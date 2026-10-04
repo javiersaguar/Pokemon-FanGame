@@ -26,6 +26,7 @@ SceneManager="*res://src/autoload/scene_manager.gd"
 AudioManager="*res://src/autoload/audio_manager.gd"
 Dialogue="*res://src/autoload/dialogue.gd"
 Clock="*res://src/autoload/clock.gd"
+Cutscene="*res://src/autoload/cutscene.gd"
 Debug="*res://src/autoload/debug.gd"
 
 [debug]

@@ -2,7 +2,7 @@
 class_name Player
 extends Character
 ## Jugador: movimiento por casillas, interacción, menú y cámara.
-## Tras cada paso: warp → EventBus.player_stepped → encuentros salvajes.
+## Tras cada paso: warp → EventBus.player_stepped → disparador → encuentro salvaje.
 
 ## Pulsación más corta que esto en una dirección nueva = solo girar.
 const TURN_DELAY := 0.1
@@ -28,6 +28,8 @@ func _ready() -> void:
 		return
 	refresh_appearance()
 	EventBus.map_will_change.connect(_on_map_will_change)
+	# También cuando lo mueve una cinemática: GameState siempre sabe dónde está.
+	step_finished.connect(func(_tile: Vector2i) -> void: _sync_state())
 
 
 func _process(delta: float) -> void:
@@ -72,6 +74,12 @@ func refresh_appearance() -> void:
 func place_at(tile: Vector2i, dir: Vector2i = Vector2i.ZERO) -> void:
 	super(tile, dir)
 	_sync_state()
+
+
+func face(dir: Vector2i) -> void:
+	super(dir)
+	if is_node_ready() and not Engine.is_editor_hint():
+		GameState.player_facing = facing
 
 
 ## Ajusta la cámara al mapa: límites en sus bordes (centrada si el mapa es más
@@ -149,6 +157,10 @@ func _after_step() -> bool:
 		return false
 	EventBus.player_stepped.emit(tile)
 	if GameState.input_locked:
+		return false
+	var trigger := map.trigger_at(tile)
+	if trigger:
+		await Cutscene.play(trigger.event, trigger, trigger.event_params, trigger.once_flag)
 		return false
 	var wild := WildEncounters.roll(map, tile)
 	if not wild.is_empty():

@@ -27,6 +27,22 @@ static func path_from_id(map_id: StringName) -> String:
 	return MAPS_DIR + String(map_id) + ".tscn"
 
 
+## Ids de todos los mapas de maps/, ordenados.
+static func list_all() -> Array[StringName]:
+	var out: Array[StringName] = []
+	_collect(MAPS_DIR, out)
+	out.sort_custom(func(a: StringName, b: StringName) -> bool: return String(a) < String(b))
+	return out
+
+
+static func _collect(dir_path: String, out: Array[StringName]) -> void:
+	for entry: String in ResourceLoader.list_directory(dir_path):
+		if entry.ends_with("/"):
+			_collect(dir_path + entry, out)
+		elif entry.ends_with(".tscn"):
+			out.append(id_from_path(dir_path + entry))
+
+
 func get_display_name() -> String:
 	return data.display_name if data else String(get_map_id())
 
@@ -104,3 +120,29 @@ func warp_at(tile: Vector2i) -> Warp:
 		if warp.contains_tile(tile):
 			return warp
 	return null
+
+
+func get_triggers() -> Array[Trigger]:
+	var out: Array[Trigger] = []
+	var triggers := get_node_or_null(^"Triggers")
+	if triggers:
+		for child: Node in triggers.get_children():
+			if child is Trigger:
+				out.append(child)
+	return out
+
+
+## Primer disparador de pisar que esté en `tile` y se pueda disparar.
+func trigger_at(tile: Vector2i) -> Trigger:
+	for trigger: Trigger in get_triggers():
+		if trigger.mode == Trigger.Mode.STEP and trigger.contains_tile(tile) and trigger.can_fire():
+			return trigger
+	return null
+
+
+func enter_triggers() -> Array[Trigger]:
+	var out: Array[Trigger] = []
+	for trigger: Trigger in get_triggers():
+		if trigger.mode == Trigger.Mode.ON_ENTER and trigger.can_fire():
+			out.append(trigger)
+	return out
