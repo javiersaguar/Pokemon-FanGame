@@ -2,6 +2,7 @@
   "_doc": "Cambios propios sobre data/generated/species.json. Cada entrada sustituye los campos indicados de la especie. Para crear una especie nueva (por ejemplo, una forma regional Panchito) añade \"base\": \"<especie de la que se copia>\". Las claves que empiezan por _ son comentarios.",
   "_evoluciones_por_intercambio": "Decisión de Javier: las evoluciones por intercambio simples pasan a ser por nivel (36-38) y las que piden objeto, a subir de nivel con ese objeto equipado (method level_hold). replaces = \"trade\" marca las sustituidas.",
   "_nincada": "Shedinja aparece al evolucionar Nincada si hay hueco en el equipo y una Poké Ball (method shed: no es una evolución normal).",
+  "_fuente": "Las entradas con \"fuente\" corrigen los datos importados según esa fuente (DIRECTRICES §3): WikiDex para verificar, Añil para sus retoques. Ver tools/wikidex/verify_stats.mjs.",
   "species": {
     "poliwhirl": {"evolutions":[{"to":"poliwrath","method":"item","item":"waterstone"},{"to":"politoed","method":"level_hold","item":"kingsrock","replaces":"trade"}]},
     "kadabra": {"evolutions":[{"to":"alakazam","method":"level","level":37,"replaces":"trade"}]},
@@ -32,6 +33,8 @@
     "pumpkaboosmall": {"evolutions":[{"to":"gourgeistsmall","method":"level","level":36,"replaces":"trade"}]},
     "pumpkaboolarge": {"evolutions":[{"to":"gourgeistlarge","method":"level","level":36,"replaces":"trade"}]},
     "pumpkaboosuper": {"evolutions":[{"to":"gourgeistsuper","method":"level","level":36,"replaces":"trade"}]},
+    "slowking": {"ev_yield": {"spd": 3}, "fuente": "WikiDex"},
+    "nymble": {"ev_yield": {"spe": 1}, "fuente": "WikiDex"},
     "nincada": {"evolutions":[{"to":"ninjask","method":"level","level":20},{"to":"shedinja","method":"shed","level":20}]}
   }
 }

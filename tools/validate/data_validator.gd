@@ -5,6 +5,7 @@ extends RefCounted
 ## Errores = hay que arreglarlos antes de mergear. Avisos = pendientes conocidos (sprites, scripts...).
 
 const SPRITE_ROOT := "res://assets/sprites/pokemon"
+const WIKIDEX_CHECK := "res://data/generated/wikidex_check.json"
 ## Versiones que necesita cada especie que se puede conseguir (DIRECTRICES §8: los shiny, de verdad).
 ## Iconos shiny y Pokémon que te siguen: se añadirán cuando la biblia de arte fije sus rutas.
 const SPRITE_SETS: Array[String] = ["front", "back", "front_shiny", "back_shiny", "icons"]
@@ -32,6 +33,7 @@ static func run() -> DataValidator:
 	v._check_panchito_items()
 	v._check_moves_in_use()
 	v._check_sprites()
+	v._check_wikidex()
 	return v
 
 
@@ -132,6 +134,27 @@ func _check_sprites() -> void:
 		if not missing.is_empty():
 			_warn("Faltan %d sprites en %s/%s/ (node tools/sprites/download_sprites.mjs): %s" % [
 				missing.size(), SPRITE_ROOT, set_name, ", ".join(missing)])
+
+
+# --- Estadísticas comprobadas con WikiDex (DIRECTRICES §3) ---
+
+func _check_wikidex() -> void:
+	if not FileAccess.file_exists(WIKIDEX_CHECK):
+		_warn("Las estadísticas no se han comprobado con WikiDex (node tools/wikidex/verify_stats.mjs).")
+		return
+	var report := JsonFile.read_dict(WIKIDEX_CHECK)
+	for m: Dictionary in report.get("mismatches", []):
+		_warn("WikiDex: %s tiene estadísticas distintas: %s" % [m.get("species", "?"), "; ".join(PackedStringArray(m.get("differences", [])))])
+	var checked := {}
+	for id: Variant in report.get("species", []):
+		checked[StringName(str(id))] = true
+	var pending: PackedStringArray = []
+	for id: StringName in _species_in_game().keys():
+		if DataDB.has_species(id) and not DataDB.species(id).is_form() and not checked.has(id):
+			pending.append(String(id))
+	pending.sort()
+	if not pending.is_empty():
+		_warn("Sin comprobar con WikiDex (node tools/wikidex/verify_stats.mjs): %s" % ", ".join(pending))
 
 
 # --- Entrenadores ---

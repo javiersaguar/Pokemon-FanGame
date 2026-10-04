@@ -75,6 +75,23 @@ godot --headless --path . --import                            # después, para c
   `species.json`: `raichualola`, `charizardmegax`...).
 - El validador (`tools/validate`) avisa de las especies del juego a las que les falta alguna versión.
 
+## `wikidex`: verificación de estadísticas (DIRECTRICES §3)
+
+Compara las estadísticas base y los EVs de `data/generated/species.json` (con los overrides aplicados) con la
+plantilla `{{Características}}` vigente de cada página de WikiDex. Usa la API de MediaWiki por lotes de 20, con
+pausas (1,5 s) y caché en `tools/cache/wikidex/`.
+
+```bash
+node tools/wikidex/verify_stats.mjs                 # Pokédex regional + especies del juego + muestra de 150
+node tools/wikidex/verify_stats.mjs --sample 400    # muestra más amplia
+node tools/wikidex/verify_stats.mjs --species pikachu,garchomp
+```
+
+- Escribe `data/generated/wikidex_check.json`, que lee el validador (avisa de diferencias y de especies del juego
+  sin comprobar). Sale con código 1 si hay diferencias.
+- Cada diferencia se revisa a mano. Si WikiDex tiene razón, se corrige en `data/species_overrides.json` con
+  `"fuente": "WikiDex"` (los retoques de Añil, con `"fuente": "Añil"`).
+
 ## `validate`: validador de datos (Fase 4.6)
 
 ```bash
