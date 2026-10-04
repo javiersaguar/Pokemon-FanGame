@@ -106,17 +106,17 @@ Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) 
 
 ## Agente 3 — Presentación, UI y contenido Panchito
 
-**He leído `docs/DIRECTRICES.md`** (2026-10-04, secciones 0–8) y he reordenado mi plan:
+**He leído `docs/DIRECTRICES.md` §0, §7, §7.1 y §8** (actualización de 2026-10-04 con los recursos descargados), las capturas de `docs/arte/referencias/` y `docs/arte/recursos_terceros.md`. `core.hooksPath .githooks` activo en mi copia. Plan nuevo, en este orden:
 
-**En qué estoy:** prueba de nivel gráfico (§7) y Fase A, en `feat/agente3-arte`:
-1. `docs/arte/BIBLIA.md`, `docs/arte/seguimiento.md` (ya con los placeholders que hay a la vista) y `docs/arte/licencias.md`.
-2. Lista de recursos para descargar (tilesets, personajes, Pokémon que te siguen, fondos de combate y fuente) y propuesta del set de sprites de Pokémon, en "Preguntas para Javier".
-3. Validador de arte (`tools/arte/`) y galería.
-4. Pantalla de combate y pantalla de datos del Pokémon de muestra a 512×384, y comparativas en `docs/arte/comparativas/`.
+**En qué estoy:** prueba de nivel gráfico (§7, pasos 1 y 4), en `feat/agente3-muestra-combate`:
+1. Revisar `recursos_terceros.md` y pedir lo que falta para igualar a Añil (preguntas para Javier).
+2. Reescribir `docs/arte/BIBLIA.md` con la **escala real de los packs** (ya al doble para 512×384, espaldas al triple, sin reescalar) y poner al día `seguimiento.md` y `licencias.md`. Mi antigua lista `docs/arte/recursos.md` queda sustituida por la de Javier.
+3. **Pantalla de combate de muestra** con los recursos reales: fondo de `10_fondos_combate`, Pokémon del `06_generation9_pack` (frente 192 y espalda 288, los importa el Agente 2), iconos de tipo de Loaky (`types_spanish.png`), fuente *Truth and Ideals*, cajas de datos con PS y experiencia animadas, botones Luchar/Mochila/Pokémon/Huir con color y animación, y entrada de un shiny con destellos y sonido.
+4. **Pantalla de datos del Pokémon de muestra**, diseño propio.
+5. Fuente *Truth and Ideals*: tiene ñ, tildes, ü, ¿¡, ♂, ♀ y ★; le faltan €, — y · (lo confirmo renderizándola).
+6. Capturas a 512×384 al lado de las referencias en `docs/arte/comparativas/` y aviso a Javier.
 
-Hecho de la Fase A: `docs/arte/BIBLIA.md` (propuesta), `docs/arte/seguimiento.md`, `docs/arte/licencias.md`, `docs/arte/recursos.md` (lista para descargar, preguntas 8 y 9), paleta maestra propuesta (`assets/arte/paleta.json` → `.gpl` y `.png`) y validador de arte (`tools/arte/validar.gd`, uso en `README.md`).
-
-**Después** (tras la aprobación de Javier): menú inicial de la Fase 15.2 ("Realizado por Javier Saguar"), pantallas del MVP, TrainerNPC, marcadores R.2 en `Dialogue`, `starters.json`/`gifts.json`/`statics.json`/`trades.json` y las pantallas del RandomLocke (R.8).
+**Después** (tras la aprobación de Javier): entrenadores Panchito con `11_character_customization_gen4`, menú inicial de la Fase 15.2 ("Realizado por Javier Saguar"), pantallas del MVP, TrainerNPC, marcadores R.2 en `Dialogue`, `starters.json`/`gifts.json`/`statics.json`/`trades.json` y las pantallas del RandomLocke (R.8).
 
 **Terminado:**
 - Borrador de `docs/GDD.md` (Fase 2): estructura completa, con las decisiones de diseño marcadas **PENDIENTE JAVIER** (resumen de las que bloquean el MVP en su §0).
