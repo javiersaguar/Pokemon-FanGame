@@ -1,0 +1,486 @@
+{
+ "source": [
+  "Generation 9 Resource Pack v3.3.8",
+  "Generation 8 Pack v20.1"
+ ],
+ "species": {
+  "alcremie": {
+   "essentials": "ALCREMIE",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "ariados": {
+   "essentials": "ARIADOS",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "blastoise": {
+   "essentials": "BLASTOISE",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "bulbasaur": {
+   "essentials": "BULBASAUR",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "butterfree": {
+   "essentials": "BUTTERFREE",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_female": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "front_shiny_female": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_female": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "back_shiny_female": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "caterpie": {
+   "essentials": "CATERPIE",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "charizard": {
+   "essentials": "CHARIZARD",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "charmander": {
+   "essentials": "CHARMANDER",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "charmeleon": {
+   "essentials": "CHARMELEON",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "furret": {
+   "essentials": "FURRET",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "gyarados": {
+   "essentials": "GYARADOS",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_female": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "front_shiny_female": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_female": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "back_shiny_female": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_female": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "icons_shiny_female": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "hoothoot": {
+   "essentials": "HOOTHOOT",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "hoppip": {
+   "essentials": "HOPPIP",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "ivysaur": {
+   "essentials": "IVYSAUR",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "jumpluff": {
+   "essentials": "JUMPLUFF",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "magikarp": {
+   "essentials": "MAGIKARP",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_female": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "front_shiny_female": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_female": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "back_shiny_female": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "metapod": {
+   "essentials": "METAPOD",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "milcery": {
+   "essentials": "MILCERY",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "noctowl": {
+   "essentials": "NOCTOWL",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "pidgeot": {
+   "essentials": "PIDGEOT",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "pidgeotto": {
+   "essentials": "PIDGEOTTO",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "pidgey": {
+   "essentials": "PIDGEY",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "raticate": {
+   "essentials": "RATICATE",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_female": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "front_shiny_female": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_female": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "back_shiny_female": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "rattata": {
+   "essentials": "RATTATA",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_female": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "front_shiny_female": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_female": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "back_shiny_female": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "sentret": {
+   "essentials": "SENTRET",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "skiploom": {
+   "essentials": "SKIPLOOM",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "slurpuff": {
+   "essentials": "SLURPUFF",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "spinarak": {
+   "essentials": "SPINARAK",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "squirtle": {
+   "essentials": "SQUIRTLE",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "swirlix": {
+   "essentials": "SWIRLIX",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "venusaur": {
+   "essentials": "VENUSAUR",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_female": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "front_shiny_female": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_female": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "back_shiny_female": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_female": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "followers_shiny_female": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  },
+  "wartortle": {
+   "essentials": "WARTORTLE",
+   "files": {
+    "front": "06_generation9_pack",
+    "front_shiny": "06_generation9_pack",
+    "back": "06_generation9_pack",
+    "back_shiny": "06_generation9_pack",
+    "icons": "06_generation9_pack",
+    "icons_shiny": "06_generation9_pack",
+    "followers": "06_generation9_pack",
+    "followers_shiny": "06_generation9_pack",
+    "cries": "06_generation9_pack"
+   }
+  }
+ },
+ "missing": {},
+ "unmatched_forms": []
+}

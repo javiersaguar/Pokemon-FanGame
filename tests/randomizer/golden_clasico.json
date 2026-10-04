@@ -1,5 +1,5 @@
 {
-	"fingerprint": "2ac5bea54d2138cc973b422552ac90737fa2e8846d8b03de85e0e32416ffa811",
+	"fingerprint": "f9e4188b8626b90ab5f902d33a6e33201c2813e06e9cdaf2199c1aecd50ed762",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -117,7 +117,12 @@
 		"gifts": {
 			"gift_prueba": "grubbin"
 		},
-		"items": {},
+		"items": {
+			"test/test_outdoor/PocionOculta": "yellowflute",
+			"test/test_outdoor/PokeBalls": "ether",
+			"test/test_room/CarameloOculto": "ejectpack",
+			"test/test_room/Pocion": "freshstartmochi"
+		},
 		"learnsets": {
 			"bellibolt": [
 				[

@@ -1,0 +1,18 @@
+{
+  "_doc": "Especies que usa el juego además de la Pokédex regional (data/regional_dex.json). De ellas salen los sprites, iconos, Pokémon que te siguen y gritos que copia tools/sprites/import_pokemon_assets.mjs, y el validador comprueba que tengan todas sus versiones (normal y shiny). Las familias evolutivas y las especies que aparecen en encuentros, entrenadores, iniciales, regalos, estáticos e intercambios se añaden solas. Lista inicial: el MVP (iniciales provisionales de Kanto, Ruta 1, Manolo y la sala de pruebas). IDs de data/generated/species.json, en minúsculas.",
+  "species": [
+    "bulbasaur", "ivysaur", "venusaur",
+    "charmander", "charmeleon", "charizard",
+    "squirtle", "wartortle", "blastoise",
+    "pidgey", "pidgeotto", "pidgeot",
+    "rattata", "raticate",
+    "sentret", "furret",
+    "hoothoot", "noctowl",
+    "spinarak", "ariados",
+    "hoppip", "skiploom", "jumpluff",
+    "caterpie", "metapod", "butterfree",
+    "magikarp", "gyarados",
+    "swirlix", "slurpuff",
+    "milcery", "alcremie"
+  ]
+}
