@@ -9,7 +9,7 @@ Interfaces públicas entre las partes del juego. Cada sección la define y manti
 | Sección | Dueño |
 |---------|-------|
 | 0. Convenciones comunes | Agente 1 (todos pueden proponer) |
-| 1. EventBus · 2. GameState · 3. SaveManager · 4. SceneManager · 5. Mapas · 6. Clock · 7. Debug | Agente 1 |
+| 1. EventBus · 2. GameState · 3. SaveManager · 4. SceneManager · 5. Mapas · 6. Clock · 7. Debug · 7b. Cinemáticas y eventos | Agente 1 |
 | 8. DataDB, clases de datos, Pokemon, BattleSetup, BattleAction, BattleEvent | Agente 2 |
 | 9. Dialogue, AudioManager, BattleScene, UI, formato de entrenadores | Agente 3 |
 
@@ -471,6 +471,79 @@ Debug.run_command(line: String) -> String
 - Con `button_label`, además aparece como botón en la pestaña "Trucos".
 - Se puede llamar desde el `_ready` de cualquier autoload o nodo. Cada agente registra **sus** comandos desde su código (por ejemplo, Agente 2: `givepkmn <especie> <nivel>` y `heal`; Agente 3: `giveitem <id> [n]`).
 - Comandos de serie: `help`, `tp`, `flag`, `var`, `money`, `hour`, `noclip`, `encounters`, `save`, `load`, `slots`, `battle` y `title`.
+
+---
+
+## 7b. Cinemáticas y eventos (Agente 1)
+
+Fase 13.1. Un evento es **un guion que se lee de arriba abajo con `await`**.
+
+### StoryEvent (`src/events/story_event.gd`)
+
+```gdscript
+extends StoryEvent      # tu evento: src/events/<zona>/<nombre>.gd
+
+func run() -> void:     # corrutina
+	var rival := entity("Rival") as NPC
+	await Cutscene.emote(rival, "!")
+	await Cutscene.approach(rival, player)
+	await Dialogue.say("¡{player}! ¡Espera!", rival)
+	var outcome := await Cutscene.battle_trainer(&"rival_lab_%d" % GameState.var_int(&"starter"), {"can_lose": true})
+	GameState.set_flag(&"rival_intro_done")
+```
+
+- Campos: `source` (quien lo lanzó; puede haberse liberado), `params` (los `event_params` de quien lo lanza), `map`, `player`.
+- Métodos: `param(key, default)`, `entity(nombre_del_nodo) -> MapEntity` (en `Entities` del mapa actual) y `source_entity()`.
+- **Se ejecuta dentro del autoload `Cutscene`**, así que sigue vivo aunque cambie de mapa (a diferencia de una corrutina de un nodo del mapa, §5).
+- **Regla R.2**: nada de especies, objetos ni equipos escritos a mano. Se piden por id a `DataDB` o llegan en `params`.
+
+### Cutscene (autoload)
+
+```gdscript
+await Cutscene.play(event: GDScript | StoryEvent, source: Node = null, params := {}, done_flag := &"")
+Cutscene.current: StoryEvent / Cutscene.is_running() -> bool
+signal event_started(event) / event_finished(event)
+Cutscene.lock_player() / unlock_player()          # play() ya bloquea (&"cutscene") mientras dura
+await Cutscene.wait(seconds)
+await Cutscene.walk(entity: Character, path: Array[Vector2i], running := false, ignore_collisions := false)
+await Cutscene.walk_to(entity, tile, running := false)
+await Cutscene.approach(entity, target: Node2D, running := false)   # hasta quedarse delante y mirarle
+Cutscene.face(entity, dir) / face_each_other(a, b)
+await Cutscene.emote(entity, text := "!", duration := 0.6)
+Cutscene.show_entity(entity) / hide_entity(entity)  # mientras dure el mapa; permanente = flags
+Cutscene.path_between(from, to) -> Array[Vector2i]  # = Grid.path_between()
+await Cutscene.fade_out() / fade_in()
+Cutscene.music(id, fade := 0.5) / sfx(id) / await jingle(id)
+await Cutscene.shake(strength := 3.0, duration := 0.3)
+await Cutscene.camera_pan(tile, duration := 0.6) / camera_reset(duration := 0.4)
+await Cutscene.teleport(map_id, spawn_id := &"default", facing := Vector2i.ZERO)
+Cutscene.heal_party()
+await Cutscene.give_item(item_id, quantity := 1, announce := true) -> bool      # a la mochila + mensaje
+await Cutscene.give_pokemon(pokemon, announce := true) -> String              # "party", "pc" o ""
+await Cutscene.battle_trainer(trainer_id, options := {}) -> StringName       # si ganas: trainer_defeated:<id>
+await Cutscene.battle_wild(species_or_pokemon, level := 5, options := {}) -> StringName
+```
+
+`give_pokemon()` rellena los datos de captura (`original_trainer`, `trainer_id`, `met_*`) y lo apunta en la Pokédex.
+
+### Quién lanza los eventos
+
+| Quién | Cómo |
+|-------|------|
+| **NPC** | Exports `event: GDScript` y `event_params: Dictionary`. Si tiene evento, al hablarle se ejecuta en vez de sus `lines` |
+| **Trigger** (`src/overworld/trigger/trigger.gd`, dentro de `Triggers`) | `event`, `event_params`, `mode` (`STEP` al pisarlo; `ON_ENTER` al terminar de entrar en el mapa), `size`, `required_flag`, `blocked_by_flag` y `once_flag` (se activa al terminar; así no se repite). En el editor se ve como un rectángulo naranja |
+| **StarterBall** (`src/overworld/starter_ball/starter_ball.tscn`) | Poké Ball del inicial: `starter_slot` (`starter_1`..`3`) y `starter_index` (1–3). Ya trae `hidden_if_flag = starter_chosen` |
+| Cualquier código | `await Cutscene.play(MiEvento, self, {...})` |
+
+`MapRoot.get_triggers()`, `trigger_at(tile)` (solo `STEP` y que se puedan disparar) y `enter_triggers()`.
+
+### Eventos comunes (`src/events/common/`)
+
+| Evento | `params` | Qué hace |
+|--------|----------|----------|
+| `heal_party_event.gd` | `spawn` (spawn delante del mostrador; `"default"`) | Enfermera: pregunta, jingle `heal`, cura al equipo y fija `healing_map`/`healing_spawn` |
+| `open_shop_event.gd` | `shop_id` | Dependiente: abre `ShopScreen.open(shop_id)` (Agente 3) |
+| `choose_starter_event.gd` | `slot`, `index` | Pregunta "¿Eliges a X?" con la especie de `DataDB.starter(slot)`, lo da (nivel del dato o `world.json` → `new_game.starter_level`), var `starter` = `index` y flag `starter_chosen` |
 
 ---
 
