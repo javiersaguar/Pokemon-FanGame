@@ -1,0 +1,29 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/overworld/item_ball/item_ball.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/placeholder/item_ball.png" id="2_ball"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tile"]
+size = Vector2(14, 14)
+
+[node name="ItemBall" type="Node2D"]
+script = ExtResource("1_item")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ball")
+
+[node name="Body" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+shape = SubResource("RectangleShape2D_tile")
+
+[node name="Area" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+shape = SubResource("RectangleShape2D_tile")
+disabled = true

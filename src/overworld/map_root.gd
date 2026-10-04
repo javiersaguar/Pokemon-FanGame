@@ -60,3 +60,47 @@ func get_bounds() -> Rect2i:
 		return Rect2i()
 	var used := ground.get_used_rect()
 	return Rect2i(used.position * Grid.TILE, used.size * Grid.TILE)
+
+
+func get_layer(layer_name: StringName) -> TileMapLayer:
+	return get_node_or_null(NodePath(String(layer_name))) as TileMapLayer
+
+
+## Valor de la custom data `key` en la casilla. Decor tiene prioridad sobre Ground.
+func tile_custom_data(tile: Vector2i, key: StringName, default: Variant = null) -> Variant:
+	for layer_name: StringName in [&"Decor", &"Ground"]:
+		var layer := get_layer(layer_name)
+		if layer == null or layer.tile_set == null:
+			continue
+		if layer.tile_set.get_custom_data_layer_by_name(key) == -1:
+			continue
+		var tile_data := layer.get_cell_tile_data(tile)
+		if tile_data:
+			return tile_data.get_custom_data(key)
+	return default
+
+
+## Tipo de terreno de la casilla ("grass", "tall_grass", "water", "counter"...).
+func terrain_at(tile: Vector2i) -> String:
+	return str(tile_custom_data(tile, &"terrain", ""))
+
+
+func is_encounter_tile(tile: Vector2i) -> bool:
+	return bool(tile_custom_data(tile, &"encounter", false))
+
+
+func get_warps() -> Array[Warp]:
+	var out: Array[Warp] = []
+	var warps := get_node_or_null(^"Warps")
+	if warps:
+		for child: Node in warps.get_children():
+			if child is Warp:
+				out.append(child)
+	return out
+
+
+func warp_at(tile: Vector2i) -> Warp:
+	for warp: Warp in get_warps():
+		if warp.contains_tile(tile):
+			return warp
+	return null

@@ -8,6 +8,9 @@
     "healing_spawn": "default"
   },
   "max_money": 999999,
+  "encounters": {
+    "step_chance": 0.1
+  },
   "clock": {
     "mode": "real",
     "periods": [

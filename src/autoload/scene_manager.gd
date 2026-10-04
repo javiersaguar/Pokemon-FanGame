@@ -24,7 +24,7 @@ var ui_layer: CanvasLayer
 var transition_layer: CanvasLayer
 
 var current_map: MapRoot
-var player: Node2D
+var player: Player
 var is_changing_map := false
 var in_battle := false
 
@@ -295,10 +295,8 @@ func _place_player(tile: Vector2i, facing: Vector2i) -> void:
 	if player.get_parent():
 		player.get_parent().remove_child(player)
 	parent.add_child(player)
-	if player.has_method(&"place_at"):
-		player.call(&"place_at", tile, facing)
-	else:
-		player.position = Grid.to_world(tile)
+	player.place_at(tile, facing)
+	player.setup_camera(current_map)
 
 
 func _unload_map() -> void:
@@ -316,8 +314,9 @@ func _enter_game() -> void:
 		_title.queue_free()
 		_title = null
 	close_all_menus()
-	if player == null and ResourceLoader.exists(PLAYER_SCENE):
+	if player == null:
 		player = (load(PLAYER_SCENE) as PackedScene).instantiate()
+	player.refresh_appearance()
 	GameState.in_game = true
 
 

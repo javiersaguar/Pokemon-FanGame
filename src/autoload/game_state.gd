@@ -330,16 +330,8 @@ func _vars_to_dict(ints: bool) -> Dictionary:
 	return out
 
 
-func _module_class_script(key: StringName) -> Script:
-	var wanted: StringName = MODULE_CLASSES[key]
-	for info: Dictionary in ProjectSettings.get_global_class_list():
-		if info["class"] == wanted:
-			return load(info["path"])
-	return null
-
-
 func _new_module(key: StringName) -> Variant:
-	var script := _module_class_script(key)
+	var script := GlobalClasses.find(MODULE_CLASSES[key])
 	return script.new() if script else null
 
 

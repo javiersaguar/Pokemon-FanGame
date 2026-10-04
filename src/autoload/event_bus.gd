@@ -12,6 +12,8 @@ signal player_stepped(tile: Vector2i)
 signal map_will_change(from_map: StringName, to_map: StringName)
 ## El mapa `map_id` ya está cargado y el jugador colocado (antes del fundido de entrada).
 signal map_loaded(map_id: StringName)
+## Se ha gastado el último paso de Repelente (GameState var `repel_steps`).
+signal repel_wore_off
 
 # --- Combate ---
 ## `setup` es el BattleSetup del Agente 2.
