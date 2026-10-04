@@ -92,18 +92,22 @@ tests/       Tests automáticos (GUT)
 tools/       Scripts de importación y validación de datos
 ```
 
-### Gráficos provisionales
+### Tileset y personajes del mapa
 
-El tileset (`assets/tilesets/placeholder/`) y los personajes del mapa (`assets/sprites/characters/placeholder/`) se generan por script hasta que haya arte real:
+**No hay arte generado por código.** El tileset de exteriores y los personajes del mapa se copian de los packs de terceros que Javier tiene fuera del repo (`docs/arte/recursos_terceros.md`; créditos en `CREDITOS.md`). Para regenerarlos:
 
 ```bash
-godot --headless --path . -s res://assets/tilesets/placeholder/generate_png.gd
-godot --headless --path . -s res://assets/sprites/characters/placeholder/generate_characters.gd
+# Personajes, Poké Ball del suelo y efectos (pack 05)
+godot --headless --path . -s res://assets/sprites/characters/import_characters.gd
+# Tileset de exteriores (packs 01, 02, 03 y 04): PNG, importar y TileSet
+godot --headless --path . -s res://assets/tilesets/exterior/build_exterior.gd -- --paso=png
 godot --headless --path . --import
-godot --headless --path . -s res://assets/tilesets/placeholder/build_tileset.gd
+godot --headless --path . -s res://assets/tilesets/exterior/build_exterior.gd -- --paso=tileset
 ```
 
-La sala de pruebas (`maps/test/`) se generó con `maps/test/build_test_maps.gd`. Ahora se edita en el editor: **no vuelvas a ejecutar ese script** (pide `-- --force` porque sobrescribe los mapas).
+Si los packs están en otra carpeta: `-- --recursos=<ruta>` (en `--paso=png` y en el de personajes).
+
+Mapas generados por script (pisan los cambios hechos a mano, por eso piden `-- --force`): la sala de pruebas (`maps/test/build_test_maps.gd`) y los mapas de muestra de la prueba de nivel gráfico (`maps/_tools/build_muestras.gd`). Al tocar objetos del suelo: `godot --headless --path . -s res://maps/_tools/build_item_placements.gd`.
 
 ## Arte (Fase A)
 

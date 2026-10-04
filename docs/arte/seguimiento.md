@@ -13,10 +13,9 @@ Relleno técnico temporal que hay que sustituir. **Ninguno es arte del juego.**
 
 | Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
 |-------|------|-------|--------|-------------------|---------------------|-------|
-| Tileset provisional (`assets/tilesets/placeholder/`) | Tileset | A1 | placeholder | Generado por script | — | Se sustituye por los packs 01–04 en los mapas de muestra |
-| Personajes y objetos del mapa provisionales (`assets/sprites/characters/placeholder/`) | Personaje en el mapa | A1 | placeholder | Generados por script | — | Se sustituyen por los packs 05 y 13 |
 | Efectos de los movimientos (`BattleFx`) | Animación de combate | A3 | placeholder | Dibujados por código | — | Estallido, proyectil y destellos por tipo. Falta un pack de efectos (pregunta en `docs/ESTADO.md`) |
 | Sprite de Pokémon de reserva (`PlaceholderArt.pokemon`) | Pokémon en combate | A3 | placeholder | Generado por código | — | **Solo** si a una especie le falta el sprite; con el Generation 9 Pack no sale ninguno |
+| Protagonista provisional (Ethan y Lyra del pack 05) | Personaje en el mapa | A1 | integrado | PurpleZaffre, pack 05 | — | Provisional hasta el diseño del protagonista de Panchito (pack 11) |
 
 Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador hasta tener su sprite) ni el fondo dibujado por código.
 
@@ -24,6 +23,13 @@ Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador h
 
 | Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
 |-------|------|-------|--------|-------------------|---------------------|-------|
+| Tileset de exteriores (`assets/tilesets/exterior/`: hierba, bosque, caminos, hierba alta, estanque, meseta, bordillo, adoquines, adornos) | Tileset | A1 | integrado | Packs 02 (×2 tal cual) y 01, 03 y 04 (×2 duplicando píxeles); ver CREDITOS.md | ⏳ | Prueba de nivel gráfico: `docs/arte/comparativas/` |
+| Casas de HGSS (`casas.png`) | Edificio | A1 | integrado | SirMalo, pack 01 | ⏳ | 3 casas de Pueblo Primavera |
+| Árboles y flora (`arboles.png`, `flora.png`) | Tileset | A1 | integrado | AnonAlpaca (+ Magiscarf), packs 03 y 04 | ⏳ | Mayor densidad de detalle que el pack 02 |
+| Flores animadas y brillo del agua (`animados.png`) | Tileset animado | A1 | integrado | Pack 02 | ⏳ | 4 y 2 cuadros |
+| Personajes del mapa (`assets/sprites/characters/*.png`) | Personaje en el mapa | A1 | integrado | PurpleZaffre, pack 05 | ⏳ | Rival, profesor, enfermera, dependiente y vecinos |
+| Efectos del mapa (`assets/sprites/characters/effects/`) | Efecto | A1 | integrado | PurpleZaffre, pack 05 | ⏳ | "!", hierba al pisarla, polvo al saltar, brillo shiny |
+| Sombras de los personajes | Efecto | A1 | — | **Falta el recurso** | — | Ningún pack trae sombra del mapa (pregunta para Javier) |
 | **Generation 9 Resource Pack v3.3.8** (`assets/sprites/pokemon/`: `front`, `front_shiny` 192×192; `back`, `back_shiny` 288×288; `icons`, `icons_shiny` 128×64; `followers`, `followers_shiny` 256×256) | Pokémon (combate, iconos y seguidores) | A2 | integrado | Recopilado por Caruban; autores en `CREDITOS.md` ("Pokémon") | ⏳ | **Set oficial del proyecto** (DIRECTRICES §7.1). Los importa `tools/sprites/` solo de las especies en uso, sin reescalar. Shiny oficiales |
 | Objeto Poké Ball (`assets/sprites/items/pokeball.png`, 48×48) | Objeto | A3 | integrado | Generation 9 Pack (`Graphics/Items`) | ⏳ | En la ficha del Pokémon (la Ball en la que se capturó) |
 | Sombras de Pokémon (`assets/sprites/ui/battle/shadows/`) | Combate | A3 | integrado | Generation 9 Pack (`Graphics/Pokemon/Shadow`) | ⏳ | Bajo el Pokémon rival y en la ficha. Sustituyen a las bases hasta tenerlas |
