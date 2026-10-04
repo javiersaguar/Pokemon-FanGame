@@ -1,0 +1,20 @@
+# Caché de Godot (se regenera sola)
+.godot/
+
+# Builds
+/builds/
+*.pck
+*.zip
+
+# Presets de exportación (pueden contener rutas o claves locales)
+export_presets.cfg
+
+# Sistema y editor
+.vscode/
+Thumbs.db
+desktop.ini
+
+# Dependencias de las herramientas
+tools/node_modules/
+tools/.venv/
+tools/cache/
