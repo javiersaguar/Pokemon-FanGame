@@ -56,10 +56,22 @@ func test_los_entrenadores_no_tiran_shiny() -> void:
 
 
 func test_shiny_tiene_sprites_oficiales() -> void:
+	# Cada versión shiny es un archivo propio del pack (colores oficiales), distinto del normal.
 	for id: StringName in [&"pidgey", &"charmander", &"swirlix"]:
-		for set_name: String in ["front_shiny", "back_shiny"]:
-			var path := "res://assets/sprites/pokemon/%s/%s.png" % [set_name, id]
-			assert_true(ResourceLoader.exists(path), path)
-		var normal := (load("res://assets/sprites/pokemon/front/%s.png" % id) as Texture2D).get_image()
-		var shiny := (load("res://assets/sprites/pokemon/front_shiny/%s.png" % id) as Texture2D).get_image()
-		assert_ne(normal.get_data(), shiny.get_data(), "%s shiny distinto del normal" % id)
+		for view: String in ["front", "back", "icons", "followers"]:
+			var normal_path := "res://assets/sprites/pokemon/%s/%s.png" % [view, id]
+			var shiny_path := "res://assets/sprites/pokemon/%s_shiny/%s.png" % [view, id]
+			assert_true(FileAccess.file_exists(normal_path), normal_path)
+			assert_true(FileAccess.file_exists(shiny_path), shiny_path)
+			var normal := (load(normal_path) as Texture2D).get_image()
+			var shiny := (load(shiny_path) as Texture2D).get_image()
+			assert_eq(shiny.get_size(), normal.get_size(), "%s: mismo tamaño" % shiny_path)
+			assert_ne(normal.get_data(), shiny.get_data(), "%s shiny distinto del normal" % shiny_path)
+
+
+func test_sprites_a_la_escala_del_pack() -> void:
+	# Se usan tal cual (DIRECTRICES §7.1): frente 192, espalda 288, iconos 2 cuadros de 64, seguidores 4×4 de 64.
+	var sizes := {"front": Vector2i(192, 192), "back": Vector2i(288, 288), "icons": Vector2i(128, 64), "followers": Vector2i(256, 256)}
+	for view: String in sizes:
+		var img := (load("res://assets/sprites/pokemon/%s/charmander.png" % view) as Texture2D).get_image()
+		assert_eq(img.get_size(), sizes[view], view)

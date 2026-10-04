@@ -54,26 +54,30 @@ El formato de cada campo está en `docs/contratos.md` (sección DataDB).
 (Poción = curar 20 PS, Super Ball = ×1,5...), con los valores oficiales de la 7.ª generación en adelante.
 Es un archivo de datos: los números del juego no van en los `.gd`.
 
-## `sprites`: sprites de Pokémon (DIRECTRICES §7.2)
+## `sprites`: gráficos y gritos de los Pokémon (DIRECTRICES §7.1 y §7.2)
 
-Descarga **un único set** estilo 5.ª generación de las carpetas de Pokémon Showdown (`gen5`, `gen5-back`,
-`gen5-shiny`, `gen5-back-shiny`; incluyen el Smogon Sprite Project para las generaciones posteriores) y recorta
-los iconos de su hoja (`pokemonicons-sheet.png`, 40×30). Los shiny son los **oficiales**, nunca generados.
+Copia de los packs que ha descargado Javier (fuera del repo, en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/`)
+**solo las especies que usa el juego**, byte a byte: **sin reescalar ni convertir**, porque ya vienen a la escala de
+512×384 (frente 192×192, espalda 288×288, iconos 128×64 = 2 cuadros de 64, Pokémon que te siguen 256×256 = 4×4
+cuadros de 64). Set oficial: `06_generation9_pack`; `07_generation8_pack` solo si falta algo. No descarga nada
+de internet ni modifica la carpeta de recursos.
 
 ```bash
-node tools/sprites/download_sprites.mjs                       # especies del juego y sus familias
-node tools/sprites/download_sprites.mjs --species pikachu,raichualola
-node tools/sprites/download_sprites.mjs --all                 # todas (tarda: hay pausas entre descargas)
-godot --headless --path . --import                            # después, para crear los .import
+node tools/sprites/import_pokemon_assets.mjs                    # especies del juego
+node tools/sprites/import_pokemon_assets.mjs --species pikachu
+node tools/sprites/import_pokemon_assets.mjs --all              # todas (para RandomLocke)
+godot --headless --path . --import                              # después, para crear los .import
 ```
 
-- Por defecto descarga las especies de la Pokédex regional, de `data/encounters/`, `data/trainers/`,
-  `data/starters.json`, `gifts.json`, `statics.json` y `trades.json`, y **sus familias evolutivas**.
-- Pausa de 300 ms entre descargas (`--delay`), caché en `tools/cache/sprites/` (también recuerda los que no
-  existen), `--offline` y `--force`.
-- Destino: `assets/sprites/pokemon/<front|back|front_shiny|back_shiny|icons>/<id>.png` (`id` = el de
-  `species.json`: `raichualola`, `charizardmegax`...).
-- El validador (`tools/validate`) avisa de las especies del juego a las que les falta alguna versión.
+- **Especies del juego:** `data/regional_dex.json` + `data/species_in_use.json` (lista inicial: el MVP) + las que
+  salen en `data/encounters/`, `data/trainers/`, `starters.json`, `gifts.json`, `statics.json` y `trades.json`, con
+  sus familias evolutivas. El validador usa la misma definición.
+- **Destino**, con nuestros ids: `assets/sprites/pokemon/{front,front_shiny,back,back_shiny,icons,icons_shiny,followers,followers_shiny}/<id>.png`
+  (más `<id>_female.png` donde el pack tiene diferencias por sexo) y `assets/audio/cries/<id>.ogg`.
+- Las formas (`raichualola`...) se buscan en `pokemon_forms.txt` del pack; las que no tienen equivalente se listan.
+- Opciones: `--source <carpeta>` (o `PANCHITO_RECURSOS`), `--dry-run` y `--prune` (borra las especies que ya no se usan).
+- Resumen (qué archivo viene de qué pack y qué falta): `data/generated/pokemon_assets.json`. Sale con código 1 si falta algo.
+- El validador da **error** si a una especie usada le falta alguna versión (normal o shiny) y aviso si le falta el grito.
 
 ## `wikidex`: verificación de estadísticas (DIRECTRICES §3)
 

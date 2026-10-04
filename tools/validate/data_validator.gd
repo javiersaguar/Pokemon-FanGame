@@ -5,10 +5,14 @@ extends RefCounted
 ## Errores = hay que arreglarlos antes de mergear. Avisos = pendientes conocidos (sprites, scripts...).
 
 const SPRITE_ROOT := "res://assets/sprites/pokemon"
+const CRIES_DIR := "res://assets/audio/cries"
+const SPECIES_IN_USE_PATH := "res://data/species_in_use.json"
 const WIKIDEX_CHECK := "res://data/generated/wikidex_check.json"
-## Versiones que necesita cada especie que se puede conseguir (DIRECTRICES §8: los shiny, de verdad).
-## Iconos shiny y Pokémon que te siguen: se añadirán cuando la biblia de arte fije sus rutas.
-const SPRITE_SETS: Array[String] = ["front", "back", "front_shiny", "back_shiny", "icons"]
+## Versiones que necesita cada especie que usa el juego (DIRECTRICES §7.2 y §8): todas, normal y shiny
+## (los shiny son los oficiales del pack, nunca generados). Las copia tools/sprites/import_pokemon_assets.mjs.
+const SPRITE_SETS: Array[String] = [
+	"front", "front_shiny", "back", "back_shiny", "icons", "icons_shiny", "followers", "followers_shiny",
+]
 const ITEM_ICON_DIR := "res://assets/sprites/items"
 const KNOWN_ITEM_EFFECTS: Array[StringName] = [
 	&"heal_hp", &"cure_status", &"heal_and_cure", &"revive", &"restore_pp", &"boost_stat",
@@ -113,27 +117,60 @@ func _obtainable_species() -> Dictionary:
 # --- Sprites ---
 
 ## Especies que se pueden ver en el juego: Pokédex regional, encuentros, entrenadores y sus evoluciones.
+## Especies que usa el juego: Pokédex regional, data/species_in_use.json, encuentros, entrenadores,
+## iniciales, regalos, estáticos e intercambios, con sus familias evolutivas (igual que el importador).
 func _species_in_game() -> Dictionary:
 	var species := _obtainable_species()
 	for id: StringName in DataDB.regional_dex():
 		species[id] = true
+	for id: Variant in JsonFile.read_dict(SPECIES_IN_USE_PATH).get("species", []) if FileAccess.file_exists(SPECIES_IN_USE_PATH) else []:
+		species[StringName(str(id))] = true
 	for trainer_id: StringName in DataDB.trainer_ids():
 		for spec: Dictionary in DataDB.trainer(trainer_id).get("party", []):
 			species[StringName(str(spec.get("species", "")))] = true
+	for id: StringName in DataDB.starter_ids():
+		species[DataDB.starter(id)] = true
+	for id: StringName in DataDB.gift_ids():
+		species[StringName(str(DataDB.gift(id).get("species", "")))] = true
+	for id: StringName in DataDB.static_ids():
+		species[StringName(str(DataDB.static_encounter(id).get("species", "")))] = true
+	var queue: Array = species.keys()
+	while not queue.is_empty():
+		var id: StringName = queue.pop_back()
+		if not DataDB.has_species(id):
+			continue
+		var s := DataDB.species(id)
+		var next: Array[StringName] = [s.prevo]
+		for evo: Dictionary in s.evolutions:
+			if not evo.has("region"):
+				next.append(StringName(str(evo.get("to", ""))))
+		for n: StringName in next:
+			if n != &"" and DataDB.has_species(n) and not species.has(n):
+				species[n] = true
+				queue.append(n)
+	species.erase(&"")
 	return species
 
 
 func _check_sprites() -> void:
-	var species := _species_in_game().keys()
-	species.sort()
+	var species: Array = _species_in_game().keys()
+	DataUtil.sort_names(species)
 	for set_name: String in SPRITE_SETS:
 		var missing: PackedStringArray = []
 		for id: StringName in species:
-			if DataDB.has_species(id) and not ResourceLoader.exists("%s/%s/%s.png" % [SPRITE_ROOT, set_name, id]):
+			if DataDB.has_species(id) and not FileAccess.file_exists("%s/%s/%s.png" % [SPRITE_ROOT, set_name, id]):
 				missing.append(String(id))
 		if not missing.is_empty():
-			_warn("Faltan %d sprites en %s/%s/ (node tools/sprites/download_sprites.mjs): %s" % [
+			_error("Faltan %d versiones en %s/%s/ (node tools/sprites/import_pokemon_assets.mjs): %s" % [
 				missing.size(), SPRITE_ROOT, set_name, ", ".join(missing)])
+	var no_cry: PackedStringArray = []
+	for id: StringName in species:
+		if DataDB.has_species(id) and not FileAccess.file_exists("%s/%s.ogg" % [CRIES_DIR, id]):
+			no_cry.append(String(id))
+	if not no_cry.is_empty():
+		# Aviso y no error mientras los .ogg no se puedan subir (hace falta Git LFS).
+		_warn("Faltan %d gritos en %s/ (node tools/sprites/import_pokemon_assets.mjs): %s" % [
+			no_cry.size(), CRIES_DIR, ", ".join(no_cry)])
 
 
 # --- Estadísticas comprobadas con WikiDex (DIRECTRICES §3) ---
@@ -149,7 +186,9 @@ func _check_wikidex() -> void:
 	for id: Variant in report.get("species", []):
 		checked[StringName(str(id))] = true
 	var pending: PackedStringArray = []
-	for id: StringName in _species_in_game().keys():
+	var in_game: Array = _species_in_game().keys()
+	DataUtil.sort_names(in_game)
+	for id: StringName in in_game:
 		if DataDB.has_species(id) and not DataDB.species(id).is_form() and not checked.has(id):
 			pending.append(String(id))
 	pending.sort()
