@@ -43,20 +43,29 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 1 — Mundo y arquitectura
 
-**En qué estoy:** Fase 5 (jugador, NPC base, warps, objetos del suelo, interacción y encuentros) en `feat/agente1-mundo`.
+**He leído `docs/DIRECTRICES.md`** (2026-10-04, secciones 0–8) y he reordenado mi plan.
+
+**En qué estoy:** prueba de nivel gráfico (§7, paso 3):
+1. ✅ Proyecto a **512×384** con el mundo a ×2 (cámara del jugador con `zoom = 2`, UI sin zoom, posiciones en píxeles enteros del arte, fondo negro).
+2. Pokémon que te sigue (Fase 14.5: sigue el historial de casillas, se esconde en interiores y con Surf, brillo si es shiny), sombras de los personajes y hierba que se mueve al pisarla, listos para el arte real.
+3. ⏳ `maps/test/muestra_ruta.tscn` y `maps/test/muestra_pueblo.tscn` con los packs reales: **bloqueado** hasta que estén los recursos de la lista del Agente 3 en `assets/_terceros/`.
+
+Mientras tanto, lógica sin pantallas nuevas: ranuras múltiples (Fase 8.7: 8 o más, miniatura y resumen), `GameState.mode` y `GameState.randomlocke`, parche de la ROM guardado con la ranura, flujo de nueva partida (R.9–R.10) y regla R.2 en todos mis eventos.
 
 **Terminado:**
-- Paso 0, el esqueleto (rama `feat/agente1-esqueleto`, mergeada en `main`):
-  - Fase 1: proyecto de Godot 4.7.2 en la raíz, estructura de carpetas, `.gitignore`, `.gitattributes`, `README.md`, `CREDITOS.md` y GUT 9.7.1 en `addons/gut` (`.gutconfig.json` → `tests/`).
-  - Fase 3: 320×180 con escalado entero y Nearest, snap a píxel, renderizador Compatibility, Input Map completo, aviso de declaraciones sin tipo y capas de física con nombre.
-  - Escena `src/main/main.tscn` (World/Battle/UI/Transition) y autoloads en el orden de la guía: `DataDB`*, `EventBus`, `GameState`, `SaveManager`, `SceneManager`, `AudioManager`*, `Dialogue`*, `Clock` y `Debug`. (*) = stubs provisionales para sus dueños.
-  - `GameState` (flags, vars, dinero, medallas, bloqueo de input y módulos) y `SaveManager` (JSON con `save_version`, `.tmp` → `.bak` → renombrar, y migraciones).
-  - `SceneManager`: cambio de mapa con fundido, `start_battle()` con sustituto provisional, derrota → Centro Pokémon, pila de menús y flujo título/nueva partida/continuar.
-  - `MapRoot` + `MapData`, `Grid`, tileset provisional con física y custom data, y la sala de pruebas (`test/test_room` y `test/test_outdoor`).
-  - Menú Debug (F9): teletransporte, flags y vars, trucos (atravesar paredes, sin encuentros, hora), guardar y cargar, combate de prueba, consola y `Debug.register_command()` para los demás.
-  - `docs/contratos.md` (secciones 0–7 rellenas y huecos para el Agente 2 y el Agente 3), `docs/flags.md` y `docs/mapas/reservas.md`.
+- Paso 0, el esqueleto: proyecto de Godot 4.7.2, estructura de carpetas, GUT 9.7.1, Input Map, escena `Main` (World/Battle/UI/Transition), autoloads, `GameState`, `SaveManager` (`save_version`, `.tmp` → `.bak` → renombrar, migraciones), `SceneManager` (mapas con fundido, combate, derrota → Centro Pokémon, pila de menús, flujo de partida), `Clock`, menú Debug (F9) con `Debug.register_command()`, `docs/contratos.md` §0–7, `docs/flags.md` y `docs/mapas/reservas.md`.
+- **Fase 5** (`contratos.md` §5):
+  - Jugador por casillas: toque corto = girar, pasos encadenados sin parones, correr, choque con la pared (`bump`) y `EventBus.player_stepped`.
+  - Cámara con límites en los bordes del mapa (fija en los interiores que caben en pantalla). Warps al pisar, con fundido y el sonido del warp.
+  - Base `MapEntity` → `Character` → `Player` / `NPC` (girarse al hablar, paseo aleatorio, `_on_interact()` para comportamientos propios). Objetos del suelo y ocultos (`ItemBall`, flag `item_taken:…`), carteles e interacción con `accept`, también por encima de un mostrador.
+  - Encuentros salvajes con `DataDB.encounter_table()`, `land_rate`, momento del día y Repelente (`repel_steps`).
+  - Sala de pruebas: NPCs (uno que pasea, otro detrás del mostrador y otro que lanza combates de prueba), objetos visibles y ocultos, cartel, warps entre los dos mapas y tabla de encuentros.
+  - **Criterio de "hecho" comprobado** con una partida automatizada: moverse por los dos mapas conectados, hablar con NPCs, recoger objetos, encuentro en la hierba alta (abre la BattleScene del Agente 3), guardar y cargar.
+- Directrices: 512×384 y zoom 2; `gui/theme/custom` (petición 8); `pokemon` y `shiny` en `data/world.json` (petición 10 y §8); regla R.2 en encuentros, objetos del suelo y NPC de pruebas; `core.hooksPath .githooks` activado (vale para todos los worktrees); `docs/.gdignore`, para que Godot no importe las capturas de `docs/`; fila de los personajes provisionales en `docs/arte/seguimiento.md`.
+- Tests en `tests/mundo/`: GameState, SaveManager, mapas y encuentros.
+- Integración: he unido `origin/main` (las directrices de Javier) con el `main` local de los agentes. **El `main` local no está subido a GitHub** (pregunta 10).
 
-**Bloqueos:** ninguno. Para la Fase 8 necesito las peticiones 1, 2 y 4 y las preguntas 1 y 2.
+**Bloqueos:** mapas de muestra → recursos en `assets/_terceros/` (Javier). Fase 8 → `BattleSetup` (petición 1), pantallas del Agente 3 y preguntas 1 y 2.
 
 ---
 
@@ -124,13 +133,16 @@ Hecho de la Fase A: `docs/arte/BIBLIA.md` (propuesta), `docs/arte/seguimiento.md
 | 2 | A1 → A2 | Clases `Party`, `PCStorage` y `Pokedex` con los requisitos de módulo de GameState (`contratos.md` §2). En `Party`, además: `heal_all()`, `is_all_fainted()` y el nivel del primer Pokémon no debilitado (para el Repelente). | hecha: `Party` con `heal_all()`, `is_all_fainted()` y `first_able_level()`; `PCStorage` y `Pokedex` (`contratos.md` §8.4) |
 | 3 | A1 → A2 | `tests/` es tuyo: ¿me cedes `tests/mundo/` para los tests de GameState, SaveManager y SceneManager? (Y quizá `tests/ui/` al Agente 3.) | hecha: `tests/mundo/` es del Agente 1 |
 | 4 | A1 → A3 | BattleScene en `res://src/battle/scene/battle_scene.tscn` con `run(setup) -> StringName`; título en `res://src/ui/title/title_screen.tscn`; menú de pausa en `res://src/ui/pause_menu/pause_menu.tscn` (`contratos.md` §4). Si preferís otras rutas, decídmelo. | hecha: rutas aceptadas (`contratos.md` §9.3) |
-| 5 | A1 → A3 | Formato de `data/encounters/<id>.json` (lo leerá el disparador de encuentros de la Fase 5). Propuesta: el de la guía (5.7), con `land.day`, `land.night`, `water`... Y una tabla de prueba `data/encounters/test_outdoor.json` para `test/test_outdoor`. | hecha: formato de la guía + `land_rate` y tablas por momento del día con los ids de `Clock.period()` (`contratos.md` §9.7). Falta poner `encounter_table = &"test_outdoor"` en el `MapData` del mapa (tuyo) |
+| 5 | A1 → A3 | Formato de `data/encounters/<id>.json` (lo leerá el disparador de encuentros de la Fase 5). Propuesta: el de la guía (5.7), con `land.day`, `land.night`, `water`... Y una tabla de prueba `data/encounters/test_outdoor.json` para `test/test_outdoor`. | hecha: formato de la guía + `land_rate` y tablas por momento del día con los ids de `Clock.period()` (`contratos.md` §9.7). `encounter_table = &"test_outdoor"` ya está puesto en el mapa |
 | 6 | A1 → A3 | Si queréis un Theme o una fuente por defecto global, pedidme `gui/theme/custom` en `project.godot`. Los stubs de Dialogue y Debug usan tamaño de fuente 8. | hecha: la pido en la petición 8 cuando entregue el Theme |
 | 7 | A3 → A2 | Para la BattleScene (`contratos.md` §8): (a) cómo se crea el motor a partir de un `BattleSetup` y qué devuelve al empezar; (b) cómo se le envía la acción del jugador y cómo se piden los reemplazos tras un debilitado; (c) la lista de tipos de `BattleEvent` con sus campos; (d) datos de presentación en `BattleSetup`: fondo, BGM, y clase, nombre y sprite de cada entrenador (yo los saco de `data/trainer_classes.json` si me pasas el `trainer_id`). **Propuesta** de lo que necesita la escena (eventos, resumen de Pokémon y reparto de textos): `contratos.md` §9.3 → `BattleDriver`. No hace falta que sea igual: yo escribo el adaptador; pero cuanto más se parezca, menos traducción. | hecha: motor entregado (`contratos.md` §8.5). Diferencias con tu propuesta del `BattleDriver`: la petición es `engine.request` (`BattleRequest`) y las acciones son `BattleAction`; los textos de presentación (aparición, desafío, "¡Adelante, X!", retirada y derrota) sí llegan como `message` pero con `tag`, para que los filtres; los Pokémon para los menús salen de `engine.active()` y `engine.party()` |
-| 8 | A3 → A1 | `gui/theme/custom = "res://src/ui/theme/main_theme.tres"` en `project.godot` (ya está en `main`). Ojo: el Theme usa Pixel Operator a 16 px; el `Theme.new()` con tamaño 8 del Debug y del sustituto de combate la pondría a 8 px y se vería mal. Para texto pequeño, la variación `SmallLabel` (Pixel Operator 8). | pendiente |
+| 8 | A3 → A1 | `gui/theme/custom = "res://src/ui/theme/main_theme.tres"` en `project.godot` (ya está en `main`). Ojo: el Theme usa Pixel Operator a 16 px; el `Theme.new()` con tamaño 8 del Debug y del sustituto de combate la pondría a 8 px y se vería mal. Para texto pequeño, la variación `SmallLabel` (Pixel Operator 8). | hecha: `gui/theme/custom` puesto; el Debug y el combate provisional usan el Theme sin tocarlo y el globo de `show_emote()` usa `SmallLabel` |
 | 9 | A3 → A2 | Datos de entrenadores (`contratos.md` §9.6): ¿los carga `DataDB` o los leo yo con `TrainerData` (`src/overworld/trainers/`)? Por mí, cualquiera de las dos; `BattleSetup.trainer(trainer_id)` (petición 1) necesitará el equipo. Y, como en la petición 3, ¿me cedes `tests/ui/` para mis tests? | hecha: los carga `DataDB` (`trainer()`, `trainer_class()`, `encounter_table()`, `shop()`, en bruto; `contratos.md` §8.2). Si quieres `TrainerData`, que lea de `DataDB`. `tests/ui/` es tuyo |
-| 10 | A2 → A1 | Sección `"pokemon"` en `data/world.json` con las reglas configurables que lee `DataDB.rule()` (`contratos.md` §8.2): `{"shiny_odds": 4096, "wild_hidden_ability_chance": 0.0, "pc_boxes": 32, "pc_box_size": 30, "exp_share": true}`. Mientras no esté, se usan esos valores por defecto. | pendiente |
+| 10 | A2 → A1 | Sección `"pokemon"` en `data/world.json` con las reglas configurables que lee `DataDB.rule()` (`contratos.md` §8.2): `{"shiny_odds": 4096, "wild_hidden_ability_chance": 0.0, "pc_boxes": 32, "pc_box_size": 30, "exp_share": true}`. Mientras no esté, se usan esos valores por defecto. | hecha, salvo `shiny_odds`: por la directriz §8 la probabilidad shiny va en `data/world.json` → `shiny` (petición 13) |
 | 11 | A2 → A3 | Los mensajes de combate escriben el dinero como `"%d ₽"` (`BattleText.CURRENCY`, previsto). ¿La fuente Pixel Operator tiene `₽`? Si no, dime qué símbolo usar (o si lo dibujas como icono). | pendiente |
+| 12 | A1 → A2 | Regla R.2 para los objetos del suelo: `DataDB.placed_item(placement_id: StringName, default_item: StringName) -> StringName`, que devuelva el objeto del parche de RandomLocke si lo hay y, si no, `default_item`. `placement_id` = `<map_id>/<nombre del nodo>` (`ItemBall.placement_id()`); `ItemBall` ya lo llama si existe. Para que el randomizer conozca todas las colocaciones, ¿te vale que yo genere `data/item_placements.json` (`{placement_id: item_id}`) con un script que recorra `maps/`? | pendiente |
+| 13 | A1 → A2 | Probabilidad shiny: la directriz §8 la pone en `data/world.json` → `shiny`: `{"odds": 4096, "rolls": {"base": 1, "shiny_charm": 3, "masuda": 6, "masuda_shiny_charm": 8}}` (una tirada = 1/`odds`). La he puesto ahí y no en `pokemon.shiny_odds`: ¿puedes leerla de `shiny`? | pendiente |
+| 14 | A1 → A3 | Aviso: con la resolución a 512×384 (ya en `main`), el cuadro de diálogo sigue colocado como en 320×180 y sale a media pantalla. | informativo |
 
 ---
 
@@ -147,6 +159,7 @@ Hecho de la Fase A: `docs/arte/BIBLIA.md` (propuesta), `docs/arte/seguimiento.md
 | 7 | A2 | **Habilidad oculta en Pokémon salvajes** (Fase 6.1, "con baja probabilidad"): ¿qué probabilidad? En los juegos actuales es 0 salvo casos especiales. Ahora: 0 (`wild_hidden_ability_chance`). | |
 | 8 | A3 | **Prueba de nivel gráfico, paso 1: recursos para descargar** (`docs/arte/recursos.md`, con enlace, autores y licencia de cada uno): sprites de Pokémon, tilesets, personajes del mapa, Pokémon que te siguen, fondos y bases de combate y fuentes. (a) ¿Los descargas en `assets/_terceros/`? Para mi muestra de combate necesito, por orden: el **set de sprites de Pokémon** (propongo la opción A, *Animated Pokemon System*, el mismo linaje que Añil; la B es la de Showdown del Agente 2), los **fondos y bases** de *Elite Battle System* y, si quieres comparar, otra **fuente**. (b) Varios autores **prohíben redistribuir** sus packs y el repo es público: ¿ponemos `assets/_terceros/` en `.gitignore` y en el repo solo lo que el juego usa? (`.gitignore` lo cambiaría el Agente 1) | |
 | 9 | A3 | **Biblia de arte y paleta** (`docs/arte/BIBLIA.md`, muestrario en `assets/arte/paleta.png`): ¿la apruebas o cambias algo? Decisiones abiertas en su §12: paleta, fuente, set de sprites, tono visual de lo nuestro (UI, clases Panchito, logo) y lienzo de 80×80 para los entrenadores en combate | |
+| 10 | A1 | **GitHub**: el `main` local tiene el trabajo de los tres agentes y tus directrices, pero no está subido (no subimos sin permiso). ¿Lo subo (`git push origin main`) cada vez que se integre algo? Si sigues subiendo cosas a GitHub desde otra copia, las integro igual que esta vez. | |
 
 ---
 
@@ -154,6 +167,7 @@ Hecho de la Fase A: `docs/arte/BIBLIA.md` (propuesta), `docs/arte/seguimiento.md
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-04 | A1 | §0: resolución **512×384** con el mundo a ×2 (zoom de la cámara) y la UI sin zoom. §5 entregado (Fase 5): `MapEntity`, `Character`, `Player`, `NPC`, `ItemBall`, `MapSign`, `Warp`, `WildEncounters` y los métodos nuevos de `MapRoot`. `EventBus.repel_wore_off` nueva. `GameState.dir_name()`/`dir_from_name()` dejan de ser estáticas (también están en `Grid`). `ItemBall` resuelve el objeto con `DataDB.placed_item()` si existe (R.2). |
 | 2026-10-04 | A3 | `contratos.md` §9 rellena. Dialogue y AudioManager mantienen las firmas del stub y **añaden**: `vars`, `cancel_choice`, `ask_yes_no()`, `format_text()`, `text_speed` y `NO_CANCEL` (Dialogue); `save_bgm()`, `restore_bgm()`, `play_ambient()`, `stop_ambient()`, `set_volume()` y `get_volume()` (AudioManager). Formatos de entrenadores, encuentros y tiendas. |
 | 2026-10-04 | A3 | BattleScene entregada (§9.3, `run(setup) -> StringName`), con `BattleDriver` y FakeBattle. `TrainerData.get_class()` pasa a llamarse `get_trainer_class()` (choca con `Object.get_class()`). Nuevo widget `GridMenu` (§9.4). |
 | 2026-10-04 | A3 | AudioManager entregado (§9.2), sin cambios de firma. |

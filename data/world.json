@@ -8,6 +8,19 @@
     "healing_spawn": "default"
   },
   "max_money": 999999,
+  "encounters": {
+    "step_chance": 0.1
+  },
+  "pokemon": {
+    "wild_hidden_ability_chance": 0.0,
+    "pc_boxes": 32,
+    "pc_box_size": 30,
+    "exp_share": true
+  },
+  "shiny": {
+    "odds": 4096,
+    "rolls": {"base": 1, "shiny_charm": 3, "masuda": 6, "masuda_shiny_charm": 8}
+  },
   "clock": {
     "mode": "real",
     "periods": [

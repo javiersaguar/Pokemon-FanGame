@@ -227,8 +227,6 @@ func _build_ui() -> void:
 	layer.layer = 100
 	add_child(layer)
 	_panel = PanelContainer.new()
-	_panel.theme = Theme.new()
-	_panel.theme.default_font_size = 8
 	_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_panel.offset_left = 4
 	_panel.offset_top = 4

@@ -34,16 +34,21 @@ gdscript/warnings/untyped_declaration=1
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=180
-window/size/window_width_override=1280
-window/size/window_height_override=720
+window/size/viewport_width=512
+window/size/viewport_height=384
+window/size/window_width_override=1024
+window/size/window_height_override=768
 window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
+[gui]
+
+theme/custom="res://src/ui/theme/main_theme.tres"
 
 [input]
 
@@ -178,6 +183,7 @@ debug={
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

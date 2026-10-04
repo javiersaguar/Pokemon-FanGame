@@ -20,6 +20,7 @@ Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus person
 | Recurso | Autor | Licencia | Enlace | En el repo |
 |---------|-------|----------|--------|------------|
 | Tileset provisional | Equipo de Pokémon Panchito (generado por script) | Propio | — | `assets/tilesets/placeholder/` |
+| Personajes y objetos del mapa provisionales | Equipo de Pokémon Panchito (generado por script) | Propio | — | `assets/sprites/characters/placeholder/` |
 
 ## Datos
 

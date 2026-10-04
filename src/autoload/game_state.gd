@@ -293,30 +293,14 @@ func from_dict(data: Dictionary) -> void:
 			set(key, _module_from_dict(key, modules[String(key)]))
 
 
-# --- Utilidades de dirección (compartidas con el mundo y el guardado) ---
+# --- Utilidades de dirección (las mismas que Grid; aquí por comodidad) ---
 
-static func dir_name(dir: Vector2i) -> String:
-	match dir:
-		Vector2i.UP:
-			return "up"
-		Vector2i.LEFT:
-			return "left"
-		Vector2i.RIGHT:
-			return "right"
-		_:
-			return "down"
+func dir_name(dir: Vector2i) -> String:
+	return Grid.dir_name(dir)
 
 
-static func dir_from_name(dir_text: String) -> Vector2i:
-	match dir_text:
-		"up":
-			return Vector2i.UP
-		"left":
-			return Vector2i.LEFT
-		"right":
-			return Vector2i.RIGHT
-		_:
-			return Vector2i.DOWN
+func dir_from_name(dir_text: String) -> Vector2i:
+	return Grid.dir_from_name(dir_text)
 
 
 # --- Internos ---
@@ -330,16 +314,8 @@ func _vars_to_dict(ints: bool) -> Dictionary:
 	return out
 
 
-func _module_class_script(key: StringName) -> Script:
-	var wanted: StringName = MODULE_CLASSES[key]
-	for info: Dictionary in ProjectSettings.get_global_class_list():
-		if info["class"] == wanted:
-			return load(info["path"])
-	return null
-
-
 func _new_module(key: StringName) -> Variant:
-	var script := _module_class_script(key)
+	var script := GlobalClasses.find(MODULE_CLASSES[key])
 	return script.new() if script else null
 
 

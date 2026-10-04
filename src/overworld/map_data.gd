@@ -15,6 +15,9 @@ extends Resource
 @export var weather: StringName = &"none"
 ## Id del JSON de data/encounters/ (sin extensión). Vacío = sin encuentros.
 @export var encounter_table: StringName
+## Probabilidad de encuentro por paso en hierba alta. 0 = la de data/world.json
+## (encounters.step_chance).
+@export_range(0.0, 1.0, 0.01) var encounter_rate := 0.0
 @export var battle_background: StringName
 @export var region_map_position: Vector2i
 @export var can_fly_from := true

@@ -1,0 +1,29 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="1_npc"]
+[ext_resource type="Script" path="res://src/overworld/character_sprite.gd" id="2_sprite"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/placeholder/npc_man.png" id="3_sheet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(14, 14)
+
+[node name="NPC" type="Node2D"]
+script = ExtResource("1_npc")
+sprite_sheet = ExtResource("3_sheet")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("3_sheet")
+hframes = 4
+vframes = 4
+script = ExtResource("2_sprite")
+
+[node name="Body" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+shape = SubResource("RectangleShape2D_body")
+
+[node name="RayCast" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+collision_mask = 11
