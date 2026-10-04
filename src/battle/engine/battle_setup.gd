@@ -19,6 +19,9 @@ var player_trainer_id: int = 0
 ## Entrenadores rivales (vacío en combates salvajes). Ver contratos.md §8.5.
 var trainers: Array[Dictionary] = []
 var can_lose: bool = false
+## Reglas Locke de RandomLocke (Fase R.7): un debilitado del jugador muere (evento pokemon_died)
+## y no se puede revivir.
+var locke_rules: bool = false
 var can_run: bool = true
 var allow_items: bool = true
 var exp_enabled: bool = true
@@ -123,12 +126,14 @@ func fill_from_game_state() -> void:
 		dex_caught_count = dex.caught_count()
 	time_period = Clock.period()
 	exp_share = bool(DataDB.rule(&"exp_share", true))
+	if GameState.is_randomlocke():
+		locke_rules = bool((GameState.randomlocke.get("settings", {}) as Dictionary).get("locke_rules", true))
 
 
-## options: can_lose, can_run, allow_items, exp_enabled, exp_share, background, bgm, weather,
+## options: can_lose, can_run, allow_items, exp_enabled, exp_share, locke_rules, background, bgm, weather,
 ## environment, time_period, seed, ai_level.
 func apply_options(options: Dictionary) -> void:
-	for key: String in ["can_lose", "can_run", "allow_items", "exp_enabled", "exp_share"]:
+	for key: String in ["can_lose", "can_run", "allow_items", "exp_enabled", "exp_share", "locke_rules"]:
 		if options.has(key):
 			set(key, bool(options[key]))
 	for key: String in ["background", "bgm", "weather", "environment", "time_period"]:

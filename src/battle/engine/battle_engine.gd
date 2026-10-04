@@ -122,7 +122,7 @@ func can_use_item(item_id: StringName, party_index: int = -1) -> bool:
 			return not p.is_fainted() and (String(p.status) in statuses \
 				or (bool(it.param("confusion", false)) and on_field != null and on_field.has_volatile(&"confusion")))
 		&"revive":
-			return p.is_fainted()
+			return p.is_fainted() and not setup.locke_rules
 		&"restore_pp":
 			for slot: MoveSlot in p.moves:
 				if slot.pp < slot.max_pp():
@@ -352,11 +352,26 @@ func _process_faints() -> void:
 	for b: Battler in _pending_faints:
 		_emit(BattleEvent.FAINT, b.side, b.slot, {"party_index": b.party_index})
 		_msg(tr("¡%s se debilitó!") % BattleText.cap_name(b, setup.is_wild()))
+		if b.side == PLAYER and setup.locke_rules:
+			_record_death(b)
 		if b.side == FOE:
 			steps.append(_step_award_exp.bind(b.pokemon))
 	_pending_faints.clear()
 	steps.append(_step_check_end)
 	_push_front(steps)
+
+
+func _record_death(b: Battler) -> void:
+	var foe := active(FOE)
+	var death := {
+		"party_index": b.party_index, "uid": b.pokemon.uid, "species": String(b.pokemon.species_id),
+		"name": b.pokemon.display_name(), "level": b.pokemon.level,
+		"foe_species": String(foe.pokemon.species_id) if foe else "", "foe_name": foe.pokemon.display_name() if foe else "",
+		"trainer": _trainer_name(), "turn": turn,
+	}
+	result.deaths.append(death)
+	_emit(BattleEvent.POKEMON_DIED, b.side, b.slot, death)
+	_msg(tr("%s ha caído para siempre...") % b.pokemon.display_name(), "death")
 
 
 func _step_check_end() -> void:

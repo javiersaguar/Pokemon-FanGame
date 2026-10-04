@@ -11,6 +11,8 @@ const DAMAGE := &"damage"
 const HEAL := &"heal"
 const MISS := &"miss"
 const FAINT := &"faint"
+## Reglas Locke: un Pokémon del jugador ha muerto (va justo después de su `faint`).
+const POKEMON_DIED := &"pokemon_died"
 const STATUS := &"status"
 const CANT_MOVE := &"cant_move"
 const VOLATILE := &"volatile"

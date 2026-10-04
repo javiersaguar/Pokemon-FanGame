@@ -41,3 +41,9 @@ static func bool_dict(values: Variant) -> Dictionary[StringName, bool]:
 		for k: Variant in values:
 			out[StringName(str(k))] = bool(values[k])
 	return out
+
+
+## Ordena alfabéticamente (en el sitio). Ojo: Array.sort() con StringName NO ordena por texto
+## (compara punteros), así que el orden cambiaría entre ejecuciones.
+static func sort_names(values: Array) -> void:
+	values.sort_custom(func(a: Variant, b: Variant) -> bool: return String(a) < String(b))

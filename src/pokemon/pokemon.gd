@@ -75,7 +75,7 @@ static func create(id: StringName, at_level: int, rng: RandomNumberGenerator = n
 		p.ivs[stat] = rng.randi_range(0, MAX_IV)
 		p.evs[stat] = 0
 	var natures := DataDB.nature_ids()
-	natures.sort()
+	DataUtil.sort_names(natures)
 	p.nature = natures[rng.randi_range(0, natures.size() - 1)]
 	if s.is_genderless():
 		p.gender = GENDERLESS
