@@ -93,6 +93,8 @@ Mientras tanto, lógica sin pantallas nuevas: API de cinemáticas y entidades de
 
 **Bloqueos:** ninguno.
 
+**Aviso para todos:** en Godot 4.7, `Array.sort()` con `StringName` **no** ordena por texto (compara punteros: `[&"zeta", &"alpha"]` puede quedar en cualquier orden y cambia entre ejecuciones). Si el orden importa (semillas, guardado, listas que ve el jugador), usad `DataUtil.sort_names(array)` o `sort_custom` con `String(a) < String(b)`.
+
 **Decisiones de Javier ya tomadas (para el GDD):** evoluciones por intercambio → nivel fijo o subir de nivel con el objeto equipado; experiencia → fórmula escalada de la 7.ª generación en adelante (sin bonus por combate de entrenador).
 
 ---
