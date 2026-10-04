@@ -22,9 +22,9 @@ Interfaces públicas entre las partes del juego. Cada sección la define y manti
 - **Textos visibles en español.** Los textos de la interfaz pasan por `tr()`.
 - **Ningún dato de juego en un `.gd`**: potencias, niveles, precios y similares van en `data/`.
 - **Leer JSON**: `JsonFile.read(path) -> Variant` y `JsonFile.read_dict(path) -> Dictionary` (`src/util/json_file.gd`). Dan errores claros con la ruta y la línea.
-- **Resolución base 320×180** (escalado entero, filtro Nearest). Las interfaces se diseñan a esa resolución.
+- **Resolución base 512×384** (decisión de Javier, Fase 3.2; escalado entero y filtro Nearest). **El mundo se ve a ×2**: el arte se dibuja con casillas de 16 px y la cámara del jugador tiene `zoom = 2` (16×12 casillas en pantalla). **La UI no tiene zoom**: las `CanvasLayer` se diseñan a 512×384 nativo. Las posiciones del mundo van en píxeles enteros del arte (`Character` redondea al moverse). Fondo por defecto negro.
 - **Casillas de 16 px.** Las entidades del mapa se colocan en el **centro** de su casilla: `Grid.to_world(tile) -> Vector2`, `Grid.to_tile(pos) -> Vector2i`, `Grid.TILE` (`src/overworld/grid.gd`).
-- **Direcciones**: `Vector2i.UP/DOWN/LEFT/RIGHT` en código; `"up"`, `"down"`, `"left"` y `"right"` en JSON y en el guardado (`GameState.dir_name()` / `GameState.dir_from_name()`).
+- **Direcciones**: `Vector2i.UP/DOWN/LEFT/RIGHT` en código; `"up"`, `"down"`, `"left"` y `"right"` en JSON y en el guardado (`Grid.dir_name()` / `Grid.dir_from_name()`, estáticas; `GameState` tiene las mismas como métodos).
 - **Id de mapa** = ruta de la escena dentro de `maps/` sin `.tscn`: `maps/pueblo_inicial/exterior.tscn` → `&"pueblo_inicial/exterior"`.
 
 ### Capas
@@ -34,7 +34,7 @@ Interfaces públicas entre las partes del juego. Cada sección la define y manti
 | `Main/World` | 0 | Mapa actual y jugador (Node2D) |
 | `Main/Battle` | 10 | Escena de combate |
 | `Main/UI` | 20 | Menús (pila de `SceneManager`) |
-| Dialogue (propuesta) | 30 | Cuadro de texto |
+| Dialogue | 30 | Cuadro de texto (Agente 3) |
 | `Main/Transition` | 50 | Fundidos (`Transition/Fade`) y transiciones |
 | Debug | 100 | Menú de depuración |
 
@@ -150,7 +150,7 @@ GameState.add_badge(id) -> void
 GameState.set_healing_spot(map_id, spawn_id) -> void
 GameState.lock_input(reason) / unlock_input(reason) / is_input_locked_by(reason) / clear_input_locks()
 GameState.to_dict() -> Dictionary / from_dict(data) -> void
-GameState.dir_name(dir: Vector2i) -> String / dir_from_name(text) -> Vector2i   # estáticas
+GameState.dir_name(dir: Vector2i) -> String / dir_from_name(text) -> Vector2i   # = Grid.dir_name() / Grid.dir_from_name()
 ```
 
 ### Módulos de otros agentes (`party`, `pc`, `pokedex`, `bag`)
@@ -395,7 +395,7 @@ func _on_interact(player: Player) -> void   # virtual: por defecto dice `lines`
 
 Para un NPC con comportamiento propio: script `@tool` que hereda de `NPC` y sobrescribe `_on_interact()` (ejemplo: `maps/test/test_battle_npc.gd`).
 
-**ItemBall**: `item_id: StringName`, `quantity: int`, `hidden_item: bool`. Al cogerlo activa `item_taken:<map_id>:<nombre del nodo>`, llama a `GameState.bag.add(item_id, quantity)` si la mochila existe, suena el ME `item_get` y muestra el mensaje con el nombre de `DataDB.item(item_id).name` (o el id, si no existe).
+**ItemBall**: `item_id: StringName`, `quantity: int`, `hidden_item: bool`. Su **id de colocación** es `<map_id>/<nombre del nodo>` (`placement_id()`): por la regla R.2, el objeto que da es `DataDB.placed_item(placement_id, item_id)` si DataDB lo tiene (en RandomLocke puede ser otro) y, si no, `item_id`. Al cogerlo activa `item_taken:<map_id>:<nombre del nodo>`, llama a `GameState.bag.add(objeto, quantity)` si la mochila existe, suena el ME `item` y muestra "¡{player} ha encontrado {item}!" con el nombre (o el plural) de `DataDB.item()`.
 
 **MapSign**: `lines`, `only_from_below := true` y `show_sprite := true`.
 
@@ -415,11 +415,11 @@ Un nodo del mapa (NPC, cartel, Warp...) **se libera al cambiar de mapa** y sus c
 ### Encuentros salvajes
 
 - Solo en casillas con `encounter = true` y en mapas con `data.encounter_table`.
-- Probabilidad por paso: `data.encounter_rate` o, si es 0, `data/world.json` → `encounters.step_chance` (0,1).
-- Tabla `data/encounters/<encounter_table>.json` (formato del Agente 3). Se lee el de la guía (5.7): `{"land": {"day": [{"species", "min", "max", "weight"}], "night": [...]}, "water": [...]}`. Cada sección puede ser una lista o un diccionario por momento del día (`morning`, `day`, `evening`, `night`); si falta el momento exacto, se usa `day` o `night`.
-- Repelente: la var `repel_steps` de GameState (pasos que quedan). Mientras dure, no salen Pokémon de nivel menor que `GameState.party.lead_level()`. Al gastarse emite `EventBus.repel_wore_off`. El objeto que la activa es cosa del Agente 3.
+- Probabilidad por paso: `data.encounter_rate` del mapa si es > 0; si no, `land_rate` (%) de la tabla; si no, `data/world.json` → `encounters.step_chance` (0,1).
+- Tabla `DataDB.encounter_table(<encounter_table>)` (= `data/encounters/<id>.json`, formato del §9.7; en RandomLocke, la parcheada). Cada sección es una lista o un diccionario por momento del día; si falta el momento, se usa `day`.
+- Repelente: la var `repel_steps` de GameState (pasos que quedan). Mientras dure, no salen Pokémon de nivel menor que `GameState.party.first_able_level()`. Al gastarse emite `EventBus.repel_wore_off`. El objeto que la activa es cosa del Agente 3.
 - El combate se crea con `BattleSetup.wild(species, level)` si esa clase existe (Agente 2). Si no, con `{"kind": "wild", "species", "level", "can_lose": false}`.
-- `Debug.encounters_disabled` los desactiva. API: `WildEncounters.roll(map, tile)`, `pick(table_id, kind, period)`, `make_setup(wild)` y `clear_cache()`.
+- `Debug.encounters_disabled` los desactiva. API: `WildEncounters.roll(map, tile, kind := &"land")`, `pick(table_id, kind, period)`, `pick_from(table, kind, period)`, `slots(table, kind, period)`, `step_chance(map, table, kind)` y `make_setup(wild)`; `WildEncounters.rng` es su `RandomNumberGenerator`.
 
 ---
 
