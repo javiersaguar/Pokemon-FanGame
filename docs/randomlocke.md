@@ -111,7 +111,7 @@ La primera aparición elegible consume zona **antes** de capturar. Se mantiene p
 
 Muerte idempotente por uid, lápida con mote/especie/nivel/zona/rival/contexto y epitafio determinista de `epitafios.json`. El motor puro **no retira** el Pokémon del equipo: A1/A2 deben sacarlo a Cementerio, impedir curación/revivir/usarlo y evitar EXP. PC suministrado a game over es plano, sin Cementerio ni huevos. No se termina una partida nueva antes del inicial; si permadeath está desactivada, un equipo debilitado puede curarse. Ranura finished no puede continuar ni capturar, pero se puede consultar.
 
-`level_cap/can_gain_exp`, `battle_mode` y `can_use_item` exponen restricciones para A2. Congelar EXP significa limitar el premio para no superar cap (no basta bloquear después de saltárselo). El límite de objetos es por combate, contabiliza usos exitosos y no lanzamientos de Balls según decisión de contenido pendiente del motor de combate. `snapshot` expone zonas available/pending/caught/lost, capturas, muertes, Cementerio, estado y reglas para pantallas A3.
+`level_cap/can_gain_exp`, `battle_mode` y `can_use_item` exponen restricciones para A2. Congelar EXP significa limitar el premio para no superar cap (no basta bloquear después de saltárselo). El límite de objetos es por combate, contabiliza usos exitosos. El tratamiento de las Balls en ese límite queda pendiente de decisión de contenido; la UI/motor deben conservar la posibilidad de capturar. `snapshot` expone zonas available/pending/caught/lost, capturas, muertes, Cementerio, estado y reglas para pantallas A3.
 
 ## Integración y compatibilidad
 

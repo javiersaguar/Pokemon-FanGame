@@ -184,13 +184,21 @@ Después: eventos de la historia del MVP (intro del profesor, laboratorio y riva
 
 ## Agente 4 — Motor del RandomLocke
 
-**En qué estoy:** sincronización con main compartido y validación de suite completa antes de merge/push; continuación del traspaso A2 en `feat/agente4-randomizer`, worktree `/home/javier/proyectos/pokemon-panchito-agente4`, repo compartido `/home/javier/proyectos/pokemon-panchito`. DIRECTRICES, guía y traspaso leídos. Clon inicial Windows apartado; no se integra su implementación nueva.
+**En qué estoy:** motor v0.2 terminado y validado para entrega en `main`, con push inmediato a GitHub. Worktree propio `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-randomizer`, repo compartido `/home/javier/proyectos/pokemon-panchito`. El clon Windows inicial quedó apartado; no se integró su implementación nueva.
 
-**Terminado:** motor completo con 37 tests verdes (666 aserciones), 200 semillas por preset y suite lenta de 1000 por preset (3000 generaciones, 491 aserciones, 37,1 s), dorado fixture v2 estricto y dorado real v2. Caos con datos reales: 0,94 s. Importación Godot limpia. Contrato §10 v2 publicado antes del código. Se conserva API y algoritmos A2 y dorado v1. Nuevas APIs puras y versión 2 por RNG por módulo/validación. Godot 4.7.2 comprobado. Javier decide cualquier especie, salvo exclusiones elegidas y viabilidad técnica de formas.
+**Terminado (2026-10-04):**
+- DIRECTRICES, guía y traspaso A2 leídos; se conserva API/algoritmos válidos y el dorado v1. Cualquier especie elegible, sin limitación a Pokédex ni sprites del MVP, por decisión de Javier.
+- §10 v2: entrada JSON independiente y adaptador DataDB, ajustes/presets/prohibidos, formato de parche y semilla, APIs e integración. A2 acepta semántica de apply_patch; sin objeciones registradas al contrato nuevo.
+- Randomizer puro de entrada explícita: RNG SHA-256 por módulo/ID, orden textual, flags randomize:false en tablas/slots/campos, balance estricto sin relajación silenciosa, iniciales/rival/líder/as, salvajes por zona/global/caos, historia, movimientos/STAB, MT/tutores, habilidades, tipos, estadísticas, evoluciones, objetos colocados/equipados y tiendas.
+- RomPatch con input_hash/JSON canónico/errores serializados, RomValidator (R.4/progreso/referencias/ciclos/equilibrio), SeedCode v2 con todos los ajustes y versiones, SpoilerLog puro en español.
+- LockeRules: primera captura, duplicados por línea parcheada, shiny, regalos/estáticos/intercambios, mote, Cementerio y epitafios, EXP cap/fijo/objetos/game over, estado inmutable y snapshot JSON.
+- Fixture propio de 40 especies y dorado v2 estricto, sin depender de DataDB. Tests de módulos, corrupción, flags, ida/vuelta, equilibrio y cada regla Locke. Suite normal: 200 semillas por preset; lenta: 1000 por preset (3000 ROM válidas, 16 tests, 491 aserciones, 37,1 s).
+- **Suite completa tras rebase al main compartido: 194/194 tests, 3051 aserciones, 42,5 s**. Importación limpia con Godot **4.7.2-stable** tras importar todos los sprites. RandomLocke: 37/37 tests; Caos real: ~0,94 s (antes del rebase; prueba de tiempo también pasa en suite completa).
+- `docs/randomlocke.md`: todos los ajustes, presets, semillas, migración y llamadas para A1/A2/A3. Commits de Javier Saguar, hook activo.
 
-**Cambios necesarios:** A2 leía DataDB/JSON, compartía RNG, relajaba fuerza/nivel/repetidos y faltaba randomize:false. Se corrige para Fase R. MT/tutores, objetos equipados, validador de progreso y LockeRules implementados y probados.
+**Cambios necesarios respecto a A2:** aislar RNG, sacar lectura de DataDB/JSON del hilo, completar módulos faltantes y validación/protecciones. Generador v2 evita reinterpretar códigos v1; partidas antiguas conservan su parche. La excepción STAB Siniestro ≤60 y defaults siguen PENDIENTE JAVIER (preguntas 15–16), no se presentan como decisiones definitivas.
 
-**Bloqueos:** ninguno del motor. A2 acepta semántica apply_patch; integración mundo/UI pendiente. Merge con import y suite en verde, push inmediato.
+**Bloqueos:** ninguno del motor. **Integración aún pendiente** en carpetas ajenas: A2 apply_patch/input/MT/tutores/held_items/shiny y reglas individuales del combate; A1 zone_id/llamadas Locke/Cementerio; A3 pantallas R.8. Peticiones **22–25** abiertas. Esta entrega es del motor sin interfaz, hito v0.2; no afirma que el flujo jugable R.8/R.9 esté cerrado.
 
 ---
 
@@ -271,3 +279,4 @@ Después: eventos de la historia del MVP (intro del profesor, laboratorio y riva
 | 2026-10-04 | A2 | Sprites de Pokémon: nuevas carpetas `icons_shiny/`, `followers/` y `followers_shiny/` (petición 18) y variantes `<id>_female.png`; tamaños del Generation 9 Pack (192/288/128×64/256). `data/species_in_use.json` (nuevo) define, con la Pokédex regional, qué especies usa el juego. |
 | 2026-10-04 | A2 | §8.5: eventos `weather`, `terrain` y `side_condition`; `BattleRequest.reason` (`uturn`, `batonpass`); acciones obligadas sin petición (dos turnos, bloqueos, recarga); `can_switch`/`can_run` falsos si está atrapado. §8.7 nuevo: sistema de efectos (`BattleEffect`, `Effects`, hooks y API del motor). `DamageCalc.calculate(..., opts)`. |
 | 2026-10-04 | A4 | §10 v2 continúa traspaso §8.6: entrada pura, aislamiento RNG/versión 2; conserva API/patch A2 y dorado v1. Peticiones 22–25. |
+| 2026-10-04 | A4 | Entrega §10 implementado y docs/randomlocke.md: 194 tests verdes tras rebase, 3000 semillas válidas; motor v2 conserva formato species/API A2. Datos nuevos en data/randomizer/, raíz anterior conservada; peticiones de integración 22–25. |
