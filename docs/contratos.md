@@ -706,7 +706,7 @@ AudioManager.get_volume(bus: StringName) -> float
 
 ### 9.3 Escenas que usa SceneManager
 
-Se aceptan las rutas de la sección 4:
+Se aceptan las rutas de la sección 4.
 
 | Escena | Contrato |
 |--------|----------|
@@ -714,12 +714,31 @@ Se aceptan las rutas de la sección 4:
 | `res://src/ui/title/title_screen.tscn` | Llama a `SceneManager.start_new_game()` o `SceneManager.continue_game(slot)` |
 | `res://src/ui/pause_menu/pause_menu.tscn` | Menú de la pila de `SceneManager` |
 
+#### BattleScene ↔ combate: `BattleDriver`
+
+La BattleScene habla con un `BattleDriver` (`src/battle/scene/battle_driver.gd`, documentado en el propio archivo), que sigue el flujo de §8.5: `start()` → mientras no acabe, `request()` → acción del jugador → `submit(action)`. Los eventos son **los `BattleEvent` de §8.5 tal cual** (`type`, `side`, `slot`, `data`); la escena ignora los tipos que no conoce. Hoy lo implementa `FakeBattle` (`src/battle/scene/dev/`, combate de mentira con eventos del mismo formato y sin tocar la partida); cuando llegue el `BattleEngine`, un adaptador fino (Agente 3) traducirá `BattleRequest` / `BattleAction` y llamará a `result.apply_to_game_state()` en `finish()`.
+
+```gdscript
+driver.info() -> Dictionary        # {kind: &"wild"/&"trainer", trainers (como BattleSetup.trainers), background, bgm, can_run, can_lose}
+driver.start() -> Array            # BattleEvent hasta la primera decisión
+driver.request() -> Dictionary     # {kind: &"action" | &"switch" | &"learn_move", party_index, move_id, move_name, can_run}
+driver.submit(action) -> Array     # {type: &"fight", move_slot} · {&"item", item} · {&"switch", party_index} · {&"run"} · {&"learn_move", forget_index}
+driver.is_over() -> bool / outcome() -> StringName / finish()   # finish() = aplicar el resultado a la partida
+driver.player_active() -> Dictionary / player_party() -> Array[Dictionary] / battle_items() -> Array[Dictionary]   # para los menús
+```
+
+**Quién pone cada texto**: el motor manda los de mecánicas en eventos `message` (`¡X usó Y!`, `¡Es muy eficaz!`, `¡Has derrotado a...!`...) y el `lose_text` / `win_text` en `trainer_speech`. La escena solo pone los de presentación: `¡Un X salvaje apareció!`, `¡<Clase> <Nombre> te desafía!`, `¡<Entrenador> sacó a X!`, `¡Adelante, X!`, `¡X, vuelve!`, `¿Qué debería hacer X?` y `¡{player} está fuera de combate!` (derrota que no se puede perder).
+
+- La música de victoria empieza al debilitarse el último Pokémon del rival (si en esa tanda llega `end` con `win`).
+- `BattleScene.fast = true` quita animaciones y esperas (tests).
+- Sprites: `assets/sprites/pokemon/<front|back>[_shiny]/<especie>.png`, `assets/sprites/trainers/player_back_<male|female>.png` y fondos `assets/sprites/ui/battle/bg_<entorno>.png`. Si faltan, se generan provisionales (`PlaceholderArt`).
+
 ### 9.4 Interfaz común
 
 - **Theme global**: `res://src/ui/theme/main_theme.tres` (fuente, colores y marcos). Se pide al Agente 1 en `project.godot` → `gui/theme/custom`.
 - **Fuentes**: Pixel Operator (CC0) en `assets/fonts/`, sin antialiasing: tamaño **16** para el texto normal (es el del Theme) y `PixelOperator8.ttf` a tamaño **8** para textos pequeños. Tiene ñ, tildes, ü, ¿, ¡, «», € y …; **no** tiene º, ª, ♂ ni ♀ (se dibujan como iconos).
 - **Variaciones del Theme**: `SmallLabel` (8 px), `LightLabel` y `SmallLightLabel` (texto claro sobre fondo oscuro), `SmallFrame` (marco con menos margen). `Panel` y `PanelContainer` usan el marco estándar.
-- **Widgets**: `CursorArrow` (`src/ui/widgets/cursor_arrow.gd`, flecha de menú o de "continuar"), `DialogueBox` (`src/ui/dialogue/dialogue_box.tscn`, cuadro de texto reutilizable: `await play(text, speaker_name, wait_last)`) y `ChoiceBox` (`src/ui/dialogue/choice_box.tscn`, lista de opciones: `await choose(options, cancel_choice) -> int`).
+- **Widgets**: `GridMenu` (`src/ui/widgets/grid_menu.gd`, menú en rejilla o lista con cursor, opciones desactivadas y `await choose(start, allow_cancel) -> int`), `CursorArrow` (`src/ui/widgets/cursor_arrow.gd`, flecha de menú o de "continuar"), `DialogueBox` (`src/ui/dialogue/dialogue_box.tscn`, cuadro de texto reutilizable: `await play(text, speaker_name, wait_last)`) y `ChoiceBox` (`src/ui/dialogue/choice_box.tscn`, lista de opciones: `await choose(options, cancel_choice) -> int`).
 - Pantallas de uso común **(previsto)**:
 
 ```gdscript
@@ -808,7 +827,7 @@ Bag.items_in_pocket(pocket: StringName) -> Array[StringName]   # bolsillos: camp
 - El id de un entrenador es **único en todo el juego**, no solo en su archivo.
 - Al ganarle: flag `trainer_defeated:<id>` (lo pone `TrainerNPC` o el evento que lanza el combate).
 - Rivales del laboratorio: `rival_lab_1` / `_2` / `_3` según la variable `starter` (1 Planta, 2 Fuego, 3 Agua).
-- Lectura **(previsto)**: `TrainerData.get_trainer(id) -> Dictionary` y `TrainerData.get_class(id) -> Dictionary` (`src/overworld/trainers/trainer_data.gd`), con el entrenador ya combinado con su clase. Si el Agente 2 prefiere cargarlos en `DataDB`, se cambia.
+- Lectura: `TrainerData.get_trainer(id) -> Dictionary` (el entrenador combinado con su clase: `display_name`, `class_name`, `gender`, `battle_sprite`, `overworld_sprite`, `intro_bgm`, `battle_bgm`, `ai_level`, `base_money`), `TrainerData.get_trainer_class(id)` y `TrainerData.exists(id)` (`src/overworld/trainers/trainer_data.gd`). `DataDB` también carga estos archivos tal cual.
 
 **TrainerNPC** **(previsto)**: `src/overworld/trainers/trainer_npc.tscn`, hereda de `NPC` (sección 5). Exports: `trainer_id: StringName`, `sight_range := 4`, `partner: NodePath` (pareja para combate doble).
 

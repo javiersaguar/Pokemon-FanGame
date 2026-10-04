@@ -23,6 +23,7 @@ var _typed := 0.0
 var _typing_end := 0
 ## Frame en el que el cuadro empezó a esperar input: la pulsación que lo abrió no cuenta.
 var _active_frame := -1
+var _default_text_width := 0.0
 
 @onready var _frame: Control = $Frame
 @onready var _label: RichTextLabel = $Frame/Text
@@ -32,6 +33,7 @@ var _active_frame := -1
 
 
 func _ready() -> void:
+	_default_text_width = _label.size.x
 	set_process(false)
 	clear()
 
@@ -94,6 +96,12 @@ func set_speaker(speaker_name: String) -> void:
 	_name_plate.visible = speaker_name != ""
 	_name_plate.reset_size()
 	_name_plate.position.y = _frame.position.y - _name_plate.size.y + NAME_PLATE_OVERLAP
+
+
+## Ancho del texto en píxeles (el combate lo estrecha para dejar sitio al menú).
+## Negativo = el ancho normal del cuadro.
+func set_text_width(width: float) -> void:
+	_label.size.x = _default_text_width if width < 0.0 else width
 
 
 func clear() -> void:
