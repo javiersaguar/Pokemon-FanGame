@@ -877,7 +877,9 @@ BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 
 **Debug** (Agente 2): `givepkmn <especie> [nivel] [shiny]`, `forceshiny [on|off]`, `heal`, `party`, `setlevel <posición> <nivel>`, `wildbattle <especie> [nivel]`, `trainerbattle <id>` y `dex [all]`.
 
-### 8.6 RandomLocke: motor de aleatorización (`src/randomizer/`)
+### 8.6 RandomLocke: motor de aleatorización (`src/randomizer/`) — traspasado al Agente 4
+
+> **Desde 2026-10-04, `src/randomizer/` y `tests/randomizer/` son del Agente 4** (DIRECTRICES §2 y §6). Lo que sigue es la API tal como la entregó el Agente 2; manda la sección 10 en cuanto el Agente 4 la publique. El Agente 2 conserva `DataDB.apply_patch()` / `clear_patch()` (§8.2) y el evento `pokemon_died` del motor.
 
 Lógica **pura y determinista** (como el motor de combate): no toca `DataDB` ni nodos, así que se puede llamar desde `WorkerThreadPool` para la pantalla "Generando la ROM...". Misma semilla + mismos ajustes + misma versión = **la misma ROM**, byte a byte.
 
@@ -1145,3 +1147,9 @@ Formato de la guía (Fase 5.7) con dos añadidos:
 - Se venden los objetos de todos los tramos con `badges` ≤ medallas del jugador.
 - Precio de compra: `prices[id]` si existe; si no, el `price` del objeto en DataDB. Precio de venta: `floor(precio × sell_ratio)`.
 - Se abre con `await ShopScreen.open(&"tienda_ciudad2")` **(previsto)**.
+
+---
+
+## 10. RandomLocke (Agente 4) — POR DEFINIR
+
+> Sección del Agente 4: `Randomizer`, `RomPatch`, ajustes y presets, códigos de semilla, `RomValidator` y `LockeRules`. Incluye también lo que el Agente 4 necesita de `DataDB` (Agente 2), de `GameState` y `SaveManager` (Agente 1) y de la UI (Agente 3).

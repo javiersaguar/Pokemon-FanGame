@@ -118,20 +118,21 @@ Dónde se va el tiempo, aproximadamente:
 - [ ] **Luz**: siempre desde arriba a la izquierda, en todo el juego.
 - [ ] **Contornos**: en personajes, objetos y Pokémon propios, un contorno oscuro **del color del objeto** (*sel-out*), nunca negro puro. En los tiles de suelo no hay contorno.
 - [ ] **Reglas de píxel**: el mundo, los personajes y los Pokémon se ven siempre a **×2 exacto** (Fase 3.2), y la UI a ×2 con detalle a ×1 solo donde lo diga la biblia. Sin escalados no enteros, sin rotar pixel art, sin antialiasing automático y sin desenfoques. Dentro de una misma capa no se mezclan escalas.
-- [ ] **Tamaños canónicos** (cada tipo de asset tiene un único lienzo):
+- [ ] **Tamaños canónicos** (cada tipo de asset tiene un único lienzo). Son los **tamaños de archivo tal como vienen en los packs** (`docs/arte/recursos_terceros.md`), ya preparados para 512×384, y **se usan sin reescalar**. El arte propio se dibuja a la mitad (a 16 px por casilla) y se exporta a ×2 con vecino más próximo para que encaje.
 
-| Asset | Lienzo | Notas |
-|-------|--------|-------|
-| Tile | 16×16 | Autotiles con todas las variantes del terrain set |
-| Personaje en el mapa | 32×32 por frame | 4 direcciones × 4 frames; variantes de correr, bici, surf y pesca |
-| Pokémon en combate | 96×96 (se ve a 192×192) | Frente y espalda, **normal y shiny con los colores shiny oficiales**. Animados si el set lo permite. **Un mismo set para todas las especies** |
-| Icono de Pokémon | 32×32 | 2 frames (animación del menú), también en versión shiny |
-| Pokémon que te sigue | 32×32 o 64×64 | Según el tamaño de la especie, **también en versión shiny** |
+| Asset | Tamaño del archivo | Notas |
+|-------|--------------------|-------|
+| Tile | 32×32 | Autotiles con todas las variantes del terrain set |
+| Personaje en el mapa | Hoja de 256×256 = 4×4 cuadros de 64×64 | 4 direcciones × 4 frames; variantes de correr, bici, surf y pesca |
+| Pokémon de frente | 192×192 | Normal y **shiny con los colores oficiales**, y variante hembra donde exista. **Un mismo set para todas las especies** (Generation 9 Pack) |
+| Pokémon de espalda | 288×288 | Igual que el frente. Se ve más grande a propósito, para dar perspectiva (como en Essentials y Añil) |
+| Icono de Pokémon | 128×64 = 2 cuadros de 64×64 | Animación del menú, también en versión shiny |
+| Pokémon que te sigue | Hoja de 256×256 = 4×4 cuadros de 64×64 | **También en versión shiny** |
 | Entrenador en combate | Un lienzo fijo para todos (defínelo en la biblia) | Clases Panchito incluidas |
-| Objeto | 24×24 | |
-| Iconos de tipo, estado y categoría | Definir en la biblia | Mismo grosor de borde y tipografía |
-| Fondo de combate | 256×192 (se ve a 512×384) + bases | Versiones de día y de noche si el lugar es exterior |
-| Retrato de diálogo | Definir (por ejemplo, 64×64) | Solo personajes importantes |
+| Objeto | El del pack de objetos (defínelo en la biblia) | |
+| Iconos de tipo, estado y categoría | Los del pack Loaky (en español) | Mismo grosor de borde y tipografía |
+| Fondo de combate | Según el pack de fondos (pensado para 512×384) + bases | Versiones de día y de noche si el lugar es exterior |
+| Retrato de diálogo | Definir en la biblia | Solo personajes importantes |
 
 - [ ] **Tipografía**: 1–2 fuentes pixel como mucho, con tamaños fijos, y que tengan ñ, tildes y ¿¡.
 - [ ] **Tokens de UI** (en el `Theme` de la Fase 15.1): colores con nombre, márgenes en múltiplos de 2 px, sombra de 1 px y estilos de panel (9-slice).
@@ -1582,8 +1583,9 @@ Después de generar, un validador comprueba la ROM. Si algo falla, se **regenera
 
 | Pieza | Agente |
 |-------|--------|
-| `Randomizer`, `RomPatch`, validador R.4, códigos de semilla R.5, tests R.6, `DataDB.apply_patch` y el evento `pokemon_died` del motor | **Agente 2** |
-| `GameState.mode` / `randomlocke`, guardado del parche con la ranura, `zone_id` y seguimiento de zonas, reglas Locke en el mundo (primera captura, regalos, game over), flujo de nueva partida en `SceneManager` y la regla R.2 en todos los eventos | **Agente 1** |
+| `Randomizer`, `RomPatch`, ajustes y presets, validador R.4, códigos de semilla R.5, registro de spoilers, tests R.6 y la **lógica pura de las reglas Locke** (`LockeRules`: zonas, primera captura, cláusulas, muertes, tope de nivel, game over) | **Agente 4** |
+| `DataDB.apply_patch()` / `clear_patch()` según el contrato del Agente 4, y el evento `pokemon_died` del motor de combate | **Agente 2** |
+| `GameState.mode` / `randomlocke`, guardado del parche con la ranura, `zone_id` en los mapas, **integración** de `LockeRules` en el mundo (primera captura, regalos, game over), flujo de nueva partida en `SceneManager` y la regla R.2 en todos los eventos | **Agente 1** |
 | Pantallas de R.8 (modo, ajustes, generación, resumen, indicadores, Cementerio, game over), marcadores de texto en `Dialogue`, `starters.json`, `gifts.json`, `statics.json` y `trades.json` | **Agente 3** |
 
 ✅ **Criterio de "hecho":** desde el menú inicial se crea una partida RandomLocke con un código, se genera la ROM en menos de 3 s, se juega hasta el primer gimnasio con las reglas Locke funcionando, y otra persona con el mismo código obtiene exactamente los mismos iniciales, encuentros y entrenadores.

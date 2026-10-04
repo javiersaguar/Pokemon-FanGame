@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-04, Javier):** 📦 **Recursos gráficos descargados y listos** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (fuera del repo). Índice en `docs/arte/recursos_terceros.md`; reglas de uso y escala en `docs/DIRECTRICES.md` §7.1. Set de Pokémon oficial: `06_generation9_pack` (generaciones 1–9, normales y shiny, con Pokémon que te siguen). **Se usan tal cual, sin reescalar.** Seguid con la prueba de nivel gráfico (§7).
+**Último aviso (2026-10-04, Javier):** 👋 **Se incorpora el Agente 4, dueño del motor del RandomLocke** (Fase R: generador de la ROM, `RomPatch`, códigos de semilla, validación y lógica pura de las reglas Locke). `src/randomizer/` y `tests/randomizer/` pasan del Agente 2 al Agente 4. El Agente 2 solo implementa `DataDB.apply_patch()` y `pokemon_died` según el contrato que publique el Agente 4 en `docs/contratos.md` §10. Reparto actualizado en `DIRECTRICES.md` §2 y §6 y en la Fase R.10. El Agente 4 trabaja con datos de prueba propios, así que **no bloquea a nadie** ni queda bloqueado.
+
+**Aviso anterior (2026-10-04, Javier):** 📦 **Recursos gráficos descargados y listos** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (fuera del repo). Índice en `docs/arte/recursos_terceros.md`; reglas de uso y escala en `docs/DIRECTRICES.md` §7.1. Set de Pokémon oficial: `06_generation9_pack` (generaciones 1–9, normales y shiny, con Pokémon que te siguen). **Se usan tal cual, sin reescalar.** Seguid con la prueba de nivel gráfico (§7).
 
 **Aviso anterior (2026-10-04, Javier):** 🚨 **Los gráficos actuales no valen: el mínimo es el nivel de Pokémon Añil.** Leed `docs/DIRECTRICES.md` §0, §7 y §8 **antes de seguir**:
 - Capturas de referencia en `docs/arte/referencias/` (combate, pueblo, datos del Pokémon y ruta).
@@ -35,6 +37,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 |--------|-----|-------------|
 | 1 | Mundo y arquitectura | `project.godot`, `src/autoload/` (salvo `data_db.gd`, `dialogue.gd` y `audio_manager.gd`), `src/overworld/` (salvo `src/overworld/trainers/`), `src/events/`, `src/main/`, `src/util/`, `maps/`, `assets/tilesets/`, `assets/sprites/characters/`, `data/world.json`, `docs/flags.md`, `docs/mapas/` |
 | 2 | Datos y motor de combate | `tools/`, `data/generated/`, `data/species_overrides.json`, `data/regional_dex.json`, `src/autoload/data_db.gd`, `src/pokemon/`, `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/` |
+| 4 | Motor del RandomLocke | `src/randomizer/`, `tests/randomizer/`, `data/randomizer/`, `docs/randomlocke.md` y la sección 10 de `docs/contratos.md` |
 | 3 | Presentación, UI y contenido Panchito | `src/ui/`, `src/battle/scene/`, `src/items/`, `src/overworld/trainers/`, `src/autoload/dialogue.gd`, `src/autoload/audio_manager.gd`, `data/trainer_classes.json`, `data/trainers/`, `data/items_panchito.json`, `data/shops.json`, `data/encounters/`, `assets/` (salvo `tilesets/` y `sprites/characters/`), `docs/entrenadores.md`, `docs/objetos_especiales.md` |
 
 - `src/main/`, `src/util/`, `data/world.json`, `docs/flags.md` y `docs/mapas/` no estaban en el reparto: los ha tomado el Agente 1 (arquitectura). Si alguien no está de acuerdo, que lo diga en "Peticiones".
@@ -79,14 +82,42 @@ Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) 
 
 **He leído** (2026-10-04, órdenes nuevas de Javier) `docs/DIRECTRICES.md` §0, §7, §7.1 y §8, las 4 capturas de `docs/arte/referencias/` y `docs/arte/recursos_terceros.md`. Entendido: el listón es Añil; prohibido el arte generado por código; los packs de `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` no se tocan y se copia al repo **solo lo que se usa, sin reescalar** (frente 192 px, espalda 288 px, iconos 128×64 = 2 cuadros de 64, Pokémon que te siguen 256×256 = 4×4 cuadros de 64), con su crédito en `CREDITOS.md`; set oficial: `06_generation9_pack` (y `07_generation8_pack` solo si falta algo). **No descargo nada de internet.**
 
-**Plan actualizado:**
-1. ✅ Importador `tools/sprites/import_pokemon_assets.mjs` (sustituye a la descarga de Showdown, que retiro junto con sus sprites): copia del pack 06 las especies que usa el juego (lista inicial en `data/species_in_use.json` + Pokédex regional + las que salen en los datos, con sus familias) a `assets/sprites/pokemon/{front,front_shiny,back,back_shiny,icons,icons_shiny,followers,followers_shiny}/<id>.png` y los gritos a `assets/audio/cries/<id>.ogg`.
-2. ✅ Validador: cada especie usada tiene todas sus versiones, normal y shiny (error si falta alguna; aviso si falta el grito).
-3. ✅ Shiny (Fase 6.7): ya hecho (1/4096 en `data/world.json` → `shiny`, que puso el Agente 1, tiradas del Amuleto Iris y Masuda, test sembrado con 1.000.000 de tiradas).
-4. ✅ Créditos del Generation 9 Pack (`Credits.txt`) en `CREDITOS.md` → «Pokémon: sprites, iconos, Pokémon que te siguen y gritos (Agente 2)».
-5. Después: Fase 9 del motor de combate y lo que falte del randomizer.
+**Repo compartido (WSL):** `/home/javier/proyectos/pokemon-panchito` (tiene el `.git` y el `main` local; de él salen los worktrees `pokemon-panchito-agente1`, `-agente2` y `-agente3`, en `/home/javier/proyectos/`). Mi worktree: `/home/javier/proyectos/pokemon-panchito-agente2`. **Desde 2026-10-04, quien mergea en el `main` local hace `git push origin main` en ese momento**: GitHub es la referencia común.
 
-**En qué estoy:** Fase 9 del motor de combate (sistema de efectos con hooks) y lo que falta del randomizer.
+**Plan (2026-10-04, órdenes de Javier):**
+1. ✅ Subir el trabajo a GitHub (merge de `origin/main`: Agente 4 y tamaños de la Fase A.2).
+2. ✅ Traspaso del randomizer al Agente 4 (abajo). Me quedo con `DataDB.apply_patch()` / `clear_patch()` según su contrato (§10) y con el evento `pokemon_died` del motor.
+3. ⏳ Sprites de **todas** las especies del pack 06 (`import_pokemon_assets.mjs --all`); los gritos se suben como archivos normales cuando el Agente 1 quite el audio de LFS en `.gitattributes`.
+4. Después: Fase 9 del motor de combate.
+
+**En qué estoy:** sprites de todas las especies (`feat/agente2-sprites-todas`).
+
+### Traspaso del randomizer al Agente 4
+
+`src/randomizer/` y `tests/randomizer/` son tuyos desde hoy (DIRECTRICES §2 y §6). He leído tu §10 v1 (rama `feat/agente4-randomlocke`): tu diseño (entrada `RandomizerInput` independiente de los autoloads, ajustes como diccionarios, 4 presets) sustituye al mío, así que lo que hay sirve de referencia y de banco de pruebas; reescríbelo o reutilízalo como prefieras.
+
+**Archivos que te dejo** (todo en `main`):
+- `src/randomizer/randomizer.gd` (generador), `randomizer_settings.gd` (ajustes y presets), `rom_patch.gd` (parche, JSON estable y spoilers), `rom_validator.gd` (validación R.4 y "especies en juego"), `seed_code.gd` (códigos).
+- `tests/randomizer/test_randomizer.gd` (11 tests) y `tests/randomizer/golden_clasico.json` (parche dorado).
+- `data/randomizer.json`: prohibidos (especies, movimientos y habilidades), topes de potencia por nivel, márgenes de nivel de las evoluciones, objetos garantizados en tiendas, etiquetas de legendario, intentos de validación y los presets `clasico`, `solo_aleatorio` y `caos`. Ahora es tuyo: muévelo a `data/randomizer/` si quieres (avísame para que el validador de datos no lo busque).
+
+**API actual** (`contratos.md` §8.6, marcada como traspasada): `Randomizer.generate(seed, settings: RandomizerSettings) -> RomPatch` (lee `DataDB` sin modificarlo; devuelve `null` si hay un parche aplicado); `RandomizerSettings.from_preset(id)`, `apply_dict()`, `to_dict()`, `to_bits()` / `from_bits()` (21 campos, 30 bits), `matches_preset()`; `RomPatch.create()`, `from_dict()`, `to_dict()`, `section()`, `to_json()` (claves ordenadas), `apply()`, `spoiler_text()`; `RomValidator.validate(patch) -> PackedStringArray`, más `species_in_play()`, `wild_species()`, `level_moves()`, `default_moves()`, `evolutions()`; `SeedCode.encode(seed, settings, version)` / `decode(code)` / `random_seed()`: `PANCHITO-XXXX-XXXX-XX` = 5 bits de versión + 3 de preset + 32 de semilla + 10 de comprobación; con ajustes personalizados (preset 7) se añade `-XXXXXX` con los 30 bits de ajustes (la misma idea que tu `-C`).
+
+**Tests:** códigos (preset, personalizado, no válidos y otra versión), misma semilla = misma ROM, parche dorado, robustez (100 semillas; 1000 con `PANCHITO_LONG_TESTS=1`, unos 170 s, todas válidas), reglas de equilibrio (triángulo de iniciales, primera etapa, sin legendarios tempranos, rival), STAB al nivel 1, aplicación a `DataDB` y vuelta atrás, spoilers y tiempo (< 3 s: ~0,2 s el clásico y ~0,9 s el caos). El test inyecta iniciales, regalos y estáticos de prueba en `DataDB` si no existen los JSON.
+
+**Parche dorado:** semilla `20261004`, preset `clasico`. Guarda una huella SHA-256 de todo lo que lee el generador (versión, fuentes, `data/randomizer.json`, encuentros, entrenadores, iniciales, regalos, estáticos, intercambios, colocaciones y Pokédex regional): si cambian los datos, el test queda *pending* en vez de fallar, y se rehace con `PANCHITO_UPDATE_GOLDEN=1`. Rehecho hoy tras `item_placements.json` del Agente 1.
+
+**Qué falta:** MT y tutores (aún no hay datos de MT), objetos equipados de los salvajes, `input_hash`, exportar los spoilers a `user://randomlocke/`, comprobar R.4 de objetos y movimientos necesarios para avanzar, temas de tipo por datos (`type_theme` / tu `leader_type`), `LockeRules` y la integración con el mundo y la UI.
+
+**Decisiones que tomé** (por si las mantienes):
+- Determinismo: siempre en orden de id con `DataUtil.sort_names()`. **Ojo: `Array.sort()` con `StringName` ordena por puntero, no por texto, y el orden cambia entre ejecuciones.** Subsemillas: `hash("%d:%d" % [seed, intento])`.
+- Iniciales en triángulo: `starter_2` gana a `starter_1`, `starter_3` a `starter_2` y `starter_1` a `starter_3`. El rival no se resuelve aparte: cada especie de la línea del inicial original se cambia por la de la misma etapa de la línea nueva, así que el rival sigue llevando el que te gana y evolucionando.
+- Al cambiar la especie de un entrenador se quitan `moves`, `ability` y `form`. No se repiten especies en un equipo.
+- Movimientos por nivel: se conservan los niveles y el número; el ataque con STAB garantizado va el último de su primer nivel (para que entre en sus 4 iniciales); en cada momento de la curva, los 4 últimos aprendidos incluyen uno de daño. Solo movimientos implementados (`needs_script` falso) por defecto.
+- Reservas: especies base con número > 0 y `nonstandard` vacío o `past` con learnset; legendario = etiquetas `restricted_legendary`, `sub_legendary` o `mythical`; sin legendarios por debajo del nivel 30 con `no_early_legendaries`.
+- Evoluciones aleatorias: destino con más total de estadísticas que el origen y dentro de la tolerancia del original (evita ciclos).
+
+**Lo que sigue siendo mío y respuesta a tus peticiones 7 y 8** (de tu rama): de acuerdo con la semántica de `apply_patch` del §10. Cuando tu contrato esté en `main`, adapto `DataDB`: `apply_patch(patch) -> Array[String]` atómico (valida referencias y hash antes; un error no toca el parche activo), consultas parcheadas también de tipos, estadísticas, evoluciones, objetos equipados, intercambios, colocaciones, tiendas y MT/tutores (cuando existan sus datos), sin volver a aplicar `species_map`, y `DataDB.randomizer_input() -> Dictionary` con el formato `RandomizerInput` (con `stage`, `min_level`, `max_level` y `family_id`). `pokemon_died` ya existe (`BattleSetup.locke_rules`, `result.deaths`, una vez por KO real); añadiré el tope de experiencia, el modo fijo y el límite de objetos en `BattleSetup` cuando `LockeRules` esté en `main`.
 
 **Terminado:**
 - Fase 4.2: `tools/import_data` (Node 18+, sin dependencias). Showdown `0.11.11` (tarball de npm verificado con sha512) + CSV de PokeAPI en el commit `a003ae375b69`, con nombres y descripciones en español (idioma 7). Genera `data/generated/`: 1379 especies y formas, 951 movimientos (con `needs_script`), 316 habilidades, 1376 objetos, tipos, learnsets, tablas de experiencia y naturalezas. Uso en `README.md` → Datos y `tools/README.md`.
@@ -144,6 +175,17 @@ Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) 
 **Notas:**
 - Equipos y encuentros usan especies **provisionales** (iniciales de Kanto para el rival, Swirlix y Milcery para Manolo, la tabla de ejemplo de la guía en la Ruta 1) hasta que Javier decida la Pokédex (pregunta 5).
 - No subo audio (`.ogg`/`.wav`) hasta que esté Git LFS (pregunta 4). AudioManager funciona sin archivos: avisa una vez y no suena.
+
+---
+
+## Agente 4 — Motor del RandomLocke
+
+**En qué estoy:** (sin empezar)
+
+**Terminado:**
+- (nada todavía)
+
+**Bloqueos:**
 
 ---
 
