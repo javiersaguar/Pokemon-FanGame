@@ -2,7 +2,13 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-04, Javier):** 👋 **Se incorpora el Agente 4, dueño del motor del RandomLocke** (Fase R: generador de la ROM, `RomPatch`, códigos de semilla, validación y lógica pura de las reglas Locke). `src/randomizer/` y `tests/randomizer/` pasan del Agente 2 al Agente 4. El Agente 2 solo implementa `DataDB.apply_patch()` y `pokemon_died` según el contrato que publique el Agente 4 en `docs/contratos.md` §10. Reparto actualizado en `DIRECTRICES.md` §2 y §6 y en la Fase R.10. El Agente 4 trabaja con datos de prueba propios, así que **no bloquea a nadie** ni queda bloqueado.
+**Último aviso (2026-10-04, Javier):** 🛑 **Fin de la sesión.** Se para aquí hasta la próxima. Todo está integrado en `main` y subido a GitHub, y los cuatro worktrees están limpios. **Al empezar la próxima sesión, cada agente lee [«Próxima sesión»](#próxima-sesión-tareas-declaradas) y empieza por su primera tarea.** Estado comprobado en `main` al cerrar:
+- Tests: **194, de los que pasan 193** y 1 queda *pending* (el parche dorado del RandomLocke, petición 28). 3051 aserciones, 42,6 s.
+- `--import`: la primera vez tras traer la fuente *Truth and Ideals* da errores de carga; la segunda sale **limpia**.
+- **Validador de arte: 177 errores** (casi todos colores fuera de la paleta en `assets/tilesets/exterior/`, que son de terceros). Es la petición 26: las reglas aún no distinguen el arte de los packs del propio.
+- En el repo: 1.373 sprites de frente y 1.281 gritos, sin Git LFS. Todos los commits son de Javier Saguar, sin coautores.
+
+**Aviso anterior (2026-10-04, Javier):** 👋 **Se incorpora el Agente 4, dueño del motor del RandomLocke** (Fase R: generador de la ROM, `RomPatch`, códigos de semilla, validación y lógica pura de las reglas Locke). `src/randomizer/` y `tests/randomizer/` pasan del Agente 2 al Agente 4. El Agente 2 solo implementa `DataDB.apply_patch()` y `pokemon_died` según el contrato que publique el Agente 4 en `docs/contratos.md` §10. Reparto actualizado en `DIRECTRICES.md` §2 y §6 y en la Fase R.10. El Agente 4 trabaja con datos de prueba propios, así que **no bloquea a nadie** ni queda bloqueado.
 
 **Aviso anterior (2026-10-04, Javier):** 📦 **Recursos gráficos descargados y listos** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (fuera del repo). Índice en `docs/arte/recursos_terceros.md`; reglas de uso y escala en `docs/DIRECTRICES.md` §7.1. Set de Pokémon oficial: `06_generation9_pack` (generaciones 1–9, normales y shiny, con Pokémon que te siguen). **Se usan tal cual, sin reescalar.** Seguid con la prueba de nivel gráfico (§7).
 
@@ -203,6 +209,39 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ---
 
+## Próxima sesión (tareas declaradas)
+
+*Cerrada el 2026-10-04 por Javier. Orden: de arriba abajo dentro de cada bloque. Hasta que Javier apruebe la prueba de nivel gráfico (§7), **no se añaden pantallas ni mapas visibles nuevos**. Antes de empezar: `git pull` de `main` en tu worktree y repasa tu sección (hay frases de antes del cierre que ya no son ciertas: «el `main` local no está subido», «no subo audio hasta que esté Git LFS»…).*
+
+**Javier (decisiones que desbloquean al resto)**
+1. **Revisar la prueba de nivel gráfico** en `docs/arte/comparativas/`: mundo (pregunta 17) y combate y ficha (preguntas 12 y 14, escala de los fondos y método del arte propio).
+2. **Recursos que faltan** (pregunta 13 y 17): bases y entorno de combate con sonidos (*Elite Battle: DX*), efectos de movimientos (NikDie), entrenadores en combate (pack 12), efectos del mapa (*Misc. VFX from BW2*) y **sprite de sombra** de los personajes del mapa. Sin pack de sonidos no suenan ni el shiny ni el salto (petición 27).
+3. **GDD del MVP** (preguntas 1, 5 y 6): iniciales, nombres (pueblo, ciudad 2, profesor, rival, región), quién es Panchito, tono, Ruta 1 y entrenadores. Además: reloj (2), dinero inicial (3), habilidad oculta en salvajes (7), biblia de arte (9) y las del RandomLocke (15 y 16).
+
+**Agente 1 — Mundo y arquitectura**
+1. Petición 24: integrar `LockeRules` y `zone_id` en el mundo (registrar antes del combate, resolver al capturar, huir o debilitar, Cementerio y game over).
+2. Eventos de la historia del MVP (intro del profesor, laboratorio y rival) con `Cutscene` y la regla R.2, **sin mapas visibles nuevos**.
+3. Tras la revisión de Javier: densidad de la ruta (alturas, estanques, escaleras), sombras si llega el recurso y lo que pida de la prueba.
+4. Limpieza: la rama `feat/agente1-sin-lfs` está superada por `-sin-lfs-2` (mismo contenido); bórrala si no la necesitas.
+
+**Agente 2 — Datos y motor de combate**
+1. Petición 22: `DataDB.randomizer_input()` y `apply_patch()` atómico con hash, según el §10 v2 del Agente 4.
+2. Petición 23: reglas individuales de `LockeRules` en el combate (muerte permanente, tope de experiencia, modo fijo, objetos).
+3. Fase 9: habilidades y objetos equipados (9.5), Púas y Trampa Rocas, más movimientos (9.2), IA 2–4 (9.7); después dobles (9.4) y gimmicks (9.6).
+
+**Agente 3 — Presentación, UI y contenido Panchito**
+1. Petición 26: reglas del validador de arte para el arte de terceros (tilesets, personajes, Pokémon que te siguen). **Objetivo: 0 errores en `main`** (ahora 177).
+2. Peticiones abiertas: 11 (símbolo `₽`), 16 (formato de `data/starters.json` y marcadores R.2), 27 (SE `jump` y `shiny`, cuando haya pack de sonidos) y 25 (pantallas R.8 del RandomLocke).
+3. Galería de assets y pulido de la muestra según lo que diga Javier en las preguntas 12–14, **sin pantallas nuevas**.
+4. Recordatorio para todos (aviso de contrato del 2026-10-04): el texto del Theme va a tamaño 10 y está pensado para pantallas dentro de un `UiCanvas`.
+
+**Agente 4 — Motor del RandomLocke**
+1. Petición 28: rehacer el parche dorado (`PANCHITO_UPDATE_GOLDEN=1`); es el único test *pending* de `main`.
+2. Acompañar las integraciones 22–25 (A2, A1 y A3) y ajustar el §10 si piden cambios.
+3. Esperar las decisiones de Javier en las preguntas 15 y 16 antes de fijar los valores por defecto.
+
+---
+
 ## Peticiones
 
 | # | De → Para | Petición | Estado |
@@ -226,7 +265,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 17 | A1 → A2 | Aviso: al añadir `data/item_placements.json` y `new_game.starter_level` en `data/world.json`, el test del parche dorado del randomizer queda *pending* ("Los datos de entrada han cambiado"). Cuando puedas, rehaz el parche dorado (`PANCHITO_UPDATE_GOLDEN=1`). | hecho: parche dorado rehecho |
 | 18 | A2 → A1 | Carpeta de los **Pokémon que te siguen** (DIRECTRICES §7.2, la acordamos tú y yo): propongo `assets/sprites/pokemon/followers/<id>.png` y `followers_shiny/<id>.png`, junto al resto de sprites de Pokémon, y ya los he copiado ahí. Son hojas de 256×256 = 4×4 cuadros de 64 px (filas: abajo, izquierda, derecha, arriba; columnas: los 4 pasos), a escala del pack, sin zoom. Si prefieres otra carpeta (por ejemplo `assets/sprites/characters/followers/`), dímelo y cambio una constante del importador. | aceptada por Javier: el Pokémon que te sigue usa `assets/sprites/pokemon/followers/` y `followers_shiny/` |
 | 19 | A2 → A3 | Sprites de Pokémon nuevos (Generation 9 Pack, en `main`): **frente 192×192 y espalda 288×288** (se dibujan a 1×, sin zoom: ya vienen al doble), **iconos 128×64** (2 cuadros de 64) también en `icons_shiny/`, y `<id>_female.png` donde hay diferencias por sexo. Hace falta: (a) poner al día `tools/arte/reglas.json` (todavía pide cuadros de 96 y de 32, y trata `icons/` como placeholder); (b) apuntar el set en `docs/arte/seguimiento.md` y `docs/arte/licencias.md` (créditos ya en `CREDITOS.md`); (c) la BattleScene ya encuentra las rutas de siempre (`front[_shiny]/<id>.png`...). Ya están los de **todas** las especies (pregunta 11) y los gritos en `assets/audio/cries/<id>.ogg`. | hecha (A3): `tools/arte/reglas.json` con 192×192, 288×288, 128×64 y 256×256 (y tiles de 32, personajes en cuadros de 64, objetos de 48 y entrenadores de 160); Generation 9 Pack apuntado en `seguimiento.md` y `licencias.md` |
-| 20 | A1 → A2 | **Sin Git LFS** (orden de Javier): `.gitattributes` ya trata `.ogg`, `.wav`, `.mp3`, `.psd` y `.aseprite` como `binary` normal, y está en GitHub. **Ya puedes subir los gritos** (`assets/audio/cries/`). | pendiente |
+| 20 | A1 → A2 | **Sin Git LFS** (orden de Javier): `.gitattributes` ya trata `.ogg`, `.wav`, `.mp3`, `.psd` y `.aseprite` como `binary` normal, y está en GitHub. **Ya puedes subir los gritos** (`assets/audio/cries/`). | hecha (A2): 1.281 gritos en `main` como archivos normales (comprobado al cerrar la sesión) |
 | 21 | A1 → A3 | Lo mismo para el audio: sin Git LFS, los `.ogg`/`.wav` se suben como binarios normales. | informativo |
 | 22 | A4 → A2 | §10 v2 conserva parche species A2 y añade entrada pura, MT/tutores y held_items. Mantengo data/randomizer.json por compatibilidad. Añadir randomizer_input y apply_patch atómico con hash; consultas nuevas y shiny según ajuste. | aceptada en traspaso; implementación pendiente |
 | 23 | A4 → A2 | pokemon_died ya existe; conectar reglas individuales LockeRules (permadeath, EXP cap, fijo, objetos); una muerte por uid, excluir tutoriales. | pendiente |
@@ -251,7 +290,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 7 | A2 | **Habilidad oculta en Pokémon salvajes** (Fase 6.1, "con baja probabilidad"): ¿qué probabilidad? En los juegos actuales es 0 salvo casos especiales. Ahora: 0 (`wild_hidden_ability_chance`). | |
 | 8 | A3 | ~~Lista de recursos para descargar~~ | Resuelta: Javier descargó los packs (`docs/arte/recursos_terceros.md`) |
 | 9 | A3 | **Biblia de arte y paleta** (`docs/arte/BIBLIA.md`, ya con la escala real de los packs; muestrario en `assets/arte/paleta.png`): ¿la apruebas o cambias algo? Decisiones abiertas en su §12: paleta del arte propio, fuente *Truth and Ideals*, encuadre de los fondos, tono visual de lo nuestro y lienzo de 160×160 para los entrenadores en combate | |
-| 10 | A1 | **GitHub**: el `main` local tiene el trabajo de los tres agentes y tus directrices, pero no está subido (no subimos sin permiso). ¿Lo subo (`git push origin main`) cada vez que se integre algo? Si sigues subiendo cosas a GitHub desde otra copia, las integro igual que esta vez. | |
+| 10 | A1 | **GitHub**: el `main` local tiene el trabajo de los tres agentes y tus directrices, pero no está subido (no subimos sin permiso). ¿Lo subo (`git push origin main`) cada vez que se integre algo? Si sigues subiendo cosas a GitHub desde otra copia, las integro igual que esta vez. | Javier: sí, quien mergea en `main` lo sube en el momento (norma en el README y en los avisos de contrato) |
 | 11 | A2 | **Sprites para RandomLocke:** en RandomLocke puede salir cualquier especie, así que harían falta los sprites de todas. Copiarlas todas con `import_pokemon_assets.mjs --all` son unos 11.600 archivos (≈ 25–30 MB de PNG, más ≈ 15 MB de gritos). ¿Las copiamos todas cuando llegue el RandomLocke, o limito el randomizer a una lista de especies (por ejemplo, la Pokédex regional ampliada)? Y para los gritos: ¿instalas Git LFS (pregunta 4) o los subimos sin LFS? | Javier (2026-10-04): (a) se copian los de **todas** las especies del pack 06 y lo que no deba salir en RandomLocke se excluye desde sus ajustes; (b) sin Git LFS: los gritos van como archivos normales. **Hecho.** |
 | 12 | A3 | **Prueba de nivel gráfico (§7.5): combate y ficha listos para revisar.** Lado a lado con Añil: `docs/arte/comparativas/combate_lado_a_lado.png` y `datos_lado_a_lado.png`; más capturas (movimientos, shiny con destellos, barra de PS bajando, las 3 páginas de la ficha) en la misma carpeta. Mi valoración sincera: la interfaz (cajas de datos, botones, fuente, iconos, ficha) ya está a la altura en limpieza y coherencia, pero **el combate se ve más pobre que Añil por el fondo**: el de Añil es un bosque con árboles y bases; el nuestro es el suelo liso de EBDX sin bases ni elementos (ver pregunta 13). ¿Apruebas o qué cambio? | |
 | 13 | A3 | **Recursos que faltan para igualar a Añil** (ninguno está en `recursos_terceros.md`): (a) **bases de combate y elementos del entorno** (árboles, hierba, cielo animado) de *Elite Battle: DX*, de Luka S.J. (créditos en su página: Game Freak, Pokecheck.org, PinkCatDragon, Tebited15, WolfPP, BadSamaritan...), https://luka-sj.com/essentials/resources/EBDX — trae también **sonidos** de combate y Poké Balls; (b) **ningún pack de sonidos**: faltan los SE de cursor, golpes, captura y el **sonido del shiny** (§8); los trae EBDX (extraídos de N2/B2 por BadSamaritan); (c) **efectos de movimientos**: *EBDX move & common animation pack*, de NikDie (créditos: Luka S.J. y NikDie), https://eeveeexpo.com/resources/1230/; (d) **entrenadores en combate** de NPCs normales: el pack 12 que no se descargó, *HGSS Trainer Battle Sprites*, de doof ("please credit": Nx-kun, Lemon, Sparta), https://eeveeexpo.com/resources/158/ (las clases Panchito, con el pack 11); (e) para el Agente 1, *Misc. VFX from BW2* de Brom ("credit if used": hierba alta, corte...), https://eeveeexpo.com/resources/357/. ¿Los descargas? | |
