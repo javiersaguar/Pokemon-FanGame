@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-04, Javier):** 🚨 **Los gráficos actuales no valen: el mínimo es el nivel de Pokémon Añil.** Leed `docs/DIRECTRICES.md` §0, §7 y §8 **antes de seguir**:
+**Último aviso (2026-10-04, Javier):** 📦 **Recursos gráficos descargados y listos** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (fuera del repo). Índice en `docs/arte/recursos_terceros.md`; reglas de uso y escala en `docs/DIRECTRICES.md` §7.1. Set de Pokémon oficial: `06_generation9_pack` (generaciones 1–9, normales y shiny, con Pokémon que te siguen). **Se usan tal cual, sin reescalar.** Seguid con la prueba de nivel gráfico (§7).
+
+**Aviso anterior (2026-10-04, Javier):** 🚨 **Los gráficos actuales no valen: el mínimo es el nivel de Pokémon Añil.** Leed `docs/DIRECTRICES.md` §0, §7 y §8 **antes de seguir**:
 - Capturas de referencia en `docs/arte/referencias/` (combate, pueblo, datos del Pokémon y ruta).
 - La resolución pasa a **512×384** con el mundo a ×2 (Fase 3.2). **Se acabó el arte generado por código.**
 - **Prueba de nivel gráfico** (§7, pasos 1–6): mapas de muestra (A1), combate y pantalla de datos de muestra (A3), sprites reales de Pokémon (A2) y comparación lado a lado para que Javier la apruebe. Hasta la aprobación, el MVP no añade más pantallas ni mapas visibles.
