@@ -423,7 +423,8 @@ AudioManager.get_volume(bus: StringName) -> float
 ```
 
 - **Buses** (`res://default_bus_layout.tres`): `Master`, `BGM`, `SE`, `ME`, `Cries`, `Ambient`.
-- **Id → archivo**, sin tablas en el código: `assets/audio/bgm/<id>.ogg`, `assets/audio/se/<id>.(ogg|wav)`, `assets/audio/me/<id>.ogg`, `assets/audio/cries/<species_id>.ogg` y `assets/audio/ambient/<id>.ogg`. Si falta el archivo, avisa una vez y no suena nada (nunca rompe).
+- **Id → archivo**, sin tablas en el código: `assets/audio/<bgm|se|me|cries|ambient>/<id>.<ogg|wav|mp3>` (los gritos, con el id de la especie). Si falta el archivo, no suena nada (nunca rompe): se avisa solo del primero que falte y el comando de Debug `audio` da la lista completa.
+- Si el mapa nuevo no tiene archivo de BGM, la música anterior se apaga igualmente (silencio mejor que pista equivocada).
 - Bucles: en la importación del `.ogg` (*loop* + *loop offset*).
 - **SE estándar**: `menu_move`, `menu_accept`, `menu_cancel`, `menu_error`, `bump`, `door`, `stairs`, `ledge`, `grass`, `hit_normal`, `hit_weak`, `hit_super`, `low_hp`, `ball_throw`, `ball_shake`, `ball_caught`, `exp`, `save`.
 - **ME estándar**: `heal`, `item`, `key_item`, `badge`, `evolution`, `caught`, `level_up`, `hatch`.
@@ -453,7 +454,7 @@ await PartyScreen.open(mode := PartyScreen.Mode.VIEW) -> int   # índice elegido
 await BagScreen.open(mode := BagScreen.Mode.FIELD) -> StringName  # id del objeto o &""
 ```
 
-- Comandos de Debug del Agente 3 **(previsto)**: `giveitem <id> [n]`, `dialogue <texto>`, `bgm <id>`.
+- Comandos de Debug del Agente 3: `dialogue <texto>`, `bgm [id]`, `se <id>`, `me <id>`, `volume <bus> <0-100>` y `audio` (audios que faltan). **(Previsto)**: `giveitem <id> [n]`.
 
 ### 9.5 Mochila (`Bag`, módulo de GameState) (previsto)
 
