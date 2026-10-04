@@ -338,11 +338,11 @@ func _check_moves_in_use() -> void:
 				used[entry[1]] = String(id)
 	var missing: PackedStringArray = []
 	for move_id: StringName in used:
-		if DataDB.has_move(move_id) and DataDB.move(move_id).needs_script:
+		if DataDB.has_move(move_id) and DataDB.move(move_id).needs_script and not Effects.has_move(move_id):
 			missing.append("%s (%s)" % [move_id, used[move_id]])
 	missing.sort()
 	if not missing.is_empty():
-		_warn("%d movimientos en uso necesitan script (Fase 9.2; de momento solo hacen la parte de datos): %s" % [
+		_warn("%d movimientos en uso necesitan script y aún no lo tienen (src/battle/effects/moves/; de momento solo hacen la parte de datos): %s" % [
 			missing.size(), ", ".join(missing)])
 
 

@@ -5,6 +5,8 @@ extends RefCounted
 var index: int
 var party: Array[Pokemon] = []
 var active: Array[Battler] = []
+## Condiciones de bando activas (Reflejo, Velo Sagrado, Viento Afín, trampas, Deseo...): id → estado.
+var conditions: Dictionary[StringName, Dictionary] = {}
 
 
 func _init(side_index: int, members: Array[Pokemon]) -> void:

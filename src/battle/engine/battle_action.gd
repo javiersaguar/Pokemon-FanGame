@@ -19,6 +19,9 @@ var party_index: int = -1
 var item_id: StringName = &""
 ## LEARN_MOVE: movimiento que se olvida (0-3); -1 = no aprender el nuevo.
 var forget_index: int = -1
+## Acción obligada por el motor (movimiento bloqueado, de dos turnos o recarga): no gasta PP
+## y no se comprueba. No la crea la interfaz.
+var forced: bool = false
 
 
 static func fight(index: int, target: int = 0) -> BattleAction:

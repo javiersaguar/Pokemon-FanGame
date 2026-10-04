@@ -814,12 +814,15 @@ setup.fill_from_game_state() / setup.apply_options(options) / setup.is_wild()
 | `caught_species`, `dex_caught_count` | | De `GameState.pokedex` (Ball Acopio y captura crítica) |
 | `seed` | `int` | 0 = aleatoria (la usada queda en `result.seed`) |
 
-**`BattleRequest`** (`engine.request`): `kind` (`BattleRequest.Kind.ACTION`, `SWITCH` o `LEARN_MOVE`), `side`, `slot`, `party_index`, `move_id` (en `LEARN_MOVE`), `can_run`, `can_switch`, `can_use_items`, `usable_moves: Array[int]` (índices con PP; vacío = solo puede usar Forcejeo).
+**`BattleRequest`** (`engine.request`): `kind` (`BattleRequest.Kind.ACTION`, `SWITCH` o `LEARN_MOVE`), `side`, `slot`, `party_index`, `move_id` (en `LEARN_MOVE`), `can_run`, `can_switch`, `can_use_items`, `usable_moves: Array[int]` (índices con PP; vacío = solo puede usar Forcejeo), `reason` (en `SWITCH`: vacío = se ha debilitado; `&"uturn"` = Ida y Vuelta / Voltiocambio / Viraje; `&"batonpass"` = Relevo).
+
+- Si el Pokémon está atrapado (Giro Fuego...), `can_switch` y `can_run` llegan a `false`.
+- Cuando el movimiento del jugador es obligado (segundo turno de Rayo Solar, Golpe, Alboroto, recarga de Hiperrayo), el motor **no pide acción**: resuelve ese turno solo y los eventos llegan en el mismo `submit()`.
 
 | `kind` | Cuándo | Respuestas válidas |
 |--------|--------|--------------------|
 | `ACTION` | Inicio de turno | `fight`, `switch_to`, `use_item`, `run` |
-| `SWITCH` | Se ha debilitado el Pokémon del jugador | `switch_to` (o `run` en salvajes, si `can_run`) |
+| `SWITCH` | Se ha debilitado el Pokémon del jugador, o `reason` = `uturn` / `batonpass` (cambio a mitad de turno: el menú del equipo no se puede cancelar) | `switch_to` (o `run` en salvajes, si `can_run`) |
 | `LEARN_MOVE` | Quiere aprender `move_id` y ya sabe 4 | `learn_move(índice a olvidar)` o `learn_move(-1)` = no aprenderlo |
 
 **`BattleAction`**
@@ -857,6 +860,9 @@ BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 | `trainer_speech` | 1 | `trainer_index, text` | Entra el entrenador y dice `lose_text` / `win_text` |
 | `money` | — | `amount` | — |
 | `turn` | — | `turn` | Empieza un turno (opcional) |
+| `weather` | — | `weather` (`raindance`, `sunnyday`, `sandstorm`, `snow`; `""` = se acaba) | Clima en pantalla |
+| `terrain` | — | `terrain` (`mistyterrain`...; `""` = se acaba) | Campo en pantalla |
+| `side_condition` | bando | `condition` (`reflect`, `lightscreen`, `safeguard`, `tailwind`, `stickyweb`, `wish`...), `active` | Indicadores del bando (opcional) |
 | `end` | — | `outcome` | Último evento |
 
 - `source` de `damage`/`heal`: `move`, `recoil`, `drain`, `confusion`, `brn`, `psn`, `tox`, `struggle`, `selfdestruct`, `item`.
@@ -876,6 +882,23 @@ BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 **Validador** (Fase 4.6): `godot --headless --path . -s res://tools/validate/validate.gd` (o el test `tests/datos/test_validador.gd`). Errores = especies, movimientos, objetos o clases que no existen, evoluciones por intercambio, niveles o pesos no válidos; avisos = sprites e iconos que faltan y movimientos en uso que necesitan script.
 
 **Debug** (Agente 2): `givepkmn <especie> [nivel] [shiny]`, `forceshiny [on|off]`, `heal`, `party`, `setlevel <posición> <nivel>`, `wildbattle <especie> [nivel]`, `trainerbattle <id>` y `dex [all]`.
+
+### 8.7 Efectos de combate (`src/battle/effects/`, Fase 9.1)
+
+Los movimientos especiales, los volátiles, las condiciones de bando, los climas y los campos son **scripts con hooks**: cada uno hereda de `BattleEffect` y solo implementa los que necesita; el motor los llama en su momento. Un script por id:
+
+| Carpeta | Qué | Ejemplos |
+|---------|-----|----------|
+| `src/battle/effects/moves/<id>.gd` | Movimientos con comportamiento propio | `protect`, `solarbeam`, `uturn`, `leechseed`, `superfang`... |
+| `src/battle/effects/conditions/<id>.gd` | Volátiles, condiciones de bando, climas y campos | `protect`, `leechseed`, `partiallytrapped`, `reflect`, `tailwind`, `raindance`, `mistyterrain`... |
+| `src/battle/effects/*.gd` | Bases compartidas | `TwoTurnMoveEffect`, `RechargeMoveEffect`, `LockedMoveEffect`, `PartialTrapMoveEffect`, `WeatherMoveEffect`, `SideConditionMoveEffect`, `WeatherConditionEffect`, `ScreenConditionEffect`... |
+
+- `Effects.move(id)` / `Effects.condition(id)` devuelven el efecto (o `null`: entonces el movimiento usa solo sus datos, Fase 7.6). El validador avisa de los movimientos en uso con `needs_script` que aún no tienen script (hoy: ninguno de los del MVP).
+- **Hooks** (documentados en `battle_effect.gd`): de movimiento `on_try_move`, `charge_turn`, `accuracy`, `base_power`, `fixed_damage`, `on_hit` (`CONTINUE` / `HANDLED`), `on_after_hit`, `on_after_move`, `runs_before_switch`, `is_stalling_move`; de condición `duration`, `residual_order`, `on_start`, `on_end`, `on_residual`, `before_move_priority`, `on_before_move`, `on_try_hit`, `weather_modifier`, `modify_base_power`, `stat_modifier`, `damage_modifier`, `modify_speed`, `on_set_status`, `on_try_confuse`, `on_switch_in`, `traps`, `forced_action`, `removed_types`.
+- **API del motor para los efectos**: `message()`, `deal_damage()`, `heal()`, `boost()`, `set_status()`, `can_set_status()`, `force_status()`, `cure_status()`, `confuse()`, `add_volatile()` / `remove_volatile()`, `add_side_condition()` / `remove_side_condition()` / `has_side_condition()`, `set_weather()` / `clear_weather()` / `weather()`, `set_terrain()` / `clear_terrain()` / `terrain()`, `field_state()` / `set_field_state()`, `is_grounded()`, `speed_of()`, `foe_of()`, `turn_action()`, `move_index_of()`, `request_switch()`, `force_switch()`, `use_move()`, `end_battle()`, y para los textos `name_of()`, `inner_name_of()`, `to_name()`, `of_name()`, `team_name()`, `team_of_name()`, `team_to_name()`. Estado: `engine.field` (clima, campo...), `BattleSide.conditions`, `Battler.volatiles` (cada uno `{id, turns, ...}`), `Battler.ability` (habilidad en el combate), `damaged_this_turn`, `protect_count`.
+- Al final del turno, cada condición descuenta su duración y se acaba al llegar a 0 (o hace su efecto), por `residual_order` (clima 1, Deseo 4, Drenadoras 8, veneno y quemadura 9, atrapado 13, bando 26, campo 27, Alboroto 28) y, a igualdad, el más rápido primero.
+- `DamageCalc.calculate(..., opts)` admite `power`, `weather`, `final` (multiplicadores encadenados en base 4096 como `chainModify`), `atk_mod` y `def_mod`.
+- Pendiente de la Fase 9: habilidades y objetos equipados (9.5), resto de movimientos (9.2), trampas Púas/Trampa Rocas, dobles (9.4), gimmicks (9.6) e IA 2–4 (9.7).
 
 ### 8.6 RandomLocke: motor de aleatorización (`src/randomizer/`) — traspasado al Agente 4
 

@@ -19,6 +19,12 @@ var crit_stage: int = 0
 var turns_active: int = 0
 var last_move: StringName = &""
 var moved_this_turn: bool = false
+## Ha recibido daño este turno (Buena Baza).
+var damaged_this_turn: bool = false
+## Usos seguidos de Protección y similares (cada uno es menos probable).
+var protect_count: int = 0
+## Habilidad en el combate (Danza Amiga o Abatidoras la cambian sin tocar al Pokémon).
+var ability: StringName = &""
 
 
 func _init(p: Pokemon, battle_side: int, battle_slot: int, index: int) -> void:
@@ -28,18 +34,28 @@ func _init(p: Pokemon, battle_side: int, battle_slot: int, index: int) -> void:
 	party_index = index
 	for stat: StringName in BOOST_STATS:
 		boosts[stat] = 0
+	ability = p.ability_id()
 
 
 func is_fainted() -> bool:
 	return pokemon.is_fainted()
 
 
+## ¿Tiene ese tipo ahora? (tiene en cuenta los volátiles que quitan tipos).
 func has_type(type: StringName) -> bool:
-	return pokemon.has_type(type)
+	return type in types()
 
 
+## Tipos en el combate: los del Pokémon menos los que quite algún volátil (Respiro quita Volador).
+## Puede quedar vacío (sin tipo: todo le afecta de forma neutra).
 func types() -> Array[StringName]:
-	return pokemon.types()
+	var out := pokemon.types()
+	for id: StringName in volatiles:
+		var effect := Effects.condition(id)
+		if effect != null:
+			for t: StringName in effect.removed_types(volatiles[id]):
+				out.erase(t)
+	return out
 
 
 func has_volatile(id: StringName) -> bool:

@@ -30,10 +30,12 @@ static func base_damage(level: int, power: int, attack: int, defense: int) -> in
 ## Del daño base (sin el +2) al daño final. `effectiveness` > 0 (las inmunidades se miran antes).
 @warning_ignore("integer_division")
 static func modify_damage(base: int, roll: int, crit: bool, stab: bool, effectiveness: float,
-		burned_physical: bool, spread: bool = false, other: float = 1.0) -> int:
+		burned_physical: bool, spread: bool = false, other: float = 1.0, weather: float = 1.0) -> int:
 	var damage := base + 2
 	if spread:
 		damage = modify(damage, SPREAD_MULTIPLIER)
+	if weather != 1.0:
+		damage = modify(damage, weather)
 	if crit:
 		damage = int(damage * CRIT_MULTIPLIER)
 	damage = damage * (100 - clampi(roll, 0, ROLLS - 1)) / 100
@@ -51,8 +53,20 @@ static func modify_damage(base: int, roll: int, crit: bool, stab: bool, effectiv
 	return damage % 65536
 
 
+## Encadena modificadores como Showdown (chainModify, en base 4096) y devuelve el total.
+@warning_ignore("integer_division")
+static func chain(modifiers: Array) -> float:
+	var total := 4096
+	for m: Variant in modifiers:
+		total = (total * int(float(m) * 4096.0) + 2048) >> 12
+	return total / 4096.0
+
+
 ## Daño de `move` de `attacker` contra `defender` con una tirada concreta (0..15). No mira inmunidades.
-static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit: bool, roll: int) -> int:
+## `opts` (todo opcional, lo pone el motor con los efectos de la Fase 9): power (potencia base),
+## weather (multiplicador del clima), final (Array de multiplicadores finales: Reflejo...),
+## atk_mod / def_mod (multiplicadores de las estadísticas: Tormenta Arena, Nieve...).
+static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit: bool, roll: int, opts: Dictionary = {}) -> int:
 	var physical := move.is_physical()
 	var atk_stat := &"atk" if physical else &"spa"
 	var def_stat := &"def" if physical else &"spd"
@@ -65,12 +79,17 @@ static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit
 		def_stage = 0
 	var attack := attacker.boosted_stat(atk_stat, atk_stage)
 	var defense := defender.boosted_stat(def_stat, def_stage)
-	var base := base_damage(attacker.pokemon.level, move.power, attack, defense)
+	if float(opts.get("atk_mod", 1.0)) != 1.0:
+		attack = modify(attack, float(opts["atk_mod"]))
+	if float(opts.get("def_mod", 1.0)) != 1.0:
+		defense = modify(defense, float(opts["def_mod"]))
+	var base := base_damage(attacker.pokemon.level, int(opts.get("power", move.power)), attack, defense)
 	var typeless := is_typeless(move)
 	var effectiveness := 1.0 if typeless else DataDB.type_effectiveness(move.type, defender.types())
 	var stab := not typeless and attacker.has_type(move.type)
 	var burned := physical and attacker.pokemon.status == &"brn" and move.id != &"facade"
-	return modify_damage(base, roll, crit, stab, effectiveness, burned)
+	var final_mod := chain(opts.get("final", []))
+	return modify_damage(base, roll, crit, stab, effectiveness, burned, false, final_mod, float(opts.get("weather", 1.0)))
 
 
 ## Las 16 cantidades posibles, de menor a mayor (como la calculadora de Showdown).

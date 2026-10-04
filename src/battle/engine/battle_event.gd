@@ -26,6 +26,11 @@ const FLEE := &"flee"
 const TRAINER_SPEECH := &"trainer_speech"
 const MONEY := &"money"
 const TURN := &"turn"
+## Clima: {weather} ("" = se acaba). Campo: {terrain} ("" = se acaba).
+const WEATHER := &"weather"
+const TERRAIN := &"terrain"
+## Condición de bando (Reflejo, Viento Afín, Red Viscosa...): {condition, active}. `side` = bando.
+const SIDE_CONDITION := &"side_condition"
 const END := &"end"
 
 var type: StringName
