@@ -91,15 +91,18 @@ tests/       Tests automáticos (GUT)
 tools/       Scripts de importación y validación de datos
 ```
 
-### Tileset provisional
+### Gráficos provisionales
 
-`assets/tilesets/placeholder/` se genera por script hasta que haya arte real:
+El tileset (`assets/tilesets/placeholder/`) y los personajes del mapa (`assets/sprites/characters/placeholder/`) se generan por script hasta que haya arte real:
 
 ```bash
 godot --headless --path . -s res://assets/tilesets/placeholder/generate_png.gd
+godot --headless --path . -s res://assets/sprites/characters/placeholder/generate_characters.gd
 godot --headless --path . --import
 godot --headless --path . -s res://assets/tilesets/placeholder/build_tileset.gd
 ```
+
+La sala de pruebas (`maps/test/`) se generó con `maps/test/build_test_maps.gd`. Ahora se edita en el editor: **no vuelvas a ejecutar ese script** (pide `-- --force` porque sobrescribe los mapas).
 
 ## Arte (Fase A)
 

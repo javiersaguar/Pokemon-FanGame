@@ -67,7 +67,7 @@ Interfaces públicas entre las partes del juego. Cada sección la define y manti
 
 | `reason` | Quién |
 |----------|-------|
-| `&"map_change"`, `&"battle"`, `&"menu"`, `&"debug"` | SceneManager / Debug (Agente 1) |
+| `&"map_change"`, `&"battle"`, `&"menu"`, `&"debug"`, `&"interact"` | SceneManager / Debug / Player (Agente 1) |
 | `&"cutscene"` | Cinemáticas (Agente 1, Fase 13) |
 | `&"dialogue"` | Dialogue (Agente 3) |
 
@@ -86,6 +86,7 @@ Autoload `EventBus` (`src/autoload/event_bus.gd`). Solo declara señales; las em
 | `player_stepped(tile: Vector2i)` | Player | Al terminar cada paso |
 | `map_will_change(from_map: StringName, to_map: StringName)` | SceneManager | Pantalla en negro, antes de descargar el mapa |
 | `map_loaded(map_id: StringName)` | SceneManager | Mapa cargado y jugador colocado, antes del fundido de entrada |
+| `repel_wore_off` | WildEncounters | Se ha gastado el último paso de Repelente |
 | `battle_started(setup: Variant)` | SceneManager | Al empezar `start_battle()` |
 | `battle_ended(outcome: StringName)` | SceneManager | Al cerrar la escena de combate |
 | `flag_changed(key: StringName, value: bool)` | GameState | Solo si el valor cambia |
@@ -171,6 +172,7 @@ Todas las claves se registran en `docs/flags.md`. Patrones reservados:
 | `trainer_defeated:<trainer_id>` | Entrenador derrotado | TrainerNPC (Agente 3) |
 | `item_taken:<map_id>:<nodo>` | Objeto del suelo recogido | ItemBall (Agente 1) |
 | `story_progress` (var `int`) | Avance de la historia en pasos de 10 | Eventos (Agente 1) |
+| `repel_steps` (var `int`) | Pasos de Repelente que quedan | La pone el objeto (Agente 3); la descuenta WildEncounters (Agente 1) |
 
 ---
 
@@ -227,7 +229,7 @@ SceneManager.list_maps() -> Array[StringName]
 SceneManager.fade_out(duration := 0.25, color := Color.BLACK) -> void
 SceneManager.fade_in(duration := 0.25) -> void
 SceneManager.current_map: MapRoot
-SceneManager.player: Node2D                          # Player (Fase 5)
+SceneManager.player: Player
 SceneManager.is_busy() -> bool                       # cambiando de mapa o en combate
 ```
 
@@ -271,7 +273,7 @@ SceneManager.open_pause_menu() -> void        # instancia res://src/ui/pause_men
 | `TITLE_SCENE` | `res://src/ui/title/title_screen.tscn` | Agente 3 | Se añade a la capa UI. Llama a `SceneManager.start_new_game()` o `SceneManager.continue_game(slot)` |
 | `PAUSE_MENU_SCENE` | `res://src/ui/pause_menu/pause_menu.tscn` | Agente 3 | Menú de la pila (ver arriba) |
 | `BATTLE_SCENE` | `res://src/battle/scene/battle_scene.tscn` | Agente 3 | `run(setup) -> StringName` |
-| `PLAYER_SCENE` | `res://src/overworld/player/player.tscn` | Agente 1 | Fase 5 |
+| `PLAYER_SCENE` | `res://src/overworld/player/player.tscn` | Agente 1 | Ver sección 5 |
 
 Si preferís otras rutas, pedidlo y se cambian las constantes.
 
@@ -304,7 +306,15 @@ MapRoot.get_bounds() -> Rect2i                 # en píxeles, según Ground
 MapRoot.id_from_path(path) / MapRoot.path_from_id(map_id)   # estáticas
 ```
 
-`MapData` (`src/overworld/map_data.gd`): `id`, `display_name`, `bgm` (id para AudioManager), `outdoor`, `weather`, `encounter_table` (id de `data/encounters/<id>.json`), `battle_background`, `region_map_position`, `can_fly_from`, `can_bike`, `healing_spot` y `fixed_camera`.
+`MapData` (`src/overworld/map_data.gd`): `id`, `display_name`, `bgm` (id para AudioManager), `outdoor`, `weather`, `encounter_table` (id de `data/encounters/<id>.json`), `encounter_rate` (0 = por defecto), `battle_background`, `region_map_position`, `can_fly_from`, `can_bike`, `healing_spot` y `fixed_camera`.
+
+```gdscript
+MapRoot.get_layer(name) -> TileMapLayer
+MapRoot.tile_custom_data(tile, key, default = null) -> Variant   # Decor antes que Ground
+MapRoot.terrain_at(tile) -> String
+MapRoot.is_encounter_tile(tile) -> bool
+MapRoot.get_warps() -> Array[Warp] / MapRoot.warp_at(tile) -> Warp
+```
 
 ### TileSet
 
@@ -313,11 +323,103 @@ Todos los TileSets del juego tienen estas capas (el provisional está en `assets
 - Física 0 → capa `paredes`; física 1 → capa `agua`.
 - Custom data: `terrain` (`String`: `grass`, `tall_grass`, `path`, `floor`, `water`, `ledge_down`, `door`, `mat`...), `encounter` (`bool`) y `footstep_sound` (`String`).
 
-### Entidades del mapa (Fase 5, previsto)
+### Entidades del mapa
 
-- `Player` (`src/overworld/player/`): `facing: Vector2i`, `tile_position() -> Vector2i`, `place_at(tile, facing)`.
-- `NPC` (`src/overworld/npc/npc.tscn`), base de `TrainerNPC` (Agente 3): exports de sprite y dirección, `interact()` virtual, `face(dir)`, `face_towards(node)`, `await walk(path)` y `show_emote(...)`.
-- Interacción: con `accept`, el jugador busca en la casilla de delante un nodo con `interact()` y lo llama (`await`).
+Van dentro de `Entities`. Jerarquía de clases (todas `@tool`: **las clases hijas también deben ser `@tool`** y llamar a `super()` en `_ready()`, y su lógica de juego debe ir protegida con `if Engine.is_editor_hint(): return`):
+
+```
+MapEntity (src/overworld/map_entity.gd)       # algo que se examina con accept
+├── Character (src/overworld/character.gd)    # se mueve por casillas
+│   ├── Player (src/overworld/player/player.tscn)
+│   └── NPC (src/overworld/npc/npc.tscn)      # base de TrainerNPC (Agente 3)
+├── ItemBall (src/overworld/item_ball/item_ball.tscn)
+└── MapSign (src/overworld/sign/sign.tscn)
+Warp (src/overworld/warp/warp.gd)             # va en Warps, no en Entities
+```
+
+**MapEntity**
+
+```gdscript
+@export var visible_if_flag: StringName   # solo está si la flag está activa
+@export var hidden_if_flag: StringName    # desaparece si la flag está activa
+func interact(player: Player) -> void     # virtual; puede ser corrutina (el jugador espera)
+func tile_position() -> Vector2i
+func is_present() -> bool
+func get_map() -> MapRoot
+```
+
+- Se coloca sola en el centro de su casilla.
+- Para bloquear el paso y que se pueda examinar, lleva un `StaticBody2D` en la capa `entidades` (2). Si no bloquea (objetos ocultos, disparadores), un `Area2D` en la capa `disparadores` (3).
+- El jugador busca con `accept` en la casilla de delante. Si delante hay un tile con `terrain = "counter"`, busca en la siguiente (para hablar por encima de un mostrador).
+
+**Character** (escena: `Sprite` con `CharacterSprite`, `Body` y `RayCast`)
+
+```gdscript
+@export var sprite_sheet: Texture2D          # 4 columnas × 4 filas (ver "Spritesheets")
+@export var initial_facing: Character.Direction   # DOWN, LEFT, RIGHT, UP
+var facing: Vector2i
+var moving: bool
+signal step_finished(tile: Vector2i)
+func face(dir: Vector2i) -> void
+func face_towards(target: Node2D) -> void
+func can_step(dir: Vector2i) -> bool
+func step(dir, duration := Character.WALK_TIME, ignore_collisions := false) -> bool   # corrutina
+func walk(path: Array[Vector2i], duration := WALK_TIME, ignore_collisions := false) -> void   # corrutina
+func bump(dir, duration := WALK_TIME) -> void          # andar en el sitio
+func place_at(tile: Vector2i, dir := Vector2i.ZERO) -> void
+func show_emote(text := "!", duration := 0.6) -> void  # corrutina; globo sobre la cabeza
+```
+
+`WALK_TIME` = 0,25 s y `RUN_TIME` = 0,125 s por casilla. Al moverse, el cuerpo se adelanta a la casilla de destino para reservarla.
+
+**Player** (`SceneManager.player`)
+
+- Toque corto en otra dirección = solo girar. Si se mantiene, anda y encadena casillas sin parones. Con `run`, corre. Contra una pared anda en el sitio y suena `bump`.
+- Tras cada paso: warp (si lo hay) → `EventBus.player_stepped(tile)` → encuentro salvaje (si nadie ha bloqueado el input).
+- `menu` → `SceneManager.open_pause_menu()`; `accept` → interacción. Durante la interacción el input está bloqueado con `&"interact"`.
+- Tras cualquier bloqueo espera un frame antes de volver a leer `accept`, así la pulsación que cierra un diálogo o un menú no vuelve a interactuar.
+- `refresh_appearance()` usa el spritesheet según `GameState.player_gender`. `setup_camera(map)` ajusta la cámara (la llama SceneManager).
+- `find_entity_at(tile) -> MapEntity`.
+
+**NPC**
+
+```gdscript
+@export var display_name: String          # nombre en el cuadro de diálogo
+@export_multiline var lines: PackedStringArray
+@export var turn_to_player := true
+@export var wander := false / wander_radius := 2 / wander_interval := Vector2(1.5, 4.0)
+var home_tile: Vector2i
+var talking: bool
+func _on_interact(player: Player) -> void   # virtual: por defecto dice `lines`
+```
+
+Para un NPC con comportamiento propio: script `@tool` que hereda de `NPC` y sobrescribe `_on_interact()` (ejemplo: `maps/test/test_battle_npc.gd`).
+
+**ItemBall**: `item_id: StringName`, `quantity: int`, `hidden_item: bool`. Al cogerlo activa `item_taken:<map_id>:<nombre del nodo>`, llama a `GameState.bag.add(item_id, quantity)` si la mochila existe, suena el ME `item_get` y muestra el mensaje con el nombre de `DataDB.item(item_id).name` (o el id, si no existe).
+
+**MapSign**: `lines`, `only_from_below := true` y `show_sprite := true`.
+
+**Warp**: `target_map`, `target_spawn` (`&"default"`), `arrival_facing` (`KEEP`, `DOWN`, `LEFT`, `RIGHT` o `UP`), `size: Vector2i` (casillas desde la suya hacia la derecha y abajo) y `sound` (SE, por defecto `&"door"`). Se activa al pisarlo. En el editor se dibuja como un rectángulo azul.
+
+### Corrutinas y cambios de mapa
+
+Un nodo del mapa (NPC, cartel, Warp...) **se libera al cambiar de mapa** y sus corrutinas en marcha se cortan. Por eso:
+
+- Lo que deba seguir tras un cambio de mapa no puede vivir en un nodo del mapa: los warps los ejecuta el jugador y las cinemáticas largas (Fase 13) irán en un nodo persistente.
+- Si un NPC lanza un combate que el jugador pierde (y no se puede perder), el jugador aparece en el Centro Pokémon y la corrutina del NPC termina ahí: lo que hubiera después del combate no se ejecuta. El jugador recupera el control solo.
+
+### Spritesheets de personajes
+
+`assets/sprites/characters/<id>.png`: **4 columnas** (quieto, paso A, quieto, paso B) × **4 filas** (abajo, izquierda, derecha, arriba). El tamaño de frame es libre (ancho/4 × alto/4) y los pies tocan el borde inferior del frame. Los provisionales (`assets/sprites/characters/placeholder/`, frames de 32×32) se generan con `generate_characters.gd`: `player_male`, `player_female`, `rival`, `professor`, `mom`, `npc_man`, `npc_woman`, `npc_old`, `nurse`, `clerk` y `trainer`, más `item_ball` y `sign` (16×16).
+
+### Encuentros salvajes
+
+- Solo en casillas con `encounter = true` y en mapas con `data.encounter_table`.
+- Probabilidad por paso: `data.encounter_rate` o, si es 0, `data/world.json` → `encounters.step_chance` (0,1).
+- Tabla `data/encounters/<encounter_table>.json` (formato del Agente 3). Se lee el de la guía (5.7): `{"land": {"day": [{"species", "min", "max", "weight"}], "night": [...]}, "water": [...]}`. Cada sección puede ser una lista o un diccionario por momento del día (`morning`, `day`, `evening`, `night`); si falta el momento exacto, se usa `day` o `night`.
+- Repelente: la var `repel_steps` de GameState (pasos que quedan). Mientras dure, no salen Pokémon de nivel menor que `GameState.party.lead_level()`. Al gastarse emite `EventBus.repel_wore_off`. El objeto que la activa es cosa del Agente 3.
+- El combate se crea con `BattleSetup.wild(species, level)` si esa clase existe (Agente 2). Si no, con `{"kind": "wild", "species", "level", "can_lose": false}`.
+- `Debug.encounters_disabled` los desactiva. API: `WildEncounters.roll(map, tile)`, `pick(table_id, kind, period)`, `make_setup(wild)` y `clear_cache()`.
 
 ---
 

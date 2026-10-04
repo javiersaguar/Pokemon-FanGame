@@ -19,3 +19,4 @@ Todas las claves de `GameState.flags` y `GameState.vars` van aquí **antes** de 
 | Clave | Valores | Notas |
 |-------|---------|-------|
 | `story_progress` | 0, 10, 20... | Avance de la historia (valores espaciados para poder insertar pasos) |
+| `repel_steps` | 0+ | Pasos de Repelente que quedan (la pone el objeto; la descuenta `WildEncounters`) |
