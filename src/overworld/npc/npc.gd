@@ -10,6 +10,10 @@ extends Character
 ## Frases al hablarle, en orden.
 @export_multiline var lines: PackedStringArray = []
 @export var turn_to_player := true
+## Evento al hablarle (script que hereda de StoryEvent). Si hay evento, no se
+## dicen las `lines`. Se ejecuta en Cutscene y recibe `event_params`.
+@export var event: GDScript
+@export var event_params: Dictionary = {}
 
 @export_group("Paseo")
 ## Da pasos al azar alrededor de su casilla inicial.
@@ -57,8 +61,11 @@ func interact(player: Player) -> void:
 	talking = false
 
 
-## Comportamiento al hablarle. Por defecto, dice `lines`.
+## Comportamiento al hablarle. Por defecto, su evento o, si no tiene, sus `lines`.
 func _on_interact(_player: Player) -> void:
+	if event:
+		await Cutscene.play(event, self, event_params)
+		return
 	for line: String in lines:
 		await Dialogue.say(line, display_name)
 

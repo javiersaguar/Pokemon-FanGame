@@ -298,6 +298,9 @@ func _change_map(map_id: StringName, resolve_tile: Callable, facing: Vector2i,
 	await fade_in()
 	is_changing_map = false
 	GameState.unlock_input(&"map_change")
+	for trigger: Trigger in map.enter_triggers():
+		if is_instance_valid(trigger) and current_map == map and trigger.can_fire():
+			await Cutscene.play(trigger.event, trigger, trigger.event_params, trigger.once_flag)
 
 
 func _place_player(tile: Vector2i, facing: Vector2i) -> void:
