@@ -79,7 +79,15 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 3 — Presentación, UI y contenido Panchito
 
-**En qué estoy:** pantallas del MVP (título, menú de pausa, teclado de nombres, mochila con `Bag`, equipo, tienda y guardar), en `feat/agente3-pantallas`. TrainerNPC en cuanto esté el `NPC` del Agente 1 en `main`.
+**He leído `docs/DIRECTRICES.md`** (2026-10-04, secciones 0–8) y he reordenado mi plan:
+
+**En qué estoy:** prueba de nivel gráfico (§7) y Fase A, en `feat/agente3-arte`:
+1. `docs/arte/BIBLIA.md`, `docs/arte/seguimiento.md` (ya con los placeholders que hay a la vista) y `docs/arte/licencias.md`.
+2. Lista de recursos para descargar (tilesets, personajes, Pokémon que te siguen, fondos de combate y fuente) y propuesta del set de sprites de Pokémon, en "Preguntas para Javier".
+3. Validador de arte (`tools/arte/`) y galería.
+4. Pantalla de combate y pantalla de datos del Pokémon de muestra a 512×384, y comparativas en `docs/arte/comparativas/`.
+
+**Después** (tras la aprobación de Javier): menú inicial de la Fase 15.2 ("Realizado por Javier Saguar"), pantallas del MVP, TrainerNPC, marcadores R.2 en `Dialogue`, `starters.json`/`gifts.json`/`statics.json`/`trades.json` y las pantallas del RandomLocke (R.8).
 
 **Terminado:**
 - Borrador de `docs/GDD.md` (Fase 2): estructura completa, con las decisiones de diseño marcadas **PENDIENTE JAVIER** (resumen de las que bloquean el MVP en su §0).
@@ -93,7 +101,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - **BattleScene** (Fase 7.10) en `res://src/battle/scene/battle_scene.tscn` con `run(setup) -> StringName`: cortinilla (distinta para salvaje y entrenador), entrada de entrenadores, fondo y bases por entorno, cajas de datos con PS animados (verde → amarilla → roja), PS en número y barra de experiencia, menús Luchar/Mochila/Pokémon/Huir y de movimientos (PP y tipo), animaciones genéricas por categoría y color de tipo, parpadeo al recibir daño, debilitado, secuencia de captura, despedida del entrenador (`lose_text`/`win_text`) y BGM guardada y restaurada. Habla con un `BattleDriver` que sigue el flujo y los `BattleEvent` de §8.5 (`contratos.md` §9.3); de momento con **FakeBattle**, un combate de mentira: **el comando `battle` del Debug ya abre esta escena** en vez del sustituto. Sprites provisionales generados si faltan. En cuanto el `BattleEngine` esté en `main`, escribo el adaptador.
 - `TrainerData` (`src/overworld/trainers/`): entrenador + clase combinados, leyendo de `DataDB`.
 - Tests en `tests/ui/`: Dialogue (10), AudioManager (6) y BattleScene (5).
-**Bloqueos:** ninguno por ahora. Para la BattleScene necesito la petición 7 (puedo empezar con eventos falsos).
+**Bloqueos:** para la muestra de combate necesito los recursos de la lista (fondos y bases) y los sprites reales de Pokémon del Agente 2. Mientras, preparo la maqueta a 512×384.
 
 **Notas:**
 - Equipos y encuentros usan especies **provisionales** (iniciales de Kanto para el rival, Swirlix y Milcery para Manolo, la tabla de ejemplo de la guía en la Ruta 1) hasta que Javier decida la Pokédex (pregunta 5).
