@@ -1,0 +1,10 @@
+# Cabecera de sección de la ficha (9-slice: márgenes 3, 2, 3, 2): cápsula oscura con luz arriba.
+@leyenda  . = transparente   o = ui_1   f = ui_2   h = ui_3
+@salida res://assets/sprites/ui/summary/section.png
+---
+.oooooo.
+ohhhhhho
+offffffo
+offffffo
+offffffo
+.oooooo.

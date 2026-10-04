@@ -1,0 +1,11 @@
+# Flecha de "continuar" del diálogo (8×6) con su sombra.
+@leyenda  . = transparente   a = ui_2   s = ui_5
+@salida res://assets/sprites/ui/cursor_down.png
+@salida res://assets/sprites/ui/cursor_down_light.png  a=ui_6  s=ui_2
+---
+aaaaaaa.
+.aaaaas.
+..aaas..
+...as...
+....s...
+........

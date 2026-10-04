@@ -70,6 +70,8 @@ func _size_problem(size: Vector2i, rule: Dictionary) -> String:
 	var frames: Array = rule.get("frames", [rule["frame"]] if rule.has("frame") else [])
 	if rule.has("multiple_of"):
 		frames = [rule["multiple_of"]]
+	if frames.is_empty():
+		return ""
 	for option: Array in frames:
 		var frame := _vec(option)
 		if size.x % frame.x == 0 and size.y % frame.y == 0 and size.x > 0 and size.y > 0:

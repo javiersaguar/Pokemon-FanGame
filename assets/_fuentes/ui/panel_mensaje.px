@@ -1,0 +1,12 @@
+# Panel oscuro de los mensajes de combate (9-slice: márgenes 3, 3, 3, 1).
+@leyenda  . = transparente   b = ui_3   c = ui_2@240   a = ui_1@230
+@salida res://assets/sprites/ui/battle/panel_message.png
+---
+..bbbb..
+.bccccb.
+bcaaaacb
+baaaaaab
+baaaaaab
+baaaaaab
+baaaaaab
+baaaaaab

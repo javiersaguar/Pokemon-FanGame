@@ -1,17 +1,29 @@
 @tool
 class_name CursorArrow
 extends Control
-## Flecha pixel art: cursor de los menús (derecha) o "continuar" del diálogo (abajo).
-## Se dibuja fila a fila para que quede nítida a cualquier escala entera.
+## Flecha de los menús (derecha) o de "continuar" del diálogo (abajo), con la
+## versión clara para paneles oscuros. Pixel art en assets/sprites/ui/cursor_*.png.
 
 enum Direction { RIGHT, DOWN }
 
+const TEXTURES := {
+	Direction.RIGHT: [preload("res://assets/sprites/ui/cursor_right.png"),
+		preload("res://assets/sprites/ui/cursor_right_light.png")],
+	Direction.DOWN: [preload("res://assets/sprites/ui/cursor_down.png"),
+		preload("res://assets/sprites/ui/cursor_down_light.png")],
+}
+## Rápido (BIBLIA.md §8): sube y baja 1 píxel de arte.
 const BOB_INTERVAL := 0.3
 
 @export var direction := Direction.RIGHT:
 	set(value):
 		direction = value
 		_update_size()
+		queue_redraw()
+## Versión clara (sobre paneles oscuros).
+@export var light := false:
+	set(value):
+		light = value
 		queue_redraw()
 ## Sube y baja 1 píxel (la flecha de "continuar").
 @export var bob := false:
@@ -44,32 +56,19 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	draw_arrow(self, Vector2(0, _bob_offset), direction)
+	draw_texture(texture_for(direction, light), Vector2(0, _bob_offset))
 
 
-## Dibuja la flecha (con su sombra) en cualquier CanvasItem: los menús de
-## rejilla la pintan así junto a la opción elegida.
-static func draw_arrow(canvas: CanvasItem, origin: Vector2, dir: Direction = Direction.RIGHT) -> void:
-	var color := Color(0.25098, 0.25098, 0.282353)
-	var shadow := Color(0.815686, 0.815686, 0.784314)
-	if canvas is Control:
-		color = (canvas as Control).get_theme_color(&"font_color", &"Label")
-		shadow = (canvas as Control).get_theme_color(&"font_shadow_color", &"Label")
-	_draw_shape(canvas, origin + Vector2.ONE, dir, shadow)
-	_draw_shape(canvas, origin, dir, color)
+static func texture_for(dir: Direction, light_version: bool = false) -> Texture2D:
+	return TEXTURES[dir][1 if light_version else 0]
 
 
-static func _draw_shape(canvas: CanvasItem, origin: Vector2, dir: Direction, color: Color) -> void:
-	if dir == Direction.RIGHT:
-		for row: int in 7:
-			var width := 4 - absi(row - 3)
-			canvas.draw_rect(Rect2(origin + Vector2(0, row), Vector2(width, 1)), color)
-	else:
-		for row: int in 4:
-			var width := 7 - row * 2
-			canvas.draw_rect(Rect2(origin + Vector2(row, row), Vector2(width, 1)), color)
+## Dibuja la flecha en cualquier CanvasItem (los menús de rejilla la pintan así).
+static func draw_arrow(canvas: CanvasItem, origin: Vector2, dir: Direction = Direction.RIGHT,
+		light_version: bool = false) -> void:
+	canvas.draw_texture(texture_for(dir, light_version), origin)
 
 
 func _update_size() -> void:
-	custom_minimum_size = Vector2(5, 8) if direction == Direction.RIGHT else Vector2(8, 6)
+	custom_minimum_size = Vector2(texture_for(direction).get_size())
 	size = custom_minimum_size

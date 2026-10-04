@@ -1,0 +1,16 @@
+# Caja de datos de un Pokémon en combate (9-slice: márgenes de 4).
+@leyenda  . = transparente   b = ui_2   w = ui_6   s = ui_5   h = ui_4
+@salida res://assets/sprites/ui/battle/databox.png
+---
+..bbbbbbbb..
+.bwwwwwwwwb.
+bwwwwwwwwwwb
+bwwwwwwwwwwb
+bwwwwwwwwwwb
+bwwwwwwwwwwb
+bwwwwwwwwwwb
+bwwwwwwwwwwb
+bssssssssssb
+bhhhhhhhhhhb
+.bhhhhhhhhb.
+..bbbbbbbb..
