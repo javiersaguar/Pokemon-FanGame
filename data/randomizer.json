@@ -1,0 +1,52 @@
+{
+  "_doc": "Configuración del motor de RandomLocke (Fase R, Agente 2): listas de prohibidos, reglas de equilibrio y presets. Cambiar algo de aquí que afecte a las ROM obliga a subir Randomizer.GENERATOR_VERSION.",
+
+  "banned_species": [],
+  "banned_moves": ["struggle", "sketch", "transform", "metronome", "mirrormove", "assist", "sleeptalk", "naturepower"],
+  "banned_abilities": ["wonderguard", "hugepower", "purepower", "shadowtag", "arenatrap", "moody", "truant", "imposter"],
+
+  "_power_caps": "Potencia máxima de un movimiento aprendido por nivel con 'scaled_power': [hasta el nivel, potencia máxima].",
+  "power_caps": [[10, 50], [20, 70], [30, 85], [45, 100], [60, 120], [100, 250]],
+  "_evolution_gap": "Niveles extra que se suponen para una evolución que no es por nivel (piedra, amistad...) al calcular a qué nivel puede aparecer una especie.",
+  "evolution_gap": 15,
+  "_overlevel_gap": "Un entrenador o salvaje no lleva la forma sin evolucionar si supera en tantos niveles el de su evolución.",
+  "overlevel_gap": 10,
+  "_first_move_min_power": "Potencia mínima del ataque de daño que se garantiza al nivel 1.",
+  "first_move_min_power": 30,
+  "shop_guaranteed": ["pokeball", "potion"],
+  "_early_legendary_level": "Con 'no_early_legendaries', ningún legendario por debajo de este nivel.",
+  "early_legendary_level": 30,
+  "_type_preference_chance": "Con learnsets 'type_preference', probabilidad de que cada movimiento sea de su tipo.",
+  "type_preference_chance": 0.5,
+  "_legendary_tags": "Etiquetas de species.json que cuentan como legendario o singular.",
+  "legendary_tags": ["restricted_legendary", "sub_legendary", "mythical"],
+  "_validation_attempts": "Subsemillas que se prueban si una ROM no pasa la validación (R.4).",
+  "validation_attempts": 25,
+
+  "presets": {
+    "clasico": {
+      "starters": "triangle", "wild": "per_zone", "trainers": true, "keep_type_themes": true,
+      "story_pokemon": true, "allow_legendaries": false, "learnsets": "type_preference",
+      "guarantee_stab": true, "scaled_power": true, "abilities": false, "types": false,
+      "base_stats": false, "evolutions": false, "items": true, "shops": false,
+      "similar_strength": true, "strength_tolerance": 15, "level_appropriate": true,
+      "no_early_legendaries": true, "only_implemented_moves": true, "locke_rules": true
+    },
+    "solo_aleatorio": {
+      "starters": "triangle", "wild": "per_zone", "trainers": true, "keep_type_themes": true,
+      "story_pokemon": true, "allow_legendaries": false, "learnsets": "type_preference",
+      "guarantee_stab": true, "scaled_power": true, "abilities": false, "types": false,
+      "base_stats": false, "evolutions": false, "items": true, "shops": false,
+      "similar_strength": true, "strength_tolerance": 15, "level_appropriate": true,
+      "no_early_legendaries": true, "only_implemented_moves": true, "locke_rules": false
+    },
+    "caos": {
+      "starters": "random", "wild": "chaos", "trainers": true, "keep_type_themes": false,
+      "story_pokemon": true, "allow_legendaries": true, "learnsets": "random",
+      "guarantee_stab": false, "scaled_power": false, "abilities": true, "types": true,
+      "base_stats": true, "evolutions": true, "items": true, "shops": true,
+      "similar_strength": false, "strength_tolerance": 100, "level_appropriate": false,
+      "no_early_legendaries": false, "only_implemented_moves": true, "locke_rules": true
+    }
+  }
+}

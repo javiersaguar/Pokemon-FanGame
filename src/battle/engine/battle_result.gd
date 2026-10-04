@@ -16,6 +16,8 @@ var money_won: int = 0
 var caught_pokemon: Pokemon = null
 var seen_species: Array[StringName] = []
 var items_used: Array[StringName] = []
+## Reglas Locke: {party_index, uid, species, name, level, foe_species, foe_name, trainer, turn} de cada muerto.
+var deaths: Array[Dictionary] = []
 ## {party_index, uid, to}: evoluciones que la escena de evolución tiene que reproducir.
 var pending_evolutions: Array[Dictionary] = []
 

@@ -804,6 +804,43 @@ BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 
 **Debug** (Agente 2): `givepkmn <especie> [nivel] [shiny]`, `forceshiny [on|off]`, `heal`, `party`, `setlevel <posición> <nivel>`, `wildbattle <especie> [nivel]`, `trainerbattle <id>` y `dex [all]`.
 
+### 8.6 RandomLocke: motor de aleatorización (`src/randomizer/`)
+
+Lógica **pura y determinista** (como el motor de combate): no toca `DataDB` ni nodos, así que se puede llamar desde `WorkerThreadPool` para la pantalla "Generando la ROM...". Misma semilla + mismos ajustes + misma versión = **la misma ROM**, byte a byte.
+
+```gdscript
+var settings := RandomizerSettings.from_preset("clasico")   # "clasico", "solo_aleatorio", "caos" (data/randomizer.json)
+settings.wild = "chaos"; settings.preset = RandomizerSettings.CUSTOM   # o tocar campos sueltos (tabla de abajo)
+var rom: RomPatch = Randomizer.generate(seed, settings)     # seed: 0..2³²−1; null si DataDB ya tiene un parche
+rom.apply()                     # = DataDB.apply_patch(rom.data); al volver al título: DataDB.clear_patch()
+rom.to_json() -> String         # guardar en slot_<n>.rom.json (claves ordenadas)
+RomPatch.from_dict(JSON.parse_string(texto)).apply()   # al cargar la ranura, ANTES de cargar el mapa
+rom.seed_code() -> String       # "PANCHITO-XXXX-XXXX-XX" (+ "-XXXXXX" si los ajustes son personalizados)
+rom.spoiler_text() -> String    # registro de spoilers (R.5)
+rom.settings() -> RandomizerSettings / rom.generator_version()
+
+SeedCode.encode(seed, settings) -> String
+SeedCode.decode(code) -> Dictionary   # {ok, seed, settings, version, error}; error en español ("Este código es de otra versión...")
+SeedCode.random_seed() -> int
+RomValidator.validate(rom) -> PackedStringArray   # R.4 (Randomizer.generate ya la pasa y prueba subsemillas)
+```
+
+| Ajuste (`RandomizerSettings`) | Valores | Qué hace |
+|-------------------------------|---------|----------|
+| `starters` | `off`, `random`, `triangle`, `three_stage` | `triangle`: tres primeras etapas en triángulo de tipos (`starter_2` gana a `starter_1`, `starter_3` a `starter_2` y `starter_1` a `starter_3`). La línea del rival se cambia con la misma etapa, así que el rival sigue llevando el que te gana y lo evoluciona |
+| `wild` | `off`, `per_zone`, `global`, `chaos` | `global` = mapeo 1:1 en todo el juego (`species_map`) |
+| `trainers`, `keep_type_themes` | bool | Los temas salen de `type_theme` del entrenador o de su clase, o del tipo que comparten todos sus Pokémon |
+| `story_pokemon`, `allow_legendaries`, `no_early_legendaries` | bool | Regalos, estáticos e intercambios (los `"randomize": false` no se tocan) |
+| `learnsets`, `guarantee_stab`, `scaled_power`, `only_implemented_moves` | `off`/`random`/`type_preference`; bool | Mismo número de movimientos y niveles; ataque de daño (con STAB) al nivel 1 y en cada momento de la curva |
+| `abilities`, `types`, `base_stats`, `evolutions` | bool | Tipos y estadísticas, coherentes en la línea evolutiva |
+| `items`, `shops` | bool | Colocaciones de `item_placements.json` (nunca objetos clave) y tiendas (siempre con Poké Balls y Pociones) |
+| `similar_strength`, `strength_tolerance`, `level_appropriate` | bool, 0–100 | ±% del total de estadísticas; etapa evolutiva acorde al nivel |
+| `locke_rules` | bool | Reglas Locke en el combate |
+
+- **Reglas Locke en el combate** (Fase R.7, parte del Agente 2): `BattleSetup.locke_rules` (se rellena solo con `GameState.is_randomlocke()` y `GameState.randomlocke.settings.locke_rules`). Cuando cae un Pokémon del jugador: evento `pokemon_died` (justo después de su `faint`) con `{party_index, uid, species, name, level, foe_species, foe_name, trainer, turn}`, mensaje con `tag = "death"` y la misma entrada en `result.deaths` (para el Cementerio). Los objetos de revivir no se pueden usar.
+- `data/randomizer.json` (Agente 2): prohibidos (especies, movimientos y habilidades), reglas de equilibrio y presets. Cambiar algo que altere las ROM obliga a subir `Randomizer.GENERATOR_VERSION`.
+- Tests (`tests/randomizer/`): códigos, determinismo, parche dorado (`golden_clasico.json`, se rehace con `PANCHITO_UPDATE_GOLDEN=1`), robustez (100 semillas; **1000 con `PANCHITO_LONG_TESTS=1`**), reglas, aplicación y tiempo (< 3 s).
+
 ---
 
 ## 9. Presentación, UI y contenido (Agente 3)

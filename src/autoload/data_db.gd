@@ -375,6 +375,10 @@ func has_encounter_table(id: StringName) -> bool:
 	return _encounters.has(String(id))
 
 
+func encounter_ids() -> Array[StringName]:
+	return DataUtil.names(_encounters.keys())
+
+
 ## Tienda de data/shops.json → shops[id].
 func shop(id: StringName) -> Dictionary:
 	var patched: Variant = _patch.get("shops", {}).get(String(id))
@@ -385,6 +389,10 @@ func shop(id: StringName) -> Dictionary:
 
 func has_shop(id: StringName) -> bool:
 	return _shops.has(String(id))
+
+
+func shop_ids() -> Array[StringName]:
+	return DataUtil.names(_shops.keys())
 
 
 ## data/shops.json → sell_ratio (precio de venta = floor(precio × sell_ratio)).
@@ -411,6 +419,18 @@ func starter_ids() -> Array[StringName]:
 ## Regalo de data/gifts.json: ficha de Pokemon.from_spec() ({species, level, ...}).
 func gift(id: StringName) -> Dictionary:
 	return _story_entry(_gifts, "gifts", id, "el regalo")
+
+
+func gift_ids() -> Array[StringName]:
+	return DataUtil.names(_gifts.keys())
+
+
+func static_ids() -> Array[StringName]:
+	return DataUtil.names(_statics.keys())
+
+
+func trade_ids() -> Array[StringName]:
+	return DataUtil.names(_trades.keys())
 
 
 ## Encuentro estático de data/statics.json (legendarios, bloqueos): ficha de Pokemon.from_spec().

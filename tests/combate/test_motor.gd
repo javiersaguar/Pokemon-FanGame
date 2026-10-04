@@ -367,3 +367,20 @@ func test_combate_completo_con_semilla_fija() -> void:
 	var first: Array = run.call()
 	assert_eq(run.call(), first)
 	assert_true(first[0] in [BattleResult.WIN, BattleResult.LOSE])
+
+
+func test_reglas_locke_pokemon_died() -> void:
+	var weak := _mon(&"caterpie", 2, {"moves": ["stringshot"]})
+	var other := _mon(&"weedle", 2, {"moves": ["stringshot"]})
+	var s := _wild([weak, other], _mon(&"machamp", 60, {"moves": ["closecombat"]}))
+	s.locke_rules = true
+	var engine := BattleEngine.new(s)
+	engine.start()
+	var events := engine.submit(BattleAction.fight(0))
+	var died := _first(events, BattleEvent.POKEMON_DIED)
+	assert_not_null(died, "evento pokemon_died")
+	assert_eq(died.value("uid"), weak.uid)
+	assert_eq(died.value("foe_species"), "machamp")
+	assert_eq(engine.result.deaths.size(), 1)
+	weak.current_hp = 0
+	assert_false(engine.can_use_item(&"revive", 0), "con las reglas Locke no se revive")
