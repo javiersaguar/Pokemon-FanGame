@@ -74,9 +74,16 @@ Mientras tanto, lógica sin pantallas nuevas: API de cinemáticas y entidades de
 
 ## Agente 2 — Datos y motor de combate
 
-**He leído `docs/DIRECTRICES.md`** (2026-10-04, secciones 0–8). Mi orden: (1) entregar el motor (hecho, abajo); (2) **script de descarga de sprites de Pokémon** (§7.2), ya; (3) shiny: tiradas desde `data/world.json` → `shiny`, test estadístico y validador de las 4 versiones (§8); (4) regla R.2 en `DataDB` (`starter()`, `gift()`, `static_encounter()`, `trade()` y marcadores) y `DataDB.apply_patch()`; (5) `src/randomizer/` para `v0.2`; (6) verificación de estadísticas con WikiDex (§3).
+**He leído** (2026-10-04, órdenes nuevas de Javier) `docs/DIRECTRICES.md` §0, §7, §7.1 y §8, las 4 capturas de `docs/arte/referencias/` y `docs/arte/recursos_terceros.md`. Entendido: el listón es Añil; prohibido el arte generado por código; los packs de `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` no se tocan y se copia al repo **solo lo que se usa, sin reescalar** (frente 192 px, espalda 288 px, iconos 128×64 = 2 cuadros de 64, Pokémon que te siguen 256×256 = 4×4 cuadros de 64), con su crédito en `CREDITOS.md`; set oficial: `06_generation9_pack` (y `07_generation8_pack` solo si falta algo). **No descargo nada de internet.**
 
-**En qué estoy:** siguiente paso, la Fase 9 (sistema de efectos con hooks, para que funcionen los movimientos que necesitan script: el validador lista 52 que se usan ya en el MVP), clima, campos y trampas, dobles, gimmicks e IA 2–4.
+**Plan actualizado:**
+1. ⏳ Importador `tools/sprites/import_pokemon_assets.mjs` (sustituye a la descarga de Showdown, que retiro junto con sus sprites): copia del pack 06 las especies que usa el juego (lista inicial en `data/species_in_use.json` + Pokédex regional + las que salen en los datos, con sus familias) a `assets/sprites/pokemon/{front,front_shiny,back,back_shiny,icons,icons_shiny,followers,followers_shiny}/<id>.png` y los gritos a `assets/audio/cries/<id>.ogg`.
+2. ⏳ Validador: cada especie usada tiene todas sus versiones, normal y shiny.
+3. ✅ Shiny (Fase 6.7): ya hecho (1/4096 en `data/world.json` → `shiny`, que puso el Agente 1, tiradas del Amuleto Iris y Masuda, test sembrado con 1.000.000 de tiradas).
+4. ⏳ Créditos del Generation 9 Pack (`Credits.txt`) en `CREDITOS.md`.
+5. Después: Fase 9 del motor de combate y lo que falte del randomizer.
+
+**En qué estoy:** importador de sprites del pack 06 (`feat/agente2-recursos`).
 
 **Terminado:**
 - Fase 4.2: `tools/import_data` (Node 18+, sin dependencias). Showdown `0.11.11` (tarball de npm verificado con sha512) + CSV de PokeAPI en el commit `a003ae375b69`, con nombres y descripciones en español (idioma 7). Genera `data/generated/`: 1379 especies y formas, 951 movimientos (con `needs_script`), 316 habilidades, 1376 objetos, tipos, learnsets, tablas de experiencia y naturalezas. Uso en `README.md` → Datos y `tools/README.md`.
