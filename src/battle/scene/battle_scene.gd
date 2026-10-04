@@ -16,6 +16,8 @@ const BALL_FROM := Vector2(40, 120)
 ## Fase 7.10: "Luchar / Mochila / Pokémon / Huir".
 const COMMANDS: Array[String] = ["Luchar", "Mochila", "Pokémon", "Huir"]
 enum Command { FIGHT, BAG, POKEMON, RUN }
+## Textos de presentación del motor (`tag` en `data`) que la escena pone a su manera.
+const SCENE_TEXT_TAGS: Array[String] = ["wild_appear", "challenge", "send_out", "recall"]
 
 ## Sin animaciones ni esperas (para los tests).
 @export var fast := false
@@ -81,10 +83,13 @@ func run(setup: Variant) -> StringName:
 	return outcome
 
 
-## El driver que corresponde a `setup`. Mientras no exista el motor real, FakeBattle.
+## El driver que corresponde a `setup`: el motor real con un BattleSetup; FakeBattle
+## con un Dictionary (combate de prueba del Debug).
 static func make_driver(setup: Variant) -> BattleDriver:
 	if setup is BattleDriver:
 		return setup
+	if setup is BattleSetup:
+		return EngineDriver.new(setup)
 	return FakeBattle.new(setup)
 
 
@@ -104,7 +109,8 @@ func _play_event(event: Variant) -> void:
 	var data: Dictionary = _field(event, "data", {})
 	match StringName(_field(event, "type", "")):
 		&"message":
-			await _message(str(data.get("text", "")))
+			if str(data.get("tag", "")) not in SCENE_TEXT_TAGS:
+				await _message(str(data.get("text", "")))
 		&"switch_in":
 			await _switch_in(side, data)
 		&"switch_out":
@@ -292,10 +298,10 @@ func _ask_player(request: Dictionary) -> Dictionary:
 			return {"type": &"switch", "party_index": await _choose_party(true)}
 		BattleDriver.REQUEST_LEARN_MOVE:
 			return {"type": &"learn_move", "forget_index": await _choose_forget(request)}
-	return await _choose_action()
+	return await _choose_action(request)
 
 
-func _choose_action() -> Dictionary:
+func _choose_action(request: Dictionary = {}) -> Dictionary:
 	while true:
 		var active := _driver.player_active()
 		_box.set_text_width(PROMPT_TEXT_WIDTH)
@@ -311,20 +317,24 @@ func _choose_action() -> Dictionary:
 				if slot >= 0:
 					return {"type": &"fight", "move_slot": slot}
 			Command.BAG:
-				var item := await _choose_item()
-				if item != &"":
-					return {"type": &"item", "item": item}
+				var use := await _choose_item()
+				if not use.is_empty():
+					return use
 			Command.POKEMON:
 				var index := await _choose_party(false)
 				if index >= 0:
 					return {"type": &"switch", "party_index": index}
 			Command.RUN:
-				return {"type": &"run"}
+				if request.get("can_run", true):
+					return {"type": &"run"}
+				await _message(tr("¡No puedes huir de un combate contra un entrenador!"))
 	return {}
 
 
 func _choose_move(active: Dictionary) -> int:
 	var moves: Array = active.get("moves", [])
+	if moves.all(func(m: Dictionary) -> bool: return int(m.get("pp", 0)) <= 0):
+		return 0
 	var names := PackedStringArray()
 	for i: int in 4:
 		names.append(str(moves[i].get("name", "?")) if i < moves.size() else "—")
@@ -356,33 +366,47 @@ func _show_move_info(index: int, moves: Array) -> void:
 		UiColors.type_color(StringName(move.get("type", "normal"))).darkened(0.35))
 
 
-func _choose_item() -> StringName:
+## Objeto que usar (y sobre quién). {} = el jugador ha vuelto atrás.
+func _choose_item() -> Dictionary:
 	var items := _driver.battle_items()
 	if items.is_empty():
 		await _message(tr("No tienes objetos que puedas usar ahora."))
-		return &""
+		return {}
 	var labels := PackedStringArray()
 	for item: Dictionary in items:
 		labels.append("%s ×%d" % [item.get("name", "?"), int(item.get("count", 0))])
 	var index := await _list(tr("¿Qué objeto quieres usar?"), labels, [], true)
-	return StringName(items[index].get("id", "")) if index >= 0 else &""
+	if index < 0:
+		return {}
+	var item_id := StringName(items[index].get("id", ""))
+	var target := -1
+	if _driver.item_needs_target(item_id):
+		target = await _choose_party(false, true)
+		if target < 0:
+			return {}
+	if not _driver.can_use_item(item_id, target):
+		await _message(tr("No tendría ningún efecto."))
+		return {}
+	return {"type": &"item", "item": item_id, "party_index": target}
 
 
-func _choose_party(forced: bool) -> int:
+## Pokémon del equipo: para cambiar (no se puede elegir el activo ni los debilitados)
+## o, con `for_item`, como objetivo de un objeto (se puede elegir cualquiera).
+func _choose_party(forced: bool, for_item: bool = false) -> int:
 	var party := _driver.player_party()
 	var labels := PackedStringArray()
 	var disabled: Array[bool] = []
 	for pokemon: Dictionary in party:
 		labels.append("%s  Nv%d  %d/%d" % [pokemon.get("name", "?"), int(pokemon.get("level", 1)),
 			int(pokemon.get("hp", 0)), int(pokemon.get("max_hp", 1))])
-		disabled.append(not pokemon.get("able", true) or pokemon.get("active", false))
-	var prompt := tr("¿Qué Pokémon sacarás?") if forced else tr("Elige un Pokémon.")
+		disabled.append(not for_item and (not pokemon.get("able", true) or pokemon.get("active", false)))
+	var prompt := tr("¿Sobre qué Pokémon?") if for_item else (tr("¿Qué Pokémon sacarás?") if forced else tr("Elige un Pokémon."))
 	return await _list(prompt, labels, disabled, not forced)
 
 
 ## Qué movimiento olvidar para aprender `request.move_name` (−1 = no aprenderlo).
 func _choose_forget(request: Dictionary) -> int:
-	var moves: Array = _driver.player_active().get("moves", [])
+	var moves: Array = request.get("moves", _driver.player_active().get("moves", []))
 	var labels := PackedStringArray()
 	for move: Dictionary in moves:
 		labels.append(str(move.get("name", "?")))

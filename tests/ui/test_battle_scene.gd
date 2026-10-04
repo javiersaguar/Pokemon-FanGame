@@ -94,3 +94,42 @@ func test_map_bgm_is_restored_after_battle() -> void:
 	await _autoplay(BattleScene.Command.RUN)
 	assert_eq(AudioManager.current_bgm, &"mapa_de_prueba")
 	AudioManager.stop_bgm(0.0)
+
+
+# --- Con el motor real (EngineDriver) ---
+
+func _engine_party(level: int = 12) -> void:
+	GameState.reset()
+	GameState.player_name = "Rojo"
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 42
+	(GameState.party as Party).add(Pokemon.create(&"charmander", level, rng))
+
+
+func test_real_engine_wild_battle_until_win() -> void:
+	_engine_party(14)
+	_start(BattleSetup.wild(&"rattata", 2, {"seed": 5}))
+	await _autoplay(BattleScene.Command.FIGHT)
+	assert_true(_done, "el combate termina")
+	assert_eq(_outcome, SceneManager.OUTCOME_WIN)
+	GameState.reset()
+
+
+func test_real_engine_catch_spends_balls_and_adds_to_party() -> void:
+	_engine_party(14)
+	(GameState.bag as Bag).add(&"pokeball", 30)
+	_start(BattleSetup.wild(&"rattata", 2, {"seed": 9}))
+	await _autoplay(BattleScene.Command.BAG)
+	assert_eq(_outcome, SceneManager.OUTCOME_CAUGHT)
+	assert_lt((GameState.bag as Bag).count(&"pokeball"), 30, "se gastan Poké Balls")
+	assert_eq((GameState.party as Party).size(), 2, "el capturado va al equipo")
+	GameState.reset()
+
+
+func test_real_engine_trainer_battle_cannot_run() -> void:
+	_engine_party(14)
+	_start(BattleSetup.trainer(&"ruta1_manolo", {"seed": 3}))
+	await _autoplay(BattleScene.Command.FIGHT, BattleScene.Command.RUN)
+	assert_eq(_outcome, SceneManager.OUTCOME_WIN)
+	GameState.reset()
+

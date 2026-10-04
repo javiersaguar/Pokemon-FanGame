@@ -24,9 +24,12 @@ Relleno técnico temporal que hay que sustituir. **Ninguno es arte del juego.**
 | Barras de PS y experiencia (`HpBar`) | UI de combate | A3 | placeholder | Dibujadas por código | — | |
 | Iconos de sexo y de estado (`BattleDataBox`) | UI | A3 | placeholder | Dibujados por código | — | Se sustituyen por iconos de la biblia |
 | Cursor y flecha de continuar (`CursorArrow`) | UI | A3 | placeholder | Dibujados por código | — | |
+| Personajes del mapa provisionales (`assets/sprites/characters/placeholder/`) | Personaje en el mapa | A1 | placeholder | Generados por script | — | Fuera de la paleta y de 16×16: el validador solo avisa |
+| Iconos de Pokémon de Showdown (`assets/sprites/pokemon/icons/`) | Icono de Pokémon | A2 | placeholder | Showdown (40×30, 1 frame) | — | El canon es 32×32 × 2 frames; se cambian cuando Javier elija el set (pregunta 8) |
 
 ## Assets
 
 | Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
 |-------|------|-------|--------|-------------------|---------------------|-------|
 | Pixel Operator (`assets/fonts/`) | Fuente | A3 | integrado | Jayvee Enaguas, CC0 1.0 | ⏳ | Candidata. Faltan º, ª, ♂ y ♀. Hay que revisarla a 512×384 |
+| Sprites de combate de Pokémon del MVP (`assets/sprites/pokemon/front`, `back` y `_shiny`) | Pokémon en combate | A2 | integrado | Showdown `gen5` (Smogon Sprite Project), estáticos 96×96 | ⏳ | Opción B de `docs/arte/recursos.md`; pendiente de que Javier elija el set (pregunta 8) |

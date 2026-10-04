@@ -67,11 +67,9 @@ func submit(action: Dictionary) -> Array:
 	var foe := _foes[_foe_index]
 	match StringName(action.get("type", "")):
 		&"run":
-			if _info["can_run"]:
-				events.append(_ev(&"flee", PLAYER, {"success": true}))
-				events.append(_msg("¡Escapaste sin problemas!"))
-				return _end(events, &"run")
-			events.append(_msg("¡No puedes huir de un combate contra un entrenador!"))
+			events.append(_ev(&"flee", PLAYER, {"success": true}))
+			events.append(_msg("¡Escapaste sin problemas!"))
+			return _end(events, &"run")
 		&"switch":
 			var forced := _must_switch
 			_must_switch = false

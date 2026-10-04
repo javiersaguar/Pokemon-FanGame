@@ -872,7 +872,7 @@ Se aceptan las rutas de la sección 4.
 
 #### BattleScene ↔ combate: `BattleDriver`
 
-La BattleScene habla con un `BattleDriver` (`src/battle/scene/battle_driver.gd`, documentado en el propio archivo), que sigue el flujo de §8.5: `start()` → mientras no acabe, `request()` → acción del jugador → `submit(action)`. Los eventos son **los `BattleEvent` de §8.5 tal cual** (`type`, `side`, `slot`, `data`); la escena ignora los tipos que no conoce. Hoy lo implementa `FakeBattle` (`src/battle/scene/dev/`, combate de mentira con eventos del mismo formato y sin tocar la partida); cuando llegue el `BattleEngine`, un adaptador fino (Agente 3) traducirá `BattleRequest` / `BattleAction` y llamará a `result.apply_to_game_state()` en `finish()`.
+La BattleScene habla con un `BattleDriver` (`src/battle/scene/battle_driver.gd`, documentado en el propio archivo), que sigue el flujo de §8.5: `start()` → mientras no acabe, `request()` → acción del jugador → `submit(action)`. Los eventos son **los `BattleEvent` de §8.5 tal cual** (`type`, `side`, `slot`, `data`); la escena ignora los tipos que no conoce. Lo implementan **`EngineDriver`** (`src/battle/scene/engine_driver.gd`, el adaptador del `BattleEngine`: traduce `BattleRequest` / `BattleAction`, quita el objeto de la mochila al usarlo y llama a `result.apply_to_game_state()` en `finish()`) y **`FakeBattle`** (`src/battle/scene/dev/`, combate de mentira para pruebas, sin tocar la partida). `run(setup)` elige: `BattleSetup` → motor real; `Dictionary` (el combate de prueba del Debug) → FakeBattle; un `BattleDriver` → ese.
 
 ```gdscript
 driver.info() -> Dictionary        # {kind: &"wild"/&"trainer", trainers (como BattleSetup.trainers), background, bgm, can_run, can_lose}
@@ -881,10 +881,12 @@ driver.request() -> Dictionary     # {kind: &"action" | &"switch" | &"learn_move
 driver.submit(action) -> Array     # {type: &"fight", move_slot} · {&"item", item} · {&"switch", party_index} · {&"run"} · {&"learn_move", forget_index}
 driver.is_over() -> bool / outcome() -> StringName / finish()   # finish() = aplicar el resultado a la partida
 driver.player_active() -> Dictionary / player_party() -> Array[Dictionary] / battle_items() -> Array[Dictionary]   # para los menús
+driver.item_needs_target(item_id) -> bool / can_use_item(item_id, party_index) -> bool
 ```
 
-**Quién pone cada texto**: el motor manda los de mecánicas en eventos `message` (`¡X usó Y!`, `¡Es muy eficaz!`, `¡Has derrotado a...!`...) y el `lose_text` / `win_text` en `trainer_speech`. La escena solo pone los de presentación: `¡Un X salvaje apareció!`, `¡<Clase> <Nombre> te desafía!`, `¡<Entrenador> sacó a X!`, `¡Adelante, X!`, `¡X, vuelve!`, `¿Qué debería hacer X?` y `¡{player} está fuera de combate!` (derrota que no se puede perder).
+**Quién pone cada texto**: el motor manda los de mecánicas en eventos `message` (`¡X usó Y!`, `¡Es muy eficaz!`, `¡Has derrotado a...!`...) y el `lose_text` / `win_text` en `trainer_speech`. Los `message` con `tag` `wild_appear`, `challenge`, `send_out` y `recall` **los salta la escena** porque los pone ella en el momento justo de la animación: `¡Un X salvaje apareció!`, `¡<Clase> <Nombre> te desafía!`, `¡<Entrenador> sacó a X!`, `¡Adelante, X!`, `¡X, vuelve!`, `¿Qué debería hacer X?` y `¡{player} está fuera de combate!` (derrota que no se puede perder).
 
+- La escena comprueba antes de enviar: no deja huir de un entrenador (`request.can_run`), ni usar un objeto sin efecto (`can_use_item`), ni elegir un movimiento sin PP; sin PP en ninguno, envía Forcejeo.
 - La música de victoria empieza al debilitarse el último Pokémon del rival (si en esa tanda llega `end` con `win`).
 - `BattleScene.fast = true` quita animaciones y esperas (tests).
 - Sprites: `assets/sprites/pokemon/<front|back>[_shiny]/<especie>.png`, `assets/sprites/trainers/player_back_<male|female>.png` y fondos `assets/sprites/ui/battle/bg_<entorno>.png`. Si faltan, se generan provisionales (`PlaceholderArt`).
@@ -904,9 +906,9 @@ await PartyScreen.open(mode := PartyScreen.Mode.VIEW) -> int   # índice elegido
 await BagScreen.open(mode := BagScreen.Mode.FIELD) -> StringName  # id del objeto o &""
 ```
 
-- Comandos de Debug del Agente 3: `dialogue <texto>`, `bgm [id]`, `se <id>`, `me <id>`, `volume <bus> <0-100>` y `audio` (audios que faltan). **(Previsto)**: `giveitem <id> [n]`.
+- Comandos de Debug del Agente 3: `dialogue <texto>`, `giveitem <id> [n]`, `bag`, `bgm [id]`, `se <id>`, `me <id>`, `volume <bus> <0-100>` y `audio` (audios que faltan).
 
-### 9.5 Mochila (`Bag`, módulo de GameState) (previsto)
+### 9.5 Mochila (`Bag`, módulo de GameState)
 
 `class_name Bag` en `src/items/bag.gd` (cumple los requisitos de módulo de la sección 2).
 
@@ -916,7 +918,12 @@ Bag.remove(item_id: StringName, amount := 1) -> bool # false si no hay suficient
 Bag.count(item_id: StringName) -> int
 Bag.has(item_id: StringName, amount := 1) -> bool
 Bag.items_in_pocket(pocket: StringName) -> Array[StringName]   # bolsillos: campo `pocket` de los objetos
+Bag.battle_items() -> Array[StringName]   # los que tienen battle_use
+Bag.all_items() -> Array[StringName] / Bag.is_empty() -> bool
+Bag.MAX_COUNT   # 999
 ```
+
+El orden es el de obtención. `GameState.bag` la crea y la guarda sola.
 
 ### 9.6 Entrenadores (datos)
 

@@ -46,15 +46,7 @@ func _ready() -> void:
 	root.add_child(_box)
 	_choice = CHOICE_SCENE.instantiate()
 	root.add_child(_choice)
-	Debug.register_command("dialogue", _debug_say,
-		"dialogue <texto>: muestra el texto en el cuadro de diálogo (\\n = salto de línea)")
-
-
-func _debug_say(args: PackedStringArray) -> String:
-	if args.is_empty():
-		return "Uso: dialogue <texto>"
-	say(" ".join(args).replace("\\n", "\n"))
-	return ""
+	UiDebug.register()
 
 
 ## Muestra `text` y espera a que el jugador lo pase. `speaker`: nombre (String)
