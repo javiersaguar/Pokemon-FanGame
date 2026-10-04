@@ -22,8 +22,8 @@ Interfaces públicas entre las partes del juego. Cada sección la define y manti
 - **Textos visibles en español.** Los textos de la interfaz pasan por `tr()`.
 - **Ningún dato de juego en un `.gd`**: potencias, niveles, precios y similares van en `data/`.
 - **Leer JSON**: `JsonFile.read(path) -> Variant` y `JsonFile.read_dict(path) -> Dictionary` (`src/util/json_file.gd`). Dan errores claros con la ruta y la línea.
-- **Resolución base 512×384** (decisión de Javier, Fase 3.2; escalado entero y filtro Nearest). **El mundo se ve a ×2**: el arte se dibuja con casillas de 16 px y la cámara del jugador tiene `zoom = 2` (16×12 casillas en pantalla). **La UI no tiene zoom**: las `CanvasLayer` se diseñan a 512×384 nativo. Las posiciones del mundo van en píxeles enteros del arte (`Character` redondea al moverse). Fondo por defecto negro.
-- **Casillas de 16 px.** Las entidades del mapa se colocan en el **centro** de su casilla: `Grid.to_world(tile) -> Vector2`, `Grid.to_tile(pos) -> Vector2i`, `Grid.TILE` (`src/overworld/grid.gd`).
+- **Resolución base 512×384** (decisión de Javier, Fase 3.2; ventana de 1024×768, escalado entero y filtro Nearest). **El mundo se ve a ×2 con casillas de 32 px de pantalla**: los packs ya vienen al doble (DIRECTRICES §7.1), así que la cámara del mundo tiene `zoom = 1` y hay 16×12 casillas en pantalla. **La UI no tiene zoom**: las `CanvasLayer` se diseñan a 512×384 nativo. Las posiciones del mundo van en múltiplos de 2 px (un píxel del arte: `Grid.ART_PIXEL`, `Grid.round_to_art_pixel()`). Fondo por defecto negro.
+- **Casillas de 32 px** (`Grid.TILE`). Las entidades del mapa se colocan en el **centro** de su casilla: `Grid.to_world(tile) -> Vector2`, `Grid.to_tile(pos) -> Vector2i`, `Grid.path_between(from, to)` (`src/overworld/grid.gd`).
 - **Direcciones**: `Vector2i.UP/DOWN/LEFT/RIGHT` en código; `"up"`, `"down"`, `"left"` y `"right"` en JSON y en el guardado (`Grid.dir_name()` / `Grid.dir_from_name()`, estáticas; `GameState` tiene las mismas como métodos).
 - **Id de mapa** = ruta de la escena dentro de `maps/` sin `.tscn`: `maps/pueblo_inicial/exterior.tscn` → `&"pueblo_inicial/exterior"`.
 
@@ -307,10 +307,11 @@ Raíz `Node2D` con `src/overworld/map_root.gd` (`class_name MapRoot`) y `@export
 
 ```
 <Mapa> (MapRoot)
-├── Ground (TileMapLayer)     # suelo
-├── Decor (TileMapLayer)      # objetos con colisión a la altura del jugador
+├── Ground (TileMapLayer)     # suelo: hierba, caminos, hierba alta, agua, adoquines
+├── Decor (TileMapLayer)      # lo plano encima del suelo: bosque, flores, bordillos, mesetas, carteles
 ├── Entities (Node2D, y_sort_enabled)   # jugador, NPCs, objetos
-├── Above (TileMapLayer)      # lo que tapa al jugador (copas, tejados)
+│   └── Objects (TileMapLayer, y_sort_enabled)   # casas y árboles grandes: se ordenan con los personajes
+├── Above (TileMapLayer, z_index 10)    # lo que siempre tapa al jugador
 ├── Warps (Node2D)
 ├── Spawns (Node2D)           # un Marker2D por spawn_id; "default" obligatorio
 └── Triggers (Node2D)
@@ -326,11 +327,11 @@ MapRoot.get_bounds() -> Rect2i                 # en píxeles, según Ground
 MapRoot.id_from_path(path) / MapRoot.path_from_id(map_id)   # estáticas
 ```
 
-`MapData` (`src/overworld/map_data.gd`): `id`, `display_name`, `bgm` (id para AudioManager), `outdoor`, `weather`, `encounter_table` (id de `data/encounters/<id>.json`), `encounter_rate` (0 = por defecto), `battle_background`, `region_map_position`, `can_fly_from`, `can_bike`, `healing_spot` y `fixed_camera`.
+`MapData` (`src/overworld/map_data.gd`): `id`, `display_name`, `bgm` (id para AudioManager), `outdoor`, `weather`, `encounter_table` (id de `data/encounters/<id>.json`), `encounter_rate` (0 = por defecto), `battle_background`, `region_map_position`, `can_fly_from`, `can_bike`, `healing_spot`, `fixed_camera` y `followers_allowed` (el Pokémon que te sigue sale en este mapa; `true`).
 
 ```gdscript
 MapRoot.get_layer(name) -> TileMapLayer
-MapRoot.tile_custom_data(tile, key, default = null) -> Variant   # Decor antes que Ground
+MapRoot.tile_custom_data(tile, key, default = null) -> Variant   # Decor → Entities/Objects → Ground; el primer valor no vacío
 MapRoot.terrain_at(tile) -> String
 MapRoot.is_encounter_tile(tile) -> bool
 MapRoot.get_warps() -> Array[Warp] / MapRoot.warp_at(tile) -> Warp
@@ -338,10 +339,14 @@ MapRoot.get_warps() -> Array[Warp] / MapRoot.warp_at(tile) -> Warp
 
 ### TileSet
 
-Todos los TileSets del juego tienen estas capas (el provisional está en `assets/tilesets/placeholder/`):
+Todos los TileSets del juego tienen estas capas. El de exteriores es `assets/tilesets/exterior/exterior.tres` (casillas de 32 px; qué hay en cada atlas: `ExteriorTiles`, en `exterior_tiles.gd`; cómo se monta: README):
 
 - Física 0 → capa `paredes`; física 1 → capa `agua`.
-- Custom data: `terrain` (`String`: `grass`, `tall_grass`, `path`, `floor`, `water`, `ledge_down`, `door`, `mat`...), `encounter` (`bool`) y `footstep_sound` (`String`).
+- Custom data: `terrain` (`String`: `grass`, `tall_grass`, `path`, `sand`, `stone`, `water`, `tree`, `house`, `fence`, `hedge`, `cliff`, `stairs`, `flowers`, `obstacle`, `ledge_down`/`ledge_left`/`ledge_right`, `counter`...), `encounter` (`bool`) y `footstep_sound` (`String`).
+- Terrenos de Godot (conjunto 0, esquinas y lados, 47 casillas cada uno): 0 **hierba alta** y 1 **camino**. En el editor se pintan con la herramienta de terrenos; por código, `set_cells_terrain_connect()`.
+- Animadas: flores rojas y blancas (4 cuadros) y brillos del agua (2 cuadros), en la fuente `animados`.
+- **Objetos grandes** (fuentes `casas` y `arboles`; lista en `objetos.json`): una sola casilla grande que se pone en `Entities/Objects` en su casilla **de abajo a la izquierda**. Solo chocan en su base (`footprint`); la puerta de las casas se puede pisar (para el Warp).
+- **Bordillos** (`ledge_<dirección>`): chocan, pero el jugador los salta 2 casillas en esa dirección si la de llegada está libre.
 
 ### Entidades del mapa
 
@@ -351,7 +356,8 @@ Van dentro de `Entities`. Jerarquía de clases (todas `@tool`: **las clases hija
 MapEntity (src/overworld/map_entity.gd)       # algo que se examina con accept
 ├── Character (src/overworld/character.gd)    # se mueve por casillas
 │   ├── Player (src/overworld/player/player.tscn)
-│   └── NPC (src/overworld/npc/npc.tscn)      # base de TrainerNPC (Agente 3)
+│   ├── NPC (src/overworld/npc/npc.tscn)      # base de TrainerNPC (Agente 3)
+│   └── Follower (src/overworld/follower/follower.tscn)   # Pokémon que te sigue
 ├── ItemBall (src/overworld/item_ball/item_ball.tscn)
 └── MapSign (src/overworld/sign/sign.tscn)
 Warp (src/overworld/warp/warp.gd)             # va en Warps, no en Entities
@@ -376,26 +382,33 @@ func get_map() -> MapRoot
 
 ```gdscript
 @export var sprite_sheet: Texture2D          # 4 columnas × 4 filas (ver "Spritesheets")
+@export var run_sprite_sheet: Texture2D      # opcional: hoja para correr
 @export var initial_facing: Character.Direction   # DOWN, LEFT, RIGHT, UP
 var facing: Vector2i
 var moving: bool
 signal step_finished(tile: Vector2i)
+signal step_started(from: Vector2i, to: Vector2i, duration: float)   # al empezar un paso o un salto
 func face(dir: Vector2i) -> void
 func face_towards(target: Node2D) -> void
 func can_step(dir: Vector2i) -> bool
-func step(dir, duration := Character.WALK_TIME, ignore_collisions := false) -> bool   # corrutina
+func step(dir, duration := Character.WALK_TIME, ignore_collisions := false, running := false) -> bool   # corrutina
+func jump(dir, tiles := 2) -> void                     # corrutina; salto de bordillo (con polvo al caer)
+func is_tile_free(tile) -> bool                        # sin pared, agua ni entidad (física)
 func walk(path: Array[Vector2i], duration := WALK_TIME, ignore_collisions := false) -> void   # corrutina
 func bump(dir, duration := WALK_TIME) -> void          # andar en el sitio
 func place_at(tile: Vector2i, dir := Vector2i.ZERO) -> void
-func show_emote(text := "!", duration := 0.6) -> void  # corrutina; globo sobre la cabeza
+func show_emote(text := "!", duration := 0.6) -> void  # corrutina; "!" con el sprite del pack 05
 ```
 
-`WALK_TIME` = 0,25 s y `RUN_TIME` = 0,125 s por casilla. Al moverse, el cuerpo se adelanta a la casilla de destino para reservarla.
+`WALK_TIME` = 0,25 s y `RUN_TIME` = 0,125 s por casilla. Al moverse, el cuerpo se adelanta a la casilla de destino para reservarla. En hierba alta (`terrain = "tall_grass"`) la hierba se mueve al pisarla y los pies se hunden (`CharacterSprite.bush_depth`, como Essentials).
+
+**Follower** (`src/overworld/follower/follower.tscn`): `species`, `shiny` y `leader_path` (para los de los NPCs). Hoja: `assets/sprites/pokemon/followers/<species>.png` o `followers_shiny/` (Agente 2); si no hay, no se ve. `follow(character)`, `appear()` (brillo y SE `shiny` si es shiny). Va a la casilla que deja su líder, con su misma velocidad (también en los saltos), se mueve aunque esté quieto y no choca con nadie. El del jugador lo crea SceneManager al colocarlo (`SceneManager.player_follower`): el primer Pokémon del equipo que pueda luchar, si `data/world.json` → `followers.enabled` y el mapa lo permite.
 
 **Player** (`SceneManager.player`)
 
 - Toque corto en otra dirección = solo girar. Si se mantiene, anda y encadena casillas sin parones. Con `run`, corre. Contra una pared anda en el sitio y suena `bump`.
-- Tras cada paso: warp (si lo hay) → `EventBus.player_stepped(tile)` → encuentro salvaje (si nadie ha bloqueado el input).
+- Tras cada paso: warp (si lo hay) → `EventBus.player_stepped(tile)` → disparador → encuentro salvaje (si nadie ha bloqueado el input). Delante de un bordillo en su dirección, salta (SE `jump`).
+- Con `run`, corre con la hoja de correr (`player_<sexo>_run.png`).
 - `menu` → `SceneManager.open_pause_menu()`; `accept` → interacción. Durante la interacción el input está bloqueado con `&"interact"`.
 - Tras cualquier bloqueo espera un frame antes de volver a leer `accept`, así la pulsación que cierra un diálogo o un menú no vuelve a interactuar.
 - `refresh_appearance()` usa el spritesheet según `GameState.player_gender`. `setup_camera(map)` ajusta la cámara (la llama SceneManager).
@@ -417,7 +430,7 @@ Para un NPC con comportamiento propio: script `@tool` que hereda de `NPC` y sobr
 
 **ItemBall**: `item_id: StringName`, `quantity: int`, `hidden_item: bool`. Todas las colocaciones están en `data/item_placements.json` (`{placement_id: item_id}`, lo lee el randomizer con `DataDB.item_placements()`): se regenera con `godot --headless --path . -s res://maps/_tools/build_item_placements.gd` al tocar objetos del suelo (`ItemPlacements.scan()`; un test de `tests/mundo/` avisa si está desactualizado). Su **id de colocación** es `<map_id>/<nombre del nodo>` (`placement_id()`): por la regla R.2, el objeto que da es `DataDB.placed_item(placement_id, item_id)` si DataDB lo tiene (en RandomLocke puede ser otro) y, si no, `item_id`. Al cogerlo activa `item_taken:<map_id>:<nombre del nodo>`, llama a `GameState.bag.add(objeto, quantity)` si la mochila existe, suena el ME `item` y muestra "¡{player} ha encontrado {item}!" con el nombre (o el plural) de `DataDB.item()`.
 
-**MapSign**: `lines`, `only_from_below := true` y `show_sprite := true`.
+**MapSign**: `lines`, `only_from_below := true` y `show_sprite` (la escena lo trae a `false`: el cartel se dibuja con el TileSet).
 
 **Warp**: `target_map`, `target_spawn` (`&"default"`), `arrival_facing` (`KEEP`, `DOWN`, `LEFT`, `RIGHT` o `UP`), `size: Vector2i` (casillas desde la suya hacia la derecha y abajo) y `sound` (SE, por defecto `&"door"`). Se activa al pisarlo. En el editor se dibuja como un rectángulo azul.
 
@@ -430,7 +443,7 @@ Un nodo del mapa (NPC, cartel, Warp...) **se libera al cambiar de mapa** y sus c
 
 ### Spritesheets de personajes
 
-`assets/sprites/characters/<id>.png`: **4 columnas** (quieto, paso A, quieto, paso B) × **4 filas** (abajo, izquierda, derecha, arriba). El tamaño de frame es libre (ancho/4 × alto/4) y los pies tocan el borde inferior del frame. Los provisionales (`assets/sprites/characters/placeholder/`, frames de 32×32) se generan con `generate_characters.gd`: `player_male`, `player_female`, `rival`, `professor`, `mom`, `npc_man`, `npc_woman`, `npc_old`, `nurse`, `clerk` y `trainer`, más `item_ball` y `sign` (16×16).
+`assets/sprites/characters/<id>.png`: **4 columnas** (quieto, paso A, quieto, paso B) × **4 filas** (abajo, izquierda, derecha, arriba), cuadros de **64×64** (pack 05, tal cual) y los pies en el borde inferior de la casilla. Hay: `player_male`/`player_female` (+ `_run`; provisionales: Ethan y Lyra), `rival`, `professor`, `mom`, `nurse`, `clerk`, `trainer` y vecinos `npc_*` (`youngster`, `lass`, `fisherman`, `kimono_girl`, `old_man`, `old_woman`, `man`, `woman`, `boy`, `girl`). `objects.png` (4×4 cuadros de 32: la columna 0 es la Poké Ball del suelo) y `effects/` (`exclamation`, `grass_rustle`, `jump_dust`, `shiny_sparkles`). Se copian con `import_characters.gd`.
 
 ### Encuentros salvajes
 

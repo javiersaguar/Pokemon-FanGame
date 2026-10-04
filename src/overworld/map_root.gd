@@ -1,10 +1,14 @@
 class_name MapRoot
 extends Node2D
 ## Raíz de cada escena de mapa. Estructura esperada (ver docs/contratos.md):
-##   Ground, Decor, Above (TileMapLayer) · Entities (Node2D con y_sort) ·
+##   Ground, Decor, Above (TileMapLayer) · Entities (Node2D con y_sort, con
+##   Objects dentro: TileMapLayer con y_sort para casas y árboles) ·
 ##   Warps · Spawns (Marker2D por spawn_id) · Triggers
 
 const MAPS_DIR := "res://maps/"
+## Capas de casillas en orden de prioridad para la custom data (terrain...).
+## Objects (dentro de Entities, con y-sort) lleva casas y árboles.
+const TILE_LAYERS: Array[StringName] = [&"Decor", &"Entities/Objects", &"Ground"]
 const DEFAULT_SPAWN := &"default"
 
 @export var data: MapData
@@ -82,9 +86,11 @@ func get_layer(layer_name: StringName) -> TileMapLayer:
 	return get_node_or_null(NodePath(String(layer_name))) as TileMapLayer
 
 
-## Valor de la custom data `key` en la casilla. Decor tiene prioridad sobre Ground.
+## Valor de la custom data `key` en la casilla: el de la primera capa de
+## TILE_LAYERS que lo tenga puesto (no vacío). Así un adorno de Decor sin terreno
+## (flores, brillos del agua) no tapa la hierba alta o el agua de Ground.
 func tile_custom_data(tile: Vector2i, key: StringName, default: Variant = null) -> Variant:
-	for layer_name: StringName in [&"Decor", &"Ground"]:
+	for layer_name: StringName in TILE_LAYERS:
 		var layer := get_layer(layer_name)
 		if layer == null or layer.tile_set == null:
 			continue
@@ -92,8 +98,21 @@ func tile_custom_data(tile: Vector2i, key: StringName, default: Variant = null) 
 			continue
 		var tile_data := layer.get_cell_tile_data(tile)
 		if tile_data:
-			return tile_data.get_custom_data(key)
+			var value: Variant = tile_data.get_custom_data(key)
+			if not _is_unset(value):
+				return value
 	return default
+
+
+static func _is_unset(value: Variant) -> bool:
+	match typeof(value):
+		TYPE_NIL:
+			return true
+		TYPE_BOOL:
+			return not value
+		TYPE_STRING, TYPE_STRING_NAME:
+			return String(value).is_empty()
+	return false
 
 
 ## Tipo de terreno de la casilla ("grass", "tall_grass", "water", "counter"...).

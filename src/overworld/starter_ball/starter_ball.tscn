@@ -1,10 +1,10 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://src/overworld/starter_ball/starter_ball.gd" id="1_starter"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/placeholder/item_ball.png" id="2_ball"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/objects.png" id="2_ball"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tile"]
-size = Vector2(14, 14)
+size = Vector2(28, 28)
 
 [node name="StarterBall" type="Node2D"]
 script = ExtResource("1_starter")
@@ -12,6 +12,8 @@ hidden_if_flag = &"starter_chosen"
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_ball")
+hframes = 4
+vframes = 4
 
 [node name="Body" type="StaticBody2D" parent="."]
 collision_layer = 2

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="1_npc"]
 [ext_resource type="Script" path="res://src/overworld/character_sprite.gd" id="2_sprite"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/placeholder/npc_man.png" id="3_sheet"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="3_sheet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
-size = Vector2(14, 14)
+size = Vector2(28, 28)
 
 [node name="NPC" type="Node2D"]
 script = ExtResource("1_npc")

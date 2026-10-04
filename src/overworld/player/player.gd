@@ -8,9 +8,13 @@ extends Character
 const TURN_DELAY := 0.1
 ## Capas en las que se buscan cosas que examinar: entidades y disparadores.
 const INTERACT_MASK := 2 | 4
-const SHEETS: Dictionary[StringName, String] = {
-	&"male": "res://assets/sprites/characters/placeholder/player_male.png",
-	&"female": "res://assets/sprites/characters/placeholder/player_female.png",
+## Hojas del protagonista por sexo: [andar, correr] (provisionales: Ethan y Lyra
+## del pack 05).
+const SHEETS: Dictionary[StringName, Array] = {
+	&"male": ["res://assets/sprites/characters/player_male.png",
+		"res://assets/sprites/characters/player_male_run.png"],
+	&"female": ["res://assets/sprites/characters/player_female.png",
+		"res://assets/sprites/characters/player_female_run.png"],
 }
 
 var _walking := false
@@ -67,8 +71,9 @@ func _process(delta: float) -> void:
 
 ## Sprite según el sexo elegido (GameState.player_gender).
 func refresh_appearance() -> void:
-	var path: String = SHEETS.get(GameState.player_gender, SHEETS[&"male"])
-	sprite_sheet = load(path)
+	var paths: Array = SHEETS.get(GameState.player_gender, SHEETS[&"male"])
+	run_sprite_sheet = load(paths[1])
+	sprite_sheet = load(paths[0])
 
 
 func place_at(tile: Vector2i, dir: Vector2i = Vector2i.ZERO) -> void:
@@ -127,8 +132,11 @@ func _turn(dir: Vector2i) -> void:
 func _walk(dir: Vector2i) -> void:
 	_walking = true
 	while dir != Vector2i.ZERO:
-		var duration := RUN_TIME if Input.is_action_pressed(&"run") else WALK_TIME
-		if not await step(dir, duration, Debug.noclip):
+		var running := Input.is_action_pressed(&"run")
+		if _can_jump(dir):
+			AudioManager.play_se(&"jump")
+			await jump(dir)
+		elif not await step(dir, RUN_TIME if running else WALK_TIME, Debug.noclip, running):
 			AudioManager.play_se(&"bump")
 			await bump(dir)
 			_sync_state()
@@ -139,6 +147,15 @@ func _walk(dir: Vector2i) -> void:
 			break
 		dir = read_direction()
 	_walking = false
+
+
+## Bordillo delante (terreno ledge_<dirección>) y casilla libre detrás: se salta.
+func _can_jump(dir: Vector2i) -> bool:
+	var map := get_map_root()
+	if map == null or map.terrain_at(tile_position() + dir) != "ledge_" + Grid.dir_name(dir):
+		return false
+	var landing := tile_position() + dir * 2
+	return map.terrain_at(landing) != "ledge_" + Grid.dir_name(dir) and is_tile_free(landing)
 
 
 ## Devuelve false si el paso ha llevado a otra cosa (warp, combate, evento) y
