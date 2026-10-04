@@ -375,35 +375,203 @@ DataDB.type_effectiveness(atk_type: StringName, def_types: Array[StringName]) ->
 
 ---
 
-## 9. Presentación, UI y contenido (Agente 3) — POR DEFINIR
+## 9. Presentación, UI y contenido (Agente 3)
 
-> Sección del Agente 3. Lo que hay ahora es el **stub provisional** que dejó el Agente 1 para que el proyecto arranque.
+Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces.
 
-### Dialogue (stub actual en `src/autoload/dialogue.gd`)
+### 9.1 Dialogue (autoload)
+
+Código: `src/autoload/dialogue.gd` + `src/ui/dialogue/`. Mantiene las firmas del stub; solo añade parámetros opcionales al final.
 
 ```gdscript
-await Dialogue.say(text: String, speaker: Variant = null) -> void
-var i: int = await Dialogue.ask(text: String, options: PackedStringArray, speaker: Variant = null)
-Dialogue.is_open: bool
+Dialogue.is_open: bool                 # true mientras hay un say()/ask() en curso
+Dialogue.text_speed: int               # caracteres por segundo (lo cambia Opciones); 0 = instantáneo
+Dialogue.NO_CANCEL                     # constante para ask(): cancel no hace nada
+
+await Dialogue.say(text: String, speaker: Variant = null, vars: Dictionary = {}) -> void
+var i: int = await Dialogue.ask(text: String, options: PackedStringArray, speaker: Variant = null,
+		cancel_choice: int = -1, vars: Dictionary = {})
+var yes: bool = await Dialogue.ask_yes_no(text: String, speaker: Variant = null, vars: Dictionary = {})
+Dialogue.format_text(text: String, vars: Dictionary = {}) -> String
 ```
 
-- `speaker`: nombre (`String`) o un objeto con `display_name`.
-- `ask()` devuelve el índice elegido; `cancel` elige la última opción (normalmente "No").
-- Variables en el texto: `{player}` y `{rival}`.
-- Bloquea el input con `&"dialogue"` y emite `EventBus.dialogue_started` y `dialogue_finished`.
+- `speaker`: nombre (`String`) o un objeto con `display_name`. `null` = sin nombre.
+- **Variables**: `{player}` y `{rival}` (de `GameState`), `{pokemon}` (por defecto, el primero del equipo) y las que se pasen en `vars` (`{"item": "Poción"}` → `{item}`).
+- **Colores**: BBCode de `RichTextLabel` (`[color=#e05050]texto[/color]`).
+- **Páginas**: el texto se divide solo en páginas de 2 líneas. Una línea en blanco (`\n\n`) fuerza página nueva.
+- `ask()`: devuelve el índice elegido. `cancel` devuelve `cancel_choice` (−1 = la última opción, normalmente "No"; `Dialogue.NO_CANCEL` = no se puede cancelar).
+- `accept` y `cancel` completan la página si se está escribiendo o pasan a la siguiente.
+- Bloquea el input con `&"dialogue"` y emite `EventBus.dialogue_started` / `dialogue_finished`. Varios `say()` seguidos no parpadean.
 
-### AudioManager (stub actual en `src/autoload/audio_manager.gd`, no suena nada)
+### 9.2 AudioManager (autoload)
+
+Código: `src/autoload/audio_manager.gd`. Mantiene las firmas del stub.
 
 ```gdscript
-AudioManager.play_bgm(id: StringName, fade_time := 0.5) -> void
-AudioManager.stop_bgm(fade_time := 0.5) -> void
-AudioManager.play_se(id: StringName) -> void
-AudioManager.play_me(id: StringName) -> void    # en la versión real, que se pueda hacer await
-AudioManager.play_cry(species_id: StringName) -> void
 AudioManager.current_bgm: StringName
+AudioManager.play_bgm(id: StringName, fade_time := 0.5) -> void   # crossfade; si ya suena, no reinicia
+AudioManager.stop_bgm(fade_time := 0.5) -> void
+AudioManager.save_bgm() -> void                 # recuerda la BGM actual (p. ej., antes de un combate)
+AudioManager.restore_bgm(fade_time := 0.5) -> void
+AudioManager.play_se(id: StringName) -> void
+await AudioManager.play_me(id: StringName)      # pausa la BGM y la reanuda al acabar; await opcional
+await AudioManager.play_cry(species_id: StringName)   # await opcional
+AudioManager.play_ambient(id: StringName, fade_time := 1.0) -> void
+AudioManager.stop_ambient(fade_time := 1.0) -> void
+AudioManager.set_volume(bus: StringName, linear: float) -> void   # 0.0–1.0
+AudioManager.get_volume(bus: StringName) -> float
 ```
 
-### Pendiente de definir por el Agente 3
+- **Buses** (`res://default_bus_layout.tres`): `Master`, `BGM`, `SE`, `ME`, `Cries`, `Ambient`.
+- **Id → archivo**, sin tablas en el código: `assets/audio/bgm/<id>.ogg`, `assets/audio/se/<id>.(ogg|wav)`, `assets/audio/me/<id>.ogg`, `assets/audio/cries/<species_id>.ogg` y `assets/audio/ambient/<id>.ogg`. Si falta el archivo, avisa una vez y no suena nada (nunca rompe).
+- Bucles: en la importación del `.ogg` (*loop* + *loop offset*).
+- **SE estándar**: `menu_move`, `menu_accept`, `menu_cancel`, `menu_error`, `bump`, `door`, `stairs`, `ledge`, `grass`, `hit_normal`, `hit_weak`, `hit_super`, `low_hp`, `ball_throw`, `ball_shake`, `ball_caught`, `exp`, `save`.
+- **ME estándar**: `heal`, `item`, `key_item`, `badge`, `evolution`, `caught`, `level_up`, `hatch`.
 
-- Formato de `data/trainer_classes.json`, `data/trainers/*.json` y `data/encounters/*.json`.
-- BattleScene (`run(setup) -> StringName`, sección 4), título y menú de pausa.
+### 9.3 Escenas que usa SceneManager
+
+Se aceptan las rutas de la sección 4:
+
+| Escena | Contrato |
+|--------|----------|
+| `res://src/battle/scene/battle_scene.tscn` | `func run(setup) -> StringName` (corrutina). Reproduce la lista de `BattleEvent` del motor (sección 8). Guarda la BGM del mapa con `AudioManager.save_bgm()` y la restaura al acabar |
+| `res://src/ui/title/title_screen.tscn` | Llama a `SceneManager.start_new_game()` o `SceneManager.continue_game(slot)` |
+| `res://src/ui/pause_menu/pause_menu.tscn` | Menú de la pila de `SceneManager` |
+
+### 9.4 Interfaz común
+
+- **Theme global**: `res://src/ui/theme/main_theme.tres` (fuente, colores y marcos). Se pide al Agente 1 en `project.godot` → `gui/theme/custom`.
+- **Fuentes**: Pixel Operator (CC0) en `assets/fonts/`: tamaño **16** para el texto normal y la variante "8" a tamaño **8** para textos pequeños.
+- Pantallas de uso común **(previsto)**:
+
+```gdscript
+var name: String = await NameEntry.open(title: String, default_name := "", max_length := 10)
+await ShopScreen.open(shop_id: StringName)     # data/shops.json
+await PartyScreen.open(mode := PartyScreen.Mode.VIEW) -> int   # índice elegido o -1
+await BagScreen.open(mode := BagScreen.Mode.FIELD) -> StringName  # id del objeto o &""
+```
+
+- Comandos de Debug del Agente 3 **(previsto)**: `giveitem <id> [n]`, `dialogue <texto>`, `bgm <id>`.
+
+### 9.5 Mochila (`Bag`, módulo de GameState) (previsto)
+
+`class_name Bag` en `src/items/bag.gd` (cumple los requisitos de módulo de la sección 2).
+
+```gdscript
+Bag.add(item_id: StringName, amount := 1) -> int     # devuelve cuántos se añadieron (máx. 999 por objeto)
+Bag.remove(item_id: StringName, amount := 1) -> bool # false si no hay suficientes
+Bag.count(item_id: StringName) -> int
+Bag.has(item_id: StringName, amount := 1) -> bool
+Bag.items_in_pocket(pocket: StringName) -> Array[StringName]   # bolsillos: campo `pocket` de los objetos
+```
+
+### 9.6 Entrenadores (datos)
+
+**Clases** — `data/trainer_classes.json`:
+
+```json
+"robasientos": {
+  "name": "Robasientos del metro",
+  "gender": "male",
+  "base_money": 16,
+  "ai_level": 1,
+  "battle_sprite": "res://assets/sprites/trainers/robasientos.png",
+  "overworld_sprite": "res://assets/sprites/characters/robasientos.png",
+  "intro_bgm": "encounter_suspicious",
+  "battle_bgm": "battle_trainer"
+}
+```
+
+| Campo | Tipo | Notas |
+|-------|------|-------|
+| `name` | String | Va delante del nombre: "Robasientos del metro Paco". Vacío = solo el nombre (el rival) |
+| `gender` | `"male"` / `"female"` / `"mixed"` | En las clases `mixed`, cada entrenador indica su `gender` |
+| `base_money` | int | Dinero al ganar = `base_money × nivel del último Pokémon` |
+| `ai_level` | int 0–4 | Fase 9.7. Cada entrenador lo puede sobrescribir |
+| `battle_sprite`, `overworld_sprite` | ruta `res://` | Clases `mixed`: además `battle_sprite_female` y `overworld_sprite_female` |
+| `intro_bgm`, `battle_bgm` | id de AudioManager | |
+
+**Entrenadores** — `data/trainers/<zona>.json` (un archivo por zona):
+
+```json
+"ruta3_paco": {
+  "class": "robasientos",
+  "name": "Paco",
+  "intro_text": "¡Eh, tú! Ese sitio del vagón es mío.",
+  "lose_text": "Ese asiento estaba libre, te lo juro.",
+  "win_text": "",
+  "after_text": "Mañana vuelvo a pillarlo, que lo sepas.",
+  "items": [],
+  "party": [
+    {"species": "ninjask", "level": 14},
+    {"species": "pikachu", "level": 15,
+     "moves": ["quickattack", "thundershock", "doubleteam", "thunderwave"],
+     "item": "oranberry"}
+  ],
+  "rematches": ["ruta3_paco_2"]
+}
+```
+
+| Campo | Obligatorio | Notas |
+|-------|-------------|-------|
+| `class` | Sí | Id de `trainer_classes.json` |
+| `name` | Sí | Admite variables de Dialogue (`"{rival}"`) |
+| `gender` | Solo si la clase es `mixed` | `"male"` / `"female"` |
+| `intro_text` | No | Al verte, antes del combate. Vacío si lo dice una cinemática |
+| `lose_text` | Sí | Lo dice en el combate cuando le ganas |
+| `win_text` | No | Lo dice si te gana (combates que se pueden perder) |
+| `after_text` | No | Al hablarle después de derrotarlo |
+| `items` | No | Objetos que usa en combate |
+| `ai_level`, `battle_bgm` | No | Sobrescriben los de la clase |
+| `double` | No | `true` = combate doble con un solo entrenador |
+| `party` | Sí | 1–6 Pokémon. Obligatorios `species` y `level`. Opcionales: `moves`, `ability`, `item`, `nature`, `ivs`, `evs`, `gender`, `shiny`, `form`, `nickname`, `tera_type`. Sin `moves` = los 4 últimos aprendidos por nivel |
+| `rematches` | No | Ids de las revanchas, en orden |
+
+- El id de un entrenador es **único en todo el juego**, no solo en su archivo.
+- Al ganarle: flag `trainer_defeated:<id>` (lo pone `TrainerNPC` o el evento que lanza el combate).
+- Rivales del laboratorio: `rival_lab_1` / `_2` / `_3` según la variable `starter` (1 Planta, 2 Fuego, 3 Agua).
+- Lectura **(previsto)**: `TrainerData.get_trainer(id) -> Dictionary` y `TrainerData.get_class(id) -> Dictionary` (`src/overworld/trainers/trainer_data.gd`), con el entrenador ya combinado con su clase. Si el Agente 2 prefiere cargarlos en `DataDB`, se cambia.
+
+**TrainerNPC** **(previsto)**: `src/overworld/trainers/trainer_npc.tscn`, hereda de `NPC` (sección 5). Exports: `trainer_id: StringName`, `sight_range := 4`, `partner: NodePath` (pareja para combate doble).
+
+### 9.7 Encuentros (`data/encounters/<id>.json`)
+
+Formato de la guía (Fase 5.7) con dos añadidos:
+
+```json
+{
+  "land_rate": 10,
+  "land": {
+    "day":   [{"species": "pidgey", "min": 2, "max": 4, "weight": 40}],
+    "night": [{"species": "hoothoot", "min": 2, "max": 4, "weight": 40}]
+  },
+  "water": [], "old_rod": [], "good_rod": [], "super_rod": [], "rock_smash": [], "headbutt": []
+}
+```
+
+- `land_rate`: probabilidad de encuentro por paso en hierba alta, en %. Si falta, 10.
+- Cada tabla (`land`, `water`...) es **una lista** (igual a cualquier hora) **o un diccionario por momento del día** con los ids de `Clock.period()` (`morning`, `day`, `evening`, `night`). Si falta `morning` o `evening`, se usa `day`. Si falta el momento y no hay `day`, la tabla está vacía.
+- `weight`: peso relativo (no tienen que sumar 100). Nivel aleatorio entre `min` y `max`, ambos incluidos.
+- El id del archivo (sin `.json`) es el `MapData.encounter_table`. Tablas actuales: `ruta_1` (provisional) y `test_outdoor` (sala de pruebas).
+
+### 9.8 Tiendas (`data/shops.json`)
+
+```json
+{
+  "sell_ratio": 0.5,
+  "shops": {
+    "tienda_ciudad2": {
+      "name": "Tienda",
+      "stock": [
+        {"badges": 0, "items": ["pokeball", "potion"]},
+        {"badges": 1, "items": ["greatball", "superpotion"]}
+      ],
+      "prices": {}
+    }
+  }
+}
+```
+
+- Se venden los objetos de todos los tramos con `badges` ≤ medallas del jugador.
+- Precio de compra: `prices[id]` si existe; si no, el `price` del objeto en DataDB. Precio de venta: `floor(precio × sell_ratio)`.
+- Se abre con `await ShopScreen.open(&"tienda_ciudad2")` **(previsto)**.

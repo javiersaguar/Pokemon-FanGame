@@ -28,7 +28,7 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 
 | # | Decisión | A quién afecta | Opciones / sugerencia de la guía | Estado |
 |---|----------|----------------|-----------------------------------|--------|
-| 1 | Resolución base | `project.godot`, toda la UI y el combate | **320×180** (16:9, recomendada) o 256×192 (4:3, la de DS y Añil) | **PENDIENTE JAVIER** |
+| 1 | Resolución base | `project.godot`, toda la UI y el combate | **320×180** (16:9, recomendada) o 256×192 (4:3, la de DS y Añil) | Provisional: 320×180 (ya configurada). **PENDIENTE JAVIER** confirmarla |
 | 2 | ¿Quién o qué es Panchito? | Logo, título, intro y trama | Protagonista, profesor, mascota, villano o región | **PENDIENTE JAVIER** |
 | 3 | Nombres de la región, del pueblo inicial y de la ciudad 2 | Mapas, carteles y diálogos | Puede parodiar un lugar real | **PENDIENTE JAVIER** |
 | 4 | Los 3 iniciales | Laboratorio, equipos del rival y datos | Triángulo Planta / Fuego / Agua (variable `starter` = 1 / 2 / 3, Apéndice C) | **PENDIENTE JAVIER** |
@@ -36,7 +36,7 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 | 6 | Especies salvajes de la Ruta 1 (día y noche) | `data/encounters/` | La guía usa de ejemplo Pidgey, Rattata, Sentret, Hoppip / Hoothoot, Spinarak | **PENDIENTE JAVIER** |
 | 7 | Chico / chica: aspecto y nombres por defecto | Intro y teclado de nombres | — | **PENDIENTE JAVIER** |
 | 8 | Tono general | Todos los textos | ¿Parodia total o aventura seria con chistes? | **PENDIENTE JAVIER** |
-| 9 | Reloj real o interno (acelerado) | `Clock`, encuentros de día y de noche | Fase 14.1 | **PENDIENTE JAVIER** |
+| 9 | Reloj real o interno (acelerado) | `Clock`, encuentros de día y de noche | Fase 14.1 | Provisional: reloj real (`data/world.json`). **PENDIENTE JAVIER** |
 
 ---
 
@@ -58,7 +58,7 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 | Campo | Valor |
 |-------|-------|
 | Tamaño de tile | 16×16 px (Fase 3.2) |
-| Resolución base | **PENDIENTE JAVIER** (ver decisión 1) |
+| Resolución base | Provisional: 320×180 (ver decisión 1) |
 | Estilo de tileset | **PENDIENTE JAVIER.** Sugerencia: 4.ª o 5.ª generación, con aire de Añil, de recursos con permiso de uso |
 | Sprites de Pokémon | **PENDIENTE JAVIER.** Sugerencia: los de 5.ª generación, como Añil |
 | Logo | Tipografía propia parecida a la oficial (Fase 15.2) |
@@ -207,7 +207,7 @@ Reglas de la guía: los entrenadores de ruta van **2–4 niveles por debajo** de
 | Concepto | Valor |
 |----------|-------|
 | Dinero al ganar a un entrenador | `base_money` de la clase × nivel del último Pokémon (Fase 7.8) |
-| Dinero inicial | **PENDIENTE JAVIER** |
+| Dinero inicial | Provisional: 3000 (`data/world.json`). **PENDIENTE JAVIER** |
 | Dinero perdido al ser derrotado | **PENDIENTE JAVIER** |
 | Precios de la tienda | **PENDIENTE JAVIER.** Regla de la guía: que el jugador pueda curarse pero tenga que elegir |
 | Catálogo por ciudad | Crece con las medallas (Fase 11.5), en `data/shops.json` |
