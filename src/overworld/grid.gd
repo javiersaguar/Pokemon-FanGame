@@ -43,3 +43,14 @@ static func dir_from_name(dir_text: String) -> Vector2i:
 			return Vector2i.RIGHT
 		_:
 			return Vector2i.DOWN
+
+
+## Direcciones para ir de `from` a `to`: primero en horizontal y luego en vertical.
+static func path_between(from: Vector2i, to: Vector2i) -> Array[Vector2i]:
+	var path: Array[Vector2i] = []
+	var delta := to - from
+	for i: int in absi(delta.x):
+		path.append(Vector2i(signi(delta.x), 0))
+	for i: int in absi(delta.y):
+		path.append(Vector2i(0, signi(delta.y)))
+	return path

@@ -58,6 +58,8 @@ const NPC_SCENE := "res://src/overworld/npc/npc.tscn"
 const ITEM_SCENE := "res://src/overworld/item_ball/item_ball.tscn"
 const SIGN_SCENE := "res://src/overworld/sign/sign.tscn"
 const WARP_SCRIPT := "res://src/overworld/warp/warp.gd"
+const TRIGGER_SCRIPT := "res://src/overworld/trigger/trigger.gd"
+const STARTER_SCENE := "res://src/overworld/starter_ball/starter_ball.tscn"
 const SHEETS := "res://assets/sprites/characters/placeholder/"
 
 const ROOM_ENTITIES := [
@@ -75,6 +77,15 @@ const ROOM_ENTITIES := [
 	{"scene": ITEM_SCENE, "name": "Pocion", "tile": Vector2i(17, 8), "props": {"item_id": &"potion"}},
 	{"scene": ITEM_SCENE, "name": "CarameloOculto", "tile": Vector2i(2, 8), "props": {
 		"item_id": &"rarecandy", "hidden_item": true}},
+	{"scene": NPC_SCENE, "name": "Enfermera", "tile": Vector2i(15, 2), "props": {
+		"display_name": "Enfermera", "sheet": "nurse",
+		"event": "res://src/events/common/heal_party_event.gd"}},
+	{"scene": STARTER_SCENE, "name": "Inicial1", "tile": Vector2i(3, 3), "props": {
+		"starter_slot": &"starter_1", "starter_index": 1}},
+	{"scene": STARTER_SCENE, "name": "Inicial2", "tile": Vector2i(4, 3), "props": {
+		"starter_slot": &"starter_2", "starter_index": 2}},
+	{"scene": STARTER_SCENE, "name": "Inicial3", "tile": Vector2i(5, 3), "props": {
+		"starter_slot": &"starter_3", "starter_index": 3}},
 ]
 const ROOM_WARPS := [
 	{"name": "ToOutdoor", "tile": Vector2i(9, 10), "size": Vector2i(2, 1), "map": &"test/test_outdoor",
@@ -94,6 +105,10 @@ const OUTDOOR_ENTITIES := [
 	{"scene": ITEM_SCENE, "name": "PocionOculta", "tile": Vector2i(28, 1), "props": {
 		"item_id": &"potion", "hidden_item": true}},
 ]
+const OUTDOOR_TRIGGERS := [
+	{"name": "DisparadorDePrueba", "tile": Vector2i(12, 7), "event": "res://maps/test/test_trigger_event.gd",
+		"once_flag": &"test_trigger_done"},
+]
 const OUTDOOR_WARPS := [
 	{"name": "ToRoom", "tile": Vector2i(5, 4), "map": &"test/test_room", "spawn": &"from_outdoor",
 		"facing": 4, "sound": &"door"},
@@ -110,19 +125,20 @@ func _initialize() -> void:
 		"outdoor": false,
 		"fixed_camera": true,
 		"healing_spot": &"test/test_room",
-	}, {"default": Vector2i(10, 5), "from_outdoor": Vector2i(9, 9)}, ROOM_ENTITIES, ROOM_WARPS)
+	}, {"default": Vector2i(10, 5), "from_outdoor": Vector2i(9, 9)}, ROOM_ENTITIES, ROOM_WARPS, [])
 	_build("res://maps/test/test_outdoor.tscn", OUTDOOR, 0, force, {
 		"id": &"test/test_outdoor",
 		"display_name": "Exterior de pruebas",
 		"outdoor": true,
 		"encounter_table": &"test_outdoor",
 		"healing_spot": &"test/test_room",
-	}, {"default": Vector2i(10, 9), "from_room": Vector2i(5, 5)}, OUTDOOR_ENTITIES, OUTDOOR_WARPS)
+	}, {"default": Vector2i(10, 9), "from_room": Vector2i(5, 5)}, OUTDOOR_ENTITIES, OUTDOOR_WARPS,
+		OUTDOOR_TRIGGERS)
 	quit()
 
 
 func _build(path: String, rows: Array, floor_tile: int, force: bool, data: Dictionary,
-		spawns: Dictionary, entities_spec: Array, warps_spec: Array) -> void:
+		spawns: Dictionary, entities_spec: Array, warps_spec: Array, triggers_spec: Array) -> void:
 	if FileAccess.file_exists(path) and not force:
 		print("%s ya existe; usa -- --force para sobrescribirlo." % path)
 		return
@@ -143,7 +159,7 @@ func _build(path: String, rows: Array, floor_tile: int, force: bool, data: Dicti
 	_add_layer(map_node, "Above", tileset)
 	var warps := _add(map_node, Node2D.new(), "Warps")
 	var spawns_node := _add(map_node, Node2D.new(), "Spawns")
-	_add(map_node, Node2D.new(), "Triggers")
+	var triggers := _add(map_node, Node2D.new(), "Triggers")
 
 	for y: int in rows.size():
 		var row: String = rows[y]
@@ -171,6 +187,8 @@ func _build(path: String, rows: Array, floor_tile: int, force: bool, data: Dicti
 				entity.set("sprite_sheet", load(SHEETS + props[key] + ".png"))
 			elif key == "lines":
 				entity.set("lines", PackedStringArray(props[key]))
+			elif key == "event":
+				entity.set("event", load(props[key]))
 			else:
 				entity.set(key, props[key])
 
@@ -184,6 +202,14 @@ func _build(path: String, rows: Array, floor_tile: int, force: bool, data: Dicti
 		warp.set("arrival_facing", spec["facing"])
 		warp.set("size", spec.get("size", Vector2i.ONE))
 		warp.set("sound", spec["sound"])
+
+	for spec: Dictionary in triggers_spec:
+		var trigger := Node2D.new()
+		trigger.set_script(load(TRIGGER_SCRIPT))
+		_add(triggers, trigger, spec["name"])
+		trigger.position = Grid.to_world(spec["tile"])
+		trigger.set("event", load(spec["event"]))
+		trigger.set("once_flag", spec.get("once_flag", &""))
 
 	var scene := PackedScene.new()
 	scene.pack(map_node)

@@ -79,3 +79,23 @@ func test_probabilidad_por_paso() -> void:
 func test_tabla_real_de_la_sala_de_pruebas() -> void:
 	var wild := WildEncounters.pick(&"test_outdoor", &"land", &"day")
 	assert_true(DataDB.has_species(wild["species"]), "especie existente: %s" % wild.get("species"))
+
+
+func test_sin_pokemon_no_hay_encuentros() -> void:
+	GameState.new_game()
+	_map.data.encounter_rate = 1.0
+	var grass := Vector2i(15, 3)
+	assert_eq(WildEncounters.roll(_map, grass), {}, "equipo vacío: nada")
+	(GameState.party as Party).add(Pokemon.create(&"pikachu", 10))
+	assert_false(WildEncounters.roll(_map, grass).is_empty(), "con un Pokémon, siempre (rate = 1)")
+	assert_eq(WildEncounters.roll(_map, Vector2i(5, 7)), {}, "en el camino no")
+	_map.data.encounter_rate = 0.0
+	GameState.reset()
+
+
+func test_lista_de_objetos_colocados_al_dia() -> void:
+	var expected := ItemPlacements.to_json(ItemPlacements.scan())
+	var current := FileAccess.get_file_as_string(ItemPlacements.OUTPUT)
+	assert_eq(current, expected,
+		"data/item_placements.json desactualizado: godot --headless --path . -s res://maps/_tools/build_item_placements.gd")
+	assert_eq(DataDB.placed_item(&"test/test_room/Pocion", &"potion"), &"potion", "sin parche, el de la escena")

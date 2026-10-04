@@ -10,6 +10,9 @@ extends Node2D
 ## Desaparece si esta flag está activa.
 @export var hidden_if_flag: StringName
 
+## Oculta la entidad mientras dure el mapa (cinemáticas), además de sus flags.
+var _forced_hidden := false
+
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -24,11 +27,19 @@ func tile_position() -> Vector2i:
 
 
 func is_present() -> bool:
+	if _forced_hidden:
+		return false
 	if visible_if_flag != &"" and not GameState.flag(visible_if_flag):
 		return false
 	if hidden_if_flag != &"" and GameState.flag(hidden_if_flag):
 		return false
 	return true
+
+
+## Oculta (true) o vuelve a mostrar (false) la entidad sin tocar flags.
+func set_forced_hidden(value: bool) -> void:
+	_forced_hidden = value
+	_refresh_presence()
 
 
 ## La llama el jugador al pulsar `accept` delante. Puede ser corrutina: el

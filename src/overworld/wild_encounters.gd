@@ -22,6 +22,9 @@ static func roll(map: MapRoot, tile: Vector2i, kind: StringName = &"land") -> Di
 	var repel_active := _tick_repel()
 	if Debug.encounters_disabled or map.data == null or map.data.encounter_table == &"":
 		return {}
+	# Sin ningún Pokémon que pueda luchar no hay encuentros (como en los juegos oficiales).
+	if _able_count() == 0:
+		return {}
 	if not map.is_encounter_tile(tile):
 		return {}
 	var table := load_table(map.data.encounter_table)
@@ -103,6 +106,13 @@ static func _tick_repel() -> bool:
 	if steps == 1:
 		EventBus.repel_wore_off.emit()
 	return true
+
+
+static func _able_count() -> int:
+	var party: Variant = GameState.party
+	if party is Object and party.has_method(&"able_count"):
+		return int(party.able_count())
+	return 1
 
 
 static func _lead_level() -> int:
