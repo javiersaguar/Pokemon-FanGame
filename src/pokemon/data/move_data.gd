@@ -151,6 +151,7 @@ func targets_user() -> bool:
 
 
 ## PP máximos con `pp_ups` Más PP (0-3).
+@warning_ignore("integer_division")
 func max_pp(pp_ups: int = 0) -> int:
 	if no_pp_boosts:
 		return pp

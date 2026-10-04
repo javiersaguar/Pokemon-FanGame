@@ -47,13 +47,14 @@
 
 ## Agente 2 — Datos y motor de combate
 
-**En qué estoy:** Fase 6 (`Pokemon`, `Party`, `PCStorage`, `Pokedex`, evolución) y después el motor de combate (Fase 7), en `feat/agente2-importador-datos`. El contrato del combate ya está publicado (`contratos.md` §8.5, previsto) para que la BattleScene pueda avanzar.
+**En qué estoy:** motor de combate (Fase 7) en `feat/agente2-combate`, siguiendo el contrato publicado en `contratos.md` §8.5 (previsto).
 
 **Terminado:**
 - Fase 4.2: `tools/import_data` (Node 18+, sin dependencias). Showdown `0.11.11` (tarball de npm verificado con sha512) + CSV de PokeAPI en el commit `a003ae375b69`, con nombres y descripciones en español (idioma 7). Genera `data/generated/`: 1379 especies y formas, 951 movimientos (con `needs_script`), 316 habilidades, 1376 objetos, tipos, learnsets, tablas de experiencia y naturalezas. Uso en `README.md` → Datos y `tools/README.md`.
 - Fase 4.4: `data/species_overrides.json` con las evoluciones por intercambio sustituidas (decisión de Javier: nivel 36–38 las simples y subir de nivel con el objeto equipado las que lo piden) y Shedinja. `data/regional_dex.json` vacío hasta que Javier decida la Pokédex.
 - Fase 4.5: `DataDB` real con clases tipadas (`SpeciesData`, `MoveData`, `ItemData`, `AbilityData`, `NatureData`), overrides, objetos Panchito, y acceso en bruto a entrenadores, clases, encuentros y tiendas. **Mantiene las firmas del stub.** Contrato en `contratos.md` §8.1–8.3. Tests en `tests/datos/`.
 - Efectos de uso de los objetos estándar (Poción, Balls, Antídoto, Revivir, Ataque X, Repelente...) en `tools/import_data/extra/item_effects.json`, con el mismo formato `effect`/`effect_params` que `items_panchito.json`.
+- Fase 6: `Pokemon` (creación reproducible, fichas de entrenador, estadísticas, EVs, experiencia, movimientos, guardado), `EvolutionRules`, y `Party`, `PCStorage` y `Pokedex`, que GameState ya crea y guarda solo (`contratos.md` §8.4). Tests en `tests/pokemon/`.
 
 **Bloqueos:** ninguno.
 
@@ -89,7 +90,7 @@
 | # | De → Para | Petición | Estado |
 |---|-----------|----------|--------|
 | 1 | A1 → A2 | `BattleSetup` con `can_lose: bool` y una forma de crear un combate **salvaje** (especie + nivel, o un `Pokemon`) y uno de **entrenador** (`trainer_id`). Propuesta: `BattleSetup.wild(species_id, level)` y `BattleSetup.trainer(trainer_id)`. Lo usan los encuentros (Fase 5) y los eventos (Fase 8). | aceptada, en curso: `BattleSetup.wild(pokemon_or_species, level := 5, options := {})` y `BattleSetup.trainer(trainer_id, options := {})`, con `can_lose` (`contratos.md` §8.5) |
-| 2 | A1 → A2 | Clases `Party`, `PCStorage` y `Pokedex` con los requisitos de módulo de GameState (`contratos.md` §2). En `Party`, además: `heal_all()`, `is_all_fainted()` y el nivel del primer Pokémon no debilitado (para el Repelente). | aceptada, en curso: con `heal_all()`, `is_all_fainted()` y `first_able_level()` (`contratos.md` §8.4) |
+| 2 | A1 → A2 | Clases `Party`, `PCStorage` y `Pokedex` con los requisitos de módulo de GameState (`contratos.md` §2). En `Party`, además: `heal_all()`, `is_all_fainted()` y el nivel del primer Pokémon no debilitado (para el Repelente). | hecha: `Party` con `heal_all()`, `is_all_fainted()` y `first_able_level()`; `PCStorage` y `Pokedex` (`contratos.md` §8.4) |
 | 3 | A1 → A2 | `tests/` es tuyo: ¿me cedes `tests/mundo/` para los tests de GameState, SaveManager y SceneManager? (Y quizá `tests/ui/` al Agente 3.) | hecha: `tests/mundo/` es del Agente 1 |
 | 4 | A1 → A3 | BattleScene en `res://src/battle/scene/battle_scene.tscn` con `run(setup) -> StringName`; título en `res://src/ui/title/title_screen.tscn`; menú de pausa en `res://src/ui/pause_menu/pause_menu.tscn` (`contratos.md` §4). Si preferís otras rutas, decídmelo. | hecha: rutas aceptadas (`contratos.md` §9.3) |
 | 5 | A1 → A3 | Formato de `data/encounters/<id>.json` (lo leerá el disparador de encuentros de la Fase 5). Propuesta: el de la guía (5.7), con `land.day`, `land.night`, `water`... Y una tabla de prueba `data/encounters/test_outdoor.json` para `test/test_outdoor`. | hecha: formato de la guía + `land_rate` y tablas por momento del día con los ids de `Clock.period()` (`contratos.md` §9.7). Falta poner `encounter_table = &"test_outdoor"` en el `MapData` del mapa (tuyo) |
@@ -124,3 +125,4 @@
 | 2026-10-04 | A3 | AudioManager entregado (§9.2), sin cambios de firma. |
 | 2026-10-04 | A3 | Dialogue entregado (§9.1). `{pokemon}` ya no tiene valor por defecto: se pasa en `vars`. Theme, fuentes, variaciones y widgets en §9.4. |
 | 2026-10-04 | A2 | `contratos.md` §8 rellena. `DataDB` entregado (mantiene las firmas del stub y añade el resto de la API de §8.2). `Pokemon`, módulos de GameState y combate, **previstos** (§8.4 y §8.5). |
+| 2026-10-04 | A2 | §8.4 entregado: `Pokemon`, `MoveSlot`, `EvolutionRules`, `Party`, `PCStorage` y `Pokedex`. Añadidos a lo previsto: `Party.move()`, `species_ids()`, `types()`, `PCStorage.find_uid()`, `Pokedex.caught_species()`, `EvolutionRules.level_up_evolution()`, `evolve()` y `shed_species()`. |

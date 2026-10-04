@@ -493,7 +493,7 @@ Efectos de uso (`effect` → `effect_params`), iguales para objetos estándar y 
 
 **`AbilityData`**: `id`, `name`, `description`, `rating`, `needs_script`. **`NatureData`**: `id`, `name`, `plus`, `minus` (vacíos si es neutra), `percent(stat) -> int` (110/100/90).
 
-### 8.4 Pokemon y módulos de GameState (`src/pokemon/`) (previsto)
+### 8.4 Pokemon y módulos de GameState (`src/pokemon/`)
 
 **`Pokemon`** (`RefCounted`): un Pokémon concreto.
 
@@ -528,26 +528,28 @@ p.move_ids() / p.has_move(id) / p.try_learn(id) -> bool / p.replace_move(index, 
 p.evolve_to(species_id) -> void           # conserva el daño recibido y el mote
 ```
 
-**`EvolutionRules`** (estática): `level_up_target(p, context := {}) -> StringName` (al subir de nivel o al acabar un combate) e `item_target(p, item_id, context := {}) -> StringName` (`&""` = no evoluciona). `context`: `{time: Clock.period(), party_species: Array[StringName], party_types: Array[StringName], weather: StringName}`.
+**`EvolutionRules`** (estática): `level_up_target(p, context := {}) -> StringName` (al subir de nivel o al acabar un combate) e `item_target(p, item_id, context := {}) -> StringName` (`&""` = no evoluciona). `level_up_evolution(p, context)` devuelve la entrada completa y `evolve(p, evo)` la aplica (y gasta el objeto equipado si era `level_hold`). `shed_species(from, to)` = Shedinja al evolucionar Nincada. `context`: `{time: Clock.period(), party_species: Array[StringName], party_types: Array[StringName], weather: StringName, location: StringName}`.
 
 **Módulos de GameState** (`Party`, `PCStorage`, `Pokedex`): cumplen la sección 2 (`new()`, `to_dict()`, `from_dict()`).
 
 ```gdscript
 # Party (máx. 6)
 party.members: Array[Pokemon]
-party.size() / is_full() / add(p) -> bool / remove_at(i) -> Pokemon / swap(i, j) / get_at(i)
+party.size() / is_full() / add(p) -> bool / remove_at(i) -> Pokemon / swap(i, j) / move(from, to) / get_at(i) / index_of(p)
+party.has_species(id) / species_ids() / types()        # para el contexto de evolución
 party.first_able() -> Pokemon / first_able_index() -> int / first_able_level() -> int   # Repelente
 party.is_all_fainted() -> bool / able_count() -> int / heal_all() -> void
 
 # PCStorage (cajas × huecos, de las reglas de 8.2)
 pc.box_count() / box_size() / get_pokemon(box, slot) -> Pokemon / set_pokemon(box, slot, p)
 pc.take(box, slot) -> Pokemon / deposit(p) -> Vector2i   # (-1, -1) si está lleno
-pc.move(from_box, from_slot, to_box, to_slot)  # intercambia / release(box, slot) / is_full() / count()
+pc.move(from_box, from_slot, to_box, to_slot)  # intercambia / release(box, slot) / is_full() / count() / find_uid(uid)
 pc.box_name(box) / rename_box(box, name) / box_wallpaper(box) / set_box_wallpaper(box, id) / current_box
 
 # Pokedex (por especie base; las formas se apuntan aparte)
 dex.mark_seen(species_id, shiny := false) / mark_caught(species_id) / register(p: Pokemon)   # register = visto + capturado
-dex.is_seen(id) / is_caught(id) / seen_count() / caught_count() / forms_seen(id) -> Array[StringName]
+dex.is_seen(id) / is_caught(id) / is_shiny_seen(id) / forms_seen(id) -> Array[StringName] / caught_species()
+dex.seen_count(regional_only := false) / caught_count(regional_only := false)
 ```
 
 ### 8.5 Combate (`src/battle/engine/`) (previsto)
