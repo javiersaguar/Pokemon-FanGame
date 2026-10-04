@@ -54,7 +54,55 @@ const OUTDOOR := [
 ]
 
 
-func _init() -> void:
+const NPC_SCENE := "res://src/overworld/npc/npc.tscn"
+const ITEM_SCENE := "res://src/overworld/item_ball/item_ball.tscn"
+const SIGN_SCENE := "res://src/overworld/sign/sign.tscn"
+const WARP_SCRIPT := "res://src/overworld/warp/warp.gd"
+const SHEETS := "res://assets/sprites/characters/placeholder/"
+
+const ROOM_ENTITIES := [
+	{"scene": NPC_SCENE, "name": "Profesor", "tile": Vector2i(10, 4), "props": {
+		"display_name": "Profesor", "sheet": "professor",
+		"lines": ["¡Hola! Soy el profesor provisional.", "Esta es la sala de pruebas del equipo."]}},
+	{"scene": NPC_SCENE, "name": "Probador", "tile": Vector2i(4, 6), "script": "res://maps/test/test_battle_npc.gd",
+		"props": {"display_name": "Probador", "sheet": "trainer", "initial_facing": 2}},
+	{"scene": NPC_SCENE, "name": "Paseante", "tile": Vector2i(15, 6), "props": {
+		"sheet": "npc_woman", "wander": true,
+		"lines": ["Doy vueltas por la sala para probar el paseo de los NPCs."]}},
+	{"scene": NPC_SCENE, "name": "Dependiente", "tile": Vector2i(9, 6), "props": {
+		"display_name": "Dependiente", "sheet": "clerk",
+		"lines": ["Te atiendo por encima del mostrador."]}},
+	{"scene": ITEM_SCENE, "name": "Pocion", "tile": Vector2i(17, 8), "props": {"item_id": &"potion"}},
+	{"scene": ITEM_SCENE, "name": "CarameloOculto", "tile": Vector2i(2, 8), "props": {
+		"item_id": &"rarecandy", "hidden_item": true}},
+]
+const ROOM_WARPS := [
+	{"name": "ToOutdoor", "tile": Vector2i(9, 10), "size": Vector2i(2, 1), "map": &"test/test_outdoor",
+		"spawn": &"from_room", "facing": 1, "sound": &"exit"},
+]
+
+const OUTDOOR_ENTITIES := [
+	{"scene": SIGN_SCENE, "name": "Cartel", "tile": Vector2i(7, 5), "props": {"lines": [
+		"EXTERIOR DE PRUEBAS",
+		"La hierba alta da encuentros si existe data/encounters/test_outdoor.json."]}},
+	{"scene": NPC_SCENE, "name": "Vecino", "tile": Vector2i(12, 9), "props": {
+		"sheet": "npc_man", "wander": true, "lines": ["¡Cuidado con la hierba alta!"]}},
+	{"scene": NPC_SCENE, "name": "Abuelo", "tile": Vector2i(24, 8), "props": {
+		"sheet": "npc_old", "initial_facing": 1, "lines": ["El agua de ahí no se cruza sin Surf."]}},
+	{"scene": ITEM_SCENE, "name": "PokeBalls", "tile": Vector2i(26, 10), "props": {
+		"item_id": &"pokeball", "quantity": 2}},
+	{"scene": ITEM_SCENE, "name": "PocionOculta", "tile": Vector2i(28, 1), "props": {
+		"item_id": &"potion", "hidden_item": true}},
+]
+const OUTDOOR_WARPS := [
+	{"name": "ToRoom", "tile": Vector2i(5, 4), "map": &"test/test_room", "spawn": &"from_outdoor",
+		"facing": 4, "sound": &"door"},
+]
+
+
+## En _initialize (no en _init) para que los autoloads ya existan al cargar los scripts.
+func _initialize() -> void:
+	await process_frame
 	var force := "--force" in OS.get_cmdline_user_args()
 	_build("res://maps/test/test_room.tscn", ROOM, 3, force, {
 		"id": &"test/test_room",
@@ -62,18 +110,19 @@ func _init() -> void:
 		"outdoor": false,
 		"fixed_camera": true,
 		"healing_spot": &"test/test_room",
-	}, {"default": Vector2i(10, 5), "from_outdoor": Vector2i(9, 9)})
+	}, {"default": Vector2i(10, 5), "from_outdoor": Vector2i(9, 9)}, ROOM_ENTITIES, ROOM_WARPS)
 	_build("res://maps/test/test_outdoor.tscn", OUTDOOR, 0, force, {
 		"id": &"test/test_outdoor",
 		"display_name": "Exterior de pruebas",
 		"outdoor": true,
+		"encounter_table": &"test_outdoor",
 		"healing_spot": &"test/test_room",
-	}, {"default": Vector2i(10, 9), "from_room": Vector2i(5, 5)})
+	}, {"default": Vector2i(10, 9), "from_room": Vector2i(5, 5)}, OUTDOOR_ENTITIES, OUTDOOR_WARPS)
 	quit()
 
 
 func _build(path: String, rows: Array, floor_tile: int, force: bool, data: Dictionary,
-		spawns: Dictionary) -> void:
+		spawns: Dictionary, entities_spec: Array, warps_spec: Array) -> void:
 	if FileAccess.file_exists(path) and not force:
 		print("%s ya existe; usa -- --force para sobrescribirlo." % path)
 		return
@@ -92,7 +141,7 @@ func _build(path: String, rows: Array, floor_tile: int, force: bool, data: Dicti
 	var entities := _add(map_node, Node2D.new(), "Entities") as Node2D
 	entities.y_sort_enabled = true
 	_add_layer(map_node, "Above", tileset)
-	_add(map_node, Node2D.new(), "Warps")
+	var warps := _add(map_node, Node2D.new(), "Warps")
 	var spawns_node := _add(map_node, Node2D.new(), "Spawns")
 	_add(map_node, Node2D.new(), "Triggers")
 
@@ -109,6 +158,32 @@ func _build(path: String, rows: Array, floor_tile: int, force: bool, data: Dicti
 	for spawn_id: String in spawns:
 		var marker := _add(spawns_node, Marker2D.new(), spawn_id) as Marker2D
 		marker.position = Grid.to_world(spawns[spawn_id])
+
+	for spec: Dictionary in entities_spec:
+		var entity := (load(spec["scene"]) as PackedScene).instantiate() as Node2D
+		if spec.has("script"):
+			entity.set_script(load(spec["script"]))
+		_add(entities, entity, spec["name"])
+		entity.position = Grid.to_world(spec["tile"])
+		var props: Dictionary = spec["props"]
+		for key: String in props:
+			if key == "sheet":
+				entity.set("sprite_sheet", load(SHEETS + props[key] + ".png"))
+			elif key == "lines":
+				entity.set("lines", PackedStringArray(props[key]))
+			else:
+				entity.set(key, props[key])
+
+	for spec: Dictionary in warps_spec:
+		var warp := Node2D.new()
+		warp.set_script(load(WARP_SCRIPT))
+		_add(warps, warp, spec["name"])
+		warp.position = Grid.to_world(spec["tile"])
+		warp.set("target_map", spec["map"])
+		warp.set("target_spawn", spec["spawn"])
+		warp.set("arrival_facing", spec["facing"])
+		warp.set("size", spec.get("size", Vector2i.ONE))
+		warp.set("sound", spec["sound"])
 
 	var scene := PackedScene.new()
 	scene.pack(map_node)
