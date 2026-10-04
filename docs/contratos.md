@@ -489,6 +489,8 @@ Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces
 | `data/trainer_classes.json`, `data/trainers/*.json`, `data/encounters/*.json`, `data/shops.json` | Agente 3 | Formatos en la sección 9. `DataDB` los carga y los devuelve tal cual |
 
 - En todos los JSON, las claves que empiezan por `_` son comentarios y se ignoran.
+- `starters.json`, `gifts.json`, `statics.json` y `trades.json` (Agente 3): `{id: especie}` o `{id: {species, level, ...}}` (los campos de una ficha de entrenador, sección 9.6), más `"randomize": false` si no se debe aleatorizar. En `trades.json`, lo que recibe el jugador va en `receive`.
+- Parche (`DataDB.apply_patch`): `species` (`{id: {campo: valor}}`), `abilities`, `learnsets` (`{id: [[nivel, movimiento]...]}`), `tm_compat`, `trainers` (se mezcla con el original), `encounters`, `shops` (sustituyen la tabla), `starters`, `gifts`, `statics`, `trades` (especie o campos) e `items` (`{placement_id: objeto}`). Nunca modifica los datos base.
 - Enumerados en `snake_case`: tipos (`fire`), objetivos (`all_adjacent_foes`), grupos de crecimiento (`medium_fast`), grupos huevo (`human_like`), estados (`par`, `brn`, `psn`, `tox`, `slp`, `frz`).
 
 ### 8.2 DataDB (autoload)
@@ -534,6 +536,19 @@ DataDB.trainer(id) / has_trainer(id) / trainer_ids()   # todos los data/trainers
 DataDB.encounter_table(id) / has_encounter_table(id)   # data/encounters/<id>.json
 DataDB.shop(id) / has_shop(id) / shop_sell_ratio()     # data/shops.json → shops[id] y sell_ratio
 
+# Regla R.2 (RandomLocke): lo que da o coloca la historia, siempre por id
+DataDB.starter(id) -> StringName / starter_spec(id) -> Dictionary / starter_ids()   # data/starters.json (starter_1/2/3)
+DataDB.gift(id) -> Dictionary                # data/gifts.json   → ficha para Pokemon.from_spec()
+DataDB.static_encounter(id) -> Dictionary    # data/statics.json → ficha para Pokemon.from_spec()
+DataDB.trade(id) -> Dictionary               # data/trades.json (tal cual)
+DataDB.placed_item(placement_id, default_item) -> StringName   # ItemBall: "<map_id>/<nodo>"
+DataDB.item_placements() -> Dictionary       # data/item_placements.json (Agente 1)
+DataDB.resolve_markers(text) -> String       # {starter:id} {gift:id} {static:id} {trade:id} {species:id} {item:id}
+
+# Parche de RandomLocke (Fase R.1): todas las consultas de arriba devuelven lo parcheado
+DataDB.apply_patch(patch: Dictionary) / clear_patch() / has_patch() / current_patch()
+signal patch_changed
+
 # Otros
 DataDB.meta() -> Dictionary                  # versiones de las fuentes (data/generated/meta.json)
 DataDB.rule(key, default) -> Variant         # data/world.json → "pokemon" (ver abajo)
@@ -543,10 +558,11 @@ DataDB.rule(key, default) -> Variant         # data/world.json → "pokemon" (ve
 
 | Clave | Por defecto | Uso |
 |-------|-------------|-----|
-| `shiny_odds` | `4096` | Probabilidad de shiny = 1/`shiny_odds` (0 = nunca) |
 | `wild_hidden_ability_chance` | `0.0` | Probabilidad (0–1) de habilidad oculta en Pokémon nuevos. **POR DEFINIR (Javier)** |
 | `pc_boxes`, `pc_box_size` | `32`, `30` | Cajas del PC |
 | `exp_share` | `true` | Repartir Experiencia moderno activo por defecto |
+
+**Shiny** (`data/world.json` → `"shiny"`, Fase 6.7 y DIRECTRICES §8): `{"odds": 4096, "rolls": {"base": 1, "shiny_charm": 3, "masuda": 6, "masuda_shiny_charm": 8}}`. Cada tirada es una comprobación independiente de 1/`odds`. `DataDB.shiny_odds() -> int` y `DataDB.shiny_rolls(kind := &"base") -> int` (con esos valores por defecto si falta la sección).
 
 ### 8.3 Clases de datos (`src/pokemon/data/`)
 
@@ -634,8 +650,10 @@ Efectos de uso (`effect` → `effect_params`), iguales para objetos estándar y 
 | `pokerus`, `tera_type`, `ribbons` | | |
 
 ```gdscript
-Pokemon.create(species_id, level, rng: RandomNumberGenerator = null) -> Pokemon   # salvaje o regalo
-Pokemon.from_spec(spec: Dictionary, rng = null) -> Pokemon   # ficha de data/trainers (party[i])
+Pokemon.create(species_id, level, rng: RandomNumberGenerator = null, shiny_rolls := 1) -> Pokemon   # salvaje o regalo
+Pokemon.from_spec(spec: Dictionary, rng = null) -> Pokemon   # ficha de data/trainers (party[i]); no tira shiny: solo si "shiny": true
+Pokemon.roll_shiny(rng, rolls := 1) -> bool / Pokemon.shiny_chance(rolls := 1) -> float
+Pokemon.debug_force_shiny: bool                # Debug: forceshiny on|off
 Pokemon.from_dict(d) -> Pokemon / p.to_dict() -> Dictionary / p.clone() -> Pokemon
 
 p.species() -> SpeciesData / p.display_name() -> String / p.types() / p.ability_id()
@@ -784,7 +802,7 @@ BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 
 **Validador** (Fase 4.6): `godot --headless --path . -s res://tools/validate/validate.gd` (o el test `tests/datos/test_validador.gd`). Errores = especies, movimientos, objetos o clases que no existen, evoluciones por intercambio, niveles o pesos no válidos; avisos = sprites e iconos que faltan y movimientos en uso que necesitan script.
 
-**Debug** (Agente 2): `givepkmn <especie> [nivel]`, `heal`, `party`, `setlevel <posición> <nivel>`, `wildbattle <especie> [nivel]`, `trainerbattle <id>` y `dex [all]`.
+**Debug** (Agente 2): `givepkmn <especie> [nivel] [shiny]`, `forceshiny [on|off]`, `heal`, `party`, `setlevel <posición> <nivel>`, `wildbattle <especie> [nivel]`, `trainerbattle <id>` y `dex [all]`.
 
 ---
 

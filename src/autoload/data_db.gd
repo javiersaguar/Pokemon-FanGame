@@ -7,9 +7,13 @@ extends Node
 ## - data/items_panchito.json: objetos Panchito (se suman a los estándar).
 ## - data/trainer_classes.json, data/trainers/*.json, data/encounters/*.json, data/shops.json:
 ##   datos del Agente 3; DataDB solo los carga y los devuelve tal cual (Dictionary).
+## - data/starters.json, gifts.json, statics.json y trades.json (Agente 3) e item_placements.json
+##   (Agente 1): todo lo que la historia da o coloca, por id (regla R.2 de RandomLocke).
+## Con un parche de RandomLocke aplicado (apply_patch, Fase R.1), las consultas devuelven lo parcheado.
 ## En todos los archivos, las claves que empiezan por "_" son comentarios y se ignoran.
 
 signal loaded
+signal patch_changed
 
 const GENERATED_DIR := "res://data/generated"
 const SPECIES_OVERRIDES_PATH := "res://data/species_overrides.json"
@@ -19,6 +23,12 @@ const TRAINER_CLASSES_PATH := "res://data/trainer_classes.json"
 const TRAINERS_DIR := "res://data/trainers"
 const ENCOUNTERS_DIR := "res://data/encounters"
 const SHOPS_PATH := "res://data/shops.json"
+const STARTERS_PATH := "res://data/starters.json"
+const GIFTS_PATH := "res://data/gifts.json"
+const STATICS_PATH := "res://data/statics.json"
+const TRADES_PATH := "res://data/trades.json"
+const ITEM_PLACEMENTS_PATH := "res://data/item_placements.json"
+const MARKER_KINDS: Array[String] = ["starter", "gift", "static", "trade", "species", "item"]
 ## Reglas configurables de los Pokémon: sección "pokemon" de data/world.json (Agente 1).
 const WORLD_PATH := "res://data/world.json"
 const MAX_LEVEL := 100
@@ -44,6 +54,15 @@ var _shops: Dictionary = {}
 var _shops_file: Dictionary = {}
 var _meta: Dictionary = {}
 var _rules: Dictionary = {}
+var _shiny: Dictionary = {}
+var _starters: Dictionary = {}
+var _gifts: Dictionary = {}
+var _statics: Dictionary = {}
+var _trades: Dictionary = {}
+var _item_placements: Dictionary = {}
+var _patch: Dictionary = {}
+var _patched_species: Dictionary[StringName, SpeciesData] = {}
+var _marker_regex := RegEx.create_from_string("\\{(%s):([A-Za-z0-9_/\\-]+)\\}" % "|".join(PackedStringArray(MARKER_KINDS)))
 var _debug_commands: PokemonDebugCommands
 
 
@@ -77,13 +96,22 @@ func load_all() -> void:
 	for group: String in exp_tables:
 		_exp_tables[StringName(group)] = PackedInt32Array(exp_tables[group])
 	_meta = _read_dict(GENERATED_DIR + "/meta.json")
-	_rules = _read_dict(WORLD_PATH, true).get("pokemon", {})
+	var world := _read_dict(WORLD_PATH, true)
+	_rules = world.get("pokemon", {})
+	_shiny = world.get("shiny", {})
 	_load_regional_dex()
 	_trainer_classes = _without_comments(_read_dict(TRAINER_CLASSES_PATH, true))
 	_shops_file = _read_dict(SHOPS_PATH, true)
 	_shops = _without_comments(_shops_file.get("shops", {}))
 	_trainers = _load_dir_merged(TRAINERS_DIR)
 	_encounters = _load_dir_by_file(ENCOUNTERS_DIR)
+	_starters = _without_comments(_read_dict(STARTERS_PATH, true))
+	_gifts = _without_comments(_read_dict(GIFTS_PATH, true))
+	_statics = _without_comments(_read_dict(STATICS_PATH, true))
+	_trades = _without_comments(_read_dict(TRADES_PATH, true))
+	_item_placements = _without_comments(_read_dict(ITEM_PLACEMENTS_PATH, true))
+	if not _patch.is_empty():
+		apply_patch(_patch)
 	is_loaded = true
 	print_verbose("DataDB: datos cargados en %d ms (%d especies, %d movimientos, %d objetos)." % [
 		Time.get_ticks_msec() - t0, _species.size(), _moves.size(), _items.size()])
@@ -93,7 +121,7 @@ func load_all() -> void:
 # --- Especies ---
 
 func species(id: StringName) -> SpeciesData:
-	var s: SpeciesData = _species.get(id)
+	var s: SpeciesData = _patched_species.get(id, _species.get(id))
 	if s == null:
 		push_error("DataDB: no existe la especie '%s'." % id)
 	return s
@@ -242,7 +270,16 @@ func learnset(species_id: StringName) -> Dictionary:
 	var key := s.learnset_id
 	if key == &"" and s.is_form():
 		key = _species[s.base_species].learnset_id if _species.has(s.base_species) else &""
-	return _learnsets.get(String(key), {})
+	var ls: Dictionary = _learnsets.get(String(key), {})
+	var patched_level: Variant = _patch.get("learnsets", {}).get(String(species_id))
+	var patched_tms: Variant = _patch.get("tm_compat", {}).get(String(species_id))
+	if patched_level != null or patched_tms != null:
+		ls = ls.duplicate()
+		if patched_level != null:
+			ls["level"] = patched_level
+		if patched_tms != null:
+			ls["machine"] = patched_tms
+	return ls
 
 
 ## Movimientos por nivel ordenados: [[nivel: int, movimiento: StringName], ...]. Nivel 0 = al evolucionar.
@@ -310,7 +347,12 @@ func has_trainer_class(id: StringName) -> bool:
 
 
 func trainer(id: StringName) -> Dictionary:
-	return _raw_get(_trainers, id, "el entrenador")
+	var t := _raw_get(_trainers, id, "el entrenador")
+	var patched: Variant = _patch.get("trainers", {}).get(String(id))
+	if patched is Dictionary and not t.is_empty():
+		t = t.duplicate(true)
+		t.merge(patched, true)
+	return t
 
 
 func has_trainer(id: StringName) -> bool:
@@ -323,6 +365,9 @@ func trainer_ids() -> Array[StringName]:
 
 ## Tabla de encuentros de data/encounters/<id>.json (id = ruta relativa sin ".json").
 func encounter_table(id: StringName) -> Dictionary:
+	var patched: Variant = _patch.get("encounters", {}).get(String(id))
+	if patched is Dictionary:
+		return patched
 	return _raw_get(_encounters, id, "la tabla de encuentros")
 
 
@@ -332,6 +377,9 @@ func has_encounter_table(id: StringName) -> bool:
 
 ## Tienda de data/shops.json → shops[id].
 func shop(id: StringName) -> Dictionary:
+	var patched: Variant = _patch.get("shops", {}).get(String(id))
+	if patched is Dictionary:
+		return patched
 	return _raw_get(_shops, id, "la tienda")
 
 
@@ -344,14 +392,166 @@ func shop_sell_ratio() -> float:
 	return float(_shops_file.get("sell_ratio", 0.5))
 
 
+# --- Regla R.2: lo que da o coloca la historia, por id ---
+
+## Especie del inicial `id` ("starter_1", "starter_2", "starter_3") de data/starters.json.
+func starter(id: StringName) -> StringName:
+	return StringName(str(starter_spec(id).get("species", "")))
+
+
+## Ficha completa del inicial ({species, level?...}; acepta "starter_1": "bulbasaur" o un diccionario).
+func starter_spec(id: StringName) -> Dictionary:
+	return _story_entry(_starters, "starters", id, "el inicial")
+
+
+func starter_ids() -> Array[StringName]:
+	return DataUtil.names(_starters.keys())
+
+
+## Regalo de data/gifts.json: ficha de Pokemon.from_spec() ({species, level, ...}).
+func gift(id: StringName) -> Dictionary:
+	return _story_entry(_gifts, "gifts", id, "el regalo")
+
+
+## Encuentro estático de data/statics.json (legendarios, bloqueos): ficha de Pokemon.from_spec().
+func static_encounter(id: StringName) -> Dictionary:
+	return _story_entry(_statics, "statics", id, "el encuentro estático")
+
+
+## Intercambio con un NPC de data/trades.json (tal cual, con el parche aplicado).
+func trade(id: StringName) -> Dictionary:
+	return _story_entry(_trades, "trades", id, "el intercambio")
+
+
+## Objeto colocado en un mapa (ItemBall). `placement_id` = "<map_id>/<nodo>"; si el parche no lo
+## cambia, devuelve `default_item` (el que tiene la escena).
+func placed_item(placement_id: StringName, default_item: StringName) -> StringName:
+	var patched: Variant = _patch.get("items", {}).get(String(placement_id))
+	return StringName(str(patched)) if patched != null else default_item
+
+
+## data/item_placements.json: {placement_id: item_id} de todos los mapas (lo genera el Agente 1).
+func item_placements() -> Dictionary:
+	return _item_placements
+
+
+## Sustituye los marcadores de texto por nombres: {starter:starter_1}, {gift:<id>}, {static:<id>},
+## {trade:<id>}, {species:<id>} e {item:<id>}. Así el texto coincide con la ROM de RandomLocke.
+func resolve_markers(text: String) -> String:
+	var out := text
+	for m: RegExMatch in _marker_regex.search_all(text):
+		var label := _marker_name(m.get_string(1), StringName(m.get_string(2)))
+		if label != "":
+			out = out.replace(m.get_string(0), label)
+	return out
+
+
+func _marker_name(kind: String, id: StringName) -> String:
+	var species_id := &""
+	match kind:
+		"item":
+			return item(id).name if has_item(id) else ""
+		"species":
+			species_id = id
+		"starter":
+			species_id = starter(id) if _starters.has(String(id)) else &""
+		"gift":
+			species_id = StringName(str(gift(id).get("species", ""))) if _gifts.has(String(id)) else &""
+		"static":
+			species_id = StringName(str(static_encounter(id).get("species", ""))) if _statics.has(String(id)) else &""
+		"trade":
+			var t := trade(id) if _trades.has(String(id)) else {}
+			var receive: Variant = t.get("receive", t)
+			species_id = StringName(str(receive.get("species", ""))) if receive is Dictionary else StringName(str(receive))
+	if species_id == &"" or not has_species(species_id):
+		push_warning("DataDB: no se puede resolver el marcador {%s:%s}." % [kind, id])
+		return ""
+	return species(species_id).name
+
+
+func _story_entry(table: Dictionary, patch_key: String, id: StringName, what: String) -> Dictionary:
+	if not table.has(String(id)):
+		push_error("DataDB: no existe %s '%s'." % [what, id])
+		return {}
+	var base: Variant = table[String(id)]
+	var entry: Dictionary = {"species": str(base)} if base is String else (base as Dictionary).duplicate(true)
+	var patched: Variant = _patch.get(patch_key, {}).get(String(id))
+	if patched is String:
+		entry["species"] = patched
+	elif patched is Dictionary:
+		entry.merge(patched, true)
+	return entry
+
+
+# --- Parche de RandomLocke (Fase R.1) ---
+
+## Aplica una ROM: todas las consultas devuelven lo parcheado (no toca los datos base).
+## Claves que entiende: species ({id: {campo: valor}}), abilities, learnsets, tm_compat, trainers,
+## encounters, shops, starters, gifts, statics, trades e items (colocaciones).
+func apply_patch(patch: Dictionary) -> void:
+	_patch = patch.duplicate(true)
+	_patched_species.clear()
+	_level_moves_cache.clear()
+	var fields: Dictionary = _patch.get("species", {})
+	var abilities: Dictionary = _patch.get("abilities", {})
+	for id: String in _union_keys(fields, abilities):
+		if not _species.has(StringName(id)):
+			push_error("DataDB.apply_patch: la especie '%s' no existe." % id)
+			continue
+		var raw: Dictionary = _species[StringName(id)].raw.duplicate(true)
+		raw.merge(fields.get(id, {}), true)
+		if abilities.has(id):
+			raw["abilities"] = abilities[id]
+		_patched_species[StringName(id)] = SpeciesData.from_dict(StringName(id), raw)
+	patch_changed.emit()
+
+
+## Vuelve a los datos base (al salir al título).
+func clear_patch() -> void:
+	if _patch.is_empty():
+		return
+	_patch = {}
+	_patched_species.clear()
+	_level_moves_cache.clear()
+	patch_changed.emit()
+
+
+func has_patch() -> bool:
+	return not _patch.is_empty()
+
+
+func current_patch() -> Dictionary:
+	return _patch.duplicate(true)
+
+
+func _union_keys(a: Dictionary, b: Dictionary) -> Array[String]:
+	var out: Array[String] = []
+	for k: Variant in a.keys() + b.keys():
+		if str(k) not in out:
+			out.append(str(k))
+	out.sort()
+	return out
+
+
 ## Versiones de las fuentes de data/generated (meta.json).
 func meta() -> Dictionary:
 	return _meta
 
 
-## Regla configurable de data/world.json → "pokemon" (shiny_odds, pc_boxes...). Ver contrato.
+## Regla configurable de data/world.json → "pokemon" (pc_boxes, exp_share...). Ver contrato.
 func rule(key: StringName, default: Variant) -> Variant:
 	return _rules.get(String(key), default)
+
+
+## Shiny (Fase 6.7): data/world.json → "shiny" → odds (4096 por defecto; 0 = nunca).
+func shiny_odds() -> int:
+	return int(_shiny.get("odds", _rules.get("shiny_odds", 4096)))
+
+
+## Tiradas de shiny (data/world.json → shiny → rolls): base 1, shiny_charm 3, masuda 6, masuda_shiny_charm 8.
+func shiny_rolls(kind: StringName = &"base") -> int:
+	var defaults := {"base": 1, "shiny_charm": 3, "masuda": 6, "masuda_shiny_charm": 8}
+	return int(_shiny.get("rolls", {}).get(String(kind), defaults.get(String(kind), 1)))
 
 
 # --- Carga ---

@@ -21,6 +21,8 @@ Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus person
 |---------|-------|----------|--------|------------|
 | Tileset provisional | Equipo de Pokémon Panchito (generado por script) | Propio | — | `assets/tilesets/placeholder/` |
 | Personajes y objetos del mapa provisionales | Equipo de Pokémon Panchito (generado por script) | Propio | — | `assets/sprites/characters/placeholder/` |
+| Sprites de Pokémon de combate (frente, espalda, normal y shiny), estilo 5.ª generación | Nintendo / Game Freak (5.ª generación) y los artistas del Smogon Sprite Project (generaciones posteriores), vía Pokémon Showdown | Propiedad de Nintendo / Game Freak; uso de fans sin ánimo de lucro | https://play.pokemonshowdown.com/sprites/ | `assets/sprites/pokemon/{front,back,front_shiny,back_shiny}/` (`tools/sprites`) |
+| Iconos de Pokémon (40×30) | Nintendo / Game Freak y colaboradores de Pokémon Showdown (hoja `pokemonicons-sheet.png`) | Propiedad de Nintendo / Game Freak; uso de fans sin ánimo de lucro | https://play.pokemonshowdown.com/sprites/pokemonicons-sheet.png | `assets/sprites/pokemon/icons/` (`tools/sprites`) |
 
 ## Datos
 
