@@ -2,7 +2,13 @@
 
 > **Este documento manda.** Si algo de aquí choca con `GUIA_DESARROLLO.md`, `docs/contratos.md` o cualquier otro documento, gana lo que dice aquí. Solo lo modifica Javier.
 >
-> Última actualización: 2026-10-04
+> Última actualización: 2026-10-04 (secciones 7 y 8 añadidas)
+
+---
+
+## 0. ⚠️ PRIORIDAD ACTUAL: alcanzar el nivel gráfico de Pokémon Añil (sección 7)
+
+Los gráficos actuales (el tileset generado por código a 320×180) **no son aceptables**. Antes de seguir añadiendo funciones visibles al MVP, los Agentes 1 y 3 hacen la **prueba de nivel gráfico** de la sección 7. El Agente 2 sigue con el motor y, además, con los sprites de Pokémon y los shinies.
 
 ---
 
@@ -73,4 +79,31 @@ Se añade al reparto de `docs/ESTADO.md`:
 | `src/randomizer/`, `tests/randomizer/` | 2 |
 | `docs/arte/`, `assets/arte/`, `assets/_fuentes/`, `tools/arte/` | 3 |
 | `data/starters.json`, `data/gifts.json`, `data/statics.json`, `data/trades.json` | 3 |
-| `docs/DIRECTRICES.md`, `.githooks/`, `.github/` | Javier |
+| `docs/DIRECTRICES.md`, `.githooks/`, `.github/`, `docs/arte/referencias/` | Javier |
+| `assets/_terceros/` (packs descargados por Javier, sin modificar) | Javier (los agentes solo leen y copian de aquí) |
+
+## 7. Nivel gráfico mínimo: Pokémon Añil
+
+**El listón son las 4 capturas de `docs/arte/referencias/`** (combate, pueblo con Pokémon que te sigue, pantalla de datos y ruta). Todo lo que se vea en el juego tiene que estar **a ese nivel o por encima**. Se mantiene Godot: el aspecto de Añil sale de sus **recursos gráficos y su resolución**, no del motor, y Godot puede mostrar eso y más.
+
+**Por qué ahora se ve cutre y qué cambia:**
+| Problema | Cambio |
+|----------|--------|
+| Resolución 320×180, demasiado pequeña | **512×384** (la de Añil). Mundo y sprites dibujados a 16 px y mostrados a **×2**; la UI a 512×384 nativo. Detalles en la **Fase 3.2** de la guía |
+| Tileset dibujado por código | **Prohibido el arte generado por código** para el juego. Tiles, personajes y sprites salen de packs de la comunidad con permiso o de arte hecho a mano (**Fase A.3**) |
+| Sin sprites de Pokémon reales | Set estilo 5.ª generación, normal y shiny, para todas las especies (Fase A.3) |
+
+**Prueba de nivel gráfico (hacer YA, en este orden):**
+1. **Agente 3**: lista de recursos a descargar (tilesets exterior, interior y cueva estilo 4.ª/5.ª gen; personajes del mapa; Pokémon que te siguen con shiny; fondos y bases de combate; fuente pixel), con **enlace, autor y licencia** de cada uno, en "Preguntas para Javier" de `docs/ESTADO.md`. Javier los descarga en `assets/_terceros/`.
+2. **Agente 2**: script en `tools/` que descarga los sprites de Pokémon (frente, espalda, normal y shiny, iconos) de las carpetas de sprites de Showdown o del repo `PokeAPI/sprites`, **empezando por las especies de la Pokédex regional y del MVP**, con pausas entre peticiones y caché local. Créditos en `CREDITOS.md`.
+3. **Agente 1**: pasar el proyecto a **512×384** (cámara del mundo con `zoom = 2`, UI sin zoom) y montar con los recursos reales **dos mapas de muestra**: `maps/test/muestra_ruta.tscn` (al nivel de `anil_ruta.png`) y `maps/test/muestra_pueblo.tscn` (al nivel de `anil_pueblo.png`, con NPCs, flores y hierba animadas, sombras y el Pokémon que te sigue).
+4. **Agente 3**: **pantalla de combate de muestra** (al nivel de `anil_combate.png`: fondo y bases, sprites a ×2, cajas de datos con barras de PS y experiencia, iconos de estado y género, y botones Luchar / Mochila / Pokémon / Huir con su animación) y **pantalla de datos del Pokémon de muestra** (al nivel de `anil_datos_pokemon.png`). Diseño **propio**, no una copia de la UI de Añil.
+5. **Todos**: capturas del juego **a la misma escala** que las referencias, puestas **lado a lado** en `docs/arte/comparativas/`. Se avisa a Javier en "Preguntas para Javier".
+6. **Javier aprueba** (o pide cambios). Hasta entonces, el MVP no añade más pantallas ni mapas visibles; el trabajo de motor, datos y lógica sigue con normalidad.
+
+## 8. Shiny: probabilidad y diseño fiel
+
+- **Probabilidad base: 1/4096 (≈ 0,024 %)**. Con Amuleto Iris, 3/4096; Masuda, 6/4096; ambos, 8/4096. Se configura en `data/world.json` → `shiny`; en RandomLocke se puede subir en los ajustes. Tabla completa en la **Fase 6.7** de la guía.
+- **Diseño fiel:** cada especie tiene su sprite shiny **con los colores shiny oficiales** (frente, espalda, icono y Pokémon que te sigue), del mismo set que el normal. **Prohibido generar shinies cambiando el tono por código.**
+- Presentación: destellos y sonido al aparecer, estrella ★ en todas las pantallas, y registro en la Pokédex.
+- Reparto: **Agente 2** (probabilidad en `Pokemon`, test estadístico y validador de las 4 versiones shiny), **Agente 3** (destellos, sonido y estrellas en la UI), **Agente 1** (`data/world.json` → `shiny` y brillo del Pokémon que te sigue).

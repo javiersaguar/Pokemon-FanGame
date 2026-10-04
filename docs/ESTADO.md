@@ -2,7 +2,13 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-04, Javier):** 📌 **Nuevas directrices obligatorias en [`docs/DIRECTRICES.md`](DIRECTRICES.md).** Leedlas antes de vuestra siguiente tarea. Resumen:
+**Último aviso (2026-10-04, Javier):** 🚨 **Los gráficos actuales no valen: el mínimo es el nivel de Pokémon Añil.** Leed `docs/DIRECTRICES.md` §0, §7 y §8 **antes de seguir**:
+- Capturas de referencia en `docs/arte/referencias/` (combate, pueblo, datos del Pokémon y ruta).
+- La resolución pasa a **512×384** con el mundo a ×2 (Fase 3.2). **Se acabó el arte generado por código.**
+- **Prueba de nivel gráfico** (§7, pasos 1–6): mapas de muestra (A1), combate y pantalla de datos de muestra (A3), sprites reales de Pokémon (A2) y comparación lado a lado para que Javier la apruebe. Hasta la aprobación, el MVP no añade más pantallas ni mapas visibles.
+- **Shiny**: 1/4096 de base (≈ 0,024 %) y sprites con los colores shiny oficiales, nunca generados por código (§8 y Fase 6.7).
+
+**Aviso anterior (2026-10-04, Javier):** 📌 **Nuevas directrices obligatorias en [`docs/DIRECTRICES.md`](DIRECTRICES.md).** Leedlas antes de vuestra siguiente tarea. Resumen:
 1. **Arte de nivel profesional**, pieza a pieza → nueva **Fase A** de la guía.
 2. **Varias partidas** (8+ ranuras) y **modo RandomLocke** con motor de aleatorización propio → **Fase 8.7** y nueva **Fase R**. ⚠️ La **regla R.2** (todo por ID de datos, nada escrito a mano en los eventos) afecta **ya** al MVP.
 3. **Estadísticas**: verificar con **WikiDex** y aplicar los retoques de **Pokémon Añil** como overrides → **Fase 4.1**.

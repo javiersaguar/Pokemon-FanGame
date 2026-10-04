@@ -108,27 +108,29 @@ Dónde se va el tiempo, aproximadamente:
 - [ ] **Nada de arte provisional en una build pública.** Los placeholders se permiten durante el desarrollo, pero tienen que estar **apuntados en el seguimiento** (A.7).
 - [ ] **El juego se juzga en movimiento**, no en capturas: animaciones, transiciones y respuesta al input cuentan tanto como los sprites.
 - [ ] **Un asset solo es "final" con la aprobación de Javier** (columna en el seguimiento).
+- [ ] **Listón mínimo: Pokémon Añil.** Las capturas de `docs/arte/referencias/` (combate, pueblo con Pokémon que te sigue, pantalla de datos y ruta) son el **mínimo aceptable**. Antes de dar por buena cualquier pantalla, se hace una captura del juego a la misma escala y se compara lado a lado con su referencia. Si se ve peor, no está terminada.
+- [ ] **No se genera arte por código para el juego.** Los tilesets y sprites "dibujados" con scripts solo valen como relleno técnico temporal. El arte real sale de A.3.
 
 ### A.2 Biblia de arte (`docs/arte/BIBLIA.md`): hacerla ANTES de producir
 
-- [ ] **Referencias de estilo**: 5.ª generación (Negro/Blanco) y *Pokémon Añil* como norte. Describe por escrito qué se toma de cada referencia.
+- [ ] **Referencias de estilo**: 5.ª generación (Negro/Blanco) y *Pokémon Añil* como norte (capturas en `docs/arte/referencias/`). Describe por escrito qué se toma de cada referencia: densidad de detalle de los tiles, rampas de color, flores y hierba animadas, sombras, marcos y degradados de la UI, iconos, etc. **Se toma el nivel y el estilo, no se copian sus gráficos propios** (la UI de Añil es obra de su equipo).
 - [ ] **Paleta maestra** (`assets/arte/paleta.gpl` + `paleta.png`): 48–64 colores organizados en **rampas por material** (hierba, agua, piedra, madera, tejado, piel, metal, UI...). Sombras desplazadas hacia tonos fríos y luces hacia cálidos (*hue shifting*). Las clases Panchito, los objetos Panchito, la UI y los tiles salen de esta paleta. Los sets de terceros se respetan, pero se comprueba que encajen.
 - [ ] **Luz**: siempre desde arriba a la izquierda, en todo el juego.
 - [ ] **Contornos**: en personajes, objetos y Pokémon propios, un contorno oscuro **del color del objeto** (*sel-out*), nunca negro puro. En los tiles de suelo no hay contorno.
-- [ ] **Reglas de píxel**: 1 píxel del asset = 1 píxel del juego. Sin escalados no enteros, sin rotar pixel art, sin antialiasing automático, sin desenfoques y sin mezclar resoluciones.
+- [ ] **Reglas de píxel**: el mundo, los personajes y los Pokémon se ven siempre a **×2 exacto** (Fase 3.2), y la UI a ×2 con detalle a ×1 solo donde lo diga la biblia. Sin escalados no enteros, sin rotar pixel art, sin antialiasing automático y sin desenfoques. Dentro de una misma capa no se mezclan escalas.
 - [ ] **Tamaños canónicos** (cada tipo de asset tiene un único lienzo):
 
 | Asset | Lienzo | Notas |
 |-------|--------|-------|
 | Tile | 16×16 | Autotiles con todas las variantes del terrain set |
 | Personaje en el mapa | 32×32 por frame | 4 direcciones × 4 frames; variantes de correr, bici, surf y pesca |
-| Pokémon en combate | 96×96 | Frente y espalda, normal y shiny. **Un mismo set para todas las especies** |
-| Icono de Pokémon | 32×32 | 2 frames (animación del menú) |
-| Pokémon que te sigue | 32×32 o 64×64 | Según el tamaño de la especie |
+| Pokémon en combate | 96×96 (se ve a 192×192) | Frente y espalda, **normal y shiny con los colores shiny oficiales**. Animados si el set lo permite. **Un mismo set para todas las especies** |
+| Icono de Pokémon | 32×32 | 2 frames (animación del menú), también en versión shiny |
+| Pokémon que te sigue | 32×32 o 64×64 | Según el tamaño de la especie, **también en versión shiny** |
 | Entrenador en combate | Un lienzo fijo para todos (defínelo en la biblia) | Clases Panchito incluidas |
 | Objeto | 24×24 | |
 | Iconos de tipo, estado y categoría | Definir en la biblia | Mismo grosor de borde y tipografía |
-| Fondo de combate | 320×180 + bases | Versiones de día y de noche si el lugar es exterior |
+| Fondo de combate | 256×192 (se ve a 512×384) + bases | Versiones de día y de noche si el lugar es exterior |
 | Retrato de diálogo | Definir (por ejemplo, 64×64) | Solo personajes importantes |
 
 - [ ] **Tipografía**: 1–2 fuentes pixel como mucho, con tamaños fijos, y que tengan ñ, tildes y ¿¡.
@@ -137,7 +139,10 @@ Dónde se va el tiempo, aproximadamente:
 
 ### A.3 De dónde sale el arte (por orden de preferencia)
 
-1. **Sets completos y coherentes de la comunidad con permiso de uso.** Por ejemplo, para los Pokémon en combate, un set de estilo 5.ª generación que cubra **todas** las especies (los sprites estilo Negro/Blanco del proyecto de sprites de Smogon, los que usa Showdown, cubren las generaciones posteriores con el mismo estilo). Verifica la licencia y acredita.
+1. **Sets completos y coherentes de la comunidad con permiso de uso.** Verifica la licencia y acredita.
+   - **Pokémon en combate**: set estilo 5.ª generación que cubra **todas** las especies, normal y shiny. Las carpetas de sprites de Pokémon Showdown (`gen5`, `gen5-shiny`, `gen5-back`, `gen5-back-shiny` y las animadas `gen5ani*` donde existan) incluyen los del proyecto de sprites de Smogon para las generaciones posteriores, con el mismo estilo. El repo `PokeAPI/sprites` es una alternativa.
+   - **Tilesets, personajes del mapa, Pokémon que te siguen y fondos de combate**: packs estilo 4.ª/5.ª generación de la comunidad (Eevee Expo, Relic Castle, DeviantArt...). Los **créditos de Pokémon Añil** listan los recursos que usa: sirven como pista para encontrar los mismos packs, pero el permiso se pide a sus **autores originales**. Muchos de estos packs requieren registrarse o descargarse a mano: los agentes preparan la lista (nombre, enlace, licencia) y **Javier los descarga** en `assets/_terceros/`.
+   - **Fuente pixel** con ñ, tildes y ¿¡ y licencia libre.
 2. **Arte propio hecho a mano siguiendo la biblia** para todo lo que no existe en ningún sitio: protagonistas, **clases Panchito**, logo, UI, medallas, **objetos Panchito** y lugares únicos.
 3. **Nunca**: mezclar sets de estilos distintos, reescalar sprites de otros juegos con otra resolución, ni usar imágenes generadas automáticamente que no encajen con la biblia.
 
@@ -457,13 +462,15 @@ Como lo programas tú, **decide y documenta** qué entra en cada versión:
 
 ### 3.2 Resolución y pixel art
 
-- [ ] **Tiles de 16×16 px** (estándar de Pokémon 2D).
-- [ ] **Resolución base**: dos opciones razonables:
-  - **320×180** (16:9). Escala entera ×4 = 1280×720, ×6 = 1920×1080. **Recomendado.**
-  - **256×192** (4:3, la de DS, la de Añil). Bandas negras en pantallas panorámicas.
+> ⚠️ **Cambio de Javier (2026-10-04): se abandona 320×180.** El objetivo es el nivel gráfico de *Pokémon Añil* (ver `docs/arte/referencias/`), así que se usa su misma resolución.
+
+- [ ] **Resolución base: 512×384** (4:3, la de Añil). Escala entera ×2 = 1024×768 (cabe en pantallas 1080p) y ×3 = 1536×1152 (pantallas 1440p).
+- [ ] **Dos escalas de dibujo**, como en Añil:
+  - **Mundo y sprites a ×2**: el arte se dibuja con **tiles de 16×16** y se muestra a 32×32 (la `Camera2D` del mundo con `zoom = 2`). Lo mismo para los personajes y para los Pokémon en combate (un sprite de 96×96 se ve a 192×192, como en la captura de combate de Añil). Las posiciones del mundo se redondean a píxeles **del arte** (múltiplos de 2 en pantalla).
+  - **Interfaz a 512×384 nativo**: las `CanvasLayer` de la UI no tienen zoom. La UI se diseña con píxeles de 2×2 por defecto (para que case con el mundo) y **se permite detalle a 1×** (degradados, bordes finos, texto pequeño) cuando la biblia de arte lo define. Así se consigue el acabado de la pantalla de datos de Añil.
 - [ ] *Project Settings*:
-  - `display/window/size/viewport_width/height` = resolución base
-  - `display/window/size/window_width/height_override` = ×4 (ventana inicial)
+  - `display/window/size/viewport_width/height` = 512 × 384
+  - `display/window/size/window_width/height_override` = 1024 × 768 (ventana inicial)
   - `display/window/stretch/mode` = `viewport`
   - `display/window/stretch/aspect` = `keep`
   - `display/window/stretch/scale_mode` = `integer`
@@ -840,7 +847,7 @@ extends Resource
 | `nature` | 25 naturalezas: +10 % / −10 % |
 | `ability_slot` | `"0"`, `"1"` o `"H"` (oculta) |
 | `gender` | Según el ratio de la especie |
-| `shiny` | 1/4096 por defecto (configurable) |
+| `shiny` | Probabilidad y diseño en la **Fase 6.7** |
 | `moves` (máx. 4) | Cada uno con `id`, `pp` y `pp_ups` |
 | `current_hp`, `status` | `par`, `brn`, `psn`, `tox`, `slp` (+ turnos), `frz` |
 | `held_item` | |
@@ -890,7 +897,33 @@ extends Resource
 - [ ] Tests de experiencia y nivel.
 - [ ] Test de guardar → cargar un Pokémon idéntico.
 
-✅ **Criterio de "hecho":** desde el Debug puedes crear un Pokémon de cualquier especie y nivel con estadísticas correctas, meterlo al equipo o al PC, y guardarlo y cargarlo.
+### 6.7 Shiny: probabilidad y diseño (decisión de Javier)
+
+**Probabilidad** (configurable en `data/world.json` → `shiny`, nunca escrita en el código):
+
+| Situación | Tiradas | Probabilidad | Porcentaje |
+|-----------|---------|--------------|------------|
+| **Base** (salvajes, huevos, regalos) | 1 | **1/4096** | **≈ 0,024 %** |
+| Con **Amuleto Iris** (postgame) | 3 | 3/4096 ≈ 1/1365 | ≈ 0,073 % |
+| **Método Masuda** (huevo de padres de distinto origen) | 6 | 6/4096 ≈ 1/683 | ≈ 0,146 % |
+| Masuda + Amuleto Iris | 8 | 8/4096 = 1/512 | ≈ 0,195 % |
+| *(Opcional)* Cadenas de captura o Poké Radar | Según la cadena | Hasta ≈ 1/1024 | ≈ 0,1 % |
+
+- [ ] Cada "tirada" es una comprobación independiente de 1/4096: `p = 1 − (1 − 1/4096)^tiradas`. Implementado y testeado con semilla.
+- [ ] En **RandomLocke** se puede elegir la probabilidad en los ajustes (1/4096 oficial, 1/1024, 1/512 o 1/100 "modo Panchito").
+- [ ] Opción de Debug para forzar shinies (y probar los sprites).
+- [ ] Los entrenadores pueden llevar un shiny fijado en su JSON (`"shiny": true`). Los Pokémon de entrenadores no tiran probabilidad salvo que se decida.
+
+**Diseño fiel a los colores oficiales**
+- [ ] **Cada especie tiene su sprite shiny de verdad**, con los **colores shiny oficiales**: frente, espalda, icono y Pokémon que te sigue, del **mismo set** que el normal (Fase A.3). **Prohibido generarlos cambiando el tono por código**: un shiny con colores inventados es un error.
+- [ ] El validador (Fase 4.6) comprueba que toda especie obtenible tiene sus 4 versiones shiny.
+- [ ] **Presentación** (nivel Añil o superior):
+  - [ ] Destellos de estrellas animados + sonido característico al entrar en combate (y al salir de la Poké Ball).
+  - [ ] Estrella ★ junto al nombre en las cajas de combate, el equipo, la pantalla de datos y el PC.
+  - [ ] El Pokémon que te sigue también brilla al aparecer.
+  - [ ] La Pokédex registra "shiny visto" y "shiny capturado" y deja ver la versión shiny en la entrada de la especie.
+
+✅ **Criterio de "hecho":** desde el Debug puedes crear un Pokémon de cualquier especie y nivel con estadísticas correctas, meterlo al equipo o al PC, y guardarlo y cargarlo. Los shinies salen con la probabilidad configurada (test estadístico con 1.000.000 de tiradas sembradas).
 
 ---
 
@@ -1699,7 +1732,7 @@ func run() -> void:
 
 ### 14.4 Encuentros especiales
 
-- [ ] **Shiny** (con Amuleto Iris en el postgame) y animación de brillo.
+- [ ] **Shiny**: probabilidades, Amuleto Iris, Masuda y presentación según la **Fase 6.7**.
 - [ ] **Pokérus**.
 - [ ] **Pesca** (3 cañas, minijuego de "¡Pican!"), **Golpe Cabeza** en árboles y **Golpe Roca**.
 - [ ] **Errantes** (aparecen al azar en rutas y huyen).
