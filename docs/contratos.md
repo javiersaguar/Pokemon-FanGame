@@ -434,7 +434,7 @@ Un nodo del mapa (NPC, cartel, Warp...) **se libera al cambiar de mapa** y sus c
 
 ### Encuentros salvajes
 
-- Solo en casillas con `encounter = true` y en mapas con `data.encounter_table`.
+- Solo en casillas con `encounter = true`, en mapas con `data.encounter_table` y si el equipo tiene algún Pokémon que pueda luchar.
 - Probabilidad por paso: `data.encounter_rate` del mapa si es > 0; si no, `land_rate` (%) de la tabla; si no, `data/world.json` → `encounters.step_chance` (0,1).
 - Tabla `DataDB.encounter_table(<encounter_table>)` (= `data/encounters/<id>.json`, formato del §9.7; en RandomLocke, la parcheada). Cada sección es una lista o un diccionario por momento del día; si falta el momento, se usa `day`.
 - Repelente: la var `repel_steps` de GameState (pasos que quedan). Mientras dure, no salen Pokémon de nivel menor que `GameState.party.first_able_level()`. Al gastarse emite `EventBus.repel_wore_off`. El objeto que la activa es cosa del Agente 3.
