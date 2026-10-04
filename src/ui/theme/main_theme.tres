@@ -1,41 +1,54 @@
 [gd_resource type="Theme" format=3]
 
-[ext_resource type="FontFile" uid="uid://dspol7wcs35xt" path="res://assets/fonts/PixelOperator.ttf" id="1_font"]
-[ext_resource type="FontFile" uid="uid://bw4ubyctdug3" path="res://assets/fonts/PixelOperator8.ttf" id="2_font8"]
+[ext_resource type="FontFile" uid="uid://c4oheefs83twi" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="1_font"]
+[ext_resource type="FontFile" uid="uid://cgbq2m757q1c6" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-SmallTruths-Normal.ttf" id="2_font8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/battle/databox.png" id="3_frame"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/battle/panel_message.png" id="4_dark"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/battle/tag_ps.png" id="5_tag"]
 
-[sub_resource type="StyleBoxFlat" id="frame"]
+[sub_resource type="StyleBoxTexture" id="frame"]
 content_margin_left = 8.0
 content_margin_top = 5.0
 content_margin_right = 8.0
 content_margin_bottom = 5.0
-bg_color = Color(0.972549, 0.972549, 0.941176, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.235294, 0.290196, 0.470588, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
+texture = ExtResource("3_frame")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
 
-[sub_resource type="StyleBoxFlat" id="frame_small"]
+[sub_resource type="StyleBoxTexture" id="frame_small"]
 content_margin_left = 6.0
-content_margin_top = 2.0
+content_margin_top = 1.0
 content_margin_right = 6.0
 content_margin_bottom = 2.0
-bg_color = Color(0.972549, 0.972549, 0.941176, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.235294, 0.290196, 0.470588, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
+texture = ExtResource("3_frame")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="dark"]
+content_margin_left = 8.0
+content_margin_top = 5.0
+content_margin_right = 8.0
+content_margin_bottom = 5.0
+texture = ExtResource("4_dark")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="tag"]
+content_margin_left = 3.0
+content_margin_top = 0.0
+content_margin_right = 3.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_tag")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="empty"]
 content_margin_left = 2.0
@@ -43,54 +56,59 @@ content_margin_top = 0.0
 content_margin_right = 2.0
 content_margin_bottom = 0.0
 
-[sub_resource type="StyleBoxFlat" id="focus"]
-content_margin_left = 2.0
-content_margin_top = 0.0
-content_margin_right = 2.0
-content_margin_bottom = 0.0
-bg_color = Color(0.85098, 0.886275, 0.956863, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
-anti_aliasing = false
-
 [resource]
 default_font = ExtResource("1_font")
-default_font_size = 16
-Button/colors/font_color = Color(0.25098, 0.25098, 0.282353, 1)
-Button/colors/font_disabled_color = Color(0.627451, 0.627451, 0.658824, 1)
-Button/colors/font_focus_color = Color(0.25098, 0.25098, 0.282353, 1)
-Button/colors/font_hover_color = Color(0.25098, 0.25098, 0.282353, 1)
-Button/colors/font_hover_pressed_color = Color(0.25098, 0.25098, 0.282353, 1)
-Button/colors/font_pressed_color = Color(0.25098, 0.25098, 0.282353, 1)
+default_font_size = 10
+Button/colors/font_color = Color(0.188235, 0.188235, 0.282353, 1)
+Button/colors/font_disabled_color = Color(0.564706, 0.596078, 0.658824, 1)
+Button/colors/font_focus_color = Color(0.188235, 0.188235, 0.282353, 1)
+Button/colors/font_hover_color = Color(0.188235, 0.188235, 0.282353, 1)
+Button/colors/font_hover_pressed_color = Color(0.188235, 0.188235, 0.282353, 1)
+Button/colors/font_pressed_color = Color(0.188235, 0.188235, 0.282353, 1)
 Button/styles/disabled = SubResource("empty")
-Button/styles/focus = SubResource("focus")
+Button/styles/focus = SubResource("tag")
 Button/styles/hover = SubResource("empty")
 Button/styles/normal = SubResource("empty")
 Button/styles/pressed = SubResource("empty")
-Label/colors/font_color = Color(0.25098, 0.25098, 0.282353, 1)
-Label/colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
-Label/constants/line_spacing = 0
+DarkPanel/base_type = &"Panel"
+DarkPanel/styles/panel = SubResource("dark")
+Label/colors/font_color = Color(0.188235, 0.188235, 0.282353, 1)
+Label/colors/font_shadow_color = Color(0.815686, 0.831373, 0.862745, 1)
+Label/constants/line_spacing = 2
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 LightLabel/base_type = &"Label"
-LightLabel/colors/font_color = Color(0.972549, 0.972549, 0.972549, 1)
-LightLabel/colors/font_shadow_color = Color(0.313726, 0.313726, 0.376471, 1)
+LightLabel/colors/font_color = Color(0.972549, 0.972549, 0.941176, 1)
+LightLabel/colors/font_shadow_color = Color(0.188235, 0.188235, 0.282353, 1)
+LightRichText/base_type = &"RichTextLabel"
+LightRichText/colors/default_color = Color(0.972549, 0.972549, 0.941176, 1)
+LightRichText/colors/font_shadow_color = Color(0.188235, 0.188235, 0.282353, 1)
 Panel/styles/panel = SubResource("frame")
 PanelContainer/styles/panel = SubResource("frame")
-RichTextLabel/colors/default_color = Color(0.25098, 0.25098, 0.282353, 1)
-RichTextLabel/colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
-RichTextLabel/constants/line_separation = 0
+RichTextLabel/colors/default_color = Color(0.188235, 0.188235, 0.282353, 1)
+RichTextLabel/colors/font_shadow_color = Color(0.815686, 0.831373, 0.862745, 1)
+RichTextLabel/constants/line_separation = 2
 RichTextLabel/constants/shadow_offset_x = 1
 RichTextLabel/constants/shadow_offset_y = 1
 SmallFrame/base_type = &"PanelContainer"
 SmallFrame/styles/panel = SubResource("frame_small")
 SmallLabel/base_type = &"Label"
-SmallLabel/font_sizes/font_size = 8
+SmallLabel/font_sizes/font_size = 10
 SmallLabel/fonts/font = ExtResource("2_font8")
 SmallLightLabel/base_type = &"Label"
-SmallLightLabel/colors/font_color = Color(0.972549, 0.972549, 0.972549, 1)
-SmallLightLabel/colors/font_shadow_color = Color(0.313726, 0.313726, 0.376471, 1)
-SmallLightLabel/font_sizes/font_size = 8
+SmallLightLabel/colors/font_color = Color(0.972549, 0.972549, 0.941176, 1)
+SmallLightLabel/colors/font_shadow_color = Color(0.188235, 0.188235, 0.282353, 1)
+SmallLightLabel/font_sizes/font_size = 10
 SmallLightLabel/fonts/font = ExtResource("2_font8")
+TagLabel/base_type = &"Label"
+TagLabel/colors/font_color = Color(0.941176, 0.690196, 0.188235, 1)
+TagLabel/colors/font_shadow_color = Color(0.0941176, 0.0941176, 0.12549, 1)
+TagLabel/font_sizes/font_size = 10
+TagLabel/fonts/font = ExtResource("2_font8")
+TagLabel/styles/normal = SubResource("tag")
+KeyLabel/base_type = &"Label"
+KeyLabel/colors/font_color = Color(0.345098, 0.345098, 0.439216, 1)
+KeyLabel/colors/font_shadow_color = Color(0.815686, 0.831373, 0.862745, 1)
+TitleLabel/base_type = &"Label"
+TitleLabel/colors/font_color = Color(0.917647, 0.815686, 0.596078, 1)
+TitleLabel/colors/font_shadow_color = Color(0.0941176, 0.0941176, 0.12549, 1)

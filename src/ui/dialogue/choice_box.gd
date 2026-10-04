@@ -8,7 +8,7 @@ signal _chosen(index: int)
 const ROW_HEIGHT := 16
 
 ## Esquina inferior derecha del cuadro, en píxeles de la pantalla base.
-@export var anchor_point := Vector2(316, 132)
+@export var anchor_point := Vector2(252, 148)
 
 var is_choosing := false
 var selected := 0

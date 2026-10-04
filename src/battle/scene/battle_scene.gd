@@ -6,13 +6,21 @@ extends Control
 ## Los textos de mecánicas ("¡X usó Y!") los manda el motor; la escena pone los
 ## de presentación: aparición, desafío, "¡Adelante, X!", menú y despedida.
 
-const PROMPT_TEXT_WIDTH := 160.0
+## La interfaz va en el UiCanvas (256×192 a ×2); el campo (World) va a 1:1 en
+## píxeles de pantalla, porque los sprites de los packs ya vienen al doble.
+const MESSAGE_RECT := Rect2(0, 146, 256, 46)
+const PROMPT_TEXT_WIDTH := 112.0
 const MESSAGE_WAIT := 0.9
-const OFFSCREEN_LEFT := -64.0
-const OFFSCREEN_RIGHT := 384.0
+const OFFSCREEN_LEFT := -96.0
+const OFFSCREEN_RIGHT := 608.0
 const PLAYER_BACK_SPRITE := "res://assets/sprites/trainers/player_back_%s.png"
-const LIST_ANCHOR := Vector2(316, 132)
-const BALL_FROM := Vector2(40, 120)
+const LIST_ANCHOR := Vector2(252, 146)
+const BALL_FROM := Vector2(80, 240)
+const SPARKLE := preload("res://assets/sprites/ui/battle/shiny_sparkle.png")
+const SPARKLE_FRAMES := 3
+const BALL_TEXTURE := preload("res://assets/sprites/ui/battle/ball.png")
+## Color de cada botón del menú principal (BIBLIA.md §7).
+const COMMAND_COLORS: Array[StringName] = [&"rojo", &"amarillo", &"verde", &"azul"]
 ## Fase 7.10: "Luchar / Mochila / Pokémon / Huir".
 const COMMANDS: Array[String] = ["Luchar", "Mochila", "Pokémon", "Huir"]
 enum Command { FIGHT, BAG, POKEMON, RUN }
@@ -27,32 +35,36 @@ var _info: Dictionary = {}
 var _last_command := 0
 var _last_move := 0
 
-@onready var _background: BattleBackground = $Field/Background
-@onready var _foe_trainer: Sprite2D = $Field/FoeTrainer
-@onready var _foe_sprite: BattlePokemonSprite = $Field/FoeSprite
-@onready var _player_trainer: Sprite2D = $Field/PlayerTrainer
-@onready var _player_sprite: BattlePokemonSprite = $Field/PlayerSprite
-@onready var _fx: Node2D = $Field/Fx
-@onready var _foe_box: BattleDataBox = $FoeBox
-@onready var _player_box: BattleDataBox = $PlayerBox
-@onready var _box: DialogueBox = $MessageBox
-@onready var _command_panel: Control = $CommandPanel
-@onready var _command_menu: GridMenu = $CommandPanel/Menu
-@onready var _move_panel: Control = $MovePanel
-@onready var _move_menu: GridMenu = $MovePanel/Moves/Menu
-@onready var _move_pp: Label = $MovePanel/Info/PP
-@onready var _move_type: Label = $MovePanel/Info/Type
-@onready var _list_panel: PanelContainer = $ListPanel
-@onready var _list_menu: GridMenu = $ListPanel/Margin/Menu
-@onready var _curtain_a: ColorRect = $Curtain/A
-@onready var _curtain_b: ColorRect = $Curtain/B
+@onready var _background: BattleBackground = $World/Background
+@onready var _foe_shadow: Sprite2D = $World/FoeShadow
+@onready var _foe_trainer: Sprite2D = $World/FoeTrainer
+@onready var _foe_sprite: BattlePokemonSprite = $World/FoeSprite
+@onready var _player_trainer: Sprite2D = $World/PlayerTrainer
+@onready var _player_sprite: BattlePokemonSprite = $World/PlayerSprite
+@onready var _fx: Node2D = $World/Fx
+@onready var _foe_box: BattleDataBox = $Canvas/FoeBox
+@onready var _player_box: BattleDataBox = $Canvas/PlayerBox
+@onready var _box: DialogueBox = $Canvas/MessageBox
+@onready var _command_panel: Control = $Canvas/Commands
+@onready var _command_menu: GridMenu = $Canvas/Commands
+@onready var _move_panel: Control = $Canvas/MovePanel
+@onready var _move_menu: GridMenu = $Canvas/MovePanel/Moves
+@onready var _move_pp: Label = $Canvas/MovePanel/Info/PP
+@onready var _move_type: Label = $Canvas/MovePanel/Info/Type
+@onready var _list_panel: PanelContainer = $Canvas/ListPanel
+@onready var _list_menu: GridMenu = $Canvas/ListPanel/Margin/Menu
+@onready var _curtain_a: ColorRect = $Canvas/Curtain/A
+@onready var _curtain_b: ColorRect = $Canvas/Curtain/B
 
 
 func _ready() -> void:
-	var labels := PackedStringArray()
-	for command: String in COMMANDS:
-		labels.append(tr(command))
-	_command_menu.set_items(labels)
+	_box.place_frame(MESSAGE_RECT)
+	for i: int in COMMANDS.size():
+		_command_menu.add_child(_button(COMMAND_COLORS[i], tr(COMMANDS[i]), Vector2(60, 18)))
+	for i: int in 4:
+		var move_button := _button(&"claro", "", Vector2(122, 18))
+		move_button.align_left = true
+		_move_menu.add_child(move_button)
 	_command_panel.hide()
 	_move_panel.hide()
 	_list_panel.hide()
@@ -138,6 +150,8 @@ func _play_event(event: Variant) -> void:
 			AudioManager.play_cry(_sprite(side).species_id)
 			await _sprite(side).faint(_t(0.4))
 			_data_box(side).hide()
+			if side == BattleDriver.FOE:
+				_foe_shadow.hide()
 		&"exp":
 			if side == BattleDriver.PLAYER:
 				AudioManager.play_se(&"exp")
@@ -179,7 +193,10 @@ func _switch_in(side: int, data: Dictionary) -> void:
 		if not (sprite.visible and sprite.species_id == StringName(pokemon.get("species", ""))):
 			sprite.set_pokemon(pokemon)
 			await sprite.slide_in(OFFSCREEN_LEFT, _t(0.6))
+		_foe_shadow.show()
 		AudioManager.play_cry(sprite.species_id)
+		if pokemon.get("shiny", false):
+			await _shiny_sparkles(sprite)
 		await _show_box(box, pokemon)
 		await _message(tr("¡Un %s salvaje apareció!") % pokemon_name)
 		return
@@ -196,7 +213,10 @@ func _switch_in(side: int, data: Dictionary) -> void:
 	sprite.set_pokemon(pokemon)
 	AudioManager.play_se(&"ball_open")
 	await sprite.appear(_t(0.3))
+	_foe_shadow.visible = _foe_sprite.visible
 	AudioManager.play_cry(sprite.species_id)
+	if pokemon.get("shiny", false):
+		await _shiny_sparkles(sprite)
 	await _show_box(box, pokemon)
 
 
@@ -238,6 +258,8 @@ func _damage(side: int, hp: int, effectiveness: float) -> void:
 		AudioManager.play_se(&"hit_weak")
 	else:
 		AudioManager.play_se(&"hit_normal")
+	if effectiveness > 1.0:
+		await _sprite(side).flash(_t(0.15))
 	await _sprite(side).blink(3, _t(0.06))
 	var change := absf(box.hp - hp) / float(box.max_hp)
 	await box.animate_hp(hp, -1, _t(clampf(change * 1.2, 0.25, 1.0)))
@@ -247,10 +269,11 @@ func _damage(side: int, hp: int, effectiveness: float) -> void:
 
 func _throw_ball(shakes: int, caught: bool) -> void:
 	var ball := Sprite2D.new()
-	ball.texture = PlaceholderArt.ball()
+	ball.texture = BALL_TEXTURE
+	ball.scale = Vector2(2, 2)
 	ball.position = BALL_FROM
 	_fx.add_child(ball)
-	var target := _foe_sprite.home() + Vector2(0, -28)
+	var target := _foe_sprite.home() + Vector2(0, -80)
 	AudioManager.play_se(&"ball_throw")
 	if not fast:
 		var tween := create_tween()
@@ -258,21 +281,19 @@ func _throw_ball(shakes: int, caught: bool) -> void:
 		await tween.finished
 	ball.position = target
 	await _foe_sprite.withdraw(_t(0.3))
-	var ground := _foe_sprite.home() + Vector2(0, -5)
+	var ground := _foe_sprite.home() + Vector2(0, -12)
 	if not fast:
 		var drop := create_tween()
-		drop.tween_property(ball, ^"position", ground, 0.3).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+		drop.tween_method(func(p: Vector2) -> void: ball.position = _even(p), ball.position, ground, 0.3) \
+			.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
 		await drop.finished
 	ball.position = ground
 	for i: int in mini(shakes, 3):
 		await _wait(_t(0.35))
 		AudioManager.play_se(&"ball_shake")
-		if not fast:
-			var wobble := create_tween()
-			wobble.tween_property(ball, ^"rotation", -0.5, 0.08)
-			wobble.tween_property(ball, ^"rotation", 0.5, 0.16)
-			wobble.tween_property(ball, ^"rotation", 0.0, 0.08)
-			await wobble.finished
+		for step: float in [-2.0, 2.0, -2.0, 0.0]:
+			ball.position.x = ground.x + step
+			await _wait(_t(0.06))
 	await _wait(_t(0.35))
 	if caught:
 		AudioManager.play_se(&"ball_caught")
@@ -285,9 +306,40 @@ func _throw_ball(shakes: int, caught: bool) -> void:
 	await _foe_sprite.appear(_t(0.3))
 
 
+## Destellos y sonido de un shiny al aparecer (DIRECTRICES §8).
+func _shiny_sparkles(sprite: BattlePokemonSprite) -> void:
+	AudioManager.play_se(&"shiny")
+	if fast:
+		return
+	var center := sprite.center()
+	var offsets: Array[Vector2] = [Vector2(-56, -40), Vector2(48, -56), Vector2(-24, 24), Vector2(60, 16), Vector2(0, -72)]
+	for i: int in offsets.size():
+		var sparkle := Sprite2D.new()
+		sparkle.texture = SPARKLE
+		sparkle.hframes = SPARKLE_FRAMES
+		sparkle.scale = Vector2(2, 2)
+		sparkle.position = _even(center + offsets[i])
+		_fx.add_child(sparkle)
+		_animate_sparkle(sparkle, i * 0.08)
+	await _wait(0.75)
+
+
+func _animate_sparkle(sparkle: Sprite2D, delay: float) -> void:
+	sparkle.visible = false
+	await _wait(delay)
+	sparkle.visible = true
+	for frame: int in [0, 1, 2, 1, 2, 1, 0]:
+		sparkle.frame = frame
+		await _wait(0.08)
+	sparkle.queue_free()
+
+
+static func _even(v: Vector2) -> Vector2:
+	return (v / 2.0).round() * 2.0
+
+
 func _ball_arc(t: float, ball: Sprite2D, target: Vector2) -> void:
-	ball.position = BALL_FROM.lerp(target, t) + Vector2(0, -sin(t * PI) * 48.0)
-	ball.rotation = t * TAU * 2.0
+	ball.position = _even(BALL_FROM.lerp(target, t) + Vector2(0, -sin(t * PI) * 96.0))
 
 
 # --- Menús ---
@@ -308,6 +360,8 @@ func _choose_action(request: Dictionary = {}) -> Dictionary:
 		await _box.play(tr("¿Qué debería hacer %s?") % active.get("name", ""), "", false)
 		_command_panel.show()
 		var command := await _command_menu.choose(_last_command, false)
+		if command >= 0 and not fast:
+			await (_command_menu.get_child(command) as BattleButton).press()
 		_command_panel.hide()
 		_box.set_text_width(-1.0)
 		_last_command = command
@@ -335,20 +389,20 @@ func _choose_move(active: Dictionary) -> int:
 	var moves: Array = active.get("moves", [])
 	if moves.all(func(m: Dictionary) -> bool: return int(m.get("pp", 0)) <= 0):
 		return 0
-	var names := PackedStringArray()
 	for i: int in 4:
-		names.append(str(moves[i].get("name", "?")) if i < moves.size() else "—")
-	_move_menu.set_items(names)
-	for i: int in 4:
-		_move_menu.disabled[i] = i >= moves.size() or int(moves[i].get("pp", 0)) <= 0
+		var button := _move_menu.get_child(i) as BattleButton
+		button.text = str(moves[i].get("name", "?")) if i < moves.size() else "—"
+		button.set_type_icon(StringName(moves[i].get("type", "")) if i < moves.size() else &"")
+		_move_menu.set_disabled(i, i >= moves.size() or int(moves[i].get("pp", 0)) <= 0)
 	var update := _show_move_info.bind(moves)
 	_move_menu.selection_changed.connect(update)
-	_box.hide()
+	_box.clear()
 	_move_panel.show()
 	var slot := await _move_menu.choose(mini(_last_move, maxi(moves.size() - 1, 0)))
+	if slot >= 0 and not fast:
+		await (_move_menu.get_child(slot) as BattleButton).press()
 	_move_menu.selection_changed.disconnect(update)
 	_move_panel.hide()
-	_box.show()
 	if slot >= 0:
 		_last_move = slot
 	return slot
@@ -361,9 +415,8 @@ func _show_move_info(index: int, moves: Array) -> void:
 		return
 	var move: Dictionary = moves[index]
 	_move_pp.text = tr("PP %d/%d") % [int(move.get("pp", 0)), int(move.get("max_pp", 0))]
-	_move_type.text = _type_name(StringName(move.get("type", "normal")))
-	_move_type.add_theme_color_override(&"font_color",
-		UiColors.type_color(StringName(move.get("type", "normal"))).darkened(0.35))
+	_move_type.text = {"physical": tr("Físico"), "special": tr("Especial"), "status": tr("Estado")}.get(
+		str(move.get("category", "")), "")
 
 
 ## Objeto que usar (y sobre quién). {} = el jugador ha vuelto atrás.
@@ -419,7 +472,7 @@ func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can
 	await _box.play(prompt, "", false)
 	_list_menu.set_items(labels)
 	for i: int in disabled.size():
-		_list_menu.disabled[i] = disabled[i]
+		_list_menu.set_disabled(i, disabled[i])
 	_list_panel.reset_size()
 	_list_panel.position = (LIST_ANCHOR - _list_panel.get_combined_minimum_size()).round()
 	_list_panel.show()
@@ -434,13 +487,14 @@ func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can
 ## salvaje (primer switch_in de `start_events`) entra a la vez que el jugador.
 func _intro(start_events: Array) -> void:
 	var trainer := _trainer()
+	# Sin sprite real (aún no hay entrenadores en combate) no se enseña ningún relleno.
 	var player_back := PlaceholderArt.load_texture(PLAYER_BACK_SPRITE % GameState.player_gender)
-	_set_trainer_texture(_player_trainer, player_back if player_back else PlaceholderArt.trainer(true))
-	_player_trainer.show()
+	_set_trainer_texture(_player_trainer, player_back)
+	_player_trainer.visible = player_back != null
 	if not trainer.is_empty():
 		var sprite := PlaceholderArt.load_texture(str(trainer.get("battle_sprite", "")))
-		_set_trainer_texture(_foe_trainer, sprite if sprite else PlaceholderArt.trainer(false))
-		_foe_trainer.show()
+		_set_trainer_texture(_foe_trainer, sprite)
+		_foe_trainer.visible = sprite != null
 	await _open_curtain(trainer.is_empty())
 	var player_home := _player_trainer.position
 	_player_trainer.position.x = OFFSCREEN_RIGHT
@@ -450,11 +504,15 @@ func _intro(start_events: Array) -> void:
 	if not wild.is_empty():
 		_foe_sprite.set_pokemon(wild)
 		_foe_sprite.position.x = OFFSCREEN_LEFT
-	var tween := create_tween().set_parallel()
-	tween.tween_property(_player_trainer, ^"position", player_home, maxf(_t(0.6), 0.001))
-	tween.tween_property(_foe_trainer, ^"position", foe_home, maxf(_t(0.6), 0.001))
+	var duration := maxf(_t(0.6), 0.001)
+	var tween := create_tween().set_parallel().set_ease(Tween.EASE_OUT)
+	tween.tween_method(func(p: Vector2) -> void: _player_trainer.position = p.round(),
+		_player_trainer.position, player_home, duration)
+	tween.tween_method(func(p: Vector2) -> void: _foe_trainer.position = p.round(),
+		_foe_trainer.position, foe_home, duration)
 	if not wild.is_empty():
-		tween.tween_property(_foe_sprite, ^"position:x", _foe_sprite.home().x, maxf(_t(0.6), 0.001))
+		tween.tween_method(func(p: Vector2) -> void: _foe_sprite.position = p.round(),
+			_foe_sprite.position, _foe_sprite.home(), duration)
 	await tween.finished
 	if not trainer.is_empty():
 		await _message(tr("¡%s te desafía!") % trainer.get("display_name", ""))
@@ -482,7 +540,7 @@ func _first_wild(events: Array) -> Dictionary:
 
 
 func _trainer_returns() -> void:
-	if _foe_trainer.visible and is_equal_approx(_foe_trainer.position.x, _foe_sprite.home().x):
+	if _foe_trainer.texture == null or (_foe_trainer.visible and is_equal_approx(_foe_trainer.position.x, _foe_sprite.home().x)):
 		return
 	_foe_trainer.show()
 	await _slide_sprite(_foe_trainer, _foe_sprite.home().x, _t(0.5))
@@ -491,24 +549,24 @@ func _trainer_returns() -> void:
 func _open_curtain(horizontal: bool) -> void:
 	if horizontal:
 		_curtain_a.position = Vector2(0, 0)
-		_curtain_a.size = Vector2(320, 90)
-		_curtain_b.position = Vector2(0, 90)
-		_curtain_b.size = Vector2(320, 90)
+		_curtain_a.size = Vector2(256, 96)
+		_curtain_b.position = Vector2(0, 96)
+		_curtain_b.size = Vector2(256, 96)
 	else:
 		_curtain_a.position = Vector2(0, 0)
-		_curtain_a.size = Vector2(160, 180)
-		_curtain_b.position = Vector2(160, 0)
-		_curtain_b.size = Vector2(160, 180)
+		_curtain_a.size = Vector2(128, 192)
+		_curtain_b.position = Vector2(128, 0)
+		_curtain_b.size = Vector2(128, 192)
 	_curtain_a.show()
 	_curtain_b.show()
 	if not fast:
 		var tween := create_tween().set_parallel().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 		if horizontal:
-			tween.tween_property(_curtain_a, ^"position:y", -90.0, 0.4)
-			tween.tween_property(_curtain_b, ^"position:y", 180.0, 0.4)
+			tween.tween_property(_curtain_a, ^"position:y", -96.0, 0.3)
+			tween.tween_property(_curtain_b, ^"position:y", 192.0, 0.3)
 		else:
-			tween.tween_property(_curtain_a, ^"position:x", -160.0, 0.4)
-			tween.tween_property(_curtain_b, ^"position:x", 320.0, 0.4)
+			tween.tween_property(_curtain_a, ^"position:x", -128.0, 0.3)
+			tween.tween_property(_curtain_b, ^"position:x", 256.0, 0.3)
 		await tween.finished
 	_curtain_a.hide()
 	_curtain_b.hide()
@@ -527,11 +585,11 @@ func _show_box(box: BattleDataBox, pokemon: Dictionary) -> void:
 	if fast:
 		return
 	var home := box.position
-	box.position.x += -40.0 if box == _foe_box else 40.0
+	var from := home + Vector2(-24.0 if box == _foe_box else 24.0, 0)
 	box.modulate.a = 0.0
-	var tween := create_tween().set_parallel()
-	tween.tween_property(box, ^"position", home, 0.2)
-	tween.tween_property(box, ^"modulate:a", 1.0, 0.2)
+	var tween := create_tween().set_parallel().set_ease(Tween.EASE_OUT)
+	tween.tween_method(func(p: Vector2) -> void: box.position = p.round(), from, home, 0.15)
+	tween.tween_property(box, ^"modulate:a", 1.0, 0.15)
 	await tween.finished
 
 
@@ -540,14 +598,24 @@ func _slide_sprite(sprite: Node2D, to_x: float, duration: float) -> void:
 		sprite.position.x = to_x
 		return
 	var tween := create_tween()
-	tween.tween_property(sprite, ^"position:x", to_x, duration)
+	tween.tween_method(func(x: float) -> void: sprite.position.x = roundf(x), sprite.position.x, to_x, duration)
 	await tween.finished
 
 
 func _set_trainer_texture(sprite: Sprite2D, texture: Texture2D) -> void:
 	sprite.texture = texture
 	sprite.centered = false
+	if texture == null:
+		return
 	sprite.offset = Vector2(-texture.get_width() / 2.0, -texture.get_height()).round()
+
+
+func _button(color: StringName, text: String, button_size: Vector2) -> BattleButton:
+	var button := BattleButton.new()
+	button.color = color
+	button.text = text
+	button.custom_minimum_size = button_size
+	return button
 
 
 func _sprite(side: int) -> BattlePokemonSprite:

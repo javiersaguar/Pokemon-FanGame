@@ -11,6 +11,11 @@ signal _chosen(index: int)
 const CANCELLED := -1
 const CURSOR_GAP := 8
 
+## false = sin flecha: la opción elegida se marca sola (los BattleButton cambian de aspecto).
+@export var show_cursor := true
+## Flecha clara (sobre paneles oscuros).
+@export var light_cursor := false
+
 var selected := 0
 var is_choosing := false
 ## Opciones desactivadas: se pueden señalar, pero al aceptar suena error.
@@ -40,7 +45,7 @@ func _input(event: InputEvent) -> void:
 		target = selected + 1 if selected % cols < cols - 1 else selected
 	elif event.is_action_pressed(&"accept"):
 		get_viewport().set_input_as_handled()
-		if selected < disabled.size() and disabled[selected]:
+		if _is_disabled(selected):
 			AudioManager.play_se(&"menu_error")
 			return
 		AudioManager.play_se(&"menu_accept")
@@ -86,8 +91,26 @@ func set_item_text(index: int, text: String) -> void:
 
 func select(index: int) -> void:
 	selected = clampi(index, 0, maxi(get_child_count() - 1, 0))
+	for i: int in get_child_count():
+		var child := get_child(i)
+		if child.has_method(&"set_focused"):
+			child.set_focused(i == selected)
 	queue_redraw()
 	selection_changed.emit(selected)
+
+
+## Marca la opción `index` como desactivada (y lo muestra si es un BattleButton).
+func set_disabled(index: int, value: bool) -> void:
+	if disabled.size() < get_child_count():
+		disabled.resize(get_child_count())
+	disabled[index] = value
+	var child := get_child(index)
+	if child.has_method(&"set_disabled"):
+		child.set_disabled(value)
+
+
+func _is_disabled(index: int) -> bool:
+	return index < disabled.size() and disabled[index]
 
 
 ## Espera a que el jugador elija. Devuelve el índice o CANCELLED (−1).
@@ -109,10 +132,10 @@ func _finish(index: int) -> void:
 
 
 func _draw() -> void:
-	if get_child_count() == 0 or not visible:
+	if not show_cursor or get_child_count() == 0 or not visible:
 		return
 	var item := get_child(selected) as Control
 	if item == null:
 		return
 	var origin := item.position + Vector2(-CURSOR_GAP, (item.size.y - 8.0) / 2.0)
-	CursorArrow.draw_arrow(self, origin.round())
+	CursorArrow.draw_arrow(self, origin.round(), CursorArrow.Direction.RIGHT, light_cursor)

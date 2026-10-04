@@ -1,0 +1,12 @@
+# Fondo de la ficha: rayas diagonales que se repiten (mosaico de 8×8).
+@leyenda  m = agua_4   l = pizarra_5
+@salida res://assets/sprites/ui/summary/background_tile.png
+---
+mmmmllll
+mmmllllm
+mmllllmm
+mllllmmm
+llllmmmm
+lllmmmml
+llmmmmll
+lmmmmlll

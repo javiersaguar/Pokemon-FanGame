@@ -1,0 +1,10 @@
+# Marco de la barra de PS (9-slice: márgenes 2, 2, 2, 2). El relleno lo dibuja HpBar dentro.
+@leyenda  . = transparente   b = ui_1   k = ui_3
+@salida res://assets/sprites/ui/battle/hp_frame.png
+---
+.bbbbbb.
+bkkkkkkb
+bkkkkkkb
+bkkkkkkb
+bkkkkkkb
+.bbbbbb.

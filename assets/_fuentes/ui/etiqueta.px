@@ -1,0 +1,16 @@
+# Cápsula para etiquetas pequeñas (PS y estados). 9-slice: márgenes de 2.
+@leyenda  . = transparente   o = ui_1   f = ui_2
+@salida res://assets/sprites/ui/battle/tag_ps.png
+@salida res://assets/sprites/ui/icons/status/par.png  o=madera_3  f=acento_amarillo
+@salida res://assets/sprites/ui/icons/status/brn.png  o=teja_2  f=teja_4
+@salida res://assets/sprites/ui/icons/status/psn.png  o=teja_1  f=teja_3
+@salida res://assets/sprites/ui/icons/status/tox.png  o=ui_1  f=teja_1
+@salida res://assets/sprites/ui/icons/status/slp.png  o=piedra_2  f=piedra_4
+@salida res://assets/sprites/ui/icons/status/frz.png  o=agua_3  f=agua_5
+---
+.oooo.
+offffo
+offffo
+offffo
+offffo
+.oooo.

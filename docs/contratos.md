@@ -1001,14 +1001,15 @@ driver.item_needs_target(item_id) -> bool / can_use_item(item_id, party_index) -
 - La escena comprueba antes de enviar: no deja huir de un entrenador (`request.can_run`), ni usar un objeto sin efecto (`can_use_item`), ni elegir un movimiento sin PP; sin PP en ninguno, envía Forcejeo.
 - La música de victoria empieza al debilitarse el último Pokémon del rival (si en esa tanda llega `end` con `win`).
 - `BattleScene.fast = true` quita animaciones y esperas (tests).
-- Sprites: `assets/sprites/pokemon/<front|back>[_shiny]/<especie>.png`, `assets/sprites/trainers/player_back_<male|female>.png` y fondos `assets/sprites/ui/battle/bg_<entorno>.png`. Si faltan, se generan provisionales (`PlaceholderArt`).
+- Sprites: `assets/sprites/pokemon/<front|back>[_shiny]/<especie>.png` del Generation 9 Pack, a 1:1 (frente 192, espalda 288; los pies se alinean solos con las filas vacías de abajo), `assets/sprites/trainers/player_back_<male|female>.png` y fondos `assets/sprites/ui/battle/backgrounds/<archivo>.png` según el entorno (`BattleBackground.FILES`). Sin sprite de entrenador no se enseña ninguno; sin sprite de Pokémon sale uno provisional.
 
 ### 9.4 Interfaz común
 
 - **Theme global**: `res://src/ui/theme/main_theme.tres` (fuente, colores y marcos). Se pide al Agente 1 en `project.godot` → `gui/theme/custom`.
-- **Fuentes**: Pixel Operator (CC0) en `assets/fonts/`, sin antialiasing: tamaño **16** para el texto normal (es el del Theme) y `PixelOperator8.ttf` a tamaño **8** para textos pequeños. Tiene ñ, tildes, ü, ¿, ¡, «», € y …; **no** tiene º, ª, ♂ ni ♀ (se dibujan como iconos).
-- **Variaciones del Theme**: `SmallLabel` (8 px), `LightLabel` y `SmallLightLabel` (texto claro sobre fondo oscuro), `SmallFrame` (marco con menos margen). `Panel` y `PanelContainer` usan el marco estándar.
+- **Fuente**: *Truth and Ideals* (`assets/fonts/truth_and_ideals/`), sin antialiasing, a tamaño **10** (Normal) y **10** (Small Truths, para `SmallLabel`). Pensada para pantallas dentro de un **`UiCanvas`** (`src/ui/widgets/ui_canvas.gd`: lienzo de 256×192 a ×2), donde se ve a 20 px. Tiene ñ, tildes, ü, ¿, ¡, ♂, ♀ y ★; le faltan €, — y ·.
+- **Variaciones del Theme**: `SmallLabel`, `LightLabel` y `SmallLightLabel` (texto claro sobre fondo oscuro), `TagLabel` (etiqueta PS), `KeyLabel` (claves de las fichas), `TitleLabel` (cabeceras), `DarkPanel` y `LightRichText` (mensajes de combate) y `SmallFrame`. `Panel` y `PanelContainer` usan el marco de pixel art propio.
 - **Widgets**: `GridMenu` (`src/ui/widgets/grid_menu.gd`, menú en rejilla o lista con cursor, opciones desactivadas y `await choose(start, allow_cancel) -> int`), `CursorArrow` (`src/ui/widgets/cursor_arrow.gd`, flecha de menú o de "continuar"), `DialogueBox` (`src/ui/dialogue/dialogue_box.tscn`, cuadro de texto reutilizable: `await play(text, speaker_name, wait_last)`) y `ChoiceBox` (`src/ui/dialogue/choice_box.tscn`, lista de opciones: `await choose(options, cancel_choice) -> int`).
+- **Más widgets**: `UiCanvas`, `BattleButton` (botón de pixel art de color con foco animado), `TypeIcons.texture(type)` / `make_rect(type)` (iconos de tipo de Loaky) y `await SummaryScreen.open(parent, party: Array[Pokemon], index)` (ficha del Pokémon: Datos, Notas y Estadísticas).
 - Pantallas de uso común **(previsto)**:
 
 ```gdscript

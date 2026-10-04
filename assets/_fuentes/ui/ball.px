@@ -1,0 +1,16 @@
+# Poké Ball de la captura (12×12). La sacudida se anima moviéndola 1 píxel, sin rotar.
+@leyenda  . = transparente   d = ui_1   r = acento_rojo   l = teja_5   w = ui_6   g = ui_5
+@salida res://assets/sprites/ui/battle/ball.png
+---
+....dddd....
+..ddrrrrdd..
+.dllrrrrrrd.
+.dlrrrrrrrd.
+drrrddddrrrd
+dddddwwddddd
+dddddwwddddd
+dwwwddddwwwd
+dwwwwwwwwwwd
+.dwwwwwwwgd.
+..ddggggdd..
+....dddd....

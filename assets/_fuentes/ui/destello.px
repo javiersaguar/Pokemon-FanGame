@@ -1,0 +1,13 @@
+# Destello de shiny (3 frames de 9×9): crece, brilla y se apaga. DIRECTRICES §8.
+@leyenda  . = transparente   w = ui_6   y = tierra_6   o = acento_amarillo
+@salida res://assets/sprites/ui/battle/shiny_sparkle.png
+---
+.............y........y....
+.............o.......yoy...
+....y.......yoy.....yowoy..
+...yoy....yoowooy..yowwwoy.
+..yowoy.....yoy...yowwwwwoy
+...yoy.......o.....yowwwoy.
+....y........y......yowoy..
+.....................yoy...
+......................y....

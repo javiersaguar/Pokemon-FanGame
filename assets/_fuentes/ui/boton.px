@@ -1,0 +1,32 @@
+# Botones de combate (9-slice: márgenes de 4). Una forma y una rampa de color por botón:
+# d = contorno (sel-out), s = sombra, m = color base, l = luz (arriba a la izquierda).
+@leyenda  . = transparente   d = teja_2   s = teja_3   m = acento_rojo   l = teja_5
+@salida res://assets/sprites/ui/battle/button_rojo.png
+@salida res://assets/sprites/ui/battle/button_rojo_foco.png  d=ui_6
+@salida res://assets/sprites/ui/battle/button_amarillo.png  d=madera_3  s=madera_5  m=acento_amarillo  l=tierra_6
+@salida res://assets/sprites/ui/battle/button_amarillo_foco.png  d=ui_6  s=madera_5  m=acento_amarillo  l=tierra_6
+@salida res://assets/sprites/ui/battle/button_verde.png  d=hierba_2  s=hierba_3  m=acento_verde  l=hierba_5
+@salida res://assets/sprites/ui/battle/button_verde_foco.png  d=ui_6  s=hierba_3  m=acento_verde  l=hierba_5
+@salida res://assets/sprites/ui/battle/button_azul.png  d=pizarra_2  s=pizarra_3  m=acento_azul  l=pizarra_5
+@salida res://assets/sprites/ui/battle/button_azul_foco.png  d=ui_6  s=pizarra_3  m=acento_azul  l=pizarra_5
+@salida res://assets/sprites/ui/battle/button_claro.png  d=ui_2  s=ui_4  m=ui_5  l=ui_6
+@salida res://assets/sprites/ui/battle/button_claro_foco.png  d=acento_amarillo  s=ui_4  m=ui_5  l=ui_6
+@salida res://assets/sprites/ui/battle/button_rojo_foco2.png  d=tierra_6
+@salida res://assets/sprites/ui/battle/button_amarillo_foco2.png  d=tierra_6  s=madera_5  m=acento_amarillo  l=tierra_6
+@salida res://assets/sprites/ui/battle/button_verde_foco2.png  d=tierra_6  s=hierba_3  m=acento_verde  l=hierba_5
+@salida res://assets/sprites/ui/battle/button_azul_foco2.png  d=tierra_6  s=pizarra_3  m=acento_azul  l=pizarra_5
+@salida res://assets/sprites/ui/battle/button_claro_foco2.png  d=madera_5  s=ui_4  m=ui_5  l=ui_6
+@salida res://assets/sprites/ui/battle/button_gris.png  d=piedra_2  s=piedra_3  m=piedra_4  l=piedra_5
+---
+..dddddddd..
+.dlllllllld.
+dllmmmmmmmmd
+dlmmmmmmmmmd
+dmmmmmmmmmmd
+dmmmmmmmmmmd
+dmmmmmmmmmmd
+dmmmmmmmmmmd
+dmmmmmmmmmsd
+dssssssssssd
+.dssssssssd.
+..dddddddd..

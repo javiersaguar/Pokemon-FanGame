@@ -35,10 +35,8 @@ func _ready() -> void:
 	var layer := CanvasLayer.new()
 	layer.layer = LAYER
 	add_child(layer)
-	var root := Control.new()
+	var root := UiCanvas.new()
 	root.theme = MAIN_THEME
-	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	root.set_anchors_preset(Control.PRESET_FULL_RECT)
 	layer.add_child(root)
 	_box = BOX_SCENE.instantiate()
 	_box.text_speed = text_speed
