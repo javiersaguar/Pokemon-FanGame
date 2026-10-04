@@ -1,0 +1,31 @@
+name: Autoría
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  autoria:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Todos los commits son de Javier Saguar y sin coautores
+        run: |
+          fallo=0
+          # Autor: siempre Javier Saguar. Committer: Javier Saguar o GitHub (merges desde la web).
+          malos=$(git log --format='%h%x09%an%x09%cn' | awk -F'\t' '$2 != "Javier Saguar" || ($3 != "Javier Saguar" && $3 != "GitHub")')
+          if [ -n "$malos" ]; then
+            echo "::error::Commits con un autor distinto de Javier Saguar:"
+            echo "$malos"
+            fallo=1
+          fi
+          coautores=$(git log --format='%h %(trailers:key=Co-authored-by,valueonly,separator=%x2C )' | awk 'NF > 1')
+          if [ -n "$coautores" ]; then
+            echo "::error::Commits con coautores:"
+            echo "$coautores"
+            fallo=1
+          fi
+          exit $fallo

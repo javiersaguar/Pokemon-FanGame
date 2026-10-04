@@ -57,6 +57,17 @@ En el editor: panel **GUT** (abajo) → *Run All*.
 
 ## Trabajo en equipo
 
+> **Directrices obligatorias de Javier:** [`docs/DIRECTRICES.md`](docs/DIRECTRICES.md). Mandan sobre el resto de documentos.
+
+- **Autoría:** todos los commits los firma **Javier Saguar**, sin coautores. En cada copia nueva del repo, una sola vez:
+
+  ```bash
+  git config user.name "Javier Saguar"
+  git config user.email "javisaguarantona@gmail.com"
+  git config core.hooksPath .githooks
+  ```
+
+  El hook `.githooks/commit-msg` rechaza los commits con otro autor o con coautores, y el workflow `Autoría` lo comprueba en GitHub.
 - Cada persona o agente trabaja en **su propia copia** (`git worktree` o clon aparte) y en ramas `feat/<agente>-<tarea>` (por ejemplo, `feat/agente2-datadb`).
 
   ```bash
