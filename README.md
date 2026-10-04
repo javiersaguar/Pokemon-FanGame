@@ -92,4 +92,12 @@ godot --headless --path . -s res://assets/tilesets/placeholder/build_tileset.gd
 
 ## Datos (Fase 4)
 
-*(Sección del Agente 2: cómo regenerar `data/generated/`.)*
+Los datos oficiales (especies, movimientos, objetos, tipos, learnsets...) **no se escriben a mano**: los genera `tools/import_data` a partir de Pokémon Showdown y PokeAPI, con versiones fijadas y nombres y descripciones en español. Requiere **Node.js 18+** (sin `npm install`):
+
+```bash
+node tools/import_data/index.mjs            # regenera data/generated/*.json
+node tools/import_data/index.mjs --offline  # sin descargar (usa tools/cache/)
+```
+
+- `data/generated/` **no se edita a mano**. Los cambios propios van en `data/species_overrides.json` (por ejemplo, las evoluciones por intercambio sustituidas) y en los demás JSON de `data/`.
+- Detalles (fuentes, versiones, cómo actualizarlas): [`tools/README.md`](tools/README.md). Formato de los datos y API de `DataDB`: [`docs/contratos.md`](docs/contratos.md) §8.

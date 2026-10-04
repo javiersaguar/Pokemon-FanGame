@@ -1,0 +1,37 @@
+{
+  "generator": "tools/import_data",
+  "language_id": 7,
+  "sources": {
+    "showdown": {
+      "package": "pokemon-showdown",
+      "version": "0.11.11",
+      "integrity": "sha512-FdW7gt3TkG4AdXmpMTPYX2kx42VEfY8tQApjW9wEHOGzwH6Kn97wD0o5uIzAc4xpO1W+Tim70Ti9+FNkMNCA2w=="
+    },
+    "pokeapi": {
+      "repo": "PokeAPI/pokeapi",
+      "commit": "a003ae375b69a99907ec273fe100d97e7f36321c"
+    }
+  },
+  "counts": {
+    "species": 1379,
+    "moves": 951,
+    "abilities": 316,
+    "items": 1376,
+    "types": 18,
+    "learnsets": 1151,
+    "exp_tables": 6,
+    "natures": 25
+  },
+  "missing_spanish_names": {
+    "moves": 34,
+    "abilities": 2,
+    "items": 69,
+    "forms": 162
+  },
+  "missing_spanish_descriptions": {
+    "moves": 127,
+    "abilities": 49,
+    "items": 321,
+    "species": 157
+  }
+}
