@@ -1,0 +1,20 @@
+{
+  "_": "Paleta maestra de Pokémon Panchito (docs/arte/BIBLIA.md §4). PROPUESTA pendiente de aprobación de Javier. Cada rampa va de oscuro (1) a claro; sombras hacia tonos fríos y luces hacia cálidos. Se regenera paleta.gpl y paleta.png con tools/arte/paleta.gd.",
+  "name": "Pokemon Panchito",
+  "ramps": {
+    "hierba":  ["#1f3a35", "#2a5a3c", "#3c7d42", "#5aa148", "#8cc65a", "#c8e47c"],
+    "agua":    ["#1c2450", "#22447c", "#2e68a6", "#4592ca", "#7cc0e2", "#c4eef4"],
+    "piedra":  ["#26243a", "#423e54", "#625c6e", "#88808c", "#b0a8a8", "#dcd2c6"],
+    "tierra":  ["#3a2632", "#5c3c38", "#82583e", "#a87a50", "#caa26a", "#ead098"],
+    "madera":  ["#2c1a2a", "#4c2a30", "#723f32", "#985c36", "#be864a", "#e0b46a"],
+    "teja":    ["#381634", "#64203e", "#922e42", "#be4844", "#e07258", "#f4a884"],
+    "pizarra": ["#1c1a40", "#28306a", "#344a92", "#486cb8", "#6c96d6", "#a8c8ee"],
+    "piel":    ["#482838", "#784242", "#a66250", "#ce8a66", "#eab48c", "#f8dcbe"],
+    "metal":   ["#22243a", "#3a3e58", "#565e7a", "#7c86a0", "#a8b2c6", "#d6dee8"],
+    "ui":      ["#181820", "#303048", "#585870", "#9098a8", "#d0d4dc", "#f8f8f0"],
+    "acento":  ["#d84848", "#f0b030", "#48a850", "#4878d0"]
+  },
+  "names": {
+    "acento": ["acento_rojo", "acento_amarillo", "acento_verde", "acento_azul"]
+  }
+}

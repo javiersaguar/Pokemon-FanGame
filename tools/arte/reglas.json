@@ -1,0 +1,31 @@
+{
+  "_": "Reglas del validador de arte (docs/arte/BIBLIA.md §5 y §11). Gana la regla con la ruta más larga que coincida. frame = tamaño de cada frame (la imagen debe ser un múltiplo exacto); size/sizes = tamaño exacto; multiple_of = múltiplo de ese tamaño. third_party = no se comprueba la paleta (sets de terceros). placeholder = relleno temporal apuntado en docs/arte/seguimiento.md (solo avisa).",
+  "exclude": [
+    "res://assets/_terceros/",
+    "res://assets/_fuentes/",
+    "res://assets/arte/",
+    "res://assets/fonts/"
+  ],
+  "third_party": [
+    "res://assets/sprites/pokemon/"
+  ],
+  "placeholder": [
+    "res://assets/tilesets/placeholder/"
+  ],
+  "rules": [
+    {"path": "res://assets/tilesets/", "multiple_of": [16, 16]},
+    {"path": "res://assets/sprites/pokemon/", "frame": [96, 96]},
+    {"path": "res://assets/sprites/pokemon/icons/", "frame": [32, 32]},
+    {"path": "res://assets/sprites/pokemon/icons_shiny/", "frame": [32, 32]},
+    {"path": "res://assets/sprites/characters/", "frame": [32, 32]},
+    {"path": "res://assets/sprites/characters/followers/", "frames": [[32, 32], [64, 64]]},
+    {"path": "res://assets/sprites/trainers/", "frame": [80, 80]},
+    {"path": "res://assets/sprites/items/", "size": [24, 24]},
+    {"path": "res://assets/sprites/ui/battle/bg_", "size": [256, 192]},
+    {"path": "res://assets/sprites/ui/battle/base_", "sizes": [[128, 32], [160, 40]]},
+    {"path": "res://assets/sprites/ui/icons/types/", "size": [32, 14]},
+    {"path": "res://assets/sprites/ui/icons/status/", "size": [24, 8]},
+    {"path": "res://assets/sprites/ui/icons/category/", "size": [28, 12]},
+    {"path": "res://assets/sprites/ui/portraits/", "size": [64, 64]}
+  ]
+}
