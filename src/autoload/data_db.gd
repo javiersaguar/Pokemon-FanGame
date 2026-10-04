@@ -44,10 +44,14 @@ var _shops: Dictionary = {}
 var _shops_file: Dictionary = {}
 var _meta: Dictionary = {}
 var _rules: Dictionary = {}
+var _debug_commands: PokemonDebugCommands
 
 
 func _ready() -> void:
 	load_all()
+	if OS.is_debug_build():
+		_debug_commands = PokemonDebugCommands.new()
+		_debug_commands.register.call_deferred()
 
 
 ## Carga (o recarga) todos los datos.
