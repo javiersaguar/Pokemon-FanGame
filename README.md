@@ -14,11 +14,11 @@ Fangame **sin ánimo de lucro** al estilo de *Pokémon Añil*, programado desde 
 | Software | Versión |
 |----------|---------|
 | **Godot** | **4.7.2-stable**, edición estándar (no la .NET). **Todo el grupo con esta versión exacta.** |
-| Git + Git LFS | Cualquiera reciente. `git lfs install` una vez por equipo |
+| Git | Cualquiera reciente (sin Git LFS: el audio y los gráficos van como binarios normales) |
 
 ## Abrir y ejecutar
 
-1. `git clone https://github.com/javiersaguar/Pokemon-Panchito.git` y, dentro, `git lfs pull`.
+1. `git clone https://github.com/javiersaguar/Pokemon-Panchito.git`.
 2. Godot 4.7.2 → **Importar** → elige `project.godot`.
 3. **F5** ejecuta el juego. **F9** abre el menú de depuración (solo en builds de debug).
 
@@ -75,6 +75,7 @@ En el editor: panel **GUT** (abajo) → *Run All*.
   ```
 
 - Commits pequeños, en español y descriptivos. Rebase sobre `main` a menudo.
+- **Quien mergea a `main` lo sube a GitHub en el momento** (`git push origin main`). Antes, `git fetch` y, si GitHub tiene commits nuevos, se integran en `main` con un merge (no con rebase: `main` tiene merges de todos).
 - **Nadie edita lo que no es suyo**: la propiedad de cada carpeta está en `docs/ESTADO.md`. Los cambios en lo de otro se piden en "Peticiones".
 - Antes de pintar un mapa, resérvalo en `docs/mapas/reservas.md`: **un mapa = una persona a la vez**.
 
