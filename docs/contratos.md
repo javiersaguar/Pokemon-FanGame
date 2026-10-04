@@ -352,26 +352,299 @@ Debug.run_command(line: String) -> String
 
 ---
 
-## 8. Datos y combate (Agente 2) — POR DEFINIR
+## 8. Datos y combate (Agente 2)
 
-> Sección del Agente 2. Lo que hay ahora es el **stub provisional** que dejó el Agente 1 para que el proyecto arranque.
+Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).
 
-### DataDB (stub actual en `src/autoload/data_db.gd`)
+### 8.1 Archivos de datos
+
+| Archivo | Dueño | Qué es |
+|---------|-------|--------|
+| `data/generated/*.json` | Agente 2 | Datos oficiales generados por `tools/import_data` (ver `tools/README.md`). **No se editan a mano** |
+| `data/species_overrides.json` | Agente 2 | Cambios propios sobre las especies. `{"species": {id: {campo: valor}}}`: cada campo sustituye al generado. Con `"base": "<id>"` se crea una especie nueva copiando otra (formas regionales Panchito) |
+| `data/regional_dex.json` | Agente 2 | `{"name", "species": [ids en orden]}`. Vacío hasta que Javier decida la Pokédex |
+| `data/items_panchito.json` | Agente 3 | Objetos Panchito: `{id: {...}}` con los mismos campos que los estándar (8.3). Se suman a los estándar con `is_panchito = true` |
+| `data/trainer_classes.json`, `data/trainers/*.json`, `data/encounters/*.json`, `data/shops.json` | Agente 3 | Formatos en la sección 9. `DataDB` los carga y los devuelve tal cual |
+
+- En todos los JSON, las claves que empiezan por `_` son comentarios y se ignoran.
+- Enumerados en `snake_case`: tipos (`fire`), objetivos (`all_adjacent_foes`), grupos de crecimiento (`medium_fast`), grupos huevo (`human_like`), estados (`par`, `brn`, `psn`, `tox`, `slp`, `frz`).
+
+### 8.2 DataDB (autoload)
+
+Código: `src/autoload/data_db.gd`. Carga todo en su `_ready()` (es el primer autoload). Si se pide un id que no existe: `push_error` con el id y devuelve `null` (o `{}` en los datos en bruto).
 
 ```gdscript
 DataDB.is_loaded: bool
-DataDB.species(id: StringName) -> Variant   # null en el stub
-DataDB.move(id: StringName) -> Variant
-DataDB.item(id: StringName) -> Variant
-DataDB.type_effectiveness(atk_type: StringName, def_types: Array[StringName]) -> float   # 1.0 en el stub
+DataDB.MAX_LEVEL                     # 100
+DataDB.load_all() -> void            # recarga todo (Debug)
+
+# Especies, movimientos, habilidades, naturalezas y objetos (clases tipadas, 8.3)
+DataDB.species(id) -> SpeciesData            / has_species(id) / species_ids(include_forms := true)
+DataDB.move(id) -> MoveData                  / has_move(id) / move_ids()
+DataDB.ability(id) -> AbilityData            / has_ability(id)
+DataDB.nature(id) -> NatureData              / nature_ids()
+DataDB.item(id) -> ItemData                  / has_item(id) / item_ids()
+
+# Tipos
+DataDB.type_ids() -> Array[StringName]       # los 18 tipos
+DataDB.type_name(type) -> String             # "Fuego"
+DataDB.type_effectiveness(atk_type: StringName, def_types: Array[StringName]) -> float   # 0, 0.25 ... 4
+DataDB.type_immune_to(type, condition) -> bool   # fire + brn, electric + par, steel + psn, grass + powder...
+
+# Experiencia (grupos: slow, medium_fast, fast, medium_slow, erratic, fluctuating)
+DataDB.exp_for_level(group, level) -> int    # experiencia total al empezar ese nivel
+DataDB.level_for_exp(group, exp) -> int
+
+# Learnsets (generación más reciente con datos)
+DataDB.learnset(species_id) -> Dictionary    # {gen, level: [[nivel, id]...], machine, tutor, egg}
+DataDB.level_up_moves(species_id) -> Array   # [[nivel: int, id: StringName], ...]; nivel 0 = al evolucionar
+DataDB.moves_learned_at(species_id, level) -> Array[StringName]
+DataDB.default_moves(species_id, level) -> Array[StringName]   # los 4 últimos aprendidos por nivel
+DataDB.can_learn(species_id, move_id) -> bool
+
+# Pokédex regional
+DataDB.regional_dex() -> Array[StringName]
+DataDB.regional_number(species_id) -> int    # 1, 2, 3...; 0 = no está. Las formas usan el de su especie
+
+# Datos del Agente 3, en bruto (Dictionary tal cual está en el JSON)
+DataDB.trainer_class(id) / has_trainer_class(id)
+DataDB.trainer(id) / has_trainer(id) / trainer_ids()   # todos los data/trainers/*.json unidos (ids únicos)
+DataDB.encounter_table(id) / has_encounter_table(id)   # data/encounters/<id>.json
+DataDB.shop(id) / has_shop(id) / shop_sell_ratio()     # data/shops.json → shops[id] y sell_ratio
+
+# Otros
+DataDB.meta() -> Dictionary                  # versiones de las fuentes (data/generated/meta.json)
+DataDB.rule(key, default) -> Variant         # data/world.json → "pokemon" (ver abajo)
 ```
 
-### Pendiente de definir por el Agente 2
+**Reglas configurables** (`data/world.json` → `"pokemon"`, del Agente 1). Si falta una, se usa el valor por defecto:
 
-- Clases `SpeciesData`, `MoveData`, `ItemData`...
-- `Pokemon` (instancia), `Party`, `PCStorage` y `Pokedex` (con los requisitos de módulo de GameState, sección 2).
-- `BattleSetup`: lo que necesita el Agente 1 está en "Peticiones" de `docs/ESTADO.md`.
-- `BattleAction` y la lista de tipos de `BattleEvent`.
+| Clave | Por defecto | Uso |
+|-------|-------------|-----|
+| `shiny_odds` | `4096` | Probabilidad de shiny = 1/`shiny_odds` (0 = nunca) |
+| `wild_hidden_ability_chance` | `0.0` | Probabilidad (0–1) de habilidad oculta en Pokémon nuevos. **POR DEFINIR (Javier)** |
+| `pc_boxes`, `pc_box_size` | `32`, `30` | Cajas del PC |
+| `exp_share` | `true` | Repartir Experiencia moderno activo por defecto |
+
+### 8.3 Clases de datos (`src/pokemon/data/`)
+
+Todas son `RefCounted` de solo lectura y tienen `raw: Dictionary` (la entrada completa del JSON) para los campos sin propiedad propia.
+
+**`SpeciesData`** — una especie **o una forma** (las formas son especies propias: `raichualola`, `charizardmegax`, `meowsticf`...).
+
+| Campo | Tipo | Notas |
+|-------|------|-------|
+| `id`, `num` | `StringName`, `int` | `num` = número nacional (las formas comparten el de su especie) |
+| `name`, `name_en` | `String` | Nombre en español. **Las formas se llaman como su especie** ("Raichu"), como en los juegos |
+| `base_species`, `forme`, `form_name` | | Solo en formas: `raichu`, `alola`, "Forma de Alola" |
+| `types` | `Array[StringName]` | |
+| `base_stats` | `Dictionary[StringName, int]` | `hp`, `atk`, `def`, `spa`, `spd`, `spe` (`SpeciesData.STATS`) |
+| `fixed_max_hp` | `int` | Shedinja = 1; 0 = fórmula normal |
+| `abilities` | `Dictionary[String, StringName]` | Ranuras `"0"`, `"1"`, `"H"` (oculta), `"S"` |
+| `gender_ratio` | `float` | Probabilidad de ser hembra; `-1` = sin sexo (`is_genderless()`) |
+| `catch_rate`, `base_exp`, `exp_group`, `ev_yield` | | `ev_yield` solo con las estadísticas que dan EVs |
+| `egg_groups`, `egg_cycles`, `hatch_steps`, `base_friendship` | | |
+| `height`, `weight` (m, kg), `color`, `genus`, `generation`, `dex_entry` | | `genus` = "Pokémon Ratón" |
+| `prevo`, `evolutions` | | Ver "Evoluciones" |
+| `forms`, `is_mega`, `is_gmax`, `required_item` | | |
+| `is_legendary`, `is_mythical`, `is_baby`, `tags`, `nonstandard` | | `nonstandard` = `past`, `future`, `lgpe`... (no está en los juegos actuales) |
+
+Métodos: `base_stat(stat)`, `is_genderless()`, `is_form()`, `root_species()` (la especie sin forma), `has_type(t)`, `ability(slot)`, `has_hidden_ability()`.
+
+**Evoluciones** (`SpeciesData.evolutions`, un `Dictionary` por entrada): `{to, method, ...condiciones}`.
+
+| `method` | Condiciones | Cuándo se comprueba |
+|----------|-------------|---------------------|
+| `level` | `level` | Al subir de nivel |
+| `friendship` | `min_friendship` (160) | Al subir de nivel |
+| `level_hold` | `item` (equipado; se gasta al evolucionar) | Al subir de nivel |
+| `level_move` | `move` (lo conoce) | Al subir de nivel |
+| `level_extra` | Ver campos extra | Al subir de nivel |
+| `item` | `item` (se usa sobre el Pokémon) | Al usar el objeto |
+| `shed` | — | Shedinja: lo crea quien hace evolucionar a Nincada (hueco en el equipo + una Poké Ball) |
+| `trade`, `other` | — | Nunca (las de intercambio están sustituidas en `species_overrides.json`) |
+
+Campos extra opcionales en cualquier método: `time` (`day` = periodos `morning` y `day` de `Clock`; `night`; `dusk` = `evening`), `gender` (`male`/`female`), `stat_relation` (`atk_gt_def`, `atk_lt_def`, `atk_eq_def`), `party_species`, `party_type`, `known_move_type`, `weather` (`rain`), `location`, `region` (evolución regional de otro juego: **no se aplica**), `condition` (texto original de Showdown) y `replaces: "trade"` (sustituida).
+
+**`MoveData`**: `id`, `num`, `name`, `type`, `category` (`MoveData.Category.PHYSICAL/SPECIAL/STATUS`), `power`, `accuracy` (**0 = no falla nunca**), `pp`, `priority`, `target`, `flags: Dictionary[StringName, bool]` (`contact`, `sound`, `punch`, `bite`, `bullet`, `powder`, `protect`...), `secondaries: Array[Dictionary]` (`{chance, status?, volatile_status?, boosts?, self_boosts?}`), `boosts`, `self_boosts`, `status`, `volatile_status`, `drain`/`recoil`/`heal` (`[numerador, denominador]` o vacío), `multihit_min`/`multihit_max`, `crit_ratio`, `ohko`, `fixed_damage`, `level_damage`, `selfdestruct`, `needs_script` (necesita código propio, Fase 9.2), `description`. Métodos: `has_flag(f)`, `is_status()`, `is_damaging()`, `max_pp(pp_ups)`, `targets_user()`.
+
+**`ItemData`**: `id`, `name`, `name_plural` (= `name` si no se indica), `pocket` (`items`, `medicine`, `pokeballs`, `machines`, `berries`, `mail`, `battle`, `key`; el Agente 3 puede añadir `panchito`), `category`, `price`, `fling_power`, `flags`, `description`, `field_use` / `battle_use` (`""`, `on_pokemon`, `on_active`, `no_target`), `effect`, `effect_params`, `is_berry`, `is_pokeball`, `held_needs_script`, `is_panchito`. Métodos: `sell_price()` (mitad del precio), `is_ball()`, `is_key_item()`, `usable_in_field()`, `usable_in_battle()`, `param(key, default)`.
+
+Efectos de uso (`effect` → `effect_params`), iguales para objetos estándar y Panchito:
+
+| `effect` | `effect_params` | Ejemplos |
+|----------|-----------------|----------|
+| `heal_hp` | `amount` (PS) o `fraction` (de los PS máximos) | Poción (20), Hiperpoción (120), Poción Máxima (`fraction` 1.0), Baya Aranja |
+| `cure_status` | `statuses: [...]`, `confusion: bool` | Antídoto (`psn`, `tox`), Cura Total |
+| `heal_and_cure` | `fraction` | Restaurar Todo |
+| `revive` | `fraction` | Revivir (0.5), Revivir Máximo (1.0) |
+| `restore_pp` | `amount` o `full`, `all_moves` | Éter, Elixir |
+| `boost_stat` | `stat`, `stages` | Ataque X (+2) |
+| `crit_boost` | `stages` | Directo |
+| `ball` | `multiplier` o `guaranteed` o `formula`, + condiciones (`if_types`, `if_first_turn`...) | Super Ball (1.5), Master Ball |
+| `flee` | — | Muñeca Poké |
+| `repel` | `steps` | Repelente (100) |
+| `escape` | — | Cuerda Huida |
+| `evolution` | — | Piedras evolutivas |
+| `add_evs` | `stat`, `amount` | Proteína |
+| `level_up` | `levels` | Caramelo Raro |
+| `pp_up` | `max` | Más PP, PP Máximos |
+| `exp_boost` | `multiplier` | Huevo Suerte (equipado) |
+
+**`AbilityData`**: `id`, `name`, `description`, `rating`, `needs_script`. **`NatureData`**: `id`, `name`, `plus`, `minus` (vacíos si es neutra), `percent(stat) -> int` (110/100/90).
+
+### 8.4 Pokemon y módulos de GameState (`src/pokemon/`) (previsto)
+
+**`Pokemon`** (`RefCounted`): un Pokémon concreto.
+
+| Campo | Tipo | Notas |
+|-------|------|-------|
+| `uid` | `String` | Identificador único |
+| `species_id` | `StringName` | Especie o forma (`raichualola`) |
+| `nickname` | `String` | Vacío = nombre de la especie (`display_name()`) |
+| `level`, `exp` | `int` | `exp` total |
+| `ivs`, `evs` | `Dictionary[StringName, int]` | 0–31; 0–252 (510 en total) |
+| `nature`, `ability_slot`, `gender`, `shiny` | | `ability_slot`: `"0"`, `"1"`, `"H"`; `gender`: `&"male"`, `&"female"`, `&""` |
+| `moves` | `Array[MoveSlot]` | Máx. 4. `MoveSlot`: `id`, `pp`, `pp_ups`, `max_pp()` |
+| `current_hp`, `status`, `status_turns` | | `status`: `""` o `par`/`brn`/`psn`/`tox`/`slp`/`frz` |
+| `held_item`, `friendship`, `ball` | | |
+| `original_trainer`, `trainer_id`, `met_level`, `met_location`, `met_date` | | Los rellena quien lo recibe (captura, regalo...) |
+| `pokerus`, `tera_type`, `ribbons` | | |
+
+```gdscript
+Pokemon.create(species_id, level, rng: RandomNumberGenerator = null) -> Pokemon   # salvaje o regalo
+Pokemon.from_spec(spec: Dictionary, rng = null) -> Pokemon   # ficha de data/trainers (party[i])
+Pokemon.from_dict(d) -> Pokemon / p.to_dict() -> Dictionary / p.clone() -> Pokemon
+
+p.species() -> SpeciesData / p.display_name() -> String / p.types() / p.ability_id()
+p.stat(stat) -> int / p.max_hp() -> int / p.stats() -> Dictionary[StringName, int]
+p.is_fainted() / p.heal(amount) -> int / p.take_damage(amount) -> int / p.revive(fraction)
+p.set_status(status, turns) / p.cure_status() / p.heal_full()        # heal_full = Centro Pokémon
+p.exp_at_level_start() / p.exp_at_next_level() / p.exp_to_next_level()
+p.gain_exp(amount) -> Array[Dictionary]   # una entrada por nivel: {level, old_stats, new_stats, new_moves}
+p.set_level(level) -> Array[Dictionary]
+p.add_evs(stat, amount) -> int
+p.move_ids() / p.has_move(id) / p.try_learn(id) -> bool / p.replace_move(index, id) / p.forget_move(index)
+p.evolve_to(species_id) -> void           # conserva el daño recibido y el mote
+```
+
+**`EvolutionRules`** (estática): `level_up_target(p, context := {}) -> StringName` (al subir de nivel o al acabar un combate) e `item_target(p, item_id, context := {}) -> StringName` (`&""` = no evoluciona). `context`: `{time: Clock.period(), party_species: Array[StringName], party_types: Array[StringName], weather: StringName}`.
+
+**Módulos de GameState** (`Party`, `PCStorage`, `Pokedex`): cumplen la sección 2 (`new()`, `to_dict()`, `from_dict()`).
+
+```gdscript
+# Party (máx. 6)
+party.members: Array[Pokemon]
+party.size() / is_full() / add(p) -> bool / remove_at(i) -> Pokemon / swap(i, j) / get_at(i)
+party.first_able() -> Pokemon / first_able_index() -> int / first_able_level() -> int   # Repelente
+party.is_all_fainted() -> bool / able_count() -> int / heal_all() -> void
+
+# PCStorage (cajas × huecos, de las reglas de 8.2)
+pc.box_count() / box_size() / get_pokemon(box, slot) -> Pokemon / set_pokemon(box, slot, p)
+pc.take(box, slot) -> Pokemon / deposit(p) -> Vector2i   # (-1, -1) si está lleno
+pc.move(from_box, from_slot, to_box, to_slot)  # intercambia / release(box, slot) / is_full() / count()
+pc.box_name(box) / rename_box(box, name) / box_wallpaper(box) / set_box_wallpaper(box, id) / current_box
+
+# Pokedex (por especie base; las formas se apuntan aparte)
+dex.mark_seen(species_id, shiny := false) / mark_caught(species_id) / register(p: Pokemon)   # register = visto + capturado
+dex.is_seen(id) / is_caught(id) / seen_count() / caught_count() / forms_seen(id) -> Array[StringName]
+```
+
+### 8.5 Combate (`src/battle/engine/`) (previsto)
+
+El motor es **lógica pura** (`RefCounted`, sin nodos ni `await`). La BattleScene le manda decisiones y reproduce los eventos que devuelve. Toda la aleatoriedad sale del RNG del combate (`setup.seed`): misma semilla + mismas decisiones = mismo combate.
+
+```gdscript
+# Dentro de BattleScene.run(setup) -> StringName
+var engine := BattleEngine.new(setup)
+var events: Array[BattleEvent] = engine.start()     # presentación hasta la primera decisión
+await play(events)
+while not engine.is_over():
+	var request: BattleRequest = engine.request        # qué tiene que decidir el jugador
+	var action: BattleAction = await ask_player(request)
+	events = engine.submit(action)                    # resuelve hasta la siguiente decisión o el final
+	await play(events)
+var result: BattleResult = engine.result
+result.apply_to_game_state()                          # dinero, captura (equipo o PC) y Pokédex
+return result.outcome                                 # = SceneManager.OUTCOME_*
+```
+
+- El motor modifica directamente los `Pokemon` de `setup.player_party` (PS, PP, estado, experiencia, niveles y movimientos aprendidos). Para simular sin tocar el equipo, pasa clones (`Pokemon.clone()`).
+- **La BattleScene quita el objeto de la mochila cuando envía una acción `ITEM`** (las Balls también). Antes, `engine.can_use_item(item_id, party_index) -> bool` dice si tiene efecto.
+- Los eventos llevan **todo lo necesario para dibujar** (PS antes y después, nombres...), porque cuando se reproducen el motor ya ha resuelto el turno entero. Para los menús (movimientos, equipo) se puede leer el estado del motor durante una `request`: `engine.active(side, slot) -> Battler`, `engine.party(side) -> Array[Pokemon]`.
+- Al terminar, las evoluciones pendientes están en `result.pending_evolutions`; la escena de evolución (Agente 3) las reproduce y llama a `Pokemon.evolve_to()`.
+
+**`BattleSetup`**
+
+```gdscript
+BattleSetup.wild(pokemon_or_species: Variant, level := 5, options := {}) -> BattleSetup
+BattleSetup.trainer(trainer_id: StringName, options := {}) -> BattleSetup
+# options: can_lose, can_run, exp_enabled, background, bgm, weather, environment, seed, ai_level
+```
+
+| Campo | Tipo | Notas |
+|-------|------|-------|
+| `kind` | `BattleSetup.Kind.WILD` / `TRAINER` | |
+| `format` | `BattleSetup.Format.SINGLE` / `DOUBLE` | v0.1: solo individual |
+| `player_party`, `foe_party` | `Array[Pokemon]` | Las fábricas toman el equipo de `GameState.party` |
+| `player_name`, `player_trainer_id` | | De `GameState` |
+| `trainers` | `Array[Dictionary]` | Rivales (vacío en salvajes): `{id, class, class_name, name, display_name, gender, base_money, ai_level, battle_sprite, battle_bgm, intro_bgm, intro_text, lose_text, win_text, items}`. `display_name` = "Vendedor de Chupachups Manolo", con `{rival}` y `{player}` ya sustituidos |
+| `can_lose` | `bool` | `true` = perder no te manda al Centro Pokémon |
+| `can_run`, `allow_items`, `exp_enabled`, `exp_share` | `bool` | `can_run` = `true` en salvajes |
+| `background`, `bgm` | `StringName` | `bgm`: la del entrenador (`battle_bgm`) o `battle_wild` |
+| `weather`, `environment`, `time_period` | `StringName` | `environment`: `grass`, `cave`, `water`... (para algunas Balls) |
+| `caught_species`, `dex_caught_count` | | De `GameState.pokedex` (Ball Acopio y captura crítica) |
+| `seed` | `int` | 0 = aleatoria (la usada queda en `result.seed`) |
+
+**`BattleRequest`** (`engine.request`): `kind` (`BattleRequest.Kind.ACTION`, `SWITCH` o `LEARN_MOVE`), `side`, `slot`, `party_index`, `move_id` (en `LEARN_MOVE`), `can_run`, `can_switch`, `can_use_items`, `usable_moves: Array[int]` (índices con PP; vacío = solo puede usar Forcejeo).
+
+| `kind` | Cuándo | Respuestas válidas |
+|--------|--------|--------------------|
+| `ACTION` | Inicio de turno | `fight`, `switch_to`, `use_item`, `run` |
+| `SWITCH` | Se ha debilitado el Pokémon del jugador | `switch_to` (o `run` en salvajes, si `can_run`) |
+| `LEARN_MOVE` | Quiere aprender `move_id` y ya sabe 4 | `learn_move(índice a olvidar)` o `learn_move(-1)` = no aprenderlo |
+
+**`BattleAction`**
+
+```gdscript
+BattleAction.fight(move_index: int, target_slot := 0)   # move_index -1 = Forcejeo
+BattleAction.switch_to(party_index: int)
+BattleAction.use_item(item_id: StringName, party_index := -1)   # -1 = sin objetivo (Balls)
+BattleAction.run()
+BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
+```
+
+**`BattleEvent`**: `type: StringName`, `side: int` (0 = jugador, 1 = rival; −1 = ninguno), `slot: int` (posición en el campo; 0 en individuales) y `data: Dictionary`. Se reproducen en orden. Los textos vienen ya en español en eventos `message`.
+
+| `type` | `side`/`slot` | `data` | Qué hace la escena |
+|--------|---------------|--------|--------------------|
+| `message` | — | `text` | Muestra el texto |
+| `switch_in` | quien entra | `party_index, species, form_name, name, level, gender, shiny, hp, max_hp, status, wild` + en el jugador `exp, exp_level_start, exp_next_level` | Lanzar la Ball / aparecer y caja de datos |
+| `switch_out` | quien sale | `party_index` | Retirar al Pokémon |
+| `move` | usuario | `move, move_name, type, category, target_side, target_slot` | Animación del movimiento |
+| `damage` | quien lo recibe | `amount, hp, max_hp, effectiveness, critical, source` | Barra de PS (y sonido según `effectiveness`) |
+| `heal` | quien se cura | `amount, hp, max_hp, source` | Barra de PS |
+| `miss` | objetivo | — | (opcional) |
+| `faint` | debilitado | `party_index` | Grito y desaparición |
+| `status` | afectado | `status` (`""` = curado) | Icono de estado en la caja |
+| `cant_move` | quien no se mueve | `reason` (`par`, `slp`, `frz`, `flinch`, `confusion`) | Animación del estado |
+| `volatile` | afectado | `volatile` (`confusion`), `active` | (opcional) |
+| `boost` | afectado | `stat, amount, stage` | Animación de subida o bajada |
+| `exp` | 0 / slot o −1 | `party_index, amount, exp, level, exp_level_start, exp_next_level` | Barra de experiencia |
+| `level_up` | 0 / slot o −1 | `party_index, level, old_stats, new_stats, hp, max_hp` | Jingle y tabla de estadísticas |
+| `move_learned` | 0 | `party_index, move, move_name, forgot` | — |
+| `catch` | 1 / slot | `ball, shakes (0–3), caught, critical` | Lanzar la Ball y sacudidas |
+| `item_used` | quien lo usa | `item, item_name, party_index` | — |
+| `flee` | 0 | `success` | — |
+| `trainer_speech` | 1 | `trainer_index, text` | Entra el entrenador y dice `lose_text` / `win_text` |
+| `money` | — | `amount` | — |
+| `end` | — | `outcome` | Último evento |
+
+- `source` de `damage`/`heal`: `move`, `recoil`, `drain`, `confusion`, `brn`, `psn`, `tox`, `struggle`, `item`.
+- `stat` de `boost`: `atk`, `def`, `spa`, `spd`, `spe`, `accuracy`, `evasion`.
+- Se pueden añadir tipos nuevos (clima, Mega...) en la Fase 9: la escena debe **ignorar los que no conozca**.
+
+**`BattleResult`** (`engine.result`): `outcome` (`&"win"`, `&"lose"`, `&"run"`, `&"caught"`), `turns`, `seed`, `money_won`, `caught_pokemon: Pokemon` (o `null`), `seen_species: Array[StringName]`, `items_used: Array[StringName]`, `pending_evolutions: Array[Dictionary]` (`{party_index, uid, to}`). `apply_to_game_state()` suma el dinero, apunta la Pokédex, rellena los datos de captura (`original_trainer`, `trainer_id`, `met_*`) y mete el capturado en el equipo o, si está lleno, en el PC; devuelve `{caught_to: "party" | "pc" | "", box, slot}`.
 
 ---
 

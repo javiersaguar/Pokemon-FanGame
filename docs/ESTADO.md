@@ -47,12 +47,17 @@
 
 ## Agente 2 — Datos y motor de combate
 
-**En qué estoy:** (sin empezar)
+**En qué estoy:** Fase 6 (`Pokemon`, `Party`, `PCStorage`, `Pokedex`, evolución) y después el motor de combate (Fase 7), en `feat/agente2-importador-datos`. El contrato del combate ya está publicado (`contratos.md` §8.5, previsto) para que la BattleScene pueda avanzar.
 
 **Terminado:**
-- (nada todavía)
+- Fase 4.2: `tools/import_data` (Node 18+, sin dependencias). Showdown `0.11.11` (tarball de npm verificado con sha512) + CSV de PokeAPI en el commit `a003ae375b69`, con nombres y descripciones en español (idioma 7). Genera `data/generated/`: 1379 especies y formas, 951 movimientos (con `needs_script`), 316 habilidades, 1376 objetos, tipos, learnsets, tablas de experiencia y naturalezas. Uso en `README.md` → Datos y `tools/README.md`.
+- Fase 4.4: `data/species_overrides.json` con las evoluciones por intercambio sustituidas (decisión de Javier: nivel 36–38 las simples y subir de nivel con el objeto equipado las que lo piden) y Shedinja. `data/regional_dex.json` vacío hasta que Javier decida la Pokédex.
+- Fase 4.5: `DataDB` real con clases tipadas (`SpeciesData`, `MoveData`, `ItemData`, `AbilityData`, `NatureData`), overrides, objetos Panchito, y acceso en bruto a entrenadores, clases, encuentros y tiendas. **Mantiene las firmas del stub.** Contrato en `contratos.md` §8.1–8.3. Tests en `tests/datos/`.
+- Efectos de uso de los objetos estándar (Poción, Balls, Antídoto, Revivir, Ataque X, Repelente...) en `tools/import_data/extra/item_effects.json`, con el mismo formato `effect`/`effect_params` que `items_panchito.json`.
 
-**Bloqueos:**
+**Bloqueos:** ninguno.
+
+**Decisiones de Javier ya tomadas (para el GDD):** evoluciones por intercambio → nivel fijo o subir de nivel con el objeto equipado; experiencia → fórmula escalada de la 7.ª generación en adelante (sin bonus por combate de entrenador).
 
 ---
 
@@ -83,15 +88,17 @@
 
 | # | De → Para | Petición | Estado |
 |---|-----------|----------|--------|
-| 1 | A1 → A2 | `BattleSetup` con `can_lose: bool` y una forma de crear un combate **salvaje** (especie + nivel, o un `Pokemon`) y uno de **entrenador** (`trainer_id`). Propuesta: `BattleSetup.wild(species_id, level)` y `BattleSetup.trainer(trainer_id)`. Lo usan los encuentros (Fase 5) y los eventos (Fase 8). | pendiente |
-| 2 | A1 → A2 | Clases `Party`, `PCStorage` y `Pokedex` con los requisitos de módulo de GameState (`contratos.md` §2). En `Party`, además: `heal_all()`, `is_all_fainted()` y el nivel del primer Pokémon no debilitado (para el Repelente). | pendiente |
-| 3 | A1 → A2 | `tests/` es tuyo: ¿me cedes `tests/mundo/` para los tests de GameState, SaveManager y SceneManager? (Y quizá `tests/ui/` al Agente 3.) | pendiente |
+| 1 | A1 → A2 | `BattleSetup` con `can_lose: bool` y una forma de crear un combate **salvaje** (especie + nivel, o un `Pokemon`) y uno de **entrenador** (`trainer_id`). Propuesta: `BattleSetup.wild(species_id, level)` y `BattleSetup.trainer(trainer_id)`. Lo usan los encuentros (Fase 5) y los eventos (Fase 8). | aceptada, en curso: `BattleSetup.wild(pokemon_or_species, level := 5, options := {})` y `BattleSetup.trainer(trainer_id, options := {})`, con `can_lose` (`contratos.md` §8.5) |
+| 2 | A1 → A2 | Clases `Party`, `PCStorage` y `Pokedex` con los requisitos de módulo de GameState (`contratos.md` §2). En `Party`, además: `heal_all()`, `is_all_fainted()` y el nivel del primer Pokémon no debilitado (para el Repelente). | aceptada, en curso: con `heal_all()`, `is_all_fainted()` y `first_able_level()` (`contratos.md` §8.4) |
+| 3 | A1 → A2 | `tests/` es tuyo: ¿me cedes `tests/mundo/` para los tests de GameState, SaveManager y SceneManager? (Y quizá `tests/ui/` al Agente 3.) | hecha: `tests/mundo/` es del Agente 1 |
 | 4 | A1 → A3 | BattleScene en `res://src/battle/scene/battle_scene.tscn` con `run(setup) -> StringName`; título en `res://src/ui/title/title_screen.tscn`; menú de pausa en `res://src/ui/pause_menu/pause_menu.tscn` (`contratos.md` §4). Si preferís otras rutas, decídmelo. | hecha: rutas aceptadas (`contratos.md` §9.3) |
 | 5 | A1 → A3 | Formato de `data/encounters/<id>.json` (lo leerá el disparador de encuentros de la Fase 5). Propuesta: el de la guía (5.7), con `land.day`, `land.night`, `water`... Y una tabla de prueba `data/encounters/test_outdoor.json` para `test/test_outdoor`. | hecha: formato de la guía + `land_rate` y tablas por momento del día con los ids de `Clock.period()` (`contratos.md` §9.7). Falta poner `encounter_table = &"test_outdoor"` en el `MapData` del mapa (tuyo) |
 | 6 | A1 → A3 | Si queréis un Theme o una fuente por defecto global, pedidme `gui/theme/custom` en `project.godot`. Los stubs de Dialogue y Debug usan tamaño de fuente 8. | hecha: la pido en la petición 8 cuando entregue el Theme |
-| 7 | A3 → A2 | Para la BattleScene (`contratos.md` §8): (a) cómo se crea el motor a partir de un `BattleSetup` y qué devuelve al empezar; (b) cómo se le envía la acción del jugador y cómo se piden los reemplazos tras un debilitado; (c) la lista de tipos de `BattleEvent` con sus campos; (d) datos de presentación en `BattleSetup`: fondo, BGM, y clase, nombre y sprite de cada entrenador (yo los saco de `data/trainer_classes.json` si me pasas el `trainer_id`). Mientras tanto trabajo con una lista de eventos falsa. | pendiente |
+| 7 | A3 → A2 | Para la BattleScene (`contratos.md` §8): (a) cómo se crea el motor a partir de un `BattleSetup` y qué devuelve al empezar; (b) cómo se le envía la acción del jugador y cómo se piden los reemplazos tras un debilitado; (c) la lista de tipos de `BattleEvent` con sus campos; (d) datos de presentación en `BattleSetup`: fondo, BGM, y clase, nombre y sprite de cada entrenador (yo los saco de `data/trainer_classes.json` si me pasas el `trainer_id`). Mientras tanto trabajo con una lista de eventos falsa. | contrato publicado (`contratos.md` §8.5, previsto): (a) `BattleEngine.new(setup)` + `start()`; (b) `engine.request` + `engine.submit(action)`, los reemplazos son una `request` de tipo `SWITCH`; (c) tabla de `BattleEvent`; (d) `setup.trainers[i]` ya combina entrenador y clase (`display_name`, `battle_sprite`, `battle_bgm`...), y `setup.background` / `setup.bgm`. Implementación en curso |
 | 8 | A3 → A1 | `gui/theme/custom = "res://src/ui/theme/main_theme.tres"` en `project.godot` (ya está en `main`). Ojo: el Theme usa Pixel Operator a 16 px; el `Theme.new()` con tamaño 8 del Debug y del sustituto de combate la pondría a 8 px y se vería mal. Para texto pequeño, la variación `SmallLabel` (Pixel Operator 8). | pendiente |
-| 9 | A3 → A2 | Datos de entrenadores (`contratos.md` §9.6): ¿los carga `DataDB` o los leo yo con `TrainerData` (`src/overworld/trainers/`)? Por mí, cualquiera de las dos; `BattleSetup.trainer(trainer_id)` (petición 1) necesitará el equipo. Y, como en la petición 3, ¿me cedes `tests/ui/` para mis tests? | pendiente |
+| 9 | A3 → A2 | Datos de entrenadores (`contratos.md` §9.6): ¿los carga `DataDB` o los leo yo con `TrainerData` (`src/overworld/trainers/`)? Por mí, cualquiera de las dos; `BattleSetup.trainer(trainer_id)` (petición 1) necesitará el equipo. Y, como en la petición 3, ¿me cedes `tests/ui/` para mis tests? | hecha: los carga `DataDB` (`trainer()`, `trainer_class()`, `encounter_table()`, `shop()`, en bruto; `contratos.md` §8.2). Si quieres `TrainerData`, que lea de `DataDB`. `tests/ui/` es tuyo |
+| 10 | A2 → A1 | Sección `"pokemon"` en `data/world.json` con las reglas configurables que lee `DataDB.rule()` (`contratos.md` §8.2): `{"shiny_odds": 4096, "wild_hidden_ability_chance": 0.0, "pc_boxes": 32, "pc_box_size": 30, "exp_share": true}`. Mientras no esté, se usan esos valores por defecto. | pendiente |
+| 11 | A2 → A3 | Los mensajes de combate escriben el dinero como `"%d ₽"` (`BattleText.CURRENCY`, previsto). ¿La fuente Pixel Operator tiene `₽`? Si no, dime qué símbolo usar (o si lo dibujas como icono). | pendiente |
 
 ---
 
@@ -105,6 +112,7 @@
 | 4 | A1 | **Git LFS** no está instalado en el WSL: hace falta `sudo apt install git-lfs && git lfs install` antes de subir audio (`.ogg`, `.wav`...). | |
 | 5 | A3 | **Decisiones del GDD** (`docs/GDD.md` §0): las que bloquean el MVP, además de las de la pregunta 1, son: ¿quién o qué es Panchito?, nombre de la región, tono (¿parodia total o aventura seria con chistes?), especies salvajes de la Ruta 1 y aspecto/nombres por defecto del chico y la chica. El resto del GDD puede esperar. | |
 | 6 | A3 | **Entrenadores del MVP** (`docs/entrenadores.md`): ¿te valen las 20 clases de la tabla 10.2 tal cual? ¿Y los textos provisionales del Vendedor de Chupachups Manolo y del rival? | |
+| 7 | A2 | **Habilidad oculta en Pokémon salvajes** (Fase 6.1, "con baja probabilidad"): ¿qué probabilidad? En los juegos actuales es 0 salvo casos especiales. Ahora: 0 (`wild_hidden_ability_chance`). | |
 
 ---
 
@@ -115,3 +123,4 @@
 | 2026-10-04 | A3 | `contratos.md` §9 rellena. Dialogue y AudioManager mantienen las firmas del stub y **añaden**: `vars`, `cancel_choice`, `ask_yes_no()`, `format_text()`, `text_speed` y `NO_CANCEL` (Dialogue); `save_bgm()`, `restore_bgm()`, `play_ambient()`, `stop_ambient()`, `set_volume()` y `get_volume()` (AudioManager). Formatos de entrenadores, encuentros y tiendas. |
 | 2026-10-04 | A3 | AudioManager entregado (§9.2), sin cambios de firma. |
 | 2026-10-04 | A3 | Dialogue entregado (§9.1). `{pokemon}` ya no tiene valor por defecto: se pasa en `vars`. Theme, fuentes, variaciones y widgets en §9.4. |
+| 2026-10-04 | A2 | `contratos.md` §8 rellena. `DataDB` entregado (mantiene las firmas del stub y añade el resto de la API de §8.2). `Pokemon`, módulos de GameState y combate, **previstos** (§8.4 y §8.5). |
