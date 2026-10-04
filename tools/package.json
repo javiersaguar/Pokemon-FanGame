@@ -1,0 +1,13 @@
+{
+  "name": "pokemon-panchito-tools",
+  "private": true,
+  "type": "module",
+  "description": "Herramientas de datos de Pokémon Panchito (importación y validación).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "import-data": "node import_data/index.mjs",
+    "import-data:offline": "node import_data/index.mjs --offline"
+  }
+}
