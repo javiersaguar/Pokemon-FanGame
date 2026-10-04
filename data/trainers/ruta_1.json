@@ -1,0 +1,15 @@
+{
+  "ruta1_manolo": {
+    "class": "vendedorchupachups",
+    "name": "Manolo",
+    "intro_text": "¡Chupachups, chupachups! ¿De fresa o de cola? Si los quieres, gánatelos.",
+    "lose_text": "¿Uno de fresa para olvidar la derrota?",
+    "win_text": "Pues ahora te los cobro a precio de feria.",
+    "after_text": "Los de cola se me han acabado. Los de fresa también... me los he comido yo.",
+    "items": [],
+    "party": [
+      {"species": "swirlix", "level": 4},
+      {"species": "milcery", "level": 4}
+    ]
+  }
+}

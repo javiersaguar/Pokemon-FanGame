@@ -1,0 +1,228 @@
+{
+  "rival": {
+    "name": "",
+    "gender": "mixed",
+    "base_money": 48,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/rival.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/rival_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/rival.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/rival_f.png",
+    "intro_bgm": "encounter_rival",
+    "battle_bgm": "battle_rival"
+  },
+  "vendedorchupachups": {
+    "name": "Vendedor de Chupachups",
+    "gender": "male",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/vendedorchupachups.png",
+    "overworld_sprite": "res://assets/sprites/characters/vendedorchupachups.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "flautista": {
+    "name": "Flautista",
+    "gender": "mixed",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/flautista.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/flautista_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/flautista.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/flautista_f.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "peruana150": {
+    "name": "Peruana de 1,50",
+    "gender": "female",
+    "base_money": 16,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/peruana150.png",
+    "overworld_sprite": "res://assets/sprites/characters/peruana150.png",
+    "intro_bgm": "encounter_girl",
+    "battle_bgm": "battle_trainer"
+  },
+  "robasientos": {
+    "name": "Robasientos del metro",
+    "gender": "male",
+    "base_money": 16,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/robasientos.png",
+    "overworld_sprite": "res://assets/sprites/characters/robasientos.png",
+    "intro_bgm": "encounter_suspicious",
+    "battle_bgm": "battle_trainer"
+  },
+  "cunado": {
+    "name": "Cuñado que sabe de todo",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/cunado.png",
+    "overworld_sprite": "res://assets/sprites/characters/cunado.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "jubiladoobras": {
+    "name": "Jubilado mirando obras",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/jubiladoobras.png",
+    "overworld_sprite": "res://assets/sprites/characters/jubiladoobras.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "abuela": {
+    "name": "Abuela que te pone de comer",
+    "gender": "female",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/abuela.png",
+    "overworld_sprite": "res://assets/sprites/characters/abuela.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "influencerlinkedin": {
+    "name": "Influencer de LinkedIn",
+    "gender": "mixed",
+    "base_money": 60,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/influencerlinkedin.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/influencerlinkedin_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/influencerlinkedin.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/influencerlinkedin_f.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "repartidorbici": {
+    "name": "Repartidor en bici",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/repartidorbici.png",
+    "overworld_sprite": "res://assets/sprites/characters/repartidorbici.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "estudianteinge": {
+    "name": "Estudiante de Ingeniería en exámenes",
+    "gender": "mixed",
+    "base_money": 20,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/estudianteinge.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/estudianteinge_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/estudianteinge.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/estudianteinge_f.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "opositor": {
+    "name": "Opositor eterno",
+    "gender": "mixed",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/opositor.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/opositor_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/opositor.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/opositor_f.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "patinetero": {
+    "name": "Patinetero eléctrico",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/patinetero.png",
+    "overworld_sprite": "res://assets/sprites/characters/patinetero.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "tertuliano": {
+    "name": "Tertuliano de bar",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/tertuliano.png",
+    "overworld_sprite": "res://assets/sprites/characters/tertuliano.png",
+    "intro_bgm": "encounter_suspicious",
+    "battle_bgm": "battle_trainer"
+  },
+  "revisorcercanias": {
+    "name": "Revisor del Cercanías",
+    "gender": "mixed",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/revisorcercanias.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/revisorcercanias_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/revisorcercanias.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/revisorcercanias_f.png",
+    "intro_bgm": "encounter_suspicious",
+    "battle_bgm": "battle_trainer"
+  },
+  "domadorpalomas": {
+    "name": "Domador de palomas",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/domadorpalomas.png",
+    "overworld_sprite": "res://assets/sprites/characters/domadorpalomas.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "crossfitero": {
+    "name": "Crossfitero",
+    "gender": "mixed",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/crossfitero.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/crossfitero_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/crossfitero.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/crossfitero_f.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "turistachanclas": {
+    "name": "Turista con chanclas y calcetines",
+    "gender": "mixed",
+    "base_money": 50,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/turistachanclas.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/turistachanclas_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/turistachanclas.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/turistachanclas_f.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "tuno": {
+    "name": "Tuno",
+    "gender": "male",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/tuno.png",
+    "overworld_sprite": "res://assets/sprites/characters/tuno.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "camarero": {
+    "name": "Camarero sin propina",
+    "gender": "male",
+    "base_money": 20,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/camarero.png",
+    "overworld_sprite": "res://assets/sprites/characters/camarero.png",
+    "intro_bgm": "encounter_suspicious",
+    "battle_bgm": "battle_trainer"
+  },
+  "padretarjeta": {
+    "name": "Padre con la tarjeta del súper",
+    "gender": "male",
+    "base_money": 48,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/padretarjeta.png",
+    "overworld_sprite": "res://assets/sprites/characters/padretarjeta.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  }
+}
