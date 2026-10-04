@@ -184,12 +184,13 @@ Después: eventos de la historia del MVP (intro del profesor, laboratorio y riva
 
 ## Agente 4 — Motor del RandomLocke
 
-**En qué estoy:** (sin empezar)
+**En qué estoy:** continuación del traspaso A2 en `feat/agente4-randomizer`, worktree `/home/javier/proyectos/pokemon-panchito-agente4`, repo compartido `/home/javier/proyectos/pokemon-panchito`. DIRECTRICES, guía y traspaso leídos. Clon inicial Windows apartado; no se integra su implementación nueva.
 
-**Terminado:**
-- (nada todavía)
+**Terminado:** contrato §10 v2 publicado antes del código. Se conserva API y algoritmos A2 y dorado v1. Nuevas APIs puras y versión 2 por RNG por módulo/validación. Godot 4.7.2 comprobado. Javier decide cualquier especie, salvo exclusiones elegidas y viabilidad técnica de formas.
 
-**Bloqueos:**
+**Cambios necesarios:** A2 leía DataDB/JSON, compartía RNG, relajaba fuerza/nivel/repetidos y faltaba randomize:false. Se corrige para Fase R. MT/tutores, objetos equipados, validador progreso y LockeRules pendientes.
+
+**Bloqueos:** ninguno del motor. A2 acepta semántica apply_patch; integración mundo/UI pendiente. Merge con import y suite en verde, push inmediato.
 
 ---
 
@@ -218,6 +219,10 @@ Después: eventos de la historia del MVP (intro del profesor, laboratorio y riva
 | 19 | A2 → A3 | Sprites de Pokémon nuevos (Generation 9 Pack, en `main`): **frente 192×192 y espalda 288×288** (se dibujan a 1×, sin zoom: ya vienen al doble), **iconos 128×64** (2 cuadros de 64) también en `icons_shiny/`, y `<id>_female.png` donde hay diferencias por sexo. Hace falta: (a) poner al día `tools/arte/reglas.json` (todavía pide cuadros de 96 y de 32, y trata `icons/` como placeholder); (b) apuntar el set en `docs/arte/seguimiento.md` y `docs/arte/licencias.md` (créditos ya en `CREDITOS.md`); (c) la BattleScene ya encuentra las rutas de siempre (`front[_shiny]/<id>.png`...). Ya están los de **todas** las especies (pregunta 11) y los gritos en `assets/audio/cries/<id>.ogg`. | hecha (A3): `tools/arte/reglas.json` con 192×192, 288×288, 128×64 y 256×256 (y tiles de 32, personajes en cuadros de 64, objetos de 48 y entrenadores de 160); Generation 9 Pack apuntado en `seguimiento.md` y `licencias.md` |
 | 20 | A1 → A2 | **Sin Git LFS** (orden de Javier): `.gitattributes` ya trata `.ogg`, `.wav`, `.mp3`, `.psd` y `.aseprite` como `binary` normal, y está en GitHub. **Ya puedes subir los gritos** (`assets/audio/cries/`). | pendiente |
 | 21 | A1 → A3 | Lo mismo para el audio: sin Git LFS, los `.ogg`/`.wav` se suben como binarios normales. | informativo |
+| 20 | A4 → A2 | §10 v2 conserva parche species A2 y añade entrada pura, MT/tutores y held_items. Mantengo data/randomizer.json por compatibilidad. Añadir randomizer_input y apply_patch atómico con hash; consultas nuevas y shiny según ajuste. | aceptada en traspaso; implementación pendiente |
+| 21 | A4 → A2 | pokemon_died ya existe; conectar reglas individuales LockeRules (permadeath, EXP cap, fijo, objetos); una muerte por uid, excluir tutoriales. | pendiente |
+| 22 | A4 → A1 | Integrar LockeRules/zone_id: registrar ANTES de combate, resolver encounter_id al capturar/huir/KO; guardar snapshot/familias; registrar inicial poseído, Cementerio/game over. Modo/ranuras/parche ya existen: conservar. | pendiente |
+| 23 | A4 → A3 | Pantallas R.8 leen schema/presets y snapshot LockeRules; §10 conserva API A2. SpoilerLog puro devuelve texto para exportación bajo demanda. Cementerio/zonas/motes/game over. | pendiente |
 
 ---
 
@@ -239,6 +244,7 @@ Después: eventos de la historia del MVP (intro del profesor, laboratorio y riva
 | 12 | A3 | **Prueba de nivel gráfico (§7.5): combate y ficha listos para revisar.** Lado a lado con Añil: `docs/arte/comparativas/combate_lado_a_lado.png` y `datos_lado_a_lado.png`; más capturas (movimientos, shiny con destellos, barra de PS bajando, las 3 páginas de la ficha) en la misma carpeta. Mi valoración sincera: la interfaz (cajas de datos, botones, fuente, iconos, ficha) ya está a la altura en limpieza y coherencia, pero **el combate se ve más pobre que Añil por el fondo**: el de Añil es un bosque con árboles y bases; el nuestro es el suelo liso de EBDX sin bases ni elementos (ver pregunta 13). ¿Apruebas o qué cambio? | |
 | 13 | A3 | **Recursos que faltan para igualar a Añil** (ninguno está en `recursos_terceros.md`): (a) **bases de combate y elementos del entorno** (árboles, hierba, cielo animado) de *Elite Battle: DX*, de Luka S.J. (créditos en su página: Game Freak, Pokecheck.org, PinkCatDragon, Tebited15, WolfPP, BadSamaritan...), https://luka-sj.com/essentials/resources/EBDX — trae también **sonidos** de combate y Poké Balls; (b) **ningún pack de sonidos**: faltan los SE de cursor, golpes, captura y el **sonido del shiny** (§8); los trae EBDX (extraídos de N2/B2 por BadSamaritan); (c) **efectos de movimientos**: *EBDX move & common animation pack*, de NikDie (créditos: Luka S.J. y NikDie), https://eeveeexpo.com/resources/1230/; (d) **entrenadores en combate** de NPCs normales: el pack 12 que no se descargó, *HGSS Trainer Battle Sprites*, de doof ("please credit": Nx-kun, Lemon, Sparta), https://eeveeexpo.com/resources/158/ (las clases Panchito, con el pack 11); (e) para el Agente 1, *Misc. VFX from BW2* de Brom ("credit if used": hierba alta, corte...), https://eeveeexpo.com/resources/357/. ¿Los descargas? | |
 | 14 | A3 | **Escala de los fondos de combate:** los del pack 10 miden **384×308** (son de EBDX, que los amplía ×2,25 con su cámara), así que no llenan 512×384 tal cual. En la muestra se ven a **×2 exacto** y encuadrados en el horizonte. ¿Vale así o prefieres otra solución? Y una consulta de método: el arte propio de la interfaz lo dibujo a mano en archivos de texto con la paleta (`assets/_fuentes/ui/*.px`) y se ve a ×2 con el `UiCanvas` (en pantalla, igual que exportarlo a ×2). ¿Te vale o lo quieres en Aseprite? | |
+| 15 | A4 | Mantengo extensión de códigos personalizados A2 (sufijo base32), ampliada en generador v2. Corto para presets. Defaults heredados de balance y nuevos defaults Locke/MT propuestos para revisión. | PENDIENTE JAVIER |
 ---
 
 ## Avisos de cambios de contrato
@@ -263,3 +269,4 @@ Después: eventos de la historia del MVP (intro del profesor, laboratorio y riva
 | 2026-10-04 | A2 | §8.6 nuevo: `Randomizer`, `RandomizerSettings`, `RomPatch`, `RomValidator`, `SeedCode`; reglas Locke en el combate (`BattleSetup.locke_rules`, evento `pokemon_died`, `result.deaths`). `DataDB`: `encounter_ids()`, `shop_ids()`, `gift_ids()`, `static_ids()`, `trade_ids()`. |
 | 2026-10-04 | A2 | Sprites de Pokémon: nuevas carpetas `icons_shiny/`, `followers/` y `followers_shiny/` (petición 18) y variantes `<id>_female.png`; tamaños del Generation 9 Pack (192/288/128×64/256). `data/species_in_use.json` (nuevo) define, con la Pokédex regional, qué especies usa el juego. |
 | 2026-10-04 | A2 | §8.5: eventos `weather`, `terrain` y `side_condition`; `BattleRequest.reason` (`uturn`, `batonpass`); acciones obligadas sin petición (dos turnos, bloqueos, recarga); `can_switch`/`can_run` falsos si está atrapado. §8.7 nuevo: sistema de efectos (`BattleEffect`, `Effects`, hooks y API del motor). `DamageCalc.calculate(..., opts)`. |
+| 2026-10-04 | A4 | §10 v2 continúa traspaso §8.6: entrada pura, aislamiento RNG/versión 2; conserva API/patch A2 y dorado v1. Peticiones 20–23. |
