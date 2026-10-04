@@ -43,6 +43,8 @@ async function readJSON(file, fallback = {}) {
 }
 
 async function writeAtomic(file, text) {
+  await mkdir(path.join(root, 'tools', 'cache'), { recursive: true });
+  await writeFile(path.join(root, 'tools', 'cache', '.gdignore'), '');
   await mkdir(path.dirname(file), { recursive: true });
   await writeFile(file + '.tmp', text);
   await rename(file + '.tmp', file);

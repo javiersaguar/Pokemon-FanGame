@@ -2,7 +2,7 @@
 // Importa los datos oficiales (Showdown + PokeAPI) a data/generated/*.json.
 // Uso: node tools/import_data/index.mjs [--offline] [--verbose]
 import path from 'node:path';
-import { readFile } from 'node:fs/promises';
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { SHOWDOWN, POKEAPI, LANG_ES } from './config.mjs';
 import { loadShowdown, loadPokeAPI } from './lib/sources.mjs';
@@ -34,6 +34,9 @@ const preview = (list, n = 15) => list.slice(0, n).join(', ') + (list.length > n
 async function main() {
   const t0 = Date.now();
   console.log(`Fuentes: ${SHOWDOWN.package}@${SHOWDOWN.version} · ${POKEAPI.repo}@${POKEAPI.commit.slice(0, 12)}${offline ? ' (sin conexión)' : ''}`);
+  // Godot no debe importar la caché (CSV de PokeAPI, sprites...): .gdignore dentro de tools/cache/.
+  await mkdir(cacheDir, { recursive: true });
+  await writeFile(path.join(cacheDir, '.gdignore'), '');
   const [sd, pa] = await Promise.all([loadShowdown(cacheDir, { offline }), loadPokeAPI(cacheDir, { offline })]);
   const extraItems = JSON.parse(await readFile(path.join(here, 'extra', 'item_effects.json'), 'utf8'));
 
