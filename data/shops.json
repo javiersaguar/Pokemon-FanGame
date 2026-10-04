@@ -1,0 +1,15 @@
+{
+  "sell_ratio": 0.5,
+  "shops": {
+    "tienda_ciudad2": {
+      "name": "Tienda",
+      "stock": [
+        {"badges": 0, "items": ["pokeball", "potion", "antidote", "paralyzeheal", "awakening", "burnheal", "iceheal", "repel", "escaperope"]},
+        {"badges": 1, "items": ["greatball", "superpotion"]},
+        {"badges": 3, "items": ["hyperpotion", "superrepel", "revive"]},
+        {"badges": 5, "items": ["ultraball", "fullheal", "maxrepel"]}
+      ],
+      "prices": {}
+    }
+  }
+}
