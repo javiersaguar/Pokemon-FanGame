@@ -58,7 +58,7 @@
 
 ## Agente 3 — Presentación, UI y contenido Panchito
 
-**En qué estoy:** AudioManager (Fase 16.1), en `feat/agente3-audio`. Después, BattleScene con eventos falsos.
+**En qué estoy:** BattleScene (Fase 7.10) con una lista de eventos falsa, en `feat/agente3-battle-scene`. Después, TrainerNPC y las pantallas del MVP.
 
 **Terminado:**
 - Borrador de `docs/GDD.md` (Fase 2): estructura completa, con las decisiones de diseño marcadas **PENDIENTE JAVIER** (resumen de las que bloquean el MVP en su §0).
@@ -68,7 +68,8 @@
 - Peticiones 4, 5 y 6.
 - **Dialogue** (Fase 5.6, `contratos.md` §9.1): letra a letra (`Dialogue.text_speed`), páginas automáticas de 2 líneas y `\n\n` para forzar página, flecha de continuar, nombre del hablante, colores BBCode, variables, `ask()` / `ask_yes_no()` con cursor y `cancel`, sin parpadeo entre líneas seguidas. Comando de Debug `dialogue <texto>`.
 - **Theme global** `src/ui/theme/main_theme.tres` y fuente **Pixel Operator** (CC0) sin antialiasing, con ñ, tildes y ¿¡. Widgets `CursorArrow`, `DialogueBox` y `ChoiceBox` reutilizables (§9.4).
-- Tests de Dialogue (10) listos en local; los subo a `tests/ui/` cuando el Agente 2 responda a la petición 9.
+- **AudioManager** (Fase 16.1, `contratos.md` §9.2): buses en `res://default_bus_layout.tres` (`Master`, `BGM`, `SE`, `ME`, `Cries`, `Ambient`), BGM con fundido cruzado que no se reinicia si es la misma, `save_bgm()`/`restore_bgm()` por donde iba, ME que pausan y reanudan la BGM (con `await`), SE con 6 voces, gritos, sonido ambiente y volumen por bus. Sin archivos de audio todavía: avisa una sola vez y el comando de Debug `audio` lista lo que falta. Más comandos: `bgm`, `se`, `me` y `volume`.
+- Tests de Dialogue (10) y AudioManager (6) listos en local; los subo a `tests/ui/` cuando el Agente 2 responda a la petición 9.
 
 **Bloqueos:** ninguno por ahora. Para la BattleScene necesito la petición 7 (puedo empezar con eventos falsos).
 
@@ -112,4 +113,5 @@
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
 | 2026-10-04 | A3 | `contratos.md` §9 rellena. Dialogue y AudioManager mantienen las firmas del stub y **añaden**: `vars`, `cancel_choice`, `ask_yes_no()`, `format_text()`, `text_speed` y `NO_CANCEL` (Dialogue); `save_bgm()`, `restore_bgm()`, `play_ambient()`, `stop_ambient()`, `set_volume()` y `get_volume()` (AudioManager). Formatos de entrenadores, encuentros y tiendas. |
+| 2026-10-04 | A3 | AudioManager entregado (§9.2), sin cambios de firma. |
 | 2026-10-04 | A3 | Dialogue entregado (§9.1). `{pokemon}` ya no tiene valor por defecto: se pasa en `vars`. Theme, fuentes, variaciones y widgets en §9.4. |
