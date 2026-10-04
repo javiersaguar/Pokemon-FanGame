@@ -89,12 +89,13 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 4 — Motor del RandomLocke
 
-**En qué estoy:** (sin empezar)
+**En qué estoy:** motor v0.2 en `feat/agente4-randomlocke`, clon propio `C:/Users/Javier/pokemon-panchito-agente4`. DIRECTRICES, contratos y fases requeridas leídas. Contrato §10 publicado antes del código; generación, reglas puras y fixtures independientes en curso.
 
 **Terminado:**
-- (nada todavía)
+- Contrato v1 de entrada JSON, ajustes, parche, consultas de DataDB y llamadas Locke de mundo/UI.
+- Autoría y hook configurados; Godot exacto disponible en WSL (4.7.2-stable).
 
-**Bloqueos:**
+**Bloqueos:** ninguno para programar con fixtures. Aceptación de contrato e integración pendientes de los destinatarios.
 
 ---
 
@@ -108,6 +109,10 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 4 | A1 → A3 | BattleScene en `res://src/battle/scene/battle_scene.tscn` con `run(setup) -> StringName`; título en `res://src/ui/title/title_screen.tscn`; menú de pausa en `res://src/ui/pause_menu/pause_menu.tscn` (`contratos.md` §4). Si preferís otras rutas, decídmelo. | pendiente |
 | 5 | A1 → A3 | Formato de `data/encounters/<id>.json` (lo leerá el disparador de encuentros de la Fase 5). Propuesta: el de la guía (5.7), con `land.day`, `land.night`, `water`... Y una tabla de prueba `data/encounters/test_outdoor.json` para `test/test_outdoor`. | pendiente |
 | 6 | A1 → A3 | Si queréis un Theme o una fuente por defecto global, pedidme `gui/theme/custom` en `project.godot`. Los stubs de Dialogue y Debug usan tamaño de fuente 8. | informativo |
+| 7 | A4 → A2 | Contrato §10: exportar RandomizerInput con metadatos de etapa/franja de nivel/familia, apply_patch atómico y clear_patch; todas las consultas parcheadas (incluidas MT/tutores, tipos, estadísticas, trades, held_items). species_map ya materializado, no aplicarlo dos veces. Revisar contrato y dejar objeciones aquí. | pendiente |
+| 8 | A4 → A2 | Emitir pokemon_died con uid y contexto cuando LockeRules activa muerte; congelar EXP al tope y respetar modo fijo/límite de objetos. Nunca revivir ni curar Cementerio. | pendiente |
+| 9 | A4 → A1 | Contrato §10: zone_id compartido entre mapas/planta, GameState.mode/randomlocke, snapshot LockeRules y parche por ranura; aplicar parche antes del mapa, limpiar al título; llamadas de encuentro/captura/muerte y ranura terminada. Resolver rival_starter_slot alternativo según elección y pedir equipo por ID. | pendiente |
+| 10 | A4 → A3 | Pantallas R.8 a partir de settings_schema/presets y snapshot LockeRules; datos de iniciales/regalos/estáticos/trades por ID y randomize:false; resumen, spoilers bajo demanda, zonas, Cementerio y game over. Revisar contrato §10. | pendiente |
 
 ---
 
@@ -119,6 +124,8 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 2 | A1 | **Reloj** (Fase 14.1): ¿hora real del sistema o reloj interno acelerado? Ahora mismo, real (`data/world.json` → `clock.mode`). | |
 | 3 | A1 | **Dinero inicial**: 3000 provisional (`data/world.json` → `new_game.money`). ¿Vale? | |
 | 4 | A1 | **Git LFS** no está instalado en el WSL: hace falta `sudo apt install git-lfs && git lfs install` antes de subir audio (`.ogg`, `.wav`...). | |
+| 5 | A4 | Código de 10 caracteres base32 no puede contener semilla de 32 bits y todos los ajustes. Propongo formato corto para presets y sufijo -C con ajustes empaquetados para Personalizado. ¿Aceptas la extensión? Implementaré opción provisional compatible con el corto. | PENDIENTE JAVIER |
+| 6 | A4 | Defaults de balance provisionales: tolerancia BST 25 %, potencia máxima por tramos, compatibilidad MT/tutores 50 %, regalos/estáticos cuentan por zona, objetos de combate permitidos. Presets y prohibidos editables versionados. ¿Apruebas estos valores y contenido? | PENDIENTE JAVIER |
 
 ---
 
@@ -126,3 +133,4 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-04 | 4 | Publicado §10 v1 antes de implementar: entrada, ajustes, parche, semillas, DataDB y LockeRules. Revisiones solicitadas en peticiones 7–10; extensión de códigos y defaults pendientes de Javier. |

@@ -410,6 +410,79 @@ AudioManager.current_bgm: StringName
 
 ---
 
-## 10. RandomLocke (Agente 4) — POR DEFINIR
+## 10. RandomLocke (Agente 4)
 
-> Sección del Agente 4: `Randomizer`, `RomPatch`, ajustes y presets, códigos de semilla, `RomValidator` y `LockeRules`. Incluye también lo que el Agente 4 necesita de `DataDB` (Agente 2), de `GameState` y `SaveManager` (Agente 1) y de la UI (Agente 3).
+Contrato v1 publicado el 2026-10-04. Motor puro (`RefCounted`, sin nodos ni corrutinas), independiente de los autoloads. Implementación en `src/randomizer/`; fixtures y adaptadores usan únicamente tipos JSON. La base de datos y los presets son parte de la versión del generador: cambiar resultados requiere subirla. Misma base + versión + semilla + ajustes normalizados produce los mismos bytes.
+
+### Entrada normalizada: RandomizerInput
+
+`RandomizerInput.from_dict(data) -> RandomizerInput`, `to_dict() -> Dictionary`, `errors() -> Array[String]`. Una copia profunda impide modificar los datos originales. DataDB deberá exportar este formato (también lo construyen los fixtures):
+
+| Tabla (Dictionary indexado por ID) | Campos |
+|---|---|
+| `species` | `name`, `types: Array[String]`, `base_stats: {hp,atk,def,spa,spd,spe}`, `abilities: {0,1,H}`, `evolutions: [{to,method,level?,item?}]`, `stage: int`, `min_level: int`, `max_level: int`, `family_id: String`, `legendary: bool`, `mythical: bool`, `catch_rate: int`, `held_items: Array[String]`, `randomize: bool` |
+| `moves` | `type`, `category: physical/special/status`, `power`, `damage?` (daño fijo), `implemented: bool`, `randomize: bool` |
+| `learnsets` | Por especie: `[[nivel, move_id], ...]`, ordenados por nivel |
+| `abilities`, `items` | Registros; objetos: `key_item`, `randomize`, `category` (ball/potion/other), `name` |
+| `types` | Registro por tipo con `effectiveness: {tipo_defensor: multiplicador}` |
+| `tm_moves`, `tutor_moves` | Por ID de máquina/tutor: `{move, randomize}` |
+| `tm_compat`, `tutor_compat` | Por especie: Array de IDs de máquinas/tutores |
+| `encounters` | Por ID de tabla: `{zone_id, early: bool, randomize, land:{day:[slots],night:[slots]}, water:[slots], ...}`. Cada slot: `{species,min_level,max_level,weight,randomize?}`. Cualquier array de slots anidado se conserva sin alterar pesos ni niveles |
+| `trainers` | Modelo 10.1: `{party:[{species,level,moves?,item?,randomize?}], randomize, leader_type?, ace_index?, rival?, rival_starter_slot?, rival_slot?}`. Rival: el slot inicial es la elección alternativa que debe resolver el mundo según la elección del jugador |
+| `starters`, `gifts`, `statics` | Por ID: `{species,level,zone_id?,randomize}`; iniciales exactamente tres, nivel 5 habitual |
+| `trades` | Por ID: `{requested,received,level,zone_id?,randomize}` |
+| `placements` | ID de colocación (suelo/oculto/regalo): `{item,randomize}` |
+| `shops` | Por ID: `{items:Array[String],randomize}` |
+| `required_items`, `required_moves` | Arrays de IDs necesarios para progresar: deben seguir siendo obtenibles |
+
+`stage`, `min_level`, `max_level` y `family_id` son metadatos explícitos del adaptador de DataDB, no decisiones del generador. Etapas sin evolución por nivel (piedra/amistad) necesitan franjas de balance del contenido. Los IDs que no se pueden aleatorizar conservan registro y descendientes; no entran como reemplazos si están prohibidos. `randomize:false` de una especie también protege learnset, compatibilidad, objetos equipados y todos sus campos. Entradas bloqueadas del mundo tampoco se sustituyen mediante `species_map`.
+
+### Ajustes y presets
+
+`RandomizerSettings.defaults()`, `normalize(Dictionary)`, `errors(Dictionary)` y `preset(id)` devuelven diccionarios JSON. `data/randomizer/settings_schema.json` es la lista completa de campos, rangos, valores por defecto y opciones (R.3/R.7); `presets.json` contiene los cuatro presets: `clasico`, `solo_aleatorio`, `caos_panchito`, `personalizado`. `prohibidos.json` fija especies, movimientos y habilidades excluidos, como parte de la versión. La interfaz puede editar la configuración antes de crear la partida. Probabilidad shiny: denominador 4096, 1024, 512 o 100, sin modificar sprites.
+
+### Parche y API
+
+```gdscript
+Randomizer.generate(input: RandomizerInput, settings: Dictionary, seed: int) -> RomPatch
+RomValidator.validate(input: RandomizerInput, patch: RomPatch) -> Array[String]
+SeedCode.encode(seed: int, settings: Dictionary, version: int) -> String
+SeedCode.decode(code: String) -> Dictionary # {ok,seed,settings,version,error}
+SpoilerLog.render(input: RandomizerInput, patch: RomPatch) -> String
+RomPatch.to_dict() -> Dictionary
+RomPatch.from_dict(data: Dictionary) -> RomPatch # estático
+RomPatch.canonical_json() -> String
+```
+
+Semilla sin signo de 32 bits. Fallo de generación: `RomPatch.errors` no vacío, `is_valid()` falso; no aplicar/guardar como partida. Reintentos limitados con subseed derivada; nunca cambian el código visible. `generator_version`, `seed_code`, `settings`, `input_hash` (SHA-256), `attempt` y tablas de reemplazos `starters`, `species_map`, `encounters`, `trainers`, `gifts`, `statics`, `trades`, `learnsets`, `tm_moves`, `tm_compat`, `tutor_moves`, `tutor_compat`, `abilities`, `types`, `base_stats`, `evolutions`, `held_items`, `items`, `shops` se guardan junto a la ranura. `starters/gifts/statics` contienen especie por ID; `items` objeto por ID de colocación; `trades`, encuentros, entrenadores y tiendas son registros completos. Reemplazos de especie por campo, sin sobrescribir el resto.
+
+El formato corto `PANCHITO-XXXX-XXXX-XX` contiene 32 bits de semilla, versión, preset y checksum. **No cabe una configuración personalizada completa en diez caracteres base32**: se propone una extensión `-C<payload>` para ajustes personalizados, con checksum que cubre todo el código (PENDIENTE JAVIER, registrado en ESTADO). El payload empaqueta todos los ajustes según el esquema fijo de la versión. Un código de otra versión devuelve aviso explícito; no se regenera con el generador actual. Cargar partida antigua usa el parche guardado sin regenerarlo. Datos incompatibles se detectan por `input_hash`.
+
+### Semántica solicitada a DataDB (Agente 2)
+
+`apply_patch(patch) -> Array[String]`: validar referencias y hash antes de aplicar, de forma atómica, conservar base inmutable y copia profunda del parche. Error no cambia el parche activo. Consultas `species`, `learnset`, `tm_compat`, `tm_move`, `tutor_compat`, `tutor_move`, `trainer`, `encounters`, `starter`, `gift`, `static_encounter`, `trade`, `placement_item`, `shop` ven reemplazos y vuelven a base donde no haya reemplazo. `species()` combina tipos, estadísticas, habilidades, evoluciones y objetos equipados; no usa `species_map` para remapear el ID de la consulta. `species_map` describe la correspondencia global de salvajes, ya materializada en `encounters`: **no volver a aplicarla**. Hábitats y textos se calculan sobre esas consultas. `clear_patch()` elimina toda la capa y restaura la base, sin tocar instancias de Pokémon guardadas. Aplicar antes de cargar el mapa y limpiar al título/modo normal. Petición formal en ESTADO.
+
+### LockeRules y llamadas del mundo
+
+```gdscript
+LockeRules.new(settings: Dictionary = {}, families: Dictionary = {}, epitaphs: Array = [])
+can_catch(zone_id: String, species: String, shiny: bool = false, source: String = "wild", encounter_id: String = "") -> bool
+register_encounter(zone_id, species, shiny = false, source = "wild", encounter_id = "") -> Dictionary
+resolve_encounter(encounter_id: String, outcome: String, pokemon: Dictionary = {}) -> bool
+register_owned(species: String) -> void
+register_death(pokemon: Dictionary, context: Dictionary) -> Dictionary
+level_cap(next_leader_ace_level: int) -> int # 0 = sin tope
+can_gain_exp(level: int, next_leader_ace_level: int) -> bool
+battle_mode() -> String # fixed/normal
+can_use_item(used_this_battle: int) -> bool
+is_game_over(party: Array, pc: Array) -> bool
+zone_status(zone_id: String) -> String
+snapshot() -> Dictionary
+from_dict(data: Dictionary) -> LockeRules # estático
+```
+
+Reglas copiadas y fijadas en el constructor; ninguna API para cambiarlas, getters devuelven copias. Estado serializable: reglas, familias, zonas (available/pending/caught/lost), encuentro elegible activo por zona, encuentros y resultados, líneas ya poseídas (incluso muertas), muertes y Cementerio, capturas, estado running/finished. El primer encuentro consume la zona inmediatamente; capturar se autoriza solo para su `encounter_id`; huir, KO o fallo definitivo → lost. Shiny exento no consume ni restaura zonas. Duplicado por familia no cuenta. Regalos/estáticos tienen reglas propias (si cuentan, usan zona); intercambios siguen regalos. Mote obligatorio se verifica al resolver caught (no se da por capturado hasta recibirlo).
+
+Mundo (A1): registrar **antes** del combate, consultar permiso con el mismo ID para cada lanzamiento, resolver al terminar; registrar iniciales/capturas/regalos; pasar muerte con `{zone_id,opponent,reason}` y Pokémon `{uid,species,nickname,level,hp,dead?}`. Muerte idempotente por uid, devuelve lápida con epitafio; sacar Pokémon de party/PC utilizable y marcar muerto, nunca curarlo o revivirlo. Combat engine (A2) debe emitir `pokemon_died` una sola vez por KO real cuando esté activa la regla, no en combates excluidos de tutorial. A1 guarda/restaura `snapshot`, preserva Cementerio, comprueba game over tras cada muerte y termina la ranura. PC de `is_game_over` es lista plana de Pokémon utilizables (sin Cementerio ni huevos); hp=0 no cuenta vivo mientras la regla de muerte está activa. Si esa regla está desactivada, un debilitado puede curarse y no termina la partida.
+
+UI (A3): snapshot con zonas, contadores, reglas fijadas, lápidas (mote, especie, nivel, lugar, rival, motivo y epitafio) y estado final; shiny denominator para A2, modo fijo y límite de objetos para combate. La UI elige plantilla de epitafio al construir o deja la selección determinista por uid; plantillas en `data/randomizer/epitafios.json`. No hay I/O ni señales en LockeRules. A1/A3 leen JSON antes de ejecutar en hilo; RandomizerSettings carga sus archivos de configuración una vez y mantiene copias. La generación puede prepararse en principal y ejecutarse en WorkerThreadPool, sin nodos, progreso visual ni await en el motor.
