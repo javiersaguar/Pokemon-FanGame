@@ -407,3 +407,9 @@ AudioManager.current_bgm: StringName
 
 - Formato de `data/trainer_classes.json`, `data/trainers/*.json` y `data/encounters/*.json`.
 - BattleScene (`run(setup) -> StringName`, sección 4), título y menú de pausa.
+
+---
+
+## 10. RandomLocke (Agente 4) — POR DEFINIR
+
+> Sección del Agente 4: `Randomizer`, `RomPatch`, ajustes y presets, códigos de semilla, `RomValidator` y `LockeRules`. Incluye también lo que el Agente 4 necesita de `DataDB` (Agente 2), de `GameState` y `SaveManager` (Agente 1) y de la UI (Agente 3).

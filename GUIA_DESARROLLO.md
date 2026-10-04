@@ -1582,8 +1582,9 @@ Después de generar, un validador comprueba la ROM. Si algo falla, se **regenera
 
 | Pieza | Agente |
 |-------|--------|
-| `Randomizer`, `RomPatch`, validador R.4, códigos de semilla R.5, tests R.6, `DataDB.apply_patch` y el evento `pokemon_died` del motor | **Agente 2** |
-| `GameState.mode` / `randomlocke`, guardado del parche con la ranura, `zone_id` y seguimiento de zonas, reglas Locke en el mundo (primera captura, regalos, game over), flujo de nueva partida en `SceneManager` y la regla R.2 en todos los eventos | **Agente 1** |
+| `Randomizer`, `RomPatch`, ajustes y presets, validador R.4, códigos de semilla R.5, registro de spoilers, tests R.6 y la **lógica pura de las reglas Locke** (`LockeRules`: zonas, primera captura, cláusulas, muertes, tope de nivel, game over) | **Agente 4** |
+| `DataDB.apply_patch()` / `clear_patch()` según el contrato del Agente 4, y el evento `pokemon_died` del motor de combate | **Agente 2** |
+| `GameState.mode` / `randomlocke`, guardado del parche con la ranura, `zone_id` en los mapas, **integración** de `LockeRules` en el mundo (primera captura, regalos, game over), flujo de nueva partida en `SceneManager` y la regla R.2 en todos los eventos | **Agente 1** |
 | Pantallas de R.8 (modo, ajustes, generación, resumen, indicadores, Cementerio, game over), marcadores de texto en `Dialogue`, `starters.json`, `gifts.json`, `statics.json` y `trades.json` | **Agente 3** |
 
 ✅ **Criterio de "hecho":** desde el menú inicial se crea una partida RandomLocke con un código, se genera la ROM en menos de 3 s, se juega hasta el primer gimnasio con las reglas Locke funcionando, y otra persona con el mismo código obtiene exactamente los mismos iniciales, encuentros y entrenadores.
