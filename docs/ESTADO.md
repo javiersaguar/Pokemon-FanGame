@@ -92,6 +92,8 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 3. Validador de arte (`tools/arte/`) y galería.
 4. Pantalla de combate y pantalla de datos del Pokémon de muestra a 512×384, y comparativas en `docs/arte/comparativas/`.
 
+Hecho de la Fase A: `docs/arte/BIBLIA.md` (propuesta), `docs/arte/seguimiento.md`, `docs/arte/licencias.md`, `docs/arte/recursos.md` (lista para descargar, preguntas 8 y 9), paleta maestra propuesta (`assets/arte/paleta.json` → `.gpl` y `.png`) y validador de arte (`tools/arte/validar.gd`, uso en `README.md`).
+
 **Después** (tras la aprobación de Javier): menú inicial de la Fase 15.2 ("Realizado por Javier Saguar"), pantallas del MVP, TrainerNPC, marcadores R.2 en `Dialogue`, `starters.json`/`gifts.json`/`statics.json`/`trades.json` y las pantallas del RandomLocke (R.8).
 
 **Terminado:**
@@ -143,6 +145,8 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 5 | A3 | **Decisiones del GDD** (`docs/GDD.md` §0): las que bloquean el MVP, además de las de la pregunta 1, son: ¿quién o qué es Panchito?, nombre de la región, tono (¿parodia total o aventura seria con chistes?), especies salvajes de la Ruta 1 y aspecto/nombres por defecto del chico y la chica. El resto del GDD puede esperar. | |
 | 6 | A3 | **Entrenadores del MVP** (`docs/entrenadores.md`): ¿te valen las 20 clases de la tabla 10.2 tal cual? ¿Y los textos provisionales del Vendedor de Chupachups Manolo y del rival? | |
 | 7 | A2 | **Habilidad oculta en Pokémon salvajes** (Fase 6.1, "con baja probabilidad"): ¿qué probabilidad? En los juegos actuales es 0 salvo casos especiales. Ahora: 0 (`wild_hidden_ability_chance`). | |
+| 8 | A3 | **Prueba de nivel gráfico, paso 1: recursos para descargar** (`docs/arte/recursos.md`, con enlace, autores y licencia de cada uno): sprites de Pokémon, tilesets, personajes del mapa, Pokémon que te siguen, fondos y bases de combate y fuentes. (a) ¿Los descargas en `assets/_terceros/`? Para mi muestra de combate necesito, por orden: el **set de sprites de Pokémon** (propongo la opción A, *Animated Pokemon System*, el mismo linaje que Añil; la B es la de Showdown del Agente 2), los **fondos y bases** de *Elite Battle System* y, si quieres comparar, otra **fuente**. (b) Varios autores **prohíben redistribuir** sus packs y el repo es público: ¿ponemos `assets/_terceros/` en `.gitignore` y en el repo solo lo que el juego usa? (`.gitignore` lo cambiaría el Agente 1) | |
+| 9 | A3 | **Biblia de arte y paleta** (`docs/arte/BIBLIA.md`, muestrario en `assets/arte/paleta.png`): ¿la apruebas o cambias algo? Decisiones abiertas en su §12: paleta, fuente, set de sprites, tono visual de lo nuestro (UI, clases Panchito, logo) y lienzo de 80×80 para los entrenadores en combate | |
 
 ---
 

@@ -101,6 +101,17 @@ godot --headless --path . --import
 godot --headless --path . -s res://assets/tilesets/placeholder/build_tileset.gd
 ```
 
+## Arte (Fase A)
+
+*(Sección del Agente 3.)* Normas en [`docs/arte/BIBLIA.md`](docs/arte/BIBLIA.md); estado de cada asset en [`docs/arte/seguimiento.md`](docs/arte/seguimiento.md).
+
+```bash
+godot --headless --path . -s res://tools/arte/validar.gd   # tamaños canónicos y paleta (falla con código 1)
+godot --headless --path . -s res://tools/arte/paleta.gd    # regenera assets/arte/paleta.gpl y .png desde paleta.json
+```
+
+Pásalo antes de mergear cualquier arte. Las reglas de tamaño por carpeta están en `tools/arte/reglas.json`.
+
 ## Datos (Fase 4)
 
 Los datos oficiales (especies, movimientos, objetos, tipos, learnsets...) **no se escriben a mano**: los genera `tools/import_data` a partir de Pokémon Showdown y PokeAPI, con versiones fijadas y nombres y descripciones en español. Requiere **Node.js 18+** (sin `npm install`):
