@@ -14,6 +14,7 @@ const TITLE_SCENE := "res://src/ui/title/title_screen.tscn"
 const PAUSE_MENU_SCENE := "res://src/ui/pause_menu/pause_menu.tscn"
 const BATTLE_SCENE := "res://src/battle/scene/battle_scene.tscn"
 const PLAYER_SCENE := "res://src/overworld/player/player.tscn"
+const FOLLOWER_SCENE := "res://src/overworld/follower/follower.tscn"
 const BattlePlaceholder := preload("res://src/main/battle_placeholder.gd")
 
 const FADE_TIME := 0.25
@@ -27,6 +28,8 @@ var current_map: MapRoot
 var player: Player
 var is_changing_map := false
 var in_battle := false
+## Pokémon que sigue al jugador en el mapa actual (null si no hay).
+var player_follower: Follower
 ## Última imagen del mundo sin interfaz (se toma al abrir el menú de pausa). La
 ## usa SaveManager para la miniatura de la ranura.
 var world_snapshot: Image
@@ -315,6 +318,37 @@ func _place_player(tile: Vector2i, facing: Vector2i) -> void:
 	parent.add_child(player)
 	player.place_at(tile, facing)
 	player.setup_camera(current_map)
+	_spawn_player_follower(parent)
+
+
+## El Pokémon que te sigue: el primero del equipo que pueda luchar (Fase 14.5), si
+## el mapa lo permite, está activado en data/world.json → followers.enabled y hay hoja.
+func _spawn_player_follower(parent: Node) -> void:
+	player_follower = null
+	var cfg: Dictionary = GameState.world_config.get("followers", {})
+	if not bool(cfg.get("enabled", true)) or (current_map.data and not current_map.data.followers_allowed):
+		return
+	var lead: Variant = _first_able_pokemon()
+	if lead == null or not Follower.has_sheet(lead.species_id, lead.shiny):
+		return
+	var follower := (load(FOLLOWER_SCENE) as PackedScene).instantiate() as Follower
+	follower.name = &"PlayerFollower"
+	parent.add_child(follower)
+	follower.species = lead.species_id
+	follower.shiny = lead.shiny
+	follower.follow(player)
+	follower.appear()
+	player_follower = follower
+
+
+static func _first_able_pokemon() -> Variant:
+	var party: Variant = GameState.party
+	if not (party is Object and &"members" in party):
+		return null
+	for p: Variant in party.members:
+		if p.current_hp > 0:
+			return p
+	return null
 
 
 func _unload_map() -> void:

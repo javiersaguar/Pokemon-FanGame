@@ -1,9 +1,12 @@
 class_name Grid
 extends RefCounted
-## Conversión entre casillas y píxeles. Una casilla mide TILE × TILE píxeles y
-## las entidades se colocan en el CENTRO de su casilla.
+## Conversión entre casillas y píxeles. Una casilla mide TILE × TILE píxeles de
+## pantalla (32: arte de 16 px a ×2, como los packs) y las entidades se colocan en
+## el CENTRO de su casilla. Las posiciones van en múltiplos de ART_PIXEL.
 
-const TILE := 16
+const TILE := 32
+## Un píxel del arte en pantalla (el mundo se ve a ×2).
+const ART_PIXEL := 2
 const HALF := Vector2(TILE / 2.0, TILE / 2.0)
 
 
@@ -18,6 +21,11 @@ static func to_tile(world_pos: Vector2) -> Vector2i:
 ## Coloca una posición cualquiera en el centro de su casilla.
 static func snap(world_pos: Vector2) -> Vector2:
 	return to_world(to_tile(world_pos))
+
+
+## Redondea a píxeles del arte (múltiplos de ART_PIXEL), para que nada tiemble.
+static func round_to_art_pixel(world_pos: Vector2) -> Vector2:
+	return (world_pos / ART_PIXEL).round() * ART_PIXEL
 
 
 ## "up", "down", "left" o "right" (así van las direcciones en JSON y en el guardado).
