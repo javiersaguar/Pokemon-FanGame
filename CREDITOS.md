@@ -24,7 +24,7 @@ Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus person
 
 ## Pokémon: sprites, iconos, Pokémon que te siguen y gritos (Agente 2)
 
-Copiados sin modificar ni reescalar por `tools/sprites/import_pokemon_assets.mjs`, solo de las especies que usa el juego (`data/species_in_use.json`, la Pokédex regional y las que salen en los datos). Qué archivo viene de qué pack: `data/generated/pokemon_assets.json`.
+Copiados sin modificar ni reescalar por `tools/sprites/import_pokemon_assets.mjs --all`: todas las especies y formas del pack (decisión de Javier). Qué archivo viene de qué pack: `data/generated/pokemon_assets.json`.
 
 | Recurso | Autor | Licencia o permiso | Enlace | En el repo |
 |---------|-------|--------------------|--------|------------|

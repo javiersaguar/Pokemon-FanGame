@@ -56,18 +56,22 @@ Es un archivo de datos: los números del juego no van en los `.gd`.
 
 ## `sprites`: gráficos y gritos de los Pokémon (DIRECTRICES §7.1 y §7.2)
 
-Copia de los packs que ha descargado Javier (fuera del repo, en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/`)
-**solo las especies que usa el juego**, byte a byte: **sin reescalar ni convertir**, porque ya vienen a la escala de
+Copia de los packs que ha descargado Javier (fuera del repo, en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/`),
+byte a byte, **sin reescalar ni convertir**, porque ya vienen a la escala de
 512×384 (frente 192×192, espalda 288×288, iconos 128×64 = 2 cuadros de 64, Pokémon que te siguen 256×256 = 4×4
 cuadros de 64). Set oficial: `06_generation9_pack`; `07_generation8_pack` solo si falta algo. No descarga nada
 de internet ni modifica la carpeta de recursos.
 
 ```bash
-node tools/sprites/import_pokemon_assets.mjs                    # especies del juego
+node tools/sprites/import_pokemon_assets.mjs --all              # lo habitual: todas las especies del pack
+node tools/sprites/import_pokemon_assets.mjs                    # solo las especies del juego
 node tools/sprites/import_pokemon_assets.mjs --species pikachu
-node tools/sprites/import_pokemon_assets.mjs --all              # todas (para RandomLocke)
 godot --headless --path . --import                              # después, para crear los .import
 ```
+
+- **Decisión de Javier (pregunta 11): en el repo están los de TODAS las especies del pack** (≈ 1.370 especies y formas;
+  unos 36 MB de PNG y 18 MB de gritos). Lo que no deba salir en RandomLocke se excluye desde sus ajustes, nunca
+  quitando sprites. Los gritos van como archivos normales (sin Git LFS).
 
 - **Especies del juego:** `data/regional_dex.json` + `data/species_in_use.json` (lista inicial: el MVP) + las que
   salen en `data/encounters/`, `data/trainers/`, `starters.json`, `gifts.json`, `statics.json` y `trades.json`, con
@@ -75,9 +79,9 @@ godot --headless --path . --import                              # después, para
 - **Destino**, con nuestros ids: `assets/sprites/pokemon/{front,front_shiny,back,back_shiny,icons,icons_shiny,followers,followers_shiny}/<id>.png`
   (más `<id>_female.png` donde el pack tiene diferencias por sexo) y `assets/audio/cries/<id>.ogg`.
 - Las formas (`raichualola`...) se buscan en `pokemon_forms.txt` del pack; las que no tienen equivalente se listan.
-- Opciones: `--source <carpeta>` (o `PANCHITO_RECURSOS`), `--dry-run` y `--prune` (borra las especies que ya no se usan).
-- Resumen (qué archivo viene de qué pack y qué falta): `data/generated/pokemon_assets.json`. Sale con código 1 si falta algo.
-- El validador da **error** si a una especie usada le falta alguna versión (normal o shiny) y aviso si le falta el grito.
+- Opciones: `--source <carpeta>` (o `PANCHITO_RECURSOS`) y `--dry-run`. Nunca borra nada del repo.
+- Resumen (qué archivo viene de qué pack, qué falta, formas sin equivalente y formas emparejadas por aproximación): `data/generated/pokemon_assets.json`. Sale con código 1 si falta algo (con `--all` siempre faltan los Pokémon que te siguen de las megas y otras formas de combate, que el pack no trae).
+- El validador da **error** si a una especie usada le falta alguna versión (normal o shiny) o el grito.
 
 ## `wikidex`: verificación de estadísticas (DIRECTRICES §3)
 

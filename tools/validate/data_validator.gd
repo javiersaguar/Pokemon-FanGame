@@ -168,8 +168,7 @@ func _check_sprites() -> void:
 		if DataDB.has_species(id) and not FileAccess.file_exists("%s/%s.ogg" % [CRIES_DIR, id]):
 			no_cry.append(String(id))
 	if not no_cry.is_empty():
-		# Aviso y no error mientras los .ogg no se puedan subir (hace falta Git LFS).
-		_warn("Faltan %d gritos en %s/ (node tools/sprites/import_pokemon_assets.mjs): %s" % [
+		_error("Faltan %d gritos en %s/ (node tools/sprites/import_pokemon_assets.mjs): %s" % [
 			no_cry.size(), CRIES_DIR, ", ".join(no_cry)])
 
 
