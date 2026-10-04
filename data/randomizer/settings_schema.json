@@ -1,0 +1,305 @@
+{
+  "starters": {
+    "default": "triangle",
+    "bits": 2,
+    "description": "Iniciales: sin cambios, aleatorios, triángulo de tipos o dos evoluciones",
+    "options": [
+      "off",
+      "random",
+      "triangle",
+      "three_stage"
+    ]
+  },
+  "wild": {
+    "default": "per_zone",
+    "bits": 2,
+    "description": "Salvajes: sin cambios, por zona, global 1:1 o caos",
+    "options": [
+      "off",
+      "per_zone",
+      "global",
+      "chaos"
+    ]
+  },
+  "trainers": {
+    "default": true,
+    "bits": 1,
+    "description": "Aleatorizar equipos de entrenadores conservando niveles",
+    "type": "bool"
+  },
+  "keep_type_themes": {
+    "default": true,
+    "bits": 1,
+    "description": "Conservar tipo de líderes y temas definidos",
+    "type": "bool"
+  },
+  "story_pokemon": {
+    "default": true,
+    "bits": 1,
+    "description": "Activar grupo de regalos, estáticos e intercambios",
+    "type": "bool"
+  },
+  "allow_legendaries": {
+    "default": false,
+    "bits": 1,
+    "description": "Permitir legendarios y singulares",
+    "type": "bool"
+  },
+  "learnsets": {
+    "default": "type_preference",
+    "bits": 2,
+    "description": "Movimientos por nivel: sin cambios, aleatorios o preferencia de tipo",
+    "options": [
+      "off",
+      "random",
+      "type_preference"
+    ]
+  },
+  "guarantee_stab": {
+    "default": true,
+    "bits": 1,
+    "description": "Garantizar STAB de daño al nivel 1",
+    "type": "bool"
+  },
+  "scaled_power": {
+    "default": true,
+    "bits": 1,
+    "description": "Escalar potencia máxima según nivel",
+    "type": "bool"
+  },
+  "abilities": {
+    "default": false,
+    "bits": 1,
+    "description": "Habilidades aleatorias respetando prohibidos",
+    "type": "bool"
+  },
+  "types": {
+    "default": false,
+    "bits": 1,
+    "description": "Tipos aleatorios coherentes en la línea evolutiva",
+    "type": "bool"
+  },
+  "base_stats": {
+    "default": false,
+    "bits": 1,
+    "description": "Barajar estadísticas conservando su suma",
+    "type": "bool"
+  },
+  "evolutions": {
+    "default": false,
+    "bits": 1,
+    "description": "Evoluciones con suma de estadísticas similar y sin ciclos",
+    "type": "bool"
+  },
+  "items": {
+    "default": true,
+    "bits": 1,
+    "description": "Objetos de suelo, ocultos, regalos y equipados",
+    "type": "bool"
+  },
+  "shops": {
+    "default": false,
+    "bits": 1,
+    "description": "Tiendas aleatorias con Poké Balls y Pociones garantizadas",
+    "type": "bool"
+  },
+  "similar_strength": {
+    "default": true,
+    "bits": 1,
+    "description": "Exigir fuerza similar al sustituir especies",
+    "type": "bool"
+  },
+  "strength_tolerance": {
+    "default": 15,
+    "bits": 7,
+    "description": "Tolerancia de suma de estadísticas, en porcentaje",
+    "min": 0,
+    "max": 100
+  },
+  "level_appropriate": {
+    "default": true,
+    "bits": 1,
+    "description": "Exigir etapa evolutiva adecuada al nivel",
+    "type": "bool"
+  },
+  "no_early_legendaries": {
+    "default": true,
+    "bits": 1,
+    "description": "Excluir legendarios y singulares en zonas iniciales",
+    "type": "bool"
+  },
+  "only_implemented_moves": {
+    "default": true,
+    "bits": 1,
+    "description": "Usar solo movimientos implementados",
+    "type": "bool"
+  },
+  "locke_rules": {
+    "default": true,
+    "bits": 1,
+    "description": "Activar reglas Locke; Solo aleatorio las desactiva",
+    "type": "bool"
+  },
+  "gifts": {
+    "default": true,
+    "bits": 1,
+    "description": "Aleatorizar regalos dentro del grupo de historia",
+    "type": "bool"
+  },
+  "statics": {
+    "default": true,
+    "bits": 1,
+    "description": "Aleatorizar encuentros estáticos dentro del grupo de historia",
+    "type": "bool"
+  },
+  "trades": {
+    "default": true,
+    "bits": 1,
+    "description": "Aleatorizar intercambios dentro del grupo de historia",
+    "type": "bool"
+  },
+  "trainer_duplicates": {
+    "default": false,
+    "bits": 1,
+    "description": "Permitir especies repetidas en equipos",
+    "type": "bool"
+  },
+  "leader_ace": {
+    "default": true,
+    "bits": 1,
+    "description": "Hacer que el as del líder sea el más fuerte",
+    "type": "bool"
+  },
+  "rival_starter": {
+    "default": true,
+    "bits": 1,
+    "description": "Conservar elección alternativa del rival y evolucionarla",
+    "type": "bool"
+  },
+  "tm_compat": {
+    "default": false,
+    "bits": 1,
+    "description": "Aleatorizar compatibilidad de MT",
+    "type": "bool"
+  },
+  "tm_content": {
+    "default": false,
+    "bits": 1,
+    "description": "Aleatorizar contenido de MT",
+    "type": "bool"
+  },
+  "tutor_compat": {
+    "default": false,
+    "bits": 1,
+    "description": "Aleatorizar compatibilidad de tutores",
+    "type": "bool"
+  },
+  "tutor_content": {
+    "default": false,
+    "bits": 1,
+    "description": "Aleatorizar movimientos de tutores",
+    "type": "bool"
+  },
+  "tm_percent": {
+    "default": 50,
+    "bits": 7,
+    "description": "Compatibilidad de MT por especie, en porcentaje",
+    "min": 0,
+    "max": 100
+  },
+  "tutor_percent": {
+    "default": 50,
+    "bits": 7,
+    "description": "Compatibilidad de tutores por especie, en porcentaje",
+    "min": 0,
+    "max": 100
+  },
+  "shiny_denominator": {
+    "default": 4096,
+    "bits": 2,
+    "description": "Probabilidad shiny de 1 entre este denominador",
+    "options": [
+      4096,
+      1024,
+      512,
+      100
+    ]
+  },
+  "first_encounter": {
+    "default": true,
+    "bits": 1,
+    "description": "Solo el primer encuentro elegible de cada zona",
+    "type": "bool"
+  },
+  "permadeath": {
+    "default": true,
+    "bits": 1,
+    "description": "Debilitado = muerto, pasa al Cementerio",
+    "type": "bool"
+  },
+  "nickname_required": {
+    "default": true,
+    "bits": 1,
+    "description": "Exigir mote al registrar una captura",
+    "type": "bool"
+  },
+  "duplicates_clause": {
+    "default": true,
+    "bits": 1,
+    "description": "Repetir encuentro si ya se posee su línea evolutiva",
+    "type": "bool"
+  },
+  "shiny_clause": {
+    "default": true,
+    "bits": 1,
+    "description": "Capturar shiny sin consumir ni restaurar zona",
+    "type": "bool"
+  },
+  "gifts_count": {
+    "default": true,
+    "bits": 1,
+    "description": "Regalos e intercambios consumen captura de zona",
+    "type": "bool"
+  },
+  "statics_count": {
+    "default": true,
+    "bits": 1,
+    "description": "Estáticos consumen captura de zona",
+    "type": "bool"
+  },
+  "level_cap": {
+    "default": false,
+    "bits": 1,
+    "description": "Congelar experiencia al nivel del próximo as",
+    "type": "bool"
+  },
+  "fixed_battle": {
+    "default": false,
+    "bits": 1,
+    "description": "Forzar modo de combate fijo",
+    "type": "bool"
+  },
+  "battle_items": {
+    "default": "allowed",
+    "bits": 2,
+    "description": "Objetos en combate: permitidos, limitados o prohibidos",
+    "options": [
+      "allowed",
+      "limited",
+      "forbidden"
+    ]
+  },
+  "battle_item_limit": {
+    "default": 3,
+    "bits": 5,
+    "description": "Máximo de objetos por combate si están limitados",
+    "min": 0,
+    "max": 20
+  },
+  "game_over": {
+    "default": true,
+    "bits": 1,
+    "description": "Terminar si no queda ningún Pokémon vivo en equipo o PC",
+    "type": "bool"
+  }
+}

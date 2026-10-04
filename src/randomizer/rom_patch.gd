@@ -5,11 +5,13 @@ extends RefCounted
 
 const KEYS: Array[String] = [
 	"starters", "species_map", "encounters", "trainers", "gifts", "statics", "trades",
-	"learnsets", "tm_compat", "abilities", "species", "items", "shops",
+	"learnsets", "tm_compat", "tm_moves", "tutor_compat", "tutor_moves", "abilities", "species", "items", "shops",
 ]
 
 ## {generator_version, seed, seed_code, settings, starters, species_map, encounters, trainers, ...}.
 var data: Dictionary = {}
+var input: RandomizerInput
+var errors: Array[String] = []
 
 
 static func create(seed_value: int, settings: RandomizerSettings) -> RomPatch:
@@ -28,11 +30,15 @@ static func create(seed_value: int, settings: RandomizerSettings) -> RomPatch:
 static func from_dict(d: Dictionary) -> RomPatch:
 	var p := RomPatch.new()
 	p.data = d.duplicate(true)
+	p.errors.assign(d.get("errors", []))
 	return p
 
 
 func to_dict() -> Dictionary:
-	return data.duplicate(true)
+	var result := data.duplicate(true)
+	if not errors.is_empty():
+		result["errors"] = errors.duplicate()
+	return result
 
 
 func section(key: String) -> Dictionary:
@@ -57,54 +63,25 @@ func settings() -> RandomizerSettings:
 
 ## JSON estable (claves ordenadas): dos ROM iguales dan exactamente el mismo texto.
 func to_json() -> String:
-	return JSON.stringify(data, "\t", true)
+	return JSON.stringify(JSON.parse_string(JSON.stringify(to_dict())), "\t", true)
 
 
 ## Aplica la ROM al juego (DataDB). Para quitarla: DataDB.clear_patch().
 func apply() -> void:
-	DataDB.apply_patch(data)
+	if not errors.is_empty() or data.has("errors"):
+		push_error("No se puede aplicar una ROM inválida: %s" % str(errors))
+		return
+	var db: Node = (Engine.get_main_loop() as SceneTree).root.get_node("DataDB")
+	db.apply_patch(data)
 
 
 ## Registro de spoilers (Fase R.5): qué ha cambiado, en texto. Solo se enseña si el jugador lo pide;
 ## la interfaz lo puede exportar a user://randomlocke/<código>_spoilers.txt.
 func spoiler_text() -> String:
-	var lines: PackedStringArray = ["Pokémon Panchito · RandomLocke", "Código: %s" % seed_code(), ""]
-	var name_of := func(id: Variant) -> String:
-		var sid := StringName(str(id))
-		return DataDB.species(sid).name if DataDB.has_species(sid) else str(id)
-	var starters := section("starters")
-	if not starters.is_empty():
-		lines.append("Iniciales:")
-		for key: String in _sorted(starters):
-			lines.append("  %s: %s" % [key, name_of.call(starters[key])])
-	for kind: Array in [["gifts", "Regalos"], ["statics", "Encuentros estáticos"]]:
-		var table := section(kind[0])
-		if not table.is_empty():
-			lines.append("%s:" % kind[1])
-			for key: String in _sorted(table):
-				lines.append("  %s: %s" % [key, name_of.call(table[key])])
-	var trainers := section("trainers")
-	if not trainers.is_empty():
-		lines.append("Entrenadores:")
-		for key: String in _sorted(trainers):
-			var team: PackedStringArray = []
-			for spec: Dictionary in trainers[key].get("party", []):
-				team.append("%s Nv. %d" % [name_of.call(spec.get("species", "")), int(spec.get("level", 0))])
-			lines.append("  %s: %s" % [key, ", ".join(team)])
-	var encounters := section("encounters")
-	if not encounters.is_empty():
-		lines.append("Zonas:")
-		for key: String in _sorted(encounters):
-			var species := {}
-			for entry: Dictionary in RomValidator._entries(encounters[key]):
-				species[name_of.call(entry.get("species", ""))] = true
-			var names: Array = species.keys()
-			names.sort()
-			lines.append("  %s: %s" % [key, ", ".join(PackedStringArray(names))])
-	return "\n".join(lines) + "\n"
+	return SpoilerLog.render(input if input != null else RandomizerInput.from_datadb(), self)
 
+func canonical_json() -> String:
+	return to_json()
 
-func _sorted(table: Dictionary) -> Array:
-	var keys := table.keys()
-	keys.sort()
-	return keys
+func is_valid() -> bool:
+	return errors.is_empty() and data.has("input_hash")

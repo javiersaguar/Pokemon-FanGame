@@ -2,7 +2,7 @@ class_name SeedCode
 extends RefCounted
 ## Códigos de semilla para compartir (Fase R.5): PANCHITO-XXXX-XXXX-XX codifica la versión del
 ## generador, el preset y la semilla (con una suma de control). Con ajustes personalizados se añade
-## un grupo más con los ajustes: PANCHITO-XXXX-XXXX-XX-XXXXXX.
+## un grupo más con los ajustes: PANCHITO-XXXX-XXXX-XX-<payload de esta versión>.
 ## Alfabeto Crockford base 32 (sin I, L, O ni U para no confundirlos).
 
 const PREFIX := "PANCHITO"
@@ -15,9 +15,16 @@ const CUSTOM_PRESET := 7
 
 
 ## Código para `seed_value` (0..2³²−1) y `settings`.
-static func encode(seed_value: int, settings: RandomizerSettings, version: int = Randomizer.GENERATOR_VERSION) -> String:
+static func encode(seed_value: int, settings_value: Variant, version: int = Randomizer.GENERATOR_VERSION) -> String:
+	if version < 1 or version > 31 or settings_value is Dictionary and not RandomizerSettings.errors(settings_value).is_empty():
+		return ""
+	var settings: RandomizerSettings = settings_value if settings_value is RandomizerSettings else RandomizerSettings.new()
+	if settings_value is Dictionary:
+		settings.apply_dict(settings_value)
+	if not RandomizerSettings.errors(settings.to_dict()).is_empty():
+		return ""
 	var preset_index := RandomizerSettings.PRESETS.find(settings.preset) if settings.matches_preset() else CUSTOM_PRESET
-	var setting_bits := settings.to_bits() if preset_index == CUSTOM_PRESET else 0
+	var setting_bits := settings.payload() if preset_index == CUSTOM_PRESET else ""
 	var seed32 := seed_value & 0xFFFFFFFF
 	var check := _checksum(version, preset_index, seed32, setting_bits)
 	var main := (version & 0x1F)
@@ -27,7 +34,7 @@ static func encode(seed_value: int, settings: RandomizerSettings, version: int =
 	var chars := _to_base32(main, 10)
 	var code := "%s-%s-%s-%s" % [PREFIX, chars.substr(0, 4), chars.substr(4, 4), chars.substr(8, 2)]
 	if preset_index == CUSTOM_PRESET:
-		code += "-" + _to_base32(setting_bits, _custom_chars())
+		code += "-" + setting_bits
 	return code
 
 
@@ -40,7 +47,7 @@ static func decode(code: String) -> Dictionary:
 		return fail.call("El código debe empezar por %s-." % PREFIX)
 	var body := clean.substr(PREFIX.length() + 1).replace("-", "")
 	body = body.replace("O", "0").replace("I", "1").replace("L", "1")
-	if body.length() != 10 and body.length() != 10 + _custom_chars():
+	if body.length() < 10:
 		return fail.call("El código no tiene la longitud correcta.")
 	for c: String in body:
 		if ALPHABET.find(c) < 0:
@@ -52,22 +59,28 @@ static func decode(code: String) -> Dictionary:
 	main >>= SEED_BITS
 	var preset_index := main & ((1 << PRESET_BITS) - 1)
 	var version := main >> PRESET_BITS
-	var setting_bits := _from_base32(body.substr(10)) if body.length() > 10 else 0
-	if _checksum(version, preset_index, seed32, setting_bits) != check:
-		return fail.call("El código no es válido (¿hay alguna letra mal copiada?).")
 	if version != Randomizer.GENERATOR_VERSION:
 		return {"ok": false, "version": version,
 			"error": "Este código es de otra versión de Pokémon Panchito (generador %d; esta es la %d)." % [version, Randomizer.GENERATOR_VERSION]}
+	if body.length() != 10 and body.length() != 10 + _custom_chars():
+		return fail.call("El código no tiene la longitud correcta.")
+	var setting_bits := body.substr(10) if body.length() > 10 else ""
+	if _checksum(version, preset_index, seed32, setting_bits) != check:
+		return fail.call("El código no es válido (¿hay alguna letra mal copiada?).")
+	if preset_index != CUSTOM_PRESET and body.length() != 10:
+		return fail.call("Un preset no admite ajustes adicionales.")
 	var settings: RandomizerSettings
 	if preset_index == CUSTOM_PRESET:
 		if body.length() == 10:
 			return fail.call("Faltan los ajustes personalizados al final del código.")
-		settings = RandomizerSettings.from_bits(setting_bits)
+		settings = RandomizerSettings.from_payload(setting_bits)
+		if settings == null:
+			return fail.call("Los ajustes personalizados no son válidos.")
 	elif preset_index < RandomizerSettings.PRESETS.size():
 		settings = RandomizerSettings.from_preset(RandomizerSettings.PRESETS[preset_index])
 	else:
 		return fail.call("El código usa un preset que no existe.")
-	return {"ok": true, "seed": seed32, "settings": settings, "version": version, "error": ""}
+	return {"ok": true, "seed": seed32, "settings": settings, "version": version, "settings_dict": settings.to_dict(), "error": ""}
 
 
 ## Semilla nueva al azar (para "🎲 Aleatoria").
@@ -78,11 +91,11 @@ static func random_seed() -> int:
 
 
 static func _custom_chars() -> int:
-	return ceili(RandomizerSettings.total_bits() / 5.0)
+	return RandomizerSettings.payload_chars()
 
 
-static func _checksum(version: int, preset_index: int, seed32: int, setting_bits: int) -> int:
-	var text := "%d|%d|%d|%d" % [version, preset_index, seed32, setting_bits]
+static func _checksum(version: int, preset_index: int, seed32: int, setting_bits: String) -> int:
+	var text := "%d|%d|%d|%s" % [version, preset_index, seed32, setting_bits]
 	var h := 0
 	for i: int in text.length():
 		h = (h * 31 + text.unicode_at(i)) & 0xFFFFFF
