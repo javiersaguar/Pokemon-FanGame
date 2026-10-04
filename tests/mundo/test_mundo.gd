@@ -12,10 +12,11 @@ func before_each() -> void:
 
 
 func test_casillas_y_pixeles() -> void:
-	assert_eq(Grid.to_world(Vector2i(2, 3)), Vector2(40, 56), "centro de la casilla")
-	assert_eq(Grid.to_tile(Vector2(40, 56)), Vector2i(2, 3))
+	assert_eq(Grid.to_world(Vector2i(2, 3)), Vector2(80, 112), "centro de la casilla (32 px)")
+	assert_eq(Grid.to_tile(Vector2(80, 112)), Vector2i(2, 3))
 	assert_eq(Grid.to_tile(Vector2(-1, -1)), Vector2i(-1, -1))
-	assert_eq(Grid.snap(Vector2(33, 47)), Vector2(40, 40))
+	assert_eq(Grid.snap(Vector2(33, 47)), Vector2(48, 48))
+	assert_eq(Grid.round_to_art_pixel(Vector2(33.2, 46.9)), Vector2(34, 46), "múltiplos de 2 px")
 
 
 func test_ids_de_mapa() -> void:
