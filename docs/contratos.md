@@ -469,6 +469,8 @@ Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces
 | `data/trainer_classes.json`, `data/trainers/*.json`, `data/encounters/*.json`, `data/shops.json` | Agente 3 | Formatos en la sección 9. `DataDB` los carga y los devuelve tal cual |
 
 - En todos los JSON, las claves que empiezan por `_` son comentarios y se ignoran.
+- `starters.json`, `gifts.json`, `statics.json` y `trades.json` (Agente 3): `{id: especie}` o `{id: {species, level, ...}}` (los campos de una ficha de entrenador, sección 9.6), más `"randomize": false` si no se debe aleatorizar. En `trades.json`, lo que recibe el jugador va en `receive`.
+- Parche (`DataDB.apply_patch`): `species` (`{id: {campo: valor}}`), `abilities`, `learnsets` (`{id: [[nivel, movimiento]...]}`), `tm_compat`, `trainers` (se mezcla con el original), `encounters`, `shops` (sustituyen la tabla), `starters`, `gifts`, `statics`, `trades` (especie o campos) e `items` (`{placement_id: objeto}`). Nunca modifica los datos base.
 - Enumerados en `snake_case`: tipos (`fire`), objetivos (`all_adjacent_foes`), grupos de crecimiento (`medium_fast`), grupos huevo (`human_like`), estados (`par`, `brn`, `psn`, `tox`, `slp`, `frz`).
 
 ### 8.2 DataDB (autoload)
@@ -513,6 +515,19 @@ DataDB.trainer_class(id) / has_trainer_class(id)
 DataDB.trainer(id) / has_trainer(id) / trainer_ids()   # todos los data/trainers/*.json unidos (ids únicos)
 DataDB.encounter_table(id) / has_encounter_table(id)   # data/encounters/<id>.json
 DataDB.shop(id) / has_shop(id) / shop_sell_ratio()     # data/shops.json → shops[id] y sell_ratio
+
+# Regla R.2 (RandomLocke): lo que da o coloca la historia, siempre por id
+DataDB.starter(id) -> StringName / starter_spec(id) -> Dictionary / starter_ids()   # data/starters.json (starter_1/2/3)
+DataDB.gift(id) -> Dictionary                # data/gifts.json   → ficha para Pokemon.from_spec()
+DataDB.static_encounter(id) -> Dictionary    # data/statics.json → ficha para Pokemon.from_spec()
+DataDB.trade(id) -> Dictionary               # data/trades.json (tal cual)
+DataDB.placed_item(placement_id, default_item) -> StringName   # ItemBall: "<map_id>/<nodo>"
+DataDB.item_placements() -> Dictionary       # data/item_placements.json (Agente 1)
+DataDB.resolve_markers(text) -> String       # {starter:id} {gift:id} {static:id} {trade:id} {species:id} {item:id}
+
+# Parche de RandomLocke (Fase R.1): todas las consultas de arriba devuelven lo parcheado
+DataDB.apply_patch(patch: Dictionary) / clear_patch() / has_patch() / current_patch()
+signal patch_changed
 
 # Otros
 DataDB.meta() -> Dictionary                  # versiones de las fuentes (data/generated/meta.json)
