@@ -1,0 +1,38 @@
+{
+  "rival_lab_1": {
+    "class": "rival",
+    "name": "{rival}",
+    "intro_text": "",
+    "lose_text": "¿¡Qué!? ¡Pero si he elegido el que tenía ventaja!",
+    "win_text": "¡Ja! Te dije que el mío era mejor.",
+    "after_text": "",
+    "items": [],
+    "party": [
+      {"species": "charmander", "level": 5}
+    ]
+  },
+  "rival_lab_2": {
+    "class": "rival",
+    "name": "{rival}",
+    "intro_text": "",
+    "lose_text": "¿¡Qué!? ¡Pero si he elegido el que tenía ventaja!",
+    "win_text": "¡Ja! Te dije que el mío era mejor.",
+    "after_text": "",
+    "items": [],
+    "party": [
+      {"species": "squirtle", "level": 5}
+    ]
+  },
+  "rival_lab_3": {
+    "class": "rival",
+    "name": "{rival}",
+    "intro_text": "",
+    "lose_text": "¿¡Qué!? ¡Pero si he elegido el que tenía ventaja!",
+    "win_text": "¡Ja! Te dije que el mío era mejor.",
+    "after_text": "",
+    "items": [],
+    "party": [
+      {"species": "bulbasaur", "level": 5}
+    ]
+  }
+}
