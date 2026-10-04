@@ -552,7 +552,7 @@ dex.is_seen(id) / is_caught(id) / is_shiny_seen(id) / forms_seen(id) -> Array[St
 dex.seen_count(regional_only := false) / caught_count(regional_only := false)
 ```
 
-### 8.5 Combate (`src/battle/engine/`) (previsto)
+### 8.5 Combate (`src/battle/engine/`, `src/battle/ai/`)
 
 El motor es **lógica pura** (`RefCounted`, sin nodos ni `await`). La BattleScene le manda decisiones y reproduce los eventos que devuelve. Toda la aleatoriedad sale del RNG del combate (`setup.seed`): misma semilla + mismas decisiones = mismo combate.
 
@@ -581,7 +581,10 @@ return result.outcome                                 # = SceneManager.OUTCOME_*
 ```gdscript
 BattleSetup.wild(pokemon_or_species: Variant, level := 5, options := {}) -> BattleSetup
 BattleSetup.trainer(trainer_id: StringName, options := {}) -> BattleSetup
-# options: can_lose, can_run, exp_enabled, background, bgm, weather, environment, seed, ai_level
+# options: can_lose, can_run, allow_items, exp_enabled, exp_share, background, bgm, weather,
+#          environment, time_period, seed, ai_level
+BattleSetup.trainer_info(trainer_id, player_name := "") -> Dictionary   # entrenador + clase (lo de setup.trainers[i])
+setup.fill_from_game_state() / setup.apply_options(options) / setup.is_wild()
 ```
 
 | Campo | Tipo | Notas |
@@ -611,16 +614,16 @@ BattleSetup.trainer(trainer_id: StringName, options := {}) -> BattleSetup
 ```gdscript
 BattleAction.fight(move_index: int, target_slot := 0)   # move_index -1 = Forcejeo
 BattleAction.switch_to(party_index: int)
-BattleAction.use_item(item_id: StringName, party_index := -1)   # -1 = sin objetivo (Balls)
+BattleAction.use_item(item_id: StringName, party_index := -1, move_index := -1)   # -1 = sin objetivo (Balls); move_index = Éter
 BattleAction.run()
 BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 ```
 
-**`BattleEvent`**: `type: StringName`, `side: int` (0 = jugador, 1 = rival; −1 = ninguno), `slot: int` (posición en el campo; 0 en individuales) y `data: Dictionary`. Se reproducen en orden. Los textos vienen ya en español en eventos `message`.
+**`BattleEvent`**: `type: StringName`, `side: int` (0 = jugador, 1 = rival; −1 = ninguno), `slot: int` (posición en el campo; 0 en individuales) y `data: Dictionary`. Se reproducen en orden. Los textos vienen ya en español en eventos `message`. Constantes: `BattleEvent.MESSAGE`, `SWITCH_IN`... Atajos: `e.value(key, default)` y `e.text()`.
 
 | `type` | `side`/`slot` | `data` | Qué hace la escena |
 |--------|---------------|--------|--------------------|
-| `message` | — | `text` | Muestra el texto |
+| `message` | — | `text`, `tag` (solo en los de presentación: `wild_appear`, `challenge`, `send_out`, `recall`, `defeat`) | Muestra el texto. Los que llevan `tag` la escena los puede sustituir por los suyos |
 | `switch_in` | quien entra | `party_index, species, form_name, name, level, gender, shiny, hp, max_hp, status, wild` + en el jugador `exp, exp_level_start, exp_next_level` | Lanzar la Ball / aparecer y caja de datos |
 | `switch_out` | quien sale | `party_index` | Retirar al Pokémon |
 | `move` | usuario | `move, move_name, type, category, target_side, target_slot` | Animación del movimiento |
@@ -635,18 +638,31 @@ BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 | `exp` | 0 / slot o −1 | `party_index, amount, exp, level, exp_level_start, exp_next_level` | Barra de experiencia |
 | `level_up` | 0 / slot o −1 | `party_index, level, old_stats, new_stats, hp, max_hp` | Jingle y tabla de estadísticas |
 | `move_learned` | 0 | `party_index, move, move_name, forgot` | — |
-| `catch` | 1 / slot | `ball, shakes (0–3), caught, critical` | Lanzar la Ball y sacudidas |
+| `catch` | 1 / slot | `ball, shakes (0–3), caught, critical` (+ `blocked` contra entrenadores) | Lanzar la Ball y sacudidas |
 | `item_used` | quien lo usa | `item, item_name, party_index` | — |
 | `flee` | 0 | `success` | — |
 | `trainer_speech` | 1 | `trainer_index, text` | Entra el entrenador y dice `lose_text` / `win_text` |
 | `money` | — | `amount` | — |
+| `turn` | — | `turn` | Empieza un turno (opcional) |
 | `end` | — | `outcome` | Último evento |
 
-- `source` de `damage`/`heal`: `move`, `recoil`, `drain`, `confusion`, `brn`, `psn`, `tox`, `struggle`, `item`.
+- `source` de `damage`/`heal`: `move`, `recoil`, `drain`, `confusion`, `brn`, `psn`, `tox`, `struggle`, `selfdestruct`, `item`.
 - `stat` de `boost`: `atk`, `def`, `spa`, `spd`, `spe`, `accuracy`, `evasion`.
 - Se pueden añadir tipos nuevos (clima, Mega...) en la Fase 9: la escena debe **ignorar los que no conozca**.
 
-**`BattleResult`** (`engine.result`): `outcome` (`&"win"`, `&"lose"`, `&"run"`, `&"caught"`), `turns`, `seed`, `money_won`, `caught_pokemon: Pokemon` (o `null`), `seen_species: Array[StringName]`, `items_used: Array[StringName]`, `pending_evolutions: Array[Dictionary]` (`{party_index, uid, to}`). `apply_to_game_state()` suma el dinero, apunta la Pokédex, rellena los datos de captura (`original_trainer`, `trainer_id`, `met_*`) y mete el capturado en el equipo o, si está lleno, en el PC; devuelve `{caught_to: "party" | "pc" | "", box, slot}`.
+**`BattleResult`** (`engine.result`): `outcome` (`&"win"`, `&"lose"`, `&"run"`, `&"caught"`; constantes `BattleResult.WIN`...), `turns`, `seed`, `money_won`, `caught_pokemon: Pokemon` (o `null`), `seen_species: Array[StringName]`, `items_used: Array[StringName]`, `pending_evolutions: Array[Dictionary]` (`{party_index, uid, to, evolution}`; `EvolutionRules.evolve(p, evolution)` la aplica y gasta el objeto si hace falta). `apply_to_game_state(location := &"")` suma el dinero, apunta la Pokédex, rellena los datos de captura (`original_trainer`, `trainer_id`, `met_*`) y mete el capturado en el equipo o, si está lleno, en el PC; devuelve `{caught_to: "party" | "pc" | "", box, slot}`. La pérdida de dinero al perder y la vuelta al Centro Pokémon son de SceneManager.
+
+**Qué hace el motor (v0.1)** — mecánicas de la 7.ª generación en adelante, con el redondeo de Showdown:
+- Daño exacto (los tests comparan las 16 tiradas con el simulador de Showdown 0.11.11), STAB, tabla de tipos, críticos (1/24, 1/8, 1/2, siempre), quemadura y niveles de característica.
+- Precisión y evasión; sueño (1–3 turnos), congelación (20 %), parálisis (25 % y mitad de Velocidad), confusión (33 %), retroceso, veneno (1/8), Tóxico (n/16) y quemadura (1/16).
+- Efectos "por datos" de la Fase 7.6. Los movimientos con `needs_script` hacen solo su parte de datos (daño, cambios de características, estado o curación) hasta la Fase 9; si no tienen ninguna, fallan ("¡Pero falló!"). El validador los lista.
+- Captura (Balls de los datos, captura crítica según `setup.dex_caught_count`), huida, objetos de curación, Balls, Ataque X, Directo y Muñeca Poké, experiencia (también al capturar), EVs, dinero y evoluciones pendientes.
+- IA (`BattleAI`): nivel 0 = movimiento al azar; nivel 1 = el que más daño hace (`engine.estimate_damage()`). Reemplazo: el siguiente del equipo.
+- Más API: `engine.rng`, `engine.turn`, `engine.side(i)`, `engine.estimate_damage(user, target, move)`. Textos en `BattleText` (moneda: `BattleText.CURRENCY`).
+
+**Validador** (Fase 4.6): `godot --headless --path . -s res://tools/validate/validate.gd` (o el test `tests/datos/test_validador.gd`). Errores = especies, movimientos, objetos o clases que no existen, evoluciones por intercambio, niveles o pesos no válidos; avisos = sprites e iconos que faltan y movimientos en uso que necesitan script.
+
+**Debug** (Agente 2): `givepkmn <especie> [nivel]`, `heal`, `party`, `setlevel <posición> <nivel>`, `wildbattle <especie> [nivel]`, `trainerbattle <id>` y `dex [all]`.
 
 ---
 
