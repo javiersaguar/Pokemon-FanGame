@@ -396,7 +396,7 @@ Dialogue.format_text(text: String, vars: Dictionary = {}) -> String
 ```
 
 - `speaker`: nombre (`String`) o un objeto con `display_name`. `null` = sin nombre.
-- **Variables**: `{player}` y `{rival}` (de `GameState`), `{pokemon}` (por defecto, el primero del equipo) y las que se pasen en `vars` (`{"item": "Poción"}` → `{item}`).
+- **Variables**: `{player}` y `{rival}` (de `GameState`) y las que se pasen en `vars` (`{"pokemon": "Pikachu"}` → `{pokemon}`, `{"item": "Poción"}` → `{item}`). El texto pasa antes por `tr()`.
 - **Colores**: BBCode de `RichTextLabel` (`[color=#e05050]texto[/color]`).
 - **Páginas**: el texto se divide solo en páginas de 2 líneas. Una línea en blanco (`\n\n`) fuerza página nueva.
 - `ask()`: devuelve el índice elegido. `cancel` devuelve `cancel_choice` (−1 = la última opción, normalmente "No"; `Dialogue.NO_CANCEL` = no se puede cancelar).
@@ -441,7 +441,9 @@ Se aceptan las rutas de la sección 4:
 ### 9.4 Interfaz común
 
 - **Theme global**: `res://src/ui/theme/main_theme.tres` (fuente, colores y marcos). Se pide al Agente 1 en `project.godot` → `gui/theme/custom`.
-- **Fuentes**: Pixel Operator (CC0) en `assets/fonts/`: tamaño **16** para el texto normal y la variante "8" a tamaño **8** para textos pequeños.
+- **Fuentes**: Pixel Operator (CC0) en `assets/fonts/`, sin antialiasing: tamaño **16** para el texto normal (es el del Theme) y `PixelOperator8.ttf` a tamaño **8** para textos pequeños. Tiene ñ, tildes, ü, ¿, ¡, «», € y …; **no** tiene º, ª, ♂ ni ♀ (se dibujan como iconos).
+- **Variaciones del Theme**: `SmallLabel` (8 px), `LightLabel` y `SmallLightLabel` (texto claro sobre fondo oscuro), `SmallFrame` (marco con menos margen). `Panel` y `PanelContainer` usan el marco estándar.
+- **Widgets**: `CursorArrow` (`src/ui/widgets/cursor_arrow.gd`, flecha de menú o de "continuar"), `DialogueBox` (`src/ui/dialogue/dialogue_box.tscn`, cuadro de texto reutilizable: `await play(text, speaker_name, wait_last)`) y `ChoiceBox` (`src/ui/dialogue/choice_box.tscn`, lista de opciones: `await choose(options, cancel_choice) -> int`).
 - Pantallas de uso común **(previsto)**:
 
 ```gdscript

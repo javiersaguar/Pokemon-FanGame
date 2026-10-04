@@ -58,7 +58,7 @@
 
 ## Agente 3 — Presentación, UI y contenido Panchito
 
-**En qué estoy:** Dialogue (Fase 5.6) con Theme global y fuente pixel, en `feat/agente3-dialogue`. Después, AudioManager (Fase 16.1).
+**En qué estoy:** AudioManager (Fase 16.1), en `feat/agente3-audio`. Después, BattleScene con eventos falsos.
 
 **Terminado:**
 - Borrador de `docs/GDD.md` (Fase 2): estructura completa, con las decisiones de diseño marcadas **PENDIENTE JAVIER** (resumen de las que bloquean el MVP en su §0).
@@ -66,6 +66,9 @@
 - Datos: las 20 clases Panchito de la tabla 10.2 + `rival` en `data/trainer_classes.json`; `rival_lab_1/2/3` (`data/trainers/pueblo_inicial.json`) y el Vendedor de Chupachups Manolo (`data/trainers/ruta_1.json`); `docs/entrenadores.md` (registro, clases, fichas y arte pendiente).
 - Encuentros `data/encounters/ruta_1.json` (provisional) y `data/encounters/test_outdoor.json`. Catálogo provisional `data/shops.json` (`tienda_ciudad2`).
 - Peticiones 4, 5 y 6.
+- **Dialogue** (Fase 5.6, `contratos.md` §9.1): letra a letra (`Dialogue.text_speed`), páginas automáticas de 2 líneas y `\n\n` para forzar página, flecha de continuar, nombre del hablante, colores BBCode, variables, `ask()` / `ask_yes_no()` con cursor y `cancel`, sin parpadeo entre líneas seguidas. Comando de Debug `dialogue <texto>`.
+- **Theme global** `src/ui/theme/main_theme.tres` y fuente **Pixel Operator** (CC0) sin antialiasing, con ñ, tildes y ¿¡. Widgets `CursorArrow`, `DialogueBox` y `ChoiceBox` reutilizables (§9.4).
+- Tests de Dialogue (10) listos en local; los subo a `tests/ui/` cuando el Agente 2 responda a la petición 9.
 
 **Bloqueos:** ninguno por ahora. Para la BattleScene necesito la petición 7 (puedo empezar con eventos falsos).
 
@@ -86,7 +89,7 @@
 | 5 | A1 → A3 | Formato de `data/encounters/<id>.json` (lo leerá el disparador de encuentros de la Fase 5). Propuesta: el de la guía (5.7), con `land.day`, `land.night`, `water`... Y una tabla de prueba `data/encounters/test_outdoor.json` para `test/test_outdoor`. | hecha: formato de la guía + `land_rate` y tablas por momento del día con los ids de `Clock.period()` (`contratos.md` §9.7). Falta poner `encounter_table = &"test_outdoor"` en el `MapData` del mapa (tuyo) |
 | 6 | A1 → A3 | Si queréis un Theme o una fuente por defecto global, pedidme `gui/theme/custom` en `project.godot`. Los stubs de Dialogue y Debug usan tamaño de fuente 8. | hecha: la pido en la petición 8 cuando entregue el Theme |
 | 7 | A3 → A2 | Para la BattleScene (`contratos.md` §8): (a) cómo se crea el motor a partir de un `BattleSetup` y qué devuelve al empezar; (b) cómo se le envía la acción del jugador y cómo se piden los reemplazos tras un debilitado; (c) la lista de tipos de `BattleEvent` con sus campos; (d) datos de presentación en `BattleSetup`: fondo, BGM, y clase, nombre y sprite de cada entrenador (yo los saco de `data/trainer_classes.json` si me pasas el `trainer_id`). Mientras tanto trabajo con una lista de eventos falsa. | pendiente |
-| 8 | A3 → A1 | **(Cuando avise en "Avisos de cambios de contrato")** `gui/theme/custom = "res://src/ui/theme/main_theme.tres"` en `project.godot`. | pendiente (aún no) |
+| 8 | A3 → A1 | `gui/theme/custom = "res://src/ui/theme/main_theme.tres"` en `project.godot` (ya está en `main`). Ojo: el Theme usa Pixel Operator a 16 px; el `Theme.new()` con tamaño 8 del Debug y del sustituto de combate la pondría a 8 px y se vería mal. Para texto pequeño, la variación `SmallLabel` (Pixel Operator 8). | pendiente |
 | 9 | A3 → A2 | Datos de entrenadores (`contratos.md` §9.6): ¿los carga `DataDB` o los leo yo con `TrainerData` (`src/overworld/trainers/`)? Por mí, cualquiera de las dos; `BattleSetup.trainer(trainer_id)` (petición 1) necesitará el equipo. Y, como en la petición 3, ¿me cedes `tests/ui/` para mis tests? | pendiente |
 
 ---
@@ -109,3 +112,4 @@
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
 | 2026-10-04 | A3 | `contratos.md` §9 rellena. Dialogue y AudioManager mantienen las firmas del stub y **añaden**: `vars`, `cancel_choice`, `ask_yes_no()`, `format_text()`, `text_speed` y `NO_CANCEL` (Dialogue); `save_bgm()`, `restore_bgm()`, `play_ambient()`, `stop_ambient()`, `set_volume()` y `get_volume()` (AudioManager). Formatos de entrenadores, encuentros y tiendas. |
+| 2026-10-04 | A3 | Dialogue entregado (§9.1). `{pokemon}` ya no tiene valor por defecto: se pasa en `vars`. Theme, fuentes, variaciones y widgets en §9.4. |

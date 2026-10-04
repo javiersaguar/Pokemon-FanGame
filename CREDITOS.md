@@ -31,4 +31,6 @@ Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus person
 
 ## Fuentes
 
-*(Sección del Agente 3.)*
+| Recurso | Autor | Licencia | Enlace | En el repo |
+|---------|-------|----------|--------|------------|
+| Pixel Operator (versión 2018.10.04-1) | Jayvee Enaguas (HarvettFox96) | CC0 1.0 | https://www.dafont.com/pixel-operator.font | `assets/fonts/` (licencia en `PixelOperator-LICENSE.txt`) |
