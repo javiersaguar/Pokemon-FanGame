@@ -1,0 +1,20 @@
+{
+  "new_game": {
+    "map": "test/test_room",
+    "spawn": "default",
+    "facing": "down",
+    "money": 3000,
+    "healing_map": "test/test_room",
+    "healing_spawn": "default"
+  },
+  "max_money": 999999,
+  "clock": {
+    "mode": "real",
+    "periods": [
+      {"id": "morning", "from_hour": 4},
+      {"id": "day", "from_hour": 10},
+      {"id": "evening", "from_hour": 17},
+      {"id": "night", "from_hour": 20}
+    ]
+  }
+}
