@@ -5,11 +5,14 @@
 
 Esta guía va **en orden**. Cada fase se apoya en las anteriores. No pases a la siguiente sin cumplir su **criterio de "hecho"**. Las tareas se marcan con `- [ ]` y se tachan con `- [x]` (GitHub las muestra como checkboxes).
 
+Hay dos fases con letra en vez de número: **Fase A (dirección de arte)**, que es transversal y se aplica a todo el proyecto, y **Fase R (modo RandomLocke)**, que se construye en paralelo a partir del hito `v0.2`. Las decisiones de Javier que mandan sobre esta guía están en [`docs/DIRECTRICES.md`](docs/DIRECTRICES.md).
+
 ---
 
 ## Índice
 
 - [0. Cómo usar esta guía](#0-cómo-usar-esta-guía)
+- [Fase A — Dirección de arte (calidad profesional, transversal)](#fase-a--dirección-de-arte-calidad-profesional-transversal)
 - [Fase 1 — Entorno y repositorio](#fase-1--entorno-y-repositorio)
 - [Fase 2 — Preproducción (documento de diseño)](#fase-2--preproducción-documento-de-diseño)
 - [Fase 3 — Arquitectura base del proyecto](#fase-3--arquitectura-base-del-proyecto)
@@ -21,6 +24,7 @@ Esta guía va **en orden**. Cada fase se apoya en las anteriores. No pases a la 
 - [Fase 9 — Combate avanzado (mecánicas modernas)](#fase-9--combate-avanzado-mecánicas-modernas)
 - [Fase 10 — Entrenadores Panchito (clases humorísticas)](#fase-10--entrenadores-panchito-clases-humorísticas)
 - [Fase 11 — Objetos e inventario (+ objetos especiales Panchito)](#fase-11--objetos-e-inventario--objetos-especiales-panchito)
+- [Fase R — Modo RandomLocke (motor de aleatorización)](#fase-r--modo-randomlocke-motor-de-aleatorización)
 - [Fase 12 — Mundo: región, mapas y navegación](#fase-12--mundo-región-mapas-y-navegación)
 - [Fase 13 — Historia, eventos y cinemáticas](#fase-13--historia-eventos-y-cinemáticas)
 - [Fase 14 — Sistemas de mundo vivo](#fase-14--sistemas-de-mundo-vivo)
@@ -58,9 +62,9 @@ Dónde se va el tiempo, aproximadamente:
 | Hito | Versión | Contenido | Fases |
 |------|---------|-----------|-------|
 | H0 | `v0.0` | Proyecto Godot arrancando con la arquitectura base y los datos importados | 1–4 |
-| H1 | `v0.1` | **MVP**: moverse, pueblo inicial, elegir inicial, Ruta 1, combate salvaje, captura, rival y 1 entrenador Panchito, guardado | 5–8 |
-| H2 | `v0.2` | Combate moderno completo, entrenadores, objetos | 9–11 |
-| H3 | `v0.3` | **Demo pública**: hasta el 1.er gimnasio, con historia, UI y audio propios | 12–16 + tramo 1 de la 17 |
+| H1 | `v0.1` | **MVP**: moverse, pueblo inicial, elegir inicial, Ruta 1, combate salvaje, captura, rival y 1 entrenador Panchito, guardado en varias ranuras | 5–8 |
+| H2 | `v0.2` | Combate moderno completo, entrenadores, objetos, **motor de aleatorización (sin UI)** y biblia de arte | 9–11, R.1–R.6, A.1–A.3 |
+| H3 | `v0.3` | **Demo pública**: hasta el 1.er gimnasio, con historia, UI y audio propios, **menú inicial profesional** y **RandomLocke jugable** | 12–16 + tramo 1 de la 17, R completa |
 | H4 | `v0.5` | Hasta el 4.º gimnasio | 17 (tramos 2–4) |
 | H5 | `v0.8` | Hasta el 8.º gimnasio | 17 (tramos 5–8) |
 | H6 | `v1.0` | Liga, créditos, postgame básico, build pública | 18, 20, 21 |
@@ -74,6 +78,9 @@ Dónde se va el tiempo, aproximadamente:
 4. **Prueba cada sistema en la escena de pruebas** antes de usarlo en el juego.
 5. **Apunta los créditos desde el primer recurso que uses** (`CREDITOS.md`).
 6. **Es un fangame: nunca se monetiza.** Nada de ventas, donaciones a cambio de builds ni anuncios.
+7. **Calidad gráfica profesional.** Ningún asset es "final" sin pasar la checklist de la Fase A y sin la aprobación de Javier. Se hacen **uno a uno**, aunque cueste más.
+8. **Todo el contenido se referencia por ID de datos**, nunca escrito a mano en un evento. Iniciales, regalos, estáticos, entrenadores, objetos del suelo y tiendas salen de los JSON, y los textos que nombran a un Pokémon usan marcadores. Si no, el modo RandomLocke no puede aleatorizarlos (Fase R.2).
+9. **Autoría:** todos los commits los firma **Javier Saguar**, sin coautores ni trailers de atribución. Lo comprueba el hook `.githooks/commit-msg` (ver `README.md`).
 
 ### 0.4 Glosario rápido de Godot
 
@@ -87,6 +94,123 @@ Dónde se va el tiempo, aproximadamente:
 | **`await`** | Espera a que algo termine (una animación, un diálogo) sin bloquear el juego. Base de las cinemáticas |
 | **TileMapLayer** | Nodo para pintar mapas con tiles |
 | **`res://` / `user://`** | Carpeta del proyecto / carpeta de datos del usuario (partidas guardadas) |
+
+---
+
+## Fase A — Dirección de arte (calidad profesional, transversal)
+
+> 🎨 **Exigencia de Javier:** el apartado gráfico tiene que estar a **nivel profesional**, aunque lleve mucho esfuerzo y haya que hacer las cosas **una a una**. Esta fase no es un paso más: es el estándar que cumple **todo** lo que se ve en pantalla, desde el MVP hasta la `v1.0`.
+
+### A.1 Principios
+
+- [ ] **Coherencia antes que cantidad.** Un juego con 50 assets impecables y del mismo estilo se ve mejor que uno con 500 de estilos mezclados.
+- [ ] **Una pieza a la vez.** Un asset se termina, se integra y se revisa **antes** de empezar el siguiente del mismo tipo. Nada de "ya lo pulimos al final".
+- [ ] **Nada de arte provisional en una build pública.** Los placeholders se permiten durante el desarrollo, pero tienen que estar **apuntados en el seguimiento** (A.7).
+- [ ] **El juego se juzga en movimiento**, no en capturas: animaciones, transiciones y respuesta al input cuentan tanto como los sprites.
+- [ ] **Un asset solo es "final" con la aprobación de Javier** (columna en el seguimiento).
+- [ ] **Listón mínimo: Pokémon Añil.** Las capturas de `docs/arte/referencias/` (combate, pueblo con Pokémon que te sigue, pantalla de datos y ruta) son el **mínimo aceptable**. Antes de dar por buena cualquier pantalla, se hace una captura del juego a la misma escala y se compara lado a lado con su referencia. Si se ve peor, no está terminada.
+- [ ] **No se genera arte por código para el juego.** Los tilesets y sprites "dibujados" con scripts solo valen como relleno técnico temporal. El arte real sale de A.3.
+
+### A.2 Biblia de arte (`docs/arte/BIBLIA.md`): hacerla ANTES de producir
+
+- [ ] **Referencias de estilo**: 5.ª generación (Negro/Blanco) y *Pokémon Añil* como norte (capturas en `docs/arte/referencias/`). Describe por escrito qué se toma de cada referencia: densidad de detalle de los tiles, rampas de color, flores y hierba animadas, sombras, marcos y degradados de la UI, iconos, etc. **Se toma el nivel y el estilo, no se copian sus gráficos propios** (la UI de Añil es obra de su equipo).
+- [ ] **Paleta maestra** (`assets/arte/paleta.gpl` + `paleta.png`): 48–64 colores organizados en **rampas por material** (hierba, agua, piedra, madera, tejado, piel, metal, UI...). Sombras desplazadas hacia tonos fríos y luces hacia cálidos (*hue shifting*). Las clases Panchito, los objetos Panchito, la UI y los tiles salen de esta paleta. Los sets de terceros se respetan, pero se comprueba que encajen.
+- [ ] **Luz**: siempre desde arriba a la izquierda, en todo el juego.
+- [ ] **Contornos**: en personajes, objetos y Pokémon propios, un contorno oscuro **del color del objeto** (*sel-out*), nunca negro puro. En los tiles de suelo no hay contorno.
+- [ ] **Reglas de píxel**: el mundo, los personajes y los Pokémon se ven siempre a **×2 exacto** (Fase 3.2), y la UI a ×2 con detalle a ×1 solo donde lo diga la biblia. Sin escalados no enteros, sin rotar pixel art, sin antialiasing automático y sin desenfoques. Dentro de una misma capa no se mezclan escalas.
+- [ ] **Tamaños canónicos** (cada tipo de asset tiene un único lienzo):
+
+| Asset | Lienzo | Notas |
+|-------|--------|-------|
+| Tile | 16×16 | Autotiles con todas las variantes del terrain set |
+| Personaje en el mapa | 32×32 por frame | 4 direcciones × 4 frames; variantes de correr, bici, surf y pesca |
+| Pokémon en combate | 96×96 (se ve a 192×192) | Frente y espalda, **normal y shiny con los colores shiny oficiales**. Animados si el set lo permite. **Un mismo set para todas las especies** |
+| Icono de Pokémon | 32×32 | 2 frames (animación del menú), también en versión shiny |
+| Pokémon que te sigue | 32×32 o 64×64 | Según el tamaño de la especie, **también en versión shiny** |
+| Entrenador en combate | Un lienzo fijo para todos (defínelo en la biblia) | Clases Panchito incluidas |
+| Objeto | 24×24 | |
+| Iconos de tipo, estado y categoría | Definir en la biblia | Mismo grosor de borde y tipografía |
+| Fondo de combate | 256×192 (se ve a 512×384) + bases | Versiones de día y de noche si el lugar es exterior |
+| Retrato de diálogo | Definir (por ejemplo, 64×64) | Solo personajes importantes |
+
+- [ ] **Tipografía**: 1–2 fuentes pixel como mucho, con tamaños fijos, y que tengan ñ, tildes y ¿¡.
+- [ ] **Tokens de UI** (en el `Theme` de la Fase 15.1): colores con nombre, márgenes en múltiplos de 2 px, sombra de 1 px y estilos de panel (9-slice).
+- [ ] **Tiempos y curvas de animación**: rápido 0,08 s, normal 0,15 s, lento 0,3 s. Entradas con *ease-out*, salidas con *ease-in* y un rebote leve solo en elementos de recompensa (medallas, objetos).
+
+### A.3 De dónde sale el arte (por orden de preferencia)
+
+1. **Sets completos y coherentes de la comunidad con permiso de uso.** Verifica la licencia y acredita.
+   - **Pokémon en combate**: set estilo 5.ª generación que cubra **todas** las especies, normal y shiny. Las carpetas de sprites de Pokémon Showdown (`gen5`, `gen5-shiny`, `gen5-back`, `gen5-back-shiny` y las animadas `gen5ani*` donde existan) incluyen los del proyecto de sprites de Smogon para las generaciones posteriores, con el mismo estilo. El repo `PokeAPI/sprites` es una alternativa.
+   - **Tilesets, personajes del mapa, Pokémon que te siguen y fondos de combate**: packs estilo 4.ª/5.ª generación de la comunidad (Eevee Expo, Relic Castle, DeviantArt...). Los **créditos de Pokémon Añil** listan los recursos que usa: sirven como pista para encontrar los mismos packs, pero el permiso se pide a sus **autores originales**. Muchos de estos packs requieren registrarse o descargarse a mano: los agentes preparan la lista (nombre, enlace, licencia) y **Javier los descarga** en `assets/_terceros/`.
+   - **Fuente pixel** con ñ, tildes y ¿¡ y licencia libre.
+2. **Arte propio hecho a mano siguiendo la biblia** para todo lo que no existe en ningún sitio: protagonistas, **clases Panchito**, logo, UI, medallas, **objetos Panchito** y lugares únicos.
+3. **Nunca**: mezclar sets de estilos distintos, reescalar sprites de otros juegos con otra resolución, ni usar imágenes generadas automáticamente que no encajen con la biblia.
+
+- [ ] Cada asset de terceros se apunta en `CREDITOS.md` y su licencia en `docs/arte/licencias.md`.
+
+### A.4 Proceso pieza a pieza
+
+1. **Encargo**: fila en el seguimiento con qué es, dónde se ve, tamaño, referencias y rampas de la paleta.
+2. **Silueta**: se prueba en negro a 1x. Si no se reconoce, no se sigue.
+3. **Color** con la paleta maestra.
+4. **Animación**: frames y timing según la biblia.
+5. **Integración en el juego real**, no en un visor aislado.
+6. **Revisión** con la checklist A.6 a 1x y a la escala de juego, de día y de noche, sobre todos los fondos donde aparece, y al lado de los assets ya aprobados.
+7. **Aprobación de Javier** → estado "✅ final".
+
+- [ ] Los archivos fuente (`.aseprite`, `.psd`) van en `assets/_fuentes/` (Git LFS), con una exportación reproducible (script o línea de comandos de Aseprite).
+
+### A.5 Pulido de movimiento ("juice")
+
+**Mundo**
+- [ ] Sombra bajo personajes y Pokémon que te siguen.
+- [ ] Hierba alta que se mueve al pisarla, polvo al correr, salpicaduras en el agua y huellas en arena o nieve.
+- [ ] Puertas animadas, tejados que se ocultan al entrar (si aplica) e iluminación nocturna (ventanas y farolas).
+- [ ] Agua y flores animadas en los tiles.
+
+**Combate**
+- [ ] Animación de reposo de los Pokémon (respiración o vaivén de 1 px, si el set no está animado).
+- [ ] Barra de PS con *easing* y una "barra fantasma" que muestra el daño recibido antes de vaciarse.
+- [ ] Destello blanco al recibir un golpe, sacudida en críticos y supereficaces, y partículas por tipo de movimiento.
+- [ ] Ligero zoom o desplazamiento de cámara en los ataques fuertes.
+- [ ] Transiciones de entrada **únicas** para líderes, rival, legendarios y Alto Mando.
+
+**UI**
+- [ ] Cursor animado, paneles que entran deslizándose con un rebote mínimo y estados visuales de botón (normal, foco, pulsado, deshabilitado).
+- [ ] Cifras que cuentan hacia arriba o abajo (dinero, experiencia) e iconos del equipo animados.
+- [ ] Sonido coherente en cada interacción.
+
+**Reglas**
+- [ ] Ninguna animación bloquea al jugador más de 0,3 s salvo las cinemáticas.
+- [ ] Opción para reducir animaciones.
+- [ ] 60 fps estables.
+
+### A.6 Checklist de calidad de cada asset (criterio de "hecho")
+
+- [ ] Usa solo colores de la paleta (o de su set de terceros aprobado). Lo comprueba el validador A.8.
+- [ ] Tamaño canónico, píxel 1:1 y sin semitransparencias no intencionadas.
+- [ ] Luz y contorno según la biblia.
+- [ ] Legible a 1x, con silueta reconocible.
+- [ ] Coherente al lado de 3 assets finales vecinos (comparación lado a lado).
+- [ ] Animación sin temblores de píxel, con el timing de la biblia.
+- [ ] Probado en el juego en todos sus contextos (día y noche, fondos, menús).
+- [ ] Créditos y licencia apuntados (si es de terceros).
+- [ ] **Aprobado por Javier.**
+
+### A.7 Seguimiento (`docs/arte/seguimiento.md`)
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|-------|------|-------|--------|-------------------|---------------------|-------|
+
+Estados: `placeholder → encargo → silueta → color → animado → integrado → revisado → ✅ final`.
+
+### A.8 Herramientas de apoyo
+
+- [ ] **Validador de arte** (`tools/arte/`): falla si un PNG usa colores fuera de la paleta o tiene un tamaño no canónico. Se pasa antes de cada merge.
+- [ ] **Galería** (`maps/test/galeria_arte.tscn` o una escena de UI): muestra los assets juntos a escala real para compararlos.
+- [ ] **Capturas antes y después** en cada pull request de arte.
+
+✅ **Criterio de "hecho" (para cada hito):** todo lo visible en la build del hito está en estado "✅ final" o es un placeholder apuntado y aceptado por Javier para ese hito. **Desde `v0.3` (demo pública) no puede quedar ningún placeholder.**
 
 ---
 
@@ -338,13 +462,15 @@ Como lo programas tú, **decide y documenta** qué entra en cada versión:
 
 ### 3.2 Resolución y pixel art
 
-- [ ] **Tiles de 16×16 px** (estándar de Pokémon 2D).
-- [ ] **Resolución base**: dos opciones razonables:
-  - **320×180** (16:9). Escala entera ×4 = 1280×720, ×6 = 1920×1080. **Recomendado.**
-  - **256×192** (4:3, la de DS, la de Añil). Bandas negras en pantallas panorámicas.
+> ⚠️ **Cambio de Javier (2026-10-04): se abandona 320×180.** El objetivo es el nivel gráfico de *Pokémon Añil* (ver `docs/arte/referencias/`), así que se usa su misma resolución.
+
+- [ ] **Resolución base: 512×384** (4:3, la de Añil). Escala entera ×2 = 1024×768 (cabe en pantallas 1080p) y ×3 = 1536×1152 (pantallas 1440p).
+- [ ] **Dos escalas de dibujo**, como en Añil:
+  - **Mundo y sprites a ×2**: el arte se dibuja con **tiles de 16×16** y se muestra a 32×32 (la `Camera2D` del mundo con `zoom = 2`). Lo mismo para los personajes y para los Pokémon en combate (un sprite de 96×96 se ve a 192×192, como en la captura de combate de Añil). Las posiciones del mundo se redondean a píxeles **del arte** (múltiplos de 2 en pantalla).
+  - **Interfaz a 512×384 nativo**: las `CanvasLayer` de la UI no tienen zoom. La UI se diseña con píxeles de 2×2 por defecto (para que case con el mundo) y **se permite detalle a 1×** (degradados, bordes finos, texto pequeño) cuando la biblia de arte lo define. Así se consigue el acabado de la pantalla de datos de Añil.
 - [ ] *Project Settings*:
-  - `display/window/size/viewport_width/height` = resolución base
-  - `display/window/size/window_width/height_override` = ×4 (ventana inicial)
+  - `display/window/size/viewport_width/height` = 512 × 384
+  - `display/window/size/window_width/height_override` = 1024 × 768 (ventana inicial)
   - `display/window/stretch/mode` = `viewport`
   - `display/window/stretch/aspect` = `keep`
   - `display/window/stretch/scale_mode` = `integer`
@@ -415,7 +541,11 @@ Main (Node)
 |--------|------------|-------|
 | **Pokémon Showdown** (repo `smogon/pokemon-showdown`, carpeta `data/`) | Especies, movimientos (con efectos secundarios, prioridad y flags), habilidades, objetos, tabla de tipos, learnsets y formas | Código con licencia MIT. Es la referencia de mecánicas más fiable que existe |
 | **PokeAPI** (repo `PokeAPI/pokeapi`, carpeta `data/v2/csv/`) | **Nombres y descripciones en español**, entradas de la Pokédex, grupos de experiencia, ratio de género, ratio de captura, grupos huevo y pasos de eclosión | En los CSV, el idioma español tiene `local_language_id = 7` (compruébalo en `languages.csv`) |
-| **Sprites** | Front, back, shiny, iconos | El repo de sprites de PokeAPI o los packs de la comunidad. Elige **un estilo** (por ejemplo, los de 5.ª generación, como Añil) |
+| **WikiDex** (wikidex.net) | **Referencia de verificación de estadísticas**, tipos, habilidades, movimientos por nivel y nombres oficiales en español (sobre todo de las generaciones recientes, donde PokeAPI tiene huecos en español) | Las estadísticas base oficiales son las mismas que en Showdown: WikiDex sirve para **comprobarlas** y para completar nombres. No hagas scraping masivo: usa la API de MediaWiki con pausas y caché local, o consulta a mano |
+| **Pokémon Añil** | **Cambios propios de Añil** sobre los oficiales: estadísticas retocadas, tipos, habilidades, métodos de evolución que sustituyen al intercambio, etc. | Lo que Añil cambie y queramos copiar va a `data/species_overrides.json`, con `"fuente": "Añil"` en cada entrada. Fuente: su wiki o los datos del juego que aporte Javier. **Se acredita en `CREDITOS.md`** |
+| **Sprites** | Front, back, shiny, iconos | Un único set coherente para todas las especies (ver Fase A.3) |
+
+> **Decisión de Javier sobre las estadísticas:** se pueden tomar de **WikiDex** y copiar las de **Pokémon Añil**. En la práctica: los datos importados (Showdown + PokeAPI) son la base. El validador compara las estadísticas base con WikiDex (al menos en una muestra amplia y en toda la Pokédex regional) y cualquier diferencia se revisa. Los retoques de Añil se aplican como overrides con su fuente indicada.
 
 > Los Pokémon, sus nombres y sus sprites son propiedad de Nintendo, Game Freak y The Pokémon Company. Acredita las fuentes en `CREDITOS.md`.
 
@@ -717,7 +847,7 @@ extends Resource
 | `nature` | 25 naturalezas: +10 % / −10 % |
 | `ability_slot` | `"0"`, `"1"` o `"H"` (oculta) |
 | `gender` | Según el ratio de la especie |
-| `shiny` | 1/4096 por defecto (configurable) |
+| `shiny` | Probabilidad y diseño en la **Fase 6.7** |
 | `moves` (máx. 4) | Cada uno con `id`, `pp` y `pp_ups` |
 | `current_hp`, `status` | `par`, `brn`, `psn`, `tox`, `slp` (+ turnos), `frz` |
 | `held_item` | |
@@ -767,7 +897,33 @@ extends Resource
 - [ ] Tests de experiencia y nivel.
 - [ ] Test de guardar → cargar un Pokémon idéntico.
 
-✅ **Criterio de "hecho":** desde el Debug puedes crear un Pokémon de cualquier especie y nivel con estadísticas correctas, meterlo al equipo o al PC, y guardarlo y cargarlo.
+### 6.7 Shiny: probabilidad y diseño (decisión de Javier)
+
+**Probabilidad** (configurable en `data/world.json` → `shiny`, nunca escrita en el código):
+
+| Situación | Tiradas | Probabilidad | Porcentaje |
+|-----------|---------|--------------|------------|
+| **Base** (salvajes, huevos, regalos) | 1 | **1/4096** | **≈ 0,024 %** |
+| Con **Amuleto Iris** (postgame) | 3 | 3/4096 ≈ 1/1365 | ≈ 0,073 % |
+| **Método Masuda** (huevo de padres de distinto origen) | 6 | 6/4096 ≈ 1/683 | ≈ 0,146 % |
+| Masuda + Amuleto Iris | 8 | 8/4096 = 1/512 | ≈ 0,195 % |
+| *(Opcional)* Cadenas de captura o Poké Radar | Según la cadena | Hasta ≈ 1/1024 | ≈ 0,1 % |
+
+- [ ] Cada "tirada" es una comprobación independiente de 1/4096: `p = 1 − (1 − 1/4096)^tiradas`. Implementado y testeado con semilla.
+- [ ] En **RandomLocke** se puede elegir la probabilidad en los ajustes (1/4096 oficial, 1/1024, 1/512 o 1/100 "modo Panchito").
+- [ ] Opción de Debug para forzar shinies (y probar los sprites).
+- [ ] Los entrenadores pueden llevar un shiny fijado en su JSON (`"shiny": true`). Los Pokémon de entrenadores no tiran probabilidad salvo que se decida.
+
+**Diseño fiel a los colores oficiales**
+- [ ] **Cada especie tiene su sprite shiny de verdad**, con los **colores shiny oficiales**: frente, espalda, icono y Pokémon que te sigue, del **mismo set** que el normal (Fase A.3). **Prohibido generarlos cambiando el tono por código**: un shiny con colores inventados es un error.
+- [ ] El validador (Fase 4.6) comprueba que toda especie obtenible tiene sus 4 versiones shiny.
+- [ ] **Presentación** (nivel Añil o superior):
+  - [ ] Destellos de estrellas animados + sonido característico al entrar en combate (y al salir de la Poké Ball).
+  - [ ] Estrella ★ junto al nombre en las cajas de combate, el equipo, la pantalla de datos y el PC.
+  - [ ] El Pokémon que te sigue también brilla al aparecer.
+  - [ ] La Pokédex registra "shiny visto" y "shiny capturado" y deja ver la versión shiny en la entrada de la especie.
+
+✅ **Criterio de "hecho":** desde el Debug puedes crear un Pokémon de cualquier especie y nivel con estadísticas correctas, meterlo al equipo o al PC, y guardarlo y cargarlo. Los shinies salen con la probabilidad configurada (test estadístico con 1.000.000 de tiradas sembradas).
 
 ---
 
@@ -953,10 +1109,16 @@ Showdown describe la mayoría de los movimientos con campos estándar. Implement
 
 - [ ] Menú: Pokédex, Pokémon, Mochila, Jugador, Guardar y Opciones (versiones básicas).
 - [ ] **Guardado** (`SaveManager`):
-  - [ ] `GameState` → `Dictionary` → JSON → `user://saves/slot_1.json`
+  - [ ] `GameState` → `Dictionary` → JSON → `user://saves/slot_<n>.json`
   - [ ] Incluye `save_version` para migrar partidas antiguas en el futuro
   - [ ] Escritura segura: escribe a `.tmp` y renombra (si se va la luz, no se corrompe la partida)
   - [ ] Cargar restaura el mapa, la posición, la dirección, el equipo, la mochila, los flags y la hora jugada
+- [ ] **Varias partidas a la vez** (decisión de Javier):
+  - [ ] **Mínimo 8 ranuras**, cada una con una partida independiente (normal o RandomLocke).
+  - [ ] Cada ranura guarda en su `summary`: **modo** (`normal` / `randomlocke`), nombre del jugador, tiempo, medallas, Pokédex (vistos y capturados), ubicación, fecha e iconos del equipo. Además, **una miniatura** (captura del viewport al guardar, en `slot_<n>.png`).
+  - [ ] En RandomLocke, además: código de semilla, muertes y estado (`en curso` / `terminada`).
+  - [ ] Nueva partida → elegir ranura (avisando si se sobrescribe). Copiar y borrar ranuras con confirmación doble.
+  - [ ] "Continuar" carga la última ranura usada.
 
 ✅ **Criterio de "hecho" (hito `v0.1`):** alguien que no conoce el juego empieza partida, elige inicial, pelea con el rival, captura un Pokémon, gana al Vendedor de Chupachups, se cura, compra, guarda, cierra, carga y sigue. **Sin el menú Debug.**
 
@@ -1268,6 +1430,166 @@ func use_on(pkmn: Pokemon) -> String:
 
 ---
 
+## Fase R — Modo RandomLocke (motor de aleatorización)
+
+> 🎲 **Decisión de Javier:** además del modo normal, hay un **modo RandomLocke**. Pokémon salvajes, iniciales, equipos de los entrenadores, movimientos aprendidos y más se aleatorizan. **Antes de empezar cada partida se genera aleatoriamente su "ROM"**, con un motor de aleatorización propio. Encima se aplican las reglas *Nuzlocke* ("Locke").
+
+**Cuándo se hace:** el motor (R.1–R.6) se construye cuando ya existen los datos y el modelo de Pokémon (Fases 4 y 6), y debe estar listo para `v0.2`. La interfaz y las reglas Locke (R.7–R.10) se cierran para la demo `v0.3`. **La regla de la Fase R.2 se aplica desde YA**, incluido el MVP.
+
+### R.1 Concepto: "ROM" = datos base + parche
+
+```
+ datos base (data/*.json)  ──┐
+                             ├──▶  Randomizer.generate(semilla, ajustes)  ──▶  RomPatch
+ semilla + ajustes  ─────────┘                                                  │
+                                                                                ▼
+                         DataDB.apply_patch(patch)  ──▶  el juego ve la "ROM" aleatorizada
+```
+
+- [ ] **`Randomizer`** (`src/randomizer/`): **lógica pura y determinista** (como el `BattleEngine`): sin nodos, con su propio `RandomNumberGenerator` sembrado y recorriendo siempre los datos **en orden de ID** (nunca en el orden de un `Dictionary` sin ordenar). Misma semilla + mismos ajustes + misma versión del generador = **exactamente la misma ROM**.
+- [ ] **`RomPatch`**: diccionario de reemplazos sobre los datos base. **Nunca modifica los datos originales.**
+
+```json
+{
+  "generator_version": 1,
+  "seed_code": "PANCHITO-7KQ2-M9XA-3F",
+  "settings": { "...": "..." },
+  "starters": {"starter_1": "litwick", "starter_2": "mareep", "starter_3": "shellos"},
+  "species_map": {"pidgey": "yanma", "rattata": "zubat"},
+  "encounters": {"ruta_1": { "land": { "day": [ ... ] } } },
+  "trainers": {"ruta3_paco": {"party": [ ... ]}},
+  "gifts": {"gift_eevee_ciudad3": "dratini"},
+  "statics": {"static_legendario_portada": "ho-oh"},
+  "learnsets": {"litwick": [[1, "ember"], [5, "bite"]]},
+  "tm_compat": {"litwick": ["tm_flamethrower", "tm_surf"]},
+  "abilities": {"litwick": {"0": "levitate", "H": "intimidate"}},
+  "items": {"ruta_1/itemball_1": "superpotion"},
+  "shops": {}
+}
+```
+
+- [ ] **`DataDB.apply_patch(patch)` / `DataDB.clear_patch()`**: todas las consultas (`species`, `learnset`, `trainer`, `encounters`, `gift`...) devuelven el dato parcheado si existe. Al volver al título se limpia el parche.
+- [ ] **El parche se guarda con la partida** (`slot_<n>.rom.json`) junto con la semilla, los ajustes y la versión del generador. Así una partida antigua **siempre** carga su ROM, aunque el generador cambie en el futuro.
+
+### R.2 Requisito previo para TODO el proyecto (desde ya)
+
+El randomizer solo puede tocar lo que pasa por los datos. Por eso:
+
+- [ ] **Ningún evento escribe una especie, un objeto, un movimiento o un equipo a mano.** Todo se pide por ID:
+  - Iniciales → `data/starters.json` (`starter_1/2/3`) → `DataDB.starter("starter_1")`
+  - Regalos → `data/gifts.json` → `DataDB.gift("gift_eevee_ciudad3")`
+  - Encuentros estáticos (legendarios, bloqueos) → `data/statics.json` → `DataDB.static_encounter(id)`
+  - Entrenadores → `data/trainers/*.json` (ya era así)
+  - Objetos del suelo y ocultos → ID de colocación (`<mapa>/<id>`) resuelto por `DataDB`
+  - Tiendas → `data/shops.json` (ya era así)
+  - Intercambios con NPCs → `data/trades.json`
+- [ ] **Los textos que nombran a un Pokémon usan marcadores** que resuelve `DataDB`: `"¡Cuida bien de {gift:gift_eevee_ciudad3}!"` o `"¡{static:static_legendario_portada} ha despertado!"`. Así el texto coincide con la especie aleatorizada.
+- [ ] Lo que **no** se debe aleatorizar nunca (objetos clave, Pokémon de cinemáticas obligatorias...) se marca con `"randomize": false` en su JSON.
+- [ ] El validador (Fase 4.6) avisa si encuentra especies u objetos escritos a mano en `src/events/` o en los mapas.
+
+### R.3 Qué se puede aleatorizar (cada punto es un ajuste)
+
+| Grupo | Opciones |
+|-------|----------|
+| **Iniciales** | Aleatorios / aleatorios con un triángulo de tipos / 3 de la misma etapa evolutiva (que evolucionen 2 veces) |
+| **Salvajes** | Por zona (cada tabla con especies distintas) / mapeo global 1:1 (cada especie se cambia por otra en todo el juego) / caos total (cada hueco al azar) |
+| **Entrenadores** | Equipos aleatorios con el **mismo nivel** / **mantener el tipo de los líderes** (un líder de Agua sigue usando tipo Agua) / el as del líder es su Pokémon más fuerte / el rival lleva el inicial que tú no elegiste y **lo evoluciona** a lo largo de la historia |
+| **Regalos, estáticos e intercambios** | Aleatorios (con o sin legendarios) |
+| **Movimientos por nivel** | Aleatorios / con preferencia de tipo (≥ 50 % de su tipo) / **garantizar un ataque con STAB al nivel 1** / potencia escalada por nivel (nada de Explosión a nivel 5) / número de movimientos conservado |
+| **MT y tutores** | Compatibilidad aleatoria (% configurable) / contenido de las MT aleatorio |
+| **Habilidades** | Aleatorias, con lista de prohibidas (Superguarda, Potencia...) |
+| **Tipos** | Aleatorios (manteniendo la coherencia en la línea evolutiva) |
+| **Estadísticas base** | Barajar entre estadísticas manteniendo el total |
+| **Evoluciones** | Aleatorias con un total de estadísticas similar |
+| **Objetos** | Del suelo, ocultos, regalos y objetos equipados de los salvajes (nunca los objetos clave) |
+| **Tiendas** | Aleatorias, garantizando Poké Balls y Pociones |
+
+**Reglas de equilibrio** (para que sea divertido y no imposible):
+
+- [ ] **Potencia similar**: la especie nueva tiene un total de estadísticas base dentro de ±X % de la original (configurable).
+- [ ] **Etapa evolutiva acorde al nivel**: un entrenador de nivel 40 no lleva una forma bebé, ni uno de nivel 5 un Pokémon totalmente evolucionado. Se usan los niveles de evolución de los datos.
+- [ ] **Sin legendarios ni singulares en las rutas iniciales** (ajuste).
+- [ ] **Lista de prohibidos** editable (especies, movimientos y habilidades).
+
+### R.4 Validación de la ROM generada
+
+Después de generar, un validador comprueba la ROM. Si algo falla, se **regenera con una subsemilla derivada** (sin cambiar la semilla que ve el jugador) hasta que pase:
+
+- [ ] Los tres iniciales son distintos y cada uno tiene **al menos un ataque de daño** al nivel 5.
+- [ ] **Todos los Pokémon tienen al menos un ataque de daño** en cada momento de su curva de aprendizaje.
+- [ ] **Cada zona tiene al menos una especie capturable** distinta para la regla de primera captura.
+- [ ] Los movimientos y objetos de campo necesarios para avanzar siguen siendo obtenibles (con el estilo moderno de objetos de la Fase 12.5 esto es casi automático).
+- [ ] No hay especies repetidas dentro del equipo de un mismo entrenador (salvo que se elija ese ajuste).
+- [ ] Ningún objeto clave ni Pokémon marcado con `"randomize": false` ha cambiado.
+- [ ] Se genera en **menos de 2–3 s** en un PC modesto.
+
+### R.5 Semillas y códigos para compartir
+
+- [ ] **Código de semilla** legible: `PANCHITO-XXXX-XXXX-XX`, que codifica la **semilla + los ajustes + la versión del generador**. Dos amigos con el mismo código juegan **la misma ROM**: retos y carreras entre amigos.
+- [ ] Introducir un código a mano o generar uno al azar.
+- [ ] Si el código es de otra versión del generador: aviso claro ("Este código es de otra versión de Pokémon Panchito").
+- [ ] **Registro de spoilers** opcional: exportar a `user://randomlocke/<código>_spoilers.txt` qué ha cambiado (iniciales, líderes, legendarios...). Nunca se muestra salvo que el jugador lo pida.
+
+### R.6 Tests del motor
+
+- [ ] **Determinismo**: misma semilla y ajustes → mismo parche, byte a byte (test con un parche "dorado" guardado en `tests/`).
+- [ ] **Robustez**: 1000 semillas aleatorias → todas pasan el validador R.4.
+- [ ] **Equilibrio**: estadísticas de las ROMs generadas (total medio por zona, legendarios tempranos = 0...).
+- [ ] **Rendimiento**: tiempo de generación medido en el test.
+
+### R.7 Reglas Locke (Nuzlocke) activables
+
+| Regla | Por defecto | Detalle |
+|-------|-------------|---------|
+| **Primera captura por zona** | ✅ | Solo cuenta el **primer encuentro** de cada zona (`zone_id` en las tablas de encuentros; varias plantas de una cueva pueden compartir zona). Si huyes o lo debilitas, la zona se pierde |
+| **Debilitado = muerto** | ✅ | El Pokémon pasa al **Cementerio** (caja especial del PC) y no se puede revivir ni usar |
+| **Mote obligatorio** | ✅ | Al capturar, el teclado de nombres es obligatorio |
+| **Cláusula de duplicados** | ✅ | Si el primer encuentro es de una especie (o línea evolutiva) que ya tienes, no cuenta y se puede repetir |
+| **Cláusula shiny** | ✅ | Un shiny se puede capturar siempre, aunque la zona ya esté usada |
+| **Regalos y estáticos** | Configurable | ¿Cuentan como la captura de la zona? |
+| **Tope de nivel** | Opcional | No se puede superar el nivel del as del siguiente líder (la experiencia se congela) |
+| **Modo de combate "Fijo"** | Opcional | Fuerza el modo fijo de la Fase 9.8 |
+| **Objetos en combate** | Opcional | Prohibidos o limitados |
+| **Game over** | ✅ | Si mueren todos los Pokémon del equipo y no quedan en el PC → **partida terminada** |
+
+- [ ] Las reglas se eligen al crear la partida y **no se pueden cambiar después**. Quedan guardadas en la ranura.
+- [ ] El motor de combate emite un evento `pokemon_died` (en vez de solo "debilitado") cuando las reglas Locke están activas. El mundo y la UI reaccionan a ese evento.
+
+### R.8 Interfaz del RandomLocke
+
+- [ ] **Nueva partida → elegir modo**: dos tarjetas grandes (**Normal** / **RandomLocke**) con descripción e ilustración.
+- [ ] **Ajustes del RandomLocke**:
+  - [ ] **Presets**: *RandomLocke clásico*, *Solo aleatorio* (sin reglas Locke), *Caos Panchito* (todo al máximo) y *Personalizado*.
+  - [ ] Pestañas por grupo (R.3 y R.7) con interruptores y deslizadores, y una descripción de cada ajuste.
+  - [ ] Campo de **código de semilla** (introducir o "🎲 Aleatoria").
+- [ ] **Pantalla "Generando la ROM..."**: barra de progreso real (la generación va en un hilo con `WorkerThreadPool`), mensajes graciosos que rotan ("Barajando la Pokédex...", "Sobornando a los líderes de gimnasio...", "Escondiendo el asiento del metro...") y una animación de nivel profesional (Fase A).
+- [ ] **Resumen final**: código para compartir (botón de copiar), ajustes elegidos y un botón "Ver spoilers" con doble confirmación.
+- [ ] **Indicadores durante la partida**:
+  - [ ] Al entrar en una zona, el cartel del nombre muestra el estado de la captura (🟢 disponible / ✅ capturado / ❌ perdido).
+  - [ ] Pantalla de zonas en el menú (lista de zonas y su estado).
+  - [ ] Contador de muertes en la tarjeta de entrenador.
+- [ ] **Cementerio**: caja especial del PC con lápidas, mote, especie, nivel, dónde y contra quién cayó, y un **epitafio** (a elegir o generado con humor Panchito).
+- [ ] **Game over**: pantalla final con estadísticas (tiempo, medallas, capturas, muertes, el "MVP" del equipo). La ranura queda como *terminada* y se puede consultar, pero no continuar.
+
+### R.9 Integración con el resto del juego
+
+- [ ] `GameState.mode` (`normal` / `randomlocke`) y `GameState.randomlocke` (código, ajustes, versión del generador, zonas usadas, muertes, estado).
+- [ ] Cargar una ranura RandomLocke → `DataDB.apply_patch()` **antes** de cargar el mapa.
+- [ ] Pokédex: en RandomLocke, las áreas de hábitat se calculan con la ROM parcheada.
+- [ ] Los logros o estadísticas del modo normal y del RandomLocke se llevan por separado.
+
+### R.10 Reparto entre los agentes
+
+| Pieza | Agente |
+|-------|--------|
+| `Randomizer`, `RomPatch`, validador R.4, códigos de semilla R.5, tests R.6, `DataDB.apply_patch` y el evento `pokemon_died` del motor | **Agente 2** |
+| `GameState.mode` / `randomlocke`, guardado del parche con la ranura, `zone_id` y seguimiento de zonas, reglas Locke en el mundo (primera captura, regalos, game over), flujo de nueva partida en `SceneManager` y la regla R.2 en todos los eventos | **Agente 1** |
+| Pantallas de R.8 (modo, ajustes, generación, resumen, indicadores, Cementerio, game over), marcadores de texto en `Dialogue`, `starters.json`, `gifts.json`, `statics.json` y `trades.json` | **Agente 3** |
+
+✅ **Criterio de "hecho":** desde el menú inicial se crea una partida RandomLocke con un código, se genera la ROM en menos de 3 s, se juega hasta el primer gimnasio con las reglas Locke funcionando, y otra persona con el mismo código obtiene exactamente los mismos iniciales, encuentros y entrenadores.
+
+---
+
 ## Fase 12 — Mundo: región, mapas y navegación
 
 ### 12.1 Convenciones de mapas
@@ -1410,7 +1732,7 @@ func run() -> void:
 
 ### 14.4 Encuentros especiales
 
-- [ ] **Shiny** (con Amuleto Iris en el postgame) y animación de brillo.
+- [ ] **Shiny**: probabilidades, Amuleto Iris, Masuda y presentación según la **Fase 6.7**.
 - [ ] **Pokérus**.
 - [ ] **Pesca** (3 cañas, minijuego de "¡Pican!"), **Golpe Cabeza** en árboles y **Golpe Roca**.
 - [ ] **Errantes** (aparecen al azar en rutas y huyen).
@@ -1449,11 +1771,36 @@ func run() -> void:
 - [ ] **Pila de menús** en `SceneManager` (abrir un menú encima de otro y volver con `cancel`).
 - [ ] Animaciones de entrada y salida rápidas (≤ 0,15 s); nunca deben ralentizar al jugador.
 
-### 15.2 Identidad visual
+### 15.2 Identidad visual y menú inicial
 
-- [ ] **Logo de Pokémon Panchito** con tipografía propia parecida a la oficial.
-- [ ] **Pantalla de título** con fondo, logo, música, "Pulsa Enter" y una animación sencilla.
+> ⭐ **Decisión de Javier:** el menú inicial tiene que estar **muy currado** y mostrar **"Realizado por Javier Saguar"**. Es lo primero que ve cualquiera que abra el juego, así que se aplica la Fase A con el máximo nivel de exigencia.
+
+- [ ] **Logo de Pokémon Panchito** con tipografía propia parecida a la oficial, en versión grande (título) y pequeña (menús). Con brillo animado (un shader que barre el logo).
 - [ ] Paleta y marcos (cuadros de diálogo) con estilo Panchito; el jugador puede elegir el marco en las opciones.
+
+**Secuencia de arranque**
+1. [ ] **Splash de autor**: fundido desde negro → **"Javier Saguar presenta"** con un sonido sutil → fundido. Se puede saltar con cualquier botón (solo a partir de la segunda vez que se abre el juego).
+2. [ ] **Aviso de fangame** breve (2 s, se puede saltar): *"Fangame sin ánimo de lucro. Pokémon es propiedad de Nintendo, Game Freak y The Pokémon Company."*
+3. [ ] **Intro animada** (10–20 s, se puede saltar): una pequeña cinemática con el legendario de portada o con Panchito, sincronizada con la música.
+4. [ ] **Pantalla de título**:
+   - [ ] Fondo con **parallax de 3–5 capas** (cielo, montañas, ciudad, primer plano) que se mueve suavemente.
+   - [ ] Logo con entrada animada (cae y rebota levemente) y brillo periódico.
+   - [ ] Pokémon animados y partículas ambientales (hojas, chispas...).
+   - [ ] Música con intro + bucle.
+   - [ ] **"Pulsa START"** con un parpadeo suave (fundido, no un parpadeo brusco).
+   - [ ] **Pie de pantalla fijo: "Realizado por Javier Saguar"** + versión (`v0.3.0`) en tipografía pequeña y elegante.
+   - [ ] **Modo demostración**: tras 30–60 s sin tocar nada, se vuelve a reproducir la intro.
+
+**Menú principal** (tras pulsar START, con transición animada)
+- [ ] **Continuar**: muestra la tarjeta de la última partida (miniatura, nombre, modo, medallas, tiempo, ubicación).
+- [ ] **Nueva partida** → elegir **modo** (Normal / RandomLocke, Fase R.8) → elegir **ranura** (Fase 8.7).
+- [ ] **Cargar partida**: rejilla de las ranuras con miniatura, insignia de modo (Normal / RandomLocke) y sus datos; las ranuras vacías se ven distintas. Opciones de copiar y borrar.
+- [ ] **Opciones** (las mismas de la 15.3).
+- [ ] **Créditos**: pantalla con desplazamiento, música propia y **"Juego realizado por Javier Saguar"** como primera línea. Debajo, los recursos de terceros de `CREDITOS.md` con sus autores y licencias.
+- [ ] **Salir**.
+- [ ] Cursor animado, sonidos de navegación, transiciones entre submenús (deslizamiento y fundido) y navegación completa con teclado y mando.
+
+**Criterio de calidad del menú inicial:** pasa la checklist A.6 en todos sus assets, funciona a 60 fps, ninguna transición dura más de 0,3 s y Javier lo aprueba antes de la demo `v0.3`.
 
 ### 15.3 Pantallas
 
@@ -1466,7 +1813,7 @@ func run() -> void:
 - [ ] **Tarjeta de entrenador** y **estuche de medallas** con **diseño propio de las 8 medallas**
 - [ ] **Mapa de la región**
 - [ ] **Opciones**: velocidad de texto, volumen (música, efectos y gritos por separado), modo de combate (cambio o fijo), animaciones de combate sí/no, marco, controles y pantalla completa
-- [ ] **Guardar y cargar** con resumen (tiempo, medallas, equipo) y varias ranuras
+- [ ] **Guardar y cargar** con resumen (tiempo, medallas, equipo, modo y miniatura) y al menos 8 ranuras (Fase 8.7)
 - [ ] **Teclado de nombres** (para el nombre del jugador y los motes)
 - [ ] **Tiendas** (comprar y vender con selector de cantidad)
 - [ ] **Interfaz de combate** (Fase 7.10)
@@ -1827,22 +2174,25 @@ Godot trae red de serie (`ENetMultiplayerPeer`, `WebSocketMultiplayerPeer`), as�
 ## Resumen del orden
 
 ```
+FA  Dirección de arte (transversal: se aplica desde el MVP hasta el final)
 F1  Entorno + repo
 F2  Diseño (GDD)
 F3  Arquitectura base (autoloads, resolución, input, debug)
-F4  Pipeline de datos (Showdown + PokeAPI → JSON en español) ── v0.0
+F4  Pipeline de datos (Showdown + PokeAPI → JSON en español, verificado con WikiDex y Añil) ── v0.0
 F5  Movimiento, mapas, diálogo, encuentros
 F6  Modelo de Pokémon, equipo y PC
 F7  Motor de combate (núcleo)
-F8  MVP jugable ───────────────────────────────────────────────── v0.1
+F8  MVP jugable (varias ranuras de guardado) ─────────────────── v0.1
 F9  Combate avanzado (efectos, dobles, Mega, Z, Dinamax, Tera, IA)
 F10 Entrenadores Panchito
-F11 Objetos (+ especiales Panchito) ───────────────────────────── v0.2
+F11 Objetos (+ especiales Panchito)
+FR  Motor RandomLocke (R.1–R.6) + biblia de arte (A.1–A.3) ────── v0.2
 F12 Región, mapas y navegación
 F13 Historia y cinemáticas
 F14 Mundo vivo (día/noche, clima, crianza, seguimiento...)
-F15 UI
+F15 UI + menú inicial "Realizado por Javier Saguar"
 F16 Audio
+FR  Interfaz y reglas Locke (R.7–R.10)
 F17 Tramo 1 ───────────────────────────────────────────────────── v0.3 (demo)
 F17 Tramos 2–4 ────────────────────────────────────────────────── v0.5
 F17 Tramos 5–8 ────────────────────────────────────────────────── v0.8

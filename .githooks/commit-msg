@@ -1,0 +1,34 @@
+#!/bin/sh
+# Pokémon Panchito: todos los commits los firma Javier Saguar, sin coautores.
+# Se activa con: git config core.hooksPath .githooks
+
+AUTOR_ESPERADO="Javier Saguar"
+fallo=0
+
+autor=$(git var GIT_AUTHOR_IDENT | sed 's/ <.*//')
+committer=$(git var GIT_COMMITTER_IDENT | sed 's/ <.*//')
+
+if [ "$autor" != "$AUTOR_ESPERADO" ]; then
+    echo "✗ El autor del commit es '$autor' y debe ser '$AUTOR_ESPERADO'." >&2
+    echo "  git config user.name \"$AUTOR_ESPERADO\"" >&2
+    fallo=1
+fi
+if [ "$committer" != "$AUTOR_ESPERADO" ]; then
+    echo "✗ El committer es '$committer' y debe ser '$AUTOR_ESPERADO'." >&2
+    fallo=1
+fi
+
+# Líneas del mensaje sin los comentarios de Git
+if grep -v '^#' "$1" | grep -qiE '^[[:space:]]*co-authored-by:'; then
+    echo "✗ El mensaje lleva una línea Co-Authored-By. Los commits no tienen coautores." >&2
+    fallo=1
+fi
+if grep -v '^#' "$1" | grep -qiE 'generated with|🤖'; then
+    echo "✗ El mensaje lleva una línea de atribución ('Generated with...'). Quítala." >&2
+    fallo=1
+fi
+
+if [ "$fallo" -ne 0 ]; then
+    echo "Commit rechazado. Ver docs/DIRECTRICES.md (sección 5)." >&2
+fi
+exit $fallo
