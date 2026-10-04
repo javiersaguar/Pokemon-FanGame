@@ -30,8 +30,12 @@ function parseCondition(cond, evo) {
   if (evo.method === 'trade' && (m = /^with an? ([a-z]+)$/.exec(c))) evo.trade_with = toID(m[1]);
 }
 
+// Amistad mínima para evolucionar (8.ª generación en adelante).
+const EVO_MIN_FRIENDSHIP = 160;
+
 function evolutionOf(target, source) {
   const evo = { to: toID(target.name), method: EVO_METHOD[target.evoType] ?? 'level' };
+  if (evo.method === 'friendship') evo.min_friendship = EVO_MIN_FRIENDSHIP;
   if (target.evoLevel !== undefined) evo.level = target.evoLevel;
   if (target.evoItem) evo.item = toID(target.evoItem);
   if (target.evoMove) evo.move = toID(target.evoMove);
@@ -117,6 +121,7 @@ export function buildSpecies(sd, pa, report) {
       form_name: formName,
       types: s.types.map(toID),
       base_stats: s.baseStats,
+      max_hp: s.maxHP,
       abilities: Object.fromEntries(Object.entries(s.abilities).map(([slot, a]) => [slot, toID(a)])),
       gender_ratio: genderRatio(s),
       catch_rate: sp ? Number(sp.capture_rate) : 45,

@@ -1,5 +1,5 @@
 {
-  "_doc": "Efectos de uso de los objetos estándar (valores oficiales de la 7.ª generación en adelante). Se fusionan en data/generated/items.json. field_use / battle_use: '' (no se usa), 'on_pokemon' (un Pokémon del equipo), 'on_active' (el Pokémon en combate) o 'no_target'. Efectos: heal_hp {amount|fraction}, cure_status {statuses, confusion}, heal_and_cure {fraction}, revive {fraction}, restore_pp {amount|full, all_moves}, boost_stat {stat, stages}, crit_boost {stages}, ball {multiplier|guaranteed|formula + condiciones}, flee, repel {steps}, escape, evolution, add_evs {stat, amount}, level_up {levels}, pp_up {max}.",
+  "_doc": "Efectos de uso de los objetos estándar (valores oficiales de la 7.ª generación en adelante). Se fusionan en data/generated/items.json. field_use / battle_use: '' (no se usa), 'on_pokemon' (un Pokémon del equipo), 'on_active' (el Pokémon en combate) o 'no_target'. Efectos: heal_hp {amount|fraction}, cure_status {statuses, confusion}, heal_and_cure {fraction}, revive {fraction}, restore_pp {amount|full, all_moves}, boost_stat {stat, stages}, crit_boost {stages}, ball {multiplier|guaranteed|formula + condiciones}, flee, repel {steps}, escape, evolution, add_evs {stat, amount}, level_up {levels}, pp_up {max}, exp_boost {multiplier} (equipado).",
 
   "potion": {"field_use": "on_pokemon", "battle_use": "on_pokemon", "effect": "heal_hp", "effect_params": {"amount": 20}},
   "superpotion": {"field_use": "on_pokemon", "battle_use": "on_pokemon", "effect": "heal_hp", "effect_params": {"amount": 60}},
@@ -103,6 +103,7 @@
   "zinc": {"field_use": "on_pokemon", "battle_use": "", "effect": "add_evs", "effect_params": {"stat": "spd", "amount": 10}},
   "carbos": {"field_use": "on_pokemon", "battle_use": "", "effect": "add_evs", "effect_params": {"stat": "spe", "amount": 10}},
   "rarecandy": {"field_use": "on_pokemon", "battle_use": "", "effect": "level_up", "effect_params": {"levels": 1}},
+  "luckyegg": {"field_use": "", "battle_use": "", "effect": "exp_boost", "effect_params": {"multiplier": 1.5}},
   "ppup": {"field_use": "on_pokemon", "battle_use": "", "effect": "pp_up", "effect_params": {"max": false}},
   "ppmax": {"field_use": "on_pokemon", "battle_use": "", "effect": "pp_up", "effect_params": {"max": true}}
 }
