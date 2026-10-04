@@ -14,6 +14,7 @@ Relleno técnico temporal que hay que sustituir. **Ninguno es arte del juego.**
 | Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
 |-------|------|-------|--------|-------------------|---------------------|-------|
 | Tileset provisional (`assets/tilesets/placeholder/`) | Tileset | A1 | placeholder | Generado por script | — | Se sustituye por los packs de terceros (lista en `docs/ESTADO.md`) |
+| Personajes y objetos del mapa provisionales (`assets/sprites/characters/placeholder/`) | Personaje en el mapa | A1 | placeholder | Generado por script | — | Jugador, rival, NPCs, Poké Ball del suelo y cartel. Se sustituyen por los packs de personajes de terceros |
 | Sprites de Pokémon en combate (`PlaceholderArt.pokemon`) | Pokémon en combate | A3 | placeholder | Generado por código | — | "Gota" del color del tipo. Se quita en cuanto estén los sprites reales del Agente 2 (`assets/sprites/pokemon/`) |
 | Entrenadores en combate (`PlaceholderArt.trainer`) | Entrenador en combate | A3 | placeholder | Generado por código | — | Silueta. Se sustituye por los sprites de las clases (`docs/entrenadores.md`) |
 | Poké Ball de la captura (`PlaceholderArt.ball`) | UI de combate | A3 | placeholder | Generado por código | — | |
