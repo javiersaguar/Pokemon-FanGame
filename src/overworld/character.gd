@@ -75,7 +75,7 @@ func step(dir: Vector2i, duration: float = WALK_TIME, ignore_collisions: bool = 
 	body.position = Vector2(dir * Grid.TILE)
 	sprite.play_step(dir, duration)
 	var tween := create_tween()
-	tween.tween_property(self, ^"position", target, duration)
+	tween.tween_method(_set_position_rounded, position, target, duration)
 	await tween.finished
 	position = target
 	body.position = Vector2.ZERO
@@ -113,7 +113,7 @@ func place_at(tile: Vector2i, dir: Vector2i = Vector2i.ZERO) -> void:
 func show_emote(text: String = "!", duration: float = 0.6) -> void:
 	var label := Label.new()
 	label.text = text
-	label.add_theme_font_size_override(&"font_size", 8)
+	label.theme_type_variation = &"SmallLabel"
 	label.add_theme_color_override(&"font_outline_color", Color.BLACK)
 	label.add_theme_constant_override(&"outline_size", 2)
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -122,6 +122,12 @@ func show_emote(text: String = "!", duration: float = 0.6) -> void:
 	add_child(label)
 	await get_tree().create_timer(duration).timeout
 	label.queue_free()
+
+
+## Las posiciones del mundo van en píxeles enteros del arte (a ×2 en pantalla),
+## para que no haya temblores de medio píxel al moverse.
+func _set_position_rounded(value: Vector2) -> void:
+	position = value.round()
 
 
 static func direction_to(delta: Vector2) -> Vector2i:

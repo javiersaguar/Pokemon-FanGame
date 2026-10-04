@@ -17,8 +17,6 @@ var _first_button: Button
 
 func _init() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
-	theme = Theme.new()
-	theme.default_font_size = 8
 
 	var background := ColorRect.new()
 	background.color = Color(0.12, 0.12, 0.2)

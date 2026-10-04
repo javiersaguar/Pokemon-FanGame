@@ -75,11 +75,13 @@ func place_at(tile: Vector2i, dir: Vector2i = Vector2i.ZERO) -> void:
 
 
 ## Ajusta la cámara al mapa: límites en sus bordes (centrada si el mapa es más
-## pequeño que la pantalla) o fija en el centro si data.fixed_camera.
+## pequeño que la pantalla) o fija en el centro si data.fixed_camera y el mapa
+## cabe entero. El mundo se ve a ×2 (zoom de la cámara, Fase 3.2).
 func setup_camera(map: MapRoot) -> void:
 	var bounds := map.get_bounds()
-	var view := Vector2i(get_viewport_rect().size)
-	var fixed := map.data != null and map.data.fixed_camera
+	var view := Vector2i(get_viewport_rect().size / camera.zoom)
+	var fits := bounds.size.x <= view.x and bounds.size.y <= view.y
+	var fixed := map.data != null and map.data.fixed_camera and fits
 	camera.top_level = fixed
 	if fixed:
 		camera.global_position = map.to_global(Vector2(bounds.get_center()))
