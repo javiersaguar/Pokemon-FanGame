@@ -49,6 +49,8 @@ var pokerus: int = 0
 var tera_type: StringName = &""
 var ribbons: Array[StringName] = []
 
+## Debug: todos los Pokémon nuevos salen shiny (para probar los sprites).
+static var debug_force_shiny: bool = false
 static var _uid_rng: RandomNumberGenerator
 
 
@@ -56,7 +58,8 @@ static var _uid_rng: RandomNumberGenerator
 
 ## Pokémon nuevo (salvaje o de regalo): IVs al azar, naturaleza, sexo, habilidad, shiny y los
 ## últimos 4 movimientos aprendibles por nivel. `rng` permite resultados reproducibles.
-static func create(id: StringName, at_level: int, rng: RandomNumberGenerator = null) -> Pokemon:
+## `shiny_rolls`: tiradas de shiny (Fase 6.7: 1 normal, más con el Amuleto Iris o Masuda; 0 = nunca).
+static func create(id: StringName, at_level: int, rng: RandomNumberGenerator = null, shiny_rolls: int = 1) -> Pokemon:
 	var s := DataDB.species(id)
 	if s == null:
 		return null
@@ -84,8 +87,7 @@ static func create(id: StringName, at_level: int, rng: RandomNumberGenerator = n
 	p.ability_slot = slots[rng.randi_range(0, slots.size() - 1)]
 	if s.has_hidden_ability() and rng.randf() < float(DataDB.rule(&"wild_hidden_ability_chance", 0.0)):
 		p.ability_slot = "H"
-	var odds := int(DataDB.rule(&"shiny_odds", 4096))
-	p.shiny = odds > 0 and rng.randi_range(1, odds) == 1
+	p.shiny = roll_shiny(rng, shiny_rolls)
 	for move_id: StringName in DataDB.default_moves(id, p.level):
 		p.moves.append(MoveSlot.create(move_id))
 	p.friendship = s.base_friendship
@@ -106,7 +108,8 @@ static func from_spec(spec: Dictionary, rng: RandomNumberGenerator = null) -> Po
 			id = with_form
 		else:
 			push_error("Pokemon.from_spec: '%s' no tiene la forma '%s'." % [id, form])
-	var p := create(id, int(spec.get("level", 5)), rng)
+	# Los Pokémon de los entrenadores no tiran shiny: solo lo son si su ficha lo dice.
+	var p := create(id, int(spec.get("level", 5)), rng, 0)
 	if p == null:
 		return null
 	p.apply_spec(spec)
@@ -156,6 +159,25 @@ func apply_spec(spec: Dictionary) -> void:
 	if spec.has("ball"):
 		ball = StringName(spec["ball"])
 	current_hp = max_hp()
+
+
+## Tirada de shiny (Fase 6.7): `rolls` comprobaciones independientes de 1/odds,
+## con odds = data/world.json → shiny.odds (4096 por defecto).
+static func roll_shiny(rng: RandomNumberGenerator, rolls: int = 1) -> bool:
+	if debug_force_shiny and rolls > 0:
+		return true
+	var odds := DataDB.shiny_odds()
+	var hit := false
+	for i: int in maxi(rolls, 0):
+		if odds > 0 and rng.randi_range(1, odds) == 1:
+			hit = true
+	return hit
+
+
+## Probabilidad teórica de shiny con `rolls` tiradas: 1 − (1 − 1/odds)^rolls.
+static func shiny_chance(rolls: int = 1) -> float:
+	var odds := DataDB.shiny_odds()
+	return 0.0 if odds <= 0 else 1.0 - pow(1.0 - 1.0 / odds, rolls)
 
 
 static func new_uid() -> String:

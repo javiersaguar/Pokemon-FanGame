@@ -4,7 +4,8 @@ extends RefCounted
 
 
 func register() -> void:
-	Debug.register_command("givepkmn", givepkmn, "givepkmn <especie> [nivel] · al equipo o al PC")
+	Debug.register_command("givepkmn", givepkmn, "givepkmn <especie> [nivel] [shiny] · al equipo o al PC")
+	Debug.register_command("forceshiny", forceshiny, "forceshiny [on|off] · todos los Pokémon nuevos salen shiny")
 	Debug.register_command("heal", heal, "Cura al equipo (PS, estado y PP).", "Curar equipo")
 	Debug.register_command("party", party, "Lista el equipo.")
 	Debug.register_command("setlevel", setlevel, "setlevel <posición 1-6> <nivel>")
@@ -15,11 +16,13 @@ func register() -> void:
 
 func givepkmn(args: PackedStringArray) -> String:
 	if args.is_empty():
-		return "Uso: givepkmn <especie> [nivel]"
+		return "Uso: givepkmn <especie> [nivel] [shiny]"
 	var id := StringName(args[0].to_lower())
 	if not DataDB.has_species(id):
 		return "No existe la especie '%s'." % id
 	var p := Pokemon.create(id, int(args[1]) if args.size() > 1 else 5)
+	if args.size() > 2 and args[2] == "shiny":
+		p.shiny = true
 	p.original_trainer = GameState.player_name
 	p.trainer_id = GameState.trainer_id
 	p.met_location = GameState.map_id
@@ -35,6 +38,11 @@ func givepkmn(args: PackedStringArray) -> String:
 		if where != PCStorage.NO_SLOT:
 			return "%s (Nv. %d) al PC: caja %d, hueco %d." % [p.display_name(), p.level, where.x + 1, where.y + 1]
 	return "No hay sitio para %s." % p.display_name()
+
+
+func forceshiny(args: PackedStringArray) -> String:
+	Pokemon.debug_force_shiny = args.is_empty() or args[0].to_lower() in ["on", "1", "si", "sí", "true"]
+	return "Shiny forzado: %s." % ("sí" if Pokemon.debug_force_shiny else "no")
 
 
 func heal(_args: PackedStringArray) -> String:

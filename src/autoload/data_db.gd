@@ -44,6 +44,7 @@ var _shops: Dictionary = {}
 var _shops_file: Dictionary = {}
 var _meta: Dictionary = {}
 var _rules: Dictionary = {}
+var _shiny: Dictionary = {}
 var _debug_commands: PokemonDebugCommands
 
 
@@ -77,7 +78,9 @@ func load_all() -> void:
 	for group: String in exp_tables:
 		_exp_tables[StringName(group)] = PackedInt32Array(exp_tables[group])
 	_meta = _read_dict(GENERATED_DIR + "/meta.json")
-	_rules = _read_dict(WORLD_PATH, true).get("pokemon", {})
+	var world := _read_dict(WORLD_PATH, true)
+	_rules = world.get("pokemon", {})
+	_shiny = world.get("shiny", {})
 	_load_regional_dex()
 	_trainer_classes = _without_comments(_read_dict(TRAINER_CLASSES_PATH, true))
 	_shops_file = _read_dict(SHOPS_PATH, true)
@@ -349,9 +352,20 @@ func meta() -> Dictionary:
 	return _meta
 
 
-## Regla configurable de data/world.json → "pokemon" (shiny_odds, pc_boxes...). Ver contrato.
+## Regla configurable de data/world.json → "pokemon" (pc_boxes, exp_share...). Ver contrato.
 func rule(key: StringName, default: Variant) -> Variant:
 	return _rules.get(String(key), default)
+
+
+## Shiny (Fase 6.7): data/world.json → "shiny" → odds (4096 por defecto; 0 = nunca).
+func shiny_odds() -> int:
+	return int(_shiny.get("odds", _rules.get("shiny_odds", 4096)))
+
+
+## Tiradas de shiny (data/world.json → shiny → rolls): base 1, shiny_charm 3, masuda 6, masuda_shiny_charm 8.
+func shiny_rolls(kind: StringName = &"base") -> int:
+	var defaults := {"base": 1, "shiny_charm": 3, "masuda": 6, "masuda_shiny_charm": 8}
+	return int(_shiny.get("rolls", {}).get(String(kind), defaults.get(String(kind), 1)))
 
 
 # --- Carga ---
