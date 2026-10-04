@@ -62,6 +62,7 @@ static func from_dict(item_id: StringName, d: Dictionary, panchito: bool = false
 
 
 ## Precio de venta (la mitad, como en los juegos oficiales).
+@warning_ignore("integer_division")
 func sell_price() -> int:
 	return price / 2
 

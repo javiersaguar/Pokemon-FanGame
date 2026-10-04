@@ -216,13 +216,13 @@ func exp_for_level(group: StringName, level: int) -> int:
 	return table[clampi(level, 1, MAX_LEVEL)]
 
 
-func level_for_exp(group: StringName, exp: int) -> int:
+func level_for_exp(group: StringName, total_exp: int) -> int:
 	var table: PackedInt32Array = _exp_tables.get(group, PackedInt32Array())
 	if table.is_empty():
 		push_error("DataDB: no existe el grupo de crecimiento '%s'." % group)
 		return 1
 	var level := 1
-	while level < MAX_LEVEL and table[level + 1] <= exp:
+	while level < MAX_LEVEL and table[level + 1] <= total_exp:
 		level += 1
 	return level
 
