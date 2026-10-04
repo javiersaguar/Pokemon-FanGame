@@ -7,6 +7,10 @@ extends Node
 const SAVE_VERSION := 1
 const WORLD_CONFIG_PATH := "res://data/world.json"
 
+## Modos de partida (Fase R): normal o RandomLocke.
+const MODE_NORMAL := &"normal"
+const MODE_RANDOMLOCKE := &"randomlocke"
+
 ## Módulos de otros agentes que viven dentro de GameState. Cada clase se busca por
 ## su class_name; si todavía no existe, sus datos se conservan tal cual al guardar.
 ## Requisitos de cada clase: `new()` sin argumentos, `to_dict() -> Dictionary` y
@@ -17,6 +21,13 @@ const MODULE_CLASSES: Dictionary[StringName, StringName] = {
 	&"pokedex": &"Pokedex",
 	&"bag": &"Bag",
 }
+
+# --- Partida ---
+## MODE_NORMAL o MODE_RANDOMLOCKE. Se elige al crear la partida y no cambia.
+var mode: StringName = MODE_NORMAL
+## Datos del RandomLocke (vacío en modo normal): seed_code, settings,
+## generator_version, rules, zones {zone_id: estado}, deaths y status.
+var randomlocke: Dictionary = {}
 
 # --- Jugador ---
 var player_name: String = ""
@@ -47,9 +58,14 @@ var pc: Variant = null
 var pokedex: Variant = null
 var bag: Variant = null
 
-# --- Solo en ejecución (no se guarda) ---
+# --- Solo en ejecución (no se guarda en el JSON de la partida) ---
 ## Contenido de data/world.json.
 var world_config: Dictionary = {}
+## Ranura de la partida en curso (0 = ninguna). La fijan SaveManager y SceneManager.
+var slot: int = 0
+## Parche de la ROM del RandomLocke (Fase R.1). SaveManager lo guarda aparte,
+## en slot_<n>.rom.json.
+var rom_patch: Dictionary = {}
 ## true cuando hay al menos un bloqueo activo (menú, diálogo, cinemática...).
 var input_locked: bool:
 	get:
@@ -72,6 +88,10 @@ func _process(delta: float) -> void:
 
 ## Deja el estado vacío (sin partida).
 func reset() -> void:
+	mode = MODE_NORMAL
+	randomlocke = {}
+	slot = 0
+	rom_patch = {}
 	player_name = ""
 	player_gender = &"male"
 	rival_name = ""
@@ -93,8 +113,16 @@ func reset() -> void:
 
 
 ## Estado inicial de una partida nueva según data/world.json → new_game.
-func new_game() -> void:
+## `options` (todas opcionales): slot (int), mode (MODE_*), randomlocke
+## (Dictionary) y rom_patch (Dictionary, el parche de la ROM ya generado).
+func new_game(options: Dictionary = {}) -> void:
 	reset()
+	slot = int(options.get("slot", 0))
+	mode = StringName(options.get("mode", MODE_NORMAL))
+	randomlocke = (options.get("randomlocke", {}) as Dictionary).duplicate(true)
+	rom_patch = options.get("rom_patch", {})
+	if is_randomlocke():
+		randomlocke.merge({"zones": {}, "deaths": 0, "status": "in_progress"})
 	var cfg: Dictionary = world_config.get("new_game", {})
 	trainer_id = randi_range(0, 65535)
 	secret_id = randi_range(0, 65535)
@@ -228,11 +256,17 @@ func clear_input_locks() -> void:
 
 # --- Guardado ---
 
+func is_randomlocke() -> bool:
+	return mode == MODE_RANDOMLOCKE
+
+
 func to_dict() -> Dictionary:
 	var modules := {}
 	for key: StringName in MODULE_CLASSES:
 		modules[String(key)] = _module_to_dict(get(key))
 	return {
+		"mode": String(mode),
+		"randomlocke": randomlocke.duplicate(true),
 		"player": {
 			"name": player_name,
 			"gender": String(player_gender),
@@ -257,8 +291,15 @@ func to_dict() -> Dictionary:
 	}
 
 
+## Restaura la partida. No toca `slot` ni `rom_patch` (los pone SaveManager).
 func from_dict(data: Dictionary) -> void:
+	var keep_slot := slot
+	var keep_patch := rom_patch
 	reset()
+	slot = keep_slot
+	rom_patch = keep_patch
+	mode = StringName(data.get("mode", String(MODE_NORMAL)))
+	randomlocke = (data.get("randomlocke", {}) as Dictionary).duplicate(true)
 	var p: Dictionary = data.get("player", {})
 	player_name = p.get("name", "")
 	player_gender = StringName(p.get("gender", "male"))

@@ -104,8 +104,9 @@ func _register_builtin_commands() -> void:
 	register_command("hour", _cmd_hour, "hour <desplazamiento en horas>")
 	register_command("noclip", _cmd_noclip, "noclip [on|off]")
 	register_command("encounters", _cmd_encounters, "encounters [on|off]")
-	register_command("save", _cmd_save, "save [ranura]", "Guardar")
-	register_command("load", _cmd_load, "load [ranura]", "Cargar")
+	register_command("save", _cmd_save, "save [ranura] (por defecto, la de la partida)", "Guardar")
+	register_command("load", _cmd_load, "load [ranura] (por defecto, la última usada)", "Cargar")
+	register_command("slots", _cmd_slots, "Lista las partidas guardadas.")
 	register_command("battle", _cmd_battle, "Combate de prueba (se puede perder).",
 		"Combate de prueba")
 	register_command("title", _cmd_title, "Vuelve a la pantalla de título.", "Título")
@@ -186,18 +187,31 @@ func _cmd_encounters(args: PackedStringArray) -> String:
 
 
 func _cmd_save(args: PackedStringArray) -> String:
-	var slot := args[0].to_int() if not args.is_empty() else 1
+	var slot := args[0].to_int() if not args.is_empty() else SaveManager.current_slot()
 	var err := SaveManager.save_game(slot)
 	return "Guardado en la ranura %d." % slot if err == OK else "Error al guardar: %s" % error_string(err)
 
 
 func _cmd_load(args: PackedStringArray) -> String:
-	var slot := args[0].to_int() if not args.is_empty() else 1
+	var slot := args[0].to_int() if not args.is_empty() else SaveManager.last_used_slot()
 	if not SaveManager.has_save(slot):
 		return "La ranura %d está vacía." % slot
 	close()
 	SceneManager.continue_game(slot)
 	return "Cargando la ranura %d..." % slot
+
+
+func _cmd_slots(_args: PackedStringArray) -> String:
+	var lines := PackedStringArray()
+	for summary: Dictionary in SaveManager.list_slots():
+		if summary.is_empty():
+			continue
+		lines.append("%d: %s · %s · %s · %d medallas · %s" % [summary["slot"], summary.get("mode", "normal"),
+			summary.get("player_name", ""), summary.get("map_name", ""), summary.get("badges", 0),
+			summary.get("saved_at", "")])
+	var last := SaveManager.last_used_slot()
+	lines.append("Ranuras: %d · en curso: %d · última usada: %d" % [SaveManager.slot_count(), GameState.slot, last])
+	return "\n".join(lines)
 
 
 func _cmd_battle(_args: PackedStringArray) -> String:

@@ -63,3 +63,64 @@ func test_partida_de_una_version_mas_nueva() -> void:
 	DirAccess.remove_absolute(path + ".bak")
 	assert_eq(SaveManager.load_game(SLOT), ERR_FILE_UNRECOGNIZED)
 	assert_push_error("versión más nueva")
+
+
+func test_varias_ranuras_y_la_ultima_usada() -> void:
+	var other := SLOT - 1
+	SaveManager.delete_save(other)
+	GameState.player_name = "Ana"
+	assert_eq(SaveManager.save_game(other), OK)
+	GameState.player_name = "Beto"
+	assert_eq(SaveManager.save_game(SLOT), OK)
+	assert_eq(SaveManager.last_used_slot(), SLOT)
+	assert_eq(GameState.slot, SLOT, "guardar fija la ranura en curso")
+	assert_eq(SaveManager.load_game(other), OK)
+	assert_eq(GameState.player_name, "Ana")
+	assert_eq(SaveManager.last_used_slot(), other, "cargar también cuenta como usada")
+	assert_eq(SaveManager.save_game(), OK, "sin ranura guarda en la de la partida")
+	assert_eq(SaveManager.slot_summary(other).get("player_name"), "Ana")
+	assert_eq(SaveManager.slot_summary(SLOT).get("player_name"), "Beto")
+	SaveManager.delete_save(other)
+	assert_eq(SaveManager.last_used_slot(), 0, "la última usada ya no existe")
+
+
+func test_resumen_de_la_ranura() -> void:
+	GameState.player_name = "Javi"
+	GameState.add_badge(&"badge_1")
+	GameState.party.add(Pokemon.create(&"pikachu", 5))
+	SaveManager.save_game(SLOT)
+	var summary := SaveManager.slot_summary(SLOT)
+	assert_eq(summary["slot"], SLOT)
+	assert_eq(summary["mode"], "normal")
+	assert_eq(summary["badges"], 1.0)
+	assert_eq(summary["party"][0]["species"], "pikachu")
+	assert_true(summary.has("dex_seen") and summary.has("saved_at") and summary.has("thumbnail"))
+	assert_eq(SaveManager.list_slots().size(), SaveManager.slot_count())
+
+
+func test_copiar_ranura() -> void:
+	var other := SLOT - 1
+	SaveManager.delete_save(other)
+	GameState.player_name = "Copia"
+	SaveManager.save_game(SLOT)
+	assert_eq(SaveManager.copy_slot(SLOT, other), OK)
+	assert_eq(SaveManager.slot_summary(other).get("player_name"), "Copia")
+	assert_eq(SaveManager.copy_slot(SLOT, SLOT), ERR_INVALID_PARAMETER)
+	SaveManager.delete_save(other)
+
+
+func test_randomlocke_guarda_su_rom() -> void:
+	GameState.new_game({"slot": SLOT, "mode": GameState.MODE_RANDOMLOCKE,
+		"randomlocke": {"seed_code": "PANCHITO-TEST-0000-00"},
+		"rom_patch": {"generator_version": 1, "starters": {"starter_1": "litwick"}}})
+	assert_true(GameState.is_randomlocke())
+	assert_eq(GameState.randomlocke.get("deaths"), 0)
+	assert_eq(SaveManager.save_game(), OK)
+	assert_true(FileAccess.file_exists(SaveManager.rom_patch_path(SLOT)))
+	GameState.reset()
+	assert_eq(SaveManager.load_game(SLOT), OK)
+	assert_eq(GameState.mode, GameState.MODE_RANDOMLOCKE)
+	assert_eq(GameState.rom_patch["starters"]["starter_1"], "litwick")
+	assert_eq(SaveManager.slot_summary(SLOT).get("seed_code"), "PANCHITO-TEST-0000-00")
+	GameState.reset()
+	SaveManager.apply_rom_patch()

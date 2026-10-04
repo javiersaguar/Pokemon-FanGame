@@ -27,6 +27,9 @@ var current_map: MapRoot
 var player: Player
 var is_changing_map := false
 var in_battle := false
+## Última imagen del mundo sin interfaz (se toma al abrir el menú de pausa). La
+## usa SaveManager para la miniatura de la ranura.
+var world_snapshot: Image
 
 var _fade: ColorRect
 var _menus: Array[Node] = []
@@ -80,9 +83,16 @@ func go_to_title() -> void:
 	await fade_in()
 
 
-## Nueva partida. Sin argumentos usa data/world.json → new_game.
-func start_new_game(map: StringName = &"", spawn: StringName = &"") -> void:
-	GameState.new_game()
+## Nueva partida. Sin argumentos usa data/world.json → new_game. `options`
+## (todas opcionales, ver GameState.new_game()): slot (por defecto, la primera
+## ranura vacía o la 1), mode, randomlocke y rom_patch. Con RandomLocke, el
+## parche se aplica en DataDB antes de cargar el mapa (Fase R.9).
+func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dictionary = {}) -> void:
+	if not options.has("slot"):
+		options = options.duplicate()
+		options["slot"] = maxi(SaveManager.first_empty_slot(), 1)
+	GameState.new_game(options)
+	SaveManager.apply_rom_patch()
 	var cfg: Dictionary = GameState.world_config.get("new_game", {})
 	if map == &"":
 		map = GameState.map_id
@@ -235,10 +245,18 @@ func close_all_menus() -> void:
 
 ## Menú de pausa del Agente 3 (lo abre el jugador con la acción `menu`).
 func open_pause_menu() -> void:
+	world_snapshot = capture_screen()
 	if not ResourceLoader.exists(PAUSE_MENU_SCENE):
 		push_warning("SceneManager: falta el menú de pausa (%s)." % PAUSE_MENU_SCENE)
 		return
 	push_menu((load(PAUSE_MENU_SCENE) as PackedScene).instantiate())
+
+
+## Imagen de la pantalla tal como se ve ahora (null sin pantalla, en headless).
+func capture_screen() -> Image:
+	if DisplayServer.get_name() == "headless":
+		return null
+	return get_viewport().get_texture().get_image()
 
 
 # --- Internos ---
@@ -328,6 +346,8 @@ func _leave_game() -> void:
 		player = null
 	GameState.clear_input_locks()
 	GameState.reset()
+	SaveManager.apply_rom_patch()
+	world_snapshot = null
 
 
 ## Derrota: el equipo se cura y vuelves al último Centro Pokémon.
