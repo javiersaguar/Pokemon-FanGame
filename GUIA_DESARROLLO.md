@@ -466,7 +466,7 @@ Como lo programas tú, **decide y documenta** qué entra en cada versión:
 
 - [ ] **Resolución base: 512×384** (4:3, la de Añil). Escala entera ×2 = 1024×768 (cabe en pantallas 1080p) y ×3 = 1536×1152 (pantallas 1440p).
 - [ ] **Dos escalas de dibujo**, como en Añil:
-  - **Mundo y sprites a ×2**: el arte se dibuja con **tiles de 16×16** y se muestra a 32×32 (la `Camera2D` del mundo con `zoom = 2`). Lo mismo para los personajes y para los Pokémon en combate (un sprite de 96×96 se ve a 192×192, como en la captura de combate de Añil). Las posiciones del mundo se redondean a píxeles **del arte** (múltiplos de 2 en pantalla).
+  - **Mundo y sprites a ×2**: cada casilla del mapa ocupa **32×32 px en pantalla** (arte de 16 px al doble). Los packs de la comunidad (`docs/arte/recursos_terceros.md`) **ya vienen al doble**: tiles de 32 px, cuadros de personaje de 64 px y Pokémon de frente a 192 px. **Se usan tal cual, sin reescalar**, con la `Camera2D` del mundo a `zoom = 1` y una cuadrícula de 32 px. El arte propio se dibuja a 16 px y se exporta a ×2 con vecino más próximo. Excepción heredada de Essentials y Añil: los Pokémon **de espalda** se ven a ×3 (288 px) para dar perspectiva. Las posiciones del mundo se redondean a múltiplos de 2 px de pantalla (un píxel del arte).
   - **Interfaz a 512×384 nativo**: las `CanvasLayer` de la UI no tienen zoom. La UI se diseña con píxeles de 2×2 por defecto (para que case con el mundo) y **se permite detalle a 1×** (degradados, bordes finos, texto pequeño) cuando la biblia de arte lo define. Así se consigue el acabado de la pantalla de datos de Añil.
 - [ ] *Project Settings*:
   - `display/window/size/viewport_width/height` = 512 × 384

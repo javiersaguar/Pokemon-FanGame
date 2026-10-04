@@ -80,7 +80,8 @@ Se añade al reparto de `docs/ESTADO.md`:
 | `docs/arte/`, `assets/arte/`, `assets/_fuentes/`, `tools/arte/` | 3 |
 | `data/starters.json`, `data/gifts.json`, `data/statics.json`, `data/trades.json` | 3 |
 | `docs/DIRECTRICES.md`, `.githooks/`, `.github/`, `docs/arte/referencias/` | Javier |
-| `assets/_terceros/` (packs descargados por Javier, sin modificar) | Javier (los agentes solo leen y copian de aquí) |
+| `C:\Users\Javier\Pokemon-Panchito-recursos\` = `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` desde WSL (packs descargados por Javier, **fuera del repo**, sin modificar) | Javier (los agentes solo leen y copian de aquí) |
+| `docs/arte/recursos_terceros.md` (índice de esos packs: origen, créditos y notas técnicas) | Javier |
 
 ## 7. Nivel gráfico mínimo: Pokémon Añil
 
@@ -89,14 +90,29 @@ Se añade al reparto de `docs/ESTADO.md`:
 **Por qué ahora se ve cutre y qué cambia:**
 | Problema | Cambio |
 |----------|--------|
-| Resolución 320×180, demasiado pequeña | **512×384** (la de Añil). Mundo y sprites dibujados a 16 px y mostrados a **×2**; la UI a 512×384 nativo. Detalles en la **Fase 3.2** de la guía |
+| Resolución 320×180, demasiado pequeña | **512×384** (la de Añil), con el mundo a ×2 (casillas de 32 px en pantalla) y la UI a 512×384 nativo. Detalles en la **Fase 3.2** de la guía |
 | Tileset dibujado por código | **Prohibido el arte generado por código** para el juego. Tiles, personajes y sprites salen de packs de la comunidad con permiso o de arte hecho a mano (**Fase A.3**) |
-| Sin sprites de Pokémon reales | Set estilo 5.ª generación, normal y shiny, para todas las especies (Fase A.3) |
+| Sin sprites de Pokémon reales | **Generation 9 Pack**: generaciones 1 a 9, frente, espalda, iconos y Pokémon que te sigue, normales y **shiny oficiales** |
+
+### 7.1 ✅ Recursos ya descargados (2026-10-04)
+
+Javier ya ha descargado los packs. Están **fuera del repo** en:
+
+- Windows: `C:\Users\Javier\Pokemon-Panchito-recursos\`
+- WSL: `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/`
+
+**Índice completo** (qué hay en cada carpeta, de dónde sale, a quién acreditar y tamaños): `docs/arte/recursos_terceros.md`.
+
+Reglas de uso:
+- **No se modifica nada en esa carpeta.** Se copian al repo **solo los archivos que se usen** (por ejemplo, solo las especies del MVP, no los 1500 sprites), en su carpeta de `assets/` y con el crédito en `CREDITOS.md`.
+- **Escala: los packs ya vienen preparados para 512×384** (tiles de 32 px, cuadros de 64 px, Pokémon de frente a 192 px, de espalda a 288 px). **Se usan tal cual, sin reescalar** (Fase 3.2).
+- **Set de Pokémon oficial del proyecto: `06_generation9_pack`** (generaciones 1 a 9, con shiny en todas las vistas). `07_generation8_pack` solo como reserva si falta algo.
+- **No hay que crear `assets/_terceros/`** dentro del repo. Si alguien la creó, se elimina.
 
 **Prueba de nivel gráfico (hacer YA, en este orden):**
-1. **Agente 3**: lista de recursos a descargar (tilesets exterior, interior y cueva estilo 4.ª/5.ª gen; personajes del mapa; Pokémon que te siguen con shiny; fondos y bases de combate; fuente pixel), con **enlace, autor y licencia** de cada uno, en "Preguntas para Javier" de `docs/ESTADO.md`. Javier los descarga en `assets/_terceros/`.
-2. **Agente 2**: script en `tools/` que descarga los sprites de Pokémon (frente, espalda, normal y shiny, iconos) de las carpetas de sprites de Showdown o del repo `PokeAPI/sprites`, **empezando por las especies de la Pokédex regional y del MVP**, con pausas entre peticiones y caché local. Créditos en `CREDITOS.md`.
-3. **Agente 1**: pasar el proyecto a **512×384** (cámara del mundo con `zoom = 2`, UI sin zoom) y montar con los recursos reales **dos mapas de muestra**: `maps/test/muestra_ruta.tscn` (al nivel de `anil_ruta.png`) y `maps/test/muestra_pueblo.tscn` (al nivel de `anil_pueblo.png`, con NPCs, flores y hierba animadas, sombras y el Pokémon que te sigue).
+1. ~~**Agente 3**: lista de recursos a descargar.~~ **Hecho por Javier** (ver §7.1). El Agente 3 revisa `docs/arte/recursos_terceros.md` y, si echa en falta algo para igualar a Añil (interiores, cuevas, efectos...), lo pide en "Preguntas para Javier" con su enlace.
+2. **Agente 2**: ~~script de descarga de sprites~~ → **importador** en `tools/` que copia del `06_generation9_pack` a `assets/sprites/pokemon/` (`front`, `front_shiny`, `back`, `back_shiny`, `icons`, `icons_shiny`) y a los Pokémon que te siguen **solo las especies que usa el juego** (Pokédex regional + MVP), con nombres en minúsculas según nuestros IDs, y gritos a `assets/audio/cries/`. Además, un validador que comprueba que cada especie usada tiene **todas sus versiones normal y shiny**.
+3. **Agente 1**: pasar el proyecto a **512×384** (casillas de 32 px, cámara del mundo con `zoom = 1` porque los tiles ya vienen al doble, UI sin zoom) y montar con los recursos reales **dos mapas de muestra**: `maps/test/muestra_ruta.tscn` (al nivel de `anil_ruta.png`) y `maps/test/muestra_pueblo.tscn` (al nivel de `anil_pueblo.png`, con NPCs, flores y hierba animadas, sombras y el Pokémon que te sigue).
 4. **Agente 3**: **pantalla de combate de muestra** (al nivel de `anil_combate.png`: fondo y bases, sprites a ×2, cajas de datos con barras de PS y experiencia, iconos de estado y género, y botones Luchar / Mochila / Pokémon / Huir con su animación) y **pantalla de datos del Pokémon de muestra** (al nivel de `anil_datos_pokemon.png`). Diseño **propio**, no una copia de la UI de Añil.
 5. **Todos**: capturas del juego **a la misma escala** que las referencias, puestas **lado a lado** en `docs/arte/comparativas/`. Se avisa a Javier en "Preguntas para Javier".
 6. **Javier aprueba** (o pide cambios). Hasta entonces, el MVP no añade más pantallas ni mapas visibles; el trabajo de motor, datos y lógica sigue con normalidad.
