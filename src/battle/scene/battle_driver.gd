@@ -67,3 +67,13 @@ func player_party() -> Array[Dictionary]:
 ## Objetos que se pueden usar en combate: [{id, name, count}].
 func battle_items() -> Array[Dictionary]:
 	return []
+
+
+## true si el objeto se usa sobre un Pokémon del equipo (Poción) y hay que elegirlo.
+func item_needs_target(_item_id: StringName) -> bool:
+	return false
+
+
+## ¿Tendría efecto usar el objeto ahora (sobre `party_index`, −1 = sin objetivo)?
+func can_use_item(_item_id: StringName, _party_index: int = -1) -> bool:
+	return true
