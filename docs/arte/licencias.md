@@ -1,14 +1,20 @@
 # Licencias del arte de terceros
 
-Un registro por recurso **que se usa en el juego** (Fase A.3). Antes de integrar un asset de terceros, su fila tiene que estar aquí y en `CREDITOS.md`. Lista de candidatos (aún sin usar): `docs/arte/recursos.md`.
+Un registro por recurso **que se usa en el juego** (Fase A.3). Antes de integrar un asset de terceros, su fila tiene que estar aquí y en `CREDITOS.md`. Packs descargados por Javier (de dónde sale cada uno): `docs/arte/recursos_terceros.md`.
 
-| Recurso | Autores | Licencia / condiciones | Enlace | En el repo | Comprobado |
-|---------|---------|------------------------|--------|------------|------------|
-| Pixel Operator 2018.10.04-1 | Jayvee Enaguas (HarvettFox96) | CC0 1.0 (texto completo en `assets/fonts/PixelOperator-LICENSE.txt`) | https://www.dafont.com/pixel-operator.font | `assets/fonts/` | 2026-10-04 |
+Todos son recursos de fans para fangames sin ánimo de lucro; los sprites de Pokémon son propiedad de Nintendo, Game Freak y The Pokémon Company. Solo se usan en un juego **no comercial** y con crédito.
+
+| Recurso | Autores | Licencia / condiciones (de su página) | Enlace | En el repo | Comprobado |
+|---------|---------|----------------------------------------|--------|------------|------------|
+| **Generation 9 Resource Pack v3.3.8** (set oficial de Pokémon) | Recopilado por Caruban; sprites de veekun y de los Smogon Sprite Projects, iconos, seguidores y gritos de los autores de su `Credits.txt` | Uso libre con crédito a todos los autores de `Credits.txt` (lista en `CREDITOS.md`) | https://eeveeexpo.com/resources/1101/ | `assets/sprites/pokemon/` (Agente 2), `assets/sprites/items/pokeball.png`, `assets/sprites/ui/battle/shadows/` | 2026-10-04 |
+| *ORAS/XY themed battle backgrounds for EBDX* | PhoenixOfLight92 (extracción de los fondos de 6.ª gen) y LackDeJurane (fondos combinados) | "PhoenixOfLight92 for ripping the Gen 6 battlebacks, LackDeJurane for the combined battlebacks" | https://eeveeexpo.com/resources/729/ | `assets/sprites/ui/battle/backgrounds/` | 2026-10-04 |
+| *Loaky's Modern Type Icons* | Loaky | "Credit isn't required!" (se acredita igualmente) | https://eeveeexpo.com/resources/1528/ | `assets/sprites/ui/icons/types_spanish.png` | 2026-10-04 |
+| *Gen 5 Font – Truth and Ideals* | bonzairob | "Credit if used: bonzairob @ 3dPE" | https://eeveeexpo.com/resources/861/ | `assets/fonts/truth_and_ideals/` | 2026-10-04 |
+| Pixel Operator 2018.10.04-1 | Jayvee Enaguas (HarvettFox96) | CC0 1.0 (texto completo en `assets/fonts/PixelOperator-LICENSE.txt`) | https://www.dafont.com/pixel-operator.font | `assets/fonts/` (ya no se usa) | 2026-10-04 |
 
 ## Cómo añadir un recurso
 
-1. Lee la licencia del pack descargado (su `README` o la página del recurso) y copia las condiciones tal cual: crédito, uso no comercial, si se puede editar o redistribuir.
+1. Lee la licencia del pack (su `README`, `Credits.txt` o la página del recurso) y copia las condiciones tal cual: crédito, uso no comercial, si se puede editar o redistribuir.
 2. Añade la fila aquí y los autores en `CREDITOS.md` (sección de su tipo).
-3. Si el pack prohíbe redistribuirlo, en el repo solo van los archivos que el juego usa.
+3. Copia al repo **solo los archivos que se usen**, sin reescalar (`DIRECTRICES.md` §7.1).
 4. Apunta el asset en `docs/arte/seguimiento.md` con su fuente.

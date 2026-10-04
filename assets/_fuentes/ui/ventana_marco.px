@@ -1,0 +1,16 @@
+# Marco de la ventana de la ficha, con el centro vacío (9-slice: márgenes de 4). Debajo va un trozo del fondo de combate a 1:1.
+@leyenda  . = transparente   b = agua_3   l = agua_6
+@salida res://assets/sprites/ui/summary/window_frame.png
+---
+..bbbbbbbb..
+.bllllllllb.
+bl........lb
+bl........lb
+b..........b
+b..........b
+b..........b
+b..........b
+b..........b
+bl........lb
+.bllllllllb.
+..bbbbbbbb..

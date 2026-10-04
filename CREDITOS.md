@@ -39,6 +39,17 @@ Créditos del Generation 9 Pack (`Credits.txt`), de las partes que usamos:
 - **Gritos:** generaciones 1–6, Rhyden; generación 7, Marin y Rhyden; generación 8, Zeak6464; Leyendas: Arceus, Morningdew; generación 9, editados de los vídeos de Lightblade, HeroLinik y Joya in UK; megaevoluciones de Leyendas: Z-A, DarkWolf13 (de un vídeo de HeroLinik).
 - **Recopilación:** Generation 9 Pack, Caruban; sprites redimensionados de las generaciones 8 y 9, http404error; Generation 8 Pack, Golisopod User y UberDunsparce. Lista completa de créditos de los sprites: la hoja de cálculo enlazada en el `Credits.txt` del pack.
 
+## Interfaz y combate (Agente 3)
+
+Copiados del pack sin modificar ni reescalar, solo los archivos que se usan.
+
+| Recurso | Autor | Licencia o permiso | Enlace | En el repo |
+|---------|-------|--------------------|--------|------------|
+| Fondo de combate "Field" de *ORAS/XY themed battle backgrounds for EBDX* | **PhoenixOfLight92** (extracción de los fondos de la 6.ª generación) y **LackDeJurane** (fondos combinados) | Uso con crédito | https://eeveeexpo.com/resources/729/ | `assets/sprites/ui/battle/backgrounds/field.png` |
+| *Loaky's Modern Type Icons* (versión en español) | **Loaky** | El autor no exige crédito; se le acredita igualmente | https://eeveeexpo.com/resources/1528/ | `assets/sprites/ui/icons/types_spanish.png` |
+| Poké Ball (objeto) y sombras de los Pokémon del Generation 9 Pack | Los de la sección "Pokémon" | Igual que el Generation 9 Pack | https://eeveeexpo.com/resources/1101/ | `assets/sprites/items/pokeball.png`, `assets/sprites/ui/battle/shadows/` |
+| Botones, paneles, iconos de estado y de sexo, destellos, cursores y ficha del Pokémon | Equipo de Pokémon Panchito (pixel art propio, `assets/_fuentes/ui/`) | Propio | — | `assets/sprites/ui/` |
+
 ## Datos
 
 | Recurso | Autor | Licencia | Enlace | En el repo |
@@ -57,4 +68,5 @@ Los nombres, textos y datos de los Pokémon son propiedad de Nintendo, Game Frea
 
 | Recurso | Autor | Licencia | Enlace | En el repo |
 |---------|-------|----------|--------|------------|
-| Pixel Operator (versión 2018.10.04-1) | Jayvee Enaguas (HarvettFox96) | CC0 1.0 | https://www.dafont.com/pixel-operator.font | `assets/fonts/` (licencia en `PixelOperator-LICENSE.txt`) |
+| *Gen 5 Font – Truth and Ideals* (Normal, Shadow y Small Truths) | **bonzairob** ("Credit if used: bonzairob @ 3dPE") | Uso con crédito | https://eeveeexpo.com/resources/861/ | `assets/fonts/truth_and_ideals/` (la del juego) |
+| Pixel Operator (versión 2018.10.04-1) | Jayvee Enaguas (HarvettFox96) | CC0 1.0 | https://www.dafont.com/pixel-operator.font | `assets/fonts/` (licencia en `PixelOperator-LICENSE.txt`; ya no se usa) |

@@ -17,9 +17,9 @@ script = ExtResource("1_box")
 visible = false
 layout_mode = 0
 offset_left = 4.0
-offset_top = 108.0
+offset_top = 124.0
 offset_right = 40.0
-offset_bottom = 132.0
+offset_bottom = 148.0
 mouse_filter = 2
 theme_type_variation = &"SmallFrame"
 
@@ -29,17 +29,17 @@ layout_mode = 2
 [node name="Frame" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 130.0
-offset_right = 316.0
-offset_bottom = 176.0
+offset_top = 146.0
+offset_right = 252.0
+offset_bottom = 188.0
 mouse_filter = 2
 
 [node name="Text" type="RichTextLabel" parent="Frame"]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 7.0
-offset_right = 302.0
-offset_bottom = 39.0
+offset_top = 5.0
+offset_right = 238.0
+offset_bottom = 37.0
 mouse_filter = 2
 bbcode_enabled = true
 scroll_active = false
@@ -49,10 +49,10 @@ visible_characters_behavior = 1
 [node name="Arrow" type="Control" parent="Frame"]
 visible = false
 layout_mode = 0
-offset_left = 302.0
-offset_top = 33.0
-offset_right = 310.0
-offset_bottom = 39.0
+offset_left = 238.0
+offset_top = 31.0
+offset_right = 246.0
+offset_bottom = 37.0
 mouse_filter = 2
 script = ExtResource("2_arrow")
 direction = 1

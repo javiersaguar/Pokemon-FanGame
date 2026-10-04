@@ -15,6 +15,8 @@ const NAME_PLATE_OVERLAP := 2
 
 ## Caracteres por segundo. 0 = instantáneo.
 @export var text_speed := 40
+## Panel oscuro con texto claro (mensajes de combate).
+@export var dark := false
 
 var is_typing := false
 var is_waiting := false
@@ -34,6 +36,10 @@ var _default_text_width := 0.0
 
 func _ready() -> void:
 	_default_text_width = _label.size.x
+	if dark:
+		_frame.theme_type_variation = &"DarkPanel"
+		_label.theme_type_variation = &"LightRichText"
+		_arrow.light = true
 	set_process(false)
 	clear()
 
@@ -96,6 +102,16 @@ func set_speaker(speaker_name: String) -> void:
 	_name_plate.visible = speaker_name != ""
 	_name_plate.reset_size()
 	_name_plate.position.y = _frame.position.y - _name_plate.size.y + NAME_PLATE_OVERLAP
+
+
+## Coloca el marco en `rect` (coordenadas del lienzo), con el texto y la flecha dentro.
+func place_frame(rect: Rect2) -> void:
+	_frame.position = rect.position
+	_frame.size = rect.size
+	_label.position = Vector2(10, 6)
+	_label.size = Vector2(rect.size.x - 20, 32)
+	_default_text_width = _label.size.x
+	_arrow.position = Vector2(rect.size.x - 16, rect.size.y - 10)
 
 
 ## Ancho del texto en píxeles (el combate lo estrecha para dejar sitio al menú).
