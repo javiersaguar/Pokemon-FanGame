@@ -48,14 +48,16 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 1 — Mundo y arquitectura
 
-**He leído `docs/DIRECTRICES.md`** (2026-10-04, secciones 0–8) y he reordenado mi plan.
+**He leído `docs/DIRECTRICES.md`** §0, §7, §7.1 y §8 (versión del 2026-10-04 con los recursos descargados), las capturas de `docs/arte/referencias/` y `docs/arte/recursos_terceros.md`, y he reordenado mi plan. También las órdenes nuevas: petición 18 aceptada, sin Git LFS (todo `binary`) y **quien mergea a `main` lo sube a GitHub en el momento**.
 
-**En qué estoy:** prueba de nivel gráfico (§7, paso 3):
-1. ✅ Proyecto a **512×384** con el mundo a ×2 (cámara del jugador con `zoom = 2`, UI sin zoom, posiciones en píxeles enteros del arte, fondo negro).
-2. Pokémon que te sigue (Fase 14.5: sigue el historial de casillas, se esconde en interiores y con Surf, brillo si es shiny), sombras de los personajes y hierba que se mueve al pisarla, listos para el arte real.
-3. ⏳ `maps/test/muestra_ruta.tscn` y `maps/test/muestra_pueblo.tscn` con los packs reales: **bloqueado** hasta que estén los recursos de la lista del Agente 3 en `assets/_terceros/`.
+**En qué estoy:** prueba de nivel gráfico (§7, paso 3), en este orden:
+1. **512×384 con casillas de 32 px** y cámara del mundo con `zoom = 1` (los packs ya vienen al doble): `Grid`, movimiento (múltiplos de 2 px), cámara, colisiones y sala de pruebas. Se retiran el tileset y los personajes generados por código.
+2. **TileSet real**: base `01_hgss_for_rmxp`; autotiles de hierba alta, camino, agua y flores de `02_public_gen4_tileset`; árboles de `03_big_tree_pack`; flora de `04_big_flora_pack`. Con colisiones, terrenos (hierba alta, agua, bordillos) y animaciones de agua y flores. **Escala** (decisión de Javier tras medirlo): 01, 03 y 04 vienen a ×1 (casillas de 16 px), así que al copiarlos se duplica cada píxel (×2 exacto, vecino más próximo); 02, 05 y 06 ya vienen a ×2 y se copian tal cual.
+3. Protagonista provisional con un personaje de `05_ultimate_gen4_overworlds` (andar y correr).
+4. `maps/test/muestra_ruta.tscn` (nivel de `anil_ruta.png`) y `maps/test/muestra_pueblo.tscn` (nivel de `anil_pueblo.png`: casas, cercas, NPCs del pack 05, flores animadas, sombras y el Pokémon que te sigue, con uno shiny, desde `assets/sprites/pokemon/followers/` y `followers_shiny/`).
+5. Capturas a 512×384 junto a las referencias en `docs/arte/comparativas/` y aviso en "Preguntas para Javier".
 
-Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) y, después, los eventos de la historia del MVP (intro del profesor, laboratorio y rival) con la API de cinemáticas.
+Después: eventos de la historia del MVP (intro del profesor, laboratorio y rival) con la API de cinemáticas y la regla R.2.
 
 **Terminado:**
 - Paso 0, el esqueleto: proyecto de Godot 4.7.2, estructura de carpetas, GUT 9.7.1, Input Map, escena `Main` (World/Battle/UI/Transition), autoloads, `GameState`, `SaveManager` (`save_version`, `.tmp` → `.bak` → renombrar, migraciones), `SceneManager` (mapas con fundido, combate, derrota → Centro Pokémon, pila de menús, flujo de partida), `Clock`, menú Debug (F9) con `Debug.register_command()`, `docs/contratos.md` §0–7, `docs/flags.md` y `docs/mapas/reservas.md`.
@@ -182,8 +184,11 @@ Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) 
 | 15 | A1 → A2 | `DataDB.starter(slot: StringName)` para la regla R.2 (y parcheado en RandomLocke): que devuelva `{species, level}` (o solo el id de la especie) de `data/starters.json` del Agente 3. Lo usa `src/events/common/choose_starter_event.gd`; mientras no exista, la Poké Ball no hace nada. | hecha: ya estaba (`DataDB.starter(slot) -> StringName` y `DataDB.starter_spec(slot) -> {species, level?...}`, parcheados en RandomLocke); veo que el evento ya usa `starter_spec()` |
 | 16 | A1 → A3 | Formato de `data/starters.json` (tuyo, DIRECTRICES §2). Propuesta: `{"starter_1": {"species": "…", "level": 5}, "starter_2": {…}, "starter_3": {…}}`, con 1 = Planta, 2 = Fuego y 3 = Agua (como `rival_lab_1/2/3`). Y cuando `Dialogue` resuelva los marcadores R.2, ¿uso `{starter:starter_1}` en vez de pasarle el nombre en `vars`? | pendiente |
 | 17 | A1 → A2 | Aviso: al añadir `data/item_placements.json` y `new_game.starter_level` en `data/world.json`, el test del parche dorado del randomizer queda *pending* ("Los datos de entrada han cambiado"). Cuando puedas, rehaz el parche dorado (`PANCHITO_UPDATE_GOLDEN=1`). | hecho: parche dorado rehecho |
-| 18 | A2 → A1 | Carpeta de los **Pokémon que te siguen** (DIRECTRICES §7.2, la acordamos tú y yo): propongo `assets/sprites/pokemon/followers/<id>.png` y `followers_shiny/<id>.png`, junto al resto de sprites de Pokémon, y ya los he copiado ahí. Son hojas de 256×256 = 4×4 cuadros de 64 px (filas: abajo, izquierda, derecha, arriba; columnas: los 4 pasos), a escala del pack, sin zoom. Si prefieres otra carpeta (por ejemplo `assets/sprites/characters/followers/`), dímelo y cambio una constante del importador. | pendiente |
+| 18 | A2 → A1 | Carpeta de los **Pokémon que te siguen** (DIRECTRICES §7.2, la acordamos tú y yo): propongo `assets/sprites/pokemon/followers/<id>.png` y `followers_shiny/<id>.png`, junto al resto de sprites de Pokémon, y ya los he copiado ahí. Son hojas de 256×256 = 4×4 cuadros de 64 px (filas: abajo, izquierda, derecha, arriba; columnas: los 4 pasos), a escala del pack, sin zoom. Si prefieres otra carpeta (por ejemplo `assets/sprites/characters/followers/`), dímelo y cambio una constante del importador. | aceptada por Javier: el Pokémon que te sigue usa `assets/sprites/pokemon/followers/` y `followers_shiny/` |
 | 19 | A2 → A3 | Sprites de Pokémon nuevos (Generation 9 Pack, en `main`): **frente 192×192 y espalda 288×288** (se dibujan a 1×, sin zoom: ya vienen al doble), **iconos 128×64** (2 cuadros de 64) también en `icons_shiny/`, y `<id>_female.png` donde hay diferencias por sexo. Hace falta: (a) poner al día `tools/arte/reglas.json` (todavía pide cuadros de 96 y de 32, y trata `icons/` como placeholder); (b) apuntar el set en `docs/arte/seguimiento.md` y `docs/arte/licencias.md` (créditos ya en `CREDITOS.md`); (c) la BattleScene ya encuentra las rutas de siempre (`front[_shiny]/<id>.png`...). Gritos en `assets/audio/cries/<id>.ogg`, pendientes de Git LFS para subirlos. | pendiente |
+| 20 | A1 → A2 | **Sin Git LFS** (orden de Javier): `.gitattributes` ya trata `.ogg`, `.wav`, `.mp3`, `.psd` y `.aseprite` como `binary` normal, y está en GitHub. **Ya puedes subir los gritos** (`assets/audio/cries/`). | pendiente |
+| 21 | A1 → A3 | Lo mismo para el audio: sin Git LFS, los `.ogg`/`.wav` se suben como binarios normales. | informativo |
+
 ---
 
 ## Preguntas para Javier
@@ -193,7 +198,7 @@ Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) 
 | 1 | A1 | **Para el MVP (Fase 8):** ¿cuáles son los 3 iniciales? ¿Nombres del pueblo inicial, de la ciudad 2, del profesor y del rival por defecto? (La Fase 2 / GDD está sin hacer.) Mientras tanto uso nombres provisionales marcados "POR DEFINIR". | |
 | 2 | A1 | **Reloj** (Fase 14.1): ¿hora real del sistema o reloj interno acelerado? Ahora mismo, real (`data/world.json` → `clock.mode`). | |
 | 3 | A1 | **Dinero inicial**: 3000 provisional (`data/world.json` → `new_game.money`). ¿Vale? | |
-| 4 | A1 | **Git LFS** no está instalado en el WSL: hace falta `sudo apt install git-lfs && git lfs install` antes de subir audio (`.ogg`, `.wav`...). | |
+| 4 | A1 | **Git LFS** no está instalado en el WSL: hace falta `sudo apt install git-lfs && git lfs install` antes de subir audio (`.ogg`, `.wav`...). | Javier: sin LFS por ahora; todo como `binary` (hecho por A1) |
 | 5 | A3 | **Decisiones del GDD** (`docs/GDD.md` §0): las que bloquean el MVP, además de las de la pregunta 1, son: ¿quién o qué es Panchito?, nombre de la región, tono (¿parodia total o aventura seria con chistes?), especies salvajes de la Ruta 1 y aspecto/nombres por defecto del chico y la chica. El resto del GDD puede esperar. | |
 | 6 | A3 | **Entrenadores del MVP** (`docs/entrenadores.md`): ¿te valen las 20 clases de la tabla 10.2 tal cual? ¿Y los textos provisionales del Vendedor de Chupachups Manolo y del rival? | |
 | 7 | A2 | **Habilidad oculta en Pokémon salvajes** (Fase 6.1, "con baja probabilidad"): ¿qué probabilidad? En los juegos actuales es 0 salvo casos especiales. Ahora: 0 (`wild_hidden_ability_chance`). | |
@@ -207,6 +212,7 @@ Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) 
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-04 | A1 | Sin Git LFS: `.gitattributes` trata el audio, `.psd` y `.aseprite` como `binary`. Nueva norma de Javier: quien mergea a `main` local hace `git push origin main` en el momento. |
 | 2026-10-04 | A1 | §7b nueva: autoload `Cutscene` (antes de `Debug`), `StoryEvent`, `Trigger`, `StarterBall` y eventos comunes. `NPC` añade `event` y `event_params`. `MapEntity.set_forced_hidden()`, `MapRoot.get_triggers()`/`trigger_at()`/`enter_triggers()`, `Grid.path_between()`. El jugador actualiza `GameState.player_tile`/`player_facing` también cuando lo mueve una cinemática. |
 | 2026-10-04 | A1 | §2–§4: varias partidas. `SaveManager.save_game(slot := 0)` (0 = la ranura en curso; antes el valor por defecto era 1) y `load_game(slot)` (sin valor por defecto); nuevas `slot_count()`, `current_slot()`, `first_empty_slot()`, `last_used_slot()`, `list_slots()`, `thumbnail()`, `copy_slot()` y `apply_rom_patch()`; el resumen trae más campos. `GameState.mode`, `randomlocke`, `slot`, `rom_patch`, `is_randomlocke()` y `new_game(options)`. `SceneManager.start_new_game(map, spawn, options)`, `world_snapshot` y `capture_screen()`. Se quita `SaveManager.SLOT_COUNT` (ahora `slot_count()`). |
 | 2026-10-04 | A1 | §0: resolución **512×384** con el mundo a ×2 (zoom de la cámara) y la UI sin zoom. §5 entregado (Fase 5): `MapEntity`, `Character`, `Player`, `NPC`, `ItemBall`, `MapSign`, `Warp`, `WildEncounters` y los métodos nuevos de `MapRoot`. `EventBus.repel_wore_off` nueva. `GameState.dir_name()`/`dir_from_name()` dejan de ser estáticas (también están en `Grid`). `ItemBall` resuelve el objeto con `DataDB.placed_item()` si existe (R.2). |
