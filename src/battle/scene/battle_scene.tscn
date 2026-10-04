@@ -1,0 +1,174 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/battle/scene/battle_scene.gd" id="1_scene"]
+[ext_resource type="Theme" path="res://src/ui/theme/main_theme.tres" id="2_theme"]
+[ext_resource type="Script" path="res://src/battle/scene/battle_background.gd" id="3_bg"]
+[ext_resource type="Script" path="res://src/battle/scene/battle_pokemon_sprite.gd" id="4_sprite"]
+[ext_resource type="Script" path="res://src/battle/scene/battle_data_box.gd" id="5_box"]
+[ext_resource type="PackedScene" path="res://src/ui/dialogue/dialogue_box.tscn" id="6_dialogue"]
+[ext_resource type="Script" path="res://src/ui/widgets/grid_menu.gd" id="7_grid"]
+
+[node name="BattleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_scene")
+
+[node name="Field" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="Field"]
+script = ExtResource("3_bg")
+
+[node name="FoeTrainer" type="Sprite2D" parent="Field"]
+position = Vector2(236, 78)
+centered = false
+
+[node name="FoeSprite" type="Node2D" parent="Field"]
+position = Vector2(236, 80)
+script = ExtResource("4_sprite")
+
+[node name="PlayerTrainer" type="Sprite2D" parent="Field"]
+position = Vector2(84, 134)
+centered = false
+
+[node name="PlayerSprite" type="Node2D" parent="Field"]
+position = Vector2(84, 136)
+script = ExtResource("4_sprite")
+back = true
+
+[node name="Fx" type="Node2D" parent="Field"]
+
+[node name="FoeBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 130.0
+offset_bottom = 38.0
+mouse_filter = 2
+script = ExtResource("5_box")
+
+[node name="PlayerBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 90.0
+offset_right = 314.0
+offset_bottom = 130.0
+mouse_filter = 2
+script = ExtResource("5_box")
+is_player = true
+
+[node name="MessageBox" parent="." instance=ExtResource("6_dialogue")]
+layout_mode = 1
+
+[node name="CommandPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 130.0
+offset_right = 316.0
+offset_bottom = 176.0
+mouse_filter = 2
+
+[node name="Menu" type="GridContainer" parent="CommandPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 7.0
+offset_right = 132.0
+offset_bottom = 39.0
+mouse_filter = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 0
+columns = 2
+script = ExtResource("7_grid")
+
+[node name="MovePanel" type="Control" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 130.0
+offset_right = 316.0
+offset_bottom = 176.0
+mouse_filter = 2
+
+[node name="Moves" type="Panel" parent="MovePanel"]
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 46.0
+mouse_filter = 2
+
+[node name="Menu" type="GridContainer" parent="MovePanel/Moves"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 7.0
+offset_right = 206.0
+offset_bottom = 39.0
+mouse_filter = 2
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 0
+columns = 2
+script = ExtResource("7_grid")
+
+[node name="Info" type="Panel" parent="MovePanel"]
+layout_mode = 0
+offset_left = 212.0
+offset_right = 312.0
+offset_bottom = 46.0
+mouse_filter = 2
+
+[node name="PP" type="Label" parent="MovePanel/Info"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 94.0
+offset_bottom = 22.0
+
+[node name="Type" type="Label" parent="MovePanel/Info"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 22.0
+offset_right = 94.0
+offset_bottom = 38.0
+
+[node name="ListPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="ListPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+
+[node name="Menu" type="GridContainer" parent="ListPanel/Margin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/v_separation = 0
+script = ExtResource("7_grid")
+
+[node name="Curtain" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="A" type="ColorRect" parent="Curtain"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 90.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="B" type="ColorRect" parent="Curtain"]
+layout_mode = 0
+offset_top = 90.0
+offset_right = 320.0
+offset_bottom = 180.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

@@ -1,0 +1,21 @@
+{
+  "_": "Datos de prueba de FakeBattle (solo mientras no existe el BattleEngine del Agente 2).",
+  "player_party": [
+    {"species": "charmander", "level": 6, "types": ["fire"], "moves": ["scratch", "growl", "ember"]},
+    {"species": "pidgey", "level": 4, "types": ["normal", "flying"], "moves": ["tackle", "sandattack"]}
+  ],
+  "wild": {"species": "rattata", "level": 3, "types": ["normal"], "moves": ["tackle", "tailwhip"]},
+  "items": [{"id": "pokeball", "count": 5}, {"id": "potion", "count": 2}],
+  "moves": {
+    "scratch": {"name": "Arañazo", "type": "normal", "category": "physical", "power": 40, "pp": 35},
+    "tackle": {"name": "Placaje", "type": "normal", "category": "physical", "power": 40, "pp": 35},
+    "growl": {"name": "Gruñido", "type": "normal", "category": "status", "power": 0, "pp": 40},
+    "tailwhip": {"name": "Látigo", "type": "normal", "category": "status", "power": 0, "pp": 30},
+    "sandattack": {"name": "Ataque Arena", "type": "ground", "category": "status", "power": 0, "pp": 15},
+    "ember": {"name": "Ascuas", "type": "fire", "category": "special", "power": 40, "pp": 25},
+    "vinewhip": {"name": "Látigo Cepa", "type": "grass", "category": "physical", "power": 45, "pp": 25},
+    "watergun": {"name": "Pistola Agua", "type": "water", "category": "special", "power": 40, "pp": 25},
+    "fairywind": {"name": "Viento Feérico", "type": "fairy", "category": "special", "power": 40, "pp": 30}
+  },
+  "item_names": {"pokeball": "Poké Ball", "potion": "Poción"}
+}

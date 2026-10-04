@@ -44,22 +44,30 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	var color := get_theme_color(&"font_color", &"Label")
-	var shadow := get_theme_color(&"font_shadow_color", &"Label")
-	var origin := Vector2(0, _bob_offset)
-	_draw_shape(origin + Vector2.ONE, shadow)
-	_draw_shape(origin, color)
+	draw_arrow(self, Vector2(0, _bob_offset), direction)
 
 
-func _draw_shape(origin: Vector2, color: Color) -> void:
-	if direction == Direction.RIGHT:
+## Dibuja la flecha (con su sombra) en cualquier CanvasItem: los menús de
+## rejilla la pintan así junto a la opción elegida.
+static func draw_arrow(canvas: CanvasItem, origin: Vector2, dir: Direction = Direction.RIGHT) -> void:
+	var color := Color(0.25098, 0.25098, 0.282353)
+	var shadow := Color(0.815686, 0.815686, 0.784314)
+	if canvas is Control:
+		color = (canvas as Control).get_theme_color(&"font_color", &"Label")
+		shadow = (canvas as Control).get_theme_color(&"font_shadow_color", &"Label")
+	_draw_shape(canvas, origin + Vector2.ONE, dir, shadow)
+	_draw_shape(canvas, origin, dir, color)
+
+
+static func _draw_shape(canvas: CanvasItem, origin: Vector2, dir: Direction, color: Color) -> void:
+	if dir == Direction.RIGHT:
 		for row: int in 7:
 			var width := 4 - absi(row - 3)
-			draw_rect(Rect2(origin + Vector2(0, row), Vector2(width, 1)), color)
+			canvas.draw_rect(Rect2(origin + Vector2(0, row), Vector2(width, 1)), color)
 	else:
 		for row: int in 4:
 			var width := 7 - row * 2
-			draw_rect(Rect2(origin + Vector2(row, row), Vector2(width, 1)), color)
+			canvas.draw_rect(Rect2(origin + Vector2(row, row), Vector2(width, 1)), color)
 
 
 func _update_size() -> void:
