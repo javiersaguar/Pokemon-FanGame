@@ -415,7 +415,7 @@ func _on_interact(player: Player) -> void   # virtual: por defecto dice `lines`
 
 Para un NPC con comportamiento propio: script `@tool` que hereda de `NPC` y sobrescribe `_on_interact()` (ejemplo: `maps/test/test_battle_npc.gd`).
 
-**ItemBall**: `item_id: StringName`, `quantity: int`, `hidden_item: bool`. Su **id de colocación** es `<map_id>/<nombre del nodo>` (`placement_id()`): por la regla R.2, el objeto que da es `DataDB.placed_item(placement_id, item_id)` si DataDB lo tiene (en RandomLocke puede ser otro) y, si no, `item_id`. Al cogerlo activa `item_taken:<map_id>:<nombre del nodo>`, llama a `GameState.bag.add(objeto, quantity)` si la mochila existe, suena el ME `item` y muestra "¡{player} ha encontrado {item}!" con el nombre (o el plural) de `DataDB.item()`.
+**ItemBall**: `item_id: StringName`, `quantity: int`, `hidden_item: bool`. Todas las colocaciones están en `data/item_placements.json` (`{placement_id: item_id}`, lo lee el randomizer con `DataDB.item_placements()`): se regenera con `godot --headless --path . -s res://maps/_tools/build_item_placements.gd` al tocar objetos del suelo (`ItemPlacements.scan()`; un test de `tests/mundo/` avisa si está desactualizado). Su **id de colocación** es `<map_id>/<nombre del nodo>` (`placement_id()`): por la regla R.2, el objeto que da es `DataDB.placed_item(placement_id, item_id)` si DataDB lo tiene (en RandomLocke puede ser otro) y, si no, `item_id`. Al cogerlo activa `item_taken:<map_id>:<nombre del nodo>`, llama a `GameState.bag.add(objeto, quantity)` si la mochila existe, suena el ME `item` y muestra "¡{player} ha encontrado {item}!" con el nombre (o el plural) de `DataDB.item()`.
 
 **MapSign**: `lines`, `only_from_below := true` y `show_sprite := true`.
 
@@ -543,7 +543,7 @@ await Cutscene.battle_wild(species_or_pokemon, level := 5, options := {}) -> Str
 |--------|----------|----------|
 | `heal_party_event.gd` | `spawn` (spawn delante del mostrador; `"default"`) | Enfermera: pregunta, jingle `heal`, cura al equipo y fija `healing_map`/`healing_spawn` |
 | `open_shop_event.gd` | `shop_id` | Dependiente: abre `ShopScreen.open(shop_id)` (Agente 3) |
-| `choose_starter_event.gd` | `slot`, `index` | Pregunta "¿Eliges a X?" con la especie de `DataDB.starter(slot)`, lo da (nivel del dato o `world.json` → `new_game.starter_level`), var `starter` = `index` y flag `starter_chosen` |
+| `choose_starter_event.gd` | `slot`, `index` | Pregunta "¿Eliges a X?" con la especie de `DataDB.starter_spec(slot)`, lo da (nivel del dato o `world.json` → `new_game.starter_level`), var `starter` = `index` y flag `starter_chosen` |
 
 ---
 

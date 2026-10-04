@@ -91,3 +91,11 @@ func test_sin_pokemon_no_hay_encuentros() -> void:
 	assert_eq(WildEncounters.roll(_map, Vector2i(5, 7)), {}, "en el camino no")
 	_map.data.encounter_rate = 0.0
 	GameState.reset()
+
+
+func test_lista_de_objetos_colocados_al_dia() -> void:
+	var expected := ItemPlacements.to_json(ItemPlacements.scan())
+	var current := FileAccess.get_file_as_string(ItemPlacements.OUTPUT)
+	assert_eq(current, expected,
+		"data/item_placements.json desactualizado: godot --headless --path . -s res://maps/_tools/build_item_placements.gd")
+	assert_eq(DataDB.placed_item(&"test/test_room/Pocion", &"potion"), &"potion", "sin parche, el de la escena")

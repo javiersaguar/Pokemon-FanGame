@@ -139,10 +139,7 @@ func map_exists(map_id: StringName) -> bool:
 
 ## Todos los mapas de maps/ (para el Debug y los tests de humo).
 func list_maps() -> Array[StringName]:
-	var out: Array[StringName] = []
-	_collect_maps(MapRoot.MAPS_DIR, out)
-	out.sort_custom(func(a: StringName, b: StringName) -> bool: return String(a) < String(b))
-	return out
+	return MapRoot.list_all()
 
 
 # --- Fundidos ---
@@ -375,14 +372,6 @@ static func _setup_can_lose(setup: Variant) -> bool:
 	if setup is Dictionary:
 		return setup.get("can_lose", false)
 	return false
-
-
-func _collect_maps(dir_path: String, out: Array[StringName]) -> void:
-	for entry: String in ResourceLoader.list_directory(dir_path):
-		if entry.ends_with("/"):
-			_collect_maps(dir_path + entry, out)
-		elif entry.ends_with(".tscn"):
-			out.append(MapRoot.id_from_path(dir_path + entry))
 
 
 static func _parse_user_args() -> Dictionary:

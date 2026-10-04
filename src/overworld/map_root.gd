@@ -27,6 +27,22 @@ static func path_from_id(map_id: StringName) -> String:
 	return MAPS_DIR + String(map_id) + ".tscn"
 
 
+## Ids de todos los mapas de maps/, ordenados.
+static func list_all() -> Array[StringName]:
+	var out: Array[StringName] = []
+	_collect(MAPS_DIR, out)
+	out.sort_custom(func(a: StringName, b: StringName) -> bool: return String(a) < String(b))
+	return out
+
+
+static func _collect(dir_path: String, out: Array[StringName]) -> void:
+	for entry: String in ResourceLoader.list_directory(dir_path):
+		if entry.ends_with("/"):
+			_collect(dir_path + entry, out)
+		elif entry.ends_with(".tscn"):
+			out.append(id_from_path(dir_path + entry))
+
+
 func get_display_name() -> String:
 	return data.display_name if data else String(get_map_id())
 
