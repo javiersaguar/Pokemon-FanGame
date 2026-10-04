@@ -716,22 +716,22 @@ Se aceptan las rutas de la sección 4.
 
 #### BattleScene ↔ combate: `BattleDriver`
 
-La BattleScene no habla directamente con el motor, sino con un `BattleDriver` (`src/battle/scene/battle_driver.gd`, documentado en el propio archivo). Hoy lo implementa `FakeBattle` (`src/battle/scene/dev/`, combate de mentira para probar la escena); cuando exista el `BattleEngine` del Agente 2, lo implementará un adaptador (Agente 3) que traduzca sus `BattleEvent` y `BattleAction`. Así, si el motor cambia, solo cambia el adaptador.
+La BattleScene habla con un `BattleDriver` (`src/battle/scene/battle_driver.gd`, documentado en el propio archivo), que sigue el flujo de §8.5: `start()` → mientras no acabe, `request()` → acción del jugador → `submit(action)`. Los eventos son **los `BattleEvent` de §8.5 tal cual** (`type`, `side`, `slot`, `data`); la escena ignora los tipos que no conoce. Hoy lo implementa `FakeBattle` (`src/battle/scene/dev/`, combate de mentira con eventos del mismo formato y sin tocar la partida); cuando llegue el `BattleEngine`, un adaptador fino (Agente 3) traducirá `BattleRequest` / `BattleAction` y llamará a `result.apply_to_game_state()` en `finish()`.
 
 ```gdscript
-driver.info() -> Dictionary        # {kind: &"wild"/&"trainer", trainer, background, bgm, can_run, can_lose}
-driver.start() -> Array            # eventos iniciales (los send_out)
-driver.submit(action) -> Array     # {type: &"fight", move_slot} · {&"item", item} · {&"switch", party_index} · {&"run"}
-driver.needs_switch() -> bool / driver.submit_switch(party_index) -> Array
-driver.is_over() -> bool / driver.outcome() -> StringName   # SceneManager.OUTCOME_*
-driver.player_active() -> Dictionary / player_party() -> Array[Dictionary] / battle_items() -> Array[Dictionary]
+driver.info() -> Dictionary        # {kind: &"wild"/&"trainer", trainers (como BattleSetup.trainers), background, bgm, can_run, can_lose}
+driver.start() -> Array            # BattleEvent hasta la primera decisión
+driver.request() -> Dictionary     # {kind: &"action" | &"switch" | &"learn_move", party_index, move_id, move_name, can_run}
+driver.submit(action) -> Array     # {type: &"fight", move_slot} · {&"item", item} · {&"switch", party_index} · {&"run"} · {&"learn_move", forget_index}
+driver.is_over() -> bool / outcome() -> StringName / finish()   # finish() = aplicar el resultado a la partida
+driver.player_active() -> Dictionary / player_party() -> Array[Dictionary] / battle_items() -> Array[Dictionary]   # para los menús
 ```
 
-Eventos que entiende la escena (`Dictionary` u objeto con esas propiedades; `side` = `&"player"` o `&"foe"`): `message {text}`, `send_out {side, pokemon, wild}`, `withdraw {side}`, `move {side, target, move: {id, name, type, category}}`, `damage {side, hp, effectiveness, critical}`, `heal {side, hp}`, `status {side, status}`, `stat_change {side, stat, stages}`, `faint {side}`, `exp {side, exp 0–1}`, `level_up {side, level, hp, max_hp}` y `ball {ball, shakes, caught}`. `pokemon` = `{species, name, level, gender, hp, max_hp, status, shiny, types, exp, able, moves: [{id, name, type, category, pp, max_pp}]}`.
+**Quién pone cada texto**: el motor manda los de mecánicas en eventos `message` (`¡X usó Y!`, `¡Es muy eficaz!`, `¡Has derrotado a...!`...) y el `lose_text` / `win_text` en `trainer_speech`. La escena solo pone los de presentación: `¡Un X salvaje apareció!`, `¡<Clase> <Nombre> te desafía!`, `¡<Entrenador> sacó a X!`, `¡Adelante, X!`, `¡X, vuelve!`, `¿Qué debería hacer X?` y `¡{player} está fuera de combate!` (derrota que no se puede perder).
 
-**Quién pone cada texto**: el motor manda los de mecánicas (`¡X usó Y!`, `¡Es muy eficaz!`, `¡X se debilitó!`, experiencia...). La escena pone los de presentación: `¡Un X salvaje apareció!`, `¡<Clase> <Nombre> te desafía!`, `¡<Entrenador> sacó a X!`, `¡Adelante, X!`, `¿Qué debería hacer X?`, `¡Has derrotado a <Entrenador>!` y el `lose_text` / `win_text` del entrenador.
-
-`BattleScene.fast = true` quita animaciones y esperas (tests). Sprites: `assets/sprites/pokemon/<front|back>[_shiny]/<especie>.png`, `assets/sprites/trainers/player_back_<male|female>.png` y fondos `assets/sprites/ui/battle/bg_<entorno>.png`; si faltan, se generan provisionales (`PlaceholderArt`).
+- La música de victoria empieza al debilitarse el último Pokémon del rival (si en esa tanda llega `end` con `win`).
+- `BattleScene.fast = true` quita animaciones y esperas (tests).
+- Sprites: `assets/sprites/pokemon/<front|back>[_shiny]/<especie>.png`, `assets/sprites/trainers/player_back_<male|female>.png` y fondos `assets/sprites/ui/battle/bg_<entorno>.png`. Si faltan, se generan provisionales (`PlaceholderArt`).
 
 ### 9.4 Interfaz común
 

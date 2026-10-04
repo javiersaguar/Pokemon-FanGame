@@ -19,6 +19,7 @@ const GENDER_COLORS: Dictionary[StringName, Color] = {
 
 var hp := 0
 var max_hp := 1
+var pokemon_name := ""
 
 var _name: Label
 var _level: Label
@@ -66,14 +67,15 @@ func _ready() -> void:
 
 
 func show_pokemon(pokemon: Dictionary) -> void:
-	_name.text = str(pokemon.get("name", "?"))
+	pokemon_name = str(pokemon.get("name", "?"))
+	_name.text = pokemon_name
 	_gender = StringName(pokemon.get("gender", ""))
 	set_level(int(pokemon.get("level", 1)))
 	set_status(StringName(pokemon.get("status", "")))
 	max_hp = maxi(int(pokemon.get("max_hp", 1)), 1)
 	set_hp(int(pokemon.get("hp", max_hp)))
 	if _exp_bar:
-		_exp_bar.ratio = float(pokemon.get("exp", 0.0))
+		_exp_bar.ratio = float(pokemon.get("exp_ratio", 0.0))
 	queue_redraw()
 
 

@@ -72,12 +72,10 @@ func run(setup: Variant) -> StringName:
 	await _intro(start_events)
 	await _play_events(start_events)
 	while not _driver.is_over():
-		var action := await _choose_action()
+		var action := await _ask_player(_driver.request())
 		await _play_events(_driver.submit(action))
-		while _driver.needs_switch() and not _driver.is_over():
-			var index := await _choose_party(true)
-			await _play_events(_driver.submit_switch(index))
 	var outcome := _driver.outcome()
+	_driver.finish()
 	await _outro(outcome)
 	AudioManager.restore_bgm()
 	return outcome
@@ -93,59 +91,85 @@ static func make_driver(setup: Variant) -> BattleDriver:
 # --- Eventos ---
 
 func _play_events(events: Array) -> void:
-	for event: Variant in events:
-		await _play_event(event)
+	var victory_at := _victory_index(events)
+	for i: int in events.size():
+		await _play_event(events[i])
+		if i == victory_at:
+			AudioManager.play_bgm(&"victory_wild" if _trainer().is_empty() else &"victory_trainer", 0.2)
 
 
+## Tipos y campos: contratos.md §8.5 (BattleEvent). Los que no conoce, los ignora.
 func _play_event(event: Variant) -> void:
-	var side := StringName(_field(event, "side", BattleDriver.FOE))
+	var side := int(_field(event, "side", -1))
+	var data: Dictionary = _field(event, "data", {})
 	match StringName(_field(event, "type", "")):
 		&"message":
-			await _message(str(_field(event, "text", "")))
-		&"send_out":
-			await _send_out(side, _field(event, "pokemon", {}), bool(_field(event, "wild", false)))
-		&"withdraw":
+			await _message(str(data.get("text", "")))
+		&"switch_in":
+			await _switch_in(side, data)
+		&"switch_out":
+			if side == BattleDriver.PLAYER:
+				await _message(tr("¡%s, vuelve!") % _player_box.pokemon_name)
 			await _sprite(side).withdraw(_t(0.3))
 			_data_box(side).hide()
 		&"move":
-			await _animate_move(side, StringName(_field(event, "target", BattleDriver.FOE)),
-				_field(event, "move", {}))
+			await _animate_move(side, int(data.get("target_side", 1 - side)), data)
 		&"damage":
-			await _damage(side, int(_field(event, "hp", 0)), float(_field(event, "effectiveness", 1.0)))
+			await _damage(side, int(data.get("hp", 0)), float(data.get("effectiveness", 1.0)))
 		&"heal":
 			var box := _data_box(side)
-			await box.animate_hp(int(_field(event, "hp", box.hp)), -1, _t(0.5))
+			await box.animate_hp(int(data.get("hp", box.hp)), int(data.get("max_hp", -1)), _t(0.5))
 		&"status":
-			_data_box(side).set_status(StringName(_field(event, "status", "")))
-		&"stat_change":
-			var stages := int(_field(event, "stages", 0))
-			AudioManager.play_se(&"stat_up" if stages > 0 else &"stat_down")
-			var tint := Color("f87858") if stages > 0 else Color("5888f8")
+			_data_box(side).set_status(StringName(data.get("status", "")))
+		&"boost":
+			var amount := int(data.get("amount", 0))
+			AudioManager.play_se(&"stat_up" if amount > 0 else &"stat_down")
+			var tint := Color("f87858") if amount > 0 else Color("5888f8")
 			await BattleFx.sparkle(_fx, _sprite(side).center(), tint, _t(0.6))
+		&"cant_move":
+			await BattleFx.sparkle(_fx, _sprite(side).center(), Color("d8d8d8"), _t(0.4))
 		&"faint":
 			AudioManager.play_cry(_sprite(side).species_id)
 			await _sprite(side).faint(_t(0.4))
 			_data_box(side).hide()
 		&"exp":
-			AudioManager.play_se(&"exp")
-			await _player_box.animate_exp(float(_field(event, "exp", 0.0)), _t(0.6))
+			if side == BattleDriver.PLAYER:
+				AudioManager.play_se(&"exp")
+				await _player_box.animate_exp(_exp_ratio(data), _t(0.6))
 		&"level_up":
-			_player_box.set_level(int(_field(event, "level", 1)))
-			_player_box.set_exp(0.0)
-			await _player_box.animate_hp(int(_field(event, "hp", _player_box.hp)),
-				int(_field(event, "max_hp", _player_box.max_hp)), 0.0)
+			if side == BattleDriver.PLAYER:
+				_player_box.set_level(int(data.get("level", 1)))
+				_player_box.set_exp(0.0)
+				await _player_box.animate_hp(int(data.get("hp", _player_box.hp)),
+					int(data.get("max_hp", _player_box.max_hp)), 0.0)
 			await AudioManager.play_me(&"level_up")
-		&"ball":
-			await _throw_ball(int(_field(event, "shakes", 0)), bool(_field(event, "caught", false)))
-		var unknown:
-			push_warning("BattleScene: evento desconocido '%s'." % unknown)
+		&"catch":
+			await _throw_ball(int(data.get("shakes", 0)), bool(data.get("caught", false)))
+		&"trainer_speech":
+			await _trainer_returns()
+			await _message(Dialogue.format_text(str(data.get("text", ""))))
 
 
-func _send_out(side: StringName, pokemon: Dictionary, wild: bool) -> void:
+## Índice del último debilitado del rival si el combate se gana en esta tanda
+## (ahí empieza la música de victoria). −1 si no.
+func _victory_index(events: Array) -> int:
+	var won := false
+	var last_faint := -1
+	for i: int in events.size():
+		var type := StringName(_field(events[i], "type", ""))
+		if type == &"faint" and int(_field(events[i], "side", -1)) == BattleDriver.FOE:
+			last_faint = i
+		elif type == &"end":
+			won = StringName((_field(events[i], "data", {}) as Dictionary).get("outcome", "")) == &"win"
+	return last_faint if won else -1
+
+
+func _switch_in(side: int, data: Dictionary) -> void:
 	var sprite := _sprite(side)
 	var box := _data_box(side)
+	var pokemon := _summary(data)
 	var pokemon_name := str(pokemon.get("name", "?"))
-	if side == BattleDriver.FOE and wild:
+	if side == BattleDriver.FOE and data.get("wild", false):
 		if not (sprite.visible and sprite.species_id == StringName(pokemon.get("species", ""))):
 			sprite.set_pokemon(pokemon)
 			await sprite.slide_in(OFFSCREEN_LEFT, _t(0.6))
@@ -170,7 +194,23 @@ func _send_out(side: StringName, pokemon: Dictionary, wild: bool) -> void:
 	await _show_box(box, pokemon)
 
 
-func _animate_move(side: StringName, target_side: StringName, move: Dictionary) -> void:
+## Resumen para el sprite y la caja de datos a partir de los datos de switch_in.
+func _summary(data: Dictionary) -> Dictionary:
+	var pokemon := data.duplicate()
+	var species := StringName(data.get("species", ""))
+	if not pokemon.has("types"):
+		pokemon["types"] = Array(DataDB.species(species).types) if DataDB.has_species(species) else []
+	pokemon["exp_ratio"] = _exp_ratio(data)
+	return pokemon
+
+
+static func _exp_ratio(data: Dictionary) -> float:
+	var start := float(data.get("exp_level_start", 0))
+	var span := float(data.get("exp_next_level", 0)) - start
+	return clampf((float(data.get("exp", 0)) - start) / span, 0.0, 1.0) if span > 0.0 else 0.0
+
+
+func _animate_move(side: int, target_side: int, move: Dictionary) -> void:
 	var user := _sprite(side)
 	var target := _sprite(target_side)
 	var color := UiColors.type_color(StringName(move.get("type", "normal")))
@@ -184,7 +224,7 @@ func _animate_move(side: StringName, target_side: StringName, move: Dictionary) 
 			await BattleFx.sparkle(_fx, target.center(), color, _t(0.6))
 
 
-func _damage(side: StringName, hp: int, effectiveness: float) -> void:
+func _damage(side: int, hp: int, effectiveness: float) -> void:
 	var box := _data_box(side)
 	if effectiveness > 1.0:
 		AudioManager.play_se(&"hit_super")
@@ -245,6 +285,15 @@ func _ball_arc(t: float, ball: Sprite2D, target: Vector2) -> void:
 
 
 # --- Menús ---
+
+func _ask_player(request: Dictionary) -> Dictionary:
+	match StringName(request.get("kind", BattleDriver.REQUEST_ACTION)):
+		BattleDriver.REQUEST_SWITCH:
+			return {"type": &"switch", "party_index": await _choose_party(true)}
+		BattleDriver.REQUEST_LEARN_MOVE:
+			return {"type": &"learn_move", "forget_index": await _choose_forget(request)}
+	return await _choose_action()
+
 
 func _choose_action() -> Dictionary:
 	while true:
@@ -321,15 +370,25 @@ func _choose_item() -> StringName:
 
 func _choose_party(forced: bool) -> int:
 	var party := _driver.player_party()
-	var active := _driver.player_active()
 	var labels := PackedStringArray()
 	var disabled: Array[bool] = []
 	for pokemon: Dictionary in party:
 		labels.append("%s  Nv%d  %d/%d" % [pokemon.get("name", "?"), int(pokemon.get("level", 1)),
 			int(pokemon.get("hp", 0)), int(pokemon.get("max_hp", 1))])
-		disabled.append(not pokemon.get("able", true) or is_same(pokemon, active))
+		disabled.append(not pokemon.get("able", true) or pokemon.get("active", false))
 	var prompt := tr("¿Qué Pokémon sacarás?") if forced else tr("Elige un Pokémon.")
 	return await _list(prompt, labels, disabled, not forced)
+
+
+## Qué movimiento olvidar para aprender `request.move_name` (−1 = no aprenderlo).
+func _choose_forget(request: Dictionary) -> int:
+	var moves: Array = _driver.player_active().get("moves", [])
+	var labels := PackedStringArray()
+	for move: Dictionary in moves:
+		labels.append(str(move.get("name", "?")))
+	labels.append(tr("No aprender %s") % request.get("move_name", ""))
+	var index := await _list(tr("¿Qué movimiento olvidas?"), labels, [], false)
+	return index if index < moves.size() else -1
 
 
 func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can_cancel: bool) -> int:
@@ -348,7 +407,7 @@ func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can
 # --- Entrada y salida ---
 
 ## Cortinilla y entrada de los entrenadores. En combates salvajes, el Pokémon
-## salvaje (primer send_out de `start_events`) entra a la vez que el jugador.
+## salvaje (primer switch_in de `start_events`) entra a la vez que el jugador.
 func _intro(start_events: Array) -> void:
 	var trainer := _trainer()
 	var player_back := PlaceholderArt.load_texture(PLAYER_BACK_SPRITE % GameState.player_gender)
@@ -378,19 +437,8 @@ func _intro(start_events: Array) -> void:
 
 
 func _outro(outcome: StringName) -> void:
-	var trainer := _trainer()
 	match outcome:
-		SceneManager.OUTCOME_WIN:
-			AudioManager.play_bgm(&"victory_trainer" if not trainer.is_empty() else &"victory_wild", 0.2)
-			if not trainer.is_empty():
-				await _trainer_returns()
-				await _message(tr("¡Has derrotado a %s!") % trainer.get("display_name", ""))
-				if str(trainer.get("lose_text", "")) != "":
-					await _message(Dialogue.format_text(str(trainer["lose_text"])))
 		SceneManager.OUTCOME_LOSE:
-			if not trainer.is_empty() and str(trainer.get("win_text", "")) != "":
-				await _trainer_returns()
-				await _message(Dialogue.format_text(str(trainer["win_text"])))
 			if not _info.get("can_lose", false):
 				await _message(Dialogue.format_text(tr("¡{player} está fuera de combate!")))
 		SceneManager.OUTCOME_CAUGHT:
@@ -402,13 +450,16 @@ func _outro(outcome: StringName) -> void:
 
 func _first_wild(events: Array) -> Dictionary:
 	for event: Variant in events:
-		if _field(event, "type", "") == &"send_out" and _field(event, "side", "") == BattleDriver.FOE \
-				and _field(event, "wild", false):
-			return _field(event, "pokemon", {})
+		var data: Dictionary = _field(event, "data", {})
+		if _field(event, "type", "") == &"switch_in" and int(_field(event, "side", -1)) == BattleDriver.FOE \
+				and data.get("wild", false):
+			return _summary(data)
 	return {}
 
 
 func _trainer_returns() -> void:
+	if _foe_trainer.visible and is_equal_approx(_foe_trainer.position.x, _foe_sprite.home().x):
+		return
 	_foe_trainer.show()
 	await _slide_sprite(_foe_trainer, _foe_sprite.home().x, _t(0.5))
 
@@ -475,16 +526,17 @@ func _set_trainer_texture(sprite: Sprite2D, texture: Texture2D) -> void:
 	sprite.offset = Vector2(-texture.get_width() / 2.0, -texture.get_height()).round()
 
 
-func _sprite(side: StringName) -> BattlePokemonSprite:
+func _sprite(side: int) -> BattlePokemonSprite:
 	return _player_sprite if side == BattleDriver.PLAYER else _foe_sprite
 
 
-func _data_box(side: StringName) -> BattleDataBox:
+func _data_box(side: int) -> BattleDataBox:
 	return _player_box if side == BattleDriver.PLAYER else _foe_box
 
 
 func _trainer() -> Dictionary:
-	return _info.get("trainer", {})
+	var trainers: Array = _info.get("trainers", [])
+	return trainers[0] if not trainers.is_empty() else {}
 
 
 func _t(seconds: float) -> float:
@@ -507,9 +559,7 @@ func _wait_or_accept(seconds: float) -> void:
 
 
 func _type_name(type: StringName) -> String:
-	if DataDB.has_method(&"type_name"):
-		return str(DataDB.call(&"type_name", type))
-	return String(type).capitalize()
+	return DataDB.type_name(type)
 
 
 static func _category(value: Variant) -> StringName:

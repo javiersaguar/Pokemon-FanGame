@@ -3,51 +3,39 @@ extends RefCounted
 ## Lo que la BattleScene necesita del combate. Hoy lo implementa FakeBattle;
 ## cuando exista el BattleEngine del Agente 2, lo implementará un adaptador.
 ##
-## Eventos: Dictionary (u objeto con propiedades) con `type` y estos campos.
-## `side` es &"player" o &"foe"; `pokemon` es un resumen (ver pokemon_summary()).
-##   message      {text}
-##   send_out     {side, pokemon, wild: bool}
-##   withdraw     {side}
-##   move         {side, target, move: {id, name, type, category}}
-##   damage       {side, hp, effectiveness: float, critical: bool}
-##   heal         {side, hp}
-##   status       {side, status}
-##   stat_change  {side, stat, stages}
-##   faint        {side}
-##   exp          {side, exp: float 0–1}
-##   level_up     {side, level, hp, max_hp}
-##   ball         {ball, shakes: int, caught: bool}
-##
-## Resumen de un Pokémon: {species, name, level, gender, hp, max_hp, status,
-## shiny, types, exp (0–1), able: bool, moves: [{id, name, type, category, pp, max_pp}]}
+## Los eventos tienen el formato de BattleEvent (contratos.md §8.5): `type`,
+## `side` (0 = jugador, 1 = rival), `slot` y `data`. Pueden ser BattleEvent o
+## Dictionary con esas claves. La escena ignora los tipos que no conoce.
 
-const PLAYER := &"player"
-const FOE := &"foe"
+const PLAYER := 0
+const FOE := 1
+
+## Lo que tiene que decidir el jugador (como BattleRequest):
+## {kind: &"action" | &"switch" | &"learn_move", party_index, move_id, move_name, can_run}
+const REQUEST_ACTION := &"action"
+const REQUEST_SWITCH := &"switch"
+const REQUEST_LEARN_MOVE := &"learn_move"
 
 
-## {kind: &"wild" | &"trainer", trainer: Dictionary (TrainerData.get_trainer),
+## {kind: &"wild" | &"trainer", trainers: Array[Dictionary] (como BattleSetup.trainers),
 ##  background: StringName, bgm: StringName, can_run: bool, can_lose: bool}
 func info() -> Dictionary:
 	return {}
 
 
-## Eventos del principio del combate (los send_out).
+## Eventos hasta la primera decisión.
 func start() -> Array:
 	return []
 
 
-## Resuelve un turno con la acción del jugador:
-## {type: &"fight", move_slot} · {type: &"item", item} · {type: &"switch", party_index} · {type: &"run"}
+func request() -> Dictionary:
+	return {"kind": REQUEST_ACTION}
+
+
+## Resuelve hasta la siguiente decisión. Acciones:
+## {type: &"fight", move_slot} · {type: &"item", item} · {type: &"switch", party_index}
+## · {type: &"run"} · {type: &"learn_move", forget_index}
 func submit(_action: Dictionary) -> Array:
-	return []
-
-
-## true si el jugador tiene que sacar otro Pokémon (el suyo se ha debilitado).
-func needs_switch() -> bool:
-	return false
-
-
-func submit_switch(_party_index: int) -> Array:
 	return []
 
 
@@ -60,10 +48,18 @@ func outcome() -> StringName:
 	return &"win"
 
 
+## Aplica el resultado a la partida (dinero, captura, Pokédex). Lo llama la escena al final.
+func finish() -> void:
+	pass
+
+
+## Para los menús: el Pokémon activo del jugador.
+## {name, level, hp, max_hp, moves: [{id, name, type, category, pp, max_pp}]}
 func player_active() -> Dictionary:
 	return {}
 
 
+## Para el menú de equipo: [{name, level, hp, max_hp, able: bool, active: bool}].
 func player_party() -> Array[Dictionary]:
 	return []
 
