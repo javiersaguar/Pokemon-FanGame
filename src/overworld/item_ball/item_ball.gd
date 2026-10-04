@@ -34,32 +34,43 @@ func taken_flag() -> StringName:
 	return StringName("item_taken:%s:%s" % [map_id, name])
 
 
+## Id de colocación (<map_id>/<nombre del nodo>) con el que DataDB resuelve el
+## objeto (Fase R.2: en RandomLocke puede ser otro).
+func placement_id() -> StringName:
+	var map := get_map()
+	return StringName("%s/%s" % [map.get_map_id() if map else &"?", name])
+
+
+## Objeto que da: el de DataDB para su colocación si lo resuelve; si no, item_id.
+func resolved_item() -> StringName:
+	if DataDB.has_method(&"placed_item"):
+		return DataDB.call(&"placed_item", placement_id(), item_id)
+	return item_id
+
+
 func interact(_player: Player) -> void:
+	var item := resolved_item()
 	GameState.set_flag(taken_flag())
-	var added := _give()
-	AudioManager.play_me(&"item_get")
-	var item_name := _item_name()
-	var text := "¡{player} ha encontrado %s!" % (item_name if quantity == 1
-		else "%d × %s" % [quantity, item_name])
-	if not added:
-		push_warning("ItemBall: no hay mochila (GameState.bag); '%s' no se ha guardado." % item_id)
-	await Dialogue.say(text)
+	if not _give(item):
+		push_warning("ItemBall: no hay mochila (GameState.bag); '%s' no se ha guardado." % item)
+	AudioManager.play_me(&"item")
+	await Dialogue.say("¡{player} ha encontrado {item}!", null, {"item": _item_text(item)})
 	queue_free()
 
 
-func _give() -> bool:
+func _give(item: StringName) -> bool:
 	var bag: Variant = GameState.bag
 	if bag is Object and bag.has_method(&"add"):
-		bag.add(item_id, quantity)
+		bag.add(item, quantity)
 		return true
 	return false
 
 
-func _item_name() -> String:
-	var data: Variant = DataDB.item(item_id)
-	if data is Object and &"name" in data:
-		return str(data.name)
-	return String(item_id)
+func _item_text(item: StringName) -> String:
+	if not DataDB.has_item(item):
+		return String(item)
+	var data: ItemData = DataDB.item(item)
+	return data.name if quantity == 1 else "%d %s" % [quantity, data.name_plural]
 
 
 func _apply_hidden() -> void:

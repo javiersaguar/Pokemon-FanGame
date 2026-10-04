@@ -78,7 +78,7 @@ const ROOM_ENTITIES := [
 ]
 const ROOM_WARPS := [
 	{"name": "ToOutdoor", "tile": Vector2i(9, 10), "size": Vector2i(2, 1), "map": &"test/test_outdoor",
-		"spawn": &"from_room", "facing": 1, "sound": &"exit"},
+		"spawn": &"from_room", "facing": 1, "sound": &"door"},
 ]
 
 const OUTDOOR_ENTITIES := [

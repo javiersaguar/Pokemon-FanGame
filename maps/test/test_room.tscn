@@ -89,7 +89,7 @@ target_map = &"test/test_outdoor"
 target_spawn = &"from_room"
 arrival_facing = 1
 size = Vector2i(2, 1)
-sound = &"exit"
+sound = &"door"
 
 [node name="Spawns" type="Node2D" parent="." unique_id=1628889635]
 

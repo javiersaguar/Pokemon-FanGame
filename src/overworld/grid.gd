@@ -18,3 +18,28 @@ static func to_tile(world_pos: Vector2) -> Vector2i:
 ## Coloca una posición cualquiera en el centro de su casilla.
 static func snap(world_pos: Vector2) -> Vector2:
 	return to_world(to_tile(world_pos))
+
+
+## "up", "down", "left" o "right" (así van las direcciones en JSON y en el guardado).
+static func dir_name(dir: Vector2i) -> String:
+	match dir:
+		Vector2i.UP:
+			return "up"
+		Vector2i.LEFT:
+			return "left"
+		Vector2i.RIGHT:
+			return "right"
+		_:
+			return "down"
+
+
+static func dir_from_name(dir_text: String) -> Vector2i:
+	match dir_text:
+		"up":
+			return Vector2i.UP
+		"left":
+			return Vector2i.LEFT
+		"right":
+			return Vector2i.RIGHT
+		_:
+			return Vector2i.DOWN
