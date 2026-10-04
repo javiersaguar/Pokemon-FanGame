@@ -4,7 +4,10 @@ extends RefCounted
 ## o desde la línea de comandos: godot --headless --path . -s res://tools/validate/validate.gd
 ## Errores = hay que arreglarlos antes de mergear. Avisos = pendientes conocidos (sprites, scripts...).
 
-const SPRITE_DIR := "res://assets/sprites/pokemon/front"
+const SPRITE_ROOT := "res://assets/sprites/pokemon"
+## Versiones que necesita cada especie que se puede conseguir (DIRECTRICES §8: los shiny, de verdad).
+## Iconos shiny y Pokémon que te siguen: se añadirán cuando la biblia de arte fije sus rutas.
+const SPRITE_SETS: Array[String] = ["front", "back", "front_shiny", "back_shiny", "icons"]
 const ITEM_ICON_DIR := "res://assets/sprites/items"
 const KNOWN_ITEM_EFFECTS: Array[StringName] = [
 	&"heal_hp", &"cure_status", &"heal_and_cure", &"revive", &"restore_pp", &"boost_stat",
@@ -28,6 +31,7 @@ static func run() -> DataValidator:
 	v._check_shops()
 	v._check_panchito_items()
 	v._check_moves_in_use()
+	v._check_sprites()
 	return v
 
 
@@ -76,8 +80,6 @@ func _check_regional_dex() -> void:
 		var s := DataDB.species(id)
 		if s.is_form():
 			_error("regional_dex.json: '%s' es una forma; pon su especie (%s)." % [id, s.base_species])
-		if not ResourceLoader.exists("%s/%s.png" % [SPRITE_DIR, id]):
-			_warn("%s no tiene sprite en %s/." % [id, SPRITE_DIR])
 		if not obtainable.has(id):
 			_warn("%s no sale en ningún encuentro ni por evolución." % id)
 		for evo: Dictionary in s.evolutions:
@@ -104,6 +106,32 @@ func _obtainable_species() -> Dictionary:
 					found[to] = true
 					changed = true
 	return found
+
+
+# --- Sprites ---
+
+## Especies que se pueden ver en el juego: Pokédex regional, encuentros, entrenadores y sus evoluciones.
+func _species_in_game() -> Dictionary:
+	var species := _obtainable_species()
+	for id: StringName in DataDB.regional_dex():
+		species[id] = true
+	for trainer_id: StringName in DataDB.trainer_ids():
+		for spec: Dictionary in DataDB.trainer(trainer_id).get("party", []):
+			species[StringName(str(spec.get("species", "")))] = true
+	return species
+
+
+func _check_sprites() -> void:
+	var species := _species_in_game().keys()
+	species.sort()
+	for set_name: String in SPRITE_SETS:
+		var missing: PackedStringArray = []
+		for id: StringName in species:
+			if DataDB.has_species(id) and not ResourceLoader.exists("%s/%s/%s.png" % [SPRITE_ROOT, set_name, id]):
+				missing.append(String(id))
+		if not missing.is_empty():
+			_warn("Faltan %d sprites en %s/%s/ (node tools/sprites/download_sprites.mjs): %s" % [
+				missing.size(), SPRITE_ROOT, set_name, ", ".join(missing)])
 
 
 # --- Entrenadores ---

@@ -53,3 +53,30 @@ El formato de cada campo está en `docs/contratos.md` (sección DataDB).
 `import_data/extra/item_effects.json` contiene, a mano, el efecto de uso de los objetos estándar
 (Poción = curar 20 PS, Super Ball = ×1,5...), con los valores oficiales de la 7.ª generación en adelante.
 Es un archivo de datos: los números del juego no van en los `.gd`.
+
+## `sprites`: sprites de Pokémon (DIRECTRICES §7.2)
+
+Descarga **un único set** estilo 5.ª generación de las carpetas de Pokémon Showdown (`gen5`, `gen5-back`,
+`gen5-shiny`, `gen5-back-shiny`; incluyen el Smogon Sprite Project para las generaciones posteriores) y recorta
+los iconos de su hoja (`pokemonicons-sheet.png`, 40×30). Los shiny son los **oficiales**, nunca generados.
+
+```bash
+node tools/sprites/download_sprites.mjs                       # especies del juego y sus familias
+node tools/sprites/download_sprites.mjs --species pikachu,raichualola
+node tools/sprites/download_sprites.mjs --all                 # todas (tarda: hay pausas entre descargas)
+godot --headless --path . --import                            # después, para crear los .import
+```
+
+- Por defecto descarga las especies de la Pokédex regional, de `data/encounters/`, `data/trainers/`,
+  `data/starters.json`, `gifts.json`, `statics.json` y `trades.json`, y **sus familias evolutivas**.
+- Pausa de 300 ms entre descargas (`--delay`), caché en `tools/cache/sprites/` (también recuerda los que no
+  existen), `--offline` y `--force`.
+- Destino: `assets/sprites/pokemon/<front|back|front_shiny|back_shiny|icons>/<id>.png` (`id` = el de
+  `species.json`: `raichualola`, `charizardmegax`...).
+- El validador (`tools/validate`) avisa de las especies del juego a las que les falta alguna versión.
+
+## `validate`: validador de datos (Fase 4.6)
+
+```bash
+godot --headless --path . -s res://tools/validate/validate.gd   # sale con código 1 si hay errores
+```
