@@ -112,6 +112,10 @@ Autoload `GameState` (`src/autoload/game_state.gd`): estado de la partida.
 
 | Campo | Tipo | Notas |
 |-------|------|-------|
+| `mode` | `StringName` | `GameState.MODE_NORMAL` (`&"normal"`) o `MODE_RANDOMLOCKE` (`&"randomlocke"`). Se elige al crear la partida |
+| `randomlocke` | `Dictionary` | Vacío en modo normal. En RandomLocke: `seed_code`, `settings`, `generator_version`, `rules`, `zones` (`{zone_id: estado}`), `deaths` y `status` (`"in_progress"`/`"finished"`) |
+| `slot` | `int` | Ranura de la partida en curso (0 = ninguna). No va en el JSON |
+| `rom_patch` | `Dictionary` | Parche de la ROM del RandomLocke. Se guarda aparte (`slot_<n>.rom.json`) |
 | `player_name`, `rival_name` | `String` | |
 | `player_gender` | `StringName` | `&"male"` / `&"female"` |
 | `trainer_id`, `secret_id` | `int` | 0–65535, aleatorios en `new_game()` |
@@ -133,7 +137,8 @@ Autoload `GameState` (`src/autoload/game_state.gd`): estado de la partida.
 
 ```gdscript
 GameState.reset() -> void                # sin partida
-GameState.new_game() -> void             # valores de data/world.json → new_game
+GameState.new_game(options := {}) -> void   # data/world.json → new_game; options: slot, mode, randomlocke, rom_patch
+GameState.is_randomlocke() -> bool
 GameState.flag(key) -> bool
 GameState.set_flag(key, value := true) -> void
 GameState.clear_flag(key) -> void
@@ -178,19 +183,30 @@ Todas las claves se registran en `docs/flags.md`. Patrones reservados:
 
 ## 3. SaveManager (Agente 1)
 
-Autoload `SaveManager` (`src/autoload/save_manager.gd`). Ranuras 1..`SLOT_COUNT` (3).
+Autoload `SaveManager` (`src/autoload/save_manager.gd`). **Varias partidas a la vez** (Fase 8.7): ranuras `1..slot_count()` (`data/world.json` → `saves.slots`, 8 por defecto), cada una normal o RandomLocke.
 
 ```gdscript
-SaveManager.has_save(slot := 1) -> bool
-SaveManager.save_game(slot := 1) -> Error
-SaveManager.load_game(slot := 1) -> Error      # solo restaura GameState; para entrar: SceneManager.continue_game()
+SaveManager.slot_count() -> int
+SaveManager.has_save(slot) -> bool
+SaveManager.current_slot() -> int              # GameState.slot, o 1 si no hay
+SaveManager.first_empty_slot() -> int          # 0 = todas ocupadas
+SaveManager.last_used_slot() -> int            # la de "Continuar"; 0 = ninguna
+SaveManager.save_game(slot := 0) -> Error      # 0 = la ranura de la partida en curso
+SaveManager.load_game(slot) -> Error           # restaura GameState (y la ROM); para entrar: SceneManager.continue_game()
 SaveManager.slot_summary(slot) -> Dictionary   # {} si está vacía
-SaveManager.delete_save(slot) -> void
+SaveManager.list_slots() -> Array[Dictionary]  # un resumen por ranura, en orden ({} = vacía)
+SaveManager.thumbnail(slot) -> Texture2D       # null si no tiene
+SaveManager.copy_slot(from, to) -> Error       # sobrescribe `to`
+SaveManager.delete_save(slot) -> void          # borra todos sus archivos
+SaveManager.apply_rom_patch() -> void          # aplica (o quita) en DataDB la ROM de la partida
 ```
 
-- Archivo `user://saves/slot_<n>.json`: `{save_version, game_version, saved_at, summary, state}` con `state = GameState.to_dict()`.
-- `summary` = `{player_name, play_time, badges (número), money, map_id, map_name}` + `saved_at` en `slot_summary()`.
-- **Escritura segura**: se escribe `slot_<n>.json.tmp`, se comprueba, la partida anterior pasa a `.bak` y el `.tmp` se renombra. Si el principal está dañado, se carga el `.bak`.
+- **Archivos** de la ranura `n` en `user://saves/`: `slot_<n>.json` (`{save_version, game_version, saved_at, summary, state}` con `state = GameState.to_dict()`), `slot_<n>.png` (miniatura: el mundo a 256×192, sin la interfaz) y, en RandomLocke, `slot_<n>.rom.json` (el parche de la ROM, `GameState.rom_patch`, Fase R.1). `index.json` guarda la última ranura usada.
+- **`summary`**: `slot`, `mode` (`"normal"`/`"randomlocke"`), `player_name`, `player_gender`, `play_time`, `badges` (número), `money`, `map_id`, `map_name`, `dex_seen`, `dex_caught`, `party` (`[{species, shiny}]`, para los iconos), `saved_at`, `thumbnail` (ruta o `""`) y, en RandomLocke, `seed_code`, `deaths` y `status`. (Ojo: tras pasar por JSON, los números llegan como `float`.)
+- La miniatura sale de `SceneManager.world_snapshot` (se toma al abrir el menú de pausa, antes de dibujarlo) o, si no hay, de la pantalla actual.
+- **Al cargar** una partida RandomLocke se llama a `DataDB.apply_patch(rom_patch)` **antes** de cargar el mapa; al cargar una normal o volver al título, a `DataDB.clear_patch()` (si DataDB los tiene; Agente 2, Fase R).
+- Las confirmaciones (sobrescribir, copiar, borrar dos veces) son cosa de la UI.
+- **Escritura segura**: se escribe a `.tmp`, se comprueba, la versión anterior pasa a `.bak` y el `.tmp` se renombra. Si el principal está dañado, se carga el `.bak`.
 - **Migraciones**: al cambiar el formato, se sube `GameState.SAVE_VERSION` y se añade el paso en `SaveManager._migrate()`.
 
 ---
@@ -213,9 +229,13 @@ Main (Node)
 ```gdscript
 SceneManager.boot()                                  # lo llama Main
 SceneManager.go_to_title() -> void                   # corrutina
-SceneManager.start_new_game(map := &"", spawn := &"") -> void
+SceneManager.start_new_game(map := &"", spawn := &"", options := {}) -> void
 SceneManager.continue_game(slot: int) -> Error       # carga y entra en el mapa guardado
+SceneManager.world_snapshot: Image                   # el mundo sin interfaz (al abrir el menú de pausa)
+SceneManager.capture_screen() -> Image               # null en headless
 ```
+
+`start_new_game()`: `options` = las de `GameState.new_game()`. Sin `slot`, usa la primera ranura vacía (o la 1). Con RandomLocke y `rom_patch`, aplica el parche en DataDB antes de cargar el mapa. El flujo de pantallas (elegir modo y ranura, ajustes y generación de la ROM) es del Agente 3; al acabar llama a `start_new_game(&"", &"", {slot, mode, randomlocke, rom_patch})`.
 
 Argumentos de arranque (después de `--`): `--map=<map_id> [--spawn=<id>]` empieza partida nueva en ese mapa y `--load=<slot>` carga una ranura. Sin argumentos: título si existe; si no, partida nueva.
 
@@ -450,7 +470,7 @@ Debug.run_command(line: String) -> String
 - `callable` recibe `args: PackedStringArray` y devuelve el texto a mostrar (`String`).
 - Con `button_label`, además aparece como botón en la pestaña "Trucos".
 - Se puede llamar desde el `_ready` de cualquier autoload o nodo. Cada agente registra **sus** comandos desde su código (por ejemplo, Agente 2: `givepkmn <especie> <nivel>` y `heal`; Agente 3: `giveitem <id> [n]`).
-- Comandos de serie: `help`, `tp`, `flag`, `var`, `money`, `hour`, `noclip`, `encounters`, `save`, `load`, `battle` y `title`.
+- Comandos de serie: `help`, `tp`, `flag`, `var`, `money`, `hour`, `noclip`, `encounters`, `save`, `load`, `slots`, `battle` y `title`.
 
 ---
 

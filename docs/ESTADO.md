@@ -50,7 +50,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 2. Pokémon que te sigue (Fase 14.5: sigue el historial de casillas, se esconde en interiores y con Surf, brillo si es shiny), sombras de los personajes y hierba que se mueve al pisarla, listos para el arte real.
 3. ⏳ `maps/test/muestra_ruta.tscn` y `maps/test/muestra_pueblo.tscn` con los packs reales: **bloqueado** hasta que estén los recursos de la lista del Agente 3 en `assets/_terceros/`.
 
-Mientras tanto, lógica sin pantallas nuevas: ranuras múltiples (Fase 8.7: 8 o más, miniatura y resumen), `GameState.mode` y `GameState.randomlocke`, parche de la ROM guardado con la ranura, flujo de nueva partida (R.9–R.10) y regla R.2 en todos mis eventos.
+Mientras tanto, lógica sin pantallas nuevas: API de cinemáticas y entidades de los eventos del MVP (Fase 13.1: disparadores, enfermera, Poké Balls del inicial con `DataDB.starter()`, tendero), con la regla R.2 en todos.
 
 **Terminado:**
 - Paso 0, el esqueleto: proyecto de Godot 4.7.2, estructura de carpetas, GUT 9.7.1, Input Map, escena `Main` (World/Battle/UI/Transition), autoloads, `GameState`, `SaveManager` (`save_version`, `.tmp` → `.bak` → renombrar, migraciones), `SceneManager` (mapas con fundido, combate, derrota → Centro Pokémon, pila de menús, flujo de partida), `Clock`, menú Debug (F9) con `Debug.register_command()`, `docs/contratos.md` §0–7, `docs/flags.md` y `docs/mapas/reservas.md`.
@@ -62,7 +62,8 @@ Mientras tanto, lógica sin pantallas nuevas: ranuras múltiples (Fase 8.7: 8 o 
   - Sala de pruebas: NPCs (uno que pasea, otro detrás del mostrador y otro que lanza combates de prueba), objetos visibles y ocultos, cartel, warps entre los dos mapas y tabla de encuentros.
   - **Criterio de "hecho" comprobado** con una partida automatizada: moverse por los dos mapas conectados, hablar con NPCs, recoger objetos, encuentro en la hierba alta (abre la BattleScene del Agente 3), guardar y cargar.
 - Directrices: 512×384 y zoom 2; `gui/theme/custom` (petición 8); `pokemon` y `shiny` en `data/world.json` (petición 10 y §8); regla R.2 en encuentros, objetos del suelo y NPC de pruebas; `core.hooksPath .githooks` activado (vale para todos los worktrees); `docs/.gdignore`, para que Godot no importe las capturas de `docs/`; fila de los personajes provisionales en `docs/arte/seguimiento.md`.
-- Tests en `tests/mundo/`: GameState, SaveManager, mapas y encuentros.
+- **Varias partidas** (Fase 8.7 y R.9, `contratos.md` §2–§4): 8 ranuras (`data/world.json` → `saves.slots`), resumen completo (modo, jugador, tiempo, medallas, Pokédex, lugar, fecha e iconos del equipo; en RandomLocke, código, muertes y estado), miniatura del mundo sin la interfaz, última ranura usada para "Continuar", copiar y borrar ranuras. `GameState.mode`/`randomlocke`/`slot`/`rom_patch`; el parche de la ROM se guarda con la ranura (`slot_<n>.rom.json`) y se aplica en DataDB antes de cargar el mapa. `SceneManager.start_new_game(map, spawn, options)` para el flujo de nueva partida. Comando de Debug `slots`.
+- Tests en `tests/mundo/`: GameState, SaveManager (también ranuras, copia y RandomLocke), mapas y encuentros.
 - Integración: he unido `origin/main` (las directrices de Javier) con el `main` local de los agentes. **El `main` local no está subido a GitHub** (pregunta 10).
 
 **Bloqueos:** mapas de muestra → recursos en `assets/_terceros/` (Javier). Fase 8 → `BattleSetup` (petición 1), pantallas del Agente 3 y preguntas 1 y 2.
@@ -167,6 +168,7 @@ Hecho de la Fase A: `docs/arte/BIBLIA.md` (propuesta), `docs/arte/seguimiento.md
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-04 | A1 | §2–§4: varias partidas. `SaveManager.save_game(slot := 0)` (0 = la ranura en curso; antes el valor por defecto era 1) y `load_game(slot)` (sin valor por defecto); nuevas `slot_count()`, `current_slot()`, `first_empty_slot()`, `last_used_slot()`, `list_slots()`, `thumbnail()`, `copy_slot()` y `apply_rom_patch()`; el resumen trae más campos. `GameState.mode`, `randomlocke`, `slot`, `rom_patch`, `is_randomlocke()` y `new_game(options)`. `SceneManager.start_new_game(map, spawn, options)`, `world_snapshot` y `capture_screen()`. Se quita `SaveManager.SLOT_COUNT` (ahora `slot_count()`). |
 | 2026-10-04 | A1 | §0: resolución **512×384** con el mundo a ×2 (zoom de la cámara) y la UI sin zoom. §5 entregado (Fase 5): `MapEntity`, `Character`, `Player`, `NPC`, `ItemBall`, `MapSign`, `Warp`, `WildEncounters` y los métodos nuevos de `MapRoot`. `EventBus.repel_wore_off` nueva. `GameState.dir_name()`/`dir_from_name()` dejan de ser estáticas (también están en `Grid`). `ItemBall` resuelve el objeto con `DataDB.placed_item()` si existe (R.2). |
 | 2026-10-04 | A3 | `contratos.md` §9 rellena. Dialogue y AudioManager mantienen las firmas del stub y **añaden**: `vars`, `cancel_choice`, `ask_yes_no()`, `format_text()`, `text_speed` y `NO_CANCEL` (Dialogue); `save_bgm()`, `restore_bgm()`, `play_ambient()`, `stop_ambient()`, `set_volume()` y `get_volume()` (AudioManager). Formatos de entrenadores, encuentros y tiendas. |
 | 2026-10-04 | A3 | BattleScene entregada (§9.3, `run(setup) -> StringName`), con `BattleDriver` y FakeBattle. `TrainerData.get_class()` pasa a llamarse `get_trainer_class()` (choca con `Object.get_class()`). Nuevo widget `GridMenu` (§9.4). |
