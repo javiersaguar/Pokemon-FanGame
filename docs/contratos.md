@@ -1145,3 +1145,9 @@ Formato de la guía (Fase 5.7) con dos añadidos:
 - Se venden los objetos de todos los tramos con `badges` ≤ medallas del jugador.
 - Precio de compra: `prices[id]` si existe; si no, el `price` del objeto en DataDB. Precio de venta: `floor(precio × sell_ratio)`.
 - Se abre con `await ShopScreen.open(&"tienda_ciudad2")` **(previsto)**.
+
+---
+
+## 10. RandomLocke (Agente 4) — POR DEFINIR
+
+> Sección del Agente 4: `Randomizer`, `RomPatch`, ajustes y presets, códigos de semilla, `RomValidator` y `LockeRules`. Incluye también lo que el Agente 4 necesita de `DataDB` (Agente 2), de `GameState` y `SaveManager` (Agente 1) y de la UI (Agente 3).

@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-04, Javier):** 📦 **Recursos gráficos descargados y listos** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (fuera del repo). Índice en `docs/arte/recursos_terceros.md`; reglas de uso y escala en `docs/DIRECTRICES.md` §7.1. Set de Pokémon oficial: `06_generation9_pack` (generaciones 1–9, normales y shiny, con Pokémon que te siguen). **Se usan tal cual, sin reescalar.** Seguid con la prueba de nivel gráfico (§7).
+**Último aviso (2026-10-04, Javier):** 👋 **Se incorpora el Agente 4, dueño del motor del RandomLocke** (Fase R: generador de la ROM, `RomPatch`, códigos de semilla, validación y lógica pura de las reglas Locke). `src/randomizer/` y `tests/randomizer/` pasan del Agente 2 al Agente 4. El Agente 2 solo implementa `DataDB.apply_patch()` y `pokemon_died` según el contrato que publique el Agente 4 en `docs/contratos.md` §10. Reparto actualizado en `DIRECTRICES.md` §2 y §6 y en la Fase R.10. El Agente 4 trabaja con datos de prueba propios, así que **no bloquea a nadie** ni queda bloqueado.
+
+**Aviso anterior (2026-10-04, Javier):** 📦 **Recursos gráficos descargados y listos** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (fuera del repo). Índice en `docs/arte/recursos_terceros.md`; reglas de uso y escala en `docs/DIRECTRICES.md` §7.1. Set de Pokémon oficial: `06_generation9_pack` (generaciones 1–9, normales y shiny, con Pokémon que te siguen). **Se usan tal cual, sin reescalar.** Seguid con la prueba de nivel gráfico (§7).
 
 **Aviso anterior (2026-10-04, Javier):** 🚨 **Los gráficos actuales no valen: el mínimo es el nivel de Pokémon Añil.** Leed `docs/DIRECTRICES.md` §0, §7 y §8 **antes de seguir**:
 - Capturas de referencia en `docs/arte/referencias/` (combate, pueblo, datos del Pokémon y ruta).
@@ -35,6 +37,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 |--------|-----|-------------|
 | 1 | Mundo y arquitectura | `project.godot`, `src/autoload/` (salvo `data_db.gd`, `dialogue.gd` y `audio_manager.gd`), `src/overworld/` (salvo `src/overworld/trainers/`), `src/events/`, `src/main/`, `src/util/`, `maps/`, `assets/tilesets/`, `assets/sprites/characters/`, `data/world.json`, `docs/flags.md`, `docs/mapas/` |
 | 2 | Datos y motor de combate | `tools/`, `data/generated/`, `data/species_overrides.json`, `data/regional_dex.json`, `src/autoload/data_db.gd`, `src/pokemon/`, `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/` |
+| 4 | Motor del RandomLocke | `src/randomizer/`, `tests/randomizer/`, `data/randomizer/`, `docs/randomlocke.md` y la sección 10 de `docs/contratos.md` |
 | 3 | Presentación, UI y contenido Panchito | `src/ui/`, `src/battle/scene/`, `src/items/`, `src/overworld/trainers/`, `src/autoload/dialogue.gd`, `src/autoload/audio_manager.gd`, `data/trainer_classes.json`, `data/trainers/`, `data/items_panchito.json`, `data/shops.json`, `data/encounters/`, `assets/` (salvo `tilesets/` y `sprites/characters/`), `docs/entrenadores.md`, `docs/objetos_especiales.md` |
 
 - `src/main/`, `src/util/`, `data/world.json`, `docs/flags.md` y `docs/mapas/` no estaban en el reparto: los ha tomado el Agente 1 (arquitectura). Si alguien no está de acuerdo, que lo diga en "Peticiones".
@@ -144,6 +147,17 @@ Mientras tanto, lógica sin pantallas nuevas: el Pokémon que te sigue (paso 2) 
 **Notas:**
 - Equipos y encuentros usan especies **provisionales** (iniciales de Kanto para el rival, Swirlix y Milcery para Manolo, la tabla de ejemplo de la guía en la Ruta 1) hasta que Javier decida la Pokédex (pregunta 5).
 - No subo audio (`.ogg`/`.wav`) hasta que esté Git LFS (pregunta 4). AudioManager funciona sin archivos: avisa una vez y no suena.
+
+---
+
+## Agente 4 — Motor del RandomLocke
+
+**En qué estoy:** (sin empezar)
+
+**Terminado:**
+- (nada todavía)
+
+**Bloqueos:**
 
 ---
 
