@@ -1,0 +1,1273 @@
+{
+	"abilities": {},
+	"encounters": {
+		"cueva_alta": {
+			"early": false,
+			"water": [
+				{
+					"max_level": 22.0,
+					"min_level": 20.0,
+					"species": "mon03_1",
+					"weight": 50.0
+				},
+				{
+					"max_level": 23.0,
+					"min_level": 21.0,
+					"species": "mon02_1",
+					"weight": 50.0
+				}
+			],
+			"zone_id": "cueva"
+		},
+		"cueva_baja": {
+			"early": true,
+			"land": {
+				"day": [
+					{
+						"max_level": 10.0,
+						"min_level": 8.0,
+						"species": "mon03_0",
+						"weight": 50.0
+					},
+					{
+						"max_level": 11.0,
+						"min_level": 9.0,
+						"species": "mon09_0",
+						"weight": 50.0
+					}
+				]
+			},
+			"zone_id": "cueva"
+		},
+		"ruta_1": {
+			"early": true,
+			"land": {
+				"day": [
+					{
+						"max_level": 5.0,
+						"min_level": 3.0,
+						"species": "mon09_0",
+						"weight": 50.0
+					},
+					{
+						"max_level": 6.0,
+						"min_level": 4.0,
+						"species": "mon06_0",
+						"weight": 50.0
+					}
+				],
+				"night": [
+					{
+						"max_level": 6.0,
+						"min_level": 4.0,
+						"species": "mon02_0",
+						"weight": 50.0
+					},
+					{
+						"max_level": 6.0,
+						"min_level": 4.0,
+						"randomize": false,
+						"species": "panchito",
+						"weight": 50.0
+					}
+				]
+			},
+			"zone_id": "ruta_1"
+		}
+	},
+	"generator_version": 2.0,
+	"gifts": {
+		"regalo": "mon04_0"
+	},
+	"input_hash": "ab47ac01a44dc43708eb8893413d4e8b16de92d7f2a2624ae354e6a4aea4817b",
+	"items": {
+		"pueblo/regalo": "superpotion",
+		"ruta_1/suelo": "oranberry"
+	},
+	"learnsets": {
+		"mon00_0": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_status"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"fire_hit2"
+			],
+			[
+				40.0,
+				"fire_hit1"
+			]
+		],
+		"mon00_1": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_hit0"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"flying_hit0"
+			],
+			[
+				40.0,
+				"fire_hit2"
+			]
+		],
+		"mon00_2": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_status"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"grass_hit0"
+			],
+			[
+				40.0,
+				"normal_hit2"
+			]
+		],
+		"mon01_0": [
+			[
+				1.0,
+				"water_hit0"
+			],
+			[
+				5.0,
+				"water_status"
+			],
+			[
+				12.0,
+				"water_hit1"
+			],
+			[
+				25.0,
+				"water_hit2"
+			],
+			[
+				40.0,
+				"water_status"
+			]
+		],
+		"mon01_1": [
+			[
+				1.0,
+				"water_hit0"
+			],
+			[
+				5.0,
+				"water_status"
+			],
+			[
+				12.0,
+				"water_hit1"
+			],
+			[
+				25.0,
+				"water_hit2"
+			],
+			[
+				40.0,
+				"water_hit0"
+			]
+		],
+		"mon01_2": [
+			[
+				1.0,
+				"water_hit0"
+			],
+			[
+				5.0,
+				"water_status"
+			],
+			[
+				12.0,
+				"water_hit1"
+			],
+			[
+				25.0,
+				"water_hit2"
+			],
+			[
+				40.0,
+				"water_status"
+			]
+		],
+		"mon02_0": [
+			[
+				1.0,
+				"grass_hit0"
+			],
+			[
+				5.0,
+				"grass_status"
+			],
+			[
+				12.0,
+				"grass_hit1"
+			],
+			[
+				25.0,
+				"electric_status"
+			],
+			[
+				40.0,
+				"ground_status"
+			]
+		],
+		"mon02_1": [
+			[
+				1.0,
+				"grass_hit0"
+			],
+			[
+				5.0,
+				"grass_hit0"
+			],
+			[
+				12.0,
+				"grass_hit1"
+			],
+			[
+				25.0,
+				"normal_status"
+			],
+			[
+				40.0,
+				"flying_status"
+			]
+		],
+		"mon02_2": [
+			[
+				1.0,
+				"grass_hit0"
+			],
+			[
+				5.0,
+				"grass_hit0"
+			],
+			[
+				12.0,
+				"grass_hit1"
+			],
+			[
+				25.0,
+				"grass_hit2"
+			],
+			[
+				40.0,
+				"normal_hit0"
+			]
+		],
+		"mon03_0": [
+			[
+				1.0,
+				"electric_hit0"
+			],
+			[
+				5.0,
+				"electric_hit0"
+			],
+			[
+				12.0,
+				"electric_hit1"
+			],
+			[
+				25.0,
+				"electric_hit2"
+			],
+			[
+				40.0,
+				"electric_hit2"
+			]
+		],
+		"mon03_1": [
+			[
+				1.0,
+				"electric_hit0"
+			],
+			[
+				5.0,
+				"electric_hit0"
+			],
+			[
+				12.0,
+				"electric_hit1"
+			],
+			[
+				25.0,
+				"ground_hit1"
+			],
+			[
+				40.0,
+				"electric_hit2"
+			]
+		],
+		"mon03_2": [
+			[
+				1.0,
+				"electric_hit0"
+			],
+			[
+				5.0,
+				"electric_status"
+			],
+			[
+				12.0,
+				"electric_hit1"
+			],
+			[
+				25.0,
+				"normal_hit1"
+			],
+			[
+				40.0,
+				"flying_hit0"
+			]
+		],
+		"mon04_0": [
+			[
+				1.0,
+				"ground_hit0"
+			],
+			[
+				5.0,
+				"ground_status"
+			],
+			[
+				12.0,
+				"ground_hit1"
+			],
+			[
+				25.0,
+				"water_hit1"
+			],
+			[
+				40.0,
+				"ground_hit2"
+			]
+		],
+		"mon04_1": [
+			[
+				1.0,
+				"ground_hit0"
+			],
+			[
+				5.0,
+				"ground_hit0"
+			],
+			[
+				12.0,
+				"ground_hit1"
+			],
+			[
+				25.0,
+				"grass_status"
+			],
+			[
+				40.0,
+				"water_hit1"
+			]
+		],
+		"mon04_2": [
+			[
+				1.0,
+				"ground_hit0"
+			],
+			[
+				5.0,
+				"ground_status"
+			],
+			[
+				12.0,
+				"ground_hit1"
+			],
+			[
+				25.0,
+				"ground_hit2"
+			],
+			[
+				40.0,
+				"water_hit0"
+			]
+		],
+		"mon05_0": [
+			[
+				1.0,
+				"flying_hit0"
+			],
+			[
+				5.0,
+				"flying_hit0"
+			],
+			[
+				12.0,
+				"flying_hit1"
+			],
+			[
+				25.0,
+				"flying_hit2"
+			],
+			[
+				40.0,
+				"flying_hit0"
+			]
+		],
+		"mon05_1": [
+			[
+				1.0,
+				"flying_hit0"
+			],
+			[
+				5.0,
+				"flying_status"
+			],
+			[
+				12.0,
+				"flying_hit1"
+			],
+			[
+				25.0,
+				"ground_status"
+			],
+			[
+				40.0,
+				"ground_hit2"
+			]
+		],
+		"mon05_2": [
+			[
+				1.0,
+				"flying_hit0"
+			],
+			[
+				5.0,
+				"flying_status"
+			],
+			[
+				12.0,
+				"flying_hit1"
+			],
+			[
+				25.0,
+				"water_hit1"
+			],
+			[
+				40.0,
+				"grass_hit1"
+			]
+		],
+		"mon06_0": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_status"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"fire_hit2"
+			],
+			[
+				40.0,
+				"fire_hit2"
+			]
+		],
+		"mon06_1": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_status"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"fire_hit2"
+			],
+			[
+				40.0,
+				"flying_status"
+			]
+		],
+		"mon06_2": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_hit0"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"fire_hit2"
+			],
+			[
+				40.0,
+				"fire_status"
+			]
+		],
+		"mon07_0": [
+			[
+				1.0,
+				"water_hit0"
+			],
+			[
+				5.0,
+				"water_hit0"
+			],
+			[
+				12.0,
+				"water_hit1"
+			],
+			[
+				25.0,
+				"flying_hit2"
+			],
+			[
+				40.0,
+				"water_hit2"
+			]
+		],
+		"mon07_1": [
+			[
+				1.0,
+				"water_hit0"
+			],
+			[
+				5.0,
+				"water_hit0"
+			],
+			[
+				12.0,
+				"water_hit1"
+			],
+			[
+				25.0,
+				"ground_hit1"
+			],
+			[
+				40.0,
+				"water_hit2"
+			]
+		],
+		"mon07_2": [
+			[
+				1.0,
+				"water_hit0"
+			],
+			[
+				5.0,
+				"water_status"
+			],
+			[
+				12.0,
+				"water_hit1"
+			],
+			[
+				25.0,
+				"water_hit2"
+			],
+			[
+				40.0,
+				"grass_hit0"
+			]
+		],
+		"mon08_0": [
+			[
+				1.0,
+				"grass_hit0"
+			],
+			[
+				5.0,
+				"grass_status"
+			],
+			[
+				12.0,
+				"grass_hit1"
+			],
+			[
+				25.0,
+				"fire_hit2"
+			],
+			[
+				40.0,
+				"grass_hit2"
+			]
+		],
+		"mon08_1": [
+			[
+				1.0,
+				"grass_hit0"
+			],
+			[
+				5.0,
+				"grass_status"
+			],
+			[
+				12.0,
+				"grass_hit1"
+			],
+			[
+				25.0,
+				"grass_hit2"
+			],
+			[
+				40.0,
+				"normal_hit0"
+			]
+		],
+		"mon08_2": [
+			[
+				1.0,
+				"grass_hit0"
+			],
+			[
+				5.0,
+				"grass_status"
+			],
+			[
+				12.0,
+				"grass_hit1"
+			],
+			[
+				25.0,
+				"water_hit0"
+			],
+			[
+				40.0,
+				"fire_hit2"
+			]
+		],
+		"mon09_0": [
+			[
+				1.0,
+				"electric_hit0"
+			],
+			[
+				5.0,
+				"electric_status"
+			],
+			[
+				12.0,
+				"electric_hit1"
+			],
+			[
+				25.0,
+				"electric_hit2"
+			],
+			[
+				40.0,
+				"electric_hit1"
+			]
+		],
+		"mon09_1": [
+			[
+				1.0,
+				"electric_hit0"
+			],
+			[
+				5.0,
+				"electric_hit0"
+			],
+			[
+				12.0,
+				"electric_hit1"
+			],
+			[
+				25.0,
+				"electric_hit2"
+			],
+			[
+				40.0,
+				"normal_hit2"
+			]
+		],
+		"mon09_2": [
+			[
+				1.0,
+				"electric_hit0"
+			],
+			[
+				5.0,
+				"electric_status"
+			],
+			[
+				12.0,
+				"electric_hit1"
+			],
+			[
+				25.0,
+				"ground_hit2"
+			],
+			[
+				40.0,
+				"water_hit2"
+			]
+		],
+		"mon10_0": [
+			[
+				1.0,
+				"ground_hit0"
+			],
+			[
+				5.0,
+				"ground_status"
+			],
+			[
+				12.0,
+				"ground_hit1"
+			],
+			[
+				25.0,
+				"electric_hit2"
+			],
+			[
+				40.0,
+				"electric_status"
+			]
+		],
+		"mon10_1": [
+			[
+				1.0,
+				"ground_hit0"
+			],
+			[
+				5.0,
+				"ground_status"
+			],
+			[
+				12.0,
+				"ground_hit1"
+			],
+			[
+				25.0,
+				"grass_hit2"
+			],
+			[
+				40.0,
+				"water_hit1"
+			]
+		],
+		"mon10_2": [
+			[
+				1.0,
+				"ground_hit0"
+			],
+			[
+				5.0,
+				"ground_hit0"
+			],
+			[
+				12.0,
+				"ground_hit1"
+			],
+			[
+				25.0,
+				"ground_hit2"
+			],
+			[
+				40.0,
+				"ground_hit0"
+			]
+		],
+		"mon11_0": [
+			[
+				1.0,
+				"flying_hit0"
+			],
+			[
+				5.0,
+				"flying_hit0"
+			],
+			[
+				12.0,
+				"flying_hit1"
+			],
+			[
+				25.0,
+				"flying_hit2"
+			],
+			[
+				40.0,
+				"flying_hit0"
+			]
+		],
+		"mon11_1": [
+			[
+				1.0,
+				"flying_hit0"
+			],
+			[
+				5.0,
+				"flying_status"
+			],
+			[
+				12.0,
+				"flying_hit1"
+			],
+			[
+				25.0,
+				"flying_hit2"
+			],
+			[
+				40.0,
+				"flying_hit1"
+			]
+		],
+		"mon11_2": [
+			[
+				1.0,
+				"flying_hit0"
+			],
+			[
+				5.0,
+				"flying_status"
+			],
+			[
+				12.0,
+				"flying_hit1"
+			],
+			[
+				25.0,
+				"water_hit1"
+			],
+			[
+				40.0,
+				"ground_hit0"
+			]
+		],
+		"mon12_0": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_status"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"fire_hit2"
+			],
+			[
+				40.0,
+				"ground_hit2"
+			]
+		],
+		"mon12_1": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_hit0"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"electric_hit1"
+			],
+			[
+				40.0,
+				"grass_hit1"
+			]
+		],
+		"mon12_2": [
+			[
+				1.0,
+				"fire_hit0"
+			],
+			[
+				5.0,
+				"fire_status"
+			],
+			[
+				12.0,
+				"fire_hit1"
+			],
+			[
+				25.0,
+				"fire_hit2"
+			],
+			[
+				40.0,
+				"water_status"
+			]
+		]
+	},
+	"seed": 20261004.0,
+	"seed_code": "PANCHITO-200K-AA4C-S1",
+	"settings": {
+		"abilities": false,
+		"allow_legendaries": false,
+		"base_stats": false,
+		"battle_item_limit": 3.0,
+		"battle_items": "allowed",
+		"duplicates_clause": true,
+		"evolutions": false,
+		"first_encounter": true,
+		"fixed_battle": false,
+		"game_over": true,
+		"gifts": true,
+		"gifts_count": true,
+		"guarantee_stab": true,
+		"items": true,
+		"keep_type_themes": true,
+		"leader_ace": true,
+		"learnsets": "type_preference",
+		"level_appropriate": true,
+		"level_cap": false,
+		"locke_rules": true,
+		"nickname_required": true,
+		"no_early_legendaries": true,
+		"only_implemented_moves": true,
+		"permadeath": true,
+		"preset": "clasico",
+		"rival_starter": true,
+		"scaled_power": true,
+		"shiny_clause": true,
+		"shiny_denominator": 4096.0,
+		"shops": false,
+		"similar_strength": true,
+		"starters": "triangle",
+		"statics": true,
+		"statics_count": true,
+		"story_pokemon": true,
+		"strength_tolerance": 15.0,
+		"tm_compat": false,
+		"tm_content": false,
+		"tm_percent": 50.0,
+		"trades": true,
+		"trainer_duplicates": false,
+		"trainers": true,
+		"tutor_compat": false,
+		"tutor_content": false,
+		"tutor_percent": 50.0,
+		"types": false,
+		"wild": "per_zone"
+	},
+	"shops": {},
+	"species": {
+		"mon00_0": {
+			"held_items": [
+				"pokeball"
+			]
+		},
+		"mon00_1": {
+			"held_items": [
+				"superpotion"
+			]
+		},
+		"mon00_2": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon01_0": {
+			"held_items": [
+				"pokeball"
+			]
+		},
+		"mon01_1": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon01_2": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon02_0": {
+			"held_items": [
+				"pokeball"
+			]
+		},
+		"mon02_1": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon02_2": {
+			"held_items": [
+				"superpotion"
+			]
+		},
+		"mon03_0": {
+			"held_items": [
+				"superpotion"
+			]
+		},
+		"mon03_1": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon03_2": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon04_0": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon04_1": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon04_2": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon05_0": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon05_1": {
+			"held_items": [
+				"superpotion"
+			]
+		},
+		"mon05_2": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon06_0": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon06_1": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon06_2": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon07_0": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon07_1": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon07_2": {
+			"held_items": [
+				"superpotion"
+			]
+		},
+		"mon08_0": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon08_1": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon08_2": {
+			"held_items": [
+				"oranberry"
+			]
+		},
+		"mon09_0": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon09_1": {
+			"held_items": [
+				"pokeball"
+			]
+		},
+		"mon09_2": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon10_0": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon10_1": {
+			"held_items": [
+				"pokeball"
+			]
+		},
+		"mon10_2": {
+			"held_items": [
+				"superpotion"
+			]
+		},
+		"mon11_0": {
+			"held_items": [
+				"pokeball"
+			]
+		},
+		"mon11_1": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon11_2": {
+			"held_items": [
+				"repel"
+			]
+		},
+		"mon12_0": {
+			"held_items": [
+				"superpotion"
+			]
+		},
+		"mon12_1": {
+			"held_items": [
+				"potion"
+			]
+		},
+		"mon12_2": {
+			"held_items": [
+				"potion"
+			]
+		}
+	},
+	"species_map": {},
+	"starters": {
+		"starter_1": "mon00_0",
+		"starter_2": "mon07_0",
+		"starter_3": "mon02_0"
+	},
+	"statics": {
+		"fijo": "mon09_1"
+	},
+	"subseed": 0.0,
+	"tm_compat": {},
+	"tm_moves": {},
+	"trades": {
+		"trueque": {
+			"give": "mon03_0",
+			"receive": {
+				"level": 12.0,
+				"species": "mon02_0"
+			}
+		}
+	},
+	"trainers": {
+		"lider": {
+			"party": [
+				{
+					"level": 12.0,
+					"species": "mon00_0"
+				},
+				{
+					"level": 22.0,
+					"species": "mon00_1"
+				},
+				{
+					"level": 40.0,
+					"species": "mon06_2"
+				}
+			]
+		},
+		"paco": {
+			"party": [
+				{
+					"level": 8.0,
+					"species": "mon07_0"
+				},
+				{
+					"level": 20.0,
+					"species": "mon10_1"
+				}
+			]
+		},
+		"rival_1": {
+			"party": [
+				{
+					"level": 5.0,
+					"species": "mon07_0"
+				}
+			]
+		},
+		"rival_2": {
+			"party": [
+				{
+					"level": 20.0,
+					"species": "mon07_1"
+				}
+			]
+		},
+		"rival_3": {
+			"party": [
+				{
+					"level": 40.0,
+					"species": "mon07_2"
+				}
+			]
+		}
+	},
+	"tutor_compat": {},
+	"tutor_moves": {}
+}

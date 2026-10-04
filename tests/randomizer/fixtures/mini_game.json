@@ -1,0 +1,3626 @@
+{
+  "species": {
+    "mon00_0": {
+      "name": "Criatura 00-0",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "atk": 50,
+        "def": 50,
+        "spa": 50,
+        "spd": 50,
+        "spe": 50
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line00",
+      "evolutions": [
+        {
+          "to": "mon00_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 1,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon00_1": {
+      "name": "Criatura 00-1",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 65,
+        "spa": 65,
+        "spd": 65,
+        "spe": 65
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line00",
+      "evolutions": [
+        {
+          "to": "mon00_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 2,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon00_2": {
+      "name": "Criatura 00-2",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "atk": 85,
+        "def": 85,
+        "spa": 85,
+        "spd": 85,
+        "spe": 85
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line00",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 3,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon01_0": {
+      "name": "Criatura 01-0",
+      "types": [
+        "water"
+      ],
+      "base_stats": {
+        "hp": 51,
+        "atk": 51,
+        "def": 51,
+        "spa": 51,
+        "spd": 51,
+        "spe": 51
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line01",
+      "evolutions": [
+        {
+          "to": "mon01_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 4,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon01_1": {
+      "name": "Criatura 01-1",
+      "types": [
+        "water"
+      ],
+      "base_stats": {
+        "hp": 66,
+        "atk": 66,
+        "def": 66,
+        "spa": 66,
+        "spd": 66,
+        "spe": 66
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line01",
+      "evolutions": [
+        {
+          "to": "mon01_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 5,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon01_2": {
+      "name": "Criatura 01-2",
+      "types": [
+        "water"
+      ],
+      "base_stats": {
+        "hp": 86,
+        "atk": 86,
+        "def": 86,
+        "spa": 86,
+        "spd": 86,
+        "spe": 86
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line01",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 6,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon02_0": {
+      "name": "Criatura 02-0",
+      "types": [
+        "grass"
+      ],
+      "base_stats": {
+        "hp": 52,
+        "atk": 52,
+        "def": 52,
+        "spa": 52,
+        "spd": 52,
+        "spe": 52
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line02",
+      "evolutions": [
+        {
+          "to": "mon02_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 7,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon02_1": {
+      "name": "Criatura 02-1",
+      "types": [
+        "grass"
+      ],
+      "base_stats": {
+        "hp": 67,
+        "atk": 67,
+        "def": 67,
+        "spa": 67,
+        "spd": 67,
+        "spe": 67
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line02",
+      "evolutions": [
+        {
+          "to": "mon02_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 8,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon02_2": {
+      "name": "Criatura 02-2",
+      "types": [
+        "grass"
+      ],
+      "base_stats": {
+        "hp": 87,
+        "atk": 87,
+        "def": 87,
+        "spa": 87,
+        "spd": 87,
+        "spe": 87
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line02",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 9,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon03_0": {
+      "name": "Criatura 03-0",
+      "types": [
+        "electric"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "atk": 50,
+        "def": 50,
+        "spa": 50,
+        "spd": 50,
+        "spe": 50
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line03",
+      "evolutions": [
+        {
+          "to": "mon03_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 10,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon03_1": {
+      "name": "Criatura 03-1",
+      "types": [
+        "electric"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 65,
+        "spa": 65,
+        "spd": 65,
+        "spe": 65
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line03",
+      "evolutions": [
+        {
+          "to": "mon03_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 11,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon03_2": {
+      "name": "Criatura 03-2",
+      "types": [
+        "electric"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "atk": 85,
+        "def": 85,
+        "spa": 85,
+        "spd": 85,
+        "spe": 85
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line03",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 12,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon04_0": {
+      "name": "Criatura 04-0",
+      "types": [
+        "ground"
+      ],
+      "base_stats": {
+        "hp": 51,
+        "atk": 51,
+        "def": 51,
+        "spa": 51,
+        "spd": 51,
+        "spe": 51
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line04",
+      "evolutions": [
+        {
+          "to": "mon04_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 13,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon04_1": {
+      "name": "Criatura 04-1",
+      "types": [
+        "ground"
+      ],
+      "base_stats": {
+        "hp": 66,
+        "atk": 66,
+        "def": 66,
+        "spa": 66,
+        "spd": 66,
+        "spe": 66
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line04",
+      "evolutions": [
+        {
+          "to": "mon04_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 14,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon04_2": {
+      "name": "Criatura 04-2",
+      "types": [
+        "ground"
+      ],
+      "base_stats": {
+        "hp": 86,
+        "atk": 86,
+        "def": 86,
+        "spa": 86,
+        "spd": 86,
+        "spe": 86
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line04",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 15,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon05_0": {
+      "name": "Criatura 05-0",
+      "types": [
+        "flying"
+      ],
+      "base_stats": {
+        "hp": 52,
+        "atk": 52,
+        "def": 52,
+        "spa": 52,
+        "spd": 52,
+        "spe": 52
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line05",
+      "evolutions": [
+        {
+          "to": "mon05_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 16,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon05_1": {
+      "name": "Criatura 05-1",
+      "types": [
+        "flying"
+      ],
+      "base_stats": {
+        "hp": 67,
+        "atk": 67,
+        "def": 67,
+        "spa": 67,
+        "spd": 67,
+        "spe": 67
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line05",
+      "evolutions": [
+        {
+          "to": "mon05_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 17,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon05_2": {
+      "name": "Criatura 05-2",
+      "types": [
+        "flying"
+      ],
+      "base_stats": {
+        "hp": 87,
+        "atk": 87,
+        "def": 87,
+        "spa": 87,
+        "spd": 87,
+        "spe": 87
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line05",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 18,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon06_0": {
+      "name": "Criatura 06-0",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "atk": 50,
+        "def": 50,
+        "spa": 50,
+        "spd": 50,
+        "spe": 50
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line06",
+      "evolutions": [
+        {
+          "to": "mon06_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 19,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon06_1": {
+      "name": "Criatura 06-1",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 65,
+        "spa": 65,
+        "spd": 65,
+        "spe": 65
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line06",
+      "evolutions": [
+        {
+          "to": "mon06_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 20,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon06_2": {
+      "name": "Criatura 06-2",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "atk": 85,
+        "def": 85,
+        "spa": 85,
+        "spd": 85,
+        "spe": 85
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line06",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 21,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon07_0": {
+      "name": "Criatura 07-0",
+      "types": [
+        "water"
+      ],
+      "base_stats": {
+        "hp": 51,
+        "atk": 51,
+        "def": 51,
+        "spa": 51,
+        "spd": 51,
+        "spe": 51
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line07",
+      "evolutions": [
+        {
+          "to": "mon07_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 22,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon07_1": {
+      "name": "Criatura 07-1",
+      "types": [
+        "water"
+      ],
+      "base_stats": {
+        "hp": 66,
+        "atk": 66,
+        "def": 66,
+        "spa": 66,
+        "spd": 66,
+        "spe": 66
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line07",
+      "evolutions": [
+        {
+          "to": "mon07_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 23,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon07_2": {
+      "name": "Criatura 07-2",
+      "types": [
+        "water"
+      ],
+      "base_stats": {
+        "hp": 86,
+        "atk": 86,
+        "def": 86,
+        "spa": 86,
+        "spd": 86,
+        "spe": 86
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line07",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 24,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon08_0": {
+      "name": "Criatura 08-0",
+      "types": [
+        "grass"
+      ],
+      "base_stats": {
+        "hp": 52,
+        "atk": 52,
+        "def": 52,
+        "spa": 52,
+        "spd": 52,
+        "spe": 52
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line08",
+      "evolutions": [
+        {
+          "to": "mon08_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 25,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon08_1": {
+      "name": "Criatura 08-1",
+      "types": [
+        "grass"
+      ],
+      "base_stats": {
+        "hp": 67,
+        "atk": 67,
+        "def": 67,
+        "spa": 67,
+        "spd": 67,
+        "spe": 67
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line08",
+      "evolutions": [
+        {
+          "to": "mon08_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 26,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon08_2": {
+      "name": "Criatura 08-2",
+      "types": [
+        "grass"
+      ],
+      "base_stats": {
+        "hp": 87,
+        "atk": 87,
+        "def": 87,
+        "spa": 87,
+        "spd": 87,
+        "spe": 87
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line08",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 27,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon09_0": {
+      "name": "Criatura 09-0",
+      "types": [
+        "electric"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "atk": 50,
+        "def": 50,
+        "spa": 50,
+        "spd": 50,
+        "spe": 50
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line09",
+      "evolutions": [
+        {
+          "to": "mon09_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 28,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon09_1": {
+      "name": "Criatura 09-1",
+      "types": [
+        "electric"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 65,
+        "spa": 65,
+        "spd": 65,
+        "spe": 65
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line09",
+      "evolutions": [
+        {
+          "to": "mon09_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 29,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon09_2": {
+      "name": "Criatura 09-2",
+      "types": [
+        "electric"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "atk": 85,
+        "def": 85,
+        "spa": 85,
+        "spd": 85,
+        "spe": 85
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line09",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 30,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon10_0": {
+      "name": "Criatura 10-0",
+      "types": [
+        "ground"
+      ],
+      "base_stats": {
+        "hp": 51,
+        "atk": 51,
+        "def": 51,
+        "spa": 51,
+        "spd": 51,
+        "spe": 51
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line10",
+      "evolutions": [
+        {
+          "to": "mon10_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 31,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon10_1": {
+      "name": "Criatura 10-1",
+      "types": [
+        "ground"
+      ],
+      "base_stats": {
+        "hp": 66,
+        "atk": 66,
+        "def": 66,
+        "spa": 66,
+        "spd": 66,
+        "spe": 66
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line10",
+      "evolutions": [
+        {
+          "to": "mon10_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 32,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon10_2": {
+      "name": "Criatura 10-2",
+      "types": [
+        "ground"
+      ],
+      "base_stats": {
+        "hp": 86,
+        "atk": 86,
+        "def": 86,
+        "spa": 86,
+        "spd": 86,
+        "spe": 86
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line10",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 33,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon11_0": {
+      "name": "Criatura 11-0",
+      "types": [
+        "flying"
+      ],
+      "base_stats": {
+        "hp": 52,
+        "atk": 52,
+        "def": 52,
+        "spa": 52,
+        "spd": 52,
+        "spe": 52
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line11",
+      "evolutions": [
+        {
+          "to": "mon11_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 34,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon11_1": {
+      "name": "Criatura 11-1",
+      "types": [
+        "flying"
+      ],
+      "base_stats": {
+        "hp": 67,
+        "atk": 67,
+        "def": 67,
+        "spa": 67,
+        "spd": 67,
+        "spe": 67
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line11",
+      "evolutions": [
+        {
+          "to": "mon11_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 35,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon11_2": {
+      "name": "Criatura 11-2",
+      "types": [
+        "flying"
+      ],
+      "base_stats": {
+        "hp": 87,
+        "atk": 87,
+        "def": 87,
+        "spa": 87,
+        "spd": 87,
+        "spe": 87
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line11",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 36,
+      "is_legendary": false,
+      "is_mythical": false
+    },
+    "mon12_0": {
+      "name": "Criatura 12-0",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 50,
+        "atk": 50,
+        "def": 50,
+        "spa": 50,
+        "spd": 50,
+        "spe": 50
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 15,
+      "family_id": "line12",
+      "evolutions": [
+        {
+          "to": "mon12_1",
+          "method": "level",
+          "level": 16
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 37,
+      "is_legendary": true,
+      "is_mythical": false
+    },
+    "mon12_1": {
+      "name": "Criatura 12-1",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 65,
+        "spa": 65,
+        "spd": 65,
+        "spe": 65
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 1,
+      "min_level": 16,
+      "max_level": 35,
+      "family_id": "line12",
+      "evolutions": [
+        {
+          "to": "mon12_2",
+          "method": "level",
+          "level": 36
+        }
+      ],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 38,
+      "is_legendary": true,
+      "is_mythical": false
+    },
+    "mon12_2": {
+      "name": "Criatura 12-2",
+      "types": [
+        "fire"
+      ],
+      "base_stats": {
+        "hp": 85,
+        "atk": 85,
+        "def": 85,
+        "spa": 85,
+        "spd": 85,
+        "spe": 85
+      },
+      "abilities": {
+        "0": "blaze",
+        "H": "overgrow"
+      },
+      "stage": 2,
+      "min_level": 36,
+      "max_level": 100,
+      "family_id": "line12",
+      "evolutions": [],
+      "catch_rate": 45,
+      "held_items": [
+        "oranberry"
+      ],
+      "randomize": true,
+      "num": 39,
+      "is_legendary": true,
+      "is_mythical": false
+    },
+    "panchito": {
+      "name": "Panchito",
+      "types": [
+        "normal"
+      ],
+      "base_stats": {
+        "hp": 55,
+        "atk": 55,
+        "def": 55,
+        "spa": 55,
+        "spd": 55,
+        "spe": 55
+      },
+      "abilities": {
+        "0": "intimidate"
+      },
+      "stage": 0,
+      "min_level": 1,
+      "max_level": 100,
+      "family_id": "panchito",
+      "evolutions": [],
+      "catch_rate": 255,
+      "held_items": [],
+      "randomize": false,
+      "num": 40,
+      "is_legendary": false,
+      "is_mythical": false
+    }
+  },
+  "moves": {
+    "fire_hit0": {
+      "name": "Golpe fire 0",
+      "type": "fire",
+      "category": "physical",
+      "power": 40,
+      "implemented": true,
+      "num": 1,
+      "pp": 20
+    },
+    "fire_hit1": {
+      "name": "Golpe fire 1",
+      "type": "fire",
+      "category": "physical",
+      "power": 60,
+      "implemented": true,
+      "num": 2,
+      "pp": 20
+    },
+    "fire_hit2": {
+      "name": "Golpe fire 2",
+      "type": "fire",
+      "category": "physical",
+      "power": 80,
+      "implemented": true,
+      "num": 3,
+      "pp": 20
+    },
+    "fire_hit3": {
+      "name": "Golpe fire 3",
+      "type": "fire",
+      "category": "physical",
+      "power": 110,
+      "implemented": true,
+      "num": 4,
+      "pp": 20
+    },
+    "fire_status": {
+      "name": "Gesto fire",
+      "type": "fire",
+      "category": "status",
+      "power": 0,
+      "implemented": true,
+      "num": 5,
+      "pp": 20
+    },
+    "water_hit0": {
+      "name": "Golpe water 0",
+      "type": "water",
+      "category": "physical",
+      "power": 40,
+      "implemented": true,
+      "num": 6,
+      "pp": 20
+    },
+    "water_hit1": {
+      "name": "Golpe water 1",
+      "type": "water",
+      "category": "physical",
+      "power": 60,
+      "implemented": true,
+      "num": 7,
+      "pp": 20
+    },
+    "water_hit2": {
+      "name": "Golpe water 2",
+      "type": "water",
+      "category": "physical",
+      "power": 80,
+      "implemented": true,
+      "num": 8,
+      "pp": 20
+    },
+    "water_hit3": {
+      "name": "Golpe water 3",
+      "type": "water",
+      "category": "physical",
+      "power": 110,
+      "implemented": true,
+      "num": 9,
+      "pp": 20
+    },
+    "water_status": {
+      "name": "Gesto water",
+      "type": "water",
+      "category": "status",
+      "power": 0,
+      "implemented": true,
+      "num": 10,
+      "pp": 20
+    },
+    "grass_hit0": {
+      "name": "Golpe grass 0",
+      "type": "grass",
+      "category": "physical",
+      "power": 40,
+      "implemented": true,
+      "num": 11,
+      "pp": 20
+    },
+    "grass_hit1": {
+      "name": "Golpe grass 1",
+      "type": "grass",
+      "category": "physical",
+      "power": 60,
+      "implemented": true,
+      "num": 12,
+      "pp": 20
+    },
+    "grass_hit2": {
+      "name": "Golpe grass 2",
+      "type": "grass",
+      "category": "physical",
+      "power": 80,
+      "implemented": true,
+      "num": 13,
+      "pp": 20
+    },
+    "grass_hit3": {
+      "name": "Golpe grass 3",
+      "type": "grass",
+      "category": "physical",
+      "power": 110,
+      "implemented": true,
+      "num": 14,
+      "pp": 20
+    },
+    "grass_status": {
+      "name": "Gesto grass",
+      "type": "grass",
+      "category": "status",
+      "power": 0,
+      "implemented": true,
+      "num": 15,
+      "pp": 20
+    },
+    "electric_hit0": {
+      "name": "Golpe electric 0",
+      "type": "electric",
+      "category": "physical",
+      "power": 40,
+      "implemented": true,
+      "num": 16,
+      "pp": 20
+    },
+    "electric_hit1": {
+      "name": "Golpe electric 1",
+      "type": "electric",
+      "category": "physical",
+      "power": 60,
+      "implemented": true,
+      "num": 17,
+      "pp": 20
+    },
+    "electric_hit2": {
+      "name": "Golpe electric 2",
+      "type": "electric",
+      "category": "physical",
+      "power": 80,
+      "implemented": true,
+      "num": 18,
+      "pp": 20
+    },
+    "electric_hit3": {
+      "name": "Golpe electric 3",
+      "type": "electric",
+      "category": "physical",
+      "power": 110,
+      "implemented": true,
+      "num": 19,
+      "pp": 20
+    },
+    "electric_status": {
+      "name": "Gesto electric",
+      "type": "electric",
+      "category": "status",
+      "power": 0,
+      "implemented": true,
+      "num": 20,
+      "pp": 20
+    },
+    "ground_hit0": {
+      "name": "Golpe ground 0",
+      "type": "ground",
+      "category": "physical",
+      "power": 40,
+      "implemented": true,
+      "num": 21,
+      "pp": 20
+    },
+    "ground_hit1": {
+      "name": "Golpe ground 1",
+      "type": "ground",
+      "category": "physical",
+      "power": 60,
+      "implemented": true,
+      "num": 22,
+      "pp": 20
+    },
+    "ground_hit2": {
+      "name": "Golpe ground 2",
+      "type": "ground",
+      "category": "physical",
+      "power": 80,
+      "implemented": true,
+      "num": 23,
+      "pp": 20
+    },
+    "ground_hit3": {
+      "name": "Golpe ground 3",
+      "type": "ground",
+      "category": "physical",
+      "power": 110,
+      "implemented": true,
+      "num": 24,
+      "pp": 20
+    },
+    "ground_status": {
+      "name": "Gesto ground",
+      "type": "ground",
+      "category": "status",
+      "power": 0,
+      "implemented": true,
+      "num": 25,
+      "pp": 20
+    },
+    "flying_hit0": {
+      "name": "Golpe flying 0",
+      "type": "flying",
+      "category": "physical",
+      "power": 40,
+      "implemented": true,
+      "num": 26,
+      "pp": 20
+    },
+    "flying_hit1": {
+      "name": "Golpe flying 1",
+      "type": "flying",
+      "category": "physical",
+      "power": 60,
+      "implemented": true,
+      "num": 27,
+      "pp": 20
+    },
+    "flying_hit2": {
+      "name": "Golpe flying 2",
+      "type": "flying",
+      "category": "physical",
+      "power": 80,
+      "implemented": true,
+      "num": 28,
+      "pp": 20
+    },
+    "flying_hit3": {
+      "name": "Golpe flying 3",
+      "type": "flying",
+      "category": "physical",
+      "power": 110,
+      "implemented": true,
+      "num": 29,
+      "pp": 20
+    },
+    "flying_status": {
+      "name": "Gesto flying",
+      "type": "flying",
+      "category": "status",
+      "power": 0,
+      "implemented": true,
+      "num": 30,
+      "pp": 20
+    },
+    "normal_hit0": {
+      "name": "Golpe normal 0",
+      "type": "normal",
+      "category": "physical",
+      "power": 40,
+      "implemented": true,
+      "num": 31,
+      "pp": 20
+    },
+    "normal_hit1": {
+      "name": "Golpe normal 1",
+      "type": "normal",
+      "category": "physical",
+      "power": 60,
+      "implemented": true,
+      "num": 32,
+      "pp": 20
+    },
+    "normal_hit2": {
+      "name": "Golpe normal 2",
+      "type": "normal",
+      "category": "physical",
+      "power": 80,
+      "implemented": true,
+      "num": 33,
+      "pp": 20
+    },
+    "normal_hit3": {
+      "name": "Golpe normal 3",
+      "type": "normal",
+      "category": "physical",
+      "power": 110,
+      "implemented": true,
+      "num": 34,
+      "pp": 20
+    },
+    "normal_status": {
+      "name": "Gesto normal",
+      "type": "normal",
+      "category": "status",
+      "power": 0,
+      "implemented": true,
+      "num": 35,
+      "pp": 20
+    }
+  },
+  "abilities": {
+    "blaze": {
+      "num": 1
+    },
+    "torrent": {
+      "num": 2
+    },
+    "overgrow": {
+      "num": 3
+    },
+    "intimidate": {
+      "num": 4
+    },
+    "levitate": {
+      "num": 5
+    },
+    "wonderguard": {
+      "num": 6
+    }
+  },
+  "types": {
+    "fire": {
+      "name": "fire",
+      "effectiveness": {
+        "grass": 2,
+        "water": 0.5
+      }
+    },
+    "water": {
+      "name": "water",
+      "effectiveness": {
+        "grass": 0.5,
+        "fire": 2,
+        "electric": 0.5
+      }
+    },
+    "grass": {
+      "name": "grass",
+      "effectiveness": {
+        "fire": 0.5,
+        "water": 2,
+        "flying": 0.5
+      }
+    },
+    "electric": {
+      "name": "electric",
+      "effectiveness": {
+        "water": 2,
+        "ground": 0.5
+      }
+    },
+    "ground": {
+      "name": "ground",
+      "effectiveness": {
+        "electric": 2
+      }
+    },
+    "flying": {
+      "name": "flying",
+      "effectiveness": {
+        "grass": 2
+      }
+    },
+    "normal": {
+      "name": "normal",
+      "effectiveness": {}
+    }
+  },
+  "learnsets": {
+    "mon00_0": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon00_1": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon00_2": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon01_0": {
+      "level": [
+        [
+          1,
+          "water_hit0"
+        ],
+        [
+          5,
+          "water_status"
+        ],
+        [
+          12,
+          "water_hit1"
+        ],
+        [
+          25,
+          "water_hit2"
+        ],
+        [
+          40,
+          "water_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon01_1": {
+      "level": [
+        [
+          1,
+          "water_hit0"
+        ],
+        [
+          5,
+          "water_status"
+        ],
+        [
+          12,
+          "water_hit1"
+        ],
+        [
+          25,
+          "water_hit2"
+        ],
+        [
+          40,
+          "water_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon01_2": {
+      "level": [
+        [
+          1,
+          "water_hit0"
+        ],
+        [
+          5,
+          "water_status"
+        ],
+        [
+          12,
+          "water_hit1"
+        ],
+        [
+          25,
+          "water_hit2"
+        ],
+        [
+          40,
+          "water_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon02_0": {
+      "level": [
+        [
+          1,
+          "grass_hit0"
+        ],
+        [
+          5,
+          "grass_status"
+        ],
+        [
+          12,
+          "grass_hit1"
+        ],
+        [
+          25,
+          "grass_hit2"
+        ],
+        [
+          40,
+          "grass_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon02_1": {
+      "level": [
+        [
+          1,
+          "grass_hit0"
+        ],
+        [
+          5,
+          "grass_status"
+        ],
+        [
+          12,
+          "grass_hit1"
+        ],
+        [
+          25,
+          "grass_hit2"
+        ],
+        [
+          40,
+          "grass_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon02_2": {
+      "level": [
+        [
+          1,
+          "grass_hit0"
+        ],
+        [
+          5,
+          "grass_status"
+        ],
+        [
+          12,
+          "grass_hit1"
+        ],
+        [
+          25,
+          "grass_hit2"
+        ],
+        [
+          40,
+          "grass_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon03_0": {
+      "level": [
+        [
+          1,
+          "electric_hit0"
+        ],
+        [
+          5,
+          "electric_status"
+        ],
+        [
+          12,
+          "electric_hit1"
+        ],
+        [
+          25,
+          "electric_hit2"
+        ],
+        [
+          40,
+          "electric_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon03_1": {
+      "level": [
+        [
+          1,
+          "electric_hit0"
+        ],
+        [
+          5,
+          "electric_status"
+        ],
+        [
+          12,
+          "electric_hit1"
+        ],
+        [
+          25,
+          "electric_hit2"
+        ],
+        [
+          40,
+          "electric_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon03_2": {
+      "level": [
+        [
+          1,
+          "electric_hit0"
+        ],
+        [
+          5,
+          "electric_status"
+        ],
+        [
+          12,
+          "electric_hit1"
+        ],
+        [
+          25,
+          "electric_hit2"
+        ],
+        [
+          40,
+          "electric_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon04_0": {
+      "level": [
+        [
+          1,
+          "ground_hit0"
+        ],
+        [
+          5,
+          "ground_status"
+        ],
+        [
+          12,
+          "ground_hit1"
+        ],
+        [
+          25,
+          "ground_hit2"
+        ],
+        [
+          40,
+          "ground_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon04_1": {
+      "level": [
+        [
+          1,
+          "ground_hit0"
+        ],
+        [
+          5,
+          "ground_status"
+        ],
+        [
+          12,
+          "ground_hit1"
+        ],
+        [
+          25,
+          "ground_hit2"
+        ],
+        [
+          40,
+          "ground_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon04_2": {
+      "level": [
+        [
+          1,
+          "ground_hit0"
+        ],
+        [
+          5,
+          "ground_status"
+        ],
+        [
+          12,
+          "ground_hit1"
+        ],
+        [
+          25,
+          "ground_hit2"
+        ],
+        [
+          40,
+          "ground_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon05_0": {
+      "level": [
+        [
+          1,
+          "flying_hit0"
+        ],
+        [
+          5,
+          "flying_status"
+        ],
+        [
+          12,
+          "flying_hit1"
+        ],
+        [
+          25,
+          "flying_hit2"
+        ],
+        [
+          40,
+          "flying_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon05_1": {
+      "level": [
+        [
+          1,
+          "flying_hit0"
+        ],
+        [
+          5,
+          "flying_status"
+        ],
+        [
+          12,
+          "flying_hit1"
+        ],
+        [
+          25,
+          "flying_hit2"
+        ],
+        [
+          40,
+          "flying_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon05_2": {
+      "level": [
+        [
+          1,
+          "flying_hit0"
+        ],
+        [
+          5,
+          "flying_status"
+        ],
+        [
+          12,
+          "flying_hit1"
+        ],
+        [
+          25,
+          "flying_hit2"
+        ],
+        [
+          40,
+          "flying_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon06_0": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon06_1": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon06_2": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon07_0": {
+      "level": [
+        [
+          1,
+          "water_hit0"
+        ],
+        [
+          5,
+          "water_status"
+        ],
+        [
+          12,
+          "water_hit1"
+        ],
+        [
+          25,
+          "water_hit2"
+        ],
+        [
+          40,
+          "water_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon07_1": {
+      "level": [
+        [
+          1,
+          "water_hit0"
+        ],
+        [
+          5,
+          "water_status"
+        ],
+        [
+          12,
+          "water_hit1"
+        ],
+        [
+          25,
+          "water_hit2"
+        ],
+        [
+          40,
+          "water_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon07_2": {
+      "level": [
+        [
+          1,
+          "water_hit0"
+        ],
+        [
+          5,
+          "water_status"
+        ],
+        [
+          12,
+          "water_hit1"
+        ],
+        [
+          25,
+          "water_hit2"
+        ],
+        [
+          40,
+          "water_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon08_0": {
+      "level": [
+        [
+          1,
+          "grass_hit0"
+        ],
+        [
+          5,
+          "grass_status"
+        ],
+        [
+          12,
+          "grass_hit1"
+        ],
+        [
+          25,
+          "grass_hit2"
+        ],
+        [
+          40,
+          "grass_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon08_1": {
+      "level": [
+        [
+          1,
+          "grass_hit0"
+        ],
+        [
+          5,
+          "grass_status"
+        ],
+        [
+          12,
+          "grass_hit1"
+        ],
+        [
+          25,
+          "grass_hit2"
+        ],
+        [
+          40,
+          "grass_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon08_2": {
+      "level": [
+        [
+          1,
+          "grass_hit0"
+        ],
+        [
+          5,
+          "grass_status"
+        ],
+        [
+          12,
+          "grass_hit1"
+        ],
+        [
+          25,
+          "grass_hit2"
+        ],
+        [
+          40,
+          "grass_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon09_0": {
+      "level": [
+        [
+          1,
+          "electric_hit0"
+        ],
+        [
+          5,
+          "electric_status"
+        ],
+        [
+          12,
+          "electric_hit1"
+        ],
+        [
+          25,
+          "electric_hit2"
+        ],
+        [
+          40,
+          "electric_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon09_1": {
+      "level": [
+        [
+          1,
+          "electric_hit0"
+        ],
+        [
+          5,
+          "electric_status"
+        ],
+        [
+          12,
+          "electric_hit1"
+        ],
+        [
+          25,
+          "electric_hit2"
+        ],
+        [
+          40,
+          "electric_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon09_2": {
+      "level": [
+        [
+          1,
+          "electric_hit0"
+        ],
+        [
+          5,
+          "electric_status"
+        ],
+        [
+          12,
+          "electric_hit1"
+        ],
+        [
+          25,
+          "electric_hit2"
+        ],
+        [
+          40,
+          "electric_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon10_0": {
+      "level": [
+        [
+          1,
+          "ground_hit0"
+        ],
+        [
+          5,
+          "ground_status"
+        ],
+        [
+          12,
+          "ground_hit1"
+        ],
+        [
+          25,
+          "ground_hit2"
+        ],
+        [
+          40,
+          "ground_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon10_1": {
+      "level": [
+        [
+          1,
+          "ground_hit0"
+        ],
+        [
+          5,
+          "ground_status"
+        ],
+        [
+          12,
+          "ground_hit1"
+        ],
+        [
+          25,
+          "ground_hit2"
+        ],
+        [
+          40,
+          "ground_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon10_2": {
+      "level": [
+        [
+          1,
+          "ground_hit0"
+        ],
+        [
+          5,
+          "ground_status"
+        ],
+        [
+          12,
+          "ground_hit1"
+        ],
+        [
+          25,
+          "ground_hit2"
+        ],
+        [
+          40,
+          "ground_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon11_0": {
+      "level": [
+        [
+          1,
+          "flying_hit0"
+        ],
+        [
+          5,
+          "flying_status"
+        ],
+        [
+          12,
+          "flying_hit1"
+        ],
+        [
+          25,
+          "flying_hit2"
+        ],
+        [
+          40,
+          "flying_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon11_1": {
+      "level": [
+        [
+          1,
+          "flying_hit0"
+        ],
+        [
+          5,
+          "flying_status"
+        ],
+        [
+          12,
+          "flying_hit1"
+        ],
+        [
+          25,
+          "flying_hit2"
+        ],
+        [
+          40,
+          "flying_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon11_2": {
+      "level": [
+        [
+          1,
+          "flying_hit0"
+        ],
+        [
+          5,
+          "flying_status"
+        ],
+        [
+          12,
+          "flying_hit1"
+        ],
+        [
+          25,
+          "flying_hit2"
+        ],
+        [
+          40,
+          "flying_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon12_0": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon12_1": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "mon12_2": {
+      "level": [
+        [
+          1,
+          "fire_hit0"
+        ],
+        [
+          5,
+          "fire_status"
+        ],
+        [
+          12,
+          "fire_hit1"
+        ],
+        [
+          25,
+          "fire_hit2"
+        ],
+        [
+          40,
+          "fire_hit3"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    },
+    "panchito": {
+      "level": [
+        [
+          1,
+          "normal_hit0"
+        ]
+      ],
+      "machine": [],
+      "tutor": []
+    }
+  },
+  "items": {
+    "pokeball": {
+      "name": "Poké Ball",
+      "category": "ball",
+      "pocket": "pokeballs",
+      "price": 100,
+      "field_use": "no_target",
+      "effect": "ball"
+    },
+    "potion": {
+      "name": "Poción",
+      "category": "potion",
+      "pocket": "medicine",
+      "price": 100,
+      "field_use": "no_target",
+      "effect": "heal_hp"
+    },
+    "superpotion": {
+      "name": "Superpoción",
+      "category": "potion",
+      "pocket": "medicine",
+      "price": 100,
+      "field_use": "no_target",
+      "effect": "heal_hp"
+    },
+    "oranberry": {
+      "name": "Baya Aranja",
+      "category": "other",
+      "pocket": "items",
+      "price": 100,
+      "field_use": "no_target",
+      "effect": "heal_hp"
+    },
+    "repel": {
+      "name": "Repelente",
+      "category": "other",
+      "pocket": "items",
+      "price": 100,
+      "field_use": "no_target",
+      "effect": "heal_hp"
+    },
+    "bicycle": {
+      "name": "Bici",
+      "key_item": true,
+      "randomize": false,
+      "category": "other",
+      "pocket": "key",
+      "price": 100,
+      "field_use": "no_target",
+      "effect": "heal_hp"
+    }
+  },
+  "tm_moves": {
+    "tm_1": {
+      "move": "fire_hit2"
+    },
+    "tm_2": {
+      "move": "water_hit2"
+    },
+    "tm_field": {
+      "move": "normal_hit0",
+      "randomize": false
+    }
+  },
+  "tm_compat": {
+    "mon00_0": [
+      "tm_1"
+    ],
+    "mon00_1": [
+      "tm_1"
+    ],
+    "mon00_2": [
+      "tm_1"
+    ],
+    "mon01_0": [
+      "tm_1"
+    ],
+    "mon01_1": [
+      "tm_1"
+    ],
+    "mon01_2": [
+      "tm_1"
+    ],
+    "mon02_0": [
+      "tm_1"
+    ],
+    "mon02_1": [
+      "tm_1"
+    ],
+    "mon02_2": [
+      "tm_1"
+    ],
+    "mon03_0": [
+      "tm_1"
+    ],
+    "mon03_1": [
+      "tm_1"
+    ],
+    "mon03_2": [
+      "tm_1"
+    ],
+    "mon04_0": [
+      "tm_1"
+    ],
+    "mon04_1": [
+      "tm_1"
+    ],
+    "mon04_2": [
+      "tm_1"
+    ],
+    "mon05_0": [
+      "tm_1"
+    ],
+    "mon05_1": [
+      "tm_1"
+    ],
+    "mon05_2": [
+      "tm_1"
+    ],
+    "mon06_0": [
+      "tm_1"
+    ],
+    "mon06_1": [
+      "tm_1"
+    ],
+    "mon06_2": [
+      "tm_1"
+    ],
+    "mon07_0": [
+      "tm_1"
+    ],
+    "mon07_1": [
+      "tm_1"
+    ],
+    "mon07_2": [
+      "tm_1"
+    ],
+    "mon08_0": [
+      "tm_1"
+    ],
+    "mon08_1": [
+      "tm_1"
+    ],
+    "mon08_2": [
+      "tm_1"
+    ],
+    "mon09_0": [
+      "tm_1"
+    ],
+    "mon09_1": [
+      "tm_1"
+    ],
+    "mon09_2": [
+      "tm_1"
+    ],
+    "mon10_0": [
+      "tm_1"
+    ],
+    "mon10_1": [
+      "tm_1"
+    ],
+    "mon10_2": [
+      "tm_1"
+    ],
+    "mon11_0": [
+      "tm_1"
+    ],
+    "mon11_1": [
+      "tm_1"
+    ],
+    "mon11_2": [
+      "tm_1"
+    ],
+    "mon12_0": [
+      "tm_1"
+    ],
+    "mon12_1": [
+      "tm_1"
+    ],
+    "mon12_2": [
+      "tm_1"
+    ],
+    "panchito": []
+  },
+  "tutor_moves": {
+    "tutor_1": {
+      "move": "grass_hit1"
+    }
+  },
+  "tutor_compat": {
+    "mon00_0": [
+      "tutor_1"
+    ],
+    "mon00_1": [
+      "tutor_1"
+    ],
+    "mon00_2": [
+      "tutor_1"
+    ],
+    "mon01_0": [
+      "tutor_1"
+    ],
+    "mon01_1": [
+      "tutor_1"
+    ],
+    "mon01_2": [
+      "tutor_1"
+    ],
+    "mon02_0": [
+      "tutor_1"
+    ],
+    "mon02_1": [
+      "tutor_1"
+    ],
+    "mon02_2": [
+      "tutor_1"
+    ],
+    "mon03_0": [
+      "tutor_1"
+    ],
+    "mon03_1": [
+      "tutor_1"
+    ],
+    "mon03_2": [
+      "tutor_1"
+    ],
+    "mon04_0": [
+      "tutor_1"
+    ],
+    "mon04_1": [
+      "tutor_1"
+    ],
+    "mon04_2": [
+      "tutor_1"
+    ],
+    "mon05_0": [
+      "tutor_1"
+    ],
+    "mon05_1": [
+      "tutor_1"
+    ],
+    "mon05_2": [
+      "tutor_1"
+    ],
+    "mon06_0": [
+      "tutor_1"
+    ],
+    "mon06_1": [
+      "tutor_1"
+    ],
+    "mon06_2": [
+      "tutor_1"
+    ],
+    "mon07_0": [
+      "tutor_1"
+    ],
+    "mon07_1": [
+      "tutor_1"
+    ],
+    "mon07_2": [
+      "tutor_1"
+    ],
+    "mon08_0": [
+      "tutor_1"
+    ],
+    "mon08_1": [
+      "tutor_1"
+    ],
+    "mon08_2": [
+      "tutor_1"
+    ],
+    "mon09_0": [
+      "tutor_1"
+    ],
+    "mon09_1": [
+      "tutor_1"
+    ],
+    "mon09_2": [
+      "tutor_1"
+    ],
+    "mon10_0": [
+      "tutor_1"
+    ],
+    "mon10_1": [
+      "tutor_1"
+    ],
+    "mon10_2": [
+      "tutor_1"
+    ],
+    "mon11_0": [
+      "tutor_1"
+    ],
+    "mon11_1": [
+      "tutor_1"
+    ],
+    "mon11_2": [
+      "tutor_1"
+    ],
+    "mon12_0": [
+      "tutor_1"
+    ],
+    "mon12_1": [
+      "tutor_1"
+    ],
+    "mon12_2": [
+      "tutor_1"
+    ],
+    "panchito": [
+      "tutor_1"
+    ]
+  },
+  "encounters": {
+    "ruta_1": {
+      "zone_id": "ruta_1",
+      "early": true,
+      "land": {
+        "day": [
+          {
+            "species": "mon00_0",
+            "min_level": 3,
+            "max_level": 5,
+            "weight": 50
+          },
+          {
+            "species": "mon01_0",
+            "min_level": 4,
+            "max_level": 6,
+            "weight": 50
+          }
+        ],
+        "night": [
+          {
+            "species": "mon02_0",
+            "min_level": 4,
+            "max_level": 6,
+            "weight": 50
+          },
+          {
+            "species": "panchito",
+            "min_level": 4,
+            "max_level": 6,
+            "weight": 50,
+            "randomize": false
+          }
+        ]
+      }
+    },
+    "cueva_baja": {
+      "zone_id": "cueva",
+      "early": true,
+      "land": {
+        "day": [
+          {
+            "species": "mon03_0",
+            "min_level": 8,
+            "max_level": 10,
+            "weight": 50
+          },
+          {
+            "species": "mon04_0",
+            "min_level": 9,
+            "max_level": 11,
+            "weight": 50
+          }
+        ]
+      }
+    },
+    "cueva_alta": {
+      "zone_id": "cueva",
+      "early": false,
+      "water": [
+        {
+          "species": "mon05_1",
+          "min_level": 20,
+          "max_level": 22,
+          "weight": 50
+        },
+        {
+          "species": "mon06_1",
+          "min_level": 21,
+          "max_level": 23,
+          "weight": 50
+        }
+      ]
+    },
+    "reserva": {
+      "zone_id": "reserva",
+      "randomize": false,
+      "land": {
+        "day": [
+          {
+            "species": "panchito",
+            "min_level": 10,
+            "max_level": 12,
+            "weight": 50
+          }
+        ]
+      }
+    }
+  },
+  "trainers": {
+    "paco": {
+      "party": [
+        {
+          "species": "mon03_0",
+          "level": 8
+        },
+        {
+          "species": "mon04_1",
+          "level": 20
+        }
+      ]
+    },
+    "lider": {
+      "leader_type": "fire",
+      "ace_index": 2,
+      "party": [
+        {
+          "species": "mon00_0",
+          "level": 12
+        },
+        {
+          "species": "mon06_1",
+          "level": 22
+        },
+        {
+          "species": "mon00_2",
+          "level": 40
+        }
+      ]
+    },
+    "rival_1": {
+      "rival": true,
+      "rival_starter_slot": "starter_2",
+      "rival_slot": 0,
+      "party": [
+        {
+          "species": "mon01_0",
+          "level": 5
+        }
+      ],
+      "class": "rival"
+    },
+    "rival_2": {
+      "rival": true,
+      "rival_starter_slot": "starter_2",
+      "rival_slot": 0,
+      "party": [
+        {
+          "species": "mon01_1",
+          "level": 20
+        }
+      ],
+      "class": "rival"
+    },
+    "rival_3": {
+      "rival": true,
+      "rival_starter_slot": "starter_2",
+      "rival_slot": 0,
+      "party": [
+        {
+          "species": "mon01_2",
+          "level": 40
+        }
+      ],
+      "class": "rival"
+    },
+    "guion": {
+      "randomize": false,
+      "party": [
+        {
+          "species": "panchito",
+          "level": 5,
+          "shiny": true
+        }
+      ]
+    }
+  },
+  "starters": {
+    "starter_1": {
+      "species": "mon00_0",
+      "level": 5
+    },
+    "starter_2": {
+      "species": "mon01_0",
+      "level": 5
+    },
+    "starter_3": {
+      "species": "mon02_0",
+      "level": 5
+    }
+  },
+  "gifts": {
+    "regalo": {
+      "species": "mon03_0",
+      "level": 10,
+      "zone_id": "pueblo"
+    }
+  },
+  "statics": {
+    "fijo": {
+      "species": "mon04_1",
+      "level": 25,
+      "zone_id": "cueva"
+    },
+    "guion": {
+      "species": "panchito",
+      "level": 5,
+      "randomize": false
+    }
+  },
+  "trades": {
+    "trueque": {
+      "give": "mon04_0",
+      "receive": {
+        "species": "mon05_0",
+        "level": 12
+      }
+    }
+  },
+  "placements": {
+    "ruta_1/suelo": {
+      "item": "oranberry"
+    },
+    "pueblo/regalo": {
+      "item": "potion"
+    },
+    "pueblo/bici": {
+      "item": "bicycle"
+    }
+  },
+  "shops": {
+    "tienda": {
+      "stock": [
+        {
+          "items": [
+            "pokeball",
+            "potion",
+            "repel"
+          ]
+        }
+      ]
+    }
+  },
+  "required_items": [
+    "bicycle"
+  ],
+  "required_moves": [],
+  "config": {
+    "_doc": "Configuración del motor de RandomLocke (Fase R, Agente 2): listas de prohibidos, reglas de equilibrio y presets. Cambiar algo de aquí que afecte a las ROM obliga a subir Randomizer.GENERATOR_VERSION.",
+    "banned_species": [],
+    "banned_moves": [
+      "struggle",
+      "sketch",
+      "transform",
+      "metronome",
+      "mirrormove",
+      "assist",
+      "sleeptalk",
+      "naturepower"
+    ],
+    "banned_abilities": [
+      "wonderguard",
+      "hugepower",
+      "purepower",
+      "shadowtag",
+      "arenatrap",
+      "moody",
+      "truant",
+      "imposter"
+    ],
+    "_power_caps": "Potencia máxima de un movimiento aprendido por nivel con 'scaled_power': [hasta el nivel, potencia máxima].",
+    "power_caps": [
+      [
+        10,
+        50
+      ],
+      [
+        20,
+        70
+      ],
+      [
+        30,
+        85
+      ],
+      [
+        45,
+        100
+      ],
+      [
+        60,
+        120
+      ],
+      [
+        100,
+        250
+      ]
+    ],
+    "_evolution_gap": "Niveles extra que se suponen para una evolución que no es por nivel (piedra, amistad...) al calcular a qué nivel puede aparecer una especie.",
+    "evolution_gap": 15,
+    "_overlevel_gap": "Un entrenador o salvaje no lleva la forma sin evolucionar si supera en tantos niveles el de su evolución.",
+    "overlevel_gap": 10,
+    "_first_move_min_power": "Potencia mínima del ataque de daño que se garantiza al nivel 1.",
+    "first_move_min_power": 30,
+    "shop_guaranteed": [
+      "pokeball",
+      "potion"
+    ],
+    "_early_legendary_level": "Con 'no_early_legendaries', ningún legendario por debajo de este nivel.",
+    "early_legendary_level": 30,
+    "_type_preference_chance": "Con learnsets 'type_preference', probabilidad de que cada movimiento sea de su tipo.",
+    "type_preference_chance": 0.5,
+    "_legendary_tags": "Etiquetas de species.json que cuentan como legendario o singular.",
+    "legendary_tags": [
+      "restricted_legendary",
+      "sub_legendary",
+      "mythical"
+    ],
+    "_validation_attempts": "Subsemillas que se prueban si una ROM no pasa la validación (R.4).",
+    "validation_attempts": 25,
+    "low_power_stab_cap_overrides": {
+      "dark": 60
+    },
+    "presets": {
+      "clasico": {
+        "starters": "triangle",
+        "wild": "per_zone",
+        "trainers": true,
+        "keep_type_themes": true,
+        "story_pokemon": true,
+        "allow_legendaries": false,
+        "learnsets": "type_preference",
+        "guarantee_stab": true,
+        "scaled_power": true,
+        "abilities": false,
+        "types": false,
+        "base_stats": false,
+        "evolutions": false,
+        "items": true,
+        "shops": false,
+        "similar_strength": true,
+        "strength_tolerance": 15,
+        "level_appropriate": true,
+        "no_early_legendaries": true,
+        "only_implemented_moves": true,
+        "locke_rules": true,
+        "gifts": true,
+        "statics": true,
+        "trades": true,
+        "trainer_duplicates": false,
+        "leader_ace": true,
+        "rival_starter": true,
+        "tm_compat": false,
+        "tm_content": false,
+        "tutor_compat": false,
+        "tutor_content": false,
+        "tm_percent": 50,
+        "tutor_percent": 50,
+        "shiny_denominator": 4096,
+        "first_encounter": true,
+        "permadeath": true,
+        "nickname_required": true,
+        "duplicates_clause": true,
+        "shiny_clause": true,
+        "gifts_count": true,
+        "statics_count": true,
+        "level_cap": false,
+        "fixed_battle": false,
+        "battle_items": "allowed",
+        "battle_item_limit": 3,
+        "game_over": true
+      },
+      "solo_aleatorio": {
+        "starters": "triangle",
+        "wild": "per_zone",
+        "trainers": true,
+        "keep_type_themes": true,
+        "story_pokemon": true,
+        "allow_legendaries": false,
+        "learnsets": "type_preference",
+        "guarantee_stab": true,
+        "scaled_power": true,
+        "abilities": false,
+        "types": false,
+        "base_stats": false,
+        "evolutions": false,
+        "items": true,
+        "shops": false,
+        "similar_strength": true,
+        "strength_tolerance": 15,
+        "level_appropriate": true,
+        "no_early_legendaries": true,
+        "only_implemented_moves": true,
+        "locke_rules": false,
+        "gifts": true,
+        "statics": true,
+        "trades": true,
+        "trainer_duplicates": false,
+        "leader_ace": true,
+        "rival_starter": true,
+        "tm_compat": false,
+        "tm_content": false,
+        "tutor_compat": false,
+        "tutor_content": false,
+        "tm_percent": 50,
+        "tutor_percent": 50,
+        "shiny_denominator": 4096,
+        "first_encounter": true,
+        "permadeath": true,
+        "nickname_required": true,
+        "duplicates_clause": true,
+        "shiny_clause": true,
+        "gifts_count": true,
+        "statics_count": true,
+        "level_cap": false,
+        "fixed_battle": false,
+        "battle_items": "allowed",
+        "battle_item_limit": 3,
+        "game_over": true
+      },
+      "caos": {
+        "starters": "random",
+        "wild": "chaos",
+        "trainers": true,
+        "keep_type_themes": false,
+        "story_pokemon": true,
+        "allow_legendaries": true,
+        "learnsets": "random",
+        "guarantee_stab": false,
+        "scaled_power": false,
+        "abilities": true,
+        "types": true,
+        "base_stats": true,
+        "evolutions": true,
+        "items": true,
+        "shops": true,
+        "similar_strength": false,
+        "strength_tolerance": 100,
+        "level_appropriate": false,
+        "no_early_legendaries": false,
+        "only_implemented_moves": true,
+        "locke_rules": true,
+        "gifts": true,
+        "statics": true,
+        "trades": true,
+        "trainer_duplicates": false,
+        "leader_ace": true,
+        "rival_starter": true,
+        "tm_compat": true,
+        "tm_content": true,
+        "tutor_compat": true,
+        "tutor_content": true,
+        "tm_percent": 50,
+        "tutor_percent": 50,
+        "shiny_denominator": 4096,
+        "first_encounter": true,
+        "permadeath": true,
+        "nickname_required": true,
+        "duplicates_clause": true,
+        "shiny_clause": true,
+        "gifts_count": true,
+        "statics_count": true,
+        "level_cap": false,
+        "fixed_battle": false,
+        "battle_items": "allowed",
+        "battle_item_limit": 3,
+        "game_over": true
+      },
+      "personalizado": {
+        "starters": "triangle",
+        "wild": "per_zone",
+        "trainers": true,
+        "keep_type_themes": true,
+        "story_pokemon": true,
+        "allow_legendaries": false,
+        "learnsets": "type_preference",
+        "guarantee_stab": true,
+        "scaled_power": true,
+        "abilities": false,
+        "types": false,
+        "base_stats": false,
+        "evolutions": false,
+        "items": true,
+        "shops": false,
+        "similar_strength": true,
+        "strength_tolerance": 15,
+        "level_appropriate": true,
+        "no_early_legendaries": true,
+        "only_implemented_moves": true,
+        "locke_rules": true,
+        "gifts": true,
+        "statics": true,
+        "trades": true,
+        "trainer_duplicates": false,
+        "leader_ace": true,
+        "rival_starter": true,
+        "tm_compat": false,
+        "tm_content": false,
+        "tutor_compat": false,
+        "tutor_content": false,
+        "tm_percent": 50,
+        "tutor_percent": 50,
+        "shiny_denominator": 4096,
+        "first_encounter": true,
+        "permadeath": true,
+        "nickname_required": true,
+        "duplicates_clause": true,
+        "shiny_clause": true,
+        "gifts_count": true,
+        "statics_count": true,
+        "level_cap": false,
+        "fixed_battle": false,
+        "battle_items": "allowed",
+        "battle_item_limit": 3,
+        "game_over": true
+      }
+    }
+  }
+}

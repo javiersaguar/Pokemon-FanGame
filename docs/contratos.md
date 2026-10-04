@@ -1195,7 +1195,7 @@ Contrato v2 (continuación del traspaso A2) publicado el 2026-10-04. Motor puro 
 | `trainers` | Modelo 10.1: `{party:[{species,level,moves?,item?,randomize?}], randomize, leader_type?, ace_index?, rival?, rival_starter_slot?, rival_slot?}`. Rival: el slot inicial es la elección alternativa que debe resolver el mundo según la elección del jugador |
 | `starters`, `gifts`, `statics` | Por ID: `{species,level,zone_id?,randomize}`; iniciales exactamente tres, nivel 5 habitual |
 | `trades` | Por ID: `{give:species_id,receive:{species,level},zone_id?,randomize}` |
-| `placements` | ID de colocación (suelo/oculto/regalo): `{item,randomize}` |
+| `placements` | ID de colocación (suelo/oculto/regalo): `item_id` o `{item,randomize}` |
 | `shops` | Por ID: `{stock:[{items:Array[String]}],randomize}` |
 | `required_items`, `required_moves` | Arrays de IDs necesarios para progresar: deben seguir siendo obtenibles |
 
@@ -1203,7 +1203,7 @@ Contrato v2 (continuación del traspaso A2) publicado el 2026-10-04. Motor puro 
 
 ### Ajustes y presets
 
-`RandomizerSettings.defaults()`, `normalize(Dictionary)`, `errors(Dictionary)` y `preset(id)` devuelven diccionarios JSON. `data/randomizer/settings_schema.json` es la lista completa de campos, rangos, valores por defecto y opciones (R.3/R.7); `presets.json` contiene los cuatro presets: `clasico`, `solo_aleatorio`, `caos_panchito`, `personalizado`. `prohibidos.json` fija especies, movimientos y habilidades excluidos, como parte de la versión. La interfaz puede editar la configuración antes de crear la partida. Probabilidad shiny: denominador 4096, 1024, 512 o 100, sin modificar sprites.
+`RandomizerSettings.defaults()`, `normalize(Dictionary)`, `errors(Dictionary)` y `preset_dict(id)` devuelven diccionarios JSON. `data/randomizer/settings_schema.json` es la lista completa de campos, rangos, valores por defecto y opciones (R.3/R.7); `presets.json` contiene los cuatro presets: `clasico`, `solo_aleatorio`, `caos_panchito`, `personalizado`. `prohibidos.json` fija especies, movimientos y habilidades excluidos, como parte de la versión. La interfaz puede editar la configuración antes de crear la partida. Probabilidad shiny: denominador 4096, 1024, 512 o 100, sin modificar sprites.
 
 ### Parche y API
 
@@ -1220,7 +1220,7 @@ RomPatch.canonical_json() -> String
 
 Semilla sin signo de 32 bits. Fallo de generación: `RomPatch.errors` no vacío, `is_valid()` falso; no aplicar/guardar como partida. Reintentos limitados con subseed derivada; nunca cambian el código visible. `generator_version`, `seed_code`, `settings`, `input_hash` (SHA-256), `attempt` y tablas de reemplazos `starters`, `species_map`, `encounters`, `trainers`, `gifts`, `statics`, `trades`, `learnsets`, `tm_moves`, `tm_compat`, `tutor_moves`, `tutor_compat`, `abilities`, `species`, `items`, `shops` se guardan junto a la ranura. `starters/gifts/statics` contienen especie por ID; `items` objeto por ID de colocación; `trades`, encuentros, entrenadores y tiendas son registros completos. Reemplazos de especie por campo, sin sobrescribir el resto.
 
-El formato corto `PANCHITO-XXXX-XXXX-XX` contiene 32 bits de semilla, versión, preset y checksum. **Se conserva la extensión base32 de A2 para personalizados**, ampliada en versión 2 (PENDIENTE JAVIER); no se añade marcador C. El checksum cubre todo el código. El payload empaqueta todos los ajustes según el esquema fijo de la versión. Un código de otra versión devuelve aviso explícito; no se regenera con el generador actual. Cargar partida antigua usa el parche guardado sin regenerarlo. Datos incompatibles se detectan por `input_hash`.
+El formato corto `PANCHITO-XXXX-XXXX-XX` contiene 32 bits de semilla, 5 de versión, 3 de preset y 10 de checksum. **Se conserva la extensión base32 de A2 para personalizados**, ampliada en versión 2 (PENDIENTE JAVIER); no se añade marcador C. El checksum cubre todo el código. El payload empaqueta todos los ajustes según el esquema fijo de la versión. Un código de otra versión devuelve aviso explícito; no se regenera con el generador actual. Cargar partida antigua usa el parche guardado sin regenerarlo. Datos incompatibles se detectan por `input_hash`.
 
 ### Semántica solicitada a DataDB (Agente 2)
 
@@ -1260,3 +1260,5 @@ Se conserva API de Settings (campos heredados, `from_preset/apply_dict/to_dict/t
 Versión **2** por aislamiento de RNG y validación estricta. Se conserva formato A2: 5 bits versión, 3 preset, 32 semilla, 10 checksum; sufijo base32 personalizado ampliado según campos. Rechazar códigos v1 con aviso, conservar carga de parches antiguos sin regenerar. Dorado v1 conservado; dorado v2 de fixture inmutable.
 
 Motivo de cambios: generación anterior leía DataDB/JSON desde hilo, compartía RNG (un ajuste cambiaba otros módulos), relajaba fuerza/nivel/repetidos silenciosamente y faltaba protección randomize:false en slots/tablas/campos. Se reutilizan triángulo, curva de movimientos, rival, representación de parches y tests válidos. Los metadatos evolutivos pueden derivarse con márgenes heredados si faltan, sin fijar nuevas decisiones de diseño.
+
+La entrada incluye `config` con snapshot de policy/prohibidos/presets, y `regional` opcional. `RandomizerInput.from_datadb()` es adaptador del principal; `families(patch)` calcula duplicados sobre grafo efectivo. El nombre de helper de presets por diccionario es `preset_dict` porque `preset` ya es el campo público heredado. Preparar Settings.prepare antes de hilos. Excepción STAB Siniestro ≤60, propuesta PENDIENTE JAVIER en ESTADO; curvas sin nivel 1 normalizan primer registro a 1 sin aumentar cantidad. Configuración nueva en data/randomizer/; raíz antigua conservada por compatibilidad.

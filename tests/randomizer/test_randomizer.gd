@@ -1,9 +1,9 @@
 extends GutTest
 ## Motor de RandomLocke (Fase R.6): códigos de semilla, determinismo, robustez, reglas y rendimiento.
-## Con PANCHITO_LONG_TESTS=1 la prueba de robustez usa 1000 semillas (por defecto, 100).
+## Integración con datos reales; cobertura de 200/1000 semillas por preset en test_fixture_engine.gd.
 ## Con PANCHITO_UPDATE_GOLDEN=1 se rehace el parche dorado.
 
-const GOLDEN_PATH := "res://tests/randomizer/golden_clasico.json"
+const GOLDEN_PATH := "res://tests/randomizer/golden_clasico_v2.json"
 const GOLDEN_SEED := 20261004
 
 var _saved: Dictionary
@@ -121,7 +121,7 @@ func _all(ids: Array[StringName], getter: Callable) -> Dictionary:
 # --- Robustez y reglas (R.4) ---
 
 func test_muchas_semillas_pasan_la_validacion() -> void:
-	var count := 1000 if OS.get_environment("PANCHITO_LONG_TESTS") == "1" else 100
+	var count := 20
 	var failed: PackedStringArray = []
 	for i: int in count:
 		var seed_value := i * 7919 + 1
@@ -183,6 +183,9 @@ func test_la_rom_se_aplica_a_datadb() -> void:
 
 
 func test_se_genera_rapido() -> void:
+	if not FileAccess.file_exists("res://data/generated/species.json"):
+		pending("Rendimiento omitido: todavía no existen datos reales.")
+		return
 	var t0 := Time.get_ticks_msec()
 	var caos := Randomizer.generate(1, RandomizerSettings.from_preset("caos"))
 	var elapsed := Time.get_ticks_msec() - t0
