@@ -163,5 +163,346 @@
 			"overworld walk/tops/vest/vest black.png",
 			"overworld walk/hair/boy 4/boy 4 black.png"
 		]
+	},
+	"flautista": {
+		"idea": "Flautista (chico): boina, camisa con pañuelo azul y pantalón pirata.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/capri/capri beige.png",
+			"trainer front male/tops/scarf top/scarf top blue.png",
+			"trainer front male/hair/hair 3/3 brown.png",
+			"trainer front male/hats/beret.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/capris/capris beige.png",
+			"overworld walk/tops/scarf shirt/scarf shirt blue.png",
+			"overworld walk/hair/boy 3/boy 3 brown.png",
+			"overworld walk/hats/beret.png"
+		]
+	},
+	"flautista_f": {
+		"idea": "Flautista (chica): lazo, camisa con pañuelo y falda larga verde.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/long skirt/long skirt green.png",
+			"trainer front female/tops/scarf shirt/scarf shirt blue.png",
+			"trainer front female/hair/Hair 1/1 blonde.png",
+			"trainer front female/hats/ribbon.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/long skirt/long skirt green.png",
+			"overworld walk/tops/scarf shirt/scarf shirt blue.png",
+			"overworld walk/hair/girl 1/1 blonde.png",
+			"overworld walk/hats/ribbon.png"
+		]
+	},
+	"peruana150": {
+		"idea": "Peruana de 1,50: coleta, flor en el pelo, chaqueta rosa y pantalón pirata.",
+		"frente": [
+			"trainer front female/base/base medium.png",
+			"trainer front female/bottoms/capri/capri black.png",
+			"trainer front female/tops/open jacket/open pink.png",
+			"trainer front female/hair/hair 4/4 black.png",
+			"trainer front female/hats/flower/flower red.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base medium.png",
+			"overworld walk/bottoms/capris/capris black.png",
+			"overworld walk/tops/open jacket/open jacket pink.png",
+			"overworld walk/hair/girl 4/4 black.png",
+			"overworld walk/hats/flower/flower red.png"
+		]
+	},
+	"robasientos": {
+		"idea": "Robasientos del metro: sudadera negra, vaqueros grises y gorro.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans grey.png",
+			"trainer front male/tops/hoodie/hoodie black.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/beanie/beanie black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans grey.png",
+			"overworld walk/tops/hoodie/hoodie black.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/beanie/beanie black.png"
+		]
+	},
+	"cunado": {
+		"idea": "Cuñado que sabe de todo: polo azul marino, pantalón pirata beis y gafas.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/capri/capri beige.png",
+			"trainer front male/tops/classy top/classy top navy.png",
+			"trainer front male/hair/hair 2/2 brown.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/capris/capris beige.png",
+			"overworld walk/tops/classy top m/classy top m navy.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"influencerlinkedin": {
+		"idea": "Influencer de LinkedIn (chico): traje azul, pelo engominado rubio y gafas.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/classy pants/classy pants navy.png",
+			"trainer front male/tops/formal top/formal blue.png",
+			"trainer front male/hair/hair 4/4 blond.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m navy.png",
+			"overworld walk/tops/formal top/formal blue.png",
+			"overworld walk/hair/boy 4/boy 4 blond.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"influencerlinkedin_f": {
+		"idea": "Influencer de LinkedIn (chica): blusa negra, falda de tubo gris y gafas.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/pencil skirt/skirt pencil grey.png",
+			"trainer front female/tops/classy top/classy top black.png",
+			"trainer front female/hair/Hair 1/1 blonde.png",
+			"trainer front female/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/pencil skirt/pencil skirt grey.png",
+			"overworld walk/tops/classy top f/classy top f black.png",
+			"overworld walk/hair/girl 1/1 blonde.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"estudianteinge": {
+		"idea": "Estudiante de Ingeniería (chico): sudadera verde, gafas, pelo revuelto y mochila.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/hoodie/hoodie green.png",
+			"trainer front male/hair/hair 1/1 black.png",
+			"trainer front male/hats/glasses/glasses red.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/hoodie/hoodie green.png",
+			"overworld walk/carrying stuff/rucksack/rucksack blue.png",
+			"overworld walk/hair/boy 1/boy 1 black.png",
+			"overworld walk/hats/glasses/glasses red.png"
+		]
+	},
+	"estudianteinge_f": {
+		"idea": "Estudiante de Ingeniería (chica): sudadera morada, gafas y mochila.",
+		"frente": [
+			"trainer front female/base/base medium.png",
+			"trainer front female/bottoms/Jeans/jeans navy.png",
+			"trainer front female/tops/hoodie/hoodie  purple.png",
+			"trainer front female/hair/hair 3/3 brown.png",
+			"trainer front female/hats/glasses/glasses red.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base medium.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/hoodie/hoodie purple.png",
+			"overworld walk/carrying stuff/rucksack/rucksack purple.png",
+			"overworld walk/hair/girl  3/3 brown.png",
+			"overworld walk/hats/glasses/glasses red.png"
+		]
+	},
+	"opositor": {
+		"idea": "Opositor eterno (chico): jersey de cuello alto granate, gafas y pantalón de vestir.",
+		"frente": [
+			"trainer front male/base/base pale.png",
+			"trainer front male/bottoms/classy pants/classy pants black.png",
+			"trainer front male/tops/turtleneck/turtleneck wine.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base pale.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m black.png",
+			"overworld walk/tops/turtleneck m/turtleneck m  wine.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"opositor_f": {
+		"idea": "Opositora eterna (chica): jersey de cuello alto verde, gafas y falda larga.",
+		"frente": [
+			"trainer front female/base/base  pale.png",
+			"trainer front female/bottoms/long skirt/long skirt blue.png",
+			"trainer front female/tops/turtleneck/turtleneck green.png",
+			"trainer front female/hair/hair 4/4 brown.png",
+			"trainer front female/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base pale.png",
+			"overworld walk/bottoms/long skirt/long skirt blue.png",
+			"overworld walk/tops/turtleneck f/turtleneck f green.png",
+			"overworld walk/hair/girl 4/4 brown.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"patinetero": {
+		"idea": "Patinetero eléctrico: camiseta azul, pantalón corto y cinta en la frente.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/shorts/shorts black.png",
+			"trainer front male/tops/t-shirt/t-shirt blue.png",
+			"trainer front male/hair/hair 2/2 brown.png",
+			"trainer front male/hats/headband.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/t-shirt/t-shirt blue.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png",
+			"overworld walk/hats/headband.png"
+		]
+	},
+	"tertuliano": {
+		"idea": "Tertuliano de bar: boina, camisa blanca y pantalón beis.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/classy pants/classy pants beige.png",
+			"trainer front male/tops/shirt combo/shirt combo white.png",
+			"trainer front male/hair/hair 2/2 white.png",
+			"trainer front male/hats/beret.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m beige.png",
+			"overworld walk/tops/shirt combo/shirt combo white.png",
+			"overworld walk/hair/boy 2/boy 2 white.png",
+			"overworld walk/hats/beret.png"
+		]
+	},
+	"revisorcercanias": {
+		"idea": "Revisor del Cercanías (chico): uniforme azul y gorra.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jumpsuit pants alt/jumpsuit pants alt blue.png",
+			"trainer front male/tops/jumpsuit alt top/jumpsuit alt blue.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jumpsuit pants alt/jumpsuit pants alt blue.png",
+			"overworld walk/tops/jumpsuit alt top/alt jumpsuit  blue.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"revisorcercanias_f": {
+		"idea": "Revisora del Cercanías (chica): uniforme azul y gorra.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/jumpsuit pants alt/jumpsuit pants alt blue.png",
+			"trainer front female/tops/jumpsuit alt top/jumpsuit alt blue.png",
+			"trainer front female/hair/hair 4/4 black.png",
+			"trainer front female/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/jumpsuit pants alt/jumpsuit pants alt blue.png",
+			"overworld walk/tops/jumpsuit alt top/alt jumpsuit  blue.png",
+			"overworld walk/hair/girl 4/4 black.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"domadorpalomas": {
+		"idea": "Domador de palomas: gabardina azul marino, sombrero y pelo blanco.",
+		"frente": [
+			"trainer front male/base/base pale.png",
+			"trainer front male/bottoms/classy pants/classy pants grey.png",
+			"trainer front male/tops/trench coat/trench coat navy.png",
+			"trainer front male/hair/hair 2/2 white.png",
+			"trainer front male/hats/fedora.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base pale.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m grey.png",
+			"overworld walk/tops/trenchcoat/trenchcoat navy.png",
+			"overworld walk/hair/boy 2/boy 2 white.png",
+			"overworld walk/hats/fedora.png"
+		]
+	},
+	"crossfitero": {
+		"idea": "Crossfitero (chico): camiseta de tirantes roja, pantalón corto y cinta.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/shorts/shorts black.png",
+			"trainer front male/tops/tank top/tank top red.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/headband.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/tank top/tank top red.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/headband.png"
+		]
+	},
+	"crossfitero_f": {
+		"idea": "Crossfitera (chica): camiseta de tirantes, pantalón corto y cinta.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/shorts/short black.png",
+			"trainer front female/tops/tank top/tank top red.png",
+			"trainer front female/hair/hair 4/4 blonde.png",
+			"trainer front female/hats/headband.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/tank top/tank top red.png",
+			"overworld walk/hair/girl 4/4 blonde.png",
+			"overworld walk/hats/headband.png"
+		]
+	},
+	"turistachanclas_f": {
+		"idea": "Turista con chanclas (chica): ropa de playa, pamela y gafas.",
+		"frente": [
+			"trainer front female/base/base  pale.png",
+			"trainer front female/bottoms/beach bottom/beach  bottoms blue.png",
+			"trainer front female/tops/beach top/beach top blue.png",
+			"trainer front female/hair/hair 3/3 blonde.png",
+			"trainer front female/hats/sun hat.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base pale.png",
+			"overworld walk/bottoms/beach bottom f/beach bottom f blue.png",
+			"overworld walk/tops/beach top f/beach  top f blue.png",
+			"overworld walk/hair/girl  3/3 blonde.png",
+			"overworld walk/hats/sun hat.png"
+		]
+	},
+	"padretarjeta": {
+		"idea": "Padre con la tarjeta del súper: camisa azul, vaqueros y bolsa de la compra.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/collared shirt/collared shirt light blue.png",
+			"trainer front male/hair/hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/collared shirt/collared shirt light blue.png",
+			"overworld walk/carrying stuff/bag/bag white.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png"
+		]
 	}
 }
