@@ -161,3 +161,18 @@ func test_migracion_v1_conserva_zonas_muertes_y_rom() -> void:
 	GameState.reset()
 	assert_eq(SaveManager.load_game(SLOT), OK)
 	assert_eq(GameState.randomlocke.deaths, 2)
+
+func test_equipo_y_pc_llenos_no_gastan_ball_ni_dejan_mote_sin_salida() -> void:
+	while not GameState.party.is_full():
+		GameState.party.add(Pokemon.create(&"rattata", 2))
+	var filler := Pokemon.create(&"pidgey", 2)
+	for box: int in GameState.pc.box_count():
+		for slot: int in GameState.pc.box_size():
+			GameState.pc.set_pokemon(box, slot, filler)
+	var driver := SceneManager.prepare_battle(BattleSetup.wild(&"bulbasaur", 3), {"zone_id": "ruta"}) as LockeBattleDriver
+	driver.start()
+	GameState.bag.add(&"pokeball", 1)
+	assert_false(driver.can_use_item(&"pokeball"))
+	assert_eq(driver.submit({"type": &"item", "item": &"pokeball"}), [])
+	assert_eq(GameState.bag.count(&"pokeball"), 1)
+	assert_eq(GameState.locke.pending, {})

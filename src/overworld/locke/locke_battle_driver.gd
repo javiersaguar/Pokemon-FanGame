@@ -37,6 +37,8 @@ func battle_items() -> Array[Dictionary]:
 func item_needs_target(item_id: StringName) -> bool:
 	return inner.item_needs_target(item_id)
 func can_use_item(item_id: StringName, party_index: int = -1) -> bool:
+	if DataDB.has_item(item_id) and DataDB.item(item_id).is_ball() and GameState.party.is_full() and GameState.pc.is_full():
+		return false
 	if DataDB.has_item(item_id) and DataDB.item(item_id).is_ball() and not encounter.is_empty() and not GameState.locke.can_catch(encounter):
 		return false
 	return inner.can_use_item(item_id, party_index)
