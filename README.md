@@ -39,6 +39,8 @@ godot --headless --path . --import                   # la primera vez y tras añ
 godot --headless --path . -s addons/gut/gut_cmdln.gd # todos los tests (config: .gutconfig.json)
 ```
 
+**WSL con varios agentes:** ejecuta tests con datos temporales propios: `XDG_DATA_HOME=/tmp/panchito-a1-tests godot --headless --path . -s addons/gut/gut_cmdln.gd`. Godot comparte `user://` entre worktrees por nombre del proyecto; sin aislamiento los tests de guardado pueden interferir.
+
 En el editor: panel **GUT** (abajo) → *Run All*.
 
 **Antes de mergear a `main`:** el proyecto abre sin errores (`--import` y F5 limpios) y los tests pasan.

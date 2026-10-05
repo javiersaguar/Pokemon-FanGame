@@ -589,6 +589,10 @@ Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al mo
 `world.names`: town, city_2, professor, rival, region, todos POR DEFINIR hasta decisión de Javier. `WorldNames.value(key)` y `WorldNames.resolve(text)`; marcadores `{world:clave}`. NPC, carteles, MvpStoryEvent y MapRoot.get_display_name los resuelven. `{player}` / `{rival}` siguen en Dialogue y se guardan por partida; no se sobrescriben al cambiar las identidades del diseño. Pedido a A3 aplicar resolución también en Dialogue.format_text (petición 34). Recompensa de profesor: world.mvp_story.reward.quantity=5. Reloj real y dinero inicial 3000 ya estaban correctos y se verifican sobre datos reales.
 
 
+## 7e. Destinos portátiles del MVP (A1)
+
+`world.mvp_locations.profile` y `profiles.{test,real}`: rol → `{map,spawn}`. `MvpLocations.target(role)` resuelve destino activo; `validate(profile)` comprueba escena MapRoot y aparición exacta; `activate(profile)` cambia solo si todo es válido. `new_game_config()` combina los parámetros generales con start/healing del perfil. MvpStoryEvent.travel usa roles bedroom/laboratory; ninguna ruta de mapa está en el guion. Entrega/IDs en docs/mapas/lista.md.
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).

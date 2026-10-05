@@ -115,7 +115,7 @@ func choose(text: String, options: PackedStringArray) -> int:
 func request_name(kind: StringName, initial: String) -> String:
 	return await Cutscene.request_name(kind, initial)
 func travel(destination: String) -> void:
-	var target: Dictionary = config().get(destination, {})
+	var target: Dictionary = MvpLocations.target(StringName(destination))
 	if target.is_empty():
 		return
 	await Cutscene.teleport(StringName(target.get("map", "")), StringName(target.get("spawn", "default")))

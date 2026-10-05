@@ -99,7 +99,7 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 		options["slot"] = maxi(SaveManager.first_empty_slot(), 1)
 	GameState.new_game(options)
 	SaveManager.apply_rom_patch()
-	var cfg: Dictionary = GameState.world_config.get("new_game", {})
+	var cfg: Dictionary = MvpLocations.new_game_config()
 	if map == &"":
 		map = GameState.map_id
 	if spawn == &"":

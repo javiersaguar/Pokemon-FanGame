@@ -55,14 +55,6 @@
     ]
   },
   "mvp_story": {
-    "bedroom": {
-      "map": "test/test_room",
-      "spawn": "bedroom"
-    },
-    "laboratory": {
-      "map": "test/test_room",
-      "spawn": "laboratory"
-    },
     "rival_by_starter": {
       "1": "rival_lab_1",
       "2": "rival_lab_2",
@@ -79,5 +71,94 @@
     "professor": "POR DEFINIR",
     "rival": "POR DEFINIR",
     "region": "POR DEFINIR"
+  },
+  "mvp_locations": {
+    "profile": "test",
+    "profiles": {
+      "test": {
+        "town": {
+          "map": "test/test_outdoor",
+          "spawn": "from_room"
+        },
+        "home": {
+          "map": "test/test_room",
+          "spawn": "default"
+        },
+        "bedroom": {
+          "map": "test/test_room",
+          "spawn": "bedroom"
+        },
+        "rival_home": {
+          "map": "test/test_room",
+          "spawn": "default"
+        },
+        "laboratory": {
+          "map": "test/test_room",
+          "spawn": "laboratory"
+        },
+        "route_1": {
+          "map": "test/test_outdoor",
+          "spawn": "default"
+        },
+        "city_2": {
+          "map": "test/test_room",
+          "spawn": "default"
+        },
+        "healing": {
+          "map": "test/test_room",
+          "spawn": "default"
+        },
+        "shop": {
+          "map": "test/test_room",
+          "spawn": "default"
+        },
+        "start": {
+          "map": "test/test_room",
+          "spawn": "default"
+        }
+      },
+      "real": {
+        "town": {
+          "map": "pueblo_inicial/exterior",
+          "spawn": "from_home"
+        },
+        "home": {
+          "map": "pueblo_inicial/casa_jugador_pb",
+          "spawn": "from_bedroom"
+        },
+        "bedroom": {
+          "map": "pueblo_inicial/casa_jugador_1p",
+          "spawn": "intro"
+        },
+        "rival_home": {
+          "map": "pueblo_inicial/casa_rival",
+          "spawn": "from_town"
+        },
+        "laboratory": {
+          "map": "pueblo_inicial/laboratorio",
+          "spawn": "from_town"
+        },
+        "route_1": {
+          "map": "ruta_1/exterior",
+          "spawn": "from_town"
+        },
+        "city_2": {
+          "map": "ciudad_2/exterior",
+          "spawn": "from_route"
+        },
+        "healing": {
+          "map": "ciudad_2/centro_pokemon",
+          "spawn": "from_city"
+        },
+        "shop": {
+          "map": "ciudad_2/tienda",
+          "spawn": "from_city"
+        },
+        "start": {
+          "map": "pueblo_inicial/casa_jugador_1p",
+          "spawn": "intro"
+        }
+      }
+    }
   }
 }

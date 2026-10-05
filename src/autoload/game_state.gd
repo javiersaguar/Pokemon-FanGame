@@ -128,7 +128,7 @@ func new_game(options: Dictionary = {}) -> void:
 	rom_patch = options.get("rom_patch", {})
 	if is_randomlocke():
 		randomlocke.merge({"zones": {}, "deaths": 0, "status": "in_progress"})
-	var cfg: Dictionary = world_config.get("new_game", {})
+	var cfg: Dictionary = MvpLocations.new_game_config()
 	trainer_id = randi_range(0, 65535)
 	secret_id = randi_range(0, 65535)
 	money = int(cfg.get("money", 0))
