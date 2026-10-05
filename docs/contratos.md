@@ -605,6 +605,14 @@ Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al mo
 
 `run_toggle` = R / Y; `run` = Shift / B. `GameState.always_run` se guarda como campo aditivo de v2; falta de campo toma world.new_game.always_run=false. `set_always_run(bool)` emite EventBus.always_run_changed solo al cambiar; cargar/reset no anuncian. UI A3: aviso breve, opción y controles (39). `Player.running_requested(held)` invierte temporalmente always_run si se mantiene run. No corre con MapData.can_run=false, interiores pequeños (outdoor=false y fixed_camera) o transporte bike/surf. Se puede alternar durante un paso; el siguiente usa el ajuste nuevo.
 
+## 7h. Entorno y encuentros del mundo (A1)
+
+`WorldAtmosphere` en World: CanvasModulate según world.clock.tints/Clock, interiores blancos; CPUParticles2D solo con textura explícita de world.weather.presets y ambiente por MapData.ambient/AudioManager. NightLight activa PointLight2D con textura de arte en sus active_periods. Sin recurso no genera dibujo. UI/combate están en otros CanvasLayer.
+
+`FieldEncounters.roll/start(map,method,tile)` old_rod/good_rod/super_rod/headbutt/rock_smash por DataDB, herramienta y partido capaz; fishing requiere agua y headbutt árbol. Los rates vienen de tabla/World. FieldEncounterEvent y StaticEncounterEvent: datos por ID/R.2; static_done:<id> solo tras KO/captura, huida permite volver.
+
+`WorldRoamers.release(id,static_id,maps)`: crea desde estático R.2, conserva Pokemon completo, ubicación y estado en GameState.roamers (campo aditivo v2). Cambiar mapa mueve; continuar no. Roll por chance configurada (0 hasta definir contenido); SceneManager resuelve salud/estado tras combate, captured/defeated lo retiran. No se inventan especies/ubicaciones/desbloqueos. Petición 41 para contenido A3.
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).

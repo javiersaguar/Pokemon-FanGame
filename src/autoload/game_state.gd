@@ -28,6 +28,8 @@ var mode: StringName = MODE_NORMAL
 ## Datos del RandomLocke (vacío en modo normal): seed_code, settings,
 ## generator_version, rules, zones {zone_id: estado}, deaths y status.
 var randomlocke: Dictionary = {}
+## Errantes liberados: identidad y salud completas, estado y mapa.
+var roamers: Dictionary = {}
 
 # --- Jugador ---
 ## Ajuste guardado; run mantenido invierte temporalmente esta preferencia.
@@ -97,6 +99,7 @@ func reset() -> void:
 	unlock_input(&"locke_nickname")
 	mode = MODE_NORMAL
 	randomlocke = {}
+	roamers = {}
 	slot = 0
 	rom_patch = {}
 	always_run = bool(world_config.get("new_game", {}).get("always_run", false))
@@ -287,6 +290,7 @@ func to_dict() -> Dictionary:
 		"always_run": always_run,
 		"mode": String(mode),
 		"randomlocke": randomlocke.duplicate(true),
+		"roamers": roamers.duplicate(true),
 		"player": {
 			"name": player_name,
 			"gender": String(player_gender),
@@ -321,6 +325,7 @@ func from_dict(data: Dictionary) -> void:
 	always_run = bool(data.get("always_run", world_config.get("new_game", {}).get("always_run", false)))
 	mode = StringName(data.get("mode", String(MODE_NORMAL)))
 	randomlocke = (data.get("randomlocke", {}) as Dictionary).duplicate(true)
+	roamers = (data.get("roamers", {}) as Dictionary).duplicate(true)
 	var p: Dictionary = data.get("player", {})
 	player_name = p.get("name", "")
 	player_gender = StringName(p.get("gender", "male"))

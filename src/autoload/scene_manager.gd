@@ -21,6 +21,7 @@ const BattlePlaceholder := preload("res://src/main/battle_placeholder.gd")
 
 const FADE_TIME := 0.25
 
+var atmosphere: WorldAtmosphere
 var world: Node2D
 var battle_layer: CanvasLayer
 var ui_layer: CanvasLayer
@@ -53,6 +54,8 @@ func register_main(main: Node) -> void:
 	ui_layer = main.get_node(^"UI")
 	transition_layer = main.get_node(^"Transition")
 	_fade = transition_layer.get_node(^"Fade")
+	atmosphere = WorldAtmosphere.new()
+	world.add_child(atmosphere)
 
 
 ## Primer flujo del juego. Argumentos de línea de comandos (tras `--`):
@@ -211,6 +214,8 @@ func start_battle(setup: Variant, context: Dictionary = {}) -> StringName:
 	await fade_in()
 
 	var outcome: StringName = await scene.call(&"run", playable)
+	if context.has("roamer_id") and setup is BattleSetup and not setup.foe_party.is_empty():
+		WorldRoamers.resolve(StringName(context.roamer_id), setup.foe_party[0], outcome)
 
 	await fade_out()
 	scene.queue_free()
@@ -413,6 +418,8 @@ func _change_map(map_id: StringName, resolve_tile: Callable, facing: Vector2i,
 	if map.data and map.data.bgm != &"":
 		AudioManager.play_bgm(map.data.bgm)
 	WorldTravel.record_visit(map)
+	WorldRoamers.move_on_transition(from_map)
+	atmosphere.apply_map(map)
 	EventBus.map_loaded.emit(map_id)
 
 	await fade_in()
@@ -501,6 +508,8 @@ func _enter_game() -> void:
 
 
 func _leave_game() -> void:
+	if is_instance_valid(atmosphere):
+		atmosphere.reset()
 	if is_instance_valid(_title):
 		_title.queue_free()
 	_title = null

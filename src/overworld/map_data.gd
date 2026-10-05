@@ -15,6 +15,8 @@ extends Resource
 ## Afecta al tinte día/noche.
 @export var outdoor := true
 @export var weather: StringName = &"none"
+## Sonido ambiente independiente de BGM; vacío toma el del clima, si existe.
+@export var ambient: StringName
 ## Id del JSON de data/encounters/ (sin extensión). Vacío = sin encuentros.
 @export var encounter_table: StringName
 ## Zona compartida por plantas/mapas para primera captura; vacío usa tabla o ID del mapa.

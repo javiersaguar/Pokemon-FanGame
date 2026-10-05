@@ -19,6 +19,8 @@ func interact(player: Player) -> void:
 		if cleared_flag != &"":
 			GameState.set_flag(cleared_flag)
 		set_forced_hidden(true)
+		if action == "rock_smash":
+			await FieldEncounters.start(player.get_map_root(), &"rock_smash", tile_position())
 func push(player: Player) -> bool:
 	var destination := tile_position() + player.facing
 	var map := player.get_map_root()

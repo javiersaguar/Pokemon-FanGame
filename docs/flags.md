@@ -7,6 +7,7 @@ Todas las claves de `GameState.flags` y `GameState.vars` van aquí **antes** de 
 | Patrón | Se activa en | Efecto | Dueño |
 |--------|--------------|--------|-------|
 | `trainer_defeated:<trainer_id>` | Al ganar a ese entrenador | Ya no te ve; dice su `after_text` | Agente 3 |
+| `static_done:<static_id>` | KO/captura de estático | Evita repetir hasta evento de reaparición autorizado | Agente 1 |
 | `visited_map:<map_id>` | Al cargar mapa | Registro de visitas para vuelo | Agente 1 |
 | `item_taken:<map_id>:<nodo>` | Al recoger un objeto del suelo | El objeto no vuelve a aparecer | Agente 1 |
 

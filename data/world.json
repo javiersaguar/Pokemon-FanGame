@@ -53,7 +53,14 @@
         "id": "night",
         "from_hour": 20
       }
-    ]
+    ],
+    "tints": {
+      "morning": "fff0da",
+      "day": "ffffff",
+      "evening": "f3bea1",
+      "night": "859bc8"
+    },
+    "tint_transition": 2.0
   },
   "mvp_story": {
     "rival_by_starter": {
@@ -191,6 +198,22 @@
       "bike": {
         "item": "bicycle",
         "required_flag": ""
+      },
+      "old_rod": {
+        "item": "oldrod",
+        "required_flag": ""
+      },
+      "good_rod": {
+        "item": "goodrod",
+        "required_flag": ""
+      },
+      "super_rod": {
+        "item": "superrod",
+        "required_flag": ""
+      },
+      "headbutt": {
+        "item": null,
+        "required_flag": ""
       }
     },
     "transport_sheets": {
@@ -204,5 +227,26 @@
       }
     },
     "flight_destinations": []
+  },
+  "weather": {
+    "presets": {
+      "rain": {
+        "texture": null,
+        "ambient": "",
+        "amount": 120,
+        "lifetime": 0.8,
+        "velocity": 320
+      },
+      "snow": {
+        "texture": null,
+        "ambient": "",
+        "amount": 80,
+        "lifetime": 3.0,
+        "velocity": 70
+      }
+    }
+  },
+  "roamers": {
+    "encounter_chance": 0.0
   }
 }

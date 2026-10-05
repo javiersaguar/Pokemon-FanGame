@@ -208,6 +208,11 @@ func _after_step() -> bool:
 	if trigger:
 		await Cutscene.play(trigger.event, trigger, trigger.event_params, trigger.once_flag)
 		return false
+	if map.is_encounter_tile(tile):
+		var roaming := WorldRoamers.roll(map)
+		if not roaming.is_empty():
+			await SceneManager.start_battle(BattleSetup.wild(roaming.pokemon), {"roamer_id": roaming.id})
+			return false
 	var wild := WildEncounters.roll(map, tile, &"water" if FieldActions.transport() == &"surf" else &"land")
 	if not wild.is_empty():
 		await SceneManager.start_battle(WildEncounters.make_setup(wild))
