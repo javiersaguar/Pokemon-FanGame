@@ -57,7 +57,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) las DIRECTRICES actuales, el último aviso y «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente1`, rama `feat/agente1-bloque-i`, actualizado desde `origin/main`; autoría de Javier y hooks activos.
 
-**En qué estoy:** bloque I, tarea 1 terminada; siguiente: historia del MVP en la sala existente (tarea 2). Bloque II y cierre de v0.1 esperan aprobación gráfica (preguntas 12, 14 y 17).
+**En qué estoy:** bloque I.2, historia del MVP en sala existente, reservada en docs/mapas/reservas.md. I.1 ya integrado y subido en 147d39e9. Bloque II y cierre de v0.1 esperan aprobación gráfica (preguntas 12, 14 y 17).
 
 **Terminado:**
 - **Bloque I.1 / petición 24 (2026-10-05):** WorldLocke/LockeBattleDriver (§7c), primera captura por zone_id antes del combate, autorización de Balls sin gasto para encuentros prohibidos, duplicados/shiny, inicial poseído, regalos, resolución run/KO/captura, mote pendiente sin inventarlo, Cementerio idempotente y retirada de party/PC, superviviente PC, game over y rechazo de continuar finished. Snapshot/familias/pendientes guardados; SAVE_VERSION 2 con migración v1 que conserva zonas/contadores sin inventar lápidas. **206/206 tests, 3121 aserciones, 45,8 s, 0 pending**, import limpio y arranque gráfico sin errores de script/recursos (audio Dummy por entorno WSL). Teclado de motes y pantallas de Cementerio/game over quedan a A3, petición 29.
