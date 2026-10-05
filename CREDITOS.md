@@ -50,7 +50,7 @@ Copiados del pack sin modificar ni reescalar, solo los archivos que se usan.
 
 | Recurso | Autor | Licencia o permiso | Enlace | En el repo |
 |---------|-------|--------------------|--------|------------|
-| Fondo de combate "Field" de *ORAS/XY themed battle backgrounds for EBDX* | **PhoenixOfLight92** (extracción de los fondos de la 6.ª generación) y **LackDeJurane** (fondos combinados) | Uso con crédito | https://eeveeexpo.com/resources/729/ | `assets/sprites/ui/battle/backgrounds/field.png` |
+| Fondos de combate de *ORAS/XY themed battle backgrounds for EBDX* (Field, Forest, Cave, City, Water, IndoorA, Snow, Sand) | **PhoenixOfLight92** (extracción de los fondos de la 6.ª generación) y **LackDeJurane** (fondos combinados) | Uso con crédito | https://eeveeexpo.com/resources/729/ | `assets/sprites/ui/battle/backgrounds/` |
 | *Loaky's Modern Type Icons* (versión en español) | **Loaky** | El autor no exige crédito; se le acredita igualmente | https://eeveeexpo.com/resources/1528/ | `assets/sprites/ui/icons/types_spanish.png` |
 | Poké Ball (objeto) y sombras de los Pokémon del Generation 9 Pack | Los de la sección "Pokémon" | Igual que el Generation 9 Pack | https://eeveeexpo.com/resources/1101/ | `assets/sprites/items/pokeball.png`, `assets/sprites/ui/battle/shadows/` |
 | Botones, paneles, iconos de estado y de sexo, destellos, cursores y ficha del Pokémon | Equipo de Pokémon Panchito (pixel art propio, `assets/_fuentes/ui/`) | Propio | — | `assets/sprites/ui/` |
