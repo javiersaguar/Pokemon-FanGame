@@ -19,5 +19,6 @@ func test_sombra_queda_en_suelo_durante_salto() -> void:
 	assert_lt(character.sprite.global_position.y, character.global_position.y)
 	assert_eq(shadow.global_position.y, character.global_position.y)
 	await character.step_finished
+	await get_tree().create_timer(0.4).timeout
 	assert_eq(character.sprite.position, Vector2.ZERO)
 	assert_eq(shadow.position, Vector2.ZERO)
