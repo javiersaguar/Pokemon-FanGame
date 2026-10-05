@@ -1176,7 +1176,21 @@ El orden es el de obtención. `GameState.bag` la crea y la guarda sola.
 - Rivales del laboratorio: `rival_lab_1` / `_2` / `_3` según la variable `starter` (1 Planta, 2 Fuego, 3 Agua).
 - Lectura: `TrainerData.get_trainer(id) -> Dictionary` (el entrenador combinado con su clase: `display_name`, `class_name`, `gender`, `battle_sprite`, `overworld_sprite`, `intro_bgm`, `battle_bgm`, `ai_level`, `base_money`), `TrainerData.get_trainer_class(id)` y `TrainerData.exists(id)` (`src/overworld/trainers/trainer_data.gd`). `DataDB` también carga estos archivos tal cual.
 
-**TrainerNPC** **(previsto)**: `src/overworld/trainers/trainer_npc.tscn`, hereda de `NPC` (sección 5). Exports: `trainer_id: StringName`, `sight_range := 4`, `partner: NodePath` (pareja para combate doble).
+**TrainerNPC** (`src/overworld/trainers/trainer_npc.tscn`, hereda de `NPC`):
+
+```gdscript
+@export var trainer_id: StringName
+@export var sight_range := 4          # 0 = no te ve; solo lucha si le hablas
+@export var partner: NodePath         # el otro de una pareja; basta con enlazarlo en uno
+@export var battle_options: Dictionary = {}   # las de BattleSetup.trainer() (can_lose...)
+@export var challenge_event: GDScript # vacío = trainer_challenge_event.gd
+```
+
+- Tras cada `player_stepped`, si estás en línea recta delante, a ≤ `sight_range` casillas y sin nada que bloquee el paso en medio: "!" (también el de la pareja), música `intro_bgm` de la clase, se acerca hasta quedarse delante, `intro_text` y combate (`Cutscene.battle_trainer`, que activa `trainer_defeated:<id>` al ganar).
+- Hablarle antes de que te vea lanza el mismo combate, sin el "!" ni el acercamiento.
+- Derrotado: ya no te ve; al hablarle dice `after_text` (o sus `lines` si no tiene).
+- **Pareja**: si te ve cualquiera de los dos, os desafían los dos. Hasta que el motor juegue dobles (Fase 9.4) luchan **uno detrás de otro**.
+- En la sala de pruebas: `Manolo` (`ruta1_manolo`) en `maps/test/test_room.tscn`, mirando a la derecha desde la casilla (2, 9), fuera del camino del guion del MVP.
 
 ### 9.7 Encuentros (`data/encounters/<id>.json`)
 

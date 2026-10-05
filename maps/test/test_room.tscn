@@ -21,6 +21,7 @@
 [ext_resource type="Script" path="res://src/overworld/starter_ball/starter_ball.gd" id="19_j7u45"]
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="20_dwle1"]
 [ext_resource type="Script" path="res://src/overworld/trigger/trigger.gd" id="21_vdj4f"]
+[ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="22_manolo"]
 
 [sub_resource type="Resource" id="Resource_qheyi"]
 script = ExtResource("2_n1pat")
@@ -98,6 +99,12 @@ event_params = {
 "shop_id": &"tienda_ciudad2"
 }
 sprite_sheet = ExtResource("13_ueo03")
+
+[node name="Manolo" parent="Entities" instance=ExtResource("22_manolo")]
+position = Vector2(80, 304)
+trainer_id = &"ruta1_manolo"
+sight_range = 3
+initial_facing = 2
 
 [node name="Enfermera" type="Node2D" parent="Entities" unique_id=1857361632 instance=ExtResource("4_t1wvv")]
 position = Vector2(496, 112)
