@@ -249,7 +249,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) `docs/DIRECTRICES.md` (§0, §1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `docs/arte/recursos_terceros.md`, las 4 referencias de Añil, las comparativas, las respuestas 9 y 17 de Javier y mi lista de «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-arte`; autoría de Javier Saguar y `core.hooksPath .githooks` activos.
 
-**En qué estoy:** tareas 1–4 hechas: **pueblo de muestra rehecho y presentado a Javier** (pregunta 19). Sigo con la tarea 5 (ruta de muestra con varios niveles de altura) mientras lo revisa.
+**En qué estoy:** tareas 1–4 hechas: **pueblo de muestra rehecho y presentado a Javier** (pregunta 19). Sigo con la tarea 5 (ruta de muestra con varios niveles de altura, reservada como `muestras/ruta`) mientras lo revisa.
 
 **Terminado:**
 - **Tarea 1:** traspasos recibidos (abajo) y scripts acordados.
