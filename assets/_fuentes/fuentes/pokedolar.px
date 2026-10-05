@@ -1,0 +1,16 @@
+# Símbolo del dinero ₽ (Pokédólar) para Truth and Ideals a tamaño 10, que no lo trae.
+# 6×10: la altura de las mayúsculas y el trazo de 1 px de la fuente. Lo usa
+# assets/fonts/pokedolar/pokedolar.fnt como fuente de respaldo del Theme.
+@leyenda  . = transparente   # = blanco
+@salida res://assets/fonts/pokedolar/pokedolar.png
+---
+.####.
+.#...#
+.#...#
+.#...#
+.####.
+.#....
+###...
+.#....
+###...
+.#....

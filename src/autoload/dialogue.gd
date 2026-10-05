@@ -81,14 +81,16 @@ func ask_yes_no(text: String, speaker: Variant = null, vars: Dictionary = {}) ->
 	return await ask(text, PackedStringArray([tr("Sí"), tr("No")]), speaker, -1, vars) == 0
 
 
-## Traduce `text` y sustituye {player}, {rival} y las variables de `vars`.
+## Traduce `text`, sustituye {player}, {rival} y las variables de `vars`, y resuelve los
+## marcadores de la regla R.2 ({starter:starter_1}, {gift:id}, {species:id}, {item:id}...)
+## con DataDB, así que en RandomLocke nombran lo que hay en la ROM.
 func format_text(text: String, vars: Dictionary = {}) -> String:
 	var values := {
 		"player": GameState.player_name,
 		"rival": GameState.rival_name,
 	}
 	values.merge(vars, true)
-	return tr(text).format(values)
+	return DataDB.resolve_markers(tr(text).format(values))
 
 
 func _begin() -> void:

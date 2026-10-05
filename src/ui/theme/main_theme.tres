@@ -2,9 +2,19 @@
 
 [ext_resource type="FontFile" uid="uid://c4oheefs83twi" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="1_font"]
 [ext_resource type="FontFile" uid="uid://cgbq2m757q1c6" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-SmallTruths-Normal.ttf" id="2_font8"]
+[ext_resource type="FontFile" uid="uid://dlad8023urj2n" path="res://assets/fonts/pokedolar/pokedolar.fnt" id="6_pokedolar"]
+[ext_resource type="FontFile" uid="uid://bnti5yhwmuig4" path="res://assets/fonts/pokedolar/pokedolar_pequeno.fnt" id="7_pokedolar8"]
 [ext_resource type="Texture2D" path="res://assets/sprites/ui/battle/databox.png" id="3_frame"]
 [ext_resource type="Texture2D" path="res://assets/sprites/ui/battle/panel_message.png" id="4_dark"]
 [ext_resource type="Texture2D" path="res://assets/sprites/ui/battle/tag_ps.png" id="5_tag"]
+
+[sub_resource type="FontVariation" id="font_normal"]
+fallbacks = Array[Font]([ExtResource("6_pokedolar")])
+base_font = ExtResource("1_font")
+
+[sub_resource type="FontVariation" id="font_small"]
+fallbacks = Array[Font]([ExtResource("7_pokedolar8")])
+base_font = ExtResource("2_font8")
 
 [sub_resource type="StyleBoxTexture" id="frame"]
 content_margin_left = 8.0
@@ -57,7 +67,7 @@ content_margin_right = 2.0
 content_margin_bottom = 0.0
 
 [resource]
-default_font = ExtResource("1_font")
+default_font = SubResource("font_normal")
 default_font_size = 10
 Button/colors/font_color = Color(0.188235, 0.188235, 0.282353, 1)
 Button/colors/font_disabled_color = Color(0.564706, 0.596078, 0.658824, 1)
@@ -94,17 +104,17 @@ SmallFrame/base_type = &"PanelContainer"
 SmallFrame/styles/panel = SubResource("frame_small")
 SmallLabel/base_type = &"Label"
 SmallLabel/font_sizes/font_size = 10
-SmallLabel/fonts/font = ExtResource("2_font8")
+SmallLabel/fonts/font = SubResource("font_small")
 SmallLightLabel/base_type = &"Label"
 SmallLightLabel/colors/font_color = Color(0.972549, 0.972549, 0.941176, 1)
 SmallLightLabel/colors/font_shadow_color = Color(0.188235, 0.188235, 0.282353, 1)
 SmallLightLabel/font_sizes/font_size = 10
-SmallLightLabel/fonts/font = ExtResource("2_font8")
+SmallLightLabel/fonts/font = SubResource("font_small")
 TagLabel/base_type = &"Label"
 TagLabel/colors/font_color = Color(0.941176, 0.690196, 0.188235, 1)
 TagLabel/colors/font_shadow_color = Color(0.0941176, 0.0941176, 0.12549, 1)
 TagLabel/font_sizes/font_size = 10
-TagLabel/fonts/font = ExtResource("2_font8")
+TagLabel/fonts/font = SubResource("font_small")
 TagLabel/styles/normal = SubResource("tag")
 KeyLabel/base_type = &"Label"
 KeyLabel/colors/font_color = Color(0.345098, 0.345098, 0.439216, 1)

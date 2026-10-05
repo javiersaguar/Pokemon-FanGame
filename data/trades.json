@@ -1,0 +1,4 @@
+{
+  "_": "Intercambios con NPCs (regla R.2, contratos.md §8.1): give = especie que pide el NPC; receive = ficha de entrenador (§9.6, la de Pokemon.from_spec(): nickname, ball, item...) de lo que recibe el jugador. \"randomize\": false (en el intercambio o en receive) si RandomLocke no lo debe cambiar. El evento lo pide con DataDB.trade(id) y el texto nombra lo que recibes con {trade:id}. El MVP no tiene ninguno.",
+  "_ejemplo": {"trade_ciudad2": {"give": "pidgey", "receive": {"species": "abra", "level": 10, "nickname": "Pancho"}}}
+}
