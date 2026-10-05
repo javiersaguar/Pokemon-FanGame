@@ -64,5 +64,104 @@
 			"overworld walk/hair/boy 2/boy 2 white.png",
 			"overworld walk/hats/glasses/glasses blue.png"
 		]
+	},
+	"tuno": {
+		"idea": "Tuno: capa negra larga (la gabardina negra), pantalón negro y melena.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/trench coat/trench coat black.png",
+			"trainer front male/hair/hair 3/3 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/trenchcoat/trenchcoat black.png",
+			"overworld walk/hair/boy 3/boy 3 black.png"
+		]
+	},
+	"abuela": {
+		"idea": "Abuela que te pone de comer: pelo blanco corto, gafas, chal y falda larga.",
+		"frente": [
+			"trainer front female/base/base  pale.png",
+			"trainer front female/bottoms/long skirt/long skirt black.png",
+			"trainer front female/tops/scarf shirt/scarf shirt red.png",
+			"trainer front female/hair/Hair 2/2 white.png",
+			"trainer front female/hats/glasses/glasses red.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base pale.png",
+			"overworld walk/bottoms/long skirt/long skirt  black.png",
+			"overworld walk/tops/scarf shirt/scarf shirt red.png",
+			"overworld walk/hair/girl 2/2 white.png",
+			"overworld walk/hats/glasses/glasses red.png"
+		]
+	},
+	"jubiladoobras": {
+		"idea": "Jubilado mirando obras: pelo blanco, chaleco gris y pantalón de vestir.",
+		"frente": [
+			"trainer front male/base/base pale.png",
+			"trainer front male/bottoms/classy pants/classy pants grey.png",
+			"trainer front male/tops/vest/vest grey.png",
+			"trainer front male/hair/hair 2/2 white.png",
+			"trainer front male/hats/fedora.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base pale.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m grey.png",
+			"overworld walk/tops/vest/vest grey.png",
+			"overworld walk/hair/boy 2/boy 2 white.png",
+			"overworld walk/hats/fedora.png"
+		]
+	},
+	"repartidorbici": {
+		"idea": "Repartidor en bici: gorra, camiseta verde, pantalón corto y mochila de reparto.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/shorts/shorts black.png",
+			"trainer front male/tops/t-shirt/t-shirt green.png",
+			"trainer front male/hair/hair 2/2 brown.png",
+			"trainer front male/hats/youngster hat/youngster cap yellow.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/t-shirt/t-shirt green.png",
+			"overworld walk/carrying stuff/sporty backpack/sporty backpack green.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png",
+			"overworld walk/hats/youngster hat/youngster cap yellow.png"
+		]
+	},
+	"turistachanclas": {
+		"idea": "Turista con chanclas: ropa de playa, sombrero de paja y gafas.",
+		"frente": [
+			"trainer front male/base/base pale.png",
+			"trainer front male/bottoms/beach bottom/beach bottom red.png",
+			"trainer front male/tops/beach top/beach top red.png",
+			"trainer front male/hair/hair 3/3 blond.png",
+			"trainer front male/hats/straw hat.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base pale.png",
+			"overworld walk/bottoms/beach bottom m/beach bottom m red.png",
+			"overworld walk/tops/beach top m/beach top  m red.png",
+			"overworld walk/hair/boy 3/boy 3 blond.png",
+			"overworld walk/hats/straw hat.png"
+		]
+	},
+	"camarero": {
+		"idea": "Camarero sin propina: chaleco negro, pantalón negro y pelo engominado.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/vest/vest black.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/vest/vest black.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
 	}
 }
