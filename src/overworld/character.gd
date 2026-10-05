@@ -21,6 +21,7 @@ const BLOCKING_MASK := 1 | 2 | 8
 const WALK_BLOCKED_TIMEOUT := 2.0
 ## Píxeles de los pies que se hunden en la hierba alta (bush depth de Essentials a ×2).
 const BUSH_DEPTH := 24
+const GROUND_SHADOW := preload("res://assets/sprites/characters/effects/sombra.png")
 const GRASS_RUSTLE := preload("res://assets/sprites/characters/effects/grass_rustle.png")
 const EXCLAMATION := preload("res://assets/sprites/characters/effects/exclamation.png")
 ## Terreno (custom data `terrain` del TileSet) que hunde los pies y se mueve al pisarlo.
@@ -55,6 +56,13 @@ var moving := false
 
 
 func _ready() -> void:
+	# Hermana del sprite: el salto desplaza solo al personaje, no su sombra.
+	if not has_node("GroundShadow"):
+		var shadow := Sprite2D.new()
+		shadow.name = "GroundShadow"
+		shadow.texture = GROUND_SHADOW
+		add_child(shadow)
+		move_child(shadow, 0)
 	if sprite_sheet:
 		sprite.set_sheets(sprite_sheet, run_sprite_sheet)
 	face(DIRECTIONS[initial_facing])
