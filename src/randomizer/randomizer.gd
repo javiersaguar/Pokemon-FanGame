@@ -7,7 +7,7 @@ extends RefCounted
 ##   var rom := Randomizer.generate(seed, RandomizerSettings.from_preset("clasico"))
 ##   rom.apply()   # input.apply_patch()
 
-## Súbelo cuando cambie cualquier cosa que altere las ROM generadas (código o data/randomizer.json).
+## Súbelo cuando cambie cualquier cosa que altere las ROM generadas (código o data/randomizer/).
 const GENERATOR_VERSION := 2
 const CONFIG_PATH := "res://data/randomizer/policy.json"
 const STATS: Array[StringName] = [&"hp", &"atk", &"def", &"spa", &"spd", &"spe"]

@@ -44,7 +44,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | Agente | Rol | Es dueño de |
 |--------|-----|-------------|
 | 1 | Mundo y arquitectura | `project.godot`, `src/autoload/` (salvo `data_db.gd`, `dialogue.gd` y `audio_manager.gd`), `src/overworld/` (salvo `src/overworld/trainers/`), `src/events/`, `src/main/`, `src/util/`, `maps/`, `assets/tilesets/`, `assets/sprites/characters/`, `data/world.json`, `docs/flags.md`, `docs/mapas/` |
-| 2 | Datos, motor de combate y RandomLocke | `tools/` (salvo `tools/arte/`), `data/generated/`, `data/species_overrides.json`, `data/regional_dex.json`, `data/species_in_use.json`, `src/autoload/data_db.gd`, `src/pokemon/`, `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/` (salvo `tests/mundo/` y `tests/ui/`), y **desde el 2026-10-05** lo que era del Agente 4: `src/randomizer/`, `tests/randomizer/`, `data/randomizer/`, `data/randomizer.json`, `docs/randomlocke.md` y la sección 10 de `docs/contratos.md` |
+| 2 | Datos, motor de combate y RandomLocke | `tools/` (salvo `tools/arte/`), `data/generated/`, `data/species_overrides.json`, `data/regional_dex.json`, `data/species_in_use.json`, `src/autoload/data_db.gd`, `src/pokemon/`, `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/` (salvo `tests/mundo/` y `tests/ui/`), y **desde el 2026-10-05** lo que era del Agente 4: `src/randomizer/`, `tests/randomizer/`, `data/randomizer/` (única fuente; `data/randomizer.json` retirado el 2026-10-05), `docs/randomlocke.md` y la sección 10 de `docs/contratos.md` |
 | 3 | Presentación, UI y contenido Panchito | `src/ui/`, `src/battle/scene/`, `src/items/`, `src/overworld/trainers/`, `src/autoload/dialogue.gd`, `src/autoload/audio_manager.gd`, `data/trainer_classes.json`, `data/trainers/`, `data/items_panchito.json`, `data/shops.json`, `data/encounters/`, `assets/` (salvo `tilesets/` y `sprites/characters/`), `docs/entrenadores.md`, `docs/objetos_especiales.md` |
 
 - `src/main/`, `src/util/`, `data/world.json`, `docs/flags.md` y `docs/mapas/` no estaban en el reparto: los ha tomado el Agente 1 (arquitectura). Si alguien no está de acuerdo, que lo diga en "Peticiones".
@@ -100,7 +100,16 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 3. ✅ Sprites de **todas** las especies del pack 06 (`import_pokemon_assets.mjs --all`: ≈ 1.370 especies y formas, 8 vistas cada una, y 1.281 gritos, que ya van como archivos normales porque el Agente 1 quitó el audio de LFS).
 4. ⏳ Fase 9 del motor de combate. Hecho: el sistema de efectos con hooks (9.1) y los 52 movimientos con script que usa el MVP más sus parientes (80 scripts), con climas, Campo de Niebla y condiciones de bando (9.3).
 
-**En qué estoy:** Fase 9 del motor de combate: siguen las habilidades y objetos equipados (9.5), más movimientos (9.2), Púas y Trampa Rocas, IA 2–4 (9.7) y, después, dobles (9.4) y gimmicks (9.6).
+**He leído** (2026-10-05) el aviso de la sesión de 3 agentes, el bloque I de «Próxima sesión», la sección del Agente 4, `docs/randomlocke.md` y el §10. El motor del RandomLocke vuelve a ser mío. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`, rama `feat/agente2-bloque-i`.
+
+**En qué estoy:** bloque I, de arriba abajo. Hecho el punto 1 (configuración única en `data/randomizer/`). Siguiente: petición 28, el parche dorado.
+
+**Bloque I:**
+1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
+2. ⏳ Petición 28: rehacer el parche dorado.
+3. ⏳ Petición 22: `DataDB.randomizer_input()` y `apply_patch()` atómico con hash.
+4. ⏳ Petición 23: reglas de `LockeRules` en el combate.
+5. ⏳ Fase 9.5: habilidades y objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4.
 
 ### Traspaso del randomizer al Agente 4
 
@@ -349,3 +358,4 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 2026-10-04 | A2 | §8.5: eventos `weather`, `terrain` y `side_condition`; `BattleRequest.reason` (`uturn`, `batonpass`); acciones obligadas sin petición (dos turnos, bloqueos, recarga); `can_switch`/`can_run` falsos si está atrapado. §8.7 nuevo: sistema de efectos (`BattleEffect`, `Effects`, hooks y API del motor). `DamageCalc.calculate(..., opts)`. |
 | 2026-10-04 | A4 | §10 v2 continúa traspaso §8.6: entrada pura, aislamiento RNG/versión 2; conserva API/patch A2 y dorado v1. Peticiones 22–25. |
 | 2026-10-04 | A4 | Entrega §10 implementado y docs/randomlocke.md: 194 tests verdes tras rebase, 3000 semillas válidas; motor v2 conserva formato species/API A2. Datos nuevos en data/randomizer/, raíz anterior conservada; peticiones de integración 22–25. |
+| 2026-10-05 | A2 | §8.6 y §10: el motor vuelve al Agente 2. Configuración única en `data/randomizer/`; se retira `data/randomizer.json`. El validador comprueba que `policy.json` coincida con `presets.json` y `prohibidos.json`. |

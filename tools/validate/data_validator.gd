@@ -8,6 +8,11 @@ const SPRITE_ROOT := "res://assets/sprites/pokemon"
 const CRIES_DIR := "res://assets/audio/cries"
 const SPECIES_IN_USE_PATH := "res://data/species_in_use.json"
 const WIKIDEX_CHECK := "res://data/generated/wikidex_check.json"
+## Única fuente de la configuración del RandomLocke (data/randomizer.json está retirado).
+const RANDOMIZER_DIR := "res://data/randomizer"
+const RANDOMIZER_FILES: Array[String] = [
+	"policy.json", "presets.json", "prohibidos.json", "settings_schema.json", "epitafios.json",
+]
 ## Versiones que necesita cada especie que usa el juego (DIRECTRICES §7.2 y §8): todas, normal y shiny
 ## (los shiny son los oficiales del pack, nunca generados). Las copia tools/sprites/import_pokemon_assets.mjs.
 const SPRITE_SETS: Array[String] = [
@@ -38,6 +43,7 @@ static func run() -> DataValidator:
 	v._check_moves_in_use()
 	v._check_sprites()
 	v._check_wikidex()
+	v._check_randomizer()
 	return v
 
 
@@ -344,6 +350,67 @@ func _check_moves_in_use() -> void:
 	if not missing.is_empty():
 		_warn("%d movimientos en uso necesitan script y aún no lo tienen (src/battle/effects/moves/; de momento solo hacen la parte de datos): %s" % [
 			missing.size(), ", ".join(missing)])
+
+
+## La configuración del RandomLocke vive solo en data/randomizer/. policy.json es lo que
+## entra en la ROM; presets.json y prohibidos.json tienen que coincidir con ella.
+func _check_randomizer() -> void:
+	if FileAccess.file_exists("res://data/randomizer.json"):
+		_error("data/randomizer.json está retirado: la configuración vive solo en data/randomizer/.")
+	var missing := false
+	for name: String in RANDOMIZER_FILES:
+		if not FileAccess.file_exists("%s/%s" % [RANDOMIZER_DIR, name]):
+			_error("Falta data/randomizer/%s." % name)
+			missing = true
+	if missing:
+		return
+	var policy := JsonFile.read_dict(RANDOMIZER_DIR + "/policy.json")
+	var presets := JsonFile.read_dict(RANDOMIZER_DIR + "/presets.json")
+	var banned := JsonFile.read_dict(RANDOMIZER_DIR + "/prohibidos.json")
+	var schema := JsonFile.read_dict(RANDOMIZER_DIR + "/settings_schema.json")
+	var epitaphs: Variant = JsonFile.read(RANDOMIZER_DIR + "/epitafios.json")
+	for key: String in ["banned_species", "banned_moves", "banned_abilities"]:
+		if policy.get(key) != banned.get(key):
+			_error("policy.json y prohibidos.json no coinciden en %s." % key)
+	for id: Variant in banned.get("banned_species", []):
+		if not DataDB.has_species(StringName(str(id))):
+			_error("prohibidos.json: la especie '%s' no existe." % id)
+	for id: Variant in banned.get("banned_moves", []):
+		if not DataDB.has_move(StringName(str(id))):
+			_error("prohibidos.json: el movimiento '%s' no existe." % id)
+	for id: Variant in banned.get("banned_abilities", []):
+		if not DataDB.has_ability(StringName(str(id))):
+			_error("prohibidos.json: la habilidad '%s' no existe." % id)
+	for id: Variant in policy.get("shop_guaranteed", []):
+		if not DataDB.has_item(StringName(str(id))):
+			_error("policy.json: el objeto garantizado '%s' no existe." % id)
+	if epitaphs is not Array or (epitaphs as Array).is_empty():
+		_error("epitafios.json debe ser una lista de textos.")
+	else:
+		for line: Variant in epitaphs:
+			if line is not String or str(line) == "":
+				_error("epitafios.json: cada epitafio tiene que ser un texto.")
+				break
+	for preset_id: String in presets:
+		var entry: Variant = presets[preset_id]
+		if entry is not Dictionary or not (entry as Dictionary).has("settings"):
+			_error("presets.json: '%s' no tiene settings." % preset_id)
+			continue
+		var settings: Dictionary = (entry as Dictionary)["settings"]
+		for problem: String in RandomizerSettings.errors(settings):
+			_error("presets.json → %s: %s" % [preset_id, problem])
+		if policy.get("presets", {}).get(preset_id) != settings:
+			_error("El preset '%s' de policy.json no coincide con presets.json." % preset_id)
+	var schema_keys: Array[String] = []
+	for key: Variant in schema:
+		schema_keys.append(str(key))
+	schema_keys.sort()
+	var field_keys: Array[String] = []
+	for field: Array in RandomizerSettings.FIELDS + RandomizerSettings.EXTRA_FIELDS:
+		field_keys.append(str(field[0]))
+	field_keys.sort()
+	if schema_keys != field_keys:
+		_error("settings_schema.json no lista los mismos ajustes que RandomizerSettings.")
 
 
 func _json_files(dir: String) -> Array[String]:

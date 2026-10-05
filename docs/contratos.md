@@ -913,14 +913,14 @@ Los movimientos especiales, los volátiles, las condiciones de bando, los climas
 - `DamageCalc.calculate(..., opts)` admite `power`, `weather`, `final` (multiplicadores encadenados en base 4096 como `chainModify`), `atk_mod` y `def_mod`.
 - Pendiente de la Fase 9: habilidades y objetos equipados (9.5), resto de movimientos (9.2), trampas Púas/Trampa Rocas, dobles (9.4), gimmicks (9.6) e IA 2–4 (9.7).
 
-### 8.6 RandomLocke: motor de aleatorización (`src/randomizer/`) — traspasado al Agente 4
+### 8.6 RandomLocke: motor de aleatorización (`src/randomizer/`)
 
-> **Desde 2026-10-04, `src/randomizer/` y `tests/randomizer/` son del Agente 4** (DIRECTRICES §2 y §6). Lo que sigue es la API tal como la entregó el Agente 2; manda la sección 10 en cuanto el Agente 4 la publique. El Agente 2 conserva `DataDB.apply_patch()` / `clear_patch()` (§8.2) y el evento `pokemon_died` del motor.
+> **Desde 2026-10-05 el motor vuelve a ser del Agente 2** (lo construyó el Agente 4). Manda la sección 10. La configuración vive solo en `data/randomizer/` (`policy.json`, `presets.json`, `prohibidos.json`, `settings_schema.json`, `epitafios.json`). `data/randomizer.json` está retirado.
 
 Lógica **pura y determinista** (como el motor de combate): no toca `DataDB` ni nodos, así que se puede llamar desde `WorkerThreadPool` para la pantalla "Generando la ROM...". Misma semilla + mismos ajustes + misma versión = **la misma ROM**, byte a byte.
 
 ```gdscript
-var settings := RandomizerSettings.from_preset("clasico")   # "clasico", "solo_aleatorio", "caos" (data/randomizer.json)
+var settings := RandomizerSettings.from_preset("clasico")   # "clasico", "solo_aleatorio", "caos" (data/randomizer/presets.json)
 settings.wild = "chaos"; settings.preset = RandomizerSettings.CUSTOM   # o tocar campos sueltos (tabla de abajo)
 var rom: RomPatch = Randomizer.generate(seed, settings)     # seed: 0..2³²−1; null si DataDB ya tiene un parche
 rom.apply()                     # = DataDB.apply_patch(rom.data); al volver al título: DataDB.clear_patch()
@@ -949,7 +949,7 @@ RomValidator.validate(rom) -> PackedStringArray   # R.4 (Randomizer.generate ya 
 | `locke_rules` | bool | Reglas Locke en el combate |
 
 - **Reglas Locke en el combate** (Fase R.7, parte del Agente 2): `BattleSetup.locke_rules` (se rellena solo con `GameState.is_randomlocke()` y `GameState.randomlocke.settings.locke_rules`). Cuando cae un Pokémon del jugador: evento `pokemon_died` (justo después de su `faint`) con `{party_index, uid, species, name, level, foe_species, foe_name, trainer, turn}`, mensaje con `tag = "death"` y la misma entrada en `result.deaths` (para el Cementerio). Los objetos de revivir no se pueden usar.
-- `data/randomizer.json` (Agente 2): prohibidos (especies, movimientos y habilidades), reglas de equilibrio y presets. Cambiar algo que altere las ROM obliga a subir `Randomizer.GENERATOR_VERSION`.
+- `data/randomizer/` (Agente 2): prohibidos, reglas de equilibrio, presets, esquema y epitafios. `policy.json` es la copia que entra en la ROM y tiene que coincidir con `presets.json` y `prohibidos.json`. Cambiar algo que altere las ROM obliga a subir `Randomizer.GENERATOR_VERSION`.
 - Tests (`tests/randomizer/`): códigos, determinismo, parche dorado (`golden_clasico.json`, se rehace con `PANCHITO_UPDATE_GOLDEN=1`), robustez (100 semillas; **1000 con `PANCHITO_LONG_TESTS=1`**), reglas, aplicación y tiempo (< 3 s).
 
 ---
@@ -1187,7 +1187,7 @@ Formato de la guía (Fase 5.7) con dos añadidos:
 
 ---
 
-## 10. RandomLocke (Agente 4)
+## 10. RandomLocke (Agente 2; lo construyó el Agente 4)
 
 Contrato v2 (continuación del traspaso A2) publicado el 2026-10-04. Motor puro (`RefCounted`, sin nodos ni corrutinas), independiente de los autoloads. Implementación en `src/randomizer/`; fixtures y adaptadores usan únicamente tipos JSON. La base de datos y los presets son parte de la versión del generador: cambiar resultados requiere subirla. Misma base + versión + semilla + ajustes normalizados produce los mismos bytes.
 
@@ -1274,4 +1274,4 @@ Versión **2** por aislamiento de RNG y validación estricta. Se conserva format
 
 Motivo de cambios: generación anterior leía DataDB/JSON desde hilo, compartía RNG (un ajuste cambiaba otros módulos), relajaba fuerza/nivel/repetidos silenciosamente y faltaba protección randomize:false en slots/tablas/campos. Se reutilizan triángulo, curva de movimientos, rival, representación de parches y tests válidos. Los metadatos evolutivos pueden derivarse con márgenes heredados si faltan, sin fijar nuevas decisiones de diseño.
 
-La entrada incluye `config` con snapshot de policy/prohibidos/presets, y `regional` opcional. `RandomizerInput.from_datadb()` es adaptador del principal; `families(patch)` calcula duplicados sobre grafo efectivo. El nombre de helper de presets por diccionario es `preset_dict` porque `preset` ya es el campo público heredado. Preparar Settings.prepare antes de hilos. Excepción STAB Siniestro ≤60, propuesta PENDIENTE JAVIER en ESTADO; curvas sin nivel 1 normalizan primer registro a 1 sin aumentar cantidad. Configuración nueva en data/randomizer/; raíz antigua conservada por compatibilidad.
+La entrada incluye `config` con snapshot de policy/prohibidos/presets, y `regional` opcional. `RandomizerInput.from_datadb()` es adaptador del principal; `families(patch)` calcula duplicados sobre grafo efectivo. El nombre de helper de presets por diccionario es `preset_dict` porque `preset` ya es el campo público heredado. Preparar Settings.prepare antes de hilos. Excepción STAB Siniestro ≤60, propuesta PENDIENTE JAVIER en ESTADO; curvas sin nivel 1 normalizan primer registro a 1 sin aumentar cantidad. Configuración única en data/randomizer/ (`data/randomizer.json` retirado el 2026-10-05). `policy.json` es la copia que entra en la ROM y el validador exige que coincida con `presets.json` y `prohibidos.json`.

@@ -81,7 +81,7 @@ Los rangos/defaults están en `data/randomizer/settings_schema.json`. Las propue
 
 `data/randomizer/presets.json` contiene cuatro entradas. **RandomLocke clásico** conserva el balance de A2 (triángulo, salvajes por zona, tolerancia 15 %, etapas y reglas Locke). **Solo aleatorio** usa ese motor y desactiva el interruptor Locke. **Caos Panchito** permite legendarios, todos los módulos, tipos/estadísticas/evoluciones/MT/tutores, sin restricciones de etapa o BST de encuentros. **Personalizado** parte del clásico y permite editar cualquier campo. Alias `caos_panchito` → `caos` por compatibilidad. Probabilidad shiny 1/4096 por defecto, configurable a 1/1024, 1/512 o 1/100; la aplica A2, nunca cambia colores de sprites.
 
-`prohibidos.json`: banned_species, banned_moves, banned_abilities. `policy.json`: curva de potencia, excepción STAB, márgenes de evolución, nivel temprano, tiendas, intentos y referencia de presets. Configuración original `data/randomizer.json` se conserva para consumidores anteriores; el motor nuevo usa snapshot de `data/randomizer/`. **Cambiar resultados obliga a subir generator_version y regenerar dorados de esa versión**.
+`prohibidos.json`: banned_species, banned_moves, banned_abilities. `policy.json`: curva de potencia, excepción STAB, márgenes de evolución, nivel temprano, tiendas, intentos y la copia de presets y prohibidos que entra en la ROM. **Una sola fuente:** `data/randomizer/`. `data/randomizer.json` está retirado; el validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`. **Cambiar resultados obliga a subir generator_version y regenerar dorados de esa versión**.
 
 ## Parche, semillas y spoilers
 
