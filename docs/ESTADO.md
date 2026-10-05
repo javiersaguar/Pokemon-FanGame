@@ -102,11 +102,11 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) el aviso de la sesión de 3 agentes, el bloque I de «Próxima sesión», la sección del Agente 4, `docs/randomlocke.md` y el §10. El motor del RandomLocke vuelve a ser mío. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`, rama `feat/agente2-bloque-i`.
 
-**En qué estoy:** bloque I, de arriba abajo. Hecho el punto 1 (configuración única en `data/randomizer/`). Siguiente: petición 28, el parche dorado.
+**En qué estoy:** bloque I, de arriba abajo. Hechos los puntos 1 y 2. Siguiente: petición 22, `randomizer_input()` y `apply_patch()` atómico.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
-2. ⏳ Petición 28: rehacer el parche dorado.
+2. ✅ Petición 28: parche dorado rehecho (`tests/randomizer/golden_clasico_v2.json`, semilla `20261004`, preset `clasico`). El test ya no queda *pending*.
 3. ⏳ Petición 22: `DataDB.randomizer_input()` y `apply_patch()` atómico con hash.
 4. ⏳ Petición 23: reglas de `LockeRules` en el combate.
 5. ⏳ Fase 9.5: habilidades y objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4.
@@ -306,7 +306,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 25 | A4 → A3 | Pantallas R.8 leen schema/presets y snapshot LockeRules; §10 conserva API A2. SpoilerLog puro devuelve texto para exportación bajo demanda. Cementerio/zonas/motes/game over. | pendiente |
 | 26 | A1 → A3 | `tools/arte/reglas.json`: (a) quita `assets/tilesets/placeholder/` y `assets/sprites/characters/placeholder/` (ya no existen); (b) `assets/tilesets/exterior/` y `assets/sprites/characters/` son de terceros (sin paleta maestra) y van a la escala de los packs: casillas de 32 px, personajes en cuadros de 64×64, `objects.png` en cuadros de 32 y `effects/` en cuadros cuadrados de 32; (c) los Pokémon que te siguen (`assets/sprites/pokemon/followers*`) son hojas de 256×256 en cuadros de 64. Ahora el validador da 97 errores por esto. | pendiente |
 | 27 | A1 → A3 | Sonidos que pide el mundo y que AudioManager aún no tiene: SE `jump` (salto de bordillo) y `shiny` (el Pokémon que te sigue aparece y es shiny). | pendiente |
-| 28 | A1 → A4 | Aviso: `data/item_placements.json` cambia cada vez que se añaden o se quitan objetos del suelo (ahora están los de los mapas de muestra), así que el test del parche dorado del randomizer se queda *pending*. Rehazlo cuando puedas (`PANCHITO_UPDATE_GOLDEN=1`). | informativo |
+| 28 | A1 → A4 | Aviso: `data/item_placements.json` cambia cada vez que se añaden o se quitan objetos del suelo (ahora están los de los mapas de muestra), así que el test del parche dorado del randomizer se queda *pending*. Rehazlo cuando puedas (`PANCHITO_UPDATE_GOLDEN=1`). | hecha (A2, 2026-10-05): `golden_clasico_v2.json` rehecho; 0 tests *pending* |
 
 ---
 

@@ -1,5 +1,5 @@
 {
-	"fingerprint": "8a223b6d60ea7f972d61e742cdd266770c7c792b078b2b11800b01fb4ce50914",
+	"fingerprint": "65465140f2852482a7b32686ab56bd7193e70472fda5803d4e28d4883fc0a402",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -117,12 +117,14 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "ed0106ebf2d45396e50cda3a7ee8b1183c64631715072230be71921451aa93da",
+		"input_hash": "f5aec0cc8bcc07b9e3bfd07523669db811939e1b9c496f385971bda180d1df7b",
 		"items": {
-			"test/test_outdoor/PocionOculta": "kangaskhancandy",
-			"test/test_outdoor/PokeBalls": "firestone",
-			"test/test_room/CarameloOculto": "healthmochi",
-			"test/test_room/Pocion": "timerball"
+			"test/muestra_pueblo/Pocion": "kangaskhancandy",
+			"test/muestra_ruta/Pocion": "firestone",
+			"test/test_outdoor/PocionOculta": "healthmochi",
+			"test/test_outdoor/PokeBalls": "timerball",
+			"test/test_room/CarameloOculto": "bigpearl",
+			"test/test_room/Pocion": "blunderpolicy"
 		},
 		"learnsets": {
 			"abomasnow": [
