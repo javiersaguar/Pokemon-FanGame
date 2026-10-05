@@ -36,6 +36,20 @@ func test_format_text_replaces_player_rival_and_vars() -> void:
 	assert_eq(text, "Rojo y Azul miran la Poción.")
 
 
+func test_format_text_resolves_r2_markers() -> void:
+	var starter := DataDB.species(DataDB.starter(&"starter_1")).name
+	assert_eq(Dialogue.format_text("¿Eliges a {starter:starter_1}?"), "¿Eliges a %s?" % starter)
+	assert_eq(Dialogue.format_text("{player} tiene una {item:potion}.", {}), "Rojo tiene una %s." % DataDB.item(&"potion").name)
+	assert_eq(Dialogue.format_text("¡Un {species:pikachu}!"), "¡Un Pikachu!")
+
+
+func test_r2_markers_follow_the_randomlocke_patch() -> void:
+	DataDB.apply_patch({"starters": {"starter_1": "pikachu"}})
+	var text := Dialogue.format_text("¿Eliges a {starter:starter_1}?")
+	DataDB.clear_patch()
+	assert_eq(text, "¿Eliges a Pikachu?")
+
+
 func test_say_locks_input_until_player_advances() -> void:
 	var state := {"done": false}
 	var talk := func() -> void:

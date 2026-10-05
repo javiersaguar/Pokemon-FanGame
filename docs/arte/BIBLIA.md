@@ -105,6 +105,7 @@ Los fondos del pack 10 son de Elite Battle: DX y miden 384×308: **no** vienen a
 | Texto pequeño (nivel, PS en número, etiquetas) | `TruthAndIdeals-SmallTruths-Normal.ttf` a **10** | ídem |
 
 - Tiene ñ, tildes, ü, ¿, ¡, «», º, ª, ♂, ♀ y ★. **Le faltan** €, — (raya) y · (punto medio): no se usan en los textos.
+- **Dinero: `₽`.** La fuente tampoco lo trae: está dibujado a mano (`assets/_fuentes/fuentes/pokedolar*.px`, una P con dos barras en el palo) como fuente bitmap de respaldo del Theme (`assets/fonts/pokedolar/`). Se escribe `₽` en el texto y sale con el color y la sombra del resto. Captura: `docs/arte/comparativas/dinero_pokedolar.png`.
 - Colores: texto oscuro `ui_2` con sombra `ui_5` sobre paneles claros; texto claro `ui_6` con sombra `ui_2` sobre paneles oscuros. La sombra va 1 píxel de arte abajo a la derecha.
 
 ---

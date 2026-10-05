@@ -1,0 +1,6 @@
+{
+  "_": "Iniciales (regla R.2, contratos.md §8.1). 1 = Planta, 2 = Fuego, 3 = Agua: el rival se lleva el que gana al tuyo (rival_lab_<n> de data/trainers/pueblo_inicial.json). Campos de una ficha de entrenador (§9.6); sin level se usa data/world.json → new_game.starter_level. PROVISIONAL: los de Kanto hasta que Javier decida los iniciales (pregunta 1).",
+  "starter_1": {"species": "bulbasaur", "level": 5},
+  "starter_2": {"species": "charmander", "level": 5},
+  "starter_3": {"species": "squirtle", "level": 5}
+}

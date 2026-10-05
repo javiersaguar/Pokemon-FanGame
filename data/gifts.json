@@ -1,0 +1,4 @@
+{
+  "_": "Pokémon que regala la historia (regla R.2, contratos.md §8.1): {id: especie} o {id: ficha de entrenador (§9.6)}, más \"randomize\": false si RandomLocke no lo debe cambiar. El evento lo pide con DataDB.gift(id) y el texto lo nombra con {gift:id}. El MVP no tiene regalos.",
+  "_ejemplo": {"gift_eevee_ciudad2": {"species": "eevee", "level": 10, "ball": "pokeball"}}
+}
