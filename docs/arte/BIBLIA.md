@@ -75,10 +75,11 @@ Archivos: `assets/arte/paleta.gpl` (para Aseprite, LibreSprite o GIMP) y `assets
 |-------|--------------------|---------------|
 | Tile | 32×32 (hojas en múltiplos de 32) | Packs 01–04 |
 | Personaje en el mapa | Hoja de 256×256 = 4×4 cuadros de 64 | Packs 05, 11 y 13 |
+| Efecto del mapa ("!", hierba, polvo, destellos) y objetos del suelo | Cuadros de 32×32 | Pack 05 |
 | Pokémon de frente | 192×192 (normal, shiny y `_female` donde exista) | Generation 9 Pack |
 | Pokémon de espalda | 288×288 (ídem) | Generation 9 Pack |
-| Icono de Pokémon | 128×64 = 2 cuadros de 64 (normal y shiny) | Generation 9 Pack |
-| Pokémon que te sigue | Hoja de 256×256 = 4×4 cuadros de 64 (normal y shiny) | Generation 9 Pack |
+| Icono de Pokémon | 128×64 = 2 cuadros de 64 (normal y shiny); los Pokémon grandes, 2 cuadros cuadrados mayores (160×80) | Generation 9 Pack |
+| Pokémon que te sigue | Hoja de 256×256 = 4×4 cuadros de 64 (normal y shiny); los Pokémon grandes, 4×4 cuadros mayores (280, 320 o 512 de lado) | Generation 9 Pack |
 | Entrenador en combate | **Frente 160×160**; espalda en tira de cuadros de 175×196 (lanzamiento) | Pack 11 (clases Panchito montadas con sus piezas) |
 | Objeto | **48×48** | Generation 9 Pack y pack 15 |
 | Iconos de tipo | 64×28 cada uno, en la tira `types_spanish.png` (64×532) | Pack 09 (Loaky, en español) |
@@ -158,7 +159,7 @@ Todos viven en el `Theme` (`src/ui/theme/main_theme.tres`): **un solo sitio** pa
 
 ## 11. Herramientas (A.8)
 
-- **Validador** (`tools/arte/validar.gd`, reglas en `tools/arte/reglas.json`): falla si un PNG de `assets/` no tiene el **tamaño del pack** (§5) o, si es arte propio, usa **colores fuera de la paleta**. Los packs solo se comprueban en tamaño. Se pasa antes de cada merge de arte.
+- **Validador** (`tools/arte/validar.gd`, reglas en `tools/arte/reglas.json`): falla si un PNG de `assets/` no tiene el **tamaño del pack** (§5) o, si es arte propio, usa **colores fuera de la paleta**. Los packs (tilesets, personajes del mapa, Pokémon, objetos, fondos y tipos) solo se comprueban en tamaño. Los archivos que el pack trae con un tamaño raro van en `pack_exceptions` con el motivo y solo avisan. Se pasa antes de cada merge de arte y además es un test (`tests/ui/test_arte.gd`): `main` tiene que quedar con **0 errores**.
 - **Exportador** del arte propio (`tools/arte/exportar.gd`) y **paleta** (`tools/arte/paleta.gd`).
 - **Comparativas**: capturas a 512×384, lado a lado con las referencias de Añil, en `docs/arte/comparativas/`.
 
