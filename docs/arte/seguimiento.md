@@ -52,6 +52,7 @@ Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador h
 
 | Comportamiento | Dueño | Estado | Comparativa | Aprobado por Javier |
 |---|---|---|---|---|
+| Hojas bici/Surf/pesca del pack 05, comportamiento en Player/FieldEncounters | A4 arte / A1 integración | integrado; objeto de Surf pendiente | `comparativas/transporte.md` | pendiente revisión de integración |
 | Tinte día/noche del canvas del mundo, Clock real | A1 | integrado, colores provisionales | `comparativas/dia_noche.md` | pendiente revisión; luces/clima esperan arte/audio |
 | Alternar carrera con R/Y, hoja de correr pack 05 existente | A1 | integrado | `comparativas/correr_alternar.md` | orden 1b; aviso/opción pendientes A3 |
 | Flujo inicial/ranuras/pausa y entrada de nombres con Theme/cuadro A3 existentes | A1 | placeholder de integración | `comparativas/flujo_provisional.md` | pendiente; lo sustituye A3 |

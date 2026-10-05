@@ -218,12 +218,14 @@
     },
     "transport_sheets": {
       "male": {
-        "bike": null,
-        "surf": null
+        "bike": "res://assets/sprites/characters/player_male_bike.png",
+        "surf": "res://assets/sprites/characters/player_male_surf.png",
+        "fishing": "res://assets/sprites/characters/player_male_fishing.png"
       },
       "female": {
-        "bike": null,
-        "surf": null
+        "bike": "res://assets/sprites/characters/player_female_bike.png",
+        "surf": "res://assets/sprites/characters/player_female_surf.png",
+        "fishing": "res://assets/sprites/characters/player_female_fishing.png"
       }
     },
     "flight_destinations": []

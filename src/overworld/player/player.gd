@@ -208,12 +208,13 @@ func _after_step() -> bool:
 	if trigger:
 		await Cutscene.play(trigger.event, trigger, trigger.event_params, trigger.once_flag)
 		return false
-	if map.is_encounter_tile(tile):
-		var roaming := WorldRoamers.roll(map)
+	var repel_active := GameState.var_int(WildEncounters.REPEL_VAR) > 0
+	var wild := WildEncounters.roll(map, tile, &"water" if FieldActions.transport() == &"surf" else &"land")
+	if map.is_encounter_tile(tile) and not Debug.encounters_disabled:
+		var roaming := WorldRoamers.roll(map, WildEncounters._lead_level() if repel_active else 0)
 		if not roaming.is_empty():
 			await SceneManager.start_battle(BattleSetup.wild(roaming.pokemon), {"roamer_id": roaming.id})
 			return false
-	var wild := WildEncounters.roll(map, tile, &"water" if FieldActions.transport() == &"surf" else &"land")
 	if not wild.is_empty():
 		await SceneManager.start_battle(WildEncounters.make_setup(wild))
 		return false

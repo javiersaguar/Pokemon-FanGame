@@ -613,6 +613,10 @@ Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al mo
 
 `WorldRoamers.release(id,static_id,maps)`: crea desde estático R.2, conserva Pokemon completo, ubicación y estado en GameState.roamers (campo aditivo v2). Cambiar mapa mueve; continuar no. Roll por chance configurada (0 hasta definir contenido); SceneManager resuelve salud/estado tras combate, captured/defeated lo retiran. No se inventan especies/ubicaciones/desbloqueos. Petición 41 para contenido A3.
 
+### Integración posterior de arte (peticiones 38/40)
+
+world.field.transport_sheets contiene bike/surf/fishing de Ethan/Lyra pack 05 entregadas por A4. Player desmonta bici al entrar en mapa prohibido y sale de Surf al tocar tierra; pesca cambia temporalmente de hoja y la restaura. Character genera polvo existente cada 2 pasos corriendo, y salpicadura existente al completar paso en terrain=puddle. El tile puddle espera A4; no se pinta un charco de prueba por código. Errantes respetan Repelente y la desactivación de encuentros; WildEncounters descuenta el paso antes de elegir errante.
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).
@@ -1353,3 +1357,4 @@ Versión **2** por aislamiento de RNG y validación estricta. Se conserva format
 Motivo de cambios: generación anterior leía DataDB/JSON desde hilo, compartía RNG (un ajuste cambiaba otros módulos), relajaba fuerza/nivel/repetidos silenciosamente y faltaba protección randomize:false en slots/tablas/campos. Se reutilizan triángulo, curva de movimientos, rival, representación de parches y tests válidos. Los metadatos evolutivos pueden derivarse con márgenes heredados si faltan, sin fijar nuevas decisiones de diseño.
 
 La entrada incluye `config` con snapshot de policy/prohibidos/presets, y `regional` opcional. `RandomizerInput.from_datadb()` es adaptador del principal; `families(patch)` calcula duplicados sobre grafo efectivo. El nombre de helper de presets por diccionario es `preset_dict` porque `preset` ya es el campo público heredado. Preparar Settings.prepare antes de hilos. Excepción STAB Siniestro ≤60, propuesta PENDIENTE JAVIER en ESTADO; curvas sin nivel 1 normalizan primer registro a 1 sin aumentar cantidad. Configuración única en data/randomizer/ (`data/randomizer.json` retirado el 2026-10-05). `policy.json` es la copia que entra en la ROM y el validador exige que coincida con `presets.json` y `prohibidos.json`.
+

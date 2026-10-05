@@ -452,6 +452,10 @@ func _place_player(tile: Vector2i, facing: Vector2i) -> void:
 		player.get_parent().remove_child(player)
 	parent.add_child(player)
 	player.place_at(tile, facing)
+	var mode := FieldActions.transport()
+	if (mode == &"bike" and not FieldActions.available(&"bike", current_map)) or (mode == &"surf" and current_map.terrain_at(tile) not in ["water", "waterfall"]):
+		player.set_transport_mode(&"walk")
+	player.refresh_appearance()
 	player.setup_camera(current_map)
 	_spawn_player_follower(parent)
 

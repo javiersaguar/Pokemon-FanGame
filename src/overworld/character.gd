@@ -28,6 +28,7 @@ const EXCLAMATION := preload("res://assets/sprites/characters/effects/exclamatio
 const TALL_GRASS_TERRAIN := "tall_grass"
 const JUMP_TIME := 0.4
 const JUMP_HEIGHT := 20.0
+const WATER_SPLASH := preload("res://assets/sprites/characters/effects/water_splash.png")
 const JUMP_DUST := preload("res://assets/sprites/characters/effects/jump_dust.png")
 
 @export var sprite_sheet: Texture2D:
@@ -50,6 +51,7 @@ const JUMP_DUST := preload("res://assets/sprites/characters/effects/jump_dust.pn
 var facing := Vector2i.DOWN
 var moving := false
 var _reserved_body_position := Vector2.ZERO
+var _running_steps := 0
 
 @onready var sprite: CharacterSprite = $Sprite
 @onready var body: StaticBody2D = $Body
@@ -117,6 +119,15 @@ func step(dir: Vector2i, duration: float = WALK_TIME, ignore_collisions: bool = 
 	body.position = Vector2.ZERO
 	sprite.bush_depth = BUSH_DEPTH if into_grass else 0
 	moving = false
+	var map := SceneManager.current_map if not Engine.is_editor_hint() else null
+	if map and map.terrain_at(target_tile) == "puddle":
+		_spawn_effect(WATER_SPLASH, target_tile, 0.06)
+	elif running:
+		_running_steps += 1
+		if _running_steps % 2 == 0:
+			_spawn_effect(JUMP_DUST, target_tile, 0.06)
+	else:
+		_running_steps = 0
 	step_finished.emit(tile_position())
 	return true
 

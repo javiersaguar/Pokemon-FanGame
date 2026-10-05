@@ -65,6 +65,7 @@ func test_transporte_no_activa_sin_arte_y_restauracion() -> void:
 	add_child_autofree(player)
 	player.set_process(false)
 	GameState.bag.add(&"bicycle")
+	GameState.world_config.field.transport_sheets.male.bike = null
 	assert_false(player.set_transport_mode(&"bike"), "exige hoja entregada por arte")
 	GameState.world_config.field.transport_sheets.male.bike = "res://assets/sprites/characters/player_male.png"
 	assert_true(player.set_transport_mode(&"bike"), "fixture usa hoja real, sin generar arte")

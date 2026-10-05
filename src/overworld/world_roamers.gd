@@ -23,7 +23,7 @@ static func move_on_transition(from_map: StringName) -> void:
 		var record: Dictionary = GameState.roamers[id]
 		if record.state == "roaming" and not record.maps.is_empty():
 			record.map = record.maps[rng.randi_range(0, record.maps.size() - 1)]
-static func roll(map: MapRoot) -> Dictionary:
+static func roll(map: MapRoot, minimum_level: int = 0) -> Dictionary:
 	if not (GameState.party is Party) or GameState.party.able_count() == 0:
 		return {}
 	var chance := float(GameState.world_config.get("roamers", {}).get("encounter_chance", 0.0))
@@ -32,7 +32,9 @@ static func roll(map: MapRoot) -> Dictionary:
 	for id: String in GameState.roamers:
 		var record: Dictionary = GameState.roamers[id]
 		if record.state == "roaming" and record.map == String(map.get_map_id()):
-			return {"id": id, "pokemon": Pokemon.from_dict(record.pokemon)}
+			var pokemon := Pokemon.from_dict(record.pokemon)
+			if pokemon.level >= minimum_level:
+				return {"id": id, "pokemon": pokemon}
 	return {}
 static func resolve(id: StringName, pokemon: Pokemon, outcome: StringName) -> void:
 	if not GameState.roamers.has(String(id)):
