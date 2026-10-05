@@ -628,7 +628,7 @@ world.field.transport_sheets contiene bike/surf/fishing de Ethan/Lyra pack 05 en
 ### 7j. Carga segura y smoke (A1, 2026-10-05)
 
 - `MapLoader.prepare(map_id) -> {error, map, prepare_usec}` valida PackedScene/MapRoot/data.id/Ground antes de entrar al árbol; cache de 16 escenas, sin compartir instancias. El consumidor incorpora o libera map. `spawn_tile` exacto (null si falta), `valid_tile`, `check_spawn`, `check_position(state)`.
-- `SceneManager.change_map` y `change_map_at` ahora devuelven Error. Destino inválido conserva mapa/partida/control; no usa fallback. `EventBus.map_load_failed(map_id, error)` para UI. Nueva partida valida destino antes de reset; continuar usa `SaveManager.peek_state` antes de cargar ROM/estado. Entrada directa con mapa explícito y spawn omitido usa default; entrada de historia usa datos.
+- `SceneManager.change_map` y `change_map_at` ahora devuelven Error. Destino inválido conserva mapa/partida/control; no usa fallback. `EventBus.map_load_failed(map_id, error)` para UI. Nueva partida valida destino y aplica ROM atómicamente antes de reset/new_game_started, conservando módulos y bloqueos si falla; continuar usa `SaveManager.peek_state` antes de cargar ROM/estado. Entrada directa con mapa explícito y spawn omitido usa default; entrada de historia usa datos.
 - `last_map_load_usec` mide preparación, instanciación, incorporación y colocación, excluyendo fade_out/in intencionados. `maps/_tools/smoke_maps.gd` valida todos los mapas/apariciones/warps y mide ambos tramos; informe JSON en docs/mapas. Tests extended_game recorren guion y BattleScene/EngineDriver reales sin Debug en normal y RandomLocke sobre el perfil test; cierre real v0.1 sigue bloqueado por mapas/aceptación.
 
 

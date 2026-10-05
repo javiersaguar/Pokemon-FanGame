@@ -4,40 +4,40 @@
 	"headless": true,
 	"maps": [
 		{
-			"load_ms": 0.922,
+			"load_ms": 1.066,
 			"map": "muestras/pueblo",
 			"ok": true,
-			"prepare_ms": 4.834
+			"prepare_ms": 5.658
 		},
 		{
-			"load_ms": 0.687,
+			"load_ms": 0.759,
 			"map": "muestras/ruta",
 			"ok": true,
-			"prepare_ms": 3.859
+			"prepare_ms": 4.123
 		},
 		{
-			"load_ms": 1.14,
+			"load_ms": 1.176,
 			"map": "test/muestra_pueblo",
 			"ok": true,
-			"prepare_ms": 2.123
+			"prepare_ms": 2.154
 		},
 		{
-			"load_ms": 0.639,
+			"load_ms": 0.917,
 			"map": "test/muestra_ruta",
 			"ok": true,
-			"prepare_ms": 2.149
+			"prepare_ms": 2.344
 		},
 		{
-			"load_ms": 0.567,
+			"load_ms": 1.025,
 			"map": "test/test_outdoor",
 			"ok": true,
-			"prepare_ms": 3.891
+			"prepare_ms": 4.323
 		},
 		{
-			"load_ms": 1.282,
+			"load_ms": 1.754,
 			"map": "test/test_room",
 			"ok": true,
-			"prepare_ms": 0.351
+			"prepare_ms": 0.616
 		}
 	],
 	"ok": true

@@ -134,7 +134,17 @@ func test_rom_ausente_o_invalida_no_reemplaza_partida() -> void:
 	await SceneManager.start_new_game(&"", &"", {"slot": SLOT})
 	GameState.player_name = "Anterior"
 	var map := SceneManager.current_map
+	var party: Variant = GameState.party
+	var events := [0]
+	var listen := func() -> void: events[0] += 1
+	EventBus.new_game_started.connect(listen)
+	GameState.lock_input(&"test_previous")
 	assert_eq(await SceneManager.start_new_game(&"", &"", {"mode": "randomlocke", "rom_patch": {}}), ERR_INVALID_DATA)
+	assert_eq(events[0], 0)
+	assert_eq(GameState.party, party, "Conserva los módulos, no solo sus datos serializados")
+	assert_true(GameState.is_input_locked_by(&"test_previous"))
+	GameState.unlock_input(&"test_previous")
+	EventBus.new_game_started.disconnect(listen)
 	assert_eq(GameState.player_name, "Anterior")
 	assert_true(GameState.in_game)
 	assert_eq(SceneManager.current_map, map)

@@ -126,21 +126,26 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 	if destination_error != OK:
 		EventBus.map_load_failed.emit(map, destination_error)
 		return destination_error
+	options = options.duplicate(true)
 	if not options.has("slot"):
-		options = options.duplicate()
 		options["slot"] = maxi(SaveManager.first_empty_slot(), 1)
-	var previous := GameState.to_dict()
-	var old_slot := GameState.slot
-	var was_in_game := GameState.in_game
-	var old_rom := GameState.rom_patch.duplicate(true)
+	if StringName(options.get("mode", GameState.MODE_NORMAL)) == GameState.MODE_RANDOMLOCKE:
+		var patch: Variant = options.get("rom_patch", {})
+		var state: Variant = options.get("randomlocke", {})
+		if not patch is Dictionary or not state is Dictionary:
+			return ERR_INVALID_DATA
+		# Entrada base explícita antes de aplicar. La validación de DataDB es atómica.
+		var input := RandomizerInput.from_dict(DataDB.randomizer_input())
+		var patch_error := SaveManager.apply_patch_data(patch)
+		if patch_error != OK:
+			return patch_error
+		if state.get("families", {}).is_empty():
+			state["families"] = input.families(RomPatch.from_dict(patch))
+		options["randomlocke"] = state
+	else:
+		DataDB.clear_patch()
+	# Solo una ROM válida puede emitir new_game_started y reemplazar módulos/bloqueos.
 	GameState.new_game(options)
-	var patch_error := SaveManager.apply_rom_patch()
-	if patch_error != OK:
-		GameState.rom_patch = old_rom
-		GameState.from_dict(previous)
-		GameState.slot = old_slot
-		GameState.in_game = was_in_game
-		return patch_error
 	await fade_out()
 	_enter_game()
 	var map_error := await change_map(map, spawn, GameState.player_facing)

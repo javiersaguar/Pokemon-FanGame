@@ -1,6 +1,6 @@
 # Carga y recorrido ampliado — 2026-10-05
 
-La carga valida el destino antes de mutar la partida o descargar el mapa de origen. PackedScene se conserva en una cache de 16 entradas; no se conservan instancias ni cambios de NPC de visitas anteriores. Los guardados se inspeccionan con peek_state antes de continuar. Un mapa, spawn o coordenada inválidos devuelve Error y conserva mundo, posición y control.
+La carga valida el destino antes de mutar la partida o descargar el mapa de origen. PackedScene se conserva en una cache de 16 entradas; no se conservan instancias ni cambios de NPC de visitas anteriores. Los guardados se inspeccionan con peek_state antes de continuar. Un mapa, spawn o coordenada inválidos devuelve Error y conserva mundo, posición y control. La ROM se valida antes de GameState.new_game: si falla no emite new_game_started, no reconstruye Party/PC y conserva los bloqueos previos.
 
 Entrada directa `-- --map=muestras/ruta` usa default si no se especifica --spawn. La nueva partida del título usa el mapa y spawn de world.mvp_locations/new_game. Se evita el antiguo fallback silencioso para un nombre de spawn equivocado.
 
@@ -10,12 +10,12 @@ Godot 4.7.2, WSL, headless, recursos ya importados. `prepare_ms` es carga/instan
 
 | Mapa | Preparar (ms) | Entrar (ms) | Destinos/apariciones válidos |
 |---|---:|---:|---|
-| muestras/pueblo | 4.834 | 0.922 | Sí |
-| muestras/ruta | 3.859 | 0.687 | Sí |
-| test/muestra_pueblo | 2.123 | 1.140 | Sí |
-| test/muestra_ruta | 2.149 | 0.639 | Sí |
-| test/test_outdoor | 3.891 | 0.567 | Sí |
-| test/test_room | 0.351 | 1.282 | Sí |
+| muestras/pueblo | 5.658 | 1.066 | Sí |
+| muestras/ruta | 4.123 | 0.759 | Sí |
+| test/muestra_pueblo | 2.154 | 1.176 | Sí |
+| test/muestra_ruta | 2.344 | 0.917 | Sí |
+| test/test_outdoor | 4.323 | 1.025 | Sí |
+| test/test_room | 0.616 | 1.754 | Sí |
 
 Informe [JSON](smoke_2026-10-05.json). Reproducir desde el worktree:
 
