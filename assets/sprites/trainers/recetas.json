@@ -1,0 +1,21 @@
+{
+	"_": "Recetas de los entrenadores Panchito (Agente 4): capas del pack 11 (Character Customization Resources Gen 4, de Poltergeist), de abajo arriba, para cada vista. Las monta build_trainers.gd sin reescalar. frente: combate (160x160) -> assets/sprites/trainers/<id>.png; mapa y correr: hojas de 256x256 -> assets/sprites/characters/<id>.png y <id>_run.png; espalda: tira de 875x196 -> assets/sprites/trainers/<id>_back.png. Cada sprite queda pendiente de Javier en docs/arte/seguimiento.md.",
+	"vendedorchupachups": {
+		"idea": "Vendedor de feria: sombrero de paja, camisa de rayas rojas y blancas como los envoltorios, pantalón pirata y bolsa de chupachups.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/capri/capri beige.png",
+			"trainer front male/tops/shirt combo/shirt combo red.png",
+			"trainer front male/hair/hair 3/3 black.png",
+			"trainer front male/hats/straw hat.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/capris/capris beige.png",
+			"overworld walk/tops/shirt combo/shirt combo red.png",
+			"overworld walk/carrying stuff/bag/bag orange.png",
+			"overworld walk/hair/boy 3/boy 3 black.png",
+			"overworld walk/hats/straw hat.png"
+		]
+	}
+}

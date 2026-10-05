@@ -15,6 +15,7 @@ Todos son recursos de fans para fangames sin ánimo de lucro; los sprites de Pok
 | **HGSS for RMXP** v1.2 (valla de madera; casas sin usar) | SirMalo | Crédito: SirMalo | https://eeveeexpo.com/resources/462/ | `assets/tilesets/exterior/vallas.png`, `casas.png` (Agente 4) | 2026-10-05 |
 | **Big Tree Pack** y **Big Flora Pack** | AnonAlpaca (y Magiscarf en lo que no es planta) | Libres con crédito; el autor permite editarlos | https://eeveeexpo.com/resources/602/ y https://eeveeexpo.com/resources/607/ | `assets/tilesets/exterior/arboles.png`, `flora.png` (Agente 4) | 2026-10-05 |
 | **ULTIMATE Gen 4 Overworlds Pack** | PurpleZaffre | "Credit PurpleZaffre if you use anything from this pack" (el pack pide además no redistribuirlo suelto; Javier decidió copiar al repo solo lo que se usa) | https://eeveeexpo.com/resources/609/ | `assets/sprites/characters/` (Agente 4) | 2026-10-05 |
+| **Character Customization Resources (Gen 4)** | Poltergeist (Coffee Cup) | "You can freely edit, use and share the files. Credits would be appreciated but not necessary. If used: Credit to Coffee Cup/ Poltergeist" | https://eeveeexpo.com/resources/317/ | `assets/sprites/trainers/`, `assets/sprites/characters/<clase>.png` (Agente 4, montados con `build_trainers.gd`) | 2026-10-05 |
 
 ## Cómo añadir un recurso
 
