@@ -15,6 +15,8 @@ const SRC_ANIM := 2       ## animados.png: flores y brillos del agua (02)
 const SRC_CASAS := 3      ## casas.png: 01_hgss_for_rmxp (×2)
 const SRC_ARBOLES := 4    ## arboles.png: 03_big_tree_pack (×2)
 const SRC_FLORA := 5      ## flora.png: 04_big_flora_pack (×2)
+const SRC_CASAS_DPPT := 6 ## casas_dppt.png: casas de DPPt del pack 02 (×2 tal cual)
+const SRC_VALLAS := 7     ## vallas.png: valla de madera del pack 01 (×2)
 
 ## Conjunto de terrenos de Godot (pintar con autotile en el editor).
 const TERRAIN_SET := 0
@@ -51,6 +53,9 @@ const COBBLE_LIGHT := Vector2i(0, 18)
 const COBBLE_PINK := Vector2i(0, 20)
 ## Plaza de baldosas redondas: recuadro 3×3.
 const PAVING := Vector2i(4, 18)
+## Calle de baldosas grises en espiga: recuadro 3×3 con hierba en los bordes; el
+## centro (1, 1) se repite sin que se note.
+const PAVING_STONE := Vector2i(0, 27)
 ## Meseta: 3 columnas × 4 filas (2 de hierba arriba, 2 de pared de roca abajo).
 const PLATEAU := Vector2i(0, 22)
 ## Escaleras de la meseta (las 2 filas de la pared).

@@ -40,9 +40,10 @@ static func build() -> void:
 	_animated(ts)
 	_flora(ts)
 	var objects := ExteriorTiles.objects()
-	for src_id: int in [ExteriorTiles.SRC_CASAS, ExteriorTiles.SRC_ARBOLES]:
-		var file := "casas.png" if src_id == ExteriorTiles.SRC_CASAS else "arboles.png"
-		_objects(ts, src_id, file, objects)
+	var object_files := {ExteriorTiles.SRC_CASAS: "casas.png", ExteriorTiles.SRC_ARBOLES: "arboles.png",
+		ExteriorTiles.SRC_CASAS_DPPT: "casas_dppt.png", ExteriorTiles.SRC_VALLAS: "vallas.png"}
+	for src_id: int in object_files:
+		_objects(ts, src_id, object_files[src_id], objects)
 	var err := ResourceSaver.save(ts, OUT + "exterior.tres")
 	print("exterior.tres: ", error_string(err))
 
@@ -115,6 +116,7 @@ static func _gen4(ts: TileSet) -> void:
 	_tile_rect(s, Rect2i(0, 15, 7, 3), "obstacle", WALL)
 	_tile_rect(s, Rect2i(ExteriorTiles.COBBLE_LIGHT, Vector2i(4, 4)), "stone", -1, "stone")
 	_tile_rect(s, Rect2i(ExteriorTiles.PAVING, Vector2i(3, 3)), "stone", -1, "stone")
+	_tile_rect(s, Rect2i(ExteriorTiles.PAVING_STONE, Vector2i(5, 3)), "stone", -1, "stone")
 	# Meseta: solo se pisa el centro de arriba; los bordes y la pared chocan.
 	var p := ExteriorTiles.PLATEAU
 	_tile_rect(s, Rect2i(p, Vector2i(3, 4)), "cliff", WALL)
@@ -185,7 +187,12 @@ static func _objects(ts: TileSet, src_id: int, file: String, objects: Dictionary
 		var tile := s.get_tile_data(coords, 0)
 		tile.texture_origin = Vector2i(T / 2 - size.x * T / 2, size.y * T / 2 - T / 2)
 		tile.y_sort_origin = T / 2 - 1
-		tile.set_custom_data("terrain", "house" if src_id == ExteriorTiles.SRC_CASAS else "tree")
+		var terrain := "tree"
+		if src_id in [ExteriorTiles.SRC_CASAS, ExteriorTiles.SRC_CASAS_DPPT]:
+			terrain = "house"
+		elif src_id == ExteriorTiles.SRC_VALLAS:
+			terrain = "fence"
+		tile.set_custom_data("terrain", terrain)
 		for cell: Vector2i in o["footprint"]:
 			if cell == o["door"]:
 				continue
