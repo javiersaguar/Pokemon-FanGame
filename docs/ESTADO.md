@@ -125,7 +125,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) el aviso de la sesión de 4 agentes, las respuestas de Javier, la tabla de propiedad (el Agente 4 pasa a arte) y la lista de «Próxima sesión». Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión larga, de arriba abajo. Hecho el punto 1 (fase 9.5). Siguiente: fase 9.2, movimientos con script de las especies en uso.
+**En qué estoy:** sesión larga, de arriba abajo. Hechos los puntos 1 a 3. Siguiente: lo que pidan el Agente 1 o el 3 para el MVP; si no hay petición nueva, la fase 9.4 (primero el contrato de los dobles).
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -133,6 +133,8 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 3. ✅ Petición 22: `DataDB.randomizer_input()` (con `stage`, `min_level`, `max_level` y `family_id`) y `apply_patch() -> Array[String]` atómico. Un hash o una referencia mala no toca el parche activo. Consultas nuevas: `tm_compat`, `tutor_compat`, `tm_move`, `tutor_move`. `shiny_odds()` usa `settings.shiny_denominator` del parche. `species()` ya mezcla tipos, estadísticas, evoluciones y objetos equipados, y no reaplicamos `species_map`. El dorado se rehizo: solo cambió `input_hash`.
 4. ✅ Petición 23: el combate aplica muerte permanente (una vez por `uid`, nunca en tutorial), tope de experiencia (`next_ace_level`), modo fijo y límite de objetos. Las Balls no gastan el límite. `prepare_battle` con `tutorial` limpia las reglas del setup.
 5. ✅ Fase 9.5 (2026-10-05, sesión de 4 agentes): habilidades de `species_in_use.json`, objetos equipados de combate y Púas, Púas Tóxicas y Trampa Rocas.
+6. ✅ Fase 9.2: el validador no avisa de ningún movimiento en uso (0 avisos de script; los 17 avisos que quedan son la Pokédex vacía y los iconos de la tienda).
+7. ✅ Fase 9.7: IA 2–4. En 24 combates iguales la IA 4 gana a la 0, y el nivel 3 cambia cuando su ataque no hace daño.
 
 ### Traspaso del randomizer al Agente 4
 
@@ -441,6 +443,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-05 | A2 | §8.5: IA de niveles 2 a 4 (`BattleAI`). El reemplazo del nivel 3 elige al que más daño haría. |
 | 2026-10-05 | A2 | §8.7: habilidades y objetos equipados en el combate (fase 9.5) y trampas Púas, Púas Tóxicas y Trampa Rocas. |
 | 2026-10-05 | A2 | §8.5: `BattleSetup.locke`, `next_ace_level`, `battle_style` y `tutorial`. `pokemon_died` una vez por uid. Tope de experiencia, modo fijo y límite de objetos. `reason = shift` en `BattleRequest` y en `EngineDriver.request()` (`switch_to(-1)` no cambia). El tutorial de `prepare_battle` limpia esas reglas. |
 | 2026-10-05 | A1 | §7c: WorldLocke/LockeBattleDriver, GameState.locke y snapshot persistente; señales Locke, zone_id, contexto tutorial, capturas con mote pendiente, Cementerio y ranuras terminadas. |

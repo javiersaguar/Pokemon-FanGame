@@ -927,7 +927,7 @@ BattleAction.learn_move(forget_index: int)              # -1 = no aprenderlo
 - Precisión y evasión; sueño (1–3 turnos), congelación (20 %), parálisis (25 % y mitad de Velocidad), confusión (33 %), retroceso, veneno (1/8), Tóxico (n/16) y quemadura (1/16).
 - Efectos "por datos" de la Fase 7.6. Los movimientos con `needs_script` hacen solo su parte de datos (daño, cambios de características, estado o curación) hasta la Fase 9; si no tienen ninguna, fallan ("¡Pero falló!"). El validador los lista.
 - Captura (Balls de los datos, captura crítica según `setup.dex_caught_count`), huida, objetos de curación, Balls, Ataque X, Directo y Muñeca Poké, experiencia (también al capturar), EVs, dinero y evoluciones pendientes.
-- IA (`BattleAI`): nivel 0 = movimiento al azar; nivel 1 = el que más daño hace (`engine.estimate_damage()`). Reemplazo: el siguiente del equipo.
+- IA (`BattleAI`): nivel 0 = movimiento al azar; nivel 1 = el que más daño hace (`engine.estimate_damage()`); nivel 2 = evita lo inútil y usa un estado con sentido; nivel 3 = cambia si no puede hacer daño; nivel 4 = puntúa el golpe menos el contraataque. Desde el nivel 3 el reemplazo es el que más daño haría.
 - Más API: `engine.rng`, `engine.turn`, `engine.side(i)`, `engine.estimate_damage(user, target, move)`. Textos en `BattleText` (moneda: `BattleText.CURRENCY`).
 
 **Validador** (Fase 4.6): `godot --headless --path . -s res://tools/validate/validate.gd` (o el test `tests/datos/test_validador.gd`). Errores = especies, movimientos, objetos o clases que no existen, evoluciones por intercambio, niveles o pesos no válidos; avisos = sprites e iconos que faltan y movimientos en uso que necesitan script.
