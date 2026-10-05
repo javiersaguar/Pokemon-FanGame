@@ -17,7 +17,13 @@ const ICON_FRAME_TIME := 0.25
 ## Trozo del fondo "Field" (píxeles del archivo) que se ve detrás del Pokémon: cielo y horizonte.
 const SCENERY_REGION := Rect2(80, 20, 224, 184)
 ## Centro de los pies del sprite en la ventana (píxeles de pantalla).
-const SPRITE_FEET := Vector2(128, 232)
+const SPRITE_FEET := Vector2(112, 256)
+const TAB_ICONS := "res://assets/sprites/ui/summary/tab_icons.png"
+## Carácter a partir del IV más alto (una frase por estadística).
+const TRAITS: Dictionary[StringName, String] = {
+	&"hp": "Resistente.", &"atk": "Luchador.", &"def": "Aguanta bien.",
+	&"spa": "Muy curioso.", &"spd": "Mal genio.", &"spe": "Muy rápido.",
+}
 
 var party: Array[Pokemon] = []
 var index := 0
@@ -59,7 +65,7 @@ func _init() -> void:
 	_canvas.add_child(background)
 	_build_header()
 	_build_card()
-	_add_panel(UI + "battle/databox.png", Rect2(128, 26, 124, 128), 4)
+	_add_panel(UI + "battle/databox.png", Rect2(114, 22, 138, 132), 4)
 	_page_root = Control.new()
 	_page_root.mouse_filter = MOUSE_FILTER_IGNORE
 	_canvas.add_child(_page_root)
@@ -112,47 +118,52 @@ func _unhandled_input(event: InputEvent) -> void:
 # --- Construcción ---
 
 func _build_header() -> void:
-	_add_panel(UI + "battle/panel_message.png", Rect2(0, 0, 256, 22), 3)
-	_add_label(tr("Datos del Pokémon"), Vector2(8, 4), &"LightLabel")
+	_add_panel(UI + "battle/button_azul.png", Rect2(0, 0, 256, 20), 4)
+	_add_label(tr("Ficha"), Vector2(8, 3), &"LightLabel")
+	var icons: Texture2D = load(TAB_ICONS)
 	for i: int in PAGES.size():
-		var tab := _add_panel(UI + "battle/button_claro.png", Rect2(132 + i * 40, 4, 38, 15), 4)
-		var label := _add_label(tr(PAGES[i]), Vector2.ZERO, &"SmallLabel", tab)
-		label.set_anchors_preset(PRESET_FULL_RECT)
-		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		var tab := _add_panel(UI + "battle/button_claro.png", Rect2(168 + i * 28, 2, 26, 16), 4)
+		var icon := TextureRect.new()
+		var atlas := AtlasTexture.new()
+		atlas.atlas = icons
+		atlas.region = Rect2(i * 8, 0, 8, 8)
+		icon.texture = atlas
+		icon.position = Vector2(9, 3)
+		icon.mouse_filter = MOUSE_FILTER_IGNORE
+		tab.add_child(icon)
 		_tabs.append(tab)
 
 
 func _build_card() -> void:
-	_add_panel(UI + "battle/databox.png", Rect2(4, 26, 120, 128), 4)
+	_add_panel(UI + "battle/databox.png", Rect2(4, 22, 108, 132), 4)
 	# Paisaje del fondo de combate a 1:1 (escala 0,5 en el UiCanvas), con el marco encima.
 	var scenery := TextureRect.new()
 	var crop := AtlasTexture.new()
-	crop.atlas = load(UI + "battle/backgrounds/field.png")
-	crop.region = SCENERY_REGION
+	crop.atlas = load(UI + "battle/backgrounds/forest.png")
+	crop.region = Rect2(40, 0, 240, 200)
 	scenery.texture = crop
 	scenery.scale = Vector2(0.5, 0.5)
-	scenery.position = Vector2(8, 30)
+	scenery.position = Vector2(6, 24)
 	_canvas.add_child(scenery)
-	_add_panel(UI + "summary/window_frame.png", Rect2(8, 30, 112, 92), 4)
+	_add_panel(UI + "summary/window_frame.png", Rect2(6, 24, 100, 108), 4)
 	var shadow := TextureRect.new()
 	shadow.texture = load(UI + "battle/shadows/shadow_3.png")
 	shadow.scale = Vector2(0.5, 0.5)
-	shadow.position = Vector2(64 - 34, 110)
+	shadow.position = Vector2(20, 112)
 	_canvas.add_child(shadow)
 	_ball = TextureRect.new()
 	_ball.texture = load("res://assets/sprites/items/pokeball.png")
 	_ball.scale = Vector2(0.5, 0.5)
-	_ball.position = Vector2(7, 126)
+	_ball.position = Vector2(6, 136)
 	_canvas.add_child(_ball)
-	_name = _add_label("", Vector2(31, 128), &"")
+	_name = _add_label("", Vector2(30, 136), &"")
 	_gender = TextureRect.new()
 	_canvas.add_child(_gender)
 	_star = TextureRect.new()
 	_star.texture = load(UI + "icons/shiny_star.png")
 	_canvas.add_child(_star)
-	_level = _add_label("", Vector2(84, 140), &"SmallLabel")
-	_level.size.x = 34
+	_level = _add_label("", Vector2(52, 148), &"SmallLabel")
+	_level.size.x = 52
 	_level.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 
 
@@ -178,9 +189,9 @@ func _refresh() -> void:
 	_name.text = p.display_name()
 	var after := _name.position.x + _name.get_minimum_size().x + 2
 	_gender.texture = BattleDataBox.GENDER_ICONS.get(p.gender)
-	_gender.position = Vector2(after, 132).round()
+	_gender.position = Vector2(after, 140).round()
 	_star.visible = p.shiny
-	_star.position = Vector2(after + (8 if _gender.texture else 0), 132).round()
+	_star.position = Vector2(after + (8 if _gender.texture else 0), 140).round()
 	_level.text = tr("Nv%d") % p.level
 	var ball_path := "res://assets/sprites/items/%s.png" % p.ball
 	_ball.texture = load(ball_path) if ResourceLoader.exists(ball_path) else load("res://assets/sprites/items/pokeball.png")
@@ -196,7 +207,7 @@ func _refresh() -> void:
 func _refresh_page() -> void:
 	for i: int in _tabs.size():
 		_tabs[i].texture = load(UI + ("battle/button_amarillo.png" if i == page else "battle/button_claro.png"))
-		(_tabs[i].get_child(0) as Label).theme_type_variation = &"SmallLightLabel" if i == page else &"SmallLabel"
+		(_tabs[i].get_child(0) as TextureRect).modulate = Color.WHITE if i == page else Color(0.25, 0.25, 0.35)
 	for child: Node in _page_root.get_children():
 		child.queue_free()
 	if party.is_empty():
@@ -213,7 +224,7 @@ func _page_info(p: Pokemon) -> void:
 	var rows: Array = [
 		[tr("Nº"), "%03d" % s.num], [tr("Especie"), s.name], [tr("Tipo"), ""],
 		[tr("EO"), p.original_trainer], [tr("Nº ID"), "%05d" % (p.trainer_id % 100000)],
-		[tr("Exp."), str(p.exp)], [tr("Para subir"), str(p.exp_to_next_level())],
+		[tr("Exp."), str(p.exp)], [tr("Subir"), str(p.exp_to_next_level())],
 	]
 	_rows(rows, 44)
 	var x := 182.0
@@ -240,6 +251,7 @@ func _page_notes(p: Pokemon) -> void:
 	var nature := DataDB.nature(p.nature)
 	var ability := DataDB.ability(p.ability_id())
 	_rows([[tr("Natural."), nature.name if nature else String(p.nature)],
+		[tr("Carácter"), _trait(p)],
 		[tr("Habilidad"), ability.name if ability else String(p.ability_id())],
 		[tr("Objeto"), DataDB.item(p.held_item).name if p.held_item != &"" and DataDB.has_item(p.held_item) else tr("Ninguno")]], 100)
 
@@ -282,9 +294,20 @@ func _rows(rows: Array, y: float) -> void:
 
 func _section(title: String, y: float) -> void:
 	var header := _add_panel(UI + "summary/section.png", Rect2(132, y, 116, 13), 3, _page_root)
-	var label := _add_label(title, Vector2(6, 0), &"TitleLabel", header)
+	var label := _add_label(title, Vector2(6, 0), &"SmallLabel", header)
 	label.size.y = 13
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+
+
+func _trait(p: Pokemon) -> String:
+	var best := &"hp"
+	var best_value := -1
+	for stat: StringName in STATS:
+		var value := int(p.ivs.get(stat, 0))
+		if value > best_value:
+			best_value = value
+			best = stat
+	return tr(TRAITS[best])
 
 
 func _icon_atlas(p: Pokemon) -> AtlasTexture:

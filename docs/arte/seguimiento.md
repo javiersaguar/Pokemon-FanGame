@@ -53,5 +53,5 @@ Dibujado a mano píxel a píxel con la paleta maestra en archivos de texto (`ass
 | Destello de shiny (`ui/battle/shiny_sparkle.png`, 3 frames) | Animación de combate | A3 | animado | Propio | ⏳ | DIRECTRICES §8. El sonido `shiny` falta (no hay pack de sonidos) |
 | Poké Ball de la captura (`ui/battle/ball.png`) | Combate | A3 | integrado | Propio | ⏳ | La sacudida es un movimiento de 1 píxel, sin rotar |
 | Cursor y flecha de continuar (`ui/cursor_*.png`) | UI | A3 | animado | Propio | ⏳ | |
-| Ficha del Pokémon: ventana, fondo de rayas y cabeceras (`ui/summary/`) | UI | A3 | integrado | Propio | ⏳ | |
+| Ficha del Pokémon: ventana, fondo saturado, cabeceras amarillas e iconos de pestaña (`ui/summary/`) | UI | A3 | integrado | Propio | ⏳ | Respuesta de Javier: sin gris dominante, sprite más grande, encuentro, naturaleza y carácter. Comparativa `datos_lado_a_lado.png` |
 | Símbolo del dinero `₽` (`assets/fonts/pokedolar/`, fuentes `assets/_fuentes/fuentes/pokedolar*.px`) | Glifo de fuente | A3 | integrado | Propio | ⏳ | *Truth and Ideals* no lo trae (petición 11). Una P con dos barras en el palo, con el trazo de 1 px y la altura de las mayúsculas de cada fuente (6×10 la normal, 4×7 la pequeña). Va como fuente de respaldo del Theme, así que sale en cualquier texto con `₽` |
