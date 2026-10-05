@@ -39,6 +39,8 @@ func intro() -> void:
 	GameState.rival_name = str(param("rival_name", "")).strip_edges()
 	if GameState.rival_name.is_empty():
 		GameState.rival_name = await request_name(&"rival", GameState.rival_name)
+	if is_instance_valid(SceneManager.player):
+		SceneManager.player.refresh_appearance()
 	await say("¡{player}, tu aventura empieza ahora! Tu rival se llama {rival}.")
 	GameState.set_flag(&"story_intro_done")
 	GameState.set_var(&"story_progress", 10)
@@ -64,7 +66,7 @@ func rival_setup() -> BattleSetup:
 	var trainer_id := StringName(config().get("rival_by_starter", {}).get(index, ""))
 	if trainer_id == &"" or not DataDB.has_trainer(trainer_id):
 		return null
-	return BattleSetup.trainer(trainer_id, {"can_lose": true, "locke_rules": false})
+	return BattleSetup.trainer(trainer_id, {"can_lose": true, "tutorial": true})
 
 func rival() -> void:
 	if not GameState.flag(&"starter_chosen") or GameState.flag(&"rival_intro_done"):

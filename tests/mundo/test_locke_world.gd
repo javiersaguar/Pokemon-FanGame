@@ -114,6 +114,8 @@ func test_tutorial_excluido_y_modo_normal_sin_adaptador() -> void:
 	var setup := BattleSetup.trainer(&"rival_lab_1", {"can_lose": true})
 	assert_same(SceneManager.prepare_battle(setup, {"tutorial": true}), setup)
 	assert_false(setup.locke_rules)
+	assert_null(setup.locke, "tutorial excluye también EXP/objetos/modo")
+	assert_true(setup.tutorial)
 	assert_eq(GameState.locke.rules.snapshot().encounters, {})
 	GameState.new_game()
 	setup = BattleSetup.wild(&"pidgey", 3)
