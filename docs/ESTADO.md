@@ -184,7 +184,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05, sesión de 4 agentes) el último aviso, las respuestas de Javier, la tabla de propiedad nueva y mi lista de «Próxima sesión». El arte del mundo y de los entrenadores es del Agente 4; yo sigo con la interfaz, el audio, los datos de entrenadores y `TrainerNPC`. Worktree `pokemon-panchito-agente3`, rama `feat/agente3-sesion`.
 
-**En qué estoy:** lista de la sesión, de arriba abajo. ✅ Tarea 1 (traspaso). Siguiente: tarea 2, combate (botones con relieve, el mejor fondo con lo que hay y el hueco de EBDX).
+**En qué estoy:** lista de la sesión, de arriba abajo. ✅ Tareas 1 y 2. Siguiente: tarea 3, ficha del Pokémon rehecha.
 
 ### Traspaso al Agente 4 — entrenadores Panchito (pack 11)
 
@@ -200,6 +200,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - **Decisiones que no tomé** (aspecto de cada clase: ropa, pelo, color de piel): son tuyas, y cada sprite queda pendiente de Javier en `docs/arte/seguimiento.md`. Si una clase necesita una pieza que el pack no tiene, pregunta a Javier en vez de dibujarla por código.
 
 **Terminado:**
+- **Combate, respuesta 12** (2026-10-05): botones con borde oscuro y relieve (luz arriba, sombra abajo) en `assets/_fuentes/ui/boton.px`. La hierba usa el fondo *Forest* del pack 10 (el más verde; ninguno trae árboles). Hueco de bases: `assets/sprites/ui/battle/bases/<entorno>.png`, con `default.png` provisional (óvalo propio) mientras no llegue EBDX. Comparativa: `docs/arte/comparativas/combate_lado_a_lado.png`.
 - **Validador de arte a 0 errores** (petición 26, 2026-10-05): tilesets, personajes, efectos y Pokémon de los packs se comprueban solo en tamaño; regla `grid` para los Pokémon que te siguen (4×4) y los iconos (2×1) con cuadros cuadrados de cualquier lado (los Pokémon grandes del pack traen cuadros de 70, 80 o 128); efectos y `objects.png` en cuadros de 32; `pack_exceptions` para lo que el pack trae con un tamaño raro (solo avisa). La lógica pasa a `tools/arte/art_validator.gd` y **ahora es un test** (`tests/ui/test_arte.gd`), así que `main` no puede volver a tener errores sin que falle la suite. Quedan 4 avisos: petición 29.
 - **Regla R.2 en el contenido** (peticiones 16 y 11, 2026-10-05): `data/starters.json` (Kanto provisional, pregunta 1), `gifts.json`, `statics.json` y `trades.json` (vacíos, con formato y ejemplo en comentarios). `Dialogue.format_text()` resuelve los marcadores `{starter:…}`, `{gift:…}`, `{static:…}`, `{trade:…}`, `{species:…}` e `{item:…}` con `DataDB.resolve_markers()`, también con el parche de RandomLocke. **Dinero `₽`** dibujado a mano como fuente bitmap de respaldo del Theme (*Truth and Ideals* no lo trae), en las dos fuentes; apuntado en `docs/arte/seguimiento.md` para que lo apruebe Javier.
 - Borrador de `docs/GDD.md` (Fase 2): estructura completa, con las decisiones de diseño marcadas **PENDIENTE JAVIER** (resumen de las que bloquean el MVP en su §0).
@@ -223,7 +224,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
   - `docs/arte/BIBLIA.md` reescrita con la escala real de los packs, `seguimiento.md` y `licencias.md` al día (Generation 9 Pack incluido) y créditos en `CREDITOS.md`. Mi antigua `docs/arte/recursos.md` se ha borrado (la sustituye `recursos_terceros.md`).
   - Validador de arte con los tamaños de los packs (petición 19) y exportador del arte propio (`tools/arte/exportar.gd`).
 
-**Bloqueos:** para igualar a Añil en el combate faltan bases y elementos del entorno de los fondos (pregunta 13).
+**Bloqueos:** los árboles y las bases de verdad del combate esperan a que Javier descargue *Elite Battle: DX* (respuesta 13). El hueco ya está (petición 34).
 
 **Notas:**
 - Equipos y encuentros usan especies **provisionales** (iniciales de Kanto para el rival, Swirlix y Milcery para Manolo, la tabla de ejemplo de la guía en la Ruta 1) hasta que Javier decida la Pokédex (pregunta 5).
@@ -360,6 +361,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 31 | A2 → A3 | `EngineDriver.request()` de un cambio incluye `reason`. `&"shift"` se puede rechazar (`party_index` -1 = se queda). El motor solo lo pide con `battle_style = shift`; el modo fijo de Locke no lo pide. Hasta el menú de opciones no hace falta dibujarlo. | pendiente |
 
 | 33 | A1 → A3 | Eventos MvpStoryEvent listos para teclado/tienda de bloque II. `Cutscene.name_requested(kind,initial)` abre nombres; responder `Cutscene.submit_name(kind,value)` (player/rival). Sala usa POR DEFINIR explícito. `ShopScreen.open(shop_id)` ya es contrato; dependiente conectado a tienda_ciudad2. | pendiente |
+| 34 | A3 → A4 | Fondos y bases de combate. Fondos: `assets/sprites/ui/battle/backgrounds/<archivo>.png` (384×308, a ×2 encuadrado; el mapa entorno→archivo está en `BattleBackground.FILES`). Bases: `assets/sprites/ui/battle/bases/<entorno>.png` (pies del Pokémon en el centro vertical). Si existe, la escena la usa y si no, `default.png`. Cuando llegue EBDX, sustituye esos PNG (hierba, bosque, cueva, agua, ciudad, interior, día y noche) sin tocar la escena. | pendiente |
 
 
 ---
