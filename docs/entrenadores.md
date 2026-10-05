@@ -11,6 +11,8 @@ Registro de clases y entrenadores (Fase 10 de la guía). **Imprescindible para e
 
 Leyenda de sprites: ✅ terminado · 🟨 provisional (placeholder) · ⏳ falta.
 
+Los **sprites** (combate y mapa) los monta el **Agente 4** con el pack 11. El traspaso (qué hay, rutas y orden) está en `docs/ESTADO.md`, sección del Agente 3. Los datos de esta página siguen siendo del Agente 3.
+
 ---
 
 ## 1. Registro de entrenadores

@@ -176,9 +176,22 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 3 — Presentación, UI y contenido Panchito
 
-**He leído `docs/DIRECTRICES.md`** (versión del 2026-10-05: vuelven a ser 3 agentes) y el plan de «Próxima sesión». `core.hooksPath .githooks` activo en mi copia. Sigo mis bloques de arriba abajo; el II espera a que Javier apruebe la prueba de nivel gráfico (preguntas 12–14).
+**He leído** (2026-10-05, sesión de 4 agentes) el último aviso, las respuestas de Javier, la tabla de propiedad nueva y mi lista de «Próxima sesión». El arte del mundo y de los entrenadores es del Agente 4; yo sigo con la interfaz, el audio, los datos de entrenadores y `TrainerNPC`. Worktree `pokemon-panchito-agente3`, rama `feat/agente3-sesion`.
 
-**En qué estoy (2026-10-05):** bloque I. ✅ Tareas 1, 2 y 3 (`TrainerNPC`). Siguiente: tarea 4, entrenadores Panchito uno a uno, empezando por el Vendedor de Chupachups y el rival.
+**En qué estoy:** lista de la sesión, de arriba abajo. ✅ Tarea 1 (traspaso). Siguiente: tarea 2, combate (botones con relieve, el mejor fondo con lo que hay y el hueco de EBDX).
+
+### Traspaso al Agente 4 — entrenadores Panchito (pack 11)
+
+**No hay sprites montados ni archivos copiados.** Solo miré el pack. Tú eres el dueño de `assets/sprites/trainers/` y `assets/sprites/characters/` y de montarlos.
+
+- **Pack** (fuera del repo, no se modifica): `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/11_character_customization_gen4/pokemon png/`. Piezas por capas, no personajes hechos.
+  - Mapa: `overworld walk`, `overworld run` y `overworld bike`, cada uno con `bases mf`, `bottoms`, `tops`, `hair`, `hats` y `carrying stuff`. La base de muestra mide **256×256** (4×4 cuadros de 64, el tamaño del contrato).
+  - Combate: `trainer front male|female` (base, bottoms, tops, hair, hats) y `trainer back male|female` (base, clothing, hair, hat). El lienzo de frente que aprobó Javier es **160×160** (`BIBLIA.md` §5).
+  - Hay `example sprites.png`, `examples.png` y `clothes list.docx` en esa carpeta.
+- **Rutas ya reservadas** en `data/trainer_classes.json` (siguen siendo mías; si cambias un nombre de archivo, dímelo): `res://assets/sprites/trainers/<clase>.png` y `<clase>_f.png`, y `res://assets/sprites/characters/<clase>.png` (y `_f`). `TrainerNPC` usa el del mapa si el archivo existe y, si no, el personaje genérico de la escena.
+- **Orden** (tu tarea 8): Vendedor de Chupachups, rival, profesor, protagonistas, y después el resto de las 20 clases de `docs/entrenadores.md`. Javier aprobó esas clases y los textos provisionales de Manolo y del rival (respuesta 6).
+- **Propuesta de script** (tuya, junto a los sprites, como `assets/tilesets/exterior/build_exterior.gd`): `assets/sprites/trainers/build_trainers.gd`, que componga las capas y escriba el PNG. No lo he escrito.
+- **Decisiones que no tomé** (aspecto de cada clase: ropa, pelo, color de piel): son tuyas, y cada sprite queda pendiente de Javier en `docs/arte/seguimiento.md`. Si una clase necesita una pieza que el pack no tiene, pregunta a Javier en vez de dibujarla por código.
 
 **Terminado:**
 - **Validador de arte a 0 errores** (petición 26, 2026-10-05): tilesets, personajes, efectos y Pokémon de los packs se comprueban solo en tamaño; regla `grid` para los Pokémon que te siguen (4×4) y los iconos (2×1) con cuadros cuadrados de cualquier lado (los Pokémon grandes del pack traen cuadros de 70, 80 o 128); efectos y `objects.png` en cuadros de 32; `pack_exceptions` para lo que el pack trae con un tamaño raro (solo avisa). La lógica pasa a `tools/arte/art_validator.gd` y **ahora es un test** (`tests/ui/test_arte.gd`), así que `main` no puede volver a tener errores sin que falle la suite. Quedan 4 avisos: petición 29.
