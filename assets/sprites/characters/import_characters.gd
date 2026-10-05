@@ -37,6 +37,7 @@ const CHARACTERS := {
 	"effects/grass_rustle": "Animations & Others/GrassDP1.png",
 	"effects/shiny_sparkles": "Animations & Others/Sparkles1.png",
 	"effects/jump_dust": "Animations & Others/AfterJumpDust.png",
+	"effects/water_splash": "Animations & Others/Splash.png",
 }
 
 
