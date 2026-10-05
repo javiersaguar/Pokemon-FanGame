@@ -584,6 +584,11 @@ Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al mo
 
 ---
 
+## 7d. Identidades de mundo (A1, 2026-10-05)
+
+`world.names`: town, city_2, professor, rival, region, todos POR DEFINIR hasta decisión de Javier. `WorldNames.value(key)` y `WorldNames.resolve(text)`; marcadores `{world:clave}`. NPC, carteles, MvpStoryEvent y MapRoot.get_display_name los resuelven. `{player}` / `{rival}` siguen en Dialogue y se guardan por partida; no se sobrescriben al cambiar las identidades del diseño. Pedido a A3 aplicar resolución también en Dialogue.format_text (petición 34). Recompensa de profesor: world.mvp_story.reward.quantity=5. Reloj real y dinero inicial 3000 ya estaban correctos y se verifican sobre datos reales.
+
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).

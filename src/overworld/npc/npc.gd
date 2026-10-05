@@ -74,7 +74,7 @@ func _on_interact(_player: Player) -> void:
 		await Cutscene.play(event, self, event_params)
 		return
 	for line: String in lines:
-		await Dialogue.say(line, display_name)
+		await Dialogue.say(WorldNames.resolve(line), WorldNames.resolve(display_name))
 
 
 func _reset_wander_timer() -> void:

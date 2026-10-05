@@ -48,7 +48,6 @@ func before_each() -> void:
 	_starters = DataDB._starters.duplicate(true)
 	DataDB._starters = {"starter_1": {"species": "bulbasaur", "level": 5}, "starter_2": {"species": "charmander", "level": 5}, "starter_3": {"species": "squirtle", "level": 5}}
 	GameState.new_game()
-	GameState.world_config.mvp_story.reward.quantity = 5
 
 func after_each() -> void:
 	GameState.world_config = _config

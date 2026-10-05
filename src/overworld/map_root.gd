@@ -59,7 +59,7 @@ func get_zone_id() -> StringName:
 
 
 func get_display_name() -> String:
-	return data.display_name if data else String(get_map_id())
+	return WorldNames.resolve(data.display_name) if data else String(get_map_id())
 
 
 func get_ground() -> TileMapLayer:

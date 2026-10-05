@@ -26,19 +26,35 @@
   },
   "shiny": {
     "odds": 4096,
-    "rolls": {"base": 1, "shiny_charm": 3, "masuda": 6, "masuda_shiny_charm": 8}
+    "rolls": {
+      "base": 1,
+      "shiny_charm": 3,
+      "masuda": 6,
+      "masuda_shiny_charm": 8
+    }
   },
   "clock": {
     "mode": "real",
     "periods": [
-      {"id": "morning", "from_hour": 4},
-      {"id": "day", "from_hour": 10},
-      {"id": "evening", "from_hour": 17},
-      {"id": "night", "from_hour": 20}
+      {
+        "id": "morning",
+        "from_hour": 4
+      },
+      {
+        "id": "day",
+        "from_hour": 10
+      },
+      {
+        "id": "evening",
+        "from_hour": 17
+      },
+      {
+        "id": "night",
+        "from_hour": 20
+      }
     ]
   },
   "mvp_story": {
-    "professor_name": "POR DEFINIR",
     "bedroom": {
       "map": "test/test_room",
       "spawn": "bedroom"
@@ -54,7 +70,14 @@
     },
     "reward": {
       "placement_id": "test/test_outdoor/PokeBalls",
-      "quantity": null
+      "quantity": 5
     }
+  },
+  "names": {
+    "town": "POR DEFINIR",
+    "city_2": "POR DEFINIR",
+    "professor": "POR DEFINIR",
+    "rival": "POR DEFINIR",
+    "region": "POR DEFINIR"
   }
 }

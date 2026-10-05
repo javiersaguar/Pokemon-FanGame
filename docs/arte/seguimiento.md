@@ -38,6 +38,12 @@ Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador h
 | *Truth and Ideals* (`assets/fonts/truth_and_ideals/`) | Fuente | A3 | integrado | *Gen 5 Font – Truth and Ideals*: bonzairob | ⏳ | Tamaño 10 en el UiCanvas (= 20 px en pantalla, píxel de 2×2). Tiene ñ, tildes, ü, ¿¡, ♂, ♀ y ★; le faltan €, — y · |
 | Pixel Operator (`assets/fonts/`) | Fuente | A3 | sustituido | Jayvee Enaguas, CC0 1.0 | — | Ya no la usa el Theme; se borrará si Javier aprueba *Truth and Ideals* |
 
+## Integraciones de mundo (A1)
+
+| Comportamiento | Dueño | Estado | Comparativa | Aprobado por Javier |
+|---|---|---|---|---|
+| Recompensa profesor (5 Poké Balls), nombres POR DEFINIR centralizados; usa cuadro de diálogo A3 | A1 | integrado | `comparativas/recompensa_profesor.md` | Cantidad: respuesta 18 del 2026-10-05; captura pendiente |
+
 ## Arte propio
 
 Dibujado a mano píxel a píxel con la paleta maestra en archivos de texto (`assets/_fuentes/ui/*.px`) y exportado con `tools/arte/exportar.gd`. Se dibuja a 1× y se ve a ×2 en un `UiCanvas` (escala entera, vecino más próximo), que en pantalla es lo mismo que exportarlo a ×2.

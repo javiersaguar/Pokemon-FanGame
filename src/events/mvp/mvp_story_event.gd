@@ -29,7 +29,7 @@ func run() -> void:
 func intro() -> void:
 	if GameState.flag(&"story_intro_done"):
 		return
-	await say("¡Bienvenido al mundo Pokémon! Soy el profesor {professor}.", {"professor": config().get("professor_name", "POR DEFINIR")})
+	await say("¡Bienvenido al mundo Pokémon! Soy el profesor {world:professor}.")
 	var gender := await choose("¿Cómo quieres empezar?", PackedStringArray(["Chico", "Chica"]))
 	GameState.player_gender = &"female" if gender == 1 else &"male"
 	# Identidades explícitas en sala; flujo definitivo pide teclado de A3.
@@ -38,7 +38,7 @@ func intro() -> void:
 		GameState.player_name = await request_name(&"player", GameState.player_name)
 	GameState.rival_name = str(param("rival_name", "")).strip_edges()
 	if GameState.rival_name.is_empty():
-		GameState.rival_name = await request_name(&"rival", GameState.rival_name)
+		GameState.rival_name = await request_name(&"rival", WorldNames.value(&"rival"))
 	if is_instance_valid(SceneManager.player):
 		SceneManager.player.refresh_appearance()
 	await say("¡{player}, tu aventura empieza ahora! Tu rival se llama {rival}.")
@@ -109,7 +109,7 @@ func rewards() -> void:
 
 # Tests sustituyen solo presentación, manteniendo eventos y motor reales.
 func say(text: String, values: Dictionary = {}) -> void:
-	await Dialogue.say(text, config().get("professor_name", "POR DEFINIR"), values)
+	await Dialogue.say(WorldNames.resolve(text), WorldNames.value(&"professor"), values)
 func choose(text: String, options: PackedStringArray) -> int:
 	return await Dialogue.ask(text, options, null, Dialogue.NO_CANCEL)
 func request_name(kind: StringName, initial: String) -> String:

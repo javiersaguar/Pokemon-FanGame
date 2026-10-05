@@ -13,3 +13,5 @@ No añade mapas ni pantallas nuevos. Ejecutar F5: se sigue entrando en `test/tes
 Configuración de guion en `data/world.json.mvp_story`; flags en docs/flags.md. Al crear los mapas reales se cambian los destinos, sin escribir equipos/especies/objetos en los eventos.
 
 Pruebas: `tests/mundo/test_mvp_story.gd` usa eventos y motor reales, sustituye solo presentación para el guion y prueba también teletransporte, evento ON_ENTER, derrota y enfermera en la escena de sala real. `test_locke_world.gd` prueba la integración Locke. El cierre completo v0.1 sin Debug sigue en bloque II, después de aprobación gráfica.
+
+Decisión 2026-10-05: el profesor entrega **5 Poké Balls**, una sola vez. Reloj real y dinero inicial 3000. Nombres de diseño en `world.names`, marcadores `{world:clave}`; siguen POR DEFINIR. Las referencias anteriores a cantidad pendiente quedan supersedidas por la respuesta de Javier.
