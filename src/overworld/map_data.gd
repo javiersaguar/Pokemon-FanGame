@@ -15,6 +15,8 @@ extends Resource
 @export var weather: StringName = &"none"
 ## Id del JSON de data/encounters/ (sin extensión). Vacío = sin encuentros.
 @export var encounter_table: StringName
+## Zona compartida por plantas/mapas para primera captura; vacío usa tabla o ID del mapa.
+@export var zone_id: StringName
 ## Probabilidad de encuentro por paso en hierba alta. 0 = la de data/world.json
 ## (encounters.step_chance).
 @export_range(0.0, 1.0, 0.01) var encounter_rate := 0.0

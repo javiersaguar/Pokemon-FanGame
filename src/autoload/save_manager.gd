@@ -62,6 +62,8 @@ func last_used_slot() -> int:
 ## Guarda la partida en `slot` (0 = la ranura en curso). Con la miniatura y, en
 ## RandomLocke, el parche de la ROM.
 func save_game(slot: int = 0) -> Error:
+	if GameState.locke != null:
+		GameState.locke.sync()
 	if slot <= 0:
 		slot = current_slot()
 	var data := {
@@ -288,6 +290,10 @@ func _migrate(data: Dictionary) -> Dictionary:
 		return {}
 	while version < GameState.SAVE_VERSION:
 		match version:
+			1:
+				# v2 añade snapshot Locke/pendientes; WorldLocke restaura el legado sin regenerar la ROM.
+				version = 2
+				data["save_version"] = version
 			_:
 				push_error("SaveManager: no hay migración desde save_version %d." % version)
 				return {}

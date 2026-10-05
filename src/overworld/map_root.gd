@@ -47,6 +47,17 @@ static func _collect(dir_path: String, out: Array[StringName]) -> void:
 			out.append(id_from_path(dir_path + entry))
 
 
+## Identidad persistente de captura: export > tabla de datos > ID del mapa.
+func get_zone_id() -> StringName:
+	if data != null and data.zone_id != &"":
+		return data.zone_id
+	if data != null and data.encounter_table != &"" and DataDB.has_encounter_table(data.encounter_table):
+		var table := DataDB.encounter_table(data.encounter_table)
+		if str(table.get("zone_id", "")) != "":
+			return StringName(table.zone_id)
+	return get_map_id()
+
+
 func get_display_name() -> String:
 	return data.display_name if data else String(get_map_id())
 

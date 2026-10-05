@@ -55,11 +55,12 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 1 — Mundo y arquitectura
 
-**He leído `docs/DIRECTRICES.md`** §0, §7, §7.1 y §8 (versión del 2026-10-04 con los recursos descargados), las capturas de `docs/arte/referencias/` y `docs/arte/recursos_terceros.md`, y he reordenado mi plan. También las órdenes nuevas: petición 18 aceptada, sin Git LFS (todo `binary`) y **quien mergea a `main` lo sube a GitHub en el momento**.
+**He leído** (2026-10-05) las DIRECTRICES actuales, el último aviso y «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente1`, rama `feat/agente1-bloque-i`, actualizado desde `origin/main`; autoría de Javier y hooks activos.
 
-**En qué estoy:** prueba de nivel gráfico (§7, paso 3) **entregada a Javier para revisión** (pregunta 17). Mientras la revisa: eventos de la historia del MVP (intro del profesor, laboratorio y rival) con la API de cinemáticas y la regla R.2, sin mapas visibles nuevos.
+**En qué estoy:** bloque I, tarea 1 terminada; siguiente: historia del MVP en la sala existente (tarea 2). Bloque II y cierre de v0.1 esperan aprobación gráfica (preguntas 12, 14 y 17).
 
 **Terminado:**
+- **Bloque I.1 / petición 24 (2026-10-05):** WorldLocke/LockeBattleDriver (§7c), primera captura por zone_id antes del combate, autorización de Balls sin gasto para encuentros prohibidos, duplicados/shiny, inicial poseído, regalos, resolución run/KO/captura, mote pendiente sin inventarlo, Cementerio idempotente y retirada de party/PC, superviviente PC, game over y rechazo de continuar finished. Snapshot/familias/pendientes guardados; SAVE_VERSION 2 con migración v1 que conserva zonas/contadores sin inventar lápidas. **206/206 tests, 3121 aserciones, 45,8 s, 0 pending**, import limpio y arranque gráfico sin errores de script/recursos (audio Dummy por entorno WSL). Teclado de motes y pantallas de Cementerio/game over quedan a A3, petición 29.
 - Paso 0, el esqueleto: proyecto de Godot 4.7.2, estructura de carpetas, GUT 9.7.1, Input Map, escena `Main` (World/Battle/UI/Transition), autoloads, `GameState`, `SaveManager` (`save_version`, `.tmp` → `.bak` → renombrar, migraciones), `SceneManager` (mapas con fundido, combate, derrota → Centro Pokémon, pila de menús, flujo de partida), `Clock`, menú Debug (F9) con `Debug.register_command()`, `docs/contratos.md` §0–7, `docs/flags.md` y `docs/mapas/reservas.md`.
 - **Fase 5** (`contratos.md` §5):
   - Jugador por casillas: toque corto = girar, pasos encadenados sin parones, correr, choque con la pared (`bump`) y `EventBus.player_stepped`.
@@ -84,7 +85,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - Tests en `tests/mundo/`: GameState, SaveManager (también ranuras, copia y RandomLocke), mapas, encuentros, eventos y objetos colocados.
 - Integración: he unido `origin/main` (las directrices de Javier) con el `main` local de los agentes. **El `main` local no está subido a GitHub** (pregunta 10).
 
-**Bloqueos:** mapas de muestra → recursos en `assets/_terceros/` (Javier). Fase 8 → `BattleSetup` (petición 1), pantallas del Agente 3 y preguntas 1 y 2.
+**Bloqueos:** bloque I sin bloqueo de motor. Las pantallas de nombres/tienda las integra A3; se publican interfaces para probar los eventos. Bloque II: aprobación gráfica, recursos de interiores/sombra y decisiones GDD (preguntas 1, 2, 3, 5, 17).
 
 ---
 
@@ -301,12 +302,14 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 21 | A1 → A3 | Lo mismo para el audio: sin Git LFS, los `.ogg`/`.wav` se suben como binarios normales. | informativo |
 | 22 | A4 → A2 | §10 v2 conserva parche species A2 y añade entrada pura, MT/tutores y held_items. Mantengo data/randomizer.json por compatibilidad. Añadir randomizer_input y apply_patch atómico con hash; consultas nuevas y shiny según ajuste. | hecha (A2, 2026-10-05): `randomizer_input()`, `apply_patch()` atómico, MT/tutores, objetos equipados en `species()` y shiny según el parche. `data/randomizer.json` se retiró en el punto 1 del bloque I |
 | 23 | A4 → A2 | pokemon_died ya existe; conectar reglas individuales LockeRules (permadeath, EXP cap, fijo, objetos); una muerte por uid, excluir tutoriales. | pendiente |
-| 24 | A4 → A1 | Integrar LockeRules/zone_id: registrar ANTES de combate, resolver encounter_id al capturar/huir/KO; guardar snapshot/familias; registrar inicial poseído, Cementerio/game over. Modo/ranuras/parche ya existen: conservar. | pendiente |
+| 24 | A4 → A1 | Integrar LockeRules/zone_id: registrar ANTES de combate, resolver encounter_id al capturar/huir/KO; guardar snapshot/familias; registrar inicial poseído, Cementerio/game over. Modo/ranuras/parche ya existen: conservar. | hecha (A1, 2026-10-05): adaptador WorldLocke/LockeBattleDriver, §7c; UI de mote/Cementerio pendiente A3, señal y API publicadas |
 | 25 | A4 → A3 | Pantallas R.8 leen schema/presets y snapshot LockeRules; §10 conserva API A2. SpoilerLog puro devuelve texto para exportación bajo demanda. Cementerio/zonas/motes/game over. | pendiente |
 | 26 | A1 → A3 | `tools/arte/reglas.json`: (a) quita `assets/tilesets/placeholder/` y `assets/sprites/characters/placeholder/` (ya no existen); (b) `assets/tilesets/exterior/` y `assets/sprites/characters/` son de terceros (sin paleta maestra) y van a la escala de los packs: casillas de 32 px, personajes en cuadros de 64×64, `objects.png` en cuadros de 32 y `effects/` en cuadros cuadrados de 32; (c) los Pokémon que te siguen (`assets/sprites/pokemon/followers*`) son hojas de 256×256 en cuadros de 64. Ahora el validador da 97 errores por esto. | hecha (A3): todo eso y además los Pokémon grandes (rejillas de cuadros cuadrados de cualquier lado). 0 errores, y ahora es un test (`tests/ui/test_arte.gd`) |
 | 27 | A1 → A3 | Sonidos que pide el mundo y que AudioManager aún no tiene: SE `jump` (salto de bordillo) y `shiny` (el Pokémon que te sigue aparece y es shiny). | pendiente |
 | 28 | A1 → A4 | Aviso: `data/item_placements.json` cambia cada vez que se añaden o se quitan objetos del suelo (ahora están los de los mapas de muestra), así que el test del parche dorado del randomizer se queda *pending*. Rehazlo cuando puedas (`PANCHITO_UPDATE_GOLDEN=1`). | hecha (A2, 2026-10-05): `golden_clasico_v2.json` rehecho; 0 tests *pending* |
 | 29 | A3 → A2 | El Generation 9 Pack trae a **96×96** (la mitad) 4 sprites de frente: `front/greninjamega`, `front_shiny/greninjamega`, `front_shiny/malamarmega` y `front_shiny/victreebelmega`; en combate se verían a la mitad de tamaño. Están en `pack_exceptions` de `tools/arte/reglas.json` (solo avisan). ¿Hay versión de 192 en `07_generation8_pack` u otro sitio, o los marcas como sin sprite en `pokemon_assets.json`? Si lo arreglas, quítalos de `pack_exceptions`. | pendiente |
+
+| 29 | A1 → A3 | Integración Locke del mundo lista (§7c): señales `locke_nickname_requested(token,pokemon)`, `locke_state_changed`, `locke_game_over(snapshot)`. Al recibir mote llamar `GameState.locke.complete_capture(token,nombre)`; también consultar `pending` restaurados, sin inventar mote. Captura/inicial permanecen pendientes y el mundo bloqueado hasta nombre válido. Leer `rules.snapshot().cemetery` para UI. | pendiente |
 
 ---
 
@@ -337,6 +340,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-05 | A1 | §7c: WorldLocke/LockeBattleDriver, GameState.locke y snapshot persistente; señales Locke, zone_id, contexto tutorial, capturas con mote pendiente, Cementerio y ranuras terminadas. |
 | 2026-10-04 | A1 | §0 y §5: **casillas de 32 px** y cámara del mundo con `zoom = 1` (`Grid.TILE` = 32, `Grid.ART_PIXEL`, `Grid.round_to_art_pixel()`). Nueva capa `Entities/Objects` (casas y árboles con y-sort). TileSet de exteriores en `assets/tilesets/exterior/` (se retira el provisional). Personajes en cuadros de 64×64 del pack 05 (se retiran los provisionales). `Character`: `run_sprite_sheet`, `step(..., running)`, `jump()`, `is_tile_free()` y la señal `step_started`. Nueva clase `Follower`; `SceneManager.player_follower`; `MapData.followers_allowed`; `data/world.json` → `followers.enabled`. `MapRoot.tile_custom_data()` devuelve el primer valor no vacío. |
 | 2026-10-04 | A3 | §9.4: el **Theme global** usa ahora *Truth and Ideals* a **tamaño 10**, pensado para pantallas dentro de un **`UiCanvas`** (`src/ui/widgets/ui_canvas.gd`, 256×192 a ×2): ahí se ve a 20 px con píxel de 2×2. Una pantalla a 1:1 sin `UiCanvas` verá el texto a 10 px. Nuevos `TypeIcons` (iconos de tipo de Loaky), `BattleButton` y `SummaryScreen.open()`. La BattleScene tiene el campo a 1:1 (`World`) y la interfaz en un `UiCanvas`. |
 | 2026-10-04 | A1 | Sin Git LFS: `.gitattributes` trata el audio, `.psd` y `.aseprite` como `binary`. Nueva norma de Javier: quien mergea a `main` local hace `git push origin main` en el momento. |

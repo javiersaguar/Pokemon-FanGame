@@ -178,6 +178,8 @@ func teleport(map_id: StringName, spawn_id: StringName = MapRoot.DEFAULT_SPAWN,
 
 
 func heal_party() -> void:
+	if GameState.locke != null:
+		GameState.locke.remove_dead()
 	var party := GameState.party as Party
 	if party:
 		party.heal_all()
@@ -202,12 +204,16 @@ func give_item(item_id: StringName, quantity: int = 1, announce: bool = true) ->
 
 ## Da un Pokémon (al equipo o, si está lleno, al PC), lo apunta en la Pokédex y lo
 ## anuncia. Devuelve "party", "pc" o "" si no cabe.
-func give_pokemon(pokemon: Pokemon, announce: bool = true) -> String:
+func give_pokemon(pokemon: Pokemon, announce: bool = true, source: String = "gift") -> String:
 	pokemon.original_trainer = GameState.player_name
 	pokemon.trainer_id = GameState.trainer_id
 	pokemon.met_level = pokemon.level
 	pokemon.met_location = GameState.map_id
 	pokemon.met_date = Time.get_date_string_from_system()
+	if GameState.locke != null:
+		var zone := String(SceneManager.current_map.get_zone_id()) if SceneManager.current_map else String(GameState.map_id)
+		var encounter := {} if source == "starter" else GameState.locke.begin(pokemon, zone, source)
+		return GameState.locke.receive(pokemon, encounter, source == "starter")
 	var dex := GameState.pokedex as Pokedex
 	if dex:
 		dex.register(pokemon)
@@ -230,7 +236,7 @@ func give_pokemon(pokemon: Pokemon, announce: bool = true) -> String:
 ## Combate contra un entrenador de data/trainers. Si ganas, activa
 ## trainer_defeated:<id>. `options`: las de BattleSetup.trainer() (can_lose...).
 func battle_trainer(trainer_id: StringName, options: Dictionary = {}) -> StringName:
-	var outcome: StringName = await SceneManager.start_battle(BattleSetup.trainer(trainer_id, options))
+	var outcome: StringName = await SceneManager.start_battle(BattleSetup.trainer(trainer_id, options), {"tutorial": options.get("tutorial", false)})
 	if outcome == SceneManager.OUTCOME_WIN:
 		GameState.set_flag(StringName("trainer_defeated:%s" % trainer_id))
 	return outcome
@@ -238,7 +244,7 @@ func battle_trainer(trainer_id: StringName, options: Dictionary = {}) -> StringN
 
 ## Combate contra un salvaje (`what`: especie o Pokemon), p. ej. un estático.
 func battle_wild(what: Variant, level: int = 5, options: Dictionary = {}) -> StringName:
-	return await SceneManager.start_battle(BattleSetup.wild(what, level, options))
+	return await SceneManager.start_battle(BattleSetup.wild(what, level, options), {"source": options.get("source", "static"), "zone_id": options.get("zone_id", String(SceneManager.current_map.get_zone_id()) if SceneManager.current_map else String(GameState.map_id))})
 
 
 func _camera() -> Camera2D:

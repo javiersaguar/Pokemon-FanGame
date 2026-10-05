@@ -108,6 +108,8 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 
 ## Carga la ranura y lleva al jugador a donde guardó.
 func continue_game(slot: int) -> Error:
+	if SaveManager.slot_summary(slot).get("status", "") == "finished":
+		return ERR_UNAUTHORIZED
 	var err := SaveManager.load_game(slot)
 	if err != OK:
 		return err
@@ -170,10 +172,13 @@ func fade_in(duration: float = FADE_TIME) -> void:
 ## Abre la BattleScene con `setup` (BattleSetup del Agente 2) y espera a que
 ## termine. Devuelve uno de los OUTCOME_*. Si el jugador pierde y el combate no
 ## se puede perder (setup.can_lose == false), vuelve al último Centro Pokémon.
-func start_battle(setup: Variant) -> StringName:
+func start_battle(setup: Variant, context: Dictionary = {}) -> StringName:
 	if in_battle:
 		push_error("SceneManager.start_battle: ya hay un combate en curso.")
 		return OUTCOME_LOSE
+	if GameState.is_randomlocke() and GameState.randomlocke.get("status") == "finished":
+		return OUTCOME_LOSE
+	var playable: Variant = prepare_battle(setup, context)
 	in_battle = true
 	GameState.lock_input(&"battle")
 	EventBus.battle_started.emit(setup)
@@ -184,7 +189,7 @@ func start_battle(setup: Variant) -> StringName:
 	world.process_mode = Node.PROCESS_MODE_DISABLED
 	await fade_in()
 
-	var outcome: StringName = await scene.call(&"run", setup)
+	var outcome: StringName = await scene.call(&"run", playable)
 
 	await fade_out()
 	scene.queue_free()
@@ -192,13 +197,30 @@ func start_battle(setup: Variant) -> StringName:
 	world.process_mode = Node.PROCESS_MODE_INHERIT
 	in_battle = false
 	EventBus.battle_ended.emit(outcome)
-	if outcome == OUTCOME_LOSE and not _setup_can_lose(setup):
+	if GameState.is_randomlocke() and GameState.randomlocke.get("status") == "finished":
+		if GameState.slot > 0:
+			SaveManager.save_game()
+		await fade_in()
+	elif outcome == OUTCOME_LOSE and not _setup_can_lose(setup):
 		await _whiteout()
 	else:
 		await fade_in()
 	GameState.unlock_input(&"battle")
 	return outcome
 
+
+## Preparar antes de BattleScene: registrar la primera aparición antes de cualquier acción.
+## tutorial=true excluye expresamente muerte/reglas; can_lose por sí solo no las excluye.
+func prepare_battle(setup: Variant, context: Dictionary = {}) -> Variant:
+	if not (setup is BattleSetup) or GameState.locke == null:
+		return setup
+	if bool(context.get("tutorial", false)):
+		setup.locke_rules = false
+		return setup
+	context = context.duplicate(true)
+	if not context.has("zone_id"):
+		context["zone_id"] = String(current_map.get_zone_id()) if current_map else String(GameState.map_id)
+	return LockeBattleDriver.new(setup, context)
 
 # --- Menús ---
 
@@ -386,6 +408,17 @@ func _leave_game() -> void:
 
 ## Derrota: el equipo se cura y vuelves al último Centro Pokémon.
 func _whiteout() -> void:
+	if GameState.locke != null:
+		GameState.locke.remove_dead()
+		if GameState.locke.check_game_over():
+			return
+		# Recuperar un superviviente del PC si el equipo quedó vacío.
+		if GameState.party.is_empty():
+			for pokemon: Pokemon in WorldLocke.usable_pokemon():
+				var where: Vector2i = GameState.pc.find_uid(pokemon.uid)
+				if where != PCStorage.NO_SLOT and pokemon.current_hp > 0:
+					GameState.party.add(GameState.pc.take(where.x, where.y))
+					break
 	if GameState.party is Object and GameState.party.has_method(&"heal_all"):
 		GameState.party.heal_all()
 	var target := GameState.healing_map
