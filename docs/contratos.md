@@ -237,7 +237,7 @@ SceneManager.capture_screen() -> Image               # null en headless
 
 `start_new_game()`: `options` = las de `GameState.new_game()`. Sin `slot`, usa la primera ranura vacía (o la 1). Con RandomLocke y `rom_patch`, aplica el parche en DataDB antes de cargar el mapa. El flujo de pantallas (elegir modo y ranura, ajustes y generación de la ROM) es del Agente 3; al acabar llama a `start_new_game(&"", &"", {slot, mode, randomlocke, rom_patch})`.
 
-Argumentos de arranque (después de `--`): `--map=<map_id> [--spawn=<id>]` empieza partida nueva en ese mapa y `--load=<slot>` carga una ranura. Sin argumentos: título si existe; si no, partida nueva.
+Argumentos de arranque (después de `--`): `--map=<map_id> [--spawn=<id>]` empieza partida nueva en ese mapa y `--load=<slot>` carga una ranura. Sin argumentos: siempre título (escena A3 o sustituto que reutiliza Dialogue). `options.intro=true` inicia MvpStoryEvent tras entrar al mapa. `choose_slot(overwrite=false)` devuelve 1..8 o 0 al cancelar; antes de sobrescribir pregunta. Falta de pantallas de título/pausa activa flujo provisional en src/main, no se salta la selección de ranura. Entrada de nombres provisional cede a cualquier pantalla A3 conectada a Cutscene.name_requested.
 
 ### Mapas y fundidos
 

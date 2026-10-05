@@ -15,6 +15,8 @@ const PAUSE_MENU_SCENE := "res://src/ui/pause_menu/pause_menu.tscn"
 const BATTLE_SCENE := "res://src/battle/scene/battle_scene.tscn"
 const PLAYER_SCENE := "res://src/overworld/player/player.tscn"
 const FOLLOWER_SCENE := "res://src/overworld/follower/follower.tscn"
+const FLOW_FALLBACK_SCRIPT := "res://src/main/flow_fallback.gd"
+const IDENTITY_FALLBACK_SCRIPT := "res://src/main/identity_fallback.gd"
 const BattlePlaceholder := preload("res://src/main/battle_placeholder.gd")
 
 const FADE_TIME := 0.25
@@ -41,6 +43,7 @@ var _title: Node
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	Cutscene.name_requested.connect(_on_name_requested)
 
 
 ## La llama Main al arrancar. Main debe tener World, Battle, UI y Transition/Fade.
@@ -63,10 +66,8 @@ func boot() -> void:
 			return
 	if args.has("map"):
 		await start_new_game(StringName(args["map"]), StringName(args.get("spawn", "")))
-	elif ResourceLoader.exists(TITLE_SCENE):
-		await go_to_title()
 	else:
-		await start_new_game()
+		await go_to_title()
 
 
 func is_busy() -> bool:
@@ -82,7 +83,9 @@ func go_to_title() -> void:
 		_title = (load(TITLE_SCENE) as PackedScene).instantiate()
 		ui_layer.add_child(_title)
 	else:
-		push_warning("SceneManager: falta la pantalla de título (%s)." % TITLE_SCENE)
+		_title = load(FLOW_FALLBACK_SCRIPT).new()
+		_title.kind = &"title"
+		ui_layer.add_child(_title)
 	await fade_in()
 
 
@@ -104,6 +107,8 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 	await fade_out()
 	_enter_game()
 	await change_map(map, spawn, GameState.player_facing)
+	if bool(options.get("intro", false)):
+		await Cutscene.play(load("res://src/events/mvp/mvp_story_event.gd"), null, {"stage": "intro"})
 
 
 ## Carga la ranura y lleva al jugador a donde guardó.
@@ -271,7 +276,9 @@ func close_all_menus() -> void:
 func open_pause_menu() -> void:
 	world_snapshot = capture_screen()
 	if not ResourceLoader.exists(PAUSE_MENU_SCENE):
-		push_warning("SceneManager: falta el menú de pausa (%s)." % PAUSE_MENU_SCENE)
+		var fallback: Node = load(FLOW_FALLBACK_SCRIPT).new()
+		fallback.kind = &"pause"
+		push_menu(fallback)
 		return
 	push_menu((load(PAUSE_MENU_SCENE) as PackedScene).instantiate())
 
@@ -281,6 +288,78 @@ func capture_screen() -> Image:
 	if DisplayServer.get_name() == "headless":
 		return null
 	return get_viewport().get_texture().get_image()
+
+
+# --- Sustitutos de flujo: reutilizan Dialogue, sin fijar diseño de A3 ---
+
+func choose_slot(overwrite: bool = false) -> int:
+	var labels := PackedStringArray()
+	for slot: int in range(1, SaveManager.slot_count() + 1):
+		var summary := SaveManager.slot_summary(slot)
+		labels.append("%d: %s" % [slot, summary.get("player_name", "Vacía")])
+	labels.append("Volver")
+	var index := await Dialogue.ask("Elige una ranura", labels)
+	if index == labels.size() - 1:
+		return 0
+	var slot := index + 1
+	if overwrite and SaveManager.has_save(slot):
+		if not await Dialogue.ask_yes_no("Esta ranura ya tiene una partida. ¿Sobrescribirla al guardar?"):
+			return 0
+	return slot
+
+func run_title_fallback() -> void:
+	var screen := _title
+	while not GameState.in_game and is_instance_valid(screen) and screen == _title:
+		var option := await Dialogue.ask("Pokémon Panchito", ["Continuar", "Nueva partida", "Cargar partida", "Salir"])
+		if not is_instance_valid(screen) or screen != _title:
+			return
+		match option:
+			0:
+				var slot := SaveManager.last_used_slot()
+				var err: Error = await continue_game(slot) if slot > 0 else ERR_FILE_NOT_FOUND
+				if err != OK:
+					await Dialogue.say("No se puede continuar esta partida: %s." % error_string(err))
+			1:
+				var slot := await choose_slot(true)
+				if slot > 0:
+					await start_new_game(&"", &"", {"slot": slot, "intro": true})
+			2:
+				var slot := await choose_slot()
+				if slot > 0:
+					var err := await continue_game(slot)
+					if err != OK:
+						await Dialogue.say("No se puede cargar: %s." % error_string(err))
+			3:
+				get_tree().quit()
+				return
+
+func run_pause_fallback(menu: Node) -> void:
+	var choice := await Dialogue.ask("Menú de pausa", ["Volver", "Guardar", "Cargar partida", "Menú inicial"], null, 0)
+	match choice:
+		1:
+			var err := SaveManager.save_game()
+			await Dialogue.say("Partida guardada." if err == OK else "No se pudo guardar: %s." % error_string(err))
+		2:
+			var slot := await choose_slot()
+			if slot > 0:
+				var err := await continue_game(slot)
+				if err != OK:
+					await Dialogue.say("No se puede cargar: %s." % error_string(err))
+		3:
+			if await Dialogue.ask_yes_no("¿Volver al menú inicial? El progreso sin guardar se perderá."):
+				pop_menu(menu)
+				await go_to_title()
+				return
+	pop_menu(menu)
+
+func _on_name_requested(kind: StringName, initial: String) -> void:
+	# Una pantalla A3 conectada toma precedencia sobre el sustituto.
+	if not is_instance_valid(ui_layer) or Cutscene.name_requested.get_connections().size() > 1:
+		return
+	var entry: Node = load(IDENTITY_FALLBACK_SCRIPT).new()
+	entry.kind = kind
+	entry.initial = initial
+	ui_layer.add_child(entry)
 
 
 # --- Internos ---
@@ -405,6 +484,9 @@ func _enter_game() -> void:
 
 
 func _leave_game() -> void:
+	if is_instance_valid(_title):
+		_title.queue_free()
+	_title = null
 	close_all_menus()
 	_unload_map()
 	if player:
