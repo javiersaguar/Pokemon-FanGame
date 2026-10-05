@@ -102,12 +102,12 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) el aviso de la sesión de 3 agentes, el bloque I de «Próxima sesión», la sección del Agente 4, `docs/randomlocke.md` y el §10. El motor del RandomLocke vuelve a ser mío. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`, rama `feat/agente2-bloque-i`.
 
-**En qué estoy:** bloque I, de arriba abajo. Hechos los puntos 1 y 2. Siguiente: petición 22, `randomizer_input()` y `apply_patch()` atómico.
+**En qué estoy:** bloque I, de arriba abajo. Hechos los puntos 1 a 3. Siguiente: petición 23, reglas de `LockeRules` en el combate.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
 2. ✅ Petición 28: parche dorado rehecho (`tests/randomizer/golden_clasico_v2.json`, semilla `20261004`, preset `clasico`). El test ya no queda *pending*.
-3. ⏳ Petición 22: `DataDB.randomizer_input()` y `apply_patch()` atómico con hash.
+3. ✅ Petición 22: `DataDB.randomizer_input()` (con `stage`, `min_level`, `max_level` y `family_id`) y `apply_patch() -> Array[String]` atómico. Un hash o una referencia mala no toca el parche activo. Consultas nuevas: `tm_compat`, `tutor_compat`, `tm_move`, `tutor_move`. `shiny_odds()` usa `settings.shiny_denominator` del parche. `species()` ya mezcla tipos, estadísticas, evoluciones y objetos equipados, y no reaplicamos `species_map`. El dorado se rehizo: solo cambió `input_hash`.
 4. ⏳ Petición 23: reglas de `LockeRules` en el combate.
 5. ⏳ Fase 9.5: habilidades y objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4.
 
@@ -300,7 +300,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 19 | A2 → A3 | Sprites de Pokémon nuevos (Generation 9 Pack, en `main`): **frente 192×192 y espalda 288×288** (se dibujan a 1×, sin zoom: ya vienen al doble), **iconos 128×64** (2 cuadros de 64) también en `icons_shiny/`, y `<id>_female.png` donde hay diferencias por sexo. Hace falta: (a) poner al día `tools/arte/reglas.json` (todavía pide cuadros de 96 y de 32, y trata `icons/` como placeholder); (b) apuntar el set en `docs/arte/seguimiento.md` y `docs/arte/licencias.md` (créditos ya en `CREDITOS.md`); (c) la BattleScene ya encuentra las rutas de siempre (`front[_shiny]/<id>.png`...). Ya están los de **todas** las especies (pregunta 11) y los gritos en `assets/audio/cries/<id>.ogg`. | hecha (A3): `tools/arte/reglas.json` con 192×192, 288×288, 128×64 y 256×256 (y tiles de 32, personajes en cuadros de 64, objetos de 48 y entrenadores de 160); Generation 9 Pack apuntado en `seguimiento.md` y `licencias.md` |
 | 20 | A1 → A2 | **Sin Git LFS** (orden de Javier): `.gitattributes` ya trata `.ogg`, `.wav`, `.mp3`, `.psd` y `.aseprite` como `binary` normal, y está en GitHub. **Ya puedes subir los gritos** (`assets/audio/cries/`). | hecha (A2): 1.281 gritos en `main` como archivos normales (comprobado al cerrar la sesión) |
 | 21 | A1 → A3 | Lo mismo para el audio: sin Git LFS, los `.ogg`/`.wav` se suben como binarios normales. | informativo |
-| 22 | A4 → A2 | §10 v2 conserva parche species A2 y añade entrada pura, MT/tutores y held_items. Mantengo data/randomizer.json por compatibilidad. Añadir randomizer_input y apply_patch atómico con hash; consultas nuevas y shiny según ajuste. | aceptada en traspaso; implementación pendiente |
+| 22 | A4 → A2 | §10 v2 conserva parche species A2 y añade entrada pura, MT/tutores y held_items. Mantengo data/randomizer.json por compatibilidad. Añadir randomizer_input y apply_patch atómico con hash; consultas nuevas y shiny según ajuste. | hecha (A2, 2026-10-05): `randomizer_input()`, `apply_patch()` atómico, MT/tutores, objetos equipados en `species()` y shiny según el parche. `data/randomizer.json` se retiró en el punto 1 del bloque I |
 | 23 | A4 → A2 | pokemon_died ya existe; conectar reglas individuales LockeRules (permadeath, EXP cap, fijo, objetos); una muerte por uid, excluir tutoriales. | pendiente |
 | 24 | A4 → A1 | Integrar LockeRules/zone_id: registrar ANTES de combate, resolver encounter_id al capturar/huir/KO; guardar snapshot/familias; registrar inicial poseído, Cementerio/game over. Modo/ranuras/parche ya existen: conservar. | pendiente |
 | 25 | A4 → A3 | Pantallas R.8 leen schema/presets y snapshot LockeRules; §10 conserva API A2. SpoilerLog puro devuelve texto para exportación bajo demanda. Cementerio/zonas/motes/game over. | pendiente |
@@ -359,3 +359,4 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 2026-10-04 | A4 | §10 v2 continúa traspaso §8.6: entrada pura, aislamiento RNG/versión 2; conserva API/patch A2 y dorado v1. Peticiones 22–25. |
 | 2026-10-04 | A4 | Entrega §10 implementado y docs/randomlocke.md: 194 tests verdes tras rebase, 3000 semillas válidas; motor v2 conserva formato species/API A2. Datos nuevos en data/randomizer/, raíz anterior conservada; peticiones de integración 22–25. |
 | 2026-10-05 | A2 | §8.6 y §10: el motor vuelve al Agente 2. Configuración única en `data/randomizer/`; se retira `data/randomizer.json`. El validador comprueba que `policy.json` coincida con `presets.json` y `prohibidos.json`. |
+| 2026-10-05 | A2 | §8.2: `apply_patch(patch) -> Array[String]` (atómico: un error no cambia el parche activo), `randomizer_input()`, `tm_compat()`, `tutor_compat()`, `tm_move()` y `tutor_move()`. `shiny_odds()` lee `settings.shiny_denominator` del parche. |

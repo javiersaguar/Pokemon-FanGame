@@ -632,7 +632,12 @@ DataDB.item_placements() -> Dictionary       # data/item_placements.json (Agente
 DataDB.resolve_markers(text) -> String       # {starter:id} {gift:id} {static:id} {trade:id} {species:id} {item:id}
 
 # Parche de RandomLocke (Fase R.1): todas las consultas de arriba devuelven lo parcheado
-DataDB.apply_patch(patch: Dictionary) / clear_patch() / has_patch() / current_patch()
+DataDB.randomizer_input() -> Dictionary   # snapshot base para RandomizerInput (stage, min_level, max_level, family_id)
+DataDB.apply_patch(patch: Dictionary) -> Array[String]   # vacío si se aplicó; si no, errores y el parche activo no cambia
+DataDB.clear_patch() / has_patch() / current_patch()
+DataDB.tm_compat(species_id) -> Array / tutor_compat(species_id) -> Array
+DataDB.tm_move(machine_id) -> StringName / tutor_move(tutor_id) -> StringName
+# shiny_odds() usa settings.shiny_denominator del parche activo, si lo hay
 signal patch_changed
 
 # Otros

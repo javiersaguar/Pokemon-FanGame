@@ -67,3 +67,58 @@ func test_el_parche_cambia_las_consultas_y_se_puede_quitar() -> void:
 	assert_eq(DataDB.encounter_table(&"ruta_1"), table)
 	assert_eq(DataDB.species(&"pikachu").types, [&"electric"] as Array[StringName])
 	assert_eq(DataDB.default_moves(&"bulbasaur", 5), [&"growl", &"tackle", &"vinewhip"] as Array[StringName])
+
+
+func test_entrada_del_randomizer() -> void:
+	var source := DataDB.randomizer_input()
+	var bulbasaur: Dictionary = source.species["bulbasaur"]
+	var ivysaur: Dictionary = source.species["ivysaur"]
+	var venusaur: Dictionary = source.species["venusaur"]
+	assert_eq(int(bulbasaur["stage"]), 0)
+	assert_eq(int(ivysaur["stage"]), 1)
+	assert_eq(int(ivysaur["min_level"]), 16)
+	assert_eq(int(venusaur["min_level"]), 32)
+	assert_eq(str(bulbasaur["family_id"]), str(venusaur["family_id"]))
+	assert_eq(int(bulbasaur["max_level"]), 25, "el generador le suma 1")
+	assert_false(bool(bulbasaur["legendary"]))
+	assert_true(bool(source.species["mewtwo"]["legendary"]))
+	var input := RandomizerInput.from_dict(source)
+	assert_eq(input.fingerprint.length(), 64)
+	assert_eq(RandomizerInput.from_datadb().fingerprint, input.fingerprint)
+
+
+func test_apply_patch_es_atomico() -> void:
+	var applied := DataDB.apply_patch({"starters": {"starter_1": "litwick"}})
+	assert_eq(applied, [] as Array[String])
+	var rejected := DataDB.apply_patch({
+		"input_hash": "no-es-el-hash",
+		"species": {"pikachu": {"types": ["water"]}},
+	})
+	assert_false(rejected.is_empty())
+	assert_eq(DataDB.starter(&"starter_1"), &"litwick", "un hash malo no quita el parche activo")
+	assert_eq(DataDB.species(&"pikachu").types, [&"electric"] as Array[StringName])
+	DataDB.clear_patch()
+	var unknown := DataDB.apply_patch({"species": {"noexiste": {"types": ["water"]}}})
+	assert_false(unknown.is_empty())
+	assert_false(DataDB.has_patch())
+
+
+func test_consultas_de_mt_tutores_objetos_y_shiny() -> void:
+	DataDB.apply_patch({
+		"tm_moves": {"tm01": {"move": "ember"}},
+		"tutor_moves": {"tutor_fuego": "flamethrower"},
+		"tm_compat": {"charmander": ["tm01"]},
+		"tutor_compat": {"charmander": ["tutor_fuego"]},
+		"species": {"charmander": {"held_items": ["charcoal"]}},
+		"settings": {"shiny_denominator": 512},
+	})
+	assert_eq(DataDB.tm_move(&"tm01"), &"ember")
+	assert_eq(DataDB.tutor_move(&"tutor_fuego"), &"flamethrower")
+	assert_eq(DataDB.tm_compat(&"charmander"), ["tm01"])
+	assert_eq(DataDB.tutor_compat(&"charmander"), ["tutor_fuego"])
+	assert_eq(DataDB.learnset(&"charmander")["tutor"], ["tutor_fuego"])
+	assert_eq(DataDB.species(&"charmander").raw["held_items"], ["charcoal"])
+	assert_eq(DataDB.shiny_odds(), 512)
+	DataDB.clear_patch()
+	assert_eq(DataDB.shiny_odds(), 4096)
+	assert_eq(DataDB.tm_move(&"tm01"), &"")
