@@ -560,6 +560,22 @@ await Cutscene.battle_wild(species_or_pokemon, level := 5, options := {}) -> Str
 
 ---
 
+## 7c. Integración Locke del mundo (Agente 1)
+
+`GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados.
+
+- `MapData.zone_id` / `MapRoot.get_zone_id()`: ID común entre plantas; prioridad export → `encounter_table.zone_id` → ID del mapa. Los mapas reales deben declarar su zona común.
+- `SceneManager.start_battle(setup, context := {})` / `prepare_battle(setup, context := {})`: `context` admite `zone_id`, `source` (`wild`/`static`), `tutorial`. Registra el encuentro antes de que BattleScene reciba acciones. Devuelve `LockeBattleDriver` cuando hay reglas. `can_lose` no excluye automáticamente las reglas: el combate de iniciación usa `tutorial: true` expresamente.
+- `LockeBattleDriver` envuelve `EngineDriver`, implementa la API completa de BattleDriver y deniega Balls del encuentro no elegible antes de gastar objeto/turno. Observa `pokemon_died`, conserva el contexto y retira los muertos al terminar (sin desplazar los índices del motor durante el combate). `finish()` es idempotente.
+- `WorldLocke.begin(pokemon, zone, source := "wild")`, `can_catch(encounter)`, `resolve(encounter, outcome)`, `receive(pokemon, encounter := {}, starter := false) -> String` (`party`/`pc`/`pending`/vacío), `complete_capture(token, nickname) -> String`, `death(pokemon, context)`, `remove_dead()`, `check_game_over()` y `sync()`.
+- `Cutscene.give_pokemon(pokemon, announce := true, source := "gift")` registra regalos; `source = "starter"` registra la línea poseída sin gastar zona. Si se exige mote, la incorporación queda pendiente; un mote vacío no se acepta. No se inventa un nombre para pasar la regla.
+- Nuevas señales EventBus: `locke_state_changed`, `locke_nickname_requested(token: String, pokemon: Dictionary)`, `locke_game_over(snapshot: Dictionary)`. UI A3 escucha/consulta pendientes restaurados y llama `GameState.locke.complete_capture(token, nombre)`; el control está bloqueado con `locke_nickname` hasta completar los pendientes. El inicial activa `starter_chosen` al incorporarse.
+- Los muertos salen de party/PC utilizable y quedan completos en `snapshot.cemetery`; curar y derrota filtran muertos antes de operar. Un superviviente en PC evita game over y puede pasar al equipo al reaparecer. Al terminar, se bloquea el mundo (`locke_finished`) y SceneManager guarda la ranura si ya está asignada. `continue_game()` rechaza una ranura `finished` con `ERR_UNAUTHORIZED`; `SaveManager.load_game()` sigue permitiendo consultar su contenido para Cementerio/resumen.
+
+Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al motor A2 (petición 23). Este adaptador no añade pantallas ni cambia las clases de combate/UI de otros agentes.
+
+---
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).

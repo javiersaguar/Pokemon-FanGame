@@ -66,6 +66,8 @@ var slot: int = 0
 ## Parche de la ROM del RandomLocke (Fase R.1). SaveManager lo guarda aparte,
 ## en slot_<n>.rom.json.
 var rom_patch: Dictionary = {}
+## Adaptador del mundo; snapshot persistido dentro de randomlocke.
+var locke: WorldLocke
 ## true cuando hay al menos un bloqueo activo (menú, diálogo, cinemática...).
 var input_locked: bool:
 	get:
@@ -88,6 +90,9 @@ func _process(delta: float) -> void:
 
 ## Deja el estado vacío (sin partida).
 func reset() -> void:
+	locke = null
+	unlock_input(&"locke_finished")
+	unlock_input(&"locke_nickname")
 	mode = MODE_NORMAL
 	randomlocke = {}
 	slot = 0
@@ -131,6 +136,8 @@ func new_game(options: Dictionary = {}) -> void:
 	player_facing = dir_from_name(cfg.get("facing", "down"))
 	healing_map = StringName(cfg.get("healing_map", cfg.get("map", "")))
 	healing_spawn = StringName(cfg.get("healing_spawn", cfg.get("spawn", "default")))
+	if is_randomlocke():
+		locke = WorldLocke.new(randomlocke)
 	EventBus.new_game_started.emit()
 
 
@@ -261,6 +268,8 @@ func is_randomlocke() -> bool:
 
 
 func to_dict() -> Dictionary:
+	if locke != null:
+		locke.sync()
 	var modules := {}
 	for key: StringName in MODULE_CLASSES:
 		modules[String(key)] = _module_to_dict(get(key))
@@ -332,6 +341,12 @@ func from_dict(data: Dictionary) -> void:
 	for key: StringName in MODULE_CLASSES:
 		if modules.has(String(key)):
 			set(key, _module_from_dict(key, modules[String(key)]))
+	if is_randomlocke():
+		locke = WorldLocke.new(randomlocke)
+		locke.remove_dead()
+		if not locke.pending.is_empty():
+			lock_input(&"locke_nickname")
+		locke.check_game_over()
 
 
 # --- Utilidades de dirección (las mismas que Grid; aquí por comodidad) ---

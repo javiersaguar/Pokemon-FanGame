@@ -10,6 +10,8 @@ extends StoryEvent
 
 
 func run() -> void:
+	if GameState.flag(&"starter_chosen") or (GameState.locke != null and not GameState.locke.pending.is_empty()):
+		return
 	var slot := StringName(param("slot", "starter_1"))
 	var starter := resolve(slot)
 	if starter.is_empty():
@@ -20,9 +22,12 @@ func run() -> void:
 	if not await Dialogue.ask_yes_no("¿Eliges a {pokemon}?", null, vars):
 		return
 	var pokemon := Pokemon.create(species, int(starter["level"]))
-	await Cutscene.give_pokemon(pokemon)
+	var where: String = await Cutscene.give_pokemon(pokemon, true, "starter")
+	if where == "":
+		return
 	GameState.set_var(&"starter", int(param("index", 1)))
-	GameState.set_flag(&"starter_chosen")
+	if where != "pending":
+		GameState.set_flag(&"starter_chosen")
 
 
 ## {species, level} del inicial `slot` según DataDB.starter_spec() ({} si no lo

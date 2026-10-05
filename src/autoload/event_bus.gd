@@ -30,6 +30,11 @@ signal new_game_started
 signal game_saved(slot: int)
 signal game_loaded(slot: int)
 
+## UI de RandomLocke: consultar GameState.locke.rules.snapshot().
+signal locke_state_changed
+signal locke_nickname_requested(token: String, pokemon: Dictionary)
+signal locke_game_over(snapshot: Dictionary)
+
 # --- Interfaz ---
 signal input_lock_changed(locked: bool)
 signal menu_opened(menu: Node)

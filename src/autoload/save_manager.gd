@@ -62,6 +62,8 @@ func last_used_slot() -> int:
 ## Guarda la partida en `slot` (0 = la ranura en curso). Con la miniatura y, en
 ## RandomLocke, el parche de la ROM.
 func save_game(slot: int = 0) -> Error:
+	if GameState.locke != null:
+		GameState.locke.sync()
 	if slot <= 0:
 		slot = current_slot()
 	var data := {
