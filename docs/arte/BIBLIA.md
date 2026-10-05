@@ -90,7 +90,7 @@ Archivos: `assets/arte/paleta.gpl` (para Aseprite, LibreSprite o GIMP) y `assets
 
 ### 5.1 Fondos de combate
 
-Los fondos del pack 10 son de Elite Battle: DX y miden 384×308: **no** vienen a 512×384. EBDX los muestra ampliados con la cámara (`ROOM_SCALE` 2,25, no entero). Propuesta: verlos a **×2 exacto** y encuadrar el horizonte (es la única forma de llenar la pantalla sin escalado no entero). **PENDIENTE JAVIER** (pregunta en `docs/ESTADO.md`). El pack **no trae bases**; mientras, se usa la sombra del Generation 9 Pack bajo el rival.
+Los fondos del pack 10 miden 384×308. Javier (respuesta 14) aceptó verlos a **×2 exacto** y encuadrados en el horizonte hasta que llegue *Elite Battle: DX* completo. El pack no trae árboles ni bases: la hierba usa el fondo *Forest* (el verde más cercano a Añil) y, debajo de cada Pokémon, un óvalo propio provisional (`assets/sprites/ui/battle/bases/default.png`). Las bases de EBDX las deja el Agente 4 en esa carpeta, con el nombre del entorno (`forest.png`, `cave.png`...): si el archivo existe, sustituye a la provisional sin tocar la escena.
 
 ---
 

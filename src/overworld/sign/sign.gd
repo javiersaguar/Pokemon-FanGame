@@ -20,7 +20,7 @@ func _ready() -> void:
 
 
 func interact(player: Player) -> void:
-	if only_from_below and player.facing != Vector2i.UP:
+	if only_from_below and (player.facing != Vector2i.UP or player.tile_position() != tile_position() + Vector2i.DOWN):
 		return
 	for line: String in lines:
-		await Dialogue.say(line)
+		await Dialogue.say(WorldNames.resolve(line))

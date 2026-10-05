@@ -27,3 +27,15 @@ Packs descargados por Javier el 2026-10-04. **No se modifican aquí**: se copian
 ## Escala
 
 Todos estos packs están preparados para la resolución de **512×384** de Essentials y Añil: **ya vienen al doble** (tile de 32 px, cuadro de personaje de 64 px, Pokémon de frente a 192 px). Los de espalda vienen **al triple** (288 px), igual que en Essentials y Añil, para dar perspectiva. **Se usan tal cual, sin reescalar.**
+
+## Añadidos el 2026-10-05
+
+| Carpeta | Pack | Origen | Crédito obligatorio | Contenido y notas técnicas |
+|---------|------|--------|---------------------|----------------------------|
+| `16_elite_battle_dx` | Elite Battle: DX | https://luka-sj.com/essentials/resources/EBDX | **Luka S.J.** y los créditos de su página (Game Freak, Pokecheck.org, PinkCatDragon, Tebited15, WolfPP, **BadSamaritan** por los sonidos...) | ⭐ **Fondos de combate con entorno**: `Graphics/EBDX/Battlebacks/battlebg/` (22 fondos de 384×308: campo, bosque, cueva, ciudad, agua, nieve, arena, montaña, interior, campeón...), **bases** (`base/`) y **elementos** (`elements/`: árboles, hierba, nubes, decorados, multitud...) para componer escenas como la de Añil. **Transiciones de entrada al combate** (`Transitions/`). **Sonidos**: `Audio/SE/EBDX/` (19, incluido **`Shiny.wav`**, captura, experiencia, huida, selección y zoom), `Audio/ME/EBDX/` (captura, evolución, subir de nivel) y `Audio/BGM/EBDX/` (victorias, evolución y PS bajos). También trae battlers animados y scripts de RPG Maker que **no** se usan |
+| `17_ebdx_anim_pack` | EBDX move & common animation pack | https://eeveeexpo.com/resources/1230/ | **NikDie** y **Luka S.J.** | Animaciones de movimientos y animaciones comunes (`EBDX_Anim_Pack/Graphics/EBDX/Animations/`) y sus sonidos (`EBDX_Anim_Pack/Audio/SE/`). Los scripts de RPG Maker sirven solo como referencia de timing; hay que reimplementarlos en Godot |
+| `12_hgss_trainers_front` | HGSS Trainers (Front), de The Spriters Resource | https://www.spriters-resource.com/ds_dsi/pokemonheartgoldsoulsilver/asset/28037/ | The Spriters Resource y quien lo subió (ver la página); gráficos de Game Freak y Nintendo | `hgss_trainers_front.png`: **una sola hoja** de 973×1798 con los entrenadores de HGSS de frente. **Hay que recortarla** a lienzos de 160×160 (un sprite por archivo, centrado y con los pies alineados), sin reescalar. Sustituye al pack 12 original, cuyo enlace está muerto |
+
+**Pendientes:**
+- ~~`14` Misc. VFX from BW2~~: **retirado de Eevee Expo** (con la cuenta confirmada sigue saliendo "This download is not available"). **No hace falta:** `05_ultimate_gen4_overworlds/Ultimate Gen 4 Overworlds Pack/Animations & Others/` ya trae la hierba al pisar (`Grass1-6` estilo HGSS y `GrassDP1-6` estilo DPPt), el polvo del salto (`AfterJumpDust`), salpicaduras (`Splash`, `Splash2`), destellos (`Sparkles1-2`), humo, nieve, remolino, "!" y luces.
+- **Sombra de los personajes:** ningún pack la trae. Decisión de Javier: la **dibuja a mano** el Agente 4 con el método aprobado (`.px` con la paleta, exportado a ×2). Es arte propio hecho a mano, no generado por código.

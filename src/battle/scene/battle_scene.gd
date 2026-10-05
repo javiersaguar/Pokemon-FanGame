@@ -55,6 +55,8 @@ var _last_move := 0
 @onready var _list_menu: GridMenu = $Canvas/ListPanel/Margin/Menu
 @onready var _curtain_a: ColorRect = $Canvas/Curtain/A
 @onready var _curtain_b: ColorRect = $Canvas/Curtain/B
+var _foe_base: Sprite2D
+var _player_base: Sprite2D
 
 
 func _ready() -> void:
@@ -82,6 +84,7 @@ func run(setup: Variant) -> StringName:
 	AudioManager.save_bgm()
 	AudioManager.play_bgm(StringName(_info.get("bgm", "battle_wild")), 0.0)
 	_background.set_environment(StringName(_info.get("background", "grass")))
+	_apply_bases()
 	var start_events := _driver.start()
 	await _intro(start_events)
 	await _play_events(start_events)
@@ -93,6 +96,26 @@ func run(setup: Variant) -> StringName:
 	await _outro(outcome)
 	AudioManager.restore_bgm()
 	return outcome
+
+
+## Base bajo cada Pokémon (la del entorno, o la provisional). La sombra del pack
+## sigue encima. El Agente 4 sustituye el PNG sin tocar esta escena.
+func _apply_bases() -> void:
+	var base := BattleBackground.load_base(_background.environment)
+	_foe_base = _base_sprite(_foe_base, base, Vector2(384, 190), _foe_shadow)
+	_player_base = _base_sprite(_player_base, base, Vector2(128, 328), _player_sprite)
+
+
+func _base_sprite(sprite: Sprite2D, base: Texture2D, at: Vector2, before: Node) -> Sprite2D:
+	if sprite == null:
+		sprite = Sprite2D.new()
+		sprite.centered = true
+		before.get_parent().add_child(sprite)
+		before.get_parent().move_child(sprite, before.get_index())
+	sprite.texture = base
+	sprite.position = at
+	sprite.visible = base != null
+	return sprite
 
 
 ## El driver que corresponde a `setup`: el motor real con un BattleSetup; FakeBattle

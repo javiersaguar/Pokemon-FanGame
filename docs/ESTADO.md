@@ -2,7 +2,14 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-05, Javier):** 🚀 **Sesión larga con 4 agentes.** Leed, por este orden:
+**Último aviso (2026-10-05, Javier):** 📦 **Recursos nuevos de combate descargados** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (índice actualizado en `docs/arte/recursos_terceros.md`):
+- `16_elite_battle_dx`: **fondos de combate con entorno, bases y elementos** (Agente 4 compone las escenas; Agente 3 las integra), **transiciones de entrada** (Agente 3) y **sonidos**: `Shiny.wav`, captura, experiencia, huida, selección, victorias, evolución y subir de nivel. **Agente 3: con esto se puede cerrar la petición 27 (`shiny`).**
+- `17_ebdx_anim_pack`: **animaciones de movimientos** de NikDie y sus sonidos (Agente 3, tarea 8; los scripts de RPG Maker solo sirven como referencia).
+- `12_hgss_trainers_front`: **entrenadores de HGSS de frente** en una sola hoja (Agente 4: recortar a 160×160 sin reescalar; sirven para NPCs normales y como base de los Panchito).
+- *Misc. VFX from BW2* **ya no existe**, pero **no hace falta**: los efectos del mapa (hierba al pisar, polvo del salto, salpicaduras, destellos, humo, nieve) están en `05_ultimate_gen4_overworlds/.../Animations & Others/` (Agentes 1 y 4).
+- **Sombra de los personajes** (respuesta 17): ningún pack la trae, así que **la dibuja a mano el Agente 4** con el método aprobado (`.px` con la paleta, a ×2). Es arte propio, permitido; lo prohibido es generar arte por código.
+
+**Aviso anterior (2026-10-05, Javier):** 🚀 **Sesión larga con 4 agentes.** Leed, por este orden:
 1. **[Respuestas de Javier del 2026-10-05](#respuestas-de-javier-del-2026-10-05)** (al principio de "Preguntas para Javier"): **aprobación parcial de la prueba gráfica**. Combate y ruta aprobados con cambios, ficha con cambios y **pueblo rechazado** (hay que rehacerlo). Además: 5 Poké Balls, reloj real, 3000 de dinero inicial y el resto de decisiones pendientes.
 2. **Se abre el bloque II** para todo lo que **no** sea arte de mapas: menú inicial, pantallas del MVP, integración y motor. **Los mapas reales del MVP esperan** a que Javier apruebe el pueblo rehecho.
 3. **Vuelve el Agente 4 con otro papel: arte del mundo y de los entrenadores** (tilesets, mapas pintados, sombras, entrenadores Panchito y fondos de combate). Hay propiedad nueva en la tabla de abajo.
@@ -66,9 +73,13 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) las DIRECTRICES actuales, el último aviso y «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente1`, rama `feat/agente1-bloque-i`, actualizado desde `origin/main`; autoría de Javier y hooks activos.
 
-**En qué estoy:** bloque I implementado y limpieza terminada, integrado en main y con push inmediato tras cada tarea. Bloque II (incluido el cierre de v0.1, mi responsabilidad) espera aprobación gráfica de Javier. El III sigue después del II. La cantidad de Balls del profesor espera la pregunta 18; sin ese dato no se inventa una recompensa.
+**En qué estoy:** sesión larga de cuatro agentes: leídas las respuestas de Javier (2026-10-05), la propiedad nueva y mi lista. Tarea 1 integrada y subida (2218f28b). Tarea 2 completa; siguiente: flujo de arranque/ranuras/intro/pausa con sustitutos hasta pantallas A3. Las pantallas se pueden integrar ya; mapas reales y cierre v0.1 esperan el pueblo que rehace A4.
+
+**Traspaso a A4 (arte):** exterior en `assets/tilesets/exterior/exterior.tres`, constructor `assets/tilesets/exterior/build_exterior.gd`; muestras en `maps/test/muestra_{pueblo,ruta}.tscn`, constructor `maps/_tools/build_muestras.gd`. Personajes pack 05 en `assets/sprites/characters/`; CharacterSprite usa hoja 4×4, pies en centro de casilla, orden DOWN/LEFT/RIGHT/UP. La lógica común de personaje/NPC queda en A1; pintar mapas reales queda en A4. Reserva un mapa antes de tocarlo; entregarlo pintado activa mi integración de lógica. `maps/_tools/` queda conmigo según tabla; cambios de geometría de muestras se piden aquí.
 
 **Terminado:**
+- **Sesión larga, tarea 2 (2026-10-05):** recompensa real de **5 Poké Balls**, una sola vez y por DataDB. Reloj real/3000 verificados; world.names centraliza pueblo, ciudad 2, profesor, rival y región sin inventarlos. `WorldNames` resuelve `{world:clave}` en NPC/carteles/guion/nombre de mapa; extensión global de Dialogue pedida a A3 (35). **244/244 tests, 3381 aserciones, 56,2 s, 0 pending**. Comparativa de diálogo real en `recompensa_profesor.md`.
+- **Sesión larga, tarea 1 (2026-10-05):** NPC desde cualquier lado comprobado por física real (16 combinaciones); termina el paso y se queda quieto durante el diálogo, cuatro mostradores y TrainerNPC desde espaldas/lados. `turn_on_interact=false` y alias compatible `turn_to_player`; carteles exigen casilla inferior. No hizo falta tocar archivos A3. Comparativa `docs/arte/comparativas/npc_interaccion.md`, capturas reales de Godot. **241/241 tests, 3370 aserciones, 56,2 s, 0 pending**; importación y captura sin errores de script.
 - **Bloque I.3 (2026-10-05):** retirada la rama local `feat/agente1-sin-lfs`: `git cherry main` verificó su parche equivalente y ambos padres del merge antiguo están en main; no había rama remota de ese nombre. Worktree `pokemon-panchito-agente4` retirado con `git worktree remove`: estaba limpio, solo `.godot/` ignorado, y 87075073 / toda la rama está integrada en main. Historial del motor conservado en main y en su rama. **Validación final: 228/228 tests, 3263 aserciones, 46,8 s, 0 pending**, importación limpia; se cubre también bloqueo de Balls con equipo/PC llenos para evitar un mote pendiente sin espacio de incorporación.
 - **Bloque I.2 implementado (2026-10-05):** MvpStoryEvent con intro/sexo/nombres, habitación → laboratorio (destinos de prueba en la misma sala), inicial por DataDB, rival por variante de datos/tutoría can_lose, Pokédex y regalo por colocación, enfermera y dependiente conectados. Corrige espera circular al teletransportar desde Cutscene. Recorrido en docs/mapas/pruebas_mvp.md. **227/227 tests, 3259 aserciones, 46,7 s, 0 pending**, importación y arranque gráfico limpios; 9 tests nuevos de guion y sala real; tienda/teclado definitivos esperan pantallas A3 (petición 33). Cantidad de Balls sin inventar: pregunta 18 pendiente; evento y tests preparados, world.mvp_story.reward.quantity=null hasta respuesta. No es cierre v0.1.
 - **Bloque I.1 / petición 24 (2026-10-05):** WorldLocke/LockeBattleDriver (§7c), primera captura por zone_id antes del combate, autorización de Balls sin gasto para encuentros prohibidos, duplicados/shiny, inicial poseído, regalos, resolución run/KO/captura, mote pendiente sin inventarlo, Cementerio idempotente y retirada de party/PC, superviviente PC, game over y rechazo de continuar finished. Snapshot/familias/pendientes guardados; SAVE_VERSION 2 con migración v1 que conserva zonas/contadores sin inventar lápidas. **206/206 tests, 3121 aserciones, 45,8 s, 0 pending**, import limpio y arranque gráfico sin errores de script/recursos (audio Dummy por entorno WSL). Teclado de motes y pantallas de Cementerio/game over quedan a A3, petición 32.
@@ -96,7 +107,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - Tests en `tests/mundo/`: GameState, SaveManager (también ranuras, copia y RandomLocke), mapas, encuentros, eventos y objetos colocados.
 - Integración: las tareas I.1 e I.2 se han mergeado y subido inmediatamente a GitHub (147d39e9 y fa18ab65). Directrices de autoría/hooks respetadas. Sala de pruebas liberada para los demás agentes.
 
-**Bloqueos:** motor y eventos probados; cantidad de recompensa pendiente (pregunta 18). Las pantallas de nombres/tienda las integra A3; se publican interfaces para probar los eventos. Bloque II: aprobación gráfica, recursos de interiores/sombra y decisiones GDD (preguntas 1, 2, 3, 5, 17).
+**Bloqueos:** mapas reales y cierre v0.1 esperan aprobación del pueblo rehecho y entrega de A4. Nombres/diseño GDD siguen POR DEFINIR (preguntas 1 y 5); se centralizan sin inventarlos. Recompensa ya decidida: 5 Poké Balls; se aplica en tarea 2. Pantallas definitivas se reciben de A3; preparo flujo con sustitutos de prueba.
 
 ---
 
@@ -176,11 +187,26 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 3 — Presentación, UI y contenido Panchito
 
-**He leído `docs/DIRECTRICES.md`** (versión del 2026-10-05: vuelven a ser 3 agentes) y el plan de «Próxima sesión». `core.hooksPath .githooks` activo en mi copia. Sigo mis bloques de arriba abajo; el II espera a que Javier apruebe la prueba de nivel gráfico (preguntas 12–14).
+**He leído** (2026-10-05, sesión de 4 agentes) el último aviso, las respuestas de Javier, la tabla de propiedad nueva y mi lista de «Próxima sesión». El arte del mundo y de los entrenadores es del Agente 4; yo sigo con la interfaz, el audio, los datos de entrenadores y `TrainerNPC`. Worktree `pokemon-panchito-agente3`, rama `feat/agente3-sesion`.
 
-**En qué estoy (2026-10-05):** bloque I. ✅ Tareas 1, 2 y 3 (`TrainerNPC`). Siguiente: tarea 4, entrenadores Panchito uno a uno, empezando por el Vendedor de Chupachups y el rival.
+**En qué estoy:** lista de la sesión, de arriba abajo. ✅ Tareas 1 a 3. Siguiente: tarea 4, menú inicial de la Fase 15.2.
+
+### Traspaso al Agente 4 — entrenadores Panchito (pack 11)
+
+**No hay sprites montados ni archivos copiados.** Solo miré el pack. Tú eres el dueño de `assets/sprites/trainers/` y `assets/sprites/characters/` y de montarlos.
+
+- **Pack** (fuera del repo, no se modifica): `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/11_character_customization_gen4/pokemon png/`. Piezas por capas, no personajes hechos.
+  - Mapa: `overworld walk`, `overworld run` y `overworld bike`, cada uno con `bases mf`, `bottoms`, `tops`, `hair`, `hats` y `carrying stuff`. La base de muestra mide **256×256** (4×4 cuadros de 64, el tamaño del contrato).
+  - Combate: `trainer front male|female` (base, bottoms, tops, hair, hats) y `trainer back male|female` (base, clothing, hair, hat). El lienzo de frente que aprobó Javier es **160×160** (`BIBLIA.md` §5).
+  - Hay `example sprites.png`, `examples.png` y `clothes list.docx` en esa carpeta.
+- **Rutas ya reservadas** en `data/trainer_classes.json` (siguen siendo mías; si cambias un nombre de archivo, dímelo): `res://assets/sprites/trainers/<clase>.png` y `<clase>_f.png`, y `res://assets/sprites/characters/<clase>.png` (y `_f`). `TrainerNPC` usa el del mapa si el archivo existe y, si no, el personaje genérico de la escena.
+- **Orden** (tu tarea 8): Vendedor de Chupachups, rival, profesor, protagonistas, y después el resto de las 20 clases de `docs/entrenadores.md`. Javier aprobó esas clases y los textos provisionales de Manolo y del rival (respuesta 6).
+- **Propuesta de script** (tuya, junto a los sprites, como `assets/tilesets/exterior/build_exterior.gd`): `assets/sprites/trainers/build_trainers.gd`, que componga las capas y escriba el PNG. No lo he escrito.
+- **Decisiones que no tomé** (aspecto de cada clase: ropa, pelo, color de piel): son tuyas, y cada sprite queda pendiente de Javier en `docs/arte/seguimiento.md`. Si una clase necesita una pieza que el pack no tiene, pregunta a Javier en vez de dibujarla por código.
 
 **Terminado:**
+- **Ficha rehecha** (respuesta de Javier, 2026-10-05): fondo saturado (agua y hierba, sin gris), cabeceras amarillas, pestañas con icono, sprite más grande, y en Notas el encuentro, la naturaleza y el carácter. Comparativa: `docs/arte/comparativas/datos_lado_a_lado.png`.
+- **Combate, respuesta 12** (2026-10-05): botones con borde oscuro y relieve (luz arriba, sombra abajo) en `assets/_fuentes/ui/boton.px`. La hierba usa el fondo *Forest* del pack 10 (el más verde; ninguno trae árboles). Hueco de bases: `assets/sprites/ui/battle/bases/<entorno>.png`, con `default.png` provisional (óvalo propio) mientras no llegue EBDX. Comparativa: `docs/arte/comparativas/combate_lado_a_lado.png`.
 - **Validador de arte a 0 errores** (petición 26, 2026-10-05): tilesets, personajes, efectos y Pokémon de los packs se comprueban solo en tamaño; regla `grid` para los Pokémon que te siguen (4×4) y los iconos (2×1) con cuadros cuadrados de cualquier lado (los Pokémon grandes del pack traen cuadros de 70, 80 o 128); efectos y `objects.png` en cuadros de 32; `pack_exceptions` para lo que el pack trae con un tamaño raro (solo avisa). La lógica pasa a `tools/arte/art_validator.gd` y **ahora es un test** (`tests/ui/test_arte.gd`), así que `main` no puede volver a tener errores sin que falle la suite. Quedan 4 avisos: petición 29.
 - **Regla R.2 en el contenido** (peticiones 16 y 11, 2026-10-05): `data/starters.json` (Kanto provisional, pregunta 1), `gifts.json`, `statics.json` y `trades.json` (vacíos, con formato y ejemplo en comentarios). `Dialogue.format_text()` resuelve los marcadores `{starter:…}`, `{gift:…}`, `{static:…}`, `{trade:…}`, `{species:…}` e `{item:…}` con `DataDB.resolve_markers()`, también con el parche de RandomLocke. **Dinero `₽`** dibujado a mano como fuente bitmap de respaldo del Theme (*Truth and Ideals* no lo trae), en las dos fuentes; apuntado en `docs/arte/seguimiento.md` para que lo apruebe Javier.
 - Borrador de `docs/GDD.md` (Fase 2): estructura completa, con las decisiones de diseño marcadas **PENDIENTE JAVIER** (resumen de las que bloquean el MVP en su §0).
@@ -204,11 +230,26 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
   - `docs/arte/BIBLIA.md` reescrita con la escala real de los packs, `seguimiento.md` y `licencias.md` al día (Generation 9 Pack incluido) y créditos en `CREDITOS.md`. Mi antigua `docs/arte/recursos.md` se ha borrado (la sustituye `recursos_terceros.md`).
   - Validador de arte con los tamaños de los packs (petición 19) y exportador del arte propio (`tools/arte/exportar.gd`).
 
-**Bloqueos:** para igualar a Añil en el combate faltan bases y elementos del entorno de los fondos (pregunta 13).
+**Bloqueos:** los árboles y las bases de verdad del combate esperan a que Javier descargue *Elite Battle: DX* (respuesta 13). El hueco ya está (petición 34).
 
 **Notas:**
 - Equipos y encuentros usan especies **provisionales** (iniciales de Kanto para el rival, Swirlix y Milcery para Manolo, la tabla de ejemplo de la guía en la Ruta 1) hasta que Javier decida la Pokédex (pregunta 5).
 - Sin Git LFS: el audio se sube como binario normal (pregunta 4). Aún no hay pack de sonidos (pregunta 13): AudioManager funciona sin archivos, avisa una vez y no suena; los gritos sí están.
+
+---
+
+## Agente 4 — Arte del mundo y de los entrenadores
+
+**He leído** (2026-10-05) `docs/DIRECTRICES.md` (§0, §1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `docs/arte/recursos_terceros.md`, las 4 referencias de Añil, las comparativas, las respuestas 9 y 17 de Javier y mi lista de «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-arte`; autoría de Javier Saguar y `core.hooksPath .githooks` activos.
+
+**En qué estoy:** tarea 1 (traspasos) y tareas 2–4: recursos que faltan, tileset exterior coherente en estilo DPPt y **pueblo de muestra rehecho** (primer objetivo de la sesión).
+
+**Traspasos y dónde vive cada script** (propuesta; si el Agente 1 o el 3 no están de acuerdo, que lo digan en "Peticiones"):
+- **Del Agente 1:** el tileset de exteriores (`assets/tilesets/exterior/`, con `build_exterior.gd`, `exterior_tileset_builder.gd`, `exterior_tiles.gd`, `autotile_masks.gd` y `objetos.json`) y los personajes del mapa (`assets/sprites/characters/`, con `import_characters.gd`) ya están en carpetas mías: los scripts de construcción se quedan donde están.
+- **Pintado de mapas:** mis scripts de pintado van en `maps/_pintura/` y los mapas de muestra en `maps/muestras/`. `maps/_tools/map_builder.gd` sigue siendo del Agente 1 (sala de pruebas y lógica de entidades); no lo toco.
+- **Del Agente 3:** los sprites de los entrenadores Panchito con el pack 11. Su tarea 1 de «Próxima sesión» es dejar el traspaso en su sección; hasta entonces no hay archivos que recoger.
+
+**Bloqueos:** ninguno.
 
 ---
 
@@ -341,9 +382,12 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 31 | A2 → A3 | `EngineDriver.request()` de un cambio incluye `reason`. `&"shift"` se puede rechazar (`party_index` -1 = se queda). El motor solo lo pide con `battle_style = shift`; el modo fijo de Locke no lo pide. Hasta el menú de opciones no hace falta dibujarlo. | pendiente |
 
 | 33 | A1 → A3 | Eventos MvpStoryEvent listos para teclado/tienda de bloque II. `Cutscene.name_requested(kind,initial)` abre nombres; responder `Cutscene.submit_name(kind,value)` (player/rival). Sala usa POR DEFINIR explícito. `ShopScreen.open(shop_id)` ya es contrato; dependiente conectado a tienda_ciudad2. | pendiente |
+| 34 | A3 → A4 | Fondos y bases de combate. Fondos: `assets/sprites/ui/battle/backgrounds/<archivo>.png` (384×308, a ×2 encuadrado; el mapa entorno→archivo está en `BattleBackground.FILES`). Bases: `assets/sprites/ui/battle/bases/<entorno>.png` (pies del Pokémon en el centro vertical). Si existe, la escena la usa y si no, `default.png`. Cuando llegue EBDX, sustituye esos PNG (hierba, bosque, cueva, agua, ciudad, interior, día y noche) sin tocar la escena. | pendiente |
 
+| 35 | A1 → A3 | `WorldNames.resolve(text)` resuelve `{world:town}`, `{world:city_2}`, `{world:professor}`, `{world:rival}`, `{world:region}` desde world.names. En NPC/carteles/MvpStory/mapas ya se aplica. Incorpóralo en `Dialogue.format_text()` antes de DataDB para las pantallas/textos de tu propiedad. `{rival}` sigue siendo el nombre elegido en la partida. | pendiente A3 |
 
 ---
+
 
 ## Preguntas para Javier
 
