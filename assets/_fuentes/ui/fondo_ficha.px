@@ -1,0 +1,13 @@
+# Fondo de la ficha: mosaico de 8×8, más saturado que el gris (respuesta de Javier).
+# Agua viva con un toque de hierba, en diagonal.
+@leyenda  a = agua_3   b = agua_5   c = hierba_4
+@salida res://assets/sprites/ui/summary/background_tile.png
+---
+bbccaaaa
+bccaaaab
+ccaaaabb
+caaaabbc
+aaaabbcc
+aaabbcca
+aabbccaa
+abbccaab

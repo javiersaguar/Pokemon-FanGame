@@ -184,7 +184,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05, sesión de 4 agentes) el último aviso, las respuestas de Javier, la tabla de propiedad nueva y mi lista de «Próxima sesión». El arte del mundo y de los entrenadores es del Agente 4; yo sigo con la interfaz, el audio, los datos de entrenadores y `TrainerNPC`. Worktree `pokemon-panchito-agente3`, rama `feat/agente3-sesion`.
 
-**En qué estoy:** lista de la sesión, de arriba abajo. ✅ Tareas 1 y 2. Siguiente: tarea 3, ficha del Pokémon rehecha.
+**En qué estoy:** lista de la sesión, de arriba abajo. ✅ Tareas 1 a 3. Siguiente: tarea 4, menú inicial de la Fase 15.2.
 
 ### Traspaso al Agente 4 — entrenadores Panchito (pack 11)
 
@@ -200,6 +200,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - **Decisiones que no tomé** (aspecto de cada clase: ropa, pelo, color de piel): son tuyas, y cada sprite queda pendiente de Javier en `docs/arte/seguimiento.md`. Si una clase necesita una pieza que el pack no tiene, pregunta a Javier en vez de dibujarla por código.
 
 **Terminado:**
+- **Ficha rehecha** (respuesta de Javier, 2026-10-05): fondo saturado (agua y hierba, sin gris), cabeceras amarillas, pestañas con icono, sprite más grande, y en Notas el encuentro, la naturaleza y el carácter. Comparativa: `docs/arte/comparativas/datos_lado_a_lado.png`.
 - **Combate, respuesta 12** (2026-10-05): botones con borde oscuro y relieve (luz arriba, sombra abajo) en `assets/_fuentes/ui/boton.px`. La hierba usa el fondo *Forest* del pack 10 (el más verde; ninguno trae árboles). Hueco de bases: `assets/sprites/ui/battle/bases/<entorno>.png`, con `default.png` provisional (óvalo propio) mientras no llegue EBDX. Comparativa: `docs/arte/comparativas/combate_lado_a_lado.png`.
 - **Validador de arte a 0 errores** (petición 26, 2026-10-05): tilesets, personajes, efectos y Pokémon de los packs se comprueban solo en tamaño; regla `grid` para los Pokémon que te siguen (4×4) y los iconos (2×1) con cuadros cuadrados de cualquier lado (los Pokémon grandes del pack traen cuadros de 70, 80 o 128); efectos y `objects.png` en cuadros de 32; `pack_exceptions` para lo que el pack trae con un tamaño raro (solo avisa). La lógica pasa a `tools/arte/art_validator.gd` y **ahora es un test** (`tests/ui/test_arte.gd`), así que `main` no puede volver a tener errores sin que falle la suite. Quedan 4 avisos: petición 29.
 - **Regla R.2 en el contenido** (peticiones 16 y 11, 2026-10-05): `data/starters.json` (Kanto provisional, pregunta 1), `gifts.json`, `statics.json` y `trades.json` (vacíos, con formato y ejemplo en comentarios). `Dialogue.format_text()` resuelve los marcadores `{starter:…}`, `{gift:…}`, `{static:…}`, `{trade:…}`, `{species:…}` e `{item:…}` con `DataDB.resolve_markers()`, también con el parche de RandomLocke. **Dinero `₽`** dibujado a mano como fuente bitmap de respaldo del Theme (*Truth and Ideals* no lo trae), en las dos fuentes; apuntado en `docs/arte/seguimiento.md` para que lo apruebe Javier.
