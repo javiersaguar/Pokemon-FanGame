@@ -7,6 +7,8 @@ extends RefCounted
 
 const MOVES_DIR := "res://src/battle/effects/moves/"
 const CONDITIONS_DIR := "res://src/battle/effects/conditions/"
+const AbilityCatalog := preload("res://src/battle/effects/ability_catalog.gd")
+const ItemCatalog := preload("res://src/battle/effects/item_catalog.gd")
 
 static var _cache: Dictionary = {}
 
@@ -21,6 +23,32 @@ static func condition(condition_id: StringName) -> BattleEffect:
 
 static func has_move(move_id: StringName) -> bool:
 	return move(move_id) != null
+
+
+static func ability(ability_id: StringName) -> BattleEffect:
+	if ability_id == &"":
+		return null
+	var key := "ability:" + String(ability_id)
+	if _cache.has(key):
+		return _cache[key]
+	var effect := AbilityCatalog.make(ability_id)
+	if effect != null:
+		effect.id = ability_id
+	_cache[key] = effect
+	return effect
+
+
+static func item(item_id: StringName) -> BattleEffect:
+	if item_id == &"":
+		return null
+	var key := "item:" + String(item_id)
+	if _cache.has(key):
+		return _cache[key]
+	var effect := ItemCatalog.make(item_id)
+	if effect != null:
+		effect.id = item_id
+	_cache[key] = effect
+	return effect
 
 
 static func _load(dir: String, effect_id: StringName) -> BattleEffect:

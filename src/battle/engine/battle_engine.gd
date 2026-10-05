@@ -374,6 +374,8 @@ func _step_end_of_turn() -> void:
 			var effect := Effects.condition(id)
 			if effect != null:
 				entries.append([effect.residual_order(), rank, _residual_condition.bind(effect, b, b.volatiles[id], id)])
+		for passive: BattleEffect in _passives(b):
+			entries.append([passive.residual_order(), rank, _passive_residual.bind(passive, b)])
 	for i: int in entries.size():
 		entries[i].append(i)
 	entries.sort_custom(func(a: Array, c: Array) -> bool:
@@ -395,6 +397,12 @@ func _step_end_of_turn() -> void:
 
 
 ## Una condición al final del turno: descuenta su duración (y se acaba si llega a 0) o hace su efecto.
+func _passive_residual(effect: BattleEffect, battler: Battler) -> void:
+	if battler.is_fainted() or active(battler.side) != battler:
+		return
+	effect.on_residual(self, battler, {})
+
+
 func _residual_condition(effect: BattleEffect, holder: Variant, state: Dictionary, key: StringName) -> void:
 	if holder is Battler and ((holder as Battler).is_fainted() or active((holder as Battler).side) != holder):
 		return
@@ -680,6 +688,9 @@ func _put_in(side_index: int, index: int, wild_appearance: bool) -> void:
 		var effect := Effects.condition(id)
 		if effect != null and not b.is_fainted():
 			effect.on_switch_in(self, b, conditions[id])
+	if not b.is_fainted():
+		for passive: BattleEffect in _passives(b):
+			passive.on_switch_in(self, b, {})
 
 
 func _mark_participant(foe: Pokemon, mine: Pokemon) -> void:
@@ -736,7 +747,8 @@ func _do_run(b: Battler) -> void:
 	_flee_attempts += 1
 	var mine := _speed(b)
 	var theirs := maxi(1, _speed(foe))
-	var escaped := mine >= theirs
+	var escape_ability := Effects.ability(b.ability)
+	var escaped := (escape_ability != null and escape_ability.guarantees_escape()) or mine >= theirs
 	if not escaped:
 		var odds := mine * 128 / theirs + 30 * _flee_attempts
 		escaped = odds > 255 or rng.randi_range(0, 255) < odds
@@ -874,6 +886,8 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		move = slot.data()
 	else:
 		move = DataDB.move(STRUGGLE)
+	if user.choice_move == &"" and user.pokemon.held_item in [&"choiceband", &"choicespecs", &"choicescarf"] and move.id != STRUGGLE:
+		user.choice_move = move.id
 	if not _before_move(user, move):
 		return
 	if slot != null:
@@ -1044,8 +1058,16 @@ func _accuracy_hits(user: Battler, target: Battler, move: MoveData, effect: Batt
 			accuracy = override
 	if accuracy <= 0:
 		return true
+	var user_ability := Effects.ability(user.ability)
+	if user_ability != null:
+		accuracy = user_ability.modify_accuracy(self, user, target, move, accuracy)
+	var target_ability := Effects.ability(target.ability)
+	if target_ability != null:
+		accuracy = target_ability.modify_incoming_accuracy(self, user, target, move, accuracy)
 	var stage: int = user.boosts[&"accuracy"]
-	if not move.ignore_evasion:
+	if user.ability == &"keeneye":
+		stage = maxi(0, stage)
+	elif not move.ignore_evasion:
 		stage = clampi(stage - target.boosts[&"evasion"], -6, 6)
 	return rng.randi_range(0, 99) < StatCalc.apply_accuracy_stage(accuracy, stage)
 
@@ -1090,7 +1112,7 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			crit = _roll_crit(user, move)
 			var opts := _damage_opts(user, target, move, effect, crit)
 			amount = DamageCalc.calculate(user, target, move, crit, rng.randi_range(0, DamageCalc.ROLLS - 1), opts)
-		total += _damage(target, amount, &"move", effectiveness, crit)
+		total += _damage(target, amount, &"move", effectiveness, crit, move)
 		landed += 1
 		if crit:
 			_msg(tr("¡Un golpe crítico!"))
@@ -1123,6 +1145,16 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		_damage(user, user.pokemon.current_hp, &"selfdestruct")
 	if effect != null and landed > 0:
 		effect.on_after_hit(self, user, target, move, total)
+	if total > 0 and not target.is_fainted():
+		for passive: BattleEffect in _passives(target):
+			passive.on_damaged(self, target, user, move)
+	if user.pokemon.held_item == &"lifeorb" and total > 0 and not user.is_fainted():
+		_damage(user, maxi(1, user.pokemon.max_hp() / 10), &"item")
+		_msg(tr("¡%s se ha hecho daño con la Vidasfera!") % BattleText.cap_name(user, wild))
+	if target.is_fainted():
+		var pride := Effects.ability(user.ability)
+		if pride != null:
+			pride.on_foe_fainted(self, user)
 
 
 ## Potencia y modificadores del daño según el movimiento, el clima, el campo y las condiciones del objetivo.
@@ -1141,12 +1173,22 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 		power = e.modify_base_power(self, user, target, move, power)
 		atk_mod *= e.stat_modifier(self, user, atk_stat)
 		def_mod *= e.stat_modifier(self, target, def_stat)
+	for passive: BattleEffect in _passives(user):
+		power = passive.modify_base_power(self, user, target, move, power)
+		atk_mod *= passive.stat_modifier(self, user, atk_stat)
+	for passive: BattleEffect in _passives(target):
+		def_mod *= passive.stat_modifier(self, target, def_stat)
 	var final_mods: Array = []
 	for c: Array in _conditions_of(target):
 		var m := (c[0] as BattleEffect).damage_modifier(self, user, target, move, crit)
 		if m != 1.0:
 			final_mods.append(m)
-	return {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod}
+	for passive: BattleEffect in _passives(user):
+		var outgoing := passive.damage_modifier(self, user, target, move, crit)
+		if outgoing != 1.0:
+			final_mods.append(outgoing)
+	var ignore_burn := user.ability == &"guts" and user.pokemon.status != &""
+	return {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod, "ignore_burn": ignore_burn}
 
 
 @warning_ignore("integer_division")
@@ -1179,6 +1221,9 @@ func _apply_status_move(user: Battler, target: Battler, move: MoveData, effect: 
 
 
 func _apply_secondary(user: Battler, target: Battler, sec: Dictionary) -> void:
+	var dust := Effects.ability(target.ability)
+	if dust != null and dust.blocks_secondary():
+		return
 	if not target.is_fainted():
 		if sec.has("status"):
 			_try_set_status(target, StringName(sec["status"]), false, user)
@@ -1195,7 +1240,19 @@ func _apply_secondary(user: Battler, target: Battler, sec: Dictionary) -> void:
 
 # --- Daño, curación, estados y características ---
 
-func _damage(b: Battler, amount: int, source: StringName, effectiveness: float = 1.0, critical: bool = false) -> int:
+func _damage(b: Battler, amount: int, source: StringName, effectiveness: float = 1.0, critical: bool = false, move: MoveData = null) -> int:
+	var held := Effects.item(b.pokemon.held_item)
+	if held != null and b.pokemon.held_item == &"focussash" and b.pokemon.current_hp == b.pokemon.max_hp() \
+			and b.pokemon.current_hp > 1 and amount >= b.pokemon.current_hp:
+		amount = b.pokemon.current_hp - 1
+		consume_held_item(b)
+		_msg(tr("¡%s ha aguantado gracias a la Banda Focus!") % BattleText.cap_name(b, setup.is_wild()))
+		held = null
+	elif held != null and move != null and source == &"move" and held.resists(move, effectiveness):
+		amount = maxi(1, DamageCalc.modify(amount, 0.5))
+		_msg(tr("¡La baya de %s ha reducido el daño!") % b.pokemon.display_name())
+		consume_held_item(b)
+		held = null
 	var dealt := b.pokemon.take_damage(amount)
 	if dealt > 0:
 		b.damaged_this_turn = true
@@ -1205,7 +1262,24 @@ func _damage(b: Battler, amount: int, source: StringName, effectiveness: float =
 	})
 	if b.is_fainted() and b not in _pending_faints:
 		_pending_faints.append(b)
+	elif not b.is_fainted():
+		_eat_healing_berry(b)
 	return dealt
+
+
+func _eat_healing_berry(b: Battler) -> void:
+	var held := Effects.item(b.pokemon.held_item)
+	if held == null or b.pokemon.current_hp * 2 > b.pokemon.max_hp():
+		return
+	var amount := held.heal_amount(b)
+	if amount <= 0:
+		return
+	var confuse := held.pinch_confuses(b)
+	consume_held_item(b)
+	if _heal(b, amount, &"item") > 0:
+		_msg(tr("¡%s ha comido su baya y ha recuperado PS!") % BattleText.cap_name(b, setup.is_wild()))
+	if confuse:
+		_try_confuse(b, true, null)
 
 
 func _heal(b: Battler, amount: int, source: StringName) -> int:
@@ -1239,6 +1313,11 @@ func _try_set_status(target: Battler, status: StringName, announce: bool, source
 		target.toxic_stage = 0
 	_emit(BattleEvent.STATUS, target.side, target.slot, {"status": String(status)})
 	_msg(tr(BattleText.STATUS_SET[status]) % name)
+	var berry := Effects.item(target.pokemon.held_item)
+	if berry != null and berry.cures_status(status):
+		_cure_status(target)
+		consume_held_item(target)
+		_msg(tr("¡La baya de %s ha curado su problema!") % target.pokemon.display_name())
 	return true
 
 
@@ -1262,6 +1341,11 @@ func _try_confuse(target: Battler, announce: bool, source: Battler = null) -> bo
 	for c: Array in _status_guards(target):
 		if not (c[0] as BattleEffect).on_try_confuse(self, target, source, announce):
 			return false
+	var persim := Effects.item(target.pokemon.held_item)
+	if persim != null and persim.cures_confusion():
+		consume_held_item(target)
+		_msg(tr("¡La baya de %s evita la confusión!") % target.pokemon.display_name())
+		return false
 	target.volatiles[&"confusion"] = {"turns": rng.randi_range(2, 5)}
 	_emit(BattleEvent.VOLATILE, target.side, target.slot, {"volatile": "confusion", "active": true})
 	_msg(tr("¡%s se ha quedado confuso!") % name)
@@ -1279,8 +1363,13 @@ func _end_confusion(b: Battler) -> void:
 func _apply_boosts(target: Battler, boosts: Dictionary[StringName, int], secondary: bool) -> bool:
 	var wild := setup.is_wild()
 	var shown := false
+	var guard := Effects.ability(target.ability)
 	for stat: StringName in boosts:
 		if not target.boosts.has(stat):
+			continue
+		if boosts[stat] < 0 and guard != null and guard.prevents_drop(stat):
+			if not secondary:
+				_msg(tr("¡%s se protege con su habilidad!") % BattleText.cap_name(target, wild))
 			continue
 		var old: int = target.boosts[stat]
 		var new_stage := clampi(old + boosts[stat], -6, 6)
@@ -1312,6 +1401,8 @@ func _conditions_of(b: Battler) -> Array[Array]:
 		var effect := Effects.condition(id)
 		if effect != null:
 			out.append([effect, b, b.volatiles[id]])
+	for passive: BattleEffect in _passives(b):
+		out.append([passive, b, {}])
 	return out
 
 
@@ -1353,6 +1444,8 @@ func _status_guards(target: Battler) -> Array[Array]:
 			var effect := Effects.condition(id)
 			if effect != null:
 				out.append([effect, b, b.volatiles[id]])
+	for passive: BattleEffect in _passives(target):
+		out.append([passive, target, {}])
 	return out
 
 
@@ -1399,7 +1492,35 @@ func _speed(b: Battler) -> int:
 	var spe := b.effective_speed()
 	for c: Array in _conditions_of(b):
 		spe = (c[0] as BattleEffect).modify_speed(self, b, spe)
+	for passive: BattleEffect in _passives(b):
+		spe = passive.modify_speed(self, b, spe)
 	return spe
+
+
+func _passives(b: Battler) -> Array[BattleEffect]:
+	var out: Array[BattleEffect] = []
+	if b == null:
+		return out
+	var ability := Effects.ability(b.ability)
+	if ability != null:
+		out.append(ability)
+	var held := Effects.item(b.pokemon.held_item)
+	if held != null:
+		out.append(held)
+	return out
+
+
+func side_condition(side_index: int, id: StringName) -> Dictionary:
+	return _sides[side_index].conditions.get(id, {})
+
+
+func consume_held_item(b: Battler) -> void:
+	if b == null or b.pokemon.held_item == &"":
+		return
+	b.pokemon.held_item = &""
+	b.choice_move = &""
+	if b.ability == &"unburden":
+		b.unburdened = true
 
 
 func _actives_by_speed() -> Array[Battler]:
@@ -1488,6 +1609,10 @@ func confuse(target: Battler, source: Battler = null, announce: bool = true) -> 
 ## Añade un volátil con script (conditions/<id>.gd). false si ya lo tiene o su on_start lo impide.
 func add_volatile(b: Battler, id: StringName, source: Battler = null, data: Dictionary = {}) -> bool:
 	if b == null or b.is_fainted() or b.volatiles.has(id):
+		return false
+	var veil := Effects.ability(b.ability)
+	if veil != null and not veil.allows_volatile(id):
+		message(tr("¡%s se protege con su habilidad!") % name_of(b))
 		return false
 	var state := _new_state(id, data)
 	var effect := Effects.condition(id)

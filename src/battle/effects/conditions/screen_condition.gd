@@ -26,6 +26,6 @@ func on_end(engine: BattleEngine, holder: Variant, _state: Dictionary) -> void:
 
 
 func damage_modifier(_engine: BattleEngine, user: Battler, target: Battler, move: MoveData, crit: bool) -> float:
-	if crit or user.side == target.side or move.is_physical() != physical or move.is_status():
+	if crit or user.side == target.side or move.is_physical() != physical or move.is_status() or user.ability == &"infiltrator":
 		return 1.0
 	return 0.5

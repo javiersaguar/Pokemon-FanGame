@@ -112,16 +112,16 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 3. ✅ Sprites de **todas** las especies del pack 06 (`import_pokemon_assets.mjs --all`: ≈ 1.370 especies y formas, 8 vistas cada una, y 1.281 gritos, que ya van como archivos normales porque el Agente 1 quitó el audio de LFS).
 4. ⏳ Fase 9 del motor de combate. Hecho: el sistema de efectos con hooks (9.1) y los 52 movimientos con script que usa el MVP más sus parientes (80 scripts), con climas, Campo de Niebla y condiciones de bando (9.3).
 
-**He leído** (2026-10-05) el aviso de la sesión de 3 agentes, el bloque I de «Próxima sesión», la sección del Agente 4, `docs/randomlocke.md` y el §10. El motor del RandomLocke vuelve a ser mío. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`, rama `feat/agente2-bloque-i`.
+**He leído** (2026-10-05) el aviso de la sesión de 4 agentes, las respuestas de Javier, la tabla de propiedad (el Agente 4 pasa a arte) y la lista de «Próxima sesión». Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** bloque I, de arriba abajo. Hechos los puntos 1 a 4. Siguiente: fase 9.5 (habilidades, objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4).
+**En qué estoy:** sesión larga, de arriba abajo. Hecho el punto 1 (fase 9.5). Siguiente: fase 9.2, movimientos con script de las especies en uso.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
 2. ✅ Petición 28: parche dorado rehecho (`tests/randomizer/golden_clasico_v2.json`, semilla `20261004`, preset `clasico`). Rehecho al entrar `starters.json`, `gifts.json`, `statics.json` y `trades.json`: solo cambió la huella. El test no queda *pending*.
 3. ✅ Petición 22: `DataDB.randomizer_input()` (con `stage`, `min_level`, `max_level` y `family_id`) y `apply_patch() -> Array[String]` atómico. Un hash o una referencia mala no toca el parche activo. Consultas nuevas: `tm_compat`, `tutor_compat`, `tm_move`, `tutor_move`. `shiny_odds()` usa `settings.shiny_denominator` del parche. `species()` ya mezcla tipos, estadísticas, evoluciones y objetos equipados, y no reaplicamos `species_map`. El dorado se rehizo: solo cambió `input_hash`.
 4. ✅ Petición 23: el combate aplica muerte permanente (una vez por `uid`, nunca en tutorial), tope de experiencia (`next_ace_level`), modo fijo y límite de objetos. Las Balls no gastan el límite. `prepare_battle` con `tutorial` limpia las reglas del setup.
-5. ⏳ Fase 9.5: habilidades y objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4.
+5. ✅ Fase 9.5 (2026-10-05, sesión de 4 agentes): habilidades de `species_in_use.json`, objetos equipados de combate y Púas, Púas Tóxicas y Trampa Rocas.
 
 ### Traspaso del randomizer al Agente 4
 
@@ -397,6 +397,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-05 | A2 | §8.7: habilidades y objetos equipados en el combate (fase 9.5) y trampas Púas, Púas Tóxicas y Trampa Rocas. |
 | 2026-10-05 | A2 | §8.5: `BattleSetup.locke`, `next_ace_level`, `battle_style` y `tutorial`. `pokemon_died` una vez por uid. Tope de experiencia, modo fijo y límite de objetos. `reason = shift` en `BattleRequest` y en `EngineDriver.request()` (`switch_to(-1)` no cambia). El tutorial de `prepare_battle` limpia esas reglas. |
 | 2026-10-05 | A1 | §7c: WorldLocke/LockeBattleDriver, GameState.locke y snapshot persistente; señales Locke, zone_id, contexto tutorial, capturas con mote pendiente, Cementerio y ranuras terminadas. |
 | 2026-10-04 | A1 | §0 y §5: **casillas de 32 px** y cámara del mundo con `zoom = 1` (`Grid.TILE` = 32, `Grid.ART_PIXEL`, `Grid.round_to_art_pixel()`). Nueva capa `Entities/Objects` (casas y árboles con y-sort). TileSet de exteriores en `assets/tilesets/exterior/` (se retira el provisional). Personajes en cuadros de 64×64 del pack 05 (se retiran los provisionales). `Character`: `run_sprite_sheet`, `step(..., running)`, `jump()`, `is_tile_free()` y la señal `step_started`. Nueva clase `Follower`; `SceneManager.player_follower`; `MapData.followers_allowed`; `data/world.json` → `followers.enabled`. `MapRoot.tile_custom_data()` devuelve el primer valor no vacío. |

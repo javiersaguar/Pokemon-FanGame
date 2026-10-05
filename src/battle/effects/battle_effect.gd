@@ -168,3 +168,65 @@ func forced_action(_engine: BattleEngine, _battler: Battler, _state: Dictionary)
 ## Quita tipos al que la tiene (Respiro quita Volador durante el turno).
 func removed_types(_state: Dictionary) -> Array[StringName]:
 	return []
+
+
+# --- Habilidades y objetos equipados (Fase 9.5) ---
+
+## Impide que baje esa característica (Ojocompuesto no; Vista Lince y Sacapecho).
+func prevents_drop(_stat: StringName) -> bool:
+	return false
+
+
+## Polvo Escudo: no recibe efectos secundarios.
+func blocks_secondary() -> bool:
+	return false
+
+
+## Velo Aroma: impide ciertos volátiles (Atracción).
+func allows_volatile(_id: StringName) -> bool:
+	return true
+
+
+## Ajusta la precisión del que ataca (Ojocompuesto, Entusiasmo).
+func modify_accuracy(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, accuracy: int) -> int:
+	return accuracy
+
+
+## Ajusta la precisión con la que le golpean (Tumbos).
+func modify_incoming_accuracy(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, accuracy: int) -> int:
+	return accuracy
+
+
+## Huida: escapa seguro de un salvaje.
+func guarantees_escape() -> bool:
+	return false
+
+
+## Tras recibir daño de un movimiento (Cobardía, Casco Dentado).
+func on_damaged(_engine: BattleEngine, _battler: Battler, _user: Battler, _move: MoveData) -> void:
+	pass
+
+
+## Cuando debilita a un rival (Autoestima).
+func on_foe_fainted(_engine: BattleEngine, _user: Battler) -> void:
+	pass
+
+
+func resists(_move: MoveData, _effectiveness: float) -> bool:
+	return false
+
+
+func cures_status(_status: StringName) -> bool:
+	return false
+
+
+func cures_confusion() -> bool:
+	return false
+
+
+func heal_amount(_battler: Battler) -> int:
+	return 0
+
+
+func pinch_confuses(_battler: Battler) -> bool:
+	return false

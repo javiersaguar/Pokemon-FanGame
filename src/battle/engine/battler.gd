@@ -25,6 +25,10 @@ var damaged_this_turn: bool = false
 var protect_count: int = 0
 ## Habilidad en el combate (Danza Amiga o Abatidoras la cambian sin tocar al Pokémon).
 var ability: StringName = &""
+## Movimiento fijado por un objeto Elección. Vacío = no está fijado.
+var choice_move: StringName = &""
+## Descendrático: perdió el objeto durante el combate.
+var unburdened: bool = false
 
 
 func _init(p: Pokemon, battle_side: int, battle_slot: int, index: int) -> void:
@@ -80,7 +84,14 @@ func effective_speed() -> int:
 ## Movimientos que se pueden elegir (con PP).
 func usable_moves() -> Array[int]:
 	var out: Array[int] = []
+	var vest := pokemon.held_item == &"assaultvest"
 	for i: int in pokemon.moves.size():
-		if pokemon.moves[i].pp > 0:
-			out.append(i)
+		var slot := pokemon.moves[i]
+		if slot.pp <= 0:
+			continue
+		if choice_move != &"" and slot.id != choice_move:
+			continue
+		if vest and slot.data().is_status():
+			continue
+		out.append(i)
 	return out

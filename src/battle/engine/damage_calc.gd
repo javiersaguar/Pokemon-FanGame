@@ -87,7 +87,7 @@ static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit
 	var typeless := is_typeless(move)
 	var effectiveness := 1.0 if typeless else DataDB.type_effectiveness(move.type, defender.types())
 	var stab := not typeless and attacker.has_type(move.type)
-	var burned := physical and attacker.pokemon.status == &"brn" and move.id != &"facade"
+	var burned := physical and attacker.pokemon.status == &"brn" and move.id != &"facade" and not bool(opts.get("ignore_burn", false))
 	var final_mod := chain(opts.get("final", []))
 	return modify_damage(base, roll, crit, stab, effectiveness, burned, false, final_mod, float(opts.get("weather", 1.0)))
 
