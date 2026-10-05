@@ -4,4 +4,3 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
-| `muestras/ruta` | Agente 4 | 2026-10-05 | Ruta de muestra con varios niveles de altura (pintado) |

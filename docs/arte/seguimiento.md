@@ -31,6 +31,7 @@ Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador h
 | Retoque de los verdes de los packs 02, 03 y 04 | Tileset | A4 | integrado | `GREEN_RETOUCH` en `build_exterior.gd` | ⏳ | Hierba con el tono y la viveza de la de Añil (de 85° a 105°, más saturada) |
 | Sombra de los personajes y de los Pokémon que te siguen (`effects/sombra.png`) | Efecto | A4 | integrado | Propia, dibujada a mano (`assets/_fuentes/mundo/sombra.px2`) | ⏳ | Elipse de 14×5 píxeles del arte en dos tonos fríos semitransparentes; la integra el Agente 1 |
 | Pueblo de muestra v2 (`maps/muestras/pueblo.tscn`) | Mapa | A4 | revisado | Tileset de exteriores | ⏳ | Comparativas `docs/arte/comparativas/pueblo_v2_*.png` |
+| Ruta de muestra v2 (`maps/muestras/ruta.tscn`) | Mapa | A4 | revisado | Tileset de exteriores | ⏳ | Tres niveles con escaleras; comparativas `docs/arte/comparativas/ruta_v2_*.png` |
 | Árboles y flora (`arboles.png`, `flora.png`) | Tileset | A4 | integrado | AnonAlpaca (+ Magiscarf), packs 03 y 04 | ⏳ | Mayor densidad de detalle que el pack 02 |
 | Flores animadas y brillo del agua (`animados.png`) | Tileset animado | A4 | integrado | Pack 02 | ⏳ | 4 y 2 cuadros |
 | Personajes del mapa (`assets/sprites/characters/*.png`) | Personaje en el mapa | A4 | integrado | PurpleZaffre, pack 05 | ⏳ | Rival, profesor, enfermera, dependiente y vecinos. Giro al hablar: comparativa `comparativas/npc_interaccion.md` (2026-10-05), pendiente de revisión |

@@ -117,6 +117,47 @@ func pond(rect: Rect2i, lilies: Array = []) -> void:
 		decor.set_cell(lilies[i], ExteriorTiles.SRC_FLORA, Vector2i(i % 3, 25 + (i / 3) % 3))
 
 
+# --- Alturas ---
+
+## Meseta del pack 02: borde de tierra arriba y a los lados y pared de roca de 2
+## filas abajo, con escaleras en las columnas `stairs_x`. El interior se deja sin
+## casilla en Decor: se ve el suelo de Ground (hierba, caminos, hierba alta) y
+## se puede pisar. Para varios niveles, se pintan una dentro de otra (de fuera a
+## dentro). Las filas o columnas fuera del mapa no se ven.
+func plateau(rect: Rect2i, stairs_x: Array = []) -> void:
+	var o := ExteriorTiles.PLATEAU
+	for cell: Vector2i in cells(rect):
+		var cx := 0 if cell.x == rect.position.x else (2 if cell.x == rect.end.x - 1 else 1)
+		var cy: int
+		if cell.y == rect.position.y:
+			cy = 0
+		elif cell.y >= rect.end.y - 2:
+			cy = 2 + (cell.y - (rect.end.y - 2))
+		else:
+			cy = 1
+		if cx == 1 and cy == 1:
+			decor.erase_cell(cell)
+			continue
+		var coords := o + Vector2i(cx, cy)
+		if cy >= 2 and cell.x in stairs_x:
+			coords = ExteriorTiles.STAIRS[cy - 2]
+		decor.set_cell(cell, ExteriorTiles.SRC_GEN4, coords)
+		_covered[cell] = true
+
+
+## Bordillo de x0 a x1 (incluidas) en la fila y: se salta hacia abajo.
+func ledge(x0: int, x1: int, y: int) -> void:
+	for x: int in range(x0, x1 + 1):
+		var piece := 0 if x == x0 else (2 if x == x1 else 1)
+		decor.set_cell(Vector2i(x, y), ExteriorTiles.SRC_GEN4, ExteriorTiles.LEDGE[piece])
+		_covered[Vector2i(x, y)] = true
+
+
+## Mancha de tierra (recuadro 3×3 del pack 02).
+func soil(rect: Rect2i) -> void:
+	nine_slice(rect, ExteriorTiles.SAND_PATCH)
+
+
 # --- Bosque ---
 
 ## Bosque de pinos del pack 02 (árboles de 2 columnas). Usa x e y pares y
