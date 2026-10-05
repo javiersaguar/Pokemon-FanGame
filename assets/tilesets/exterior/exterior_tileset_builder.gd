@@ -186,7 +186,11 @@ static func _objects(ts: TileSet, src_id: int, file: String, objects: Dictionary
 		s.create_tile(coords, size)
 		var tile := s.get_tile_data(coords, 0)
 		tile.texture_origin = Vector2i(T / 2 - size.x * T / 2, size.y * T / 2 - T / 2)
-		tile.y_sort_origin = T / 2 - 1
+		# Las casas se ordenan por la fila de su puerta (la base de la pared): lo
+		# que hay debajo (escalón y sombra) se pisa y quien está ahí se ve delante.
+		var door: Vector2i = o["door"]
+		var base_dy := door.y if door.x >= 0 else 0
+		tile.y_sort_origin = base_dy * T + T / 2 - 1
 		var terrain := "tree"
 		if src_id in [ExteriorTiles.SRC_CASAS, ExteriorTiles.SRC_CASAS_DPPT]:
 			terrain = "house"
@@ -194,7 +198,7 @@ static func _objects(ts: TileSet, src_id: int, file: String, objects: Dictionary
 			terrain = "fence"
 		tile.set_custom_data("terrain", terrain)
 		for cell: Vector2i in o["footprint"]:
-			if cell == o["door"]:
+			if cell == door or cell.y > base_dy:
 				continue
 			tile.add_collision_polygon(WALL)
 			tile.set_collision_polygon_points(WALL, tile.get_collision_polygons_count(WALL) - 1, _square(cell))

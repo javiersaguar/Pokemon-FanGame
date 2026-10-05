@@ -109,6 +109,8 @@ godot --headless --path . -s res://assets/tilesets/exterior/build_exterior.gd --
 
 Si los packs están en otra carpeta: `-- --recursos=<ruta>` (en `--paso=png` y en el de personajes).
 
+*(Sección del Agente 4.)* El arte del mundo dibujado a mano en texto (`assets/_fuentes/mundo/*.px2`, por ahora la sombra de los personajes) se exporta a ×2 con `godot --headless --path . -s res://assets/_fuentes/mundo/exportar_mundo.gd`. Los mapas que pinta el Agente 4 se generan con los scripts de `maps/_pintura/` (pintor común en `pintor.gd`), por ejemplo `godot --headless --path . -s res://maps/_pintura/pintar_pueblo.gd -- --force` para `maps/muestras/pueblo.tscn`.
+
 Mapas generados por script (pisan los cambios hechos a mano, por eso piden `-- --force`): la sala de pruebas (`maps/test/build_test_maps.gd`) y los mapas de muestra de la prueba de nivel gráfico (`maps/_tools/build_muestras.gd`). Al tocar objetos del suelo: `godot --headless --path . -s res://maps/_tools/build_item_placements.gd`.
 
 ## Arte (Fase A)

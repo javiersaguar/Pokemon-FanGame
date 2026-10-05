@@ -15,17 +15,20 @@ Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus person
 | Godot Engine 4.7.2 | Juan Linietsky, Ariel Manzur y colaboradores | MIT | https://godotengine.org | — |
 | GUT 9.7.1 (Godot Unit Test) | Butch Wesley (bitwes) | MIT | https://github.com/bitwes/Gut | `addons/gut/` (incluye sus propias fuentes, con su licencia) |
 
-## Gráficos del mundo: tileset y personajes del mapa (Agente 1)
+## Gráficos del mundo: tileset y personajes del mapa (Agente 4; los montó el Agente 1)
 
 Copiados de los packs de `docs/arte/recursos_terceros.md` solo en lo que se usa, sin dibujar nada encima: `assets/tilesets/exterior/build_exterior.gd` y `assets/sprites/characters/import_characters.gd` dicen qué parte sale de qué archivo. Los packs 02 y 05 ya vienen a ×2 y se copian tal cual; los packs 01, 03 y 04 vienen a ×1 y se duplica cada píxel (decisión de Javier). Los colores clave de las hojas (rosa, magenta y amarillo de relleno) se pasan a transparente y las piezas de los autotiles de RMXP se recomponen en las 47 casillas de cada terreno.
 
 | Recurso | Autor | Licencia o permiso | Enlace | En el repo |
 |---------|-------|--------------------|--------|------------|
-| **HGSS for RMXP** v1.2: casas | **SirMalo** | Recurso para fangames de Eevee Expo, con crédito | https://eeveeexpo.com/resources/462/ | `assets/tilesets/exterior/casas.png` |
-| **Public Gen 4 Tileset**: hierba, bosque de pinos, caminos, estanque, meseta y escaleras, bordillo, adoquines, carteles, rocas y troncos; autotiles de hierba alta, camino, flores y brillos del agua | **Magiscarf, WesleyFG, SailorVicious (Heavy-Metal-Lover), Shawn Frost, NSora-96, PeekyChew, Kyle-Dove, Claisprojects.com, Minorthreat0987, The-Red-Ex, UltimoSpriter, TyranitarDark, DarkDragonn, rafa-cac, Phyromatical, Alucus, Newtiteuf, ChaoticCherryCake y moca** (su `CREDITS.txt`) | Recurso público para fangames de Eevee Expo, con crédito | https://eeveeexpo.com/resources/208/ | `assets/tilesets/exterior/gen4.png`, `autotiles.png`, `animados.png` |
+| **HGSS for RMXP** v1.2: valla de madera (y las casas de HGSS, que ya no se usan en el pueblo) | **SirMalo** | Recurso para fangames de Eevee Expo, con crédito | https://eeveeexpo.com/resources/462/ | `assets/tilesets/exterior/casas.png` |
+| **Public Gen 4 Tileset**: hierba, bosque de pinos, caminos, calle de baldosas, casas de DPPt, estanque, meseta y escaleras, bordillo, adoquines, carteles, rocas y troncos; autotiles de hierba alta, camino, flores y brillos del agua | **Magiscarf, WesleyFG, SailorVicious (Heavy-Metal-Lover), Shawn Frost, NSora-96, PeekyChew, Kyle-Dove, Claisprojects.com, Minorthreat0987, The-Red-Ex, UltimoSpriter, TyranitarDark, DarkDragonn, rafa-cac, Phyromatical, Alucus, Newtiteuf, ChaoticCherryCake y moca** (su `CREDITS.txt`) | Recurso público para fangames de Eevee Expo, con crédito | https://eeveeexpo.com/resources/208/ | `assets/tilesets/exterior/gen4.png`, `autotiles.png`, `animados.png` |
 | **Big Tree Pack**: cerezos, manzano, pino, árboles redondos y arbustos | **AnonAlpaca** | Libre uso con crédito; el autor permite editarlos | https://eeveeexpo.com/resources/602/ | `assets/tilesets/exterior/arboles.png` |
 | **Big Flora Pack**: tulipanes, setos y nenúfares | **AnonAlpaca** (plantas) y **Magiscarf** (lo que no es planta) | Libre uso con crédito; el autor permite editarlos | https://eeveeexpo.com/resources/607/ | `assets/tilesets/exterior/flora.png` |
 | **ULTIMATE Gen 4 Overworlds Pack**: protagonista provisional (Ethan y Lyra, andar y correr), rival, profesor, enfermera, dependiente y vecinos; Poké Ball del suelo; "!", hierba al pisarla, polvo al saltar y brillo shiny | **PurpleZaffre** | Recurso para fangames de Eevee Expo, con crédito obligatorio | https://eeveeexpo.com/resources/609/ | `assets/sprites/characters/` y `assets/sprites/characters/effects/` |
+| Sombra de los personajes y de los Pokémon que te siguen | Equipo de Pokémon Panchito (dibujada a mano en `assets/_fuentes/mundo/sombra.px2`) | Propio | — | `assets/sprites/characters/effects/sombra.png` |
+
+Los verdes de la naturaleza de los packs 02, 03 y 04 llevan un **retoque de paleta** reproducible (`GREEN_RETOUCH` en `build_exterior.gd`) para que la hierba tenga el tono y la viveza de la de Añil.
 
 ## Pokémon: sprites, iconos, Pokémon que te siguen y gritos (Agente 2)
 

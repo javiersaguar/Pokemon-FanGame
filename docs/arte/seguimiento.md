@@ -15,7 +15,7 @@ Relleno técnico temporal que hay que sustituir. **Ninguno es arte del juego.**
 |-------|------|-------|--------|-------------------|---------------------|-------|
 | Efectos de los movimientos (`BattleFx`) | Animación de combate | A3 | placeholder | Dibujados por código | — | Estallido, proyectil y destellos por tipo. Falta un pack de efectos (pregunta en `docs/ESTADO.md`) |
 | Sprite de Pokémon de reserva (`PlaceholderArt.pokemon`) | Pokémon en combate | A3 | placeholder | Generado por código | — | **Solo** si a una especie le falta el sprite; con el Generation 9 Pack no sale ninguno |
-| Protagonista provisional (Ethan y Lyra del pack 05) | Personaje en el mapa | A1 | integrado | PurpleZaffre, pack 05 | — | Provisional hasta el diseño del protagonista de Panchito (pack 11) |
+| Protagonista provisional (Ethan y Lyra del pack 05) | Personaje en el mapa | A4 | integrado | PurpleZaffre, pack 05 | — | Provisional hasta el diseño del protagonista de Panchito (pack 11) |
 
 Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador hasta tener su sprite) ni el fondo dibujado por código.
 
@@ -23,12 +23,18 @@ Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador h
 
 | Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
 |-------|------|-------|--------|-------------------|---------------------|-------|
-| Tileset de exteriores (`assets/tilesets/exterior/`: hierba, bosque, caminos, hierba alta, estanque, meseta, bordillo, adoquines, adornos) | Tileset | A1 | integrado | Packs 02 (×2 tal cual) y 01, 03 y 04 (×2 duplicando píxeles); ver CREDITOS.md | ⏳ | Prueba de nivel gráfico: `docs/arte/comparativas/` |
-| Casas de HGSS (`casas.png`) | Edificio | A1 | integrado | SirMalo, pack 01 | ⏳ | 3 casas de Pueblo Primavera |
-| Árboles y flora (`arboles.png`, `flora.png`) | Tileset | A1 | integrado | AnonAlpaca (+ Magiscarf), packs 03 y 04 | ⏳ | Mayor densidad de detalle que el pack 02 |
-| Flores animadas y brillo del agua (`animados.png`) | Tileset animado | A1 | integrado | Pack 02 | ⏳ | 4 y 2 cuadros |
-| Personajes del mapa (`assets/sprites/characters/*.png`) | Personaje en el mapa | A1 | integrado | PurpleZaffre, pack 05 | ⏳ | Rival, profesor, enfermera, dependiente y vecinos. Giro al hablar: comparativa `comparativas/npc_interaccion.md` (2026-10-05), pendiente de revisión |
-| Efectos del mapa (`assets/sprites/characters/effects/`) | Efecto | A1 | integrado | PurpleZaffre, pack 05 | ⏳ | "!", hierba al pisarla, polvo al saltar, brillo shiny |
+| Tileset de exteriores (`assets/tilesets/exterior/`: hierba, bosque, caminos, hierba alta, estanque, meseta, bordillo, adoquines, adornos) | Tileset | A4 | integrado | Packs 02 (×2 tal cual) y 01, 03 y 04 (×2 duplicando píxeles); ver CREDITOS.md | ⏳ | Prueba de nivel gráfico: `docs/arte/comparativas/` |
+| Casas de HGSS (`casas.png`) | Edificio | A4 | retirado del pueblo | SirMalo, pack 01 | — | Javier: tejados verdeazulados que no encajan con DPPt (respuesta 17). Sustituidas por las casas de DPPt |
+| Casas de DPPt (`casas_dppt.png`: roja, azul, azul pequeña, naranja y la de tejado rojo grande) | Edificio | A4 | integrado | Pack 02 | ⏳ | Completas, con su sombra. En el pueblo de muestra v2 |
+| Calle de baldosas en espiga (`gen4.png`, filas 27–29) | Tileset | A4 | integrado | Pack 02 | ⏳ | Sustituye a la plaza de círculos y a los adoquines con grietas repetidas |
+| Valla de madera (`vallas.png`) | Objeto del mapa | A4 | integrado | SirMalo, pack 01 (×2) | ⏳ | Tramos horizontales; las puntas tapan a quien está detrás |
+| Retoque de los verdes de los packs 02, 03 y 04 | Tileset | A4 | integrado | `GREEN_RETOUCH` en `build_exterior.gd` | ⏳ | Hierba con el tono y la viveza de la de Añil (de 85° a 105°, más saturada) |
+| Sombra de los personajes y de los Pokémon que te siguen (`effects/sombra.png`) | Efecto | A4 | integrado | Propia, dibujada a mano (`assets/_fuentes/mundo/sombra.px2`) | ⏳ | Elipse de 14×5 píxeles del arte en dos tonos fríos semitransparentes; la integra el Agente 1 |
+| Pueblo de muestra v2 (`maps/muestras/pueblo.tscn`) | Mapa | A4 | revisado | Tileset de exteriores | ⏳ | Comparativas `docs/arte/comparativas/pueblo_v2_*.png` |
+| Árboles y flora (`arboles.png`, `flora.png`) | Tileset | A4 | integrado | AnonAlpaca (+ Magiscarf), packs 03 y 04 | ⏳ | Mayor densidad de detalle que el pack 02 |
+| Flores animadas y brillo del agua (`animados.png`) | Tileset animado | A4 | integrado | Pack 02 | ⏳ | 4 y 2 cuadros |
+| Personajes del mapa (`assets/sprites/characters/*.png`) | Personaje en el mapa | A4 | integrado | PurpleZaffre, pack 05 | ⏳ | Rival, profesor, enfermera, dependiente y vecinos. Giro al hablar: comparativa `comparativas/npc_interaccion.md` (2026-10-05), pendiente de revisión |
+| Efectos del mapa (`assets/sprites/characters/effects/`) | Efecto | A4 | integrado | PurpleZaffre, pack 05 | ⏳ | "!", hierba al pisarla, polvo al saltar, brillo shiny |
 | Sombras de los personajes | Efecto | A4 arte / A1 integración | integrado | Dibujada a mano por A4, `sombra.px2` | pendiente revisión | `comparativas/sombras_personajes.md`; Character la hereda también en Follower, queda en el suelo al saltar |
 | **Generation 9 Resource Pack v3.3.8** (`assets/sprites/pokemon/`: `front`, `front_shiny` 192×192; `back`, `back_shiny` 288×288; `icons`, `icons_shiny` 128×64; `followers`, `followers_shiny` 256×256) | Pokémon (combate, iconos y seguidores) | A2 | integrado | Recopilado por Caruban; autores en `CREDITOS.md` ("Pokémon") | ⏳ | **Set oficial del proyecto** (DIRECTRICES §7.1). Los importa `tools/sprites/` solo de las especies en uso, sin reescalar. Shiny oficiales |
 | Objeto Poké Ball (`assets/sprites/items/pokeball.png`, 48×48) | Objeto | A3 | integrado | Generation 9 Pack (`Graphics/Items`) | ⏳ | En la ficha del Pokémon (la Ball en la que se capturó) |

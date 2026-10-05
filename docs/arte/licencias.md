@@ -11,6 +11,10 @@ Todos son recursos de fans para fangames sin ánimo de lucro; los sprites de Pok
 | *Loaky's Modern Type Icons* | Loaky | "Credit isn't required!" (se acredita igualmente) | https://eeveeexpo.com/resources/1528/ | `assets/sprites/ui/icons/types_spanish.png` | 2026-10-04 |
 | *Gen 5 Font – Truth and Ideals* | bonzairob | "Credit if used: bonzairob @ 3dPE" | https://eeveeexpo.com/resources/861/ | `assets/fonts/truth_and_ideals/` | 2026-10-04 |
 | Pixel Operator 2018.10.04-1 | Jayvee Enaguas (HarvettFox96) | CC0 1.0 (texto completo en `assets/fonts/PixelOperator-LICENSE.txt`) | https://www.dafont.com/pixel-operator.font | `assets/fonts/` (ya no se usa) | 2026-10-04 |
+| **Public Gen 4 Tileset** (suelo, naturaleza, casas de DPPt, autotiles) | moca (recopilación); Magiscarf, WesleyFG, SailorVicious, Shawn Frost, NSora-96, PeekyChew, Kyle-Dove, Claisprojects.com, Minorthreat0987, The-Red-Ex, UltimoSpriter, TyranitarDark, DarkDragonn, rafa-cac, Phyromatical, Alucus, Newtiteuf, ChaoticCherryCake y moca (`CREDITS.txt`) | Recurso público para fangames, con crédito a todos los de `CREDITS.txt` | https://eeveeexpo.com/resources/208/ | `assets/tilesets/exterior/` (Agente 4) | 2026-10-05 |
+| **HGSS for RMXP** v1.2 (valla de madera; casas sin usar) | SirMalo | Crédito: SirMalo | https://eeveeexpo.com/resources/462/ | `assets/tilesets/exterior/vallas.png`, `casas.png` (Agente 4) | 2026-10-05 |
+| **Big Tree Pack** y **Big Flora Pack** | AnonAlpaca (y Magiscarf en lo que no es planta) | Libres con crédito; el autor permite editarlos | https://eeveeexpo.com/resources/602/ y https://eeveeexpo.com/resources/607/ | `assets/tilesets/exterior/arboles.png`, `flora.png` (Agente 4) | 2026-10-05 |
+| **ULTIMATE Gen 4 Overworlds Pack** | PurpleZaffre | "Credit PurpleZaffre if you use anything from this pack" (el pack pide además no redistribuirlo suelto; Javier decidió copiar al repo solo lo que se usa) | https://eeveeexpo.com/resources/609/ | `assets/sprites/characters/` (Agente 4) | 2026-10-05 |
 
 ## Cómo añadir un recurso
 
