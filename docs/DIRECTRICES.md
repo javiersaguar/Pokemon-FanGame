@@ -2,7 +2,7 @@
 
 > **Este documento manda.** Si algo de aquí choca con `GUIA_DESARROLLO.md`, `docs/contratos.md` o cualquier otro documento, gana lo que dice aquí. Solo lo modifica Javier.
 >
-> Última actualización: 2026-10-04 (secciones 7, 7.1 y 8; se incorpora el **Agente 4**, dueño del motor del RandomLocke)
+> Última actualización: 2026-10-05: **vuelven a ser 3 agentes**. El Agente 4 terminó el motor del RandomLocke y sus carpetas pasan al **Agente 2**. Plan de trabajo en `docs/ESTADO.md` → «Próxima sesión».
 
 ---
 
@@ -37,8 +37,7 @@ Los gráficos actuales (el tileset generado por código a 320×180) **no son ace
 | Agente | Parte |
 |--------|-------|
 | 1 | Ranuras múltiples (8+, miniatura, modo), `GameState.mode`, parche guardado con la ranura, `zone_id` y reglas Locke del mundo, flujo de nueva partida, regla R.2 en todos los eventos |
-| 2 | `DataDB.apply_patch()` / `clear_patch()` según el contrato del Agente 4, y el evento `pokemon_died` del motor de combate |
-| 4 | **Motor del RandomLocke**: `src/randomizer/` (generador puro y determinista), `RomPatch`, ajustes y presets, validación de la ROM, códigos de semilla, spoilers, tests y la lógica pura de las reglas Locke (`LockeRules`), que integran el Agente 1 (mundo) y el Agente 3 (UI) |
+| 2 | **Motor del RandomLocke** (heredado del Agente 4, ya terminado): `src/randomizer/`, `RomPatch`, ajustes y presets, validación, códigos de semilla, spoilers, tests y `LockeRules`. Además, `DataDB.apply_patch()` / `randomizer_input()` y las reglas Locke dentro del combate (`pokemon_died`, tope de experiencia, modo fijo, objetos) |
 | 3 | Pantallas de modo, ajustes, "Generando la ROM...", resumen, indicadores de zona, Cementerio y game over; marcadores de texto en `Dialogue`; `starters.json`, `gifts.json`, `statics.json` y `trades.json` |
 
 **Calendario:** motor sin interfaz para `v0.2`; interfaz y reglas Locke para la demo `v0.3`.
@@ -77,7 +76,7 @@ Se añade al reparto de `docs/ESTADO.md`:
 
 | Carpeta o archivo | Agente |
 |-------------------|--------|
-| `src/randomizer/`, `tests/randomizer/`, `data/randomizer/`, `docs/randomlocke.md`, `docs/contratos.md` §10 | **4** (antes era del 2) |
+| `src/randomizer/`, `tests/randomizer/`, `data/randomizer/`, `data/randomizer.json`, `docs/randomlocke.md`, `docs/contratos.md` §10 | **2** (de nuevo, desde el 2026-10-05; lo hizo el Agente 4) |
 | `docs/arte/`, `assets/arte/`, `assets/_fuentes/`, `tools/arte/` | 3 |
 | `data/starters.json`, `data/gifts.json`, `data/statics.json`, `data/trades.json` | 3 |
 | `docs/DIRECTRICES.md`, `.githooks/`, `.github/`, `docs/arte/referencias/` | Javier |

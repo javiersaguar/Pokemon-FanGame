@@ -1583,8 +1583,8 @@ Después de generar, un validador comprueba la ROM. Si algo falla, se **regenera
 
 | Pieza | Agente |
 |-------|--------|
-| `Randomizer`, `RomPatch`, ajustes y presets, validador R.4, códigos de semilla R.5, registro de spoilers, tests R.6 y la **lógica pura de las reglas Locke** (`LockeRules`: zonas, primera captura, cláusulas, muertes, tope de nivel, game over) | **Agente 4** |
-| `DataDB.apply_patch()` / `clear_patch()` según el contrato del Agente 4, y el evento `pokemon_died` del motor de combate | **Agente 2** |
+| `Randomizer`, `RomPatch`, ajustes y presets, validador R.4, códigos de semilla R.5, registro de spoilers, tests R.6 y la **lógica pura de las reglas Locke** (`LockeRules`: zonas, primera captura, cláusulas, muertes, tope de nivel, game over). Lo construyó el Agente 4; desde el 2026-10-05 lo mantiene el Agente 2 | **Agente 2** |
+| `DataDB.apply_patch()` / `randomizer_input()`, y el evento `pokemon_died` y las reglas Locke dentro del motor de combate | **Agente 2** |
 | `GameState.mode` / `randomlocke`, guardado del parche con la ranura, `zone_id` en los mapas, **integración** de `LockeRules` en el mundo (primera captura, regalos, game over), flujo de nueva partida en `SceneManager` y la regla R.2 en todos los eventos | **Agente 1** |
 | Pantallas de R.8 (modo, ajustes, generación, resumen, indicadores, Cementerio, game over), marcadores de texto en `Dialogue`, `starters.json`, `gifts.json`, `statics.json` y `trades.json` | **Agente 3** |
 
