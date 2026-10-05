@@ -96,25 +96,44 @@ func load_game(slot: int) -> Error:
 	data = _migrate(data)
 	if data.is_empty():
 		return ERR_FILE_UNRECOGNIZED
+	var state: Dictionary = data["state"]
+	var patch: Dictionary = {}
+	if state.get("mode", "normal") == "randomlocke":
+		patch = _read_json(rom_patch_path(slot))
+		if patch.is_empty():
+			patch = _read_json(rom_patch_path(slot) + ".bak")
+		if patch.is_empty():
+			return ERR_FILE_CORRUPT
+		var err := apply_patch_data(patch)
+		if err != OK:
+			return err
+	else:
+		DataDB.clear_patch()
+	# Solo mutar GameState después de validar/aplicar la ROM atómicamente.
+	GameState.rom_patch = patch
+	GameState.from_dict(state)
 	GameState.slot = slot
-	GameState.rom_patch = {}
-	GameState.from_dict(data["state"])
-	if GameState.is_randomlocke():
-		GameState.rom_patch = _read_json(rom_patch_path(slot))
-		if GameState.rom_patch.is_empty():
-			push_warning("SaveManager: la ranura %d es RandomLocke pero no tiene su ROM." % slot)
-	apply_rom_patch()
 	_set_last_slot(slot)
 	return OK
 
 
 ## Aplica en DataDB el parche de la partida en curso (o lo quita en modo normal).
-func apply_rom_patch() -> void:
-	if GameState.is_randomlocke() and not GameState.rom_patch.is_empty():
-		if DataDB.has_method(&"apply_patch"):
-			DataDB.call(&"apply_patch", GameState.rom_patch)
-	elif DataDB.has_method(&"clear_patch"):
-		DataDB.call(&"clear_patch")
+func apply_rom_patch() -> Error:
+	if GameState.is_randomlocke():
+		return apply_patch_data(GameState.rom_patch)
+	DataDB.clear_patch()
+	return OK
+
+func apply_patch_data(patch: Dictionary) -> Error:
+	if patch.is_empty() or not patch.get("errors", []) is Array or not patch.get("errors", []).is_empty():
+		return ERR_INVALID_DATA
+	for key: String in RomPatch.KEYS:
+		if patch.has(key) and not patch[key] is Dictionary:
+			return ERR_INVALID_DATA
+	if patch.has("settings") and not patch.settings is Dictionary:
+		return ERR_INVALID_DATA
+	var errors: Array[String] = DataDB.apply_patch(patch)
+	return OK if errors.is_empty() else ERR_INVALID_DATA
 
 
 ## Resumen para las pantallas de título y de carga (vacío si la ranura no existe):

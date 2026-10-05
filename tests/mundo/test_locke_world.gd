@@ -150,12 +150,18 @@ func test_death_del_motor_real_llega_a_cementerio() -> void:
 func test_migracion_v1_conserva_zonas_muertes_y_rom() -> void:
 	var state := GameState.to_dict()
 	state.randomlocke = {"zones": {"ruta": "lost"}, "deaths": 2, "settings": {"nickname_required": false}, "families": {"pikachu": "pikachu"}}
+	# La migración conserva la ROM v1; una ROM ausente debe rechazarse.
+	var legacy_rom := {"generator_version": 1, "seed": 77, "starters": {"starter_1": "litwick"}}
+	var rom_file := FileAccess.open(SaveManager.rom_patch_path(SLOT), FileAccess.WRITE)
+	rom_file.store_string(JSON.stringify(legacy_rom))
+	rom_file.close()
 	var file := FileAccess.open(SaveManager.slot_path(SLOT), FileAccess.WRITE)
 	file.store_string(JSON.stringify({"save_version": 1, "state": state}))
 	file.close()
 	assert_eq(SaveManager.load_game(SLOT), OK)
 	assert_eq(GameState.locke.rules.zone_status("ruta"), "lost")
 	assert_eq(GameState.randomlocke.deaths, 2, "no inventa lápidas del legado")
+	assert_eq(GameState.rom_patch, JSON.parse_string(JSON.stringify(legacy_rom)))
 	assert_eq(GameState.locke.rules.snapshot().cemetery, [])
 	assert_eq(SaveManager.save_game(SLOT), OK)
 	GameState.reset()

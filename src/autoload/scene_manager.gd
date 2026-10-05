@@ -40,11 +40,16 @@ var world_snapshot: Image
 var _fade: ColorRect
 var _menus: Array[Node] = []
 var _title: Node
+var _flow_status: Node
+var _nickname_entry: Node
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	Cutscene.name_requested.connect(_on_name_requested)
+	EventBus.locke_nickname_requested.connect(_on_locke_nickname)
+	EventBus.locke_state_changed.connect(update_zone_indicator)
+	EventBus.map_loaded.connect(func(_id: StringName) -> void: update_zone_indicator())
 
 
 ## La llama Main al arrancar. Main debe tener World, Battle, UI y Transition/Fade.
@@ -96,12 +101,22 @@ func go_to_title() -> void:
 ## (todas opcionales, ver GameState.new_game()): slot (por defecto, la primera
 ## ranura vacía o la 1), mode, randomlocke y rom_patch. Con RandomLocke, el
 ## parche se aplica en DataDB antes de cargar el mapa (Fase R.9).
-func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dictionary = {}) -> void:
+func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dictionary = {}) -> Error:
 	if not options.has("slot"):
 		options = options.duplicate()
 		options["slot"] = maxi(SaveManager.first_empty_slot(), 1)
+	var previous := GameState.to_dict()
+	var old_slot := GameState.slot
+	var was_in_game := GameState.in_game
+	var old_rom := GameState.rom_patch.duplicate(true)
 	GameState.new_game(options)
-	SaveManager.apply_rom_patch()
+	var patch_error := SaveManager.apply_rom_patch()
+	if patch_error != OK:
+		GameState.rom_patch = old_rom
+		GameState.from_dict(previous)
+		GameState.slot = old_slot
+		GameState.in_game = was_in_game
+		return patch_error
 	var cfg: Dictionary = MvpLocations.new_game_config()
 	if map == &"":
 		map = GameState.map_id
@@ -112,6 +127,7 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 	await change_map(map, spawn, GameState.player_facing)
 	if bool(options.get("intro", false)):
 		await Cutscene.play(load("res://src/events/mvp/mvp_story_event.gd"), null, {"stage": "intro"})
+	return OK
 
 
 ## Carga la ranura y lleva al jugador a donde guardó.
@@ -125,6 +141,7 @@ func continue_game(slot: int) -> Error:
 	_enter_game()
 	await change_map_at(GameState.map_id, GameState.player_tile, GameState.player_facing)
 	EventBus.game_loaded.emit(slot)
+	resume_pending_nicknames()
 	return OK
 
 
@@ -343,7 +360,7 @@ func run_title_fallback() -> void:
 			1:
 				var slot := await choose_slot(true)
 				if slot > 0:
-					await start_new_game(&"", &"", {"slot": slot, "intro": true})
+					await load("res://src/main/randomlocke_fallback.gd").new().run(slot)
 			2:
 				var slot := await choose_slot()
 				if slot > 0:
@@ -381,6 +398,68 @@ func _on_name_requested(kind: StringName, initial: String) -> void:
 	entry.kind = kind
 	entry.initial = initial
 	ui_layer.add_child(entry)
+
+
+## API de A3: ROM ya generada, settings y familias de la misma entrada explícita.
+func start_randomlocke(rom: RomPatch, slot: int, intro: bool = true) -> Error:
+	if rom == null or not rom.errors.is_empty() or rom.generator_version() != Randomizer.GENERATOR_VERSION:
+		return ERR_INVALID_DATA
+	var input := rom.input if rom.input != null else RandomizerInput.from_datadb()
+	return await start_new_game(&"", &"", {"slot": slot, "intro": intro, "mode": GameState.MODE_RANDOMLOCKE,
+		"rom_patch": rom.to_dict(), "randomlocke": {"seed_code": rom.seed_code(), "settings": rom.data.settings,
+		"families": input.families(rom)}})
+
+func request_text(prompt: String, initial: String = "", placeholder: String = "", allow_cancel: bool = false) -> String:
+	var entry: Node = load(IDENTITY_FALLBACK_SCRIPT).new()
+	entry.prompt = prompt
+	entry.initial = initial
+	entry.placeholder = placeholder
+	entry.allow_cancel = allow_cancel
+	entry.submit = func(_value: String) -> bool: return true
+	ui_layer.add_child(entry)
+	return await entry.completed
+
+func _on_locke_nickname(token: String, pokemon: Dictionary) -> void:
+	if not is_instance_valid(ui_layer) or EventBus.locke_nickname_requested.get_connections().size() > 1 or is_instance_valid(_nickname_entry):
+		return
+	var entry: Node = load(IDENTITY_FALLBACK_SCRIPT).new()
+	_nickname_entry = entry
+	entry.kind = &"nickname"
+	entry.prompt = "Elige un mote para %s" % DataDB.species(StringName(pokemon.species)).name
+	entry.submit = func(value: String) -> bool:
+		return GameState.locke != null and not GameState.locke.complete_capture(token, value).is_empty()
+	entry.completed.connect(func(_value: String) -> void:
+		_nickname_entry = null
+		resume_pending_nicknames.call_deferred())
+	ui_layer.add_child(entry)
+
+func resume_pending_nicknames() -> void:
+	if GameState.locke != null and not GameState.locke.pending.is_empty():
+		var token: String = GameState.locke.pending.keys()[0]
+		_on_locke_nickname(token, GameState.locke.pending[token].pokemon)
+
+func show_flow_status(text: String) -> void:
+	if not is_instance_valid(_flow_status):
+		_flow_status = load("res://src/main/flow_status.gd").new()
+		ui_layer.add_child(_flow_status)
+	_flow_status.show_text(text)
+
+func hide_flow_status() -> void:
+	if is_instance_valid(_flow_status):
+		_flow_status.hide()
+
+func update_zone_indicator() -> void:
+	if GameState.locke == null or not is_instance_valid(current_map) or not GameState.in_game:
+		hide_flow_status()
+		return
+	var zone := String(current_map.get_zone_id())
+	var status := GameState.locke.rules.zone_status(zone)
+	EventBus.locke_zone_entered.emit(zone, status)
+	# Una UI de A3 conectada toma la presentación.
+	if EventBus.locke_zone_entered.get_connections().is_empty():
+		var labels := {"available": "disponible", "caught": "capturada", "lost": "perdida", "pending": "pendiente"}
+		var enabled := bool(GameState.locke.rules.rules().get("locke_rules", true)) and bool(GameState.locke.rules.rules().get("first_encounter", true))
+		show_flow_status("%s / Captura: %s" % [current_map.get_display_name(), labels.get(status, status)] if enabled else "%s / Sin límite de zona" % current_map.get_display_name())
 
 
 # --- Internos ---
@@ -512,6 +591,12 @@ func _enter_game() -> void:
 
 
 func _leave_game() -> void:
+	if is_instance_valid(ui_layer):
+		for node: Node in ui_layer.get_children():
+			if node.get_script() in [load(IDENTITY_FALLBACK_SCRIPT), load("res://src/main/flow_status.gd")]:
+				node.queue_free()
+	_nickname_entry = null
+	_flow_status = null
 	if is_instance_valid(atmosphere):
 		atmosphere.reset()
 	if is_instance_valid(_title):

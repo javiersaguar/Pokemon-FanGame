@@ -32,6 +32,7 @@ signal game_loaded(slot: int)
 
 ## UI de RandomLocke: consultar GameState.locke.rules.snapshot().
 signal locke_state_changed
+signal locke_zone_entered(zone_id: String, status: String)
 signal locke_nickname_requested(token: String, pokemon: Dictionary)
 signal locke_game_over(snapshot: Dictionary)
 

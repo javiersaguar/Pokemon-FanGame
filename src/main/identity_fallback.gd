@@ -3,6 +3,12 @@ extends CanvasLayer
 ## Cede el paso automáticamente a cualquier pantalla A3 conectada a la señal.
 var kind: StringName
 var initial := ""
+signal completed(value: String)
+var prompt := ""
+var placeholder := "Escribe el nombre y pulsa Intro"
+var allow_cancel := false
+var submit: Callable
+var _locked := false
 var entry: LineEdit
 
 func _ready() -> void:
@@ -14,19 +20,39 @@ func _ready() -> void:
 	canvas.add_child(panel)
 	panel.set_process_input(false)
 	panel.get_node("Frame/Text").visible_characters = -1
-	panel.get_node("Frame/Text").text = "¿Cómo te llamas?" if kind == &"player" else "¿Cómo se llama tu rival?"
+	panel.get_node("Frame/Text").text = prompt if not prompt.is_empty() else ("¿Cómo te llamas?" if kind == &"player" else "¿Cómo se llama tu rival?")
 	entry = LineEdit.new()
 	entry.position = Vector2(14, 165)
 	entry.size = Vector2(224, 18)
 	entry.text = initial
-	entry.placeholder_text = "Escribe el nombre y pulsa Intro"
+	entry.placeholder_text = placeholder
 	entry.text_submitted.connect(_submit)
 	canvas.add_child(entry)
 	entry.grab_focus()
 	entry.select_all()
 	GameState.lock_input(&"name_entry")
+	_locked = true
 
 func _submit(text: String) -> void:
-	if Cutscene.submit_name(kind, text):
+	var value := text.strip_edges()
+	if value.is_empty():
+		return
+	var accepted: bool = submit.call(value) if submit.is_valid() else Cutscene.submit_name(kind, value)
+	if accepted:
+		_finish(value)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if allow_cancel and event.is_action_pressed(&"cancel"):
+		get_viewport().set_input_as_handled()
+		_finish("")
+
+func _finish(value: String) -> void:
+	if _locked:
 		GameState.unlock_input(&"name_entry")
-		queue_free()
+		_locked = false
+	completed.emit(value)
+	queue_free()
+
+func _exit_tree() -> void:
+	if _locked:
+		GameState.unlock_input(&"name_entry")

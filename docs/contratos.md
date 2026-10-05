@@ -617,6 +617,14 @@ Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al mo
 
 world.field.transport_sheets contiene bike/surf/fishing de Ethan/Lyra pack 05 entregadas por A4. Player desmonta bici al entrar en mapa prohibido y sale de Surf al tocar tierra; pesca cambia temporalmente de hoja y la restaura. Character genera polvo existente cada 2 pasos corriendo, y salpicadura existente al completar paso en terrain=puddle. El tile puddle espera A4; no se pinta un charco de prueba por código. Errantes respetan Repelente y la desactivación de encuentros; WildEncounters descuenta el paso antes de elegir errante.
 
+### 7i. Arranque RandomLocke (A1, 2026-10-05)
+
+- `RandomlockeJob` (Node): `start(settings: Dictionary, seed: int) -> Error`, señal `finished(rom: RomPatch)`. Copia entrada/configuración en el hilo principal y genera en Thread sin autoloads; al salir espera/join. No aplica la ROM ni inicia partida.
+- `SceneManager.start_randomlocke(rom, slot, intro := true) -> Error`: familias, código y settings de la misma ROM, aplicación antes de mapa/intro. `start_new_game` ahora devuelve Error (compatible con consumidores que ignoran resultado). `SaveManager.apply_rom_patch() -> Error` valida DataDB atómicamente; load_game rechaza ROM ausente/errónea y conserva partida anterior. Mantiene ROM v1 válida y no regenera archivos guardados.
+- `EventBus.locke_zone_entered(zone_id: String, status: String)` comunica estado actual al cargar mapa/cambiar reglas. Sustituto con Theme en A1 solo si A3 no escucha la señal. `resume_pending_nicknames()` tras continuar; teclado provisional cede a un listener A3 de locke_nickname_requested. Iniciales siguen sin consumir zona.
+- `src/main/randomlocke_fallback.gd` usa presets y campos existentes completos, código con settings personalizados y revisión paginada sin spoilers de especies. A3 reemplaza con sus pantallas; no cambia el motor §10.
+
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).
