@@ -997,6 +997,8 @@ Dialogue.format_text(text: String, vars: Dictionary = {}) -> String
 
 - `speaker`: nombre (`String`) o un objeto con `display_name`. `null` = sin nombre.
 - **Variables**: `{player}` y `{rival}` (de `GameState`) y las que se pasen en `vars` (`{"pokemon": "Pikachu"}` → `{pokemon}`, `{"item": "Poción"}` → `{item}`). El texto pasa antes por `tr()`.
+- **Marcadores de la regla R.2** (Fase R.2): `{starter:starter_1}`, `{gift:<id>}`, `{static:<id>}`, `{trade:<id>}`, `{species:<id>}` e `{item:<id>}` se sustituyen por el nombre con `DataDB.resolve_markers()` (en RandomLocke, el de la ROM). Valen en `say()`, `ask()`, las opciones y el nombre del hablante. **Los eventos que nombran un Pokémon u objeto de la historia usan marcadores, no `vars` con el nombre escrito**: `"¿Eliges a {starter:starter_1}?"`.
+- **Dinero**: el símbolo es `₽` (`BattleText.CURRENCY`). La fuente no lo trae: lo dibuja a mano una fuente de respaldo del Theme (`assets/fonts/pokedolar/`), así que basta con escribir `₽` en cualquier texto con el Theme.
 - **Colores**: BBCode de `RichTextLabel` (`[color=#e05050]texto[/color]`).
 - **Páginas**: el texto se divide solo en páginas de 2 líneas. Una línea en blanco (`\n\n`) fuerza página nueva.
 - `ask()`: devuelve el índice elegido. `cancel` devuelve `cancel_choice` (−1 = la última opción, normalmente "No"; `Dialogue.NO_CANCEL` = no se puede cancelar).

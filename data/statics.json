@@ -1,0 +1,4 @@
+{
+  "_": "Encuentros estáticos: legendarios, Pokémon que bloquean el paso... (regla R.2, contratos.md §8.1): {id: especie} o {id: ficha de entrenador (§9.6)}, más \"randomize\": false si RandomLocke no lo debe cambiar. El evento lo pide con DataDB.static_encounter(id) y el texto lo nombra con {static:id}. El MVP no tiene ninguno.",
+  "_ejemplo": {"static_snorlax_ruta3": {"species": "snorlax", "level": 30, "randomize": false}}
+}

@@ -8,6 +8,7 @@ extends SceneTree
 ## Formato de un .px:
 ##   # comentario
 ##   @leyenda  . = transparente   a = ui_1   b = ui_2@200   (nombre de la paleta[@alfa])
+##             # = blanco   (solo para glifos de fuente: el color lo pone el Theme)
 ##   @salida res://assets/sprites/ui/x.png              (una o varias)
 ##   @salida res://assets/sprites/ui/y.png  r=teja_4     (cambia símbolos solo en esa salida)
 ##   @frames 3                                           (opcional: el dibujo son N frames en horizontal)
@@ -92,6 +93,8 @@ func _parse_pairs(text: String, into: Dictionary, path: String) -> void:
 			return
 		if value == "transparente":
 			into[symbol] = Color(0, 0, 0, 0)
+		elif value == "blanco":
+			into[symbol] = Color.WHITE
 		else:
 			var name := value.get_slice("@", 0)
 			if not _colors.has(name):
