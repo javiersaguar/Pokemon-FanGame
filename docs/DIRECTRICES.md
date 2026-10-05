@@ -2,13 +2,13 @@
 
 > **Este documento manda.** Si algo de aquí choca con `GUIA_DESARROLLO.md`, `docs/contratos.md` o cualquier otro documento, gana lo que dice aquí. Solo lo modifica Javier.
 >
-> Última actualización: 2026-10-05: **vuelven a ser 3 agentes**. El Agente 4 terminó el motor del RandomLocke y sus carpetas pasan al **Agente 2**. Plan de trabajo en `docs/ESTADO.md` → «Próxima sesión».
+> Última actualización: 2026-10-05 (tarde): **4 agentes**. El motor del RandomLocke es del **Agente 2**, y el nuevo **Agente 4** se dedica al **arte del mundo y de los entrenadores** (tilesets, pintado de mapas, sombras, entrenadores Panchito y fondos de combate). La propiedad de carpetas está en `docs/ESTADO.md` y el plan, en «Próxima sesión».
 
 ---
 
 ## 0. ⚠️ PRIORIDAD ACTUAL: alcanzar el nivel gráfico de Pokémon Añil (sección 7)
 
-Los gráficos actuales (el tileset generado por código a 320×180) **no son aceptables**. Antes de seguir añadiendo funciones visibles al MVP, los Agentes 1 y 3 hacen la **prueba de nivel gráfico** de la sección 7. El Agente 2 sigue con el motor y, además, con los sprites de Pokémon y los shinies.
+**Actualización del 2026-10-05: aprobación parcial de la prueba de nivel gráfico** (detalle en `docs/ESTADO.md` → "Respuestas de Javier del 2026-10-05"). Combate y ruta, aprobados con cambios; ficha del Pokémon, con cambios; **pueblo rechazado**. Se abre el trabajo visible de interfaz, integración y motor, pero **los mapas reales del MVP esperan a que Javier apruebe el pueblo rehecho**. El arte del mundo y de los entrenadores tiene ahora un agente dedicado, el **Agente 4**. El listón sigue siendo Pokémon Añil.
 
 ---
 

@@ -2,7 +2,13 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-05, Javier):** 🔁 **Nueva sesión con 3 agentes.** El Agente 4 ha terminado: el motor del RandomLocke y sus carpetas pasan al **Agente 2** (tabla de propiedad actualizada). **El plan de trabajo nuevo está en [«Próxima sesión»](#próxima-sesión-tareas-declaradas)**: cada agente empieza por su bloque I. Regla que sigue vigente: hasta que Javier apruebe la prueba de nivel gráfico (§7), no se añaden pantallas ni mapas visibles nuevos (el bloque I de cada agente está pensado para respetarlo).
+**Último aviso (2026-10-05, Javier):** 🚀 **Sesión larga con 4 agentes.** Leed, por este orden:
+1. **[Respuestas de Javier del 2026-10-05](#respuestas-de-javier-del-2026-10-05)** (al principio de "Preguntas para Javier"): **aprobación parcial de la prueba gráfica**. Combate y ruta aprobados con cambios, ficha con cambios y **pueblo rechazado** (hay que rehacerlo). Además: 5 Poké Balls, reloj real, 3000 de dinero inicial y el resto de decisiones pendientes.
+2. **Se abre el bloque II** para todo lo que **no** sea arte de mapas: menú inicial, pantallas del MVP, integración y motor. **Los mapas reales del MVP esperan** a que Javier apruebe el pueblo rehecho.
+3. **Vuelve el Agente 4 con otro papel: arte del mundo y de los entrenadores** (tilesets, mapas pintados, sombras, entrenadores Panchito y fondos de combate). Hay propiedad nueva en la tabla de abajo.
+4. **Plan completo de la sesión: [«Próxima sesión»](#próxima-sesión-tareas-declaradas).** Cada agente sigue su lista de arriba abajo y, al acabar una tarea, empieza la siguiente sin esperar.
+
+**Aviso anterior (2026-10-05, Javier):** 🔁 **Nueva sesión con 3 agentes.** El Agente 4 ha terminado: el motor del RandomLocke y sus carpetas pasan al **Agente 2** (tabla de propiedad actualizada). **El plan de trabajo nuevo está en [«Próxima sesión»](#próxima-sesión-tareas-declaradas)**: cada agente empieza por su bloque I. Regla que sigue vigente: hasta que Javier apruebe la prueba de nivel gráfico (§7), no se añaden pantallas ni mapas visibles nuevos (el bloque I de cada agente está pensado para respetarlo).
 
 **Aviso anterior (2026-10-04, Javier):** 🛑 **Fin de la sesión.** Se para aquí hasta la próxima. Todo está integrado en `main` y subido a GitHub, y los cuatro worktrees están limpios. **Al empezar la próxima sesión, cada agente lee [«Próxima sesión»](#próxima-sesión-tareas-declaradas) y empieza por su primera tarea.** Estado comprobado en `main` al cerrar:
 - Tests: **194, de los que pasan 193** y 1 queda *pending* (el parche dorado del RandomLocke, petición 28). 3051 aserciones, 42,6 s.
@@ -43,9 +49,12 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 | Agente | Rol | Es dueño de |
 |--------|-----|-------------|
-| 1 | Mundo y arquitectura | `project.godot`, `src/autoload/` (salvo `data_db.gd`, `dialogue.gd` y `audio_manager.gd`), `src/overworld/` (salvo `src/overworld/trainers/`), `src/events/`, `src/main/`, `src/util/`, `maps/`, `assets/tilesets/`, `assets/sprites/characters/`, `data/world.json`, `docs/flags.md`, `docs/mapas/` |
+| 1 | Mundo, arquitectura e integración | `project.godot`, `src/autoload/` (salvo `data_db.gd`, `dialogue.gd` y `audio_manager.gd`), `src/overworld/` (salvo `src/overworld/trainers/`), `src/events/`, `src/main/`, `src/util/`, `maps/test/`, `maps/_tools/`, **los eventos, NPCs, disparadores y warps de todos los mapas** (nodos de lógica), `data/world.json`, `docs/flags.md`, `docs/mapas/` |
+| 4 | Arte del mundo y de los entrenadores (desde el 2026-10-05) | `assets/tilesets/`, `assets/sprites/characters/`, `assets/sprites/trainers/`, los **fondos y bases de combate** (su carpeta de `assets/`; A3 sigue integrándolos en la escena), `assets/_fuentes/` del arte del mundo, y **el pintado de los mapas del juego** (capas de tiles, objetos decorativos y composición) de `maps/` salvo `maps/test/` y `maps/_tools/`. Comparte `docs/arte/` con A3: cada uno, sus filas y secciones |
 | 2 | Datos, motor de combate y RandomLocke | `tools/` (salvo `tools/arte/`), `data/generated/`, `data/species_overrides.json`, `data/regional_dex.json`, `data/species_in_use.json`, `src/autoload/data_db.gd`, `src/pokemon/`, `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/` (salvo `tests/mundo/` y `tests/ui/`), y **desde el 2026-10-05** lo que era del Agente 4: `src/randomizer/`, `tests/randomizer/`, `data/randomizer/` (única fuente; `data/randomizer.json` retirado el 2026-10-05), `docs/randomlocke.md` y la sección 10 de `docs/contratos.md` |
-| 3 | Presentación, UI y contenido Panchito | `src/ui/`, `src/battle/scene/`, `src/items/`, `src/overworld/trainers/`, `src/autoload/dialogue.gd`, `src/autoload/audio_manager.gd`, `data/trainer_classes.json`, `data/trainers/`, `data/items_panchito.json`, `data/shops.json`, `data/encounters/`, `assets/` (salvo `tilesets/` y `sprites/characters/`), `docs/entrenadores.md`, `docs/objetos_especiales.md` |
+| 3 | Interfaz, audio y contenido Panchito | `src/ui/`, `src/battle/scene/`, `src/items/`, `src/overworld/trainers/`, `src/autoload/dialogue.gd`, `src/autoload/audio_manager.gd`, `data/trainer_classes.json`, `data/trainers/`, `data/items_panchito.json`, `data/shops.json`, `data/encounters/`, `data/starters.json`, `data/gifts.json`, `data/statics.json`, `data/trades.json`, `assets/` (salvo lo del Agente 4), `tools/arte/`, `docs/entrenadores.md`, `docs/objetos_especiales.md` |
+
+- **Flujo de un mapa:** el Agente 4 lo reserva en `docs/mapas/reservas.md`, lo pinta y lo entrega ("pintado"); después el Agente 1 lo reserva para colocar eventos, NPCs, warps y disparadores. **Un mapa = una persona a la vez.**
 
 - `src/main/`, `src/util/`, `data/world.json`, `docs/flags.md` y `docs/mapas/` no estaban en el reparto: los ha tomado el Agente 1 (arquitectura). Si alguien no está de acuerdo, que lo diga en "Peticiones".
 - **Compartidos**: `README.md` y `CREDITOS.md` (cada agente edita solo su sección), `docs/ESTADO.md` (cada uno su sección y sus filas), `.gitignore`, `.gitattributes`, `.gutconfig.json` y `addons/` (los cambios se piden al Agente 1).
@@ -225,57 +234,70 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Próxima sesión (tareas declaradas)
 
-*Plan de Javier del 2026-10-05 para **3 agentes**. Cada agente trabaja **de arriba abajo**: primero el **bloque I** (se puede hacer ya, sin pantallas ni mapas visibles nuevos), después el **bloque II** (cuando Javier apruebe la prueba de nivel gráfico, §7) y después el **bloque III**. Antes de empezar: `git pull` de `main` en tu worktree. Al terminar cada tarea: tests en verde, merge a `main`, `git push origin main` y tu sección al día. Objetivos: **`v0.1`** (MVP jugable) al cerrar los bloques II, y **`v0.2`** al cerrar los bloques III.*
+*Sesión larga del 2026-10-05 con **4 agentes**. Reglas de la sesión:*
+- *Cada agente sigue **su lista de arriba abajo**. Al terminar una tarea: tests en verde, merge a `main`, `git push origin main`, tu sección de ESTADO al día y **la siguiente tarea sin esperar**.*
+- *Si una tarea se bloquea (espera a Javier, a un recurso o a otro agente), apúntalo en "Bloqueos" y **pasa a la siguiente que no dependa de eso**. Nadie se queda parado.*
+- *Todo lo visible se entrega con su **comparativa lado a lado** en `docs/arte/comparativas/` y se apunta en `docs/arte/seguimiento.md` para que Javier lo apruebe.*
+- *Objetivos de la sesión, por orden: (1) **pueblo rehecho** presentado a Javier; (2) **`v0.1` cerrada** (MVP jugable de principio a fin, sin Debug); (3) **avanzar todo lo posible hacia `v0.2`**.*
 
-**Javier (decisiones que desbloquean al resto)**
-1. **Revisar la prueba de nivel gráfico** en `docs/arte/comparativas/` (preguntas 12, 14 y 17). Es lo que abre los bloques II.
-2. **Recursos que faltan** (pregunta 13 y 17): *Elite Battle: DX* (bases, entorno y **sonidos** de combate), efectos de movimientos de NikDie, entrenadores en combate (pack 12), *Misc. VFX from BW2*, **sprite de sombra** de los personajes del mapa, **tileset de interiores** (casas, laboratorio, Centro Pokémon, tienda) y **música**.
-3. **GDD del MVP** (preguntas 1, 5 y 6): iniciales, nombres (pueblo, ciudad 2, profesor, rival, región), quién es Panchito, tono, Ruta 1 y entrenadores. Además: reloj (2), dinero inicial (3), habilidad oculta (7), biblia de arte (9) y RandomLocke (15 y 16).
+**Javier (en paralelo)**
+1. Descargar *Elite Battle: DX*, los efectos de movimientos de NikDie, el pack 12 de entrenadores y *Misc. VFX from BW2* (enlaces en la pregunta 13), más lo que propongan el Agente 4 (interiores, sombra) y el Agente 3 (música y sonidos).
+2. Revisar el pueblo rehecho, la ficha nueva, el menú inicial y los entrenadores Panchito según vayan llegando.
+3. Decidir las preguntas 1 y 5 (iniciales, nombres, Panchito, región y tono).
 
-**Agente 1 — Mundo, arquitectura e integración del MVP** (worktree `pokemon-panchito-agente1`). **Es quien cierra `v0.1`.**
-- *Bloque I (ya):*
-  1. Petición 24: `LockeRules` y `zone_id` en el mundo (registrar el encuentro antes del combate; resolverlo al capturar, huir o debilitar; inicial poseído; Cementerio; game over).
-  2. Eventos de la historia del MVP con `Cutscene` y la regla R.2, montados en la sala de pruebas: intro del profesor (sexo y nombre), habitación, laboratorio, elegir inicial, combate del rival que se puede perder, Pokédex y Poké Balls, enfermera, tienda y derrota → Centro Pokémon. Nombres provisionales "POR DEFINIR".
-  3. Limpieza: borrar la rama `feat/agente1-sin-lfs` y retirar el worktree `pokemon-panchito-agente4` (`git worktree remove`) tras comprobar que está limpio y todo en `main`.
-- *Bloque II (tras la aprobación):*
-  4. Ajustes que pida Javier de la prueba gráfica (densidad de la ruta, alturas, estanques, escaleras con barandilla, sombras si llega el recurso).
-  5. Mapas reales del MVP: pueblo inicial + interiores (casa, laboratorio), Ruta 1 y ciudad 2 con Centro Pokémon y tienda. Si no hay tileset de interiores, se pide en "Preguntas para Javier".
-  6. Encadenar las pantallas del Agente 3 en `SceneManager` (título → nueva partida → intro → juego → menú de pausa → guardar) y **cerrar `v0.1`**: partida automatizada de principio a fin sin Debug (criterio de la Fase 8), tag `v0.1` y push.
-- *Bloque III:*
-  7. Fase 12: conexiones entre mapas, mapa de la región y vuelo, obstáculos de campo al estilo moderno, bicicleta y surf.
-  8. Fase 14 (mundo): día y noche con tinte y luces, clima con partículas, pesca, Golpe Cabeza y Golpe Roca, Pokémon errantes y estáticos.
-  9. Flujo completo de nueva partida RandomLocke en `SceneManager` (modo → ajustes → generar en hilo → intro), con las pantallas del Agente 3.
+**Agente 1 — Mundo, arquitectura e integración** (worktree `pokemon-panchito-agente1`). **Responsable de cerrar `v0.1`.**
+1. **🔧 Interactuar con los NPCs desde cualquier lado (orden de Javier).** Ahora solo funciona si el NPC está de frente al jugador. Debe bastar con que **el jugador mire a la casilla del NPC**, esté el NPC de frente, de lado o de espaldas, y **el NPC se gira hacia el jugador** antes de hablar, como en los juegos oficiales. Casos que hay que cubrir y testear:
+   - NPC parado mirando a cualquier dirección, desde las 4 direcciones.
+   - NPC que pasea: se para, se gira y no se mueve mientras dura el diálogo. Si estaba a mitad de paso, termina el paso antes.
+   - NPC detrás de un mostrador: también desde cualquier lado del mostrador por el que se le pueda hablar.
+   - Entrenadores (`TrainerNPC`, que hereda del NPC): hablarles desde un lado o desde atrás también funciona y, si no estaban derrotados, lanzan el combate. Avisa al Agente 3 si hace falta tocar `src/overworld/trainers/`.
+   - Excepción configurable por NPC (`turn_on_interact = false`) para los que no deben girarse: dormidos, de espaldas por guion, estatuas.
+   - Los **carteles** siguen como en los juegos: se leen desde la casilla de delante (abajo).
+   - Tests en `tests/mundo/` con todas las combinaciones.
+2. Aplicar las decisiones de Javier en datos: 5 Poké Balls (`world.mvp_story.reward.quantity`), reloj real, 3000 de dinero inicial. **Centralizar los nombres provisionales** (pueblo, ciudad 2, profesor, rival, región) en `data/world.json` → `names`, usados por marcadores en los textos, para cambiarlos en un solo sitio cuando Javier los decida.
+3. Flujo completo del juego en `SceneManager` con las pantallas del Agente 3 según vayan llegando (con sustitutos mientras tanto): arranque → menú inicial → nueva partida normal → elegir ranura → intro del profesor → juego → menú de pausa → guardar y cargar → "Continuar".
+4. Preparar el MVP para que los mapas reales del Agente 4 encajen sin tocar lógica: ids de mapa y de aparición en datos, y guion independiente del mapa.
+5. Al recibir cada mapa pintado del Agente 4: eventos, NPCs, warps, disparadores, `zone_id` y encuentros, objetos (regenerar `item_placements.json`), punto de curación y metadatos (nombre, BGM, `outdoor`, fondo de combate).
+6. **Cerrar `v0.1`**: partida automatizada de principio a fin sin Debug (criterio de la Fase 8, en modo normal y en RandomLocke) + revisión manual corta; tag `v0.1`, push y aviso en ESTADO.
+7. Fase 12: conexiones entre mapas, mapa de la región y vuelo (datos y lógica), obstáculos de campo al estilo moderno (Corte, Golpe Roca, Fuerza, Surf, Cascada) con sus objetos clave, bicicleta y surf.
+8. Fase 14 (mundo): día y noche con tinte y luces nocturnas, clima con partículas y sonido ambiente, pesca con 3 cañas, Golpe Cabeza y Golpe Roca, Pokémon errantes y estáticos (regla R.2).
+9. Flujo de nueva partida RandomLocke (modo → ajustes → generar en hilo → resumen → intro) con las pantallas del Agente 3, e indicador de zona al entrar en cada mapa.
+10. Robustez: carga de mapas en menos de 0,5 s, smoke test *headless* de todos los mapas y la partida automatizada ampliada a cada cosa nueva.
 
-**Agente 2 — Datos, motor de combate y RandomLocke** (worktree `pokemon-panchito-agente2`). **Hereda lo del Agente 4.**
-- *Bloque I (ya):*
-  1. Traspaso: leer la sección del Agente 4, `docs/randomlocke.md` y el §10. Unificar la configuración en **una sola fuente** (`data/randomizer/` o `data/randomizer.json`, no las dos) y actualizar el validador de datos.
-  2. Petición 28: rehacer el parche dorado → **0 tests *pending* en `main`**.
-  3. Petición 22: `DataDB.randomizer_input()` y `apply_patch()` atómico con hash.
-  4. Petición 23: reglas de `LockeRules` dentro del combate (muerte permanente, tope de experiencia, modo fijo, objetos).
-  5. Fase 9.5: habilidades y objetos equipados, empezando por los de las especies del MVP; Púas y Trampa Rocas; más movimientos (9.2) e IA de niveles 2 a 4 (9.7).
-- *Bloque II:*
-  6. Lo que el MVP necesite del motor al integrarlo el Agente 1 (combates de la historia, `can_lose`, evoluciones, aprender movimientos) y responder rápido a sus peticiones.
-  7. Fase 9.4: combates dobles, parejas de entrenadores y combate con compañero. **Publica antes en `contratos.md` los eventos y peticiones nuevos** para que el Agente 3 adapte la escena.
-- *Bloque III:*
-  8. Fase 9.6: Megaevolución (gimmick principal de la historia); después Z, Dinamax y Tera, en ese orden y como opcionales.
-  9. Fase 14.3 (lógica): guardería, huevos, herencia, eclosión y Pokérus.
-  10. Fase 20.2: herramienta de simulación en masa para equilibrar a los líderes. Volver a pasar la verificación de WikiDex cuando Javier decida la Pokédex regional.
+**Agente 2 — Datos, motor de combate y RandomLocke** (worktree `pokemon-panchito-agente2`)
+1. Fase 9.5 en todo lo que usen el MVP y `species_in_use.json`: habilidades (de entrada, modificadores, inmunidades, fin de turno) y objetos equipados (bayas, Restos, Banda Focus, objetos Elección, Vidasfera, Chaleco Asalto, Casco Dentado...). Púas, Púas Tóxicas y Trampa Rocas.
+2. Fase 9.2: más movimientos con script hasta que el validador no avise de ninguno de las especies en uso.
+3. Fase 9.7: IA de niveles 2 a 4 (nivel por clase de entrenador), con un test de simulación en el que la IA alta gane claramente a la baja.
+4. **Prioridad cuando lo pidan el Agente 1 o el 3:** lo que necesite el MVP del motor (combates de la historia, evoluciones, aprender movimientos, objetos desde la mochila).
+5. Fase 9.4, combates dobles: **primero el contrato** en `contratos.md` (objetivos, eventos y peticiones) con aviso al Agente 3; después el motor: objetivos y redirección, daño repartido ×0,75, parejas de entrenadores, combate con compañero y dobles salvajes.
+6. Fase 9.6: **Megaevolución** (Megapiedras, Megapulsera, forma, habilidad y evento para la escena). Después Z, Dinamax y Tera como opcionales, en ese orden.
+7. Fase 14.3 (lógica): guardería, compatibilidad, huevos, herencia (IVs, naturaleza, movimientos huevo, habilidad oculta, Ball), eclosión por pasos y Pokérus, con API para el Agente 1 (pasos) y el 3 (pantallas).
+8. RandomLocke: aplicar las respuestas 15 y 16, exportar los spoilers a `user://randomlocke/`, conectar la probabilidad shiny de sus ajustes y añadir MT y tutores cuando haya datos. Siempre en verde.
+9. Fase 20.2: herramienta de simulación en masa (equipo esperado contra cada líder, porcentaje de victorias) en `tools/`.
 
-**Agente 3 — Interfaz, arte, audio y contenido Panchito** (worktree `pokemon-panchito-agente3`)
-- *Bloque I (ya):*
-  1. Petición 26: validador de arte con reglas para el arte de terceros → **0 errores en `main`** (ahora 177).
-  2. Petición 16: `data/starters.json`, `gifts.json`, `statics.json` y `trades.json` con el formato del §8.1, y marcadores R.2 en `Dialogue` con `DataDB.resolve_markers()`. Petición 11: decidir cómo se muestra el dinero si la fuente no tiene `₽` (icono propio).
-  3. `TrainerNPC` (Fase 10.4): línea de visión, "!", acercarse, diálogos, parejas y "ya derrotado", probado en la sala de pruebas con el Vendedor de Chupachups.
-  4. **Entrenadores Panchito** con el pack 11 (sprites de combate y del mapa), uno a uno y empezando por el Vendedor de Chupachups y el rival; cada uno se apunta en `docs/arte/seguimiento.md` para que Javier lo apruebe.
-  5. Pulido de la muestra de combate y de la ficha según las respuestas de Javier (preguntas 12–14).
-- *Bloque II (tras la aprobación):*
-  6. **Menú inicial de la Fase 15.2**: splash "Javier Saguar presenta", aviso de fangame, título con parallax y logo animado, **"Realizado por Javier Saguar"** siempre visible, y Continuar / Nueva partida / Cargar / Opciones / Créditos / Salir.
-  7. Pantallas del MVP: menú de pausa, equipo, mochila, tienda, teclado de nombres, guardar y cargar (8 ranuras con miniatura), Pokédex básica, escena de evolución y aprender movimiento.
-  8. Audio en cuanto Javier pase los recursos: SE (menús, golpes, captura, `jump`, `shiny`: petición 27) y las primeras BGM.
-- *Bloque III:*
-  9. Pantallas del RandomLocke de la Fase R.8 (petición 25): modo, ajustes con presets, "Generando la ROM...", resumen con código, indicadores de zona, Cementerio y game over.
-  10. Escena de combate para dobles (cuando el Agente 2 publique el contrato) y efectos de movimientos si llega el pack de NikDie.
-  11. Resto de la Fase 15: PC, Pokédex completa, opciones, tarjeta de entrenador y medallas, y mapa de la región.
+**Agente 3 — Interfaz, audio y contenido Panchito** (worktree `pokemon-panchito-agente3`)
+1. **Traspaso al Agente 4** de los sprites de los entrenadores Panchito (lo que hayas empezado con el pack 11: archivos, avance y decisiones) en tu sección. Tú sigues con sus datos (clases, equipos y textos) y con `TrainerNPC`.
+2. Combate (respuesta 12): botones con borde y relieve, el mejor fondo posible con lo que hay, y el hueco preparado para los fondos y bases de EBDX (carpeta y formato acordados con el Agente 4).
+3. **Ficha del Pokémon rehecha** según la respuesta de Javier: color propio de Panchito, pantalla completa, sprite grande, iconos en las pestañas y más datos. Comparativa nueva.
+4. **Menú inicial de la Fase 15.2**: splash "Javier Saguar presenta", aviso de fangame, intro corta, título con parallax y logo animado, **"Realizado por Javier Saguar"** y la versión siempre visibles en el pie, menú principal y créditos con **"Juego realizado por Javier Saguar"** como primera línea. Para el logo, 2 o 3 propuestas en `docs/arte/comparativas/` para que elija Javier.
+5. Pantallas del MVP, una a una y con su comparativa: menú de pausa, equipo, mochila, tienda, teclado de nombres, guardar y cargar (8 ranuras con miniatura y modo), Pokédex básica, escena de evolución, aprender movimiento y la presentación visual de la intro del profesor.
+6. Audio: lista de candidatos de **música y sonidos** (enlace, autor y licencia) en "Preguntas para Javier". En cuanto lleguen: SE de menús, golpes, captura, `jump` y `shiny` (petición 27) y las primeras BGM.
+7. Pantallas del RandomLocke de la Fase R.8 (petición 25).
+8. Escena de combate para dobles y Megaevolución (cuando el Agente 2 publique el contrato) y efectos de movimientos de NikDie cuando lleguen.
+9. Resto de la Fase 15: PC, Pokédex completa, opciones (con `battle_style`, petición 31), tarjeta de entrenador y medallas, y mapa de la región.
+10. Validador de arte siempre a 0 errores, con las reglas nuevas que pida el Agente 4.
+
+**Agente 4 — Arte del mundo y de los entrenadores** (worktree nuevo `pokemon-panchito-agente4`; la propiedad está en la tabla de arriba)
+1. Leer `docs/DIRECTRICES.md` (§1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `recursos_terceros.md`, las referencias, las comparativas y las respuestas 9 y 17 de Javier. Recibir el traspaso del Agente 1 (tileset de exteriores y su script de construcción, personajes) y del Agente 3 (entrenadores Panchito); acordad dónde vive cada script de construcción.
+2. Recursos: proponer en "Preguntas para Javier", con enlace, autor y licencia, el **tileset de interiores** estilo DPPt/Añil, el **sprite de sombra** de los personajes y casas o edificios DPPt si las de HGSS no encajan.
+3. **Tileset exterior coherente** en un solo estilo (DPPt: packs 02, 03 y 04). Casas que encajen (retocadas de paleta o sustituidas), sin la plaza de círculos, suelos sin repeticiones evidentes, acantilados de varias alturas con escaleras y barandillas, vallas, flores y sombras de los objetos.
+4. **Rehacer el pueblo de muestra** (en `maps/muestras/`, que es tuya) al nivel de `anil_pueblo.png`: denso, saturado y coherente, con calles, vallas, casas completas y árboles con volumen. Comparativa lado a lado y aviso a Javier. **Es el primer objetivo de la sesión.**
+5. **Ruta de muestra** con varios niveles de altura, acantilados, escaleras y caminos naturales. Comparativa.
+6. Sombra bajo personajes y Pokémon que te siguen (con el recurso aprobado) y efectos del mapa (hierba, agua, polvo) cuando llegue *Misc. VFX from BW2*.
+7. **Tras aprobar Javier el pueblo:** pintar los mapas reales del MVP (pueblo inicial, casa del jugador de 2 plantas, casa del rival, laboratorio, Ruta 1 y ciudad 2 con Centro Pokémon y tienda) y entregarlos al Agente 1 uno a uno.
+8. **Entrenadores Panchito** con el pack 11 (combate a 160×160 y mapa en cuadros de 64), uno a uno: Vendedor de Chupachups, rival, profesor y protagonistas, y después el resto de las 20 clases. Cada uno, pendiente de la aprobación de Javier.
+9. Fondos y bases de combate con EBDX cuando llegue (hierba, bosque, cueva, agua, ciudad, interior; de día y de noche), adaptados a 512×384 y entregados al Agente 3.
+10. Mapas del tramo 1 (Ruta 2, bosque o cueva, ciudad del gimnasio 1) cuando Javier decida el GDD.
 
 ---
 
@@ -324,6 +346,29 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 ---
 
 ## Preguntas para Javier
+
+### Respuestas de Javier del 2026-10-05
+
+Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
+
+- **12 (combate): aprobado con cambios.** La interfaz va bien. Falta: (a) **fondo con entorno y bases** bajo los Pokémon, como el bosque de Añil, en cuanto lleguen los recursos de *Elite Battle: DX*; mientras tanto, el mejor fondo posible con los packs actuales; (b) **botones con borde y relieve**, no rectángulos planos.
+- **Ficha del Pokémon (parte de la 12): cambios pedidos.** Es correcta pero sosa: (a) **identidad de color propia de Panchito** (degradados, cabeceras de color; nada de gris dominante), (b) **ocupar toda la pantalla** (ahora la mitad de abajo está vacía), (c) sprite más grande sobre su fondo, (d) iconos en las pestañas y más datos visibles (Ball, naturaleza, carácter, encuentro).
+- **13 (recursos): sí, Javier los descarga**: *Elite Battle: DX*, efectos de movimientos de NikDie, pack 12 de entrenadores y *Misc. VFX from BW2*. Hasta entonces se trabaja con lo que hay y se deja preparado el hueco.
+- **14 (escala de los fondos): vale ×2 exacto y encuadrado** como solución provisional hasta EBDX. **Método del arte propio: vale** el texto con paleta (`assets/_fuentes/ui/*.px`) exportado a ×2, siempre que la exportación sea reproducible.
+- **17 (mundo):**
+  - **Ruta: aprobada con cambios.** Falta lo que le da carácter a la de Añil: **varios niveles de altura** con acantilados y escaleras, caminos menos rectos, más variedad de zonas y la sombra bajo los personajes.
+  - **Pueblo: rechazado, hay que rehacerlo.** Se ve plano, descolorido y con mezcla de estilos (tejados verdeazulados de HGSS sobre hierba de DPPt, plaza de círculos blancos, piedras con grietas repetidas, casas cortadas, huecos vacíos). Debe ser **denso, saturado y coherente**, con calles, vallas, casas completas, árboles con volumen y sombras.
+  - **Un solo estilo**: el de DPPt del pack 02 para suelo y naturaleza. Las casas de HGSS solo si se retocan para que encajen en paleta; si no, otras casas.
+  - **Sombra de los personajes:** buscar el recurso (Agente 4) y proponer el enlace. No se dibuja por código.
+- **18 (Poké Balls del profesor): 5.**
+- **2 (reloj): hora real del sistema**, como los juegos oficiales (el Debug puede cambiarla).
+- **3 (dinero inicial): 3000.**
+- **6 (entrenadores del MVP): sí** a las 20 clases de la tabla 10.2 y a los textos provisionales de Manolo y del rival. Se revisarán cuando se escriba el guion definitivo.
+- **7 (habilidad oculta en salvajes): 0 %**, como en los juegos actuales. Las habilidades ocultas se consiguen con eventos, regalos, incursiones o la Cápsula/Parche.
+- **9 (biblia de arte): aprobada provisionalmente**, con un cambio: la paleta del arte propio tiene que ser **más viva y saturada** (estilo Añil, sin grises dominantes). Sí a *Truth and Ideals* y al lienzo de 160×160 para los entrenadores en combate.
+- **15 (códigos y valores por defecto del RandomLocke): aceptado** como lo propone el Agente 4 (código corto para presets y sufijo para los personalizados, con los valores por defecto propuestos).
+- **16 (STAB Siniestro): aceptado.** Excepción configurable de potencia 60 para Siniestro (`policy.low_power_stab_cap_overrides.dark = 60`).
+- **1 y 5 (iniciales, nombres, Panchito, región, tono): siguen pendientes.** Se trabaja con nombres provisionales "POR DEFINIR", centralizados en datos para poder cambiarlos en un solo sitio.
 
 | # | Quién pregunta | Pregunta | Respuesta |
 |---|----------------|----------|-----------|
