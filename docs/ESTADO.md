@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-05, Javier):** 📦 **Recursos nuevos de combate descargados** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (índice actualizado en `docs/arte/recursos_terceros.md`):
+**Último aviso (2026-10-05, Javier):** 🏃 **Tarea nueva para el Agente 1: botón para correr** (tarea **1b** de su lista en «Próxima sesión»): tecla R / botón Y que activa o desactiva correr, ajuste "Correr siempre" guardado con la partida, y la opción en el menú de Opciones del Agente 3. Hazla en cuanto termines lo que tengas entre manos.
+
+**Aviso anterior (2026-10-05, Javier):** 📦 **Recursos nuevos de combate descargados** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (índice actualizado en `docs/arte/recursos_terceros.md`):
 - `16_elite_battle_dx`: **fondos de combate con entorno, bases y elementos** (Agente 4 compone las escenas; Agente 3 las integra), **transiciones de entrada** (Agente 3) y **sonidos**: `Shiny.wav`, captura, experiencia, huida, selección, victorias, evolución y subir de nivel. **Agente 3: con esto se puede cerrar la petición 27 (`shiny`).**
 - `17_ebdx_anim_pack`: **animaciones de movimientos** de NikDie y sus sonidos (Agente 3, tarea 8; los scripts de RPG Maker solo sirven como referencia).
 - `12_hgss_trainers_front`: **entrenadores de HGSS de frente** en una sola hoja (Agente 4: recortar a 160×160 sin reescalar; sirven para NPCs normales y como base de los Panchito).
@@ -300,6 +302,12 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
    - Excepción configurable por NPC (`turn_on_interact = false`) para los que no deben girarse: dormidos, de espaldas por guion, estatuas.
    - Los **carteles** siguen como en los juegos: se leen desde la casilla de delante (abajo).
    - Tests en `tests/mundo/` con todas las combinaciones.
+1b. **🏃 Botón para correr (orden de Javier del 2026-10-05).** Hoy solo se corre **manteniendo** `run` (Shift / B del mando). Añadir, como en los juegos modernos:
+   - Una acción nueva **`run_toggle`** (tecla **R** y el botón **Y** del mando) que **activa o desactiva correr**. Mientras está activado, el jugador corre sin mantener nada. Mantener `run` con el modo activado hace **andar** (lo invierte), para poder ir despacio en un momento dado.
+   - Ajuste **`always_run`** en `GameState` (y su valor por defecto en `data/world.json`), que se **guarda con la partida**. `run_toggle` lo cambia, con un aviso breve en pantalla ("Correr: activado/desactivado") que el Agente 3 dibuja con su estilo.
+   - No se corre en interiores pequeños ni en zonas donde el mapa lo prohíba (`MapData.can_run`, por defecto sí), ni en bicicleta o haciendo surf, que tienen su propia velocidad.
+   - Petición al Agente 3: la opción **"Correr siempre"** en el menú de Opciones (tarea 9) y las teclas de correr en la pantalla de controles.
+   - Tests: mantener, alternar, la inversión con el modo activado, el guardado del ajuste y las zonas sin correr.
 2. Aplicar las decisiones de Javier en datos: 5 Poké Balls (`world.mvp_story.reward.quantity`), reloj real, 3000 de dinero inicial. **Centralizar los nombres provisionales** (pueblo, ciudad 2, profesor, rival, región) en `data/world.json` → `names`, usados por marcadores en los textos, para cambiarlos en un solo sitio cuando Javier los decida.
 3. Flujo completo del juego en `SceneManager` con las pantallas del Agente 3 según vayan llegando (con sustitutos mientras tanto): arranque → menú inicial → nueva partida normal → elegir ranura → intro del profesor → juego → menú de pausa → guardar y cargar → "Continuar".
 4. Preparar el MVP para que los mapas reales del Agente 4 encajen sin tocar lógica: ids de mapa y de aparición en datos, y guion independiente del mapa.
@@ -330,7 +338,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 6. Audio: lista de candidatos de **música y sonidos** (enlace, autor y licencia) en "Preguntas para Javier". En cuanto lleguen: SE de menús, golpes, captura, `jump` y `shiny` (petición 27) y las primeras BGM.
 7. Pantallas del RandomLocke de la Fase R.8 (petición 25).
 8. Escena de combate para dobles y Megaevolución (cuando el Agente 2 publique el contrato) y efectos de movimientos de NikDie cuando lleguen.
-9. Resto de la Fase 15: PC, Pokédex completa, opciones (con `battle_style`, petición 31), tarjeta de entrenador y medallas, y mapa de la región.
+9. Resto de la Fase 15: PC, Pokédex completa, opciones (con `battle_style`, petición 31, y **"Correr siempre"**, tarea 1b del Agente 1), tarjeta de entrenador y medallas, y mapa de la región. El aviso "Correr: activado/desactivado" puede adelantarse en cuanto el Agente 1 lo pida.
 10. Validador de arte siempre a 0 errores, con las reglas nuevas que pida el Agente 4.
 
 **Agente 4 — Arte del mundo y de los entrenadores** (worktree nuevo `pokemon-panchito-agente4`; la propiedad está en la tabla de arriba)
