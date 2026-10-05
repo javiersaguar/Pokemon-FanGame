@@ -131,3 +131,14 @@ func test_cartel_solo_desde_abajo() -> void:
 		_player.place_at(Vector2i(8, 8) + side, Vector2i.UP)
 		await sign_node.interact(_player)
 		assert_false(Dialogue.is_open, "rechaza posición %s incluso mirando arriba" % side)
+
+func test_cuerpo_reserva_destino_sin_sobrepasarlo_a_mitad_del_paso() -> void:
+	_npc.step(Vector2i.RIGHT, 0.25)
+	_player.place_at(Vector2i(6, 6), Vector2i.UP)
+	await get_tree().create_timer(0.18).timeout
+	assert_true(_npc.moving)
+	assert_eq(_npc.body.global_position, _map.to_global(Grid.to_world(Vector2i(6, 5))))
+	assert_eq(_player.find_entity_at(Vector2i(6, 5)), _npc, "no pierde el NPC al final del paso")
+	await _player._interact()
+	assert_eq(_npc.calls, 1)
+	assert_eq(_npc.dialogue_facing, Vector2i.DOWN)

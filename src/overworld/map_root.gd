@@ -176,3 +176,12 @@ func enter_triggers() -> Array[Trigger]:
 		if trigger.mode == Trigger.Mode.ON_ENTER and trigger.can_fire():
 			out.append(trigger)
 	return out
+
+func connection_at(tile: Vector2i) -> MapConnection:
+	if data == null or get_ground() == null:
+		return null
+	var bounds := get_ground().get_used_rect()
+	for connection: MapConnection in data.connections:
+		if connection.matches(tile, bounds):
+			return connection
+	return null

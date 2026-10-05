@@ -72,8 +72,17 @@ func _process(delta: float) -> void:
 ## Sprite según el sexo elegido (GameState.player_gender).
 func refresh_appearance() -> void:
 	var paths: Array = SHEETS.get(GameState.player_gender, SHEETS[&"male"])
-	run_sprite_sheet = load(paths[1])
-	sprite_sheet = load(paths[0])
+	var mode := FieldActions.transport()
+	var transport_sheet := FieldActions.sheet_path(mode, GameState.player_gender)
+	if mode != &"walk" and not transport_sheet.is_empty() and ResourceLoader.exists(transport_sheet):
+		run_sprite_sheet = null
+		sprite_sheet = load(transport_sheet)
+	else:
+		GameState.set_var(&"transport", "walk")
+		run_sprite_sheet = load(paths[1])
+		sprite_sheet = load(paths[0])
+	if is_node_ready():
+		ray.collision_mask = BLOCKING_MASK & ~8 if FieldActions.transport() == &"surf" else BLOCKING_MASK
 
 
 func place_at(tile: Vector2i, dir: Vector2i = Vector2i.ZERO) -> void:
@@ -132,11 +141,20 @@ func _turn(dir: Vector2i) -> void:
 func _walk(dir: Vector2i) -> void:
 	_walking = true
 	while dir != Vector2i.ZERO:
-		var running := Input.is_action_pressed(&"run")
+		var map := get_map_root()
+		var connection := map.connection_at(tile_position() + dir) if map else null
+		if connection:
+			await SceneManager.cross_connection(connection, tile_position() + dir, dir)
+			break
+		var mode := FieldActions.transport()
+		var running := Input.is_action_pressed(&"run") and mode == &"walk"
+		var duration := RUN_TIME if running or mode in [&"bike", &"surf"] else WALK_TIME
+		if map and map.terrain_at(tile_position() + dir) == "waterfall" and not FieldActions.available(&"waterfall", map):
+			break
 		if _can_jump(dir):
 			AudioManager.play_se(&"jump")
 			await jump(dir)
-		elif not await step(dir, RUN_TIME if running else WALK_TIME, Debug.noclip, running):
+		elif not await step(dir, duration, Debug.noclip, running):
 			AudioManager.play_se(&"bump")
 			await bump(dir)
 			_sync_state()
@@ -172,6 +190,8 @@ func _after_step() -> bool:
 			AudioManager.play_se(warp.sound)
 		await SceneManager.change_map(warp.target_map, warp.target_spawn, warp.get_arrival_facing())
 		return false
+	if FieldActions.transport() == &"surf" and map.terrain_at(tile) not in ["water", "waterfall"]:
+		set_transport_mode(&"walk")
 	EventBus.player_stepped.emit(tile)
 	if GameState.input_locked:
 		return false
@@ -179,7 +199,7 @@ func _after_step() -> bool:
 	if trigger:
 		await Cutscene.play(trigger.event, trigger, trigger.event_params, trigger.once_flag)
 		return false
-	var wild := WildEncounters.roll(map, tile)
+	var wild := WildEncounters.roll(map, tile, &"water" if FieldActions.transport() == &"surf" else &"land")
 	if not wild.is_empty():
 		await SceneManager.start_battle(WildEncounters.make_setup(wild))
 		return false
@@ -201,6 +221,9 @@ func _interact() -> void:
 	if target == null and map and map.terrain_at(front) == "counter":
 		target = find_entity_at(front + facing)
 	if target == null:
+		if map and map.terrain_at(front) == "water" and FieldActions.transport() != &"surf" and FieldActions.available(&"surf", map):
+			if await Dialogue.ask_yes_no("¿Quieres hacer Surf?"):
+				set_transport_mode(&"surf")
 		return
 	_interacting = true
 	GameState.lock_input(&"interact")
@@ -242,6 +265,22 @@ func find_entity_at(tile: Vector2i) -> MapEntity:
 func get_map_root() -> MapRoot:
 	return SceneManager.current_map
 
+
+## A3 puede conectar el objeto de bicicleta/surf a esta API.
+func set_transport_mode(mode: StringName) -> bool:
+	var map := get_map_root()
+	if mode == &"walk":
+		if FieldActions.transport() == &"surf" and map and map.terrain_at(tile_position()) in ["water", "waterfall"]:
+			return false
+	elif mode not in [&"bike", &"surf"] or not FieldActions.available(mode, map):
+		return false
+	else:
+		var sheet := FieldActions.sheet_path(mode, GameState.player_gender)
+		if sheet.is_empty() or not ResourceLoader.exists(sheet):
+			return false
+	GameState.set_var(&"transport", String(mode))
+	refresh_appearance()
+	return true
 
 # --- Cámara ---
 

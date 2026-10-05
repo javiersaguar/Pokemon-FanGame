@@ -7,6 +7,7 @@ Todas las claves de `GameState.flags` y `GameState.vars` van aquí **antes** de 
 | Patrón | Se activa en | Efecto | Dueño |
 |--------|--------------|--------|-------|
 | `trainer_defeated:<trainer_id>` | Al ganar a ese entrenador | Ya no te ve; dice su `after_text` | Agente 3 |
+| `visited_map:<map_id>` | Al cargar mapa | Registro de visitas para vuelo | Agente 1 |
 | `item_taken:<map_id>:<nodo>` | Al recoger un objeto del suelo | El objeto no vuelve a aparecer | Agente 1 |
 
 ## Flags
@@ -26,6 +27,7 @@ Todas las claves de `GameState.flags` y `GameState.vars` van aquí **antes** de 
 
 | Clave | Valores | Notas |
 |-------|---------|-------|
+| `transport` | walk/bike/surf | Modo de movimiento; sprite obligatorio para activar bike/surf |
 | `story_progress` | 0, 10, 20... | Avance de la historia (valores espaciados para poder insertar pasos) |
 | `starter` | 1, 2, 3 | Índice elegido; rival por ID en world.mvp_story |
 | `repel_steps` | 0+ | Pasos de Repelente que quedan (la pone el objeto; la descuenta `WildEncounters`) |

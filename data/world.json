@@ -160,5 +160,48 @@
         }
       }
     }
+  },
+  "field": {
+    "actions": {
+      "cut": {
+        "item": null,
+        "required_flag": ""
+      },
+      "rock_smash": {
+        "item": null,
+        "required_flag": ""
+      },
+      "strength": {
+        "item": null,
+        "required_flag": ""
+      },
+      "surf": {
+        "item": null,
+        "required_flag": ""
+      },
+      "waterfall": {
+        "item": null,
+        "required_flag": ""
+      },
+      "fly": {
+        "item": null,
+        "required_flag": ""
+      },
+      "bike": {
+        "item": "bicycle",
+        "required_flag": ""
+      }
+    },
+    "transport_sheets": {
+      "male": {
+        "bike": null,
+        "surf": null
+      },
+      "female": {
+        "bike": null,
+        "surf": null
+      }
+    },
+    "flight_destinations": []
   }
 }

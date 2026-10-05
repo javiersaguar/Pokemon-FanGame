@@ -593,6 +593,14 @@ Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al mo
 
 `world.mvp_locations.profile` y `profiles.{test,real}`: rol → `{map,spawn}`. `MvpLocations.target(role)` resuelve destino activo; `validate(profile)` comprueba escena MapRoot y aparición exacta; `activate(profile)` cambia solo si todo es válido. `new_game_config()` combina los parámetros generales con start/healing del perfil. MvpStoryEvent.travel usa roles bedroom/laboratory; ninguna ruta de mapa está en el guion. Entrega/IDs en docs/mapas/lista.md.
 
+## 7f. Campo, conexiones y viaje (A1)
+
+`MapData.connections: Array[MapConnection]`, `MapRoot.connection_at(tile)`, `SceneManager.cross_connection(conn,tile,facing)->Error`, sin fundido. Valida destino/coordenada antes de descargar origen. MapConnection.matches/arrival trabajan con Rect2i de Ground; offset suma a coordenada paralela.
+
+`FieldActions.available(action,map)`, `FieldObstacle.action/cleared_flag`, `Player.set_transport_mode(walk/bike/surf)->bool`. Herramientas sin ID (world.field.actions) y transporte sin sprite no se activan. La casilla destino de Character queda reservada por el Body **fijo** mientras el sprite recorre el paso, también en salto.
+
+`WorldTravel.destinations()->Array[Dictionary]`, `fly(id)->Error`; destinos configurados/visitados, objeto y can_fly_from. `visited_map:<id>` se guarda como flag. Contrato de pintura/datos pendientes en docs/mapas/mecanicas_campo.md.
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).

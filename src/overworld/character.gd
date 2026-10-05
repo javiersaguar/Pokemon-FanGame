@@ -49,6 +49,7 @@ const JUMP_DUST := preload("res://assets/sprites/characters/effects/jump_dust.pn
 
 var facing := Vector2i.DOWN
 var moving := false
+var _reserved_body_position := Vector2.ZERO
 
 @onready var sprite: CharacterSprite = $Sprite
 @onready var body: StaticBody2D = $Body
@@ -102,7 +103,8 @@ func step(dir: Vector2i, duration: float = WALK_TIME, ignore_collisions: bool = 
 	var target_tile := Grid.to_tile(target)
 	step_started.emit(Grid.to_tile(position), target_tile, duration)
 	# El cuerpo se adelanta para reservar la casilla de destino.
-	body.position = Vector2(dir * Grid.TILE)
+	_reserved_body_position = to_global(Vector2(dir * Grid.TILE))
+	body.global_position = _reserved_body_position
 	sprite.play_step(dir, duration, running)
 	var into_grass := _is_tall_grass(target_tile)
 	if into_grass:
@@ -139,7 +141,8 @@ func jump(dir: Vector2i, tiles: int = 2) -> void:
 	var from := tile_position()
 	var to := from + dir * tiles
 	step_started.emit(from, to, JUMP_TIME)
-	body.position = Vector2(dir * Grid.TILE * tiles)
+	_reserved_body_position = to_global(Vector2(dir * Grid.TILE * tiles))
+	body.global_position = _reserved_body_position
 	sprite.play_step(dir, JUMP_TIME)
 	var tween := create_tween().set_parallel()
 	tween.tween_method(_set_position_rounded, position, Grid.to_world(to), JUMP_TIME)
@@ -240,6 +243,8 @@ func _spawn_effect(texture: Texture2D, tile: Vector2i, frame_time: float) -> voi
 ## para que no haya temblores de medio píxel al moverse.
 func _set_position_rounded(value: Vector2) -> void:
 	position = Grid.round_to_art_pixel(value)
+	if moving:
+		body.global_position = _reserved_body_position
 
 
 static func direction_to(delta: Vector2) -> Vector2i:

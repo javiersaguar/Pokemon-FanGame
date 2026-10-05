@@ -143,6 +143,22 @@ func change_map_at(map_id: StringName, tile: Vector2i, facing: Vector2i = Vector
 	await _change_map(map_id, func(_map: MapRoot) -> Vector2i: return tile, facing, fade)
 
 
+func cross_connection(connection: MapConnection, tile: Vector2i, facing: Vector2i) -> Error:
+	if not map_exists(connection.target_map):
+		return ERR_FILE_NOT_FOUND
+	var preview := load(MapRoot.path_from_id(connection.target_map)).instantiate() as MapRoot
+	if preview == null or preview.get_ground() == null:
+		if preview:
+			preview.free()
+		return ERR_INVALID_DATA
+	var bounds := preview.get_ground().get_used_rect()
+	var arrival := connection.arrival(tile, bounds)
+	preview.free()
+	if not bounds.has_point(arrival):
+		return ERR_INVALID_DATA
+	await change_map_at(connection.target_map, arrival, facing, false)
+	return OK
+
 func map_exists(map_id: StringName) -> bool:
 	return ResourceLoader.exists(MapRoot.path_from_id(map_id))
 
@@ -396,6 +412,7 @@ func _change_map(map_id: StringName, resolve_tile: Callable, facing: Vector2i,
 	_place_player(resolve_tile.call(map), facing)
 	if map.data and map.data.bgm != &"":
 		AudioManager.play_bgm(map.data.bgm)
+	WorldTravel.record_visit(map)
 	EventBus.map_loaded.emit(map_id)
 
 	await fade_in()

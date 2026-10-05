@@ -25,7 +25,7 @@ static func roll(map: MapRoot, tile: Vector2i, kind: StringName = &"land") -> Di
 	# Sin ningún Pokémon que pueda luchar no hay encuentros (como en los juegos oficiales).
 	if _able_count() == 0:
 		return {}
-	if not map.is_encounter_tile(tile):
+	if not map.is_encounter_tile(tile) and not (kind == &"water" and map.terrain_at(tile) in ["water", "waterfall"]):
 		return {}
 	var table := load_table(map.data.encounter_table)
 	if table.is_empty() or rng.randf() >= step_chance(map, table, kind):

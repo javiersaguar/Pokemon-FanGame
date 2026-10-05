@@ -6,6 +6,8 @@ extends Resource
 ## (maps/pueblo_inicial/exterior.tscn → &"pueblo_inicial/exterior").
 ## Si se deja vacío, se deduce de la ruta.
 @export var id: StringName
+## Conexiones sin fundido por los bordes; puertas/escaleras siguen usando Warp.
+@export var connections: Array[MapConnection] = []
 ## Nombre del cartel al entrar ("Ruta 1").
 @export var display_name: String
 ## Id de la pista para AudioManager.play_bgm(). Vacío = no cambia la música.
