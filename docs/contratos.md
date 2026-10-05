@@ -562,7 +562,7 @@ await Cutscene.battle_wild(species_or_pokemon, level := 5, options := {}) -> Str
 
 ## 7c. Integración Locke del mundo (Agente 1)
 
-`GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados.
+`GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados. SAVE_VERSION 2 migra v1 conservando ROM, zonas y contadores antiguos (`legacy_death_count`), sin fabricar lápidas ni permisos para encuentros ya gastados.
 
 - `MapData.zone_id` / `MapRoot.get_zone_id()`: ID común entre plantas; prioridad export → `encounter_table.zone_id` → ID del mapa. Los mapas reales deben declarar su zona común.
 - `SceneManager.start_battle(setup, context := {})` / `prepare_battle(setup, context := {})`: `context` admite `zone_id`, `source` (`wild`/`static`), `tutorial`. Registra el encuentro antes de que BattleScene reciba acciones. Devuelve `LockeBattleDriver` cuando hay reglas. `can_lose` no excluye automáticamente las reglas: el combate de iniciación usa `tutorial: true` expresamente.

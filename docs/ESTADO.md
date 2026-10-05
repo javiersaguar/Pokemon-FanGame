@@ -57,9 +57,10 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) las DIRECTRICES actuales, el último aviso y «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente1`, rama `feat/agente1-bloque-i`, actualizado desde `origin/main`; autoría de Javier y hooks activos.
 
-**En qué estoy:** bloque I, tarea 1 / petición 24: conectar LockeRules al mundo, encuentros por zona, guardado, Cementerio y game over. Después, historia del MVP en la sala existente y limpieza. El bloque II y el cierre de v0.1 esperan la aprobación gráfica de Javier (preguntas 12, 14 y 17); no se crean mapas ni pantallas visibles nuevos.
+**En qué estoy:** bloque I, tarea 1 terminada; siguiente: historia del MVP en la sala existente (tarea 2). Bloque II y cierre de v0.1 esperan aprobación gráfica (preguntas 12, 14 y 17).
 
 **Terminado:**
+- **Bloque I.1 / petición 24 (2026-10-05):** WorldLocke/LockeBattleDriver (§7c), primera captura por zone_id antes del combate, autorización de Balls sin gasto para encuentros prohibidos, duplicados/shiny, inicial poseído, regalos, resolución run/KO/captura, mote pendiente sin inventarlo, Cementerio idempotente y retirada de party/PC, superviviente PC, game over y rechazo de continuar finished. Snapshot/familias/pendientes guardados; SAVE_VERSION 2 con migración v1 que conserva zonas/contadores sin inventar lápidas. **206/206 tests, 3121 aserciones, 45,8 s, 0 pending**, import limpio y arranque gráfico sin errores de script/recursos (audio Dummy por entorno WSL). Teclado de motes y pantallas de Cementerio/game over quedan a A3, petición 29.
 - Paso 0, el esqueleto: proyecto de Godot 4.7.2, estructura de carpetas, GUT 9.7.1, Input Map, escena `Main` (World/Battle/UI/Transition), autoloads, `GameState`, `SaveManager` (`save_version`, `.tmp` → `.bak` → renombrar, migraciones), `SceneManager` (mapas con fundido, combate, derrota → Centro Pokémon, pila de menús, flujo de partida), `Clock`, menú Debug (F9) con `Debug.register_command()`, `docs/contratos.md` §0–7, `docs/flags.md` y `docs/mapas/reservas.md`.
 - **Fase 5** (`contratos.md` §5):
   - Jugador por casillas: toque corto = girar, pasos encadenados sin parones, correr, choque con la pared (`bump`) y `EventBus.player_stepped`.
@@ -84,7 +85,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - Tests en `tests/mundo/`: GameState, SaveManager (también ranuras, copia y RandomLocke), mapas, encuentros, eventos y objetos colocados.
 - Integración: he unido `origin/main` (las directrices de Javier) con el `main` local de los agentes. **El `main` local no está subido a GitHub** (pregunta 10).
 
-**Bloqueos:** mapas de muestra → recursos en `assets/_terceros/` (Javier). Fase 8 → `BattleSetup` (petición 1), pantallas del Agente 3 y preguntas 1 y 2.
+**Bloqueos:** bloque I sin bloqueo de motor. Las pantallas de nombres/tienda las integra A3; se publican interfaces para probar los eventos. Bloque II: aprobación gráfica, recursos de interiores/sombra y decisiones GDD (preguntas 1, 2, 3, 5, 17).
 
 ---
 

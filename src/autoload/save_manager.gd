@@ -290,6 +290,10 @@ func _migrate(data: Dictionary) -> Dictionary:
 		return {}
 	while version < GameState.SAVE_VERSION:
 		match version:
+			1:
+				# v2 añade snapshot Locke/pendientes; WorldLocke restaura el legado sin regenerar la ROM.
+				version = 2
+				data["save_version"] = version
 			_:
 				push_error("SaveManager: no hay migración desde save_version %d." % version)
 				return {}

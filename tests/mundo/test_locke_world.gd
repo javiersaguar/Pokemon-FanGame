@@ -144,3 +144,18 @@ func test_death_del_motor_real_llega_a_cementerio() -> void:
 	assert_eq(GameState.locke.rules.snapshot().death_count, 1)
 	assert_eq(GameState.party.size(), 0)
 	assert_eq(GameState.randomlocke.status, "finished")
+
+func test_migracion_v1_conserva_zonas_muertes_y_rom() -> void:
+	var state := GameState.to_dict()
+	state.randomlocke = {"zones": {"ruta": "lost"}, "deaths": 2, "settings": {"nickname_required": false}, "families": {"pikachu": "pikachu"}}
+	var file := FileAccess.open(SaveManager.slot_path(SLOT), FileAccess.WRITE)
+	file.store_string(JSON.stringify({"save_version": 1, "state": state}))
+	file.close()
+	assert_eq(SaveManager.load_game(SLOT), OK)
+	assert_eq(GameState.locke.rules.zone_status("ruta"), "lost")
+	assert_eq(GameState.randomlocke.deaths, 2, "no inventa lápidas del legado")
+	assert_eq(GameState.locke.rules.snapshot().cemetery, [])
+	assert_eq(SaveManager.save_game(SLOT), OK)
+	GameState.reset()
+	assert_eq(SaveManager.load_game(SLOT), OK)
+	assert_eq(GameState.randomlocke.deaths, 2)

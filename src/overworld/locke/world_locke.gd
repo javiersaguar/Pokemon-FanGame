@@ -4,8 +4,10 @@ extends RefCounted
 
 var rules: LockeRules
 var pending: Dictionary = {}
+var _legacy_death_count := 0
 
 func _init(saved: Dictionary = {}) -> void:
+	_legacy_death_count = int(saved.get("legacy_death_count", 0))
 	if saved.has("snapshot"):
 		rules = LockeRules.from_dict(saved.snapshot)
 		pending = saved.get("pending_captures", {}).duplicate(true)
@@ -16,6 +18,15 @@ func _init(saved: Dictionary = {}) -> void:
 			families = RandomizerInput.from_datadb().families(RomPatch.from_dict(GameState.rom_patch))
 		var templates: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/randomizer/epitafios.json"))
 		rules = LockeRules.new(settings, families, templates if templates is Array else [])
+		# El guardado anterior tenía resúmenes, sin lápidas ni permisos de captura.
+		var legacy := rules.snapshot()
+		for zone: String in saved.get("zones", {}):
+			var old: Variant = saved.zones[zone]
+			var status := str(old.get("status", "lost")) if old is Dictionary else str(old)
+			if status != "available":
+				legacy.zones[zone] = {"status": "caught" if status == "caught" else "lost"}
+		_legacy_death_count = int(saved.get("deaths", 0))
+		rules = LockeRules.from_dict(legacy)
 	if saved.get("status", "") == "finished":
 		var finished := rules.snapshot()
 		finished["state"] = "finished"
@@ -30,7 +41,8 @@ func sync() -> void:
 	GameState.randomlocke["settings"] = rules.rules()
 	GameState.randomlocke["pending_captures"] = pending.duplicate(true)
 	GameState.randomlocke["zones"] = state.zones.duplicate(true)
-	GameState.randomlocke["deaths"] = state.death_count
+	GameState.randomlocke["legacy_death_count"] = _legacy_death_count
+	GameState.randomlocke["deaths"] = state.death_count + _legacy_death_count
 	GameState.randomlocke["status"] = "finished" if state.state == "finished" else "in_progress"
 
 func begin(pokemon: Pokemon, zone: String, source: String = "wild") -> Dictionary:
@@ -96,6 +108,7 @@ func resolve(encounter: Dictionary, outcome: String) -> void:
 func death(pokemon: Pokemon, context: Dictionary) -> Dictionary:
 	var grave := rules.register_death(record(pokemon), context)
 	sync()
+	EventBus.locke_state_changed.emit()
 	return grave
 
 func remove_dead() -> void:

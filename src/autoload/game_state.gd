@@ -4,7 +4,7 @@ extends Node
 
 ## Súbelo cada vez que cambie el formato de to_dict() y añade la migración
 ## correspondiente en SaveManager.
-const SAVE_VERSION := 1
+const SAVE_VERSION := 2
 const WORLD_CONFIG_PATH := "res://data/world.json"
 
 ## Modos de partida (Fase R): normal o RandomLocke.
