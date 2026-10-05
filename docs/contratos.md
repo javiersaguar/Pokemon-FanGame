@@ -828,8 +828,8 @@ return result.outcome                                 # = SceneManager.OUTCOME_*
 ```gdscript
 BattleSetup.wild(pokemon_or_species: Variant, level := 5, options := {}) -> BattleSetup
 BattleSetup.trainer(trainer_id: StringName, options := {}) -> BattleSetup
-# options: can_lose, can_run, allow_items, exp_enabled, exp_share, background, bgm, weather,
-#          environment, time_period, seed, ai_level
+# options: can_lose, can_run, allow_items, exp_enabled, exp_share, locke_rules, tutorial,
+#          background, bgm, weather, environment, time_period, battle_style, seed, ai_level, next_ace_level
 BattleSetup.trainer_info(trainer_id, player_name := "") -> Dictionary   # entrenador + clase (lo de setup.trainers[i])
 setup.fill_from_game_state() / setup.apply_options(options) / setup.is_wild()
 ```
@@ -843,12 +843,16 @@ setup.fill_from_game_state() / setup.apply_options(options) / setup.is_wild()
 | `trainers` | `Array[Dictionary]` | Rivales (vacío en salvajes): `{id, class, class_name, name, display_name, gender, base_money, ai_level, battle_sprite, battle_bgm, intro_bgm, intro_text, lose_text, win_text, items}`. `display_name` = "Vendedor de Chupachups Manolo", con `{rival}` y `{player}` ya sustituidos |
 | `can_lose` | `bool` | `true` = perder no te manda al Centro Pokémon |
 | `can_run`, `allow_items`, `exp_enabled`, `exp_share` | `bool` | `can_run` = `true` en salvajes |
+| `locke` | `LockeRules` | Reglas de la partida. `null` si no se aplican. El tutorial lo deja en `null` |
+| `next_ace_level` | `int` | Nivel del as del siguiente líder (`GameState.randomlocke.next_ace_level`). `0` = sin tope |
+| `battle_style` | `StringName` | `&"fixed"` (por defecto, no avisa) o `&"shift"` (avisa y se puede rechazar). Si `locke.battle_mode()` es `"fixed"`, no hay aviso |
+| `tutorial` | `bool` | No aplica muerte, tope, modo fijo ni límite de objetos |
 | `background`, `bgm` | `StringName` | `bgm`: la del entrenador (`battle_bgm`) o `battle_wild` |
 | `weather`, `environment`, `time_period` | `StringName` | `environment`: `grass`, `cave`, `water`... (para algunas Balls) |
 | `caught_species`, `dex_caught_count` | | De `GameState.pokedex` (Ball Acopio y captura crítica) |
 | `seed` | `int` | 0 = aleatoria (la usada queda en `result.seed`) |
 
-**`BattleRequest`** (`engine.request`): `kind` (`BattleRequest.Kind.ACTION`, `SWITCH` o `LEARN_MOVE`), `side`, `slot`, `party_index`, `move_id` (en `LEARN_MOVE`), `can_run`, `can_switch`, `can_use_items`, `usable_moves: Array[int]` (índices con PP; vacío = solo puede usar Forcejeo), `reason` (en `SWITCH`: vacío = se ha debilitado; `&"uturn"` = Ida y Vuelta / Voltiocambio / Viraje; `&"batonpass"` = Relevo).
+**`BattleRequest`** (`engine.request`): `kind` (`BattleRequest.Kind.ACTION`, `SWITCH` o `LEARN_MOVE`), `side`, `slot`, `party_index`, `move_id` (en `LEARN_MOVE`), `can_run`, `can_switch`, `can_use_items`, `usable_moves: Array[int]` (índices con PP; vacío = solo puede usar Forcejeo), `reason` (en `SWITCH`: vacío = se ha debilitado; `&"uturn"` = Ida y Vuelta / Voltiocambio / Viraje; `&"batonpass"` = Relevo; `&"shift"` = el rival va a sacar otro y se puede rechazar con `switch_to(-1)`).
 
 - Si el Pokémon está atrapado (Giro Fuego...), `can_switch` y `can_run` llegan a `false`.
 - Cuando el movimiento del jugador es obligado (segundo turno de Rayo Solar, Golpe, Alboroto, recarga de Hiperrayo), el motor **no pide acción**: resuelve ese turno solo y los eventos llegan en el mismo `submit()`.
@@ -856,7 +860,7 @@ setup.fill_from_game_state() / setup.apply_options(options) / setup.is_wild()
 | `kind` | Cuándo | Respuestas válidas |
 |--------|--------|--------------------|
 | `ACTION` | Inicio de turno | `fight`, `switch_to`, `use_item`, `run` |
-| `SWITCH` | Se ha debilitado el Pokémon del jugador, o `reason` = `uturn` / `batonpass` (cambio a mitad de turno: el menú del equipo no se puede cancelar) | `switch_to` (o `run` en salvajes, si `can_run`) |
+| `SWITCH` | Se ha debilitado el Pokémon del jugador, `reason` = `uturn` / `batonpass` (cambio a mitad de turno: el menú del equipo no se puede cancelar) o `reason` = `shift` (modo Cambio: se puede quedar) | `switch_to` (o `run` en salvajes, si `can_run`). En `shift`, `switch_to(-1)` no cambia |
 | `LEARN_MOVE` | Quiere aprender `move_id` y ya sabe 4 | `learn_move(índice a olvidar)` o `learn_move(-1)` = no aprenderlo |
 
 **`BattleAction`**
@@ -969,7 +973,7 @@ RomValidator.validate(rom) -> PackedStringArray   # R.4 (Randomizer.generate ya 
 | `similar_strength`, `strength_tolerance`, `level_appropriate` | bool, 0–100 | ±% del total de estadísticas; etapa evolutiva acorde al nivel |
 | `locke_rules` | bool | Reglas Locke en el combate |
 
-- **Reglas Locke en el combate** (Fase R.7, parte del Agente 2): `BattleSetup.locke_rules` (se rellena solo con `GameState.is_randomlocke()` y `GameState.randomlocke.settings.locke_rules`). Cuando cae un Pokémon del jugador: evento `pokemon_died` (justo después de su `faint`) con `{party_index, uid, species, name, level, foe_species, foe_name, trainer, turn}`, mensaje con `tag = "death"` y la misma entrada en `result.deaths` (para el Cementerio). Los objetos de revivir no se pueden usar.
+- **Reglas Locke en el combate** (Fase R.7): `fill_from_game_state()` copia `GameState.locke.rules` a `setup.locke`. `locke_rules` queda activo solo si hay muerte permanente (el tutorial lo apaga). Al caer un Pokémon del jugador, una sola vez por `uid`: evento `pokemon_died` (justo después de su `faint`) con `{party_index, uid, species, name, level, foe_species, foe_name, trainer, turn}`, mensaje con `tag = "death"` y la misma entrada en `result.deaths`. No se puede revivir. La experiencia se recorta para no pasar de `next_ace_level` cuando el tope está activo. Los objetos de combate siguen `can_use_item` (usos con efecto, sin contar Balls: la captura sigue posible). El modo fijo no pregunta al sacar el siguiente rival; `&"shift"` sí, y `EngineDriver.request()` incluye `reason`.
 - `data/randomizer/` (Agente 2): prohibidos, reglas de equilibrio, presets, esquema y epitafios. `policy.json` es la copia que entra en la ROM y tiene que coincidir con `presets.json` y `prohibidos.json`. Cambiar algo que altere las ROM obliga a subir `Randomizer.GENERATOR_VERSION`.
 - Tests (`tests/randomizer/`): códigos, determinismo, parche dorado (`golden_clasico.json`, se rehace con `PANCHITO_UPDATE_GOLDEN=1`), robustez (100 semillas; **1000 con `PANCHITO_LONG_TESTS=1`**), reglas, aplicación y tiempo (< 3 s).
 
@@ -1046,7 +1050,7 @@ La BattleScene habla con un `BattleDriver` (`src/battle/scene/battle_driver.gd`,
 ```gdscript
 driver.info() -> Dictionary        # {kind: &"wild"/&"trainer", trainers (como BattleSetup.trainers), background, bgm, can_run, can_lose}
 driver.start() -> Array            # BattleEvent hasta la primera decisión
-driver.request() -> Dictionary     # {kind: &"action" | &"switch" | &"learn_move", party_index, move_id, move_name, can_run}
+driver.request() -> Dictionary     # {kind: &"action" | &"switch" | &"learn_move", party_index, move_id, move_name, can_run, reason}
 driver.submit(action) -> Array     # {type: &"fight", move_slot} · {&"item", item} · {&"switch", party_index} · {&"run"} · {&"learn_move", forget_index}
 driver.is_over() -> bool / outcome() -> StringName / finish()   # finish() = aplicar el resultado a la partida
 driver.player_active() -> Dictionary / player_party() -> Array[Dictionary] / battle_items() -> Array[Dictionary]   # para los menús
@@ -1281,7 +1285,7 @@ from_dict(data: Dictionary) -> LockeRules # estático
 
 Reglas copiadas y fijadas en el constructor; ninguna API para cambiarlas, getters devuelven copias. Estado serializable: reglas, familias, zonas (available/pending/caught/lost), encuentro elegible activo por zona, encuentros y resultados, líneas ya poseídas (incluso muertas), muertes y Cementerio, capturas, estado running/finished. El primer encuentro consume la zona inmediatamente; capturar se autoriza solo para su `encounter_id`; huir, KO o fallo definitivo → lost. Shiny exento no consume ni restaura zonas. Duplicado por familia no cuenta. Regalos/estáticos tienen reglas propias (si cuentan, usan zona); intercambios siguen regalos. Mote obligatorio se verifica al resolver caught (no se da por capturado hasta recibirlo).
 
-Mundo (A1): registrar **antes** del combate, consultar permiso con el mismo ID para cada lanzamiento, resolver al terminar; registrar iniciales/capturas/regalos; pasar muerte con `{zone_id,opponent,reason}` y Pokémon `{uid,species,nickname,level,hp,dead?}`. Muerte idempotente por uid, devuelve lápida con epitafio; sacar Pokémon de party/PC utilizable y marcar muerto, nunca curarlo o revivirlo. Combat engine (A2) debe emitir `pokemon_died` una sola vez por KO real cuando esté activa la regla, no en combates excluidos de tutorial. A1 guarda/restaura `snapshot`, preserva Cementerio, comprueba game over tras cada muerte y termina la ranura. PC de `is_game_over` es lista plana de Pokémon utilizables (sin Cementerio ni huevos); hp=0 no cuenta vivo mientras la regla de muerte está activa. Si esa regla está desactivada, un debilitado puede curarse y no termina la partida.
+Mundo (A1): registrar **antes** del combate, consultar permiso con el mismo ID para cada lanzamiento, resolver al terminar; registrar iniciales/capturas/regalos; pasar muerte con `{zone_id,opponent,reason}` y Pokémon `{uid,species,nickname,level,hp,dead?}`. Muerte idempotente por uid, devuelve lápida con epitafio; sacar Pokémon de party/PC utilizable y marcar muerto, nunca curarlo o revivirlo. El motor emite `pokemon_died` una sola vez por uid en un KO real con muerte permanente, y no en tutoriales. También aplica el tope (`next_ace_level`), el modo fijo y el límite de objetos (las Balls no lo gastan). A1 guarda/restaura `snapshot`, preserva Cementerio, comprueba game over tras cada muerte y termina la ranura. PC de `is_game_over` es lista plana de Pokémon utilizables (sin Cementerio ni huevos); hp=0 no cuenta vivo mientras la regla de muerte está activa. Si esa regla está desactivada, un debilitado puede curarse y no termina la partida.
 
 UI (A3): snapshot con zonas, contadores, reglas fijadas, lápidas (mote, especie, nivel, lugar, rival, motivo y epitafio) y estado final; shiny denominator para A2, modo fijo y límite de objetos para combate. La UI elige plantilla de epitafio al construir o deja la selección determinista por uid; plantillas en `data/randomizer/epitafios.json`. No hay I/O ni señales en LockeRules. A1/A3 leen JSON antes de ejecutar en hilo; RandomizerSettings carga sus archivos de configuración una vez y mantiene copias. La generación puede prepararse en principal y ejecutarse en WorkerThreadPool, sin nodos, progreso visual ni await en el motor.
 

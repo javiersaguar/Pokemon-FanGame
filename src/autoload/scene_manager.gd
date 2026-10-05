@@ -215,6 +215,8 @@ func prepare_battle(setup: Variant, context: Dictionary = {}) -> Variant:
 	if not (setup is BattleSetup) or GameState.locke == null:
 		return setup
 	if bool(context.get("tutorial", false)):
+		setup.tutorial = true
+		setup.locke = null
 		setup.locke_rules = false
 		return setup
 	context = context.duplicate(true)

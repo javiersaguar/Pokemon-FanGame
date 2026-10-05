@@ -103,13 +103,13 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-05) el aviso de la sesión de 3 agentes, el bloque I de «Próxima sesión», la sección del Agente 4, `docs/randomlocke.md` y el §10. El motor del RandomLocke vuelve a ser mío. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`, rama `feat/agente2-bloque-i`.
 
-**En qué estoy:** bloque I, de arriba abajo. Hechos los puntos 1 a 3. Siguiente: petición 23, reglas de `LockeRules` en el combate.
+**En qué estoy:** bloque I, de arriba abajo. Hechos los puntos 1 a 4. Siguiente: fase 9.5 (habilidades, objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4).
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
 2. ✅ Petición 28: parche dorado rehecho (`tests/randomizer/golden_clasico_v2.json`, semilla `20261004`, preset `clasico`). El test ya no queda *pending*.
 3. ✅ Petición 22: `DataDB.randomizer_input()` (con `stage`, `min_level`, `max_level` y `family_id`) y `apply_patch() -> Array[String]` atómico. Un hash o una referencia mala no toca el parche activo. Consultas nuevas: `tm_compat`, `tutor_compat`, `tm_move`, `tutor_move`. `shiny_odds()` usa `settings.shiny_denominator` del parche. `species()` ya mezcla tipos, estadísticas, evoluciones y objetos equipados, y no reaplicamos `species_map`. El dorado se rehizo: solo cambió `input_hash`.
-4. ⏳ Petición 23: reglas de `LockeRules` en el combate.
+4. ✅ Petición 23: el combate aplica muerte permanente (una vez por `uid`, nunca en tutorial), tope de experiencia (`next_ace_level`), modo fijo y límite de objetos. Las Balls no gastan el límite. `prepare_battle` con `tutorial` limpia las reglas del setup.
 5. ⏳ Fase 9.5: habilidades y objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4.
 
 ### Traspaso del randomizer al Agente 4
@@ -301,7 +301,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 20 | A1 → A2 | **Sin Git LFS** (orden de Javier): `.gitattributes` ya trata `.ogg`, `.wav`, `.mp3`, `.psd` y `.aseprite` como `binary` normal, y está en GitHub. **Ya puedes subir los gritos** (`assets/audio/cries/`). | hecha (A2): 1.281 gritos en `main` como archivos normales (comprobado al cerrar la sesión) |
 | 21 | A1 → A3 | Lo mismo para el audio: sin Git LFS, los `.ogg`/`.wav` se suben como binarios normales. | informativo |
 | 22 | A4 → A2 | §10 v2 conserva parche species A2 y añade entrada pura, MT/tutores y held_items. Mantengo data/randomizer.json por compatibilidad. Añadir randomizer_input y apply_patch atómico con hash; consultas nuevas y shiny según ajuste. | hecha (A2, 2026-10-05): `randomizer_input()`, `apply_patch()` atómico, MT/tutores, objetos equipados en `species()` y shiny según el parche. `data/randomizer.json` se retiró en el punto 1 del bloque I |
-| 23 | A4 → A2 | pokemon_died ya existe; conectar reglas individuales LockeRules (permadeath, EXP cap, fijo, objetos); una muerte por uid, excluir tutoriales. | pendiente |
+| 23 | A4 → A2 | pokemon_died ya existe; conectar reglas individuales LockeRules (permadeath, EXP cap, fijo, objetos); una muerte por uid, excluir tutoriales. | hecha (A2, 2026-10-05): muerte única por uid, tope con `next_ace_level`, modo fijo y objetos; el tutorial no aplica reglas. Las Balls no cuentan para el límite |
 | 24 | A4 → A1 | Integrar LockeRules/zone_id: registrar ANTES de combate, resolver encounter_id al capturar/huir/KO; guardar snapshot/familias; registrar inicial poseído, Cementerio/game over. Modo/ranuras/parche ya existen: conservar. | hecha (A1, 2026-10-05): adaptador WorldLocke/LockeBattleDriver, §7c; UI de mote/Cementerio pendiente A3, señal y API publicadas |
 | 25 | A4 → A3 | Pantallas R.8 leen schema/presets y snapshot LockeRules; §10 conserva API A2. SpoilerLog puro devuelve texto para exportación bajo demanda. Cementerio/zonas/motes/game over. | pendiente |
 | 26 | A1 → A3 | `tools/arte/reglas.json`: (a) quita `assets/tilesets/placeholder/` y `assets/sprites/characters/placeholder/` (ya no existen); (b) `assets/tilesets/exterior/` y `assets/sprites/characters/` son de terceros (sin paleta maestra) y van a la escala de los packs: casillas de 32 px, personajes en cuadros de 64×64, `objects.png` en cuadros de 32 y `effects/` en cuadros cuadrados de 32; (c) los Pokémon que te siguen (`assets/sprites/pokemon/followers*`) son hojas de 256×256 en cuadros de 64. Ahora el validador da 97 errores por esto. | hecha (A3): todo eso y además los Pokémon grandes (rejillas de cuadros cuadrados de cualquier lado). 0 errores, y ahora es un test (`tests/ui/test_arte.gd`) |
@@ -310,6 +310,8 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 29 | A3 → A2 | El Generation 9 Pack trae a **96×96** (la mitad) 4 sprites de frente: `front/greninjamega`, `front_shiny/greninjamega`, `front_shiny/malamarmega` y `front_shiny/victreebelmega`; en combate se verían a la mitad de tamaño. Están en `pack_exceptions` de `tools/arte/reglas.json` (solo avisan). ¿Hay versión de 192 en `07_generation8_pack` u otro sitio, o los marcas como sin sprite en `pokemon_assets.json`? Si lo arreglas, quítalos de `pack_exceptions`. | pendiente |
 
 | 29 | A1 → A3 | Integración Locke del mundo lista (§7c): señales `locke_nickname_requested(token,pokemon)`, `locke_state_changed`, `locke_game_over(snapshot)`. Al recibir mote llamar `GameState.locke.complete_capture(token,nombre)`; también consultar `pending` restaurados, sin inventar mote. Captura/inicial permanecen pendientes y el mundo bloqueado hasta nombre válido. Leer `rules.snapshot().cemetery` para UI. | pendiente |
+| 30 | A2 → A1 | El tope de experiencia ya está en el motor. Cuando exista el siguiente líder, guarda el nivel de su as en `GameState.randomlocke["next_ace_level"]` (0 si no hay tope). Sin ese número el ajuste `level_cap` no congela nada. | pendiente |
+| 31 | A2 → A3 | `EngineDriver.request()` de un cambio incluye `reason`. `&"shift"` se puede rechazar (`party_index` -1 = se queda). El motor solo lo pide con `battle_style = shift`; el modo fijo de Locke no lo pide. Hasta el menú de opciones no hace falta dibujarlo. | pendiente |
 
 ---
 
@@ -340,6 +342,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-05 | A2 | §8.5: `BattleSetup.locke`, `next_ace_level`, `battle_style` y `tutorial`. `pokemon_died` una vez por uid. Tope de experiencia, modo fijo y límite de objetos. `reason = shift` en `BattleRequest` y en `EngineDriver.request()` (`switch_to(-1)` no cambia). El tutorial de `prepare_battle` limpia esas reglas. |
 | 2026-10-05 | A1 | §7c: WorldLocke/LockeBattleDriver, GameState.locke y snapshot persistente; señales Locke, zone_id, contexto tutorial, capturas con mote pendiente, Cementerio y ranuras terminadas. |
 | 2026-10-04 | A1 | §0 y §5: **casillas de 32 px** y cámara del mundo con `zoom = 1` (`Grid.TILE` = 32, `Grid.ART_PIXEL`, `Grid.round_to_art_pixel()`). Nueva capa `Entities/Objects` (casas y árboles con y-sort). TileSet de exteriores en `assets/tilesets/exterior/` (se retira el provisional). Personajes en cuadros de 64×64 del pack 05 (se retiran los provisionales). `Character`: `run_sprite_sheet`, `step(..., running)`, `jump()`, `is_tile_free()` y la señal `step_started`. Nueva clase `Follower`; `SceneManager.player_follower`; `MapData.followers_allowed`; `data/world.json` → `followers.enabled`. `MapRoot.tile_custom_data()` devuelve el primer valor no vacío. |
 | 2026-10-04 | A3 | §9.4: el **Theme global** usa ahora *Truth and Ideals* a **tamaño 10**, pensado para pantallas dentro de un **`UiCanvas`** (`src/ui/widgets/ui_canvas.gd`, 256×192 a ×2): ahí se ve a 20 px con píxel de 2×2. Una pantalla a 1:1 sin `UiCanvas` verá el texto a 10 px. Nuevos `TypeIcons` (iconos de tipo de Loaky), `BattleButton` y `SummaryScreen.open()`. La BattleScene tiene el campo a 1:1 (`World`) y la interfaz en un `UiCanvas`. |

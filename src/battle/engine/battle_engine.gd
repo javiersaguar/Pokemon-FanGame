@@ -46,6 +46,10 @@ var field: Dictionary = {}
 var switching: Battler = null
 ## Acción que ha elegido cada Battler este turno (Golpe Bajo, Persecución...).
 var _turn_actions: Dictionary = {}
+## uids del jugador que ya han emitido pokemon_died en este combate.
+var _dead_uids: Dictionary = {}
+## Índice del rival que entrará tras un aviso de modo Cambio.
+var _shift_foe_index := -1
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -112,6 +116,8 @@ func can_use_item(item_id: StringName, party_index: int = -1) -> bool:
 		return false
 	var it := DataDB.item(item_id)
 	if it.battle_use == ItemData.USE_NONE:
+		return false
+	if not it.is_ball() and not _locke_item_allowed():
 		return false
 	if it.is_ball():
 		return setup.is_wild() and active(FOE) != null and not active(FOE).is_fainted()
@@ -231,7 +237,7 @@ func _step_next_request() -> void:
 	r.party_index = b.party_index
 	r.can_run = setup.is_wild() and setup.can_run and not trapped
 	r.can_switch = _sides[PLAYER].first_able_index() >= 0 and not trapped
-	r.can_use_items = setup.allow_items
+	r.can_use_items = setup.allow_items and (setup.is_wild() or _locke_item_allowed())
 	r.usable_moves = b.usable_moves()
 	request = r
 
@@ -431,7 +437,7 @@ func _process_faints() -> void:
 	for b: Battler in _pending_faints:
 		_emit(BattleEvent.FAINT, b.side, b.slot, {"party_index": b.party_index})
 		_msg(tr("¡%s se debilitó!") % BattleText.cap_name(b, setup.is_wild()))
-		if b.side == PLAYER and setup.locke_rules:
+		if b.side == PLAYER and setup.locke_rules and not setup.tutorial:
 			_record_death(b)
 		if b.side == FOE:
 			steps.append(_step_award_exp.bind(b.pokemon))
@@ -441,6 +447,10 @@ func _process_faints() -> void:
 
 
 func _record_death(b: Battler) -> void:
+	var uid := b.pokemon.uid
+	if uid.is_empty() or _dead_uids.has(uid):
+		return
+	_dead_uids[uid] = true
 	var foe := active(FOE)
 	var death := {
 		"party_index": b.party_index, "uid": b.pokemon.uid, "species": String(b.pokemon.species_id),
@@ -476,6 +486,18 @@ func _step_player_replacement() -> void:
 
 
 func _resolve_switch_request(req: BattleRequest, action: BattleAction) -> void:
+	if req.reason == &"shift":
+		var current := active(PLAYER)
+		if current != null and action.kind == BattleAction.Kind.SWITCH \
+				and action.party_index != current.party_index \
+				and _sides[PLAYER].can_switch_to(action.party_index):
+			_do_switch(current, action.party_index)
+		var index := _shift_foe_index
+		_shift_foe_index = -1
+		if index < 0:
+			index = BattleAI.choose_replacement(self, FOE)
+		_send_out(FOE, index)
+		return
 	if req.reason == &"" and action.kind == BattleAction.Kind.RUN and setup.is_wild() and setup.can_run:
 		_emit(BattleEvent.FLEE, PLAYER, 0, {"success": true})
 		_msg(tr("¡Escapaste sin problemas!"))
@@ -495,7 +517,65 @@ func _step_foe_replacement() -> void:
 	var b := active(FOE)
 	if _over or not b.is_fainted() or not _sides[FOE].has_able():
 		return
-	_send_out(FOE, BattleAI.choose_replacement(self, FOE))
+	var index := BattleAI.choose_replacement(self, FOE)
+	if _shift_prompt():
+		_shift_foe_index = index
+		var next := party(FOE)[index]
+		_msg(tr("¡%s va a sacar a %s!") % [_trainer_name(), next.display_name()])
+		var r := BattleRequest.new()
+		r.kind = BattleRequest.Kind.SWITCH
+		r.reason = &"shift"
+		r.side = PLAYER
+		r.slot = active(PLAYER).slot
+		r.party_index = active(PLAYER).party_index
+		r.can_run = false
+		r.can_switch = true
+		r.can_use_items = false
+		request = r
+		return
+	_send_out(FOE, index)
+
+
+func _shift_prompt() -> bool:
+	if not _style_is_shift():
+		return false
+	var current := active(PLAYER)
+	if current == null or current.is_fainted():
+		return false
+	for i: int in party(PLAYER).size():
+		if i != current.party_index and _sides[PLAYER].can_switch_to(i):
+			return true
+	return false
+
+
+func _style_is_shift() -> bool:
+	if setup.tutorial or setup.battle_style != &"shift":
+		return false
+	if setup.locke != null and setup.locke.battle_mode() == "fixed":
+		return false
+	return true
+
+
+## -1 = sin tope. 0 = ya está en el tope y no gana experiencia.
+func _exp_room(p: Pokemon) -> int:
+	if setup.tutorial or setup.locke == null:
+		return -1
+	var cap := setup.locke.level_cap(setup.next_ace_level)
+	if cap <= 0:
+		return -1
+	if p.level >= cap or p.level >= DataDB.MAX_LEVEL:
+		return 0
+	return maxi(0, DataDB.exp_for_level(p.exp_group(), cap) - p.exp)
+
+
+func _locke_item_allowed() -> bool:
+	if setup.tutorial or setup.locke == null:
+		return true
+	var used := 0
+	for id: StringName in result.items_used:
+		if DataDB.has_item(id) and not DataDB.item(id).is_ball():
+			used += 1
+	return setup.locke.can_use_item(used)
 
 
 @warning_ignore("integer_division")
@@ -1642,6 +1722,13 @@ func _step_award_exp(foe: Pokemon) -> void:
 			continue
 		var amount := ExpCalc.battle_exp(s.base_exp, foe.level, p.level, participated,
 			ExpCalc.bonus_for(p, setup.player_trainer_id))
+		var room := _exp_room(p)
+		if room == 0:
+			continue
+		if room > 0:
+			amount = mini(amount, room)
+		if amount <= 0:
+			continue
 		for stat: StringName in s.ev_yield:
 			p.add_evs(stat, s.ev_yield[stat])
 		if participated:
@@ -1668,10 +1755,15 @@ func _give_exp(index: int, amount: int) -> void:
 	var slot := on_field.slot if on_field else -1
 	var remaining := amount
 	while remaining > 0 and p.level < DataDB.MAX_LEVEL:
+		var room := _exp_room(p)
+		if room == 0:
+			break
 		var start := p.exp_at_level_start()
 		var next := p.exp_at_next_level()
 		var level := p.level
 		var chunk := mini(remaining, next - p.exp)
+		if room > 0:
+			chunk = mini(chunk, room)
 		var ups := p.gain_exp(chunk)
 		remaining -= chunk
 		_emit(BattleEvent.EXP, PLAYER, slot, {

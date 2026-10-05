@@ -37,6 +37,7 @@ func request() -> Dictionary:
 	match r.kind:
 		BattleRequest.Kind.SWITCH:
 			out["kind"] = REQUEST_SWITCH
+			out["reason"] = r.reason
 		BattleRequest.Kind.LEARN_MOVE:
 			out["kind"] = REQUEST_LEARN_MOVE
 			out["move_id"] = r.move_id

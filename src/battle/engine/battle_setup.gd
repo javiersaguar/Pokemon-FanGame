@@ -20,8 +20,17 @@ var player_trainer_id: int = 0
 var trainers: Array[Dictionary] = []
 var can_lose: bool = false
 ## Reglas Locke de RandomLocke (Fase R.7): un debilitado del jugador muere (evento pokemon_died)
-## y no se puede revivir.
+## y no se puede revivir. Se apaga si la muerte permanente está desactivada o el combate es un tutorial.
 var locke_rules: bool = false
+## Reglas completas (tope, modo fijo, objetos). null = el combate no las aplica.
+var locke: LockeRules = null
+## Nivel del as del siguiente líder. 0 = todavía no hay tope que aplicar.
+var next_ace_level: int = 0
+## "fixed" no avisa al sacar el siguiente rival; "shift" sí (se puede rechazar).
+## El modo fijo de Locke gana aunque aquí ponga "shift".
+var battle_style: StringName = &"fixed"
+## El tutorial no aplica ninguna regla Locke, aunque la partida sea RandomLocke.
+var tutorial: bool = false
 var can_run: bool = true
 var allow_items: bool = true
 var exp_enabled: bool = true
@@ -126,23 +135,33 @@ func fill_from_game_state() -> void:
 		dex_caught_count = dex.caught_count()
 	time_period = Clock.period()
 	exp_share = bool(DataDB.rule(&"exp_share", true))
-	if GameState.is_randomlocke():
-		locke_rules = bool((GameState.randomlocke.get("settings", {}) as Dictionary).get("locke_rules", true))
+	if GameState.is_randomlocke() and GameState.locke != null:
+		locke = GameState.locke.rules
+		var rules_dict := locke.rules()
+		locke_rules = bool(rules_dict.get("locke_rules", true)) and bool(rules_dict.get("permadeath", true))
+		if locke.battle_mode() == "fixed":
+			battle_style = &"fixed"
+		next_ace_level = int(GameState.randomlocke.get("next_ace_level", 0))
 
 
-## options: can_lose, can_run, allow_items, exp_enabled, exp_share, locke_rules, background, bgm, weather,
-## environment, time_period, seed, ai_level.
+## options: can_lose, can_run, allow_items, exp_enabled, exp_share, locke_rules, tutorial,
+## background, bgm, weather, environment, time_period, battle_style, seed, ai_level, next_ace_level.
 func apply_options(options: Dictionary) -> void:
-	for key: String in ["can_lose", "can_run", "allow_items", "exp_enabled", "exp_share", "locke_rules"]:
+	for key: String in ["can_lose", "can_run", "allow_items", "exp_enabled", "exp_share", "locke_rules", "tutorial"]:
 		if options.has(key):
 			set(key, bool(options[key]))
-	for key: String in ["background", "bgm", "weather", "environment", "time_period"]:
+	for key: String in ["background", "bgm", "weather", "environment", "time_period", "battle_style"]:
 		if options.has(key):
 			set(key, StringName(str(options[key])))
 	if options.has("seed"):
 		seed = int(options["seed"])
 	if options.has("ai_level"):
 		ai_level = int(options["ai_level"])
+	if options.has("next_ace_level"):
+		next_ace_level = int(options["next_ace_level"])
+	if tutorial:
+		locke = null
+		locke_rules = false
 
 
 func is_wild() -> bool:
