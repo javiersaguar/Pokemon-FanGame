@@ -9,7 +9,14 @@ extends Character
 @export var display_name: String = ""
 ## Frases al hablarle, en orden.
 @export_multiline var lines: PackedStringArray = []
-@export var turn_to_player := true
+## Desactívalo para estatuas, personajes dormidos o escenas de espaldas.
+@export var turn_on_interact := true
+## Compatibilidad con escenas anteriores; usa turn_on_interact en mapas nuevos.
+@export var turn_to_player: bool:
+	get:
+		return turn_on_interact
+	set(value):
+		turn_on_interact = value
 ## Evento al hablarle (script que hereda de StoryEvent). Si hay evento, no se
 ## dicen las `lines`. Se ejecuta en Cutscene y recibe `event_params`.
 @export var event: GDScript
@@ -55,7 +62,7 @@ func interact(player: Player) -> void:
 	talking = true
 	while moving:
 		await step_finished
-	if turn_to_player:
+	if turn_on_interact:
 		face_towards(player)
 	await _on_interact(player)
 	talking = false

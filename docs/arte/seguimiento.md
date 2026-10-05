@@ -27,7 +27,7 @@ Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador h
 | Casas de HGSS (`casas.png`) | Edificio | A1 | integrado | SirMalo, pack 01 | ⏳ | 3 casas de Pueblo Primavera |
 | Árboles y flora (`arboles.png`, `flora.png`) | Tileset | A1 | integrado | AnonAlpaca (+ Magiscarf), packs 03 y 04 | ⏳ | Mayor densidad de detalle que el pack 02 |
 | Flores animadas y brillo del agua (`animados.png`) | Tileset animado | A1 | integrado | Pack 02 | ⏳ | 4 y 2 cuadros |
-| Personajes del mapa (`assets/sprites/characters/*.png`) | Personaje en el mapa | A1 | integrado | PurpleZaffre, pack 05 | ⏳ | Rival, profesor, enfermera, dependiente y vecinos |
+| Personajes del mapa (`assets/sprites/characters/*.png`) | Personaje en el mapa | A1 | integrado | PurpleZaffre, pack 05 | ⏳ | Rival, profesor, enfermera, dependiente y vecinos. Giro al hablar: comparativa `comparativas/npc_interaccion.md` (2026-10-05), pendiente de revisión |
 | Efectos del mapa (`assets/sprites/characters/effects/`) | Efecto | A1 | integrado | PurpleZaffre, pack 05 | ⏳ | "!", hierba al pisarla, polvo al saltar, brillo shiny |
 | Sombras de los personajes | Efecto | A1 | — | **Falta el recurso** | — | Ningún pack trae sombra del mapa (pregunta para Javier) |
 | **Generation 9 Resource Pack v3.3.8** (`assets/sprites/pokemon/`: `front`, `front_shiny` 192×192; `back`, `back_shiny` 288×288; `icons`, `icons_shiny` 128×64; `followers`, `followers_shiny` 256×256) | Pokémon (combate, iconos y seguidores) | A2 | integrado | Recopilado por Caruban; autores en `CREDITOS.md` ("Pokémon") | ⏳ | **Set oficial del proyecto** (DIRECTRICES §7.1). Los importa `tools/sprites/` solo de las especies en uso, sin reescalar. Shiny oficiales |
