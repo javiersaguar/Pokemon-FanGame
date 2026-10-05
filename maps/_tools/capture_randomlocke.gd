@@ -26,7 +26,8 @@ func _initialize() -> void:
 		done[0] = true
 	run.call()
 	var stage := 0
-	for frame in 720:
+	var deadline := Time.get_ticks_msec() + 20000
+	while Time.get_ticks_msec() < deadline:
 		await process_frame
 		if dialogue._choice.is_choosing:
 			await process_frame
@@ -60,6 +61,10 @@ func _initialize() -> void:
 	await capture("mote")
 	manager._nickname_entry.entry.text_submitted.emit("Panchito")
 	await process_frame
+	await manager.change_map(&"muestras/ruta", &"default")
+	await capture("mapa_valido")
+	await manager.change_map(&"no/existe")
+	await capture("mapa_invalido_origen_preservado")
 	flow = null
 	run = Callable()
 	manager._leave_game()

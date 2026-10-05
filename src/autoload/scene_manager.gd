@@ -29,6 +29,8 @@ var transition_layer: CanvasLayer
 
 var current_map: MapRoot
 var player: Player
+## Tiempo de cargar/instanciar/colocar el último mapa; excluye el fundido intencionado.
+var last_map_load_usec := 0
 var is_changing_map := false
 var in_battle := false
 ## Pokémon que sigue al jugador en el mapa actual (null si no hay).
@@ -66,14 +68,24 @@ func register_main(main: Node) -> void:
 ## Primer flujo del juego. Argumentos de línea de comandos (tras `--`):
 ##   --map=<map_id> [--spawn=<spawn_id>]  nueva partida directamente en ese mapa
 ##   --load=<slot>                        carga esa ranura
+##   --smoke-maps=all                     prueba de mapas y reporte (desarrollo)
 func boot() -> void:
 	var args := _parse_user_args()
+	if args.get("smoke-maps", "") == "all":
+		var smoke: Node = load("res://maps/_tools/smoke_maps.gd").new()
+		add_child(smoke)
+		await smoke.run()
+		smoke.queue_free()
+		return
 	if args.has("load"):
 		var err: Error = await continue_game(int(args["load"]))
 		if err == OK:
 			return
 	if args.has("map"):
-		await start_new_game(StringName(args["map"]), StringName(args.get("spawn", "")))
+		var err := await start_new_game(StringName(args["map"]), StringName(args.get("spawn", "")))
+		if err != OK:
+			push_warning("SceneManager: no se puede iniciar en ese destino (%s)." % error_string(err))
+			await go_to_title()
 	else:
 		await go_to_title()
 
@@ -102,6 +114,18 @@ func go_to_title() -> void:
 ## ranura vacía o la 1), mode, randomlocke y rom_patch. Con RandomLocke, el
 ## parche se aplica en DataDB antes de cargar el mapa (Fase R.9).
 func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dictionary = {}) -> Error:
+	if is_busy():
+		return ERR_BUSY
+	var explicit_map := map != &""
+	var cfg: Dictionary = MvpLocations.new_game_config()
+	if map == &"":
+		map = StringName(cfg.get("map", ""))
+	if spawn == &"":
+		spawn = MapRoot.DEFAULT_SPAWN if explicit_map else StringName(cfg.get("spawn", MapRoot.DEFAULT_SPAWN))
+	var destination_error := MapLoader.check_spawn(map, spawn)
+	if destination_error != OK:
+		EventBus.map_load_failed.emit(map, destination_error)
+		return destination_error
 	if not options.has("slot"):
 		options = options.duplicate()
 		options["slot"] = maxi(SaveManager.first_empty_slot(), 1)
@@ -117,14 +141,11 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 		GameState.slot = old_slot
 		GameState.in_game = was_in_game
 		return patch_error
-	var cfg: Dictionary = MvpLocations.new_game_config()
-	if map == &"":
-		map = GameState.map_id
-	if spawn == &"":
-		spawn = StringName(cfg.get("spawn", MapRoot.DEFAULT_SPAWN))
 	await fade_out()
 	_enter_game()
-	await change_map(map, spawn, GameState.player_facing)
+	var map_error := await change_map(map, spawn, GameState.player_facing)
+	if map_error != OK:
+		return map_error
 	if bool(options.get("intro", false)):
 		await Cutscene.play(load("res://src/events/mvp/mvp_story_event.gd"), null, {"stage": "intro"})
 	return OK
@@ -132,6 +153,15 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 
 ## Carga la ranura y lleva al jugador a donde guardó.
 func continue_game(slot: int) -> Error:
+	if is_busy():
+		return ERR_BUSY
+	var saved := SaveManager.peek_state(slot)
+	if saved.is_empty():
+		return ERR_FILE_NOT_FOUND
+	var destination_error := MapLoader.check_position(saved)
+	if destination_error != OK:
+		EventBus.map_load_failed.emit(StringName(saved.get("position", {}).get("map", "")), destination_error)
+		return destination_error
 	if SaveManager.slot_summary(slot).get("status", "") == "finished":
 		return ERR_UNAUTHORIZED
 	var err := SaveManager.load_game(slot)
@@ -150,34 +180,29 @@ func continue_game(slot: int) -> Error:
 ## Cambia al mapa `map_id` y coloca al jugador en el spawn `spawn_id`.
 ## `facing` = Vector2i.ZERO mantiene la dirección actual del jugador.
 func change_map(map_id: StringName, spawn_id: StringName = MapRoot.DEFAULT_SPAWN,
-		facing: Vector2i = Vector2i.ZERO, fade: bool = true) -> void:
-	var resolve_tile := func(map: MapRoot) -> Vector2i:
-		var spawn := map.get_spawn(spawn_id)
-		return Grid.to_tile(map.to_local(spawn.global_position)) if spawn else Vector2i.ZERO
-	await _change_map(map_id, resolve_tile, facing, fade)
+		facing: Vector2i = Vector2i.ZERO, fade: bool = true) -> Error:
+	var resolve_tile := func(map: MapRoot) -> Variant: return MapLoader.spawn_tile(map, spawn_id)
+	return await _change_map(map_id, resolve_tile, facing, fade)
 
 
 ## Como change_map(), pero en una casilla concreta (cargar partida, Debug...).
 func change_map_at(map_id: StringName, tile: Vector2i, facing: Vector2i = Vector2i.ZERO,
-		fade: bool = true) -> void:
-	await _change_map(map_id, func(_map: MapRoot) -> Vector2i: return tile, facing, fade)
+		fade: bool = true) -> Error:
+	return await _change_map(map_id, func(_map: MapRoot) -> Vector2i: return tile, facing, fade)
 
 
 func cross_connection(connection: MapConnection, tile: Vector2i, facing: Vector2i) -> Error:
-	if not map_exists(connection.target_map):
-		return ERR_FILE_NOT_FOUND
-	var preview := load(MapRoot.path_from_id(connection.target_map)).instantiate() as MapRoot
-	if preview == null or preview.get_ground() == null:
-		if preview:
-			preview.free()
-		return ERR_INVALID_DATA
+	var result := MapLoader.prepare(connection.target_map)
+	if result.error != OK:
+		return result.error
+	var preview: MapRoot = result.map
 	var bounds := preview.get_ground().get_used_rect()
 	var arrival := connection.arrival(tile, bounds)
+	var valid := MapLoader.valid_tile(preview, arrival)
 	preview.free()
-	if not bounds.has_point(arrival):
+	if not valid:
 		return ERR_INVALID_DATA
-	await change_map_at(connection.target_map, arrival, facing, false)
-	return OK
+	return await change_map_at(connection.target_map, arrival, facing, false)
 
 func map_exists(map_id: StringName) -> bool:
 	return ResourceLoader.exists(MapRoot.path_from_id(map_id))
@@ -465,47 +490,45 @@ func update_zone_indicator() -> void:
 # --- Internos ---
 
 func _change_map(map_id: StringName, resolve_tile: Callable, facing: Vector2i,
-		fade: bool) -> void:
-	var path := MapRoot.path_from_id(map_id)
-	if not ResourceLoader.exists(path):
-		push_error("SceneManager: no existe el mapa '%s' (%s)." % [map_id, path])
-		await fade_in()
-		return
+		fade: bool) -> Error:
 	if is_changing_map:
-		push_warning("SceneManager: ya se está cambiando de mapa; se ignora '%s'." % map_id)
-		return
+		return ERR_BUSY
+	var started := Time.get_ticks_usec()
+	var prepared := MapLoader.prepare(map_id)
+	if prepared.error != OK:
+		EventBus.map_load_failed.emit(map_id, prepared.error)
+		return prepared.error
+	var map: MapRoot = prepared.map
+	var tile: Variant = resolve_tile.call(map)
+	if not MapLoader.valid_tile(map, tile):
+		map.free()
+		EventBus.map_load_failed.emit(map_id, ERR_INVALID_DATA)
+		return ERR_INVALID_DATA
+	var prepare_usec := Time.get_ticks_usec() - started
 	is_changing_map = true
 	GameState.lock_input(&"map_change")
 	if fade:
 		await fade_out()
-
+	started = Time.get_ticks_usec()
 	var from_map: StringName = current_map.get_map_id() if current_map else &""
 	EventBus.map_will_change.emit(from_map, map_id)
 	_unload_map()
-	var instance := (load(path) as PackedScene).instantiate()
-	var map := instance as MapRoot
-	if map == null:
-		push_error("SceneManager: la raíz de '%s' no usa map_root.gd." % path)
-		instance.free()
-		map = MapRoot.new()
 	world.add_child(map)
 	current_map = map
-	if map.get_map_id() != map_id:
-		push_warning("SceneManager: '%s' tiene data.id = '%s'." % [path, map.get_map_id()])
 	GameState.map_id = map_id
-	_place_player(resolve_tile.call(map), facing)
-	if map.data and map.data.bgm != &"":
+	_place_player(tile, facing)
+	if map.data.bgm != &"":
 		AudioManager.play_bgm(map.data.bgm)
 	WorldTravel.record_visit(map)
 	WorldRoamers.move_on_transition(from_map)
 	atmosphere.apply_map(map)
 	EventBus.map_loaded.emit(map_id)
-
+	last_map_load_usec = prepare_usec + Time.get_ticks_usec() - started
 	await fade_in()
 	is_changing_map = false
 	GameState.unlock_input(&"map_change")
-	# Evita esperar un evento nuevo dentro de la cinemática que teletransporta.
 	_run_enter_triggers(map)
+	return OK
 
 func _run_enter_triggers(map: MapRoot) -> void:
 	if Cutscene.is_running():

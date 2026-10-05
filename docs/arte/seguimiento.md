@@ -80,3 +80,5 @@ Dibujado a mano píxel a píxel con la paleta maestra en archivos de texto (`ass
 | Símbolo del dinero `₽` (`assets/fonts/pokedolar/`, fuentes `assets/_fuentes/fuentes/pokedolar*.px`) | Glifo de fuente | A3 | integrado | Propio | ⏳ | *Truth and Ideals* no lo trae (petición 11). Una P con dos barras en el palo, con el trazo de 1 px y la altura de las mayúsculas de cada fuente (6×10 la normal, 4×7 la pequeña). Va como fuente de respaldo del Theme, así que sale en cualquier texto con `₽` |
 
 | 2026-10-05 | A1 | Flujo provisional RandomLocke y zona/mote con Theme/Dialogue existentes | `comparativas/randomlocke_flujo.md` | Pendiente revisión; A3 sustituye pantallas |
+
+| 2026-10-05 | A1 | Carga segura: origen preservado ante mapa inválido, arte de ruta A4 existente | `comparativas/robustez_carga.md` | Comprobado; no altera pintura |

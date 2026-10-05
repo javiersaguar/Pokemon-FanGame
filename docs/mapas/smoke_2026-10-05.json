@@ -1,0 +1,44 @@
+{
+	"fade_excluded": true,
+	"godot": "4.7.2-stable (official)",
+	"headless": true,
+	"maps": [
+		{
+			"load_ms": 0.922,
+			"map": "muestras/pueblo",
+			"ok": true,
+			"prepare_ms": 4.834
+		},
+		{
+			"load_ms": 0.687,
+			"map": "muestras/ruta",
+			"ok": true,
+			"prepare_ms": 3.859
+		},
+		{
+			"load_ms": 1.14,
+			"map": "test/muestra_pueblo",
+			"ok": true,
+			"prepare_ms": 2.123
+		},
+		{
+			"load_ms": 0.639,
+			"map": "test/muestra_ruta",
+			"ok": true,
+			"prepare_ms": 2.149
+		},
+		{
+			"load_ms": 0.567,
+			"map": "test/test_outdoor",
+			"ok": true,
+			"prepare_ms": 3.891
+		},
+		{
+			"load_ms": 1.282,
+			"map": "test/test_room",
+			"ok": true,
+			"prepare_ms": 0.351
+		}
+	],
+	"ok": true
+}

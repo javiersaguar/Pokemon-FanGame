@@ -11,6 +11,7 @@ signal player_stepped(tile: Vector2i)
 ## Se va a descargar `from_map` para cargar `to_map` (la pantalla ya está en negro).
 signal map_will_change(from_map: StringName, to_map: StringName)
 ## El mapa `map_id` ya está cargado y el jugador colocado (antes del fundido de entrada).
+signal map_load_failed(map_id: StringName, error: int)
 signal map_loaded(map_id: StringName)
 ## Se ha gastado el último paso de Repelente (GameState var `repel_steps`).
 signal repel_wore_off

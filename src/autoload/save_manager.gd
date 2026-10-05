@@ -86,6 +86,15 @@ func save_game(slot: int = 0) -> Error:
 	return OK
 
 
+## Solo lectura para validar destino antes de reemplazar partida/mundo.
+func peek_state(slot: int) -> Dictionary:
+	var data := _read_save(slot_path(slot))
+	if data.is_empty():
+		return {}
+	data = _migrate(data)
+	return data.get("state", {}).duplicate(true)
+
+
 ## Restaura GameState desde la ranura (y, en RandomLocke, aplica su ROM en
 ## DataDB). No cambia de mapa: para entrar en la partida usa
 ## SceneManager.continue_game(slot).
