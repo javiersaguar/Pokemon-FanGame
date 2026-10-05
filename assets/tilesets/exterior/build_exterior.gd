@@ -6,6 +6,8 @@ extends SceneTree
 ## amarillo de relleno) y recompone las piezas de 16 px de los autotiles de RMXP.
 ## Escala (decisión de Javier): 02 ya viene a ×2 y se copia igual; 01, 03 y 04
 ## vienen a ×1 y se duplica cada píxel (×2 exacto, vecino más próximo).
+## Color: los verdes de la naturaleza (packs 02, 03 y 04) llevan un retoque de
+## paleta para que la hierba sea tan viva como la de Añil (ver GREEN_RETOUCH).
 ##
 ## Uso (en este orden):
 ##   godot --headless --path . -s res://assets/tilesets/exterior/build_exterior.gd -- --paso=png [--recursos=<ruta>]
@@ -19,6 +21,7 @@ const OUT := "res://assets/tilesets/exterior/"
 const GEN4_TILESET := "02_public_gen4_tileset/Gen 4 Pack/Tilesets/Custom Outside tileset.png"
 const GEN4_AUTOTILES := "02_public_gen4_tileset/Gen 4 Pack/Autotiles/"
 const HGSS_BUILDINGS := "01_hgss_for_rmxp/HGSS for RMXP/BuildingsRMXP.png"
+const HGSS_URBAN := "01_hgss_for_rmxp/HGSS for RMXP/UrbanRMXP.png"
 const TREES := "03_big_tree_pack/alpatrees.png"
 const FLORA := "04_big_flora_pack/tileset.png"
 
@@ -27,7 +30,33 @@ const KEYS_HGSS := ["ff00ff", "f05ba1", "fff568"]
 const CHECKER_GEN4 := ["ffaec9", "efe4b0"]
 
 ## Franjas de filas del pack 02 que se copian: [primera fila, nº de filas].
-const GEN4_BANDS := [[0, 9], [19, 1], [31, 5], [46, 11]]
+const GEN4_BANDS := [[0, 9], [19, 1], [31, 5], [46, 11], [242, 6]]
+
+## Retoque de paleta de los verdes (respuesta 17 de Javier: el pueblo "plano y
+## descolorido"; tiene que ser "saturado"). La hierba de DPPt tira a amarillo
+## (tono 85°, saturación 0,36) y la de Añil es más verde y viva (105°, 0,43).
+## El tono de los verdes se acerca al de Añil (`hue_target`, en fracción de vuelta)
+## y se avivan un poco, con una transición suave en los bordes del intervalo para
+## no crear saltos. No se dibuja nada: es una corrección de color de los píxeles
+## del pack, como el retoque de paleta que Javier acepta para las casas.
+const GREEN_RETOUCH := {"hue_from": 0.15, "hue_to": 0.40, "fade": 0.05, "hue_target": 0.285,
+	"pull": 0.8, "saturation": 1.16, "value": 0.05}
+
+## Casas de DPPt del pack 02 (estilo único con el suelo, respuesta 17): casilla
+## de arriba a la izquierda, tamaño en casillas y puerta (relativa a la casilla de
+## abajo a la izquierda; se pisa para entrar).
+const HOUSES_DPPT := {
+	"casa_roja": [Vector2i(0, 140), Vector2i(7, 7), Vector2i(1, -2)],
+	"casa_azul": [Vector2i(0, 147), Vector2i(7, 7), Vector2i(1, -2)],
+	"casa_azul_pequena": [Vector2i(0, 155), Vector2i(5, 6), Vector2i(1, -1)],
+	"casa_naranja": [Vector2i(3, 68), Vector2i(4, 7), Vector2i(1, -1)],
+	"casa_tejado_rojo": [Vector2i(0, 59), Vector2i(7, 7), Vector2i(2, -1)],
+}
+
+## Valla de madera del pack 01 (×1): tramo horizontal de 3 piezas (izquierda,
+## centro que se repite y derecha); cada pieza ocupa 2 casillas de alto (puntas
+## arriba, base con su sombra abajo).
+const FENCE_HGSS := Rect2i(448, 176, 48, 32)
 
 ## Casas del pack 01: rectángulo en píxeles de la hoja a ×1, trozos que se borran
 ## porque son de la pieza de al lado en la hoja y casilla de la puerta (relativa a
@@ -75,13 +104,15 @@ func _initialize() -> void:
 # --- Paso 1: PNG ---
 
 func _build_pngs() -> void:
-	_save(_gen4(), "gen4.png")
-	_save(_autotiles(), "autotiles.png")
-	_save(_animated(), "animados.png")
+	_save(_retouched(_gen4()), "gen4.png")
+	_save(_retouched(_autotiles()), "autotiles.png")
+	_save(_retouched(_animated()), "animados.png")
 	var objects := {}
 	_save(_houses(objects), "casas.png")
-	_save(_trees(objects), "arboles.png")
-	_save(_flora(), "flora.png")
+	_save(_retouched(_trees(objects)), "arboles.png")
+	_save(_retouched(_flora()), "flora.png")
+	_save(_retouched(_houses_dppt(objects)), "casas_dppt.png")
+	_save(_fences(objects), "vallas.png")
 	var file := FileAccess.open(OUT + "objetos.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(objects, "\t", true) + "\n")
 	file.close()
@@ -201,6 +232,42 @@ func _trees(objects: Dictionary) -> Image:
 	return out.get_region(Rect2i(0, 0, out.get_width(), (cursor.y + row_height) * T))
 
 
+## Casas de DPPt: se copian tal cual (el pack 02 ya va a ×2), una al lado de otra.
+func _houses_dppt(objects: Dictionary) -> Image:
+	var src := _load(GEN4_TILESET)
+	var width := 0
+	var height := 0
+	for id: String in HOUSES_DPPT:
+		var size: Vector2i = HOUSES_DPPT[id][1]
+		width += size.x
+		height = maxi(height, size.y)
+	var out := _empty(width * T, height * T)
+	var x := 0
+	for id: String in HOUSES_DPPT:
+		var origin: Vector2i = HOUSES_DPPT[id][0]
+		var size: Vector2i = HOUSES_DPPT[id][1]
+		var part := src.get_region(Rect2i(origin * T, size * T))
+		_clear_checker_tiles(part)
+		out.blit_rect(part, Rect2i(Vector2i.ZERO, part.get_size()), Vector2i(x * T, 0))
+		var door: Vector2i = HOUSES_DPPT[id][2]
+		objects[id] = {"source": ExteriorTiles.SRC_CASAS_DPPT, "coords": [x, 0], "size": [size.x, size.y],
+			"footprint": _solid_cells(part), "door": [door.x, door.y]}
+		x += size.x
+	return out
+
+
+## Valla de madera: 3 piezas de 1×2 casillas que se colocan como objetos (se
+## ordenan con los personajes, así las puntas tapan a quien está detrás).
+func _fences(objects: Dictionary) -> Image:
+	var src := _load(HGSS_URBAN)
+	_key_out(src, KEYS_HGSS)
+	var out := _double(src.get_region(FENCE_HGSS))
+	for i: int in 3:
+		objects[["valla_izquierda", "valla", "valla_derecha"][i]] = {"source": ExteriorTiles.SRC_VALLAS,
+			"coords": [i, 0], "size": [1, 2], "footprint": [[0, 0]]}
+	return out
+
+
 func _flora() -> Image:
 	var src := _load(FLORA)
 	var parts: Array[Image] = []
@@ -218,6 +285,25 @@ func _flora() -> Image:
 
 
 # --- Utilidades de imagen (copiar, no dibujar) ---
+
+## Aplica GREEN_RETOUCH a los verdes de la imagen (ver la constante).
+static func _retouched(img: Image) -> Image:
+	var r := GREEN_RETOUCH
+	var from: float = r["hue_from"]
+	var to: float = r["hue_to"]
+	var fade: float = r["fade"]
+	for y: int in img.get_height():
+		for x: int in img.get_width():
+			var c := img.get_pixel(x, y)
+			if c.a < 0.05 or c.s < 0.12 or c.h < from or c.h > to:
+				continue
+			var weight := clampf(minf(c.h - from, to - c.h) / fade, 0.0, 1.0)
+			var h := lerpf(c.h, r["hue_target"], float(r["pull"]) * weight)
+			var s := clampf(c.s * lerpf(1.0, r["saturation"], weight), 0.0, 1.0)
+			var v := clampf(c.v + float(r["value"]) * weight * c.v, 0.0, 1.0)
+			img.set_pixel(x, y, Color.from_hsv(h, s, v, c.a))
+	return img
+
 
 func _load(relative: String) -> Image:
 	var path := _resources.path_join(relative)
