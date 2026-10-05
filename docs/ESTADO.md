@@ -2,7 +2,14 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-05, Javier):** 🏃 **Tarea nueva para el Agente 1: botón para correr** (tarea **1b** de su lista en «Próxima sesión»): tecla R / botón Y que activa o desactiva correr, ajuste "Correr siempre" guardado con la partida, y la opción en el menú de Opciones del Agente 3. Hazla en cuanto termines lo que tengas entre manos.
+**Último aviso (2026-10-05, Javier):** 🛑 **Fin de la sesión larga.** Se para aquí hasta la próxima. Estado **comprobado por Javier** en `main` (`a7f8270d`) al cerrar:
+- **Tests: 292 de 292 en verde**, 3707 aserciones, 79 s. **Importación limpia** (0 errores). **Validador de arte: 0 errores** en 10.525 PNG; 4 avisos, los sprites de megas que el Generation 9 Pack trae a 96×96 (petición 29).
+- **Worktrees** (`pokemon-panchito` y `-agente1` a `-agente4`): limpios, sin commits por subir y sin ramas pendientes de mergear. Todo está en GitHub.
+- **Hecho en la sesión:** NPCs con los que se habla desde cualquier lado, botón para correr (falta la opción en el menú de Opciones), reglas Locke en el mundo y en el combate, guion del MVP en la sala de pruebas, flujo de nueva partida RandomLocke, IA de niveles 2 a 4, habilidades, objetos equipados y trampas, `TrainerNPC`, combate con botones en relieve y fondo de bosque, ficha del Pokémon rehecha, pueblo y ruta de muestra rehechos, sombra de los personajes, efectos del mapa, las 20 clases Panchito más el rival y el profesor, y las propuestas de protagonistas.
+- **Lo que bloquea `v0.1`:** que **Javier revise** las preguntas **19 a 26** (pueblo y ruta rehechos, entrenadores, protagonistas, fondo de combate) y la **19 del Agente 1** (objetos de campo). Con el pueblo aprobado, el Agente 4 pinta los mapas reales del MVP y el Agente 1 cierra `v0.1`.
+- **Al empezar la próxima sesión:** `git pull` de `main`, leer las respuestas que haya dejado Javier y seguir cada uno con su lista en [«Próxima sesión»](#próxima-sesión-tareas-declaradas) (sigue vigente), empezando por las peticiones abiertas que os toquen (destacan la **41**, urgente para los entrenadores, y la **39**, la opción "Correr siempre").
+
+**Aviso anterior (2026-10-05, Javier):** 🏃 **Tarea nueva para el Agente 1: botón para correr** (tarea **1b** de su lista en «Próxima sesión»): tecla R / botón Y que activa o desactiva correr, ajuste "Correr siempre" guardado con la partida, y la opción en el menú de Opciones del Agente 3. Hazla en cuanto termines lo que tengas entre manos.
 
 **Aviso anterior (2026-10-05, Javier):** 📦 **Recursos nuevos de combate descargados** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (índice actualizado en `docs/arte/recursos_terceros.md`):
 - `16_elite_battle_dx`: **fondos de combate con entorno, bases y elementos** (Agente 4 compone las escenas; Agente 3 las integra), **transiciones de entrada** (Agente 3) y **sonidos**: `Shiny.wav`, captura, experiencia, huida, selección, victorias, evolución y subir de nivel. **Agente 3: con esto se puede cerrar la petición 27 (`shiny`).**
