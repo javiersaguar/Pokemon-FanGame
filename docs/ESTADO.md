@@ -5,7 +5,8 @@
 **Último aviso (2026-10-05, Javier):** 📦 **Recursos nuevos de combate descargados** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (índice actualizado en `docs/arte/recursos_terceros.md`):
 - `16_elite_battle_dx`: **fondos de combate con entorno, bases y elementos** (Agente 4 compone las escenas; Agente 3 las integra), **transiciones de entrada** (Agente 3) y **sonidos**: `Shiny.wav`, captura, experiencia, huida, selección, victorias, evolución y subir de nivel. **Agente 3: con esto se puede cerrar la petición 27 (`shiny`).**
 - `17_ebdx_anim_pack`: **animaciones de movimientos** de NikDie y sus sonidos (Agente 3, tarea 8; los scripts de RPG Maker solo sirven como referencia).
-- **Todavía no hay:** entrenadores HGSS en combate (el enlace original está muerto; hay una alternativa pendiente de descarga) ni *Misc. VFX from BW2* (pide cuenta). El Agente 4 sigue sin ellos.
+- `12_hgss_trainers_front`: **entrenadores de HGSS de frente** en una sola hoja (Agente 4: recortar a 160×160 sin reescalar; sirven para NPCs normales y como base de los Panchito).
+- **Todavía no hay** *Misc. VFX from BW2* (Eevee Expo no deja descargarlo). El Agente 4 sigue sin él.
 
 **Aviso anterior (2026-10-05, Javier):** 🚀 **Sesión larga con 4 agentes.** Leed, por este orden:
 1. **[Respuestas de Javier del 2026-10-05](#respuestas-de-javier-del-2026-10-05)** (al principio de "Preguntas para Javier"): **aprobación parcial de la prueba gráfica**. Combate y ruta aprobados con cambios, ficha con cambios y **pueblo rechazado** (hay que rehacerlo). Además: 5 Poké Balls, reloj real, 3000 de dinero inicial y el resto de decisiones pendientes.

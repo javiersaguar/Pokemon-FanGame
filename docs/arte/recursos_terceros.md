@@ -36,5 +36,6 @@ Todos estos packs están preparados para la resolución de **512×384** de Essen
 | `17_ebdx_anim_pack` | EBDX move & common animation pack | https://eeveeexpo.com/resources/1230/ | **NikDie** y **Luka S.J.** | Animaciones de movimientos y animaciones comunes (`EBDX_Anim_Pack/Graphics/EBDX/Animations/`) y sus sonidos (`EBDX_Anim_Pack/Audio/SE/`). Los scripts de RPG Maker sirven solo como referencia de timing; hay que reimplementarlos en Godot |
 
 **Pendientes:**
-- `12` *HGSS Trainer Battle Sprites*: el enlace de MEGA está muerto. **Alternativa:** hoja "Trainers (Front)" de HGSS en The Spriters Resource (https://www.spriters-resource.com/ds_dsi/pokemonheartgoldsoulsilver/asset/28037/), sin cuenta; viene en una sola hoja y hay que recortarla.
+- ~~`12` HGSS Trainer Battle Sprites~~: sustituido por `12_hgss_trainers_front` (ver abajo).
 - `14` *Misc. VFX from BW2*: el archivo pide **iniciar sesión en Eevee Expo** (cuenta gratuita).
+| `12_hgss_trainers_front` | HGSS Trainers (Front), de The Spriters Resource | https://www.spriters-resource.com/ds_dsi/pokemonheartgoldsoulsilver/asset/28037/ | The Spriters Resource y quien lo subió (ver la página); gráficos de Game Freak y Nintendo | `hgss_trainers_front.png`: **una sola hoja** de 973×1798 con los entrenadores de HGSS de frente. **Hay que recortarla** a lienzos de 160×160 (un sprite por archivo, centrado y con los pies alineados), sin reescalar. Sustituye al pack 12 original, cuyo enlace está muerto |
