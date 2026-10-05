@@ -2,7 +2,12 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-05, Javier):** 🚀 **Sesión larga con 4 agentes.** Leed, por este orden:
+**Último aviso (2026-10-05, Javier):** 📦 **Recursos nuevos de combate descargados** en `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` (índice actualizado en `docs/arte/recursos_terceros.md`):
+- `16_elite_battle_dx`: **fondos de combate con entorno, bases y elementos** (Agente 4 compone las escenas; Agente 3 las integra), **transiciones de entrada** (Agente 3) y **sonidos**: `Shiny.wav`, captura, experiencia, huida, selección, victorias, evolución y subir de nivel. **Agente 3: con esto se puede cerrar la petición 27 (`shiny`).**
+- `17_ebdx_anim_pack`: **animaciones de movimientos** de NikDie y sus sonidos (Agente 3, tarea 8; los scripts de RPG Maker solo sirven como referencia).
+- **Todavía no hay:** entrenadores HGSS en combate (el enlace original está muerto; hay una alternativa pendiente de descarga) ni *Misc. VFX from BW2* (pide cuenta). El Agente 4 sigue sin ellos.
+
+**Aviso anterior (2026-10-05, Javier):** 🚀 **Sesión larga con 4 agentes.** Leed, por este orden:
 1. **[Respuestas de Javier del 2026-10-05](#respuestas-de-javier-del-2026-10-05)** (al principio de "Preguntas para Javier"): **aprobación parcial de la prueba gráfica**. Combate y ruta aprobados con cambios, ficha con cambios y **pueblo rechazado** (hay que rehacerlo). Además: 5 Poké Balls, reloj real, 3000 de dinero inicial y el resto de decisiones pendientes.
 2. **Se abre el bloque II** para todo lo que **no** sea arte de mapas: menú inicial, pantallas del MVP, integración y motor. **Los mapas reales del MVP esperan** a que Javier apruebe el pueblo rehecho.
 3. **Vuelve el Agente 4 con otro papel: arte del mundo y de los entrenadores** (tilesets, mapas pintados, sombras, entrenadores Panchito y fondos de combate). Hay propiedad nueva en la tabla de abajo.

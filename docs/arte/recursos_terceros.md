@@ -27,3 +27,14 @@ Packs descargados por Javier el 2026-10-04. **No se modifican aquí**: se copian
 ## Escala
 
 Todos estos packs están preparados para la resolución de **512×384** de Essentials y Añil: **ya vienen al doble** (tile de 32 px, cuadro de personaje de 64 px, Pokémon de frente a 192 px). Los de espalda vienen **al triple** (288 px), igual que en Essentials y Añil, para dar perspectiva. **Se usan tal cual, sin reescalar.**
+
+## Añadidos el 2026-10-05
+
+| Carpeta | Pack | Origen | Crédito obligatorio | Contenido y notas técnicas |
+|---------|------|--------|---------------------|----------------------------|
+| `16_elite_battle_dx` | Elite Battle: DX | https://luka-sj.com/essentials/resources/EBDX | **Luka S.J.** y los créditos de su página (Game Freak, Pokecheck.org, PinkCatDragon, Tebited15, WolfPP, **BadSamaritan** por los sonidos...) | ⭐ **Fondos de combate con entorno**: `Graphics/EBDX/Battlebacks/battlebg/` (22 fondos de 384×308: campo, bosque, cueva, ciudad, agua, nieve, arena, montaña, interior, campeón...), **bases** (`base/`) y **elementos** (`elements/`: árboles, hierba, nubes, decorados, multitud...) para componer escenas como la de Añil. **Transiciones de entrada al combate** (`Transitions/`). **Sonidos**: `Audio/SE/EBDX/` (19, incluido **`Shiny.wav`**, captura, experiencia, huida, selección y zoom), `Audio/ME/EBDX/` (captura, evolución, subir de nivel) y `Audio/BGM/EBDX/` (victorias, evolución y PS bajos). También trae battlers animados y scripts de RPG Maker que **no** se usan |
+| `17_ebdx_anim_pack` | EBDX move & common animation pack | https://eeveeexpo.com/resources/1230/ | **NikDie** y **Luka S.J.** | Animaciones de movimientos y animaciones comunes (`EBDX_Anim_Pack/Graphics/EBDX/Animations/`) y sus sonidos (`EBDX_Anim_Pack/Audio/SE/`). Los scripts de RPG Maker sirven solo como referencia de timing; hay que reimplementarlos en Godot |
+
+**Pendientes:**
+- `12` *HGSS Trainer Battle Sprites*: el enlace de MEGA está muerto. **Alternativa:** hoja "Trainers (Front)" de HGSS en The Spriters Resource (https://www.spriters-resource.com/ds_dsi/pokemonheartgoldsoulsilver/asset/28037/), sin cuenta; viene en una sola hoja y hay que recortarla.
+- `14` *Misc. VFX from BW2*: el archivo pide **iniciar sesión en Eevee Expo** (cuenta gratuita).
