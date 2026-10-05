@@ -22,7 +22,6 @@ const CHARACTERS := {
 	"player_female_surf": "All Official Overworlds/NPC_206_Lyra_surf.png",
 	"player_male_fishing": "All Official Overworlds/NPC_203_Ethan_fishing.png",
 	"player_female_fishing": "All Official Overworlds/NPC_206_Lyra_fishing.png",
-	"rival": "All Official Overworlds/NPC_139_Silver.png",
 	"professor": "All Official Overworlds/NPC_137_Prof_Elm.png",
 	"mom": "All Official Overworlds/NPC_126_Mom.png",
 	"nurse": "All Official Overworlds/NPC_115_Nurse_1.png",

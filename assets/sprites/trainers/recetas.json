@@ -17,5 +17,52 @@
 			"overworld walk/hair/boy 3/boy 3 black.png",
 			"overworld walk/hats/straw hat.png"
 		]
+	},
+	"rival": {
+		"idea": "Rival (chico, provisional): pelo de punta pelirrojo y chaqueta roja abierta; el rojo es su color en las dos versiones.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/open jacket/open jacket red.png",
+			"trainer front male/hair/hair 1/1 ginger.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/open jacket/open red.png",
+			"overworld walk/hair/boy 1/boy 1 ginger.png"
+		]
+	},
+	"rival_f": {
+		"idea": "Rival (chica, provisional): coleta pelirroja, sudadera roja y pantalón corto negro.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/shorts/short black.png",
+			"trainer front female/tops/hoodie/hoodie red.png",
+			"trainer front female/hair/hair 4/4 ginger.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/hoodie/hoodie red.png",
+			"overworld walk/hair/girl 4/4 ginger.png"
+		]
+	},
+	"profesor": {
+		"idea": "Profesor (provisional): pelo blanco, gafas, gabardina clara como bata de laboratorio y pantalón de vestir gris.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/classy pants/classy pants grey.png",
+			"trainer front male/tops/trench coat/trench coat beige.png",
+			"trainer front male/hair/hair 2/2 white.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m grey.png",
+			"overworld walk/tops/trenchcoat/trenchcoat beige.png",
+			"overworld walk/hair/boy 2/boy 2 white.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
 	}
 }
