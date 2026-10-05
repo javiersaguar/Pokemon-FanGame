@@ -6,7 +6,8 @@
 - `16_elite_battle_dx`: **fondos de combate con entorno, bases y elementos** (Agente 4 compone las escenas; Agente 3 las integra), **transiciones de entrada** (Agente 3) y **sonidos**: `Shiny.wav`, captura, experiencia, huida, selección, victorias, evolución y subir de nivel. **Agente 3: con esto se puede cerrar la petición 27 (`shiny`).**
 - `17_ebdx_anim_pack`: **animaciones de movimientos** de NikDie y sus sonidos (Agente 3, tarea 8; los scripts de RPG Maker solo sirven como referencia).
 - `12_hgss_trainers_front`: **entrenadores de HGSS de frente** en una sola hoja (Agente 4: recortar a 160×160 sin reescalar; sirven para NPCs normales y como base de los Panchito).
-- **Todavía no hay** *Misc. VFX from BW2* (Eevee Expo no deja descargarlo). El Agente 4 sigue sin él.
+- *Misc. VFX from BW2* **ya no existe**, pero **no hace falta**: los efectos del mapa (hierba al pisar, polvo del salto, salpicaduras, destellos, humo, nieve) están en `05_ultimate_gen4_overworlds/.../Animations & Others/` (Agentes 1 y 4).
+- **Sombra de los personajes** (respuesta 17): ningún pack la trae, así que **la dibuja a mano el Agente 4** con el método aprobado (`.px` con la paleta, a ×2). Es arte propio, permitido; lo prohibido es generar arte por código.
 
 **Aviso anterior (2026-10-05, Javier):** 🚀 **Sesión larga con 4 agentes.** Leed, por este orden:
 1. **[Respuestas de Javier del 2026-10-05](#respuestas-de-javier-del-2026-10-05)** (al principio de "Preguntas para Javier"): **aprobación parcial de la prueba gráfica**. Combate y ruta aprobados con cambios, ficha con cambios y **pueblo rechazado** (hay que rehacerlo). Además: 5 Poké Balls, reloj real, 3000 de dinero inicial y el resto de decisiones pendientes.
