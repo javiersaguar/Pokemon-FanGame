@@ -69,6 +69,15 @@ func _process(delta: float) -> void:
 	_walk(dir)
 
 
+func _unhandled_input(event: InputEvent) -> void:
+	# Evento único: también durante un paso; la velocidad cambia en el siguiente.
+	if Engine.is_editor_hint() or event.is_echo() or not event.is_action_pressed(&"run_toggle"):
+		return
+	if _interacting or GameState.input_locked or SceneManager.is_busy():
+		return
+	GameState.set_always_run(not GameState.always_run)
+	get_viewport().set_input_as_handled()
+
 ## Sprite según el sexo elegido (GameState.player_gender).
 func refresh_appearance() -> void:
 	var paths: Array = SHEETS.get(GameState.player_gender, SHEETS[&"male"])
@@ -147,7 +156,7 @@ func _walk(dir: Vector2i) -> void:
 			await SceneManager.cross_connection(connection, tile_position() + dir, dir)
 			break
 		var mode := FieldActions.transport()
-		var running := Input.is_action_pressed(&"run") and mode == &"walk"
+		var running := running_requested(Input.is_action_pressed(&"run"))
 		var duration := RUN_TIME if running or mode in [&"bike", &"surf"] else WALK_TIME
 		if map and map.terrain_at(tile_position() + dir) == "waterfall" and not FieldActions.available(&"waterfall", map):
 			break
@@ -265,6 +274,14 @@ func find_entity_at(tile: Vector2i) -> MapEntity:
 func get_map_root() -> MapRoot:
 	return SceneManager.current_map
 
+
+func running_requested(held: bool) -> bool:
+	if FieldActions.transport() != &"walk":
+		return false
+	var map := get_map_root()
+	if map and map.data and (not map.data.can_run or (not map.data.outdoor and map.data.fixed_camera)):
+		return false
+	return GameState.always_run != held
 
 ## A3 puede conectar el objeto de bicicleta/surf a esta API.
 func set_transport_mode(mode: StringName) -> bool:

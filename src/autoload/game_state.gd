@@ -30,6 +30,8 @@ var mode: StringName = MODE_NORMAL
 var randomlocke: Dictionary = {}
 
 # --- Jugador ---
+## Ajuste guardado; run mantenido invierte temporalmente esta preferencia.
+var always_run := false
 var player_name: String = ""
 var player_gender: StringName = &"male"
 var rival_name: String = ""
@@ -97,6 +99,7 @@ func reset() -> void:
 	randomlocke = {}
 	slot = 0
 	rom_patch = {}
+	always_run = bool(world_config.get("new_game", {}).get("always_run", false))
 	player_name = ""
 	player_gender = &"male"
 	rival_name = ""
@@ -132,6 +135,7 @@ func new_game(options: Dictionary = {}) -> void:
 	trainer_id = randi_range(0, 65535)
 	secret_id = randi_range(0, 65535)
 	money = int(cfg.get("money", 0))
+	always_run = bool(cfg.get("always_run", false))
 	map_id = StringName(cfg.get("map", ""))
 	player_facing = dir_from_name(cfg.get("facing", "down"))
 	healing_map = StringName(cfg.get("healing_map", cfg.get("map", "")))
@@ -140,6 +144,12 @@ func new_game(options: Dictionary = {}) -> void:
 		locke = WorldLocke.new(randomlocke)
 	EventBus.new_game_started.emit()
 
+
+func set_always_run(enabled: bool) -> void:
+	if always_run == enabled:
+		return
+	always_run = enabled
+	EventBus.always_run_changed.emit(enabled)
 
 # --- Flags y variables ---
 
@@ -274,6 +284,7 @@ func to_dict() -> Dictionary:
 	for key: StringName in MODULE_CLASSES:
 		modules[String(key)] = _module_to_dict(get(key))
 	return {
+		"always_run": always_run,
 		"mode": String(mode),
 		"randomlocke": randomlocke.duplicate(true),
 		"player": {
@@ -307,6 +318,7 @@ func from_dict(data: Dictionary) -> void:
 	reset()
 	slot = keep_slot
 	rom_patch = keep_patch
+	always_run = bool(data.get("always_run", world_config.get("new_game", {}).get("always_run", false)))
 	mode = StringName(data.get("mode", String(MODE_NORMAL)))
 	randomlocke = (data.get("randomlocke", {}) as Dictionary).duplicate(true)
 	var p: Dictionary = data.get("player", {})

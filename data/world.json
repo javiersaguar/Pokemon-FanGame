@@ -6,7 +6,8 @@
     "money": 3000,
     "starter_level": 5,
     "healing_map": "test/test_room",
-    "healing_spawn": "default"
+    "healing_spawn": "default",
+    "always_run": false
   },
   "max_money": 999999,
   "saves": {

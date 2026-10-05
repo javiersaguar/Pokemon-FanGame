@@ -49,6 +49,7 @@ Ya **no** se ven: las siluetas de entrenador (no se muestra ningún entrenador h
 
 | Comportamiento | Dueño | Estado | Comparativa | Aprobado por Javier |
 |---|---|---|---|---|
+| Alternar carrera con R/Y, hoja de correr pack 05 existente | A1 | integrado | `comparativas/correr_alternar.md` | orden 1b; aviso/opción pendientes A3 |
 | Flujo inicial/ranuras/pausa y entrada de nombres con Theme/cuadro A3 existentes | A1 | placeholder de integración | `comparativas/flujo_provisional.md` | pendiente; lo sustituye A3 |
 | Recompensa profesor (5 Poké Balls), nombres POR DEFINIR centralizados; usa cuadro de diálogo A3 | A1 | integrado | `comparativas/recompensa_profesor.md` | Cantidad: respuesta 18 del 2026-10-05; captura pendiente |
 

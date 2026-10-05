@@ -26,6 +26,8 @@ extends Resource
 @export var region_map_position: Vector2i
 @export var can_fly_from := true
 @export var can_bike := true
+## Permiso de correr. Interiores pequeños (fixed_camera y outdoor=false) no corren.
+@export var can_run := true
 ## Centro Pokémon al que vuelves si pierdes aquí sin haber curado antes en otro.
 @export var healing_spot: StringName
 ## Interiores pequeños: la cámara se queda fija en el centro del mapa.

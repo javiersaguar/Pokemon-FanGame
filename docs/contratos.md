@@ -601,6 +601,10 @@ Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al mo
 
 `WorldTravel.destinations()->Array[Dictionary]`, `fly(id)->Error`; destinos configurados/visitados, objeto y can_fly_from. `visited_map:<id>` se guarda como flag. Contrato de pintura/datos pendientes en docs/mapas/mecanicas_campo.md.
 
+## 7g. Correr sin mantener (A1, orden 1b)
+
+`run_toggle` = R / Y; `run` = Shift / B. `GameState.always_run` se guarda como campo aditivo de v2; falta de campo toma world.new_game.always_run=false. `set_always_run(bool)` emite EventBus.always_run_changed solo al cambiar; cargar/reset no anuncian. UI A3: aviso breve, opción y controles (39). `Player.running_requested(held)` invierte temporalmente always_run si se mantiene run. No corre con MapData.can_run=false, interiores pequeños (outdoor=false y fixed_camera) o transporte bike/surf. Se puede alternar durante un paso; el siguiente usa el ajuste nuevo.
+
 ## 8. Datos y combate (Agente 2)
 
 Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces (solo se añadirá, no se quitará).

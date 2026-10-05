@@ -37,6 +37,8 @@ signal locke_game_over(snapshot: Dictionary)
 
 # --- Interfaz ---
 signal input_lock_changed(locked: bool)
+## Aviso breve de correr; la UI de A3 presenta el cambio.
+signal always_run_changed(enabled: bool)
 signal menu_opened(menu: Node)
 signal menu_closed(menu: Node)
 signal dialogue_started
