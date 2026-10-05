@@ -107,7 +107,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
-2. ✅ Petición 28: parche dorado rehecho (`tests/randomizer/golden_clasico_v2.json`, semilla `20261004`, preset `clasico`). El test ya no queda *pending*.
+2. ✅ Petición 28: parche dorado rehecho (`tests/randomizer/golden_clasico_v2.json`, semilla `20261004`, preset `clasico`). Rehecho al entrar `starters.json`, `gifts.json`, `statics.json` y `trades.json`: solo cambió la huella. El test no queda *pending*.
 3. ✅ Petición 22: `DataDB.randomizer_input()` (con `stage`, `min_level`, `max_level` y `family_id`) y `apply_patch() -> Array[String]` atómico. Un hash o una referencia mala no toca el parche activo. Consultas nuevas: `tm_compat`, `tutor_compat`, `tm_move`, `tutor_move`. `shiny_odds()` usa `settings.shiny_denominator` del parche. `species()` ya mezcla tipos, estadísticas, evoluciones y objetos equipados, y no reaplicamos `species_map`. El dorado se rehizo: solo cambió `input_hash`.
 4. ✅ Petición 23: el combate aplica muerte permanente (una vez por `uid`, nunca en tutorial), tope de experiencia (`next_ace_level`), modo fijo y límite de objetos. Las Balls no gastan el límite. `prepare_battle` con `tutorial` limpia las reglas del setup.
 5. ⏳ Fase 9.5: habilidades y objetos equipados, Púas y Trampa Rocas, más movimientos e IA 2–4.
