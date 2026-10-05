@@ -43,12 +43,29 @@ func _room(builder: GDScript) -> RefCounted:
 	m.pattern(Rect2i(8, 10, 4, 2), ExteriorTiles.COBBLE_PINK, Vector2i(4, 2))
 	m.build_forest()
 	m.spawn("default", Vector2i(10, 5))
+	m.spawn("bedroom", Vector2i(10, 5))
+	m.spawn("laboratory", Vector2i(4, 4))
 	m.spawn("from_outdoor", Vector2i(9, 9))
 	m.warp("ToOutdoor", Vector2i(9, 11), &"test/test_outdoor", &"from_room", 1)
 	m.warp("ToOutdoor2", Vector2i(10, 11), &"test/test_outdoor", &"from_room", 1)
-	m.npc("Profesor", "professor", Vector2i(10, 4), DOWN,
-		PackedStringArray(["¡Hola! Soy el profesor provisional.", "Esta es la sala de pruebas del equipo."]),
-		{"display_name": "Profesor"})
+	m.npc("Profesor", "professor", Vector2i(10, 4), DOWN, PackedStringArray(),
+		{"display_name": "Profesor POR DEFINIR", "event": load("res://src/events/mvp/mvp_story_event.gd"),
+		"event_params": {"stage": "professor", "player_name": "POR DEFINIR", "rival_name": "POR DEFINIR"}})
+	m.npc("Rival", "rival", Vector2i(7, 4), DOWN, PackedStringArray(),
+		{"display_name": "Rival POR DEFINIR", "event": load("res://src/events/mvp/mvp_story_event.gd"),
+		"event_params": {"stage": "rival"}, "visible_if_flag": &"starter_chosen", "hidden_if_flag": &"rival_intro_done"})
+	for stage: String in ["bedroom", "laboratory"]:
+		# Carga diferida: SceneTree -s compila antes de registrar los autoloads.
+		var trigger := Node2D.new()
+		trigger.set_script(load("res://src/overworld/trigger/trigger.gd"))
+		trigger.name = "Historia_" + stage
+		trigger.set(&"event", load("res://src/events/mvp/mvp_story_event.gd"))
+		trigger.set(&"event_params", {"stage": stage})
+		trigger.position = Grid.to_world(Vector2i(10, 6) if stage == "bedroom" else Vector2i(4, 4))
+		trigger.set(&"mode", 0 if stage == "bedroom" else 1)
+		trigger.set(&"required_flag", &"story_intro_done" if stage == "bedroom" else &"story_bedroom_done")
+		trigger.set(&"blocked_by_flag", &"story_bedroom_done" if stage == "bedroom" else &"story_lab_intro_done")
+		m.root.get_node(^"Triggers").add_child(trigger)
 	var tester: Node = m.npc("Probador", "trainer", Vector2i(4, 6), RIGHT, PackedStringArray(),
 		{"display_name": "Probador"})
 	tester.set_script(load("res://maps/test/test_battle_npc.gd"))
@@ -57,8 +74,8 @@ func _room(builder: GDScript) -> RefCounted:
 	tester.set(&"initial_facing", RIGHT)
 	m.npc("Paseante", "npc_woman", Vector2i(15, 6), DOWN,
 		PackedStringArray(["Doy vueltas por la sala para probar el paseo de los NPCs."]), {"wander": true})
-	m.npc("Dependiente", "clerk", Vector2i(9, 7), DOWN, PackedStringArray(["¡Hola! Aquí no vendo nada todavía."]),
-		{"display_name": "Dependiente"})
+	m.npc("Dependiente", "clerk", Vector2i(9, 7), DOWN, PackedStringArray(),
+		{"display_name": "Dependiente", "event": load("res://src/events/common/open_shop_event.gd"), "event_params": {"shop_id": &"tienda_ciudad2"}})
 	m.npc("Enfermera", "nurse", Vector2i(15, 3), DOWN, PackedStringArray(),
 		{"display_name": "Enfermera", "event": load("res://src/events/common/heal_party_event.gd")})
 	m.item("Pocion", Vector2i(17, 8), &"potion")
@@ -69,6 +86,7 @@ func _room(builder: GDScript) -> RefCounted:
 		ball.position = Grid.to_world(Vector2i(3 + i, 3))
 		ball.set(&"starter_slot", StringName("starter_%d" % (i + 1)))
 		ball.set(&"starter_index", i + 1)
+		ball.set(&"visible_if_flag", &"story_lab_intro_done")
 		m.entities.add_child(ball)
 	return m
 

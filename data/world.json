@@ -36,5 +36,25 @@
       {"id": "evening", "from_hour": 17},
       {"id": "night", "from_hour": 20}
     ]
+  },
+  "mvp_story": {
+    "professor_name": "POR DEFINIR",
+    "bedroom": {
+      "map": "test/test_room",
+      "spawn": "bedroom"
+    },
+    "laboratory": {
+      "map": "test/test_room",
+      "spawn": "laboratory"
+    },
+    "rival_by_starter": {
+      "1": "rival_lab_1",
+      "2": "rival_lab_2",
+      "3": "rival_lab_3"
+    },
+    "reward": {
+      "placement_id": "test/test_outdoor/PokeBalls",
+      "quantity": null
+    }
   }
 }

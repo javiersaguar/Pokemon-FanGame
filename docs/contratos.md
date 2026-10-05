@@ -560,6 +560,14 @@ await Cutscene.battle_wild(species_or_pokemon, level := 5, options := {}) -> Str
 
 ---
 
+### Guion del MVP y teclado de identidad
+
+`MvpStoryEvent` (`src/events/mvp/`) ejecuta las etapas `intro`, `bedroom`, `laboratory`, `rival`, `rewards` y el despachador `professor` mediante `event_params.stage`. Los destinos/equipos/recompensas proceden de `data/world.json.mvp_story` y DataDB. Flags idempotentes en docs/flags.md; montaje provisional y recorrido en docs/mapas/pruebas_mvp.md. Tutorial rival: `can_lose=true`, contexto `tutorial=true`, cura tras victoria/derrota y avanza sin muerte Locke.
+
+Teclado A3: `Cutscene.request_name(kind: StringName, initial := "") -> String` emite `name_requested(kind, initial)`; UI responde con `Cutscene.submit_name(kind, value) -> bool`. `kind` = player/rival; valor vacío/campo ajeno no completa. La sala suministra explícitamente POR DEFINIR; el flujo definitivo espera nombres reales. `name_submitted` es señal interna de respuesta. Los disparadores ON_ENTER se ejecutan después de la cinemática que cambió de mapa para evitar espera circular.
+
+---
+
 ## 7c. Integración Locke del mundo (Agente 1)
 
 `GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados. SAVE_VERSION 2 migra v1 conservando ROM, zonas y contadores antiguos (`legacy_death_count`), sin fabricar lápidas ni permisos para encuentros ya gastados.

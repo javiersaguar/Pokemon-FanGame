@@ -1,142 +1,199 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_btsfy"]
-[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="2_4iekt"]
-[ext_resource type="TileSet" path="res://assets/tilesets/exterior/exterior.tres" id="3_g72da"]
-[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="4_2dbb2"]
-[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="5_dbn7p"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/professor.png" id="6_n1pat"]
-[ext_resource type="Script" path="res://maps/test/test_battle_npc.gd" id="7_bh2yx"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="8_t1wvv"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="9_hjhk6"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/clerk.png" id="10_4ffht"]
-[ext_resource type="Script" path="res://src/events/common/heal_party_event.gd" id="11_0nre5"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/nurse.png" id="12_ipans"]
-[ext_resource type="PackedScene" path="res://src/overworld/item_ball/item_ball.tscn" id="13_tg4us"]
-[ext_resource type="Script" path="res://src/overworld/item_ball/item_ball.gd" id="14_agkpu"]
-[ext_resource type="PackedScene" path="res://src/overworld/starter_ball/starter_ball.tscn" id="15_7g082"]
-[ext_resource type="Script" path="res://src/overworld/starter_ball/starter_ball.gd" id="16_kawyy"]
-[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="17_ueo03"]
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_dbn7p"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="2_n1pat"]
+[ext_resource type="TileSet" path="res://assets/tilesets/exterior/exterior.tres" id="3_bh2yx"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="4_t1wvv"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="5_hjhk6"]
+[ext_resource type="Script" path="res://src/events/mvp/mvp_story_event.gd" id="6_4ffht"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/professor.png" id="7_0nre5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/rival.png" id="8_ipans"]
+[ext_resource type="Script" path="res://maps/test/test_battle_npc.gd" id="9_tg4us"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="10_agkpu"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="11_7g082"]
+[ext_resource type="Script" path="res://src/events/common/open_shop_event.gd" id="12_kawyy"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/clerk.png" id="13_ueo03"]
+[ext_resource type="Script" path="res://src/events/common/heal_party_event.gd" id="14_5321f"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/nurse.png" id="15_xqwgv"]
+[ext_resource type="PackedScene" path="res://src/overworld/item_ball/item_ball.tscn" id="16_qef73"]
+[ext_resource type="Script" path="res://src/overworld/item_ball/item_ball.gd" id="17_3rnrb"]
+[ext_resource type="PackedScene" path="res://src/overworld/starter_ball/starter_ball.tscn" id="18_eb5jj"]
+[ext_resource type="Script" path="res://src/overworld/starter_ball/starter_ball.gd" id="19_j7u45"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="20_dwle1"]
+[ext_resource type="Script" path="res://src/overworld/trigger/trigger.gd" id="21_vdj4f"]
 
-[sub_resource type="Resource" id="Resource_5321f"]
-script = ExtResource("2_4iekt")
+[sub_resource type="Resource" id="Resource_qheyi"]
+script = ExtResource("2_n1pat")
 id = &"test/test_room"
 display_name = "Sala de pruebas"
 healing_spot = &"test/test_room"
 
-[node name="TestRoom" type="Node2D" unique_id=1310241403]
-script = ExtResource("1_btsfy")
-data = SubResource("Resource_5321f")
+[node name="TestRoom" type="Node2D" unique_id=424617581]
+script = ExtResource("1_dbn7p")
+data = SubResource("Resource_qheyi")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=867263444]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=909273762]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAGAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAHAAEAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAHAAEAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAHAAEAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAHAAEAAAASAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAHAAEAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAARAAEAAAAAAAAAAAASAAEAAAAAAAAAAAATAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAHAAEAAAACAAIAAAABABUAAAADAAIAAAACABUAAAAEAAIAAAADABQAAAAFAAIAAAADABQAAAAGAAIAAAACABQAAAAHAAIAAAAAABUAAAAIAAIAAAABABQAAAAJAAIAAAABABQAAAAKAAIAAAACABUAAAALAAIAAAABABQAAAAMAAIAAAACABQAAAANAAIAAAAAABQAAAAOAAIAAAACABQAAAAPAAIAAAAAABUAAAAQAAIAAAABABQAAAARAAIAAAABABQAAAASAAIAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAMAAAAHAAEAAAABAAMAAAAAAAAAAAACAAMAAAABABUAAAADAAMAAAADABQAAAAEAAMAAAABABUAAAAFAAMAAAACABUAAAAGAAMAAAADABUAAAAHAAMAAAADABUAAAAIAAMAAAADABQAAAAJAAMAAAAAABQAAAAKAAMAAAADABQAAAALAAMAAAABABUAAAAMAAMAAAABABUAAAANAAMAAAABABUAAAAOAAMAAAAAABQAAAAPAAMAAAAAABUAAAAQAAMAAAADABUAAAARAAMAAAABABUAAAASAAMAAAAHAAEAAAATAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAACABQAAAADAAQAAAADABUAAAAEAAQAAAADABQAAAAFAAQAAAACABUAAAAGAAQAAAACABUAAAAHAAQAAAAAABUAAAAIAAQAAAABABQAAAAJAAQAAAABABUAAAAKAAQAAAABABQAAAALAAQAAAACABQAAAAMAAQAAAADABUAAAANAAQAAAACABQAAAAOAAQAAAAAABQAAAAPAAQAAAACABQAAAAQAAQAAAAAABQAAAARAAQAAAAAABUAAAASAAQAAAAAAAAAAAATAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAGAAAAAAACAAUAAAADABQAAAADAAUAAAABABQAAAAEAAUAAAABABQAAAAFAAUAAAADABUAAAAGAAUAAAABABQAAAAHAAUAAAADABUAAAAIAAUAAAACABUAAAAJAAUAAAABABQAAAAKAAUAAAACABQAAAALAAUAAAADABQAAAAMAAUAAAACABQAAAANAAUAAAABABQAAAAOAAUAAAAAABUAAAAPAAUAAAAAABQAAAAQAAUAAAAAABUAAAARAAUAAAADABUAAAASAAUAAAAAAAAAAAATAAUAAAAAAAAAAAAAAAYAAAAGAAAAAAABAAYAAAAAAAAAAAACAAYAAAADABQAAAADAAYAAAADABUAAAAEAAYAAAABABUAAAAFAAYAAAAAABQAAAAGAAYAAAABABQAAAAHAAYAAAABABUAAAAIAAYAAAACABQAAAAJAAYAAAACABQAAAAKAAYAAAADABQAAAALAAYAAAADABQAAAAMAAYAAAAAABUAAAANAAYAAAABABUAAAAOAAYAAAACABQAAAAPAAYAAAACABUAAAAQAAYAAAAAABQAAAARAAYAAAADABUAAAASAAYAAAAHAAEAAAATAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAACABQAAAADAAcAAAADABUAAAAEAAcAAAACABQAAAAFAAcAAAABABUAAAAGAAcAAAACABQAAAAHAAcAAAACABUAAAAIAAcAAAAAABQAAAAJAAcAAAADABUAAAAKAAcAAAADABUAAAALAAcAAAACABUAAAAMAAcAAAABABUAAAANAAcAAAAAABQAAAAOAAcAAAADABQAAAAPAAcAAAAAABQAAAAQAAcAAAAAABQAAAARAAcAAAADABUAAAASAAcAAAAAAAAAAAATAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAgAAAAAAAAAAAACAAgAAAADABQAAAADAAgAAAADABUAAAAEAAgAAAADABUAAAAFAAgAAAABABQAAAAGAAgAAAAAABUAAAAHAAgAAAAAABQAAAAIAAgAAAAAABUAAAAJAAgAAAACABUAAAAKAAgAAAABABUAAAALAAgAAAABABUAAAAMAAgAAAABABUAAAANAAgAAAABABUAAAAOAAgAAAAAABQAAAAPAAgAAAADABQAAAAQAAgAAAABABUAAAARAAgAAAAAABQAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAkAAAAHAAEAAAACAAkAAAABABUAAAADAAkAAAACABQAAAAEAAkAAAADABQAAAAFAAkAAAABABQAAAAGAAkAAAAAABQAAAAHAAkAAAACABQAAAAIAAkAAAADABUAAAAJAAkAAAADABQAAAAKAAkAAAAAABUAAAALAAkAAAACABUAAAAMAAkAAAACABQAAAANAAkAAAAAABQAAAAOAAkAAAABABUAAAAPAAkAAAACABQAAAAQAAkAAAABABQAAAARAAkAAAADABQAAAASAAkAAAAAAAAAAAATAAkAAAAAAAAAAAAAAAoAAAAGAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAADABUAAAAJAAoAAAABABUAAAAKAAoAAAAAABUAAAALAAoAAAAAABUAAAAMAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAASAAoAAAAAAAAAAAATAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAABAAsAAAAHAAEAAAACAAsAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAsAAAAGAAAAAAAFAAsAAAAAAAAAAAAGAAsAAAAAAAAAAAAHAAsAAAAAAAAAAAAIAAsAAAABABUAAAAJAAsAAAACABUAAAAKAAsAAAACABUAAAALAAsAAAADABUAAAAMAAsAAAAAAAAAAAANAAsAAAAAAAAAAAAOAAsAAAAAAAAAAAAPAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAARAAsAAAAAAAAAAAASAAsAAAAAAAAAAAATAAsAAAAHAAEAAAA=")
-tile_set = ExtResource("3_g72da")
+tile_set = ExtResource("3_bh2yx")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1430769120]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=823114894]
 tile_map_data = PackedByteArray("AAAAAAAAAAACAAAAAAABAAAAAAADAAAAAAACAAAAAAAEAAAAAAADAAAAAAADAAAAAAAEAAAAAAAEAAAAAAAFAAAAAAADAAAAAAAGAAAAAAAEAAAAAAAHAAAAAAADAAAAAAAIAAAAAAAEAAAAAAAJAAAAAAADAAAAAAAKAAAAAAAEAAAAAAALAAAAAAADAAAAAAAMAAAAAAAEAAAAAAANAAAAAAADAAAAAAAOAAAAAAAEAAAAAAAPAAAAAAADAAAAAAAQAAAAAAAEAAAAAAARAAAAAAADAAAAAAASAAAAAAAEAAAAAAATAAAAAAAFAAAAAAAAAAEAAAACAAEAAAABAAEAAAADAAEAAAACAAEAAAAEAAUAAAADAAEAAAADAAUAAAAEAAEAAAAEAAUAAAAFAAEAAAADAAUAAAAGAAEAAAAEAAUAAAAHAAEAAAADAAUAAAAIAAEAAAAEAAUAAAAJAAEAAAADAAUAAAAKAAEAAAAEAAUAAAALAAEAAAADAAUAAAAMAAEAAAAEAAUAAAANAAEAAAADAAUAAAAOAAEAAAAEAAUAAAAPAAEAAAADAAUAAAAQAAEAAAAEAAUAAAARAAEAAAADAAUAAAASAAEAAAAEAAEAAAATAAEAAAAFAAEAAAAAAAIAAAACAAIAAAABAAIAAAAFAAIAAAAAAAMAAAACAAMAAAABAAMAAAAFAAMAAAAAAAQAAAACAAIAAAABAAQAAAAFAAIAAAAAAAUAAAACAAMAAAABAAUAAAAFAAMAAAAAAAYAAAACAAIAAAABAAYAAAAFAAIAAAAAAAcAAAACAAMAAAABAAcAAAAFAAMAAAAAAAgAAAACAAIAAAABAAgAAAAFAAIAAAAAAAkAAAACAAMAAAABAAkAAAAFAAMAAAASAAIAAAACAAIAAAATAAIAAAAFAAIAAAASAAMAAAACAAMAAAATAAMAAAAFAAMAAAASAAQAAAACAAIAAAATAAQAAAAFAAIAAAASAAUAAAACAAMAAAATAAUAAAAFAAMAAAASAAYAAAACAAIAAAATAAYAAAAFAAIAAAASAAcAAAACAAMAAAATAAcAAAAFAAMAAAASAAgAAAACAAIAAAATAAgAAAAFAAIAAAASAAkAAAACAAMAAAATAAkAAAAFAAMAAAAAAAoAAAACAAQAAAABAAoAAAADAAQAAAACAAoAAAAEAAAAAAADAAoAAAADAAAAAAAEAAoAAAAEAAAAAAAFAAoAAAADAAAAAAAGAAoAAAAEAAAAAAAHAAoAAAAFAAAAAAAAAAsAAAACAAUAAAABAAsAAAADAAUAAAACAAsAAAAEAAUAAAADAAsAAAADAAUAAAAEAAsAAAAEAAUAAAAFAAsAAAADAAUAAAAGAAsAAAAEAAUAAAAHAAsAAAAFAAUAAAAMAAoAAAACAAAAAAANAAoAAAADAAAAAAAOAAoAAAAEAAAAAAAPAAoAAAADAAAAAAAQAAoAAAAEAAAAAAARAAoAAAADAAAAAAASAAoAAAAEAAQAAAATAAoAAAAFAAQAAAAMAAsAAAACAAUAAAANAAsAAAADAAUAAAAOAAsAAAAEAAUAAAAPAAsAAAADAAUAAAAQAAsAAAAEAAUAAAARAAsAAAADAAUAAAASAAsAAAAEAAUAAAATAAsAAAAFAAUAAAA=")
-tile_set = ExtResource("3_g72da")
+tile_set = ExtResource("3_bh2yx")
 
-[node name="Entities" type="Node2D" parent="." unique_id=645824688]
+[node name="Entities" type="Node2D" parent="." unique_id=1742425171]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=214719737]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=232799807]
 y_sort_enabled = true
-tile_set = ExtResource("3_g72da")
+tile_set = ExtResource("3_bh2yx")
 
-[node name="Profesor" type="Node2D" parent="Entities" unique_id=248944779 instance=ExtResource("4_2dbb2")]
+[node name="Profesor" type="Node2D" parent="Entities" unique_id=49027085 instance=ExtResource("4_t1wvv")]
 position = Vector2(336, 144)
-script = ExtResource("5_dbn7p")
-display_name = "Profesor"
-lines = PackedStringArray("¡Hola! Soy el profesor provisional.", "Esta es la sala de pruebas del equipo.")
-sprite_sheet = ExtResource("6_n1pat")
+script = ExtResource("5_hjhk6")
+display_name = "Profesor POR DEFINIR"
+lines = PackedStringArray()
+event = ExtResource("6_4ffht")
+event_params = {
+"player_name": "POR DEFINIR",
+"rival_name": "POR DEFINIR",
+"stage": "professor"
+}
+sprite_sheet = ExtResource("7_0nre5")
 
-[node name="Probador" type="Node2D" parent="Entities" unique_id=723757039 instance=ExtResource("4_2dbb2")]
+[node name="Rival" type="Node2D" parent="Entities" unique_id=1489084637 instance=ExtResource("4_t1wvv")]
+position = Vector2(240, 144)
+script = ExtResource("5_hjhk6")
+display_name = "Rival POR DEFINIR"
+lines = PackedStringArray()
+event = ExtResource("6_4ffht")
+event_params = {
+"stage": "rival"
+}
+sprite_sheet = ExtResource("8_ipans")
+visible_if_flag = &"starter_chosen"
+hidden_if_flag = &"rival_intro_done"
+
+[node name="Probador" type="Node2D" parent="Entities" unique_id=1174187118 instance=ExtResource("4_t1wvv")]
 position = Vector2(144, 208)
-script = ExtResource("7_bh2yx")
+script = ExtResource("9_tg4us")
 display_name = "Probador"
 lines = PackedStringArray()
-sprite_sheet = ExtResource("8_t1wvv")
+sprite_sheet = ExtResource("10_agkpu")
 initial_facing = 2
 
-[node name="Paseante" type="Node2D" parent="Entities" unique_id=200762554 instance=ExtResource("4_2dbb2")]
+[node name="Paseante" type="Node2D" parent="Entities" unique_id=671781612 instance=ExtResource("4_t1wvv")]
 position = Vector2(496, 208)
-script = ExtResource("5_dbn7p")
+script = ExtResource("5_hjhk6")
 lines = PackedStringArray("Doy vueltas por la sala para probar el paseo de los NPCs.")
 wander = true
-sprite_sheet = ExtResource("9_hjhk6")
+sprite_sheet = ExtResource("11_7g082")
 
-[node name="Dependiente" type="Node2D" parent="Entities" unique_id=23642295 instance=ExtResource("4_2dbb2")]
+[node name="Dependiente" type="Node2D" parent="Entities" unique_id=788739783 instance=ExtResource("4_t1wvv")]
 position = Vector2(304, 240)
-script = ExtResource("5_dbn7p")
+script = ExtResource("5_hjhk6")
 display_name = "Dependiente"
-lines = PackedStringArray("¡Hola! Aquí no vendo nada todavía.")
-sprite_sheet = ExtResource("10_4ffht")
+lines = PackedStringArray()
+event = ExtResource("12_kawyy")
+event_params = {
+"shop_id": &"tienda_ciudad2"
+}
+sprite_sheet = ExtResource("13_ueo03")
 
-[node name="Enfermera" type="Node2D" parent="Entities" unique_id=1834811718 instance=ExtResource("4_2dbb2")]
+[node name="Enfermera" type="Node2D" parent="Entities" unique_id=1857361632 instance=ExtResource("4_t1wvv")]
 position = Vector2(496, 112)
-script = ExtResource("5_dbn7p")
+script = ExtResource("5_hjhk6")
 display_name = "Enfermera"
 lines = PackedStringArray()
-event = ExtResource("11_0nre5")
-sprite_sheet = ExtResource("12_ipans")
+event = ExtResource("14_5321f")
+sprite_sheet = ExtResource("15_xqwgv")
 
-[node name="Pocion" type="Node2D" parent="Entities" unique_id=69610694 instance=ExtResource("13_tg4us")]
+[node name="Pocion" type="Node2D" parent="Entities" unique_id=259501330 instance=ExtResource("16_qef73")]
 position = Vector2(560, 272)
-script = ExtResource("14_agkpu")
+script = ExtResource("17_3rnrb")
 item_id = &"potion"
 
-[node name="CarameloOculto" type="Node2D" parent="Entities" unique_id=1736861572 instance=ExtResource("13_tg4us")]
+[node name="CarameloOculto" type="Node2D" parent="Entities" unique_id=33626864 instance=ExtResource("16_qef73")]
 position = Vector2(80, 272)
-script = ExtResource("14_agkpu")
+script = ExtResource("17_3rnrb")
 item_id = &"rarecandy"
 hidden_item = true
 
-[node name="Inicial1" type="Node2D" parent="Entities" unique_id=275017155 instance=ExtResource("15_7g082")]
+[node name="Inicial1" type="Node2D" parent="Entities" unique_id=330907735 instance=ExtResource("18_eb5jj")]
 position = Vector2(112, 112)
-script = ExtResource("16_kawyy")
+script = ExtResource("19_j7u45")
+visible_if_flag = &"story_lab_intro_done"
 hidden_if_flag = &"starter_chosen"
 
-[node name="Inicial2" type="Node2D" parent="Entities" unique_id=1019147416 instance=ExtResource("15_7g082")]
+[node name="Inicial2" type="Node2D" parent="Entities" unique_id=1601711201 instance=ExtResource("18_eb5jj")]
 position = Vector2(144, 112)
-script = ExtResource("16_kawyy")
+script = ExtResource("19_j7u45")
 starter_slot = &"starter_2"
 starter_index = 2
+visible_if_flag = &"story_lab_intro_done"
 hidden_if_flag = &"starter_chosen"
 
-[node name="Inicial3" type="Node2D" parent="Entities" unique_id=1689542327 instance=ExtResource("15_7g082")]
+[node name="Inicial3" type="Node2D" parent="Entities" unique_id=1942964899 instance=ExtResource("18_eb5jj")]
 position = Vector2(176, 112)
-script = ExtResource("16_kawyy")
+script = ExtResource("19_j7u45")
 starter_slot = &"starter_3"
 starter_index = 3
+visible_if_flag = &"story_lab_intro_done"
 hidden_if_flag = &"starter_chosen"
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=653796255]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1346117884]
 z_index = 10
 tile_map_data = PackedByteArray("AAD//wEAAAABAAEAAAD//wIAAAABAAIAAAD//wMAAAABAAMAAAD//wQAAAABAAIAAAD//wUAAAABAAMAAAD//wYAAAABAAIAAAD//wcAAAABAAMAAAD//wgAAAABAAIAAAD//wkAAAABAAMAAAARAAIAAAABAAIAAAARAAMAAAABAAMAAAARAAQAAAABAAIAAAARAAUAAAABAAMAAAARAAYAAAABAAIAAAARAAcAAAABAAMAAAARAAgAAAABAAIAAAARAAkAAAABAAMAAAD//woAAAABAAQAAAA=")
-tile_set = ExtResource("3_g72da")
+tile_set = ExtResource("3_bh2yx")
 
-[node name="Warps" type="Node2D" parent="." unique_id=2041686228]
+[node name="Warps" type="Node2D" parent="." unique_id=1335146159]
 
-[node name="ToOutdoor" type="Node2D" parent="Warps" unique_id=1270735278]
+[node name="ToOutdoor" type="Node2D" parent="Warps" unique_id=786813888]
 position = Vector2(304, 368)
-script = ExtResource("17_ueo03")
+script = ExtResource("20_dwle1")
 target_map = &"test/test_outdoor"
 target_spawn = &"from_room"
 arrival_facing = 1
 
-[node name="ToOutdoor2" type="Node2D" parent="Warps" unique_id=744997309]
+[node name="ToOutdoor2" type="Node2D" parent="Warps" unique_id=583319513]
 position = Vector2(336, 368)
-script = ExtResource("17_ueo03")
+script = ExtResource("20_dwle1")
 target_map = &"test/test_outdoor"
 target_spawn = &"from_room"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=483197977]
+[node name="Spawns" type="Node2D" parent="." unique_id=1201405068]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=926755878]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=133020639]
 position = Vector2(336, 176)
 
-[node name="from_outdoor" type="Marker2D" parent="Spawns" unique_id=1269237626]
+[node name="bedroom" type="Marker2D" parent="Spawns" unique_id=136333444]
+position = Vector2(336, 176)
+
+[node name="laboratory" type="Marker2D" parent="Spawns" unique_id=402895022]
+position = Vector2(144, 144)
+
+[node name="from_outdoor" type="Marker2D" parent="Spawns" unique_id=769598013]
 position = Vector2(304, 304)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=102974788]
+[node name="Triggers" type="Node2D" parent="." unique_id=907431217]
+
+[node name="Historia_bedroom" type="Node2D" parent="Triggers" unique_id=1202066339]
+position = Vector2(336, 208)
+script = ExtResource("21_vdj4f")
+event = ExtResource("6_4ffht")
+event_params = {
+"stage": "bedroom"
+}
+required_flag = &"story_intro_done"
+blocked_by_flag = &"story_bedroom_done"
+
+[node name="Historia_laboratory" type="Node2D" parent="Triggers" unique_id=965381206]
+position = Vector2(144, 144)
+script = ExtResource("21_vdj4f")
+event = ExtResource("6_4ffht")
+event_params = {
+"stage": "laboratory"
+}
+mode = 1
+required_flag = &"story_bedroom_done"
+blocked_by_flag = &"story_lab_intro_done"

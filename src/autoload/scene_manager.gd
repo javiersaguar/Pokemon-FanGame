@@ -322,6 +322,14 @@ func _change_map(map_id: StringName, resolve_tile: Callable, facing: Vector2i,
 	await fade_in()
 	is_changing_map = false
 	GameState.unlock_input(&"map_change")
+	# Evita esperar un evento nuevo dentro de la cinemática que teletransporta.
+	_run_enter_triggers(map)
+
+func _run_enter_triggers(map: MapRoot) -> void:
+	if Cutscene.is_running():
+		await Cutscene.event_finished
+	if not is_instance_valid(map) or current_map != map:
+		return
 	for trigger: Trigger in map.enter_triggers():
 		if is_instance_valid(trigger) and current_map == map and trigger.can_fire():
 			await Cutscene.play(trigger.event, trigger, trigger.event_params, trigger.once_flag)

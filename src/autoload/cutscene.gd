@@ -5,6 +5,11 @@ extends Node
 
 signal event_started(event: StoryEvent)
 signal event_finished(event: StoryEvent)
+## UI de nombres responde con submit_name().
+signal name_requested(kind: StringName, initial: String)
+signal name_submitted(kind: StringName, value: String)
+var _name_kind: StringName
+var _name_result := ""
 
 ## Evento en curso (null si no hay).
 var current: StoryEvent
@@ -55,6 +60,24 @@ func unlock_player() -> void:
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
 
+
+## Un resultado vacío mantiene la petición pendiente; no se inventa identidad.
+func request_name(kind: StringName, initial: String = "") -> String:
+	_name_kind = kind
+	_name_result = ""
+	name_requested.emit(kind, initial)
+	while _name_result.is_empty():
+		await name_submitted
+	var result := _name_result
+	_name_kind = &""
+	return result
+
+func submit_name(kind: StringName, value: String) -> bool:
+	if kind != _name_kind or value.strip_edges().is_empty():
+		return false
+	_name_result = value.strip_edges()
+	name_submitted.emit(kind, _name_result)
+	return true
 
 # --- Personajes ---
 

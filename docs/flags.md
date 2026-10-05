@@ -13,10 +13,19 @@ Todas las claves de `GameState.flags` y `GameState.vars` van aquí **antes** de 
 
 | Clave | Se activa en | Efecto |
 |-------|--------------|--------|
+| `story_intro_done` | Intro del profesor | Identidad elegida, habitación preparada |
+| `story_bedroom_done` | Salir de la habitación | Introducción del laboratorio disponible |
+| `story_lab_intro_done` | Profesor en laboratorio | Tres Poké Balls disponibles |
+| `starter_chosen` | Inicial incorporado (tras mote si procede) | Oculta las otras dos Poké Balls |
+| `rival_intro_done` | Ganar o perder tutorial | Rival deja de desafiar; profesor da recompensas |
+| `got_pokedex` | Profesor tras rival | Habilita Pokédex |
+| `story_rewards_done` | Regalo incorporado | Evita duplicar recompensa |
+| `test_trigger_done` | Disparador de prueba | Evita repetirlo |
 
 ## Variables
 
 | Clave | Valores | Notas |
 |-------|---------|-------|
 | `story_progress` | 0, 10, 20... | Avance de la historia (valores espaciados para poder insertar pasos) |
+| `starter` | 1, 2, 3 | Índice elegido; rival por ID en world.mvp_story |
 | `repel_steps` | 0+ | Pasos de Repelente que quedan (la pone el objeto; la descuenta `WildEncounters`) |
