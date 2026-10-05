@@ -164,13 +164,12 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 3 — Presentación, UI y contenido Panchito
 
-**He leído `docs/DIRECTRICES.md` §0, §7, §7.1 y §8** (actualización de 2026-10-04 con los recursos descargados), las capturas de `docs/arte/referencias/` y `docs/arte/recursos_terceros.md`. `core.hooksPath .githooks` activo en mi copia. Plan nuevo, en este orden:
+**He leído `docs/DIRECTRICES.md`** (versión del 2026-10-05: vuelven a ser 3 agentes) y el plan de «Próxima sesión». `core.hooksPath .githooks` activo en mi copia. Sigo mis bloques de arriba abajo; el II espera a que Javier apruebe la prueba de nivel gráfico (preguntas 12–14).
 
-**En qué estoy:** prueba de nivel gráfico (§7, pasos 1 y 4) **entregada para revisión** (preguntas 12–14). Mientras Javier la revisa: pulido de la muestra según lo que diga, sin pantallas nuevas.
-
-**Después** (tras la aprobación de Javier): entrenadores Panchito con `11_character_customization_gen4`, menú inicial de la Fase 15.2 ("Realizado por Javier Saguar"), pantallas del MVP, TrainerNPC, marcadores R.2 en `Dialogue`, `starters.json`/`gifts.json`/`statics.json`/`trades.json` y las pantallas del RandomLocke (R.8).
+**En qué estoy (2026-10-05):** bloque I. ✅ Tarea 1 (petición 26). Siguiente: tarea 2 (petición 16: `starters.json`, `gifts.json`, `statics.json`, `trades.json` y marcadores R.2 en `Dialogue`; petición 11: el dinero).
 
 **Terminado:**
+- **Validador de arte a 0 errores** (petición 26, 2026-10-05): tilesets, personajes, efectos y Pokémon de los packs se comprueban solo en tamaño; regla `grid` para los Pokémon que te siguen (4×4) y los iconos (2×1) con cuadros cuadrados de cualquier lado (los Pokémon grandes del pack traen cuadros de 70, 80 o 128); efectos y `objects.png` en cuadros de 32; `pack_exceptions` para lo que el pack trae con un tamaño raro (solo avisa). La lógica pasa a `tools/arte/art_validator.gd` y **ahora es un test** (`tests/ui/test_arte.gd`), así que `main` no puede volver a tener errores sin que falle la suite. Quedan 4 avisos: petición 29.
 - Borrador de `docs/GDD.md` (Fase 2): estructura completa, con las decisiones de diseño marcadas **PENDIENTE JAVIER** (resumen de las que bloquean el MVP en su §0).
 - `docs/contratos.md` §9: Dialogue, AudioManager, escenas para SceneManager, interfaz común, `Bag`, formato de entrenadores, encuentros y tiendas.
 - Datos: las 20 clases Panchito de la tabla 10.2 + `rival` en `data/trainer_classes.json`; `rival_lab_1/2/3` (`data/trainers/pueblo_inicial.json`) y el Vendedor de Chupachups Manolo (`data/trainers/ruta_1.json`); `docs/entrenadores.md` (registro, clases, fichas y arte pendiente).
@@ -183,7 +182,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - `TrainerData` (`src/overworld/trainers/`): entrenador + clase combinados, leyendo de `DataDB`.
 - **Adaptador del motor real** (`EngineDriver`): la BattleScene ya juega combates de verdad con `BattleSetup.wild()` / `BattleSetup.trainer()` (los comandos `wildbattle` y `trainerbattle` del Agente 2), con captura al equipo o al PC, objetos sobre un Pokémon, aprender movimientos y Forcejeo. El combate de prueba de `battle` (un `Dictionary`) sigue con FakeBattle.
 - **Mochila** `Bag` (`src/items/bag.gd`, §9.5): GameState ya la crea y la guarda. Comandos de Debug `giveitem <id> [n]` y `bag`.
-- Tests en `tests/ui/`: Dialogue (10), AudioManager (6), Bag (6) y BattleScene (8, tres con el motor real).
+- Tests en `tests/ui/`: Dialogue (10), AudioManager (6), Bag (6), BattleScene (8, tres con el motor real) y validador de arte (2).
 - **Prueba de nivel gráfico** (DIRECTRICES §7, pasos 1 y 4), capturas en `docs/arte/comparativas/`:
   - **Combate de muestra** a 512×384 con los packs: fondo *Field* (pack 10), Pokémon del Generation 9 Pack a 1:1 (frente 192, espalda 288, pies alineados solos), sombra bajo el rival, cajas de datos con nombre, sexo, ★, nivel, estado y barras de PS (con "barra fantasma") y experiencia animadas, botones Luchar / Mochila / Pokémon / Huir de colores con foco animado y pulsación, botones de movimiento con el icono de tipo de Loaky, entrada del shiny con destellos (y el sonido `shiny`, que aún no existe). Sin rotaciones ni escalados no enteros.
   - **Ficha del Pokémon de muestra** (`src/ui/summary/summary_screen.gd`, `SummaryScreen.open(parent, party, index)`): diseño propio con páginas Datos, Notas y Estadísticas, el Pokémon sobre un trozo del fondo de combate, Ball de captura, tipos, naturaleza (con colores en las estadísticas) e iconos animados del equipo.
@@ -195,7 +194,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **Notas:**
 - Equipos y encuentros usan especies **provisionales** (iniciales de Kanto para el rival, Swirlix y Milcery para Manolo, la tabla de ejemplo de la guía en la Ruta 1) hasta que Javier decida la Pokédex (pregunta 5).
-- No subo audio (`.ogg`/`.wav`) hasta que esté Git LFS (pregunta 4). AudioManager funciona sin archivos: avisa una vez y no suena.
+- Sin Git LFS: el audio se sube como binario normal (pregunta 4). Aún no hay pack de sonidos (pregunta 13): AudioManager funciona sin archivos, avisa una vez y no suena; los gritos sí están.
 
 ---
 
@@ -304,9 +303,10 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 23 | A4 → A2 | pokemon_died ya existe; conectar reglas individuales LockeRules (permadeath, EXP cap, fijo, objetos); una muerte por uid, excluir tutoriales. | pendiente |
 | 24 | A4 → A1 | Integrar LockeRules/zone_id: registrar ANTES de combate, resolver encounter_id al capturar/huir/KO; guardar snapshot/familias; registrar inicial poseído, Cementerio/game over. Modo/ranuras/parche ya existen: conservar. | pendiente |
 | 25 | A4 → A3 | Pantallas R.8 leen schema/presets y snapshot LockeRules; §10 conserva API A2. SpoilerLog puro devuelve texto para exportación bajo demanda. Cementerio/zonas/motes/game over. | pendiente |
-| 26 | A1 → A3 | `tools/arte/reglas.json`: (a) quita `assets/tilesets/placeholder/` y `assets/sprites/characters/placeholder/` (ya no existen); (b) `assets/tilesets/exterior/` y `assets/sprites/characters/` son de terceros (sin paleta maestra) y van a la escala de los packs: casillas de 32 px, personajes en cuadros de 64×64, `objects.png` en cuadros de 32 y `effects/` en cuadros cuadrados de 32; (c) los Pokémon que te siguen (`assets/sprites/pokemon/followers*`) son hojas de 256×256 en cuadros de 64. Ahora el validador da 97 errores por esto. | pendiente |
+| 26 | A1 → A3 | `tools/arte/reglas.json`: (a) quita `assets/tilesets/placeholder/` y `assets/sprites/characters/placeholder/` (ya no existen); (b) `assets/tilesets/exterior/` y `assets/sprites/characters/` son de terceros (sin paleta maestra) y van a la escala de los packs: casillas de 32 px, personajes en cuadros de 64×64, `objects.png` en cuadros de 32 y `effects/` en cuadros cuadrados de 32; (c) los Pokémon que te siguen (`assets/sprites/pokemon/followers*`) son hojas de 256×256 en cuadros de 64. Ahora el validador da 97 errores por esto. | hecha (A3): todo eso y además los Pokémon grandes (rejillas de cuadros cuadrados de cualquier lado). 0 errores, y ahora es un test (`tests/ui/test_arte.gd`) |
 | 27 | A1 → A3 | Sonidos que pide el mundo y que AudioManager aún no tiene: SE `jump` (salto de bordillo) y `shiny` (el Pokémon que te sigue aparece y es shiny). | pendiente |
 | 28 | A1 → A4 | Aviso: `data/item_placements.json` cambia cada vez que se añaden o se quitan objetos del suelo (ahora están los de los mapas de muestra), así que el test del parche dorado del randomizer se queda *pending*. Rehazlo cuando puedas (`PANCHITO_UPDATE_GOLDEN=1`). | hecha (A2, 2026-10-05): `golden_clasico_v2.json` rehecho; 0 tests *pending* |
+| 29 | A3 → A2 | El Generation 9 Pack trae a **96×96** (la mitad) 4 sprites de frente: `front/greninjamega`, `front_shiny/greninjamega`, `front_shiny/malamarmega` y `front_shiny/victreebelmega`; en combate se verían a la mitad de tamaño. Están en `pack_exceptions` de `tools/arte/reglas.json` (solo avisan). ¿Hay versión de 192 en `07_generation8_pack` u otro sitio, o los marcas como sin sprite en `pokemon_assets.json`? Si lo arreglas, quítalos de `pack_exceptions`. | pendiente |
 
 ---
 

@@ -1,21 +1,20 @@
 {
-  "_": "Reglas del validador de arte (docs/arte/BIBLIA.md §5 y §11; GUIA Fase A.2). Tamaños de archivo tal como vienen los packs para 512×384, sin reescalar. Gana la regla con la ruta más larga que coincida. size/sizes = tamaño exacto; frame/frames = la imagen es un múltiplo exacto de ese cuadro; multiple_of = múltiplo de ese tamaño. third_party = no se comprueba la paleta (sets de terceros). placeholder = relleno temporal apuntado en docs/arte/seguimiento.md (solo avisa). Una regla sin tamaño (any_size) vale para el arte propio de la interfaz (paneles 9-slice e iconos), que se dibuja a 1× y se ve a ×2 en un UiCanvas: solo se comprueba la paleta.",
+  "_": "Reglas del validador de arte (docs/arte/BIBLIA.md §5 y §11; GUIA Fase A.2). Tamaños de archivo tal como vienen los packs para 512×384, sin reescalar. Gana la regla con la ruta más larga que coincida. size/sizes = tamaño exacto; frame/frames = la imagen es un múltiplo exacto de ese cuadro; multiple_of = múltiplo de ese tamaño; grid = [columnas, filas] de cuadros cuadrados de cualquier lado (los Pokémon grandes del pack traen cuadros de más de 64). third_party = no se comprueba la paleta (sets de terceros). placeholder = relleno temporal apuntado en docs/arte/seguimiento.md (solo avisa). pack_exceptions = archivos que el pack trae con otro tamaño, copiados tal cual (solo avisa, con el motivo). Una regla sin tamaño (any_size) vale para el arte propio de la interfaz (paneles 9-slice e iconos), que se dibuja a 1× y se ve a ×2 en un UiCanvas: solo se comprueba la paleta.",
   "exclude": [
     "res://assets/_fuentes/",
     "res://assets/arte/",
     "res://assets/fonts/"
   ],
   "third_party": [
+    "res://assets/sprites/characters/",
     "res://assets/sprites/pokemon/",
     "res://assets/sprites/items/",
     "res://assets/sprites/ui/battle/backgrounds/",
     "res://assets/sprites/ui/battle/shadows/",
-    "res://assets/sprites/ui/icons/types_spanish.png"
+    "res://assets/sprites/ui/icons/types_spanish.png",
+    "res://assets/tilesets/exterior/"
   ],
-  "placeholder": [
-    "res://assets/tilesets/placeholder/",
-    "res://assets/sprites/characters/placeholder/"
-  ],
+  "placeholder": [],
   "rules": [
     {
       "path": "res://assets/sprites/ui/",
@@ -54,34 +53,6 @@
       "size": [
         288,
         288
-      ]
-    },
-    {
-      "path": "res://assets/sprites/pokemon/icons/",
-      "size": [
-        128,
-        64
-      ]
-    },
-    {
-      "path": "res://assets/sprites/pokemon/icons_shiny/",
-      "size": [
-        128,
-        64
-      ]
-    },
-    {
-      "path": "res://assets/sprites/pokemon/followers/",
-      "size": [
-        256,
-        256
-      ]
-    },
-    {
-      "path": "res://assets/sprites/pokemon/followers_shiny/",
-      "size": [
-        256,
-        256
       ]
     },
     {
@@ -147,6 +118,54 @@
         64,
         532
       ]
+    },
+    {
+      "path": "res://assets/sprites/pokemon/icons/",
+      "grid": [
+        2,
+        1
+      ]
+    },
+    {
+      "path": "res://assets/sprites/pokemon/icons_shiny/",
+      "grid": [
+        2,
+        1
+      ]
+    },
+    {
+      "path": "res://assets/sprites/pokemon/followers/",
+      "grid": [
+        4,
+        4
+      ]
+    },
+    {
+      "path": "res://assets/sprites/pokemon/followers_shiny/",
+      "grid": [
+        4,
+        4
+      ]
+    },
+    {
+      "path": "res://assets/sprites/characters/effects/",
+      "frame": [
+        32,
+        32
+      ]
+    },
+    {
+      "path": "res://assets/sprites/characters/objects.png",
+      "frame": [
+        32,
+        32
+      ]
     }
-  ]
+  ],
+  "pack_exceptions": {
+    "res://assets/sprites/pokemon/front/greninjamega.png": "el Generation 9 Pack lo trae a 96×96; se ve a la mitad de tamaño en combate",
+    "res://assets/sprites/pokemon/front_shiny/greninjamega.png": "el Generation 9 Pack lo trae a 96×96; se ve a la mitad de tamaño en combate",
+    "res://assets/sprites/pokemon/front_shiny/malamarmega.png": "el Generation 9 Pack lo trae a 96×96; se ve a la mitad de tamaño en combate",
+    "res://assets/sprites/pokemon/front_shiny/victreebelmega.png": "el Generation 9 Pack lo trae a 96×96; se ve a la mitad de tamaño en combate"
+  }
 }
