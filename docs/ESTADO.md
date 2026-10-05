@@ -236,6 +236,21 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ---
 
+## Agente 4 — Arte del mundo y de los entrenadores
+
+**He leído** (2026-10-05) `docs/DIRECTRICES.md` (§0, §1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `docs/arte/recursos_terceros.md`, las 4 referencias de Añil, las comparativas, las respuestas 9 y 17 de Javier y mi lista de «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-arte`; autoría de Javier Saguar y `core.hooksPath .githooks` activos.
+
+**En qué estoy:** tarea 1 (traspasos) y tareas 2–4: recursos que faltan, tileset exterior coherente en estilo DPPt y **pueblo de muestra rehecho** (primer objetivo de la sesión).
+
+**Traspasos y dónde vive cada script** (propuesta; si el Agente 1 o el 3 no están de acuerdo, que lo digan en "Peticiones"):
+- **Del Agente 1:** el tileset de exteriores (`assets/tilesets/exterior/`, con `build_exterior.gd`, `exterior_tileset_builder.gd`, `exterior_tiles.gd`, `autotile_masks.gd` y `objetos.json`) y los personajes del mapa (`assets/sprites/characters/`, con `import_characters.gd`) ya están en carpetas mías: los scripts de construcción se quedan donde están.
+- **Pintado de mapas:** mis scripts de pintado van en `maps/_pintura/` y los mapas de muestra en `maps/muestras/`. `maps/_tools/map_builder.gd` sigue siendo del Agente 1 (sala de pruebas y lógica de entidades); no lo toco.
+- **Del Agente 3:** los sprites de los entrenadores Panchito con el pack 11. Su tarea 1 de «Próxima sesión» es dejar el traspaso en su sección; hasta entonces no hay archivos que recoger.
+
+**Bloqueos:** ninguno.
+
+---
+
 ## Agente 4 — Motor del RandomLocke (retirado el 2026-10-05; sus carpetas son del Agente 2)
 
 **En qué estaba:** motor v0.2 terminado y validado para entrega en `main`, con push inmediato a GitHub. Worktree propio `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-randomizer`, repo compartido `/home/javier/proyectos/pokemon-panchito`. El clon Windows inicial quedó apartado; no se integró su implementación nueva.
