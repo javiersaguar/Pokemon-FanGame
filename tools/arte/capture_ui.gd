@@ -37,6 +37,11 @@ func run() -> void:
 		if case_name in ["splash", "notice", "intro", "main_menu"]:
 			screen.set_stage(&"menu" if case_name == "main_menu" else StringName(case_name))
 		await create_timer(0.35).timeout
+	elif case_name == "name":
+		screen = load("res://src/ui/name/name_keyboard.gd").new()
+		screen.kind = &"player"
+		screen.initial = "Javier"
+		root.add_child(screen)
 	else:
 		screen = load("res://src/ui/options/options_screen.gd").new()
 		root.add_child(screen)

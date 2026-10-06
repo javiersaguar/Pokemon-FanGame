@@ -56,6 +56,7 @@ Interfaces públicas entre las partes del juego. Cada sección la define y manti
 | `run` | Shift | B (mantener) |
 | `speed_up` | Tab | — |
 | `debug` | F9 | — |
+| `ui_text_mode` | Tab (solo en el teclado A3; registrada al abrirlo) | — |
 
 - Nunca se leen teclas directamente: siempre acciones.
 - Enter está en `accept` y en `menu` (como en la tabla de la guía). En el mapa se comprueba `menu` antes que `accept`, así que Enter abre el menú y Z o Espacio interactúan. En los menús, Enter acepta.

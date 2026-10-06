@@ -59,7 +59,7 @@ func test_intro_nombres_teclado_y_mapa_sin_debug() -> void:
 	for frame: int in 240:
 		await wait_physics_frames(1)
 		for node: Node in SceneManager.ui_layer.get_children():
-			if node.get_script() == load("res://src/main/identity_fallback.gd"):
+			if node is NameKeyboard:
 				node.entry.text_submitted.emit("Javi" if node.kind == &"player" else "Azul")
 		if Dialogue.is_open:
 			press()
@@ -165,19 +165,22 @@ func test_mote_pendiente_teclado_y_restauracion() -> void:
 	var pokemon := Pokemon.create(&"bulbasaur", 5)
 	assert_eq(GameState.locke.receive(pokemon, {}, true), "pending")
 	await wait_physics_frames(2)
-	assert_true(is_instance_valid(SceneManager._nickname_entry))
-	SceneManager._nickname_entry.entry.text_submitted.emit("  Panchito  ")
+	assert_true(is_instance_valid(_name_entry()))
+	_name_entry().entry.text_submitted.emit("  Panchito  ")
 	await wait_physics_frames(2)
 	assert_eq(GameState.party.get_at(0).nickname, "Panchito")
 	assert_false(GameState.input_locked)
 	assert_eq(GameState.locke.receive(Pokemon.create(&"squirtle", 5), {}, true), "pending")
 	assert_eq(SaveManager.save_game(SLOT), OK)
+	var old_keyboard := _name_entry()
 	SceneManager._leave_game()
 	await wait_physics_frames(2)
+	assert_null(_name_entry(), "el teclado anterior se retira al salir")
+	assert_false(is_instance_valid(old_keyboard))
 	await SceneManager.continue_game(SLOT)
 	await wait_physics_frames(2)
-	assert_true(is_instance_valid(SceneManager._nickname_entry))
-	SceneManager._nickname_entry.entry.text_submitted.emit("Agua")
+	assert_true(is_instance_valid(_name_entry()))
+	_name_entry().entry.text_submitted.emit("Agua")
 	await wait_physics_frames(2)
 	assert_eq(GameState.party.get_at(1).nickname, "Agua")
 	assert_false(GameState.input_locked)
@@ -211,7 +214,7 @@ func test_flujo_randomlocke_modo_ajustes_resumen_intro_sin_debug() -> void:
 	for frame: int in 420:
 		await wait_physics_frames(1)
 		for node: Node in SceneManager.ui_layer.get_children():
-			if node.get_script() == load("res://src/main/identity_fallback.gd"):
+			if node is NameKeyboard:
 				node.entry.text_submitted.emit("Javi" if node.kind == &"player" else "Azul")
 		if Dialogue._choice.is_choosing:
 			if not chose_mode:
@@ -228,3 +231,9 @@ func test_flujo_randomlocke_modo_ajustes_resumen_intro_sin_debug() -> void:
 	assert_true(GameState.flag(&"story_intro_done"))
 	assert_true(DataDB.has_patch())
 	assert_false(GameState.input_locked)
+
+func _name_entry() -> NameKeyboard:
+	for node: Node in SceneManager.ui_layer.get_children():
+		if node is NameKeyboard:
+			return node
+	return null

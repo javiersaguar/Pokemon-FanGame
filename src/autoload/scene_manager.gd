@@ -446,6 +446,8 @@ func start_randomlocke(rom: RomPatch, slot: int, intro: bool = true) -> Error:
 		"families": input.families(rom)}})
 
 func request_text(prompt: String, initial: String = "", placeholder: String = "", allow_cancel: bool = false) -> String:
+	if ResourceLoader.exists("res://src/ui/name/name_keyboard.gd"):
+		return await load("res://src/ui/name/name_keyboard.gd").ask(ui_layer, prompt, initial, allow_cancel, 4096)
 	var entry: Node = load(IDENTITY_FALLBACK_SCRIPT).new()
 	entry.prompt = prompt
 	entry.initial = initial
@@ -472,7 +474,7 @@ func _on_locke_nickname(token: String, pokemon: Dictionary) -> void:
 func resume_pending_nicknames() -> void:
 	if GameState.locke != null and not GameState.locke.pending.is_empty():
 		var token: String = GameState.locke.pending.keys()[0]
-		_on_locke_nickname(token, GameState.locke.pending[token].pokemon)
+		EventBus.locke_nickname_requested.emit(token, GameState.locke.pending[token].pokemon)
 
 func show_flow_status(text: String) -> void:
 	if not is_instance_valid(_flow_status):
@@ -627,6 +629,8 @@ func _enter_game() -> void:
 func _leave_game() -> void:
 	if is_instance_valid(ui_layer):
 		for node: Node in ui_layer.get_children():
+			if node.has_method(&"clear_transient_ui"):
+				node.call(&"clear_transient_ui")
 			if node.get_script() in [load(IDENTITY_FALLBACK_SCRIPT), load("res://src/main/flow_status.gd")]:
 				node.queue_free()
 	_nickname_entry = null

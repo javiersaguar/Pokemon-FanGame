@@ -90,7 +90,7 @@ func format_text(text: String, vars: Dictionary = {}) -> String:
 		"rival": GameState.rival_name,
 	}
 	values.merge(vars, true)
-	return DataDB.resolve_markers(tr(text).format(values))
+	return DataDB.resolve_markers(WorldNames.resolve(tr(text).format(values)))
 
 
 func _begin() -> void:
