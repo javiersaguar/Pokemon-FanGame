@@ -23,6 +23,8 @@ const LONG_TEXT := 12
 			_refresh()
 
 ## Texto a la izquierda (botones de movimiento, con el icono de tipo a la derecha).
+var compact := false
+var content_left := 8.0
 var align_left := false:
 	set(value):
 		align_left = value
@@ -106,12 +108,12 @@ func _refresh() -> void:
 	var id := "gris" if disabled else String(color) + (("_foco2" if _blink_on else "_foco") if focused else "")
 	texture = load(TEXTURE_PATH % id)
 	var dark_text := color == &"claro" or disabled
-	if align_left and text.length() > LONG_TEXT:
+	if align_left and (compact or text.length() > LONG_TEXT):
 		_label.theme_type_variation = &"SmallLabel" if dark_text else &"SmallLightLabel"
 	else:
 		_label.theme_type_variation = &"" if dark_text else &"LightLabel"
 	var lift := 1.0 if _pressed else (-1.0 if focused else 0.0)
-	_label.offset_left = 8.0 if align_left else 0.0
+	_label.offset_left = content_left if align_left else 0.0
 	_label.offset_right = 0.0
 	_label.offset_top = lift
 	_label.offset_bottom = lift

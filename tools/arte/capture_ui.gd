@@ -2,6 +2,7 @@ extends SceneTree
 ## Capturas de pantallas reales, sin modificar sprites ni datos persistentes.
 var screen: Control
 var runtime: Control
+var main: Node
 var case_name := "options"
 
 func _initialize() -> void:
@@ -37,6 +38,28 @@ func run() -> void:
 		if case_name in ["splash", "notice", "intro", "main_menu"]:
 			screen.set_stage(&"menu" if case_name == "main_menu" else StringName(case_name))
 		await create_timer(0.35).timeout
+	elif case_name in ["slots", "pause"]:
+		var manager = root.get_node("SceneManager")
+		var state = root.get_node("GameState")
+		var saves = root.get_node("SaveManager")
+		main = load("res://src/main/main.tscn").instantiate()
+		main.set_script(null)
+		root.add_child(main)
+		manager.register_main(main)
+		await manager.start_new_game(&"", &"", {"slot": 1})
+		state.player_name = "Javier"
+		await RenderingServer.frame_post_draw
+		manager.world_snapshot = manager.capture_screen()
+		saves.save_game(1)
+		var settings = load("res://src/randomizer/randomizer_settings.gd").from_preset("clasico")
+		var rom = load("res://src/randomizer/randomizer.gd").generate(42, settings)
+		await manager.start_randomlocke(rom, 2, false)
+		state.player_name = "Javi"
+		await RenderingServer.frame_post_draw
+		manager.world_snapshot = manager.capture_screen()
+		saves.save_game(2)
+		screen = load("res://src/ui/saves/save_slots_screen.gd" if case_name == "slots" else "res://src/ui/pause_menu/pause_menu.gd").new()
+		manager.push_menu(screen)
 	elif case_name == "name":
 		screen = load("res://src/ui/name/name_keyboard.gd").new()
 		screen.kind = &"player"
@@ -59,5 +82,8 @@ func run() -> void:
 	screen.queue_free()
 	if runtime:
 		runtime.queue_free()
+	if main:
+		root.get_node("SceneManager")._leave_game()
+		main.queue_free()
 	await process_frame
 	quit.call_deferred()

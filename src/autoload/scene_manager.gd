@@ -362,6 +362,8 @@ func capture_screen() -> Image:
 # --- Sustitutos de flujo: reutilizan Dialogue, sin fijar diseño de A3 ---
 
 func choose_slot(overwrite: bool = false) -> int:
+	if ResourceLoader.exists("res://src/ui/saves/save_slots_screen.gd"):
+		return await load("res://src/ui/saves/save_slots_screen.gd").choose(&"new" if overwrite else &"load")
 	var labels := PackedStringArray()
 	for slot: int in range(1, SaveManager.slot_count() + 1):
 		var summary := SaveManager.slot_summary(slot)
