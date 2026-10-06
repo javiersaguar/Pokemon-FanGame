@@ -3,10 +3,13 @@ extends GutTest
 const SLOT := 97
 var main: Node
 var speed: int
+var previous_slots: int
 
 func before_each() -> void:
 	SaveManager.delete_save(SLOT)
 	GameState.reset()
+	previous_slots = SaveManager.slot_count()
+	GameState.world_config["saves"]["slots"] = SLOT
 	speed = Dialogue.text_speed
 	Dialogue.text_speed = 0
 	Dialogue._box.text_speed = 0
@@ -16,6 +19,7 @@ func before_each() -> void:
 	SceneManager.register_main(main)
 
 func after_each() -> void:
+	GameState.world_config["saves"]["slots"] = previous_slots
 	SaveManager.delete_save(SLOT)
 	Dialogue.text_speed = speed
 	Dialogue._box.text_speed = speed
@@ -81,13 +85,17 @@ func test_pausa_guarda_y_continuar_restaura() -> void:
 	SceneManager.open_pause_menu()
 	await wait_physics_frames(3)
 	assert_true(SceneManager.is_menu_open())
-	press(&"move_down")
+	press(&"move_right")
 	await wait_physics_frames(1)
 	press()
-	for frame: int in 30:
+	for frame: int in 60:
 		await wait_physics_frames(1)
-		if Dialogue.is_open:
+		if SceneManager.top_menu() is SaveSlotsScreen:
 			press()
+		elif Dialogue.is_open:
+			press()
+		elif SaveManager.has_save(SLOT):
+			press(&"cancel")
 		if not SceneManager.is_menu_open():
 			break
 	assert_true(SaveManager.has_save(SLOT))

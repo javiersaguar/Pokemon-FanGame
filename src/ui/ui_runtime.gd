@@ -23,6 +23,8 @@ func _ready() -> void:
 	toast.mouse_filter = MOUSE_FILTER_IGNORE
 	canvas.add_child(toast)
 	toast.hide()
+	EventBus.menu_opened.connect(func(_menu: Node) -> void: SceneManager.hide_flow_status())
+	EventBus.menu_closed.connect(_menu_closed)
 	EventBus.always_run_changed.connect(_run_changed)
 	Cutscene.name_requested.connect(_name_requested)
 	EventBus.locke_nickname_requested.connect(_nickname_requested)
@@ -57,6 +59,7 @@ func _name_requested(kind: StringName, initial: String) -> void:
 	# Un listener adicional de pruebas u otra UI puede tomar la petición.
 	if Cutscene.name_requested.get_connections().size() > 2 or is_instance_valid(name_screen):
 		return
+	SceneManager.hide_flow_status()
 	name_screen = NameKeyboard.new()
 	name_screen.kind = kind
 	name_screen.initial = initial
@@ -69,11 +72,13 @@ func _name_requested(kind: StringName, initial: String) -> void:
 	name_screen.queue_free()
 	name_screen = null
 	Cutscene.submit_name(kind, value)
+	_restore_zone.call_deferred()
 
 func _nickname_requested(token: String, pokemon: Dictionary) -> void:
 	if _nickname_active or GameState.locke == null or not GameState.locke.pending.has(token):
 		return
 	_nickname_active = true
+	SceneManager.hide_flow_status()
 	name_screen = NameKeyboard.new()
 	name_screen.kind = &"nickname"
 	name_screen.prompt = "Mote para %s" % DataDB.species(StringName(pokemon.species)).name
@@ -89,6 +94,7 @@ func _nickname_requested(token: String, pokemon: Dictionary) -> void:
 	name_screen = null
 	_nickname_active = false
 	SceneManager.resume_pending_nicknames.call_deferred()
+	_restore_zone.call_deferred()
 
 func clear_transient_ui() -> void:
 	_generation += 1
@@ -99,3 +105,16 @@ func clear_transient_ui() -> void:
 		keyboard.queue_free()
 	_nickname_active = false
 	toast.hide()
+
+func load_from_pause(slot: int, pause: Control) -> void:
+	var error := await SceneManager.continue_game(slot)
+	if error != OK and is_instance_valid(pause):
+		await Dialogue.say("No se pudo cargar: %s." % error_string(error))
+		if is_instance_valid(pause): pause.run.call_deferred()
+
+func _menu_closed(_menu: Node) -> void:
+	_restore_zone.call_deferred()
+
+func _restore_zone() -> void:
+	if GameState.in_game and not SceneManager.is_menu_open() and not is_instance_valid(name_screen):
+		SceneManager.update_zone_indicator()

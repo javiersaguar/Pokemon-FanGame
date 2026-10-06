@@ -23,7 +23,7 @@ static func credits_text() -> String:
 	for line: String in FileAccess.get_file_as_string("res://CREDITOS.md").split("\n"):
 		if line.begins_with(">") or line.begins_with("|---") or line == "# Créditos":
 			continue
-		lines.append(line.replace("#", "").replace("**", "").replace("`", "").replace("|", " · ").strip_edges())
+		lines.append(line.replace("—", "-").replace("#", "").replace("**", "").replace("`", "").replace("|", " / ").strip_edges())
 	return "\n".join(lines)
 
 func _process(delta: float) -> void:
