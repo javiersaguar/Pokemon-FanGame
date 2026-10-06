@@ -50,6 +50,8 @@ var _turn_actions: Dictionary = {}
 var _dead_uids: Dictionary = {}
 ## Índice del rival que entrará tras un aviso de modo Cambio.
 var _shift_foe_index := -1
+## Acciones ya elegidas en un doble, por slot del jugador, antes de resolver el turno.
+var _double_chosen: Dictionary = {}
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -63,8 +65,10 @@ func _init(battle_setup: BattleSetup) -> void:
 	result.seed = seed_value
 	_sides.append(BattleSide.new(PLAYER, setup.player_party))
 	_sides.append(BattleSide.new(FOE, setup.foe_party))
-	_sides[PLAYER].active.append(null)
-	_sides[FOE].active.append(null)
+	var slots := 2 if setup.format == BattleSetup.Format.DOUBLE else 1
+	for _i: int in slots:
+		_sides[PLAYER].active.append(null)
+		_sides[FOE].active.append(null)
 
 
 # --- API pública ---
@@ -86,7 +90,11 @@ func submit(action: BattleAction) -> Array[BattleEvent]:
 	request = null
 	match req.kind:
 		BattleRequest.Kind.ACTION:
-			_begin_turn(action)
+			if is_double():
+				_double_chosen[req.slot] = action
+				_request_double_slot()
+			else:
+				_begin_turn(action)
 		BattleRequest.Kind.SWITCH:
 			_resolve_switch_request(req, action)
 		BattleRequest.Kind.LEARN_MOVE:
@@ -99,7 +107,18 @@ func is_over() -> bool:
 
 
 func active(side_index: int, slot: int = 0) -> Battler:
-	return _sides[side_index].active[slot]
+	var act := _sides[side_index].active
+	if slot < 0 or slot >= act.size():
+		return null
+	return act[slot]
+
+
+func is_double() -> bool:
+	return setup.format == BattleSetup.Format.DOUBLE
+
+
+func slot_count() -> int:
+	return 2 if is_double() else 1
 
 
 func party(side_index: int) -> Array[Pokemon]:
@@ -213,6 +232,10 @@ func _step_intro() -> void:
 		push_error("BattleEngine: un bando no tiene ningún Pokémon que pueda luchar.")
 		_finish(BattleResult.LOSE if player_index < 0 else BattleResult.WIN)
 		return
+	if is_double():
+		_intro_doubles()
+		_queue.append(_step_next_request)
+		return
 	if setup.is_wild():
 		_put_in(FOE, foe_index, true)
 		_msg(tr("¡Un %s salvaje apareció!") % party(FOE)[foe_index].display_name(), "wild_appear")
@@ -223,7 +246,40 @@ func _step_intro() -> void:
 	_queue.append(_step_next_request)
 
 
+func _intro_doubles() -> void:
+	var foes := _leading_indexes(FOE)
+	var players := _leading_indexes(PLAYER)
+	if foes.is_empty() or players.is_empty():
+		push_error("BattleEngine: un bando no tiene ningún Pokémon que pueda luchar.")
+		_finish(BattleResult.LOSE if players.is_empty() else BattleResult.WIN)
+		return
+	if setup.is_wild():
+		for i: int in foes.size():
+			_put_in(FOE, foes[i], true, i)
+			_msg(tr("¡Un %s salvaje apareció!") % party(FOE)[foes[i]].display_name(), "wild_appear")
+	else:
+		_msg(tr("¡%s te desafía!") % _trainer_name(), "challenge")
+		for i: int in foes.size():
+			_send_out(FOE, foes[i], i)
+	for i: int in players.size():
+		_send_out(PLAYER, players[i], i)
+
+
+func _leading_indexes(side_index: int) -> Array[int]:
+	var out: Array[int] = []
+	for i: int in party(side_index).size():
+		if party(side_index)[i].is_fainted():
+			continue
+		out.append(i)
+		if out.size() == slot_count():
+			break
+	return out
+
+
 func _step_next_request() -> void:
+	if is_double():
+		_request_double_slot()
+		return
 	var b := active(PLAYER)
 	var forced := _forced_action(b)
 	if forced != null:
@@ -242,31 +298,64 @@ func _step_next_request() -> void:
 	request = r
 
 
+## Pide la acción del siguiente Pokémon del jugador en un doble. Si ya están todas, resuelve el turno.
+func _request_double_slot() -> void:
+	for slot: int in slot_count():
+		if _double_chosen.has(slot):
+			continue
+		var b := active(PLAYER, slot)
+		if b == null or b.is_fainted():
+			continue
+		var forced := _forced_action(b)
+		if forced != null or (setup.ally_ai and slot == 1):
+			_double_chosen[slot] = forced if forced != null else BattleAI.choose_action(self, PLAYER, slot, setup.ai_level)
+			continue
+		var trapped := _is_trapped(b)
+		var r := BattleRequest.new()
+		r.kind = BattleRequest.Kind.ACTION
+		r.side = PLAYER
+		r.slot = slot
+		r.party_index = b.party_index
+		r.can_run = setup.is_wild() and setup.can_run and not trapped and slot == 0
+		r.can_switch = _sides[PLAYER].first_able_index() >= 0 and not trapped
+		r.can_use_items = slot == 0 and setup.allow_items and (setup.is_wild() or _locke_item_allowed())
+		r.usable_moves = b.usable_moves()
+		request = r
+		return
+	_begin_turn(null)
+
+
 # --- Turno ---
 
-func _begin_turn(player_action: BattleAction) -> void:
+func _begin_turn(player_action: Variant = null) -> void:
 	turn += 1
 	_emit(BattleEvent.TURN, -1, -1, {"turn": turn})
 	_turn_actions.clear()
 	var entries: Array[Dictionary] = []
 	for side_index: int in [PLAYER, FOE]:
-		var b := active(side_index)
-		if b == null or b.is_fainted():
-			continue
-		var action := _forced_action(b)
-		if action == null:
-			action = _sanitize(b, player_action) if side_index == PLAYER else BattleAI.choose_action(self, side_index, b.slot, setup.ai_level)
-		b.moved_this_turn = false
-		b.damaged_this_turn = false
-		_turn_actions[b] = action
-		entries.append({
-			"battler": b,
-			"action": action,
-			"order": BattleAction.ORDER[action.kind],
-			"priority": _action_priority(b, action),
-			"speed": _speed(b),
-			"tie": rng.randf(),
-		})
+		for slot: int in slot_count():
+			var b := active(side_index, slot)
+			if b == null or b.is_fainted():
+				continue
+			var action := _forced_action(b)
+			if action == null and side_index == PLAYER and _double_chosen.has(slot):
+				action = _sanitize(b, _double_chosen[slot])
+			if action == null and side_index == PLAYER and slot == 0 and player_action != null:
+				action = _sanitize(b, player_action)
+			if action == null:
+				action = BattleAI.choose_action(self, side_index, slot, setup.ai_level)
+			b.moved_this_turn = false
+			b.damaged_this_turn = false
+			_turn_actions[b] = action
+			entries.append({
+				"battler": b,
+				"action": action,
+				"order": BattleAction.ORDER[action.kind],
+				"priority": _action_priority(b, action),
+				"speed": _speed(b),
+				"tie": rng.randf(),
+			})
+	_double_chosen.clear()
 	entries.sort_custom(_entry_goes_first)
 	for e: Dictionary in entries:
 		_queue.append(_step_action.bind(e))
@@ -326,7 +415,7 @@ func _sanitize(b: Battler, action: BattleAction) -> BattleAction:
 
 func _step_action(entry: Dictionary) -> void:
 	var b: Battler = entry["battler"]
-	if _over or b.is_fainted() or active(b.side) != b or b.moved_this_turn:
+	if _over or b.is_fainted() or active(b.side, b.slot) != b or b.moved_this_turn:
 		return
 	var action: BattleAction = entry["action"]
 	match action.kind:
@@ -398,13 +487,13 @@ func _step_end_of_turn() -> void:
 
 ## Una condición al final del turno: descuenta su duración (y se acaba si llega a 0) o hace su efecto.
 func _passive_residual(effect: BattleEffect, battler: Battler) -> void:
-	if battler.is_fainted() or active(battler.side) != battler:
+	if battler.is_fainted() or active(battler.side, battler.slot) != battler:
 		return
 	effect.on_residual(self, battler, {})
 
 
 func _residual_condition(effect: BattleEffect, holder: Variant, state: Dictionary, key: StringName) -> void:
-	if holder is Battler and ((holder as Battler).is_fainted() or active((holder as Battler).side) != holder):
+	if holder is Battler and ((holder as Battler).is_fainted() or active((holder as Battler).side, (holder as Battler).slot) != holder):
 		return
 	if _condition_state(holder, key) != state:
 		return
@@ -419,7 +508,7 @@ func _residual_condition(effect: BattleEffect, holder: Variant, state: Dictionar
 
 @warning_ignore("integer_division")
 func _residual_status(b: Battler) -> void:
-	if b.is_fainted() or active(b.side) != b:
+	if b.is_fainted() or active(b.side, b.slot) != b:
 		return
 	var p := b.pokemon
 	var name := BattleText.cap_name(b, setup.is_wild())
@@ -479,18 +568,24 @@ func _step_check_end() -> void:
 
 
 func _step_player_replacement() -> void:
-	var b := active(PLAYER)
-	if _over or not b.is_fainted() or not _sides[PLAYER].has_able():
+	if _over:
 		return
-	var r := BattleRequest.new()
-	r.kind = BattleRequest.Kind.SWITCH
-	r.side = PLAYER
-	r.slot = b.slot
-	r.party_index = b.party_index
-	r.can_run = setup.is_wild() and setup.can_run
-	r.can_switch = true
-	r.can_use_items = false
-	request = r
+	for slot: int in slot_count():
+		var b := active(PLAYER, slot)
+		if b == null or not b.is_fainted() or _sides[PLAYER].first_able_index() < 0:
+			continue
+		var r := BattleRequest.new()
+		r.kind = BattleRequest.Kind.SWITCH
+		r.side = PLAYER
+		r.slot = b.slot
+		r.party_index = b.party_index
+		r.can_run = setup.is_wild() and setup.can_run
+		r.can_switch = true
+		r.can_use_items = false
+		request = r
+		if is_double():
+			_queue.push_front(_step_player_replacement)
+		return
 
 
 func _resolve_switch_request(req: BattleRequest, action: BattleAction) -> void:
@@ -518,30 +613,36 @@ func _resolve_switch_request(req: BattleRequest, action: BattleAction) -> void:
 	if req.reason != &"":
 		_do_switch(active(PLAYER), index, req.reason)
 	else:
-		_send_out(PLAYER, index)
+		_send_out(PLAYER, index, req.slot)
 
 
 func _step_foe_replacement() -> void:
-	var b := active(FOE)
-	if _over or not b.is_fainted() or not _sides[FOE].has_able():
+	if _over or _sides[FOE].first_able_index() < 0:
 		return
-	var index := BattleAI.choose_replacement(self, FOE)
-	if _shift_prompt():
-		_shift_foe_index = index
-		var next := party(FOE)[index]
-		_msg(tr("¡%s va a sacar a %s!") % [_trainer_name(), next.display_name()])
-		var r := BattleRequest.new()
-		r.kind = BattleRequest.Kind.SWITCH
-		r.reason = &"shift"
-		r.side = PLAYER
-		r.slot = active(PLAYER).slot
-		r.party_index = active(PLAYER).party_index
-		r.can_run = false
-		r.can_switch = true
-		r.can_use_items = false
-		request = r
-		return
-	_send_out(FOE, index)
+	for slot: int in slot_count():
+		var b := active(FOE, slot)
+		if b == null or not b.is_fainted():
+			continue
+		var index := BattleAI.choose_replacement(self, FOE)
+		if index < 0:
+			return
+		if not is_double() and _shift_prompt():
+			_shift_foe_index = index
+			var next := party(FOE)[index]
+			_msg(tr("¡%s va a sacar a %s!") % [_trainer_name(), next.display_name()])
+			var r := BattleRequest.new()
+			r.kind = BattleRequest.Kind.SWITCH
+			r.reason = &"shift"
+			r.side = PLAYER
+			r.slot = active(PLAYER).slot
+			r.party_index = active(PLAYER).party_index
+			r.can_run = false
+			r.can_switch = true
+			r.can_use_items = false
+			request = r
+			return
+		_send_out(FOE, index, slot)
+	return
 
 
 func _shift_prompt() -> bool:
@@ -642,19 +743,19 @@ func _collect_evolutions() -> void:
 
 # --- Cambios ---
 
-func _send_out(side_index: int, index: int) -> void:
+func _send_out(side_index: int, index: int, slot: int = 0) -> void:
 	var p := party(side_index)[index]
 	if side_index == PLAYER:
 		_msg(tr("¡Adelante, %s!") % p.display_name(), "send_out")
 	else:
 		_msg(tr("¡%s sacó a %s!") % [_trainer_name(), p.display_name()], "send_out")
-	_put_in(side_index, index, false)
+	_put_in(side_index, index, false, slot)
 
 
-func _put_in(side_index: int, index: int, wild_appearance: bool) -> void:
+func _put_in(side_index: int, index: int, wild_appearance: bool, slot: int = 0) -> void:
 	var p := party(side_index)[index]
-	var b := Battler.new(p, side_index, 0, index)
-	_sides[side_index].active[0] = b
+	var b := Battler.new(p, side_index, slot, index)
+	_sides[side_index].active[slot] = b
 	var s := p.species()
 	var data := {
 		"party_index": index,
@@ -682,7 +783,7 @@ func _put_in(side_index: int, index: int, wild_appearance: bool) -> void:
 		var mine := active(PLAYER)
 		if mine != null and not mine.is_fainted():
 			_mark_participant(p, mine.pokemon)
-	_emit(BattleEvent.SWITCH_IN, side_index, 0, data)
+	_emit(BattleEvent.SWITCH_IN, side_index, slot, data)
 	var conditions := _sides[side_index].conditions
 	for id: StringName in conditions.keys():
 		var effect := Effects.condition(id)
@@ -996,15 +1097,51 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 	if move.is_status():
 		_apply_status_move(user, target, move, effect)
 	else:
-		_apply_damaging_move(user, target, move, effect)
+		var targets := _hit_targets(user, move)
+		var spread := targets.size() > 1
+		if targets.is_empty():
+			_apply_damaging_move(user, target, move, effect)
+		else:
+			for hit: Battler in targets:
+				_apply_damaging_move(user, hit, move, effect, spread)
 	return true
 
 
-## Objetivo en individuales: el propio usuario para los de su bando o del campo; el rival para el resto.
+## Objetivo: el usuario para los de su bando; en dobles, el slot elegido o el aliado.
+## Si el rival elegido ya no está, el golpe pasa al otro.
 func _move_target(user: Battler, move: MoveData) -> Battler:
-	if move.targets_user() or move.target == &"all":
+	if is_double() and move.target == &"adjacent_ally":
+		return active(user.side, 1 - user.slot)
+	if move.targets_user() or move.target == &"all" or move.target == &"ally_side":
 		return user
-	return _foe_of(user)
+	if not is_double():
+		return _foe_of(user)
+	var chosen := 0
+	var action: BattleAction = _turn_actions.get(user)
+	if action != null:
+		chosen = clampi(action.target_slot, 0, 1)
+	var foe := active(1 - user.side, chosen)
+	if foe == null or foe.is_fainted():
+		foe = active(1 - user.side, 1 - chosen)
+	return foe
+
+
+func _hit_targets(user: Battler, move: MoveData) -> Array[Battler]:
+	var out: Array[Battler] = []
+	if is_double() and move.target in [&"all_adjacent_foes", &"all_adjacent", &"all"]:
+		for slot: int in slot_count():
+			var foe := active(1 - user.side, slot)
+			if foe != null and not foe.is_fainted():
+				out.append(foe)
+		if move.target == &"all_adjacent":
+			var ally := active(user.side, 1 - user.slot)
+			if ally != null and not ally.is_fainted():
+				out.append(ally)
+		return out
+	var one := _move_target(user, move)
+	if one != null:
+		out.append(one)
+	return out
 
 
 ## ¿Lo puede resolver el motor? Los que tienen script (src/battle/effects/moves/) siempre. Los que
@@ -1087,7 +1224,7 @@ func _roll_crit(user: Battler, move: MoveData) -> bool:
 	return ratio > 0 and rng.randi_range(0, CRIT_CHANCES[ratio] - 1) == 0
 
 
-func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect: BattleEffect = null) -> void:
+func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect: BattleEffect = null, spread: bool = false) -> void:
 	var wild := setup.is_wild()
 	var scripted_damage := effect.fixed_damage(self, user, target, move) if effect != null else -1
 	var fixed := scripted_damage >= 0 or move.ohko != &"" or move.level_damage or move.fixed_damage > 0
@@ -1111,6 +1248,7 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		else:
 			crit = _roll_crit(user, move)
 			var opts := _damage_opts(user, target, move, effect, crit)
+			opts["spread"] = spread
 			amount = DamageCalc.calculate(user, target, move, crit, rng.randi_range(0, DamageCalc.ROLLS - 1), opts)
 		total += _damage(target, amount, &"move", effectiveness, crit, move)
 		landed += 1

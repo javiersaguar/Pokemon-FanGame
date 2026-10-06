@@ -893,7 +893,8 @@ setup.fill_from_game_state() / setup.apply_options(options) / setup.is_wild()
 | Campo | Tipo | Notas |
 |-------|------|-------|
 | `kind` | `BattleSetup.Kind.WILD` / `TRAINER` | |
-| `format` | `BattleSetup.Format.SINGLE` / `DOUBLE` | v0.1: solo individual |
+| `format` | `BattleSetup.Format.SINGLE` / `DOUBLE` | `DOUBLE` con `options.double`, o si el entrenador trae `"double": true`. Salen los dos primeros que puedan luchar |
+| `ally_ai` | `bool` | En dobles, el slot 1 del jugador lo juega la IA (compañero). El slot 0 sigue siendo el jugador |
 | `player_party`, `foe_party` | `Array[Pokemon]` | Las fábricas toman el equipo de `GameState.party` |
 | `player_name`, `player_trainer_id` | | De `GameState` |
 | `trainers` | `Array[Dictionary]` | Rivales (vacío en salvajes): `{id, class, class_name, name, display_name, gender, base_money, ai_level, battle_sprite, battle_bgm, intro_bgm, intro_text, lose_text, win_text, items}`. `display_name` = "Vendedor de Chupachups Manolo", con `{rival}` y `{player}` ya sustituidos |
@@ -910,6 +911,7 @@ setup.fill_from_game_state() / setup.apply_options(options) / setup.is_wild()
 
 **`BattleRequest`** (`engine.request`): `kind` (`BattleRequest.Kind.ACTION`, `SWITCH` o `LEARN_MOVE`), `side`, `slot`, `party_index`, `move_id` (en `LEARN_MOVE`), `can_run`, `can_switch`, `can_use_items`, `usable_moves: Array[int]` (índices con PP; vacío = solo puede usar Forcejeo), `reason` (en `SWITCH`: vacío = se ha debilitado; `&"uturn"` = Ida y Vuelta / Voltiocambio / Viraje; `&"batonpass"` = Relevo; `&"shift"` = el rival va a sacar otro y se puede rechazar con `switch_to(-1)`).
 
+- **Dobles** (Fase 9.4): `engine.is_double()` / `slot_count()` (1 o 2). `EngineDriver.info().format` es `&"single"` o `&"double"`, e `info().ally_ai`. Cada turno el motor pide **una acción por Pokémon del jugador** que siga en pie (`request.slot` 0 y luego 1); `EngineDriver.request()` incluye `slot`. `BattleAction.fight(move, target_slot)` elige al rival de ese puesto. Si ese rival ya no está, el golpe pasa al otro. `all_adjacent_foes` golpea a los dos rivales y `all_adjacent` también al aliado; con más de un objetivo el daño va ×0,75. `adjacent_ally` golpea al compañero. La IA elige el rival al que más daño hace. El modo Cambio no pregunta en dobles. Pareja de entrenadores: un solo `BattleSetup` con `format = DOUBLE`, los dos en `trainers` y el equipo rival ya junto. **Agente 3:** la escena tiene que dibujar dos Pokémon por bando (`switch_in.slot`) y repetir el menú de acciones por cada `request.slot`.
 - Si el Pokémon está atrapado (Giro Fuego...), `can_switch` y `can_run` llegan a `false`.
 - Cuando el movimiento del jugador es obligado (segundo turno de Rayo Solar, Golpe, Alboroto, recarga de Hiperrayo), el motor **no pide acción**: resuelve ese turno solo y los eventos llegan en el mismo `submit()`.
 

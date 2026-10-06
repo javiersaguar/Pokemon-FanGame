@@ -10,6 +10,8 @@ extends RefCounted
 
 
 static func choose_action(engine: BattleEngine, side: int, slot: int, level: int) -> BattleAction:
+	if engine.slot_count() > 1:
+		return _choose_double(engine, side, slot, level)
 	var b := engine.active(side, slot)
 	var usable := b.usable_moves()
 	if usable.is_empty():
@@ -45,6 +47,30 @@ static func choose_replacement(engine: BattleEngine, side: int) -> int:
 		if best >= 0:
 			return best
 	return engine.side(side).first_able_index()
+
+
+static func _choose_double(engine: BattleEngine, side: int, slot: int, level: int) -> BattleAction:
+	var b := engine.active(side, slot)
+	var usable := b.usable_moves()
+	if usable.is_empty():
+		return BattleAction.fight(-1)
+	if level <= 0:
+		return BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)])
+	var best_move := usable[0]
+	var best_slot := 0
+	var best_score := -1000000
+	for i: int in usable:
+		var move := b.pokemon.moves[i].data()
+		for foe_slot: int in engine.slot_count():
+			var foe := engine.active(1 - side, foe_slot)
+			if foe == null or foe.is_fainted():
+				continue
+			var score := engine.estimate_damage(b, foe, move) if level < 2 else _score_move(engine, b, foe, move, level)
+			if score > best_score:
+				best_score = score
+				best_move = i
+				best_slot = foe_slot
+	return BattleAction.fight(best_move, best_slot)
 
 
 static func _most_damage(engine: BattleEngine, user: Battler, target: Battler, usable: Array[int]) -> BattleAction:

@@ -11,6 +11,8 @@ const DEFAULT_TRAINER_BGM := &"battle_trainer"
 
 var kind: Kind = Kind.WILD
 var format: Format = Format.SINGLE
+## En dobles, el segundo Pokémon del jugador lo juega la IA (combate con compañero).
+var ally_ai: bool = false
 ## Objetos Pokemon del jugador: el motor los modifica (PS, PP, estado, experiencia...).
 var player_party: Array[Pokemon] = []
 var foe_party: Array[Pokemon] = []
@@ -85,8 +87,8 @@ static func trainer(trainer_id: StringName, options: Dictionary = {}) -> BattleS
 		if p != null:
 			p.original_trainer = str(info["name"])
 			s.foe_party.append(p)
-	if bool(DataDB.trainer(trainer_id).get("double", false)):
-		push_warning("BattleSetup: '%s' es un combate doble; de momento se juega en individual." % trainer_id)
+	if bool(options.get("double", DataDB.trainer(trainer_id).get("double", false))):
+		s.format = Format.DOUBLE
 	s.apply_options(options)
 	return s
 
@@ -157,6 +159,10 @@ func apply_options(options: Dictionary) -> void:
 		seed = int(options["seed"])
 	if options.has("ai_level"):
 		ai_level = int(options["ai_level"])
+	if bool(options.get("double", false)):
+		format = Format.DOUBLE
+	if options.has("ally_ai"):
+		ally_ai = bool(options["ally_ai"])
 	if options.has("next_ace_level"):
 		next_ace_level = int(options["next_ace_level"])
 	if tutorial:

@@ -21,6 +21,8 @@ func info() -> Dictionary:
 		"bgm": setup.bgm,
 		"can_run": setup.can_run,
 		"can_lose": setup.can_lose,
+		"format": &"double" if setup.format == BattleSetup.Format.DOUBLE else &"single",
+		"ally_ai": setup.ally_ai,
 	}
 
 
@@ -32,7 +34,7 @@ func request() -> Dictionary:
 	var r := engine.request
 	if r == null:
 		return {"kind": REQUEST_ACTION}
-	var out := {"party_index": r.party_index, "can_run": r.can_run, "can_switch": r.can_switch,
+	var out := {"party_index": r.party_index, "slot": r.slot, "can_run": r.can_run, "can_switch": r.can_switch,
 		"can_use_items": r.can_use_items, "usable_moves": r.usable_moves}
 	match r.kind:
 		BattleRequest.Kind.SWITCH:

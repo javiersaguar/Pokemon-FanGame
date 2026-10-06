@@ -89,7 +89,7 @@ static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit
 	var stab := not typeless and attacker.has_type(move.type)
 	var burned := physical and attacker.pokemon.status == &"brn" and move.id != &"facade" and not bool(opts.get("ignore_burn", false))
 	var final_mod := chain(opts.get("final", []))
-	return modify_damage(base, roll, crit, stab, effectiveness, burned, false, final_mod, float(opts.get("weather", 1.0)))
+	return modify_damage(base, roll, crit, stab, effectiveness, burned, bool(opts.get("spread", false)), final_mod, float(opts.get("weather", 1.0)))
 
 
 ## Las 16 cantidades posibles, de menor a mayor (como la calculadora de Showdown).

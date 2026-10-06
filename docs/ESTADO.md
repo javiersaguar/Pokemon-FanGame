@@ -149,7 +149,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-06) el aviso de la sesión de 2 agentes y la lista de «Sesión con 2 agentes». Los Agentes 1 y 4 están parados. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hecha la petición 29. Siguiente: contrato de los combates dobles y después el motor.
+**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1 y la 2. Siguiente: Megaevolución (contrato y motor), y después Z, Dinamax y Tera.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -332,7 +332,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 > ⚠️ **Orden de Javier (2026-10-06): esta lista es una sola tarea larga.** **No pares ni termines tu turno entre tarea y tarea** para informar: al cerrar cada una (tests en verde, merge, push y ESTADO al día) **empieza la siguiente directamente**. Solo te detienes si **todas** las que quedan están bloqueadas, o al acabar la 18. Si una tarea es enorme, pártela en entregas con merge y push cada una, pero sin parar.
 
 1. ✅ Petición 29: los 4 sprites de mega que vienen a 96×96. Buscarlos a 192 en el pack 07; si no están, documentarlos como excepción conocida.
-2. **Fase 9.4, combates dobles:** primero el **contrato** en `contratos.md` (objetivos, eventos y peticiones nuevos) con aviso al Agente 3; después el motor: objetivos y redirección, daño repartido ×0,75, movimientos a aliados, parejas de entrenadores (los `TrainerNPC` en pareja ya existen), combate con compañero y dobles salvajes, más la IA adaptada a dobles. Tests.
+2. ✅ **Fase 9.4, combates dobles** (2026-10-06): contrato en §8.5 y petición 47. Motor: dos puestos, objetivo y redirección, daño ×0,75, aliado, compañero con IA, salvajes dobles y entrenador con `"double": true`. La pareja de `TrainerNPC` sigue luchando seguida hasta que el mundo use un `BattleSetup` doble (petición 47).
 3. **Fase 9.6, Megaevolución** (Megapiedras, Megapulsera, una vez por combate, forma, habilidad y estadísticas nuevas, y evento para la escena), con contrato publicado antes. Después **Z, Dinamax y Tera**, en ese orden, como opcionales detrás de un ajuste.
 4. **Fase 14.3, crianza (lógica pura):** guardería, compatibilidad por grupo huevo y sexo, huevos por pasos, herencia (IVs con Lazo Destino, naturaleza con Piedra Eterna, movimientos huevo, habilidad oculta, Ball), eclosión con Cuerpo Llama, Método Masuda y Pokérus. API documentada para el mundo (pasos) y la interfaz.
 5. **Evoluciones y movimientos (Fases 6.2, 6.3):** todos los métodos de evolución que necesiten las especies en uso (hora, amistad, objeto equipado, lugar, movimiento conocido, clima...), recordador de movimientos, tutores y el **conjunto de MT** (qué movimientos son MT y su compatibilidad, sin decidir dónde se consiguen: eso es de Javier).
@@ -478,6 +478,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 43 | A1 → A3 | FieldEncounters.start(map,old_rod/good_rod/super_rod/headbutt/rock_smash,tile) preparado para los objetos de campo; tablas existentes de ruta tienen esas listas vacías. StaticEncounterEvent consulta DataDB.static_encounter; WorldRoamers.release(id,static_id,maps) y salud/mapa guardados. Necesita datos/progreso de historia; no invento especies/puntos de entrega. Ambiente MapData.ambient + world.weather.presets.ambient, AudioManager existente. | pendiente datos/UI/audio |
 | 44 | A1 → A3 | Tarea 9 lista con sustituto `src/main/randomlocke_fallback.gd`: RandomlockeJob.start(settings,seed), finished(rom), SceneManager.start_randomlocke(rom,slot,intro) → Error. EventBus.locke_zone_entered(zone_id,status) al cargar/cambiar reglas; al conectar tu presentación se omite indicador provisional. Teclado de motes cede a otro listener locke_nickname_requested, pendientes reanudados tras Continue. ROM ausente/hash distinto/ref inválida se rechaza antes de entrar. Sustituye pantallas con tu estilo; no regeneres ROM al cargar. | pendiente pantallas A3 |
 | 46 | A3 → A1 | Conexión pequeña de `UiRuntime` en `SceneManager.register_main()` y opción Opciones en el menú de pausa provisional; usa GameState.set_always_run y su señal sin cambiar reglas ni guardado. Tests de UI/combate y suite completa. | hecha por A3 en ausencia de A1/A4 (revisar al volver) |
+| 47 | A2 → A3 | **Dobles listos en el motor** (`contratos.md` §8.5). `EngineDriver.info().format` (`single`/`double`) y `ally_ai`. Cada turno hay un `request` por Pokémon vivo, con `slot`. `fight` lleva `target_slot`. `switch_in.slot` dice el puesto. Hay que dibujar dos por bando y repetir el menú. El modo Cambio no pregunta en dobles. Cuando una pareja de `TrainerNPC` deba luchar junta, el mundo tiene que pasar un `BattleSetup` con `format = DOUBLE` y los dos entrenadores. | pendiente |
 | 45 | A1 → A2 | Diagnóstico conjunto de dependencias GDScript: el smoke reducido `godot --headless --path . -- --smoke-maps=all` termina con 89 ObjectDB/62 recursos; --verbose enumera clases de datos/Pokémon/Randomizer/combate/mundo y constantes de Character, ningún Node. Suite completa, CLI normal y captura de flujo limpios. Repro/informe en docs/mapas/robustez.md. No modifico tus clases para romper dependencias sin contrato; revisar ciclo/orden de carga, conservando API y ROM. | pendiente diagnóstico |
 
 ---
@@ -545,6 +546,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-06 | A2 | §8.5: combates dobles. `format`, `ally_ai`, `request.slot`, `target_slot`, daño repartido ×0,75, aliado y redirección. `EngineDriver.info().format`. |
 | 2026-10-05 | A4 | Tileset de exteriores: fuentes nuevas `SRC_CASAS_DPPT` (6, casas de DPPt) y `SRC_VALLAS` (7, valla de madera: objetos `valla_izquierda`, `valla` y `valla_derecha` de 1×2 casillas, se colocan en su casilla de abajo) y `ExteriorTiles.PAVING_STONE` (calle de baldosas 3×3). Las casas se ordenan (y-sort) por la fila de su puerta y no chocan por debajo de ella. Los verdes de los packs 02, 03 y 04 llevan un retoque de paleta. Sombra de los personajes en `assets/sprites/characters/effects/sombra.png`. |
 | 2026-10-05 | A2 | §8.5: IA de niveles 2 a 4 (`BattleAI`). El reemplazo del nivel 3 elige al que más daño haría. |
 | 2026-10-05 | A2 | §8.7: habilidades y objetos equipados en el combate (fase 9.5) y trampas Púas, Púas Tóxicas y Trampa Rocas. |
