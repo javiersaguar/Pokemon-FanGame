@@ -393,7 +393,7 @@ func run_title_fallback() -> void:
 			1:
 				var slot := await choose_slot(true)
 				if slot > 0:
-					await load("res://src/main/randomlocke_fallback.gd").new().run(slot)
+					await load("res://src/ui/randomlocke/randomlocke_flow.gd").new().run(slot)
 			2:
 				var slot := await choose_slot()
 				if slot > 0:

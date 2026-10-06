@@ -52,6 +52,7 @@ func _init() -> void:
 	_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	_label.mouse_filter = MOUSE_FILTER_IGNORE
+	_label.clip_text = true
 	add_child(_label)
 
 
@@ -114,7 +115,7 @@ func _refresh() -> void:
 		_label.theme_type_variation = &"" if dark_text else &"LightLabel"
 	var lift := 1.0 if _pressed else (-1.0 if focused else 0.0)
 	_label.offset_left = content_left if align_left else 0.0
-	_label.offset_right = 0.0
+	_label.offset_right = -4.0
 	_label.offset_top = lift
 	_label.offset_bottom = lift
 	if _type_icon:

@@ -43,7 +43,7 @@ func _process(delta: float) -> void:
 
 # Las transiciones pueden liberar el título; su corrutina vive aquí.
 func new_from_title(slot: int, title: Control) -> void:
-	var flow: RefCounted = load("res://src/main/randomlocke_fallback.gd").new()
+	var flow: RefCounted = load("res://src/ui/randomlocke/randomlocke_flow.gd").new()
 	await flow.run(slot)
 	if is_instance_valid(title) and not GameState.in_game:
 		title.set_stage(&"menu")

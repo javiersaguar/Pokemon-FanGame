@@ -14,7 +14,21 @@ func run() -> void:
 		if arg.begins_with("--screen="):
 			case_name = arg.trim_prefix("--screen=")
 	root.size = Vector2i(512, 384)
-	if case_name.begins_with("motion_"):
+	if case_name in ["locke_mode","locke_settings","locke_generating","locke_summary"]:
+		if case_name == "locke_mode":
+			screen = load("res://src/ui/widgets/choice_screen.gd").new()
+			screen.caption = "Modo de partida"
+			screen.choices = ["Normal","RandomLocke"]
+			screen.notes = ["Aventura con los datos originales del juego.","Una ROM por semilla y reglas configurables."]
+		elif case_name == "locke_settings": screen = load("res://src/ui/randomlocke/randomlocke_settings_screen.gd").new()
+		elif case_name == "locke_generating": screen = load("res://src/ui/randomlocke/randomlocke_generating_screen.gd").new()
+		else:
+			screen = load("res://src/ui/randomlocke/randomlocke_summary_screen.gd").new()
+			var patch_class = load("res://src/randomizer/randomizer.gd")
+			var settings_class = load("res://src/randomizer/randomizer_settings.gd")
+			screen.rom = patch_class.generate(713,settings_class.from_preset("clasico"))
+		root.add_child(screen)
+	elif case_name.begins_with("motion_"):
 		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
 		root.add_child(screen)
 		screen._background.set_environment(&"grass")
