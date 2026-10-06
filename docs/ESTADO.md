@@ -149,7 +149,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-06) el aviso de la sesión de 2 agentes y la lista de «Sesión con 2 agentes». Los Agentes 1 y 4 están parados. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1, la 2 y la 3 (Mega, Z, Dinamax y Tera; sin Gigamax ni Estelar). Siguiente: crianza.
+**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1 a la 4. Siguiente: evoluciones y movimientos.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -339,7 +339,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 1. ✅ Petición 29: los 4 sprites de mega que vienen a 96×96. Buscarlos a 192 en el pack 07; si no están, documentarlos como excepción conocida.
 2. ✅ **Fase 9.4, combates dobles** (2026-10-06): contrato en §8.5 y petición 47. Motor: dos puestos, objetivo y redirección, daño ×0,75, aliado, compañero con IA, salvajes dobles y entrenador con `"double": true`. La pareja de `TrainerNPC` sigue luchando seguida hasta que el mundo use un `BattleSetup` doble (petición 47).
 3. ✅ **Fase 9.6** (2026-10-06): Megaevolución (petición 48), movimientos Z (49, efectos de estado que no son subida, curación o quitar bajadas pendientes), Dinamax (50, sin Gigamax) y Teratipo (51, sin Estelar). Los tres últimos solo si el combate los activa.
-4. **Fase 14.3, crianza (lógica pura):** guardería, compatibilidad por grupo huevo y sexo, huevos por pasos, herencia (IVs con Lazo Destino, naturaleza con Piedra Eterna, movimientos huevo, habilidad oculta, Ball), eclosión con Cuerpo Llama, Método Masuda y Pokérus. API documentada para el mundo (pasos) y la interfaz.
+4. ✅ **Fase 14.3, crianza** (2026-10-06): `Daycare` en el contrato. Grupos, sexo, Ditto, especie base, pasos, Lazo Destino, Piedra Eterna, Ball, movimientos huevo, Cuerpo Llama, Masuda (lo dice quien llama) y Pokérus. Los bebés de incienso quedan pendientes.
 5. **Evoluciones y movimientos (Fases 6.2, 6.3):** todos los métodos de evolución que necesiten las especies en uso (hora, amistad, objeto equipado, lugar, movimiento conocido, clima...), recordador de movimientos, tutores y el **conjunto de MT** (qué movimientos son MT y su compatibilidad, sin decidir dónde se consiguen: eso es de Javier).
 6. **RandomLocke:** exportar los spoilers a `user://randomlocke/`, conectar la probabilidad shiny de sus ajustes y meter las MT y tutores de la tarea 5 en el generador. Siempre en verde.
 7. **Fase 20.2:** herramienta de simulación en masa (equipo esperado contra cada líder, porcentaje de victorias) en `tools/`.
@@ -562,6 +562,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-06 | A2 | `Daycare`: compatibilidad, huevo, herencia, Cuerpo Llama, Masuda y Pokérus. Los bebés de incienso quedan pendientes. |
 | 2026-10-06 | A2 | §8.5: Teratipo detrás de `options.tera`. Un solo tipo, STAB ×2 si ya lo tenía y ×1,5 el original. Sin Estelar. Evento `tera`. |
 | 2026-10-06 | A2 | §8.5: Dinamax detrás de `options.dynamax`. Tres turnos, PS al doble, movimiento Max y su efecto de campo. Sin Gigamax. Eventos `dynamax` y `dynamax_end`. |
 | 2026-10-06 | A2 | §8.5: movimientos Z, detrás de `options.z` o la Pulsera Z. `z_moves`, `BattleAction.z`, evento `zmove`. Una vez por bando. Efectos de estado que no son subida, curación o quitar bajadas, pendientes. |

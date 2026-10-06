@@ -832,6 +832,8 @@ p.move_ids() / p.has_move(id) / p.try_learn(id) -> bool / p.replace_move(index, 
 p.evolve_to(species_id) -> void           # conserva el daño recibido y el mote
 ```
 
+**`Daycare`** (Fase 14.3, `src/pokemon/daycare.gd`): `deposit` / `withdraw` (dos plazas). `compatible(a, b)`, `egg_percent` (70/50/20) y `egg_species` (la base de la madre, o del que no es Ditto). `walk(pasos, cuerpo_llama)` cuenta doble con Cuerpo Llama y cada 256 pasos tira el porcentaje. `take_egg(masuda := false)` hereda 3 IVs (5 con Lazo Destino), la naturaleza si hay Piedra Eterna, la habilidad de la madre (80 %, u oculta al 60 % si ella la tiene), la Ball de la madre (50/50 si son la misma especie) y los movimientos huevo del padre. `shiny_rolls(masuda)` es 6 o 1: el idioma no está en el Pokémon, lo dice quien llama. `spread_pokerus(party, rng)` contagia al de al lado (1/3). Los bebés que dependen de un incienso quedan pendientes.
+
 **`EvolutionRules`** (estática): `level_up_target(p, context := {}) -> StringName` (al subir de nivel o al acabar un combate) e `item_target(p, item_id, context := {}) -> StringName` (`&""` = no evoluciona). `level_up_evolution(p, context)` devuelve la entrada completa y `evolve(p, evo)` la aplica (y gasta el objeto equipado si era `level_hold`). `shed_species(from, to)` = Shedinja al evolucionar Nincada. `context`: `{time: Clock.period(), party_species: Array[StringName], party_types: Array[StringName], weather: StringName, location: StringName}`.
 
 **Módulos de GameState** (`Party`, `PCStorage`, `Pokedex`): cumplen la sección 2 (`new()`, `to_dict()`, `from_dict()`).
