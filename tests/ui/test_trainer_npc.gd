@@ -40,6 +40,11 @@ func after_each() -> void:
 	SceneManager.player = _saved_player
 	Dialogue.text_speed = _saved_speed
 	GameState.clear_input_locks()
+	# El último aceptar aún suena al acabar: dejar al servidor liberar las voces.
+	for voice: AudioStreamPlayer in AudioManager._se:
+		voice.stop()
+		voice.stream = null
+	await wait_process_frames(2)
 
 
 func _trainer(id: StringName, tile: Vector2i, facing: Vector2i, sight := 4) -> TrainerNPC:

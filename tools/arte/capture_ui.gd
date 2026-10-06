@@ -14,7 +14,20 @@ func run() -> void:
 		if arg.begins_with("--screen="):
 			case_name = arg.trim_prefix("--screen=")
 	root.size = Vector2i(512, 384)
-	if case_name in ["shift", "forced"]:
+	if case_name.begins_with("transition_"):
+		if case_name == "transition_before":
+			screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
+			root.add_child(screen)
+			screen._background.set_environment(&"grass")
+			screen._open_curtain(false)
+			await create_timer(0.15).timeout
+		else:
+			screen = load("res://src/battle/scene/battle_entry_transition.gd").new()
+			screen.kind = StringName(case_name.trim_prefix("transition_"))
+			screen.info = {"transition": screen.kind}
+			root.add_child(screen)
+			screen.set_progress(0.5)
+	elif case_name in ["shift", "forced"]:
 		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
 		screen.fast = true
 		root.add_child(screen)

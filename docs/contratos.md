@@ -1131,6 +1131,7 @@ driver.item_needs_target(item_id) -> bool / can_use_item(item_id, party_index) -
 - La escena comprueba antes de enviar: no deja huir de un entrenador (`request.can_run`), ni usar un objeto sin efecto (`can_use_item`), ni elegir un movimiento sin PP; sin PP en ninguno, envía Forcejeo.
 - La música de victoria empieza al debilitarse el último Pokémon del rival (si en esa tanda llega `end` con `win`).
 - `BattleScene.fast = true` quita animaciones y esperas (tests).
+- `BattleEntryTransition.play(parent, info, quick)` presenta originales EBDX (1,2 s; líder 1,5 s). `info.transition` puede elegir `wild`, `trainer` o `leader`; si no, lee `kind` y `leader_type` del entrenador configurado. No deduce un líder de su nombre. Escala nativa, posiciones enteras y sin rotación; `quick` no crea nodos. Manifiesto reproducible: `data/battle_motion_assets.json`.
 - Sprites: `assets/sprites/pokemon/<front|back>[_shiny]/<especie>.png` del Generation 9 Pack, a 1:1 (frente 192, espalda 288; los pies se alinean solos con las filas vacías de abajo), `assets/sprites/trainers/player_back_<male|female>.png` y fondos `assets/sprites/ui/battle/backgrounds/<archivo>.png` según el entorno (`BattleBackground.FILES`). Sin sprite de entrenador no se enseña ninguno; sin sprite de Pokémon sale uno provisional.
 
 ### 9.4 Interfaz común

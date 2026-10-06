@@ -525,7 +525,9 @@ func _intro(start_events: Array) -> void:
 		var sprite := PlaceholderArt.load_texture(str(trainer.get("battle_sprite", "")))
 		_set_trainer_texture(_foe_trainer, sprite)
 		_foe_trainer.visible = sprite != null
-	await _open_curtain(trainer.is_empty())
+	_curtain_a.hide()
+	_curtain_b.hide()
+	await BattleEntryTransition.play(self, _info, fast)
 	var player_home := _player_trainer.position
 	_player_trainer.position.x = OFFSCREEN_RIGHT
 	var foe_home := _foe_trainer.position

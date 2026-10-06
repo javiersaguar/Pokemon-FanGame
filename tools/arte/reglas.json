@@ -13,7 +13,8 @@
     "res://assets/sprites/ui/battle/backgrounds/",
     "res://assets/sprites/ui/battle/shadows/",
     "res://assets/sprites/ui/icons/types_spanish.png",
-    "res://assets/tilesets/exterior/"
+    "res://assets/tilesets/exterior/",
+    "res://assets/sprites/ui/battle/transitions/"
   ],
   "placeholder": [],
   "rules": [
@@ -160,6 +161,55 @@
       "frame": [
         32,
         32
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/transitions/wild.png",
+      "size": [
+        512,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/transitions/trainer.png",
+      "size": [
+        640,
+        480
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/transitions/leader.png",
+      "size": [
+        512,
+        384
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/transitions/vs.png",
+      "size": [
+        122,
+        108
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/transitions/ball.png",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/transitions/streak.png",
+      "size": [
+        512,
+        84
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/transitions/leader_shine.png",
+      "size": [
+        346,
+        346
       ]
     }
   ],

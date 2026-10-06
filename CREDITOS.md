@@ -70,6 +70,8 @@ Copiados del pack sin modificar ni reescalar, solo los archivos que se usan.
 
 Los nombres, textos y datos de los Pokémon son propiedad de Nintendo, Game Freak y The Pokémon Company; las fuentes anteriores solo los recopilan.
 
+Las transiciones de entrada del combate usan **Elite Battle: DX**, de **Luka S.J.**, conforme a sus [créditos completos](https://luka-sj.com/essentials/resources/EBDX). Copias nativas de Forest/Default/Gold/Common/Elite en `assets/sprites/ui/battle/transitions/`, sin escalar ni rotar; el fondo 640×480 de Default se encuadra en 512×384. Originales, dimensiones y hashes en `data/battle_motion_assets.json`; reproducción con `tools/arte/import_battle_media.py`.
+
 ## Audio
 
 | Recurso | Autor | Licencia o permiso | Enlace | En el repo |
