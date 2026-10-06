@@ -1,13 +1,14 @@
 class_name PauseMenu
 extends MenuScreen
-const LABELS := ["Volver", "Guardar", "Cargar partida", "Menú inicial", "Equipo", "Mochila", "Pokédex", "Opciones", "PC", "Tarjeta", "Mapa"]
-const SCREENS := {4: &"PartyScreen", 5: &"BagScreen", 6: &"PokedexScreen", 8: &"PCScreen", 9: &"TrainerCardScreen", 10: &"RegionMapScreen"}
+const LABELS := ["Volver", "Guardar", "Cargar partida", "Menú inicial", "Equipo", "Mochila", "Pokédex", "Opciones", "PC", "Tarjeta", "Mapa", "Cementerio"]
+const SCREENS := {4: &"PartyScreen", 5: &"BagScreen", 6: &"PokedexScreen", 8: &"PCScreen", 9: &"TrainerCardScreen", 10: &"RegionMapScreen", 11: &"CemeteryScreen"}
 
 func _ready() -> void:
 	heading.text = "Pausa / %s" % GameState.player_name
 	menu = make_menu(LABELS, Rect2(14, 35, 230, 132), 2)
 	for index: int in SCREENS:
 		menu.set_disabled(index, GlobalClasses.find(SCREENS[index]) == null)
+	menu.set_disabled(11,not GameState.is_randomlocke())
 	run.call_deferred()
 
 func run() -> void:

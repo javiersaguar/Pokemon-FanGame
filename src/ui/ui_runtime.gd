@@ -1,6 +1,8 @@
 class_name UiRuntime
 extends Control
 ## Avisos y peticiones de UI que deben vivir también fuera del menú inicial.
+var zone: LockeZoneIndicator
+var _game_over_active := false
 var canvas: UiCanvas
 var toast: Label
 var _remaining := 0.0
@@ -23,7 +25,13 @@ func _ready() -> void:
 	toast.mouse_filter = MOUSE_FILTER_IGNORE
 	canvas.add_child(toast)
 	toast.hide()
-	EventBus.menu_opened.connect(func(_menu: Node) -> void: SceneManager.hide_flow_status())
+	zone = LockeZoneIndicator.new()
+	canvas.add_child(zone)
+	EventBus.locke_zone_entered.connect(_zone_entered)
+	EventBus.locke_game_over.connect(_game_over_requested)
+	EventBus.menu_opened.connect(func(_menu: Node) -> void:
+		SceneManager.hide_flow_status()
+		zone.hide())
 	EventBus.menu_closed.connect(_menu_closed)
 	EventBus.always_run_changed.connect(_run_changed)
 	Cutscene.name_requested.connect(_name_requested)
@@ -33,13 +41,15 @@ func _run_changed(enabled: bool) -> void:
 	toast.text = "Correr: %s" % ("activado" if enabled else "desactivado")
 	toast.show()
 	_remaining = 2.0
+	zone.hide()
 	# Los menús se añaden después: el aviso debe seguir siendo legible encima.
 	get_parent().move_child(self, -1)
 
 func _process(delta: float) -> void:
 	_remaining -= delta
-	if _remaining <= 0.0:
+	if _remaining <= 0.0 and toast.visible:
 		toast.hide()
+		_restore_zone()
 
 # Las transiciones pueden liberar el título; su corrutina vive aquí.
 func new_from_title(slot: int, title: Control) -> void:
@@ -60,6 +70,7 @@ func _name_requested(kind: StringName, initial: String) -> void:
 	if Cutscene.name_requested.get_connections().size() > 2 or is_instance_valid(name_screen):
 		return
 	SceneManager.hide_flow_status()
+	zone.hide()
 	name_screen = NameKeyboard.new()
 	name_screen.kind = kind
 	name_screen.initial = initial
@@ -79,6 +90,7 @@ func _nickname_requested(token: String, pokemon: Dictionary) -> void:
 		return
 	_nickname_active = true
 	SceneManager.hide_flow_status()
+	zone.hide()
 	name_screen = NameKeyboard.new()
 	name_screen.kind = &"nickname"
 	name_screen.prompt = "Mote para %s" % DataDB.species(StringName(pokemon.species)).name
@@ -104,6 +116,8 @@ func clear_transient_ui() -> void:
 		keyboard._finish("") # Despierta la corrutina anterior sin modificar identidad/captura.
 		keyboard.queue_free()
 	_nickname_active = false
+	_game_over_active = false
+	zone.hide()
 	toast.hide()
 
 func load_from_pause(slot: int, pause: Control) -> void:
@@ -118,3 +132,26 @@ func _menu_closed(_menu: Node) -> void:
 func _restore_zone() -> void:
 	if GameState.in_game and not SceneManager.is_menu_open() and not is_instance_valid(name_screen):
 		SceneManager.update_zone_indicator()
+
+func _zone_entered(zone_id: String, status: String) -> void:
+	SceneManager.hide_flow_status()
+	var visible_here := GameState.in_game and GameState.locke != null and not SceneManager.is_menu_open() and not is_instance_valid(name_screen) and _remaining <= 0.0
+	if not visible_here:
+		zone.hide()
+		return
+	var rules := GameState.locke.rules.rules()
+	var limit := bool(rules.get("locke_rules",true)) and bool(rules.get("first_encounter",true))
+	var map_name := SceneManager.current_map.get_display_name() if is_instance_valid(SceneManager.current_map) else zone_id
+	zone.set_zone(map_name,status,limit)
+	zone.show()
+func _game_over_requested(snapshot: Dictionary) -> void:
+	if _game_over_active: return
+	_game_over_active = true
+	var generation := _generation
+	while SceneManager.in_battle:
+		await get_tree().process_frame
+		if generation != _generation: return
+	if generation != _generation or not GameState.in_game: return
+	var screen := LockeGameOverScreen.new()
+	screen.snapshot = snapshot.duplicate(true)
+	SceneManager.push_menu(screen)

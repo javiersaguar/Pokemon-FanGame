@@ -1138,6 +1138,8 @@ driver.item_needs_target(item_id) -> bool / can_use_item(item_id, party_index) -
 
 `RandomlockeFlow.run(slot)` (A3, `src/ui/randomlocke/`) sustituye la presentación provisional de nueva partida: modo → presets/ajustes/código → `RandomlockeGeneratingScreen.generate(settings, seed)` → `RandomlockeSummaryScreen.confirm(rom)` → `SceneManager.start_randomlocke`. Usa §10 y RandomlockeJob; el trabajo en hilo nunca toca autoloads. La ROM solo se aplica al confirmar. `RandomlockeSettingsScreen.edit(settings, readonly)` retorna copia o null al cancelar; la vista de revisión no cambia ajustes. El resumen omite especies; código íntegro al portapapeles y SpoilerLog exportado solo por elección y confirmación.
 
+`LockeZoneIndicator` (UiRuntime) atiende `locke_zone_entered`; omite el indicador provisional y se oculta durante menús/teclado/aviso de correr. `await CemeteryScreen.open(snapshot := {})` usa el snapshot recibido o LockeRules, sin mutarlo ni retirar muertos. UiRuntime atiende `locke_game_over(snapshot)`, espera a `SceneManager.in_battle == false` y abre `LockeGameOverScreen`; conserva el bloqueo de partida finalizada, guarda el estado y ofrece Cementerio/código/título. Error de guardado impide salir sin reintentar. La entrada de pausa solo se activa para RandomLocke.
+
 ### 9.4 Interfaz común
 
 - **Theme global**: `res://src/ui/theme/main_theme.tres` (fuente, colores y marcos). Se pide al Agente 1 en `project.godot` → `gui/theme/custom`.

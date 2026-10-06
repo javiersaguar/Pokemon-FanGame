@@ -120,3 +120,93 @@ func test_shared_code_keeps_seed_and_custom_settings_in_summary() -> void:
 	assert_false(GameState.in_game)
 	assert_false(DataDB.has_patch())
 	assert_false(SceneManager.is_menu_open())
+
+func setup_locke_fixture() -> void:
+	GameState.mode = GameState.MODE_RANDOMLOCKE
+	GameState.in_game = true
+	var rules := LockeRules.new(RandomizerSettings.from_preset("clasico").to_dict(),{},["{nickname}: epitafio de prueba."])
+	GameState.randomlocke = {"snapshot":rules.snapshot(),"seed_code":"fixture"}
+	GameState.slot = 0
+	GameState.locke = WorldLocke.new(GameState.randomlocke)
+func runtime() -> UiRuntime:
+	for child: Node in SceneManager.ui_layer.get_children():
+		if child is UiRuntime: return child
+	return null
+func test_zone_hides_during_menus_and_shows_actual_capture_status() -> void:
+	setup_locke_fixture()
+	var ui := runtime()
+	EventBus.locke_zone_entered.emit("ruta_1","available")
+	assert_true(ui.zone.visible)
+	assert_eq(ui.zone.status_label.text,"Captura: Disponible")
+	var menu := MenuScreen.new()
+	SceneManager.push_menu(menu)
+	assert_false(ui.zone.visible)
+	SceneManager.pop_menu(menu)
+	await wait_process_frames(2)
+	EventBus.locke_zone_entered.emit("ruta_1","caught")
+	assert_eq(ui.zone.status_label.text,"Captura: Capturada")
+	var state := GameState.locke.rules.snapshot()
+	state.rules.first_encounter = false
+	GameState.locke.rules = LockeRules.from_dict(state)
+	EventBus.locke_zone_entered.emit("ruta_1","lost")
+	assert_eq(ui.zone.status_label.text,"Sin límite de captura por zona")
+	ui.clear_transient_ui()
+	assert_false(ui.zone.visible)
+func test_cemetery_displays_saved_epitaph_and_cancel_does_not_mutate_dead_pokemon() -> void:
+	setup_locke_fixture()
+	var pokemon := Pokemon.create(&"charmander",5)
+	pokemon.nickname = "Chispa"
+	GameState.locke.death(pokemon,{"zone_id":"ruta_1","opponent":"Manolo"})
+	var before := GameState.locke.rules.snapshot()
+	var run := func() -> void: await CemeteryScreen.open()
+	run.call()
+	await wait_process_frames(3)
+	var screen := SceneManager.top_menu() as CemeteryScreen
+	assert_eq(screen.choices.size(),1)
+	assert_true(screen.choices[0].contains("Chispa"))
+	assert_true(screen.notes[0].contains("ruta_1"))
+	assert_true(screen.notes[0].contains("Manolo"))
+	assert_true(screen.notes[0].contains("Chispa: epitafio de prueba."))
+	assert_not_null(screen.images[0])
+	press(&"cancel")
+	await wait_process_frames(3)
+	assert_eq(GameState.locke.rules.snapshot(),before)
+	assert_false(SceneManager.is_menu_open())
+func test_game_over_waits_for_battle_and_cannot_be_canceled_back_to_world() -> void:
+	setup_locke_fixture()
+	var pokemon := Pokemon.create(&"charmander",5)
+	GameState.locke.rules.register_owned("charmander")
+	GameState.locke.death(pokemon,{"zone_id":"ruta_1"})
+	SceneManager.in_battle = true
+	assert_true(GameState.locke.check_game_over())
+	await wait_process_frames(3)
+	assert_null(SceneManager.top_menu())
+	SceneManager.in_battle = false
+	await wait_process_frames(3)
+	var screen := SceneManager.top_menu() as LockeGameOverScreen
+	assert_not_null(screen)
+	press(&"cancel")
+	await wait_process_frames(3)
+	assert_eq(SceneManager.top_menu(),screen)
+	assert_true(GameState.is_input_locked_by(&"locke_finished"))
+	assert_eq(GameState.randomlocke.status,"finished")
+func test_game_over_saves_finished_slot_before_returning_to_title() -> void:
+	SaveManager.delete_save(98)
+	var patch := await RandomlockeGeneratingScreen.generate(RandomizerSettings.from_preset("clasico").to_dict(),713)
+	assert_eq(await SceneManager.start_randomlocke(patch,98,false),OK)
+	var pokemon := Pokemon.create(&"charmander",5)
+	GameState.locke.rules.register_owned("charmander")
+	GameState.locke.death(pokemon,{"zone_id":"ruta_1"})
+	assert_true(GameState.locke.check_game_over())
+	await wait_process_frames(3)
+	var screen := SceneManager.top_menu() as LockeGameOverScreen
+	assert_not_null(screen)
+	assert_eq(screen.save_error,OK)
+	assert_eq(SaveManager.slot_summary(98).status,"finished")
+	screen.menu.select(2)
+	press(&"accept")
+	await wait_seconds(0.65)
+	assert_false(GameState.in_game)
+	assert_false(SceneManager.is_menu_open())
+	assert_eq(SaveManager.slot_summary(98).status,"finished")
+	SaveManager.delete_save(98)

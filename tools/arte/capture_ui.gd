@@ -14,7 +14,32 @@ func run() -> void:
 		if arg.begins_with("--screen="):
 			case_name = arg.trim_prefix("--screen=")
 	root.size = Vector2i(512, 384)
-	if case_name in ["locke_mode","locke_settings","locke_generating","locke_summary"]:
+	if case_name in ["locke_cemetery","locke_game_over","locke_zone"]:
+		if case_name == "locke_zone":
+			screen = Control.new()
+			root.add_child(screen)
+			var ui = load("res://src/ui/widgets/ui_canvas.gd").new()
+			ui.theme = load("res://src/ui/theme/main_theme.tres")
+			screen.add_child(ui)
+			var bg := ColorRect.new()
+			bg.size = Vector2(256,192)
+			bg.color = Color("4592ca")
+			ui.add_child(bg)
+			var zone = load("res://src/ui/randomlocke/locke_zone_indicator.gd").new()
+			ui.add_child(zone)
+			zone.set_zone("Ruta 1","available",true)
+			zone.show()
+		else:
+			var poke = load("res://src/pokemon/pokemon.gd").create(&"charmander",12)
+			var grave: Dictionary = poke.to_dict()
+			grave.nickname = "Chispa"
+			grave.zone_id = "ruta_1"
+			grave.opponent = "Vendedor de Chupachups Manolo"
+			grave.epitaph = "Aquí yace Chispa: el crítico no venía en el contrato."
+			screen = load("res://src/ui/randomlocke/"+("cemetery_screen" if case_name == "locke_cemetery" else "locke_game_over_screen")+".gd").new()
+			screen.snapshot = {"cemetery":[grave],"captures":5,"death_count":1}
+			root.add_child(screen)
+	elif case_name in ["locke_mode","locke_settings","locke_generating","locke_summary"]:
 		if case_name == "locke_mode":
 			screen = load("res://src/ui/widgets/choice_screen.gd").new()
 			screen.caption = "Modo de partida"
