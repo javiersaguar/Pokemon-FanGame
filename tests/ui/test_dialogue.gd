@@ -185,3 +185,11 @@ func test_speaker_name_from_object_with_display_name() -> void:
 	assert_true(plate.get_parent().visible, "el nombre se ve")
 	_press(&"accept")
 	await wait_physics_frames(3)
+
+func test_world_markers_keep_chosen_rival_separate() -> void:
+	var previous: Dictionary = GameState.world_config.get("names", {}).duplicate(true)
+	GameState.world_config["names"] = {"professor": "Profesor provisional", "rival": "Nombre de diseño"}
+	GameState.rival_name = "Azul"
+	assert_eq(Dialogue.format_text("{world:professor}: {rival} / {world:rival}"),
+		"Profesor provisional: Azul / Nombre de diseño")
+	GameState.world_config["names"] = previous

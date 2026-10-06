@@ -36,7 +36,7 @@ func autoplay() -> void:
 	for frame: int in 2400:
 		await wait_physics_frames(1)
 		for node: Node in SceneManager.ui_layer.get_children():
-			if node.get_script() == load("res://src/main/identity_fallback.gd"):
+			if node is NameKeyboard:
 				node.entry.text_submitted.emit("Panchito" if node.kind == &"nickname" else ("Javi" if node.kind == &"player" else "Azul"))
 		if Dialogue.is_open:
 			press()
