@@ -28,6 +28,8 @@ var mega: bool = false
 var z: bool = false
 ## FIGHT: dinamaxizar antes de mover, si este combate lo permite (una vez por bando).
 var dynamax: bool = false
+## FIGHT: teracristalizar al mover, si este combate lo permite (una vez por bando).
+var tera: bool = false
 
 
 static func fight(index: int, target: int = 0) -> BattleAction:

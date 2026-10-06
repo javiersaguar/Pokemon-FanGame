@@ -80,6 +80,8 @@ static func _with_mega(engine: BattleEngine, b: Battler, action: BattleAction) -
 		action.z = true
 	if action.kind == BattleAction.Kind.FIGHT and engine.can_dynamax(b):
 		action.dynamax = true
+	if action.kind == BattleAction.Kind.FIGHT and engine.can_tera(b):
+		action.tera = true
 	return action
 
 

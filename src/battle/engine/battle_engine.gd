@@ -58,6 +58,9 @@ var _mega_used: Array[bool] = [false, false]
 var _z_used: Array[bool] = [false, false]
 ## Este bando ya ha dinamaxizado.
 var _dynamax_used: Array[bool] = [false, false]
+## Este bando ya ha teracristalizado. uid -> tipo, para que siga al volver a salir.
+var _tera_used: Array[bool] = [false, false]
+var _tera_of: Dictionary = {}
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -304,6 +307,7 @@ func _step_next_request() -> void:
 	r.can_mega = can_mega(b)
 	r.z_moves = z_move_indexes(b)
 	r.can_dynamax = can_dynamax(b)
+	r.can_tera = can_tera(b)
 	request = r
 
 
@@ -332,6 +336,7 @@ func _request_double_slot() -> void:
 		r.can_mega = can_mega(b)
 		r.z_moves = z_move_indexes(b)
 		r.can_dynamax = can_dynamax(b)
+		r.can_tera = can_tera(b)
 		request = r
 		return
 	_begin_turn(null)
@@ -423,6 +428,8 @@ func _sanitize(b: Battler, action: BattleAction) -> BattleAction:
 				action.z = false
 			if action.dynamax and not can_dynamax(b):
 				action.dynamax = false
+			if action.tera and not can_tera(b):
+				action.tera = false
 		BattleAction.Kind.SWITCH:
 			if not _sides[PLAYER].can_switch_to(action.party_index) or _is_trapped(b):
 				push_error("BattleEngine: no se puede cambiar al Pokémon %d." % action.party_index)
@@ -792,6 +799,8 @@ func _send_out(side_index: int, index: int, slot: int = 0) -> void:
 func _put_in(side_index: int, index: int, wild_appearance: bool, slot: int = 0) -> void:
 	var p := party(side_index)[index]
 	var b := Battler.new(p, side_index, slot, index)
+	if _tera_of.has(p.uid):
+		b.tera_active = _tera_of[p.uid]
 	_sides[side_index].active[slot] = b
 	var s := p.species()
 	var data := {
@@ -1028,6 +1037,8 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		move = DataDB.move(STRUGGLE)
 	if user.choice_move == &"" and user.pokemon.held_item in [&"choiceband", &"choicespecs", &"choicescarf"] and move.id != STRUGGLE:
 		user.choice_move = move.id
+	if action.tera and not action.forced and can_tera(user):
+		_start_tera(user)
 	var base_move := move
 	var z_status := false
 	if user.dynamax_turns > 0 and move.id != STRUGGLE:
@@ -1917,6 +1928,30 @@ func _apply_z_status(user: Battler, base: MoveData) -> void:
 
 func can_dynamax(b: Battler) -> bool:
 	return b != null and not b.is_fainted() and setup.dynamax and not _dynamax_used[b.side] and b.dynamax_turns == 0
+
+
+func can_tera(b: Battler) -> bool:
+	return b != null and not b.is_fainted() and setup.tera and not _tera_used[b.side] and b.tera_active == &"" and _tera_type_of(b) != &""
+
+
+func _tera_type_of(b: Battler) -> StringName:
+	var chosen := b.pokemon.tera_type
+	if chosen == &"" and not b.pokemon.types().is_empty():
+		chosen = b.pokemon.types()[0]
+	if chosen == &"" or chosen == &"stellar":
+		return &""
+	return chosen
+
+
+func _start_tera(b: Battler) -> void:
+	var chosen := _tera_type_of(b)
+	if chosen == &"":
+		return
+	b.tera_active = chosen
+	_tera_used[b.side] = true
+	_tera_of[b.pokemon.uid] = chosen
+	_msg(tr("¡%s ha teracristalizado en tipo %s!") % [b.pokemon.display_name(), DataDB.type_name(chosen) if DataDB.has_type(chosen) else String(chosen)], "tera")
+	_emit(BattleEvent.TERA, b.side, b.slot, {"type": String(chosen)})
 
 
 func _start_dynamax(b: Battler) -> void:

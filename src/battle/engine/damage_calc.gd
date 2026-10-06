@@ -30,7 +30,8 @@ static func base_damage(level: int, power: int, attack: int, defense: int) -> in
 ## Del daño base (sin el +2) al daño final. `effectiveness` > 0 (las inmunidades se miran antes).
 @warning_ignore("integer_division")
 static func modify_damage(base: int, roll: int, crit: bool, stab: bool, effectiveness: float,
-		burned_physical: bool, spread: bool = false, other: float = 1.0, weather: float = 1.0) -> int:
+		burned_physical: bool, spread: bool = false, other: float = 1.0, weather: float = 1.0,
+		stab_mod: float = 0.0) -> int:
 	var damage := base + 2
 	if spread:
 		damage = modify(damage, SPREAD_MULTIPLIER)
@@ -39,7 +40,9 @@ static func modify_damage(base: int, roll: int, crit: bool, stab: bool, effectiv
 	if crit:
 		damage = int(damage * CRIT_MULTIPLIER)
 	damage = damage * (100 - clampi(roll, 0, ROLLS - 1)) / 100
-	if stab:
+	if stab_mod > 1.0:
+		damage = modify(damage, stab_mod)
+	elif stab:
 		damage = modify(damage, STAB)
 	var exponent := roundi(log(effectiveness) / log(2.0)) if effectiveness > 0.0 else 0
 	for i: int in absi(exponent):
@@ -87,9 +90,24 @@ static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit
 	var typeless := is_typeless(move)
 	var effectiveness := 1.0 if typeless else DataDB.type_effectiveness(move.type, defender.types())
 	var stab := not typeless and attacker.has_type(move.type)
+	var stab_mod := _tera_stab(attacker, move) if not typeless else 0.0
+	if stab_mod > 1.0:
+		stab = false
 	var burned := physical and attacker.pokemon.status == &"brn" and move.id != &"facade" and not bool(opts.get("ignore_burn", false))
 	var final_mod := chain(opts.get("final", []))
-	return modify_damage(base, roll, crit, stab, effectiveness, burned, bool(opts.get("spread", false)), final_mod, float(opts.get("weather", 1.0)))
+	return modify_damage(base, roll, crit, stab, effectiveness, burned, bool(opts.get("spread", false)), final_mod, float(opts.get("weather", 1.0)), stab_mod)
+
+
+## STAB del Teratipo: 2 si el tipo ya lo tenía, 1,5 si es nuevo o si el golpe es de un tipo original. 0 = sin Teratipo.
+static func _tera_stab(attacker: Battler, move: MoveData) -> float:
+	if attacker.tera_active == &"":
+		return 0.0
+	var original := attacker.pokemon.types()
+	if move.type == attacker.tera_active:
+		return 2.0 if move.type in original else 1.5
+	if move.type in original:
+		return 1.5
+	return 0.0
 
 
 ## Las 16 cantidades posibles, de menor a mayor (como la calculadora de Showdown).

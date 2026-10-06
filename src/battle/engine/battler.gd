@@ -33,6 +33,8 @@ var unburdened: bool = false
 var mega_from: StringName = &""
 ## Turnos de Dinamax que le quedan. 0 = no está dinamaxizado.
 var dynamax_turns: int = 0
+## Tipo del Teratipo mientras dura el combate. Vacío si no ha teracristalizado.
+var tera_active: StringName = &""
 
 
 func _init(p: Pokemon, battle_side: int, battle_slot: int, index: int) -> void:
@@ -57,6 +59,10 @@ func has_type(type: StringName) -> bool:
 ## Tipos en el combate: los del Pokémon menos los que quite algún volátil (Respiro quita Volador).
 ## Puede quedar vacío (sin tipo: todo le afecta de forma neutra).
 func types() -> Array[StringName]:
+	if tera_active != &"":
+		var tera_types: Array[StringName] = []
+		tera_types.append(tera_active)
+		return tera_types
 	var out := pokemon.types()
 	for id: StringName in volatiles:
 		var effect := Effects.condition(id)

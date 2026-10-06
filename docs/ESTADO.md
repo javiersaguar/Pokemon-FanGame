@@ -149,7 +149,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-06) el aviso de la sesión de 2 agentes y la lista de «Sesión con 2 agentes». Los Agentes 1 y 4 están parados. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1 y la 2. De la 3 van entregadas la Megaevolución (petición 48), los movimientos Z (petición 49) y Dinamax (petición 50, sin Gigamax). Siguiente: Teratipo.
+**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1, la 2 y la 3 (Mega, Z, Dinamax y Tera; sin Gigamax ni Estelar). Siguiente: crianza.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -337,7 +337,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 1. ✅ Petición 29: los 4 sprites de mega que vienen a 96×96. Buscarlos a 192 en el pack 07; si no están, documentarlos como excepción conocida.
 2. ✅ **Fase 9.4, combates dobles** (2026-10-06): contrato en §8.5 y petición 47. Motor: dos puestos, objetivo y redirección, daño ×0,75, aliado, compañero con IA, salvajes dobles y entrenador con `"double": true`. La pareja de `TrainerNPC` sigue luchando seguida hasta que el mundo use un `BattleSetup` doble (petición 47).
-3. **Fase 9.6, Megaevolución** (Megapiedras, Megapulsera, una vez por combate, forma, habilidad y estadísticas nuevas, y evento para la escena), con contrato publicado antes. Después **Z, Dinamax y Tera**, en ese orden, como opcionales detrás de un ajuste.
+3. ✅ **Fase 9.6** (2026-10-06): Megaevolución (petición 48), movimientos Z (49, efectos de estado que no son subida, curación o quitar bajadas pendientes), Dinamax (50, sin Gigamax) y Teratipo (51, sin Estelar). Los tres últimos solo si el combate los activa.
 4. **Fase 14.3, crianza (lógica pura):** guardería, compatibilidad por grupo huevo y sexo, huevos por pasos, herencia (IVs con Lazo Destino, naturaleza con Piedra Eterna, movimientos huevo, habilidad oculta, Ball), eclosión con Cuerpo Llama, Método Masuda y Pokérus. API documentada para el mundo (pasos) y la interfaz.
 5. **Evoluciones y movimientos (Fases 6.2, 6.3):** todos los métodos de evolución que necesiten las especies en uso (hora, amistad, objeto equipado, lugar, movimiento conocido, clima...), recordador de movimientos, tutores y el **conjunto de MT** (qué movimientos son MT y su compatibilidad, sin decidir dónde se consiguen: eso es de Javier).
 6. **RandomLocke:** exportar los spoilers a `user://randomlocke/`, conectar la probabilidad shiny de sus ajustes y meter las MT y tutores de la tarea 5 en el generador. Siempre en verde.
@@ -488,6 +488,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 48 | A2 → A3 | **Megaevolución lista en el motor** (`contratos.md` §8.5). `info().mega` si hay pulsera. `request().can_mega` muestra el botón. `submit` con `mega: true` (y `target_slot` en dobles). Evento `mega` (`from`, `species`, `form_name`, `ability`, `hp`, `max_hp`) y mensaje con `tag = mega`. Al acabar o al retirarse la especie vuelve a la base: el sprite sale del evento, no del equipo guardado. | pendiente |
 | 49 | A2 → A3 | **Movimientos Z listos en el motor** (`contratos.md` §8.5). `info().z` si hay Pulsera Z. `request().z_moves` son los índices que pueden ser Z. `submit` con `z: true`. Evento `zmove` (`base`, `move`, `move_name`) y mensaje con `tag = z`. Apagado si la partida no tiene la pulsera. | pendiente |
 | 50 | A2 → A3 | **Dinamax listo en el motor** (`contratos.md` §8.5). Solo si `info().dynamax`. `request().can_dynamax` y `submit` con `dynamax: true`. Eventos `dynamax` (`hp`, `max_hp`, `turns`) y `dynamax_end`. Tres turnos, PS al doble, movimiento Max. No hay Gigamax. | pendiente |
+| 51 | A2 → A3 | **Teratipo listo en el motor** (`contratos.md` §8.5). Solo si `info().tera`. `request().can_tera` y `submit` con `tera: true`. Evento `tera` (`type`). Un solo tipo, STAB ×2 si ya lo tenía. Sin Estelar. | pendiente |
 | 45 | A1 → A2 | Diagnóstico conjunto de dependencias GDScript: el smoke reducido `godot --headless --path . -- --smoke-maps=all` termina con 89 ObjectDB/62 recursos; --verbose enumera clases de datos/Pokémon/Randomizer/combate/mundo y constantes de Character, ningún Node. Suite completa, CLI normal y captura de flujo limpios. Repro/informe en docs/mapas/robustez.md. No modifico tus clases para romper dependencias sin contrato; revisar ciclo/orden de carga, conservando API y ROM. | pendiente diagnóstico |
 
 ---
@@ -557,6 +558,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-06 | A2 | §8.5: Teratipo detrás de `options.tera`. Un solo tipo, STAB ×2 si ya lo tenía y ×1,5 el original. Sin Estelar. Evento `tera`. |
 | 2026-10-06 | A2 | §8.5: Dinamax detrás de `options.dynamax`. Tres turnos, PS al doble, movimiento Max y su efecto de campo. Sin Gigamax. Eventos `dynamax` y `dynamax_end`. |
 | 2026-10-06 | A2 | §8.5: movimientos Z, detrás de `options.z` o la Pulsera Z. `z_moves`, `BattleAction.z`, evento `zmove`. Una vez por bando. Efectos de estado que no son subida, curación o quitar bajadas, pendientes. |
 | 2026-10-06 | A2 | §8.5: Megaevolución. `mega_bracelet` / `options.mega`, `can_mega`, `BattleAction.mega`, evento `mega`. Una vez por bando, antes del orden de turno. La especie vuelve al retirarse o al acabar. |

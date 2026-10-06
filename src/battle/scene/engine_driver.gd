@@ -26,6 +26,7 @@ func info() -> Dictionary:
 		"mega": setup.mega_bracelet,
 		"z": setup.z_ring,
 		"dynamax": setup.dynamax,
+		"tera": setup.tera,
 	}
 
 
@@ -39,7 +40,7 @@ func request() -> Dictionary:
 		return {"kind": REQUEST_ACTION}
 	var out := {"party_index": r.party_index, "slot": r.slot, "can_run": r.can_run, "can_switch": r.can_switch,
 		"can_use_items": r.can_use_items, "usable_moves": r.usable_moves, "can_mega": r.can_mega,
-		"z_moves": r.z_moves, "can_dynamax": r.can_dynamax}
+		"z_moves": r.z_moves, "can_dynamax": r.can_dynamax, "can_tera": r.can_tera}
 	match r.kind:
 		BattleRequest.Kind.SWITCH:
 			out["kind"] = REQUEST_SWITCH
@@ -64,6 +65,7 @@ func submit(action: Dictionary) -> Array:
 			engine_action.mega = bool(action.get("mega", false))
 			engine_action.z = bool(action.get("z", false))
 			engine_action.dynamax = bool(action.get("dynamax", false))
+			engine_action.tera = bool(action.get("tera", false))
 		&"switch":
 			engine_action = BattleAction.switch_to(int(action.get("party_index", 0)))
 		&"item":

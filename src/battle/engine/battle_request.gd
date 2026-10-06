@@ -22,6 +22,8 @@ var can_mega: bool = false
 var z_moves: Array[int] = []
 ## ACTION: este combate permite dinamaxizar y este bando aún no lo ha hecho.
 var can_dynamax: bool = false
+## ACTION: este combate permite teracristalizar y este bando aún no lo ha hecho.
+var can_tera: bool = false
 ## SWITCH: por qué hay que cambiar. Vacío = se ha debilitado; &"uturn" (Ida y Vuelta, Voltiocambio)
 ## o &"batonpass" (Relevo) = cambio a mitad de turno que no se puede cancelar;
 ## &"shift" = el rival va a sacar otro (modo Cambio): switch_to(índice) cambia y switch_to(-1) se queda.

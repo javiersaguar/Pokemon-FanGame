@@ -39,6 +39,8 @@ const ZMOVE := &"zmove"
 ## Dinamax: {hp, max_hp, turns}. Al terminar, `dynamax_end` con los PS ya normales.
 const DYNAMAX := &"dynamax"
 const DYNAMAX_END := &"dynamax_end"
+## Teratipo: {type}. El tipo defensivo pasa a ser solo ese. Dura todo el combate.
+const TERA := &"tera"
 
 var type: StringName
 ## 0 = jugador, 1 = rival, -1 = ninguno.

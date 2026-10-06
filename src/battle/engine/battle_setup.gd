@@ -19,6 +19,8 @@ var mega_bracelet: bool = false
 var z_ring: bool = false
 ## Este combate permite Dinamax (nodo, gimnasio...). Apagado por defecto. No basta la Maximuñequera.
 var dynamax: bool = false
+## Este combate permite Teratipo (orbe cargado). Apagado por defecto.
+var tera: bool = false
 ## Objetos Pokemon del jugador: el motor los modifica (PS, PP, estado, experiencia...).
 var player_party: Array[Pokemon] = []
 var foe_party: Array[Pokemon] = []
@@ -179,6 +181,8 @@ func apply_options(options: Dictionary) -> void:
 		z_ring = bool(options["z"])
 	if options.has("dynamax"):
 		dynamax = bool(options["dynamax"])
+	if options.has("tera"):
+		tera = bool(options["tera"])
 	if options.has("next_ace_level"):
 		next_ace_level = int(options["next_ace_level"])
 	if tutorial:
