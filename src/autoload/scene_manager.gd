@@ -63,6 +63,7 @@ func register_main(main: Node) -> void:
 	_fade = transition_layer.get_node(^"Fade")
 	atmosphere = WorldAtmosphere.new()
 	world.add_child(atmosphere)
+	ui_layer.add_child(load("res://src/ui/ui_runtime.gd").new())
 
 
 ## Primer flujo del juego. Argumentos de línea de comandos (tras `--`):
@@ -402,7 +403,7 @@ func run_title_fallback() -> void:
 				return
 
 func run_pause_fallback(menu: Node) -> void:
-	var choice := await Dialogue.ask("Menú de pausa", ["Volver", "Guardar", "Cargar partida", "Menú inicial"], null, 0)
+	var choice := await Dialogue.ask("Menú de pausa", ["Volver", "Guardar", "Cargar partida", "Menú inicial", "Opciones"], null, 0)
 	match choice:
 		1:
 			var err := SaveManager.save_game()
@@ -418,6 +419,11 @@ func run_pause_fallback(menu: Node) -> void:
 				pop_menu(menu)
 				await go_to_title()
 				return
+		4:
+			var options: Node = load("res://src/ui/options/options_screen.gd").new()
+			push_menu(options)
+			await options.closed
+			pop_menu(options)
 	pop_menu(menu)
 
 func _on_name_requested(kind: StringName, initial: String) -> void:

@@ -370,6 +370,10 @@ func _ball_arc(t: float, ball: Sprite2D, target: Vector2) -> void:
 func _ask_player(request: Dictionary) -> Dictionary:
 	match StringName(request.get("kind", BattleDriver.REQUEST_ACTION)):
 		BattleDriver.REQUEST_SWITCH:
+			if StringName(request.get("reason", "")) == &"shift":
+				var choice := await _list(tr("El rival sacará otro Pokémon.\n¿Quieres cambiar?"),
+					[tr("Cambiar Pokémon"), tr("Seguir luchando")], [], true)
+				return {"type": &"switch", "party_index": await _choose_party(false) if choice == 0 else -1}
 			return {"type": &"switch", "party_index": await _choose_party(true)}
 		BattleDriver.REQUEST_LEARN_MOVE:
 			return {"type": &"learn_move", "forget_index": await _choose_forget(request)}

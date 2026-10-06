@@ -133,3 +133,42 @@ func test_real_engine_trainer_battle_cannot_run() -> void:
 	assert_eq(_outcome, SceneManager.OUTCOME_WIN)
 	GameState.reset()
 
+
+# El modo Cambio es opcional; un KO sigue obligando a elegir un sustituto.
+func _request_switch(reason: StringName) -> void:
+	_scene._driver = FakeBattle.new({}, 7)
+	_scene._box.text_speed = 0
+	var action: Dictionary = await _scene._ask_player({"kind": BattleDriver.REQUEST_SWITCH, "reason": reason})
+	_outcome = StringName(str(action.get("party_index", -99)))
+	_done = true
+
+func test_shift_can_be_declined_or_cancelled() -> void:
+	_request_switch(&"shift")
+	await wait_physics_frames(2)
+	_scene._list_menu.select(1)
+	_press(&"accept")
+	await wait_physics_frames(2)
+	assert_true(_done)
+	assert_eq(_outcome, &"-1")
+
+func test_shift_party_selection_can_be_cancelled() -> void:
+	_request_switch(&"shift")
+	await wait_physics_frames(2)
+	_press(&"accept")
+	await wait_physics_frames(2)
+	assert_false(_done)
+	_press(&"cancel")
+	await wait_physics_frames(2)
+	assert_eq(_outcome, &"-1")
+
+func test_fainted_switch_cannot_be_cancelled() -> void:
+	_request_switch(&"faint")
+	await wait_physics_frames(2)
+	_press(&"cancel")
+	await wait_physics_frames(2)
+	assert_false(_done)
+	_scene._list_menu.select(1)
+	_press(&"accept")
+	await wait_physics_frames(2)
+	assert_true(_done)
+	assert_eq(_outcome, &"1")
