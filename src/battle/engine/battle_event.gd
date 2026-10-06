@@ -32,6 +32,8 @@ const TERRAIN := &"terrain"
 ## Condición de bando (Reflejo, Viento Afín, Red Viscosa...): {condition, active}. `side` = bando.
 const SIDE_CONDITION := &"side_condition"
 const END := &"end"
+## Megaevolución: {from, species, form_name, ability, hp, max_hp}. La especie del equipo vuelve a la base al retirarse o al acabar.
+const MEGA := &"mega"
 
 var type: StringName
 ## 0 = jugador, 1 = rival, -1 = ninguno.

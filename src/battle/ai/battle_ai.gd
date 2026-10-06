@@ -17,10 +17,10 @@ static func choose_action(engine: BattleEngine, side: int, slot: int, level: int
 	if usable.is_empty():
 		return BattleAction.fight(-1)
 	if level <= 0:
-		return BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)])
+		return _with_mega(engine, b, BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)]))
 	var target := engine.active(1 - side)
 	if level == 1:
-		return _most_damage(engine, b, target, usable)
+		return _with_mega(engine, b, _most_damage(engine, b, target, usable))
 	var best := -1
 	var best_score := -1
 	for i: int in usable:
@@ -33,8 +33,8 @@ static func choose_action(engine: BattleEngine, side: int, slot: int, level: int
 		if switch_to >= 0 and best_score <= 0:
 			return BattleAction.switch_to(switch_to)
 	if best < 0:
-		return BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)])
-	return BattleAction.fight(best)
+		return _with_mega(engine, b, BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)]))
+	return _with_mega(engine, b, BattleAction.fight(best))
 
 
 ## Pokémon que saca cuando se le debilita el que tenía.
@@ -55,7 +55,7 @@ static func _choose_double(engine: BattleEngine, side: int, slot: int, level: in
 	if usable.is_empty():
 		return BattleAction.fight(-1)
 	if level <= 0:
-		return BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)])
+		return _with_mega(engine, b, BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)]))
 	var best_move := usable[0]
 	var best_slot := 0
 	var best_score := -1000000
@@ -70,7 +70,13 @@ static func _choose_double(engine: BattleEngine, side: int, slot: int, level: in
 				best_score = score
 				best_move = i
 				best_slot = foe_slot
-	return BattleAction.fight(best_move, best_slot)
+	return _with_mega(engine, b, BattleAction.fight(best_move, best_slot))
+
+
+static func _with_mega(engine: BattleEngine, b: Battler, action: BattleAction) -> BattleAction:
+	if action.kind == BattleAction.Kind.FIGHT and engine.can_mega(b):
+		action.mega = true
+	return action
 
 
 static func _most_damage(engine: BattleEngine, user: Battler, target: Battler, usable: Array[int]) -> BattleAction:

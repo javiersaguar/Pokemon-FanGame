@@ -13,6 +13,8 @@ var kind: Kind = Kind.WILD
 var format: Format = Format.SINGLE
 ## En dobles, el segundo Pokémon del jugador lo juega la IA (combate con compañero).
 var ally_ai: bool = false
+## El jugador tiene la Megapulsera o la Piedra Activadora. Sin esto no megaevoluciona.
+var mega_bracelet: bool = false
 ## Objetos Pokemon del jugador: el motor los modifica (PS, PP, estado, experiencia...).
 var player_party: Array[Pokemon] = []
 var foe_party: Array[Pokemon] = []
@@ -137,6 +139,9 @@ func fill_from_game_state() -> void:
 		dex_caught_count = dex.caught_count()
 	time_period = Clock.period()
 	exp_share = bool(DataDB.rule(&"exp_share", true))
+	if GameState.bag is Bag:
+		var bag := GameState.bag as Bag
+		mega_bracelet = bag.has(&"megabracelet") or bag.has(&"keystone")
 	if GameState.is_randomlocke() and GameState.locke != null:
 		locke = GameState.locke.rules
 		var rules_dict := locke.rules()
@@ -163,6 +168,8 @@ func apply_options(options: Dictionary) -> void:
 		format = Format.DOUBLE
 	if options.has("ally_ai"):
 		ally_ai = bool(options["ally_ai"])
+	if options.has("mega"):
+		mega_bracelet = bool(options["mega"])
 	if options.has("next_ace_level"):
 		next_ace_level = int(options["next_ace_level"])
 	if tutorial:

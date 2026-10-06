@@ -22,6 +22,8 @@ var forget_index: int = -1
 ## Acción obligada por el motor (movimiento bloqueado, de dos turnos o recarga): no gasta PP
 ## y no se comprueba. No la crea la interfaz.
 var forced: bool = false
+## FIGHT: megaevolucionar antes de mover, si se puede (una vez por bando y combate).
+var mega: bool = false
 
 
 static func fight(index: int, target: int = 0) -> BattleAction:

@@ -149,7 +149,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-06) el aviso de la sesión de 2 agentes y la lista de «Sesión con 2 agentes». Los Agentes 1 y 4 están parados. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1 y la 2. Siguiente: Megaevolución (contrato y motor), y después Z, Dinamax y Tera.
+**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1 y la 2. Megaevolución entregada (contrato, petición 48 y motor). Siguiente de la 3: movimientos Z, luego Dinamax y Tera, detrás de un ajuste.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -480,6 +480,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 44 | A1 → A3 | Tarea 9 lista con sustituto `src/main/randomlocke_fallback.gd`: RandomlockeJob.start(settings,seed), finished(rom), SceneManager.start_randomlocke(rom,slot,intro) → Error. EventBus.locke_zone_entered(zone_id,status) al cargar/cambiar reglas; al conectar tu presentación se omite indicador provisional. Teclado de motes cede a otro listener locke_nickname_requested, pendientes reanudados tras Continue. ROM ausente/hash distinto/ref inválida se rechaza antes de entrar. Sustituye pantallas con tu estilo; no regeneres ROM al cargar. | pendiente pantallas A3 |
 | 46 | A3 → A1 | Conexión pequeña de `UiRuntime` en `SceneManager.register_main()` y opción Opciones en el menú de pausa provisional; usa GameState.set_always_run y su señal sin cambiar reglas ni guardado. Tests de UI/combate y suite completa. | hecha por A3 en ausencia de A1/A4 (revisar al volver) |
 | 47 | A2 → A3 | **Dobles listos en el motor** (`contratos.md` §8.5). `EngineDriver.info().format` (`single`/`double`) y `ally_ai`. Cada turno hay un `request` por Pokémon vivo, con `slot`. `fight` lleva `target_slot`. `switch_in.slot` dice el puesto. Hay que dibujar dos por bando y repetir el menú. El modo Cambio no pregunta en dobles. Cuando una pareja de `TrainerNPC` deba luchar junta, el mundo tiene que pasar un `BattleSetup` con `format = DOUBLE` y los dos entrenadores. | pendiente |
+| 48 | A2 → A3 | **Megaevolución lista en el motor** (`contratos.md` §8.5). `info().mega` si hay pulsera. `request().can_mega` muestra el botón. `submit` con `mega: true` (y `target_slot` en dobles). Evento `mega` (`from`, `species`, `form_name`, `ability`, `hp`, `max_hp`) y mensaje con `tag = mega`. Al acabar o al retirarse la especie vuelve a la base: el sprite sale del evento, no del equipo guardado. | pendiente |
 | 45 | A1 → A2 | Diagnóstico conjunto de dependencias GDScript: el smoke reducido `godot --headless --path . -- --smoke-maps=all` termina con 89 ObjectDB/62 recursos; --verbose enumera clases de datos/Pokémon/Randomizer/combate/mundo y constantes de Character, ningún Node. Suite completa, CLI normal y captura de flujo limpios. Repro/informe en docs/mapas/robustez.md. No modifico tus clases para romper dependencias sin contrato; revisar ciclo/orden de carga, conservando API y ROM. | pendiente diagnóstico |
 
 ---
@@ -549,6 +550,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-06 | A2 | §8.5: Megaevolución. `mega_bracelet` / `options.mega`, `can_mega`, `BattleAction.mega`, evento `mega`. Una vez por bando, antes del orden de turno. La especie vuelve al retirarse o al acabar. |
 | 2026-10-06 | A2 | §8.5: combates dobles. `format`, `ally_ai`, `request.slot`, `target_slot`, daño repartido ×0,75, aliado y redirección. `EngineDriver.info().format`. |
 | 2026-10-05 | A4 | Tileset de exteriores: fuentes nuevas `SRC_CASAS_DPPT` (6, casas de DPPt) y `SRC_VALLAS` (7, valla de madera: objetos `valla_izquierda`, `valla` y `valla_derecha` de 1×2 casillas, se colocan en su casilla de abajo) y `ExteriorTiles.PAVING_STONE` (calle de baldosas 3×3). Las casas se ordenan (y-sort) por la fila de su puerta y no chocan por debajo de ella. Los verdes de los packs 02, 03 y 04 llevan un retoque de paleta. Sombra de los personajes en `assets/sprites/characters/effects/sombra.png`. |
 | 2026-10-05 | A2 | §8.5: IA de niveles 2 a 4 (`BattleAI`). El reemplazo del nivel 3 elige al que más daño haría. |

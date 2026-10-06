@@ -79,6 +79,14 @@ func is_key_item() -> bool:
 	return pocket == &"key"
 
 
+## Forma mega que otorga esta Megapiedra a esa especie. Vacío si no es su piedra.
+func mega_species(for_species: StringName) -> StringName:
+	var map: Variant = raw.get("mega_stone", {})
+	if map is Dictionary and map.has(String(for_species)):
+		return StringName(str(map[String(for_species)]))
+	return &""
+
+
 func usable_in_field() -> bool:
 	return field_use != USE_NONE
 

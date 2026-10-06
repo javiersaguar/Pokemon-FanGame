@@ -52,6 +52,8 @@ var _dead_uids: Dictionary = {}
 var _shift_foe_index := -1
 ## Acciones ya elegidas en un doble, por slot del jugador, antes de resolver el turno.
 var _double_chosen: Dictionary = {}
+## Este bando ya ha megaevolucionado en el combate (una vez por bando).
+var _mega_used: Array[bool] = [false, false]
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -295,6 +297,7 @@ func _step_next_request() -> void:
 	r.can_switch = _sides[PLAYER].first_able_index() >= 0 and not trapped
 	r.can_use_items = setup.allow_items and (setup.is_wild() or _locke_item_allowed())
 	r.usable_moves = b.usable_moves()
+	r.can_mega = can_mega(b)
 	request = r
 
 
@@ -320,6 +323,7 @@ func _request_double_slot() -> void:
 		r.can_switch = _sides[PLAYER].first_able_index() >= 0 and not trapped
 		r.can_use_items = slot == 0 and setup.allow_items and (setup.is_wild() or _locke_item_allowed())
 		r.usable_moves = b.usable_moves()
+		r.can_mega = can_mega(b)
 		request = r
 		return
 	_begin_turn(null)
@@ -346,6 +350,8 @@ func _begin_turn(player_action: Variant = null) -> void:
 				action = BattleAI.choose_action(self, side_index, slot, setup.ai_level)
 			b.moved_this_turn = false
 			b.damaged_this_turn = false
+			if action.kind == BattleAction.Kind.FIGHT and action.mega and not action.forced:
+				_try_mega(b)
 			_turn_actions[b] = action
 			entries.append({
 				"battler": b,
@@ -396,6 +402,8 @@ func _sanitize(b: Battler, action: BattleAction) -> BattleAction:
 			if action.move_index not in usable:
 				push_error("BattleEngine: el movimiento %d no se puede usar." % action.move_index)
 				return fallback
+			if action.mega and not can_mega(b):
+				action.mega = false
 		BattleAction.Kind.SWITCH:
 			if not _sides[PLAYER].can_switch_to(action.party_index) or _is_trapped(b):
 				push_error("BattleEngine: no se puede cambiar al Pokémon %d." % action.party_index)
@@ -717,6 +725,7 @@ func _finish(outcome: StringName) -> void:
 			_msg(tr("¡No te quedan Pokémon que puedan luchar!"), "defeat")
 	result.outcome = outcome
 	result.turns = turn
+	_revert_all_formes()
 	_collect_evolutions()
 	_emit(BattleEvent.END, -1, -1, {"outcome": String(outcome)})
 	_over = true
@@ -808,6 +817,7 @@ func _do_switch(b: Battler, index: int, reason: StringName = &"") -> void:
 	else:
 		_msg(tr("¡%s ha retirado a %s!") % [_trainer_name(), b.pokemon.display_name()], "recall")
 	_emit(BattleEvent.SWITCH_OUT, b.side, b.slot, {"party_index": b.party_index})
+	_revert_forme(b)
 	var passed := {}
 	if reason == &"batonpass":
 		passed = {"boosts": b.boosts.duplicate(), "crit": b.crit_stage, "volatiles": {}}
@@ -1626,6 +1636,88 @@ func _condition_event(holder: Variant, key: StringName, is_active: bool) -> void
 		_emit(BattleEvent.VOLATILE, b.side, b.slot, {"volatile": String(key), "active": is_active})
 
 
+## ¿Puede megaevolucionar este turno? El jugador necesita la pulsera. El rival, si no es salvaje, solo la piedra.
+func can_mega(b: Battler) -> bool:
+	if b == null or b.is_fainted() or b.mega_from != &"" or _mega_used[b.side]:
+		return false
+	if b.pokemon.species().is_mega:
+		return false
+	if b.side == PLAYER and not setup.mega_bracelet:
+		return false
+	if b.side == FOE and setup.is_wild():
+		return false
+	return _mega_species_for(b) != &""
+
+
+func _mega_species_for(b: Battler) -> StringName:
+	var held := b.pokemon.held_item
+	if held != &"" and DataDB.has_item(held):
+		var mapped := DataDB.item(held).mega_species(b.pokemon.species_id)
+		if mapped != &"" and DataDB.has_species(mapped):
+			var form := DataDB.species(mapped)
+			if form.is_mega and form.base_species == b.pokemon.species_id:
+				return mapped
+	for form_id: StringName in b.pokemon.species().forms:
+		if not DataDB.has_species(form_id):
+			continue
+		var form := DataDB.species(form_id)
+		if not form.is_mega or form.required_item != &"":
+			continue
+		var need := StringName(str(form.raw.get("required_move", "")))
+		if need != &"" and b.pokemon.has_move(need):
+			return form.id
+	return &""
+
+
+func _try_mega(b: Battler) -> void:
+	if not can_mega(b):
+		return
+	var next := _mega_species_for(b)
+	if next == &"":
+		return
+	var from := b.pokemon.species_id
+	b.mega_from = from
+	_mega_used[b.side] = true
+	_set_species_keep_ratio(b, next)
+	var form_name := b.pokemon.species().form_name
+	var shown := form_name if form_name != "" else b.pokemon.species().name
+	_msg(tr("¡%s ha megaevolucionado a %s!") % [b.pokemon.display_name(), shown], "mega")
+	_emit(BattleEvent.MEGA, b.side, b.slot, {
+		"from": String(from),
+		"species": String(next),
+		"form_name": form_name,
+		"ability": String(b.ability),
+		"hp": b.pokemon.current_hp,
+		"max_hp": b.pokemon.max_hp(),
+	})
+
+
+func _set_species_keep_ratio(b: Battler, species_id: StringName) -> void:
+	var p := b.pokemon
+	var old_max := p.max_hp()
+	var hp := p.current_hp
+	p.species_id = species_id
+	var new_max := p.max_hp()
+	if hp > 0 and old_max > 0 and new_max != old_max:
+		p.current_hp = clampi(int(round(float(hp) * float(new_max) / float(old_max))), 1, new_max)
+	elif hp > new_max:
+		p.current_hp = new_max
+	b.ability = p.ability_id()
+
+
+func _revert_forme(b: Battler) -> void:
+	if b == null or b.mega_from == &"":
+		return
+	_set_species_keep_ratio(b, b.mega_from)
+	b.mega_from = &""
+
+
+func _revert_all_formes() -> void:
+	for side_index: int in [PLAYER, FOE]:
+		for slot: int in slot_count():
+			_revert_forme(active(side_index, slot))
+
+
 func _speed(b: Battler) -> int:
 	var spe := b.effective_speed()
 	for c: Array in _conditions_of(b):
@@ -1951,6 +2043,7 @@ func force_switch(target: Battler) -> bool:
 		return false
 	var index: int = options[rng.randi_range(0, options.size() - 1)]
 	_emit(BattleEvent.SWITCH_OUT, target.side, target.slot, {"party_index": target.party_index})
+	_revert_forme(target)
 	_put_in(target.side, index, false)
 	_msg(tr("¡%s ha sido arrastrado al combate!") % name_of(active(target.side)))
 	return true

@@ -16,6 +16,8 @@ var can_switch: bool = true
 var can_use_items: bool = true
 ## ACTION: movimientos que se pueden elegir (con PP). Vacío = solo puede usar Forcejeo.
 var usable_moves: Array[int] = []
+## ACTION: puede megaevolucionar este turno (pulsera, piedra y nadie de su bando lo ha hecho).
+var can_mega: bool = false
 ## SWITCH: por qué hay que cambiar. Vacío = se ha debilitado; &"uturn" (Ida y Vuelta, Voltiocambio)
 ## o &"batonpass" (Relevo) = cambio a mitad de turno que no se puede cancelar;
 ## &"shift" = el rival va a sacar otro (modo Cambio): switch_to(índice) cambia y switch_to(-1) se queda.

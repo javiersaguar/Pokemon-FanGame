@@ -29,6 +29,8 @@ var ability: StringName = &""
 var choice_move: StringName = &""
 ## Descendrático: perdió el objeto durante el combate.
 var unburdened: bool = false
+## Especie de antes de megaevolucionar. Vacío si no está mega.
+var mega_from: StringName = &""
 
 
 func _init(p: Pokemon, battle_side: int, battle_slot: int, index: int) -> void:

@@ -23,6 +23,7 @@ func info() -> Dictionary:
 		"can_lose": setup.can_lose,
 		"format": &"double" if setup.format == BattleSetup.Format.DOUBLE else &"single",
 		"ally_ai": setup.ally_ai,
+		"mega": setup.mega_bracelet,
 	}
 
 
@@ -35,7 +36,7 @@ func request() -> Dictionary:
 	if r == null:
 		return {"kind": REQUEST_ACTION}
 	var out := {"party_index": r.party_index, "slot": r.slot, "can_run": r.can_run, "can_switch": r.can_switch,
-		"can_use_items": r.can_use_items, "usable_moves": r.usable_moves}
+		"can_use_items": r.can_use_items, "usable_moves": r.usable_moves, "can_mega": r.can_mega}
 	match r.kind:
 		BattleRequest.Kind.SWITCH:
 			out["kind"] = REQUEST_SWITCH
@@ -56,7 +57,8 @@ func submit(action: Dictionary) -> Array:
 	match StringName(action.get("type", "")):
 		&"fight":
 			var struggle := engine.request != null and engine.request.usable_moves.is_empty()
-			engine_action = BattleAction.fight(-1 if struggle else int(action.get("move_slot", 0)))
+			engine_action = BattleAction.fight(-1 if struggle else int(action.get("move_slot", 0)), int(action.get("target_slot", 0)))
+			engine_action.mega = bool(action.get("mega", false))
 		&"switch":
 			engine_action = BattleAction.switch_to(int(action.get("party_index", 0)))
 		&"item":
