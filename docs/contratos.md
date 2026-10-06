@@ -1098,6 +1098,8 @@ AudioManager.get_volume(bus: StringName) -> float
 - **SE estándar**: `menu_move`, `menu_accept`, `menu_cancel`, `menu_error`, `bump`, `door`, `stairs`, `ledge`, `grass`, `hit_normal`, `hit_weak`, `hit_super`, `low_hp`, `ball_throw`, `ball_shake`, `ball_caught`, `exp`, `save`.
 - **ME estándar**: `heal`, `item`, `key_item`, `badge`, `evolution`, `caught`, `level_up`, `hatch`.
 
+Audio entregado (2026-10-06): originales y hashes en `data/audio_assets.json`, copia reproducible con `tools/arte/import_audio.py`. `_find` pone las BGM/ambientes en bucle y SE/ME/gritos sin bucle; `cursor`/`cancel`/`bump` son alias de selección/cancelación/error. `save_bgm()` / `restore_bgm()` usan una pila para restaurar PS bajos y evolución dentro del combate sin perder la música del mapa. BattleScene activa `low_hp` al 20 % de PS del jugador, restaura al recuperarse/cambiar y da prioridad a victoria; `fast` omite las esperas de ME. La música general de rutas/título/combate espera la pregunta 29; la ausencia de una pista no bloquea el juego.
+
 ### 9.3 Escenas que usa SceneManager
 
 Se aceptan las rutas de la sección 4.

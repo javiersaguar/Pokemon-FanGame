@@ -46,6 +46,7 @@ func run() -> void:
 	AudioManager.save_bgm()
 	_audio_saved = true
 	AudioManager.play_bgm(&"evolution")
+	if not fast: AudioManager.play_me(&"evolution")
 	var original := pokemon.species_id
 	for step: int in 16:
 		_sprite.set_pokemon({"species": original if step % 2 == 0 else StringName(evolution.to), "shiny": pokemon.shiny})
@@ -63,7 +64,7 @@ func run() -> void:
 		_message.text = "¡Ahora es %s!" % pokemon.species().name
 		if not fast:
 			AudioManager.play_cry(pokemon.species_id)
-			await AudioManager.play_me(&"evolution")
+			AudioManager.play_se(&"menu_accept")
 	hint.text = "A / B: continuar"
 	_completed = true
 	if fast: _finish()

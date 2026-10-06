@@ -1,0 +1,155 @@
+{
+  "_doc": "Archivos originales copiados sin modificación; BGM en bucle y ME/SE sin bucle. jump usa el swoosh de SE_Zoom2 (no había muestra de salto dedicada).",
+  "files": [
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/SE_Select1.wav",
+      "target": "assets/audio/se/menu_move.wav",
+      "sha256": "de50b379a7105e2e572eef3d54ae8539759a2f704ede0d0a9c8760575cb8afe9"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/SE_Select2.wav",
+      "target": "assets/audio/se/menu_accept.wav",
+      "sha256": "757d386b8ab7dbfc786663bc952acde1973e1ff8cf912250f2163a83d2d1dfec"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/SE_Select3.wav",
+      "target": "assets/audio/se/menu_cancel.wav",
+      "sha256": "8365eca3873c1a381ceec1692cffbfa2b8f358b4e6b1aa47fed123eaeb4cd59b"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/SE_Party.wav",
+      "target": "assets/audio/se/party.wav",
+      "sha256": "692149183b1dbc4daace0a0dec87f1adc57a0e195cb328a9c511aa7b37465f83"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/Throw.wav",
+      "target": "assets/audio/se/ball_throw.wav",
+      "sha256": "74e2bfe6ce52975a6da9e1a1ede96f666bf0bdbd72229f5d685fd7d60737c6fa"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/Throw Critical.wav",
+      "target": "assets/audio/se/ball_open.wav",
+      "sha256": "f89a337c19ec21f0a1e812bfe471d9de33a4a0cf8a4bd381d8e56cc5e178972c"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/Drop.wav",
+      "target": "assets/audio/se/ball_shake.wav",
+      "sha256": "f58f36b43df2a24f6b395f2e939f5cb6d94d1c60d078a71f62b8ea6cf67bb547"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/SE_Select3.wav",
+      "target": "assets/audio/se/ball_caught.wav",
+      "sha256": "8365eca3873c1a381ceec1692cffbfa2b8f358b4e6b1aa47fed123eaeb4cd59b"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/Experience Gain.wav",
+      "target": "assets/audio/se/exp.wav",
+      "sha256": "bf4f5260453cbc5f937996197e659b8b2f2c8cd305e1a3c79232ffb35831847e"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/Flee.wav",
+      "target": "assets/audio/se/flee.wav",
+      "sha256": "356e9a30e9eba946777293e2d35298cb96344385a0c8e3b6227b406d419606be"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/Shiny.wav",
+      "target": "assets/audio/se/shiny.wav",
+      "sha256": "8d4e05095bd4db220b84e1775d8e67c8052620cdf65a07b2cbd28904b4bfcda9"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/SE/EBDX/SE_Zoom2.wav",
+      "target": "assets/audio/se/jump.wav",
+      "sha256": "fff14ab96b8167c0299a69629ad0db86c242abc550ac8351284c3dd65829ab39"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/ME/EBDX/Capture Success.ogg",
+      "target": "assets/audio/me/caught.ogg",
+      "sha256": "e934ef67706d91fc45dab4ef4a1c8ed9af48f3daea7a400f46498a35730ccc57"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/ME/EBDX/Evolution Start.ogg",
+      "target": "assets/audio/me/evolution.ogg",
+      "sha256": "054219de94cb700bece6927d7e1256e1d0ae17dcffcc053e328c4578bb288582"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/ME/EBDX/Level Up.ogg",
+      "target": "assets/audio/me/level_up.ogg",
+      "sha256": "84495870790cd94caeed207affc3b60cfb4c2ea808b0c79a871586ca31b1c909"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/BGM/EBDX/Evolution.ogg",
+      "target": "assets/audio/bgm/evolution.ogg",
+      "sha256": "087d9a9065d93b625cb652ba42907f88ee796ddf2cb0e8daf208145761b83ed4"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/BGM/EBDX/Low HP Battle.ogg",
+      "target": "assets/audio/bgm/low_hp.ogg",
+      "sha256": "8bad9d3be7596d91af26f606a69f99d5651df22c6e7e53867e4b2e5c372e5d66"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/BGM/EBDX/Victory Against Trainer.ogg",
+      "target": "assets/audio/bgm/victory_trainer.ogg",
+      "sha256": "278e1646512884eb68bce793cf67e04ff19b1b9d75282eb882f6ea3c6bd53f0b"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Audio/BGM/EBDX/Victory Against Wild.ogg",
+      "target": "assets/audio/bgm/victory_wild.ogg",
+      "sha256": "49e224f1cf3df075d5b9eff9ef3bf7460cbbc6509a9483db1493bc3b17c8513d"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Audio/SE/Anim/normaldamage.ogg",
+      "target": "assets/audio/se/hit_normal.ogg",
+      "sha256": "a588c7edca395d1c675573b5c26c26fbc1c458fab1aec128c1c46209eb0a594c"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Audio/SE/Anim/superdamage.ogg",
+      "target": "assets/audio/se/hit_super.ogg",
+      "sha256": "d084e0f8c7063f8a5fb4952400d5e8f8aaf9ddb317f81cc9d8fd3be2b6a5b398"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Audio/SE/Anim/hit.ogg",
+      "target": "assets/audio/se/hit_weak.ogg",
+      "sha256": "d8515d4c6151ee85d4189bce15e328ce83f876e6cfcb101f0f25ed837443580f"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Audio/SE/Anim/increase.ogg",
+      "target": "assets/audio/se/stat_up.ogg",
+      "sha256": "95f0bc44e55da91b8ee54905062f8fa1a38e59f485a728d319e47ebf1ba008b3"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Audio/SE/Anim/decrease.ogg",
+      "target": "assets/audio/se/stat_down.ogg",
+      "sha256": "f3d8a026dbea9e7fc90416931bbe4aa92670226784b194a1c0c92ccaf17be413"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Audio/SE/Anim/buzzer.wav",
+      "target": "assets/audio/se/menu_error.wav",
+      "sha256": "c654399c1ea56d6c99b872ba4868a2b35839779aec0775f5f6fc1673b629e429"
+    }
+  ]
+}
