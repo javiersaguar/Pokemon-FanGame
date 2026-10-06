@@ -72,7 +72,14 @@ Los nombres, textos y datos de los Pokémon son propiedad de Nintendo, Game Frea
 
 ## Audio
 
-*(Sección del Agente 3.)*
+| Recurso | Autor | Licencia o permiso | Enlace | En el repo |
+|---|---|---|---|---|
+| Elite Battle: DX: selección, experiencia, huida, shiny, lanzamiento, swoosh de salto, jingles de captura/evolución/nivel y músicas de victoria/evolución/PS bajos | **Luka S.J.**; sonidos originales de **Game Freak**, extracción por **BadSamaritan** | Recurso publicado para fangames con crédito obligatorio. No es CC0; Pokémon pertenece a Nintendo / Game Freak / The Pokémon Company | [Publicación y créditos de EBDX](https://luka-sj.com/essentials/resources/EBDX) | `assets/audio/{se,me,bgm}/`; originales/hash en `data/audio_assets.json` |
+| Sonidos de golpe normal/super/débil, subida/bajada de estadísticas y error, del EBDX move & common animation pack | **NikDie**, **Luka S.J.**, Pokémon Essentials y Game Freak (muestras originales) | Pack para fangames; crédito a los autores del recurso | [Publicación del pack de NikDie](https://eeveeexpo.com/resources/1230/) | `assets/audio/se/{hit_normal,hit_super,hit_weak,stat_up,stat_down,menu_error}.*` |
+
+Créditos completos de EBDX, conforme a su publicación: **Game Freak**, **Pokecheck.org**, **PinkCatDragon**, **Tebited15**, **WolfPP**, **Issei Hyoudou**, **Nasasu**, **luckygirl88**, **Spriters-Resource (redblueyellow)**, **Damien**, **BadSamaritan**, **Luka S.J.**, **Pokémon Essentials**, **Maruno**, **Marin** y **Golisopod User**.
+
+Copias sin modificar ni convertir. `tools/arte/import_audio.py <carpeta-de-recursos>` las reproduce y verifica los hashes. Las BGM se reproducen en bucle; SE/ME/gritos no. El salto usa `SE_Zoom2` de EBDX como swoosh (el pack no incluye un archivo de salto dedicado). Los candidatos para música general están en ESTADO, pregunta 29; aún no se usan.
 
 ## Fuentes
 

@@ -11,6 +11,7 @@ const CRIES_DIR := "res://assets/audio/cries/"
 const AMBIENT_DIR := "res://assets/audio/ambient/"
 const EXTENSIONS: Array[String] = ["ogg", "wav", "mp3"]
 const SE_VOICES := 6
+const SE_ALIASES := {&"cursor": &"menu_move", &"cancel": &"menu_cancel", &"bump": &"menu_error"}
 ## Margen al esperar un ME o un grito, por si el archivo tiene bucle.
 const WAIT_MARGIN := 0.05
 
@@ -85,7 +86,7 @@ func restore_bgm(fade_time: float = 0.5) -> void:
 # --- Efectos ---
 
 func play_se(id: StringName) -> void:
-	var stream := _find(SE_DIR, id)
+	var stream := _find(SE_DIR, SE_ALIASES.get(id, id))
 	if stream == null:
 		return
 	var player := _se[_se_next]
@@ -228,6 +229,8 @@ func _find(dir: String, id: StringName) -> AudioStream:
 		var path := "%s.%s" % [key, extension]
 		if ResourceLoader.exists(path):
 			stream = load(path) as AudioStream
+			if stream is AudioStreamOggVorbis: stream.loop = dir == BGM_DIR or dir == AMBIENT_DIR
+			if stream is AudioStreamWAV: stream.loop_mode = AudioStreamWAV.LOOP_FORWARD if dir == BGM_DIR or dir == AMBIENT_DIR else AudioStreamWAV.LOOP_DISABLED
 			break
 	if stream == null:
 		_missing.append(key)

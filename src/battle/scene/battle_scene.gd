@@ -34,6 +34,8 @@ var _driver: BattleDriver
 var _info: Dictionary = {}
 var _last_command := 0
 var _last_move := 0
+var _low_hp_music := false
+var _music_finished := false
 
 @onready var _background: BattleBackground = $World/Background
 @onready var _foe_shadow: Sprite2D = $World/FoeShadow
@@ -92,6 +94,8 @@ func run(setup: Variant) -> StringName:
 		var action := await _ask_player(_driver.request())
 		await _play_events(_driver.submit(action))
 	var outcome := _driver.outcome()
+	_music_finished = true
+	_end_low_hp_music()
 	_driver.finish()
 	await _outro(outcome)
 	await _pending_evolutions()
@@ -136,6 +140,8 @@ func _play_events(events: Array) -> void:
 	for i: int in events.size():
 		await _play_event(events[i])
 		if i == victory_at:
+			_music_finished = true
+			_end_low_hp_music()
 			AudioManager.play_bgm(&"victory_wild" if _trainer().is_empty() else &"victory_trainer", 0.2)
 
 
@@ -149,6 +155,7 @@ func _play_event(event: Variant) -> void:
 				await _message(str(data.get("text", "")))
 		&"switch_in":
 			await _switch_in(side, data)
+			_update_low_hp_music()
 		&"switch_out":
 			if side == BattleDriver.PLAYER:
 				await _message(tr("¡%s, vuelve!") % _player_box.pokemon_name)
@@ -161,6 +168,7 @@ func _play_event(event: Variant) -> void:
 		&"heal":
 			var box := _data_box(side)
 			await box.animate_hp(int(data.get("hp", box.hp)), int(data.get("max_hp", -1)), _t(0.5))
+			_update_low_hp_music()
 		&"status":
 			_data_box(side).set_status(StringName(data.get("status", "")))
 		&"boost":
@@ -174,6 +182,7 @@ func _play_event(event: Variant) -> void:
 			AudioManager.play_cry(_sprite(side).species_id)
 			await _sprite(side).faint(_t(0.4))
 			_data_box(side).hide()
+			_update_low_hp_music()
 			if side == BattleDriver.FOE:
 				_foe_shadow.hide()
 		&"exp":
@@ -186,7 +195,7 @@ func _play_event(event: Variant) -> void:
 				_player_box.set_exp(0.0)
 				await _player_box.animate_hp(int(data.get("hp", _player_box.hp)),
 					int(data.get("max_hp", _player_box.max_hp)), 0.0)
-			await AudioManager.play_me(&"level_up")
+			if not fast: await AudioManager.play_me(&"level_up")
 		&"catch":
 			await _throw_ball(int(data.get("shakes", 0)), bool(data.get("caught", false)))
 		&"trainer_speech":
@@ -287,8 +296,7 @@ func _damage(side: int, hp: int, effectiveness: float) -> void:
 	await _sprite(side).blink(3, _t(0.06))
 	var change := absf(box.hp - hp) / float(box.max_hp)
 	await box.animate_hp(hp, -1, _t(clampf(change * 1.2, 0.25, 1.0)))
-	if side == BattleDriver.PLAYER and hp > 0 and float(hp) / box.max_hp <= 0.2:
-		AudioManager.play_se(&"low_hp")
+	_update_low_hp_music()
 
 
 func _throw_ball(shakes: int, caught: bool) -> void:
@@ -546,7 +554,7 @@ func _outro(outcome: StringName) -> void:
 			if not _info.get("can_lose", false):
 				await _message(Dialogue.format_text(tr("¡{player} está fuera de combate!")))
 		SceneManager.OUTCOME_CAUGHT:
-			await AudioManager.play_me(&"caught")
+			if not fast: await AudioManager.play_me(&"caught")
 		SceneManager.OUTCOME_RUN:
 			AudioManager.play_se(&"flee")
 	await _wait(_t(0.4))
@@ -698,3 +706,17 @@ func _pending_evolutions() -> void:
 			if p.uid == str(pending.get("uid", "")) and not p.is_fainted():
 				await EvolutionScreen.open(p, pending.get("evolution", {"to": pending.to}), &"", fast)
 				break
+
+func _update_low_hp_music() -> void:
+	if _music_finished: return
+	var low := _player_box.visible and _player_box.hp > 0 and float(_player_box.hp) / maxi(_player_box.max_hp, 1) <= 0.2
+	if low and not _low_hp_music:
+		AudioManager.save_bgm()
+		AudioManager.play_bgm(&"low_hp", 0.15)
+		_low_hp_music = true
+	elif not low: _end_low_hp_music()
+
+func _end_low_hp_music() -> void:
+	if _low_hp_music:
+		AudioManager.restore_bgm(0.15)
+		_low_hp_music = false

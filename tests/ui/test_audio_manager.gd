@@ -113,3 +113,35 @@ func test_nested_bgm_restores_victory_then_map_after_evolution() -> void:
 	assert_eq(AudioManager.current_bgm, &"test_victory")
 	AudioManager.restore_bgm(0.0)
 	assert_eq(AudioManager.current_bgm, &"test_map")
+
+func test_imported_audio_manifest_and_loop_flags() -> void:
+	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_assets.json"))
+	for entry: Dictionary in manifest.files:
+		assert_eq(FileAccess.get_sha256("res://" + entry.target), entry.sha256, "audio copiado sin modificar")
+		assert_true(ResourceLoader.exists("res://" + entry.target))
+		var stream: AudioStream = load("res://" + entry.target)
+		assert_gt(stream.get_length(), 0.0)
+	var bgm := AudioManager._find(AudioManager.BGM_DIR, &"low_hp") as AudioStreamOggVorbis
+	var me := AudioManager._find(AudioManager.ME_DIR, &"caught") as AudioStreamOggVorbis
+	assert_true(bgm.loop)
+	assert_false(me.loop)
+
+func test_low_hp_music_restores_battle_then_original_map() -> void:
+	var scene := load("res://src/battle/scene/battle_scene.tscn").instantiate() as BattleScene
+	add_child(scene)
+	AudioManager.play_bgm(&"map_missing_for_test", 0.0)
+	AudioManager.save_bgm()
+	AudioManager.play_bgm(&"battle_missing_for_test", 0.0)
+	scene._player_box.show()
+	scene._player_box.max_hp = 100
+	scene._player_box.hp = 10
+	scene._update_low_hp_music()
+	assert_eq(AudioManager.current_bgm, &"low_hp")
+	scene._update_low_hp_music()
+	scene._player_box.hp = 80
+	scene._update_low_hp_music()
+	assert_eq(AudioManager.current_bgm, &"battle_missing_for_test")
+	AudioManager.restore_bgm(0.0)
+	assert_eq(AudioManager.current_bgm, &"map_missing_for_test")
+	scene.queue_free()
+	await wait_process_frames(2)
