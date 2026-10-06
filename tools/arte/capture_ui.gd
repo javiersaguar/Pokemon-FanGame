@@ -38,6 +38,36 @@ func run() -> void:
 		if case_name in ["splash", "notice", "intro", "main_menu"]:
 			screen.set_stage(&"menu" if case_name == "main_menu" else StringName(case_name))
 		await create_timer(0.35).timeout
+	elif case_name in ["party", "bag", "bag_items", "shop", "quantity"]:
+		var manager = root.get_node("SceneManager")
+		var state = root.get_node("GameState")
+		main = load("res://src/main/main.tscn").instantiate()
+		main.set_script(null)
+		root.add_child(main)
+		manager.register_main(main)
+		await manager.start_new_game(&"", &"", {"slot": 1})
+		state.player_name = "Javier"
+		state.party.add(load("res://src/pokemon/pokemon.gd").create(&"charmander", 5))
+		state.party.add(load("res://src/pokemon/pokemon.gd").create(&"pidgey", 7))
+		state.bag.add(&"potion", 5)
+		state.bag.add(&"antidote", 2)
+		state.bag.add(&"pokeball", 10)
+		state.bag.add(&"repel", 3)
+		var paths = {"party": "party/party_screen", "bag": "bag/bag_screen", "bag_items": "widgets/choice_screen", "shop": "shop/shop_screen", "quantity": "widgets/quantity_picker"}
+		screen = load("res://src/ui/%s.gd" % paths[case_name]).new()
+		if case_name == "bag_items":
+			screen.caption = "Medicinas"
+			screen.choices = ["Poción / 5", "Antídoto / 2"]
+			screen.notes = [root.get_node("DataDB").item(&"potion").description, root.get_node("DataDB").item(&"antidote").description]
+			screen.images.append(load("res://assets/sprites/items/potion.png"))
+			screen.images.append(load("res://assets/sprites/items/antidote.png"))
+		if case_name == "shop": screen.shop_id = &"tienda_ciudad2"
+		if case_name == "quantity":
+			screen.caption = "Poción"
+			screen.maximum = 15
+			screen.unit_price = 200
+			screen.quantity = 3
+		manager.push_menu(screen)
 	elif case_name in ["slots", "pause"]:
 		var manager = root.get_node("SceneManager")
 		var state = root.get_node("GameState")

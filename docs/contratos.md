@@ -1134,14 +1134,21 @@ driver.item_needs_target(item_id) -> bool / can_use_item(item_id, party_index) -
 - **Variaciones del Theme**: `SmallLabel`, `LightLabel` y `SmallLightLabel` (texto claro sobre fondo oscuro), `TagLabel` (etiqueta PS), `KeyLabel` (claves de las fichas), `TitleLabel` (cabeceras), `DarkPanel` y `LightRichText` (mensajes de combate) y `SmallFrame`. `Panel` y `PanelContainer` usan el marco de pixel art propio.
 - **Widgets**: `GridMenu` (`src/ui/widgets/grid_menu.gd`, menú en rejilla o lista con cursor, opciones desactivadas y `await choose(start, allow_cancel) -> int`), `CursorArrow` (`src/ui/widgets/cursor_arrow.gd`, flecha de menú o de "continuar"), `DialogueBox` (`src/ui/dialogue/dialogue_box.tscn`, cuadro de texto reutilizable: `await play(text, speaker_name, wait_last)`) y `ChoiceBox` (`src/ui/dialogue/choice_box.tscn`, lista de opciones: `await choose(options, cancel_choice) -> int`).
 - **Más widgets**: `UiCanvas`, `BattleButton` (botón de pixel art de color con foco animado), `TypeIcons.texture(type)` / `make_rect(type)` (iconos de tipo de Loaky) y `await SummaryScreen.open(parent, party: Array[Pokemon], index)` (ficha del Pokémon: Datos, Notas y Estadísticas).
-- Pantallas de uso común **(previsto)**:
+- Pantallas de uso común **entregadas (2026-10-06)**:
 
 ```gdscript
-var name: String = await NameEntry.open(title: String, default_name := "", max_length := 10)
-await ShopScreen.open(shop_id: StringName)     # data/shops.json
-await PartyScreen.open(mode := PartyScreen.Mode.VIEW) -> int   # índice elegido o -1
-await BagScreen.open(mode := BagScreen.Mode.FIELD) -> StringName  # id del objeto o &""
+await NameKeyboard.ask(parent, title, initial, allow_cancel, max_length) -> String
+await SaveSlotsScreen.choose(mode := &"load", start := 1) -> int  # 0 al cancelar
+await PartyScreen.open()               # equipo, datos, orden y objetos
+await PartyScreen.pick_member(title) -> int  # -1 al cancelar
+await BagScreen.open()                 # ocho bolsillos y operaciones de campo
+await BagScreen.pick_item(include_keys := true, pocket := &"") -> StringName
+await ShopScreen.open(shop_id: StringName)   # stock por medallas, compra y venta
+await ChoiceScreen.pick(title, labels, notes, textures) -> int
+await QuantityPicker.pick(title, maximum, unit_price) -> int  # 0 al cancelar
 ```
+
+`PartyItems.equip(p, id)` / `take(p)` intercambian objetos con la mochila sin perder unidades si no hay capacidad. `ShopTransactions.buy(shop, id, amount)` / `sell(id, amount)` validan dinero, existencias y capacidad antes de mutar. `FieldItemUse.use(id, pokemon, move_index)` consume solo tras un efecto válido: PS, estado, revivir (respetando muerte permanente), PP y repelente. Evolución y aprendizaje usan sus pantallas específicas; MT/vitaminas/Caramelo Raro se incorporarán con el contrato del motor. Cuerda Huida no consume sin destino de salida configurado. Las acciones de campo usan `FieldActions`; los IDs/flags pendientes no se inventan.
 
 - Comandos de Debug del Agente 3: `dialogue <texto>`, `giveitem <id> [n]`, `bag`, `bgm [id]`, `se <id>`, `me <id>`, `volume <bus> <0-100>` y `audio` (audios que faltan).
 
