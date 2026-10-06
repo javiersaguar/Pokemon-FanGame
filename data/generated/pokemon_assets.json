@@ -6654,8 +6654,6 @@
   "greninjamega": {
    "essentials": "GRENINJA_3",
    "files": {
-    "front": "06_generation9_pack",
-    "front_shiny": "06_generation9_pack",
     "back": "06_generation9_pack",
     "back_shiny": "06_generation9_pack",
     "icons": "06_generation9_pack",
@@ -9378,7 +9376,6 @@
    "essentials": "MALAMAR_1",
    "files": {
     "front": "06_generation9_pack",
-    "front_shiny": "06_generation9_pack",
     "back": "06_generation9_pack",
     "back_shiny": "06_generation9_pack",
     "icons": "06_generation9_pack",
@@ -16905,7 +16902,6 @@
    "essentials": "VICTREEBEL_1",
    "files": {
     "front": "06_generation9_pack",
-    "front_shiny": "06_generation9_pack",
     "back": "06_generation9_pack",
     "back_shiny": "06_generation9_pack",
     "icons": "06_generation9_pack",
@@ -18335,6 +18331,7 @@
   ],
   "front": [
    "basculegionf",
+   "greninjamega",
    "pichuspikyeared",
    "poltchageistartisan",
    "polteageistantique",
@@ -18343,11 +18340,14 @@
   ],
   "front_shiny": [
    "basculegionf",
+   "greninjamega",
+   "malamarmega",
    "pichuspikyeared",
    "poltchageistartisan",
    "polteageistantique",
    "sinistchamasterpiece",
-   "sinisteaantique"
+   "sinisteaantique",
+   "victreebelmega"
   ],
   "back": [
    "basculegionf",
