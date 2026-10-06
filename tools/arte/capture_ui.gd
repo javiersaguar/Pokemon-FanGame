@@ -38,6 +38,27 @@ func run() -> void:
 		if case_name in ["splash", "notice", "intro", "main_menu"]:
 			screen.set_stage(&"menu" if case_name == "main_menu" else StringName(case_name))
 		await create_timer(0.35).timeout
+	elif case_name in ["dex", "dex_entry", "learn_move", "evolution", "professor_intro"]:
+		var manager = root.get_node("SceneManager")
+		var state = root.get_node("GameState")
+		main = load("res://src/main/main.tscn").instantiate()
+		main.set_script(null)
+		root.add_child(main)
+		manager.register_main(main)
+		await manager.start_new_game(&"", &"", {"slot": 1})
+		var pokemon = load("res://src/pokemon/pokemon.gd").create(&"charmander", 16)
+		state.party.add(pokemon)
+		state.pokedex.register(pokemon)
+		var paths = {"dex": "pokedex/pokedex_screen", "dex_entry": "pokedex/pokedex_entry", "learn_move": "learn_move/learn_move_screen", "evolution": "evolution/evolution_screen", "professor_intro": "intro/professor_intro"}
+		screen = load("res://src/ui/%s.gd" % paths[case_name]).new()
+		if case_name == "dex_entry": screen.species_id = &"charmander"
+		if case_name == "learn_move":
+			screen.request = {"move_id": &"flamethrower", "move_name": "Lanzallamas", "moves": load("res://src/battle/scene/engine_driver.gd")._moves_of(pokemon)}
+		if case_name == "evolution":
+			screen.pokemon = pokemon
+			screen.evolution = {"to": "charmeleon", "method": "level"}
+		manager.push_menu(screen)
+		if case_name == "evolution": await create_timer(0.1).timeout
 	elif case_name in ["party", "bag", "bag_items", "shop", "quantity"]:
 		var manager = root.get_node("SceneManager")
 		var state = root.get_node("GameState")

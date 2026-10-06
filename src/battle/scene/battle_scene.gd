@@ -94,6 +94,7 @@ func run(setup: Variant) -> StringName:
 	var outcome := _driver.outcome()
 	_driver.finish()
 	await _outro(outcome)
+	await _pending_evolutions()
 	AudioManager.restore_bgm()
 	return outcome
 
@@ -486,13 +487,7 @@ func _choose_party(forced: bool, for_item: bool = false) -> int:
 
 ## Qué movimiento olvidar para aprender `request.move_name` (−1 = no aprenderlo).
 func _choose_forget(request: Dictionary) -> int:
-	var moves: Array = request.get("moves", _driver.player_active().get("moves", []))
-	var labels := PackedStringArray()
-	for move: Dictionary in moves:
-		labels.append(str(move.get("name", "?")))
-	labels.append(tr("No aprender %s") % request.get("move_name", ""))
-	var index := await _list(tr("¿Qué movimiento olvidas?"), labels, [], false)
-	return index if index < moves.size() else -1
+	return await LearnMoveScreen.choose(request)
 
 
 func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can_cancel: bool) -> int:
@@ -693,3 +688,13 @@ static func _field(event: Variant, key: String, default: Variant) -> Variant:
 	if event is Object and key in event:
 		return event.get(key)
 	return default
+
+func _pending_evolutions() -> void:
+	var driver := _driver as EngineDriver
+	if _driver is LockeBattleDriver: driver = _driver.inner
+	if driver == null: return
+	for pending: Dictionary in driver.engine.result.pending_evolutions:
+		for p: Pokemon in GameState.party.members:
+			if p.uid == str(pending.get("uid", "")) and not p.is_fainted():
+				await EvolutionScreen.open(p, pending.get("evolution", {"to": pending.to}), &"", fast)
+				break
