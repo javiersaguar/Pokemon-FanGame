@@ -1,4 +1,4 @@
-# Pokémon Panchito
+# Pokémon Fan-Game
 
 Fangame **sin ánimo de lucro** al estilo de *Pokémon Añil*, programado desde cero en **Godot 4 con GDScript**.
 
