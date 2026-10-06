@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-05, Javier):** 🛑 **Fin de la sesión larga.** Se para aquí hasta la próxima. Estado **comprobado por Javier** en `main` (`a7f8270d`) al cerrar:
+**Último aviso (2026-10-06, Javier):** ▶️ **Sesión con 2 agentes: el Agente 2 (motor) y el Agente 3 (interfaz).** Los Agentes 1 y 4 están **parados** (lo suyo espera a la revisión de Javier). Plan en **[«Sesión con 2 agentes (2026-10-06)»](#sesión-con-2-agentes-2026-10-06)**, que sustituye a «Próxima sesión» mientras dure. Regla especial: como los Agentes 1 y 4 no están, si para terminar una tarea hace falta **un cambio pequeño** en algo suyo (por ejemplo, enchufar una pantalla en `SceneManager` o en un sustituto), se puede hacer, con tests, y **se apunta en "Peticiones"** como `hecha por A2/A3 en ausencia de A1/A4`, para que el dueño lo revise al volver. Nada de cambios grandes en lo ajeno.
+
+**Aviso anterior (2026-10-05, Javier):** 🛑 **Fin de la sesión larga.** Se para aquí hasta la próxima. Estado **comprobado por Javier** en `main` (`a7f8270d`) al cerrar:
 - **Tests: 292 de 292 en verde**, 3707 aserciones, 79 s. **Importación limpia** (0 errores). **Validador de arte: 0 errores** en 10.525 PNG; 4 avisos, los sprites de megas que el Generation 9 Pack trae a 96×96 (petición 29).
 - **Worktrees** (`pokemon-panchito` y `-agente1` a `-agente4`): limpios, sin commits por subir y sin ramas pendientes de mergear. Todo está en GitHub.
 - **Hecho en la sesión:** NPCs con los que se habla desde cualquier lado, botón para correr (falta la opción en el menú de Opciones), reglas Locke en el mundo y en el combate, guion del MVP en la sala de pruebas, flujo de nueva partida RandomLocke, IA de niveles 2 a 4, habilidades, objetos equipados y trampas, `TrainerNPC`, combate con botones en relieve y fondo de bosque, ficha del Pokémon rehecha, pueblo y ruta de muestra rehechos, sombra de los personajes, efectos del mapa, las 20 clases Panchito más el rival y el profesor, y las propuestas de protagonistas.
@@ -309,6 +311,30 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 **Bloqueos:** ninguno del motor. **Integración aún pendiente** en carpetas ajenas: A2 apply_patch/input/MT/tutores/held_items/shiny y reglas individuales del combate; A1 zone_id/llamadas Locke/Cementerio; A3 pantallas R.8. Peticiones **22–25** abiertas. Esta entrega es del motor sin interfaz, hito v0.2; no afirma que el flujo jugable R.8/R.9 esté cerrado.
 
 ---
+
+## Sesión con 2 agentes (2026-10-06)
+
+*Solo trabajan el **Agente 2** y el **Agente 3**. Mismas reglas que la sesión larga: lista de arriba abajo; al terminar cada tarea, tests y validador de arte en verde, merge a `main`, `git push origin main`, sección al día y la siguiente sin esperar; si algo se bloquea, se apunta y se sigue con lo siguiente. Todo lo visible lleva comparativa en `docs/arte/comparativas/`. **Los dos se coordinan sobre todo en los combates dobles y la Megaevolución:** el Agente 2 publica el contrato y el Agente 3 adapta la escena.*
+
+**Agente 3 — Interfaz, audio y presentación** (worktree `pokemon-panchito-agente3`). Objetivo: que **todas las pantallas del MVP sean las definitivas** y no los sustitutos del Agente 1.
+1. Peticiones rápidas: **41** (`assets/sprites/trainers/` como arte de terceros en el validador), **39** (opción **"Correr siempre"** y aviso "Correr: activado/desactivado") y **31** (cambio en modo Cambio).
+2. **Menú inicial de la Fase 15.2**, con el máximo nivel de la Fase A: splash **"Javier Saguar presenta"**, aviso de fangame, intro corta, título con parallax y logo animado (**2 o 3 propuestas de logo** para que elija Javier), **"Realizado por Javier Saguar"** y la versión siempre en el pie, menú principal (Continuar / Nueva partida / Cargar / Opciones / Créditos / Salir) y créditos con **"Juego realizado por Javier Saguar"** como primera línea.
+3. **Pantallas del MVP**, una a una y sustituyendo a los sustitutos del Agente 1 (peticiones 33, 35 y 44): teclado de nombres; elegir ranura, guardar y cargar (8 ranuras con miniatura y modo, copiar y borrar); menú de pausa; equipo (reordenar, ficha, objetos, movimientos de campo); mochila por bolsillos; tienda (comprar y vender, `tienda_ciudad2`); Pokédex básica; escena de evolución; aprender movimiento; y la presentación visual de la intro del profesor.
+4. **Audio con los recursos de EBDX** (`16_elite_battle_dx`): SE de menús, selección, golpes, captura, experiencia, huida y **shiny** (cierra la petición 27); ME de captura, evolución y subir de nivel; BGM de victoria, evolución y PS bajos. Créditos en `CREDITOS.md`. La música general falta: **lista de candidatos con enlace, autor y licencia** en "Preguntas para Javier".
+5. **Combate más vivo:** transiciones de entrada de EBDX (salvaje, entrenador y líder) y **animaciones de movimientos** del pack de NikDie (`17_ebdx_anim_pack`). Primero las genéricas por tipo y categoría, después las de los movimientos que usa el MVP.
+6. **Pantallas del RandomLocke (Fase R.8, peticiones 25 y 44):** modo, ajustes con presets, "Generando la ROM...", resumen con código para compartir, indicador de zona, Cementerio con epitafios y game over.
+7. **Resto de la Fase 15:** PC con cajas, Pokédex completa (entrada, formas y shiny), Opciones (velocidad de texto, volúmenes, `battle_style`, correr siempre, marco, pantalla completa), tarjeta de entrenador con medallas y mapa de la región (con los datos de vuelo del Agente 1).
+8. **Escena de combate para dobles y Megaevolución**, en cuanto el Agente 2 publique sus contratos (tareas 2 y 3 del Agente 2).
+
+**Agente 2 — Datos, motor de combate y RandomLocke** (worktree `pokemon-panchito-agente2`)
+1. Petición 29: los 4 sprites de mega que vienen a 96×96. Buscarlos a 192 en el pack 07; si no están, documentarlos como excepción conocida.
+2. **Fase 9.4, combates dobles:** primero el **contrato** en `contratos.md` (objetivos, eventos y peticiones nuevos) con aviso al Agente 3; después el motor: objetivos y redirección, daño repartido ×0,75, movimientos a aliados, parejas de entrenadores (los `TrainerNPC` en pareja ya existen), combate con compañero y dobles salvajes, más la IA adaptada a dobles. Tests.
+3. **Fase 9.6, Megaevolución** (Megapiedras, Megapulsera, una vez por combate, forma, habilidad y estadísticas nuevas, y evento para la escena), con contrato publicado antes. Después **Z, Dinamax y Tera**, en ese orden, como opcionales detrás de un ajuste.
+4. **Fase 14.3, crianza (lógica pura):** guardería, compatibilidad por grupo huevo y sexo, huevos por pasos, herencia (IVs con Lazo Destino, naturaleza con Piedra Eterna, movimientos huevo, habilidad oculta, Ball), eclosión con Cuerpo Llama, Método Masuda y Pokérus. API documentada para el mundo (pasos) y la interfaz.
+5. **Evoluciones y movimientos (Fases 6.2, 6.3):** todos los métodos de evolución que necesiten las especies en uso (hora, amistad, objeto equipado, lugar, movimiento conocido, clima...), recordador de movimientos, tutores y el **conjunto de MT** (qué movimientos son MT y su compatibilidad, sin decidir dónde se consiguen: eso es de Javier).
+6. **RandomLocke:** exportar los spoilers a `user://randomlocke/`, conectar la probabilidad shiny de sus ajustes y meter las MT y tutores de la tarea 5 en el generador. Siempre en verde.
+7. **Fase 20.2:** herramienta de simulación en masa (equipo esperado contra cada líder, porcentaje de victorias) en `tools/`.
+8. **Cobertura total del combate** (tarea de fondo, para cuando acabe lo demás): habilidades, objetos y movimientos con script para **todas** las especies del juego, no solo las del MVP, ampliando el validador para que lo compruebe. De más usadas a menos.
 
 ## Próxima sesión (tareas declaradas)
 
