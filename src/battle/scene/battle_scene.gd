@@ -272,15 +272,11 @@ static func _exp_ratio(data: Dictionary) -> float:
 func _animate_move(side: int, target_side: int, move: Dictionary) -> void:
 	var user := _sprite(side)
 	var target := _sprite(target_side)
-	var color := UiColors.type_color(StringName(move.get("type", "normal")))
-	match _category(move.get("category", "physical")):
-		&"physical":
-			await user.lunge(target.home(), _t(0.25))
-			await BattleFx.burst(_fx, target.center(), color, _t(0.25))
-		&"special":
-			await BattleFx.orb(_fx, user.center(), target.center(), color, _t(0.5))
-		_:
-			await BattleFx.sparkle(_fx, target.center(), color, _t(0.6))
+	var details := move.duplicate()
+	details.category = _category(move.get("category", "physical"))
+	if details.category == &"physical":
+		await user.lunge(target.home(), _t(0.25))
+	await BattleFx.move(_fx, user.center(), target.center(), details, _t(0.65))
 
 
 func _damage(side: int, hp: int, effectiveness: float) -> void:

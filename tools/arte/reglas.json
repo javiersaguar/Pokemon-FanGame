@@ -14,7 +14,8 @@
     "res://assets/sprites/ui/battle/shadows/",
     "res://assets/sprites/ui/icons/types_spanish.png",
     "res://assets/tilesets/exterior/",
-    "res://assets/sprites/ui/battle/transitions/"
+    "res://assets/sprites/ui/battle/transitions/",
+    "res://assets/sprites/ui/battle/moves/"
   ],
   "placeholder": [],
   "rules": [
@@ -210,6 +211,139 @@
       "size": [
         346,
         346
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb008.png",
+      "size": [
+        64,
+        32
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb028.png",
+      "size": [
+        106,
+        61
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb057_3.png",
+      "size": [
+        328,
+        174
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb069_3.png",
+      "size": [
+        50,
+        18
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb086.png",
+      "size": [
+        56,
+        56
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb136.png",
+      "size": [
+        212,
+        303
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb175_1.png",
+      "size": [
+        24,
+        24
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb191.png",
+      "size": [
+        144,
+        104
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb250.png",
+      "size": [
+        62,
+        60
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb303.png",
+      "size": [
+        128,
+        64
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb303_2.png",
+      "size": [
+        20,
+        20
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb429_2_2.png",
+      "size": [
+        36,
+        37
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb460.png",
+      "size": [
+        42,
+        42
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb504.png",
+      "size": [
+        52,
+        50
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb519_2.png",
+      "size": [
+        26,
+        26
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb551.png",
+      "size": [
+        64,
+        24
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb59.png",
+      "size": [
+        78,
+        76
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb626_2.png",
+      "size": [
+        50,
+        50
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/eb637.png",
+      "size": [
+        256,
+        512
       ]
     }
   ],

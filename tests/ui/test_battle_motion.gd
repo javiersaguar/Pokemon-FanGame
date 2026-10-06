@@ -43,3 +43,25 @@ func test_normal_transition_finishes_and_removes_overlay_without_changing_game_l
 	assert_eq(get_child_count(), count)
 	assert_true(GameState.is_input_locked_by(&"motion_test"))
 	GameState.unlock_input(&"motion_test")
+
+func test_all_eighteen_types_have_native_frames_and_effects_release_nodes() -> void:
+	var types: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/battle_motion_types.json"))
+	assert_eq(types.size(), 18)
+	for type: String in types:
+		for kind: int in [BattleFx.Kind.BURST, BattleFx.Kind.ORB, BattleFx.Kind.SPARKLE]:
+			var fx := BattleFx.create(self, kind, Vector2(110,260), Vector2(360,100), BattleFx.type_profile(StringName(type)))
+			for t: float in [0.0,0.25,0.51,1.0]:
+				fx.progress = t
+				for sprite: Sprite2D in fx.particles:
+					assert_eq(sprite.scale, Vector2.ONE)
+					assert_eq(sprite.rotation, 0.0)
+					assert_eq(sprite.position, sprite.position.round())
+					assert_lt(sprite.frame, sprite.hframes * sprite.vframes)
+			fx.queue_free()
+	await wait_process_frames(2)
+	var count := get_child_count()
+	await BattleFx.move(self, Vector2.ZERO, Vector2(10,20), {"type": &"fire", "category": &"special"}, 0.05)
+	await wait_process_frames(2)
+	assert_eq(get_child_count(), count)
+	await BattleFx.move(self, Vector2.ZERO, Vector2.ONE, {}, 0.0)
+	assert_eq(get_child_count(), count, "fast no crea efectos")

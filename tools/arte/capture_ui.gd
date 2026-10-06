@@ -14,7 +14,19 @@ func run() -> void:
 		if arg.begins_with("--screen="):
 			case_name = arg.trim_prefix("--screen=")
 	root.size = Vector2i(512, 384)
-	if case_name.begins_with("transition_"):
+	if case_name.begins_with("motion_"):
+		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
+		root.add_child(screen)
+		screen._background.set_environment(&"grass")
+		screen._apply_bases()
+		screen.get_node("Canvas/Curtain").hide()
+		screen._player_sprite.set_pokemon({"species": &"charmander"})
+		screen._foe_sprite.set_pokemon({"species": &"bulbasaur"})
+		var fx_class = load("res://src/battle/scene/battle_fx.gd")
+		var kind = fx_class.Kind.ORB if case_name == "motion_special" else (fx_class.Kind.SPARKLE if case_name == "motion_status" else fx_class.Kind.BURST)
+		var fx = fx_class.create(screen._fx, kind, screen._player_sprite.center(), screen._foe_sprite.center(), fx_class.type_profile(&"fire" if kind == fx_class.Kind.ORB else &"normal"), Color(0.7,1,0.5))
+		fx.progress = 0.45
+	elif case_name.begins_with("transition_"):
 		if case_name == "transition_before":
 			screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
 			root.add_child(screen)

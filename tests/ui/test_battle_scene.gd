@@ -17,6 +17,14 @@ func before_each() -> void:
 	_done = false
 
 
+func after_each() -> void:
+	for child: Node in AudioManager.get_children():
+		if child is AudioStreamPlayer:
+			child.stop()
+			child.stream = null
+	await wait_process_frames(2)
+
+
 func _press(action: StringName) -> void:
 	var down := InputEventAction.new()
 	down.action = action
