@@ -24,7 +24,11 @@ func run() -> void:
 		screen._foe_sprite.set_pokemon({"species": &"bulbasaur"})
 		var fx_class = load("res://src/battle/scene/battle_fx.gd")
 		var kind = fx_class.Kind.ORB if case_name == "motion_special" else (fx_class.Kind.SPARKLE if case_name == "motion_status" else fx_class.Kind.BURST)
-		var fx = fx_class.create(screen._fx, kind, screen._player_sprite.center(), screen._foe_sprite.center(), fx_class.type_profile(&"fire" if kind == fx_class.Kind.ORB else &"normal"), Color(0.7,1,0.5))
+		var spec = fx_class.type_profile(&"fire" if kind == fx_class.Kind.ORB else &"normal")
+		if case_name in ["motion_scratch","motion_stringshot","motion_vinewhip"]:
+			spec = load("res://src/battle/scene/battle_move_animation.gd").sequence(StringName(case_name.trim_prefix("motion_")))
+			kind = fx_class.Kind.ORB if spec.kind == "orb" else fx_class.Kind.BURST
+		var fx = fx_class.create(screen._fx, kind, screen._player_sprite.center(), screen._foe_sprite.center(), spec, Color(0.7,1,0.5))
 		fx.progress = 0.45
 	elif case_name.begins_with("transition_"):
 		if case_name == "transition_before":

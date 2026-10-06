@@ -1,0 +1,203 @@
+{
+  "tackle": {
+    "asset": "eb303",
+    "kind": "burst",
+    "pattern": "",
+    "count": 3,
+    "duration": 0.7,
+    "frame": [
+      64,
+      64
+    ],
+    "user_motion": "lunge",
+    "focus": "target",
+    "impact": true,
+    "status_asset": true
+  },
+  "quickattack": {
+    "asset": "eb303_2",
+    "kind": "burst",
+    "pattern": "",
+    "count": 3,
+    "duration": 0.4,
+    "frame": [],
+    "user_motion": "quick",
+    "focus": "target",
+    "impact": true,
+    "status_asset": true
+  },
+  "scratch": {
+    "asset": "eb601",
+    "kind": "burst",
+    "pattern": "slash",
+    "count": 1,
+    "duration": 0.7,
+    "frame": [],
+    "user_motion": "lunge",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "peck": {
+    "asset": "eb303_2",
+    "kind": "burst",
+    "pattern": "peck",
+    "count": 3,
+    "duration": 0.5,
+    "frame": [],
+    "user_motion": "lunge",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "poisonsting": {
+    "asset": "eb303_0_4",
+    "kind": "orb",
+    "pattern": "",
+    "count": 3,
+    "duration": 0.7,
+    "frame": [
+      64,
+      64
+    ],
+    "user_motion": "",
+    "focus": "target",
+    "impact": true,
+    "status_asset": true
+  },
+  "vinewhip": {
+    "asset": "eb208",
+    "kind": "burst",
+    "pattern": "whip",
+    "count": 2,
+    "duration": 0.8,
+    "frame": [],
+    "user_motion": "",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "ember": {
+    "asset": "eb136",
+    "kind": "orb",
+    "pattern": "",
+    "count": 6,
+    "duration": 0.9,
+    "frame": [
+      53,
+      101
+    ],
+    "user_motion": "",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "watergun": {
+    "asset": "eb551",
+    "kind": "orb",
+    "pattern": "jet",
+    "count": 8,
+    "duration": 0.9,
+    "frame": [],
+    "user_motion": "",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "stringshot": {
+    "asset": "eb551_2",
+    "kind": "orb",
+    "pattern": "jet",
+    "count": 6,
+    "duration": 0.8,
+    "frame": [],
+    "user_motion": "",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "sweetscent": {
+    "asset": "eb611_2",
+    "kind": "orb",
+    "pattern": "petals",
+    "count": 16,
+    "duration": 1.1,
+    "frame": [],
+    "user_motion": "",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "aromaticmist": {
+    "asset": "eb59_8",
+    "kind": "sparkle",
+    "pattern": "mist",
+    "count": 4,
+    "duration": 1.0,
+    "frame": [],
+    "user_motion": "",
+    "focus": "user",
+    "impact": false,
+    "status_asset": true
+  },
+  "growl": {
+    "asset": "eb460",
+    "kind": "orb",
+    "pattern": "rings",
+    "count": 3,
+    "duration": 0.8,
+    "frame": [],
+    "user_motion": "sway",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "playnice": {
+    "asset": "eb519_2",
+    "kind": "sparkle",
+    "pattern": "",
+    "count": 6,
+    "duration": 0.8,
+    "frame": [],
+    "user_motion": "sway",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "defensecurl": {
+    "asset": "eb519_2",
+    "kind": "sparkle",
+    "pattern": "",
+    "count": 6,
+    "duration": 0.7,
+    "frame": [],
+    "user_motion": "flash",
+    "focus": "user",
+    "impact": false,
+    "status_asset": true
+  },
+  "tailwhip": {
+    "asset": "eb519_2",
+    "kind": "burst",
+    "pattern": "",
+    "count": 0,
+    "duration": 0.5,
+    "frame": [],
+    "user_motion": "sway",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  },
+  "splash": {
+    "asset": "eb519_2",
+    "kind": "burst",
+    "pattern": "",
+    "count": 0,
+    "duration": 0.6,
+    "frame": [],
+    "user_motion": "hop",
+    "focus": "target",
+    "impact": false,
+    "status_asset": true
+  }
+}

@@ -259,6 +259,66 @@
         512
       ],
       "sha256": "48905d79e97a533ad9179cb4f0d06570b8fe46672fb8e9fc704fafaf90258f83"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb601.png",
+      "target": "assets/sprites/ui/battle/moves/eb601.png",
+      "size": [
+        96,
+        128
+      ],
+      "sha256": "c4765acfa2c2ce15d33534513a5281d74509b1314405faa438d326719a5d277d"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb208.png",
+      "target": "assets/sprites/ui/battle/moves/eb208.png",
+      "size": [
+        76,
+        24
+      ],
+      "sha256": "26b87d6607174db3a9fefa2d38453a27c88cd4233412cd3cf38f8f8ff5592ab7"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb551_2.png",
+      "target": "assets/sprites/ui/battle/moves/eb551_2.png",
+      "size": [
+        64,
+        24
+      ],
+      "sha256": "4205b454618512b1a5a0d0a952a7a9d2e527239cb7b393a8d2424d6cb10ad109"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb611_2.png",
+      "target": "assets/sprites/ui/battle/moves/eb611_2.png",
+      "size": [
+        16,
+        12
+      ],
+      "sha256": "1f276c6d2bc0d2fd0cb0f98edee234a387b59d4280f62436f9197c559dfcaff6"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb59_8.png",
+      "target": "assets/sprites/ui/battle/moves/eb59_8.png",
+      "size": [
+        78,
+        76
+      ],
+      "sha256": "44a4e1696781079384f2e693a44d4bd72aa316f8ad626111d7f5f854bc4d5815"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb303_0_4.png",
+      "target": "assets/sprites/ui/battle/moves/eb303_0_4.png",
+      "size": [
+        128,
+        64
+      ],
+      "sha256": "db97a1974eb62d90a97fd0016ea308bdf5c155a0e66d21e62da8dba5c1dd7b16"
     }
   ]
 }

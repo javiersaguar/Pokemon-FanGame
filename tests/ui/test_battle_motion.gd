@@ -65,3 +65,28 @@ func test_all_eighteen_types_have_native_frames_and_effects_release_nodes() -> v
 	assert_eq(get_child_count(), count)
 	await BattleFx.move(self, Vector2.ZERO, Vector2.ONE, {}, 0.0)
 	assert_eq(get_child_count(), count, "fast no crea efectos")
+
+func test_specific_mvp_sequences_cover_configured_moves_and_restore_user_position() -> void:
+	var mvp: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/battle_motion_mvp.json"))
+	for id: String in mvp.moves:
+		var spec := BattleMoveAnimation.sequence(StringName(id))
+		assert_false(spec.is_empty(), id)
+		assert_true(ResourceLoader.exists(BattleFx.DIR+str(spec.asset)+".png"), id)
+	assert_true(BattleMoveAnimation.sequence(&"not_a_move").is_empty())
+	var user := BattlePokemonSprite.new()
+	user.back = true
+	user.position = Vector2(110,280)
+	add_child_autofree(user)
+	user.set_pokemon({"species": &"squirtle"})
+	var target := BattlePokemonSprite.new()
+	target.position = Vector2(360,180)
+	add_child_autofree(target)
+	target.set_pokemon({"species": &"bulbasaur"})
+	var count := get_child_count()
+	assert_true(await BattleMoveAnimation.play(self,user,target,{"move":&"splash"},false))
+	await wait_process_frames(2)
+	assert_eq(user.position,user.home(), "Salpicadura devuelve el Pokémon a su lugar")
+	assert_eq(get_child_count(), count)
+	assert_true(await BattleMoveAnimation.play(self,user,target,{"move":&"ember"},true))
+	assert_eq(get_child_count(),count, "fast omite secuencia específica")
+	assert_false(await BattleMoveAnimation.play(self,user,target,{"move":&"icebeam"},false), "fuera del MVP usa genérica")

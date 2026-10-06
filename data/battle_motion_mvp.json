@@ -1,0 +1,85 @@
+{
+  "moves": {
+    "aromaticmist": {
+      "category": "status",
+      "name": "Niebla Aromática",
+      "type": "fairy"
+    },
+    "defensecurl": {
+      "category": "status",
+      "name": "Rizo Defensa",
+      "type": "normal"
+    },
+    "ember": {
+      "category": "special",
+      "name": "Ascuas",
+      "type": "fire"
+    },
+    "growl": {
+      "category": "status",
+      "name": "Gruñido",
+      "type": "normal"
+    },
+    "peck": {
+      "category": "physical",
+      "name": "Picotazo",
+      "type": "flying"
+    },
+    "playnice": {
+      "category": "status",
+      "name": "Camaradería",
+      "type": "normal"
+    },
+    "poisonsting": {
+      "category": "physical",
+      "name": "Picotazo Veneno",
+      "type": "poison"
+    },
+    "quickattack": {
+      "category": "physical",
+      "name": "Ataque Rápido",
+      "type": "normal"
+    },
+    "scratch": {
+      "category": "physical",
+      "name": "Arañazo",
+      "type": "normal"
+    },
+    "splash": {
+      "category": "status",
+      "name": "Salpicadura",
+      "type": "normal"
+    },
+    "stringshot": {
+      "category": "status",
+      "name": "Disparo Demora",
+      "type": "bug"
+    },
+    "sweetscent": {
+      "category": "status",
+      "name": "Dulce Aroma",
+      "type": "normal"
+    },
+    "tackle": {
+      "category": "physical",
+      "name": "Placaje",
+      "type": "normal"
+    },
+    "tailwhip": {
+      "category": "status",
+      "name": "Agitacola",
+      "type": "normal"
+    },
+    "vinewhip": {
+      "category": "physical",
+      "name": "Látigo Cepa",
+      "type": "grass"
+    },
+    "watergun": {
+      "category": "special",
+      "name": "Pistola Agua",
+      "type": "water"
+    }
+  },
+  "scope": "Equipo inicial de entrenadores, iniciales y todos los niveles configurados de encuentros/regalos/estáticos; niveles posteriores usan genéricas."
+}

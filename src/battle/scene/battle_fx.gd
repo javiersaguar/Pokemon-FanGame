@@ -59,10 +59,10 @@ static func _play(fx: BattleFx, duration: float) -> void:
 	fx.queue_free()
 
 func _ready() -> void:
-	for i: int in (6 if kind == Kind.SPARKLE else 4):
+	for i: int in int(profile.get("count", 6 if kind == Kind.SPARKLE else 4)):
 		var sprite := Sprite2D.new()
-		sprite.texture = load(DIR + ("eb519_2" if kind == Kind.SPARKLE else str(profile.asset)) + ".png")
-		var frame: Array = [] if kind == Kind.SPARKLE else profile.get("frame", [])
+		sprite.texture = load(DIR + ("eb519_2" if kind == Kind.SPARKLE and not profile.get("status_asset",false) else str(profile.asset)) + ".png")
+		var frame: Array = [] if kind == Kind.SPARKLE and not profile.get("status_asset",false) else profile.get("frame", [])
 		if frame.size() == 2:
 			sprite.hframes = int(sprite.texture.get_width() / int(frame[0]))
 			sprite.vframes = int(sprite.texture.get_height() / int(frame[1]))
@@ -81,7 +81,7 @@ func _ready() -> void:
 func _pose() -> void:
 	for i: int in particles.size():
 		var sprite := particles[i]
-		var phase := clampf((progress - i * 0.07) / 0.64, 0.0, 1.0)
+		var phase := clampf((progress - i * (0.28 / maxf(1.0, particles.size()-1))) / 0.64, 0.0, 1.0)
 		sprite.frame = mini(sprite.hframes * sprite.vframes - 1, int(progress * 12.0) % (sprite.hframes * sprite.vframes))
 		sprite.modulate.a = sin(phase * PI)
 		match kind:
@@ -92,6 +92,14 @@ func _pose() -> void:
 				sprite.position = (destination + offsets[i] * (1.0 + phase * 0.5)).round()
 			Kind.SPARKLE:
 				sprite.position = (destination + Vector2((i-2.5)*16, 20 - phase*80)).round()
-	impact.visible = kind != Kind.SPARKLE
+		match str(profile.get("pattern", "")):
+			"slash": sprite.position = (destination + Vector2(24-48*phase,-16+32*phase)).round()
+			"peck": sprite.position = (destination + Vector2(0,(i-1)*18)).round()
+			"whip": sprite.position = (destination + Vector2((i*2-1)*(50-80*phase), (i*2-1)*16)).round()
+			"jet": sprite.position = (origin.lerp(destination,phase)+Vector2(0,(i%3-1)*8)).round()
+			"petals": sprite.position = (origin.lerp(destination,phase)+Vector2(sin(phase*TAU+i)*20,(i%5-2)*12)).round()
+			"rings": sprite.position = origin.lerp(destination,phase).round()
+			"mist": sprite.position = (destination+Vector2((i-1.5)*24,-phase*28)).round()
+	impact.visible = bool(profile.get("impact",kind != Kind.SPARKLE))
 	impact.modulate.a = maxf(0.0, sin(clampf((progress - 0.65) / 0.35, 0, 1) * PI))
 	impact.frame = 0 if progress < 0.85 else 1

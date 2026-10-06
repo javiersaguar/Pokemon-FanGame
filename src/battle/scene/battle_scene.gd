@@ -272,6 +272,7 @@ static func _exp_ratio(data: Dictionary) -> float:
 func _animate_move(side: int, target_side: int, move: Dictionary) -> void:
 	var user := _sprite(side)
 	var target := _sprite(target_side)
+	if await BattleMoveAnimation.play(_fx, user, target, move, fast): return
 	var details := move.duplicate()
 	details.category = _category(move.get("category", "physical"))
 	if details.category == &"physical":
