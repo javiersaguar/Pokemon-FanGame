@@ -33,3 +33,17 @@ func _process(delta: float) -> void:
 	_remaining -= delta
 	if _remaining <= 0.0:
 		toast.hide()
+
+# Las transiciones pueden liberar el título; su corrutina vive aquí.
+func new_from_title(slot: int, title: Control) -> void:
+	var flow: RefCounted = load("res://src/main/randomlocke_fallback.gd").new()
+	await flow.run(slot)
+	if is_instance_valid(title) and not GameState.in_game:
+		title.set_stage(&"menu")
+
+func load_from_title(slot: int, title: Control) -> void:
+	var error := await SceneManager.continue_game(slot)
+	if error != OK and is_instance_valid(title):
+		await Dialogue.say("No se pudo cargar: %s." % error_string(error))
+		if is_instance_valid(title):
+			title.set_stage(&"menu")
