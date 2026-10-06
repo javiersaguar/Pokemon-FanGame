@@ -22,6 +22,21 @@ func run() -> void:
 		screen._background.set_environment(&"grass")
 		screen.get_node("Canvas/Curtain").hide()
 		screen._ask_player({"kind": &"switch", "reason": &"shift" if case_name == "shift" else &"faint"})
+	elif case_name.begins_with("title") or case_name in ["splash", "notice", "intro", "main_menu", "credits"]:
+		if case_name == "credits":
+			screen = load("res://src/ui/title/title_screen.gd").new()
+			screen.skip_sequence = true
+		else:
+			screen = load("res://src/ui/title/title_screen.gd").new()
+			screen.skip_sequence = true
+			if case_name.begins_with("title_"):
+				screen.logo_variant = int(case_name.trim_prefix("title_"))
+		root.add_child(screen)
+		if case_name == "credits":
+			screen.show_subscreen(load("res://src/ui/title/credits_screen.gd").new())
+		if case_name in ["splash", "notice", "intro", "main_menu"]:
+			screen.set_stage(&"menu" if case_name == "main_menu" else StringName(case_name))
+		await create_timer(0.35).timeout
 	else:
 		screen = load("res://src/ui/options/options_screen.gd").new()
 		root.add_child(screen)
