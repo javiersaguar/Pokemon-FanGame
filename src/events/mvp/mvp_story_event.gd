@@ -29,6 +29,7 @@ func run() -> void:
 func intro() -> void:
 	if GameState.flag(&"story_intro_done"):
 		return
+	var presentation := ProfessorIntro.begin()
 	await say("¡Bienvenido al mundo Pokémon! Soy el profesor {world:professor}.")
 	var gender := await choose("¿Cómo quieres empezar?", PackedStringArray(["Chico", "Chica"]))
 	GameState.player_gender = &"female" if gender == 1 else &"male"
@@ -44,6 +45,7 @@ func intro() -> void:
 	await say("¡{player}, tu aventura empieza ahora! Tu rival se llama {rival}.")
 	GameState.set_flag(&"story_intro_done")
 	GameState.set_var(&"story_progress", 10)
+	ProfessorIntro.finish(presentation)
 	await travel("bedroom")
 
 func bedroom() -> void:

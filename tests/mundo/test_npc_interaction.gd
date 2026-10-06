@@ -142,3 +142,4 @@ func test_cuerpo_reserva_destino_sin_sobrepasarlo_a_mitad_del_paso() -> void:
 	await _player._interact()
 	assert_eq(_npc.calls, 1)
 	assert_eq(_npc.dialogue_facing, Vector2i.DOWN)
+	await wait_process_frames(2) # No liberar autofree dentro de la señal de fin del paso.

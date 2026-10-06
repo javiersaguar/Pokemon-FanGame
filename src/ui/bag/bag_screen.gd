@@ -57,6 +57,11 @@ func _manage(id: StringName) -> void:
 				var index := await PartyScreen.pick_member()
 				if index < 0: return
 				var p: Pokemon = GameState.party.get_at(index)
+				if item.effect == &"evolution":
+					var target := EvolutionRules.item_target(p, id, {"time": Clock.period()})
+					if target != &"": await EvolutionScreen.open(p, {"to": target, "method": "item"}, id)
+					else: await Dialogue.say("No tendría efecto.")
+					return
 				var move := -1
 				if item.effect == &"restore_pp" and not bool(item.param("all_moves", false)):
 					var moves := PackedStringArray()

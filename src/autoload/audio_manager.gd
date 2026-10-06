@@ -27,8 +27,7 @@ var _cry: AudioStreamPlayer
 var _se: Array[AudioStreamPlayer] = []
 var _se_next := 0
 var _me_serial := 0
-var _saved_bgm: StringName = &""
-var _saved_position := 0.0
+var _bgm_stack: Array[Dictionary] = []
 ## Ruta base + id → stream (null si no existe), para no buscar cada vez.
 var _cache: Dictionary[String, AudioStream] = {}
 ## Audios pedidos que no existen (se avisa solo del primero).
@@ -68,19 +67,19 @@ func stop_bgm(fade_time: float = 0.5) -> void:
 
 ## Recuerda la BGM actual y por dónde va (antes de un combate, por ejemplo).
 func save_bgm() -> void:
-	_saved_bgm = current_bgm
 	var player := _bgm[_bgm_index]
-	_saved_position = player.get_playback_position() if player.playing else 0.0
+	_bgm_stack.append({"id": current_bgm, "position": player.get_playback_position() if player.playing else 0.0})
 
 
-## Vuelve a la BGM guardada con save_bgm(), por donde iba.
+## Pila para restaurar también tras una evolución dentro del combate.
 func restore_bgm(fade_time: float = 0.5) -> void:
-	if _saved_bgm == &"":
+	if _bgm_stack.is_empty(): return
+	var saved: Dictionary = _bgm_stack.pop_back()
+	if saved.id == &"":
 		stop_bgm(fade_time)
 		return
-	current_bgm = _saved_bgm
-	_crossfade(_find(BGM_DIR, _saved_bgm), fade_time, _saved_position)
-	_saved_bgm = &""
+	current_bgm = saved.id
+	_crossfade(_find(BGM_DIR, saved.id), fade_time, float(saved.position))
 
 
 # --- Efectos ---

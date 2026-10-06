@@ -102,3 +102,14 @@ func test_save_and_restore_bgm() -> void:
 	AudioManager.restore_bgm(0.0)
 	assert_eq(AudioManager.current_bgm, &"test_a")
 	assert_true(AudioManager._bgm[AudioManager._bgm_index].playing)
+
+func test_nested_bgm_restores_victory_then_map_after_evolution() -> void:
+	AudioManager.play_bgm(&"test_map", 0.0)
+	AudioManager.save_bgm()
+	AudioManager.play_bgm(&"test_victory", 0.0)
+	AudioManager.save_bgm()
+	AudioManager.play_bgm(&"evolution", 0.0)
+	AudioManager.restore_bgm(0.0)
+	assert_eq(AudioManager.current_bgm, &"test_victory")
+	AudioManager.restore_bgm(0.0)
+	assert_eq(AudioManager.current_bgm, &"test_map")
