@@ -17,6 +17,8 @@ var ally_ai: bool = false
 var mega_bracelet: bool = false
 ## El jugador tiene la Pulsera Z. Sin esto no usa movimientos Z. Apagado por defecto.
 var z_ring: bool = false
+## Este combate permite Dinamax (nodo, gimnasio...). Apagado por defecto. No basta la Maximuñequera.
+var dynamax: bool = false
 ## Objetos Pokemon del jugador: el motor los modifica (PS, PP, estado, experiencia...).
 var player_party: Array[Pokemon] = []
 var foe_party: Array[Pokemon] = []
@@ -175,6 +177,8 @@ func apply_options(options: Dictionary) -> void:
 		mega_bracelet = bool(options["mega"])
 	if options.has("z"):
 		z_ring = bool(options["z"])
+	if options.has("dynamax"):
+		dynamax = bool(options["dynamax"])
 	if options.has("next_ace_level"):
 		next_ace_level = int(options["next_ace_level"])
 	if tutorial:

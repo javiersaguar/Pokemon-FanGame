@@ -149,7 +149,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-06) el aviso de la sesión de 2 agentes y la lista de «Sesión con 2 agentes». Los Agentes 1 y 4 están parados. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1 y la 2. De la 3 van entregadas la Megaevolución (petición 48) y los movimientos Z (petición 49, detrás de la Pulsera Z). Siguiente: Dinamax y después Tera.
+**En qué estoy:** sesión del 2026-10-06, de arriba abajo. Hechas la 1 y la 2. De la 3 van entregadas la Megaevolución (petición 48), los movimientos Z (petición 49) y Dinamax (petición 50, sin Gigamax). Siguiente: Teratipo.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -484,6 +484,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 47 | A2 → A3 | **Dobles listos en el motor** (`contratos.md` §8.5). `EngineDriver.info().format` (`single`/`double`) y `ally_ai`. Cada turno hay un `request` por Pokémon vivo, con `slot`. `fight` lleva `target_slot`. `switch_in.slot` dice el puesto. Hay que dibujar dos por bando y repetir el menú. El modo Cambio no pregunta en dobles. Cuando una pareja de `TrainerNPC` deba luchar junta, el mundo tiene que pasar un `BattleSetup` con `format = DOUBLE` y los dos entrenadores. | pendiente |
 | 48 | A2 → A3 | **Megaevolución lista en el motor** (`contratos.md` §8.5). `info().mega` si hay pulsera. `request().can_mega` muestra el botón. `submit` con `mega: true` (y `target_slot` en dobles). Evento `mega` (`from`, `species`, `form_name`, `ability`, `hp`, `max_hp`) y mensaje con `tag = mega`. Al acabar o al retirarse la especie vuelve a la base: el sprite sale del evento, no del equipo guardado. | pendiente |
 | 49 | A2 → A3 | **Movimientos Z listos en el motor** (`contratos.md` §8.5). `info().z` si hay Pulsera Z. `request().z_moves` son los índices que pueden ser Z. `submit` con `z: true`. Evento `zmove` (`base`, `move`, `move_name`) y mensaje con `tag = z`. Apagado si la partida no tiene la pulsera. | pendiente |
+| 50 | A2 → A3 | **Dinamax listo en el motor** (`contratos.md` §8.5). Solo si `info().dynamax`. `request().can_dynamax` y `submit` con `dynamax: true`. Eventos `dynamax` (`hp`, `max_hp`, `turns`) y `dynamax_end`. Tres turnos, PS al doble, movimiento Max. No hay Gigamax. | pendiente |
 | 45 | A1 → A2 | Diagnóstico conjunto de dependencias GDScript: el smoke reducido `godot --headless --path . -- --smoke-maps=all` termina con 89 ObjectDB/62 recursos; --verbose enumera clases de datos/Pokémon/Randomizer/combate/mundo y constantes de Character, ningún Node. Suite completa, CLI normal y captura de flujo limpios. Repro/informe en docs/mapas/robustez.md. No modifico tus clases para romper dependencias sin contrato; revisar ciclo/orden de carga, conservando API y ROM. | pendiente diagnóstico |
 
 ---
@@ -553,6 +554,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-06 | A2 | §8.5: Dinamax detrás de `options.dynamax`. Tres turnos, PS al doble, movimiento Max y su efecto de campo. Sin Gigamax. Eventos `dynamax` y `dynamax_end`. |
 | 2026-10-06 | A2 | §8.5: movimientos Z, detrás de `options.z` o la Pulsera Z. `z_moves`, `BattleAction.z`, evento `zmove`. Una vez por bando. Efectos de estado que no son subida, curación o quitar bajadas, pendientes. |
 | 2026-10-06 | A2 | §8.5: Megaevolución. `mega_bracelet` / `options.mega`, `can_mega`, `BattleAction.mega`, evento `mega`. Una vez por bando, antes del orden de turno. La especie vuelve al retirarse o al acabar. |
 | 2026-10-06 | A2 | §8.5: combates dobles. `format`, `ally_ai`, `request.slot`, `target_slot`, daño repartido ×0,75, aliado y redirección. `EngineDriver.info().format`. |

@@ -26,6 +26,8 @@ var forced: bool = false
 var mega: bool = false
 ## FIGHT: convertir el movimiento en su movimiento Z, si se puede (una vez por bando y combate).
 var z: bool = false
+## FIGHT: dinamaxizar antes de mover, si este combate lo permite (una vez por bando).
+var dynamax: bool = false
 
 
 static func fight(index: int, target: int = 0) -> BattleAction:

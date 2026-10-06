@@ -56,6 +56,8 @@ var _double_chosen: Dictionary = {}
 var _mega_used: Array[bool] = [false, false]
 ## Este bando ya ha usado un movimiento Z.
 var _z_used: Array[bool] = [false, false]
+## Este bando ya ha dinamaxizado.
+var _dynamax_used: Array[bool] = [false, false]
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -301,6 +303,7 @@ func _step_next_request() -> void:
 	r.usable_moves = b.usable_moves()
 	r.can_mega = can_mega(b)
 	r.z_moves = z_move_indexes(b)
+	r.can_dynamax = can_dynamax(b)
 	request = r
 
 
@@ -328,6 +331,7 @@ func _request_double_slot() -> void:
 		r.usable_moves = b.usable_moves()
 		r.can_mega = can_mega(b)
 		r.z_moves = z_move_indexes(b)
+		r.can_dynamax = can_dynamax(b)
 		request = r
 		return
 	_begin_turn(null)
@@ -354,6 +358,9 @@ func _begin_turn(player_action: Variant = null) -> void:
 				action = BattleAI.choose_action(self, side_index, slot, setup.ai_level)
 			b.moved_this_turn = false
 			b.damaged_this_turn = false
+			if action.dynamax and not action.forced and can_dynamax(b):
+				_start_dynamax(b)
+				action.z = false
 			if action.kind == BattleAction.Kind.FIGHT and action.mega and not action.forced:
 				_try_mega(b)
 			_turn_actions[b] = action
@@ -390,7 +397,11 @@ func _action_priority(b: Battler, action: BattleAction) -> int:
 	if action.kind != BattleAction.Kind.FIGHT:
 		return 0
 	var m := _move_for(b, action.move_index)
-	return m.priority if m else 0
+	if m == null:
+		return 0
+	if b.dynamax_turns > 0 and m.id != STRUGGLE:
+		return _as_max_move(m).priority
+	return m.priority
 
 
 ## Corrige acciones imposibles del jugador (la interfaz no debería enviarlas).
@@ -410,6 +421,8 @@ func _sanitize(b: Battler, action: BattleAction) -> BattleAction:
 				action.mega = false
 			if action.z and not can_z(b, action.move_index):
 				action.z = false
+			if action.dynamax and not can_dynamax(b):
+				action.dynamax = false
 		BattleAction.Kind.SWITCH:
 			if not _sides[PLAYER].can_switch_to(action.party_index) or _is_trapped(b):
 				push_error("BattleEngine: no se puede cambiar al Pokémon %d." % action.party_index)
@@ -492,10 +505,16 @@ func _step_end_of_turn() -> void:
 			return
 		(e[2] as Callable).call()
 	for side_index: int in [PLAYER, FOE]:
-		var b := active(side_index)
-		if b != null:
+		for slot: int in slot_count():
+			var b := active(side_index, slot)
+			if b == null:
+				continue
 			b.volatiles.erase(&"flinch")
 			b.turns_active += 1
+			if b.dynamax_turns > 0:
+				b.dynamax_turns -= 1
+				if b.dynamax_turns == 0:
+					_end_dynamax(b)
 	_process_faints()
 
 
@@ -732,6 +751,9 @@ func _finish(outcome: StringName) -> void:
 	result.outcome = outcome
 	result.turns = turn
 	_revert_all_formes()
+	for side_index: int in [PLAYER, FOE]:
+		for slot: int in slot_count():
+			_end_dynamax(active(side_index, slot))
 	_collect_evolutions()
 	_emit(BattleEvent.END, -1, -1, {"outcome": String(outcome)})
 	_over = true
@@ -823,6 +845,7 @@ func _do_switch(b: Battler, index: int, reason: StringName = &"") -> void:
 	else:
 		_msg(tr("¡%s ha retirado a %s!") % [_trainer_name(), b.pokemon.display_name()], "recall")
 	_emit(BattleEvent.SWITCH_OUT, b.side, b.slot, {"party_index": b.party_index})
+	_end_dynamax(b)
 	_revert_forme(b)
 	var passed := {}
 	if reason == &"batonpass":
@@ -1007,7 +1030,9 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		user.choice_move = move.id
 	var base_move := move
 	var z_status := false
-	if action.z and not action.forced and can_z(user, action.move_index):
+	if user.dynamax_turns > 0 and move.id != STRUGGLE:
+		move = _as_max_move(base_move)
+	elif action.z and not action.forced and can_z(user, action.move_index):
 		var built: MoveData = null if base_move.is_status() else _z_damage_move(user, base_move)
 		if base_move.is_status() or built != null:
 			_z_used[user.side] = true
@@ -1023,6 +1048,17 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 					"base": String(base_move.id), "move": String(move.id), "move_name": move.name,
 				})
 	if not _before_move(user, move):
+		return
+	if move.id == &"maxguard":
+		if slot != null and not action.forced:
+			slot.pp = maxi(0, slot.pp - 1)
+		user.last_move = move.id
+		_msg(tr("¡%s usó %s!") % [BattleText.cap_name(user, setup.is_wild()), move.name])
+		_emit(BattleEvent.MOVE, user.side, user.slot, {
+			"move": String(move.id), "move_name": move.name, "type": "normal", "category": "status",
+			"target_side": user.side, "target_slot": user.slot,
+		})
+		add_volatile(user, &"protect", user)
 		return
 	if slot != null:
 		if not action.forced:
@@ -1321,6 +1357,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	if total > 0 and not target.is_fainted():
 		for passive: BattleEffect in _passives(target):
 			passive.on_damaged(self, target, user, move)
+	if str(move.raw.get("is_max", false)) == "true" and landed > 0:
+		_max_side_effect(user, target, move.id)
 	if user.pokemon.held_item == &"lifeorb" and total > 0 and not user.is_fainted():
 		_damage(user, maxi(1, user.pokemon.max_hp() / 10), &"item")
 		_msg(tr("¡%s se ha hecho daño con la Vidasfera!") % BattleText.cap_name(user, wild))
@@ -1875,6 +1913,141 @@ func _apply_z_status(user: Battler, base: MoveData) -> void:
 				_msg(tr("¡%s ha recuperado salud!") % BattleText.cap_name(user, setup.is_wild()))
 		_:
 			pass
+
+
+func can_dynamax(b: Battler) -> bool:
+	return b != null and not b.is_fainted() and setup.dynamax and not _dynamax_used[b.side] and b.dynamax_turns == 0
+
+
+func _start_dynamax(b: Battler) -> void:
+	_dynamax_used[b.side] = true
+	b.dynamax_turns = 3
+	if b.pokemon.max_hp() > 1:
+		var ratio := float(b.pokemon.current_hp) / float(b.pokemon.max_hp())
+		b.pokemon.battle_hp_scale = 2
+		b.pokemon.current_hp = clampi(int(round(ratio * float(b.pokemon.max_hp()))), 1, b.pokemon.max_hp())
+	_msg(tr("¡%s ha dinamaxizado!") % b.pokemon.display_name(), "dynamax")
+	_emit(BattleEvent.DYNAMAX, b.side, b.slot, {
+		"hp": b.pokemon.current_hp, "max_hp": b.pokemon.max_hp(), "turns": b.dynamax_turns,
+	})
+
+
+func _end_dynamax(b: Battler) -> void:
+	if b == null or (b.dynamax_turns == 0 and b.pokemon.battle_hp_scale <= 1):
+		return
+	b.dynamax_turns = 0
+	if b.pokemon.battle_hp_scale > 1:
+		var ratio := float(b.pokemon.current_hp) / float(b.pokemon.max_hp()) if b.pokemon.max_hp() > 0 else 0.0
+		b.pokemon.battle_hp_scale = 1
+		if b.pokemon.current_hp > 0:
+			b.pokemon.current_hp = clampi(int(round(ratio * float(b.pokemon.max_hp()))), 1, b.pokemon.max_hp())
+	_emit(BattleEvent.DYNAMAX_END, b.side, b.slot, {"hp": b.pokemon.current_hp, "max_hp": b.pokemon.max_hp()})
+
+
+func _as_max_move(base: MoveData) -> MoveData:
+	if base.is_status():
+		return _copy_max(DataDB.move(&"maxguard"), base, 0)
+	var template: MoveData = null
+	for id: StringName in DataDB.move_ids():
+		var move := DataDB.move(id)
+		if move.type == base.type and str(move.raw.get("is_max", false)) == "true" and move.id != &"maxguard":
+			template = move
+			break
+	if template == null:
+		return base
+	return _copy_max(template, base, _max_power(_z_base_power_of(base)))
+
+
+func _copy_max(template: MoveData, base: MoveData, power: int) -> MoveData:
+	var m := MoveData.new()
+	m.id = template.id
+	m.name = template.name
+	m.type = template.type
+	m.category = base.category if power > 0 else MoveData.Category.STATUS
+	m.power = power
+	m.accuracy = 0
+	m.priority = template.priority
+	m.target = &"self" if power == 0 else &"normal"
+	m.needs_script = false
+	m.raw = {"is_max": true}
+	return m
+
+
+func _z_base_power_of(move: MoveData) -> int:
+	return maxi(move.power, 1)
+
+
+func _max_power(base_power: int) -> int:
+	if base_power <= 40:
+		return 90
+	if base_power <= 50:
+		return 100
+	if base_power <= 60:
+		return 110
+	if base_power <= 70:
+		return 120
+	if base_power <= 100:
+		return 130
+	if base_power <= 140:
+		return 140
+	return 150
+
+
+func _max_side_effect(user: Battler, target: Battler, id: StringName) -> void:
+	match id:
+		&"maxflare":
+			set_weather(&"sunnyday", user)
+		&"maxgeyser":
+			set_weather(&"raindance", user)
+		&"maxrockfall":
+			set_weather(&"sandstorm", user)
+		&"maxhailstorm":
+			set_weather(&"snow", user)
+		&"maxlightning":
+			set_terrain(&"electricterrain", user)
+		&"maxovergrowth":
+			set_terrain(&"grassyterrain", user)
+		&"maxstarfall":
+			set_terrain(&"mistyterrain", user)
+		&"maxmindstorm":
+			set_terrain(&"psychicterrain", user)
+		&"maxstrike":
+			_max_drop(target, &"spe")
+		&"maxflutterby":
+			_max_drop(target, &"spa")
+		&"maxphantasm":
+			_max_drop(target, &"def")
+		&"maxdarkness":
+			_max_drop(target, &"spd")
+		&"maxwyrmwind":
+			_max_drop(target, &"atk")
+		&"maxknuckle":
+			_max_raise_side(user, &"atk")
+		&"maxooze":
+			_max_raise_side(user, &"spa")
+		&"maxquake":
+			_max_raise_side(user, &"spd")
+		&"maxsteelspike":
+			_max_raise_side(user, &"def")
+		_:
+			pass
+
+
+func _max_drop(target: Battler, stat: StringName) -> void:
+	if target == null:
+		return
+	var boosts: Dictionary[StringName, int] = {}
+	boosts[stat] = -1
+	_apply_boosts(target, boosts, false)
+
+
+func _max_raise_side(user: Battler, stat: StringName) -> void:
+	var boosts: Dictionary[StringName, int] = {}
+	boosts[stat] = 1
+	for slot: int in slot_count():
+		var ally := active(user.side, slot)
+		if ally != null and not ally.is_fainted():
+			_apply_boosts(ally, boosts, false)
 
 
 func _speed(b: Battler) -> int:

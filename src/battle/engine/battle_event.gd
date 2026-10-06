@@ -36,6 +36,9 @@ const END := &"end"
 const MEGA := &"mega"
 ## Movimiento Z: {base, move, move_name}. El movimiento que sale después ya es el Z.
 const ZMOVE := &"zmove"
+## Dinamax: {hp, max_hp, turns}. Al terminar, `dynamax_end` con los PS ya normales.
+const DYNAMAX := &"dynamax"
+const DYNAMAX_END := &"dynamax_end"
 
 var type: StringName
 ## 0 = jugador, 1 = rival, -1 = ninguno.

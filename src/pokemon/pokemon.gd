@@ -227,8 +227,12 @@ func stat(stat_id: StringName) -> int:
 	return StatCalc.stat(s.base_stat(stat_id), ivs.get(stat_id, 0), evs.get(stat_id, 0), level, percent)
 
 
+## 2 mientras está dinamaxizado. No se guarda: al acabar el combate vuelve a 1.
+var battle_hp_scale: int = 1
+
+
 func max_hp() -> int:
-	return stat(&"hp")
+	return stat(&"hp") * maxi(battle_hp_scale, 1)
 
 
 func stats() -> Dictionary[StringName, int]:
