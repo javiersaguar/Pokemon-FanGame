@@ -34,6 +34,8 @@ const SIDE_CONDITION := &"side_condition"
 const END := &"end"
 ## Megaevolución: {from, species, form_name, ability, hp, max_hp}. La especie del equipo vuelve a la base al retirarse o al acabar.
 const MEGA := &"mega"
+## Movimiento Z: {base, move, move_name}. El movimiento que sale después ya es el Z.
+const ZMOVE := &"zmove"
 
 var type: StringName
 ## 0 = jugador, 1 = rival, -1 = ninguno.

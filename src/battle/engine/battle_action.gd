@@ -24,6 +24,8 @@ var forget_index: int = -1
 var forced: bool = false
 ## FIGHT: megaevolucionar antes de mover, si se puede (una vez por bando y combate).
 var mega: bool = false
+## FIGHT: convertir el movimiento en su movimiento Z, si se puede (una vez por bando y combate).
+var z: bool = false
 
 
 static func fight(index: int, target: int = 0) -> BattleAction:

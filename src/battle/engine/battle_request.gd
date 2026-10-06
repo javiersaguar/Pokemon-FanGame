@@ -18,6 +18,8 @@ var can_use_items: bool = true
 var usable_moves: Array[int] = []
 ## ACTION: puede megaevolucionar este turno (pulsera, piedra y nadie de su bando lo ha hecho).
 var can_mega: bool = false
+## ACTION: índices de movimientos que pueden ser Z este turno.
+var z_moves: Array[int] = []
 ## SWITCH: por qué hay que cambiar. Vacío = se ha debilitado; &"uturn" (Ida y Vuelta, Voltiocambio)
 ## o &"batonpass" (Relevo) = cambio a mitad de turno que no se puede cancelar;
 ## &"shift" = el rival va a sacar otro (modo Cambio): switch_to(índice) cambia y switch_to(-1) se queda.

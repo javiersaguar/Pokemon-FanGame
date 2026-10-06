@@ -76,6 +76,8 @@ static func _choose_double(engine: BattleEngine, side: int, slot: int, level: in
 static func _with_mega(engine: BattleEngine, b: Battler, action: BattleAction) -> BattleAction:
 	if action.kind == BattleAction.Kind.FIGHT and engine.can_mega(b):
 		action.mega = true
+	if action.kind == BattleAction.Kind.FIGHT and engine.can_z(b, action.move_index):
+		action.z = true
 	return action
 
 

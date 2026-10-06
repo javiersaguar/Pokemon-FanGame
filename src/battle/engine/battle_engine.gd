@@ -54,6 +54,8 @@ var _shift_foe_index := -1
 var _double_chosen: Dictionary = {}
 ## Este bando ya ha megaevolucionado en el combate (una vez por bando).
 var _mega_used: Array[bool] = [false, false]
+## Este bando ya ha usado un movimiento Z.
+var _z_used: Array[bool] = [false, false]
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -298,6 +300,7 @@ func _step_next_request() -> void:
 	r.can_use_items = setup.allow_items and (setup.is_wild() or _locke_item_allowed())
 	r.usable_moves = b.usable_moves()
 	r.can_mega = can_mega(b)
+	r.z_moves = z_move_indexes(b)
 	request = r
 
 
@@ -324,6 +327,7 @@ func _request_double_slot() -> void:
 		r.can_use_items = slot == 0 and setup.allow_items and (setup.is_wild() or _locke_item_allowed())
 		r.usable_moves = b.usable_moves()
 		r.can_mega = can_mega(b)
+		r.z_moves = z_move_indexes(b)
 		request = r
 		return
 	_begin_turn(null)
@@ -404,6 +408,8 @@ func _sanitize(b: Battler, action: BattleAction) -> BattleAction:
 				return fallback
 			if action.mega and not can_mega(b):
 				action.mega = false
+			if action.z and not can_z(b, action.move_index):
+				action.z = false
 		BattleAction.Kind.SWITCH:
 			if not _sides[PLAYER].can_switch_to(action.party_index) or _is_trapped(b):
 				push_error("BattleEngine: no se puede cambiar al Pokémon %d." % action.party_index)
@@ -999,6 +1005,23 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		move = DataDB.move(STRUGGLE)
 	if user.choice_move == &"" and user.pokemon.held_item in [&"choiceband", &"choicespecs", &"choicescarf"] and move.id != STRUGGLE:
 		user.choice_move = move.id
+	var base_move := move
+	var z_status := false
+	if action.z and not action.forced and can_z(user, action.move_index):
+		var built: MoveData = null if base_move.is_status() else _z_damage_move(user, base_move)
+		if base_move.is_status() or built != null:
+			_z_used[user.side] = true
+			_msg(tr("¡%s está rodeado de su Poder Z!") % BattleText.cap_name(user, setup.is_wild()), "z")
+			if base_move.is_status():
+				z_status = true
+				_emit(BattleEvent.ZMOVE, user.side, user.slot, {
+					"base": String(base_move.id), "move": String(base_move.id), "move_name": base_move.name,
+				})
+			else:
+				move = built
+				_emit(BattleEvent.ZMOVE, user.side, user.slot, {
+					"base": String(base_move.id), "move": String(move.id), "move_name": move.name,
+				})
 	if not _before_move(user, move):
 		return
 	if slot != null:
@@ -1008,7 +1031,9 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		_msg(tr("¡A %s no le quedan movimientos!") % BattleText.name_of(user, setup.is_wild()))
 	user.last_move = move.id
 	var hit := _use_move(user, move)
-	_after_move(user, move, hit)
+	if z_status:
+		_apply_z_status(user, base_move)
+	_after_move(user, base_move if z_status else move, hit)
 	if move.selfdestruct == &"always" and not user.is_fainted():
 		_damage(user, user.pokemon.current_hp, &"selfdestruct")
 
@@ -1716,6 +1741,140 @@ func _revert_all_formes() -> void:
 	for side_index: int in [PLAYER, FOE]:
 		for slot: int in slot_count():
 			_revert_forme(active(side_index, slot))
+
+
+## Índices que pueden convertirse en movimiento Z este turno.
+func z_move_indexes(b: Battler) -> Array[int]:
+	var out: Array[int] = []
+	if b == null:
+		return out
+	for i: int in b.usable_moves():
+		if can_z(b, i):
+			out.append(i)
+	return out
+
+
+func can_z(b: Battler, move_index: int) -> bool:
+	if b == null or b.is_fainted() or _z_used[b.side]:
+		return false
+	if b.side == PLAYER and not setup.z_ring:
+		return false
+	if b.side == FOE and setup.is_wild():
+		return false
+	if move_index < 0 or move_index >= b.pokemon.moves.size():
+		return false
+	var move := b.pokemon.moves[move_index].data()
+	var held := b.pokemon.held_item
+	if held == &"" or not DataDB.has_item(held):
+		return false
+	var crystal := DataDB.item(held)
+	if not crystal.is_z_crystal():
+		return false
+	var users: Variant = crystal.raw.get("item_user", [])
+	if users is Array and not users.is_empty():
+		var species := String(b.pokemon.species_id)
+		var base := String(b.pokemon.species().base_species)
+		if species not in users and base not in users:
+			return false
+	var from := crystal.z_move_from()
+	if from != &"":
+		return move.id == from and crystal.z_move_id() != &"" and DataDB.has_move(crystal.z_move_id())
+	var crystal_type := crystal.z_move_type()
+	return crystal_type != &"" and move.type == crystal_type
+
+
+func _z_damage_move(user: Battler, base: MoveData) -> MoveData:
+	if base.is_status():
+		return null
+	var crystal := DataDB.item(user.pokemon.held_item)
+	var template: MoveData = null
+	if crystal.z_move_from() != &"":
+		template = DataDB.move(crystal.z_move_id())
+	else:
+		template = _type_z_template(crystal.id, base.category)
+	if template == null:
+		return null
+	var m := MoveData.new()
+	m.id = template.id
+	m.name = template.name
+	m.type = template.type
+	m.category = template.category if template.power > 1 else base.category
+	m.power = template.power if template.power > 1 else _z_power(_z_base_power(user, base))
+	m.accuracy = 0
+	m.target = &"normal"
+	m.priority = base.priority
+	m.crit_ratio = maxi(template.crit_ratio, 1)
+	m.flags = template.flags.duplicate()
+	m.needs_script = false
+	return m
+
+
+func _type_z_template(crystal_id: StringName, category: MoveData.Category) -> MoveData:
+	var fallback: MoveData = null
+	for id: StringName in DataDB.move_ids():
+		var move := DataDB.move(id)
+		if StringName(str(move.raw.get("is_z", ""))) != crystal_id:
+			continue
+		if move.category == category:
+			return move
+		if fallback == null:
+			fallback = move
+	return fallback
+
+
+func _z_base_power(user: Battler, move: MoveData) -> int:
+	var power := move.power
+	var effect := Effects.move(move.id)
+	var target := _move_target(user, move)
+	if effect != null and target != null:
+		power = effect.base_power(self, user, target, move, power)
+	return maxi(power, 1)
+
+
+func _z_power(base_power: int) -> int:
+	if base_power <= 55:
+		return 100
+	if base_power <= 65:
+		return 120
+	if base_power <= 75:
+		return 140
+	if base_power <= 85:
+		return 160
+	if base_power <= 95:
+		return 175
+	if base_power <= 100:
+		return 180
+	if base_power <= 110:
+		return 185
+	if base_power <= 125:
+		return 190
+	if base_power <= 130:
+		return 195
+	return 200
+
+
+func _apply_z_status(user: Battler, base: MoveData) -> void:
+	var spec: Variant = base.raw.get("z_move", {})
+	if not spec is Dictionary:
+		return
+	if spec.has("boosts") and spec["boosts"] is Dictionary:
+		var boosts: Dictionary[StringName, int] = {}
+		for key: Variant in spec["boosts"]:
+			boosts[StringName(str(key))] = int(spec["boosts"][key])
+		_apply_boosts(user, boosts, false)
+	match str(spec.get("effect", "")):
+		"clearnegativeboost":
+			for stat: StringName in Battler.BOOST_STATS:
+				var stage := int(user.boosts.get(stat, 0))
+				if stage < 0:
+					user.boosts[stat] = 0
+					_emit(BattleEvent.BOOST, user.side, user.slot, {"stat": String(stat), "amount": -stage, "stage": 0})
+		"heal":
+			var healed := _heal(user, user.pokemon.max_hp() - user.pokemon.current_hp, &"z")
+			if healed > 0:
+				_msg(tr("¡%s ha recuperado salud!") % BattleText.cap_name(user, setup.is_wild()))
+		_:
+			pass
 
 
 func _speed(b: Battler) -> int:

@@ -79,6 +79,27 @@ func is_key_item() -> bool:
 	return pocket == &"key"
 
 
+func is_z_crystal() -> bool:
+	var value: Variant = raw.get("z_move", false)
+	if value is bool:
+		return value
+	return value is String and str(value) != ""
+
+
+func z_move_type() -> StringName:
+	return StringName(str(raw.get("z_move_type", "")))
+
+
+## Movimiento Z concreto (Pikastal Z...). Vacío en los cristales de tipo.
+func z_move_id() -> StringName:
+	var value: Variant = raw.get("z_move", "")
+	return StringName(str(value)) if value is String else &""
+
+
+func z_move_from() -> StringName:
+	return StringName(str(raw.get("z_move_from", "")))
+
+
 ## Forma mega que otorga esta Megapiedra a esa especie. Vacío si no es su piedra.
 func mega_species(for_species: StringName) -> StringName:
 	var map: Variant = raw.get("mega_stone", {})

@@ -15,6 +15,8 @@ var format: Format = Format.SINGLE
 var ally_ai: bool = false
 ## El jugador tiene la Megapulsera o la Piedra Activadora. Sin esto no megaevoluciona.
 var mega_bracelet: bool = false
+## El jugador tiene la Pulsera Z. Sin esto no usa movimientos Z. Apagado por defecto.
+var z_ring: bool = false
 ## Objetos Pokemon del jugador: el motor los modifica (PS, PP, estado, experiencia...).
 var player_party: Array[Pokemon] = []
 var foe_party: Array[Pokemon] = []
@@ -142,6 +144,7 @@ func fill_from_game_state() -> void:
 	if GameState.bag is Bag:
 		var bag := GameState.bag as Bag
 		mega_bracelet = bag.has(&"megabracelet") or bag.has(&"keystone")
+		z_ring = bag.has(&"zring")
 	if GameState.is_randomlocke() and GameState.locke != null:
 		locke = GameState.locke.rules
 		var rules_dict := locke.rules()
@@ -170,6 +173,8 @@ func apply_options(options: Dictionary) -> void:
 		ally_ai = bool(options["ally_ai"])
 	if options.has("mega"):
 		mega_bracelet = bool(options["mega"])
+	if options.has("z"):
+		z_ring = bool(options["z"])
 	if options.has("next_ace_level"):
 		next_ace_level = int(options["next_ace_level"])
 	if tutorial:
