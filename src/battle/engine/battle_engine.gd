@@ -19,12 +19,16 @@ const STRUGGLE := &"struggle"
 ## Objetivos que solo pueden ser un aliado: sin aliado, el movimiento falla. ("allies" incluye al
 ## usuario en Showdown: Aullido o Rocío Vital funcionan en individuales.)
 const ALLY_ONLY_TARGETS: Array[StringName] = [&"adjacent_ally"]
+## Movimientos con mejoras propias tras el golpe ("selfBoost" de Showdown), no como efecto del golpe.
+const BOOSTS_AFTER_HIT: Array[StringName] = [&"clangingscales", &"clangoroussoulblaze", &"scaleshot"]
 ## Volátiles que pasa Relevo al que entra.
 const BATON_PASS_VOLATILES: Array[StringName] = [&"confusion", &"focusenergy", &"leechseed"]
 const MAX_TOXIC_STAGE := 15
 const CONFUSION_SELF_HIT_PERCENT := 33
 ## Orden del daño de veneno y quemadura al final del turno (como en Showdown).
 const STATUS_RESIDUAL_ORDER := 9
+## La quemadura va después del veneno al final del turno (onResidualOrder 10 en Showdown).
+const BRN_RESIDUAL_ORDER := 10
 
 var setup: BattleSetup
 ## Decisión pendiente del jugador (null si no hay ninguna o si el combate ha terminado).
@@ -542,7 +546,7 @@ func _step_end_of_turn() -> void:
 				entries.append([effect.residual_order(), side_index, _residual_condition.bind(effect, _sides[side_index], conditions[id], id)])
 	for rank: int in order.size():
 		var b := order[rank]
-		entries.append([STATUS_RESIDUAL_ORDER, rank, _residual_status.bind(b)])
+		entries.append([BRN_RESIDUAL_ORDER if b.pokemon.status == &"brn" else STATUS_RESIDUAL_ORDER, rank, _residual_status.bind(b)])
 		var ids: Array = b.volatiles.keys()
 		DataUtil.sort_names(ids)
 		for id: StringName in ids:
@@ -562,6 +566,10 @@ func _step_end_of_turn() -> void:
 	for e: Array in entries:
 		if _over:
 			return
+		# Como Showdown: si un efecto deja a un bando sin Pokémon, el combate acaba ahí y no se
+		# aplica el resto (la quemadura o los Restos del ganador ya no llegan).
+		if _battle_decided():
+			break
 		(e[2] as Callable).call()
 	for side_index: int in [PLAYER, FOE]:
 		for slot: int in slot_count():
@@ -1135,9 +1143,6 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		# Si no puede moverse (sueño, parálisis, retroceso, enamoramiento...), pierde la carga de un
 		# movimiento de dos turnos y deja de estar en el aire o bajo tierra (onMoveAborted de Showdown).
 		remove_volatile(user, &"twoturnmove")
-		# Dormido, el arrebato (Golpe, Enfado...) se acaba sin confusión, como en Showdown.
-		if user.pokemon.status == &"slp":
-			remove_volatile(user, &"lockedmove")
 		return
 	if move.id == &"maxguard":
 		if slot != null and not action.forced:
@@ -1270,6 +1275,11 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 			for hit: Battler in targets:
 				_apply_damaging_move(user, hit, move, effect, spread)
 	return true
+
+
+## ¿A algún bando ya no le quedan Pokémon que puedan luchar? (El combate acaba al procesar los KO.)
+func _battle_decided() -> bool:
+	return _sides[PLAYER].all_fainted() or _sides[FOE].all_fainted()
 
 
 ## ¿Tiene `user` un aliado en el campo (solo en dobles)?
@@ -1426,7 +1436,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			var opts := _damage_opts(user, target, move, effect, crit)
 			opts["spread"] = spread
 			amount = DamageCalc.calculate(user, target, move, crit, rand_int(&"damage_roll", 0, DamageCalc.ROLLS - 1), opts)
-		total += _damage(target, amount, &"move", effectiveness, crit, move)
+		var dealt := _damage(target, amount, &"move", effectiveness, crit, move)
+		total += dealt
 		landed += 1
 		if crit:
 			_msg(tr("¡Un golpe crítico!"))
@@ -1435,6 +1446,11 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		for sec: Dictionary in move.secondaries:
 			if rand_chance(&"secondary", int(sec.get("chance", 100)), 100):
 				_apply_secondary(user, target, sec)
+		# Con cada golpe que hace daño, aunque debilite (DamagingHit de Showdown): Casco Dentado,
+		# Nerviosismo...
+		if dealt > 0:
+			for passive: BattleEffect in _passives(target):
+				passive.on_damaged(self, target, user, move)
 	if move.ohko != &"" and target.is_fainted():
 		_msg(tr("¡Es un golpe fulminante!"))
 	if not fixed:
@@ -1453,15 +1469,15 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	if move.struggle_recoil and not user.is_fainted():
 		_damage(user, maxi(1, roundi(user.pokemon.max_hp() / 4.0)), &"struggle")
 		_msg(tr("¡%s se ha hecho daño por el retroceso!") % BattleText.cap_name(user, wild))
-	if not move.self_boosts.is_empty() and not user.is_fainted() and landed > 0:
+	# Las mejoras que Showdown aplica después del golpe ("selfBoost") no llegan si el golpe ya ha
+	# decidido el combate: los KO se procesan antes y el combate termina.
+	if not move.self_boosts.is_empty() and not user.is_fainted() and landed > 0 \
+			and not (move.id in BOOSTS_AFTER_HIT and _battle_decided()):
 		_apply_boosts(user, move.self_boosts, true)
 	if move.selfdestruct == &"if_hit" and total > 0 and not user.is_fainted():
 		_damage(user, user.pokemon.current_hp, &"selfdestruct")
 	if effect != null and landed > 0:
 		effect.on_after_hit(self, user, target, move, total)
-	if total > 0 and not target.is_fainted():
-		for passive: BattleEffect in _passives(target):
-			passive.on_damaged(self, target, user, move)
 	if str(move.raw.get("is_max", false)) == "true" and landed > 0:
 		_max_side_effect(user, target, move.id)
 	if user.pokemon.held_item == &"lifeorb" and total > 0 and not user.is_fainted():

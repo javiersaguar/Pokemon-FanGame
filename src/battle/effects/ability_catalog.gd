@@ -134,7 +134,7 @@ class AbilityBehavior extends BattleEffect:
 					engine.deal_damage(battler, maxi(1, battler.pokemon.max_hp() / 8), &"ability")
 					engine.message(tr("¡%s se resiente por Poder Solar!") % engine.name_of(battler))
 			&"shedskin":
-				if battler.pokemon.status != &"" and engine.rand_chance(&"shedskin", 1, 3):
+				if battler.pokemon.status != &"" and engine.rand_chance(&"shedskin", 33, 100):
 					engine.cure_status(battler)
 					engine.message(tr("¡%s se ha liberado de su problema con Mudar!") % engine.name_of(battler))
 
@@ -144,7 +144,7 @@ class AbilityBehavior extends BattleEffect:
 
 
 	func on_damaged(engine: BattleEngine, battler: Battler, _user: Battler, move: MoveData) -> void:
-		if id != &"rattled" or move == null:
+		if id != &"rattled" or move == null or battler.is_fainted():
 			return
 		if move.type in [&"bug", &"ghost", &"dark"]:
 			engine.boost(battler, {&"spe": 1}, true)

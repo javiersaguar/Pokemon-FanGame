@@ -9,6 +9,8 @@ Resultados de la comparación turno a turno del combate con el simulador de Pok�
 | 2026-10-07, primera pasada | 200 | 146 (73 %) | 53 | 1 |
 | 2026-10-07, tras la 1.ª tanda de correcciones | 400 | 379 (95 %) | 17 | 4 |
 | 2026-10-07, tras la 2.ª tanda (semillas 1, 2 y 3) | 1.200 | 1.111 + 70 hasta el límite de 60 turnos (98,4 %; 99,4 % sin contar el límite) | 7 | 12 |
+| 2026-10-07, tras la 3.ª tanda (semillas 1 a 5) | 2.000 | 1.882 + 103 hasta el límite de 60 turnos (**100 %**) | 0 | 15 |
+| 2026-10-07, con objetos (`--items`, semillas 11 y 12) | 800 | 600 + 23 hasta el límite (78 %) | 173 | 4 |
 
 ## Fallos de nuestro motor corregidos
 
@@ -30,18 +32,18 @@ Resultados de la comparación turno a turno del combate con el simulador de Pok�
 | Movimientos de dos turnos | Si no podía moverse (sueño, parálisis, retroceso, enamoramiento…) conservaba la carga: seguía en el aire con Vuelo o lanzaba el Rayo Solar a la fuerza al despertar | Pierde la carga (`onMoveAborted` de Showdown) |
 | Saña, Enfado, Golpe | Si Protección paraba el último golpe, el arrebato acababa sin confusión | Confunde al acabar igual; dormido, se acaba sin confusión |
 | Protección seguidas | Retroceder o no poder moverse no reiniciaba la cuenta | Si pasa un turno sin usarla, la cuenta vuelve a empezar (el volátil `stall` dura 2 turnos) |
+| Saña, Enfado, Danza Pétalo | Seguían el arrebato aunque un turno fallara, y la parálisis no lo descontaba | Igual que el `lockedmove` de Showdown: el volátil dura 2 turnos y cada golpe lo renueva mientras quede arrebato. Si un turno no golpea se acaba: con confusión si era el último y sin ella si no. Dormido, se acaba al final del turno sin confusión |
+| Golpe Bajo | Funcionaba contra un rival que tenía que recargar (Hiperrayo) | Falla, como en Showdown |
+| Ráfaga Escamas, Fragor Escamas | Con el golpe que acaba el combate, bajaba la Defensa y subía la Velocidad | Sus mejoras ("selfBoost") van después de procesar los KO: si el combate ha acabado, no llegan. A Bocajarro y el resto sí (son efecto del golpe) |
+| Final del turno | Seguía aplicando efectos aunque un bando se quedara sin Pokémon (la quemadura del ganador lo podía debilitar) | Se corta en cuanto un bando se queda sin Pokémon |
+| Veneno y quemadura | Iban con el mismo orden al final del turno: el más rápido primero | El veneno va antes (orden 9 y 10 en Showdown) |
+| Mudar | Curaba con 1/3 | 33/100 |
+| Nerviosismo, Casco Dentado | Se activaban una vez por movimiento y no con el golpe que debilita | Con cada golpe que hace daño, aunque debilite (`DamagingHit`) |
 | Síntesis, Sol Matinal, Luz Lunar | Redondeaban las mitades hacia arriba y con sol curaban 2/3 exactos | Mismo redondeo y factores que Showdown (`this.modify(maxhp, 0,5 / 0,667 / 0,25)`) |
 
 ## Diferencias pendientes de investigar
 
-De los lotes de 400 con semillas 1 y 3 (la 2 no tiene ninguna). Para reproducirlas: `node tools/showdown_diff/index.mjs --n=400 --seed=1` y buscar el combate en `tools/cache/showdown_diff/informe.md`.
-
-| Combate | Primera diferencia | Pista |
-|---------|--------------------|-------|
-| c1-244, c3-70 | Al final, Defensa −2 y Velocidad +2 en nuestro motor (−1 y +1 en Showdown) | Algún efecto que se aplica dos veces en el último golpe |
-| c1-203, c1-305 | Showdown termina antes | Por mirar |
-| c3-62 | PS distintos al final | Por mirar |
-| c3-84, c3-319 | PS distintos (y sueño en c3-319) | Por mirar |
+Sin objetos no queda ninguna (semillas 1 a 5). **Con objetos** (`--items`) difieren en torno al 21 % de los combates: es lo siguiente que hay que revisar.
 
 ## Muestra fija en la suite
 

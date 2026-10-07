@@ -206,3 +206,159 @@ func test_la_cuenta_de_proteccion_se_reinicia_tras_un_turno_sin_usarla() -> void
 	b.protect_turn = -5
 	engine.submit(BattleAction.fight(0))
 	assert_eq(b.protect_count, 1, "no cuenta como seguida: sale bien")
+
+
+## Combate con Saña contra un Snorlax que usa Salpicadura (y Protección el turno `protect_turn`).
+## `luck_by_turn(tag, turn)` contesta el oráculo.
+func _thrash_engine(luck_by_turn: Callable, protect_turn: int = -1, status: StringName = &"") -> BattleEngine:
+	var s := BattleSetup.new()
+	s.kind = BattleSetup.Kind.TRAINER
+	var mon := _mon(&"rattata", 30, ["thrash"])
+	mon.status = status
+	s.player_party = [mon]
+	s.foe_party = [_mon(&"snorlax", 30, ["splash", "protect"])]
+	s.player_name = "Ash"
+	s.seed = 11
+	s.exp_enabled = false
+	s.trainers = [{"display_name": "Entrenador Prueba", "base_money": 10, "lose_text": "Vaya."}]
+	s.foe_controller = func(engine: BattleEngine, _side: int, _slot: int) -> BattleAction:
+		return BattleAction.fight(1 if engine.turn == protect_turn else 0)
+	s.rng_oracle = luck_by_turn
+	var engine := BattleEngine.new(s)
+	engine.start()
+	return engine
+
+
+func test_sana_confunde_al_acabar_aunque_la_paralisis_impida_el_ultimo_golpe() -> void:
+	var engine := _thrash_engine(func(tag: StringName, turn: int) -> float:
+		match String(tag):
+			"accuracy": return 0.0
+			"crit": return 0.999
+			"lockedmove_turns": return 0.0
+			"par": return 0.0 if turn == 2 else 0.999
+		return 0.5, -1, &"par")
+	engine.submit(BattleAction.fight(0))
+	var b := engine.active(BattleEngine.PLAYER)
+	assert_eq(engine.turn, 2, "el turno 2 lo juega solo (bloqueado)")
+	assert_false(b.has_volatile(&"lockedmove"))
+	assert_true(b.has_volatile(&"confusion"), "fatiga aunque no se moviera el último turno")
+
+
+func test_sana_parada_antes_del_ultimo_turno_acaba_sin_confusion() -> void:
+	var engine := _thrash_engine(func(tag: StringName, _turn: int) -> float:
+		match String(tag):
+			"accuracy": return 0.0
+			"crit": return 0.999
+			"lockedmove_turns": return 0.999
+			"protect": return 0.0
+		return 0.5, 2)
+	engine.submit(BattleAction.fight(0))
+	var b := engine.active(BattleEngine.PLAYER)
+	assert_eq(engine.turn, 2)
+	assert_false(b.has_volatile(&"lockedmove"), "Protección corta el arrebato")
+	assert_false(b.has_volatile(&"confusion"), "no era el último turno: sin fatiga")
+
+
+func test_sana_de_tres_turnos_confunde_tras_el_tercero() -> void:
+	var engine := _thrash_engine(func(tag: StringName, _turn: int) -> float:
+		match String(tag):
+			"accuracy": return 0.0
+			"crit": return 0.999
+			"lockedmove_turns": return 0.999
+		return 0.5)
+	engine.submit(BattleAction.fight(0))
+	var b := engine.active(BattleEngine.PLAYER)
+	assert_eq(engine.turn, 3, "golpea los turnos 1, 2 y 3 sin pedir acción")
+	assert_true(b.has_volatile(&"confusion"))
+
+
+func test_golpe_bajo_falla_si_el_objetivo_tiene_que_recargar() -> void:
+	var s := BattleSetup.new()
+	s.kind = BattleSetup.Kind.TRAINER
+	s.player_party = [_mon(&"snorlax", 50, ["splash", "suckerpunch"])]
+	s.foe_party = [_mon(&"rattata", 50, ["hyperbeam"])]
+	s.player_name = "Ash"
+	s.seed = 11
+	s.exp_enabled = false
+	s.trainers = [{"display_name": "Entrenador Prueba", "base_money": 10, "lose_text": "Vaya."}]
+	s.foe_controller = func(_engine: BattleEngine, _side: int, _slot: int) -> BattleAction:
+		return BattleAction.fight(0)
+	s.rng_oracle = func(tag: StringName, _turn: int) -> float:
+		return {"accuracy": 0.0, "crit": 0.999}.get(String(tag), 0.5)
+	var engine := BattleEngine.new(s)
+	engine.start()
+	engine.submit(BattleAction.fight(0))
+	var foe := engine.active(BattleEngine.FOE)
+	assert_true(foe.has_volatile(&"mustrecharge"))
+	var hp := foe.pokemon.current_hp
+	engine.submit(BattleAction.fight(1))
+	assert_eq(foe.pokemon.current_hp, hp, "Golpe Bajo falla contra quien recarga")
+
+
+func test_rafaga_escamas_no_mejora_si_el_golpe_acaba_el_combate() -> void:
+	var engine := _engine([_mon(&"dragonite", 80, ["scaleshot"])], [_mon(&"rattata", 5, ["splash"])],
+		{"accuracy": 0.0})
+	engine.submit(BattleAction.fight(0))
+	var b := engine.active(BattleEngine.PLAYER)
+	assert_true(engine.is_over())
+	assert_eq(b.boosts[&"def"], 0, "Showdown aplica el selfBoost después de procesar el KO")
+	assert_eq(b.boosts[&"spe"], 0)
+
+
+func test_a_bocajarro_si_baja_las_defensas_en_el_golpe_final() -> void:
+	var engine := _engine([_mon(&"machamp", 80, ["closecombat"])], [_mon(&"rattata", 5, ["splash"])],
+		{"accuracy": 0.0})
+	engine.submit(BattleAction.fight(0))
+	var b := engine.active(BattleEngine.PLAYER)
+	assert_true(engine.is_over())
+	assert_eq(b.boosts[&"def"], -1, "es efecto del golpe: se aplica antes de procesar el KO")
+
+
+func test_el_final_de_turno_se_corta_cuando_un_bando_se_queda_sin_pokemon() -> void:
+	var player := _mon(&"snorlax", 30, ["splash"])
+	player.status = &"brn"
+	var foe := _mon(&"rattata", 30, ["splash"])
+	foe.status = &"psn"
+	foe.current_hp = 1
+	var engine := _engine([player], [foe])
+	engine.submit(BattleAction.fight(0))
+	assert_true(engine.is_over(), "el veneno debilita al último rival")
+	assert_eq(player.current_hp, player.max_hp(), "la quemadura del ganador ya no llega")
+
+
+func test_el_veneno_va_antes_que_la_quemadura_al_final_del_turno() -> void:
+	# Nuestro Pokémon es más rápido, pero el veneno (orden 9) va antes que la quemadura (orden 10).
+	var player := _mon(&"jolteon", 50, ["splash"])
+	player.status = &"brn"
+	player.current_hp = 1
+	var foe := _mon(&"snorlax", 30, ["splash"])
+	foe.status = &"psn"
+	foe.current_hp = 1
+	var engine := _engine([player], [foe])
+	engine.submit(BattleAction.fight(0))
+	assert_true(engine.is_over())
+	assert_eq(engine.result.outcome, BattleResult.WIN, "el rival cae por el veneno antes de la quemadura")
+
+
+func test_mudar_cura_con_un_33_por_ciento() -> void:
+	var player := _mon(&"dratini", 30, ["splash"], {"ability": "shedskin"})
+	player.status = &"par"
+	var engine := _engine([player], [_mon(&"rattata", 30, ["splash"])], {"shedskin": 0.332, "par": 0.999})
+	engine.submit(BattleAction.fight(0))
+	assert_eq(player.status, &"par", "33/100 y no 1/3: con 0,332 no cura")
+
+
+func test_nerviosismo_sube_la_velocidad_con_cada_golpe() -> void:
+	var engine := _engine([_mon(&"toxel", 60, ["splash"], {"ability": "rattled"})],
+		[_mon(&"heracross", 30, ["pinmissile"])], {"accuracy": 0.0, "multihit": 0.0, "crit": 0.999})
+	engine.submit(BattleAction.fight(0))
+	assert_eq(engine.active(BattleEngine.PLAYER).boosts[&"spe"], 2, "Pin Misil golpea 2 veces: +2")
+
+
+func test_casco_dentado_hace_dano_con_cada_golpe() -> void:
+	var holder := _mon(&"snorlax", 60, ["splash"], {"item": "rockyhelmet"})
+	var foe := _mon(&"rattata", 30, ["doublekick"])
+	var engine := _engine([holder], [foe], {"accuracy": 0.0, "crit": 0.999})
+	var start := foe.current_hp
+	engine.submit(BattleAction.fight(0))
+	assert_eq(start - foe.current_hp, 2 * maxi(1, foe.max_hp() / 6), "Doble Patada: dos golpes, dos veces el Casco")
