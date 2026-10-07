@@ -33,10 +33,10 @@ func _ready() -> void:
 	professor.position = Vector2(60, 85)
 	canvas.add_child(professor)
 	label("Profesor\n%s" % WorldNames.value(&"professor"), Rect2(19, 109, 82, 27), Color("382a38"), 8)
-	var welcome := label("Un mundo de Pokémon\ny una aventura por descubrir.", Rect2(124, 43, 109, 36), Color("382a38"), 8)
+	var welcome := label("", Rect2(124, 43, 104, 54), Color("382a38"), 8)
 	welcome.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	welcome.size = Vector2(104, 54)
 	welcome.clip_text = true
+	welcome.text = "Un mundo de Pokémon\ny una aventura por descubrir."
 	for i: int in 3:
 		var species := DataDB.starter(StringName("starter_%d" % (i + 1)))
 		if species == &"": continue

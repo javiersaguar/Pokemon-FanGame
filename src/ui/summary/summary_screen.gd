@@ -42,6 +42,7 @@ var _slots: Array[NinePatchRect] = []
 var _icons: Array[TextureRect] = []
 var _icon_time := 0.0
 var _icon_frame := 0
+var _detail_open := false
 
 
 static func open(parent: Node, members: Array[Pokemon], start: int = 0) -> void:
@@ -99,7 +100,7 @@ func _process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if party.is_empty():
+	if party.is_empty() or _detail_open:
 		return
 	if event.is_action_pressed(&"move_right") or event.is_action_pressed(&"move_left"):
 		show_page(page + (1 if event.is_action_pressed(&"move_right") else -1))
@@ -108,6 +109,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		index = wrapi(index + (1 if event.is_action_pressed(&"move_down") else -1), 0, party.size())
 		AudioManager.play_se(&"cursor")
 		_refresh()
+	elif event.is_action_pressed(&"menu"):
+		get_viewport().set_input_as_handled()
+		_open_details()
+		return
 	elif event.is_action_pressed(&"cancel"):
 		AudioManager.play_se(&"cancel")
 		closed.emit()
@@ -121,6 +126,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _build_header() -> void:
 	_add_panel(UI + "battle/button_azul.png", Rect2(0, 0, 256, 20), 4)
 	_add_label(tr("Ficha"), Vector2(8, 3), &"LightLabel")
+	_add_label("C / Start: detalle", Vector2(48, 5), &"SmallLabel")
 	var icons: Texture2D = load(TAB_ICONS)
 	for i: int in PAGES.size():
 		var tab := _add_panel(UI + "battle/button_claro.png", Rect2(168 + i * 28, 2, 26, 16), 4)
@@ -141,7 +147,7 @@ func _build_card() -> void:
 	var scenery := TextureRect.new()
 	var crop := AtlasTexture.new()
 	crop.atlas = load(UI + "battle/backgrounds/forest.png")
-	crop.region = Rect2(40, 0, 240, 200)
+	crop.region = Rect2(40, 0, 200, 216)
 	scenery.texture = crop
 	scenery.scale = Vector2(0.5, 0.5)
 	scenery.position = Vector2(6, 24)
@@ -157,7 +163,9 @@ func _build_card() -> void:
 	_ball.scale = Vector2(0.5, 0.5)
 	_ball.position = Vector2(6, 136)
 	_canvas.add_child(_ball)
-	_name = _add_label("", Vector2(30, 136), &"")
+	_name = _add_label("", Vector2(30, 136), &"SmallLabel")
+	_name.size.x = 74
+	_name.clip_text = true
 	_gender = TextureRect.new()
 	_canvas.add_child(_gender)
 	_star = TextureRect.new()
@@ -188,11 +196,10 @@ func _refresh() -> void:
 		return
 	var p := party[index]
 	_name.text = p.display_name()
-	var after := _name.position.x + _name.get_minimum_size().x + 2
 	_gender.texture = BattleDataBox.GENDER_ICONS.get(p.gender)
-	_gender.position = Vector2(after, 140).round()
+	_gender.position = Vector2(30, 148).round()
 	_star.visible = p.shiny
-	_star.position = Vector2(after + (8 if _gender.texture else 0), 140).round()
+	_star.position = Vector2(40, 148).round()
 	_level.text = tr("Nv%d") % p.level
 	var ball_path := "res://assets/sprites/items/%s.png" % p.ball
 	_ball.texture = load(ball_path) if ResourceLoader.exists(ball_path) else load("res://assets/sprites/items/pokeball.png")
@@ -247,7 +254,7 @@ func _page_notes(p: Pokemon) -> void:
 	_section(tr("Encuentro"), 30)
 	var place := String(p.met_location).replace("_", " ").capitalize() if p.met_location != &"" else tr("Desconocido")
 	_rows([[tr("Lugar"), place], [tr("Nivel"), str(maxi(p.met_level, 1))],
-		[tr("Fecha"), p.met_date if p.met_date != "" else "—"]], 44)
+		[tr("Fecha"), p.met_date if p.met_date != "" else "--"]], 44)
 	_section(tr("Carácter"), 86)
 	var nature := DataDB.nature(p.nature)
 	var ability := DataDB.ability(p.ability_id())
@@ -291,8 +298,12 @@ func _page_stats(p: Pokemon) -> void:
 ## Filas de [clave, valor] en la columna derecha, desde `y`.
 func _rows(rows: Array, y: float) -> void:
 	for i: int in rows.size():
-		_add_label(rows[i][0], Vector2(136, y + i * 13), &"KeyLabel", _page_root)
-		_add_label(rows[i][1], Vector2(190, y + i * 13), &"", _page_root)
+		var key := _add_label(rows[i][0], Vector2(134, y + i * 13), &"SmallLabel", _page_root)
+		key.clip_text = true
+		key.size.x = 52
+		var value := _add_label(rows[i][1], Vector2(188, y + i * 13), &"SmallLabel", _page_root)
+		value.clip_text = true
+		value.size.x = 57
 
 
 func _section(title: String, y: float) -> void:
@@ -349,3 +360,24 @@ func _add_label(text: String, at: Vector2, variation: StringName, parent: Node =
 		label.theme_type_variation = variation
 	(parent if parent else _canvas).add_child(label)
 	return label
+
+
+## Los valores abreviados de la tarjeta se pueden leer completos con C / Start.
+func detail_choices(p: Pokemon) -> Dictionary:
+	var labels := PackedStringArray(["Datos completos"])
+	var nature := DataDB.nature(p.nature)
+	var ability := DataDB.ability(p.ability_id())
+	var item := DataDB.item(p.held_item) if DataDB.has_item(p.held_item) else null
+	var notes := PackedStringArray(["%s\nEspecie: %s\nEO: %s\nLugar: %s\nFecha: %s\nNaturaleza: %s\nCarácter: %s\nHabilidad: %s\nObjeto: %s" % [p.display_name(), p.species().name, p.original_trainer, String(p.met_location).replace("_"," ").capitalize(), p.met_date, nature.name if nature else String(p.nature), _trait(p), ability.name if ability else String(p.ability_id()), item.name if item else "Ninguno"]])
+	for move: MoveSlot in p.moves:
+		labels.append(DataDB.move(move.id).name)
+		notes.append(LearnMoveScreen.describe(move.id, move.pp, move.max_pp()))
+	labels.append("Cintas")
+	notes.append("Sin cintas." if p.ribbons.is_empty() else "\n".join(p.ribbons))
+	return {"labels":labels,"notes":notes}
+
+func _open_details() -> void:
+	_detail_open = true
+	var data := detail_choices(party[index])
+	await ChoiceScreen.pick("Ficha / detalles", data.labels, data.notes)
+	_detail_open = false

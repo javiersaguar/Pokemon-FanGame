@@ -205,9 +205,9 @@ func test_codigo_personalizado_y_cancelar_entrada() -> void:
 	var value := ["pending"]
 	var ask := func() -> void: value[0] = await SceneManager.request_text("Código", "", "PANCHITO-…", true)
 	ask.call()
-	await wait_physics_frames(2)
+	await wait_process_frames(3)
 	press(&"cancel")
-	await wait_physics_frames(2)
+	await wait_process_frames(3)
 	assert_eq(value[0], "")
 	assert_false(GameState.input_locked)
 

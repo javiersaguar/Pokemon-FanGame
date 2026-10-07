@@ -17,8 +17,9 @@ func _ready() -> void:
 	panel(Rect2(16,55,224,96))
 	status = label("Generando la ROM...",Rect2(24,75,208,22),Color("382a38"))
 	status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	var explanation := label("Preparando Pokémon, encuentros y reglas.\nPuedes revisar el resultado antes de empezar.",Rect2(28,109,200,34),Color("382a38"),8)
+	var explanation := label("",Rect2(28,109,200,34),Color("382a38"),8)
 	explanation.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	explanation.text = "Preparando Pokémon, encuentros y reglas.\nPuedes revisar el resultado antes de empezar."
 	hint.text = "Generación en curso / espera un momento"
 func _process(delta: float) -> void:
 	if UiPreferences.reduce_motion():

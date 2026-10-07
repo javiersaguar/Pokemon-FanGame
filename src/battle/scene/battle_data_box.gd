@@ -39,6 +39,8 @@ func _ready() -> void:
 	size = PLAYER_SIZE if is_player else FOE_SIZE
 	mouse_filter = MOUSE_FILTER_IGNORE
 	_name = _label(Vector2(7, 2), &"")
+	_name.size.x = 60
+	_name.clip_text = true
 	_gender = _icon(Vector2.ZERO)
 	_star = _icon(Vector2.ZERO)
 	_star.texture = SHINY_STAR
@@ -89,7 +91,7 @@ func _ready() -> void:
 func show_pokemon(pokemon: Dictionary) -> void:
 	pokemon_name = str(pokemon.get("name", "?"))
 	_name.text = pokemon_name
-	var after_name := _name.position.x + _name.get_minimum_size().x + 2
+	var after_name := minf(69,_name.position.x + _name.get_theme_font(&"font").get_string_size(pokemon_name,HORIZONTAL_ALIGNMENT_LEFT,-1,_name.get_theme_font_size(&"font_size")).x + 2)
 	var gender := StringName(pokemon.get("gender", ""))
 	_gender.texture = GENDER_ICONS.get(gender)
 	_gender.visible = _gender.texture != null

@@ -1,5 +1,10 @@
 extends GutTest
 
+func after_each() -> void:
+	for node: Node in AudioManager.get_children():
+		if node is AudioStreamPlayer: node.stop(); node.stream = null
+	await wait_process_frames(2)
+
 func _press(action: StringName) -> void:
 	var event := InputEventAction.new()
 	event.action = action
@@ -11,6 +16,9 @@ func _press(action: StringName) -> void:
 
 func test_run_option_updates_state_and_notice_without_locking() -> void:
 	GameState.reset()
+	UiPreferences.initialize()
+	var previous_run: bool = UiPreferences.values.always_run
+	UiPreferences.set_value("always_run",false)
 	var runtime := UiRuntime.new()
 	add_child_autofree(runtime)
 	var screen := OptionsScreen.new()
@@ -21,6 +29,7 @@ func test_run_option_updates_state_and_notice_without_locking() -> void:
 	assert_true(GameState.always_run)
 	assert_eq(runtime.toast.text, "Correr: activado")
 	assert_true(runtime.toast.visible)
+	assert_gte(runtime.toast.position.x,screen.heading.position.x + screen.heading.get_theme_font(&"font").get_string_size(screen.heading.text,HORIZONTAL_ALIGNMENT_LEFT,-1,10).x)
 	assert_false(GameState.input_locked)
 	_press(&"accept")
 	await wait_process_frames(3)
@@ -29,6 +38,7 @@ func test_run_option_updates_state_and_notice_without_locking() -> void:
 	_press(&"cancel")
 	await wait_process_frames(3)
 	GameState.reset()
+	UiPreferences.set_value("always_run",previous_run)
 
 func test_preferences_apply_audio_text_frame_and_preserve_other_ui_config() -> void:
 	UiPreferences.initialize()

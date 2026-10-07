@@ -147,6 +147,8 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 		DataDB.clear_patch()
 	# Solo una ROM válida puede emitir new_game_started y reemplazar módulos/bloqueos.
 	GameState.new_game(options)
+	UiPreferences.initialize()
+	GameState.set_always_run(bool(options.get("always_run",UiPreferences.values.always_run)))
 	await fade_out()
 	_enter_game()
 	var map_error := await change_map(map, spawn, GameState.player_facing)

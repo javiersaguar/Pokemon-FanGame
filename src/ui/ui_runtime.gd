@@ -17,8 +17,10 @@ func _ready() -> void:
 	canvas = UiCanvas.new()
 	add_child(canvas)
 	toast = Label.new()
-	toast.position = Vector2(8, 8)
-	toast.size = Vector2(240, 18)
+	toast.position = Vector2(132, 8)
+	toast.size = Vector2(116, 18)
+	toast.add_theme_font_size_override(&"font_size",8)
+	toast.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	toast.add_theme_color_override(&"font_color", Color("fff4d8"))
 	toast.add_theme_color_override(&"font_shadow_color", Color("382a38"))
 	toast.add_theme_constant_override(&"shadow_offset_x", 1)

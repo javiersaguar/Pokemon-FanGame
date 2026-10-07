@@ -54,8 +54,8 @@ func _ready() -> void:
 	_thumbnail.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	_thumbnail.mouse_filter = MOUSE_FILTER_IGNORE
 	canvas.add_child(_thumbnail)
-	_card = label("", Rect2(156, 111, 87, 54), Color("382a38"), 8)
-	_card.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_card = label("", Rect2(156, 111, 87, 56), Color("382a38"), 8)
+	_card.clip_text = true
 	_card.hide()
 	fill(Rect2(0, 174, 256, 18), Color("80342e"))
 	footer = label("Realizado por Javier Saguar    v%s" % ProjectSettings.get_setting("application/config/version", "0.0.0"),
@@ -158,9 +158,9 @@ func _refresh_card() -> void:
 	var summary := SaveManager.slot_summary(slot) if slot > 0 else {}
 	_thumbnail.texture = SaveManager.thumbnail(slot) if slot > 0 else null
 	menu.set_disabled(0, summary.is_empty() or summary.get("status", "") == "finished")
-	_card.text = "Sin partida guardada" if summary.is_empty() else "%s\n%s\n%s\nMedallas: %d\nTiempo: %d min" % [
+	_card.text = "Sin partida guardada" if summary.is_empty() else "%s\n%s / %d med.\n%s\n%d min" % [
 		summary.get("player_name", ""), "RandomLocke" if summary.get("mode", "normal") == "randomlocke" else "Normal",
-		summary.get("map_name", ""), int(summary.get("badges", 0)), int(float(summary.get("play_time", 0)) / 60)]
+		int(summary.get("badges", 0)), summary.get("map_name", ""), int(float(summary.get("play_time", 0)) / 60)]
 
 func _process(delta: float) -> void:
 	_clock += delta
@@ -243,7 +243,7 @@ func run_menu() -> void:
 func show_subscreen(screen: Control) -> void:
 	_subscreen = screen
 	add_child(screen)
-	screen.hint.position.y = 160
+	screen.hint.position.y = 165
 	screen.label(footer.text, Rect2(7, 177, 242, 12), Color("fff4d8"), 8)
 	await screen.closed
 	screen.queue_free()

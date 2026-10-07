@@ -27,7 +27,7 @@ static func pick(title: String, labels: PackedStringArray, descriptions := Packe
 	return index
 
 func _ready() -> void:
-	panel(Rect2(160, 34, 88, 132))
+	panel(Rect2(160, 34, 88, 130))
 	_icon = Sprite2D.new()
 	_icon.position = Vector2(204, 58)
 	_icon.scale = Vector2(0.5, 0.5)
@@ -55,7 +55,7 @@ func _refresh() -> void:
 		menu.queue_free()
 	heading.text = caption
 	var count := ceili(float(choices.size()) / ROWS)
-	hint.text = "Izq/Der: pág. %d/%d / C: texto / B: volver" % [page + 1, maxi(count, 1)]
+	hint.text = "Izq/Der %d/%d / C: texto / Z/A: elegir / X/B: volver" % [page + 1, maxi(count, 1)]
 	var labels := choices.slice(page * ROWS, mini((page + 1) * ROWS, choices.size()))
 	if labels.is_empty(): labels = ["Sin contenido"]
 	menu = make_menu(labels, Rect2(12, 34, 140, 126))

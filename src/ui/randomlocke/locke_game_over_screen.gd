@@ -6,9 +6,9 @@ var save_error := OK
 func _ready() -> void:
 	heading.text = "RandomLocke / Final de la partida"
 	panel(Rect2(12,34,232,63))
-	summary = label("No quedan Pokémon disponibles.\nCapturas: %d / Muertes: %d\nLa partida ha terminado.",Rect2(20,42,216,48),Color("382a38"),8)
-	summary.text = summary.text % [int(snapshot.get("captures",0)),int(snapshot.get("death_count",0))]
+	summary = label("",Rect2(20,42,216,48),Color("382a38"),8)
 	summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	summary.text = "No quedan Pokémon disponibles.\nCapturas: %d / Muertes: %d\nLa partida ha terminado." % [int(snapshot.get("captures",0)),int(snapshot.get("death_count",0))]
 	menu = make_menu(["Cementerio", "Copiar código", "Menú inicial"],Rect2(24,110,208,60))
 	hint.text = "Puedes revisar y compartir esta partida"
 	# La ranura terminada no se podrá continuar, también después de reiniciar.

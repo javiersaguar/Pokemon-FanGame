@@ -30,10 +30,9 @@ func run() -> void:
 			2: await RandomlockeSettingsScreen.edit(settings,true)
 			3:
 				if await Dialogue.ask_yes_no("El registro revela todos los Pokémon. ¿Exportarlo?"):
-					var file := FileAccess.open("user://randomlocke_spoilers.txt",FileAccess.WRITE)
-					if file:
-						file.store_string(rom.spoiler_text())
-						await Dialogue.say("Registro exportado a %s." % ProjectSettings.globalize_path("user://randomlocke_spoilers.txt"))
+					var path := rom.export_spoilers()
+					if not path.is_empty():
+						await Dialogue.say("Registro exportado a %s." % ProjectSettings.globalize_path(path))
 					else: await Dialogue.say("No se pudo exportar el registro.")
 			_:
 				_done = true

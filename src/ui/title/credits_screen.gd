@@ -9,7 +9,7 @@ func _ready() -> void:
 	heading.text = "Juego realizado por Javier Saguar"
 	heading.add_theme_font_size_override(&"font_size", 8)
 	hint.text = "Arriba/Abajo: texto / A: pausar / B: volver"
-	panel(Rect2(8, 32, 240, 136))
+	panel(Rect2(8, 32, 240, 132))
 	body = RichTextLabel.new()
 	body.position = Vector2(16, 39)
 	body.size = Vector2(224, 112)

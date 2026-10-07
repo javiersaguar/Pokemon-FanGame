@@ -4,6 +4,11 @@ extends RefCounted
 static func can_use(item_id: StringName, p: Pokemon = null, move_index := -1) -> bool:
 	if not DataDB.has_item(item_id) or not (GameState.bag is Bag) or not GameState.bag.has(item_id): return false
 	var item := DataDB.item(item_id)
+	if item.pocket == &"machines":
+		if p == null: return false
+		if GameState.locke != null and GameState.locke.rules.snapshot().deaths.has(p.uid): return false
+		var taught := MoveLessons.machine_move(item_id)
+		return taught != &"" and MoveLessons.can_learn_machine(p.species_id,taught) and not p.has_move(taught) and (p.moves.size() < Pokemon.MAX_MOVES or (move_index >= 0 and move_index < p.moves.size()))
 	if not item.usable_in_field(): return false
 	if item.effect == &"repel": return int(item.param("steps", 0)) > 0
 	if p == null: return false
@@ -23,6 +28,10 @@ static func can_use(item_id: StringName, p: Pokemon = null, move_index := -1) ->
 static func use(item_id: StringName, p: Pokemon = null, move_index := -1) -> Error:
 	if not can_use(item_id, p, move_index): return ERR_UNAVAILABLE
 	var item := DataDB.item(item_id)
+	if item.pocket == &"machines":
+		if not MoveLessons.use_machine(p,item_id,move_index): return ERR_UNAVAILABLE
+		GameState.bag.remove(item_id)
+		return OK
 	match item.effect:
 		&"repel": GameState.set_var(&"repel_steps", int(item.param("steps", 100)))
 		&"heal_hp", &"heal_and_cure":

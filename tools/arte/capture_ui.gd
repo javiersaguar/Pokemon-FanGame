@@ -4,6 +4,7 @@ var screen: Control
 var runtime: Control
 var main: Node
 var case_name := "options"
+var output_dir := "res://docs/arte/comparativas"
 
 func _initialize() -> void:
 	run.call_deferred()
@@ -13,8 +14,38 @@ func run() -> void:
 	for arg: String in OS.get_cmdline_user_args():
 		if arg.begins_with("--screen="):
 			case_name = arg.trim_prefix("--screen=")
+		if arg.begins_with("--output-dir="): output_dir = arg.trim_prefix("--output-dir=")
 	root.size = Vector2i(512, 384)
-	if case_name in ["locke_cemetery","locke_game_over","locke_zone"]:
+	if case_name == "locke_game_over":
+		main = load("res://src/main/main.tscn").instantiate()
+		main.set_script(null)
+		root.add_child(main)
+		root.get_node("SceneManager").register_main(main)
+		root.get_node("SceneManager")._fade.hide()
+	if case_name in ["dialogue","choice","volume"]:
+		if case_name == "volume":
+			screen = load("res://src/ui/widgets/choice_screen.gd").new()
+			screen.caption = "Volumen / Música"
+			for value: int in range(0,101,10): screen.choices.append("%d %%" % value)
+			root.add_child(screen)
+		else:
+			screen = Control.new(); root.add_child(screen)
+			var dialogue = root.get_node("Dialogue")
+			dialogue.text_speed = 0; dialogue._box.text_speed = 0
+			if case_name == "dialogue": dialogue.say("¡Hola, Javier! Pokémon Panchito te espera.")
+			else: dialogue.ask_yes_no("¿Quieres continuar?")
+	elif case_name in ["recordador","tutor"]:
+		screen = load("res://src/ui/learn_move/move_lesson_screen.gd").new()
+		var p = load("res://src/pokemon/pokemon.gd").create(&"charmander",30)
+		var lessons = load("res://src/pokemon/move_lessons.gd")
+		screen.caption = "Recordar movimiento" if case_name == "recordador" else "Tutor de movimientos"
+		screen.move_ids = lessons.relearnable(p) if case_name == "recordador" else lessons.tutor_moves(p.species_id)
+		root.add_child(screen)
+	elif case_name in ["controls","controls_names"]:
+		screen = load("res://src/ui/options/controls_screen.gd").new()
+		root.add_child(screen)
+		if case_name == "controls_names": screen.page = 1; screen._refresh(); screen.menu.select(4)
+	elif case_name in ["locke_cemetery","locke_game_over","locke_zone"]:
 		if case_name == "locke_zone":
 			screen = Control.new()
 			root.add_child(screen)
@@ -58,10 +89,19 @@ func run() -> void:
 		root.add_child(screen)
 		var p = load("res://src/pokemon/pokemon.gd").create(&"charmander",16)
 		p.nature = &"adamant"
-		p.nickname = "Panchito"
+		p.nickname = "ABCDEFGHIJKL" if case_name == "summary_long" else "Panchito"
 		screen.party.assign([p,load("res://src/pokemon/pokemon.gd").create(&"pidgey",7)])
 		screen._refresh()
 		screen.show_page({"summary_data":0,"summary_notes":1,"summary_stats":2}.get(case_name,0))
+		if case_name == "summary_moves":
+			var card = screen
+			screen = load("res://src/ui/widgets/choice_screen.gd").new()
+			var details = card.detail_choices(p)
+			screen.caption = "Ficha / detalles"
+			screen.choices = details.labels; screen.notes = details.notes
+			root.add_child(screen)
+			screen.menu.select(1)
+			card.queue_free()
 	elif case_name in ["daycare","hatching_egg","hatching_born"]:
 		var p = load("res://src/pokemon/pokemon.gd").create(&"charmander",1)
 		if case_name == "daycare":
@@ -94,7 +134,7 @@ func run() -> void:
 			var data := {"species":&"charizardmegax","hp":60,"max_hp":72,"type":&"water"}
 			await screen._play_event({"type":StringName(case_name),"side":0,"slot":0,"data":data})
 			screen._box.play({"mega":"Megaevolución / Chispa","zmove":"Movimiento Z","dynamax":"Dinamax / PS al doble","tera":"Teratipo Agua"}[case_name],"",false)
-	elif case_name in ["battle_double","double_target"]:
+	elif case_name in ["battle_double","double_target","battle_long"]:
 		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
 		screen.fast = true
 		root.add_child(screen)
@@ -109,7 +149,7 @@ func run() -> void:
 				var id: StringName = ids[side][slot]
 				var data = root.get_node("DataDB").species(id)
 				screen._sprite(side,slot).set_pokemon({"species":id})
-				screen._data_box(side,slot).show_pokemon({"name":data.name,"level":12,"hp":30,"max_hp":36})
+				screen._data_box(side,slot).show_pokemon({"name":"ABCDEFGHIJKL" if case_name == "battle_long" else data.name,"gender":&"female","shiny":case_name == "battle_long","level":100 if case_name == "battle_long" else 12,"hp":30,"max_hp":36})
 				screen._data_box(side,slot).show()
 		screen._box.text_speed = 0
 		if case_name == "double_target":
@@ -264,19 +304,25 @@ func run() -> void:
 		root.add_child(screen)
 		if case_name in ["options_yellow","options_green"]:
 			load("res://src/ui/options/ui_preferences.gd").set_value("frame",1 if case_name == "options_yellow" else 2,false)
-		if case_name == "options_volumes":
-			screen.page = 1
+		if case_name in ["options_volumes","options_return"]:
+			screen.page = 2 if case_name == "options_return" else 1
 			screen._refresh()
 		runtime = load("res://src/ui/ui_runtime.gd").new()
 		root.add_child(runtime)
 		if case_name == "run_notice":
-			runtime._run_changed(true)
+			load("res://src/ui/options/ui_preferences.gd").set_value("always_run",true,false)
+			root.get_node("GameState").set_always_run(true)
+			screen.build_choices(); screen._refresh()
 	await process_frame
 	await process_frame
 	await RenderingServer.frame_post_draw
 	var image := root.get_texture().get_image()
-	var path := "res://docs/arte/comparativas/a3_%s.png" % case_name
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(output_dir))
+	var path := "%s/a3_%s.png" % [output_dir,case_name]
 	image.save_png(path)
+	var bounds: Array = []
+	_label_bounds(root,bounds)
+	print("UI_BOUNDS ",JSON.stringify(bounds))
 	print("Captura: ", path)
 	screen.queue_free()
 	if runtime:
@@ -284,8 +330,23 @@ func run() -> void:
 	if main:
 		root.get_node("SceneManager")._leave_game()
 		main.queue_free()
+	await process_frame
+	await process_frame
 	for node: Node in root.get_node("AudioManager").get_children():
 		if node is AudioStreamPlayer: node.stop(); node.stream = null
 	await process_frame
 	await process_frame
+	await create_timer(0.1).timeout
 	quit.call_deferred()
+
+
+func _label_bounds(node: Node, records: Array) -> void:
+	if node is Label and node.is_visible_in_tree():
+		var rect: Rect2 = node.get_global_rect()
+		var ancestor := node.get_parent()
+		var scroll_clips := false
+		while ancestor != null:
+			if ancestor is ScrollContainer or (ancestor is Control and ancestor.clip_contents): scroll_clips = true
+			ancestor = ancestor.get_parent()
+		records.append({"text":node.text,"x":rect.position.x,"y":rect.position.y,"w":rect.size.x,"h":rect.size.y,"clip":node.clip_text,"wrap":node.autowrap_mode,"ancestor_clip":scroll_clips})
+	for child: Node in node.get_children(): _label_bounds(child,records)

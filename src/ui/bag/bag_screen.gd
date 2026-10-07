@@ -57,6 +57,10 @@ func _manage(id: StringName) -> void:
 				var index := await PartyScreen.pick_member()
 				if index < 0: return
 				var p: Pokemon = GameState.party.get_at(index)
+				if item.pocket == &"machines":
+					var learned := await MoveLessonScreen.use_machine(p,id)
+					if learned != ERR_SKIP: await Dialogue.say("Movimiento aprendido." if learned == OK else "No tendría efecto.")
+					return
 				if item.effect == &"evolution":
 					var target := EvolutionRules.item_target(p, id, {"time": Clock.period()})
 					if target != &"": await EvolutionScreen.open(p, {"to": target, "method": "item"}, id)

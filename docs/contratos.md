@@ -1415,7 +1415,7 @@ La entrada incluye `config` con snapshot de policy/prohibidos/presets, y `region
 
 ### §9.9 Opciones y preferencias de dispositivo
 
-`UiPreferences.initialize()` carga `user://ui.cfg` sin sustituir otras secciones. `set_value(key, value)` guarda texto (20/40/80/0), marco (0 claro/1 amarillo/2 verde), pantalla completa, reducción de animaciones y los buses BGM/SE/ME/Cries/Ambient (0..1). `reduce_motion()` consulta la reducción sin cambiar la velocidad del diálogo. `battle_style()` usa la variable guardada de GameState durante una partida y el valor de dispositivo en el título; SceneManager lo aplica antes de las reglas Locke. Correr siempre conserva el contrato GameState y se guarda por partida. `OptionsScreen` emite `closed`; navegación por páginas y ayuda recorrible con C/Start. El acabado de los marcos queda pendiente de aprobación de Javier.
+`UiPreferences.initialize()` carga `user://ui.cfg` sin sustituir otras secciones. `set_value(key, value)` guarda texto (20/40/80/0), marco (0 claro/1 amarillo/2 verde), pantalla completa, reducción de animaciones y los buses BGM/SE/ME/Cries/Ambient (0..1). `reduce_motion()` consulta la reducción sin cambiar la velocidad del diálogo. `battle_style()` usa la variable guardada de GameState durante una partida y el valor de dispositivo en el título; SceneManager lo aplica antes de las reglas Locke. `always_run()` consulta GameState durante la partida y el valor de dispositivo desde el título; start_new_game aplica ese valor de dispositivo. Continuar conserva el valor guardado. Correr siempre conserva el contrato GameState y se guarda por partida. `OptionsScreen` emite `closed`; navegación por páginas y ayuda recorrible con C/Start. El acabado de los marcos queda pendiente de aprobación de Javier.
 
 ### §9.10 PC, Pokédex completa y datos de entrenador
 
@@ -1437,10 +1437,19 @@ BattleMechanics.available(request, move_slot) devuelve Normal y capacidades anun
 
 ### §9.13 Guardería y eclosión (presentación; integración persistente pendiente)
 
-`await DaycareScreen.open(service: Daycare) -> bool` modifica las plazas del servicio recibido mediante `deposit_member(service, index)` / `withdraw_member(service, index)` (Error, operaciones atómicas, protección de último capaz/equipo lleno). Retorna true si se pide huevo; **no llama take_egg ni registra una cría**. El llamador persistente debe recoger/guardar el huevo según el futuro contrato de A2 (petición 61); por ahora no hay entrada de producción ni instancia global temporal.
+`await DaycareScreen.open(service: Daycare) -> bool` modifica las plazas del servicio recibido mediante `deposit_member(service, index)` / `withdraw_member(service, index)` (Error, operaciones atómicas, protección de último capaz/equipo lleno). Retorna true si se pide huevo; **no llama take_egg ni registra una cría**. El llamador persistente debe recoger/guardar el huevo según el futuro contrato de A2 (petición 66); por ahora no hay entrada de producción ni instancia global temporal.
 
 `await HatchingScreen.open(p: Pokemon, quick := false)` presenta una eclosión que el sistema ya ha decidido. No modifica Pokemon/Party/Pokedex ni resuelve recepción Locke. A/B omiten animación; al terminar permiten volver. Reduce animaciones respeta UiPreferences; preview es solo para capturas. Huevo/grietas originales del pack 06, fondo EBDX y sonidos existentes de apertura/grito. Guardado de huevos y pasos pendientes de A2.
 
 ### §9.14 Accesibilidad
 
 UiPreferences.reduce_motion() se respeta en todas las animaciones de UI y escena: título, créditos, generación, iconos/cursor/reposo, barras, botones, entrada/efectos del combate, evolución y eclosión. No modifica Dialogue.text_speed ni las peticiones del motor. Evolución por nivel reducida conserva cancelación mediante elección estática A/B; por objeto conserva la decisión ya confirmada. Iconos de estado acompañados de etiquetas y naturaleza con +/-, nunca información solo por color. Teclado y mando comparten InputMap; créditos/descripciones también recorribles manualmente.
+
+
+### §9.15 Detalles y aprendizaje de movimientos
+
+SummaryScreen permite C/Start para leer los valores completos de la ficha, movimientos con descripción y PP y las cintas almacenadas. No navega debajo del menú de detalle. Los nombres largos de la tarjeta y la caja de combate se limitan a su marco; nombre completo en detalle/mensajes.
+
+`await MoveLessonScreen.open_recordador(p) -> bool` ofrece solo MoveLessons.relearnable(p); `open_tutor(p, offered: Array[StringName]) -> bool` filtra el catálogo que el mundo le pase por compatibilidad. El mundo conserva ubicación, disponibilidad y precio; no se crean tutores globales ni gratuitos por defecto. Elección, confirmación y sustitución mediante LearnMoveScreen; cancelar conserva los cuatro movimientos. `use_machine(p,item_id) -> Error` retorna ERR_SKIP al cancelar, OK al aprender o ERR_UNAVAILABLE si no procede. FieldItemUse delega en MoveLessons y consume una MT solo al aprenderla. La mochila ya conecta esta entrada. Milcery/sabor y disponibilidad en el mundo pendientes de sus responsables.
+
+ControlsScreen (en Opciones) muestra los bindings reales de InputMap y explica la entrada física/visible de nombres. RandomlockeSummaryScreen exporta mediante RomPatch.export_spoilers() y presenta la ruta por código tras confirmación.

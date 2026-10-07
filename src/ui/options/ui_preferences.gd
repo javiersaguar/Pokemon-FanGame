@@ -4,10 +4,11 @@ extends RefCounted
 const FRAME_FILES := ["databox","button_amarillo","button_verde"]
 const FRAME_NAMES := ["Claro","Amarillo","Verde"]
 static var loaded := false
-static var values: Dictionary = {"text_speed":40,"frame":0,"fullscreen":false,"reduce_animations":false,"battle_style":"fixed","BGM":1.0,"SE":1.0,"ME":1.0,"Cries":1.0,"Ambient":1.0}
+static var values: Dictionary = {"always_run":false,"text_speed":40,"frame":0,"fullscreen":false,"reduce_animations":false,"battle_style":"fixed","BGM":1.0,"SE":1.0,"ME":1.0,"Cries":1.0,"Ambient":1.0}
 static func initialize() -> void:
 	if loaded: return
 	loaded = true
+	values.always_run = bool(GameState.world_config.get("new_game",{}).get("always_run",false))
 	var config := ConfigFile.new()
 	if config.load("user://ui.cfg") == OK:
 		for key: String in values:
@@ -49,3 +50,7 @@ static func apply_frame() -> void:
 static func reduce_motion() -> bool:
 	initialize()
 	return bool(values.reduce_animations)
+
+static func always_run() -> bool:
+	initialize()
+	return GameState.always_run if GameState.in_game else bool(values.always_run)
