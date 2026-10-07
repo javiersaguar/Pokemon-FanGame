@@ -343,7 +343,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **Worktree:** `/home/javier/proyectos/pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Propiedad de la sesión: `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/combate/`, `tools/showdown_diff/` y `docs/combate/` (ver «Sesión con 3 agentes»).
 
-**En qué estoy:** tarea 1, comparación con Showdown: quedan 7 combates distintos de 1.200 (lista en `docs/combate/diferencias_showdown.md`). Después, tarea 2 (cobertura total).
+**En qué estoy:** tarea 1, comparación con Showdown: sin objetos ya no queda ninguna diferencia (2.000 combates, semillas 1 a 5). Ahora, combates **con objetos** (`--items`, 21 % distintos) y después la tarea 2 (cobertura total).
 
 **Terminado:**
 - **Comparación con Showdown** (`tools/showdown_diff/`, uso en su README): juega los mismos combates en Showdown 0.11.11 y en nuestro motor con **la misma suerte** (oráculo por etiqueta y turno) y compara el estado al empezar cada turno (PS, estado, quién está en el campo, cambios, Velocidad efectiva y clima). 400 combates en unos 15 s.
@@ -352,6 +352,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 - **2.ª tanda, 7 fallos más corregidos:** Respiro le quitaba el tipo Volador **a la especie entera** (lista compartida sin copiar), Contoneo y Camelo sin subida si fallaba la confusión, Polvo Escudo bloqueando las mejoras del atacante, parálisis antes que Viento Afín en la Velocidad, movimientos de dos turnos que no perdían la carga al no poder moverse, Saña sin confusión si Protección paraba el último golpe, y la cuenta de Protección que no se reiniciaba.
 - **Muestra fija en la suite** (`tests/combate/test_showdown_muestra.gd`, 30 combates con las fotos de Showdown guardadas, sin Node) y **18 tests de regresión** (`tests/combate/test_regresiones_showdown.gd`).
 - **Resultado:** de 146/200 (73 %) a **1.181/1.200 (99,4 % sin contar el límite de turnos)** combates idénticos a Showdown en tres lotes. Suite: 404/404.
+- **3.ª tanda, 8 fallos más:** Saña, Enfado y Danza Pétalo reescritos como el `lockedmove` de Showdown (se cortan si un turno no golpea; la fatiga solo si era el último; la parálisis descuenta), Golpe Bajo contra un rival que recarga, Ráfaga Escamas en el golpe que acaba el combate, el final de turno que seguía con un bando ya sin Pokémon, el orden veneno → quemadura, Mudar al 33 %, y Nerviosismo y Casco Dentado con cada golpe (también con el que debilita). **2.000/2.000 sin objetos.** 29 tests de regresión. Suite: 415/415.
 
 **Bloqueos:** ninguno.
 
