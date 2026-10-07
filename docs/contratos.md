@@ -1020,6 +1020,7 @@ rom.to_json() -> String         # guardar en slot_<n>.rom.json (claves ordenadas
 RomPatch.from_dict(JSON.parse_string(texto)).apply()   # al cargar la ranura, ANTES de cargar el mapa
 rom.seed_code() -> String       # "PANCHITO-XXXX-XXXX-XX" (+ "-XXXXXX" si los ajustes son personalizados)
 rom.spoiler_text() -> String    # registro de spoilers (R.5)
+rom.export_spoilers() -> String  # lo escribe en user://randomlocke/<código>_spoilers.txt
 rom.settings() -> RandomizerSettings / rom.generator_version()
 
 SeedCode.encode(seed, settings) -> String

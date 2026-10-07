@@ -158,7 +158,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-06) el aviso de la sesión de 2 agentes y la lista de «Sesión con 2 agentes». Los Agentes 1 y 4 están parados. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión del 2026-10-07, de arriba abajo. Hechas la 1 a la 5. Siguiente: RandomLocke (spoilers, shiny y MT en el generador).
+**En qué estoy:** sesión del 2026-10-07, de arriba abajo. Hechas la 1 a la 6. Siguiente: simulación en masa contra los líderes.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -393,7 +393,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 3. ✅ **Fase 9.6** (2026-10-06): Megaevolución (petición 48), movimientos Z (49, efectos de estado que no son subida, curación o quitar bajadas pendientes), Dinamax (50, sin Gigamax) y Teratipo (51, sin Estelar). Los tres últimos solo si el combate los activa.
 4. ✅ **Fase 14.3, crianza** (2026-10-06): `Daycare` en el contrato. Grupos, sexo, Ditto, especie base, pasos, Lazo Destino, Piedra Eterna, Ball, movimientos huevo, Cuerpo Llama, Masuda (lo dice quien llama) y Pokérus. Los bebés de incienso quedan pendientes.
 5. ✅ **Evoluciones y movimientos** (2026-10-07): hora, amistad, objeto, lugar, movimiento, clima y Milcery al girar con un confite (petición 58). Recordador, tutores y MT por el texto del objeto. Dónde se consiguen las MT y el número de las MT 100+ (sin texto) quedan PENDIENTE JAVIER. El sabor de Alcremie también.
-6. **RandomLocke:** exportar los spoilers a `user://randomlocke/`, conectar la probabilidad shiny de sus ajustes y meter las MT y tutores de la tarea 5 en el generador. Siempre en verde.
+6. ✅ **RandomLocke** (2026-10-07): spoilers en `user://randomlocke/<código>_spoilers.txt`, el shiny del ajuste manda al aplicar la ROM, y las MT y tutores de la tarea 5 entran en el generador. El dorado solo cambió `input_hash`.
 7. **Fase 20.2:** herramienta de simulación en masa (equipo esperado contra cada líder, porcentaje de victorias) en `tools/`.
 8. **Cobertura total del combate:** habilidades, objetos y movimientos con script para **todas** las especies del juego, no solo las del MVP, ampliando el validador para que lo compruebe. De más usadas a menos, en entregas.
 9. **Pruebas diferenciales contra Showdown** (la mejor garantía de que el combate es fiel): un arnés en `tools/` (Node) que juega **miles de combates con la misma semilla, equipos y decisiones** en el simulador de Showdown y en nuestro `BattleEngine`, y compara el registro turno a turno (daño, orden, estados, críticos, fallos y KO). Informe de discrepancias en `docs/combate/diferencias_showdown.md`, corregir las que sean bugs nuestros y documentar las diferencias intencionadas. Una muestra pequeña entra en la suite normal y la grande va como test lento.
@@ -547,6 +547,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 56 | A3 → A1 | Dos líneas en `MvpStoryEvent.intro()` abren/cierran ProfessorIntro sin cambiar el guion. El test de interacción espera dos frames al terminar para que autofree no libere el NPC dentro de su señal de fin de paso. Suite y flujo reales verdes. | hecha por A3 en ausencia de A1/A4 (revisar al volver) |
 | 57 | A3 → A1 | Conectar RandomlockeFlow propio en la entrada de nueva partida del fallback de SceneManager, conservando RandomlockeJob/start_randomlocke/§10. Test de cancelar y de código compartido personalizado. | hecha por A3 en ausencia de A1 (revisar al volver) |
 | 58 | A2 → A3 | **Evoluciones, recordador, tutores y MT** (`contratos.md`, `EvolutionRules` y `MoveLessons`). Milcery: `special_target` con `spin: true` y un confite; el sabor de Alcremie está PENDIENTE JAVIER. Recordador: `relearnable` / `teach`. Tutor: `use_tutor`. MT: `use_machine` (el objeto se gasta en tu mochila). Dónde se consiguen las MT lo decide Javier. | pendiente |
+| 59 | A2 → A3 | Los spoilers de RandomLocke se exportan con `RomPatch.export_spoilers()` a `user://randomlocke/<código>_spoilers.txt`. La pantalla de resumen puede usar esa ruta en vez de `user://randomlocke_spoilers.txt`. | pendiente |
 
 ---
 
@@ -617,6 +618,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-07 | A2 | El generador recibe las MT y los tutores. `RomPatch.export_spoilers()` escribe `user://randomlocke/<código>_spoilers.txt`. El shiny de la ROM sigue siendo `settings.shiny_denominator`. |
 | 2026-10-07 | A2 | `MoveLessons` y Milcery (`special_target` con `spin` y un confite). `DataDB.tm_move` usa el catálogo de MT y el parche lo sustituye. |
 | 2026-10-06 | A2 | `Daycare`: compatibilidad, huevo, herencia, Cuerpo Llama, Masuda y Pokérus. Los bebés de incienso quedan pendientes. |
 | 2026-10-06 | A2 | §8.5: Teratipo detrás de `options.tera`. Un solo tipo, STAB ×2 si ya lo tenía y ×1,5 el original. Sin Estelar. Evento `tera`. |

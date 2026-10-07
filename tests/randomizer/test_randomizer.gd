@@ -194,6 +194,25 @@ func test_se_genera_rapido() -> void:
 	assert_lt(elapsed, 3000, "menos de 3 s (R.4)")
 
 
+func test_las_mt_entran_en_el_generador_y_el_shiny_del_ajuste_manda() -> void:
+	var input := RandomizerInput.from_datadb()
+	assert_false(input.data.tm_moves.is_empty())
+	assert_eq(input.data.tm_moves.tm01.move, "megakick")
+	assert_false(input.data.tutor_moves.is_empty())
+	var settings := _clasico()
+	settings.shiny_denominator = 100
+	settings.preset = RandomizerSettings.CUSTOM
+	var rom := Randomizer.generate(9, settings)
+	assert_true(rom.errors.is_empty(), "\n".join(rom.errors))
+	rom.apply()
+	assert_eq(DataDB.shiny_odds(), 100)
+	DataDB.clear_patch()
+	var path := rom.export_spoilers()
+	assert_true(FileAccess.file_exists(path))
+	assert_true(path.begins_with("user://randomlocke/"))
+	assert_ne(FileAccess.get_file_as_string(path), "")
+
+
 func test_registro_de_spoilers() -> void:
 	var rom := Randomizer.generate(8, _clasico())
 	var text := rom.spoiler_text()

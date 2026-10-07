@@ -80,6 +80,19 @@ func apply() -> void:
 func spoiler_text() -> String:
 	return SpoilerLog.render(input if input != null else RandomizerInput.from_datadb(), self)
 
+
+## Escribe el registro en user://randomlocke/<código>_spoilers.txt. Devuelve la ruta, o "" si falla.
+func export_spoilers() -> String:
+	var folder := DirAccess.open("user://")
+	if folder == null or (not folder.dir_exists("randomlocke") and folder.make_dir("randomlocke") != OK):
+		return ""
+	var path := "user://randomlocke/%s_spoilers.txt" % seed_code()
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	if file == null:
+		return ""
+	file.store_string(spoiler_text())
+	return path
+
 func canonical_json() -> String:
 	return to_json()
 
