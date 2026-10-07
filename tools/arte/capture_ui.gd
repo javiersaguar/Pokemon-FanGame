@@ -106,7 +106,7 @@ func run() -> void:
 		if case_name in ["splash", "notice", "intro", "main_menu"]:
 			screen.set_stage(&"menu" if case_name == "main_menu" else StringName(case_name))
 		await create_timer(0.35).timeout
-	elif case_name in ["dex", "dex_entry", "learn_move", "evolution", "professor_intro"]:
+	elif case_name in ["dex", "dex_entry", "dex_area", "dex_shiny", "dex_forms", "pc", "trainer_card", "region_map", "learn_move", "evolution", "professor_intro"]:
 		var manager = root.get_node("SceneManager")
 		var state = root.get_node("GameState")
 		main = load("res://src/main/main.tscn").instantiate()
@@ -115,11 +115,22 @@ func run() -> void:
 		manager.register_main(main)
 		await manager.start_new_game(&"", &"", {"slot": 1})
 		var pokemon = load("res://src/pokemon/pokemon.gd").create(&"charmander", 16)
+		state.player_name = "Javier"
 		state.party.add(pokemon)
 		state.pokedex.register(pokemon)
-		var paths = {"dex": "pokedex/pokedex_screen", "dex_entry": "pokedex/pokedex_entry", "learn_move": "learn_move/learn_move_screen", "evolution": "evolution/evolution_screen", "professor_intro": "intro/professor_intro"}
+		var paths = {"dex": "pokedex/pokedex_screen", "dex_entry": "pokedex/pokedex_entry", "learn_move": "learn_move/learn_move_screen", "evolution": "evolution/evolution_screen", "professor_intro": "intro/professor_intro", "dex_area":"pokedex/pokedex_entry", "dex_shiny":"pokedex/pokedex_entry", "dex_forms":"pokedex/pokedex_entry", "pc":"pc/pc_screen", "trainer_card":"trainer_card/trainer_card_screen", "region_map":"region_map/region_map_screen"}
 		screen = load("res://src/ui/%s.gd" % paths[case_name]).new()
-		if case_name == "dex_entry": screen.species_id = &"charmander"
+		if case_name in ["dex_entry","dex_area","dex_shiny"]:
+			screen.species_id = &"charmander"
+			if case_name == "dex_area": screen.species_id = &"pidgey"; state.pokedex.mark_seen(&"pidgey")
+			screen.show_area = case_name == "dex_area"
+			screen.shiny = case_name == "dex_shiny"
+		if case_name == "dex_forms":
+			state.pokedex.mark_seen(&"raichualola",true)
+			screen.species_id = &"raichualola"
+		if case_name == "pc":
+			state.pc.set_pokemon(0,0,pokemon)
+			state.pc.set_pokemon(0,4,load("res://src/pokemon/pokemon.gd").create(&"pidgey",7))
 		if case_name == "learn_move":
 			screen.request = {"move_id": &"flamethrower", "move_name": "Lanzallamas", "moves": load("res://src/battle/scene/engine_driver.gd")._moves_of(pokemon)}
 		if case_name == "evolution":
