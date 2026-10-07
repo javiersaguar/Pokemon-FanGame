@@ -16,7 +16,8 @@
     "res://assets/tilesets/exterior/",
     "res://assets/sprites/ui/battle/transitions/",
     "res://assets/sprites/ui/battle/moves/",
-    "res://assets/sprites/ui/battle/gimmicks/"
+    "res://assets/sprites/ui/battle/gimmicks/",
+    "res://assets/sprites/ui/hatching/"
   ],
   "placeholder": [],
   "rules": [
@@ -401,6 +402,27 @@
       "size": [
         128,
         128
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/hatching/egg.png",
+      "size": [
+        192,
+        192
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/hatching/cracks.png",
+      "size": [
+        960,
+        192
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/hatching/background.png",
+      "size": [
+        512,
+        384
       ]
     }
   ],

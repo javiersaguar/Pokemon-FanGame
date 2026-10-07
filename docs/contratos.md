@@ -1434,3 +1434,9 @@ TrainerChallengeEvent.group_setup(group) combina ambos rivales en DOUBLE, con la
 ### §9.12 Mecánicas de combate en la presentación
 
 BattleMechanics.available(request, move_slot) devuelve Normal y capacidades anunciadas; Z solo para índices de z_moves. action(move_slot, target_slot, mechanic) añade exclusivamente la bandera elegida. Cancelar vuelve sin submit. BattleScene reproduce mega/zmove/dynamax/dynamax_end/tera por bando/puesto. Sprite de Mega del evento, tamaño Dinamax ×2 entero, PS actuales/máximos de eventos, Tera recordado por índice de miembro dentro de ese combate (nunca se altera GameState). Indicadores M/Z/MAX/T y nombre de la mecánica en botones/mensajes; Mega símbolo EBDX, Tera icono de tipo. Reducción omite efectos, conserva estado final. Sin Gigamax/Estelar; efectos Z pendientes del motor no se simulan en la UI.
+
+### §9.13 Guardería y eclosión (presentación; integración persistente pendiente)
+
+`await DaycareScreen.open(service: Daycare) -> bool` modifica las plazas del servicio recibido mediante `deposit_member(service, index)` / `withdraw_member(service, index)` (Error, operaciones atómicas, protección de último capaz/equipo lleno). Retorna true si se pide huevo; **no llama take_egg ni registra una cría**. El llamador persistente debe recoger/guardar el huevo según el futuro contrato de A2 (petición 61); por ahora no hay entrada de producción ni instancia global temporal.
+
+`await HatchingScreen.open(p: Pokemon, quick := false)` presenta una eclosión que el sistema ya ha decidido. No modifica Pokemon/Party/Pokedex ni resuelve recepción Locke. A/B omiten animación; al terminar permiten volver. Reduce animaciones respeta UiPreferences; preview es solo para capturas. Huevo/grietas originales del pack 06, fondo EBDX y sonidos existentes de apertura/grito. Guardado de huevos y pasos pendientes de A2.

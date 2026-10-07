@@ -53,6 +53,20 @@ func run() -> void:
 			var settings_class = load("res://src/randomizer/randomizer_settings.gd")
 			screen.rom = patch_class.generate(713,settings_class.from_preset("clasico"))
 		root.add_child(screen)
+	elif case_name in ["daycare","hatching_egg","hatching_born"]:
+		var p = load("res://src/pokemon/pokemon.gd").create(&"charmander",1)
+		if case_name == "daycare":
+			screen = load("res://src/ui/daycare/daycare_screen.gd").new()
+			screen.service = load("res://src/pokemon/daycare.gd").new(8)
+			screen.service.deposit(p)
+			screen.service.deposit(load("res://src/pokemon/pokemon.gd").create(&"ditto",5))
+			screen.service.egg_ready = true
+		else:
+			screen = load("res://src/ui/hatching/hatching_screen.gd").new()
+			screen.pokemon = p
+			screen.preview = true
+		root.add_child(screen)
+		if case_name == "hatching_born": screen.show_baby()
 	elif case_name in ["mechanics_menu","mega","zmove","dynamax","tera"]:
 		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
 		screen.fast = true
