@@ -12,6 +12,14 @@ func on_try_hit(engine: BattleEngine, target: Battler, state: Dictionary, user: 
 	return false
 
 
+## Tornado y Ciclón hacen el doble de daño a quien está en el aire.
+func damage_modifier(_engine: BattleEngine, _user: Battler, target: Battler, move: MoveData, _crit: bool) -> float:
+	var state: Dictionary = target.volatiles.get(&"twoturnmove", {})
+	if str(state.get("invulnerable", "")) == "air" and move.id in [&"gust", &"twister"]:
+		return 2.0
+	return 1.0
+
+
 func forced_action(engine: BattleEngine, battler: Battler, state: Dictionary) -> BattleAction:
 	var index := engine.move_index_of(battler, StringName(str(state.get("move", ""))))
 	return BattleAction.fight(index) if index >= 0 else null

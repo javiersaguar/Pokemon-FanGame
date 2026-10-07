@@ -73,6 +73,9 @@ var _tera_of: Dictionary = {}
 ## Al empezar el combate, los efectos de entrada se aplazan hasta que salen todos (ver _flush_intro_switch_ins).
 var _defer_switch_in := false
 var _deferred_switch_ins: Array[Battler] = []
+## Durante un golpe, las bayas curativas esperan a que acaben sus efectos (Update de Showdown): así
+## Picoteo y Picadura se comen la baya antes que su dueño.
+var _hold_berries := false
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -438,8 +441,12 @@ func _begin_turn(player_action: Variant = null) -> void:
 	for e: Dictionary in entries:
 		_queue.append(_step_action.bind(e))
 	_queue.append(_step_end_of_turn)
+	# Los que entran por un KO salen todos y después hacen sus efectos de entrada por Velocidad, como
+	# al empezar: si caen los dos, la Intimidación del nuestro encuentra al nuevo rival.
+	_queue.append(func() -> void: _defer_switch_in = not _over)
 	_queue.append(_step_player_replacement)
 	_queue.append(_step_foe_replacement)
+	_queue.append(_flush_intro_switch_ins)
 	_queue.append(_step_next_request)
 
 
@@ -909,8 +916,8 @@ func _switch_in_effects(b: Battler) -> void:
 			passive.on_switch_in(self, b, {})
 
 
-## Al empezar el combate, los efectos de entrada esperan a que estén todos en el campo y van por
-## orden de Velocidad (como en Showdown): si no, la Intimidación del rival no encuentra a nadie.
+## Al empezar el combate y tras los KO, los efectos de entrada esperan a que estén todos en el campo y
+## van por orden de Velocidad (como en Showdown): si no, la Intimidación del rival no encuentra a nadie.
 func _flush_intro_switch_ins() -> void:
 	_defer_switch_in = false
 	var order: Array[Battler] = _deferred_switch_ins.duplicate()
@@ -1116,8 +1123,6 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		move = slot.data()
 	else:
 		move = DataDB.move(STRUGGLE)
-	if user.choice_move == &"" and user.pokemon.held_item in [&"choiceband", &"choicespecs", &"choicescarf"] and move.id != STRUGGLE:
-		user.choice_move = move.id
 	if action.tera and not action.forced and can_tera(user):
 		_start_tera(user)
 	var base_move := move
@@ -1144,6 +1149,9 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		# movimiento de dos turnos y deja de estar en el aire o bajo tierra (onMoveAborted de Showdown).
 		remove_volatile(user, &"twoturnmove")
 		return
+	# El objeto Elección bloquea al usar el movimiento: si retrocede o no puede moverse, no se bloquea.
+	if user.choice_move == &"" and user.pokemon.held_item in [&"choiceband", &"choicespecs", &"choicescarf"] and base_move.id != STRUGGLE:
+		user.choice_move = base_move.id
 	if move.id == &"maxguard":
 		if slot != null and not action.forced:
 			slot.pp = maxi(0, slot.pp - 1)
@@ -1248,6 +1256,9 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 		# Motivación, Niebla Aromática, Refuerzo...: sin aliado (individuales) fallan, como en Showdown.
 		_msg(tr("¡Pero falló!"))
 		return false
+	if (target == null or target.is_fainted()) and move.target == &"foe_side":
+		# Púas, Trampa Rocas...: van al campo rival aunque no quede nadie en él.
+		target = user
 	if target == null or target.is_fainted():
 		_msg(tr("¡Pero no había ningún objetivo!"))
 		return false
@@ -1278,6 +1289,10 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 
 
 ## ¿A algún bando ya no le quedan Pokémon que puedan luchar? (El combate acaba al procesar los KO.)
+func battle_decided() -> bool:
+	return _battle_decided()
+
+
 func _battle_decided() -> bool:
 	return _sides[PLAYER].all_fainted() or _sides[FOE].all_fainted()
 
@@ -1418,6 +1433,7 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	var hits := _roll_hits(move)
 	var total := 0
 	var landed := 0
+	_hold_berries = true
 	for i: int in hits:
 		if target.is_fainted() or user.is_fainted():
 			break
@@ -1436,9 +1452,16 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			var opts := _damage_opts(user, target, move, effect, crit)
 			opts["spread"] = spread
 			amount = DamageCalc.calculate(user, target, move, crit, rand_int(&"damage_roll", 0, DamageCalc.ROLLS - 1), opts)
+			if opts["resist_berry"]:
+				_msg(tr("¡La baya de %s ha reducido el daño!") % target.pokemon.display_name())
+				consume_held_item(target)
 		var dealt := _damage(target, amount, &"move", effectiveness, crit, move)
 		total += dealt
 		landed += 1
+		# El drenaje cura con cada golpe, nada más hacer el daño (antes del Casco Dentado del rival).
+		if not move.drain.is_empty() and dealt > 0 and not user.is_fainted():
+			if _heal(user, roundi(dealt * float(move.drain[0]) / move.drain[1]), &"drain") > 0:
+				_msg(tr("¡%s ha perdido energía!") % BattleText.cap_name(target, wild))
 		if crit:
 			_msg(tr("¡Un golpe crítico!"))
 		if target.pokemon.status == &"frz" and not target.is_fainted() and (move.type == &"fire" or move.thaws_target):
@@ -1451,6 +1474,10 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		if dealt > 0:
 			for passive: BattleEffect in _passives(target):
 				passive.on_damaged(self, target, user, move)
+		if i < hits - 1:
+			_hold_berries = false
+			_eat_healing_berries(user, target)
+			_hold_berries = true
 	if move.ohko != &"" and target.is_fainted():
 		_msg(tr("¡Es un golpe fulminante!"))
 	if not fixed:
@@ -1460,9 +1487,6 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			_msg(tr("No es muy eficaz..."))
 	if move.is_multihit():
 		_msg(tr("¡Ha golpeado %d veces!") % landed if landed != 1 else tr("¡Ha golpeado 1 vez!"))
-	if not move.drain.is_empty() and total > 0 and not user.is_fainted():
-		if _heal(user, roundi(total * float(move.drain[0]) / move.drain[1]), &"drain") > 0:
-			_msg(tr("¡%s ha perdido energía!") % BattleText.cap_name(target, wild))
 	if not move.recoil.is_empty() and total > 0 and not user.is_fainted():
 		_damage(user, maxi(1, roundi(total * float(move.recoil[0]) / move.recoil[1])), &"recoil")
 		_msg(tr("¡%s se ha hecho daño por el retroceso!") % BattleText.cap_name(user, wild))
@@ -1478,6 +1502,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		_damage(user, user.pokemon.current_hp, &"selfdestruct")
 	if effect != null and landed > 0:
 		effect.on_after_hit(self, user, target, move, total)
+	_hold_berries = false
+	_eat_healing_berries(user, target)
 	if str(move.raw.get("is_max", false)) == "true" and landed > 0:
 		_max_side_effect(user, target, move.id)
 	if user.pokemon.held_item == &"lifeorb" and total > 0 and not user.is_fainted():
@@ -1527,8 +1553,15 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 		var outgoing := passive.damage_modifier(self, user, target, move, crit)
 		if outgoing != 1.0:
 			final_mods.append(outgoing)
+	# Baya que reduce el daño (Caoca, Chilan...): un modificador más de la cadena, como en Showdown,
+	# para que se redondee junto con Reflejo y compañía. Se la come quien hace el golpe (_apply_damaging_move).
+	var berry := Effects.item(target.pokemon.held_item)
+	var resist_berry := berry != null and berry.resists(move, DamageCalc.effectiveness(move, target))
+	if resist_berry:
+		final_mods.append(0.5)
 	var ignore_burn := user.ability == &"guts" and user.pokemon.status != &""
-	return {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod, "ignore_burn": ignore_burn}
+	return {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod,
+		"ignore_burn": ignore_burn, "resist_berry": resist_berry}
 
 
 @warning_ignore("integer_division")
@@ -1595,11 +1628,6 @@ func _damage(b: Battler, amount: int, source: StringName, effectiveness: float =
 		consume_held_item(b)
 		_msg(tr("¡%s ha aguantado gracias a la Banda Focus!") % BattleText.cap_name(b, setup.is_wild()))
 		held = null
-	elif held != null and move != null and source == &"move" and held.resists(move, effectiveness):
-		amount = maxi(1, DamageCalc.modify(amount, 0.5))
-		_msg(tr("¡La baya de %s ha reducido el daño!") % b.pokemon.display_name())
-		consume_held_item(b)
-		held = null
 	var dealt := b.pokemon.take_damage(amount)
 	if dealt > 0:
 		b.damaged_this_turn = true
@@ -1609,14 +1637,20 @@ func _damage(b: Battler, amount: int, source: StringName, effectiveness: float =
 	})
 	if b.is_fainted() and b not in _pending_faints:
 		_pending_faints.append(b)
-	elif not b.is_fainted():
+	elif not b.is_fainted() and not _hold_berries:
 		_eat_healing_berry(b)
 	return dealt
 
 
+func _eat_healing_berries(user: Battler, target: Battler) -> void:
+	for b: Battler in [target, user]:
+		if not b.is_fainted():
+			_eat_healing_berry(b)
+
+
 func _eat_healing_berry(b: Battler) -> void:
 	var held := Effects.item(b.pokemon.held_item)
-	if held == null or b.pokemon.current_hp * 2 > b.pokemon.max_hp():
+	if held == null or not held.eats_at(b):
 		return
 	var amount := held.heal_amount(b)
 	if amount <= 0:
@@ -1660,12 +1694,41 @@ func _try_set_status(target: Battler, status: StringName, announce: bool, source
 		target.toxic_stage = 0
 	_emit(BattleEvent.STATUS, target.side, target.slot, {"status": String(status)})
 	_msg(tr(BattleText.STATUS_SET[status]) % name)
-	var berry := Effects.item(target.pokemon.held_item)
-	if berry != null and berry.cures_status(status):
-		_cure_status(target)
-		consume_held_item(target)
-		_msg(tr("¡La baya de %s ha curado su problema!") % target.pokemon.display_name())
+	eat_status_berry(target)
 	return true
+
+
+## Picadura y Picoteo: `user` se come la baya de `target` y le hace efecto sin mirar sus PS
+## (stealeat de Showdown). Quitarle el objeto activa el Liviano del rival.
+func steal_and_eat_berry(user: Battler, target: Battler) -> void:
+	var item := target.pokemon.held_item
+	if item == &"" or not DataDB.has_item(item) or DataDB.item(item).pocket != &"berries" or user.is_fainted():
+		return
+	consume_held_item(target)
+	_msg(tr("¡%s se ha comido la %s %s!") % [BattleText.cap_name(user, setup.is_wild()), DataDB.item(item).name, of_name(target)])
+	var berry := Effects.item(item)
+	if berry == null:
+		return
+	var amount := berry.heal_amount(user)
+	if amount > 0:
+		if _heal(user, amount, &"item") > 0:
+			_msg(tr("¡%s ha recuperado PS!") % BattleText.cap_name(user, setup.is_wild()))
+		if berry.pinch_confuses(user):
+			_try_confuse(user, true, null)
+	if user.pokemon.status != &"" and berry.cures_status(user.pokemon.status):
+		_cure_status(user)
+	if berry.cures_confusion() and user.has_volatile(&"confusion"):
+		remove_volatile(user, &"confusion")
+
+
+## Si lleva una baya que cura su estado, se la come (Atania tras Descanso, Ziuela...).
+func eat_status_berry(target: Battler) -> void:
+	var berry := Effects.item(target.pokemon.held_item)
+	if target.is_fainted() or berry == null or not berry.cures_status(target.pokemon.status):
+		return
+	_cure_status(target)
+	consume_held_item(target)
+	_msg(tr("¡La baya de %s ha curado su problema!") % target.pokemon.display_name())
 
 
 func _cure_status(b: Battler) -> void:

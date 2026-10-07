@@ -10,7 +10,8 @@ Resultados de la comparación turno a turno del combate con el simulador de Pok�
 | 2026-10-07, tras la 1.ª tanda de correcciones | 400 | 379 (95 %) | 17 | 4 |
 | 2026-10-07, tras la 2.ª tanda (semillas 1, 2 y 3) | 1.200 | 1.111 + 70 hasta el límite de 60 turnos (98,4 %; 99,4 % sin contar el límite) | 7 | 12 |
 | 2026-10-07, tras la 3.ª tanda (semillas 1 a 5) | 2.000 | 1.882 + 103 hasta el límite de 60 turnos (**100 %**) | 0 | 15 |
-| 2026-10-07, con objetos (`--items`, semillas 11 y 12) | 800 | 600 + 23 hasta el límite (78 %) | 173 | 4 |
+| 2026-10-07, con objetos (`--items`, semillas 11 y 12), primera pasada | 800 | 600 + 23 hasta el límite (78 %) | 173 | 4 |
+| 2026-10-07, con objetos tras la 4.ª tanda (semillas 11 a 16) | 2.400 | 2.276 + 101 hasta el límite (**100 %**) | 0 | 23 |
 
 ## Fallos de nuestro motor corregidos
 
@@ -39,11 +40,23 @@ Resultados de la comparación turno a turno del combate con el simulador de Pok�
 | Veneno y quemadura | Iban con el mismo orden al final del turno: el más rápido primero | El veneno va antes (orden 9 y 10 en Showdown) |
 | Mudar | Curaba con 1/3 | 33/100 |
 | Nerviosismo, Casco Dentado | Se activaban una vez por movimiento y no con el golpe que debilita | Con cada golpe que hace daño, aunque debilite (`DamagingHit`) |
+| Bayas Higog, Wiki, Ango, Guaya y Pabaya | Se comían a la mitad de los PS | A un cuarto (7.ª generación en adelante). Era la diferencia más frecuente con objetos: 150 de 173 combates |
+| Baya Atania y Descanso | Descanso no la activaba (ponía el sueño sin pasar por las bayas) | Se la come y se despierta, como en Showdown |
+| Chupavidas, Absorber… | Curaban al final del movimiento, después del Casco Dentado del rival | Curan con cada golpe, nada más hacer el daño |
+| Bayas que reducen el daño (Chilan, Caoca…) | Reducían también el daño fijo (Superdiente) y se aplicaban después del daño, con su propio redondeo | Son un modificador más de la cadena del cálculo (con Reflejo, un solo redondeo) y no actúan con daño fijo |
+| Picoteo y Picadura | Quitaban la baya sin efecto y no activaban el Liviano del rival; el dueño se la podía comer antes | Se la comen con su efecto, sin mirar los PS. Además, durante un golpe las bayas curativas esperan a que acaben sus efectos (`Update` de Showdown) |
+| Pañuelo, Cinta y Gafas Elección | Bloqueaban al elegir el movimiento, aunque luego retrocediera o no pudiera moverse | Bloquean al usarlo |
+| Púas, Trampa Rocas… | Fallaban si el rival acababa de caer ("no había ningún objetivo") | Van al campo rival igual |
+| Nerviosismo con Intimidación | Subía la Velocidad aunque el Ataque no bajara (a −6) | Solo si le baja el Ataque |
+| Doble KO | El nuestro entraba antes y su Intimidación no encontraba al nuevo rival | Tras los KO, salen todos y después van los efectos de entrada por Velocidad, como al empezar |
+| Púas Tóxicas y Velo Sagrado | Envenenaban a través de Velo Sagrado (no tenían fuente) | La fuente es el rival que está en el campo, como en Showdown |
+| Aguijón Letal | Subía el Ataque con el golpe que acaba el combate | No sube (va después de procesar los KO) |
+| Tornado y Ciclón | Daño normal contra quien está en el aire | ×2 |
 | Síntesis, Sol Matinal, Luz Lunar | Redondeaban las mitades hacia arriba y con sol curaban 2/3 exactos | Mismo redondeo y factores que Showdown (`this.modify(maxhp, 0,5 / 0,667 / 0,25)`) |
 
 ## Diferencias pendientes de investigar
 
-Sin objetos no queda ninguna (semillas 1 a 5). **Con objetos** (`--items`) difieren en torno al 21 % de los combates: es lo siguiente que hay que revisar.
+Ninguna: 2.000 combates sin objetos (semillas 1 a 5) y 2.400 con objetos (`--items`, semillas 11 a 16) idénticos a Showdown. Lo siguiente es medir la cobertura con `--all-abilities` y `--all-moves` (habilidades y movimientos sin implementar) y los combates dobles.
 
 ## Muestra fija en la suite
 

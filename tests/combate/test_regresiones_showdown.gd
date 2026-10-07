@@ -362,3 +362,128 @@ func test_casco_dentado_hace_dano_con_cada_golpe() -> void:
 	var start := foe.current_hp
 	engine.submit(BattleAction.fight(0))
 	assert_eq(start - foe.current_hp, 2 * maxi(1, foe.max_hp() / 6), "Doble Patada: dos golpes, dos veces el Casco")
+
+
+# --- Objetos (comparación con --items) ---
+
+func test_las_bayas_de_sabor_se_comen_a_un_cuarto_de_los_ps() -> void:
+	var holder := _mon(&"snorlax", 50, ["splash"], {"item": "aguavberry"})
+	holder.current_hp = holder.max_hp() * 2 / 5
+	var engine := _engine([holder], [_mon(&"rattata", 5, ["tackle"])], {"accuracy": 0.0, "crit": 0.999})
+	engine.submit(BattleAction.fight(0))
+	assert_eq(holder.held_item, &"aguavberry", "al 40 % todavía no se la come")
+
+
+func test_atania_despierta_tras_descanso() -> void:
+	var holder := _mon(&"snorlax", 50, ["rest"], {"item": "chestoberry"})
+	holder.current_hp = 10
+	var engine := _engine([holder], [_mon(&"rattata", 5, ["splash"])])
+	engine.submit(BattleAction.fight(0))
+	assert_eq(holder.status, &"", "se come la Atania y se despierta")
+	assert_eq(holder.current_hp, holder.max_hp())
+	assert_eq(holder.held_item, &"")
+
+
+func test_el_drenaje_cura_antes_del_casco_dentado() -> void:
+	var user := _mon(&"fomantis", 60, ["leechlife"])
+	var engine := _engine([user], [_mon(&"snorlax", 60, ["splash"], {"item": "rockyhelmet"})],
+		{"accuracy": 0.0, "crit": 0.999})
+	engine.submit(BattleAction.fight(0))
+	assert_eq(user.current_hp, user.max_hp() - user.max_hp() / 6, "con los PS al máximo, el drenaje no cura y luego llega el Casco")
+
+
+func test_puas_van_al_campo_rival_aunque_no_quede_nadie() -> void:
+	var player := _mon(&"jolteon", 50, ["doubleedge"])
+	player.current_hp = 1
+	var engine := _engine([player, _mon(&"rattata", 30, ["tackle"])], [_mon(&"snorlax", 30, ["spikes"])],
+		{"accuracy": 0.0, "crit": 0.999})
+	engine.submit(BattleAction.fight(0))
+	assert_true(player.is_fainted(), "cae por el retroceso")
+	assert_true(engine.has_side_condition(BattleEngine.PLAYER, &"spikes"))
+
+
+func test_superdiente_no_lo_reduce_la_baya_chilan() -> void:
+	var holder := _mon(&"snorlax", 50, ["splash"], {"item": "chilanberry"})
+	var engine := _engine([holder], [_mon(&"rattata", 50, ["superfang"])], {"accuracy": 0.0})
+	var start := holder.current_hp
+	engine.submit(BattleAction.fight(0))
+	assert_eq(holder.current_hp, start - start / 2)
+	assert_eq(holder.held_item, &"chilanberry", "con daño fijo no se la come")
+
+
+func test_nerviosismo_no_sube_si_la_intimidacion_no_baja_nada() -> void:
+	var engine := _engine([_mon(&"rattata", 30, ["splash"]), _mon(&"growlithe", 30, ["ember"], {"ability": "intimidate"})],
+		[_mon(&"gimmighoul", 30, ["splash"], {"ability": "rattled"})])
+	var foe := engine.active(BattleEngine.FOE)
+	foe.boosts[&"atk"] = -6
+	foe.boosts[&"spe"] = 0
+	engine.submit(BattleAction.switch_to(1))
+	assert_eq(foe.boosts[&"spe"], 0, "a −6 no le baja el Ataque: Nerviosismo no se activa")
+
+
+func test_el_panuelo_eleccion_no_bloquea_si_retrocede() -> void:
+	var holder := _mon(&"rattata", 30, ["tackle", "quickattack"], {"item": "choicescarf"})
+	var engine := _engine([holder], [_mon(&"meowth", 60, ["fakeout"])], {"accuracy": 0.0, "crit": 0.999})
+	engine.submit(BattleAction.fight(0))
+	assert_eq(engine.active(BattleEngine.PLAYER).choice_move, &"", "retrocedió sin usar el movimiento")
+
+
+func test_picoteo_se_come_la_baya_y_cura_aunque_tenga_los_ps_altos() -> void:
+	var user := _mon(&"rookidee", 60, ["pluck"])
+	user.current_hp = user.max_hp() / 2
+	var victim := _mon(&"hitmonlee", 60, ["splash"], {"item": "aguavberry", "ability": "unburden"})
+	var engine := _engine([user], [victim], {"accuracy": 0.0, "crit": 0.999})
+	var hp := user.current_hp
+	engine.submit(BattleAction.fight(0))
+	assert_eq(victim.held_item, &"")
+	assert_eq(user.current_hp, mini(user.max_hp(), hp + user.max_hp() / 3), "le hace efecto aunque no esté a un cuarto")
+	assert_true(engine.active(BattleEngine.FOE).unburdened, "quitarle la baya activa Liviano")
+
+
+func test_picoteo_roba_la_baya_antes_de_que_se_la_coma_su_dueno() -> void:
+	var victim := _mon(&"snorlax", 60, ["splash"], {"item": "oranberry"})
+	victim.current_hp = victim.max_hp() / 2 + 5
+	var user := _mon(&"rookidee", 60, ["pluck"])
+	user.current_hp = 20
+	var engine := _engine([user], [victim], {"accuracy": 0.0, "crit": 0.999})
+	engine.submit(BattleAction.fight(0))
+	assert_eq(user.current_hp, 30, "la Aranja cura 10 PS al que picotea")
+
+
+func test_tras_caer_los_dos_la_intimidacion_encuentra_al_nuevo_rival() -> void:
+	var engine := _engine([_mon(&"voltorb", 80, ["explosion"]), _mon(&"growlithe", 30, ["ember"], {"ability": "intimidate"})],
+		[_mon(&"rattata", 5, ["splash"]), _mon(&"raticate", 30, ["tackle"])], {"accuracy": 0.0, "crit": 0.999})
+	engine.submit(BattleAction.fight(0))
+	if engine.request != null and engine.request.kind == BattleRequest.Kind.SWITCH:
+		engine.submit(BattleAction.switch_to(1))
+	assert_eq(engine.active(BattleEngine.FOE).pokemon.species_id, &"raticate")
+	assert_eq(engine.active(BattleEngine.FOE).boosts[&"atk"], -1)
+
+
+func test_las_puas_toxicas_no_envenenan_con_velo_sagrado() -> void:
+	var engine := _engine([_mon(&"ariados", 50, ["splash"])], [_mon(&"rattata", 30, ["splash"]), _mon(&"sandile", 30, ["splash"])])
+	engine.add_side_condition(BattleEngine.FOE, &"toxicspikes", engine.active(BattleEngine.PLAYER))
+	engine.add_side_condition(BattleEngine.FOE, &"safeguard", engine.active(BattleEngine.FOE))
+	engine._put_in(BattleEngine.FOE, 1, false)
+	assert_eq(engine.active(BattleEngine.FOE).pokemon.status, &"", "Velo Sagrado: la fuente es el rival")
+
+
+func test_aguijon_letal_no_sube_si_el_ko_acaba_el_combate() -> void:
+	var engine := _engine([_mon(&"leavanny", 80, ["fellstinger"])], [_mon(&"rattata", 5, ["splash"])], {"accuracy": 0.0})
+	engine.submit(BattleAction.fight(0))
+	assert_true(engine.is_over())
+	assert_eq(engine.active(BattleEngine.PLAYER).boosts[&"atk"], 0)
+
+
+func test_tornado_hace_el_doble_a_quien_vuela() -> void:
+	var luck := {"accuracy": 0.0, "crit": 0.999, "damage_roll": 0.999}
+	var air := _engine([_mon(&"noibat", 60, ["fly", "splash"])], [_mon(&"pidgey", 10, ["gust"])], luck)
+	var ground := _engine([_mon(&"noibat", 60, ["fly", "splash"])], [_mon(&"pidgey", 10, ["gust"])], luck)
+	var a := air.active(BattleEngine.PLAYER).pokemon
+	var g := ground.active(BattleEngine.PLAYER).pokemon
+	air.submit(BattleAction.fight(0))
+	ground.submit(BattleAction.fight(1))
+	var hit_air := a.max_hp() - a.current_hp
+	var hit_ground := g.max_hp() - g.current_hp
+	assert_gt(hit_ground, 0)
+	assert_almost_eq(hit_air, 2 * hit_ground, 1)

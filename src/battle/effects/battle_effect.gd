@@ -230,6 +230,11 @@ func cures_confusion() -> bool:
 	return false
 
 
+## Baya curativa: ¿se come ya, con los PS que le quedan?
+func eats_at(_battler: Battler) -> bool:
+	return false
+
+
 func heal_amount(_battler: Battler) -> int:
 	return 0
 

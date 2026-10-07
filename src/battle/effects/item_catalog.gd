@@ -94,6 +94,15 @@ class ItemBehavior extends BattleEffect:
 		return id == &"lumberry" or id == &"persimberry"
 
 
+	## ¿Se come ya la baya curativa? Aranja y Zidra a la mitad de los PS; las de sabor (Higog,
+	## Wiki, Ango, Guaya, Pabaya), a un cuarto (7.ª generación en adelante).
+	func eats_at(battler: Battler) -> bool:
+		var hp := battler.pokemon.current_hp
+		if PINCH_FLAVOR.has(id):
+			return hp * 4 <= battler.pokemon.max_hp()
+		return hp * 2 <= battler.pokemon.max_hp()
+
+
 	func heal_amount(battler: Battler) -> int:
 		match id:
 			&"oranberry":

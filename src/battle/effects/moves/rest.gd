@@ -12,4 +12,5 @@ func on_hit(engine: BattleEngine, user: Battler, _target: Battler, _move: MoveDa
 	engine.force_status(user, &"slp", 3)
 	engine.message(tr("¡%s se ha echado a dormir y está como nuevo!") % engine.name_of(user))
 	engine.heal(user, p.max_hp(), &"move")
+	engine.eat_status_berry(user)
 	return HANDLED

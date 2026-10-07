@@ -20,4 +20,5 @@ func on_switch_in(engine: BattleEngine, battler: Battler, state: Dictionary) -> 
 		engine.message(tr("¡%s ha absorbido las púas tóxicas!") % engine.name_of(battler))
 		return
 	var status := &"tox" if int(state.get("layers", 1)) >= 2 else &"psn"
-	engine.set_status(battler, status, null, true)
+	# La fuente es el rival que está en el campo (como en Showdown): Velo Sagrado las para.
+	engine.set_status(battler, status, engine.foe_of(battler), true)

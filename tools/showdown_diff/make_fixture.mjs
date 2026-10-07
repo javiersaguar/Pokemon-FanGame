@@ -1,6 +1,7 @@
 // Crea la muestra fija que usa el test tests/combate/test_showdown_muestra.gd: combates que ya
 // coinciden con Showdown, con las fotos de Showdown guardadas (así el test no necesita Node).
-//   node tools/showdown_diff/make_fixture.mjs [--per-seed=10] [--seeds=1,2,3]
+//   node tools/showdown_diff/make_fixture.mjs [--per-seed=10] [--seeds=1,2,3] [--item-seeds=11,12]
+// (--item-seeds: lotes con objetos, como --items en index.mjs)
 // Rehazla cuando cambien los datos (data/generated) o se corrija algo que cambie los combates.
 
 import fs from 'node:fs';
@@ -14,11 +15,12 @@ import { compare } from './compare.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const OUT = path.join(ROOT, 'tests', 'combate', 'showdown_muestra.json');
 const GODOT = process.env.GODOT || 'godot';
-const opts = { perSeed: 10, seeds: [1, 2, 3] };
+const opts = { perSeed: 10, seeds: [1, 2, 3], itemSeeds: [11, 12] };
 for (const a of process.argv.slice(2)) {
   const [k, v] = a.replace(/^--/, '').split('=');
   if (k === 'per-seed') opts.perSeed = Number(v);
   if (k === 'seeds') opts.seeds = v.split(',').map(Number);
+  if (k === 'item-seeds') opts.itemSeeds = v ? v.split(',').map(Number) : [];
 }
 
 const tmp = fs.mkdtempSync('/tmp/showdown-muestra-');
@@ -27,8 +29,9 @@ const run = (...args) => execFileSync(GODOT, ['--headless', '--path', ROOT, '-s'
 run(`--capabilities=${path.join(tmp, 'caps.json')}`);
 const sim = loadShowdown();
 const fixture = [];
-for (const seed of opts.seeds) {
-  const specs = generate({ caps: path.join(tmp, 'caps.json'), n: 60, seed, team: 3 });
+const batches = [...opts.seeds.map((seed) => ({ seed, items: false })), ...opts.itemSeeds.map((seed) => ({ seed, items: true }))];
+for (const { seed, items } of batches) {
+  const specs = generate({ caps: path.join(tmp, 'caps.json'), n: 60, seed, team: 3, items });
   const sd = specs.map((s) => runOne(sim, s));
   fs.writeFileSync(path.join(tmp, 'specs.json'), JSON.stringify(specs));
   run(`--specs=${path.join(tmp, 'specs.json')}`, `--out=${path.join(tmp, 'ours.json')}`);

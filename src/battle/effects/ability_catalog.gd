@@ -100,9 +100,11 @@ class AbilityBehavior extends BattleEffect:
 			return
 		if id == &"intimidate":
 			engine.message(tr("¡%s intimida a %s!") % [engine.name_of(battler), engine.name_of(foe)])
+			var atk_before: int = foe.boosts[&"atk"]
 			engine.boost(foe, {&"atk": -1}, false)
-			# Nerviosismo: desde la 8.ª generación, la Intimidación le sube la Velocidad.
-			if foe.ability == &"rattled" and not foe.is_fainted():
+			# Nerviosismo: desde la 8.ª generación, la Intimidación le sube la Velocidad (si le ha
+			# bajado el Ataque: a −6 o con Cuerpo Puro, no).
+			if foe.ability == &"rattled" and not foe.is_fainted() and foe.boosts[&"atk"] != atk_before:
 				engine.boost(foe, {&"spe": 1}, true)
 		elif id == &"frisk" and foe.pokemon.held_item != &"" and DataDB.has_item(foe.pokemon.held_item):
 			engine.message(tr("¡%s ha cacheado a %s y ha encontrado %s!") % [engine.name_of(battler), engine.name_of(foe), DataDB.item(foe.pokemon.held_item).name])

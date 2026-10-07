@@ -103,8 +103,13 @@ class OraclePRNG {
       if (CORE[fn]) return CORE[fn](kind);
       const where = frame.match(/dist\/data\/(conditions|abilities|moves|items)\.js:(\d+):/);
       if (where) {
-        const tag = HANDLERS[`${where[1]}:${effectAt(where[1], Number(where[2]))}:${fn}`];
+        const effect = effectAt(where[1], Number(where[2]));
+        const tag = HANDLERS[`${where[1]}:${effect}:${fn}`];
         if (tag) return tag;
+        // Habilidades y objetos sin etiqueta propia: "ability_<id>" / "item_<id>" (en nuestro motor,
+        // rand_chance(&"ability_static", 3, 10)...).
+        if (where[1] === 'abilities') return `ability_${effect}`;
+        if (where[1] === 'items') return `item_${effect}`;
       }
     }
     return 'other';
