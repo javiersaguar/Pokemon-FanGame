@@ -343,7 +343,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **Worktree:** `/home/javier/proyectos/pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Propiedad de la sesión: `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/combate/`, `tools/showdown_diff/` y `docs/combate/` (ver «Sesión con 3 agentes»).
 
-**En qué estoy:** tarea 1, comparación con Showdown: sin objetos ya no queda ninguna diferencia (2.000 combates, semillas 1 a 5). Ahora, combates **con objetos** (`--items`, 21 % distintos) y después la tarea 2 (cobertura total).
+**En qué estoy:** tarea 1 cerrada: 2.000 combates sin objetos y 2.400 con objetos idénticos a Showdown (12 fallos más corregidos con objetos: bayas, drenaje, Elección, Picoteo, relevos tras KO…; muestra fija de 50 combates). Empiezo la tarea 2 (cobertura): faltan 226 habilidades (orden por especies: Levitación, Robustez, Presión, Velo Arena…), 441 movimientos con script y los objetos. `Effects` ya carga `abilities/<id>.gd` e `items/<id>.gd`; el arnés etiqueta el azar de habilidades y objetos como `ability_<id>` / `item_<id>`.
 
 **Terminado:**
 - **Comparación con Showdown** (`tools/showdown_diff/`, uso en su README): juega los mismos combates en Showdown 0.11.11 y en nuestro motor con **la misma suerte** (oráculo por etiqueta y turno) y compara el estado al empezar cada turno (PS, estado, quién está en el campo, cambios, Velocidad efectiva y clima). 400 combates en unos 15 s.
