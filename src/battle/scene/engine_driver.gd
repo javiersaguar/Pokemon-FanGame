@@ -97,7 +97,9 @@ func player_active() -> Dictionary:
 		return {}
 	var p := b.pokemon
 	return {"name": p.display_name(), "level": p.level, "hp": p.current_hp, "max_hp": p.max_hp(),
-		"moves": _moves_of(p)}
+		"moves": _moves_of(p),"species":p.species_id,"shiny":p.shiny,
+		"tera_type": p.tera_type if p.tera_type != &"" else p.types()[0],
+		"struggle": engine.request != null and engine.request.usable_moves.is_empty()}
 
 
 func player_party() -> Array[Dictionary]:

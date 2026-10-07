@@ -319,6 +319,26 @@
         64
       ],
       "sha256": "db97a1974eb62d90a97fd0016ea308bdf5c155a0e66d21e62da8dba5c1dd7b16"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Graphics/EBDX/Pictures/UI/symMega.png",
+      "target": "assets/sprites/ui/battle/gimmicks/mega.png",
+      "size": [
+        26,
+        34
+      ],
+      "sha256": "d2f9644eb869fd86d55d44a1a8fd382f51d53cb57603d5e1b1377232be727ee6"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Graphics/EBDX/Animations/Moves/ebMega006.png",
+      "target": "assets/sprites/ui/battle/moves/ebMega006.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "4c3908106abf6fefed18527d772a58f369d7e6361228e8d83e99744a542fcf62"
     }
   ]
 }

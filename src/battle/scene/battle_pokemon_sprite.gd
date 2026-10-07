@@ -72,7 +72,7 @@ func home() -> Vector2:
 
 ## Centro aproximado de la imagen (para los efectos).
 func center() -> Vector2:
-	return _home + Vector2(0, -_height() / 2.0)
+	return _home + Vector2(0, -_height() * scale.y / 2.0)
 
 
 ## Sale de la Poké Ball: aparece de abajo arriba en blanco y recupera el color.
@@ -209,3 +209,6 @@ func _wait(seconds: float) -> void:
 func set_home(at: Vector2) -> void:
 	_home = at.round()
 	position = _home
+
+func set_big(on: bool) -> void:
+	scale = Vector2(2,2) if on else Vector2.ONE

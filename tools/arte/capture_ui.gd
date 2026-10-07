@@ -53,6 +53,24 @@ func run() -> void:
 			var settings_class = load("res://src/randomizer/randomizer_settings.gd")
 			screen.rom = patch_class.generate(713,settings_class.from_preset("clasico"))
 		root.add_child(screen)
+	elif case_name in ["mechanics_menu","mega","zmove","dynamax","tera"]:
+		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
+		screen.fast = true
+		root.add_child(screen)
+		screen._box.text_speed = 0
+		screen._background.set_environment(&"grass")
+		screen._apply_bases()
+		screen.get_node("Canvas/Curtain").hide()
+		screen._driver = load("res://src/battle/scene/dev/fake_battle.gd").new({},7)
+		await screen._play_event({"type":&"switch_in","side":0,"slot":0,"data":{"species":&"charmander","name":"Chispa","hp":30,"max_hp":36,"level":12}})
+		screen._foe_sprite.set_pokemon({"species":&"bulbasaur"})
+		screen._foe_box.show_pokemon({"name":"Bulbasaur","level":12,"hp":30,"max_hp":36})
+		screen._foe_box.show()
+		if case_name == "mechanics_menu": screen._choose_mechanic({"can_mega":true,"z_moves":[0],"can_dynamax":true,"can_tera":true},0)
+		else:
+			var data := {"species":&"charizardmegax","hp":60,"max_hp":72,"type":&"water"}
+			await screen._play_event({"type":StringName(case_name),"side":0,"slot":0,"data":data})
+			screen._box.play({"mega":"Megaevolución / Chispa","zmove":"Movimiento Z","dynamax":"Dinamax / PS al doble","tera":"Teratipo Agua"}[case_name],"",false)
 	elif case_name in ["battle_double","double_target"]:
 		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
 		screen.fast = true
@@ -242,5 +260,8 @@ func run() -> void:
 	if main:
 		root.get_node("SceneManager")._leave_game()
 		main.queue_free()
+	for node: Node in root.get_node("AudioManager").get_children():
+		if node is AudioStreamPlayer: node.stop(); node.stream = null
+	await process_frame
 	await process_frame
 	quit.call_deferred()

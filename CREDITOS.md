@@ -89,3 +89,5 @@ Copias sin modificar ni convertir. `tools/arte/import_audio.py <carpeta-de-recur
 |---------|-------|----------|--------|------------|
 | *Gen 5 Font – Truth and Ideals* (Normal, Shadow y Small Truths) | **bonzairob** ("Credit if used: bonzairob @ 3dPE") | Uso con crédito | https://eeveeexpo.com/resources/861/ | `assets/fonts/truth_and_ideals/` (la del juego) |
 | Pixel Operator (versión 2018.10.04-1) | Jayvee Enaguas (HarvettFox96) | CC0 1.0 | https://www.dafont.com/pixel-operator.font | `assets/fonts/` (licencia en `PixelOperator-LICENSE.txt`; ya no se usa) |
+
+Presentación de Megaevolución: símbolo `Graphics/EBDX/Pictures/UI/symMega.png` y energía `Graphics/EBDX/Animations/Moves/ebMega006.png` originales del pack Elite Battle: DX, conservados íntegros en el manifiesto de recursos de combate.

@@ -39,6 +39,8 @@ var _music_finished := false
 var _field_slots := {BattleDriver.PLAYER:0,BattleDriver.FOE:0}
 var _second_sprites: Dictionary = {}
 var _second_boxes: Dictionary = {}
+var _summaries: Dictionary = {}
+var _tera_members: Dictionary = {}
 
 @onready var _background: BattleBackground = $World/Background
 @onready var _foe_shadow: Sprite2D = $World/FoeShadow
@@ -172,6 +174,9 @@ func _play_event(event: Variant) -> void:
 				await _message(tr("¡%s, vuelve!") % _data_box(side).pokemon_name)
 			await _sprite(side).withdraw(_t(0.3))
 			_data_box(side).hide()
+			_sprite(side).set_big(false)
+		&"mega", &"zmove", &"dynamax", &"dynamax_end", &"tera":
+			await _mechanic_event(type,side,data)
 		&"move":
 			await _animate_move(side, int(data.get("target_side", 1 - side)), data)
 		&"damage":
@@ -232,6 +237,11 @@ func _switch_in(side: int, data: Dictionary) -> void:
 	var sprite := _sprite(side)
 	var box := _data_box(side)
 	var pokemon := _summary(data)
+	var key := Vector2i(side,int(_field_slots.get(side,0)))
+	_summaries[key] = pokemon
+	sprite.set_big(false)
+	var member_key := Vector2i(side,int(data.get("party_index",0)))
+	box.set_mechanic(&"tera" if _tera_members.has(member_key) else &"",StringName(_tera_members.get(member_key,&"")))
 	var pokemon_name := str(pokemon.get("name", "?"))
 	if side == BattleDriver.FOE and data.get("wild", false):
 		if not (sprite.visible and sprite.species_id == StringName(pokemon.get("species", ""))):
@@ -414,8 +424,10 @@ func _choose_action(request: Dictionary = {}) -> Dictionary:
 			Command.FIGHT:
 				var slot := await _choose_move(active)
 				if slot >= 0:
+					var mechanic := await _choose_mechanic(request,slot)
+					if mechanic == &"cancel": continue
 					var target := await _choose_target(active,slot)
-					if target >= 0: return {"type": &"fight", "move_slot": slot,"target_slot":target}
+					if target >= 0: return BattleMechanics.action(slot,target,mechanic)
 			Command.BAG:
 				if not request.get("can_use_items",true):
 					await _message("No puedes usar objetos en este turno.")
@@ -514,9 +526,10 @@ func _choose_forget(request: Dictionary) -> int:
 	return await LearnMoveScreen.choose(request)
 
 
-func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can_cancel: bool) -> int:
+func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can_cancel: bool, mechanics: Array[StringName] = []) -> int:
 	await _box.play(prompt, "", false)
 	_list_menu.set_items(labels)
+	if not mechanics.is_empty(): _mechanic_buttons(labels,mechanics)
 	for i: int in disabled.size():
 		_list_menu.set_disabled(i, disabled[i])
 	_list_panel.reset_size()
@@ -764,7 +777,7 @@ func _configure_field() -> void:
 		_second_sprites[side] = sprite
 		var box := BattleDataBox.new()
 		box.is_player = sprite.back
-		box.position = Vector2(132,108) if sprite.back else Vector2(4,40)
+		box.position = Vector2(132,108) if sprite.back else Vector2(4,44)
 		$Canvas.add_child(box)
 		$Canvas.move_child(box,_box.get_index())
 		box.hide()
@@ -774,7 +787,7 @@ func target_slots(active: Dictionary, move_slot: int) -> Array[int]:
 	var targets: Array[int] = []
 	if _info.get("format",&"single") != &"double": return [0]
 	var moves: Array = active.get("moves",[])
-	if move_slot < moves.size():
+	if move_slot < moves.size() and not active.get("struggle",false):
 		var id := StringName(moves[move_slot].get("id",""))
 		if DataDB.has_move(id):
 			var move := DataDB.move(id)
@@ -790,3 +803,61 @@ func _choose_target(active: Dictionary,move_slot: int) -> int:
 	for slot: int in targets: labels.append("%s / puesto %d" % [_data_box(BattleDriver.FOE,slot).pokemon_name,slot+1])
 	var picked := await _list("Elige el objetivo.",labels,[],true)
 	return targets[picked] if picked >= 0 else -1
+
+func _choose_mechanic(request: Dictionary,move_slot: int) -> StringName:
+	var choices := BattleMechanics.available(request,move_slot)
+	if choices.size() == 1: return &""
+	var labels := PackedStringArray()
+	for kind: StringName in choices: labels.append(BattleMechanics.NAMES[kind])
+	var selected := await _list("¿Activar una mecánica?",labels,[],true,choices)
+	return choices[selected] if selected >= 0 else &"cancel"
+
+func _mechanic_event(kind: StringName,side: int,data: Dictionary) -> void:
+	var key := Vector2i(side,int(_field_slots.get(side,0)))
+	var sprite := _sprite(side)
+	var box := _data_box(side)
+	var summary: Dictionary = _summaries.get(key,{"species":sprite.species_id,"name":box.pokemon_name,"hp":box.hp,"max_hp":box.max_hp})
+	match kind:
+		&"mega":
+			if not fast and not UiPreferences.reduce_motion():
+				await BattleFx._play(BattleFx.create(_fx,BattleFx.Kind.BURST,sprite.center(),sprite.center(),{"asset":"ebMega006","frame":[],"impact":false},Color.WHITE),_t(0.65))
+			summary.merge(data,true)
+			sprite.set_pokemon(summary)
+			box.show_pokemon(summary)
+			box.set_mechanic(&"mega")
+		&"zmove":
+			box.set_mechanic(&"z")
+			await BattleFx.sparkle(_fx,sprite.center(),Color("f0b030"),_t(0.45))
+		&"dynamax":
+			await BattleFx.sparkle(_fx,sprite.center(),Color("f87898"),_t(0.45))
+			sprite.set_big(true)
+			await box.animate_hp(int(data.get("hp",box.hp)),int(data.get("max_hp",box.max_hp)),_t(0.25))
+			box.set_mechanic(&"dynamax")
+		&"dynamax_end":
+			sprite.set_big(false)
+			await box.animate_hp(int(data.get("hp",box.hp)),int(data.get("max_hp",box.max_hp)),_t(0.25))
+			box.set_mechanic(&"")
+		&"tera":
+			var type := StringName(data.get("type",""))
+			_tera_members[Vector2i(side,int(summary.get("party_index",0)))] = type
+			await BattleFx.sparkle(_fx,sprite.center(),UiColors.type_color(type),_t(0.45))
+			box.set_mechanic(&"tera",type)
+	_summaries[key] = summary
+
+func _mechanic_buttons(labels: PackedStringArray,mechanics: Array[StringName]) -> void:
+	for node: Node in _list_menu.get_children():
+		_list_menu.remove_child(node)
+		node.queue_free()
+	for index: int in labels.size():
+		var button := _button(&"claro",labels[index],Vector2(174,20))
+		button.align_left = true
+		button.compact = true
+		_list_menu.add_child(button)
+		if mechanics[index] == &"mega":
+			var symbol := Sprite2D.new()
+			symbol.texture = preload("res://assets/sprites/ui/battle/gimmicks/mega.png")
+			symbol.scale = Vector2(0.5,0.5)
+			symbol.position = Vector2(162,10)
+			button.add_child(symbol)
+		elif mechanics[index] == &"tera":
+			button.set_type_icon(StringName(_driver.player_active().get("tera_type","normal")) if _driver else &"normal")

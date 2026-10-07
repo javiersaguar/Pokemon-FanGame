@@ -4,7 +4,7 @@ extends Panel
 ## nombre, sexo, ★ si es shiny, nivel, estado, barra de PS y, en la del jugador,
 ## los PS en número y la barra de experiencia. `pokemon` = resumen de BattleScene._summary().
 
-const FOE_SIZE := Vector2(120, 30)
+const FOE_SIZE := Vector2(120, 38)
 const PLAYER_SIZE := Vector2(120, 38)
 const BAR_SIZE := Vector2(62, 6)
 const ICONS := "res://assets/sprites/ui/icons/"
@@ -20,6 +20,9 @@ const HP_FRAME := preload("res://assets/sprites/ui/battle/hp_frame.png")
 var hp := 0
 var max_hp := 1
 var pokemon_name := ""
+var mechanic: StringName = &""
+var tera_type: StringName = &""
+var _mechanic_tag: Label
 
 var _name: Label
 var _gender: TextureRect
@@ -64,6 +67,7 @@ func _ready() -> void:
 	_status.position = Vector2(7, 18)
 	_status.size = Vector2(22, 9)
 	add_child(_status)
+	_mechanic_tag = _label(Vector2(7,27), &"SmallLabel")
 	_status_text = Label.new()
 	_status_text.theme_type_variation = &"SmallLightLabel"
 	_status_text.set_anchors_preset(PRESET_FULL_RECT)
@@ -77,8 +81,8 @@ func _ready() -> void:
 		_hp_bar.value_changed.connect(_on_hp_bar_changed)
 		_exp_bar = HpBar.new()
 		_exp_bar.exp_mode = true
-		_exp_bar.position = Vector2(8, size.y - 6)
-		_exp_bar.size = Vector2(size.x - 16, 2)
+		_exp_bar.position = Vector2(30, size.y - 6)
+		_exp_bar.size = Vector2(size.x - 38, 2)
 		add_child(_exp_bar)
 
 
@@ -161,3 +165,8 @@ func _icon(at: Vector2) -> TextureRect:
 	icon.mouse_filter = MOUSE_FILTER_IGNORE
 	add_child(icon)
 	return icon
+
+func set_mechanic(kind: StringName,type: StringName = &"") -> void:
+	mechanic = kind
+	tera_type = type
+	_mechanic_tag.text = {&"mega":"M",&"z":"Z",&"dynamax":"MAX",&"tera":"T"}.get(kind,"")

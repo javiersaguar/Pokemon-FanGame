@@ -15,7 +15,8 @@
     "res://assets/sprites/ui/icons/types_spanish.png",
     "res://assets/tilesets/exterior/",
     "res://assets/sprites/ui/battle/transitions/",
-    "res://assets/sprites/ui/battle/moves/"
+    "res://assets/sprites/ui/battle/moves/",
+    "res://assets/sprites/ui/battle/gimmicks/"
   ],
   "placeholder": [],
   "rules": [
@@ -386,6 +387,20 @@
       "size": [
         128,
         64
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/gimmicks/mega.png",
+      "size": [
+        26,
+        34
+      ]
+    },
+    {
+      "path": "res://assets/sprites/ui/battle/moves/ebMega006.png",
+      "size": [
+        128,
+        128
       ]
     }
   ],
