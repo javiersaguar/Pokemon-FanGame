@@ -336,6 +336,22 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ---
 
+## Agente 5 — Calidad y motor de combate (desde el 2026-10-07)
+
+**Worktree:** `/home/javier/proyectos/pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Propiedad de la sesión: `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/combate/`, `tools/showdown_diff/` y `docs/combate/` (ver «Sesión con 3 agentes»).
+
+**En qué estoy:** tarea 1, comparación con Showdown: siguen los 17 combates distintos que quedan en el lote de 400.
+
+**Terminado:**
+- **Comparación con Showdown** (`tools/showdown_diff/`, uso en su README): juega los mismos combates en Showdown 0.11.11 y en nuestro motor con **la misma suerte** (oráculo por etiqueta y turno) y compara el estado al empezar cada turno (PS, estado, quién está en el campo, cambios, Velocidad efectiva y clima). 400 combates en unos 15 s.
+- **Motor:** todas las tiradas pasan por `rand_int(tag, …)` / `rand_chance(tag, …)`. Sin oráculo consumen el generador exactamente igual que antes (los combates con semilla no cambian). Ganchos solo para pruebas en `BattleSetup`: `rng_oracle`, `foe_controller`, `foe_replacement` y `turn_observer`.
+- **10 fallos del motor corregidos** (lista en `docs/combate/diferencias_showdown.md`): Intimidación al empezar el combate, Clorofila y similares aplicadas dos veces en la Velocidad, Francotirador/Cromolente/Vidasfera del que recibe el golpe, Mar Llamas y similares (Ataque ×1,5, no potencia), Autoestima al acabar el combate, Nerviosismo con Intimidación, Despejar sin bajar la Evasión, movimientos de aliado adyacente en individuales, Tóxico de tipo Veneno y redondeo de Síntesis.
+- **Resultado:** de 146/200 (73 %) a **379/400 (95 %)** combates idénticos a Showdown. Suite: 383/383.
+
+**Bloqueos:** ninguno.
+
+---
+
 ## Sesión con 3 agentes (2026-10-07)
 
 *Trabajan el **Agente 2**, el **Agente 3** y el **Agente 5** (nuevo). Reglas: **cada lista es una única tarea larga**. No se para ni se termina el turno entre tarea y tarea: al cerrar cada una (tests y validador de arte en verde, merge a `main`, `git push origin main` y tu sección de ESTADO al día) se empieza la siguiente. Solo se para si todo lo que queda está bloqueado. Lo visible lleva comparativa en `docs/arte/comparativas/`. Las decisiones de diseño se marcan "PENDIENTE JAVIER" y se sigue. **Commits solo como Javier Saguar, sin coautores ni líneas de atribución de ningún tipo** (el hook las rechaza: no lo desactives).*
@@ -555,6 +571,8 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 | 58 | A3 → A1 | Aplicar UiPreferences.battle_style() al preparar BattleSetup, antes de las reglas Locke que pueden forzar Fijo; cuatro líneas y test de guardado/carga y prioridad. | hecha por A3 en ausencia de A1 (revisar al volver) |
 
 | 59 | A3 → A1/A4 | Para cerrar el mapa regional gráfico y estuche: datos de lugares/coordenadas/medallas con nombres y ocho imágenes aprobadas, y fondo regional. WorldTravel ya conectado en lista de destinos; sin diseño publicado no invento geografía ni medallas. | pendiente (pregunta 30, PENDIENTE JAVIER) |
+| 60 | A5 → A3 | **Test inestable** (no es de esta entrega: falla igual en `main` sin mis cambios): `tests/mundo/test_game_flow.gd` → `test_codigo_personalizado_y_cancelar_entrada` falla **siempre** ejecutado solo (`-gunit_test_name`; `value[0]` se queda en "pending" tras pulsar `cancel` en el teclado de `request_text`) y **a veces** dentro de la suite completa. Parece de tiempos del teclado: ¿se pierde la pulsación si llega en el mismo frame en que se abre? | pendiente |
+| 61 | A5 → A2 | Aviso: el motor tiene API nueva (`rand_int`/`rand_chance` con etiqueta y ganchos de pruebas en `BattleSetup`, ver `contratos.md` §8.5). Si añades efectos que piden azar, usa esas funciones (no `engine.rng`) para que la comparación con Showdown pueda fijarlo. | informativo |
 
 ---
 
@@ -664,3 +682,4 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 | 2026-10-05 | A2 | §8.6 y §10: el motor vuelve al Agente 2. Configuración única en `data/randomizer/`; se retira `data/randomizer.json`. El validador comprueba que `policy.json` coincida con `presets.json` y `prohibidos.json`. |
 | 2026-10-05 | A2 | §8.2: `apply_patch(patch) -> Array[String]` (atómico: un error no cambia el parche activo), `randomizer_input()`, `tm_compat()`, `tutor_compat()`, `tm_move()` y `tutor_move()`. `shiny_odds()` lee `settings.shiny_denominator` del parche. |
 | 2026-10-05 | A3 | §9.1: `Dialogue.format_text()` resuelve los marcadores R.2 (`{starter:id}`, `{gift:id}`, `{static:id}`, `{trade:id}`, `{species:id}`, `{item:id}`). §9.4: el Theme dibuja `₽` con la fuente de respaldo `assets/fonts/pokedolar/`. §9.6: `TrainerNPC` entregado (línea de visión, pareja, `trainer_challenge_event.gd`). |
+| 2026-10-07 | A5 | §8.5: `BattleEngine.rand_int(tag, lo, hi)` y `rand_chance(tag, num, den)`: todas las tiradas del combate pasan por ahí (sin oráculo, igual que antes). `BattleSetup` añade ganchos **solo para pruebas**: `rng_oracle`, `foe_controller`, `foe_replacement` y `turn_observer`. `BattleEffect.move_stat_modifier(engine, user, move)` (Ataque o Ataque Especial según el movimiento: Mar Llamas...). `BattleEngine.ALLY_ONLY_TARGETS`. |

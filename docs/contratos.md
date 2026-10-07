@@ -1005,6 +1005,13 @@ Los movimientos especiales, los volátiles, las condiciones de bando, los climas
 - `DamageCalc.calculate(..., opts)` admite `power`, `weather`, `final` (multiplicadores encadenados en base 4096 como `chainModify`), `atk_mod` y `def_mod`.
 - Fase 9.5: habilidades de `species_in_use.json` (entrada, modificadores, inmunidades y final de turno) y objetos equipados (Restos, Banda Focus, Elección, Vidasfera, Chaleco Asalto, Casco Dentado y bayas de curación, estado y resistencia). Púas, Púas Tóxicas y Trampa Rocas son condiciones de bando; Giro Rápido y Despejar ya las quitan. Pendiente de la Fase 9: el resto de movimientos (9.2), dobles (9.4), gimmicks (9.6) e IA 2–4 (9.7).
 
+#### Azar y ganchos de pruebas (Agente 5, 2026-10-07)
+
+- **Todas las tiradas del combate** pasan por `engine.rand_int(tag: StringName, lo: int, hi: int) -> int` y `engine.rand_chance(tag: StringName, num: int, den: int) -> bool`. Sin oráculo consumen `engine.rng` exactamente igual que antes (`randi_range(lo, hi)` y `randi_range(0, den - 1) < num`): misma semilla = mismo combate. **Los efectos nuevos que pidan azar deben usar estas funciones, no `engine.rng`.** Etiquetas actuales: `accuracy`, `crit`, `damage_roll`, `secondary`, `multihit`, `par`, `frz_thaw`, `slp_turns`, `confusion_turns`, `confusion_hit`, `attract`, `partiallytrapped_turns`, `lockedmove_turns`, `protect`, `shedskin`, `force_switch` y `run`.
+- **Ganchos solo para pruebas** en `BattleSetup` (vacíos = comportamiento normal): `rng_oracle: Callable` (`(tag, turno) -> u` en [0, 1); fija el azar), `foe_controller: Callable` (`(engine, bando, slot) -> BattleAction`, en vez de la IA), `foe_replacement: Callable` (`(engine) -> índice`) y `turn_observer: Callable` (`(engine, turno)`, al empezar cada turno). Los usa `tools/showdown_diff/`.
+- `BattleEffect.move_stat_modifier(engine, user, move) -> float`: multiplicador del Ataque o Ataque Especial del usuario que depende del movimiento (Mar Llamas, Espesura, Torrente, Enjambre).
+- Al empezar el combate, los efectos de entrada (trampas, habilidades como Intimidación) se aplican cuando ya han salido todos, por orden de Velocidad.
+
 ### 8.6 RandomLocke: motor de aleatorización (`src/randomizer/`)
 
 > **Desde 2026-10-05 el motor vuelve a ser del Agente 2** (lo construyó el Agente 4). Manda la sección 10. La configuración vive solo en `data/randomizer/` (`policy.json`, `presets.json`, `prohibidos.json`, `settings_schema.json`, `epitafios.json`). `data/randomizer.json` está retirado.
