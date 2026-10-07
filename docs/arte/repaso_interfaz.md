@@ -32,7 +32,7 @@ Galería completa en [comparativa del repaso](comparativas/a3_repaso_interfaz.md
 
 76 capturas revisadas; comprobación de límites de etiquetas sin desbordamientos fuera de pantalla (los textos largos dentro de ScrollContainer conservan desplazamiento).
 
-Validación final de integración registrada en la sección A3 de ESTADO al publicar.
+Validación final, tras integrar la tercera tanda de A5: **439/439 tests, 8627 aserciones, 143,1 s**. Sin errores de script ni fugas al cerrar la suite. Validador: **10585 PNG, 0 errores y 0 avisos**.
 
 ## Pendientes externos
 
@@ -40,7 +40,7 @@ Validación final de integración registrada en la sección A3 de ESTADO al publ
 - Mapa regional dibujado y ocho medallas propios: pregunta 30 y petición 65. Destinos es una lista de los datos publicados, no el mapa gráfico terminado.
 - Guardería persistente/huevos/pasos: petición 66 a A2; presentación lista, entrada de producción pendiente para no perder Pokémon al cargar.
 - Torre, regalo misterioso, misiones, logros/estadísticas y modo difícil: petición 67. No se crean pantallas de sistemas cuya API y guardado aún no están publicados.
-- Ubicación/catálogo/precios de recordador/tutor y disponibilidad de MT: mundo/diseño. Solo la mochila y las entradas con catálogo recibido están conectadas. Cintas se leen por ID guardado hasta que exista catálogo de nombres/arte; no se inventan.
+- Ubicación/catálogo/precios de recordador/tutor (pregunta 31) y disponibilidad de MT: mundo/diseño. Solo la mochila y las entradas con catálogo recibido están conectadas. Cintas se leen por ID guardado hasta que exista catálogo de nombres/arte (petición 69); no se inventan.
 - Milcery/sabor: petición 58 de A2 y decisión de Javier; la interfaz no decide un resultado de evolución.
 
 Se conserva la distinción entre pantallas revisadas, integración pendiente y arte pendiente de aprobación; no se declara cerrada v0.1.

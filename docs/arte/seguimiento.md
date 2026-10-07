@@ -82,3 +82,14 @@ Dibujado a mano píxel a píxel con la paleta maestra en archivos de texto (`ass
 | 2026-10-05 | A1 | Flujo provisional RandomLocke y zona/mote con Theme/Dialogue existentes | `comparativas/randomlocke_flujo.md` | Pendiente revisión; A3 sustituye pantallas |
 
 | 2026-10-05 | A1 | Carga segura: origen preservado ante mapa inválido, arte de ruta A4 existente | `comparativas/robustez_carga.md` | Comprobado; no altera pintura |
+
+## Interfaz de la sesión 2026-10-07 (A3)
+
+| Pantallas | Estado | Comparativa | Aprobado por Javier |
+| --- | --- | --- | --- |
+| Opciones/controles, PC, Pokédex, tarjeta, dobles/mecánicas, accesibilidad y repaso general | Integradas; sprites y marcos existentes | [76 capturas e informe](comparativas/a3_repaso_interfaz.md) | pendiente |
+| Detalles de ficha, MT en mochila, recordador/tutor | MT y detalle integrados; recordador/tutor pendientes de ubicación/catálogo/precio del mundo | [Movimientos](comparativas/repaso_2026-10-07/a3_summary_moves.png), [recordador](comparativas/repaso_2026-10-07/a3_recordador.png), [tutor](comparativas/repaso_2026-10-07/a3_tutor.png) | pendiente |
+| Guardería/eclosión | Presentación revisada; guardado de servicio/huevos pendiente A2 | [Comparativa](comparativas/a3_guarderia_eclosion.md) | pendiente |
+| Mapa regional y ocho medallas | Bloqueados por datos/diseño/arte (pregunta 30) | [Destino disponible](comparativas/a3_pc_dex_tarjeta_mapa.md) | pendiente |
+
+El repaso conserva las aprobaciones parciales anteriores; estas capturas no convierten los nuevos assets o pantallas en arte final aprobado.
