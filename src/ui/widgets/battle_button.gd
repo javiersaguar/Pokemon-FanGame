@@ -63,6 +63,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if UiPreferences.reduce_motion():
+		_blink_on = false
+		_refresh()
+		return
 	_blink_time += delta
 	if _blink_time >= FOCUS_BLINK:
 		_blink_time -= FOCUS_BLINK
@@ -72,6 +76,7 @@ func _process(delta: float) -> void:
 
 ## Respuesta al pulsar: se hunde un píxel un instante (rápido, 0,08 s).
 func press() -> void:
+	if UiPreferences.reduce_motion(): return
 	_pressed = true
 	_refresh()
 	await get_tree().create_timer(0.08).timeout

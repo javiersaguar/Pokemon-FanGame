@@ -4,7 +4,7 @@ extends RefCounted
 const FRAME_FILES := ["databox","button_amarillo","button_verde"]
 const FRAME_NAMES := ["Claro","Amarillo","Verde"]
 static var loaded := false
-static var values: Dictionary = {"text_speed":40,"frame":0,"fullscreen":false,"battle_style":"fixed","BGM":1.0,"SE":1.0,"ME":1.0,"Cries":1.0,"Ambient":1.0}
+static var values: Dictionary = {"text_speed":40,"frame":0,"fullscreen":false,"reduce_animations":false,"battle_style":"fixed","BGM":1.0,"SE":1.0,"ME":1.0,"Cries":1.0,"Ambient":1.0}
 static func initialize() -> void:
 	if loaded: return
 	loaded = true
@@ -45,3 +45,7 @@ static func apply_frame() -> void:
 	for type: StringName in [&"Panel",&"PanelContainer",&"SmallFrame"]:
 		var style := theme.get_stylebox(&"panel",type) as StyleBoxTexture
 		if style: style.texture = texture
+
+static func reduce_motion() -> bool:
+	initialize()
+	return bool(values.reduce_animations)

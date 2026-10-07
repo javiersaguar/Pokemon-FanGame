@@ -14,6 +14,8 @@ func build_choices() -> void:
 	for bus: StringName in AudioManager.BUSES:
 		choices.append("%s: %d %%" % [{&"BGM":"Música",&"SE":"Efectos",&"ME":"Jingles",&"Cries":"Gritos",&"Ambient":"Ambiente"}[bus],roundi(AudioManager.get_volume(bus)*100)])
 		notes.append("Volumen independiente de %s, incluido silencio." % str(bus))
+	choices.append("Animación: %s" % ("Reducida" if UiPreferences.reduce_motion() else "Normal"))
+	notes.append("Reduce desplazamientos, destellos y parpadeos. Conserva los mensajes y las acciones del combate.")
 	choices.append("Volver")
 	notes.append("Volver al menú anterior.")
 func run() -> void:
@@ -24,7 +26,7 @@ func run() -> void:
 			continue
 		var absolute := page*ROWS+index if index >= 0 else -1
 		match absolute:
-			-1,10:
+			-1,11:
 				_done = true
 				closed.emit()
 				return
@@ -35,6 +37,7 @@ func run() -> void:
 			2: UiPreferences.set_value("battle_style","fixed" if UiPreferences.battle_style() == &"shift" else "shift")
 			3: UiPreferences.set_value("frame",(int(UiPreferences.values.frame)+1)%3)
 			4: UiPreferences.set_value("fullscreen",not UiPreferences.values.fullscreen)
+			10: UiPreferences.set_value("reduce_animations",not UiPreferences.reduce_motion())
 			_:
 				var bus := AudioManager.BUSES[absolute-5]
 				var labels := PackedStringArray()
