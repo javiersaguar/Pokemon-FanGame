@@ -121,4 +121,4 @@ func test_consultas_de_mt_tutores_objetos_y_shiny() -> void:
 	assert_eq(DataDB.shiny_odds(), 512)
 	DataDB.clear_patch()
 	assert_eq(DataDB.shiny_odds(), 4096)
-	assert_eq(DataDB.tm_move(&"tm01"), &"")
+	assert_eq(DataDB.tm_move(&"tm01"), &"megakick")

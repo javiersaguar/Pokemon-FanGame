@@ -96,7 +96,7 @@ func _check_regional_dex() -> void:
 			_warn("%s no sale en ningún encuentro ni por evolución." % id)
 		for evo: Dictionary in s.evolutions:
 			var method := str(evo.get("method", ""))
-			if not evo.has("region") and method not in SUPPORTED_EVOLUTION_METHODS:
+			if not evo.has("region") and not EvolutionRules.implemented(evo):
 				_warn("%s → %s: el método '%s' no está implementado (%s)." % [id, evo.get("to", "?"), method, evo.get("condition", "")])
 
 

@@ -582,6 +582,8 @@ func _machine_move(section: String, machine_id: StringName) -> StringName:
 		return StringName(str(patched.get("move", "")))
 	if patched is String:
 		return StringName(patched)
+	if section == "tm_moves":
+		return MoveLessons.machine_move(machine_id)
 	return &""
 
 
