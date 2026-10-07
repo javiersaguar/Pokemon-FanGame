@@ -158,6 +158,9 @@ static func snapshot(engine: BattleEngine, t: int) -> Dictionary:
 						boosts[String(k)] = int(act.boosts[k])
 				entry["boosts"] = boosts
 				entry["speed"] = engine.call("_speed", act)
+				# Solo para diagnosticar (no se compara): tipos actuales y volátiles.
+				entry["types"] = act.types().map(func(t: StringName) -> String: return String(t))
+				entry["volatiles"] = act.volatiles.keys().map(func(k: Variant) -> String: return str(k))
 			team.append(entry)
 		sides.append(team)
 	var weather := String(engine.weather())
@@ -184,7 +187,17 @@ static func _team(sets: Array) -> Array[Pokemon]:
 
 static func _log(res: Dictionary, events: Array[BattleEvent]) -> void:
 	for e: BattleEvent in events:
-		if e.type == BattleEvent.MESSAGE and str(e.data.get("text", "")) != "":
-			res["log"].append(str(e.data["text"]))
-		elif e.type == BattleEvent.TURN:
-			res["log"].append("|turn|%d" % int(e.data.get("turn", 0)))
+		var who := "p%d" % (e.side + 1)
+		match e.type:
+			BattleEvent.MESSAGE:
+				if str(e.data.get("text", "")) != "":
+					res["log"].append(str(e.data["text"]))
+			BattleEvent.TURN:
+				res["log"].append("|turn|%d" % int(e.data.get("turn", 0)))
+			BattleEvent.DAMAGE:
+				res["log"].append("|-damage|%s|%d/%d|%s%s" % [who, int(e.data["hp"]), int(e.data["max_hp"]),
+					str(e.data.get("source", "")), " [crit]" if bool(e.data.get("critical", false)) else ""])
+			BattleEvent.HEAL:
+				res["log"].append("|-heal|%s|%s" % [who, JSON.stringify(e.data)])
+			BattleEvent.BOOST:
+				res["log"].append("|-boost|%s|%s|%d" % [who, str(e.data.get("stat", "")), int(e.data.get("amount", 0))])

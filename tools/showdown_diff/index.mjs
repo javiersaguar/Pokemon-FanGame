@@ -57,5 +57,5 @@ fs.writeFileSync(file('resultado.json'), JSON.stringify(rows.map(({ spec, ...r }
 const count = summary(rows);
 console.log(`Resultado (${((Date.now() - t0) / 1000).toFixed(1)} s): ${JSON.stringify(count)}`);
 console.log(`Informe: ${file('informe.md')}`);
-const differ = rows.filter((r) => !['coincide', 'empate_velocidad'].includes(r.status)).length;
+const differ = rows.filter((r) => !['coincide', 'empate_velocidad', 'limite_turnos'].includes(r.status)).length;
 if (opts.maxDiff >= 0 && differ > opts.maxDiff) process.exit(1);

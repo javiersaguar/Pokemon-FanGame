@@ -1132,6 +1132,12 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 					"base": String(base_move.id), "move": String(move.id), "move_name": move.name,
 				})
 	if not _before_move(user, move):
+		# Si no puede moverse (sueño, parálisis, retroceso, enamoramiento...), pierde la carga de un
+		# movimiento de dos turnos y deja de estar en el aire o bajo tierra (onMoveAborted de Showdown).
+		remove_volatile(user, &"twoturnmove")
+		# Dormido, el arrebato (Golpe, Enfado...) se acaba sin confusión, como en Showdown.
+		if user.pokemon.status == &"slp":
+			remove_volatile(user, &"lockedmove")
 		return
 	if move.id == &"maxguard":
 		if slot != null and not action.forced:
@@ -1514,24 +1520,30 @@ func _apply_status_move(user: Battler, target: Battler, move: MoveData, effect: 
 	var wild := setup.is_wild()
 	if effect != null and effect.on_hit(self, user, target, move) == BattleEffect.HANDLED:
 		return
+	# Mismo orden que runMoveEffects de Showdown: cambios de características, curación, estado y
+	# confusión. Que falle una parte no anula las anteriores: Contoneo sube el Ataque +2 aunque el
+	# objetivo ya esté confuso o le proteja el Campo de Niebla.
 	var did := false
+	if not move.boosts.is_empty():
+		did = _apply_boosts(target, move.boosts, false)
 	if not move.heal.is_empty():
-		if target.pokemon.current_hp >= target.pokemon.max_hp():
+		if target.pokemon.current_hp < target.pokemon.max_hp():
+			_heal(target, roundi(target.pokemon.max_hp() * float(move.heal[0]) / move.heal[1]), &"move")
+			_msg(tr("¡%s ha recuperado PS!") % BattleText.cap_name(target, wild))
+			did = true
+		elif not did:
 			_msg(tr("¡Los PS %s están al máximo!") % BattleText.of_name(target, wild))
 			return
-		_heal(target, roundi(target.pokemon.max_hp() * float(move.heal[0]) / move.heal[1]), &"move")
-		_msg(tr("¡%s ha recuperado PS!") % BattleText.cap_name(target, wild))
-		did = true
 	if move.status != &"":
-		if not _try_set_status(target, move.status, true, user):
+		if _try_set_status(target, move.status, true, user):
+			did = true
+		elif not did:
 			return
-		did = true
 	if move.volatile_status == &"confusion":
-		if not _try_confuse(target, true, user):
+		if _try_confuse(target, true, user):
+			did = true
+		elif not did:
 			return
-		did = true
-	if not move.boosts.is_empty():
-		did = _apply_boosts(target, move.boosts, false) or did
 	if not move.self_boosts.is_empty():
 		did = _apply_boosts(user, move.self_boosts, false) or did
 	if not did:
@@ -1539,10 +1551,11 @@ func _apply_status_move(user: Battler, target: Battler, move: MoveData, effect: 
 
 
 func _apply_secondary(user: Battler, target: Battler, sec: Dictionary) -> void:
+	# Polvo Escudo solo bloquea lo que afecta al objetivo: las mejoras del propio atacante
+	# (Nitrocarga, Abrecaminos...) sí se aplican, como en Showdown (onModifySecondaries).
 	var dust := Effects.ability(target.ability)
-	if dust != null and dust.blocks_secondary():
-		return
-	if not target.is_fainted():
+	var shielded := dust != null and dust.blocks_secondary()
+	if not target.is_fainted() and not shielded:
 		if sec.has("status"):
 			_try_set_status(target, StringName(sec["status"]), false, user)
 		match str(sec.get("volatile_status", "")):
@@ -2182,11 +2195,15 @@ func _max_raise_side(user: Battler, stat: StringName) -> void:
 
 
 func _speed(b: Battler) -> int:
-	var spe := b.effective_speed()
+	var spe := b.boosted_stat(&"spe")
 	# _conditions_of() ya incluye la habilidad y el objeto: aplicarlos otra vez doblaba Clorofila,
 	# Nado Rápido, Liviano... (×4 en vez de ×2).
 	for c: Array in _conditions_of(b):
 		spe = (c[0] as BattleEffect).modify_speed(self, b, spe)
+	# La parálisis va la última, como en Showdown (Viento Afín y parálisis: 149 → 298 → 149, no 148).
+	if b.pokemon.status == &"par":
+		@warning_ignore("integer_division")
+		spe = spe * 50 / 100
 	return spe
 
 
