@@ -340,13 +340,15 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **Worktree:** `/home/javier/proyectos/pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Propiedad de la sesión: `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/combate/`, `tools/showdown_diff/` y `docs/combate/` (ver «Sesión con 3 agentes»).
 
-**En qué estoy:** tarea 1, comparación con Showdown: siguen los 17 combates distintos que quedan en el lote de 400.
+**En qué estoy:** tarea 1, comparación con Showdown: quedan 7 combates distintos de 1.200 (lista en `docs/combate/diferencias_showdown.md`). Después, tarea 2 (cobertura total).
 
 **Terminado:**
 - **Comparación con Showdown** (`tools/showdown_diff/`, uso en su README): juega los mismos combates en Showdown 0.11.11 y en nuestro motor con **la misma suerte** (oráculo por etiqueta y turno) y compara el estado al empezar cada turno (PS, estado, quién está en el campo, cambios, Velocidad efectiva y clima). 400 combates en unos 15 s.
 - **Motor:** todas las tiradas pasan por `rand_int(tag, …)` / `rand_chance(tag, …)`. Sin oráculo consumen el generador exactamente igual que antes (los combates con semilla no cambian). Ganchos solo para pruebas en `BattleSetup`: `rng_oracle`, `foe_controller`, `foe_replacement` y `turn_observer`.
 - **10 fallos del motor corregidos** (lista en `docs/combate/diferencias_showdown.md`): Intimidación al empezar el combate, Clorofila y similares aplicadas dos veces en la Velocidad, Francotirador/Cromolente/Vidasfera del que recibe el golpe, Mar Llamas y similares (Ataque ×1,5, no potencia), Autoestima al acabar el combate, Nerviosismo con Intimidación, Despejar sin bajar la Evasión, movimientos de aliado adyacente en individuales, Tóxico de tipo Veneno y redondeo de Síntesis.
-- **Resultado:** de 146/200 (73 %) a **379/400 (95 %)** combates idénticos a Showdown. Suite: 383/383.
+- **2.ª tanda, 7 fallos más corregidos:** Respiro le quitaba el tipo Volador **a la especie entera** (lista compartida sin copiar), Contoneo y Camelo sin subida si fallaba la confusión, Polvo Escudo bloqueando las mejoras del atacante, parálisis antes que Viento Afín en la Velocidad, movimientos de dos turnos que no perdían la carga al no poder moverse, Saña sin confusión si Protección paraba el último golpe, y la cuenta de Protección que no se reiniciaba.
+- **Muestra fija en la suite** (`tests/combate/test_showdown_muestra.gd`, 30 combates con las fotos de Showdown guardadas, sin Node) y **18 tests de regresión** (`tests/combate/test_regresiones_showdown.gd`).
+- **Resultado:** de 146/200 (73 %) a **1.181/1.200 (99,4 % sin contar el límite de turnos)** combates idénticos a Showdown en tres lotes. Suite: 404/404.
 
 **Bloqueos:** ninguno.
 

@@ -54,6 +54,7 @@ const HANDLERS = {
   'conditions:confusion:onStart': 'confusion_turns',
   'conditions:confusion:onBeforeMove': 'confusion_hit',
   'conditions:attract:onBeforeMove': 'attract',
+  'moves:attract:onBeforeMove': 'attract', // en Showdown la condición está dentro del movimiento
   'conditions:partiallytrapped:durationCallback': 'partiallytrapped_turns',
   'conditions:lockedmove:onStart': 'lockedmove_turns',
   'conditions:stall:onStallMove': 'protect',

@@ -23,6 +23,9 @@ var moved_this_turn: bool = false
 var damaged_this_turn: bool = false
 ## Usos seguidos de Protección y similares (cada uno es menos probable).
 var protect_count: int = 0
+## Turno del último uso con éxito. Si pasa un turno entero sin usarla (aunque sea por retroceder),
+## la cuenta vuelve a empezar, como el volátil "stall" de Showdown (dura 2 turnos).
+var protect_turn: int = -10
 ## Habilidad en el combate (Danza Amiga o Abatidoras la cambian sin tocar al Pokémon).
 var ability: StringName = &""
 ## Movimiento fijado por un objeto Elección. Vacío = no está fijado.
@@ -63,7 +66,9 @@ func types() -> Array[StringName]:
 		var tera_types: Array[StringName] = []
 		tera_types.append(tera_active)
 		return tera_types
-	var out := pokemon.types()
+	# Copia: pokemon.types() es la lista de la especie. Sin copiar, Respiro le quitaba el tipo
+	# Volador a la especie entera para el resto de la partida.
+	var out := pokemon.types().duplicate()
 	for id: StringName in volatiles:
 		var effect := Effects.condition(id)
 		if effect != null:

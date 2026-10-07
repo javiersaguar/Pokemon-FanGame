@@ -81,7 +81,11 @@ export function compare(specs, sdResults, ourResults) {
       const d = diffSnapshots(a, b);
       if (d) { row.status = 'difiere'; row.turn = turn; row.detail = d; row.prev = turn - 1; break; }
     }
-    if (row.status === 'coincide') {
+    const capped = [...(sd.flags || []), ...(ours.flags || [])].some((f) => f.flag === 'max_turns');
+    if (row.status === 'coincide' && capped) {
+      // Al llegar al límite de turnos, cada motor para en un punto algo distinto: no se compara el final.
+      row.status = 'limite_turnos';
+    } else if (row.status === 'coincide') {
       const d = diffSnapshots(sd.final, ours.final);
       if (d && Math.max(sd.final.turn, ours.final.turn) < tie) {
         row.status = 'difiere'; row.turn = 'final'; row.detail = d; row.prev = sd.final.turn;

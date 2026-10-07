@@ -39,6 +39,10 @@ tar -xzf tools/cache/pokemon-showdown-0.11.11.tgz -C ~/.cache/panchito/showdown-
 4. **Las decisiones** son las mismas en los dos: cada turno, un movimiento elegido con el hash de (semilla, bando, turno), saltando los que no se pueden usar. Tras un debilitado entra el primero que queda, en el orden del equipo. Los PP van al máximo (como Showdown, con 3 Más PP).
 5. **`compare.mjs`** compara las fotos turno a turno. Si hay un **empate de Velocidad real**, Showdown lo resuelve con su propio azar y solo se comparan los turnos anteriores.
 
+## Muestra fija para la suite
+
+`node tools/showdown_diff/make_fixture.mjs` guarda en `tests/combate/showdown_muestra.json` unos 30 combates que coinciden con Showdown, con sus fotos. El test `tests/combate/test_showdown_muestra.gd` los vuelve a jugar en nuestro motor (sin Node) y falla si alguno deja de coincidir. Rehazla si cambian los datos o una corrección cambia los combates a propósito.
+
 ## Para añadir una tirada nueva
 
 Si el motor pide azar en un sitio nuevo, usa `rand_int(&"etiqueta", ...)` o `rand_chance(&"etiqueta", ...)` y añade la etiqueta en Showdown, en `CORE` o en `HANDLERS` de `run_showdown.mjs`. Una tirada de Showdown sin etiqueta sale como `other` en el informe.

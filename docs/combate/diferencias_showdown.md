@@ -8,6 +8,7 @@ Resultados de la comparación turno a turno del combate con el simulador de Pok�
 |-------|----------|----------------------|-----------|---------------------|
 | 2026-10-07, primera pasada | 200 | 146 (73 %) | 53 | 1 |
 | 2026-10-07, tras la 1.ª tanda de correcciones | 400 | 379 (95 %) | 17 | 4 |
+| 2026-10-07, tras la 2.ª tanda (semillas 1, 2 y 3) | 1.200 | 1.111 + 70 hasta el límite de 60 turnos (98,4 %; 99,4 % sin contar el límite) | 7 | 12 |
 
 ## Fallos de nuestro motor corregidos
 
@@ -22,21 +23,29 @@ Resultados de la comparación turno a turno del combate con el simulador de Pok�
 | Despejar | No bajaba la Evasión (está en el script de Showdown, no en sus datos) | Baja la Evasión en un nivel |
 | Motivación, Niebla Aromática, Refuerzo… | Sin aliado se aplicaban al propio usuario | Con objetivo "aliado adyacente" y sin aliado, fallan. "allies" incluye al usuario: Aullido y Rocío Vital siguen funcionando en individuales |
 | Tóxico | Podía fallar usado por un Pokémon de tipo Veneno | No falla nunca (6.ª generación en adelante) |
+| Respiro | `Pokemon.types()` devuelve la lista de la especie y `Battler.types()` la modificaba: **Respiro le quitaba el tipo Volador a la especie entera** para el resto de la partida | `Battler.types()` trabaja sobre una copia |
+| Contoneo, Camelo… | Si la confusión fallaba (ya confuso, Campo de Niebla), fallaba todo y no subía el Ataque | Mismo orden que Showdown: características, curación, estado y confusión; que falle una parte no anula las otras |
+| Polvo Escudo | Bloqueaba también las mejoras del propio atacante (Nitrocarga, Abrecaminos) | Solo bloquea lo que afecta al objetivo |
+| Parálisis con Viento Afín | La parálisis se aplicaba antes que los multiplicadores (149 → 74 → 148) | Va la última, como en Showdown (149 → 298 → 149) |
+| Movimientos de dos turnos | Si no podía moverse (sueño, parálisis, retroceso, enamoramiento…) conservaba la carga: seguía en el aire con Vuelo o lanzaba el Rayo Solar a la fuerza al despertar | Pierde la carga (`onMoveAborted` de Showdown) |
+| Saña, Enfado, Golpe | Si Protección paraba el último golpe, el arrebato acababa sin confusión | Confunde al acabar igual; dormido, se acaba sin confusión |
+| Protección seguidas | Retroceder o no poder moverse no reiniciaba la cuenta | Si pasa un turno sin usarla, la cuenta vuelve a empezar (el volátil `stall` dura 2 turnos) |
 | Síntesis, Sol Matinal, Luz Lunar | Redondeaban las mitades hacia arriba y con sol curaban 2/3 exactos | Mismo redondeo y factores que Showdown (`this.modify(maxhp, 0,5 / 0,667 / 0,25)`) |
 
 ## Diferencias pendientes de investigar
 
-Del lote de 400 (semilla 1). Para reproducirlas: `node tools/showdown_diff/index.mjs --n=400 --seed=1` y buscar el combate en `tools/cache/showdown_diff/informe.md`.
+De los lotes de 400 con semillas 1 y 3 (la 2 no tiene ninguna). Para reproducirlas: `node tools/showdown_diff/index.mjs --n=400 --seed=1` y buscar el combate en `tools/cache/showdown_diff/informe.md`.
 
 | Combate | Primera diferencia | Pista |
 |---------|--------------------|-------|
-| c1-135 | Sunkern elige Rayo Solar en un motor y Crecimiento en el otro | Rayo Solar cargándose + sueño: el estado de "cargando" se trata distinto |
-| c1-160, c1-209, c1-321, c1-327, c1-366, c1-369, c1-178, c1-199 | PS distintos | Por mirar uno a uno |
-| c1-168, c1-339, c1-355, c1-361 | Ataque +2 de menos en nuestro motor | ¿Autoestima en cadena o Danza Espada? |
-| c1-176 | Lluvia en Showdown y no en el nuestro, y un KO | Duración del clima |
-| c1-244 | Velocidad y cambios dobles en nuestro motor | ¿Un cambio de característica aplicado dos veces? |
-| c1-305 | Showdown termina antes | Por mirar |
-| c1-385 | Precisión −1 en nuestro motor | Algún movimiento baja la precisión y en Showdown no |
+| c1-244, c3-70 | Al final, Defensa −2 y Velocidad +2 en nuestro motor (−1 y +1 en Showdown) | Algún efecto que se aplica dos veces en el último golpe |
+| c1-203, c1-305 | Showdown termina antes | Por mirar |
+| c3-62 | PS distintos al final | Por mirar |
+| c3-84, c3-319 | PS distintos (y sueño en c3-319) | Por mirar |
+
+## Muestra fija en la suite
+
+`tests/combate/test_showdown_muestra.gd` juega 30 combates que coinciden con Showdown (`tests/combate/showdown_muestra.json`, con las fotos de Showdown guardadas) y falla si alguno deja de coincidir. No necesita Node. Se rehace con `node tools/showdown_diff/make_fixture.mjs` cuando el cambio es intencionado. Los fallos ya corregidos tienen además su test en `tests/combate/test_regresiones_showdown.gd`.
 
 ## Diferencias intencionadas
 
