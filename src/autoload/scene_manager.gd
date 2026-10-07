@@ -286,6 +286,10 @@ func start_battle(setup: Variant, context: Dictionary = {}) -> StringName:
 ## Preparar antes de BattleScene: registrar la primera aparición antes de cualquier acción.
 ## tutorial=true excluye expresamente muerte/reglas; can_lose por sí solo no las excluye.
 func prepare_battle(setup: Variant, context: Dictionary = {}) -> Variant:
+	if setup is BattleSetup:
+		setup.battle_style = UiPreferences.battle_style()
+		if not bool(context.get("tutorial",false)) and GameState.locke != null and GameState.locke.rules.battle_mode() == "fixed":
+			setup.battle_style = &"fixed"
 	if not (setup is BattleSetup) or GameState.locke == null:
 		return setup
 	if bool(context.get("tutorial", false)):

@@ -1,8 +1,7 @@
 extends StoryEvent
 ## Desafío de un TrainerNPC (Fase 10.4). `source` = el entrenador; params: spotted
 ## (bool: te ha visto, así que "!" y se acerca; si no, le has hablado).
-## Con pareja, los dos te desafían. Hasta que el motor juegue dobles (Fase 9.4), cada
-## uno lucha por separado, uno detrás de otro.
+## Una pareja desafía en un combate doble, con ambos equipos y registros de derrota.
 
 
 func run() -> void:
@@ -30,10 +29,9 @@ func run() -> void:
 		var intro := str(t.data.get("intro_text", ""))
 		if intro != "":
 			await Dialogue.say(intro, t.display_name)
-		# Si pierdes y no se puede perder, SceneManager te lleva al Centro Pokémon y
-		# este mapa (con los entrenadores) ya no existe.
-		if await battle(t) != SceneManager.OUTCOME_WIN:
-			return
+	if group.size() > 1:
+		if await battle_group(group) != SceneManager.OUTCOME_WIN: return
+	elif await battle(group[0]) != SceneManager.OUTCOME_WIN: return
 	if map_bgm != &"":
 		AudioManager.play_bgm(map_bgm)
 
@@ -41,3 +39,22 @@ func run() -> void:
 ## El combate contra `t`. Activa trainer_defeated:<id> si ganas (Cutscene.battle_trainer).
 func battle(t: TrainerNPC) -> StringName:
 	return await Cutscene.battle_trainer(t.trainer_id, t.battle_options)
+
+static func group_setup(group: Array[TrainerNPC]) -> BattleSetup:
+	if group.is_empty(): return null
+	var setup := BattleSetup.trainer(group[0].trainer_id,group[0].battle_options)
+	setup.format = BattleSetup.Format.DOUBLE
+	for index: int in range(1,group.size()):
+		var partner := BattleSetup.trainer(group[index].trainer_id,group[index].battle_options)
+		setup.trainers.append_array(partner.trainers)
+		setup.foe_party.append_array(partner.foe_party)
+		setup.ai_level = maxi(setup.ai_level,partner.ai_level)
+	return setup
+func battle_group(group: Array[TrainerNPC]) -> StringName:
+	var ids: Array[StringName] = []
+	for t: TrainerNPC in group: ids.append(t.trainer_id)
+	var setup := group_setup(group)
+	var outcome: StringName = await SceneManager.start_battle(setup,{"tutorial":setup.tutorial})
+	if outcome == SceneManager.OUTCOME_WIN:
+		for id: StringName in ids: GameState.set_flag(StringName(TrainerNPC.DEFEATED_FLAG % id))
+	return outcome

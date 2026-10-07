@@ -36,6 +36,9 @@ var _last_command := 0
 var _last_move := 0
 var _low_hp_music := false
 var _music_finished := false
+var _field_slots := {BattleDriver.PLAYER:0,BattleDriver.FOE:0}
+var _second_sprites: Dictionary = {}
+var _second_boxes: Dictionary = {}
 
 @onready var _background: BattleBackground = $World/Background
 @onready var _foe_shadow: Sprite2D = $World/FoeShadow
@@ -82,6 +85,7 @@ func _ready() -> void:
 func run(setup: Variant) -> StringName:
 	_driver = make_driver(setup)
 	_info = _driver.info()
+	_configure_field()
 	_box.text_speed = 0 if fast else Dialogue.text_speed
 	AudioManager.save_bgm()
 	AudioManager.play_bgm(StringName(_info.get("bgm", "battle_wild")), 0.0)
@@ -107,8 +111,9 @@ func run(setup: Variant) -> StringName:
 ## sigue encima. El Agente 4 sustituye el PNG sin tocar esta escena.
 func _apply_bases() -> void:
 	var base := BattleBackground.load_base(_background.environment)
-	_foe_base = _base_sprite(_foe_base, base, Vector2(384, 190), _foe_shadow)
-	_player_base = _base_sprite(_player_base, base, Vector2(128, 328), _player_sprite)
+	var doubles: bool = _info.get("format",&"single") == &"double"
+	_foe_base = _base_sprite(_foe_base, base, Vector2(364,124) if doubles else Vector2(384,190), _foe_shadow)
+	_player_base = _base_sprite(_player_base, base, Vector2(128,306) if doubles else Vector2(128,328), _player_sprite)
 
 
 func _base_sprite(sprite: Sprite2D, base: Texture2D, at: Vector2, before: Node) -> Sprite2D:
@@ -149,7 +154,13 @@ func _play_events(events: Array) -> void:
 func _play_event(event: Variant) -> void:
 	var side := int(_field(event, "side", -1))
 	var data: Dictionary = _field(event, "data", {})
-	match StringName(_field(event, "type", "")):
+	var slot := int(_field(event,"slot",0))
+	var type := StringName(_field(event,"type",""))
+	if side in [BattleDriver.PLAYER,BattleDriver.FOE] and slot >= 0: _field_slots[side] = slot
+	if slot < 0 and type in [&"exp", &"level_up"]:
+		if type == &"level_up" and not fast: await AudioManager.play_me(&"level_up")
+		return
+	match type:
 		&"message":
 			if str(data.get("tag", "")) not in SCENE_TEXT_TAGS:
 				await _message(str(data.get("text", "")))
@@ -158,7 +169,7 @@ func _play_event(event: Variant) -> void:
 			_update_low_hp_music()
 		&"switch_out":
 			if side == BattleDriver.PLAYER:
-				await _message(tr("¡%s, vuelve!") % _player_box.pokemon_name)
+				await _message(tr("¡%s, vuelve!") % _data_box(side).pokemon_name)
 			await _sprite(side).withdraw(_t(0.3))
 			_data_box(side).hide()
 		&"move":
@@ -188,13 +199,13 @@ func _play_event(event: Variant) -> void:
 		&"exp":
 			if side == BattleDriver.PLAYER:
 				AudioManager.play_se(&"exp")
-				await _player_box.animate_exp(_exp_ratio(data), _t(0.6))
+				await _data_box(side).animate_exp(_exp_ratio(data), _t(0.6))
 		&"level_up":
 			if side == BattleDriver.PLAYER:
-				_player_box.set_level(int(data.get("level", 1)))
-				_player_box.set_exp(0.0)
-				await _player_box.animate_hp(int(data.get("hp", _player_box.hp)),
-					int(data.get("max_hp", _player_box.max_hp)), 0.0)
+				_data_box(side).set_level(int(data.get("level", 1)))
+				_data_box(side).set_exp(0.0)
+				await _data_box(side).animate_hp(int(data.get("hp", _data_box(side).hp)),
+					int(data.get("max_hp", _data_box(side).max_hp)), 0.0)
 			if not fast: await AudioManager.play_me(&"level_up")
 		&"catch":
 			await _throw_ball(int(data.get("shakes", 0)), bool(data.get("caught", false)))
@@ -271,8 +282,8 @@ static func _exp_ratio(data: Dictionary) -> float:
 
 func _animate_move(side: int, target_side: int, move: Dictionary) -> void:
 	var user := _sprite(side)
-	var target := _sprite(target_side)
-	if await BattleMoveAnimation.play(_fx, user, target, move, fast): return
+	var target := _sprite(target_side,int(move.get("target_slot",0)))
+	if await BattleMoveAnimation.play(_fx, user, target, move, fast or UiPreferences.reduce_motion()): return
 	var details := move.duplicate()
 	details.category = _category(move.get("category", "physical"))
 	if details.category == &"physical":
@@ -304,14 +315,14 @@ func _throw_ball(shakes: int, caught: bool) -> void:
 	_fx.add_child(ball)
 	var target := _foe_sprite.home() + Vector2(0, -80)
 	AudioManager.play_se(&"ball_throw")
-	if not fast:
+	if not fast and not UiPreferences.reduce_motion():
 		var tween := create_tween()
 		tween.tween_method(_ball_arc.bind(ball, target), 0.0, 1.0, 0.6)
 		await tween.finished
 	ball.position = target
 	await _foe_sprite.withdraw(_t(0.3))
 	var ground := _foe_sprite.home() + Vector2(0, -12)
-	if not fast:
+	if not fast and not UiPreferences.reduce_motion():
 		var drop := create_tween()
 		drop.tween_method(func(p: Vector2) -> void: ball.position = _even(p), ball.position, ground, 0.3) \
 			.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
@@ -338,7 +349,7 @@ func _throw_ball(shakes: int, caught: bool) -> void:
 ## Destellos y sonido de un shiny al aparecer (DIRECTRICES §8).
 func _shiny_sparkles(sprite: BattlePokemonSprite) -> void:
 	AudioManager.play_se(&"shiny")
-	if fast:
+	if fast or UiPreferences.reduce_motion():
 		return
 	var center := sprite.center()
 	var offsets: Array[Vector2] = [Vector2(-56, -40), Vector2(48, -56), Vector2(-24, 24), Vector2(60, 16), Vector2(0, -72)]
@@ -374,6 +385,7 @@ func _ball_arc(t: float, ball: Sprite2D, target: Vector2) -> void:
 # --- Menús ---
 
 func _ask_player(request: Dictionary) -> Dictionary:
+	_field_slots[BattleDriver.PLAYER] = int(request.get("slot",0))
 	match StringName(request.get("kind", BattleDriver.REQUEST_ACTION)):
 		BattleDriver.REQUEST_SWITCH:
 			if StringName(request.get("reason", "")) == &"shift":
@@ -402,12 +414,19 @@ func _choose_action(request: Dictionary = {}) -> Dictionary:
 			Command.FIGHT:
 				var slot := await _choose_move(active)
 				if slot >= 0:
-					return {"type": &"fight", "move_slot": slot}
+					var target := await _choose_target(active,slot)
+					if target >= 0: return {"type": &"fight", "move_slot": slot,"target_slot":target}
 			Command.BAG:
+				if not request.get("can_use_items",true):
+					await _message("No puedes usar objetos en este turno.")
+					continue
 				var use := await _choose_item()
 				if not use.is_empty():
 					return use
 			Command.POKEMON:
+				if not request.get("can_switch",true):
+					await _message("No puedes cambiar de Pokémon en este turno.")
+					continue
 				var index := await _choose_party(false)
 				if index >= 0:
 					return {"type": &"switch", "party_index": index}
@@ -524,7 +543,7 @@ func _intro(start_events: Array) -> void:
 		_foe_trainer.visible = sprite != null
 	_curtain_a.hide()
 	_curtain_b.hide()
-	await BattleEntryTransition.play(self, _info, fast)
+	await BattleEntryTransition.play(self, _info, fast or UiPreferences.reduce_motion())
 	var player_home := _player_trainer.position
 	_player_trainer.position.x = OFFSCREEN_RIGHT
 	var foe_home := _foe_trainer.position
@@ -588,7 +607,7 @@ func _open_curtain(horizontal: bool) -> void:
 		_curtain_b.size = Vector2(128, 192)
 	_curtain_a.show()
 	_curtain_b.show()
-	if not fast:
+	if not fast and not UiPreferences.reduce_motion():
 		var tween := create_tween().set_parallel().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 		if horizontal:
 			tween.tween_property(_curtain_a, ^"position:y", -96.0, 0.3)
@@ -611,10 +630,10 @@ func _message(text: String) -> void:
 func _show_box(box: BattleDataBox, pokemon: Dictionary) -> void:
 	box.show_pokemon(pokemon)
 	box.show()
-	if fast:
+	if fast or UiPreferences.reduce_motion():
 		return
 	var home := box.position
-	var from := home + Vector2(-24.0 if box == _foe_box else 24.0, 0)
+	var from := home + Vector2(24.0 if box.is_player else -24.0, 0)
 	box.modulate.a = 0.0
 	var tween := create_tween().set_parallel().set_ease(Tween.EASE_OUT)
 	tween.tween_method(func(p: Vector2) -> void: box.position = p.round(), from, home, 0.15)
@@ -647,11 +666,15 @@ func _button(color: StringName, text: String, button_size: Vector2) -> BattleBut
 	return button
 
 
-func _sprite(side: int) -> BattlePokemonSprite:
+func _sprite(side: int, slot := -1) -> BattlePokemonSprite:
+	var resolved: int = _field_slots.get(side,0) if slot < 0 else slot
+	if resolved == 1 and _second_sprites.has(side): return _second_sprites[side]
 	return _player_sprite if side == BattleDriver.PLAYER else _foe_sprite
 
 
-func _data_box(side: int) -> BattleDataBox:
+func _data_box(side: int, slot := -1) -> BattleDataBox:
+	var resolved: int = _field_slots.get(side,0) if slot < 0 else slot
+	if resolved == 1 and _second_boxes.has(side): return _second_boxes[side]
 	return _player_box if side == BattleDriver.PLAYER else _foe_box
 
 
@@ -661,7 +684,7 @@ func _trainer() -> Dictionary:
 
 
 func _t(seconds: float) -> float:
-	return 0.0 if fast else seconds
+	return 0.0 if fast or UiPreferences.reduce_motion() else seconds
 
 
 func _wait(seconds: float) -> void:
@@ -708,7 +731,10 @@ func _pending_evolutions() -> void:
 
 func _update_low_hp_music() -> void:
 	if _music_finished: return
-	var low := _player_box.visible and _player_box.hp > 0 and float(_player_box.hp) / maxi(_player_box.max_hp, 1) <= 0.2
+	var low := false
+	for slot: int in (2 if _info.get("format",&"single") == &"double" else 1):
+		var box := _data_box(BattleDriver.PLAYER,slot)
+		low = low or (box.visible and box.hp > 0 and float(box.hp) / maxi(box.max_hp,1) <= 0.2)
 	if low and not _low_hp_music:
 		AudioManager.save_bgm()
 		AudioManager.play_bgm(&"low_hp", 0.15)
@@ -719,3 +745,48 @@ func _end_low_hp_music() -> void:
 	if _low_hp_music:
 		AudioManager.restore_bgm(0.15)
 		_low_hp_music = false
+
+func _configure_field() -> void:
+	_field_slots = {BattleDriver.PLAYER:0,BattleDriver.FOE:0}
+	if _info.get("format",&"single") != &"double": return
+	_player_sprite.set_home(Vector2(68,292))
+	_foe_sprite.set_home(Vector2(304,108))
+	_foe_shadow.position = Vector2(304,100)
+	_player_box.position = Vector2(132,70)
+	_foe_box.position = Vector2(4,4)
+	for side: int in [BattleDriver.PLAYER,BattleDriver.FOE]:
+		if _second_sprites.has(side): continue
+		var sprite := BattlePokemonSprite.new()
+		sprite.back = side == BattleDriver.PLAYER
+		sprite.position = Vector2(188,312) if sprite.back else Vector2(422,132)
+		$World.add_child(sprite)
+		$World.move_child(sprite,_fx.get_index())
+		_second_sprites[side] = sprite
+		var box := BattleDataBox.new()
+		box.is_player = sprite.back
+		box.position = Vector2(132,108) if sprite.back else Vector2(4,40)
+		$Canvas.add_child(box)
+		$Canvas.move_child(box,_box.get_index())
+		box.hide()
+		_second_boxes[side] = box
+
+func target_slots(active: Dictionary, move_slot: int) -> Array[int]:
+	var targets: Array[int] = []
+	if _info.get("format",&"single") != &"double": return [0]
+	var moves: Array = active.get("moves",[])
+	if move_slot < moves.size():
+		var id := StringName(moves[move_slot].get("id",""))
+		if DataDB.has_move(id):
+			var move := DataDB.move(id)
+			if move.targets_user() or move.target in MoveData.FIELD_TARGETS or move.target in [&"adjacent_ally",&"all_adjacent_foes",&"all_adjacent",&"all",&"ally_side"]: return [0]
+	for slot: int in 2:
+		var box := _data_box(BattleDriver.FOE,slot)
+		if box.visible and box.hp > 0: targets.append(slot)
+	return targets
+func _choose_target(active: Dictionary,move_slot: int) -> int:
+	var targets := target_slots(active,move_slot)
+	if targets.size() <= 1: return targets[0] if not targets.is_empty() else 0
+	var labels := PackedStringArray()
+	for slot: int in targets: labels.append("%s / puesto %d" % [_data_box(BattleDriver.FOE,slot).pokemon_name,slot+1])
+	var picked := await _list("Elige el objetivo.",labels,[],true)
+	return targets[picked] if picked >= 0 else -1

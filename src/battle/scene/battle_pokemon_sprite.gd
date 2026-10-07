@@ -205,3 +205,7 @@ func _set_position_rounded(value: Vector2) -> void:
 func _wait(seconds: float) -> void:
 	if seconds > 0.0:
 		await get_tree().create_timer(seconds).timeout
+
+func set_home(at: Vector2) -> void:
+	_home = at.round()
+	position = _home

@@ -834,7 +834,9 @@ p.evolve_to(species_id) -> void           # conserva el daño recibido y el mote
 
 **`Daycare`** (Fase 14.3, `src/pokemon/daycare.gd`): `deposit` / `withdraw` (dos plazas). `compatible(a, b)`, `egg_percent` (70/50/20) y `egg_species` (la base de la madre, o del que no es Ditto). `walk(pasos, cuerpo_llama)` cuenta doble con Cuerpo Llama y cada 256 pasos tira el porcentaje. `take_egg(masuda := false)` hereda 3 IVs (5 con Lazo Destino), la naturaleza si hay Piedra Eterna, la habilidad de la madre (80 %, u oculta al 60 % si ella la tiene), la Ball de la madre (50/50 si son la misma especie) y los movimientos huevo del padre. `shiny_rolls(masuda)` es 6 o 1: el idioma no está en el Pokémon, lo dice quien llama. `spread_pokerus(party, rng)` contagia al de al lado (1/3). Los bebés que dependen de un incienso quedan pendientes.
 
-**`EvolutionRules`** (estática): `level_up_target(p, context := {}) -> StringName` (al subir de nivel o al acabar un combate) e `item_target(p, item_id, context := {}) -> StringName` (`&""` = no evoluciona). `level_up_evolution(p, context)` devuelve la entrada completa y `evolve(p, evo)` la aplica (y gasta el objeto equipado si era `level_hold`). `shed_species(from, to)` = Shedinja al evolucionar Nincada. `context`: `{time: Clock.period(), party_species: Array[StringName], party_types: Array[StringName], weather: StringName, location: StringName}`.
+**`MoveLessons`** (Fases 6.2 y 6.3): `relearnable(p)` son los movimientos de nivel que ya no tiene. `teach(p, move, replace_index := -1)` lo aprende (con 4 hace falta el índice a olvidar). `tutor_moves(species)`, `can_tutor`, `use_tutor`. `machine_move(item_id)` sale del texto de la MT cuando identifica un solo movimiento del conjunto (el de `learnset.machine`); `use_machine` lo enseña si la especie es compatible. Las MT 100+ llegaron sin texto: no se inventa su movimiento (**PENDIENTE JAVIER** el número de la 9.ª generación). Dónde se consiguen también es de Javier. `DataDB.tm_move` usa este catálogo y el parche lo sustituye.
+
+**`EvolutionRules`** (estática): `level_up_target(p, context := {}) -> StringName` (al subir de nivel o al acabar un combate) e `item_target(p, item_id, context := {}) -> StringName` (`&""` = no evoluciona). `level_up_evolution(p, context)` devuelve la entrada completa y `evolve(p, evo)` la aplica (y gasta el objeto equipado si era `level_hold`). `special_target(p, context)` es Milcery: `spin: true` y un confite equipado (`strawberrysweet` y los otros seis). El sabor de Alcremie queda **PENDIENTE JAVIER** (los datos solo tienen una especie). `shed_species(from, to)` = Shedinja al evolucionar Nincada. `context`: `{time: Clock.period(), party_species: Array[StringName], party_types: Array[StringName], weather: StringName, location: StringName, spin: bool}`.
 
 **Módulos de GameState** (`Party`, `PCStorage`, `Pokedex`): cumplen la sección 2 (`new()`, `to_dict()`, `from_dict()`).
 
@@ -1018,6 +1020,7 @@ rom.to_json() -> String         # guardar en slot_<n>.rom.json (claves ordenadas
 RomPatch.from_dict(JSON.parse_string(texto)).apply()   # al cargar la ranura, ANTES de cargar el mapa
 rom.seed_code() -> String       # "PANCHITO-XXXX-XXXX-XX" (+ "-XXXXXX" si los ajustes son personalizados)
 rom.spoiler_text() -> String    # registro de spoilers (R.5)
+rom.export_spoilers() -> String  # lo escribe en user://randomlocke/<código>_spoilers.txt
 rom.settings() -> RandomizerSettings / rom.generator_version()
 
 SeedCode.encode(seed, settings) -> String
@@ -1400,3 +1403,21 @@ Motivo de cambios: generación anterior leía DataDB/JSON desde hilo, compartía
 
 La entrada incluye `config` con snapshot de policy/prohibidos/presets, y `regional` opcional. `RandomizerInput.from_datadb()` es adaptador del principal; `families(patch)` calcula duplicados sobre grafo efectivo. El nombre de helper de presets por diccionario es `preset_dict` porque `preset` ya es el campo público heredado. Preparar Settings.prepare antes de hilos. Excepción STAB Siniestro ≤60, propuesta PENDIENTE JAVIER en ESTADO; curvas sin nivel 1 normalizan primer registro a 1 sin aumentar cantidad. Configuración única en data/randomizer/ (`data/randomizer.json` retirado el 2026-10-05). `policy.json` es la copia que entra en la ROM y el validador exige que coincida con `presets.json` y `prohibidos.json`.
 
+
+### §9.9 Opciones y preferencias de dispositivo
+
+`UiPreferences.initialize()` carga `user://ui.cfg` sin sustituir otras secciones. `set_value(key, value)` guarda texto (20/40/80/0), marco (0 claro/1 amarillo/2 verde), pantalla completa, reducción de animaciones y los buses BGM/SE/ME/Cries/Ambient (0..1). `reduce_motion()` consulta la reducción sin cambiar la velocidad del diálogo. `battle_style()` usa la variable guardada de GameState durante una partida y el valor de dispositivo en el título; SceneManager lo aplica antes de las reglas Locke. Correr siempre conserva el contrato GameState y se guarda por partida. `OptionsScreen` emite `closed`; navegación por páginas y ayuda recorrible con C/Start. El acabado de los marcos queda pendiente de aprobación de Javier.
+
+### §9.10 PC, Pokédex completa y datos de entrenador
+
+`PCScreen.open()` usa PCStorage, seis huecos por página; C abre cajas/renombrar/cancelar movimiento. `deposit_member(index, box, slot)` y `withdraw_member(box, slot)` devuelven Error y solo mueven después de validar hueco/capacidad/último capaz. UID y objetos no se modifican. La ficha y liberación se abren sobre el registro real; liberar requiere doble confirmación.
+
+`PokedexEntry`: izquierda/derecha recorre `Pokedex.forms_seen()`, R/Y alterna variocolor solo si `is_shiny_seen()`, C alterna áreas, arriba/abajo recorre texto y A reproduce el grito. `areas(id)` consulta las tablas de DataDB, incluyendo el parche activo; no conserva una copia del catálogo original. La marca variocolor es por especie base según API actual.
+
+`TrainerCardScreen.open()` y estuche leen GameState (incluidas medallas guardadas). `RegionMapScreen.open()` presenta los destinos visitados de `WorldTravel.destinations()` y llama a `fly(id)` con confirmación; no sortea los requisitos de campo. Fondo regional, coordenadas y ocho gráficos/nombres de medallas pendientes de petición 59/pregunta 30; no se considera acabado el mapa gráfico.
+
+### §9.11 Escena doble
+
+`BattleScene` respeta `info.format == double`: cuatro sprites/cajas, `event.side/slot` independientes y `request.slot` para la acción. `target_slots(active, move_slot)` ofrece solo los rivales vivos de ataques individuales; destinos de área/usuario/aliado los decide el motor. `_sprite(side, slot)` / `_data_box(side, slot)` permiten seleccionar explícitamente la presentación. No se dibuja experiencia de miembros en el banquillo (`slot < 0`). EngineDriver.player_active() lee el puesto de la petición y player_party() marca ambos activos para impedir cambiarlos entre sí.
+
+TrainerChallengeEvent.group_setup(group) combina ambos rivales en DOUBLE, con las opciones generales del iniciador y la IA máxima. battle_group guarda ambos IDs antes del combate y activa sus flags solo al ganar. El compañero con IA (`info.ally_ai`) no genera una petición extra en la escena. Petición 47 entregada.

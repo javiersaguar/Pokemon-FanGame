@@ -11,6 +11,11 @@ const TIME_PERIODS: Dictionary[String, Array] = {
 	"dusk": [&"evening"],
 }
 const LEVEL_UP_METHODS: Array[String] = ["level", "friendship", "level_hold", "level_move", "level_extra"]
+## Confites con los que Milcery evoluciona al girar. El sabor de Alcremie (una sola especie en los datos) queda PENDIENTE JAVIER.
+const SWEETS: Array[StringName] = [
+	&"strawberrysweet", &"lovesweet", &"berrysweet", &"cloversweet",
+	&"flowersweet", &"starsweet", &"ribbonsweet",
+]
 
 
 ## Especie a la que evoluciona al subir de nivel (o al acabar un combate tras subir); &"" si no.
@@ -33,6 +38,32 @@ static func item_target(p: Pokemon, item_id: StringName, context: Dictionary = {
 		if evo.get("method", "") == "item" and StringName(evo.get("item", "")) == item_id and matches(p, evo, context):
 			return StringName(evo["to"])
 	return &""
+
+
+## Milcery y otras de método `other` que el motor reconoce. `context.spin` lo pone quien gira al Pokémon.
+static func special_target(p: Pokemon, context: Dictionary = {}) -> StringName:
+	for evo: Dictionary in p.species().evolutions:
+		if evo.get("method", "") == "other" and matches(p, evo, context):
+			return StringName(evo["to"])
+	return &""
+
+
+## Evolución por intercambio ya sustituida, o la que sigue pidiendo el método `trade` en los datos.
+static func trade_target(p: Pokemon, context: Dictionary = {}) -> StringName:
+	for evo: Dictionary in p.species().evolutions:
+		if evo.get("method", "") == "trade" and matches(p, evo, context):
+			return StringName(evo["to"])
+	return &""
+
+
+## ¿El motor entiende esta entrada? Las de `other` solo si la condición está reconocida.
+static func implemented(evo: Dictionary) -> bool:
+	var method := str(evo.get("method", ""))
+	if method in LEVEL_UP_METHODS or method in ["item", "shed", "trade"]:
+		return true
+	if method == "other":
+		return _spin_sweet(evo)
+	return false
 
 
 ## Shedinja: especie extra que aparece al evolucionar `from` (Nincada) a `to`; &"" si ninguna.
@@ -71,6 +102,15 @@ static func matches(p: Pokemon, evo: Dictionary, context: Dictionary = {}) -> bo
 				return false
 		"level", "level_extra", "item":
 			pass
+		"trade":
+			var needed := StringName(evo.get("item", ""))
+			if needed != &"" and p.held_item != needed:
+				return false
+		"other":
+			if not _spin_sweet(evo):
+				return false
+			if not bool(context.get("spin", false)) or p.held_item not in SWEETS:
+				return false
 		_:
 			return false
 	if evo.has("time"):
@@ -112,6 +152,11 @@ static func matches(p: Pokemon, evo: Dictionary, context: Dictionary = {}) -> bo
 	if method == "level_extra" and not _has_structured_condition(evo):
 		return false
 	return true
+
+
+static func _spin_sweet(evo: Dictionary) -> bool:
+	var condition := str(evo.get("condition", "")).to_lower()
+	return "spin" in condition and "sweet" in condition
 
 
 ## level_extra sin ninguna condición entendida (solo texto en "condition") no se aplica nunca.

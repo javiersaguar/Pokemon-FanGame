@@ -97,6 +97,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		menu._finish(-2)
 
 func _process(delta: float) -> void:
+	if UiPreferences.reduce_motion(): return
 	_frame_time += delta
 	var atlas := _icon.texture as AtlasTexture if _icon else null
 	if atlas and _frame_time >= 0.25:

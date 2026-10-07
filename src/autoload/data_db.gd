@@ -582,6 +582,8 @@ func _machine_move(section: String, machine_id: StringName) -> StringName:
 		return StringName(str(patched.get("move", "")))
 	if patched is String:
 		return StringName(patched)
+	if section == "tm_moves":
+		return MoveLessons.machine_move(machine_id)
 	return &""
 
 
@@ -620,8 +622,41 @@ func randomizer_input() -> Dictionary:
 	source["trades"] = _duplicate_table(_trades)
 	source["shops"] = _duplicate_table(_shops)
 	source["placements"] = _item_placements.duplicate(true)
+	_fill_machine_tables(source)
 	_annotate_randomizer_species(source)
 	return source
+
+
+## MT y tutores reales para el generador. El id de tutor es `tutor_` más el movimiento.
+func _fill_machine_tables(source: Dictionary) -> void:
+	source["tm_moves"] = {}
+	source["tutor_moves"] = {}
+	source["tm_compat"] = {}
+	source["tutor_compat"] = {}
+	for item_id: StringName in MoveLessons.machine_ids():
+		source.tm_moves[String(item_id)] = {"move": String(MoveLessons.machine_move(item_id)), "randomize": true}
+	var species_ids: Array = source.species.keys()
+	species_ids.sort()
+	for species_id: String in species_ids:
+		var learnset: Dictionary = source.learnsets.get(species_id, {})
+		var machines: Array = learnset.get("machine", [])
+		var compatible: Array[String] = []
+		for item_id: String in source.tm_moves:
+			if String(source.tm_moves[item_id]["move"]) in machines:
+				compatible.append(item_id)
+		if not compatible.is_empty():
+			compatible.sort()
+			source.tm_compat[species_id] = compatible
+		var tutors: Array = learnset.get("tutor", [])
+		var tutor_ids: Array[String] = []
+		for move_id: Variant in tutors:
+			var tutor_id := "tutor_" + str(move_id)
+			if not source.tutor_moves.has(tutor_id):
+				source.tutor_moves[tutor_id] = {"move": str(move_id), "randomize": true}
+			tutor_ids.append(tutor_id)
+		if not tutor_ids.is_empty():
+			tutor_ids.sort()
+			source.tutor_compat[species_id] = tutor_ids
 
 
 func _base_learnset(species_id: StringName) -> Dictionary:
