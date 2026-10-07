@@ -1,6 +1,7 @@
 class_name HealByWeatherMoveEffect
 extends BattleEffect
 ## Síntesis, Sol Matinal, Luz Lunar: la mitad de los PS; 2/3 con sol y 1/4 con otro clima.
+## Mismos factores y redondeo que Showdown: this.modify(maxhp, factor), con 0,667 para el sol.
 
 
 func on_hit(engine: BattleEngine, user: Battler, _target: Battler, _move: MoveData) -> int:
@@ -10,9 +11,9 @@ func on_hit(engine: BattleEngine, user: Battler, _target: Battler, _move: MoveDa
 	var fraction := 0.5
 	match engine.weather():
 		&"sunnyday":
-			fraction = 2.0 / 3.0
+			fraction = 0.667
 		&"raindance", &"sandstorm", &"snow":
 			fraction = 0.25
-	engine.heal(user, roundi(user.pokemon.max_hp() * fraction), &"move")
+	engine.heal(user, DamageCalc.modify(user.pokemon.max_hp(), fraction), &"move")
 	engine.message(tr("¡%s ha recuperado PS!") % engine.name_of(user))
 	return HANDLED

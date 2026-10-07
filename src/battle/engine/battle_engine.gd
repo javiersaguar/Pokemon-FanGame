@@ -3,6 +3,8 @@ extends RefCounted
 ## Motor de combate: lógica pura (sin nodos, sin await, sin nada visual). Contrato: docs/contratos.md §8.5.
 ## La BattleScene le envía decisiones (submit) y reproduce los BattleEvent que devuelve.
 ## Toda la aleatoriedad sale de `rng` (setup.seed): misma semilla + mismas decisiones = mismo combate.
+## Cada tirada pasa por rand_int() / rand_chance() con una etiqueta (crit, accuracy, damage_roll...),
+## para que las pruebas puedan fijar el azar con un oráculo (setup.rng_oracle, ver "Azar").
 ##
 ## Por dentro, el combate es una cola de pasos. Cuando hace falta una decisión del jugador
 ## (acción, cambio tras un debilitado, olvidar un movimiento), el motor deja una `request` y para.
@@ -14,6 +16,9 @@ const CRIT_CHANCES: Array[int] = [0, 24, 8, 2, 1]
 ## Reparto de golpes de los movimientos de 2 a 5 golpes (5.ª generación en adelante).
 const MULTIHIT_2_TO_5: Array[int] = [2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5]
 const STRUGGLE := &"struggle"
+## Objetivos que solo pueden ser un aliado: sin aliado, el movimiento falla. ("allies" incluye al
+## usuario en Showdown: Aullido o Rocío Vital funcionan en individuales.)
+const ALLY_ONLY_TARGETS: Array[StringName] = [&"adjacent_ally"]
 ## Volátiles que pasa Relevo al que entra.
 const BATON_PASS_VOLATILES: Array[StringName] = [&"confusion", &"focusenergy", &"leechseed"]
 const MAX_TOXIC_STAGE := 15
@@ -61,6 +66,9 @@ var _dynamax_used: Array[bool] = [false, false]
 ## Este bando ya ha teracristalizado. uid -> tipo, para que siga al volver a salir.
 var _tera_used: Array[bool] = [false, false]
 var _tera_of: Dictionary = {}
+## Al empezar el combate, los efectos de entrada se aplazan hasta que salen todos (ver _flush_intro_switch_ins).
+var _defer_switch_in := false
+var _deferred_switch_ins: Array[Battler] = []
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -241,8 +249,10 @@ func _step_intro() -> void:
 		push_error("BattleEngine: un bando no tiene ningún Pokémon que pueda luchar.")
 		_finish(BattleResult.LOSE if player_index < 0 else BattleResult.WIN)
 		return
+	_defer_switch_in = true
 	if is_double():
 		_intro_doubles()
+		_flush_intro_switch_ins()
 		_queue.append(_step_next_request)
 		return
 	if setup.is_wild():
@@ -252,6 +262,7 @@ func _step_intro() -> void:
 		_msg(tr("¡%s te desafía!") % _trainer_name(), "challenge")
 		_send_out(FOE, foe_index)
 	_send_out(PLAYER, player_index)
+	_flush_intro_switch_ins()
 	_queue.append(_step_next_request)
 
 
@@ -342,10 +353,48 @@ func _request_double_slot() -> void:
 	_begin_turn(null)
 
 
+# --- Azar ---
+# Sin oráculo, cada función consume `rng` exactamente igual que las llamadas que sustituye
+# (mismas semillas = mismos combates que antes). Con setup.rng_oracle (solo en pruebas, como la
+# comparación con Showdown), el resultado sale de oracle.call(tag, turn) -> u en [0, 1), con la
+# misma conversión que usa Showdown: entero = lo + floor(u·n) y probabilidad = floor(u·den) < num.
+
+## Entero entre `lo` y `hi`, ambos incluidos.
+func rand_int(tag: StringName, lo: int, hi: int) -> int:
+	if setup.rng_oracle.is_valid():
+		return lo + mini(floori(_oracle_u(tag) * (hi - lo + 1)), hi - lo)
+	return rng.randi_range(lo, hi)
+
+
+## `num` entre `den` de probabilidad.
+func rand_chance(tag: StringName, num: int, den: int) -> bool:
+	if setup.rng_oracle.is_valid():
+		return floori(_oracle_u(tag) * den) < num
+	return rng.randi_range(0, den - 1) < num
+
+
+func _oracle_u(tag: StringName) -> float:
+	return clampf(float(setup.rng_oracle.call(tag, turn)), 0.0, 0.999999)
+
+
+## En pruebas con oráculo, avisa de un empate de orden (Showdown lo resuelve con su propio azar).
+func _notify_order_ties(entries: Array[Dictionary]) -> void:
+	if not setup.rng_oracle.is_valid():
+		return
+	for i: int in range(1, entries.size()):
+		var a: Dictionary = entries[i - 1]
+		var b: Dictionary = entries[i]
+		if a["order"] == b["order"] and a["priority"] == b["priority"] and a["speed"] == b["speed"]:
+			setup.rng_oracle.call(&"speed_tie", turn)
+			return
+
+
 # --- Turno ---
 
 func _begin_turn(player_action: Variant = null) -> void:
 	turn += 1
+	if setup.turn_observer.is_valid():
+		setup.turn_observer.call(self, turn)
 	_emit(BattleEvent.TURN, -1, -1, {"turn": turn})
 	_turn_actions.clear()
 	var entries: Array[Dictionary] = []
@@ -359,6 +408,8 @@ func _begin_turn(player_action: Variant = null) -> void:
 				action = _sanitize(b, _double_chosen[slot])
 			if action == null and side_index == PLAYER and slot == 0 and player_action != null:
 				action = _sanitize(b, player_action)
+			if action == null and side_index == FOE and setup.foe_controller.is_valid():
+				action = _sanitize(b, setup.foe_controller.call(self, side_index, slot))
 			if action == null:
 				action = BattleAI.choose_action(self, side_index, slot, setup.ai_level)
 			b.moved_this_turn = false
@@ -379,6 +430,7 @@ func _begin_turn(player_action: Variant = null) -> void:
 			})
 	_double_chosen.clear()
 	entries.sort_custom(_entry_goes_first)
+	_notify_order_ties(entries)
 	for e: Dictionary in entries:
 		_queue.append(_step_action.bind(e))
 	_queue.append(_step_end_of_turn)
@@ -663,7 +715,8 @@ func _step_foe_replacement() -> void:
 		var b := active(FOE, slot)
 		if b == null or not b.is_fainted():
 			continue
-		var index := BattleAI.choose_replacement(self, FOE)
+		var index := int(setup.foe_replacement.call(self)) if setup.foe_replacement.is_valid() \
+				else BattleAI.choose_replacement(self, FOE)
 		if index < 0:
 			return
 		if not is_double() and _shift_prompt():
@@ -830,7 +883,15 @@ func _put_in(side_index: int, index: int, wild_appearance: bool, slot: int = 0) 
 		if mine != null and not mine.is_fainted():
 			_mark_participant(p, mine.pokemon)
 	_emit(BattleEvent.SWITCH_IN, side_index, slot, data)
-	var conditions := _sides[side_index].conditions
+	if _defer_switch_in:
+		_deferred_switch_ins.append(b)
+		return
+	_switch_in_effects(b)
+
+
+## Trampas del bando y habilidades de entrada (Intimidación...) de `b` al salir al campo.
+func _switch_in_effects(b: Battler) -> void:
+	var conditions := _sides[b.side].conditions
 	for id: StringName in conditions.keys():
 		var effect := Effects.condition(id)
 		if effect != null and not b.is_fainted():
@@ -838,6 +899,18 @@ func _put_in(side_index: int, index: int, wild_appearance: bool, slot: int = 0) 
 	if not b.is_fainted():
 		for passive: BattleEffect in _passives(b):
 			passive.on_switch_in(self, b, {})
+
+
+## Al empezar el combate, los efectos de entrada esperan a que estén todos en el campo y van por
+## orden de Velocidad (como en Showdown): si no, la Intimidación del rival no encuentra a nadie.
+func _flush_intro_switch_ins() -> void:
+	_defer_switch_in = false
+	var order: Array[Battler] = _deferred_switch_ins.duplicate()
+	_deferred_switch_ins.clear()
+	order.sort_custom(func(a: Battler, b: Battler) -> bool: return _speed(a) > _speed(b))
+	for b: Battler in order:
+		if not b.is_fainted() and b in _sides[b.side].active:
+			_switch_in_effects(b)
 
 
 func _mark_participant(foe: Pokemon, mine: Pokemon) -> void:
@@ -900,7 +973,7 @@ func _do_run(b: Battler) -> void:
 	var escaped := (escape_ability != null and escape_ability.guarantees_escape()) or mine >= theirs
 	if not escaped:
 		var odds := mine * 128 / theirs + 30 * _flee_attempts
-		escaped = odds > 255 or rng.randi_range(0, 255) < odds
+		escaped = odds > 255 or rand_chance(&"run", odds, 256)
 	_emit(BattleEvent.FLEE, PLAYER, b.slot, {"success": escaped})
 	if escaped:
 		_msg(tr("¡Escapaste sin problemas!"))
@@ -1111,7 +1184,7 @@ func _before_move(user: Battler, move: MoveData) -> bool:
 			if not move.sleep_usable:
 				return false
 	if p.status == &"frz":
-		if move.has_flag(&"defrost") or rng.randi_range(0, 4) == 0:
+		if move.has_flag(&"defrost") or rand_chance(&"frz_thaw", 1, 5):
 			_cure_status(user)
 		else:
 			_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "frz"})
@@ -1127,17 +1200,17 @@ func _before_move(user: Battler, move: MoveData) -> bool:
 			_end_confusion(user)
 		else:
 			_msg(tr("¡%s está confuso!") % name)
-			if rng.randi_range(0, 99) < CONFUSION_SELF_HIT_PERCENT:
+			if rand_chance(&"confusion_hit", CONFUSION_SELF_HIT_PERCENT, 100):
 				_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "confusion"})
 				_msg(tr("¡Está tan confuso que se ha herido a sí mismo!"))
-				_damage(user, DamageCalc.confusion_damage(user, rng.randi_range(0, DamageCalc.ROLLS - 1)), &"confusion")
+				_damage(user, DamageCalc.confusion_damage(user, rand_int(&"damage_roll", 0, DamageCalc.ROLLS - 1)), &"confusion")
 				return false
 	for h: Array in hooks:
 		var priority := (h[0] as BattleEffect).before_move_priority()
 		if priority < 10 and priority > 1 and user.volatiles.has(StringName(str(h[1].get("id", "")))) \
 				and not (h[0] as BattleEffect).on_before_move(self, user, h[1], move):
 			return false
-	if p.status == &"par" and rng.randi_range(0, 3) == 0:
+	if p.status == &"par" and rand_chance(&"par", 1, 4):
 		_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "par"})
 		_msg(tr("¡%s está paralizado! ¡No se puede mover!") % name)
 		return false
@@ -1158,6 +1231,10 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 	if effect != null and effect.charge_turn(self, user, move):
 		return false
 	if not _supported(move):
+		_msg(tr("¡Pero falló!"))
+		return false
+	if move.target in ALLY_ONLY_TARGETS and not _has_ally(user):
+		# Motivación, Niebla Aromática, Refuerzo...: sin aliado (individuales) fallan, como en Showdown.
 		_msg(tr("¡Pero falló!"))
 		return false
 	if target == null or target.is_fainted():
@@ -1187,6 +1264,14 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 			for hit: Battler in targets:
 				_apply_damaging_move(user, hit, move, effect, spread)
 	return true
+
+
+## ¿Tiene `user` un aliado en el campo (solo en dobles)?
+func _has_ally(user: Battler) -> bool:
+	if not is_double():
+		return false
+	var ally := active(user.side, 1 - user.slot)
+	return ally != null and not ally.is_fainted()
 
 
 ## Objetivo: el usuario para los de su bando; en dobles, el slot elegido o el aliado.
@@ -1266,10 +1351,13 @@ func _is_immune(target: Battler, move: MoveData) -> bool:
 
 
 func _accuracy_hits(user: Battler, target: Battler, move: MoveData, effect: BattleEffect = null) -> bool:
+	# Tóxico usado por un Pokémon de tipo Veneno no falla nunca (6.ª generación en adelante).
+	if move.id == &"toxic" and user.has_type(&"poison"):
+		return true
 	if move.ohko != &"":
 		var ohko_accuracy := 20 if move.ohko == &"ice" and not user.has_type(&"ice") else 30
 		ohko_accuracy += user.pokemon.level - target.pokemon.level
-		return rng.randi_range(0, 99) < ohko_accuracy
+		return rand_chance(&"accuracy", ohko_accuracy, 100)
 	var accuracy := move.accuracy
 	if effect != null:
 		var override := effect.accuracy(self, user, target, move)
@@ -1288,14 +1376,14 @@ func _accuracy_hits(user: Battler, target: Battler, move: MoveData, effect: Batt
 		stage = maxi(0, stage)
 	elif not move.ignore_evasion:
 		stage = clampi(stage - target.boosts[&"evasion"], -6, 6)
-	return rng.randi_range(0, 99) < StatCalc.apply_accuracy_stage(accuracy, stage)
+	return rand_chance(&"accuracy", StatCalc.apply_accuracy_stage(accuracy, stage), 100)
 
 
 func _roll_hits(move: MoveData) -> int:
 	if move.multihit_min == 2 and move.multihit_max == 5:
-		return MULTIHIT_2_TO_5[rng.randi_range(0, MULTIHIT_2_TO_5.size() - 1)]
+		return MULTIHIT_2_TO_5[rand_int(&"multihit", 0, MULTIHIT_2_TO_5.size() - 1)]
 	if move.multihit_min != move.multihit_max:
-		return rng.randi_range(move.multihit_min, move.multihit_max)
+		return rand_int(&"multihit", move.multihit_min, move.multihit_max)
 	return move.multihit_min
 
 
@@ -1303,7 +1391,7 @@ func _roll_crit(user: Battler, move: MoveData) -> bool:
 	if move.will_crit:
 		return true
 	var ratio := clampi(move.crit_ratio + user.crit_stage, 0, CRIT_CHANCES.size() - 1)
-	return ratio > 0 and rng.randi_range(0, CRIT_CHANCES[ratio] - 1) == 0
+	return ratio > 0 and rand_chance(&"crit", 1, CRIT_CHANCES[ratio])
 
 
 func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect: BattleEffect = null, spread: bool = false) -> void:
@@ -1331,7 +1419,7 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			crit = _roll_crit(user, move)
 			var opts := _damage_opts(user, target, move, effect, crit)
 			opts["spread"] = spread
-			amount = DamageCalc.calculate(user, target, move, crit, rng.randi_range(0, DamageCalc.ROLLS - 1), opts)
+			amount = DamageCalc.calculate(user, target, move, crit, rand_int(&"damage_roll", 0, DamageCalc.ROLLS - 1), opts)
 		total += _damage(target, amount, &"move", effectiveness, crit, move)
 		landed += 1
 		if crit:
@@ -1339,7 +1427,7 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		if target.pokemon.status == &"frz" and not target.is_fainted() and (move.type == &"fire" or move.thaws_target):
 			_cure_status(target)
 		for sec: Dictionary in move.secondaries:
-			if rng.randi_range(0, 99) < int(sec.get("chance", 100)):
+			if rand_chance(&"secondary", int(sec.get("chance", 100)), 100):
 				_apply_secondary(user, target, sec)
 	if move.ohko != &"" and target.is_fainted():
 		_msg(tr("¡Es un golpe fulminante!"))
@@ -1373,7 +1461,9 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	if user.pokemon.held_item == &"lifeorb" and total > 0 and not user.is_fainted():
 		_damage(user, maxi(1, user.pokemon.max_hp() / 10), &"item")
 		_msg(tr("¡%s se ha hecho daño con la Vidasfera!") % BattleText.cap_name(user, wild))
-	if target.is_fainted():
+	# Como en Showdown, si el KO acaba el combate (al rival no le quedan Pokémon), Autoestima y
+	# compañía ya no se activan.
+	if target.is_fainted() and _sides[target.side].first_able_index() >= 0:
 		var pride := Effects.ability(user.ability)
 		if pride != null:
 			pride.on_foe_fainted(self, user)
@@ -1398,10 +1488,16 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 	for passive: BattleEffect in _passives(user):
 		power = passive.modify_base_power(self, user, target, move, power)
 		atk_mod *= passive.stat_modifier(self, user, atk_stat)
+		atk_mod *= passive.move_stat_modifier(self, user, move)
 	for passive: BattleEffect in _passives(target):
 		def_mod *= passive.stat_modifier(self, target, def_stat)
 	var final_mods: Array = []
+	# Condiciones del campo, del bando y volátiles del objetivo (Reflejo...). Su habilidad y su objeto
+	# no: su damage_modifier es ofensivo (Francotirador, Cromolente, Vidasfera) y solo vale para el usuario.
+	var target_passives := _passives(target)
 	for c: Array in _conditions_of(target):
+		if c[0] in target_passives:
+			continue
 		var m := (c[0] as BattleEffect).damage_modifier(self, user, target, move, crit)
 		if m != 1.0:
 			final_mods.append(m)
@@ -1530,7 +1626,7 @@ func _try_set_status(target: Battler, status: StringName, announce: bool, source
 			return false
 	if not can_set_status(target, status, source, announce):
 		return false
-	target.pokemon.set_status(status, rng.randi_range(2, 4) if status == &"slp" else 0)
+	target.pokemon.set_status(status, rand_int(&"slp_turns", 2, 4) if status == &"slp" else 0)
 	if status == &"tox":
 		target.toxic_stage = 0
 	_emit(BattleEvent.STATUS, target.side, target.slot, {"status": String(status)})
@@ -1568,7 +1664,7 @@ func _try_confuse(target: Battler, announce: bool, source: Battler = null) -> bo
 		consume_held_item(target)
 		_msg(tr("¡La baya de %s evita la confusión!") % target.pokemon.display_name())
 		return false
-	target.volatiles[&"confusion"] = {"turns": rng.randi_range(2, 5)}
+	target.volatiles[&"confusion"] = {"turns": rand_int(&"confusion_turns", 2, 5)}
 	_emit(BattleEvent.VOLATILE, target.side, target.slot, {"volatile": "confusion", "active": true})
 	_msg(tr("¡%s se ha quedado confuso!") % name)
 	return true
@@ -2087,10 +2183,10 @@ func _max_raise_side(user: Battler, stat: StringName) -> void:
 
 func _speed(b: Battler) -> int:
 	var spe := b.effective_speed()
+	# _conditions_of() ya incluye la habilidad y el objeto: aplicarlos otra vez doblaba Clorofila,
+	# Nado Rápido, Liviano... (×4 en vez de ×2).
 	for c: Array in _conditions_of(b):
 		spe = (c[0] as BattleEffect).modify_speed(self, b, spe)
-	for passive: BattleEffect in _passives(b):
-		spe = passive.modify_speed(self, b, spe)
 	return spe
 
 
@@ -2408,7 +2504,7 @@ func force_switch(target: Battler) -> bool:
 			options.append(i)
 	if options.is_empty():
 		return false
-	var index: int = options[rng.randi_range(0, options.size() - 1)]
+	var index: int = options[rand_int(&"force_switch", 0, options.size() - 1)]
 	_emit(BattleEvent.SWITCH_OUT, target.side, target.slot, {"party_index": target.party_index})
 	_revert_forme(target)
 	_put_in(target.side, index, false)

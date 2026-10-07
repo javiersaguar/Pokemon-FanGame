@@ -4,7 +4,7 @@ extends BattleEffect
 
 
 func duration(engine: BattleEngine) -> int:
-	return engine.rng.randi_range(5, 6)
+	return engine.rand_int(&"partiallytrapped_turns", 5, 6)
 
 
 func residual_order() -> int:

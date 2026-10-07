@@ -326,7 +326,8 @@ func test_sintesis_segun_el_clima() -> void:
 	engine.submit(BattleAction.fight(1))
 	p.current_hp = 1
 	engine.submit(BattleAction.fight(0))
-	assert_eq(p.current_hp, 1 + roundi(p.max_hp() * 0.25), "con lluvia, 1/4")
+	# Mismo redondeo que Showdown (this.modify): 102 · 0,25 = 25,5 → 25.
+	assert_eq(p.current_hp, 1 + DamageCalc.modify(p.max_hp(), 0.25), "con lluvia, 1/4")
 
 
 func test_espejo_copia_el_ultimo_movimiento() -> void:
