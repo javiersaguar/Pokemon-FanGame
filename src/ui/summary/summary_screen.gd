@@ -87,6 +87,7 @@ func show_page(new_page: int) -> void:
 
 
 func _process(delta: float) -> void:
+	if UiPreferences.reduce_motion(): return
 	_icon_time += delta
 	if _icon_time >= ICON_FRAME_TIME:
 		_icon_time -= ICON_FRAME_TIME
@@ -264,8 +265,10 @@ func _page_stats(p: Pokemon) -> void:
 		var y := 44 + (0 if i == 0 else 8 + i * 14)
 		var key := _add_label(tr(STAT_NAMES[stat]), Vector2(136, y), &"KeyLabel", _page_root)
 		if nature and stat == nature.plus:
+			key.text += " +"
 			key.add_theme_color_override(&"font_color", Color("be4844"))
 		elif nature and stat == nature.minus:
+			key.text += " -"
 			key.add_theme_color_override(&"font_color", Color("2e68a6"))
 		var value := "%d/%d" % [p.current_hp, p.max_hp()] if stat == &"hp" else str(p.stat(stat))
 		var label := _add_label(value, Vector2(196, y), &"", _page_root)

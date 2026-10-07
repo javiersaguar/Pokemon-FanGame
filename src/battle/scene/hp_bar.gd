@@ -29,7 +29,7 @@ var _tween: Tween
 func animate_to(target: float, duration: float) -> void:
 	if _tween:
 		_tween.kill()
-	if duration <= 0.0 or is_equal_approx(target, ratio):
+	if UiPreferences.reduce_motion() or duration <= 0.0 or is_equal_approx(target, ratio):
 		ratio = target
 		ghost = target
 		return

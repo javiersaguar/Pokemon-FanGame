@@ -165,17 +165,24 @@ func _refresh_card() -> void:
 func _process(delta: float) -> void:
 	_clock += delta
 	_elapsed += delta
-	for i: int in layers.size():
-		layers[i].position.x = -float(int(_clock * (i + 1) * 2.0) % 64) * 0.5
-	for i: int in pokemon.size():
-		pokemon[i].position.y = 108 + round(sin(_clock * 2.0 + i * 1.6) * 2.0)
-	if logo:
-		logo.position.y = 45 + round(sin(_clock * 1.4)) - round(12 * pow(maxf(0.0, 1.0 - _elapsed / 0.25), 2))
-		logo.modulate = Color.WHITE.lerp(Color("fff4d8"), maxf(sin(_clock * 0.8), 0.0) * 0.3)
-	if _start:
-		_start.modulate.a = 0.65 + sin(_clock * 2.0) * 0.25
-	if _message.visible:
-		_message.modulate.a = minf(_elapsed / 0.2, 1.0)
+	if UiPreferences.reduce_motion():
+		for layer: TextureRect in layers: layer.position.x = 0
+		for sprite: Sprite2D in pokemon: sprite.position.y = 108
+		if logo: logo.position.y = 45; logo.modulate = Color.WHITE
+		if _start: _start.modulate.a = 1.0
+		_message.modulate.a = 1.0
+	else:
+		for i: int in layers.size():
+			layers[i].position.x = -float(int(_clock * (i + 1) * 2.0) % 64) * 0.5
+		for i: int in pokemon.size():
+			pokemon[i].position.y = 108 + round(sin(_clock * 2.0 + i * 1.6) * 2.0)
+		if logo:
+			logo.position.y = 45 + round(sin(_clock * 1.4)) - round(12 * pow(maxf(0.0, 1.0 - _elapsed / 0.25), 2))
+			logo.modulate = Color.WHITE.lerp(Color("fff4d8"), maxf(sin(_clock * 0.8), 0.0) * 0.3)
+		if _start:
+			_start.modulate.a = 0.65 + sin(_clock * 2.0) * 0.25
+		if _message.visible:
+			_message.modulate.a = minf(_elapsed / 0.2, 1.0)
 	match stage:
 		&"splash":
 			if _elapsed >= 1.6: set_stage(&"notice")

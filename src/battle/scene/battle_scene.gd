@@ -565,16 +565,21 @@ func _intro(start_events: Array) -> void:
 	if not wild.is_empty():
 		_foe_sprite.set_pokemon(wild)
 		_foe_sprite.position.x = OFFSCREEN_LEFT
-	var duration := maxf(_t(0.6), 0.001)
-	var tween := create_tween().set_parallel().set_ease(Tween.EASE_OUT)
-	tween.tween_method(func(p: Vector2) -> void: _player_trainer.position = p.round(),
-		_player_trainer.position, player_home, duration)
-	tween.tween_method(func(p: Vector2) -> void: _foe_trainer.position = p.round(),
-		_foe_trainer.position, foe_home, duration)
-	if not wild.is_empty():
-		tween.tween_method(func(p: Vector2) -> void: _foe_sprite.position = p.round(),
-			_foe_sprite.position, _foe_sprite.home(), duration)
-	await tween.finished
+	if _t(0.6) <= 0.0:
+		_player_trainer.position = player_home
+		_foe_trainer.position = foe_home
+		if not wild.is_empty(): _foe_sprite.position = _foe_sprite.home()
+	else:
+		var duration := maxf(_t(0.6), 0.001)
+		var tween := create_tween().set_parallel().set_ease(Tween.EASE_OUT)
+		tween.tween_method(func(p: Vector2) -> void: _player_trainer.position = p.round(),
+			_player_trainer.position, player_home, duration)
+		tween.tween_method(func(p: Vector2) -> void: _foe_trainer.position = p.round(),
+			_foe_trainer.position, foe_home, duration)
+		if not wild.is_empty():
+			tween.tween_method(func(p: Vector2) -> void: _foe_sprite.position = p.round(),
+				_foe_sprite.position, _foe_sprite.home(), duration)
+		await tween.finished
 	if not trainer.is_empty():
 		await _message(tr("¡%s te desafía!") % trainer.get("display_name", ""))
 

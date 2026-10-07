@@ -48,6 +48,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if not Engine.is_editor_hint() and UiPreferences.reduce_motion():
+		_bob_offset = 0
+		queue_redraw()
+		return
 	_bob_time += delta
 	if _bob_time >= BOB_INTERVAL:
 		_bob_time -= BOB_INTERVAL

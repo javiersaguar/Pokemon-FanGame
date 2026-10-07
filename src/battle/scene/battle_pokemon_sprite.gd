@@ -37,6 +37,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if UiPreferences.reduce_motion():
+		if _sprite: _sprite.position.y = 0
+		return
 	if not idle or not visible:
 		return
 	_idle_time += delta

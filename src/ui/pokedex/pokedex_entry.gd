@@ -51,7 +51,7 @@ func _refresh_entry() -> void:
 	_sprite.set_pokemon({"species":species_id,"shiny":shiny})
 	_detail.text = "Áreas registradas\n\n" + "\n".join(areas(species_id)) if show_area else "%s\n%.1f m / %.1f kg\n%s\n%s\n\n%s" % [" / ".join(data.types.map(func(id: StringName) -> String: return DataDB.type_name(id))),data.height,data.weight,data.genus.replace("Pokemon","Pokémon") + ("\n" + data.form_name if not data.form_name.is_empty() else ""),"Variocolor" if shiny else "Color normal",data.dex_entry if GameState.pokedex.is_caught(species_id) else "Captura a este Pokémon para leer su entrada."]
 	_scroll.scroll_vertical = 0
-	hint.text = "Izq/Der: forma / Y: color / C: área / B: volver"
+	hint.text = "Izq/Der: forma / R/Y: color / C: área / B: salir"
 
 static func areas(id: StringName) -> PackedStringArray:
 	var found := PackedStringArray()

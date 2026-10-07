@@ -53,6 +53,15 @@ func run() -> void:
 			var settings_class = load("res://src/randomizer/randomizer_settings.gd")
 			screen.rom = patch_class.generate(713,settings_class.from_preset("clasico"))
 		root.add_child(screen)
+	elif case_name.begins_with("summary_"):
+		screen = load("res://src/ui/summary/summary_screen.gd").new()
+		root.add_child(screen)
+		var p = load("res://src/pokemon/pokemon.gd").create(&"charmander",16)
+		p.nature = &"adamant"
+		p.nickname = "Panchito"
+		screen.party.assign([p,load("res://src/pokemon/pokemon.gd").create(&"pidgey",7)])
+		screen._refresh()
+		screen.show_page({"summary_data":0,"summary_notes":1,"summary_stats":2}.get(case_name,0))
 	elif case_name in ["daycare","hatching_egg","hatching_born"]:
 		var p = load("res://src/pokemon/pokemon.gd").create(&"charmander",1)
 		if case_name == "daycare":
@@ -152,7 +161,8 @@ func run() -> void:
 		else:
 			screen = load("res://src/ui/title/title_screen.gd").new()
 			screen.skip_sequence = true
-			if case_name.begins_with("title_"):
+			if case_name == "title_reduced": load("res://src/ui/options/ui_preferences.gd").set_value("reduce_animations",true,false)
+			elif case_name.begins_with("title_"):
 				screen.logo_variant = int(case_name.trim_prefix("title_"))
 		root.add_child(screen)
 		if case_name == "credits":

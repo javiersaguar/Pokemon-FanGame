@@ -21,5 +21,8 @@ func _ready() -> void:
 	explanation.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	hint.text = "Generación en curso / espera un momento"
 func _process(delta: float) -> void:
+	if UiPreferences.reduce_motion():
+		status.text = "Generando la ROM..."
+		return
 	elapsed += delta
 	status.text = "Generando la ROM"+".".repeat(1+int(elapsed*3)%3)

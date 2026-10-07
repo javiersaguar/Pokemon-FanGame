@@ -12,6 +12,8 @@ var _cancelled := false
 var _animating := true
 var _completed := false
 var _audio_saved := false
+var _reduced_confirm := false
+var _reduced_waiting := false
 
 static func open(p: Pokemon, evo: Dictionary, item: StringName = &"", quick := false) -> bool:
 	if p == null or p.is_fainted() or not DataDB.has_species(StringName(evo.get("to", ""))): return false
@@ -48,11 +50,18 @@ func run() -> void:
 	AudioManager.play_bgm(&"evolution")
 	if not fast: AudioManager.play_me(&"evolution")
 	var original := pokemon.species_id
-	for step: int in 16:
-		_sprite.set_pokemon({"species": original if step % 2 == 0 else StringName(evolution.to), "shiny": pokemon.shiny})
-		_flash.set_shader_parameter(&"whiten", 1.0)
-		await get_tree().create_timer(0.01 if fast else 0.28 - step * 0.013).timeout
-		if _cancelled: break
+	if UiPreferences.reduce_motion() and not fast:
+		if item_id == &"":
+			_reduced_waiting = true
+			hint.text = "A: evolucionar / B: detener"
+			while is_inside_tree() and not _reduced_confirm and not _cancelled: await get_tree().process_frame
+			_reduced_waiting = false
+	else:
+		for step: int in 16:
+			_sprite.set_pokemon({"species": original if step % 2 == 0 else StringName(evolution.to), "shiny": pokemon.shiny})
+			_flash.set_shader_parameter(&"whiten", 1.0)
+			await get_tree().create_timer(0.01 if fast else 0.28 - step * 0.013).timeout
+			if _cancelled: break
 	_animating = false
 	_flash.set_shader_parameter(&"whiten", 0.0)
 	if _cancelled:
@@ -87,6 +96,10 @@ static func apply_evolution(p: Pokemon, evo: Dictionary, item: StringName = &"")
 		GameState.pokedex.register(extra)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if _reduced_waiting and event.is_action_pressed(&"accept"):
+		_reduced_confirm = true
+		get_viewport().set_input_as_handled()
+		return
 	if _animating and item_id == &"" and event.is_action_pressed(&"cancel"):
 		_cancelled = true
 	elif _completed and (event.is_action_pressed(&"accept") or event.is_action_pressed(&"cancel")): _finish()
