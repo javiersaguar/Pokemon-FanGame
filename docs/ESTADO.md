@@ -160,7 +160,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-06) el aviso de la sesión de 2 agentes y la lista de «Sesión con 2 agentes». Los Agentes 1 y 4 están parados. Worktree: `/home/javier/proyectos/pokemon-panchito-agente2`.
 
-**En qué estoy:** sesión del 2026-10-07, de arriba abajo. Hechas la 1 a la 6. Siguiente: simulación en masa contra los líderes.
+**En qué estoy:** sesión del 2026-10-07, de arriba abajo. Hechas la 1 a la 7 (la 8 y la 9 son del Agente 5). Siguiente: Torre de Batalla.
 
 **Bloque I:**
 1. ✅ Configuración única en `data/randomizer/`. Retirado `data/randomizer.json`. El validador exige que `policy.json` coincida con `presets.json` y `prohibidos.json`, que los ids prohibidos existan y que el esquema coincida con `RandomizerSettings`.
@@ -396,7 +396,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 4. ✅ **Fase 14.3, crianza** (2026-10-06): `Daycare` en el contrato. Grupos, sexo, Ditto, especie base, pasos, Lazo Destino, Piedra Eterna, Ball, movimientos huevo, Cuerpo Llama, Masuda (lo dice quien llama) y Pokérus. Los bebés de incienso quedan pendientes.
 5. ✅ **Evoluciones y movimientos** (2026-10-07): hora, amistad, objeto, lugar, movimiento, clima y Milcery al girar con un confite (petición 58). Recordador, tutores y MT por el texto del objeto. Dónde se consiguen las MT y el número de las MT 100+ (sin texto) quedan PENDIENTE JAVIER. El sabor de Alcremie también.
 6. ✅ **RandomLocke** (2026-10-07): spoilers en `user://randomlocke/<código>_spoilers.txt`, el shiny del ajuste manda al aplicar la ROM, y las MT y tutores de la tarea 5 entran en el generador. El dorado solo cambió `input_hash`.
-7. **Fase 20.2:** herramienta de simulación en masa (equipo esperado contra cada líder, porcentaje de victorias) en `tools/`.
+7. ✅ **Fase 20.2** (2026-10-07): `BalanceSim` y `tools/balance/simulate.gd`. Los líderes y el equipo esperado están en `data/balance/leaders.json`, vacíos hasta que Javier los decida (PENDIENTE JAVIER). Si el motor da un resultado imposible, petición al Agente 5.
 8. **Cobertura total del combate:** habilidades, objetos y movimientos con script para **todas** las especies del juego, no solo las del MVP, ampliando el validador para que lo compruebe. De más usadas a menos, en entregas.
 9. **Pruebas diferenciales contra Showdown** (la mejor garantía de que el combate es fiel): un arnés en `tools/` (Node) que juega **miles de combates con la misma semilla, equipos y decisiones** en el simulador de Showdown y en nuestro `BattleEngine`, y compara el registro turno a turno (daño, orden, estados, críticos, fallos y KO). Informe de discrepancias en `docs/combate/diferencias_showdown.md`, corregir las que sean bugs nuestros y documentar las diferencias intencionadas. Una muestra pequeña entra en la suite normal y la grande va como test lento.
 10. **Torre de Batalla** (Fase 19.3, lógica pura): reglas a nivel 50 y prohibidos, generación de equipos rivales por ronda y racha, puntos de batalla y recompensas, con los datos en `data/` y API para el mundo y la interfaz. Los nombres y premios concretos quedan como "POR DEFINIR" para Javier.
@@ -626,6 +626,7 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|
+| 2026-10-07 | A2 | `BalanceSim` (Fase 20.2). Los líderes y el equipo esperado de `data/balance/leaders.json` quedan PENDIENTE JAVIER. |
 | 2026-10-07 | A2 | El generador recibe las MT y los tutores. `RomPatch.export_spoilers()` escribe `user://randomlocke/<código>_spoilers.txt`. El shiny de la ROM sigue siendo `settings.shiny_denominator`. |
 | 2026-10-07 | A2 | `MoveLessons` y Milcery (`special_target` con `spin` y un confite). `DataDB.tm_move` usa el catálogo de MT y el parche lo sustituye. |
 | 2026-10-06 | A2 | `Daycare`: compatibilidad, huevo, herencia, Cuerpo Llama, Masuda y Pokérus. Los bebés de incienso quedan pendientes. |

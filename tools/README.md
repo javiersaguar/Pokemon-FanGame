@@ -105,3 +105,11 @@ node tools/wikidex/verify_stats.mjs --species pikachu,garchomp
 ```bash
 godot --headless --path . -s res://tools/validate/validate.gd   # sale con código 1 si hay errores
 ```
+
+## `balance`: simulación contra líderes (Fase 20.2)
+
+```bash
+godot --headless --path . -s res://tools/balance/simulate.gd -- --games=20 --seed=1
+```
+
+Lee `data/balance/leaders.json`. La lista de líderes y el equipo esperado están **PENDIENTE JAVIER**: si faltan, no inventa ninguno y solo lo dice. `BalanceSim.simulate` es la API (porcentaje de victorias de la IA).
