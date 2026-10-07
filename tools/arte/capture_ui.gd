@@ -187,6 +187,11 @@ func run() -> void:
 	else:
 		screen = load("res://src/ui/options/options_screen.gd").new()
 		root.add_child(screen)
+		if case_name in ["options_yellow","options_green"]:
+			load("res://src/ui/options/ui_preferences.gd").set_value("frame",1 if case_name == "options_yellow" else 2,false)
+		if case_name == "options_volumes":
+			screen.page = 1
+			screen.menu._finish(-2)
 		runtime = load("res://src/ui/ui_runtime.gd").new()
 		root.add_child(runtime)
 		if case_name == "run_notice":
