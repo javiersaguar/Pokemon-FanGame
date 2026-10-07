@@ -8,7 +8,7 @@ func on_after_move(engine: BattleEngine, user: Battler, move: MoveData, hit: boo
 		return
 	if not user.has_volatile(&"lockedmove"):
 		if hit:
-			engine.add_volatile(user, &"lockedmove", user, {"move": String(move.id), "uses_left": engine.rng.randi_range(2, 3) - 1})
+			engine.add_volatile(user, &"lockedmove", user, {"move": String(move.id), "uses_left": engine.rand_int(&"lockedmove_turns", 2, 3) - 1})
 		return
 	var state: Dictionary = user.volatiles[&"lockedmove"]
 	state["uses_left"] = int(state["uses_left"]) - 1

@@ -22,7 +22,7 @@ func on_before_move(engine: BattleEngine, battler: Battler, state: Dictionary, _
 		engine.remove_volatile(battler, &"attract")
 		return true
 	engine.message(tr("¡%s está enamorado %s!") % [engine.name_of(battler), engine.of_name(source)])
-	if engine.rng.randi_range(0, 1) == 0:
+	if engine.rand_chance(&"attract", 1, 2):
 		engine.message(tr("¡El enamoramiento impide que %s ataque!") % engine.inner_name_of(battler))
 		return false
 	return true

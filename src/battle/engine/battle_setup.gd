@@ -57,6 +57,15 @@ var ai_level: int = 0
 ## Especies base ya capturadas (Ball Acopio) y cuántas hay (captura crítica).
 var caught_species: Dictionary[StringName, bool] = {}
 var dex_caught_count: int = 0
+## Solo para pruebas (comparación con Showdown): fija el azar. Recibe (etiqueta, turno) y devuelve
+## u en [0, 1). Ver BattleEngine "Azar". Vacío = se usa la semilla, como siempre.
+var rng_oracle: Callable = Callable()
+## Solo para pruebas: elige la acción del rival en vez de la IA. (engine, bando, slot) -> BattleAction.
+var foe_controller: Callable = Callable()
+## Solo para pruebas: elige el rival que entra tras un debilitado. (engine) -> índice del equipo.
+var foe_replacement: Callable = Callable()
+## Solo para pruebas: se llama al empezar cada turno, antes de cualquier acción. (engine, turno).
+var turn_observer: Callable = Callable()
 ## Semilla del RNG; 0 = aleatoria.
 @warning_ignore("shadowed_global_identifier")
 var seed: int = 0

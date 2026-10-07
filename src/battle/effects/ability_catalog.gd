@@ -21,11 +21,13 @@ class AbilityBehavior extends BattleEffect:
 	}
 
 
-	func modify_base_power(_engine: BattleEngine, user: Battler, _target: Battler, move: MoveData, power: int) -> int:
+	## Mar Llamas, Espesura, Torrente y Enjambre: ×1,5 al Ataque o Ataque Especial con un tercio de
+	## los PS o menos (5.ª generación en adelante; antes era la potencia).
+	func move_stat_modifier(_engine: BattleEngine, user: Battler, move: MoveData) -> float:
 		var element: StringName = PINCH.get(id, &"")
 		if element == &"" or move.type != element or user.pokemon.current_hp * 3 > user.pokemon.max_hp():
-			return power
-		return DamageCalc.modify(power, 1.5)
+			return 1.0
+		return 1.5
 
 
 	func stat_modifier(engine: BattleEngine, battler: Battler, stat: StringName) -> float:
@@ -99,6 +101,9 @@ class AbilityBehavior extends BattleEffect:
 		if id == &"intimidate":
 			engine.message(tr("¡%s intimida a %s!") % [engine.name_of(battler), engine.name_of(foe)])
 			engine.boost(foe, {&"atk": -1}, false)
+			# Nerviosismo: desde la 8.ª generación, la Intimidación le sube la Velocidad.
+			if foe.ability == &"rattled" and not foe.is_fainted():
+				engine.boost(foe, {&"spe": 1}, true)
 		elif id == &"frisk" and foe.pokemon.held_item != &"" and DataDB.has_item(foe.pokemon.held_item):
 			engine.message(tr("¡%s ha cacheado a %s y ha encontrado %s!") % [engine.name_of(battler), engine.name_of(foe), DataDB.item(foe.pokemon.held_item).name])
 
@@ -129,7 +134,7 @@ class AbilityBehavior extends BattleEffect:
 					engine.deal_damage(battler, maxi(1, battler.pokemon.max_hp() / 8), &"ability")
 					engine.message(tr("¡%s se resiente por Poder Solar!") % engine.name_of(battler))
 			&"shedskin":
-				if battler.pokemon.status != &"" and engine.rng.randi_range(0, 2) == 0:
+				if battler.pokemon.status != &"" and engine.rand_chance(&"shedskin", 1, 3):
 					engine.cure_status(battler)
 					engine.message(tr("¡%s se ha liberado de su problema con Mudar!") % engine.name_of(battler))
 

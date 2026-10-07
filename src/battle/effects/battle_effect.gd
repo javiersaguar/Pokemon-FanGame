@@ -130,6 +130,12 @@ func stat_modifier(_engine: BattleEngine, _battler: Battler, _stat: StringName) 
 	return 1.0
 
 
+## Multiplicador del Ataque o Ataque Especial del usuario que depende del movimiento (Mar Llamas,
+## Espesura...: en Showdown son onModifyAtk/onModifySpA, no un cambio de potencia).
+func move_stat_modifier(_engine: BattleEngine, _user: Battler, _move: MoveData) -> float:
+	return 1.0
+
+
 ## Multiplicadores finales del daño (Reflejo...), contra `target`.
 func damage_modifier(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, _crit: bool) -> float:
 	return 1.0
