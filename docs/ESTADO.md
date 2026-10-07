@@ -98,6 +98,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 **Traspaso a A4 (arte):** exterior en `assets/tilesets/exterior/exterior.tres`, constructor `assets/tilesets/exterior/build_exterior.gd`; muestras en `maps/test/muestra_{pueblo,ruta}.tscn`, constructor `maps/_tools/build_muestras.gd`. Personajes pack 05 en `assets/sprites/characters/`; CharacterSprite usa hoja 4×4, pies en centro de casilla, orden DOWN/LEFT/RIGHT/UP. La lógica común de personaje/NPC queda en A1; pintar mapas reales queda en A4. Reserva un mapa antes de tocarlo; entregarlo pintado activa mi integración de lógica. `maps/_tools/` queda conmigo según tabla; cambios de geometría de muestras se piden aquí.
 
 **Terminado:**
+- **Sesión 2026-10-07, tarea 2:** PC por cajas/huecos con depósito/retirada atómicos, UID/objeto conservados, movimiento entre cajas, renombrado y liberación con doble confirmación; protege al último capaz. Pokédex con formas vistas, color variocolor visto y áreas de las tablas activas (también ROM). Tarjeta/estuche leen registros guardados; destinos visitados conectados a WorldTravel. **Mapa gráfico y ocho diseños de medallas bloqueados**, sin inventar contenido: petición 59/pregunta 30. Comparativa `a3_pc_dex_tarjeta_mapa.md`. **378/378 tests, 8414 aserciones, 107,5 s; últimas etiquetas: 3/3, 22 aserciones; arte: 0 errores/0 avisos.**
 - **Sesión 2026-10-07, tarea 1:** Opciones recuperadas y completadas: texto, cinco volúmenes con silencio, estilo guardado por partida y reglas Locke prioritarias, tres marcos publicados, pantalla completa, correr siempre y reducción de animaciones. Preferencias de dispositivo en `user://ui.cfg`, conservando el aviso inicial del título. Reducción elimina desplazamientos/destellos del combate y parpadeo de menús sin saltarse los diálogos. Comparativa `a3_opciones_completas.md`. Conexión mínima del estilo en SceneManager: petición 58. **372/372 tests, 8370 aserciones, 160,4 s (sesiones concurrentes); arte: 10580 PNG, 0 errores/0 avisos.**
 - **Sesión larga, tarea 10 (2026-10-05):** MapLoader con cache de escenas/validación previa a descargar origen, Error y map_load_failed; ROM validada antes de new_game_started/reset, conserva objetos Party/PC y bloqueos si falla; posición guardada validada antes de mutar partida, spawn exacto, CLI mapa explícito usa default. Smoke de seis mapas/spawns/warps y tiempos <0,5 s (informe docs/mapas/smoke_2026-10-05.json); dos recorridos completos de prototipo con SceneManager/Cutscene/BattleScene/motor/teclado reales, sin Debug, normal y RandomLocke, incluyendo mote, tutoría, recompensa, enfermera, correr/movimiento y guardar/Continuar. Comparativa `robustez_carga.md`. **292/292 tests, 3707 aserciones, 76,5 s, 0 pending**, suite sin errores de script/recursos al cerrar. Captura y CLI real limpios de errores. Pendiente acotado: el smoke reducido avisa referencias de GDScript/constantes al cierre (ningún Node en --verbose), documentado en docs/mapas/robustez.md; no aparece en suite completa ni arranque normal. No es cierre v0.1.
 
@@ -227,7 +228,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **He leído** (2026-10-07, sesión con 3 agentes) el último aviso, las respuestas de Javier, la tabla de propiedad nueva y mi lista de «Próxima sesión». El arte del mundo y de los entrenadores es del Agente 4; yo sigo con la interfaz, el audio, los datos de entrenadores y `TrainerNPC`. Worktree `pokemon-panchito-agente3`, rama `feat/agente3-sesion`.
 
-**En qué estoy:** sesión con 3 agentes del 7 de octubre, de arriba abajo. Recuperado el trabajo pendiente de Opciones antes de sincronizar. Tarea 1 terminada; continúo tarea 2 (PC, Pokédex completa, tarjeta y mapa), después dobles y transformaciones. A5 es ahora dueño del motor; la escena sigue siendo mía. Identidad/logo/música y arte del mundo pendientes de Javier.
+**En qué estoy:** sesión con 3 agentes del 7 de octubre, de arriba abajo. Recuperado el trabajo pendiente de Opciones antes de sincronizar. Tareas 1 y 2 funcionales publicadas; mapa gráfico/ocho medallas bloqueados por petición 59/pregunta 30. Continúo tarea 3 (dobles), después transformaciones. A5 es ahora dueño del motor; la escena sigue siendo mía. Identidad/logo/música y arte del mundo pendientes de Javier.
 
 ### Traspaso al Agente 4 — entrenadores Panchito (pack 11)
 
@@ -552,8 +553,12 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 | 58 | A3 → A1 | Aplicar UiPreferences.battle_style() al preparar BattleSetup, antes de las reglas Locke que pueden forzar Fijo; cuatro líneas y test de guardado/carga y prioridad. | hecha por A3 en ausencia de A1 (revisar al volver) |
 
+| 59 | A3 → A1/A4 | Para cerrar el mapa regional gráfico y estuche: datos de lugares/coordenadas/medallas con nombres y ocho imágenes aprobadas, y fondo regional. WorldTravel ya conectado en lista de destinos; sin diseño publicado no invento geografía ni medallas. | pendiente (pregunta 30, PENDIENTE JAVIER) |
+
 ---
 
+
+| 30 | A3 | Mapa regional y ocho medallas de Fase 15: faltan geografía y diseños propios aprobados. La lista de destinos de A1 está vacía; tarjeta y estuche leen los registros reales. ¿Qué dibujo regional, ocho nombres/diseños y coordenadas apruebas para que A1/A4 los publiquen? Comparativa `a3_pc_dex_tarjeta_mapa.md`. | PENDIENTE JAVIER |
 
 ## Preguntas para Javier
 
