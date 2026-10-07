@@ -1417,3 +1417,9 @@ La entrada incluye `config` con snapshot de policy/prohibidos/presets, y `region
 `PokedexEntry`: izquierda/derecha recorre `Pokedex.forms_seen()`, R/Y alterna variocolor solo si `is_shiny_seen()`, C alterna áreas, arriba/abajo recorre texto y A reproduce el grito. `areas(id)` consulta las tablas de DataDB, incluyendo el parche activo; no conserva una copia del catálogo original. La marca variocolor es por especie base según API actual.
 
 `TrainerCardScreen.open()` y estuche leen GameState (incluidas medallas guardadas). `RegionMapScreen.open()` presenta los destinos visitados de `WorldTravel.destinations()` y llama a `fly(id)` con confirmación; no sortea los requisitos de campo. Fondo regional, coordenadas y ocho gráficos/nombres de medallas pendientes de petición 59/pregunta 30; no se considera acabado el mapa gráfico.
+
+### §9.11 Escena doble
+
+`BattleScene` respeta `info.format == double`: cuatro sprites/cajas, `event.side/slot` independientes y `request.slot` para la acción. `target_slots(active, move_slot)` ofrece solo los rivales vivos de ataques individuales; destinos de área/usuario/aliado los decide el motor. `_sprite(side, slot)` / `_data_box(side, slot)` permiten seleccionar explícitamente la presentación. No se dibuja experiencia de miembros en el banquillo (`slot < 0`). EngineDriver.player_active() lee el puesto de la petición y player_party() marca ambos activos para impedir cambiarlos entre sí.
+
+TrainerChallengeEvent.group_setup(group) combina ambos rivales en DOUBLE, con las opciones generales del iniciador y la IA máxima. battle_group guarda ambos IDs antes del combate y activa sus flags solo al ganar. El compañero con IA (`info.ally_ai`) no genera una petición extra en la escena. Petición 47 entregada.

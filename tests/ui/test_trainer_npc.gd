@@ -10,12 +10,19 @@ const PARTNER_ID := &"rival_lab_1"
 
 class FakeChallenge extends "res://src/overworld/trainers/trainer_challenge_event.gd":
 	static var fought: Array[StringName] = []
+	static var group_formats: Array[int] = []
 
 	func battle(t: TrainerNPC) -> StringName:
 		fought.append(t.trainer_id)
 		GameState.set_flag(StringName(TrainerNPC.DEFEATED_FLAG % t.trainer_id))
 		return SceneManager.OUTCOME_WIN
 
+	func battle_group(group: Array[TrainerNPC]) -> StringName:
+		group_formats.append(group_setup(group).format)
+		for t: TrainerNPC in group:
+			fought.append(t.trainer_id)
+			GameState.set_flag(StringName(TrainerNPC.DEFEATED_FLAG % t.trainer_id))
+		return SceneManager.OUTCOME_WIN
 
 var _world: Node2D
 var _player: Player
@@ -26,6 +33,7 @@ var _saved_speed: int
 func before_each() -> void:
 	GameState.reset()
 	FakeChallenge.fought.clear()
+	FakeChallenge.group_formats.clear()
 	_saved_speed = Dialogue.text_speed
 	Dialogue.text_speed = 0
 	_world = Node2D.new()
@@ -140,6 +148,7 @@ func test_pair_challenges_together_when_either_sees_you() -> void:
 	EventBus.player_stepped.emit(_player.tile_position())
 	await _finish_cutscene()
 	assert_eq(FakeChallenge.fought, [PARTNER_ID, TRAINER_ID] as Array[StringName], "primero el que te ha visto")
+	assert_eq(FakeChallenge.group_formats,[BattleSetup.Format.DOUBLE],"Un solo combate doble")
 	assert_eq(a.facing, Vector2i.DOWN, "la pareja también te mira")
 
 

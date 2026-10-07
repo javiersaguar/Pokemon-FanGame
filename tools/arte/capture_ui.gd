@@ -53,6 +53,28 @@ func run() -> void:
 			var settings_class = load("res://src/randomizer/randomizer_settings.gd")
 			screen.rom = patch_class.generate(713,settings_class.from_preset("clasico"))
 		root.add_child(screen)
+	elif case_name in ["battle_double","double_target"]:
+		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
+		screen.fast = true
+		root.add_child(screen)
+		screen._info = {"format":&"double"}
+		screen._configure_field()
+		screen._background.set_environment(&"grass")
+		screen._apply_bases()
+		screen.get_node("Canvas/Curtain").hide()
+		var ids := [[&"charmander",&"bulbasaur"],[&"pidgey",&"rattata"]]
+		for side: int in 2:
+			for slot: int in 2:
+				var id: StringName = ids[side][slot]
+				var data = root.get_node("DataDB").species(id)
+				screen._sprite(side,slot).set_pokemon({"species":id})
+				screen._data_box(side,slot).show_pokemon({"name":data.name,"level":12,"hp":30,"max_hp":36})
+				screen._data_box(side,slot).show()
+		screen._box.text_speed = 0
+		if case_name == "double_target":
+			var disabled: Array[bool] = []
+			screen._list("Elige el objetivo.",PackedStringArray(["Pidgey / puesto 1","Rattata / puesto 2"]),disabled,true)
+		else: screen._box.set_text_width(112); screen._box.play("¿Qué debería hacer Bulbasaur?","",false); screen._command_panel.show()
 	elif case_name.begins_with("motion_"):
 		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
 		root.add_child(screen)
