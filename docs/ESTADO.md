@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-06, Javier):** ⏸️ **Pausa de la sesión con 2 agentes** (el Agente 3 se quedó sin uso a mitad de tarea). Estado **comprobado por Javier** en `main` (`0e2f1813`):
+**Último aviso (2026-10-07, Javier):** ▶️ **Sesión con 3 agentes: Agente 2 (sistemas y datos), Agente 3 (interfaz) y Agente 5 (nuevo: calidad y motor de combate).** Los Agentes 1 y 4 siguen parados. Plan y propiedad de la sesión en **[«Sesión con 3 agentes (2026-10-07)»](#sesión-con-3-agentes-2026-10-07)**, que sustituye a la de 2 agentes. Sigue vigente la regla de los cambios pequeños en lo de los agentes parados (apuntados en "Peticiones"). **Agente 3: recupera primero la pantalla de Opciones que hay sin commit en tu worktree** (ver el aviso de abajo).
+
+**Aviso anterior (2026-10-06, Javier):** ⏸️ **Pausa de la sesión con 2 agentes** (el Agente 3 se quedó sin uso a mitad de tarea). Estado **comprobado por Javier** en `main` (`0e2f1813`):
 - **Tests: 369 de 369 en verde**, 8352 aserciones, 98 s. **Importación limpia.** **Validador de arte: 0 errores y 0 avisos** en 10.580 PNG.
 - **Agente 2:** hechas las tareas **1 a 4** (megas a media escala, **combates dobles**, **Megaevolución, Z, Dinamax y Tera**, y **crianza**). Todo subido. **Al volver, sigue por la 5** (evoluciones, recordador, tutores y MT) y la lista hasta la 18, **sin parar entre tareas**.
 - **Agente 3:** hechas las tareas **1 a 6** (correr siempre, cambio opcional, **menú inicial con 3 propuestas de logo**, teclado de nombres, ranuras, pausa, equipo, mochila, tienda, Pokédex, evolución, aprender movimiento, intro, **audio de EBDX**, **transiciones y animaciones de movimientos**, y **todas las pantallas del RandomLocke**). Todo subido salvo la **tarea 7 a medias: pantalla de Opciones**. ⚠️ Está **sin commit en su worktree** (`scene_manager.gd`, `options_screen.gd`, `ui_runtime.gd`, `ui_preferences.gd`, sus tests y `capture_ui.gd`). **Al volver: no hagas `git pull` ni `reset` antes de recuperarla.** Revisa el diff, termínala, pasa los tests y súbela; después sigue con el resto de la tarea 7 (PC, Pokédex completa, tarjeta de entrenador y mapa de la región) y la 8.
@@ -330,6 +332,43 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 **Bloqueos:** ninguno del motor. **Integración aún pendiente** en carpetas ajenas: A2 apply_patch/input/MT/tutores/held_items/shiny y reglas individuales del combate; A1 zone_id/llamadas Locke/Cementerio; A3 pantallas R.8. Peticiones **22–25** abiertas. Esta entrega es del motor sin interfaz, hito v0.2; no afirma que el flujo jugable R.8/R.9 esté cerrado.
 
 ---
+
+## Sesión con 3 agentes (2026-10-07)
+
+*Trabajan el **Agente 2**, el **Agente 3** y el **Agente 5** (nuevo). Reglas: **cada lista es una única tarea larga**. No se para ni se termina el turno entre tarea y tarea: al cerrar cada una (tests y validador de arte en verde, merge a `main`, `git push origin main` y tu sección de ESTADO al día) se empieza la siguiente. Solo se para si todo lo que queda está bloqueado. Lo visible lleva comparativa en `docs/arte/comparativas/`. Las decisiones de diseño se marcan "PENDIENTE JAVIER" y se sigue. **Commits solo como Javier Saguar, sin coautores ni líneas de atribución de ningún tipo** (el hook las rechaza: no lo desactives).*
+
+**Propiedad durante esta sesión** (el resto de la tabla general no cambia):
+- **Agente 5:** `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/combate/`, `tools/showdown_diff/` (nueva) y `docs/combate/` (nueva). Además puede hacer **correcciones de bugs** en cualquier carpeta, pequeñas, con test que lo reproduzca, avisando al dueño en "Peticiones".
+- **Agente 2:** lo demás que era suyo (`src/pokemon/`, `src/randomizer/`, `src/autoload/data_db.gd`, `data/`, `tools/` salvo `tools/arte/` y `tools/showdown_diff/`, sus tests) y los **módulos nuevos** de sus tareas (por ejemplo, `src/systems/`).
+- **Agente 3:** como siempre (interfaz, escena de combate, audio, `src/items/`, `TrainerNPC`).
+
+**Agente 3 — Interfaz** (worktree `pokemon-panchito-agente3`)
+1. **Recuperar la pantalla de Opciones** que quedó sin commit en el worktree (`scene_manager.gd`, `options_screen.gd`, `ui_runtime.gd`, `ui_preferences.gd`, sus tests y `capture_ui.gd`). **No hagas `pull`, `reset` ni `checkout` antes de guardarla.** Revisa el diff, termínala (velocidad de texto, volúmenes, `battle_style`, correr siempre, marco, pantalla completa, reducir animaciones), tests y merge.
+2. Resto de la tarea 7: **PC** con cajas, **Pokédex completa** (entrada, formas, shiny, área), **tarjeta de entrenador con medallas** y **mapa de la región** (datos de vuelo del Agente 1).
+3. **Escena de combate para dobles** (petición 47): dos Pokémon por lado, selección de objetivo, cajas de datos dobles y mensajes. Comparativa.
+4. **Megaevolución, Z, Dinamax y Tera en la escena** (peticiones 48 a 51): botones, animaciones de transformación con los recursos de EBDX y NikDie si los hay, e iconos. Comparativa.
+5. **Guardería y huevos en la interfaz** (API `Daycare` del Agente 2): dejar y recoger Pokémon, aviso de huevo y **escena de eclosión**.
+6. Pantallas de los sistemas nuevos del Agente 2 **en cuanto publique cada API**: Torre de Batalla, regalo misterioso, misiones, logros y estadísticas, y modo difícil en la pantalla de nueva partida.
+7. **Accesibilidad y pulido** (Fase 15.5): "reducir animaciones" respetado en todas las pantallas, nada que se explique solo por color y textos legibles a 512×384.
+8. **Repaso general de la interfaz:** capturas de **todas** las pantallas, ortografía y tildes de todos los textos, nada que se salga de su marco, y navegación completa con teclado y con mando. Lista de defectos en `docs/arte/repaso_interfaz.md`, y corregirlos.
+
+**Agente 2 — Sistemas y datos** (worktree `pokemon-panchito-agente2`). Sigue la numeración de su lista de la sesión de 2 agentes; **las tareas 8, 9 y 16 pasan al Agente 5**.
+- **5.** Evoluciones (todos los métodos de las especies en uso), recordador de movimientos, tutores y **conjunto de MT** (sin decidir dónde se consiguen).
+- **6.** RandomLocke: spoilers a `user://randomlocke/`, probabilidad shiny de sus ajustes y MT y tutores en el generador.
+- **7.** Herramienta de **simulación en masa** contra los líderes (usa el motor tal cual; si encuentras bugs del motor, petición al Agente 5).
+- **10.** **Torre de Batalla** (lógica). **11.** Equipos en **formato Showdown** con validación de legalidad. **12.** **Regalo misterioso** con códigos firmados.
+- **13.** **Bayas, amistad, misiones y logros** (lógica pura, sin inventar misiones concretas). **14.** **Modo difícil** y Nuzlocke en partida normal.
+- **15.** **Integración continua** en GitHub Actions (solo añadir el workflow de tests; el de autoría no se toca).
+- **17.** **Prototipo de red local** (intercambio y combate), desactivado por defecto.
+- **18.** Repaso final y "Qué queda".
+- Publica en `contratos.md` la API de cada sistema nuevo y avisa al Agente 3 con una petición.
+
+**Agente 5 — Calidad y motor de combate** (worktree nuevo `pokemon-panchito-agente5`, rama `feat/agente5-calidad`)
+1. **Pruebas diferenciales contra Showdown** (antigua tarea 9 del Agente 2): arnés en `tools/showdown_diff/` que juega miles de combates con la misma semilla, equipos y decisiones en el simulador de Showdown y en nuestro `BattleEngine` (individuales y dobles), y compara turno a turno. Informe en `docs/combate/diferencias_showdown.md`; corregir los bugs nuestros y documentar las diferencias intencionadas. Muestra pequeña en la suite normal y grande como test lento.
+2. **Cobertura total del combate** (antigua 8): habilidades, objetos y movimientos con script para **todas** las especies, con el validador comprobándolo, guiado por las diferencias de la tarea 1.
+3. **Rendimiento del motor** (antigua 16): benchmarks de turno, combate y generación de ROM, y optimización sin cambiar resultados.
+4. **Control de calidad del juego entero:** partida automatizada que recorra el MVP completo en modo normal y en RandomLocke con las pantallas reales del Agente 3. Revisión del código integrado en la sesión. Bugs corregidos con su test, o en una petición al dueño si son grandes.
+5. **Estado del proyecto:** mantener `docs/ESTADO.md` coherente (avisos, peticiones resueltas, tabla de propiedad) y dejar el cierre de la sesión con el estado comprobado.
 
 ## Sesión con 2 agentes (2026-10-06)
 
