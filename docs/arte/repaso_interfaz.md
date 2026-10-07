@@ -32,7 +32,7 @@ Galería completa en [comparativa del repaso](comparativas/a3_repaso_interfaz.md
 
 76 capturas revisadas; comprobación de límites de etiquetas sin desbordamientos fuera de pantalla (los textos largos dentro de ScrollContainer conservan desplazamiento).
 
-Validación final, tras integrar la tercera tanda de A5: **439/439 tests, 8627 aserciones, 143,1 s**. Sin errores de script ni fugas al cerrar la suite. Validador: **10585 PNG, 0 errores y 0 avisos**.
+Validación final, tras integrar las últimas correcciones de A5: **452/452 tests, 8649 aserciones, 122,0 s**. Sin errores de script ni fugas al cerrar la suite. Validador: **10585 PNG, 0 errores y 0 avisos**.
 
 ## Pendientes externos
 
