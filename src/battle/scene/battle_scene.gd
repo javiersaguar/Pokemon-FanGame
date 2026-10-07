@@ -272,7 +272,7 @@ static func _exp_ratio(data: Dictionary) -> float:
 func _animate_move(side: int, target_side: int, move: Dictionary) -> void:
 	var user := _sprite(side)
 	var target := _sprite(target_side)
-	if await BattleMoveAnimation.play(_fx, user, target, move, fast): return
+	if await BattleMoveAnimation.play(_fx, user, target, move, fast or UiPreferences.reduce_motion()): return
 	var details := move.duplicate()
 	details.category = _category(move.get("category", "physical"))
 	if details.category == &"physical":
@@ -304,14 +304,14 @@ func _throw_ball(shakes: int, caught: bool) -> void:
 	_fx.add_child(ball)
 	var target := _foe_sprite.home() + Vector2(0, -80)
 	AudioManager.play_se(&"ball_throw")
-	if not fast:
+	if not fast and not UiPreferences.reduce_motion():
 		var tween := create_tween()
 		tween.tween_method(_ball_arc.bind(ball, target), 0.0, 1.0, 0.6)
 		await tween.finished
 	ball.position = target
 	await _foe_sprite.withdraw(_t(0.3))
 	var ground := _foe_sprite.home() + Vector2(0, -12)
-	if not fast:
+	if not fast and not UiPreferences.reduce_motion():
 		var drop := create_tween()
 		drop.tween_method(func(p: Vector2) -> void: ball.position = _even(p), ball.position, ground, 0.3) \
 			.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
@@ -338,7 +338,7 @@ func _throw_ball(shakes: int, caught: bool) -> void:
 ## Destellos y sonido de un shiny al aparecer (DIRECTRICES §8).
 func _shiny_sparkles(sprite: BattlePokemonSprite) -> void:
 	AudioManager.play_se(&"shiny")
-	if fast:
+	if fast or UiPreferences.reduce_motion():
 		return
 	var center := sprite.center()
 	var offsets: Array[Vector2] = [Vector2(-56, -40), Vector2(48, -56), Vector2(-24, 24), Vector2(60, 16), Vector2(0, -72)]
@@ -524,7 +524,7 @@ func _intro(start_events: Array) -> void:
 		_foe_trainer.visible = sprite != null
 	_curtain_a.hide()
 	_curtain_b.hide()
-	await BattleEntryTransition.play(self, _info, fast)
+	await BattleEntryTransition.play(self, _info, fast or UiPreferences.reduce_motion())
 	var player_home := _player_trainer.position
 	_player_trainer.position.x = OFFSCREEN_RIGHT
 	var foe_home := _foe_trainer.position
@@ -588,7 +588,7 @@ func _open_curtain(horizontal: bool) -> void:
 		_curtain_b.size = Vector2(128, 192)
 	_curtain_a.show()
 	_curtain_b.show()
-	if not fast:
+	if not fast and not UiPreferences.reduce_motion():
 		var tween := create_tween().set_parallel().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 		if horizontal:
 			tween.tween_property(_curtain_a, ^"position:y", -96.0, 0.3)
@@ -611,7 +611,7 @@ func _message(text: String) -> void:
 func _show_box(box: BattleDataBox, pokemon: Dictionary) -> void:
 	box.show_pokemon(pokemon)
 	box.show()
-	if fast:
+	if fast or UiPreferences.reduce_motion():
 		return
 	var home := box.position
 	var from := home + Vector2(-24.0 if box == _foe_box else 24.0, 0)
@@ -661,7 +661,7 @@ func _trainer() -> Dictionary:
 
 
 func _t(seconds: float) -> float:
-	return 0.0 if fast else seconds
+	return 0.0 if fast or UiPreferences.reduce_motion() else seconds
 
 
 func _wait(seconds: float) -> void:

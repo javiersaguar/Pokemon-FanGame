@@ -11,6 +11,7 @@ var _nickname_active := false
 var _generation := 0
 
 func _ready() -> void:
+	UiPreferences.initialize()
 	mouse_filter = MOUSE_FILTER_IGNORE
 	theme = preload("res://src/ui/theme/main_theme.tres")
 	canvas = UiCanvas.new()
