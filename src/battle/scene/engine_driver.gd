@@ -92,7 +92,7 @@ func finish() -> void:
 
 
 func player_active() -> Dictionary:
-	var b := engine.active(PLAYER)
+	var b := engine.active(PLAYER, engine.request.slot if engine.request else 0)
 	if b == null:
 		return {}
 	var p := b.pokemon
@@ -102,12 +102,11 @@ func player_active() -> Dictionary:
 
 func player_party() -> Array[Dictionary]:
 	var out: Array[Dictionary] = []
-	var b := engine.active(PLAYER)
 	var members := engine.party(PLAYER)
 	for i: int in members.size():
 		var p := members[i]
 		out.append({"name": p.display_name(), "level": p.level, "hp": p.current_hp, "max_hp": p.max_hp(),
-			"able": not p.is_fainted(), "active": b != null and b.party_index == i})
+			"able": not p.is_fainted(), "active": _is_active_party(i)})
 	return out
 
 
@@ -136,3 +135,9 @@ static func _moves_of(p: Pokemon) -> Array[Dictionary]:
 		out.append({"id": slot.id, "name": move.name, "type": move.type,
 			"category": MoveData.Category.keys()[move.category].to_lower(), "pp": slot.pp, "max_pp": slot.max_pp()})
 	return out
+
+func _is_active_party(index: int) -> bool:
+	for slot: int in engine.slot_count():
+		var b := engine.active(PLAYER,slot)
+		if b != null and b.party_index == index: return true
+	return false
