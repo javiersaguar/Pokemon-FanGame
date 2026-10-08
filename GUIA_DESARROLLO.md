@@ -361,7 +361,7 @@ En Godot casi todo es **texto** (`.tscn`, `.tres`, `.gd`, `.json`), así que se 
 ### 2.1 Identidad del juego
 
 - [ ] **Título:** Pokémon Spain.
-- [x] **Tono:** humor negro sobre la situación actual de España (vivienda, precariedad, burocracia, transporte, turismo…), como *Pokémon Iberia* pero al día, con las líneas rojas de `docs/concepto_pokemon_spain.md`.
+- [x] **Tono:** humor negro sobre la situación actual de España (vivienda, precariedad, burocracia, transporte, turismo…), como *Pokémon Iberia* pero al día y **sin líneas rojas** (`docs/concepto_pokemon_spain.md`).
 - [ ] **Pitch de una frase**, por ejemplo *"Una aventura Pokémon clásica en una región donde los entrenadores son los personajes de tu barrio."*
 - [x] **Concepto:** región inspirada en la España de hoy, heredera de *Pokémon Iberia* (`docs/concepto_pokemon_spain.md`). Falta decidir quién protagoniza la intro y la trama.
 - [ ] **Idioma:** español.

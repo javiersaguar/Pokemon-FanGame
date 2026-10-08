@@ -1,7 +1,7 @@
 # Pokémon Spain — Documento de diseño (GDD)
 
 > **Estado: borrador.** Sigue la Fase 2 de `GUIA_DESARROLLO.md`.
-> **Concepto (2026-10-08):** el juego se llama **Pokémon Spain**, emparentado con *Pokémon Iberia* y puesto al día con humor negro sobre la España actual. Orientación, referencias y líneas rojas en [`concepto_pokemon_spain.md`](concepto_pokemon_spain.md).
+> **Concepto (2026-10-08):** el juego se llama **Pokémon Spain**, emparentado con *Pokémon Iberia* y puesto al día con humor negro sobre la España actual. Orientación y referencias en [`concepto_pokemon_spain.md`](concepto_pokemon_spain.md).
 > Todo lo marcado **PENDIENTE JAVIER** es una decisión de diseño que falta por tomar. Las opciones que aparecen al lado son **sugerencias de la guía**, no decisiones.
 > Cuando se decida algo: sustituye la marca por la decisión y apúntalo en el [registro de decisiones](#10-registro-de-decisiones).
 
@@ -36,7 +36,7 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 | 5 | Profesor y rival: nombre, personalidad y nombre por defecto del rival | Intro y primer combate | — | **PENDIENTE JAVIER** |
 | 6 | Especies salvajes de la Ruta 1 (día y noche) | `data/encounters/` | La guía usa de ejemplo Pidgey, Rattata, Sentret, Hoppip / Hoothoot, Spinarak | **PENDIENTE JAVIER** |
 | 7 | Chico / chica: aspecto y nombres por defecto | Intro y teclado de nombres | — | **PENDIENTE JAVIER** |
-| 8 | Tono general | Todos los textos | ¿Parodia total o aventura seria con chistes? | **Decidido (2026-10-08):** humor negro sobre la situación actual de España, con las líneas rojas del [concepto](concepto_pokemon_spain.md#4-líneas-rojas-propuesta-para-que-la-confirme-javier) (**PENDIENTE JAVIER** confirmarlas) |
+| 8 | Tono general | Todos los textos | ¿Parodia total o aventura seria con chistes? | **Decidido (2026-10-08):** humor negro sobre la situación actual de España, **sin líneas rojas** (proyecto personal; se puede parodiar a famosos con su nombre real). Ver [concepto](concepto_pokemon_spain.md) |
 | 9 | Reloj real o interno (acelerado) | `Clock`, encuentros de día y de noche | Fase 14.1 | Provisional: reloj real (`data/world.json`). **PENDIENTE JAVIER** |
 
 ---
@@ -359,4 +359,5 @@ Propuesta de la guía (Fase 2.7). **PENDIENTE JAVIER** confirmarla.
 
 | Fecha | Decisión | Sección |
 |-------|----------|---------|
+| 2026-10-08 | Humor sin líneas rojas: se puede parodiar a cualquiera, con nombre real si se quiere | 1 |
 | 2026-10-08 | El juego pasa a llamarse **Pokémon Spain** (antes *Pokémon Panchito*): emparentado con *Pokémon Iberia* y con humor negro sobre la España actual | 0 (decisiones 2 y 8), 1 |
