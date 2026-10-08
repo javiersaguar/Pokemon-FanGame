@@ -19,6 +19,8 @@ func build_choices() -> void:
 	notes.append("Reduce desplazamientos, destellos y parpadeos. Conserva los mensajes y las acciones del combate.")
 	choices.append("Controles")
 	notes.append("Consultar teclas y botones de movimiento, menús, correr y nombres.")
+	choices.append("Fotos reales: %s" % ("Sí" if UiPreferences.real_photos() else "No"))
+	notes.append("En combate, enseña la foto real de los personajes famosos si está en la carpeta fotos_reales.")
 	choices.append("Volver")
 	notes.append("Volver al menú anterior.")
 func run() -> void:
@@ -45,6 +47,7 @@ func run() -> void:
 			4: UiPreferences.set_value("fullscreen",not UiPreferences.values.fullscreen)
 			10: UiPreferences.set_value("reduce_animations",not UiPreferences.reduce_motion())
 			11: await ControlsScreen.open()
+			12: UiPreferences.set_value("real_photos",not UiPreferences.real_photos())
 			_:
 				var bus := AudioManager.BUSES[absolute-5]
 				var labels := PackedStringArray()

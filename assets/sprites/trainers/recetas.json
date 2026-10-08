@@ -504,5 +504,983 @@
 			"overworld walk/carrying stuff/bag/bag white.png",
 			"overworld walk/hair/boy 2/boy 2 brown.png"
 		]
+	},
+	"ayuso": {
+		"idea": "Isabel Díaz Ayuso, líder 1 (Madrid): melena castaña, americana roja y falda negra.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/pencil skirt/skirt pencil black.png",
+			"trainer front female/tops/formal top/formal top red.png",
+			"trainer front female/hair/Hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/pencil skirt/pencil skirt black.png",
+			"overworld walk/tops/formal top/formal red.png",
+			"overworld walk/hair/girl 2/2 brown.png"
+		]
+	},
+	"laporta": {
+		"idea": "Joan Laporta, líder 2 (Barcelona): pelo canoso y traje azul marino.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/classy top/classy top navy.png",
+			"trainer front male/hair/hair 2/2 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/classy top m/classy top m navy.png",
+			"overworld walk/hair/boy 2/boy 2 white.png"
+		]
+	},
+	"labrador": {
+		"idea": "Labrador, líder 3 (Valencia): cachas de Gandía Shore, camiseta de tirantes y bañador.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/beach bottom/beach bottom blue.png",
+			"trainer front male/tops/tank top/tank top black.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/beach bottom m/beach bottom m blue.png",
+			"overworld walk/tops/tank top/tank top black.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
+	},
+	"joaquin": {
+		"idea": "Joaquín, líder 4 (Sevilla): pelo ondulado y camiseta verde del Betis.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/jeans/jeans light blue.png",
+			"trainer front male/tops/t-shirt/t-shirt green.png",
+			"trainer front male/hair/hair 3/3 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/jeans/jeans light blue.png",
+			"overworld walk/tops/t-shirt/t-shirt green.png",
+			"overworld walk/hair/boy 3/boy 3 brown.png"
+		]
+	},
+	"quevedo": {
+		"idea": "Quevedo, líder 5 (Las Palmas): sudadera negra y gafas.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/hoodie/hoodie black.png",
+			"trainer front male/hair/hair 1/1 black.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/hoodie/hoodie black.png",
+			"overworld walk/hair/boy 1/boy 1 black.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"aupa_athletic": {
+		"idea": "La chica del Aupa Athletic, líder 6 (Bilbao): coleta, camiseta rojiblanca y txapela.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/Jeans/jeans navy.png",
+			"trainer front female/tops/shirt combo/shirt combo red.png",
+			"trainer front female/hair/hair 4/4 brown.png",
+			"trainer front female/hats/beanie/beanie black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/shirt combo/shirt combo red.png",
+			"overworld walk/hair/girl 4/4 brown.png",
+			"overworld walk/hats/beret.png"
+		]
+	},
+	"latasa": {
+		"idea": "Juanmi Latasa, líder 7 (Valladolid): morado del Pucela.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/shorts/shorts white.png",
+			"trainer front male/tops/hoodie/hoodie purple.png",
+			"trainer front male/hair/hair 4/4 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/shorts/shorts white.png",
+			"overworld walk/tops/hoodie/hoodie purple.png",
+			"overworld walk/hair/boy 4/boy 4 brown.png"
+		]
+	},
+	"banderas": {
+		"idea": "Antonio Banderas, líder 8 (Málaga): El Zorro, gabardina negra y sombrero.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/trench coat/trench coat black.png",
+			"trainer front male/hair/hair 3/3 black.png",
+			"trainer front male/hats/fedora.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/trenchcoat/trenchcoat black.png",
+			"overworld walk/hair/boy 3/boy 3 black.png",
+			"overworld walk/hats/fedora.png"
+		]
+	},
+	"iniesta": {
+		"idea": "Andrés Iniesta, Alto Mando: calvo, de blanco.",
+		"frente": [
+			"trainer front male/base/base pale.png",
+			"trainer front male/bottoms/shorts/shorts white.png",
+			"trainer front male/tops/t-shirt/t-shirt white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base pale.png",
+			"overworld walk/bottoms/shorts/shorts white.png",
+			"overworld walk/tops/t-shirt/t-shirt white.png"
+		]
+	},
+	"nadal": {
+		"idea": "Rafa Nadal, Alto Mando: melena, cinta y camiseta de tirantes.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/shorts/shorts white.png",
+			"trainer front male/tops/tank top/tank top green.png",
+			"trainer front male/hair/hair 3/3 brown.png",
+			"trainer front male/hats/headband.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/shorts/shorts white.png",
+			"overworld walk/tops/tank top/tank top green.png",
+			"overworld walk/hair/boy 3/boy 3 brown.png",
+			"overworld walk/hats/headband.png"
+		]
+	},
+	"gasol": {
+		"idea": "Pau Gasol, Alto Mando: la camiseta roja de la selección.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/shorts/shorts red.png",
+			"trainer front male/tops/t-shirt/t-shirt red.png",
+			"trainer front male/hair/hair 4/4 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/shorts/shorts red.png",
+			"overworld walk/tops/t-shirt/t-shirt red.png",
+			"overworld walk/hair/boy 4/boy 4 brown.png"
+		]
+	},
+	"alonso": {
+		"idea": "Fernando Alonso, Alto Mando: mono verde de piloto.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jumpsuit pants/jumpsuit pants green.png",
+			"trainer front male/tops/jumpsuit top/jumpsuit top green.png",
+			"trainer front male/hair/hair 4/4 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jumpsuit pants/jumpsuit pants green.png",
+			"overworld walk/tops/jumpsuit top/jumpsuit green.png",
+			"overworld walk/hair/boy 4/boy 4 brown.png"
+		]
+	},
+	"pedro_sanchez": {
+		"idea": "Pedro Sánchez, Líder Supremo y jefe del Clan PSOE: traje azul marino.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/classy pants/classy pants navy.png",
+			"trainer front male/tops/classy top/classy top navy.png",
+			"trainer front male/hair/hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m navy.png",
+			"overworld walk/tops/classy top m/classy top m navy.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png"
+		]
+	},
+	"abalos": {
+		"idea": "Ábalos, del dúo del Clan PSOE: pelo gris y americana gris.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants grey.png",
+			"trainer front male/tops/classy top/classy top grey.png",
+			"trainer front male/hair/hair 2/2 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m grey.png",
+			"overworld walk/tops/classy top m/classy top m grey.png",
+			"overworld walk/hair/boy 2/boy 2 white.png"
+		]
+	},
+	"koldo": {
+		"idea": "Koldo, del dúo del Clan PSOE: grande, pelo corto y cazadora.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/open jacket/open jacket blue.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/open jacket/open jacket blue.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
+	},
+	"leire_diez": {
+		"idea": "Leire Díez, la fontanera: melena rubia, gabardina y gafas.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/Jeans/jeans navy.png",
+			"trainer front female/tops/trench coat/trench coat navy.png",
+			"trainer front female/hair/hair 3/3 blonde.png",
+			"trainer front female/hats/glasses/glasses red.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/trenchcoat/trenchcoat navy.png",
+			"overworld walk/hair/girl  3/3 blonde.png",
+			"overworld walk/hats/glasses/glasses red.png"
+		]
+	},
+	"recluta_clan": {
+		"idea": "Recluta del Clan PSOE: chaqueta roja.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/open jacket/open jacket red.png",
+			"trainer front male/hair/hair 1/1 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/open jacket/open red.png",
+			"overworld walk/hair/boy 1/boy 1 black.png"
+		]
+	},
+	"recluta_clan_f": {
+		"idea": "Recluta del Clan PSOE (chica): chaqueta roja.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/Jeans/jeans black.png",
+			"trainer front female/tops/open jacket/open red.png",
+			"trainer front female/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/open jacket/open red.png",
+			"overworld walk/hair/girl 4/4 black.png"
+		]
+	},
+	"ibai": {
+		"idea": "Ibai Llanos: sudadera negra y gorra.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/hoodie/hoodie black.png",
+			"trainer front male/hair/hair 1/1 brown.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/hoodie/hoodie black.png",
+			"overworld walk/hair/boy 1/boy 1 brown.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"lamine": {
+		"idea": "Lamine Yamal: camiseta azulgrana.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/shorts/shorts blue.png",
+			"trainer front male/tops/shirt combo/shirt combo blue.png",
+			"trainer front male/hair/hair 1/1 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/shorts/shorts blue.png",
+			"overworld walk/tops/shirt combo/shirt combo blue.png",
+			"overworld walk/hair/boy 1/boy 1 black.png"
+		]
+	},
+	"hustlehard304": {
+		"idea": "HustleHard304, padre de Lamine: camiseta negra.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/t-shirt/t-shirt black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/t-shirt/t-shirt black.png"
+		]
+	},
+	"keyne": {
+		"idea": "Keyne, hermano pequeño de Lamine: camiseta del Barça y gorra.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/shorts/shorts blue.png",
+			"trainer front male/tops/shirt combo/shirt combo blue.png",
+			"trainer front male/hair/hair 1/1 black.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/shorts/shorts blue.png",
+			"overworld walk/tops/shirt combo/shirt combo blue.png",
+			"overworld walk/hair/boy 1/boy 1 black.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"rosalia": {
+		"idea": "Rosalía: melena negra y chaqueta roja de motomami.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/ribbon skirt/skirt ribbon red.png",
+			"trainer front female/tops/open jacket/open red.png",
+			"trainer front female/hair/hair 3/3 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/ribbon skirt/ribbon skirt red.png",
+			"overworld walk/tops/open jacket/open red.png",
+			"overworld walk/hair/girl  3/3 black.png"
+		]
+	},
+	"enrique_iglesias": {
+		"idea": "Enrique Iglesias: camiseta blanca y gorra.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/t-shirt/t-shirt white.png",
+			"trainer front male/hair/hair 4/4 brown.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/t-shirt/t-shirt white.png",
+			"overworld walk/hair/boy 4/boy 4 brown.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"julio_iglesias": {
+		"idea": "Julio Iglesias: bronceado, pelo blanco y traje claro.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/classy pants/classy pants beige.png",
+			"trainer front male/tops/formal top/formal beige.png",
+			"trainer front male/hair/hair 2/2 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m beige.png",
+			"overworld walk/tops/formal top/formal beige.png",
+			"overworld walk/hair/boy 2/boy 2 white.png"
+		]
+	},
+	"sergio_ramos": {
+		"idea": "Sergio Ramos: pelo peinado atrás y camiseta blanca.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/t-shirt/t-shirt white.png",
+			"trainer front male/hair/hair 3/3 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/t-shirt/t-shirt white.png",
+			"overworld walk/hair/boy 3/boy 3 black.png"
+		]
+	},
+	"guardiola": {
+		"idea": "Pep Guardiola: calvo y jersey de cuello alto.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants grey.png",
+			"trainer front male/tops/turtleneck/turtleneck black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m grey.png",
+			"overworld walk/tops/turtleneck m/turtleneck m black.png"
+		]
+	},
+	"pique": {
+		"idea": "Gerard Piqué: camisa azul y vaqueros.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/collared shirt/collared shirt light blue.png",
+			"trainer front male/hair/hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/collared shirt/collared shirt light blue.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png"
+		]
+	},
+	"aitana": {
+		"idea": "Aitana: melena rubia corta, de rosa.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/ribbon skirt/skirt ribbon pink.png",
+			"trainer front female/tops/tank top/tank top  pink.png",
+			"trainer front female/hair/Hair 2/2 blonde.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/ribbon skirt/ribbon skirt pink.png",
+			"overworld walk/tops/tank top/tank top pink.png",
+			"overworld walk/hair/girl 2/2 blonde.png"
+		]
+	},
+	"ester_exposito": {
+		"idea": "Ester Expósito: melena rubia y vestido negro de estreno.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/evening bottom/evening bottom black.png",
+			"trainer front female/tops/classy top/classy top black.png",
+			"trainer front female/hair/hair 3/3 blonde.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/classy bottoms f/classy bottom f black.png",
+			"overworld walk/tops/classy top f/classy top f black.png",
+			"overworld walk/hair/girl  3/3 blonde.png"
+		]
+	},
+	"elxokas": {
+		"idea": "Elxokas: camiseta negra.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans grey.png",
+			"trainer front male/tops/t-shirt/t-shirt black.png",
+			"trainer front male/hair/hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans grey.png",
+			"overworld walk/tops/t-shirt/t-shirt black.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png"
+		]
+	},
+	"folagor": {
+		"idea": "Folagor03: sudadera azul.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/hoodie/hoodie blue.png",
+			"trainer front male/hair/hair 1/1 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/hoodie/hoodie blue.png",
+			"overworld walk/hair/boy 1/boy 1 brown.png"
+		]
+	},
+	"sekiam": {
+		"idea": "Sekiam: sudadera roja.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/hoodie/hoodie red.png",
+			"trainer front male/hair/hair 1/1 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/hoodie/hoodie red.png",
+			"overworld walk/hair/boy 1/boy 1 black.png"
+		]
+	},
+	"pokealex": {
+		"idea": "PokeAlex: camiseta negra de torneo.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/t-shirt/t-shirt black.png",
+			"trainer front male/hair/hair 4/4 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/t-shirt/t-shirt black.png",
+			"overworld walk/hair/boy 4/boy 4 brown.png"
+		]
+	},
+	"amancio_ortega": {
+		"idea": "Amancio Ortega: pelo blanco y jersey oscuro.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants grey.png",
+			"trainer front male/tops/turtleneck/turtleneck black.png",
+			"trainer front male/hair/hair 2/2 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m grey.png",
+			"overworld walk/tops/turtleneck m/turtleneck m black.png",
+			"overworld walk/hair/boy 2/boy 2 white.png"
+		]
+	},
+	"abascal": {
+		"idea": "Santiago Abascal: camisa y botas de montar.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/pants and boots/pants and boots beige.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/pants and boots/pants and boots beige.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
+	},
+	"topuria": {
+		"idea": "Ilia Topuria: camiseta de tirantes y pantalón corto de luchador.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/shorts/shorts black.png",
+			"trainer front male/tops/tank top/tank top black.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/tank top/tank top black.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
+	},
+	"nico_williams": {
+		"idea": "Nico Williams: camiseta rojiblanca.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/shorts/shorts black.png",
+			"trainer front male/tops/shirt combo/shirt combo red.png",
+			"trainer front male/hair/hair 1/1 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/shirt combo/shirt combo red.png",
+			"overworld walk/hair/boy 1/boy 1 black.png"
+		]
+	},
+	"inaki_williams": {
+		"idea": "Iñaki Williams: camiseta rojiblanca.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/shorts/shorts black.png",
+			"trainer front male/tops/shirt combo/shirt combo red.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/shirt combo/shirt combo red.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
+	},
+	"pereira7": {
+		"idea": "Pereira7: sudadera verde.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/hoodie/hoodie green.png",
+			"trainer front male/hair/hair 1/1 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/hoodie/hoodie green.png",
+			"overworld walk/hair/boy 1/boy 1 brown.png"
+		]
+	},
+	"broncano": {
+		"idea": "David Broncano: despeinado y camiseta negra.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/t-shirt/t-shirt black.png",
+			"trainer front male/hair/hair 1/1 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/t-shirt/t-shirt black.png",
+			"overworld walk/hair/boy 1/boy 1 brown.png"
+		]
+	},
+	"oscar_puente": {
+		"idea": "Óscar Puente: pelo canoso y americana gris.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants grey.png",
+			"trainer front male/tops/classy top/classy top grey.png",
+			"trainer front male/hair/hair 4/4 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m grey.png",
+			"overworld walk/tops/classy top m/classy top m grey.png",
+			"overworld walk/hair/boy 4/boy 4 white.png"
+		]
+	},
+	"mario_casas": {
+		"idea": "Mario Casas: cazadora y vaqueros.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/open jacket/open jacket blue.png",
+			"trainer front male/hair/hair 3/3 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/open jacket/open jacket blue.png",
+			"overworld walk/hair/boy 3/boy 3 brown.png"
+		]
+	},
+	"pablo_iglesias": {
+		"idea": "Pablo Iglesias: coleta y camisa blanca.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
+	},
+	"irene_montero": {
+		"idea": "Irene Montero: melena castaña y americana.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/Jeans/jeans navy.png",
+			"trainer front female/tops/classy top/classy top grey.png",
+			"trainer front female/hair/Hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/classy top f/classy top f grey.png",
+			"overworld walk/hair/girl 2/2 brown.png"
+		]
+	},
+	"franco": {
+		"idea": "Francisco Franco, fantasma: piel pálida, uniforme beige.",
+		"frente": [
+			"trainer front male/base/base pale.png",
+			"trainer front male/bottoms/pants and boots/pants and boots beige.png",
+			"trainer front male/tops/classy top/classy top beige.png",
+			"trainer front male/hair/hair 4/4 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base pale.png",
+			"overworld walk/bottoms/pants and boots/pants and boots beige.png",
+			"overworld walk/tops/classy top m/classy top m beige.png",
+			"overworld walk/hair/boy 4/boy 4 white.png"
+		]
+	},
+	"almeida": {
+		"idea": "Almeida: traje y gafas.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/classy top/classy top navy.png",
+			"trainer front male/hair/hair 2/2 brown.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/classy top m/classy top m navy.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"chicote": {
+		"idea": "Chicote: chaqueta de cocinero.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 white.png"
+		]
+	},
+	"pedroche": {
+		"idea": "Cristina Pedroche: vestido de las Campanadas.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/evening bottom/evening bottom wine.png",
+			"trainer front female/tops/formal top/formal top red.png",
+			"trainer front female/hair/hair 3/3 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/classy bottoms f/classy bottoms f wine.png",
+			"overworld walk/tops/formal top/formal red.png",
+			"overworld walk/hair/girl  3/3 brown.png"
+		]
+	},
+	"rubiales": {
+		"idea": "Luis Rubiales: traje de boda.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/classy top/classy top black.png",
+			"trainer front male/hair/hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/classy top m/classy top m black.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png"
+		]
+	},
+	"jenni_hermoso": {
+		"idea": "Jenni Hermoso: coleta y camiseta de la selección.",
+		"frente": [
+			"trainer front female/base/base medium.png",
+			"trainer front female/bottoms/shorts/shorts blue.png",
+			"trainer front female/tops/t-shirt/t-shirt red.png",
+			"trainer front female/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base medium.png",
+			"overworld walk/bottoms/shorts/shorts blue.png",
+			"overworld walk/tops/t-shirt/t-shirt red.png",
+			"overworld walk/hair/girl 4/4 black.png"
+		]
+	},
+	"jorge_javier": {
+		"idea": "Jorge Javier Vázquez: pelo blanco y americana de color.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/classy top/classy top wine.png",
+			"trainer front male/hair/hair 4/4 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/classy top m/classy top m wine.png",
+			"overworld walk/hair/boy 4/boy 4 white.png"
+		]
+	},
+	"coto_matamoros": {
+		"idea": "Coto Matamoros: camisa blanca abierta.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/classy pants/classy pants beige.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m beige.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 white.png"
+		]
+	},
+	"belen_esteban": {
+		"idea": "Belén Esteban: melena rubia y chaqueta rosa.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/Jeans/jeans  light blue.png",
+			"trainer front female/tops/open jacket/open pink.png",
+			"trainer front female/hair/hair 3/3 blonde.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/jeans/jeans light blue.png",
+			"overworld walk/tops/open jacket/open jacket pink.png",
+			"overworld walk/hair/girl  3/3 blonde.png"
+		]
+	},
+	"melendi": {
+		"idea": "Melendi: gorra y sudadera.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/hoodie/hoodie black.png",
+			"trainer front male/hair/hair 1/1 black.png",
+			"trainer front male/hats/youngster hat/youngster cap yellow.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/hoodie/hoodie black.png",
+			"overworld walk/hair/boy 1/boy 1 black.png",
+			"overworld walk/hats/youngster hat/youngster cap yellow.png"
+		]
+	},
+	"felipe_vi": {
+		"idea": "El rey Felipe VI: traje de rey con capa y corona de oro.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/lord suit pants.png",
+			"trainer front male/tops/lord suit top/lord suit top red.png",
+			"trainer front male/hair/hair 2/2 white.png",
+			"trainer front male/hats/crown/crown gold.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/lord suit pants.png",
+			"overworld walk/tops/lord suit top/lord suit top red.png",
+			"overworld walk/hair/boy 2/boy 2 white.png",
+			"overworld walk/hats/crown/crown gold.png"
+		]
+	},
+	"juan_carlos": {
+		"idea": "El rey emérito Juan Carlos I: traje de rey morado y corona de plata.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/lord suit pants.png",
+			"trainer front male/tops/lord suit top/lord suit top purple.png",
+			"trainer front male/hair/hair 2/2 white.png",
+			"trainer front male/hats/crown/crown silver.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/lord suit pants.png",
+			"overworld walk/tops/lord suit top/lord suit top purple.png",
+			"overworld walk/hair/boy 2/boy 2 white.png",
+			"overworld walk/hats/crown/crown silver.png"
+		]
+	},
+	"sarah_santaolalla": {
+		"idea": "Sarah Santaolalla: melena rubia y americana negra.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/Jeans/jeans black.png",
+			"trainer front female/tops/classy top/classy top black.png",
+			"trainer front female/hair/Hair 2/2 blonde.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/classy top f/classy top f black.png",
+			"overworld walk/hair/girl 2/2 blonde.png"
+		]
+	},
+	"vito_quiles": {
+		"idea": "Vito Quiles: americana y vaqueros, micrófono en mano.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/classy top/classy top navy.png",
+			"trainer front male/hair/hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/classy top m/classy top m navy.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png"
+		]
+	},
+	"bertrand_ndongo": {
+		"idea": "Bertrand Ndongo: traje oscuro.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/classy top/classy top black.png",
+			"trainer front male/hair/hair 4/4 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/classy top m/classy top m black.png",
+			"overworld walk/hair/boy 4/boy 4 black.png"
+		]
+	},
+	"vegeta": {
+		"idea": "Vegeta777: pelo de punta y sudadera morada.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans black.png",
+			"trainer front male/tops/hoodie/hoodie purple.png",
+			"trainer front male/hair/hair 1/1 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans black.png",
+			"overworld walk/tops/hoodie/hoodie purple.png",
+			"overworld walk/hair/boy 1/boy 1 black.png"
+		]
+	},
+	"willyrex": {
+		"idea": "Willyrex: sudadera azul.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/hoodie/hoodie blue.png",
+			"trainer front male/hair/hair 2/2 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/hoodie/hoodie blue.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png"
+		]
+	},
+	"ferran_torres": {
+		"idea": "Ferran Torres: camiseta azulgrana.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/shorts/shorts blue.png",
+			"trainer front male/tops/shirt combo/shirt combo blue.png",
+			"trainer front male/hair/hair 2/2 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/shorts/shorts blue.png",
+			"overworld walk/tops/shirt combo/shirt combo blue.png",
+			"overworld walk/hair/boy 2/boy 2 black.png"
+		]
+	},
+	"juan_roig": {
+		"idea": "Juan Roig: camisa blanca y chaleco de Mercadona.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants grey.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 white.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m grey.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 white.png"
+		]
 	}
 }

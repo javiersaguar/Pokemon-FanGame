@@ -551,8 +551,12 @@ func _intro(start_events: Array) -> void:
 	_set_trainer_texture(_player_trainer, player_back)
 	_player_trainer.visible = player_back != null
 	if not trainer.is_empty():
-		var sprite := PlaceholderArt.load_texture(str(trainer.get("battle_sprite", "")))
+		# Foto real del personaje si existe (decisión de Javier); si no, su sprite.
+		var photo := RealPhoto.load_texture(str(trainer.get("real_photo", "")))
+		var sprite := photo if photo != null else PlaceholderArt.load_texture(str(trainer.get("battle_sprite", "")))
 		_set_trainer_texture(_foe_trainer, sprite)
+		_foe_trainer.scale = RealPhoto.fit_scale(photo) if photo != null else Vector2.ONE
+		_foe_trainer.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR if photo != null else CanvasItem.TEXTURE_FILTER_PARENT_NODE
 		_foe_trainer.visible = sprite != null
 	_curtain_a.hide()
 	_curtain_b.hide()

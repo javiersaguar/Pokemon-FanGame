@@ -1,5 +1,5 @@
 {
-	"fingerprint": "9f03480b11601c54f910ef56d877b76385945ef148aa99ad698af5d2057316cc",
+	"fingerprint": "7e888e7b86370f493c64a65b95929ba0888cabb764ac3054e2195c79602efc0c",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -117,7 +117,7 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "f830df9b33f488577d7401c3e4cf8159e8dcd7817ac823fb7986d4fdaf10d8ad",
+		"input_hash": "8769467b7989855db4775f3355ee3ff25ffbf3a4f6fe0f6b499338c2f603c689",
 		"items": {
 			"test/muestra_pueblo/Pocion": "kangaskhancandy",
 			"test/muestra_ruta/Pocion": "firestone",
@@ -74493,6 +74493,914 @@
 		"tm_moves": {},
 		"trades": {},
 		"trainers": {
+			"abalos": {
+				"party": [
+					{
+						"level": 10.0,
+						"species": "togedemarutotem"
+					},
+					{
+						"level": 11.0,
+						"species": "cramorantgorging"
+					}
+				]
+			},
+			"abascal": {
+				"party": [
+					{
+						"level": 14.0,
+						"species": "qwilfishhisui"
+					},
+					{
+						"level": 15.0,
+						"species": "pincurchin"
+					},
+					{
+						"level": 16.0,
+						"species": "gholdengo"
+					}
+				]
+			},
+			"aitana": {
+				"party": [
+					{
+						"level": 20.0,
+						"species": "oricoriopau"
+					},
+					{
+						"level": 21.0,
+						"species": "lilligant"
+					},
+					{
+						"level": 22.0,
+						"species": "greninjabond"
+					}
+				]
+			},
+			"almeida": {
+				"party": [
+					{
+						"level": 13.0,
+						"species": "mimikyubustedtotem"
+					},
+					{
+						"level": 14.0,
+						"species": "taurospaldeacombat"
+					},
+					{
+						"level": 15.0,
+						"species": "ironjugulis"
+					}
+				]
+			},
+			"alonso": {
+				"party": [
+					{
+						"level": 58.0,
+						"species": "jolteon"
+					},
+					{
+						"level": 58.0,
+						"species": "dedenne"
+					},
+					{
+						"level": 59.0,
+						"species": "toxtricitylowkey"
+					},
+					{
+						"level": 59.0,
+						"species": "electivire"
+					},
+					{
+						"level": 60.0,
+						"species": "arctozolt"
+					},
+					{
+						"level": 61.0,
+						"species": "xurkitree"
+					}
+				]
+			},
+			"amancio_ortega": {
+				"party": [
+					{
+						"level": 40.0,
+						"species": "togedemarutotem"
+					},
+					{
+						"level": 41.0,
+						"species": "copperajah"
+					},
+					{
+						"level": 42.0,
+						"species": "kartana"
+					}
+				]
+			},
+			"aupa_athletic": {
+				"party": [
+					{
+						"level": 42.0,
+						"species": "monferno"
+					},
+					{
+						"level": 42.0,
+						"species": "poliwrath"
+					},
+					{
+						"level": 43.0,
+						"species": "infernape"
+					},
+					{
+						"level": 44.0,
+						"species": "quaquaval"
+					}
+				]
+			},
+			"ayuso": {
+				"party": [
+					{
+						"level": 12.0,
+						"species": "salandit"
+					},
+					{
+						"level": 12.0,
+						"species": "larvesta"
+					},
+					{
+						"level": 14.0,
+						"species": "salazzletotem"
+					}
+				]
+			},
+			"banderas": {
+				"party": [
+					{
+						"level": 51.0,
+						"species": "scrafty"
+					},
+					{
+						"level": 51.0,
+						"species": "skuntank"
+					},
+					{
+						"level": 52.0,
+						"species": "incineroar"
+					},
+					{
+						"level": 53.0,
+						"species": "grimmsnarl"
+					}
+				]
+			},
+			"belen_esteban": {
+				"party": [
+					{
+						"level": 14.0,
+						"species": "bouffalant"
+					},
+					{
+						"level": 15.0,
+						"species": "squawkabilly"
+					},
+					{
+						"level": 15.0,
+						"species": "oranguru"
+					}
+				]
+			},
+			"bertrand_ndongo": {
+				"party": [
+					{
+						"level": 13.0,
+						"species": "absol"
+					},
+					{
+						"level": 14.0,
+						"species": "greninjabond"
+					},
+					{
+						"level": 15.0,
+						"species": "guzzlord"
+					}
+				]
+			},
+			"broncano": {
+				"party": [
+					{
+						"level": 13.0,
+						"species": "sigilyph"
+					},
+					{
+						"level": 14.0,
+						"species": "komala"
+					},
+					{
+						"level": 14.0,
+						"species": "zangoose"
+					},
+					{
+						"level": 15.0,
+						"species": "skarmory"
+					}
+				]
+			},
+			"chicote": {
+				"party": [
+					{
+						"level": 14.0,
+						"species": "tangela"
+					},
+					{
+						"level": 15.0,
+						"species": "misdreavus"
+					}
+				]
+			},
+			"coto_matamoros": {
+				"party": [
+					{
+						"level": 50.0,
+						"species": "absol"
+					},
+					{
+						"level": 50.0,
+						"species": "persianalola"
+					},
+					{
+						"level": 51.0,
+						"species": "morpekohangry"
+					}
+				]
+			},
+			"elxokas": {
+				"party": [
+					{
+						"level": 40.0,
+						"species": "scrafty"
+					},
+					{
+						"level": 41.0,
+						"species": "kleavor"
+					},
+					{
+						"level": 42.0,
+						"species": "pyroar"
+					}
+				]
+			},
+			"enrique_iglesias": {
+				"party": [
+					{
+						"level": 14.0,
+						"species": "magnemite"
+					},
+					{
+						"level": 15.0,
+						"species": "qwilfish"
+					},
+					{
+						"level": 16.0,
+						"species": "probopass"
+					}
+				]
+			},
+			"ester_exposito": {
+				"party": [
+					{
+						"level": 14.0,
+						"species": "druddigon"
+					},
+					{
+						"level": 15.0,
+						"species": "drampa"
+					},
+					{
+						"level": 16.0,
+						"species": "cramorant"
+					}
+				]
+			},
+			"felipe_vi": {
+				"party": [
+					{
+						"level": 66.0,
+						"species": "yanmega"
+					},
+					{
+						"level": 67.0,
+						"species": "slitherwing"
+					},
+					{
+						"level": 70.0,
+						"species": "gougingfire"
+					}
+				]
+			},
+			"ferran_torres": {
+				"party": [
+					{
+						"level": 25.0,
+						"species": "wormadam"
+					},
+					{
+						"level": 26.0,
+						"species": "huntail"
+					},
+					{
+						"level": 27.0,
+						"species": "dracovish"
+					}
+				]
+			},
+			"folagor": {
+				"party": [
+					{
+						"level": 15.0,
+						"species": "komala"
+					},
+					{
+						"level": 15.0,
+						"species": "taurospaldeaaqua"
+					},
+					{
+						"level": 16.0,
+						"species": "aerodactyl"
+					}
+				]
+			},
+			"franco": {
+				"party": [
+					{
+						"level": 7.0,
+						"species": "gimmighoulroaming"
+					},
+					{
+						"level": 8.0,
+						"species": "mimikyutotem"
+					},
+					{
+						"level": 9.0,
+						"species": "duskull"
+					}
+				]
+			},
+			"gasol": {
+				"party": [
+					{
+						"level": 57.0,
+						"species": "hydrapple"
+					},
+					{
+						"level": 57.0,
+						"species": "cyclizar"
+					},
+					{
+						"level": 58.0,
+						"species": "flygon"
+					},
+					{
+						"level": 58.0,
+						"species": "haxorus"
+					},
+					{
+						"level": 59.0,
+						"species": "kommoototem"
+					},
+					{
+						"level": 60.0,
+						"species": "tyrantrum"
+					}
+				]
+			},
+			"guardiola": {
+				"party": [
+					{
+						"level": 19.0,
+						"species": "ironthorns"
+					},
+					{
+						"level": 20.0,
+						"species": "duraludon"
+					},
+					{
+						"level": 21.0,
+						"species": "milotic"
+					}
+				]
+			},
+			"hustlehard304": {
+				"party": [
+					{
+						"level": 21.0,
+						"species": "ironjugulis"
+					},
+					{
+						"level": 22.0,
+						"species": "honchkrow"
+					}
+				]
+			},
+			"ibai": {
+				"party": [
+					{
+						"level": 20.0,
+						"species": "linoone"
+					},
+					{
+						"level": 21.0,
+						"species": "eiscue"
+					},
+					{
+						"level": 22.0,
+						"species": "flareon"
+					}
+				]
+			},
+			"inaki_williams": {
+				"party": [
+					{
+						"level": 42.0,
+						"species": "torterra"
+					},
+					{
+						"level": 43.0,
+						"species": "rabsca"
+					}
+				]
+			},
+			"iniesta": {
+				"party": [
+					{
+						"level": 57.0,
+						"species": "ironcrown"
+					},
+					{
+						"level": 57.0,
+						"species": "xatu"
+					},
+					{
+						"level": 58.0,
+						"species": "rabsca"
+					},
+					{
+						"level": 58.0,
+						"species": "solrock"
+					},
+					{
+						"level": 59.0,
+						"species": "meowstic"
+					},
+					{
+						"level": 60.0,
+						"species": "bruxish"
+					}
+				]
+			},
+			"irene_montero": {
+				"party": [
+					{
+						"level": 10.0,
+						"species": "mimikyu"
+					},
+					{
+						"level": 11.0,
+						"species": "dedenne"
+					}
+				]
+			},
+			"jenni_hermoso": {
+				"party": [
+					{
+						"level": 30.0,
+						"species": "sandyshocks"
+					},
+					{
+						"level": 31.0,
+						"species": "snorlax"
+					}
+				]
+			},
+			"joaquin": {
+				"party": [
+					{
+						"level": 31.0,
+						"species": "bayleef"
+					},
+					{
+						"level": 31.0,
+						"species": "brambleghast"
+					},
+					{
+						"level": 32.0,
+						"species": "lurantistotem"
+					},
+					{
+						"level": 33.0,
+						"species": "carnivine"
+					}
+				]
+			},
+			"jorge_javier": {
+				"party": [
+					{
+						"level": 14.0,
+						"species": "raticatealolatotem"
+					},
+					{
+						"level": 15.0,
+						"species": "girafarig"
+					},
+					{
+						"level": 15.0,
+						"species": "hoothoot"
+					}
+				]
+			},
+			"juan_carlos": {
+				"party": [
+					{
+						"level": 39.0,
+						"species": "cramorantgorging"
+					},
+					{
+						"level": 40.0,
+						"species": "ironbundle"
+					},
+					{
+						"level": 41.0,
+						"species": "floatzel"
+					}
+				]
+			},
+			"juan_roig": {
+				"party": [
+					{
+						"level": 26.0,
+						"species": "slurpuff"
+					},
+					{
+						"level": 27.0,
+						"species": "greninjaash"
+					},
+					{
+						"level": 28.0,
+						"species": "mimikyubusted"
+					}
+				]
+			},
+			"julio_iglesias": {
+				"party": [
+					{
+						"level": 50.0,
+						"species": "starmie"
+					},
+					{
+						"level": 51.0,
+						"species": "ironbundle"
+					},
+					{
+						"level": 52.0,
+						"species": "basculinbluestriped"
+					}
+				]
+			},
+			"keyne": {
+				"party": [
+					{
+						"level": 18.0,
+						"species": "cascoon"
+					},
+					{
+						"level": 19.0,
+						"species": "silicobra"
+					}
+				]
+			},
+			"koldo": {
+				"party": [
+					{
+						"level": 10.0,
+						"species": "mankey"
+					},
+					{
+						"level": 11.0,
+						"species": "mienfoo"
+					}
+				]
+			},
+			"labrador": {
+				"party": [
+					{
+						"level": 25.0,
+						"species": "croagunk"
+					},
+					{
+						"level": 25.0,
+						"species": "taurospaldeablaze"
+					},
+					{
+						"level": 26.0,
+						"species": "taurospaldeaaqua"
+					},
+					{
+						"level": 27.0,
+						"species": "sawk"
+					}
+				]
+			},
+			"lamine": {
+				"party": [
+					{
+						"level": 22.0,
+						"species": "flamigo"
+					},
+					{
+						"level": 23.0,
+						"species": "celesteela"
+					}
+				]
+			},
+			"laporta": {
+				"party": [
+					{
+						"level": 19.0,
+						"species": "sandshrewalola"
+					},
+					{
+						"level": 19.0,
+						"species": "ferroseed"
+					},
+					{
+						"level": 20.0,
+						"species": "sandslashalola"
+					},
+					{
+						"level": 21.0,
+						"species": "duraludon"
+					}
+				]
+			},
+			"latasa": {
+				"party": [
+					{
+						"level": 46.0,
+						"species": "crabominable"
+					},
+					{
+						"level": 46.0,
+						"species": "sandslashalola"
+					},
+					{
+						"level": 47.0,
+						"species": "abomasnow"
+					},
+					{
+						"level": 48.0,
+						"species": "ironbundle"
+					}
+				]
+			},
+			"leire_diez": {
+				"party": [
+					{
+						"level": 22.0,
+						"species": "koffing"
+					},
+					{
+						"level": 22.0,
+						"species": "sneaselhisui"
+					},
+					{
+						"level": 23.0,
+						"species": "qwilfishhisui"
+					},
+					{
+						"level": 24.0,
+						"species": "golbat"
+					}
+				]
+			},
+			"mario_casas": {
+				"party": [
+					{
+						"level": 50.0,
+						"species": "arctozolt"
+					},
+					{
+						"level": 50.0,
+						"species": "mrmime"
+					},
+					{
+						"level": 51.0,
+						"species": "blacephalon"
+					}
+				]
+			},
+			"melendi": {
+				"party": [
+					{
+						"level": 41.0,
+						"species": "drampa"
+					},
+					{
+						"level": 41.0,
+						"species": "swadloon"
+					},
+					{
+						"level": 42.0,
+						"species": "crawdaunt"
+					}
+				]
+			},
+			"nadal": {
+				"party": [
+					{
+						"level": 57.0,
+						"species": "garchomp"
+					},
+					{
+						"level": 57.0,
+						"species": "gastrodon"
+					},
+					{
+						"level": 58.0,
+						"species": "runerigus"
+					},
+					{
+						"level": 58.0,
+						"species": "golem"
+					},
+					{
+						"level": 59.0,
+						"species": "stunfisk"
+					},
+					{
+						"level": 60.0,
+						"species": "steelix"
+					}
+				]
+			},
+			"nico_williams": {
+				"party": [
+					{
+						"level": 42.0,
+						"species": "emboar"
+					},
+					{
+						"level": 43.0,
+						"species": "typhlosionhisui"
+					}
+				]
+			},
+			"oscar_puente": {
+				"party": [
+					{
+						"level": 46.0,
+						"species": "togedemarutotem"
+					},
+					{
+						"level": 46.0,
+						"species": "klefki"
+					},
+					{
+						"level": 47.0,
+						"species": "metang"
+					}
+				]
+			},
+			"pablo_iglesias": {
+				"party": [
+					{
+						"level": 10.0,
+						"species": "ironjugulis"
+					},
+					{
+						"level": 11.0,
+						"species": "roaringmoon"
+					}
+				]
+			},
+			"pedro_sanchez": {
+				"party": [
+					{
+						"level": 61.0,
+						"species": "rapidash"
+					},
+					{
+						"level": 61.0,
+						"species": "tyrantrum"
+					},
+					{
+						"level": 62.0,
+						"species": "tsareena"
+					},
+					{
+						"level": 62.0,
+						"species": "tyranitar"
+					},
+					{
+						"level": 63.0,
+						"species": "crobat"
+					},
+					{
+						"level": 65.0,
+						"species": "skuntank"
+					}
+				]
+			},
+			"pedroche": {
+				"party": [
+					{
+						"level": 14.0,
+						"species": "druddigon"
+					},
+					{
+						"level": 15.0,
+						"species": "spiritomb"
+					}
+				]
+			},
+			"pereira7": {
+				"party": [
+					{
+						"level": 39.0,
+						"species": "electabuzz"
+					},
+					{
+						"level": 40.0,
+						"species": "prinplup"
+					},
+					{
+						"level": 41.0,
+						"species": "venomoth"
+					}
+				]
+			},
+			"pique": {
+				"party": [
+					{
+						"level": 21.0,
+						"species": "sandslashalola"
+					},
+					{
+						"level": 21.0,
+						"species": "scizor"
+					},
+					{
+						"level": 22.0,
+						"species": "klefki"
+					}
+				]
+			},
+			"pokealex": {
+				"party": [
+					{
+						"level": 15.0,
+						"species": "dracovish"
+					},
+					{
+						"level": 15.0,
+						"species": "sawk"
+					},
+					{
+						"level": 16.0,
+						"species": "cryogonal"
+					}
+				]
+			},
+			"quevedo": {
+				"party": [
+					{
+						"level": 37.0,
+						"species": "wishiwashi"
+					},
+					{
+						"level": 37.0,
+						"species": "brionne"
+					},
+					{
+						"level": 38.0,
+						"species": "cloyster"
+					},
+					{
+						"level": 39.0,
+						"species": "crawdaunt"
+					}
+				]
+			},
+			"recluta_clan": {
+				"party": [
+					{
+						"level": 11.0,
+						"species": "blitzle"
+					},
+					{
+						"level": 12.0,
+						"species": "chinchou"
+					}
+				]
+			},
 			"rival_lab_1": {
 				"party": [
 					{
@@ -74517,15 +75425,147 @@
 					}
 				]
 			},
+			"rosalia": {
+				"party": [
+					{
+						"level": 18.0,
+						"species": "axew"
+					},
+					{
+						"level": 19.0,
+						"species": "umbreon"
+					},
+					{
+						"level": 20.0,
+						"species": "indeedeef"
+					}
+				]
+			},
+			"rubiales": {
+				"party": [
+					{
+						"level": 30.0,
+						"species": "mabosstiff"
+					},
+					{
+						"level": 31.0,
+						"species": "ironjugulis"
+					}
+				]
+			},
 			"ruta1_manolo": {
 				"party": [
 					{
 						"level": 4.0,
-						"species": "snubbull"
+						"species": "mawile"
 					},
 					{
 						"level": 4.0,
-						"species": "mimejr"
+						"species": "cutiefly"
+					}
+				]
+			},
+			"sarah_santaolalla": {
+				"party": [
+					{
+						"level": 46.0,
+						"species": "medicham"
+					},
+					{
+						"level": 46.0,
+						"species": "chimecho"
+					},
+					{
+						"level": 47.0,
+						"species": "meowstic"
+					}
+				]
+			},
+			"sekiam": {
+				"party": [
+					{
+						"level": 15.0,
+						"species": "wishiwashischool"
+					},
+					{
+						"level": 15.0,
+						"species": "brutebonnet"
+					},
+					{
+						"level": 16.0,
+						"species": "espeon"
+					}
+				]
+			},
+			"sergio_ramos": {
+				"party": [
+					{
+						"level": 31.0,
+						"species": "lucario"
+					},
+					{
+						"level": 32.0,
+						"species": "gliscor"
+					},
+					{
+						"level": 33.0,
+						"species": "squawkabillyblue"
+					}
+				]
+			},
+			"topuria": {
+				"party": [
+					{
+						"level": 29.0,
+						"species": "hariyama"
+					},
+					{
+						"level": 29.0,
+						"species": "gurdurr"
+					},
+					{
+						"level": 30.0,
+						"species": "kommoototem"
+					}
+				]
+			},
+			"vegeta": {
+				"party": [
+					{
+						"level": 18.0,
+						"species": "bouffalant"
+					},
+					{
+						"level": 19.0,
+						"species": "basculegionf"
+					}
+				]
+			},
+			"vito_quiles": {
+				"party": [
+					{
+						"level": 13.0,
+						"species": "farfetchd"
+					},
+					{
+						"level": 14.0,
+						"species": "emolga"
+					},
+					{
+						"level": 15.0,
+						"species": "squawkabillywhite"
+					}
+				]
+			},
+			"willyrex": {
+				"party": [
+					{
+						"level": 18.0,
+						"species": "gholdengo"
+					},
+					{
+						"level": 19.0,
+						"species": "probopass"
 					}
 				]
 			}

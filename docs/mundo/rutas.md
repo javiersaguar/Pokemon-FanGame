@@ -1,0 +1,42 @@
+# Rutas de la región (propuesta)
+
+> Todo es **propuesta** (Javier decidió las ciudades y el orden de los gimnasios; las rutas que las unen salen de la geografía real). Ids y niveles en `data/region.json`; orden de la aventura en `region.md`.
+
+Cada ruta toma su paisaje del camino real entre las dos ciudades. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
+
+| Ruta | Paisaje real | Qué tiene en el juego | Entrenadores y personajes | Pokémon propuestos |
+|------|--------------|----------------------|---------------------------|--------------------|
+| **Ruta 1 · Hoces del Duratón** | Cañón del Duratón entre San Miguel de Bernuy y Sepúlveda: paredes de caliza, **buitres leonados**, la ermita de San Frutos en lo alto, canoas en el río | Camino por la ribera con hierba alta; mirador de los buitres; ruinas de Los Sanmartines | Piragüistas, ornitólogos con prismáticos | Pidgey, Bidoof, Vullaby, Psyduck, Magikarp |
+| **Ruta 2 · Tierra de Pinares y Acueducto** | Pinares de Cantalejo (el pueblo de los trillos) hasta **Segovia**, con el **Acueducto** | La ruta pasa **por debajo del Acueducto** (hito); pinares con resina | Resineros, el del cochinillo, turistas haciendo fotos al Acueducto | Pineco, Seedot, Combee, Nuzleaf, Stantler |
+| **Ruta 3 · Puerto de Navacerrada** | Sierra de Guadarrama: pinos, granito, nieve en invierno, el puerto de montaña; **Valle de Cuelgamuros** | Subida con nieve (hierba nevada), estación de esquí; desvío al Valle con la cruz gigante | Esquiadores, montañeros; **Franco** (fantasma) en Cuelgamuros | Snover, Snorunt, Swinub, Ponyta, Duskull |
+| **Ruta 4 · El Escorial y Galapagar** | Monasterio de El Escorial, urbanizaciones con chalet de la sierra, A-6 | Monasterio de fondo; urbanización con chalets; entrada a Madrid por Moncloa | **Pablo Iglesias e Irene Montero** (doble, chalet de Galapagar); vecinos de urbanización | Lechonk, Skwovet, Deerling, Pidove |
+| **Cercanías C-5** | Madrid ⇄ Getafe/Leganés/Móstoles | Viaje en tren con retraso aleatorio | Revisor, pasajeros dormidos | — |
+| **Ruta 5 · Corredor del Henares** | Alcalá de Henares (Universidad, Cervantes), Guadalajara, polígonos logísticos | Ruta con naves industriales, la Universidad de Alcalá y una casa de Cervantes | Estudiantes, mozos de almacén, repartidores | Patrat, Trubbish, Electrike, Lillipup |
+| **Ruta 6 · Medinaceli y Calatayud** | Páramos de Soria, el **arco romano de Medinaceli**, Calatayud ("la Dolores") | Meseta vacía (España vaciada): pueblos casi sin gente, arco romano | Pastores, el último vecino de un pueblo | Mareep, Wooloo, Skiddo, Geodude |
+| **Ruta 7 · Los Monegros** | Desierto de Aragón, yeso, tierras rojas | **Zona de desierto**: arena que frena, tormentas de polvo | Raveros (el festival Monegros Desert Festival) | Trapinch, Sandile, Cacnea, Hippopotas |
+| **Ruta 8 · Montserrat** | La montaña de Montserrat (rocas en forma de dedos) y el monasterio; Santpedor y Sant Esteve Sesrovires | Ruta de montaña con cremallera; monasterio con la Moreneta | **Pep Guardiola** (Santpedor) y **Rosalía** (Sant Esteve Sesrovires) | Roggenrola, Boldore, Timburr, Natu |
+| **Ruta marítima 1 · Canal de Ibiza** | Mar entre Mallorca e Ibiza; **Es Vedrà** | **Surf** (decisión de Javier); islote de Es Vedrà con misterio | Nadadores, regatistas, un DJ en un barco | Tentacool, Wingull, Mantine, Frillish, Wailmer |
+| **Ruta 9 · La Albufera y Gandía** | Lago de La Albufera, arrozales, barracas; la playa de Gandía | Arrozales con agua; barraca valenciana; playa de Gandía con guiños a *Gandía Shore* | Pescadores de la Albufera, *tronistas* de playa; **Ábalos y Koldo** (episodio del Clan) | Lotad, Lombre, Wooper, Krabby |
+| **Ruta 10 · Costa Blanca** | Benidorm (rascacielos y guiris) y la costa | Playa con rascacielos detrás (Benidorm) | Jubilados ingleses, socorristas | Wingull, Corphish, Exeggcute |
+| **Ruta 11 · Palmeral de Elche** | El palmeral de Elche (Patrimonio de la Humanidad) y la Vega Baja | Bosque de palmeras | **Vito Quiles** (segunda aparición: Elche es su ciudad) | Exeggcute, Tropius, Cherubi |
+| **Ruta 12 · Sierra Nevada y Granada** | Sierra Nevada nevada, la **Alhambra** a lo lejos, cortijos | Montaña nevada; **cortijo con una boda** | **Luis Rubiales y Jenni Hermoso** (doble, en la boda) | Snom, Frosmoth, Gligar, Skarmory |
+| **Ruta 13 · Mar de olivos** | Olivares de Jaén y Córdoba (la Mezquita de fondo) | Olivares en hileras infinitas | Aceituneros, un vendedor de aceite "a precio de oro" | Bounsweet, Smoliv, Dolliv, Arboliva |
+| **Ruta 14 · Doñana** | Marismas de Doñana, flamencos, linces | Marisma con agua poco profunda; puerto de Huelva al final (**ferry a Canarias**) | Ornitólogos, guardas del parque | Flamigo, Ducklett, Marshtomp |
+| **Ruta 15 · Costa de Gran Canaria** | Costa este de Gran Canaria hasta Maspalomas | Costa volcánica y de playa | Surfistas, *guagüeros* | Wishiwashi, Sandile, Pyukumuku |
+| **Ruta 16 · Rías Baixas** | Rías, bateas de mejillones, **regatas de Sanxenxo** | Ría con bateas; puerto deportivo | **El rey emérito Juan Carlos I** (regatas) | Shellder, Clauncher, Mareep |
+| **Ruta 17 · Galicia interior** | Montes, hórreos, *pazos*, lluvia constante; Lugo y su muralla; A Coruña y Arteixo | Lluvia casi siempre (clima del mapa); hórreos | **Elxokas**, **Amancio Ortega** (Inditex, Arteixo), **Pereira7** | Lotad, Shellos, Gloom, Hoothoot |
+| **Ruta 18 · Asturias y Picos de Europa** | Picos de Europa, **Covadonga** y sus lagos, sidrerías | Montaña con lagos; sidrería (escanciar como minijuego) | **Melendi** | Mudbray, Tauros, Gligar, Chatot |
+| **Ruta 19 · Costa de Cantabria** | Acantilados, Castro Urdiales | Costa con acantilados y faro | Surfistas, pescadores | Wingull, Seel, Pelipper |
+| **Ruta 20 · Sierra de Aralar** | Montes de Navarra y Gipuzkoa, bosques, ovejas latxas | Bosque de hayas y ovejas | Pastores, deporte rural vasco (aizkolaris) | Wooloo, Skwovet, Teddiursa |
+| **Ruta 21 · Viñedos de La Rioja** | Viñedos y bodegas, Logroño (calle Laurel) | Viñedos en hileras; bodega como cueva | Vendimiadores, sumilleres | Cherubi, Petilil, Sinistea |
+| **Ruta 22 · Burgos y Atapuerca** | Catedral de Burgos, yacimientos de **Atapuerca** | Yacimiento con fósiles (excavación) | Arqueólogos, paleontólogos | Fósiles (Kabuto, Omanyte, Anorith), Cubone |
+| **Ruta 23 · Cuéllar** | Tierra de Pinares de Segovia, castillo de Cuéllar, encierros a caballo | Pinares y el castillo; vuelta a San Miguel de Bernuy | Resineros, jinetes | Pineco, Nuzleaf, Ponyta |
+| **Ruta 24 · La Mancha** | Molinos de viento de Consuegra y Campo de Criptana, llanuras, el Quijote | **Molinos de viento** como hito; llanura enorme | Un caballero que ataca a los molinos y su escudero (guiño al Quijote) | Hoppip, Swablu, Tauros, Doduo |
+| **Ruta 25 · Despeñaperros** | Paso de Sierra Morena entre La Mancha y Andalucía; pantano del Montoro | Desfiladero con curvas; presa | Camioneros, cazadores | Gligar, Rhyhorn, Zubat |
+| **Ruta 26 · El Torcal de Antequera** | Rocas kársticas apiladas del Torcal, dólmenes de Antequera | Laberinto de rocas | **Coto Matamoros**; escaladores | Roggenrola, Carbink, Nosepass |
+| **Calle de la Victoria** | Calle estrecha junto a Sol | La **Calle Victoria** del juego: muy corta en la superficie y larga **bajo tierra** (las cloacas y los túneles del Metro) | Los entrenadores más fuertes | Pokémon de nivel alto |
+
+## Fuentes
+
+- Datos generales de geografía y patrimonio (Acueducto de Segovia, Montserrat, palmeral de Elche, Doñana, Atapuerca, Torcal de Antequera, molinos de Consuegra): conocimiento general; posiciones contrastadas en OpenStreetMap (© colaboradores de OpenStreetMap, ODbL).
+- Regatas de Sanxenxo del rey emérito, ferry Huelva–Canarias y vuelos Gran Canaria–Vigo: conocimiento general (comprobar horarios reales si se quiere fidelidad total).

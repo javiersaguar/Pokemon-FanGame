@@ -4,7 +4,7 @@ extends RefCounted
 const FRAME_FILES := ["databox","button_amarillo","button_verde"]
 const FRAME_NAMES := ["Claro","Amarillo","Verde"]
 static var loaded := false
-static var values: Dictionary = {"always_run":false,"text_speed":40,"frame":0,"fullscreen":false,"reduce_animations":false,"battle_style":"fixed","BGM":1.0,"SE":1.0,"ME":1.0,"Cries":1.0,"Ambient":1.0}
+static var values: Dictionary = {"always_run":false,"text_speed":40,"frame":0,"fullscreen":false,"reduce_animations":false,"real_photos":true,"battle_style":"fixed","BGM":1.0,"SE":1.0,"ME":1.0,"Cries":1.0,"Ambient":1.0}
 static func initialize() -> void:
 	if loaded: return
 	loaded = true
@@ -50,6 +50,11 @@ static func apply_frame() -> void:
 static func reduce_motion() -> bool:
 	initialize()
 	return bool(values.reduce_animations)
+
+## Fotos reales de los personajes en combate (si existen; ver RealPhoto).
+static func real_photos() -> bool:
+	initialize()
+	return bool(values.real_photos)
 
 static func always_run() -> bool:
 	initialize()

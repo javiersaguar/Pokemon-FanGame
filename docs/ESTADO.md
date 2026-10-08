@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Último aviso (2026-10-08, Javier):** 🇪🇸 **El juego pasa a llamarse Pokémon Spain** (antes *Pokémon Panchito*): emparentado con *Pokémon Iberia* y con **humor negro sobre la situación actual de España**. Humor **sin líneas rojas** (decisión de Javier). Concepto y referencias de Iberia V2.10 en [`docs/concepto_pokemon_spain.md`](concepto_pokemon_spain.md); el GDD y la guía ya lo recogen. **De momento solo ha cambiado la documentación**: no renombréis por vuestra cuenta `data/items_panchito.json`, el prefijo `PANCHITO-` de las semillas, las variables `PANCHITO_*` ni las carpetas; el título visible del juego y esos identificadores se cambiarán en una tarea aparte.
+**Último aviso (2026-10-09, Javier):** 🗺️ **Sesión larga con un solo agente (el 5), que hace de todo.** Javier ha decidido las **ciudades, los 8 líderes y dónde se combate, la Liga en el Palacio Real (Alto Mando: Iniesta, Nadal, Gasol y Alonso; Líder Supremo: Pedro Sánchez, jefe del Clan PSOE), las otras ciudades (con San Miguel de Bernuy, su pueblo, y él como entrenador), los locales (Mercadona, Estanco y Basic Fit) y 40 personajes famosos**, con foto real en combate. Todo está en **[`docs/mundo/`](mundo/README.md)**: mapa de la región (`region.md`, `data/region.json`), una ficha por ciudad con sus lugares reales, planos reales de OpenStreetMap con la cuadrícula del juego (`planos/`), rutas, personajes, locales y el arte que falta. El lore de cada ciudad lo decide Javier más adelante. Mientras dure la sesión, el Agente 5 es dueño de todo el repositorio.
+
+**Aviso anterior (2026-10-08, Javier):** 🇪🇸 **El juego pasa a llamarse Pokémon Spain** (antes *Pokémon Panchito*): emparentado con *Pokémon Iberia* y con **humor negro sobre la situación actual de España**. Humor **sin líneas rojas** (decisión de Javier). Concepto y referencias de Iberia V2.10 en [`docs/concepto_pokemon_spain.md`](concepto_pokemon_spain.md); el GDD y la guía ya lo recogen. **De momento solo ha cambiado la documentación**: no renombréis por vuestra cuenta `data/items_panchito.json`, el prefijo `PANCHITO-` de las semillas, las variables `PANCHITO_*` ni las carpetas; el título visible del juego y esos identificadores se cambiarán en una tarea aparte.
 
 **Aviso anterior (2026-10-07, Javier):** ▶️ **Sesión con 3 agentes: Agente 2 (sistemas y datos), Agente 3 (interfaz) y Agente 5 (nuevo: calidad y motor de combate).** Los Agentes 1 y 4 siguen parados. Plan y propiedad de la sesión en **[«Sesión con 3 agentes (2026-10-07)»](#sesión-con-3-agentes-2026-10-07)**, que sustituye a la de 2 agentes. Sigue vigente la regla de los cambios pequeños en lo de los agentes parados (apuntados en "Peticiones"). **Agente 3: recupera primero la pantalla de Opciones que hay sin commit en tu worktree** (ver el aviso de abajo).
 
@@ -368,6 +370,18 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 **Bloqueos:** ninguno.
 
 ---
+
+## Sesión con un solo agente (2026-10-09)
+
+*Solo trabaja el **Agente 5**, dueño de todo el repositorio mientras dure la sesión (worktree `pokemon-panchito-agente5`, rama `feat/agente5-calidad`). Reglas de siempre: tests y validadores en verde, merge a `main`, push y ESTADO al día al cerrar cada tarea; commits solo de Javier Saguar.*
+
+**Plan de la sesión:**
+1. ✅ Investigación de lugares reales de cada ciudad, mapa coherente de la región y documentación para los próximos agentes (`docs/mundo/`).
+2. ✅ Personajes: diseño de los 64 (líderes, Alto Mando, Líder Supremo, Clan PSOE y famosos) con las piezas del pack 11 (`tools/mundo/recetas_famosos.py` → `recetas.json` → `build_trainers.gd`), sus clases y equipos (`tools/mundo/entrenadores_famosos.py` → `data/trainers/liga.json` y `famosos.json`) y la **foto real en combate** (`RealPhoto`, carpeta `assets/fotos_reales/`, opción "Fotos reales").
+3. Tileset de ciudad con los edificios del pack 01 (catálogo con `tools/mundo/catalogo_edificios.gd`) y monumentos dibujados a mano (`.px2`).
+4. Pintar los mapas, empezando por **San Miguel de Bernuy** (pueblo inicial) y siguiendo el orden de la aventura.
+
+**Pendiente de Javier (de esta sesión):** quién es "la chica del *Aupa Athletic*"; Abascal aparece dos veces en la lista; cómo sale Javier como entrenador; quién es Sekiam; el lore de cada ciudad; dónde va cada famoso (hay propuestas); tipos y equipos de los líderes (propuesta en `docs/mundo/region.md`); si los combates triples (Lamine y familia; Folagor, Sekiam y PokeAlex) se hacen como combate triple de verdad (el motor solo tiene individuales y dobles) o como tres seguidos.
 
 ## Sesión con 3 agentes (2026-10-07)
 

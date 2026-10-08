@@ -18,3 +18,7 @@ desktop.ini
 tools/node_modules/
 tools/.venv/
 tools/cache/
+
+# Fotos reales de los personajes: solo en la copia de Javier (derechos de imagen)
+assets/fotos_reales/*
+!assets/fotos_reales/LEEME.md

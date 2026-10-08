@@ -1,0 +1,488 @@
+{
+  "ayuso": {
+    "class": "ayuso",
+    "name": "Ayuso",
+    "intro_text": "Bienvenido a Madrid, la capital de la libertad. Aquí combates con una caña en la mano o no combates.",
+    "lose_text": "Esto es cosa del Gobierno. Me voy a tomar una caña con mi medalla y con la tuya.",
+    "win_text": "Libertad... para ganarte.",
+    "after_text": "Desde mi ático se ve todo Madrid. Y todo lo que ha hecho mal el Gobierno.",
+    "items": [],
+    "party": [
+      {
+        "species": "growlithe",
+        "level": 12
+      },
+      {
+        "species": "litleo",
+        "level": 12
+      },
+      {
+        "species": "arcanine",
+        "level": 14
+      }
+    ]
+  },
+  "laporta": {
+    "class": "laporta",
+    "name": "Laporta",
+    "intro_text": "Benvingut al Camp Nou. Bueno, a lo que hay del Camp Nou. Activo una palanca y te gano.",
+    "lose_text": "He activado todas las palancas... y ni así. La temporada que viene, el estadio al cien por cien.",
+    "win_text": "Una palanca más y ganamos la Champions.",
+    "after_text": "El estadio estará acabado... la temporada que viene.",
+    "items": [],
+    "party": [
+      {
+        "species": "magnemite",
+        "level": 19
+      },
+      {
+        "species": "bronzor",
+        "level": 19
+      },
+      {
+        "species": "klefki",
+        "level": 20
+      },
+      {
+        "species": "copperajah",
+        "level": 21
+      }
+    ]
+  },
+  "labrador": {
+    "class": "labrador",
+    "name": "Labrador",
+    "intro_text": "¿Tú vienes a entrenar o a mirar? Aquí, en Akuarela, el que no suda no liga.",
+    "lose_text": "Me has ganado, tío. Me voy a hacer una serie de bíceps para olvidarlo.",
+    "win_text": "Hoy es día de pierna. Y tú, de perder.",
+    "after_text": "Esta noche hay fiesta en la terraza. Tú no entras.",
+    "items": [],
+    "party": [
+      {
+        "species": "mankey",
+        "level": 25
+      },
+      {
+        "species": "hariyama",
+        "level": 25
+      },
+      {
+        "species": "pawmot",
+        "level": 26
+      },
+      {
+        "species": "machamp",
+        "level": 27
+      }
+    ]
+  },
+  "joaquin": {
+    "class": "joaquin",
+    "name": "Joaquín",
+    "intro_text": "¡Illo! ¿Sabes el chiste del Pokémon que se fue a Triana? Pues empieza cuando te gane.",
+    "lose_text": "¡Me has dejado más seco que el Guadalquivir en agosto! Toma la medalla, anda, que me haces gracia.",
+    "win_text": "¡Viva er Betis manque pierda! Pero hoy no ha perdido.",
+    "after_text": "¿Otro chiste? Va: un Bulbasaur entra en un bar...",
+    "items": [],
+    "party": [
+      {
+        "species": "sunflora",
+        "level": 31
+      },
+      {
+        "species": "lilligant",
+        "level": 31
+      },
+      {
+        "species": "tsareena",
+        "level": 32
+      },
+      {
+        "species": "meowscarada",
+        "level": 33
+      }
+    ]
+  },
+  "quevedo": {
+    "class": "quevedo",
+    "name": "Quevedo",
+    "intro_text": "Quédate... a ver cómo te gano en mi isla.",
+    "lose_text": "Te quedas con la medalla. Yo me quedo con la playa.",
+    "win_text": "Quédate... en el Centro Pokémon.",
+    "after_text": "La playa del Inglés es mía. La medalla, ya es tuya.",
+    "items": [],
+    "party": [
+      {
+        "species": "wishiwashi",
+        "level": 37
+      },
+      {
+        "species": "lanturn",
+        "level": 37
+      },
+      {
+        "species": "barraskewda",
+        "level": 38
+      },
+      {
+        "species": "palafin",
+        "level": 39
+      }
+    ]
+  },
+  "aupa_athletic": {
+    "class": "aupa_athletic",
+    "name": "Aupa Athletic",
+    "intro_text": "¡Aupa Athletic! En La Catedral solo se gana con cantera.",
+    "lose_text": "¡Qué nivel! Ni en la final de Copa lloré tanto.",
+    "win_text": "¡Aupa! ¡A la gabarra!",
+    "after_text": "San Mamés siempre canta. Hoy canta por ti.",
+    "items": [],
+    "party": [
+      {
+        "species": "pignite",
+        "level": 42
+      },
+      {
+        "species": "hawlucha",
+        "level": 42
+      },
+      {
+        "species": "blaziken",
+        "level": 43
+      },
+      {
+        "species": "infernape",
+        "level": 44
+      }
+    ]
+  },
+  "latasa": {
+    "class": "latasa",
+    "name": "Latasa",
+    "intro_text": "En Valladolid hace un frío que pela. Y yo, en el área, más.",
+    "lose_text": "Gol en propia. Te la has ganado, la medalla.",
+    "win_text": "Y otro gol para el Pucela.",
+    "after_text": "En invierno, la Plaza Mayor es una pista de hielo. Y yo, el que marca.",
+    "items": [],
+    "party": [
+      {
+        "species": "cetitan",
+        "level": 46
+      },
+      {
+        "species": "glalie",
+        "level": 46
+      },
+      {
+        "species": "avalugg",
+        "level": 47
+      },
+      {
+        "species": "baxcalibur",
+        "level": 48
+      }
+    ]
+  },
+  "banderas": {
+    "class": "banderas",
+    "name": "Banderas",
+    "intro_text": "¡Silencio, se rueda! Escena final: el Zorro derrota al aspirante. Toma una.",
+    "lose_text": "¡Corten! Me has robado la escena. Y la medalla. Vuelve cuando quieras al Soho.",
+    "win_text": "Toma buena. Se imprime.",
+    "after_text": "La próxima película la ruedo contigo de protagonista. O de extra.",
+    "items": [],
+    "party": [
+      {
+        "species": "sneasel",
+        "level": 51
+      },
+      {
+        "species": "absol",
+        "level": 51
+      },
+      {
+        "species": "hydreigon",
+        "level": 52
+      },
+      {
+        "species": "zoroark",
+        "level": 53
+      }
+    ]
+  },
+  "iniesta": {
+    "class": "iniesta",
+    "name": "Iniesta",
+    "intro_text": "No hace falta correr. Hace falta ver el pase antes que nadie.",
+    "lose_text": "Has visto el pase antes que yo. Enhorabuena.",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "Has visto el pase antes que yo. Enhorabuena.",
+    "items": [
+      "hyperpotion",
+      "hyperpotion"
+    ],
+    "party": [
+      {
+        "species": "espeon",
+        "level": 57
+      },
+      {
+        "species": "bronzong",
+        "level": 57
+      },
+      {
+        "species": "hatterene",
+        "level": 58
+      },
+      {
+        "species": "indeedee",
+        "level": 58
+      },
+      {
+        "species": "slowking",
+        "level": 59
+      },
+      {
+        "species": "gardevoir",
+        "level": 60
+      }
+    ]
+  },
+  "nadal": {
+    "class": "nadal",
+    "name": "Nadal",
+    "intro_text": "En tierra batida no he perdido casi nunca. Vamos.",
+    "lose_text": "¡Vamos! Bien jugado. Hasta el último punto.",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "¡Vamos! Bien jugado. Hasta el último punto.",
+    "items": [
+      "hyperpotion",
+      "hyperpotion"
+    ],
+    "party": [
+      {
+        "species": "hippowdon",
+        "level": 57
+      },
+      {
+        "species": "excadrill",
+        "level": 57
+      },
+      {
+        "species": "krookodile",
+        "level": 58
+      },
+      {
+        "species": "mamoswine",
+        "level": 58
+      },
+      {
+        "species": "donphan",
+        "level": 59
+      },
+      {
+        "species": "garchomp",
+        "level": 60
+      }
+    ]
+  },
+  "gasol": {
+    "class": "gasol",
+    "name": "Gasol",
+    "intro_text": "Desde aquí arriba veo todos tus movimientos.",
+    "lose_text": "Me has ganado el rebote. Y el partido.",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "Me has ganado el rebote. Y el partido.",
+    "items": [
+      "hyperpotion",
+      "hyperpotion"
+    ],
+    "party": [
+      {
+        "species": "haxorus",
+        "level": 57
+      },
+      {
+        "species": "kingdra",
+        "level": 57
+      },
+      {
+        "species": "flygon",
+        "level": 58
+      },
+      {
+        "species": "goodra",
+        "level": 58
+      },
+      {
+        "species": "salamence",
+        "level": 59
+      },
+      {
+        "species": "dragonite",
+        "level": 60
+      }
+    ]
+  },
+  "alonso": {
+    "class": "alonso",
+    "name": "Alonso",
+    "intro_text": "El 33 llegará. Hoy, por ejemplo.",
+    "lose_text": "GP2 engine, GP2... digo, buen combate.",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "GP2 engine, GP2... digo, buen combate.",
+    "items": [
+      "hyperpotion",
+      "hyperpotion"
+    ],
+    "party": [
+      {
+        "species": "magnezone",
+        "level": 58
+      },
+      {
+        "species": "rotom",
+        "level": 58
+      },
+      {
+        "species": "jolteon",
+        "level": 59
+      },
+      {
+        "species": "electivire",
+        "level": 59
+      },
+      {
+        "species": "ironhands",
+        "level": 60
+      },
+      {
+        "species": "regieleki",
+        "level": 61
+      }
+    ]
+  },
+  "pedro_sanchez": {
+    "class": "pedro_sanchez",
+    "name": "Pedro Sánchez",
+    "intro_text": "He resistido mociones, investigaciones y cinco años de campaña. Un niño con ocho medallas no es nada. Manual de resistencia, capítulo uno.",
+    "lose_text": "Convocaré elecciones... cuando me venga bien.",
+    "win_text": "Ya lo decía yo: hay Gobierno para rato.",
+    "after_text": "Convocaré elecciones... cuando me venga bien.",
+    "items": [
+      "hyperpotion",
+      "hyperpotion"
+    ],
+    "party": [
+      {
+        "species": "corviknight",
+        "level": 61
+      },
+      {
+        "species": "toxapex",
+        "level": 61
+      },
+      {
+        "species": "gholdengo",
+        "level": 62
+      },
+      {
+        "species": "hydreigon",
+        "level": 62
+      },
+      {
+        "species": "annihilape",
+        "level": 63
+      },
+      {
+        "species": "kingambit",
+        "level": 65
+      }
+    ]
+  },
+  "abalos": {
+    "class": "abalos",
+    "name": "Ábalos",
+    "intro_text": "¡Prepárate para los problemas! ¡Y más vale que tengas mascarillas!",
+    "lose_text": "¡El Clan PSOE vuelve a despegar...!",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "¡El Clan PSOE vuelve a despegar...!",
+    "items": [],
+    "party": [
+      {
+        "species": "mimikyu",
+        "level": 10
+      },
+      {
+        "species": "liepard",
+        "level": 11
+      }
+    ]
+  },
+  "koldo": {
+    "class": "koldo",
+    "name": "Koldo",
+    "intro_text": "¡Y yo soy Koldo! ¡El que lleva los sobres!",
+    "lose_text": "¡El Clan PSOE vuelve a despegar...!",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "¡El Clan PSOE vuelve a despegar...!",
+    "items": [],
+    "party": [
+      {
+        "species": "timburr",
+        "level": 10
+      },
+      {
+        "species": "gurdurr",
+        "level": 11
+      }
+    ]
+  },
+  "leire_diez": {
+    "class": "leire_diez",
+    "name": "Leire",
+    "intro_text": "Yo no investigo a nadie. Solo arreglo tuberías... y expedientes.",
+    "lose_text": "Esto no ha pasado. Y si ha pasado, es periodismo.",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "Esto no ha pasado. Y si ha pasado, es periodismo.",
+    "items": [],
+    "party": [
+      {
+        "species": "grimer",
+        "level": 22
+      },
+      {
+        "species": "swalot",
+        "level": 22
+      },
+      {
+        "species": "muk",
+        "level": 23
+      },
+      {
+        "species": "toxapex",
+        "level": 24
+      }
+    ]
+  },
+  "recluta_clan": {
+    "class": "recluta_clan",
+    "name": "Recluta",
+    "intro_text": "¡Por el Líder Supremo! ¡Y por la siguiente legislatura!",
+    "lose_text": "Me van a abrir un expediente...",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "Me van a abrir un expediente...",
+    "items": [],
+    "party": [
+      {
+        "species": "purrloin",
+        "level": 11
+      },
+      {
+        "species": "koffing",
+        "level": 12
+      }
+    ]
+  }
+}

@@ -224,5 +224,637 @@
     "overworld_sprite": "res://assets/sprites/characters/padretarjeta.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "ayuso": {
+    "name": "Líder",
+    "gender": "female",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/ayuso.png",
+    "overworld_sprite": "res://assets/sprites/characters/ayuso.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "laporta": {
+    "name": "Líder",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/laporta.png",
+    "overworld_sprite": "res://assets/sprites/characters/laporta.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "labrador": {
+    "name": "Líder",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/labrador.png",
+    "overworld_sprite": "res://assets/sprites/characters/labrador.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "joaquin": {
+    "name": "Líder",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/joaquin.png",
+    "overworld_sprite": "res://assets/sprites/characters/joaquin.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "quevedo": {
+    "name": "Líder",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/quevedo.png",
+    "overworld_sprite": "res://assets/sprites/characters/quevedo.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "aupa_athletic": {
+    "name": "Líder",
+    "gender": "female",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/aupa_athletic.png",
+    "overworld_sprite": "res://assets/sprites/characters/aupa_athletic.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "latasa": {
+    "name": "Líder",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/latasa.png",
+    "overworld_sprite": "res://assets/sprites/characters/latasa.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "banderas": {
+    "name": "Líder",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/banderas.png",
+    "overworld_sprite": "res://assets/sprites/characters/banderas.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_gym_leader"
+  },
+  "iniesta": {
+    "name": "Alto Mando",
+    "gender": "male",
+    "base_money": 160,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/iniesta.png",
+    "overworld_sprite": "res://assets/sprites/characters/iniesta.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_elite_four"
+  },
+  "nadal": {
+    "name": "Alto Mando",
+    "gender": "male",
+    "base_money": 160,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/nadal.png",
+    "overworld_sprite": "res://assets/sprites/characters/nadal.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_elite_four"
+  },
+  "gasol": {
+    "name": "Alto Mando",
+    "gender": "male",
+    "base_money": 160,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/gasol.png",
+    "overworld_sprite": "res://assets/sprites/characters/gasol.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_elite_four"
+  },
+  "alonso": {
+    "name": "Alto Mando",
+    "gender": "male",
+    "base_money": 160,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/alonso.png",
+    "overworld_sprite": "res://assets/sprites/characters/alonso.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_elite_four"
+  },
+  "pedro_sanchez": {
+    "name": "Líder Supremo",
+    "gender": "male",
+    "base_money": 200,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/pedro_sanchez.png",
+    "overworld_sprite": "res://assets/sprites/characters/pedro_sanchez.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_champion"
+  },
+  "abalos": {
+    "name": "Dúo del Clan",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/abalos.png",
+    "overworld_sprite": "res://assets/sprites/characters/abalos.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_villain"
+  },
+  "koldo": {
+    "name": "Dúo del Clan",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/koldo.png",
+    "overworld_sprite": "res://assets/sprites/characters/koldo.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_villain"
+  },
+  "leire_diez": {
+    "name": "Fontanera del Clan",
+    "gender": "female",
+    "base_money": 80,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/leire_diez.png",
+    "overworld_sprite": "res://assets/sprites/characters/leire_diez.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_villain"
+  },
+  "ibai": {
+    "name": "Streamer",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/ibai.png",
+    "overworld_sprite": "res://assets/sprites/characters/ibai.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "lamine": {
+    "name": "Crack",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/lamine.png",
+    "overworld_sprite": "res://assets/sprites/characters/lamine.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "hustlehard304": {
+    "name": "Padre orgulloso",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/hustlehard304.png",
+    "overworld_sprite": "res://assets/sprites/characters/hustlehard304.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "keyne": {
+    "name": "Hermano pequeño",
+    "gender": "male",
+    "base_money": 20,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/keyne.png",
+    "overworld_sprite": "res://assets/sprites/characters/keyne.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "rosalia": {
+    "name": "Motomami",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/rosalia.png",
+    "overworld_sprite": "res://assets/sprites/characters/rosalia.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "enrique_iglesias": {
+    "name": "Cantante",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/enrique_iglesias.png",
+    "overworld_sprite": "res://assets/sprites/characters/enrique_iglesias.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "julio_iglesias": {
+    "name": "Cantante",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/julio_iglesias.png",
+    "overworld_sprite": "res://assets/sprites/characters/julio_iglesias.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "sergio_ramos": {
+    "name": "Defensa",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/sergio_ramos.png",
+    "overworld_sprite": "res://assets/sprites/characters/sergio_ramos.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "guardiola": {
+    "name": "Entrenador",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/guardiola.png",
+    "overworld_sprite": "res://assets/sprites/characters/guardiola.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "pique": {
+    "name": "Empresario",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/pique.png",
+    "overworld_sprite": "res://assets/sprites/characters/pique.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "aitana": {
+    "name": "Cantante",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/aitana.png",
+    "overworld_sprite": "res://assets/sprites/characters/aitana.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "ester_exposito": {
+    "name": "Actriz",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/ester_exposito.png",
+    "overworld_sprite": "res://assets/sprites/characters/ester_exposito.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "elxokas": {
+    "name": "Streamer",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/elxokas.png",
+    "overworld_sprite": "res://assets/sprites/characters/elxokas.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "folagor": {
+    "name": "Youtuber Pokémon",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/folagor.png",
+    "overworld_sprite": "res://assets/sprites/characters/folagor.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "sekiam": {
+    "name": "Youtuber Pokémon",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/sekiam.png",
+    "overworld_sprite": "res://assets/sprites/characters/sekiam.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "pokealex": {
+    "name": "Jugador de VGC",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/pokealex.png",
+    "overworld_sprite": "res://assets/sprites/characters/pokealex.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "amancio_ortega": {
+    "name": "Empresario",
+    "gender": "male",
+    "base_money": 200,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/amancio_ortega.png",
+    "overworld_sprite": "res://assets/sprites/characters/amancio_ortega.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "abascal": {
+    "name": "Político",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/abascal.png",
+    "overworld_sprite": "res://assets/sprites/characters/abascal.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "topuria": {
+    "name": "Campeón de UFC",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/topuria.png",
+    "overworld_sprite": "res://assets/sprites/characters/topuria.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "nico_williams": {
+    "name": "Delantero",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/nico_williams.png",
+    "overworld_sprite": "res://assets/sprites/characters/nico_williams.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "inaki_williams": {
+    "name": "Delantero",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/inaki_williams.png",
+    "overworld_sprite": "res://assets/sprites/characters/inaki_williams.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "pereira7": {
+    "name": "Streamer",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/pereira7.png",
+    "overworld_sprite": "res://assets/sprites/characters/pereira7.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "broncano": {
+    "name": "Presentador",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/broncano.png",
+    "overworld_sprite": "res://assets/sprites/characters/broncano.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "oscar_puente": {
+    "name": "Ministro de Transportes",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/oscar_puente.png",
+    "overworld_sprite": "res://assets/sprites/characters/oscar_puente.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "mario_casas": {
+    "name": "Actor",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/mario_casas.png",
+    "overworld_sprite": "res://assets/sprites/characters/mario_casas.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "pablo_iglesias": {
+    "name": "Exvicepresidente",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/pablo_iglesias.png",
+    "overworld_sprite": "res://assets/sprites/characters/pablo_iglesias.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "irene_montero": {
+    "name": "Exministra",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/irene_montero.png",
+    "overworld_sprite": "res://assets/sprites/characters/irene_montero.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "franco": {
+    "name": "Fantasma",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/franco.png",
+    "overworld_sprite": "res://assets/sprites/characters/franco.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "almeida": {
+    "name": "Alcalde",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/almeida.png",
+    "overworld_sprite": "res://assets/sprites/characters/almeida.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "chicote": {
+    "name": "Cocinero de las Campanadas",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/chicote.png",
+    "overworld_sprite": "res://assets/sprites/characters/chicote.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "pedroche": {
+    "name": "Presentadora de las Campanadas",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/pedroche.png",
+    "overworld_sprite": "res://assets/sprites/characters/pedroche.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "rubiales": {
+    "name": "Invitado de la boda",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/rubiales.png",
+    "overworld_sprite": "res://assets/sprites/characters/rubiales.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "jenni_hermoso": {
+    "name": "Campeona del mundo",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/jenni_hermoso.png",
+    "overworld_sprite": "res://assets/sprites/characters/jenni_hermoso.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "jorge_javier": {
+    "name": "Presentador",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/jorge_javier.png",
+    "overworld_sprite": "res://assets/sprites/characters/jorge_javier.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "coto_matamoros": {
+    "name": "Tertuliano",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/coto_matamoros.png",
+    "overworld_sprite": "res://assets/sprites/characters/coto_matamoros.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "belen_esteban": {
+    "name": "Princesa del pueblo",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/belen_esteban.png",
+    "overworld_sprite": "res://assets/sprites/characters/belen_esteban.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "melendi": {
+    "name": "Cantante",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/melendi.png",
+    "overworld_sprite": "res://assets/sprites/characters/melendi.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "felipe_vi": {
+    "name": "Rey",
+    "gender": "male",
+    "base_money": 250,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/felipe_vi.png",
+    "overworld_sprite": "res://assets/sprites/characters/felipe_vi.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_champion"
+  },
+  "juan_carlos": {
+    "name": "Rey emérito",
+    "gender": "male",
+    "base_money": 250,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/juan_carlos.png",
+    "overworld_sprite": "res://assets/sprites/characters/juan_carlos.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "sarah_santaolalla": {
+    "name": "Tertuliana",
+    "gender": "female",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/sarah_santaolalla.png",
+    "overworld_sprite": "res://assets/sprites/characters/sarah_santaolalla.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "vito_quiles": {
+    "name": "Agitador",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/vito_quiles.png",
+    "overworld_sprite": "res://assets/sprites/characters/vito_quiles.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "bertrand_ndongo": {
+    "name": "Agitador",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/bertrand_ndongo.png",
+    "overworld_sprite": "res://assets/sprites/characters/bertrand_ndongo.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "vegeta": {
+    "name": "Youtuber",
+    "gender": "male",
+    "base_money": 100,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/vegeta.png",
+    "overworld_sprite": "res://assets/sprites/characters/vegeta.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "willyrex": {
+    "name": "Youtuber",
+    "gender": "male",
+    "base_money": 100,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/willyrex.png",
+    "overworld_sprite": "res://assets/sprites/characters/willyrex.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "ferran_torres": {
+    "name": "Delantero",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/ferran_torres.png",
+    "overworld_sprite": "res://assets/sprites/characters/ferran_torres.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "juan_roig": {
+    "name": "Presidente de Mercadona",
+    "gender": "male",
+    "base_money": 300,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/juan_roig.png",
+    "overworld_sprite": "res://assets/sprites/characters/juan_roig.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "recluta_clan": {
+    "name": "Recluta del Clan",
+    "gender": "mixed",
+    "base_money": 30,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/recluta_clan.png",
+    "overworld_sprite": "res://assets/sprites/characters/recluta_clan.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_villain",
+    "battle_sprite_female": "res://assets/sprites/trainers/recluta_clan_f.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/recluta_clan_f.png"
   }
 }

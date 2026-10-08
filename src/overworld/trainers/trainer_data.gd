@@ -14,7 +14,8 @@ static func get_trainer_class(class_id: StringName) -> Dictionary:
 
 ## El entrenador con los campos de su clase resueltos:
 ## display_name ("Vendedor de Chupachups Manolo"), class_name, gender,
-## battle_sprite, overworld_sprite, intro_bgm, battle_bgm, ai_level y base_money.
+## battle_sprite, overworld_sprite, real_photo (ruta de la foto real o ""), intro_bgm, battle_bgm,
+## ai_level y base_money.
 static func get_trainer(trainer_id: StringName) -> Dictionary:
 	var raw := DataDB.trainer(trainer_id)
 	if raw.is_empty():
@@ -34,6 +35,8 @@ static func get_trainer(trainer_id: StringName) -> Dictionary:
 		cls.get("battle_sprite", ""))
 	trainer["overworld_sprite"] = cls.get("overworld_sprite_female" if female else "overworld_sprite",
 		cls.get("overworld_sprite", ""))
+	# Foto real del personaje, si Javier la ha puesto (RealPhoto): por id del entrenador o de su clase.
+	trainer["real_photo"] = RealPhoto.find_path([trainer_id, trainer.get("class", "")])
 	for key: String in ["intro_bgm", "battle_bgm", "ai_level", "base_money"]:
 		if not trainer.has(key) and cls.has(key):
 			trainer[key] = cls[key]
