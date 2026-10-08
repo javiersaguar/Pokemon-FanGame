@@ -2,7 +2,7 @@
 
 > **Este documento manda.** Si algo de aquí choca con `GUIA_DESARROLLO.md`, `docs/contratos.md` o cualquier otro documento, gana lo que dice aquí. Solo lo modifica Javier.
 >
-> Última actualización: 2026-10-05 (tarde): **4 agentes**. El motor del RandomLocke es del **Agente 2**, y el nuevo **Agente 4** se dedica al **arte del mundo y de los entrenadores** (tilesets, pintado de mapas, sombras, entrenadores Panchito y fondos de combate). La propiedad de carpetas está en `docs/ESTADO.md` y el plan, en «Próxima sesión».
+> Última actualización: 2026-10-05 (tarde): **4 agentes**. El motor del RandomLocke es del **Agente 2**, y el nuevo **Agente 4** se dedica al **arte del mundo y de los entrenadores** (tilesets, pintado de mapas, sombras, entrenadores Spain y fondos de combate). La propiedad de carpetas está en `docs/ESTADO.md` y el plan, en «Próxima sesión».
 
 ---
 

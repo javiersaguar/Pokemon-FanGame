@@ -12,8 +12,8 @@ Pantallas reales a 512×384. Se conservan las capturas anteriores y se guardan l
 | ![Aviso anterior](a3_run_notice.png) | ![Aviso separado](repaso_2026-10-07/a3_run_notice.png) |
 | Sin consulta de controles | ![Controles](repaso_2026-10-07/a3_controls.png) |
 | MT sin uso en mochila | ![Confirmación de movimiento](repaso_2026-10-07/a3_learn_move.png) |
-| ![Referencia Añil: ficha](../referencias/anil_datos_pokemon.png) | ![Ficha Panchito](repaso_2026-10-07/a3_summary_notes.png) |
-| ![Referencia Añil: combate](../referencias/anil_combate.png) | ![Dobles Panchito](repaso_2026-10-07/a3_battle_double.png) |
+| ![Referencia Añil: ficha](../referencias/anil_datos_pokemon.png) | ![Ficha Spain](repaso_2026-10-07/a3_summary_notes.png) |
+| ![Referencia Añil: combate](../referencias/anil_combate.png) | ![Dobles Spain](repaso_2026-10-07/a3_battle_double.png) |
 
 PENDIENTE JAVIER: aprobación visual. Mapa/medallas, identidad y música conservan sus preguntas abiertas. Guardería y sistemas nuevos conservan sus dependencias de integración.
 

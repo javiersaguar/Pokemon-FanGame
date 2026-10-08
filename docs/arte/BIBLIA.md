@@ -1,4 +1,4 @@
-# Biblia de arte de Pokémon Panchito
+# Biblia de arte de Pokémon Spain
 
 > Fase A.2 de la guía. **Se cumple en todo lo que se ve en pantalla.** Si algo de aquí choca con `docs/DIRECTRICES.md`, manda la directriz.
 > Estado: **propuesta del Agente 3, PENDIENTE de aprobación de Javier.** Lo marcado **PENDIENTE JAVIER** es una decisión suya; el resto es la propuesta por defecto mientras no diga otra cosa.
@@ -14,7 +14,7 @@
 | **Pokémon Negro/Blanco (5.ª gen)** | Perspectiva de los tiles (vista "de perfil", 3/4), densidad de detalle de 16×16, rampas de color de 4–6 tonos, contornos del color del objeto, sprites de combate de 96×96 animados, personajes del mapa de 32×32 | La UI de la pantalla táctil y su doble pantalla |
 | **Pokémon Añil** | El **nivel de acabado**: mundo y sprites a ×2 sobre 512×384, flores y hierba animadas, sombras bajo los personajes, Pokémon que te sigue, fondos de combate con profundidad, cajas de datos con barras de PS y experiencia legibles, botones de acción con un color por opción, paneles con degradado y pestañas con iconos en la pantalla de datos | **Sus gráficos propios** (UI, logos, marcos): son obra de su equipo. Nuestra UI es de diseño propio |
 
-**Personalidad Panchito** (para lo que es nuestro: UI, clases, objetos y logo): colores cálidos y saturados de barrio y verbena (naranjas, amarillos, rojos teja, azul cielo), formas redondeadas y algún detalle de humor en los iconos. **PENDIENTE JAVIER:** confirmar el tono visual o pedir otro.
+**Personalidad Spain** (para lo que es nuestro: UI, clases, objetos y logo): colores cálidos y saturados de barrio y verbena (naranjas, amarillos, rojos teja, azul cielo), formas redondeadas y algún detalle de humor en los iconos. **PENDIENTE JAVIER:** confirmar el tono visual o pedir otro.
 
 ---
 
@@ -47,7 +47,7 @@
 Archivos: `assets/arte/paleta.gpl` (para Aseprite, LibreSprite o GIMP) y `assets/arte/paleta.png` (muestrario). Se generan con `tools/arte/` a partir de `assets/arte/paleta.json`, que es la fuente.
 
 - **64 colores en 11 rampas por material**, de oscuro a claro, con *hue shifting*: las sombras tiran a tonos fríos (azul o violeta) y las luces a cálidos (amarillo).
-- Las clases Panchito, los objetos Panchito, la UI y cualquier tile o sprite propio salen **solo** de esta paleta.
+- Las clases Spain, los objetos Spain, la UI y cualquier tile o sprite propio salen **solo** de esta paleta.
 - Los **sets de terceros** conservan su paleta, pero se comprueba que encajen al lado de la nuestra; el validador los trata aparte (sección 11).
 - **PENDIENTE JAVIER:** aprobar la paleta propuesta o pedir cambios.
 
@@ -80,7 +80,7 @@ Archivos: `assets/arte/paleta.gpl` (para Aseprite, LibreSprite o GIMP) y `assets
 | Pokémon de espalda | 288×288 (ídem) | Generation 9 Pack |
 | Icono de Pokémon | 128×64 = 2 cuadros de 64 (normal y shiny); los Pokémon grandes, 2 cuadros cuadrados mayores (160×80) | Generation 9 Pack |
 | Pokémon que te sigue | Hoja de 256×256 = 4×4 cuadros de 64 (normal y shiny); los Pokémon grandes, 4×4 cuadros mayores (280, 320 o 512 de lado) | Generation 9 Pack |
-| Entrenador en combate | **Frente 160×160**; espalda en tira de cuadros de 175×196 (lanzamiento) | Pack 11 (clases Panchito montadas con sus piezas) |
+| Entrenador en combate | **Frente 160×160**; espalda en tira de cuadros de 175×196 (lanzamiento) | Pack 11 (clases Spain montadas con sus piezas) |
 | Objeto | **48×48** | Generation 9 Pack y pack 15 |
 | Iconos de tipo | 64×28 cada uno, en la tira `types_spanish.png` (64×532) | Pack 09 (Loaky, en español) |
 | Iconos de estado | Propios: cápsula de 22×9 con la abreviatura en español (`PAR`, `QUE`, `ENV`, `DOR`, `CON`), a ×2 | Los del Generation 9 Pack están en inglés |
@@ -141,7 +141,7 @@ Todos viven en el `Theme` (`src/ui/theme/main_theme.tres`): **un solo sitio** pa
 ## 9. De dónde sale el arte (A.3)
 
 1. **Packs de la comunidad ya descargados por Javier** (`docs/arte/recursos_terceros.md`), copiados al repo **solo** los archivos que se usan, sin reescalar, con su fila en `docs/arte/licencias.md` y `CREDITOS.md`. Set oficial de Pokémon: **Generation 9 Pack**.
-2. **Arte propio hecho a mano** con esta biblia para lo que no existe: interfaz, protagonistas, **clases Panchito** (con las piezas editables del pack 11), logo, medallas, **objetos Panchito** y lugares únicos. Se dibuja píxel a píxel con la paleta; la interfaz, en archivos de texto `assets/_fuentes/ui/*.px` que exporta `tools/arte/exportar.gd` (cada píxel elegido a mano: no es arte generado por algoritmo).
+2. **Arte propio hecho a mano** con esta biblia para lo que no existe: interfaz, protagonistas, **clases Spain** (con las piezas editables del pack 11), logo, medallas, **objetos Spain** y lugares únicos. Se dibuja píxel a píxel con la paleta; la interfaz, en archivos de texto `assets/_fuentes/ui/*.px` que exporta `tools/arte/exportar.gd` (cada píxel elegido a mano: no es arte generado por algoritmo).
 3. **Nunca**: mezclar sets de estilos distintos, reescalar sprites de otros juegos, usar imágenes generadas automáticamente ni **generar shinies cambiando el tono**.
 
 ---

@@ -642,9 +642,9 @@ Lo marcado **(previsto)** aún no está entregado y puede cambiar hasta entonces
 | Archivo | Dueño | Qué es |
 |---------|-------|--------|
 | `data/generated/*.json` | Agente 2 | Datos oficiales generados por `tools/import_data` (ver `tools/README.md`). **No se editan a mano** |
-| `data/species_overrides.json` | Agente 2 | Cambios propios sobre las especies. `{"species": {id: {campo: valor}}}`: cada campo sustituye al generado. Con `"base": "<id>"` se crea una especie nueva copiando otra (formas regionales Panchito) |
+| `data/species_overrides.json` | Agente 2 | Cambios propios sobre las especies. `{"species": {id: {campo: valor}}}`: cada campo sustituye al generado. Con `"base": "<id>"` se crea una especie nueva copiando otra (formas regionales Spain) |
 | `data/regional_dex.json` | Agente 2 | `{"name", "species": [ids en orden]}`. Vacío hasta que Javier decida la Pokédex |
-| `data/items_panchito.json` | Agente 3 | Objetos Panchito: `{id: {...}}` con los mismos campos que los estándar (8.3). Se suman a los estándar con `is_panchito = true` |
+| `data/items_panchito.json` | Agente 3 | Objetos Spain: `{id: {...}}` con los mismos campos que los estándar (8.3). Se suman a los estándar con `is_panchito = true` |
 | `data/trainer_classes.json`, `data/trainers/*.json`, `data/encounters/*.json`, `data/shops.json` | Agente 3 | Formatos en la sección 9. `DataDB` los carga y los devuelve tal cual |
 
 - En todos los JSON, las claves que empiezan por `_` son comentarios y se ignoran.
@@ -772,7 +772,7 @@ Campos extra opcionales en cualquier método: `time` (`day` = periodos `morning`
 
 **`ItemData`**: `id`, `name`, `name_plural` (= `name` si no se indica), `pocket` (`items`, `medicine`, `pokeballs`, `machines`, `berries`, `mail`, `battle`, `key`; el Agente 3 puede añadir `panchito`), `category`, `price`, `fling_power`, `flags`, `description`, `field_use` / `battle_use` (`""`, `on_pokemon`, `on_active`, `no_target`), `effect`, `effect_params`, `is_berry`, `is_pokeball`, `held_needs_script`, `is_panchito`. Métodos: `sell_price()` (mitad del precio), `is_ball()`, `is_key_item()`, `usable_in_field()`, `usable_in_battle()`, `param(key, default)`.
 
-Efectos de uso (`effect` → `effect_params`), iguales para objetos estándar y Panchito:
+Efectos de uso (`effect` → `effect_params`), iguales para objetos estándar y Spain:
 
 | `effect` | `effect_params` | Ejemplos |
 |----------|-----------------|----------|

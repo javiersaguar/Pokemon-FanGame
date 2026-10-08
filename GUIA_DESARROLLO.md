@@ -1,7 +1,8 @@
-# Pokémon Panchito — Guía de desarrollo completa (Godot 4)
+# Pokémon Spain — Guía de desarrollo completa (Godot 4)
 
 > Fangame **sin ánimo de lucro** al estilo de *Pokémon Añil*, programado **desde cero en Godot 4 con GDScript**.
-> Repositorio: <https://github.com/javiersaguar/Pokemon-Panchito>
+> Repositorio: <https://github.com/javiersaguar/Pokemon-FanGame>
+> **Concepto:** emparentado con *Pokémon Iberia* y puesto al día con **humor negro sobre la situación actual de España**. Ver [`docs/concepto_pokemon_spain.md`](docs/concepto_pokemon_spain.md).
 
 Esta guía va **en orden**. Cada fase se apoya en las anteriores. No pases a la siguiente sin cumplir su **criterio de "hecho"**. Las tareas se marcan con `- [ ]` y se tachan con `- [x]` (GitHub las muestra como checkboxes).
 
@@ -22,8 +23,8 @@ Hay dos fases con letra en vez de número: **Fase A (dirección de arte)**, que 
 - [Fase 7 — Motor de combate (núcleo)](#fase-7--motor-de-combate-núcleo)
 - [Fase 8 — MVP jugable (Pueblo inicial + Ruta 1)](#fase-8--mvp-jugable-pueblo-inicial--ruta-1)
 - [Fase 9 — Combate avanzado (mecánicas modernas)](#fase-9--combate-avanzado-mecánicas-modernas)
-- [Fase 10 — Entrenadores Panchito (clases humorísticas)](#fase-10--entrenadores-panchito-clases-humorísticas)
-- [Fase 11 — Objetos e inventario (+ objetos especiales Panchito)](#fase-11--objetos-e-inventario--objetos-especiales-panchito)
+- [Fase 10 — Entrenadores Spain (clases humorísticas)](#fase-10--entrenadores-spain-clases-humorísticas)
+- [Fase 11 — Objetos e inventario (+ objetos especiales Spain)](#fase-11--objetos-e-inventario--objetos-especiales-spain)
 - [Fase R — Modo RandomLocke (motor de aleatorización)](#fase-r--modo-randomlocke-motor-de-aleatorización)
 - [Fase 12 — Mundo: región, mapas y navegación](#fase-12--mundo-región-mapas-y-navegación)
 - [Fase 13 — Historia, eventos y cinemáticas](#fase-13--historia-eventos-y-cinemáticas)
@@ -62,7 +63,7 @@ Dónde se va el tiempo, aproximadamente:
 | Hito | Versión | Contenido | Fases |
 |------|---------|-----------|-------|
 | H0 | `v0.0` | Proyecto Godot arrancando con la arquitectura base y los datos importados | 1–4 |
-| H1 | `v0.1` | **MVP**: moverse, pueblo inicial, elegir inicial, Ruta 1, combate salvaje, captura, rival y 1 entrenador Panchito, guardado en varias ranuras | 5–8 |
+| H1 | `v0.1` | **MVP**: moverse, pueblo inicial, elegir inicial, Ruta 1, combate salvaje, captura, rival y 1 entrenador Spain, guardado en varias ranuras | 5–8 |
 | H2 | `v0.2` | Combate moderno completo, entrenadores, objetos, **motor de aleatorización (sin UI)** y biblia de arte | 9–11, R.1–R.6, A.1–A.3 |
 | H3 | `v0.3` | **Demo pública**: hasta el 1.er gimnasio, con historia, UI y audio propios, **menú inicial profesional** y **RandomLocke jugable** | 12–16 + tramo 1 de la 17, R completa |
 | H4 | `v0.5` | Hasta el 4.º gimnasio | 17 (tramos 2–4) |
@@ -114,7 +115,7 @@ Dónde se va el tiempo, aproximadamente:
 ### A.2 Biblia de arte (`docs/arte/BIBLIA.md`): hacerla ANTES de producir
 
 - [ ] **Referencias de estilo**: 5.ª generación (Negro/Blanco) y *Pokémon Añil* como norte (capturas en `docs/arte/referencias/`). Describe por escrito qué se toma de cada referencia: densidad de detalle de los tiles, rampas de color, flores y hierba animadas, sombras, marcos y degradados de la UI, iconos, etc. **Se toma el nivel y el estilo, no se copian sus gráficos propios** (la UI de Añil es obra de su equipo).
-- [ ] **Paleta maestra** (`assets/arte/paleta.gpl` + `paleta.png`): 48–64 colores organizados en **rampas por material** (hierba, agua, piedra, madera, tejado, piel, metal, UI...). Sombras desplazadas hacia tonos fríos y luces hacia cálidos (*hue shifting*). Las clases Panchito, los objetos Panchito, la UI y los tiles salen de esta paleta. Los sets de terceros se respetan, pero se comprueba que encajen.
+- [ ] **Paleta maestra** (`assets/arte/paleta.gpl` + `paleta.png`): 48–64 colores organizados en **rampas por material** (hierba, agua, piedra, madera, tejado, piel, metal, UI...). Sombras desplazadas hacia tonos fríos y luces hacia cálidos (*hue shifting*). Las clases Spain, los objetos Spain, la UI y los tiles salen de esta paleta. Los sets de terceros se respetan, pero se comprueba que encajen.
 - [ ] **Luz**: siempre desde arriba a la izquierda, en todo el juego.
 - [ ] **Contornos**: en personajes, objetos y Pokémon propios, un contorno oscuro **del color del objeto** (*sel-out*), nunca negro puro. En los tiles de suelo no hay contorno.
 - [ ] **Reglas de píxel**: el mundo, los personajes y los Pokémon se ven siempre a **×2 exacto** (Fase 3.2), y la UI a ×2 con detalle a ×1 solo donde lo diga la biblia. Sin escalados no enteros, sin rotar pixel art, sin antialiasing automático y sin desenfoques. Dentro de una misma capa no se mezclan escalas.
@@ -128,7 +129,7 @@ Dónde se va el tiempo, aproximadamente:
 | Pokémon de espalda | 288×288 | Igual que el frente. Se ve más grande a propósito, para dar perspectiva (como en Essentials y Añil) |
 | Icono de Pokémon | 128×64 = 2 cuadros de 64×64 | Animación del menú, también en versión shiny |
 | Pokémon que te sigue | Hoja de 256×256 = 4×4 cuadros de 64×64 | **También en versión shiny** |
-| Entrenador en combate | Un lienzo fijo para todos (defínelo en la biblia) | Clases Panchito incluidas |
+| Entrenador en combate | Un lienzo fijo para todos (defínelo en la biblia) | Clases Spain incluidas |
 | Objeto | El del pack de objetos (defínelo en la biblia) | |
 | Iconos de tipo, estado y categoría | Los del pack Loaky (en español) | Mismo grosor de borde y tipografía |
 | Fondo de combate | Según el pack de fondos (pensado para 512×384) + bases | Versiones de día y de noche si el lugar es exterior |
@@ -144,7 +145,7 @@ Dónde se va el tiempo, aproximadamente:
    - **Pokémon en combate**: set estilo 5.ª generación que cubra **todas** las especies, normal y shiny. Las carpetas de sprites de Pokémon Showdown (`gen5`, `gen5-shiny`, `gen5-back`, `gen5-back-shiny` y las animadas `gen5ani*` donde existan) incluyen los del proyecto de sprites de Smogon para las generaciones posteriores, con el mismo estilo. El repo `PokeAPI/sprites` es una alternativa.
    - **Tilesets, personajes del mapa, Pokémon que te siguen y fondos de combate**: packs estilo 4.ª/5.ª generación de la comunidad (Eevee Expo, Relic Castle, DeviantArt...). Los **créditos de Pokémon Añil** listan los recursos que usa: sirven como pista para encontrar los mismos packs, pero el permiso se pide a sus **autores originales**. Muchos de estos packs requieren registrarse o descargarse a mano: los agentes preparan la lista (nombre, enlace, licencia) y **Javier los descarga** en `assets/_terceros/`.
    - **Fuente pixel** con ñ, tildes y ¿¡ y licencia libre.
-2. **Arte propio hecho a mano siguiendo la biblia** para todo lo que no existe en ningún sitio: protagonistas, **clases Panchito**, logo, UI, medallas, **objetos Panchito** y lugares únicos.
+2. **Arte propio hecho a mano siguiendo la biblia** para todo lo que no existe en ningún sitio: protagonistas, **clases Spain**, logo, UI, medallas, **objetos Spain** y lugares únicos.
 3. **Nunca**: mezclar sets de estilos distintos, reescalar sprites de otros juegos con otra resolución, ni usar imágenes generadas automáticamente que no encajen con la biblia.
 
 - [ ] Cada asset de terceros se apunta en `CREDITOS.md` y su licencia en `docs/arte/licencias.md`.
@@ -231,16 +232,16 @@ Estados: `placeholder → encargo → silueta → color → animado → integrad
 
 ### 1.2 Crear el proyecto en el repo
 
-El repo `Pokemon-Panchito` está clonado en `C:\Users\Javier\Pokemon-Panchito`.
+El repo `Pokemon-FanGame` está clonado en `C:\Users\Javier\Pokemon-Panchito`.
 
 - [ ] Godot → **Nuevo proyecto** → ruta: la raíz del repo → renderizador **Compatibility** (máxima compatibilidad: PCs antiguos, web y móvil) o **Forward+** si solo apuntas a PCs modernos. Para un 2D pixel art, **Compatibility** es suficiente.
-- [ ] Nombre del proyecto: **Pokémon Panchito**.
+- [ ] Nombre del proyecto: **Pokémon Spain**.
 - [ ] Comprueba que se crea `project.godot` en la raíz.
 
 ### 1.3 Estructura de carpetas
 
 ```
-Pokemon-Panchito/
+Pokemon-FanGame/
 ├── project.godot
 ├── addons/                    # Plugins del editor (tests, diálogo...)
 ├── assets/
@@ -248,7 +249,7 @@ Pokemon-Panchito/
 │   ├── fonts/
 │   ├── sprites/
 │   │   ├── pokemon/{front,back,icons,front_shiny,back_shiny}/
-│   │   ├── trainers/          # Sprites de combate de clases Panchito
+│   │   ├── trainers/          # Sprites de combate de clases Spain
 │   │   ├── characters/        # Spritesheets del mapa (jugador, NPCs)
 │   │   ├── items/
 │   │   └── ui/
@@ -256,7 +257,7 @@ Pokemon-Panchito/
 ├── data/                      # ★ Datos del juego (JSON generados + JSON propios)
 │   ├── generated/             # Importados de Showdown/PokeAPI. NO se editan a mano
 │   ├── species_overrides.json # Cambios propios sobre especies (evoluciones, etc.)
-│   ├── trainer_classes.json   # ★ Clases Panchito
+│   ├── trainer_classes.json   # ★ Clases Spain
 │   ├── trainers/              # Un JSON por zona
 │   ├── items_panchito.json    # ★ Objetos especiales
 │   ├── encounters/            # Un JSON por mapa
@@ -359,10 +360,10 @@ En Godot casi todo es **texto** (`.tscn`, `.tres`, `.gd`, `.json`), así que se 
 
 ### 2.1 Identidad del juego
 
-- [ ] **Título:** Pokémon Panchito.
-- [ ] **Tono:** humor absurdo y costumbrista español (clases de entrenador y objetos de broma) con una aventura que se toma en serio lo justo. ¿Parodia total o aventura seria con chistes?
+- [ ] **Título:** Pokémon Spain.
+- [x] **Tono:** humor negro sobre la situación actual de España (vivienda, precariedad, burocracia, transporte, turismo…), como *Pokémon Iberia* pero al día, con las líneas rojas de `docs/concepto_pokemon_spain.md`.
 - [ ] **Pitch de una frase**, por ejemplo *"Una aventura Pokémon clásica en una región donde los entrenadores son los personajes de tu barrio."*
-- [ ] **¿Quién o qué es Panchito?** ¿Protagonista, profesor, mascota, villano, región? Condiciona el logo, la intro y la trama.
+- [x] **Concepto:** región inspirada en la España de hoy, heredera de *Pokémon Iberia* (`docs/concepto_pokemon_spain.md`). Falta decidir quién protagoniza la intro y la trama.
 - [ ] **Idioma:** español.
 - [ ] **Resolución y estilo de pixel art** (se decide aquí, se configura en la Fase 3.2).
 
@@ -412,7 +413,7 @@ En Godot casi todo es **texto** (`.tscn`, `.tres`, `.gd`, `.json`), así que se 
 
 ### 2.6 Historia (esqueleto)
 
-- [ ] **Equipo villano** (nombre, motivación, reclutas, almirantes, jefe), con los reclutas como otra clase Panchito.
+- [ ] **Equipo villano** (nombre, motivación, reclutas, almirantes, jefe), con los reclutas como otra clase Spain.
 - [ ] **Rival** (personalidad, 5–7 combates, inicial con ventaja sobre el tuyo).
 - [ ] **Profesor** e intro.
 - [ ] **3 actos**: presentación (gimnasios 1–3), conflicto (4–6), clímax con legendario (7–8) y Liga.
@@ -610,8 +611,8 @@ Main (Node)
 
 - [ ] `species_overrides.json`: cambios sobre las especies oficiales:
   - **Evoluciones por intercambio sustituidas** por nivel u objeto (Kadabra, Machoke, Graveler, Haunter, Onix→Steelix, Scyther→Scizor, Poliwhirl→Politoed, Slowpoke→Slowking, Seadra, Porygon, Electabuzz, Magmar, Dusclops, Rhydon, Feebas, Boldore, Gurdurr...)
-  - *(Opcional)* **Formas regionales Panchito**
-- [ ] `regional_dex.json`: orden de la Pokédex de Panchito.
+  - *(Opcional)* **Formas regionales Spain**
+- [ ] `regional_dex.json`: orden de la Pokédex de Spain.
 - [ ] `trainer_classes.json`, `trainers/*.json` (Fase 10).
 - [ ] `items_panchito.json` (Fase 11).
 - [ ] `encounters/*.json` (Fase 5.7).
@@ -911,7 +912,7 @@ extends Resource
 | *(Opcional)* Cadenas de captura o Poké Radar | Según la cadena | Hasta ≈ 1/1024 | ≈ 0,1 % |
 
 - [ ] Cada "tirada" es una comprobación independiente de 1/4096: `p = 1 − (1 − 1/4096)^tiradas`. Implementado y testeado con semilla.
-- [ ] En **RandomLocke** se puede elegir la probabilidad en los ajustes (1/4096 oficial, 1/1024, 1/512 o 1/100 "modo Panchito").
+- [ ] En **RandomLocke** se puede elegir la probabilidad en los ajustes (1/4096 oficial, 1/1024, 1/512 o 1/100 "modo Spain").
 - [ ] Opción de Debug para forzar shinies (y probar los sprites).
 - [ ] Los entrenadores pueden llevar un shiny fijado en su JSON (`"shiny": true`). Los Pokémon de entrenadores no tiran probabilidad salvo que se decida.
 
@@ -1101,7 +1102,7 @@ Showdown describe la mayoría de los movimientos con campos estándar. Implement
 - [ ] **Tienda**: comprar y vender, con el catálogo de `shops.json`.
 - [ ] **Derrota** → vuelta al último Centro Pokémon.
 
-### 8.6 Primer entrenador Panchito
+### 8.6 Primer entrenador Spain
 
 - [ ] Una clase humorística completa (por ejemplo, **Vendedor de Chupachups**) siguiendo la Fase 10, con sprite provisional.
 - [ ] En la Ruta 1, con visión, frase de desafío, combate y frase de derrota.
@@ -1232,7 +1233,7 @@ Cada una es un "modo" que se activa una vez por combate. Prográmalas **en el or
 
 ---
 
-## Fase 10 — Entrenadores Panchito (clases humorísticas)
+## Fase 10 — Entrenadores Spain (clases humorísticas)
 
 > 🎭 **La seña de identidad del juego.** Aquí no hay "Cazabichos Pepe" ni "Entrenador Guay Luis". Hay **"Vendedor de Chupachups Manolo"**, **"Flautista Iker"**, **"Peruana de 1,50 Rosa"** o **"Robasientos del metro Paco"**.
 
@@ -1277,7 +1278,7 @@ Cada una es un "modo" que se activa una vez por combate. Prográmalas **en el or
 - [ ] Campos opcionales por Pokémon: `moves`, `ability`, `item`, `nature`, `ivs`, `evs`, `gender`, `shiny`, `form`, `nickname`, `tera_type`.
 - [ ] Si no se indican movimientos, se usan los 4 últimos aprendidos por nivel.
 
-### 10.2 Lista de clases Panchito (propuesta inicial, amplíala)
+### 10.2 Lista de clases Spain (propuesta inicial, amplíala)
 
 | ID | Nombre en el juego | Sexo | Tema del equipo (sugerencia) | Frase de derrota (ejemplo) |
 |----|--------------------|------|------------------------------|-----------------------------|
@@ -1335,15 +1336,15 @@ Hereda de `NPC.tscn` y añade:
 
 - [ ] `docs/entrenadores.md` con clase, nombre, mapa, nivel medio, obligatorio sí/no y estado del sprite. **Imprescindible para el balanceo (Fase 20).**
 
-✅ **Criterio de "hecho":** al menos 10 clases Panchito con datos, sprites (aunque sean provisionales), música e IA, probadas en individual y en doble y con línea de visión correcta.
+✅ **Criterio de "hecho":** al menos 10 clases Spain con datos, sprites (aunque sean provisionales), música e IA, probadas en individual y en doble y con línea de visión correcta.
 
 ---
 
-## Fase 11 — Objetos e inventario (+ objetos especiales Panchito)
+## Fase 11 — Objetos e inventario (+ objetos especiales Spain)
 
 ### 11.1 Mochila
 
-- [ ] **Bolsillos**: Objetos, Medicinas, Poké Balls, MT/MO, Bayas, Objetos de combate, Objetos clave y **"Cosas de Panchito"** (opcional, para los especiales).
+- [ ] **Bolsillos**: Objetos, Medicinas, Poké Balls, MT/MO, Bayas, Objetos de combate, Objetos clave y **"Cosas de Spain"** (opcional, para los especiales).
 - [ ] Cantidades (máx. 999), ordenar y registrar un objeto clave en un atajo (bici, caña...).
 - [ ] Usar, equipar, tirar y ver la descripción.
 
@@ -1379,7 +1380,7 @@ func use_on(pkmn: Pokemon) -> String:
 - [ ] **Objetos clave**: Bicicleta, cañas, Buscapelea, Pokégear o teléfono, Zahorí, Repartir Experiencia, Pokéflauta...
 - [ ] **MT** reutilizables (estilo moderno) y **MO** o sus sustitutos (Fase 12.5).
 
-### 11.4 Objetos especiales Panchito (por definir)
+### 11.4 Objetos especiales Spain (por definir)
 
 > 📝 **Estos objetos se definirán más adelante.** Esta sección deja preparado el sistema y una plantilla. Las ideas de abajo son solo **ejemplos para inspirar**; la lista real irá en `docs/objetos_especiales.md`.
 
@@ -1393,7 +1394,7 @@ func use_on(pkmn: Pokemon) -> String:
 | `chupachupssuerte` | Chupachups de la suerte | Equipable | Sube el índice de crítico |
 | `abanicoabuela` | Abanico de la abuela | Equipable | Inmune a quemaduras |
 | `bonometro` | Bono de metro | Clave | Viaje rápido entre estaciones |
-| `asientoreservado` | Asiento reservado | Clave | Desbloquea una zona (el "Snorlax" de Panchito) |
+| `asientoreservado` | Asiento reservado | Clave | Desbloquea una zona (el "Snorlax" de Spain) |
 
 **Plantilla para crear un objeto especial:**
 
@@ -1425,9 +1426,9 @@ func use_on(pkmn: Pokemon) -> String:
 - [ ] **Objetos visibles** (`ItemBall.tscn`) y **ocultos** (detectables con el Zahorí).
 - [ ] **Regalos de NPCs** (una sola vez, con flag).
 - [ ] **Tiendas por ciudad** con catálogo que crece con las medallas.
-- [ ] **Tiendas especiales**: grandes almacenes, tienda de MT, bayas y una **tienda Panchito** (kiosko de chuches, bar o mercadillo).
+- [ ] **Tiendas especiales**: grandes almacenes, tienda de MT, bayas y una **tienda Spain** (kiosko de chuches, bar o mercadillo).
 
-✅ **Criterio de "hecho" (hito `v0.2` junto con las Fases 9–10):** mochila completa, objetos estándar funcionando y al menos 1 objeto Panchito de prueba creado con la plantilla.
+✅ **Criterio de "hecho" (hito `v0.2` junto con las Fases 9–10):** mochila completa, objetos estándar funcionando y al menos 1 objeto Spain de prueba creado con la plantilla.
 
 ---
 
@@ -1528,7 +1529,7 @@ Después de generar, un validador comprueba la ROM. Si algo falla, se **regenera
 
 - [ ] **Código de semilla** legible: `PANCHITO-XXXX-XXXX-XX`, que codifica la **semilla + los ajustes + la versión del generador**. Dos amigos con el mismo código juegan **la misma ROM**: retos y carreras entre amigos.
 - [ ] Introducir un código a mano o generar uno al azar.
-- [ ] Si el código es de otra versión del generador: aviso claro ("Este código es de otra versión de Pokémon Panchito").
+- [ ] Si el código es de otra versión del generador: aviso claro ("Este código es de otra versión de Pokémon Spain").
 - [ ] **Registro de spoilers** opcional: exportar a `user://randomlocke/<código>_spoilers.txt` qué ha cambiado (iniciales, líderes, legendarios...). Nunca se muestra salvo que el jugador lo pida.
 
 ### R.6 Tests del motor
@@ -1560,7 +1561,7 @@ Después de generar, un validador comprueba la ROM. Si algo falla, se **regenera
 
 - [ ] **Nueva partida → elegir modo**: dos tarjetas grandes (**Normal** / **RandomLocke**) con descripción e ilustración.
 - [ ] **Ajustes del RandomLocke**:
-  - [ ] **Presets**: *RandomLocke clásico*, *Solo aleatorio* (sin reglas Locke), *Caos Panchito* (todo al máximo) y *Personalizado*.
+  - [ ] **Presets**: *RandomLocke clásico*, *Solo aleatorio* (sin reglas Locke), *Caos Spain* (todo al máximo) y *Personalizado*.
   - [ ] Pestañas por grupo (R.3 y R.7) con interruptores y deslizadores, y una descripción de cada ajuste.
   - [ ] Campo de **código de semilla** (introducir o "🎲 Aleatoria").
 - [ ] **Pantalla "Generando la ROM..."**: barra de progreso real (la generación va en un hilo con `WorkerThreadPool`), mensajes graciosos que rotan ("Barajando la Pokédex...", "Sobornando a los líderes de gimnasio...", "Escondiendo el asiento del metro...") y una animación de nivel profesional (Fase A).
@@ -1569,7 +1570,7 @@ Después de generar, un validador comprueba la ROM. Si algo falla, se **regenera
   - [ ] Al entrar en una zona, el cartel del nombre muestra el estado de la captura (🟢 disponible / ✅ capturado / ❌ perdido).
   - [ ] Pantalla de zonas en el menú (lista de zonas y su estado).
   - [ ] Contador de muertes en la tarjeta de entrenador.
-- [ ] **Cementerio**: caja especial del PC con lápidas, mote, especie, nivel, dónde y contra quién cayó, y un **epitafio** (a elegir o generado con humor Panchito).
+- [ ] **Cementerio**: caja especial del PC con lápidas, mote, especie, nivel, dónde y contra quién cayó, y un **epitafio** (a elegir o generado con humor negro de Pokémon Spain).
 - [ ] **Game over**: pantalla final con estadísticas (tiempo, medallas, capturas, muertes, el "MVP" del equipo). La ranura queda como *terminada* y se puede consultar, pero no continuar.
 
 ### R.9 Integración con el resto del juego
@@ -1613,7 +1614,7 @@ Tabla en `docs/mapas/lista.md` con el estado (`boceto → pintado → entidades 
 - [ ] Guarida del villano
 - [ ] Calle Victoria, Liga (recepción, 4 salas, Campeón, Hall de la Fama)
 - [ ] Zonas del postgame
-- [ ] **Zonas Panchito**: estación de metro como mazmorra, mercadillo, fiestas del pueblo...
+- [ ] **Zonas Spain**: estación de metro como mazmorra, mercadillo, fiestas del pueblo...
 
 ### 12.3 Mapa de la región y vuelo
 
@@ -1635,7 +1636,7 @@ Tabla en `docs/mapas/lista.md` con el estado (`boceto → pintado → entidades 
 - [ ] **Bicicleta**: velocidad ×2 y zonas donde es obligatoria.
 - [ ] **Bordillos (ledges)**: saltar hacia abajo con su animación.
 - [ ] **Hielo resbaladizo**, cintas o flechas y teletransportadores (para cuevas y gimnasios).
-- [ ] *(Opcional)* **Bono de metro Panchito** como viaje rápido alternativo.
+- [ ] *(Opcional)* **Bono de metro Spain** como viaje rápido alternativo.
 
 ✅ **Criterio de "hecho":** todos los mapas de la ruta crítica están pintados y conectados, el mapa de la región y el vuelo funcionan, y cada obstáculo tiene su mecánica.
 
@@ -1752,7 +1753,7 @@ func run() -> void:
 ### 14.6 Bayas y teléfono
 
 - [ ] **Plantación de bayas**: plantar, regar y crecimiento por tiempo real.
-- [ ] **Teléfono o Pokégear**: contactos, llamadas de entrenadores (revanchas), de la madre o del profesor, y radio (opcional). Ideal para el humor Panchito.
+- [ ] **Teléfono o Pokégear**: contactos, llamadas de entrenadores (revanchas), de la madre o del profesor, y radio (opcional). Ideal para el humor negro de Pokémon Spain.
 
 ### 14.7 Amistad
 
@@ -1777,13 +1778,13 @@ func run() -> void:
 
 > ⭐ **Decisión de Javier:** el menú inicial tiene que estar **muy currado** y mostrar **"Realizado por Javier Saguar"**. Es lo primero que ve cualquiera que abra el juego, así que se aplica la Fase A con el máximo nivel de exigencia.
 
-- [ ] **Logo de Pokémon Panchito** con tipografía propia parecida a la oficial, en versión grande (título) y pequeña (menús). Con brillo animado (un shader que barre el logo).
-- [ ] Paleta y marcos (cuadros de diálogo) con estilo Panchito; el jugador puede elegir el marco en las opciones.
+- [ ] **Logo de Pokémon Spain** con tipografía propia parecida a la oficial, en versión grande (título) y pequeña (menús). Con brillo animado (un shader que barre el logo).
+- [ ] Paleta y marcos (cuadros de diálogo) con estilo Spain; el jugador puede elegir el marco en las opciones.
 
 **Secuencia de arranque**
 1. [ ] **Splash de autor**: fundido desde negro → **"Javier Saguar presenta"** con un sonido sutil → fundido. Se puede saltar con cualquier botón (solo a partir de la segunda vez que se abre el juego).
 2. [ ] **Aviso de fangame** breve (2 s, se puede saltar): *"Fangame sin ánimo de lucro. Pokémon es propiedad de Nintendo, Game Freak y The Pokémon Company."*
-3. [ ] **Intro animada** (10–20 s, se puede saltar): una pequeña cinemática con el legendario de portada o con Panchito, sincronizada con la música.
+3. [ ] **Intro animada** (10–20 s, se puede saltar): una pequeña cinemática con el legendario de portada o con la mascota del juego, sincronizada con la música.
 4. [ ] **Pantalla de título**:
    - [ ] Fondo con **parallax de 3–5 capas** (cielo, montañas, ciudad, primer plano) que se mueve suavemente.
    - [ ] Logo con entrada animada (cae y rebota levemente) y brillo periódico.
@@ -1855,8 +1856,8 @@ func run() -> void:
 
 | Categoría | Pistas necesarias |
 |-----------|-------------------|
-| **BGM** | Título, intro del profesor, pueblo inicial, laboratorio, ciudades (o grupos), rutas (3–5), cueva, bosque, mar/surf, bici, Centro Pokémon, Tienda, gimnasio, guarida villana, Liga, Hall de la Fama, créditos y **tema de Panchito** |
-| **Combate** | Salvaje, entrenador, **entrenador Panchito** (opcional), rival, líder, villanos, jefe villano, legendario, Alto Mando, Campeón y las victorias |
+| **BGM** | Título, intro del profesor, pueblo inicial, laboratorio, ciudades (o grupos), rutas (3–5), cueva, bosque, mar/surf, bici, Centro Pokémon, Tienda, gimnasio, guarida villana, Liga, Hall de la Fama, créditos y **tema de Pokémon Spain** |
+| **Combate** | Salvaje, entrenador, **entrenador Spain** (opcional), rival, líder, villanos, jefe villano, legendario, Alto Mando, Campeón y las victorias |
 | **ME** | Curar, objeto, objeto clave, medalla, evolución, captura, subir de nivel, eclosión |
 | **SE** | Menú (mover, aceptar, cancelar, error), puertas, choque, salto, hierba, golpes (normal, poco eficaz, supereficaz), PS bajos, Poké Ball |
 | **Intro de entrenador** | Por clase o género, por ejemplo una melodía "sospechosa" para el Robasientos |
@@ -1865,7 +1866,7 @@ func run() -> void:
 ### 16.3 Origen y licencias
 
 - [ ] Remixes de la comunidad **con permiso** y crédito.
-- [ ] Música propia, aunque sea solo un **tema de Panchito** que identifique el juego.
+- [ ] Música propia, aunque sea solo un **tema de Pokémon Spain** que identifique el juego.
 - [ ] Volumen **normalizado** entre pistas.
 - [ ] Todo en `CREDITOS.md`.
 
@@ -1882,8 +1883,8 @@ func run() -> void:
 **A. Diseño (en el GDD)**
 - [ ] Mapas del tramo: rutas, ciudad y mazmorra.
 - [ ] Especies nuevas (3–5 por ruta) y su reparto por hora.
-- [ ] Entrenadores del tramo: 4–8 por ruta, **con clases Panchito variadas** y acordes a la zona.
-- [ ] Objetos del tramo, incluido **algún objeto Panchito**.
+- [ ] Entrenadores del tramo: 4–8 por ruta, **con clases Spain variadas** y acordes a la zona.
+- [ ] Objetos del tramo, incluido **algún objeto Spain**.
 - [ ] Evento de historia del tramo (rival o villano).
 - [ ] Líder: tipo, puzle, equipo, medalla, MT y desbloqueo.
 
@@ -1900,7 +1901,7 @@ func run() -> void:
 **C. Gimnasio**
 - [ ] Puzle (interruptores, laberinto, preguntas, teletransportes, oscuridad, hielo...).
 - [ ] 2–4 entrenadores de gimnasio.
-- [ ] "Guía del gimnasio" en la entrada (puede ser otra clase Panchito con consejos absurdos).
+- [ ] "Guía del gimnasio" en la entrada (puede ser otra clase Spain con consejos absurdos).
 - [ ] Líder: diálogo antes y después, IA nivel 3+, **un "as"** que obligue a pensar y música propia.
 - [ ] Medalla, MT y desbloqueo.
 - [ ] Revancha para el postgame.
@@ -1935,7 +1936,7 @@ func run() -> void:
 ### 18.1 Calle Victoria
 
 - [ ] Mazmorra larga que exige varios movimientos de campo.
-- [ ] Entrenadores fuertes, con versiones "veteranas" de las clases Panchito.
+- [ ] Entrenadores fuertes, con versiones "veteranas" de las clases Spain.
 - [ ] Guardia que comprueba las 8 medallas.
 
 ### 18.2 Liga
@@ -1949,7 +1950,7 @@ func run() -> void:
 
 ### 18.3 Postgame
 
-- [ ] Nuevas zonas: islas, montaña, zonas secretas Panchito...
+- [ ] Nuevas zonas: islas, montaña, zonas secretas Spain...
 - [ ] Legendarios del postgame.
 - [ ] **Revanchas** de líderes y del Alto Mando.
 - [ ] Pokédex Nacional (si se decidió) y evaluación de la Pokédex.
@@ -1969,7 +1970,7 @@ Cada punto es independiente. Elige los que quieras y en el orden que quieras.
 ### 19.1 Misiones secundarias
 
 - [ ] Sistema de misiones: estado por misión en `GameState` + pantalla de registro en el menú.
-- [ ] 15–30 misiones con humor Panchito: recuperar el bocata del repartidor, encontrar al jubilado perdido en las obras, ayudar al opositor a estudiar (minijuego de preguntas)...
+- [ ] 15–30 misiones con humor negro de Pokémon Spain: recuperar el bocata del repartidor, encontrar al jubilado perdido en las obras, ayudar al opositor a estudiar (minijuego de preguntas)...
 - [ ] Intercambios con NPCs (Pokémon con mote gracioso).
 
 ### 19.2 Minijuegos
@@ -1977,7 +1978,7 @@ Cada punto es independiente. Elige los que quieras y en el orden que quieras.
 - [ ] Zona Safari (combate especial con cebo y roca).
 - [ ] Concurso de captura de bichos.
 - [ ] Sala de juegos (Voltorb Flip o similar).
-- [ ] Minijuegos Panchito: carrera para sentarse en el metro, quiz del opositor, regateo en el mercadillo...
+- [ ] Minijuegos Spain: carrera para sentarse en el metro, quiz del opositor, regateo en el mercadillo...
 
 ### 19.3 Competitivo
 
@@ -1987,7 +1988,7 @@ Cada punto es independiente. Elige los que quieras y en el orden que quieras.
 
 ### 19.4 Coleccionables y logros
 
-- [ ] Coleccionables Panchito (cromos, chapas...) con recompensas.
+- [ ] Coleccionables Spain (cromos, chapas...) con recompensas.
 - [ ] Logros internos y estadísticas (pasos, capturas, combates ganados...).
 
 ### 19.5 Online (opcional, avanzado)
@@ -2028,7 +2029,7 @@ Godot trae red de serie (`ENetMultiplayerPeer`, `WebSocketMultiplayerPeer`), as�
   - [ ] Cada movimiento de campo
   - [ ] Cada tienda
   - [ ] Cada líder da medalla y MT
-  - [ ] Cada objeto Panchito
+  - [ ] Cada objeto Spain
   - [ ] Liga → créditos → postgame
   - [ ] Opciones (volumen, velocidad, pantalla completa)
   - [ ] Teclado **y** mando
@@ -2061,13 +2062,13 @@ Godot trae red de serie (`ENetMultiplayerPeer`, `WebSocketMultiplayerPeer`), as�
 
 ### 21.2 Distribución
 
-- [ ] **GitHub Releases** del repo `Pokemon-Panchito` con el `.zip` de cada plataforma, `LEEME.txt` (controles, instalación, aviso legal) y `CREDITOS.txt`.
+- [ ] **GitHub Releases** del repo `Pokemon-FanGame` con el `.zip` de cada plataforma, `LEEME.txt` (controles, instalación, aviso legal) y `CREDITOS.txt`.
 - [ ] *(Opcional)* itch.io **gratis, sin donaciones**.
-- [ ] Aviso legal visible: *"Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus personajes son propiedad de Nintendo, Game Freak y The Pokémon Company. No está afiliado a ellos."*
+- [ ] Aviso legal visible: *"Pokémon Spain es un fangame sin ánimo de lucro. Pokémon y todos sus personajes son propiedad de Nintendo, Game Freak y The Pokémon Company. No está afiliado a ellos."*
 
 > ⚠️ **Realidad legal:** Nintendo y The Pokémon Company cierran fangames con regularidad, sobre todo los que se hacen populares o se monetizan. Para reducir el riesgo: nada de dinero, perfil bajo y **copia de seguridad del proyecto fuera de GitHub** por si el repo recibe una retirada por DMCA.
 >
-> 💡 **Ventaja de haberlo hecho desde cero:** todo el código, el motor y las clases Panchito son **tuyos**. Si algún día quisieras un juego original, bastaría con cambiar los datos y los gráficos de los Pokémon por criaturas propias.
+> 💡 **Ventaja de haberlo hecho desde cero:** todo el código, el motor y las clases Spain son **tuyos**. Si algún día quisieras un juego original, bastaría con cambiar los datos y los gráficos de los Pokémon por criaturas propias.
 
 ### 21.3 Mantenimiento
 
@@ -2127,7 +2128,7 @@ Godot trae red de serie (`ENetMultiplayerPeer`, `WebSocketMultiplayerPeer`), as�
 | story_progress | ver tabla | |
 ```
 
-### Apéndice D — Plantilla de ficha de entrenador Panchito
+### Apéndice D — Plantilla de ficha de entrenador Spain
 
 ```markdown
 ### Robasientos del metro Paco
@@ -2142,7 +2143,7 @@ Godot trae red de serie (`ENetMultiplayerPeer`, `WebSocketMultiplayerPeer`), as�
 - **Sprite:** ✅ combate / ⏳ mapa
 ```
 
-### Apéndice E — Plantilla de ficha de objeto especial Panchito
+### Apéndice E — Plantilla de ficha de objeto especial Spain
 
 ```markdown
 ### <Nombre del objeto>
@@ -2186,8 +2187,8 @@ F6  Modelo de Pokémon, equipo y PC
 F7  Motor de combate (núcleo)
 F8  MVP jugable (varias ranuras de guardado) ─────────────────── v0.1
 F9  Combate avanzado (efectos, dobles, Mega, Z, Dinamax, Tera, IA)
-F10 Entrenadores Panchito
-F11 Objetos (+ especiales Panchito)
+F10 Entrenadores Spain
+F11 Objetos (+ especiales Spain)
 FR  Motor RandomLocke (R.1–R.6) + biblia de arte (A.1–A.3) ────── v0.2
 F12 Región, mapas y navegación
 F13 Historia y cinemáticas

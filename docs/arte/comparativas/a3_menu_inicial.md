@@ -24,6 +24,6 @@ Estas son composiciones tipográficas con la fuente existente, no la tipografía
 
 Reproducción: `godot --path . --rendering-method gl_compatibility --audio-driver Dummy -s tools/arte/capture_ui.gd -- --screen=title_0` (también title_1, title_2, main_menu, splash, notice, intro, credits).
 
-Pendiente de Javier: identidad de Panchito/legendario de portada y composición/tipografía definitiva (preguntas 5 y 27). La intro usa el trío provisional existente, no añade historia. Música de título/intro/créditos pendiente de elegir recurso; la tarea 4 propone candidatos. La carga/elegir ranura y el modo aún usan los sustitutos hasta las tareas 3 y 6.
+Pendiente de Javier: identidad de Spain/legendario de portada y composición/tipografía definitiva (preguntas 5 y 27). La intro usa el trío provisional existente, no añade historia. Música de título/intro/créditos pendiente de elegir recurso; la tarea 4 propone candidatos. La carga/elegir ranura y el modo aún usan los sustitutos hasta las tareas 3 y 6.
 
 Validación: importación sin errores; 300/300 tests, 3744 aserciones, 80,6 s; validador 10521 PNG, 0 errores/0 avisos. Transición de Continuar probada con partida real; Opciones vuelve al menú y conserva el pie.

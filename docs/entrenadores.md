@@ -1,4 +1,4 @@
-# Entrenadores Panchito
+# Entrenadores Spain
 
 Registro de clases y entrenadores (Fase 10 de la guía). **Imprescindible para el balanceo (Fase 20).**
 

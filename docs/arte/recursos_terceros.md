@@ -1,4 +1,4 @@
-# Recursos de terceros de Pokémon Panchito
+# Recursos de terceros de Pokémon Spain
 
 Packs descargados por Javier el 2026-10-04. **No se modifican aquí**: se copian al repo solo los archivos que se usen, convertidos si hace falta, con su crédito en `CREDITOS.md`.
 
@@ -18,7 +18,7 @@ Packs descargados por Javier el 2026-10-04. **No se modifican aquí**: se copian
 | `08_fuente_truth_and_ideals` | Gen 5 Font – Truth and Ideals | https://eeveeexpo.com/resources/861/ | Autor del pack en Eevee Expo | 6 TTF de Negro/Blanco (normal, sombra y contorno). A 1:1 a 10 px. Comprobar ñ, tildes y ¿¡ |
 | `09_iconos_tipo_loaky` | Loaky's Modern Type Icons | https://eeveeexpo.com/resources/1528/ | **Loaky** | `types_spanish.png` y `types_stellar_spanish.png` (**en español**), más plantillas |
 | `10_fondos_combate` | Battlebacks (ORAS/XY themed) | https://eeveeexpo.com/resources/729/ | Autor del pack en Eevee Expo | 14 fondos (campo, bosque, cueva, ciudad, agua, nieve, arena...) y cielos de amanecer, día y noche |
-| `11_character_customization_gen4` | Character Customization Resources (Gen 4) | https://eeveeexpo.com/resources/317/ | Autor del pack en Eevee Expo | Piezas (bases, ropa, pelo) para montar personajes en el mapa (andar, correr, bici) y en combate. **Se pueden editar libremente**: base para los **entrenadores Panchito** |
+| `11_character_customization_gen4` | Character Customization Resources (Gen 4) | https://eeveeexpo.com/resources/317/ | Autor del pack en Eevee Expo | Piezas (bases, ropa, pelo) para montar personajes en el mapa (andar, correr, bici) y en combate. **Se pueden editar libremente**: base para los **entrenadores Spain** |
 | `13_ultimate_gen5_overworlds` | ULTIMATE Gen 5 Overworlds Pack | https://eeveeexpo.com/resources/619/ | **PurpleZaffre** | NPCs de BW/B2W2. Hojas de 256×256 |
 | `15_objetos_paldea` | Scarlet/Violet item sprites | https://eeveeexpo.com/resources/1288/ | Autor del pack en Eevee Expo | Iconos de objetos de la 9.ª generación |
 

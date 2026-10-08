@@ -1,6 +1,7 @@
-# Pokémon Panchito — Documento de diseño (GDD)
+# Pokémon Spain — Documento de diseño (GDD)
 
 > **Estado: borrador.** Sigue la Fase 2 de `GUIA_DESARROLLO.md`.
+> **Concepto (2026-10-08):** el juego se llama **Pokémon Spain**, emparentado con *Pokémon Iberia* y puesto al día con humor negro sobre la España actual. Orientación, referencias y líneas rojas en [`concepto_pokemon_spain.md`](concepto_pokemon_spain.md).
 > Todo lo marcado **PENDIENTE JAVIER** es una decisión de diseño que falta por tomar. Las opciones que aparecen al lado son **sugerencias de la guía**, no decisiones.
 > Cuando se decida algo: sustituye la marca por la decisión y apúntalo en el [registro de decisiones](#10-registro-de-decisiones).
 
@@ -16,7 +17,7 @@
 - [5. Curva de niveles y economía](#5-curva-de-niveles-y-economía)
 - [6. Historia (esqueleto)](#6-historia-esqueleto)
 - [7. Alcance de mecánicas](#7-alcance-de-mecánicas)
-- [8. Contenido Panchito](#8-contenido-panchito)
+- [8. Contenido Spain](#8-contenido-spain)
 - [9. Listas maestras](#9-listas-maestras)
 - [10. Registro de decisiones](#10-registro-de-decisiones)
 
@@ -29,13 +30,13 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 | # | Decisión | A quién afecta | Opciones / sugerencia de la guía | Estado |
 |---|----------|----------------|-----------------------------------|--------|
 | 1 | Resolución base | `project.godot`, toda la UI y el combate | **320×180** (16:9, recomendada) o 256×192 (4:3, la de DS y Añil) | Provisional: 320×180 (ya configurada). **PENDIENTE JAVIER** confirmarla |
-| 2 | ¿Quién o qué es Panchito? | Logo, título, intro y trama | Protagonista, profesor, mascota, villano o región | **PENDIENTE JAVIER** |
+| 2 | Concepto del juego | Logo, título, intro y trama | — | **Decidido (2026-10-08):** España actual con humor negro, heredero de *Pokémon Iberia* ([concepto](concepto_pokemon_spain.md)). Falta quién protagoniza la intro: **PENDIENTE JAVIER** |
 | 3 | Nombres de la región, del pueblo inicial y de la ciudad 2 | Mapas, carteles y diálogos | Puede parodiar un lugar real | **PENDIENTE JAVIER** |
 | 4 | Los 3 iniciales | Laboratorio, equipos del rival y datos | Triángulo Planta / Fuego / Agua (variable `starter` = 1 / 2 / 3, Apéndice C) | **PENDIENTE JAVIER** |
 | 5 | Profesor y rival: nombre, personalidad y nombre por defecto del rival | Intro y primer combate | — | **PENDIENTE JAVIER** |
 | 6 | Especies salvajes de la Ruta 1 (día y noche) | `data/encounters/` | La guía usa de ejemplo Pidgey, Rattata, Sentret, Hoppip / Hoothoot, Spinarak | **PENDIENTE JAVIER** |
 | 7 | Chico / chica: aspecto y nombres por defecto | Intro y teclado de nombres | — | **PENDIENTE JAVIER** |
-| 8 | Tono general | Todos los textos | ¿Parodia total o aventura seria con chistes? | **PENDIENTE JAVIER** |
+| 8 | Tono general | Todos los textos | ¿Parodia total o aventura seria con chistes? | **Decidido (2026-10-08):** humor negro sobre la situación actual de España, con las líneas rojas del [concepto](concepto_pokemon_spain.md#4-líneas-rojas-propuesta-para-que-la-confirme-javier) (**PENDIENTE JAVIER** confirmarlas) |
 | 9 | Reloj real o interno (acelerado) | `Clock`, encuentros de día y de noche | Fase 14.1 | Provisional: reloj real (`data/world.json`). **PENDIENTE JAVIER** |
 
 ---
@@ -44,13 +45,13 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 
 | Campo | Valor |
 |-------|-------|
-| **Título** | Pokémon Panchito |
+| **Título** | Pokémon Spain |
 | **Tipo** | Fangame **sin ánimo de lucro**, al estilo de *Pokémon Añil*, programado desde cero en Godot 4 con GDScript |
 | **Idioma** | Español (textos preparados para traducción con `tr()`) |
 | **Monetización** | Ninguna: ni ventas, ni donaciones a cambio de builds, ni anuncios (regla de oro 6) |
-| **Tono** | **PENDIENTE JAVIER.** Punto de partida de la guía: humor absurdo y costumbrista español (clases de entrenador y objetos de broma) con una aventura que se toma en serio lo justo |
-| **Pitch de una frase** | **PENDIENTE JAVIER.** Ejemplo de la guía: *"Una aventura Pokémon clásica en una región donde los entrenadores son los personajes de tu barrio."* |
-| **Panchito** | **PENDIENTE JAVIER** (ver decisión 2) |
+| **Tono** | Humor negro sobre la España actual (vivienda, precariedad, burocracia, transporte, turismo…), como *Pokémon Iberia* pero al día. Ver [concepto](concepto_pokemon_spain.md) |
+| **Pitch de una frase** | **PENDIENTE JAVIER.** Propuesta: *"Hazte con todos… si te llega el sueldo."* |
+| **Referencia** | *Pokémon Iberia* (Eric Lostie): solo como referencia de tono y estructura; no se copia nada suyo |
 | **Público** | **PENDIENTE JAVIER.** El humor debe funcionar para la gente a la que va dirigido |
 
 ### 1.1 Estilo visual
@@ -86,7 +87,7 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 | Rutas (~20–25) | Numeradas | | — | 3–5 especies nuevas por ruta |
 | Calle Victoria | | Cueva / montaña | — | Exige varios movimientos de campo |
 | Liga | | | — | Recepción, 4 salas, Campeón y Hall de la Fama |
-| Zonas de postgame | **PENDIENTE JAVIER** | | — | Ideas de la guía: islas, montaña, zonas secretas Panchito |
+| Zonas de postgame | **PENDIENTE JAVIER** | | — | Ideas de la guía: islas, montaña, zonas secretas Spain |
 
 ### 2.2 Biomas que deben aparecer
 
@@ -98,7 +99,7 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 - [ ] Nieve
 - [ ] Ciudad
 - [ ] Metro
-- [ ] **Zonas Panchito** (ideas de la guía): estación de metro como mazmorra, mercadillo, fiestas del pueblo...
+- [ ] **Zonas Spain** (ideas de la guía): estación de metro como mazmorra, mercadillo, fiestas del pueblo...
 
 ### 2.3 Bloqueos de progreso
 
@@ -107,7 +108,7 @@ Sin estas respuestas se puede programar con valores provisionales, pero el MVP n
 | Árboles cortables | **PENDIENTE JAVIER** (MO clásica o sistema moderno, ver [§7.2](#72-otras-decisiones-de-sistemas)) | |
 | Rocas rompibles / de fuerza | **PENDIENTE JAVIER** | |
 | Agua y cascadas | **PENDIENTE JAVIER** | |
-| "Asiento reservado del metro" (el Snorlax de Panchito, idea de la guía) | **PENDIENTE JAVIER** | |
+| "Asiento reservado del metro" (el Snorlax de Spain, idea de la guía) | **PENDIENTE JAVIER** | |
 
 - **Ruta crítica** y punto donde se abre el mundo: **PENDIENTE JAVIER.** La tabla de gimnasios de la guía sitúa Surf tras el gimnasio 3.
 
@@ -132,7 +133,7 @@ Niveles y desbloqueos tomados de la guía. El resto, **PENDIENTE JAVIER**.
 
 - **Regla:** los tipos de los gimnasios deben repartir ventajas y desventajas entre los 3 iniciales (ninguno debe ser un muro con un inicial ni un paseo con otro).
 - Cada líder: presentación, combate, medalla, MT y desbloqueo (Fase 13.4). Diseño propio de las 8 medallas (Fase 15.3).
-- ¿Humor Panchito también en los líderes? **PENDIENTE JAVIER.**
+- ¿Humor Spain también en los líderes? **PENDIENTE JAVIER.**
 
 ---
 
@@ -143,7 +144,7 @@ Niveles y desbloqueos tomados de la guía. El resto, **PENDIENTE JAVIER**.
 | **Tamaño** | **PENDIENTE JAVIER.** Guía: ~150–250 especies (cada especie extra = más sprites, balance y encuentros) |
 | **Orden** | `data/regional_dex.json` |
 | **Pokédex Nacional en el postgame** | **PENDIENTE JAVIER** |
-| **Formas regionales Panchito** (opcional) | **PENDIENTE JAVIER** |
+| **Formas regionales Spain** (opcional) | **PENDIENTE JAVIER** |
 
 ### 4.1 Iniciales
 
@@ -211,7 +212,7 @@ Reglas de la guía: los entrenadores de ruta van **2–4 niveles por debajo** de
 | Dinero perdido al ser derrotado | **PENDIENTE JAVIER** |
 | Precios de la tienda | **PENDIENTE JAVIER.** Regla de la guía: que el jugador pueda curarse pero tenga que elegir |
 | Catálogo por ciudad | Crece con las medallas (Fase 11.5), en `data/shops.json` |
-| Tienda Panchito | Kiosko de chuches, bar o mercadillo (idea de la guía). **PENDIENTE JAVIER** |
+| Tienda Spain | Kiosko de chuches, bar o mercadillo (idea de la guía). **PENDIENTE JAVIER** |
 
 ---
 
@@ -232,7 +233,7 @@ Reglas de la guía: los entrenadores de ruta van **2–4 niveles por debajo** de
 |-------|-------|
 | Nombre | **PENDIENTE JAVIER** |
 | Motivación | **PENDIENTE JAVIER** |
-| Reclutas | Otra clase Panchito: **PENDIENTE JAVIER** |
+| Reclutas | Otra clase Spain: **PENDIENTE JAVIER** |
 | Almirantes | **PENDIENTE JAVIER** |
 | Jefe | **PENDIENTE JAVIER** |
 | Guarida | **PENDIENTE JAVIER** (con puzle, Fase 13.4) |
@@ -316,7 +317,7 @@ Propuesta de la guía (Fase 2.7). **PENDIENTE JAVIER** confirmarla.
 
 ---
 
-## 8. Contenido Panchito
+## 8. Contenido Spain
 
 ### 8.1 Clases de entrenador
 
@@ -326,18 +327,18 @@ Propuesta de la guía (Fase 2.7). **PENDIENTE JAVIER** confirmarla.
 - ¿Humor también en reclutas, rival y líderes? **PENDIENTE JAVIER.**
 - El humor va sobre **situaciones y personajes cotidianos**.
 
-### 8.2 Objetos especiales Panchito
+### 8.2 Objetos especiales Spain
 
 - **Los define Javier.** Hasta entonces, solo placeholders marcados **"POR DEFINIR"**.
 - Lista real en `docs/objetos_especiales.md`; datos en `data/items_panchito.json`.
 - Las ideas de la Fase 11.4 (Bocata de calamares, Tupper de mamá, tortilla con o sin cebolla...) son solo inspiración.
-- ¿Bolsillo propio "Cosas de Panchito" en la mochila? **PENDIENTE JAVIER.**
+- ¿Bolsillo propio "Cosas de Spain" en la mochila? **PENDIENTE JAVIER.**
 
 ### 8.3 Música
 
-- Al menos un **tema de Panchito** propio que identifique el juego (Fase 16.3).
+- Al menos un **tema de Pokémon Spain** propio que identifique el juego (Fase 16.3).
 - Intros de entrenador por clase (por ejemplo, una melodía "sospechosa" para el Robasientos).
-- ¿Tema de combate propio para entrenadores Panchito? **PENDIENTE JAVIER.**
+- ¿Tema de combate propio para entrenadores Spain? **PENDIENTE JAVIER.**
 
 ---
 
@@ -346,7 +347,7 @@ Propuesta de la guía (Fase 2.7). **PENDIENTE JAVIER** confirmarla.
 | Archivo | Contenido | Fase |
 |---------|-----------|------|
 | `docs/entrenadores.md` | Clase, nombre, mapa, nivel medio, obligatorio sí/no y estado del sprite | 10.6 |
-| `docs/objetos_especiales.md` | Objetos Panchito (los define Javier) | 11.4 |
+| `docs/objetos_especiales.md` | Objetos Spain (los define Javier) | 11.4 |
 | `docs/flags.md` | Registro de flags y variables de historia | 13.2 |
 | `docs/mapas/lista.md` | Mapas y su estado (boceto → pintado → entidades → probado) | 12.2 |
 | `docs/mapas/reservas.md` | Quién está pintando cada mapa | 1.5 |
@@ -358,4 +359,4 @@ Propuesta de la guía (Fase 2.7). **PENDIENTE JAVIER** confirmarla.
 
 | Fecha | Decisión | Sección |
 |-------|----------|---------|
-| | | |
+| 2026-10-08 | El juego pasa a llamarse **Pokémon Spain** (antes *Pokémon Panchito*): emparentado con *Pokémon Iberia* y con humor negro sobre la España actual | 0 (decisiones 2 y 8), 1 |

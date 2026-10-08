@@ -1,8 +1,8 @@
-# Pokémon Fan-Game
+# Pokémon Spain
 
-Fangame **sin ánimo de lucro** al estilo de *Pokémon Añil*, programado desde cero en **Godot 4 con GDScript**.
+Fangame **sin ánimo de lucro** al estilo de *Pokémon Añil*, programado desde cero en **Godot 4 con GDScript**. Emparentado con *Pokémon Iberia* y puesto al día con **humor negro sobre la situación actual de España** ([concepto](docs/concepto_pokemon_spain.md)).
 
-> Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus personajes son propiedad de Nintendo, Game Freak y The Pokémon Company. No está afiliado a ellos.
+> Pokémon Spain es un fangame sin ánimo de lucro. Pokémon y todos sus personajes son propiedad de Nintendo, Game Freak y The Pokémon Company. No está afiliado a ellos.
 
 - Plan de desarrollo: [`GUIA_DESARROLLO.md`](GUIA_DESARROLLO.md)
 - Interfaces entre módulos: [`docs/contratos.md`](docs/contratos.md)
@@ -18,7 +18,7 @@ Fangame **sin ánimo de lucro** al estilo de *Pokémon Añil*, programado desde 
 
 ## Abrir y ejecutar
 
-1. `git clone https://github.com/javiersaguar/Pokemon-Panchito.git`.
+1. `git clone https://github.com/javiersaguar/Pokemon-FanGame.git`.
 2. Godot 4.7.2 → **Importar** → elige `project.godot`.
 3. **F5** ejecuta el juego. **F9** abre el menú de depuración (solo en builds de debug).
 

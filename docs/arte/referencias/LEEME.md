@@ -1,6 +1,6 @@
 # Referencias de nivel gráfico
 
-Capturas de **Pokémon Añil** que marcan el **nivel mínimo** de calidad de Pokémon Panchito (ver `docs/DIRECTRICES.md` §7 y la Fase A de la guía).
+Capturas de **Pokémon Añil** que marcan el **nivel mínimo** de calidad de Pokémon Spain (ver `docs/DIRECTRICES.md` §7 y la Fase A de la guía).
 
 | Archivo | Qué hay que igualar o superar |
 |---------|-------------------------------|

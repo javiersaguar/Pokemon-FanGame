@@ -1,12 +1,16 @@
 # Créditos
 
-Pokémon Panchito es un fangame sin ánimo de lucro. Pokémon y todos sus personajes, nombres y gráficos son propiedad de Nintendo, Game Freak y The Pokémon Company. Este proyecto no está afiliado a ellos.
+Pokémon Spain es un fangame sin ánimo de lucro. Pokémon y todos sus personajes, nombres y gráficos son propiedad de Nintendo, Game Freak y The Pokémon Company. Este proyecto no está afiliado a ellos.
 
 > Apunta aquí **cada recurso ajeno en cuanto lo uses**: qué es, autor, licencia o permiso, enlace y dónde está en el repo. Cada agente edita solo su sección.
 
 ## Equipo
 
 - Javier Saguar y su grupo.
+
+## Inspiración
+
+- *Pokémon Iberia*, de **Eric Lostie**: referencia de tono y de estructura (región basada en España, humor negro). No se usa ningún recurso, texto ni gráfico suyo.
 
 ## Motor y herramientas
 
@@ -26,8 +30,8 @@ Copiados de los packs de `docs/arte/recursos_terceros.md` solo en lo que se usa,
 | **Big Tree Pack**: cerezos, manzano, pino, árboles redondos y arbustos (en el mapa y en el fondo de combate del bosque) | **AnonAlpaca** | Libre uso con crédito; el autor permite editarlos | https://eeveeexpo.com/resources/602/ | `assets/tilesets/exterior/arboles.png` |
 | **Big Flora Pack**: tulipanes, setos y nenúfares | **AnonAlpaca** (plantas) y **Magiscarf** (lo que no es planta) | Libre uso con crédito; el autor permite editarlos | https://eeveeexpo.com/resources/607/ | `assets/tilesets/exterior/flora.png` |
 | **ULTIMATE Gen 4 Overworlds Pack**: protagonista provisional (Ethan y Lyra: andar, correr, bici, surf y pesca), rival, profesor, enfermera, dependiente y vecinos; Poké Ball del suelo; "!", hierba al pisarla, polvo al saltar y brillo shiny | **PurpleZaffre** | Recurso para fangames de Eevee Expo, con crédito obligatorio | https://eeveeexpo.com/resources/609/ | `assets/sprites/characters/` y `assets/sprites/characters/effects/` |
-| **Character Customization Resources (Gen 4)**: piezas (bases, ropa, pelo, sombreros, bolsas) con las que se montan los entrenadores Panchito | **Poltergeist** (Coffee Cup) | "You can freely edit, use and share the files"; crédito agradecido | https://eeveeexpo.com/resources/317/ | `assets/sprites/trainers/`, `assets/sprites/characters/<clase>.png` |
-| Sombra de los personajes y de los Pokémon que te siguen | Equipo de Pokémon Panchito (dibujada a mano en `assets/_fuentes/mundo/sombra.px2`) | Propio | — | `assets/sprites/characters/effects/sombra.png` |
+| **Character Customization Resources (Gen 4)**: piezas (bases, ropa, pelo, sombreros, bolsas) con las que se montan los entrenadores Spain | **Poltergeist** (Coffee Cup) | "You can freely edit, use and share the files"; crédito agradecido | https://eeveeexpo.com/resources/317/ | `assets/sprites/trainers/`, `assets/sprites/characters/<clase>.png` |
+| Sombra de los personajes y de los Pokémon que te siguen | Equipo de Pokémon Spain (dibujada a mano en `assets/_fuentes/mundo/sombra.px2`) | Propio | — | `assets/sprites/characters/effects/sombra.png` |
 
 Los verdes de la naturaleza de los packs 02, 03 y 04 llevan un **retoque de paleta** reproducible (`GREEN_RETOUCH` en `build_exterior.gd`) para que la hierba tenga el tono y la viveza de la de Añil.
 
@@ -58,7 +62,7 @@ Copiados del pack sin modificar ni reescalar, solo los archivos que se usan.
 | Fondos de combate de *ORAS/XY themed battle backgrounds for EBDX* (Field, Forest, Cave, City, Water, IndoorA, Snow, Sand) | **PhoenixOfLight92** (extracción de los fondos de la 6.ª generación) y **LackDeJurane** (fondos combinados) | Uso con crédito | https://eeveeexpo.com/resources/729/ | `assets/sprites/ui/battle/backgrounds/` |
 | *Loaky's Modern Type Icons* (versión en español) | **Loaky** | El autor no exige crédito; se le acredita igualmente | https://eeveeexpo.com/resources/1528/ | `assets/sprites/ui/icons/types_spanish.png` |
 | Iconos de objetos del MVP y sombras de los Pokémon del Generation 9 Pack | Los de la sección "Pokémon" | Igual que el Generation 9 Pack | https://eeveeexpo.com/resources/1101/ | `assets/sprites/items/`, `assets/sprites/ui/battle/shadows/` |
-| Botones, paneles, iconos de estado y de sexo, destellos, cursores y ficha del Pokémon | Equipo de Pokémon Panchito (pixel art propio, `assets/_fuentes/ui/`) | Propio | — | `assets/sprites/ui/` |
+| Botones, paneles, iconos de estado y de sexo, destellos, cursores y ficha del Pokémon | Equipo de Pokémon Spain (pixel art propio, `assets/_fuentes/ui/`) | Propio | — | `assets/sprites/ui/` |
 
 ## Datos
 
