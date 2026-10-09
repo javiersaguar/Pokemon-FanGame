@@ -1,0 +1,29 @@
+{
+  "ruta16_regatista": {
+    "class": "regatista",
+    "name": "Roi",
+    "intro_text": "Salgo de Sanxenxo con marea alta. ¡Hoy el viento es mío!",
+    "lose_text": "Me he quedado en la boya.",
+    "win_text": "¡Viento del norte, hacia la Ruta 17!",
+    "after_text": "Las regatas llenan el puerto. El mejillón, la ría. Cada uno a lo suyo.",
+    "items": [],
+    "party": [
+      {"species": "pelipper", "level": 39},
+      {"species": "clawitzer", "level": 40}
+    ]
+  },
+  "ruta16_nadadora": {
+    "class": "nadador",
+    "name": "Iria",
+    "gender": "female",
+    "intro_text": "Cruzo la ría a nado, de batea en batea. ¡El agua está helada y yo no!",
+    "lose_text": "Me vuelvo al muelle.",
+    "win_text": "¡La ría no perdona!",
+    "after_text": "El mejillón se cría solo. Nosotros solo ponemos la cuerda y esperamos.",
+    "items": [],
+    "party": [
+      {"species": "shellder", "level": 38},
+      {"species": "floatzel", "level": 39}
+    ]
+  }
+}

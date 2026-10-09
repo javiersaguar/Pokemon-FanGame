@@ -384,14 +384,16 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo-norte`. Fuentes de
 
 **Hecho:**
 - **Vigo** (`maps/vigo/exterior.tscn`, 56×46). Porta do Sol con el árbol de Navidad (fuente 250, huella `base`) y el Sireno (fuente 251). Centro Pokémon, Mercadona, estanco y Basic-Fit. Puerto al sur. Aeropuerto de Peinador al este. Entrenadores Uxío (regatista) y Sabela (nadadora). Encuentros en `data/encounters/vigo.json`. Alcance desde `default`, `from_avion` y `from_ruta_16`: 0 problemas.
+- **Ruta 16 · Rías Baixas** (`maps/ruta_16/exterior.tscn`, 36×52). Ría al oeste con dos bateas; Sanxenxo al este, con cartel de las regatas (el rey emérito no está en el mapa). Roi (regatista) e Iria (nadadora). Encuentros en `data/encounters/ruta_16.json`. Alcance desde `default`, `from_vigo` y `from_ruta_17`: 0 problemas.
 
 **Uniones que deja el Agente 5:**
 - Vigo, spawn `from_avion`: columna **50**, fila **34** (mostrador del aeropuerto, casilla libre para la pasarela del vuelo desde Gran Canaria). No hay warp.
 
-**Unión dentro del tramo (la cierra este agente al pintar la Ruta 16):**
-- Borde norte de Vigo → `ruta_16/exterior`, columnas **24–29** (fila 0). Spawn `from_ruta_16` en la columna **26**, fila **1**.
+**Uniones dentro del tramo:**
+- Vigo norte → Ruta 16 sur: columnas **24–29**. Spawn `from_ruta_16` en Vigo, columna **26**, fila **1**. Spawn `from_vigo` en la Ruta 16, columna **26**, fila **50**.
+- Ruta 16 norte → Ruta 17 (aún no pintada): columnas **16–21** (fila 0). Spawn `from_ruta_17` en la columna **18**, fila **1**.
 
-**Pendiente del tramo:** Ruta 16, Ruta 17, Ruta 18, Santander, Ruta 19, Bilbao (gimnasio 6), Ruta 20, Pamplona (`from_ruta_21` en el borde sur, pasillo de 4 casillas o más).
+**Pendiente del tramo:** Ruta 17, Ruta 18, Santander, Ruta 19, Bilbao (gimnasio 6), Ruta 20, Pamplona (`from_ruta_21` en el borde sur, pasillo de 4 casillas o más).
 
 **Preguntas para Javier:** quién es la chica del Aupa Athletic (gimnasio 6, San Mamés); si el lore de Vigo (luces en julio, cupo de las Cíes) se queda; el arte es provisional.
 

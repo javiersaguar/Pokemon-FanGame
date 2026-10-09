@@ -15,6 +15,7 @@ Cada ruta toma su paisaje del camino real entre las dos ciudades.
 - **Ruta 7:** Kike y Vane (ravers, clase nueva) en el festival. Desierto de arena con cerros de yeso. El viento y las tormentas de polvo quedan pendientes (los climas aún no tienen textura). Unida con la Ruta 8 por el este.
 - **Ruta 8:** Laia (montañera) y Oriol (flautista). Terraza del monasterio con las agujas; Santpedor y Sant Esteve Sesrovires con su cartel (**Guardiola** y **Rosalía** los coloca Javier). Unida con Barcelona (Les Corts, por la Diagonal).
 - **Ruta 6:** Cirilo (pastor, clase nueva) y Anselmo (jubilado mirando obras). Medinaceli en su cerro con el arco romano, el pueblo vaciado con su último vecino y Calatayud (torre mudéjar, mesón de la Dolores). Unida con Zaragoza por el este. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
+- **Ruta 16:** Roi (regatista) e Iria (nadadora). Ría al oeste con dos bateas; Sanxenxo al este (cartel de las regatas: el rey emérito no está puesto). Sur, columnas 24–29, unido con Vigo. Norte, columnas 16–21, reservado para la Ruta 17.
 
 | Ruta | Paisaje real | Qué tiene en el juego | Entrenadores y personajes | Pokémon propuestos |
 |------|--------------|----------------------|---------------------------|--------------------|

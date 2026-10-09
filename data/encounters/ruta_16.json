@@ -1,0 +1,40 @@
+{
+  "land_rate": 12,
+  "land": {
+    "day": [
+      {"species": "mareep", "min": 38, "max": 40, "weight": 30},
+      {"species": "wingull", "min": 38, "max": 40, "weight": 25},
+      {"species": "shellos", "min": 38, "max": 40, "weight": 25},
+      {"species": "flaaffy", "min": 39, "max": 41, "weight": 20}
+    ],
+    "night": [
+      {"species": "shellder", "min": 38, "max": 40, "weight": 30},
+      {"species": "mareep", "min": 38, "max": 40, "weight": 25},
+      {"species": "wingull", "min": 38, "max": 41, "weight": 25},
+      {"species": "hoothoot", "min": 39, "max": 41, "weight": 20}
+    ]
+  },
+  "water": [
+    {"species": "clauncher", "min": 38, "max": 41, "weight": 30},
+    {"species": "wailmer", "min": 38, "max": 41, "weight": 25},
+    {"species": "shellder", "min": 38, "max": 40, "weight": 25},
+    {"species": "wingull", "min": 38, "max": 40, "weight": 15},
+    {"species": "pelipper", "min": 40, "max": 41, "weight": 5}
+  ],
+  "old_rod": [
+    {"species": "magikarp", "min": 15, "max": 20, "weight": 70},
+    {"species": "shellder", "min": 15, "max": 20, "weight": 30}
+  ],
+  "good_rod": [
+    {"species": "clauncher", "min": 32, "max": 38, "weight": 60},
+    {"species": "shellder", "min": 32, "max": 38, "weight": 40}
+  ],
+  "super_rod": [
+    {"species": "clauncher", "min": 38, "max": 41, "weight": 50},
+    {"species": "wailmer", "min": 38, "max": 41, "weight": 50}
+  ],
+  "rock_smash": [],
+  "headbutt": [
+    {"species": "wingull", "min": 38, "max": 40, "weight": 100}
+  ]
+}
