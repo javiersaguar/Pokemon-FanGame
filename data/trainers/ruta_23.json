@@ -1,0 +1,40 @@
+{
+  "ruta23_resinero": {
+    "class": "resinero",
+    "name": "Raúl",
+    "intro_text": "El pino da resina. Mi equipo da guerra.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "No cortes la corteza del árbol por probar.",
+    "items": [],
+    "party": [
+      {
+        "species": "pineco",
+        "level": 48
+      },
+      {
+        "species": "nuzleaf",
+        "level": 49
+      }
+    ]
+  },
+  "ruta23_jinete": {
+    "class": "pastor",
+    "name": "Ángel",
+    "intro_text": "Por el campo, al paso. En combate, al galope.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Los encierros no son una carrera cualquiera.",
+    "items": [],
+    "party": [
+      {
+        "species": "ponyta",
+        "level": 48
+      },
+      {
+        "species": "mudsdale",
+        "level": 50
+      }
+    ]
+  }
+}

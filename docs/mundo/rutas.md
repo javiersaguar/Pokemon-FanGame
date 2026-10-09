@@ -57,3 +57,5 @@ Cada ruta toma su paisaje del camino real entre las dos ciudades.
 
 - Datos generales de geografía y patrimonio (Acueducto de Segovia, Montserrat, palmeral de Elche, Doñana, Atapuerca, Torcal de Antequera, molinos de Consuegra): conocimiento general; posiciones contrastadas en OpenStreetMap (© colaboradores de OpenStreetMap, ODbL).
 - Regatas de Sanxenxo del rey emérito, ferry Huelva–Canarias y vuelos Gran Canaria–Vigo: conocimiento general (comprobar horarios reales si se quiere fidelidad total).
+
+- **Ruta 23:** Cuéllar y Tierra de Pinares, enlazada entre Valladolid y San Miguel. [Ficha y coordenadas](ruta_23.md).

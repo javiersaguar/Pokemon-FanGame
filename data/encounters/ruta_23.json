@@ -1,0 +1,63 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "pineco",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "nuzleaf",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "ponyta",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "deerling",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      }
+    ],
+    "night": [
+      {
+        "species": "hoothoot",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "pineco",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "nuzleaf",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "murkrow",
+        "min": 47,
+        "max": 50,
+        "weight": 25
+      }
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

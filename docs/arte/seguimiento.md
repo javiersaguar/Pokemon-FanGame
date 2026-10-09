@@ -146,3 +146,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Ruta 21 · Viñedos de La Rioja y cepa propia | Exterior provisional, fuente 350; plano OSM y alcance | [Comparativa](comparativas/ruta_21.md) | pendiente Javier |
 | Ruta 22 · Burgos y Atapuerca, catedral propia | Exterior y fuente 351 provisionales; sin entrega de fósiles | [Comparativa](comparativas/ruta_22.md) | pendiente Javier |
 | Valladolid · Plaza Mayor, Campo Grande y Pisuerga | Exterior provisional, fuentes 352–356; cuatro locales; adaptaciones arquitectónicas pendientes de revisión | [Comparativa](comparativas/valladolid.md) | pendiente Javier |
+
+| Mundo centro: Ruta 23 y acceso San Miguel | Castillo fuente 357; puente existente | PROVISIONAL, pendiente Javier | `comparativas/ruta_23.md` |

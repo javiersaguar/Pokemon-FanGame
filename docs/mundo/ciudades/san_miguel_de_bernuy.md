@@ -88,3 +88,7 @@ Ribera y meseta: Bidoof, Pidgey, Rattata, Zigzagoon, Lechonk y Wooloo en los pra
 - [Fiestas de San Miguel Arcángel](https://www.festivalesdeespana.com/festival/fiestas-patronales-san-miguel-arcangel-san-miguel-de-bernuy/2025) y [de la Virgen del Río](https://www.festivalesdeespana.com/festival/fiestas-patronales-virgen-del-rio-san-miguel-de-bernuy/2025)
 - [Molino Grande del Duratón](https://www.terranostrum.es/alojamientos/segovia/hotel-rural-molino-grande-del-duraton)
 - Posiciones: © colaboradores de OpenStreetMap (ODbL).
+
+## Enlace de regreso (2026-10-09)
+
+Ruta 23 entra por el oeste, filas 31–34. Nuevo spawn `from_ruta_23` (0,32), puente horizontal sobre el Duratón; se conserva el resto del pueblo y el enlace sur a Ruta 1. [Comparativa](../../arte/comparativas/ruta_23.md).

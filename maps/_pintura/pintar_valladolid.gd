@@ -70,6 +70,7 @@ func _initialize() -> void:
 	p.object(&"banco",Vector2i(39,45))
 	p.spawn("default",Vector2i(48,1))
 	p.spawn("from_ruta_22",Vector2i(48,0))
+	p.connect_edge("east", &"ruta_23/exterior", -12, Vector2i(30, 34))
 	p.spawn("from_ruta_23",Vector2i(71,31))
 	p.connect_edge("north", &"ruta_22/exterior", -24, Vector2i(46,50))
 	p.trainer("Aficionado", &"valladolid_aficionado",Vector2i(30,33),2,3)

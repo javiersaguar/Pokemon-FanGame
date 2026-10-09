@@ -35,11 +35,14 @@ func _paint(painter: GDScript) -> RefCounted:
 	data.region_map_position = Vector2i(13, 8)
 	var p: RefCounted = painter.new("SanMiguelDeBernuy", SIZE, data, 1975)
 	p.fill_grass(0.18)
+	p.connect_edge("west", &"ruta_23/exterior", -13, Vector2i(31, 35))
+	p.spawn("from_ruta_23", Vector2i(0, 32))
 	p.connect_edge("south", &"ruta_1/exterior")  # la calle Real sigue en la Ruta 1, mismas columnas
 
 	# Agua: la cola del embalse de las Vencías (norte) y el río Duratón (oeste), que entra en él.
 	p.water(Rect2i(0, 0, 22, 8))
-	p.water(Rect2i(4, 8, 6, 42))
+	p.water(Rect2i(4, 8, 6, 23))
+	p.water(Rect2i(4, 35, 6, 15))
 
 	# Pinares de la Tierra de Pinares al norte y al este, con el hueco de la carretera de Fuentidueña.
 	p.forest(Rect2i(34, 0, 10, 8))
@@ -53,7 +56,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.paving(Rect2i(15, 16, 14, 7))
 	p.paving(Rect2i(20, 23, 3, 27))
 	p.paving(Rect2i(23, 23, 19, 1))
-	p.paving(Rect2i(10, 31, 34, 3))
+	p.paving(Rect2i(0, 31, 44, 4))
 	p.build_paving()
 
 	# Edificios (casilla de abajo a la izquierda). Las casas son todas de DPPt (pack 02), como el
@@ -98,6 +101,9 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.terrain(dirt, ExteriorTiles.TERRAIN_PATH)
 
 	p.build_water()
+	# Paso occidental de Ruta 23: mismo puente de piedra, orientación horizontal.
+	var bridge: Dictionary = ExteriorTiles.objects()[&"puente_piedra"]
+	p.decor.set_cell(Vector2i(10, 31), bridge.source, bridge.coords, TileSetAtlasSource.TRANSFORM_TRANSPOSE)
 	p.build_forest()
 
 	# Plaza de España: el caño de agua potable en el centro, un banco y farolas.
@@ -115,6 +121,8 @@ func _paint(painter: GDScript) -> RefCounted:
 
 	# Chopos de la ribera (las choperas del Duratón), en las dos orillas, y árboles del pueblo.
 	for y: int in range(12, 50, 4):
+		if y in [32, 36]:
+			continue  # acceso al puente; las demás choperas se conservan
 		p.object(&"arbol_verde", Vector2i(0, y))
 		p.object(&"arbol_verde", Vector2i(2, y + 2))
 	for y: int in [20, 40]:
