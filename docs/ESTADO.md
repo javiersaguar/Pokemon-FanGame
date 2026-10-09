@@ -378,10 +378,16 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 **Plan de la sesión:**
 1. ✅ Investigación de lugares reales de cada ciudad, mapa coherente de la región y documentación para los próximos agentes (`docs/mundo/`).
 2. ✅ Personajes: diseño de los 64 (líderes, Alto Mando, Líder Supremo, Clan PSOE y famosos) con las piezas del pack 11 (`tools/mundo/recetas_famosos.py` → `recetas.json` → `build_trainers.gd`), sus clases y equipos (`tools/mundo/entrenadores_famosos.py` → `data/trainers/liga.json` y `famosos.json`) y la **foto real en combate** (`RealPhoto`, carpeta `assets/fotos_reales/`, opción "Fotos reales").
-3. Tileset de ciudad con los edificios del pack 01 (catálogo con `tools/mundo/catalogo_edificios.gd`) y monumentos dibujados a mano (`.px2`).
-4. Pintar los mapas, empezando por **San Miguel de Bernuy** (pueblo inicial) y siguiendo el orden de la aventura.
+3. ✅ Tileset de ciudad: edificios de ciudad y adornos urbanos del pack 01, más casas y edificios de DPPt del pack 02, nieve y pinos nevados, y **monumentos dibujados a mano** (`assets/_fuentes/mundo/*.px2`, exportados con `exportar_mundo.gd` a `assets/tilesets/exterior/hecho_a_mano/`; su número de fuente es fijo en `hecho_a_mano/piezas.json`, y pueden chocar solo por la base para pasar por debajo de arcos y acueductos).
+4. Pintar los mapas en el orden de la aventura (scripts en `maps/_pintura/pintar_*.gd`; comprobación con `maps/_tools/alcance.gd`; capturas en `docs/arte/comparativas/`). Hechos, todos unidos sin fundido por sus bordes:
+   - ✅ **San Miguel de Bernuy** (pueblo inicial): iglesia y ermita a mano, solo casas de DPPt.
+   - ✅ **Ruta 1** (Hoces del Duratón), **Ruta 2** (Tierra de Pinares y el **Acueducto de Segovia**), **Ruta 3** (Puerto de Navacerrada con nieve y el **Valle de Cuelgamuros**), **Ruta 4** (**Monasterio de El Escorial** y la urbanización de Galapagar). Cada una con sus entrenadores (`data/trainers/ruta_<n>.json`, clases nuevas: piragüista, ornitóloga, resinero, esquiador, montañera) y encuentros (`data/encounters/ruta_<n>.json`).
+   - ✅ **Madrid · Moncloa** (Arco de la Victoria, Faro, Templo de Debod, Ferraz 70 con reclutas del Clan, Argüelles) y **Madrid · Sol y Gran Vía** (Real Casa de Correos = gimnasio 1, Plaza Mayor, Callao con el cartel de Schweppes, Metrópolis).
+   - Siguiente: `madrid/palacio_real` (Liga), `madrid/retiro` (Cibeles, Puerta de Alcalá, Retiro, Congreso, Atocha), `madrid/chamberi` (el ático de Ayuso), la Calle de la Victoria; después Ruta 5 → Zaragoza y el resto del círculo.
+   - Bloqueado: **interiores** (no hay tileset de interiores, pregunta 19): las puertas no llevan a ningún sitio todavía.
+5. Arreglado de paso: los planos de OpenStreetMap perdían todos los polígonos cerrados (parques, agua, edificios) al simplificar; regenerados.
 
-**Pendiente de Javier (de esta sesión):** quién es "la chica del *Aupa Athletic*"; Abascal aparece dos veces en la lista; cómo sale Javier como entrenador; quién es Sekiam; el lore de cada ciudad; dónde va cada famoso (hay propuestas); tipos y equipos de los líderes (propuesta en `docs/mundo/region.md`); si los combates triples (Lamine y familia; Folagor, Sekiam y PokeAlex) se hacen como combate triple de verdad (el motor solo tiene individuales y dobles) o como tres seguidos.
+**Pendiente de Javier (de esta sesión):** revisar el arte de los mapas y de los monumentos dibujados a mano (todo provisional; comparativas en `docs/arte/comparativas/`); quién es "la chica del *Aupa Athletic*"; Abascal aparece dos veces en la lista; cómo sale Javier como entrenador; quién es Sekiam; el lore de cada ciudad; dónde va cada famoso (hay propuestas); tipos y equipos de los líderes (propuesta en `docs/mundo/region.md`); si los combates triples (Lamine y familia; Folagor, Sekiam y PokeAlex) se hacen como combate triple de verdad (el motor solo tiene individuales y dobles) o como tres seguidos.
 
 ## Sesión con 3 agentes (2026-10-07)
 
