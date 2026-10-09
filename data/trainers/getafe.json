@@ -1,0 +1,40 @@
+{
+  "getafe_aficionado": {
+    "class": "cunado",
+    "name": "Sergio",
+    "intro_text": "En el Coliseum cada punto se pelea.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Se defiende la grada y se defiende el equipo.",
+    "items": [],
+    "party": [
+      {
+        "species": "tauros",
+        "level": 17
+      },
+      {
+        "species": "scraggy",
+        "level": 18
+      }
+    ]
+  },
+  "getafe_poligono": {
+    "class": "estudianteinge",
+    "name": "Iván",
+    "intro_text": "Entre dos turnos me da tiempo a combatir.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "La nave es grande; la nómina, menos.",
+    "items": [],
+    "party": [
+      {
+        "species": "trubbish",
+        "level": 16
+      },
+      {
+        "species": "electrike",
+        "level": 17
+      }
+    ]
+  }
+}

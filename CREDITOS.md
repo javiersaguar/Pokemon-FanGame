@@ -101,6 +101,6 @@ Presentación de Megaevolución: símbolo `Graphics/EBDX/Pictures/UI/symMega.png
 
 Eclosión: `Graphics/Pokemon/Eggs/000.png` y `000_cracks.png` del Generation 9 Pack, y `Graphics/EBDX/Pictures/Hatching/hatchbg.png` de Elite Battle: DX; originales íntegros a tamaño nativo en el manifiesto de recursos. Se mantienen los autores y condiciones de los packs indicados arriba.
 
-| Monumentos dibujados a mano (tramo centro y final) | Javier Saguar | Cepa de La Rioja (`cepa_rioja.px2`), Catedral de Burgos (`catedral_burgos.px2`), Cúpula del Milenio (`cupula_milenio.px2`), Conde Ansúrez, Castillo de Cuéllar y adaptaciones de Ayuntamiento/San Pablo/catedral de Valladolid (fuentes `.px2` propias), provisionales |
+| Monumentos dibujados a mano (tramo centro y final) | Javier Saguar | Cepa de La Rioja (`cepa_rioja.px2`), Catedral de Burgos (`catedral_burgos.px2`), Cúpula del Milenio (`cupula_milenio.px2`), Conde Ansúrez, Castillo de Cuéllar, Sagrado Corazón del Cerro de los Ángeles, adaptación de la Magdalena de Getafe y adaptaciones de Ayuntamiento/San Pablo/catedral de Valladolid (fuentes `.px2` propias), provisionales |
 
 Plano Ruta 23: © colaboradores de OpenStreetMap, ODbL.

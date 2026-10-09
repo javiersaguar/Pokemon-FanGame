@@ -64,3 +64,22 @@ Trubbish, Zigzagoon, Rattata, Pidove, Patrat (polígonos); en las riberas del Ma
 - [Visit Madrid: Getafe](https://www.visitmadrid.es/donde-ir-comunidad-madrid/donde-ir/area-metropolitana-madrid/getafe) · [Cerro de los Ángeles (esmadrid)](https://www.esmadrid.com/en/node/80321) · [Coliseum (Wikipedia)](https://en.wikipedia.org/wiki/Estadio_Coliseum)
 - [Butarque (CD Leganés)](https://www.cdleganes.com/en/news/cd-leganes-and-leganes-city-council-reach-a-historic-agreement-for-the-concession-of-the-estadio-municipal-butarque-for-fifty-years) · [Móstoles (hoteles.net)](https://www.hoteles.net/madrid/mostoles/mostoles-que-ver-y-hacer.html) · [Parque El Soto](https://birdingplaces.eu/birdingplaces/spain/parque-el-soto)
 - Planos: © colaboradores de OpenStreetMap (ODbL).
+
+## Cómo se reparte en el juego (tramo centro, 2026-10-09)
+
+| Mapa | Distribución norte arriba | Estado |
+|---|---|---|
+| `getafe/exterior` · 64×64 | Coliseum al norte; estación y Hospitalillo al oeste; plaza y Magdalena en el centro; Cerro de los Ángeles al este y ribera en el borde oriental; salida sur a Ruta 24 | Pintado provisional, 15 puertas alcanzables |
+| `leganes/exterior` | San Salvador, Plaza Mayor, cuartel, Butarque al noreste, Polvoranca al suroeste y museo al sureste | siguiente |
+| `mostoles/exterior` | Pradillo, Asunción, Casa Torrejón, campus y El Soto | siguiente |
+| `cercanias_c5/anden` | Andén exterior y accesos de Atocha, Leganés y Móstoles | siguiente |
+
+### Getafe · Estado (2026-10-09)
+
+Dos entrenadores genéricos y encuentros 14–17 como zona opcional temprana (curva pendiente Javier). Cuatro locales señalizados, sin interiores ni famosos. Cerro: figura propia fuente 358; catedral: adaptación de iglesia propia fuente 359, torre mudéjar y nave compactas, pendientes de más detalle. Hospitalillo y Ayuntamiento con casas DPPt; Coliseum con cancha de hierba y graderíos compuestos del set propio, interpretación provisional. Sin grúas ni aviones hasta disponer de esos recursos.
+
+Spawn `from_leganes` (0,27), corredor oeste filas 26–29 reservado hasta pintar Leganés. `from_ruta_24` (47,63), corredor sur columnas 46–49 reservado hasta pintar Ruta 24. Carga medida 142,45 ms; alcance desde ambos accesos: 0 problemas.
+
+Fuentes primarias: [Magdalena, Ayuntamiento](https://getafe.es/placemarks/catedral-de-la-magdalena/), [Catedral, Comunidad de Madrid](https://www.madrid.org/monumentoscercanias/catedral-santa-m-magdalena.html), [Monumento actual, Santuario del Cerro](https://cerrodelosangeles.es/monumento/). [Plano propio regenerado de OSM](../planos/getafe.svg), © colaboradores, ODbL.
+
+Corrección geográfica: **Getafe Centro pertenece a C-4, no C-5**. Se propone el acceso urbano por Leganés. La C-5 se integra por Atocha hacia Leganés y Móstoles. [Esquema CRTM](https://www.crtm.es/datos_lineas/horarios/5C5H2.pdf). Las condiciones de viaje y retrasos requieren decisión de Javier.

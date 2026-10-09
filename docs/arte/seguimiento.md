@@ -148,3 +148,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Valladolid · Plaza Mayor, Campo Grande y Pisuerga | Exterior provisional, fuentes 352–356; cuatro locales; adaptaciones arquitectónicas pendientes de revisión | [Comparativa](comparativas/valladolid.md) | pendiente Javier |
 
 | Mundo centro: Ruta 23 y acceso San Miguel | Castillo fuente 357; puente existente | PROVISIONAL, pendiente Javier | `comparativas/ruta_23.md` |
+
+| Mundo centro: Getafe | Fuentes 358–359; cancha y edificios compuestos | PROVISIONAL, pendiente Javier | `comparativas/getafe.md` |
