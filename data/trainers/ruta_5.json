@@ -1,0 +1,60 @@
+{
+  "ruta5_repartidor": {
+    "class": "repartidorbici",
+    "name": "Wilmer",
+    "intro_text": "¡Tengo 140 paquetes y me quedan 6 minutos! Un combate rapidito, que me penalizan.",
+    "lose_text": "Me han quitado una estrella en la aplicación. Por tu culpa.",
+    "win_text": "¡Entregado! Te lo dejo en el buzón de un vecino que no conoces.",
+    "after_text": "Aquí en el polígono hay más naves que en la NASA. Y menos sueldo.",
+    "items": [],
+    "party": [
+      {
+        "species": "electrike",
+        "level": 15
+      },
+      {
+        "species": "lillipup",
+        "level": 16
+      }
+    ]
+  },
+  "ruta5_opositora": {
+    "class": "opositor",
+    "gender": "female",
+    "name": "Nuria",
+    "intro_text": "Llevo seis años opositando a notarías. El temario de los Pokémon me lo sé mejor.",
+    "lose_text": "Suspendida otra vez. Ya van siete.",
+    "win_text": "¡Tema 214 aprobado!",
+    "after_text": "En Alcalá estudió Cervantes. Y no tuvo que preparar oposiciones, el muy suertudo.",
+    "items": [],
+    "party": [
+      {
+        "species": "patrat",
+        "level": 15
+      },
+      {
+        "species": "watchog",
+        "level": 17
+      }
+    ]
+  },
+  "ruta5_estudiante": {
+    "class": "estudianteinge",
+    "name": "Álex",
+    "intro_text": "¡La Universidad de Alcalá tiene más de 500 años! Yo llevo seis en primero, voy camino.",
+    "lose_text": "Esto lo convalido como prácticas.",
+    "win_text": "¡Matrícula de honor!",
+    "after_text": "El Quijote se escribió aquí al lado. Bueno, se imaginó. Yo me imagino aprobando Cálculo.",
+    "items": [],
+    "party": [
+      {
+        "species": "trubbish",
+        "level": 15
+      },
+      {
+        "species": "magnemite",
+        "level": 16
+      }
+    ]
+  }
+}

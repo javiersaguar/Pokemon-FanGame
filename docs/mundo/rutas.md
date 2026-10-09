@@ -9,7 +9,8 @@ Cada ruta toma su paisaje del camino real entre las dos ciudades.
 - **Ruta 1:** Manolo (el de los Chupachups), Dani (piragüista) y Marta (ornitóloga).
 - **Ruta 2:** Eusebio (resinero) y Steve (turista). El Acueducto cruza el Azoguejo de lado a lado y se pasa por debajo de los arcos.
 - **Ruta 3:** Borja (esquiador) y Lucía (montañera). Se entra por arriba, al puerto nevado (en la nieve salen Pokémon), y se baja por escaleras; el Valle de Cuelgamuros (cruz y basílica dibujadas a mano) está abajo a la izquierda. **Franco (fantasma)** no está puesto: dónde va cada famoso lo decide Javier. Unida con la Ruta 4 por el sur.
-- **Ruta 4:** Álvaro (el padre con la tarjeta) y Carla (crossfitera). Monasterio de El Escorial dibujado a mano; urbanización de chalets con setos (el "chalet de la colina" está sin dueño en el mapa: **Pablo Iglesias e Irene Montero** los coloca Javier). La calle sale por el este hacia `madrid/moncloa`, que aún no existe. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
+- **Ruta 4:** Álvaro (el padre con la tarjeta) y Carla (crossfitera). Monasterio de El Escorial dibujado a mano; urbanización de chalets con setos (el "chalet de la colina" está sin dueño en el mapa: **Pablo Iglesias e Irene Montero** los coloca Javier). Unida con `madrid/moncloa` por la A-6.
+- **Ruta 5:** Wilmer (repartidor), Nuria (opositora) y Álex (estudiante). Polígono, Alcalá (Universidad, Cervantes) y Guadalajara (Infantado); sale de Madrid por el norte del Retiro. La salida este (Ruta 6) aún no tiene conexión. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
 
 | Ruta | Paisaje real | Qué tiene en el juego | Entrenadores y personajes | Pokémon propuestos |
 |------|--------------|----------------------|---------------------------|--------------------|

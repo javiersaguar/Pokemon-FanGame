@@ -45,6 +45,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.fill_grass(0.2)
 	p.connect_edge("west", &"madrid/centro", 8, Vector2i(12, 20))   # Alcalá ⇄ Gran Vía
 	p.connect_edge("west", &"madrid/centro", 2, Vector2i(28, 34))   # San Jerónimo ⇄ Sol
+	p.connect_edge("east", &"ruta_5/exterior", 8, Vector2i(0, 14))   # por el norte del Retiro, hacia la A-2
 
 	# --- Baldosas: Alcalá, Cibeles, la Independencia, el Paseo del Prado, San Jerónimo y Atocha ---
 	for r: Rect2i in [Rect2i(0, 14, 48, 4), Rect2i(6, 10, 18, 14), Rect2i(28, 18, 18, 10), Rect2i(10, 0, 8, 50),
