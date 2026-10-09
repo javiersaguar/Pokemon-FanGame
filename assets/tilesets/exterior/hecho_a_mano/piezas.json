@@ -1,5 +1,7 @@
 {
-  "_": "Edificios dibujados a mano: número de fuente del TileSet (fijo: los mapas pintados lo guardan; uno nuevo toma el siguiente libre) y puerta (casilla relativa a la de abajo a la izquierda; sin puerta = centro de la fila de abajo).",
+  "_": "Edificios dibujados a mano: número de fuente del TileSet (fijo: los mapas pintados lo guardan; uno nuevo toma el siguiente libre), puerta (casilla relativa a la de abajo a la izquierda; sin puerta = centro de la fila de abajo; null = no tiene) y huella (base = solo choca la fila de abajo y se pasa por debajo).",
   "iglesia_san_miguel": {"fuente": 20, "puerta": [3, 0]},
-  "ermita_virgen_del_rio": {"fuente": 21, "puerta": [1, 0]}
+  "ermita_virgen_del_rio": {"fuente": 21, "puerta": [1, 0]},
+  "acueducto_segovia": {"fuente": 22, "puerta": null, "huella": "base"},
+  "acueducto_segovia_tramo": {"fuente": 23, "puerta": null, "huella": "base"}
 }

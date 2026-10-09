@@ -876,5 +876,15 @@
     "overworld_sprite": "res://assets/sprites/characters/ornitologa.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "resinero": {
+    "name": "Resinero",
+    "gender": "male",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/resinero.png",
+    "overworld_sprite": "res://assets/sprites/characters/resinero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

@@ -24,6 +24,90 @@
 		],
 		"source": 9
 	},
+	"acueducto_segovia": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/acueducto_segovia.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				2,
+				0
+			],
+			[
+				4,
+				0
+			],
+			[
+				6,
+				0
+			],
+			[
+				8,
+				0
+			],
+			[
+				10,
+				0
+			],
+			[
+				12,
+				0
+			]
+		],
+		"size": [
+			14,
+			7
+		],
+		"source": 22
+	},
+	"acueducto_segovia_tramo": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/acueducto_segovia_tramo.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				2,
+				0
+			],
+			[
+				4,
+				0
+			],
+			[
+				6,
+				0
+			],
+			[
+				8,
+				0
+			],
+			[
+				10,
+				0
+			],
+			[
+				12,
+				0
+			]
+		],
+		"size": [
+			14,
+			7
+		],
+		"source": 23
+	},
 	"aerogenerador": {
 		"coords": [
 			30,

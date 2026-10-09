@@ -402,6 +402,7 @@ func _urban_props(objects: Dictionary) -> Image:
 ## exportar_mundo.gd a hecho_a_mano/): cada PNG es una fuente propia del TileSet. Su número de
 ## fuente (desde SRC_HECHO_A_MANO) y su puerta están en hecho_a_mano/piezas.json; el número no
 ## cambia nunca, porque los mapas ya pintados lo guardan. Un PNG que no esté apuntado es un error.
+## "huella": "base" = solo choca la fila de abajo; "puerta": null = no tiene puerta.
 func _hand_made(objects: Dictionary) -> void:
 	var dir := OUT + "hecho_a_mano/"
 	var pieces := JsonFile.read_dict(dir + "piezas.json")
@@ -423,11 +424,17 @@ func _hand_made(objects: Dictionary) -> void:
 		img.convert(Image.FORMAT_RGBA8)
 		var size := Vector2i(ceili(img.get_width() / float(T)), ceili(img.get_height() / float(T)))
 		var footprint := _solid_cells(img)
+		if pieces[id].get("huella", "") == "base":
+			# Solo choca la fila de abajo (pilares de un acueducto, de un puente...): se pasa por debajo.
+			footprint = footprint.filter(func(cell: Array) -> bool: return int(cell[1]) == 0)
+		objects[id] = {"source": source, "file": "hecho_a_mano/" + file,
+			"coords": [0, 0], "size": [size.x, size.y], "footprint": footprint}
+		if pieces[id].get("puerta", []) == null:
+			continue
 		var door := _bottom_center(footprint, size.x)
 		if pieces[id].has("puerta"):
 			door = Vector2i(int(pieces[id]["puerta"][0]), int(pieces[id]["puerta"][1]))
-		objects[id] = {"source": source, "file": "hecho_a_mano/" + file,
-			"coords": [0, 0], "size": [size.x, size.y], "footprint": footprint, "door": [door.x, door.y]}
+		objects[id]["door"] = [door.x, door.y]
 
 
 ## Lo que se toca con el centro de la pieza (o con su grupo más grande): se borran los trozos

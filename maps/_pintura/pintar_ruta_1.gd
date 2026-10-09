@@ -5,7 +5,7 @@ extends SceneTree
 ## arriba, por las escaleras, el páramo con sabinas y pinos, el mirador de los buitres leonados
 ## y, en lo más alto del meandro, las ruinas del priorato de San Frutos.
 ## Se une sin fundido con el pueblo por el norte (mismas columnas: la calle Real sigue aquí).
-## El sur (Ruta 2, Sepúlveda y Segovia) está cortado por obras hasta que exista la Ruta 2.
+## Por el sur sigue la Ruta 2 (Tierra de Pinares y Segovia), también sin fundido.
 ## Uso: godot --headless --path . -s res://maps/_pintura/pintar_ruta_1.gd -- --force
 
 const OUT := "res://maps/ruta_1/exterior.tscn"
@@ -44,6 +44,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta1", SIZE, data, 1990)
 	p.fill_grass(0.2)
 	p.connect_edge("north", &"pueblo_inicial/exterior")
+	p.connect_edge("south", &"ruta_2/exterior")
 
 	# El río Duratón, que viene del pueblo (mismas columnas) y sigue hacia el sur. Recto: el
 	# estanque del pack no trae esquinas hacia dentro para hacer meandros.
@@ -99,9 +100,6 @@ func _paint(painter: GDScript) -> RefCounted:
 		p.deco(cell, ExteriorTiles.ROCK_BROWN if (cell.x + cell.y) % 2 == 0 else ExteriorTiles.ROCK)
 	p.deco(Vector2i(28, 19), ExteriorTiles.STUMP)
 
-	# Valla de la obra que corta la carretera a Sepúlveda.
-	p.fence(19, 23, 61)
-
 	p.flowers(Rect2i(21, 7, 2, 2), 0.4)
 	p.flowers(Rect2i(33, 28, 2, 1), 0.6)
 	p.flowers(Rect2i(16, 47, 2, 2), 0.3)
@@ -120,8 +118,8 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.sign_text("CartelSanFrutos", Vector2i(28, 18), PackedStringArray(["Priorato de San Frutos (siglo XII).",
 		"Cuenta la leyenda que San Frutos rajó la roca con su cayado: la Cuchillada."]))
 	p.deco(Vector2i(24, 56), ExteriorTiles.SIGN)
-	p.sign_text("CartelObras", Vector2i(24, 56), PackedStringArray(["CARRETERA CORTADA POR OBRAS.",
-		"Ministerio de Transportes. Fin previsto de las obras: 2019."]))
+	p.sign_text("CartelSur", Vector2i(24, 56), PackedStringArray(["↓ Ruta 2 · Tierra de Pinares y Segovia.",
+		"Carretera arreglada por el Ministerio en 2019. Bueno: pintada."]))
 
 	# Apariciones.
 	p.spawn("default", Vector2i(21, 1))
@@ -136,7 +134,7 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Dicen que la grieta de la roca la abrió él. Yo creo que fue una obra del Ministerio."]))
 	p.npc("Recogida", "npc_fisherman", Vector2i(12, 54), LEFT, PackedStringArray([
 		"Aquí se recogen las canoas que bajan desde San Miguel. ¡Ni se te ocurra tirarte al río!"]))
-	p.npc("Jubilado", "jubiladoobras", Vector2i(21, 60), DOWN, PackedStringArray([
-		"Llevo desde 2019 mirando esta obra. Han puesto una valla. Y luego otra valla.",
-		"Hasta que no la acaben, a Sepúlveda no se pasa."]))
+	p.npc("Jubilado", "jubiladoobras", Vector2i(18, 60), RIGHT, PackedStringArray([
+		"Llevo desde 2019 mirando esta obra. Por fin han quitado la valla.",
+		"Ahora miro la carretera. Por si acaso la vuelven a poner."]))
 	return p

@@ -1,0 +1,40 @@
+{
+  "ruta2_eusebio": {
+    "class": "resinero",
+    "name": "Eusebio",
+    "intro_text": "Cuarenta años sangrando pinos para sacar resina. ¿Sabes lo que pega la resina? Pues mis Pokémon, más.",
+    "lose_text": "Me has dejado más pegado que un pino en agosto.",
+    "win_text": "En la Tierra de Pinares se aguanta mucho. Hasta la despoblación.",
+    "after_text": "Antes éramos cien resineros. Ahora quedan unos pocos y un Pineco que no se va ni a la de tres.",
+    "items": [],
+    "party": [
+      {
+        "species": "pineco",
+        "level": 5
+      },
+      {
+        "species": "seedot",
+        "level": 6
+      }
+    ]
+  },
+  "ruta2_steve": {
+    "class": "turistachanclas",
+    "name": "Steve",
+    "intro_text": "Hello! ¡Foto con el aqueduct! ¿No? Then... ¡combate, my friend!",
+    "lose_text": "Oh my God. Necesito un cochinillo para recuperarme.",
+    "win_text": "Sorry! In my country we win at everything except football.",
+    "after_text": "¡Dos mil años sin cemento! En mi país no aguanta ni el Brexit.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidgey",
+        "level": 5
+      },
+      {
+        "species": "meowth",
+        "level": 6
+      }
+    ]
+  }
+}
