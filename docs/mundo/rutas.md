@@ -48,6 +48,8 @@ Cada ruta toma su paisaje del camino real entre las dos ciudades.
 | **Ruta 26 · El Torcal de Antequera** | Rocas kársticas apiladas del Torcal, dólmenes de Antequera | Laberinto de rocas | **Coto Matamoros**; escaladores | Roggenrola, Carbink, Nosepass |
 | **Calle de la Victoria** | Calle estrecha junto a Sol | La **Calle Victoria** del juego: muy corta en la superficie y larga **bajo tierra** (las cloacas y los túneles del Metro) | Los entrenadores más fuertes | Pokémon de nivel alto |
 
+- **Ruta 21:** viñedos con cepas en espaldera, Ebro y calados; Toño (vendimiador) y Diego (sumiller). Entrada Pamplona reservada al Agente 5. [Ficha y fuentes](ruta_21.md).
+
 ## Fuentes
 
 - Datos generales de geografía y patrimonio (Acueducto de Segovia, Montserrat, palmeral de Elche, Doñana, Atapuerca, Torcal de Antequera, molinos de Consuegra): conocimiento general; posiciones contrastadas en OpenStreetMap (© colaboradores de OpenStreetMap, ODbL).

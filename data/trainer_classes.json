@@ -990,5 +990,15 @@
     "overworld_sprite": "res://assets/sprites/characters/tronista.png",
     "intro_bgm": "encounter_tough",
     "battle_bgm": "battle_trainer"
+  },
+  "vendimiador": {
+    "name": "Vendimiador",
+    "gender": "male",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/vendimiador.png",
+    "overworld_sprite": "res://assets/sprites/characters/vendimiador.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

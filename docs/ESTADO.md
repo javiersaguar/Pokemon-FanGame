@@ -232,7 +232,7 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 **Worktree:** `pokemon-panchito-agente3`, rama `feat/agente3-mundo-centro`. Reparto nuevo de Javier: Ruta 21 a Málaga; fuentes propias 350–449. Solo este tramo y las excepciones expresas de San Miguel/Atocha/Calle de la Victoria.
 
-**En curso:** Ruta 21 (viñedos). Entrada `from_pamplona` libre en el borde norte; unión con Pamplona reservada al Agente 5. Interiores bloqueados por falta de tileset. Famosos sin colocar, pendiente Javier.
+**Hecho:** Ruta 21 (viñedos), cepa propia fuente 350, vendimiador y sumiller; alcance 0 problemas. Entrada `from_pamplona` en **(24,0)**, columnas **22–25** libres en el borde norte; unión con Pamplona reservada al Agente 5. **Siguiente:** Ruta 22 (Burgos y Atapuerca). Interiores bloqueados por falta de tileset. Famosos sin colocar, pendiente Javier.
 
 
 **He leído** (2026-10-07, sesión con 3 agentes) el último aviso, las respuestas de Javier, la tabla de propiedad nueva y mi lista de «Próxima sesión». El arte del mundo y de los entrenadores es del Agente 4; yo sigo con la interfaz, el audio, los datos de entrenadores y `TrainerNPC`. Worktree `pokemon-panchito-agente3`, rama `feat/agente3-sesion`.

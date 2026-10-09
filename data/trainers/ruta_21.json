@@ -1,0 +1,40 @@
+{
+  "ruta21_vendimiador": {
+    "class": "vendimiador",
+    "name": "Toño",
+    "intro_text": "¡La vendimia no espera! Tú tampoco vas a esperar turno.",
+    "lose_text": "Me has dejado sin cosecha.",
+    "win_text": "Aquí se trabaja de sol a sol.",
+    "after_text": "Lo que sube es la botella. Lo que cobro por la uva, no.",
+    "items": [],
+    "party": [
+      {
+        "species": "cherubi",
+        "level": 45
+      },
+      {
+        "species": "petilil",
+        "level": 46
+      }
+    ]
+  },
+  "ruta21_sumiller": {
+    "class": "camarero",
+    "name": "Diego",
+    "intro_text": "Notas de madera, hierba y derrota. Vamos a catar tu equipo.",
+    "lose_text": "Demasiado cuerpo para mi paladar.",
+    "win_text": "Tiene un final largo. Como este combate.",
+    "after_text": "La carta de vinos tiene más futuro que mi contrato.",
+    "items": [],
+    "party": [
+      {
+        "species": "sinistea",
+        "level": 46
+      },
+      {
+        "species": "roserade",
+        "level": 47
+      }
+    ]
+  }
+}

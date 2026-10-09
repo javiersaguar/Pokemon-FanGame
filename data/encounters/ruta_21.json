@@ -1,0 +1,71 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "cherubi",
+        "min": 44,
+        "max": 47,
+        "weight": 35
+      },
+      {
+        "species": "petilil",
+        "min": 44,
+        "max": 47,
+        "weight": 30
+      },
+      {
+        "species": "deerling",
+        "min": 44,
+        "max": 47,
+        "weight": 20
+      },
+      {
+        "species": "combee",
+        "min": 44,
+        "max": 47,
+        "weight": 15
+      }
+    ],
+    "night": [
+      {
+        "species": "sinistea",
+        "min": 44,
+        "max": 47,
+        "weight": 40
+      },
+      {
+        "species": "hoothoot",
+        "min": 44,
+        "max": 47,
+        "weight": 30
+      },
+      {
+        "species": "petilil",
+        "min": 44,
+        "max": 47,
+        "weight": 30
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "ducklett",
+      "min": 44,
+      "max": 47,
+      "weight": 100
+    }
+  ],
+  "old_rod": [
+    {
+      "species": "magikarp",
+      "min": 40,
+      "max": 44,
+      "weight": 100
+    }
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

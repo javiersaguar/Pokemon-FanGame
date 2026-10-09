@@ -139,3 +139,5 @@ Dibujado a mano píxel a píxel con la paleta maestra en archivos de texto (`ass
 | Mapa regional y ocho medallas | Bloqueados por datos/diseño/arte (pregunta 30) | [Destino disponible](comparativas/a3_pc_dex_tarjeta_mapa.md) | pendiente |
 
 El repaso conserva las aprobaciones parciales anteriores; estas capturas no convierten los nuevos assets o pantallas en arte final aprobado.
+
+| Ruta 21 · Viñedos de La Rioja y cepa propia | Exterior provisional, fuente 350; plano OSM y alcance | [Comparativa](comparativas/ruta_21.md) | pendiente Javier |

@@ -72,3 +72,9 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Valladolid | ✅ | — | — | — | — |
 | Puertollano | ✅ | — | — | — | — |
 | Málaga | ✅ | — | — | — | — |
+
+## Tramo centro y final (Agente 3, 2026-10-09)
+
+| Lugar | Exterior | Alcance | Revisión |
+|---|---|---|---|
+| Ruta 21 · Viñedos | [Captura](../arte/comparativas/ruta_21_mapa.png), [ficha](ruta_21.md) | desde `from_pamplona`, 0 problemas | pendiente Javier |

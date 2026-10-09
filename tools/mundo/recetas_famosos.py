@@ -175,6 +175,8 @@ SPECS = {
                       "Ferran Torres: camiseta azulgrana."),
     "juan_roig": ("m", "light", (2, "white"), ("camisa", "white"), ("vestir", "grey"), None,
                   "Juan Roig: camisa blanca y chaleco de Mercadona."),
+    "vendimiador": ("m", "medium", (3, "black"), ("camisa", "green"), ("botas", "brown"), ("straw hat", None),
+                    "Vendimiador riojano: camisa verde y sombrero de faena."),
     # Clases de entrenador de las rutas (docs/mundo/rutas.md).
     "piraguista": ("m", "medium", (4, "brown"), ("tirantes", "red"), ("corto", "blue"), ("headband", None),
                    "Piragüista de las Hoces del Duratón: camiseta roja de tirantes, pantalón corto y cinta."),
