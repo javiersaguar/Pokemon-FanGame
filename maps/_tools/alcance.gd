@@ -1,8 +1,8 @@
 extends SceneTree
 ## Comprueba a dónde se llega andando en un mapa pintado: desde una aparición, recorre las casillas
 ## libres (la misma consulta de física que usan los personajes, Character.is_tile_free) y avisa de
-## las puertas de los edificios, los bordes con conexión, los carteles y los personajes a los que
-## no se llega. Los bordillos cuentan como pared (no salta); el agua también, salvo con --surf.
+## las puertas de los edificios, las pasarelas (Warp), los bordes con conexión, los carteles y los
+## personajes a los que no se llega. Los bordillos cuentan como pared (no salta); el agua también, salvo con --surf.
 ## Uso: godot --headless --path . -s res://maps/_tools/alcance.gd -- <id del mapa> [aparición] [--surf]
 ## Ejemplo: -- madrid/moncloa default
 
@@ -82,6 +82,16 @@ func _initialize() -> void:
 		if not near:
 			problems += 1
 			print("  NO se llega a %s en %s" % [node.name, t])
+	# Pasarelas (ferris, avión, Cercanías): hay que poder pisar su casilla.
+	var warps := map.get_node_or_null("Warps")
+	if warps != null:
+		for node: Node in warps.get_children():
+			var t := Grid.to_tile((node as Node2D).position)
+			if not seen.has(t):
+				problems += 1
+				print("  NO se llega a la pasarela %s en %s" % [node.name, t])
+			else:
+				print("  pasarela %s → %s: se llega" % [node.name, node.get(&"target_map")])
 	# Bordes con conexión.
 	for c: Resource in map.get(&"data").connections:
 		var count := 0
