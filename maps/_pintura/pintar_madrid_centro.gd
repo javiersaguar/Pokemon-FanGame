@@ -43,6 +43,8 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.fill_grass(0.1)
 	p.connect_edge("west", &"madrid/moncloa", 38, Vector2i(0, 24))
 	p.connect_edge("west", &"madrid/palacio_real", 14, Vector2i(24, 34))  # Arenal hacia el Palacio
+	p.connect_edge("east", &"madrid/retiro", -8, Vector2i(20, 28))   # Gran Vía → Alcalá y Cibeles
+	p.connect_edge("east", &"madrid/retiro", -2, Vector2i(30, 36))   # Carrera de San Jerónimo → Congreso
 	p.paving(Rect2i(0, 0, SIZE.x, SIZE.y))
 	p.build_paving()
 

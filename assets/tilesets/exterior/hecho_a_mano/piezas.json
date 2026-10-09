@@ -24,5 +24,15 @@
   "teatro_real": {"fuente": 41, "puerta": [3, 0]},
   "felipe_iv": {"fuente": 42, "puerta": null},
   "estatua_rey": {"fuente": 43, "puerta": null},
-  "verja": {"fuente": 44, "puerta": null}
+  "verja": {"fuente": 44, "puerta": null},
+  "cibeles": {"fuente": 45, "puerta": null},
+  "palacio_cibeles": {"fuente": 46, "puerta": [4, 0]},
+  "puerta_alcala": {"fuente": 47, "puerta": null, "huella": "base"},
+  "congreso": {"fuente": 48, "puerta": [4, 0]},
+  "leon_congreso": {"fuente": 49, "puerta": null},
+  "museo_prado": {"fuente": 50, "puerta": [5, 0]},
+  "fuente_neptuno": {"fuente": 51, "puerta": null},
+  "estacion_atocha": {"fuente": 52, "puerta": [6, 0]},
+  "monumento_alfonso_xii": {"fuente": 53, "puerta": null},
+  "palacio_cristal": {"fuente": 54, "puerta": [3, 0]}
 }

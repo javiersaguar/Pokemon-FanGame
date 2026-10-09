@@ -114,5 +114,62 @@
         "level": 13
       }
     ]
+  },
+  "madrid_palomas": {
+    "class": "domadorpalomas",
+    "name": "Emilio",
+    "intro_text": "Llevo cuarenta años dando de comer a las palomas del Retiro. Ahora ellas me dan de comer a mí.",
+    "lose_text": "¡Volad, mis niñas, volad! Ah, no, que se han desmayado.",
+    "win_text": "Una paloma madrileña aguanta más que un concejal.",
+    "after_text": "Está prohibido darles de comer. Por eso les doy de cenar.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidove",
+        "level": 13
+      },
+      {
+        "species": "tranquill",
+        "level": 14
+      }
+    ]
+  },
+  "madrid_patinetero": {
+    "class": "patinetero",
+    "name": "Iker",
+    "intro_text": "¡Aparta, que voy por la acera a veinticinco por hora! ¡Bueno, vale, combatimos!",
+    "lose_text": "Se me ha acabado la batería. Y la dignidad.",
+    "win_text": "¡Brrrrum! Ni el casco me hace falta.",
+    "after_text": "El patinete lo alquilo por minutos. Llevo tres horas. No quiero pensar en ello.",
+    "items": [],
+    "party": [
+      {
+        "species": "pawmi",
+        "level": 13
+      },
+      {
+        "species": "electrike",
+        "level": 14
+      }
+    ]
+  },
+  "madrid_crossfitero": {
+    "class": "crossfitero",
+    "name": "Borja",
+    "intro_text": "¡Tercera vuelta al Estanque! ¿Un combate entre series? ¡Venga, que esto es cardio!",
+    "lose_text": "Me he quedado sin aire. Y sin batido.",
+    "win_text": "¡Eso es! ¡Sudor y Pokémon!",
+    "after_text": "El Retiro es el mejor gimnasio de Madrid. Y gratis, que la cuota del box me cuesta un riñón.",
+    "items": [],
+    "party": [
+      {
+        "species": "machop",
+        "level": 13
+      },
+      {
+        "species": "timburr",
+        "level": 14
+      }
+    ]
   }
 }

@@ -54,7 +54,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Ciudad | Ficha | Mapa exterior | Interiores | Lógica | Aprobada |
 |--------|-------|---------------|------------|--------|----------|
 | San Miguel de Bernuy | ✅ | ✅ provisional ([captura](../arte/comparativas/san_miguel_mapa.png)) | — | carteles y vecinos | — |
-| Madrid (y Palacio Real) | ✅ | Moncloa, Sol/Gran Vía y Palacio Real ✅ provisionales ([Moncloa](../arte/comparativas/madrid_moncloa_mapa.png), [centro](../arte/comparativas/madrid_centro_mapa.png), [Palacio](../arte/comparativas/madrid_palacio_real_mapa.png)); Retiro y Chamberí pendientes | — | carteles, vecinos, reclutas del Clan, entrenadores de ciudad | — |
+| Madrid (y Palacio Real) | ✅ | Moncloa, Sol/Gran Vía, Palacio Real y Retiro ✅ provisionales ([Moncloa](../arte/comparativas/madrid_moncloa_mapa.png), [centro](../arte/comparativas/madrid_centro_mapa.png), [Palacio](../arte/comparativas/madrid_palacio_real_mapa.png), [Retiro](../arte/comparativas/madrid_retiro_mapa.png)); Chamberí pendiente | — | carteles, vecinos, reclutas del Clan, entrenadores de ciudad | — |
 | Móstoles, Leganés y Getafe | ✅ | — | — | — | — |
 | Zaragoza | ✅ | — | — | — | — |
 | Barcelona | ✅ | — | — | — | — |

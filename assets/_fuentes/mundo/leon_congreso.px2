@@ -1,0 +1,40 @@
+# León de bronce del Congreso (hecho con cañones fundidos, de ahí lo de "Daoíz y Velarde") sobre su
+# pedestal. Se ponen dos, a los lados de la escalinata. 32x32 del arte (2x2 casillas). PROVISIONAL.
+@leyenda  . = transparente   K = piedra_1   D = piedra_2   d = piedra_3   g = piedra_4   l = piedra_5   L = piedra_6
+@leyenda  S = piedra_1@90   B = pizarra_4   p = pizarra_2   P = pizarra_1   q = pizarra_3   r = teja_3   R = teja_2
+@leyenda  m = tierra_4   o = tierra_5   O = tierra_6   w = madera_2   W = madera_4   y = acento_amarillo   n = metal_2
+@leyenda  v = hierba_1   V = hierba_2   h = hierba_4   e = acento_rojo   a = agua_4   A = agua_5   u = ui_6
+@salida res://assets/tilesets/exterior/hecho_a_mano/leon_congreso.png
+---
+................................
+................................
+................mmmmmmmmmmmmmmmm
+................mmmmmmmmmmmmmmmm
+................mmmmmmmmmmmmmmmm
+................mmmmmmmmmmmmmmmm
+................mmmmwwwwwwwwmmmm
+................mmmmwwwwwwwwmmmm
+....wwww........mmmmwwKKwwwwmmmm
+....wwww........mmmmwwKKwwwwmmmm
+....wwww........mmmmwwwwwwwwmmmm
+....wwww........mmmmwwwwwwwwmmmm
+....wwwwwwwwwwwwmmmmwwwwwwwwmmmm
+....wwwwwwwwwwwwmmmmwwwwwwwwmmmm
+....wwwwwwwwwwwwmmmmmmmmmmmmmmmm
+....wwwwwwwwwwwwmmmmmmmmmmmmmmmm
+....wwwwwwwwwwwwmmmmmmmmmmmmmmmm
+....wwwwwwwwwwwwmmmmmmmmmmmmmmmm
+....wwWWWWwwwwwwwwwwWWWWww......
+....wwWWWWwwwwwwwwwwWWWWww......
+....wwWWWWwwwwwwwwwwWWWWww......
+....wwWWWWwwwwwwwwwwWWWWww......
+..LLLLLLLLLLLLLLLLLLLLLLLLLLLL..
+..LLLLLLLLLLLLLLLLLLLLLLLLLLLL..
+..gggggggggggggggggggggggggggg..
+..gggggggggggggggggggggggggggg..
+..gggggggggggggggggggggggggggg..
+..gggggggggggggggggggggggggggg..
+..gggggggggggggggggggggggggggg..
+..gggggggggggggggggggggggggggg..
+..gggggggggggggggggggggggggggg..
+..gggggggggggggggggggggggggggg..
