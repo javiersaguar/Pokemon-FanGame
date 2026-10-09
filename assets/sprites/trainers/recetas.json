@@ -1669,5 +1669,35 @@
 			"overworld walk/hair/boy 2/boy 2 blond.png",
 			"overworld walk/hats/youngster hat/youngster cap blue.png"
 		]
+	},
+	"nadador": {
+		"idea": "Nadador de aguas abiertas: bañador y camiseta de playa azules.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/beach bottom/beach bottom blue.png",
+			"trainer front male/tops/beach top/beach top blue.png",
+			"trainer front male/hair/hair 1/1 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/beach bottom m/beach bottom m blue.png",
+			"overworld walk/tops/beach top m/beach top  m blue.png",
+			"overworld walk/hair/boy 1/boy 1 brown.png"
+		]
+	},
+	"nadador_f": {
+		"idea": "Nadadora de aguas abiertas: bañador de playa rojo.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/beach bottom/beach  bottoms red.png",
+			"trainer front female/tops/beach top/beach top red.png",
+			"trainer front female/hair/Hair 2/2 blonde.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/beach bottom f/beach bottom f red.png",
+			"overworld walk/tops/beach top f/beach  top f red.png",
+			"overworld walk/hair/girl 2/2 blonde.png"
+		]
 	}
 }

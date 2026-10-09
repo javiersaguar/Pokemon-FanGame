@@ -2,8 +2,8 @@ extends SceneTree
 ## Comprueba a dónde se llega andando en un mapa pintado: desde una aparición, recorre las casillas
 ## libres (la misma consulta de física que usan los personajes, Character.is_tile_free) y avisa de
 ## las puertas de los edificios, los bordes con conexión, los carteles y los personajes a los que
-## no se llega. Los bordillos y el agua cuentan como pared (no salta ni hace Surf).
-## Uso: godot --headless --path . -s res://maps/_tools/alcance.gd -- <id del mapa> [aparición]
+## no se llega. Los bordillos cuentan como pared (no salta); el agua también, salvo con --surf.
+## Uso: godot --headless --path . -s res://maps/_tools/alcance.gd -- <id del mapa> [aparición] [--surf]
 ## Ejemplo: -- madrid/moncloa default
 
 const BLOCKING_MASK := 1 | 2 | 8
@@ -12,13 +12,16 @@ const DIRS: Array[Vector2i] = [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector
 
 func _initialize() -> void:
 	await process_frame
-	var args := OS.get_cmdline_user_args()
+	var args := Array(OS.get_cmdline_user_args())
 	if args.is_empty():
 		push_error("alcance: falta el id del mapa.")
 		quit(2)
 		return
 	var map_id := StringName(args[0])
+	var surf := "--surf" in args
+	args = args.filter(func(a: String) -> bool: return a != "--surf")
 	var spawn_name := StringName(args[1]) if args.size() > 1 else &"default"
+	var mask := BLOCKING_MASK & ~8 if surf else BLOCKING_MASK
 	var scene: PackedScene = load("res://maps/%s.tscn" % map_id)
 	var map: Node2D = scene.instantiate()
 	root.add_child(map)
@@ -33,7 +36,7 @@ func _initialize() -> void:
 			return false
 		var q := PhysicsPointQueryParameters2D.new()
 		q.position = map.to_global(Grid.to_world(tile))
-		q.collision_mask = BLOCKING_MASK
+		q.collision_mask = mask
 		q.collide_with_areas = false
 		return space.intersect_point(q, 1).is_empty()
 	var seen := {start: true}

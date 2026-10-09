@@ -1,0 +1,22 @@
+{
+  "land_rate": 0,
+  "land": {
+    "day": [],
+    "night": []
+  },
+  "water": [
+    {"species": "tentacool", "min": 21, "max": 24, "weight": 35},
+    {"species": "wingull", "min": 21, "max": 24, "weight": 25},
+    {"species": "wailmer", "min": 22, "max": 24, "weight": 20},
+    {"species": "mantine", "min": 23, "max": 25, "weight": 10},
+    {"species": "frillish", "min": 23, "max": 25, "weight": 10}
+  ],
+  "old_rod": [
+    {"species": "magikarp", "min": 20, "max": 22, "weight": 70},
+    {"species": "finneon", "min": 20, "max": 22, "weight": 30}
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

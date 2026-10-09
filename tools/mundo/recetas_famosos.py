@@ -196,6 +196,10 @@ SPECS = {
                    "Carterista de La Rambla: sudadera negra con capucha, vaqueros y gorro de lana."),
     "regatista": ("m", "light", (2, "blond"), ("camiseta", "white"), ("corto", "red"), ("youngster hat", None),
                   "Regatista del puerto de Palma: camiseta blanca, pantalón corto rojo y gorra."),
+    "nadador": ("m", "medium", (1, "brown"), ("playa", "blue"), ("playa", "blue"), None,
+                "Nadador de aguas abiertas: bañador y camiseta de playa azules."),
+    "nadador_f": ("f", "light", (2, "blond"), ("playa", "red"), ("playa", "red"), None,
+                  "Nadadora de aguas abiertas: bañador de playa rojo."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
 }

@@ -42,7 +42,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.soil(Rect2i(54, 2, 6, 50))                 # la playa de la Barceloneta
 	p.water(Rect2i(60, 0, 12, 52))               # el Mediterráneo
 	p.water(Rect2i(0, 52, 72, 8))                # el Port Vell
-	p.build_water(0.3)
+	p.build_water(0.12)
 
 	for b: Array in [
 		# El Raval, al oeste de La Rambla.

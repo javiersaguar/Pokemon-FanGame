@@ -44,11 +44,12 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.fill_grass(0.2)
 
 	# La ciudad y el puerto (baldosas) y la bahía.
+	p.connect_edge("south", &"maritima_1/exterior", -12, Vector2i(12, 60))  # Surf hacia Ibiza
 	p.paving(Rect2i(18, 0, 54, 46))
 	p.paving(Rect2i(0, 40, 18, 6))
 	p.build_paving()
 	p.water(Rect2i(0, 46, 72, 10))
-	p.build_water(0.3)
+	p.build_water(0.12)
 
 	# El monte de Bellver: meseta con pinar, hierba alta y el castillo arriba.
 	p.plateau(Rect2i(-2, -2, 18, 24), [8, 9])

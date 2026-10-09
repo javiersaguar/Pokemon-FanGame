@@ -1,0 +1,41 @@
+{
+  "maritima1_nadador": {
+    "class": "nadador",
+    "name": "Biel",
+    "intro_text": "¡Voy nadando de Mallorca a Ibiza! Bueno, de islote en islote. ¡Combate en la orilla!",
+    "lose_text": "Me he quedado sin brazada.",
+    "win_text": "¡Agua salada, Pokémon curtidos!",
+    "after_text": "En la Dragonera viven lagartijas que no hay en ningún otro sitio. Y gaviotas que te roban el bocadillo.",
+    "items": [],
+    "party": [
+      {
+        "species": "buizel",
+        "level": 23
+      },
+      {
+        "species": "wailmer",
+        "level": 24
+      }
+    ]
+  },
+  "maritima1_dj": {
+    "class": "raver",
+    "name": "DJ Marta",
+    "gender": "female",
+    "intro_text": "¡Pincho en mi velero rumbo a Ibiza! ¿Bailas o combates? Las dos cosas.",
+    "lose_text": "Me has cortado el tema en lo mejor.",
+    "win_text": "¡Drop! ¡Toma drop!",
+    "after_text": "Es Vedrà tiene un campo magnético, dicen. Mi brújula se vuelve loca. Y yo también.",
+    "items": [],
+    "party": [
+      {
+        "species": "noibat",
+        "level": 24
+      },
+      {
+        "species": "frillish",
+        "level": 24
+      }
+    ]
+  }
+}

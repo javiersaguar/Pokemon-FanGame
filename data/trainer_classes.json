@@ -958,5 +958,17 @@
     "overworld_sprite": "res://assets/sprites/characters/regatista.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "nadador": {
+    "name": "Nadador",
+    "gender": "mixed",
+    "base_money": 28,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/nadador.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/nadador_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/nadador.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/nadador_f.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }
