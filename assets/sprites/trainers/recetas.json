@@ -1482,5 +1482,39 @@
 			"overworld walk/tops/collared shirt/collared shirt white.png",
 			"overworld walk/hair/boy 2/boy 2 white.png"
 		]
+	},
+	"piraguista": {
+		"idea": "Piragüista de las Hoces del Duratón: camiseta roja de tirantes, pantalón corto y cinta.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/shorts/shorts blue.png",
+			"trainer front male/tops/tank top/tank top red.png",
+			"trainer front male/hair/hair 4/4 brown.png",
+			"trainer front male/hats/headband.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/shorts/shorts blue.png",
+			"overworld walk/tops/tank top/tank top red.png",
+			"overworld walk/hair/boy 4/boy 4 brown.png",
+			"overworld walk/hats/headband.png"
+		]
+	},
+	"ornitologa": {
+		"idea": "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/pants and boots/pants and boots beige.png",
+			"trainer front female/tops/vest/vest brown.png",
+			"trainer front female/hair/Hair 2/2 brown.png",
+			"trainer front female/hats/sun hat.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/pants and boots/pants and boots beige.png",
+			"overworld walk/tops/vest/vest brown.png",
+			"overworld walk/hair/girl 2/2 brown.png",
+			"overworld walk/hats/sun hat.png"
+		]
 	}
 }

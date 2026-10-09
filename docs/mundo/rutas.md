@@ -2,7 +2,9 @@
 
 > Todo es **propuesta** (Javier decidió las ciudades y el orden de los gimnasios; las rutas que las unen salen de la geografía real). Ids y niveles en `data/region.json`; orden de la aventura en `region.md`.
 
-Cada ruta toma su paisaje del camino real entre las dos ciudades. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
+Cada ruta toma su paisaje del camino real entre las dos ciudades.
+
+**Pintadas:** Ruta 1 (`maps/ruta_1/exterior.tscn`, `maps/_pintura/pintar_ruta_1.gd`; captura en `docs/arte/comparativas/ruta_1_mapa.png`). Entrenadores en `data/trainers/ruta_1.json` (Manolo, el de los Chupachups; Dani, piragüista; Marta, ornitóloga) y encuentros en `data/encounters/ruta_1.json`. La salida sur está cortada por obras hasta que se pinte la Ruta 2. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
 
 | Ruta | Paisaje real | Qué tiene en el juego | Entrenadores y personajes | Pokémon propuestos |
 |------|--------------|----------------------|---------------------------|--------------------|

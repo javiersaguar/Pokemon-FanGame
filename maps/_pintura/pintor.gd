@@ -10,6 +10,7 @@ extends RefCounted
 const T := Grid.TILE
 const MAP_ROOT_SCRIPT := "res://src/overworld/map_root.gd"
 const NPC_SCENE := "res://src/overworld/npc/npc.tscn"
+const TRAINER_SCENE := "res://src/overworld/trainers/trainer_npc.tscn"
 const SIGN_SCENE := "res://src/overworld/sign/sign.tscn"
 const FOLLOWER_SCENE := "res://src/overworld/follower/follower.tscn"
 const CHARACTERS := "res://assets/sprites/characters/"
@@ -309,6 +310,26 @@ func npc(npc_name: String, sheet: String, cell: Vector2i, facing: int, lines: Pa
 	for key: String in props:
 		node.set(StringName(key), props[key])
 	entities.add_child(node)
+
+
+## Entrenador de data/trainers/*.json: su sprite sale de su clase. Te ve a `sight` casillas.
+func trainer(node_name: String, trainer_id: StringName, cell: Vector2i, facing: int, sight: int = 4) -> void:
+	var node: Node2D = (load(TRAINER_SCENE) as PackedScene).instantiate()
+	node.name = node_name
+	node.position = Grid.to_world(cell)
+	node.set(&"trainer_id", trainer_id)
+	node.set(&"initial_facing", facing)
+	node.set(&"sight_range", sight)
+	entities.add_child(node)
+
+
+## Conexión sin fundido con el mapa vecino por un borde (MapConnection).
+func connect_edge(edge: String, target_map: StringName, offset: int = 0) -> void:
+	var c := MapConnection.new()
+	c.edge = edge
+	c.target_map = target_map
+	c.offset = offset
+	root.get(&"data").connections.append(c)
 
 
 func follower(follower_name: String, species: StringName, shiny: bool, leader: String, cell: Vector2i) -> void:

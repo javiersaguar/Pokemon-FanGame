@@ -35,6 +35,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	data.region_map_position = Vector2i(13, 8)
 	var p: RefCounted = painter.new("SanMiguelDeBernuy", SIZE, data, 1975)
 	p.fill_grass(0.18)
+	p.connect_edge("south", &"ruta_1/exterior")  # la calle Real sigue en la Ruta 1, mismas columnas
 
 	# Agua: la cola del embalse de las Vencías (norte) y el río Duratón (oeste), que entra en él.
 	p.water(Rect2i(0, 0, 22, 8))

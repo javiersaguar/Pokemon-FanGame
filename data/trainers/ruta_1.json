@@ -8,8 +8,52 @@
     "after_text": "Los de cola se me han acabado. Los de fresa también... me los he comido yo.",
     "items": [],
     "party": [
-      {"species": "swirlix", "level": 4},
-      {"species": "milcery", "level": 4}
+      {
+        "species": "swirlix",
+        "level": 4
+      },
+      {
+        "species": "milcery",
+        "level": 4
+      }
+    ]
+  },
+  "ruta1_dani": {
+    "class": "piraguista",
+    "name": "Dani",
+    "intro_text": "¡Acabo de bajar las Hoces en canoa! Ocho kilómetros remando y aún me quedan fuerzas.",
+    "lose_text": "Me he quedado sin brazos. Y la canoa la tengo que devolver a las seis.",
+    "win_text": "¡Esto es remar contra corriente y lo demás son tonterías!",
+    "after_text": "Si te asomas río arriba verás los buitres. Ellos no reman: planean. Listos.",
+    "items": [],
+    "party": [
+      {
+        "species": "magikarp",
+        "level": 3
+      },
+      {
+        "species": "psyduck",
+        "level": 4
+      }
+    ]
+  },
+  "ruta1_marta": {
+    "class": "ornitologa",
+    "name": "Marta",
+    "intro_text": "¡Chis! Llevo contados setecientos buitres leonados. Si me haces perder la cuenta, combatimos.",
+    "lose_text": "Setecientos... ¿uno? Da igual, empiezo otra vez.",
+    "win_text": "Los buitres esperan a que caigas. Yo también.",
+    "after_text": "Hay más buitres que vecinos en toda la comarca. Y pagan menos impuestos.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidgey",
+        "level": 3
+      },
+      {
+        "species": "vullaby",
+        "level": 5
+      }
     ]
   }
 }

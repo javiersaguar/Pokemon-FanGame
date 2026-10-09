@@ -856,5 +856,25 @@
     "battle_bgm": "battle_villain",
     "battle_sprite_female": "res://assets/sprites/trainers/recluta_clan_f.png",
     "overworld_sprite_female": "res://assets/sprites/characters/recluta_clan_f.png"
+  },
+  "piraguista": {
+    "name": "Piragüista",
+    "gender": "male",
+    "base_money": 20,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/piraguista.png",
+    "overworld_sprite": "res://assets/sprites/characters/piraguista.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "ornitologa": {
+    "name": "Ornitóloga",
+    "gender": "female",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/ornitologa.png",
+    "overworld_sprite": "res://assets/sprites/characters/ornitologa.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }
