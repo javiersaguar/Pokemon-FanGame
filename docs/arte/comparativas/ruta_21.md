@@ -6,8 +6,8 @@ La [referencia de ruta de Añil](../referencias/anil_ruta.png) y la [Ruta 6](rut
 
 ## Pieza nueva junto a una pieza existente
 
-| Cepa propia (fuente 350, ×2) | Árbol del set existente |
+| Cepa propia (fuente 350, ×2) | Palmera propia del set existente |
 |---|---|
-| ![Cepa](../../../assets/tilesets/exterior/hecho_a_mano/cepa_rioja.png) | Véase el árbol en el centro de la captura, junto a los calados |
+| ![Cepa](../../../assets/tilesets/exterior/hecho_a_mano/cepa_rioja.png) | ![Palmera](../../../assets/tilesets/exterior/hecho_a_mano/palmera.png) |
 
 Cepa dibujada a mano en `.px2`, paleta maestra; provisionales tanto pieza como composición. Bodegas sin interior, sin famosos. No se declara aprobado el nivel gráfico.

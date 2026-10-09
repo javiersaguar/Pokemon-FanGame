@@ -6,8 +6,8 @@ Referencia de escala y densidad: [Ruta 6](ruta_6_mapa.png) y [Añil](../referenc
 
 ## Catedral propia y recurso existente
 
-| Catedral de Burgos, paleta maestra y ×2 | Casas DPPt |
+| Catedral de Burgos, paleta maestra y ×2 | Catedral de Barcelona existente |
 |---|---|
-| ![Catedral](../../../assets/tilesets/exterior/hecho_a_mano/catedral_burgos.png) | Fachadas en la captura, sin reescalar |
+| ![Catedral](../../../assets/tilesets/exterior/hecho_a_mano/catedral_burgos.png) | ![Barcelona](../../../assets/tilesets/exterior/hecho_a_mano/catedral_barcelona.png) |
 
 Dos agujas, galería, rosetón y tres portadas; interpretación compacta provisional. [Fuente oficial](https://catedraldeburgos.es/patrimonio/portadas/). No hay aprobación visual ni interiores.
