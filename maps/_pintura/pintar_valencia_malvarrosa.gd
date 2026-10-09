@@ -33,6 +33,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	data.encounter_table = &"valencia"
 	data.region_map_position = Vector2i(22, 14)
 	var p: RefCounted = painter.new("ValenciaMalvarrosa", SIZE, data, 1238)
+	p.connect_edge("west", &"valencia/turia", 4, Vector2i(22, 30))
 	p.fill_grass(0.1)
 
 	p.paving(Rect2i(0, 0, 40, 48))

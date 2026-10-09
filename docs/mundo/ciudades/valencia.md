@@ -7,7 +7,9 @@
 ## Estado (2026-10-09)
 
 - **`valencia/malvarrosa` pintado** (`maps/_pintura/pintar_valencia_malvarrosa.gd`, 64×56): el Mediterráneo al este, la playa con sombrillas y socorrista, el paseo con **palmeras** (dibujadas a mano), **Akuarela Playa** (gimnasio 3, dibujada a mano, con su portero), el Cabanyal con Centro Pokémon, Mercadona, estanco y Basic-Fit, y el puerto con el **ferry de Ibiza** (pasarela en los dos puertos). Entrenadores en `data/trainers/valencia.json` (tronista, clase nueva, y una despedida de soltero) y encuentros en `data/encounters/valencia.json`.
-- **Pendiente:** `valencia/ciutat_vella` y `valencia/turia` (con la Ciudad de las Artes); la salida al oeste por la Avinguda del Port.
+- **`valencia/ciutat_vella` pintado** (64×56): las **Torres de Serranos** (se pasa por la puerta al Turia), la Plaza de la Reina con el **Micalet** y la Puerta de los Hierros, la **Lonja de la Seda** y el **Mercado Central**, la horchatería, Centro Pokémon, Mercadona, estanco y la Plaza del Ayuntamiento con palmeras y un fallero.
+- **`valencia/turia` pintado** (84×36): el antiguo cauce hecho parque (caminos, hierba alta, arboledas; una corredora y una abuela) que termina en la **Ciudad de las Artes y las Ciencias** (Palau de les Arts, Hemisfèric, Museu de les Ciències). Une Ciutat Vella (sur) con la Malvarrosa (este).
+- **Pendiente:** la Ruta 9 (Albufera y Gandía) hacia el sur; el Oceanogràfic y el Gulliver.
 
 ## Cómo se reparte en el juego
 

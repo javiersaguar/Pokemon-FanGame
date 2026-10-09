@@ -60,7 +60,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Barcelona | ✅ | Les Corts, Eixample y Ciutat Vella ✅ provisionales ([Les Corts](../arte/comparativas/barcelona_les_corts_mapa.png), [Eixample](../arte/comparativas/barcelona_eixample_mapa.png), [Ciutat Vella](../arte/comparativas/barcelona_ciutat_vella_mapa.png)) | — | soci, obrero, startup, guiri, carterista, bañista | — |
 | Palma de Mallorca | ✅ | ✅ provisional ([captura](../arte/comparativas/palma_mapa.png)) | — | ferry a Barcelona (pasarela), regatista y alemán | — |
 | Ibiza | ✅ | ✅ provisional ([captura](../arte/comparativas/ibiza_mapa.png)) | — | hippie y relaciones públicas; Surf desde la Ruta marítima 1 | — |
-| Valencia | ✅ | Malvarrosa ✅ provisional ([captura](../arte/comparativas/valencia_malvarrosa_mapa.png)); Ciutat Vella y Turia pendientes | — | tronista y despedida de soltero; ferry de Ibiza | — |
+| Valencia | ✅ | Malvarrosa, Ciutat Vella y Turia ✅ provisionales ([Malvarrosa](../arte/comparativas/valencia_malvarrosa_mapa.png), [Ciutat Vella](../arte/comparativas/valencia_ciutat_vella_mapa.png), [Turia](../arte/comparativas/valencia_turia_mapa.png)) | — | tronista y despedida de soltero; ferry de Ibiza | — |
 | Alicante | ✅ | — | — | — | — |
 | Murcia | ✅ | — | — | — | — |
 | Sevilla | ✅ | Centro, Río y Triana y Plaza de España ✅ provisionales ([Centro](../arte/comparativas/sevilla_centro_mapa.png), [Río](../arte/comparativas/sevilla_rio_mapa.png), [Plaza de España](../arte/comparativas/sevilla_maria_luisa_mapa.png)) | — | costalero, flamencas, guiri, domador de palomas, tuno; club de la comedia (gimnasio 4) con su cartel | — |

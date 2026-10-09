@@ -36,5 +36,44 @@
         "level": 27
       }
     ]
+  },
+  "vlc_corredora": {
+    "class": "crossfitero",
+    "gender": "female",
+    "name": "Andrea",
+    "intro_text": "Corro los nueve kilómetros del Turia cada mañana. ¡Y combato a la vuelta!",
+    "lose_text": "Me has cortado el ritmo. Y la racha de Strava.",
+    "win_text": "¡Récord personal!",
+    "after_text": "El Turia era un río. Tras la riada del 57 lo desviaron y lo hicieron jardín. El mejor cambio de la historia.",
+    "items": [],
+    "party": [
+      {
+        "species": "lopunny",
+        "level": 27
+      },
+      {
+        "species": "tranquill",
+        "level": 27
+      }
+    ]
+  },
+  "vlc_abuela": {
+    "class": "abuela",
+    "name": "Amparo",
+    "intro_text": "¡Xe! Mis nietos están en el parque de Gulliver. Mientras, a ver qué tal combates.",
+    "lose_text": "Ay, qué majo. Toma, una naranja.",
+    "win_text": "¡Esto es Valencia, nene! Aquí se combate con paella en el estómago.",
+    "after_text": "La paella con chorizo no es paella. Es arroz con cosas. Que no se te olvide.",
+    "items": [],
+    "party": [
+      {
+        "species": "cherrim",
+        "level": 26
+      },
+      {
+        "species": "lechonk",
+        "level": 28
+      }
+    ]
   }
 }

@@ -543,5 +543,43 @@
   "escultura_leganes": {
     "fuente": 361,
     "puerta": null
+  },
+  "micalet_catedral": {
+    "fuente": 85,
+    "puerta": [
+      5,
+      0
+    ]
+  },
+  "lonja_seda": {
+    "fuente": 86,
+    "puerta": [
+      4,
+      0
+    ]
+  },
+  "mercado_central": {
+    "fuente": 87,
+    "puerta": [
+      5,
+      0
+    ]
+  },
+  "torres_serranos": {
+    "fuente": 88,
+    "puerta": null,
+    "huella": "base"
+  },
+  "hemisferic": {
+    "fuente": 89,
+    "puerta": null
+  },
+  "museu_ciencies": {
+    "fuente": 90,
+    "puerta": null
+  },
+  "palau_arts": {
+    "fuente": 91,
+    "puerta": null
   }
 }

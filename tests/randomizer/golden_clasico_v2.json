@@ -1,5 +1,5 @@
 {
-	"fingerprint": "75f5708a179d99230370e2db5584c31f6ff2a61f98edf89b49675c93a7864823",
+	"fingerprint": "b82fc19ba986166efacb6d7ecfaade5ebe8ce9fb432df51becd84c92d663bdf6",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -2910,7 +2910,7 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "0880164f96bc5a3e1c393379229fcebc2a170ce4cdf3dc0483e9cc95333df704",
+		"input_hash": "8533cd6d4dfdf99987c2741e871b1fb4658169864a3556d73e0af54d14a55222",
 		"items": {
 			"test/muestra_pueblo/Pocion": "kangaskhancandy",
 			"test/muestra_ruta/Pocion": "firestone",
@@ -79350,15 +79350,39 @@
 					}
 				]
 			},
+			"vlc_abuela": {
+				"party": [
+					{
+						"level": 26.0,
+						"species": "polteageist"
+					},
+					{
+						"level": 28.0,
+						"species": "skwovet"
+					}
+				]
+			},
+			"vlc_corredora": {
+				"party": [
+					{
+						"level": 27.0,
+						"species": "gumshoostotem"
+					},
+					{
+						"level": 27.0,
+						"species": "herdier"
+					}
+				]
+			},
 			"vlc_despedida": {
 				"party": [
 					{
 						"level": 26.0,
-						"species": "flittle"
+						"species": "gothita"
 					},
 					{
 						"level": 27.0,
-						"species": "honchkrow"
+						"species": "overqwil"
 					}
 				]
 			},
@@ -79366,11 +79390,11 @@
 				"party": [
 					{
 						"level": 26.0,
-						"species": "sawk"
+						"species": "pawmo"
 					},
 					{
 						"level": 27.0,
-						"species": "hawlucha"
+						"species": "bewear"
 					}
 				]
 			},
@@ -79378,11 +79402,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "klefki"
+						"species": "lucario"
 					},
 					{
 						"level": 19.0,
-						"species": "togedemarutotem"
+						"species": "kartana"
 					}
 				]
 			},
@@ -79390,11 +79414,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "wiglett"
+						"species": "purrloin"
 					},
 					{
 						"level": 19.0,
-						"species": "alomomola"
+						"species": "qwilfish"
 					}
 				]
 			},
@@ -79402,11 +79426,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "ninetalesalola"
+						"species": "stunfisk"
 					},
 					{
 						"level": 19.0,
-						"species": "applin"
+						"species": "noibat"
 					}
 				]
 			}
