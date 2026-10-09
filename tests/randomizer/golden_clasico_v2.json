@@ -1,5 +1,5 @@
 {
-	"fingerprint": "04a15534159d9ec2a4a7e8a3d9f3e1a694ebc22040b2ec0788571dcf3788d63c",
+	"fingerprint": "1b4feab3bc946aa73eb0834a6922bc490fca506b61d80a052c721b5540ba2ee6",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -1433,6 +1433,82 @@
 					}
 				]
 			},
+			"valladolid": {
+				"good_rod": [],
+				"headbutt": [],
+				"land": {
+					"day": [
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "deino",
+							"weight": 25.0
+						},
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "galvantula",
+							"weight": 25.0
+						},
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "varoom",
+							"weight": 25.0
+						},
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "frillish",
+							"weight": 25.0
+						}
+					],
+					"night": [
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "tynamo",
+							"weight": 25.0
+						},
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "qwilfish",
+							"weight": 25.0
+						},
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "pikachukalos",
+							"weight": 25.0
+						},
+						{
+							"max": 47.0,
+							"min": 44.0,
+							"species": "frillish",
+							"weight": 25.0
+						}
+					]
+				},
+				"land_rate": 10.0,
+				"old_rod": [],
+				"rock_smash": [],
+				"super_rod": [],
+				"water": [
+					{
+						"max": 47.0,
+						"min": 44.0,
+						"species": "varoom",
+						"weight": 50.0
+					},
+					{
+						"max": 47.0,
+						"min": 44.0,
+						"species": "slugma",
+						"weight": 50.0
+					}
+				]
+			},
 			"vigo": {
 				"good_rod": [
 					{
@@ -1673,7 +1749,7 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "82279206b7350fc5e56d7a0371f640bcc7bb0806c67cce0218fe4f6ffd84d37b",
+		"input_hash": "623fca0e0c28a1b67c9a97af980ca3b8a7cc408ef0a57c3b511589ea72d92323",
 		"items": {
 			"test/muestra_pueblo/Pocion": "kangaskhancandy",
 			"test/muestra_ruta/Pocion": "firestone",
@@ -77601,15 +77677,39 @@
 					}
 				]
 			},
+			"valladolid_aficionado": {
+				"party": [
+					{
+						"level": 46.0,
+						"species": "amaura"
+					},
+					{
+						"level": 47.0,
+						"species": "snover"
+					}
+				]
+			},
+			"valladolid_paseante": {
+				"party": [
+					{
+						"level": 47.0,
+						"species": "fearow"
+					},
+					{
+						"level": 48.0,
+						"species": "farfetchd"
+					}
+				]
+			},
 			"vegeta": {
 				"party": [
 					{
 						"level": 18.0,
-						"species": "mrmimegalar"
+						"species": "farigiraf"
 					},
 					{
 						"level": 19.0,
-						"species": "sneasler"
+						"species": "starmie"
 					}
 				]
 			},
@@ -77617,11 +77717,11 @@
 				"party": [
 					{
 						"level": 36.0,
-						"species": "pelipper"
+						"species": "kingler"
 					},
 					{
 						"level": 37.0,
-						"species": "sealeo"
+						"species": "frogadier"
 					}
 				]
 			},
@@ -77629,11 +77729,11 @@
 				"party": [
 					{
 						"level": 37.0,
-						"species": "swanna"
+						"species": "bibarel"
 					},
 					{
 						"level": 38.0,
-						"species": "basculin"
+						"species": "floatzel"
 					}
 				]
 			},
@@ -77645,11 +77745,11 @@
 					},
 					{
 						"level": 14.0,
-						"species": "vivillonpokeball"
+						"species": "beautifly"
 					},
 					{
 						"level": 15.0,
-						"species": "sigilyph"
+						"species": "squawkabillyblue"
 					}
 				]
 			},
@@ -77657,11 +77757,11 @@
 				"party": [
 					{
 						"level": 26.0,
-						"species": "spearow"
+						"species": "noibat"
 					},
 					{
 						"level": 27.0,
-						"species": "snorlax"
+						"species": "bombirdier"
 					}
 				]
 			},
@@ -77669,11 +77769,11 @@
 				"party": [
 					{
 						"level": 26.0,
-						"species": "pignite"
+						"species": "monferno"
 					},
 					{
 						"level": 27.0,
-						"species": "taurospaldeaaqua"
+						"species": "lilliganthisui"
 					}
 				]
 			},
@@ -77681,11 +77781,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "scizor"
+						"species": "durant"
 					},
 					{
 						"level": 19.0,
-						"species": "irontreads"
+						"species": "stakataka"
 					}
 				]
 			},
@@ -77693,11 +77793,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "bramblin"
+						"species": "rattataalola"
 					},
 					{
 						"level": 19.0,
-						"species": "carbink"
+						"species": "durant"
 					}
 				]
 			},
@@ -77705,11 +77805,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "crocalor"
+						"species": "electrodehisui"
 					},
 					{
 						"level": 19.0,
-						"species": "arrokuda"
+						"species": "rolycoly"
 					}
 				]
 			}

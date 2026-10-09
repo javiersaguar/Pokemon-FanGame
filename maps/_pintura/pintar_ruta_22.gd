@@ -51,6 +51,7 @@ func _initialize() -> void:
 	p.spawn("from_ruta_21", Vector2i(24, 0))
 	p.spawn("from_valladolid", Vector2i(24, 63))
 	p.connect_edge("north", &"ruta_21/exterior", 0, Vector2i(22, 26))
+	p.connect_edge("south", &"valladolid/exterior", 24, Vector2i(22, 26))
 	p.trainer("Arqueologo", &"ruta22_arqueologa", Vector2i(40, 17), 1, 2)
 	p.trainer("Paleontologo", &"ruta22_paleontologo", Vector2i(18, 43), 2, 3)
 	_sign(p, "Atapuerca", Vector2i(37, 22), ["ATAPUERCA · TRINCHERA DEL FERROCARRIL", "El tren descubrió los fósiles. Hoy descubrir un tren que llegue a tiempo sería otro hallazgo."])

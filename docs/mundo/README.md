@@ -69,7 +69,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Santander | ✅ | — | — | — | — |
 | Bilbao | ✅ | — | — | — | — |
 | Pamplona | ✅ | — | — | — | — |
-| Valladolid | ✅ | — | — | — | — |
+| Valladolid | ✅ | ✅ provisional ([captura](../arte/comparativas/valladolid_mapa.png)) | — | cuatro locales señalizados, aficionado y paseante; gimnasio 7 reservado | — |
 | Puertollano | ✅ | — | — | — | — |
 | Málaga | ✅ | — | — | — | — |
 

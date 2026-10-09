@@ -51,3 +51,19 @@ Campo Grande: Pavos reales = **Pidove → Unfezant** y Squawkabilly; Pisuerga: D
 - [Ouigo: Valladolid en un día](https://www.ouigo.com/es/actualidad/que-ver-en-valladolid-en-un-dia) · [Spain.info: Campo Grande](https://www.spain.info/es/lugares-interes/campo-grande/) · [Turismo Castilla y León: Museo Nacional de Escultura](https://www.turismocastillayleon.com/es/arte-cultura-patrimonio/museos/museo-nacional-escultura) · [Ayuntamiento: Cúpula del Milenio](https://info.valladolid.es/en/-/lugares-teatros-cupula-del-milenio)
 - Sarah Santaolalla (Salamanca): [El Independiente](https://www.elindependiente.com/series-y-television/2025/08/14/quien-es-sarah-santaolalla/amp/)
 - Plano: © colaboradores de OpenStreetMap (ODbL).
+
+## Cómo se reparte en el juego
+
+| Mapa | Composición | Conexiones |
+|---|---|---|
+| `valladolid/exterior` (72×64) | Pisuerga al oeste; San Pablo/Museo al norte, Plaza Mayor en el centro y catedral al este; Campo Grande y estación al sur | Ruta 22 al norte, columnas 46–49 (offset −24); Ruta 23 reservada al este, filas 30–33 |
+
+Las distancias se comprimen sobre el [plano real](../planos/valladolid.svg); orientación norte arriba. Fachadas porticadas rojas reutilizadas del set propio. Cúpula geodésica y Conde Ansúrez dibujados en texto (fuentes 352/356); Ayuntamiento, San Pablo y catedral tienen fuentes propias adaptadas de otras fachadas dibujadas del set (353–355). Las interpretaciones arquitectónicas son provisionales y requieren revisión; el Museo, Academia, Pasaje y estación se componen con edificios de los packs. No se coloca a Latasa ni a los otros famosos.
+
+Fuentes ampliadas: [Ayuntamiento, Plaza Mayor](https://www.info.valladolid.es/blog/plaza-mayor-valladolid/), [Casa Consistorial](https://info.valladolid.es/disfruta/patrimonio/monumentos/casa-consistorial), [Campo Grande](https://info.valladolid.es/disfruta/patrimonio/monumentos/campo-grande).
+
+## Estado (2026-10-09)
+
+Exterior provisional; Centro Pokémon, Mercadona, Estanco y Basic-Fit señalizados. Plaza Mayor libre para el gimnasio 7. Dos entrenadores genéricos y encuentros en el parque/ribera. Interiores y AVE bloqueados o pendientes de su implementación/condiciones; no se inventan horarios, cobros ni desbloqueos. Ruta 22 enlazada, Ruta 23 se conectará al pintarla. Arte y equipos siguen siendo propuestas pendientes Javier.
+
+San Pablo y catedral: [fachada oficial de San Pablo](https://www.info.valladolid.es/disfruta/patrimonio/zonas-verdes/plazas/plaza-de-san-pablo), [historia de la torre de la catedral](https://www.info.valladolid.es/blog/adios-a-la-moza-vallisoletana-el-derrumbe-de-la-torre-de-la-catedral/).

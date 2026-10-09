@@ -1,0 +1,40 @@
+{
+  "valladolid_aficionado": {
+    "class": "cunado",
+    "name": "Javi",
+    "intro_text": "¡En Pucela se viene con bufanda! Aunque sea agosto.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "El fichaje se anuncia, las victorias ya veremos.",
+    "items": [],
+    "party": [
+      {
+        "species": "snover",
+        "level": 46
+      },
+      {
+        "species": "cubchoo",
+        "level": 47
+      }
+    ]
+  },
+  "valladolid_paseante": {
+    "class": "domadorpalomas",
+    "name": "Félix",
+    "intro_text": "Las aves de Campo Grande también saben defender el parque.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Los pavos reales no tienen abono del estadio. Y bien que viven.",
+    "items": [],
+    "party": [
+      {
+        "species": "unfezant",
+        "level": 47
+      },
+      {
+        "species": "squawkabilly",
+        "level": 48
+      }
+    ]
+  }
+}
