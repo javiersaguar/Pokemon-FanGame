@@ -89,7 +89,9 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Entrada: 80 euros. Agua: 15 euros. Dignidad: no incluida."]))
 	p.deco(Vector2i(22, 11), ExteriorTiles.SIGN)
 	p.sign_text("CartelFerry", Vector2i(22, 11), PackedStringArray(["FERRY · Ibiza → Valencia.",
-		"Aún no hay barco: la naviera dice que «la semana que viene»."]))
+		"La pasarela está un poco más allá. Cinco horas de travesía y el bar cerrado."]))
+	p.warp("FerryValencia", Vector2i(26, 10), &"valencia/malvarrosa", &"from_ferry", &"")
+	p.spawn("from_ferry", Vector2i(26, 11))
 
 	# --- Apariciones, entrenadores y vecinos ---
 	p.spawn("default", Vector2i(30, 11))

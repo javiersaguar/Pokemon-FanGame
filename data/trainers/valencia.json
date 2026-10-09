@@ -1,0 +1,40 @@
+{
+  "vlc_tronista": {
+    "class": "tronista",
+    "name": "Jonathan",
+    "intro_text": "Bro, ¿tú sabes cuántas sentadillas he hecho hoy? Más que combates has hecho tú en tu vida.",
+    "lose_text": "Me has dejado más tocado que una ruptura en directo.",
+    "win_text": "¡Hoy toca proteína y fiesta en Akuarela!",
+    "after_text": "Labrador está dentro. Dicen que levanta más que la grúa del puerto.",
+    "items": [],
+    "party": [
+      {
+        "species": "machoke",
+        "level": 26
+      },
+      {
+        "species": "hariyama",
+        "level": 27
+      }
+    ]
+  },
+  "vlc_despedida": {
+    "class": "cunado",
+    "name": "Rubén",
+    "intro_text": "¡Despedida de soltero! Me caso el sábado y hoy combato con todo el que me encuentre.",
+    "lose_text": "Mi novia no puede enterarse de esto.",
+    "win_text": "¡Vivan los novios!",
+    "after_text": "Llevo una camiseta con mi foto de bebé y un velo. No preguntes.",
+    "items": [],
+    "party": [
+      {
+        "species": "lechonk",
+        "level": 26
+      },
+      {
+        "species": "slurpuff",
+        "level": 27
+      }
+    ]
+  }
+}

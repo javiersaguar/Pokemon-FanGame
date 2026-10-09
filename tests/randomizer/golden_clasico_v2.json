@@ -1,5 +1,5 @@
 {
-	"fingerprint": "d634db01a7832283326dfb65117f2992786310f968cac17169a6f56200dded79",
+	"fingerprint": "da24482c8314e5ac54877f76862d242ac98b9cdcd254a14eb9108e856de05e48",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -1185,6 +1185,107 @@
 					}
 				]
 			},
+			"valencia": {
+				"good_rod": [],
+				"headbutt": [],
+				"land": {
+					"day": [
+						{
+							"max": 27.0,
+							"min": 25.0,
+							"species": "wattrel",
+							"weight": 25.0
+						},
+						{
+							"max": 28.0,
+							"min": 26.0,
+							"species": "teddiursa",
+							"weight": 15.0
+						},
+						{
+							"max": 27.0,
+							"min": 25.0,
+							"species": "arrokuda",
+							"weight": 20.0
+						},
+						{
+							"max": 27.0,
+							"min": 25.0,
+							"species": "sizzlipede",
+							"weight": 20.0
+						},
+						{
+							"max": 27.0,
+							"min": 25.0,
+							"species": "beautifly",
+							"weight": 20.0
+						}
+					],
+					"night": [
+						{
+							"max": 27.0,
+							"min": 25.0,
+							"species": "arrokuda",
+							"weight": 35.0
+						},
+						{
+							"max": 27.0,
+							"min": 25.0,
+							"species": "patrat",
+							"weight": 35.0
+						},
+						{
+							"max": 27.0,
+							"min": 25.0,
+							"species": "duskull",
+							"weight": 30.0
+						}
+					]
+				},
+				"land_rate": 10.0,
+				"old_rod": [
+					{
+						"max": 25.0,
+						"min": 22.0,
+						"species": "pikachuhoenn",
+						"weight": 50.0
+					},
+					{
+						"max": 25.0,
+						"min": 22.0,
+						"species": "azurill",
+						"weight": 50.0
+					}
+				],
+				"rock_smash": [],
+				"super_rod": [],
+				"water": [
+					{
+						"max": 30.0,
+						"min": 25.0,
+						"species": "tentacool",
+						"weight": 35.0
+					},
+					{
+						"max": 30.0,
+						"min": 25.0,
+						"species": "tinkatink",
+						"weight": 25.0
+					},
+					{
+						"max": 30.0,
+						"min": 25.0,
+						"species": "pikachuhoenn",
+						"weight": 25.0
+					},
+					{
+						"max": 30.0,
+						"min": 26.0,
+						"species": "pawniard",
+						"weight": 15.0
+					}
+				]
+			},
 			"zaragoza": {
 				"good_rod": [],
 				"headbutt": [],
@@ -1279,7 +1380,7 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "479e59f491e67e3212040d5f1324d2bd13f799cc51143fb445e686b79f2936c0",
+		"input_hash": "4e2466bf30ad12d3537f2f36d7086cd3d78c030c598eb6244075e9fa7c2b1233",
 		"items": {
 			"test/muestra_pueblo/Pocion": "kangaskhancandy",
 			"test/muestra_ruta/Pocion": "firestone",
@@ -77187,15 +77288,39 @@
 					}
 				]
 			},
+			"vlc_despedida": {
+				"party": [
+					{
+						"level": 26.0,
+						"species": "hatenna"
+					},
+					{
+						"level": 27.0,
+						"species": "sinistcha"
+					}
+				]
+			},
+			"vlc_tronista": {
+				"party": [
+					{
+						"level": 26.0,
+						"species": "pawmo"
+					},
+					{
+						"level": 27.0,
+						"species": "throh"
+					}
+				]
+			},
 			"willyrex": {
 				"party": [
 					{
 						"level": 18.0,
-						"species": "togedemarutotem"
+						"species": "stunfiskgalar"
 					},
 					{
 						"level": 19.0,
-						"species": "kartana"
+						"species": "duraludon"
 					}
 				]
 			},
@@ -77203,11 +77328,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "starly"
+						"species": "patrat"
 					},
 					{
 						"level": 19.0,
-						"species": "minior"
+						"species": "marowakalolatotem"
 					}
 				]
 			},
@@ -77215,11 +77340,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "froslass"
+						"species": "polteageist"
 					},
 					{
 						"level": 19.0,
-						"species": "burmy"
+						"species": "jigglypuff"
 					}
 				]
 			}

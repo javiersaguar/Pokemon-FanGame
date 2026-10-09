@@ -980,5 +980,15 @@
     "overworld_sprite": "res://assets/sprites/characters/hippie.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "tronista": {
+    "name": "Tronista",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/tronista.png",
+    "overworld_sprite": "res://assets/sprites/characters/tronista.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
   }
 }
