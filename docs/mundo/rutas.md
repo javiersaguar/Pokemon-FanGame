@@ -50,6 +50,8 @@ Cada ruta toma su paisaje del camino real entre las dos ciudades.
 
 - **Ruta 21:** viñedos con cepas en espaldera, Ebro y calados; Toño (vendimiador) y Diego (sumiller). Entrada Pamplona reservada al Agente 5. [Ficha y fuentes](ruta_21.md).
 
+- **Ruta 22:** Burgos al oeste, Atapuerca al este y Arlanzón al sur del casco; Luis (arqueólogo) y Pablo (estudiante), encuentros 45–48. [Ficha, plano y fuentes](ruta_22.md). Enlazada con Ruta 21.
+
 ## Fuentes
 
 - Datos generales de geografía y patrimonio (Acueducto de Segovia, Montserrat, palmeral de Elche, Doñana, Atapuerca, Torcal de Antequera, molinos de Consuegra): conocimiento general; posiciones contrastadas en OpenStreetMap (© colaboradores de OpenStreetMap, ODbL).

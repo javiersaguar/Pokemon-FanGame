@@ -1,390 +1,70 @@
 {
   "_": "Edificios dibujados a mano: número de fuente del TileSet (fijo: los mapas pintados lo guardan; uno nuevo toma el siguiente libre), puerta (casilla relativa a la de abajo a la izquierda; sin puerta = centro de la fila de abajo; null = no tiene) y huella (base = solo choca la fila de abajo y se pasa por debajo; ninguna = no choca nada).",
-  "iglesia_san_miguel": {
-    "fuente": 20,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "ermita_virgen_del_rio": {
-    "fuente": 21,
-    "puerta": [
-      1,
-      0
-    ]
-  },
-  "acueducto_segovia": {
-    "fuente": 22,
-    "puerta": null,
-    "huella": "base"
-  },
-  "acueducto_segovia_tramo": {
-    "fuente": 23,
-    "puerta": null,
-    "huella": "base"
-  },
-  "cruz_cuelgamuros": {
-    "fuente": 24,
-    "puerta": null
-  },
-  "basilica_cuelgamuros": {
-    "fuente": 25,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "monasterio_escorial": {
-    "fuente": 26,
-    "puerta": [
-      7,
-      0
-    ]
-  },
-  "arco_victoria": {
-    "fuente": 27,
-    "puerta": null,
-    "huella": "base"
-  },
-  "templo_debod": {
-    "fuente": 28,
-    "puerta": [
-      2,
-      0
-    ]
-  },
-  "puerta_debod": {
-    "fuente": 29,
-    "puerta": null,
-    "huella": "base"
-  },
-  "faro_moncloa": {
-    "fuente": 30,
-    "puerta": null,
-    "huella": "base"
-  },
-  "casa_correos": {
-    "fuente": 31,
-    "puerta": [
-      5,
-      0
-    ]
-  },
-  "oso_madrono": {
-    "fuente": 32,
-    "puerta": null
-  },
-  "soportales": {
-    "fuente": 33,
-    "puerta": null
-  },
-  "soportales_arco": {
-    "fuente": 34,
-    "puerta": null,
-    "huella": "base"
-  },
-  "casa_panaderia": {
-    "fuente": 35,
-    "puerta": [
-      6,
-      0
-    ]
-  },
-  "mercado_san_miguel": {
-    "fuente": 36,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "edificio_metropolis": {
-    "fuente": 37,
-    "puerta": [
-      2,
-      0
-    ]
-  },
-  "edificio_carrion": {
-    "fuente": 38,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "palacio_real": {
-    "fuente": 39,
-    "puerta": [
-      9,
-      0
-    ]
-  },
-  "catedral_almudena": {
-    "fuente": 40,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "teatro_real": {
-    "fuente": 41,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "felipe_iv": {
-    "fuente": 42,
-    "puerta": null
-  },
-  "estatua_rey": {
-    "fuente": 43,
-    "puerta": null
-  },
-  "verja": {
-    "fuente": 44,
-    "puerta": null
-  },
-  "cibeles": {
-    "fuente": 45,
-    "puerta": null
-  },
-  "palacio_cibeles": {
-    "fuente": 46,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "puerta_alcala": {
-    "fuente": 47,
-    "puerta": null,
-    "huella": "base"
-  },
-  "congreso": {
-    "fuente": 48,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "leon_congreso": {
-    "fuente": 49,
-    "puerta": null
-  },
-  "museo_prado": {
-    "fuente": 50,
-    "puerta": [
-      5,
-      0
-    ]
-  },
-  "fuente_neptuno": {
-    "fuente": 51,
-    "puerta": null
-  },
-  "estacion_atocha": {
-    "fuente": 52,
-    "puerta": [
-      6,
-      0
-    ]
-  },
-  "monumento_alfonso_xii": {
-    "fuente": 53,
-    "puerta": null
-  },
-  "palacio_cristal": {
-    "fuente": 54,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "boca_metro": {
-    "fuente": 55,
-    "puerta": [
-      1,
-      0
-    ]
-  },
-  "nave_logistica": {
-    "fuente": 56,
-    "puerta": null
-  },
-  "universidad_alcala": {
-    "fuente": 57,
-    "puerta": [
-      5,
-      0
-    ]
-  },
-  "palacio_infantado": {
-    "fuente": 58,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "arco_medinaceli": {
-    "fuente": 59,
-    "puerta": null,
-    "huella": "base"
-  },
-  "torre_mudejar": {
-    "fuente": 60,
-    "puerta": null,
-    "huella": "base"
-  },
-  "basilica_pilar": {
-    "fuente": 61,
-    "puerta": [
-      8,
-      0
-    ]
-  },
-  "la_seo": {
-    "fuente": 62,
-    "puerta": [
-      6,
-      0
-    ]
-  },
-  "puente_piedra": {
-    "fuente": 63,
-    "puerta": null,
-    "huella": "ninguna"
-  },
-  "escenario_festival": {
-    "fuente": 64,
-    "puerta": null
-  },
-  "agujas_montserrat": {
-    "fuente": 65,
-    "puerta": null
-  },
-  "monasterio_montserrat": {
-    "fuente": 66,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "camp_nou": {
-    "fuente": 67,
-    "puerta": [
-      10,
-      0
-    ]
-  },
-  "grua": {
-    "fuente": 68,
-    "puerta": null,
-    "huella": "base"
-  },
-  "sagrada_familia": {
-    "fuente": 69,
-    "puerta": [
-      5,
-      0
-    ]
-  },
-  "casa_batllo": {
-    "fuente": 70,
-    "puerta": [
-      2,
-      0
-    ]
-  },
-  "la_pedrera": {
-    "fuente": 71,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "monumento_colon": {
-    "fuente": 72,
-    "puerta": null,
-    "huella": "base"
-  },
-  "boqueria": {
-    "fuente": 73,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "catedral_barcelona": {
-    "fuente": 74,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "ferry": {
-    "fuente": 75,
-    "puerta": null
-  },
-  "catedral_palma": {
-    "fuente": 76,
-    "puerta": [
-      6,
-      0
-    ]
-  },
-  "castillo_bellver": {
-    "fuente": 77,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "es_vedra": {
-    "fuente": 78,
-    "puerta": null
-  },
-  "muralla_dalt_vila": {
-    "fuente": 79,
-    "puerta": null,
-    "huella": "base"
-  },
-  "catedral_ibiza": {
-    "fuente": 80,
-    "puerta": [
-      3,
-      0
-    ]
-  },
-  "casa_ibicenca": {
-    "fuente": 81,
-    "puerta": [
-      1,
-      0
-    ]
-  },
-  "club_ibiza": {
-    "fuente": 82,
-    "puerta": [
-      4,
-      0
-    ]
-  },
-  "palmera": {
-    "fuente": 83,
-    "puerta": null,
-    "huella": "base"
-  },
-  "akuarela": {
-    "fuente": 84,
-    "puerta": [
-      5,
-      0
-    ]
-  },
-  "cepa_rioja": {
-    "fuente": 350,
-    "puerta": null,
-    "huella": "base"
-  }
+  "iglesia_san_miguel": {"fuente": 20, "puerta": [3, 0]},
+  "ermita_virgen_del_rio": {"fuente": 21, "puerta": [1, 0]},
+  "acueducto_segovia": {"fuente": 22, "puerta": null, "huella": "base"},
+  "acueducto_segovia_tramo": {"fuente": 23, "puerta": null, "huella": "base"},
+  "cruz_cuelgamuros": {"fuente": 24, "puerta": null},
+  "basilica_cuelgamuros": {"fuente": 25, "puerta": [4, 0]},
+  "monasterio_escorial": {"fuente": 26, "puerta": [7, 0]},
+  "arco_victoria": {"fuente": 27, "puerta": null, "huella": "base"},
+  "templo_debod": {"fuente": 28, "puerta": [2, 0]},
+  "puerta_debod": {"fuente": 29, "puerta": null, "huella": "base"},
+  "faro_moncloa": {"fuente": 30, "puerta": null, "huella": "base"},
+  "casa_correos": {"fuente": 31, "puerta": [5, 0]},
+  "oso_madrono": {"fuente": 32, "puerta": null},
+  "soportales": {"fuente": 33, "puerta": null},
+  "soportales_arco": {"fuente": 34, "puerta": null, "huella": "base"},
+  "casa_panaderia": {"fuente": 35, "puerta": [6, 0]},
+  "mercado_san_miguel": {"fuente": 36, "puerta": [3, 0]},
+  "edificio_metropolis": {"fuente": 37, "puerta": [2, 0]},
+  "edificio_carrion": {"fuente": 38, "puerta": [3, 0]},
+  "palacio_real": {"fuente": 39, "puerta": [9, 0]},
+  "catedral_almudena": {"fuente": 40, "puerta": [4, 0]},
+  "teatro_real": {"fuente": 41, "puerta": [3, 0]},
+  "felipe_iv": {"fuente": 42, "puerta": null},
+  "estatua_rey": {"fuente": 43, "puerta": null},
+  "verja": {"fuente": 44, "puerta": null},
+  "cibeles": {"fuente": 45, "puerta": null},
+  "palacio_cibeles": {"fuente": 46, "puerta": [4, 0]},
+  "puerta_alcala": {"fuente": 47, "puerta": null, "huella": "base"},
+  "congreso": {"fuente": 48, "puerta": [4, 0]},
+  "leon_congreso": {"fuente": 49, "puerta": null},
+  "museo_prado": {"fuente": 50, "puerta": [5, 0]},
+  "fuente_neptuno": {"fuente": 51, "puerta": null},
+  "estacion_atocha": {"fuente": 52, "puerta": [6, 0]},
+  "monumento_alfonso_xii": {"fuente": 53, "puerta": null},
+  "palacio_cristal": {"fuente": 54, "puerta": [3, 0]},
+  "boca_metro": {"fuente": 55, "puerta": [1, 0]},
+  "nave_logistica": {"fuente": 56, "puerta": null},
+  "universidad_alcala": {"fuente": 57, "puerta": [5, 0]},
+  "palacio_infantado": {"fuente": 58, "puerta": [4, 0]},
+  "arco_medinaceli": {"fuente": 59, "puerta": null, "huella": "base"},
+  "torre_mudejar": {"fuente": 60, "puerta": null, "huella": "base"},
+  "basilica_pilar": {"fuente": 61, "puerta": [8, 0]},
+  "la_seo": {"fuente": 62, "puerta": [6, 0]},
+  "puente_piedra": {"fuente": 63, "puerta": null, "huella": "ninguna"},
+  "escenario_festival": {"fuente": 64, "puerta": null},
+  "agujas_montserrat": {"fuente": 65, "puerta": null},
+  "monasterio_montserrat": {"fuente": 66, "puerta": [4, 0]},
+  "camp_nou": {"fuente": 67, "puerta": [10, 0]},
+  "grua": {"fuente": 68, "puerta": null, "huella": "base"},
+  "sagrada_familia": {"fuente": 69, "puerta": [5, 0]},
+  "casa_batllo": {"fuente": 70, "puerta": [2, 0]},
+  "la_pedrera": {"fuente": 71, "puerta": [3, 0]},
+  "monumento_colon": {"fuente": 72, "puerta": null, "huella": "base"},
+  "boqueria": {"fuente": 73, "puerta": [3, 0]},
+  "catedral_barcelona": {"fuente": 74, "puerta": [4, 0]},
+  "ferry": {"fuente": 75, "puerta": null},
+  "catedral_palma": {"fuente": 76, "puerta": [6, 0]},
+  "castillo_bellver": {"fuente": 77, "puerta": [3, 0]},
+  "es_vedra": {"fuente": 78, "puerta": null},
+  "muralla_dalt_vila": {"fuente": 79, "puerta": null, "huella": "base"},
+  "catedral_ibiza": {"fuente": 80, "puerta": [3, 0]},
+  "casa_ibicenca": {"fuente": 81, "puerta": [1, 0]},
+  "club_ibiza": {"fuente": 82, "puerta": [4, 0]},
+  "palmera": {"fuente": 83, "puerta": null, "huella": "base"},
+  "akuarela": {"fuente": 84, "puerta": [5, 0]},
+  "cepa_rioja": {"fuente": 350, "puerta": null, "huella": "base"},
+  "catedral_burgos": {"fuente": 351, "puerta": [2, 0]}
 }

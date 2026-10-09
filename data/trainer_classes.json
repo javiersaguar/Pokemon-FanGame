@@ -1000,5 +1000,15 @@
     "overworld_sprite": "res://assets/sprites/characters/vendimiador.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "arqueologo": {
+    "name": "Arqueólogo",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/arqueologo.png",
+    "overworld_sprite": "res://assets/sprites/characters/arqueologo.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

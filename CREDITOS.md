@@ -100,4 +100,4 @@ Presentación de Megaevolución: símbolo `Graphics/EBDX/Pictures/UI/symMega.png
 
 Eclosión: `Graphics/Pokemon/Eggs/000.png` y `000_cracks.png` del Generation 9 Pack, y `Graphics/EBDX/Pictures/Hatching/hatchbg.png` de Elite Battle: DX; originales íntegros a tamaño nativo en el manifiesto de recursos. Se mantienen los autores y condiciones de los packs indicados arriba.
 
-| Monumentos dibujados a mano (tramo centro y final) | Javier Saguar | Cepa de La Rioja (`cepa_rioja.px2`), provisional |
+| Monumentos dibujados a mano (tramo centro y final) | Javier Saguar | Cepa de La Rioja (`cepa_rioja.px2`) y Catedral de Burgos (`catedral_burgos.px2`), provisionales |

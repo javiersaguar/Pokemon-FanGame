@@ -1,0 +1,76 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "cubone",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      },
+      {
+        "species": "geodude",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      },
+      {
+        "species": "roggenrola",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      },
+      {
+        "species": "baltoy",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      }
+    ],
+    "night": [
+      {
+        "species": "cubone",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      },
+      {
+        "species": "duskull",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      },
+      {
+        "species": "zubat",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      },
+      {
+        "species": "baltoy",
+        "min": 45,
+        "max": 48,
+        "weight": 25
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "psyduck",
+      "min": 45,
+      "max": 48,
+      "weight": 50
+    },
+    {
+      "species": "ducklett",
+      "min": 45,
+      "max": 48,
+      "weight": 50
+    }
+  ],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

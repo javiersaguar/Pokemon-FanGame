@@ -36,6 +36,7 @@ func _initialize() -> void:
 	p.spawn("default", Vector2i(24, 1))
 	p.spawn("from_pamplona", Vector2i(24, 0))
 	p.spawn("from_ruta_22", Vector2i(24, 63))
+	p.connect_edge("south", &"ruta_22/exterior", 0, Vector2i(22, 26))
 	p.trainer("Vendimiador", &"ruta21_vendimiador", Vector2i(18, 20), 2, 3)
 	p.trainer("Sumiller", &"ruta21_sumiller", Vector2i(31, 41), 1, 3)
 	_sign(p, "Laurel", Vector2i(29, 20), ["LOGROÑO · CALLE LAUREL", "Pincho, vino y otro pincho. El gimnasio más cerca: caminar hasta casa."])

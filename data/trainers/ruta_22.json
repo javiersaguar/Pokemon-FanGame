@@ -1,0 +1,40 @@
+{
+  "ruta22_arqueologa": {
+    "class": "arqueologo",
+    "name": "Luis",
+    "intro_text": "He encontrado un hueso. Ahora voy a encontrar el punto débil de tu equipo.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "El contrato dura una campaña; los fósiles, un millón de años.",
+    "items": [],
+    "party": [
+      {
+        "species": "cubone",
+        "level": 46
+      },
+      {
+        "species": "kabutops",
+        "level": 47
+      }
+    ]
+  },
+  "ruta22_paleontologo": {
+    "class": "estudianteinge",
+    "name": "Pablo",
+    "intro_text": "Un fósil no es un Pokémon con poca batería. ¡Te lo enseño!",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "La beca llegó tarde. El antecessor llegó antes.",
+    "items": [],
+    "party": [
+      {
+        "species": "omastar",
+        "level": 47
+      },
+      {
+        "species": "armaldo",
+        "level": 48
+      }
+    ]
+  }
+}

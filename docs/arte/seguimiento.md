@@ -141,3 +141,4 @@ Dibujado a mano píxel a píxel con la paleta maestra en archivos de texto (`ass
 El repaso conserva las aprobaciones parciales anteriores; estas capturas no convierten los nuevos assets o pantallas en arte final aprobado.
 
 | Ruta 21 · Viñedos de La Rioja y cepa propia | Exterior provisional, fuente 350; plano OSM y alcance | [Comparativa](comparativas/ruta_21.md) | pendiente Javier |
+| Ruta 22 · Burgos y Atapuerca, catedral propia | Exterior y fuente 351 provisionales; sin entrega de fósiles | [Comparativa](comparativas/ruta_22.md) | pendiente Javier |
