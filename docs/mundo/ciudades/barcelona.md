@@ -9,7 +9,8 @@
 - **`barcelona/les_corts` pintado** (`maps/_pintura/pintar_barcelona_les_corts.gd`, 64×48): se llega por la Diagonal desde la Ruta 8 (sin fundido). Al norte, Pedralbes y Les Corts; al sur, la explanada del **Spotify Camp Nou** (gimnasio 2, dibujado a mano con la tercera grada sin acabar y asientos vacíos) con dos grúas, La Masia, la tienda del Barça y el Basic-Fit. Entrenadores en `data/trainers/barcelona.json` (un socio y el jubilado de las obras) y encuentros de la ciudad en `data/encounters/barcelona.json` (con agua de mar para la Barceloneta y el puerto).
 - **`barcelona/eixample` pintado** (`maps/_pintura/pintar_barcelona_eixample.gd`, 72×60, unido con Les Corts por la Diagonal): la cuadrícula de Cerdà (recta), el Passeig de Gràcia con **La Pedrera** y la **Casa Batlló**, la **Sagrada Família** con su grúa, Mercadona, estanco y la **Plaça de Catalunya** con fuentes, El Corte Inglés y el Centro Pokémon. Entrenadores: una de startup y un guiri.
 - **`barcelona/ciutat_vella` pintado** (`maps/_pintura/pintar_barcelona_ciutat_vella.gd`, 72×60, unido con el Eixample por La Rambla): La Rambla con plátanos, una estatua humana y un carterista; el Raval con la **Boqueria**, el Liceu y el estanco; el Barri Gòtic con la **Catedral** y la Plaça Reial; el **Monumento a Colón**; el Port Vell con la terminal y el **ferry** atracado (la taquilla aún no vende billetes); la playa de la **Barceloneta** con el Centro Pokémon, la torre del socorrista y sombrillas. Mar con Surf y caña.
-- **Pendiente:** el viaje en ferry a Palma (warp o evento desde la taquilla); Park Güell y Montjuïc (opcionales).
+- El ferry ya lleva a Palma: pasarela (Warp) junto a la taquilla del puerto. No pide billete ni medalla (falta el evento).
+- **Pendiente:** Park Güell y Montjuïc (opcionales).
 
 ## Cómo se reparte en el juego
 

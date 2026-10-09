@@ -1,0 +1,40 @@
+{
+  "palma_regatista": {
+    "class": "regatista",
+    "name": "Tolo",
+    "intro_text": "Salgo a regatear cada mañana por la bahía. ¡Hoy toca regatear contigo!",
+    "lose_text": "Me has dejado sin viento.",
+    "win_text": "¡Viento en popa!",
+    "after_text": "En verano hay tantos yates en el puerto que se puede cruzar la bahía saltando de cubierta en cubierta.",
+    "items": [],
+    "party": [
+      {
+        "species": "wingull",
+        "level": 23
+      },
+      {
+        "species": "buizel",
+        "level": 24
+      }
+    ]
+  },
+  "palma_aleman": {
+    "class": "turistachanclas",
+    "name": "Klaus",
+    "intro_text": "Ich habe drei Häuser in Mallorca! Y ahora quiero tu Pokémon. ¡Combate!",
+    "lose_text": "Ach. Me compraré otra casa para consolarme.",
+    "win_text": "¡Mallorca es la isla número diecisiete de Alemania!",
+    "after_text": "Los de aquí se quejan de los alquileres. Yo no lo entiendo: a mí me salen baratísimos.",
+    "items": [],
+    "party": [
+      {
+        "species": "lechonk",
+        "level": 23
+      },
+      {
+        "species": "pelipper",
+        "level": 24
+      }
+    ]
+  }
+}

@@ -337,6 +337,19 @@ func trainer(node_name: String, trainer_id: StringName, cell: Vector2i, facing: 
 	entities.add_child(node)
 
 
+## Paso a otro mapa al pisar la casilla (Warp): puertas, la pasarela del ferry... Va en el nodo Warps.
+func warp(warp_name: String, cell: Vector2i, target_map: StringName, target_spawn: StringName,
+		sound: StringName = &"door") -> void:
+	var node := Node2D.new()
+	node.set_script(load("res://src/overworld/warp/warp.gd"))
+	node.name = warp_name
+	node.position = Grid.to_world(cell)
+	node.set(&"target_map", target_map)
+	node.set(&"target_spawn", target_spawn)
+	node.set(&"sound", sound)
+	root.get_node(^"Warps").add_child(node)
+
+
 ## Conexión sin fundido con el mapa vecino por un borde (MapConnection); `span` = solo un tramo del
 ## borde [desde, hasta), para que un borde lleve a varios mapas.
 func connect_edge(edge: String, target_map: StringName, offset: int = 0, span: Vector2i = Vector2i.ZERO) -> void:

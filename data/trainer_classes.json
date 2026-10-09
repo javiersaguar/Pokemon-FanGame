@@ -948,5 +948,15 @@
     "overworld_sprite": "res://assets/sprites/characters/carterista.png",
     "intro_bgm": "encounter_villain",
     "battle_bgm": "battle_trainer"
+  },
+  "regatista": {
+    "name": "Regatista",
+    "gender": "male",
+    "base_money": 36,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/regatista.png",
+    "overworld_sprite": "res://assets/sprites/characters/regatista.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

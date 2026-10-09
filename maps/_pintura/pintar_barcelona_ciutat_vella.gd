@@ -92,6 +92,8 @@ func _paint(painter: GDScript) -> RefCounted:
 		"(La estatua humana no se mueve.)",
 		"...¿Una monedita? ¡Pues sigo sin moverme!"]))
 	p.npc("Taquilla", "npc_lass", Vector2i(13, 51), DOWN, PackedStringArray([
-		"Ferry a Palma de Mallorca. El billete aún no está a la venta.",
-		"Vuelve cuando tengas la medalla de Barcelona... y biodramina."]))
+		"Ferry a Palma de Mallorca. La pasarela está a tu derecha.",
+		"Ocho horas de travesía. Trae biodramina."]))
+	p.spawn("from_ferry", Vector2i(14, 50))
+	p.warp("FerryPalma", Vector2i(14, 51), &"palma/exterior", &"from_ferry", &"")
 	return p

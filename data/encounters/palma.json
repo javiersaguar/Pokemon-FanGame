@@ -1,0 +1,32 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "combee", "min": 22, "max": 24, "weight": 30},
+      {"species": "spinarak", "min": 22, "max": 24, "weight": 25},
+      {"species": "wingull", "min": 22, "max": 24, "weight": 25},
+      {"species": "pidgeotto", "min": 23, "max": 25, "weight": 20}
+    ],
+    "night": [
+      {"species": "gastly", "min": 22, "max": 24, "weight": 40},
+      {"species": "spinarak", "min": 22, "max": 24, "weight": 30},
+      {"species": "noctowl", "min": 23, "max": 25, "weight": 30}
+    ]
+  },
+  "water": [
+    {"species": "wingull", "min": 22, "max": 27, "weight": 30},
+    {"species": "finneon", "min": 22, "max": 27, "weight": 30},
+    {"species": "corsola", "min": 22, "max": 27, "weight": 20},
+    {"species": "pelipper", "min": 25, "max": 28, "weight": 20}
+  ],
+  "old_rod": [
+    {"species": "finneon", "min": 20, "max": 23, "weight": 60},
+    {"species": "magikarp", "min": 20, "max": 23, "weight": 40}
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": [
+    {"species": "combee", "min": 22, "max": 24, "weight": 100}
+  ]
+}

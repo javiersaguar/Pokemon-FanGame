@@ -194,6 +194,8 @@ SPECS = {
                 "Raver del festival de Los Monegros: pelo rosa, camiseta de tirantes y gafas de sol."),
     "carterista": ("m", "medium", (1, "black"), ("sudadera", "black"), ("vaqueros", "black"), ("beanie", "black"),
                    "Carterista de La Rambla: sudadera negra con capucha, vaqueros y gorro de lana."),
+    "regatista": ("m", "light", (2, "blond"), ("camiseta", "white"), ("corto", "red"), ("youngster hat", None),
+                  "Regatista del puerto de Palma: camiseta blanca, pantalón corto rojo y gorra."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
 }
