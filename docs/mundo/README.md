@@ -79,3 +79,4 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 |---|---|---|---|
 | Ruta 21 · Viñedos | [Captura](../arte/comparativas/ruta_21_mapa.png), [ficha](ruta_21.md) | desde `from_pamplona`, 0 problemas | pendiente Javier |
 | Ruta 22 · Burgos y Atapuerca | [Captura](../arte/comparativas/ruta_22_mapa.png), [ficha](ruta_22.md) | norte y Ruta 21, 0 problemas | pendiente Javier |
+| Ruta 23 · Cuéllar y regreso San Miguel | [Captura](../arte/comparativas/ruta_23_mapa.png), [ficha](ruta_23.md) | Valladolid y pueblo, 0 problemas | pendiente Javier |
