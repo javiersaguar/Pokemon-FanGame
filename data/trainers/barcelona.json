@@ -1,0 +1,40 @@
+{
+  "bcn_soci": {
+    "class": "cunado",
+    "name": "Jordi",
+    "intro_text": "Soy socio desde 1985 y aún no me han devuelto mi asiento. ¡Mientras tanto, combate!",
+    "lose_text": "Esto es una palanca más. Ya me la cobrarán.",
+    "win_text": "¡Visca el Barça! Y que acaben la grada, por favor.",
+    "after_text": "Dicen que el estadio estará al cien por cien la temporada que viene. Lo dicen cada temporada.",
+    "items": [],
+    "party": [
+      {
+        "species": "pawmo",
+        "level": 21
+      },
+      {
+        "species": "tranquill",
+        "level": 22
+      }
+    ]
+  },
+  "bcn_obrero": {
+    "class": "jubiladoobras",
+    "name": "Ramon",
+    "intro_text": "Llevo dos años mirando las obras del Camp Nou. Ya sé más de grúas que el ingeniero.",
+    "lose_text": "Me voy a mirar otra grúa.",
+    "win_text": "¡Eso es hormigón armado, chaval!",
+    "after_text": "La Sagrada Família y el Camp Nou: a ver cuál acaban antes. Yo apuesto por ninguna.",
+    "items": [],
+    "party": [
+      {
+        "species": "timburr",
+        "level": 21
+      },
+      {
+        "species": "magneton",
+        "level": 22
+      }
+    ]
+  }
+}

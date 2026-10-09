@@ -42,6 +42,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta8", SIZE, data, 1025)
 	p.fill_grass(0.2)
 	p.connect_edge("west", &"ruta_7/exterior", 0, Vector2i(14, 18))
+	p.connect_edge("east", &"barcelona/les_corts", 0, Vector2i(14, 18))
 
 	# El camino al pie de la montaña y la plaza del monasterio.
 	p.terrain(rects([Rect2i(0, 14, 72, 4), Rect2i(14, 18, 2, 12), Rect2i(54, 18, 2, 12)]),

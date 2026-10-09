@@ -1,0 +1,32 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "pidove", "min": 20, "max": 22, "weight": 30},
+      {"species": "purrloin", "min": 20, "max": 22, "weight": 25},
+      {"species": "trubbish", "min": 20, "max": 22, "weight": 20},
+      {"species": "meowth", "min": 21, "max": 23, "weight": 15},
+      {"species": "spinda", "min": 21, "max": 23, "weight": 10}
+    ],
+    "night": [
+      {"species": "purrloin", "min": 20, "max": 22, "weight": 35},
+      {"species": "trubbish", "min": 20, "max": 22, "weight": 25},
+      {"species": "meowth", "min": 21, "max": 23, "weight": 25},
+      {"species": "noibat", "min": 21, "max": 23, "weight": 15}
+    ]
+  },
+  "water": [
+    {"species": "tentacool", "min": 20, "max": 25, "weight": 40},
+    {"species": "wingull", "min": 20, "max": 25, "weight": 30},
+    {"species": "krabby", "min": 20, "max": 25, "weight": 20},
+    {"species": "pelipper", "min": 24, "max": 26, "weight": 10}
+  ],
+  "old_rod": [
+    {"species": "magikarp", "min": 18, "max": 20, "weight": 70},
+    {"species": "krabby", "min": 18, "max": 20, "weight": 30}
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

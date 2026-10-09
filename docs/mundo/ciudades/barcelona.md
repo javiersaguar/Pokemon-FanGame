@@ -4,6 +4,11 @@
 >
 > Planos reales: [`../planos/barcelona_centro.svg`](../planos/barcelona_centro.svg) (casilla = 40 m) y [`../planos/barcelona_camp_nou.svg`](../planos/barcelona_camp_nou.svg) (casilla = 8 m).
 
+## Estado (2026-10-09)
+
+- **`barcelona/les_corts` pintado** (`maps/_pintura/pintar_barcelona_les_corts.gd`, 64×48): se llega por la Diagonal desde la Ruta 8 (sin fundido). Al norte, Pedralbes y Les Corts; al sur, la explanada del **Spotify Camp Nou** (gimnasio 2, dibujado a mano con la tercera grada sin acabar y asientos vacíos) con dos grúas, La Masia, la tienda del Barça y el Basic-Fit. Entrenadores en `data/trainers/barcelona.json` (un socio y el jubilado de las obras) y encuentros de la ciudad en `data/encounters/barcelona.json` (con agua de mar para la Barceloneta y el puerto).
+- **Pendiente:** `barcelona/eixample` (al este por la Diagonal) y `barcelona/ciutat_vella` con el puerto y el ferry a Palma.
+
 ## Cómo se reparte en el juego
 
 | Mapa (id propuesto) | Zona real | Qué hay |

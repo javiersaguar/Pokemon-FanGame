@@ -46,5 +46,7 @@
   "puente_piedra": {"fuente": 63, "puerta": null, "huella": "ninguna"},
   "escenario_festival": {"fuente": 64, "puerta": null},
   "agujas_montserrat": {"fuente": 65, "puerta": null},
-  "monasterio_montserrat": {"fuente": 66, "puerta": [4, 0]}
+  "monasterio_montserrat": {"fuente": 66, "puerta": [4, 0]},
+  "camp_nou": {"fuente": 67, "puerta": [10, 0]},
+  "grua": {"fuente": 68, "puerta": null, "huella": "base"}
 }
