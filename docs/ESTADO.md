@@ -383,7 +383,9 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
    - ✅ **San Miguel de Bernuy** (pueblo inicial): iglesia y ermita a mano, solo casas de DPPt.
    - ✅ **Ruta 1** (Hoces del Duratón), **Ruta 2** (Tierra de Pinares y el **Acueducto de Segovia**), **Ruta 3** (Puerto de Navacerrada con nieve y el **Valle de Cuelgamuros**), **Ruta 4** (**Monasterio de El Escorial** y la urbanización de Galapagar). Cada una con sus entrenadores (`data/trainers/ruta_<n>.json`, clases nuevas: piragüista, ornitóloga, resinero, esquiador, montañera) y encuentros (`data/encounters/ruta_<n>.json`).
    - ✅ **Madrid · Moncloa** (Arco de la Victoria, Faro, Templo de Debod, Ferraz 70 con reclutas del Clan, Argüelles) y **Madrid · Sol y Gran Vía** (Real Casa de Correos = gimnasio 1, Plaza Mayor, Callao con el cartel de Schweppes, Metrópolis).
-   - Siguiente: `madrid/palacio_real` (Liga), `madrid/retiro` (Cibeles, Puerta de Alcalá, Retiro, Congreso, Atocha), `madrid/chamberi` (el ático de Ayuso), la Calle de la Victoria; después Ruta 5 → Zaragoza y el resto del círculo.
+   - ✅ **Madrid · Palacio Real** (Liga, Plaza de Oriente, Almudena), **Madrid · Retiro y Prado** (Cibeles y el Ayuntamiento, Puerta de Alcalá, Congreso, Prado, Atocha, el Retiro) y **Madrid · Chamberí** (el ático de Ayuso, Andén 0). Los cinco barrios están unidos entre sí (`MapConnection.span`: un borde puede llevar a varios mapas).
+   - ✅ **Ruta 5** (Alcalá de Henares y Guadalajara), **Ruta 6** (Medinaceli y Calatayud), **Zaragoza** (Pilar, La Seo, Puente de Piedra, El Tubo), **Ruta 7** (Los Monegros y su festival) y **Ruta 8** (Montserrat).
+   - Siguiente: **Barcelona** (gimnasio 2, Laporta en el Camp Nou) y el resto del círculo. Falta la Calle de la Victoria (mazmorra de Sol al Palacio) y el sur de Madrid (Cercanías C-5).
    - Bloqueado: **interiores** (no hay tileset de interiores, pregunta 19): las puertas no llevan a ningún sitio todavía.
 5. Arreglado de paso: los planos de OpenStreetMap perdían todos los polígonos cerrados (parques, agua, edificios) al simplificar; regenerados.
 
