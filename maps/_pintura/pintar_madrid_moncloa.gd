@@ -44,6 +44,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("MadridMoncloa", SIZE, data, 1956)
 	p.fill_grass(0.15)
 	p.connect_edge("west", &"ruta_4/exterior", 16)
+	p.connect_edge("east", &"madrid/centro", -38)  # la Plaza de España sigue en el centro (Gran Vía)
 
 	# --- La ciudad, toda de baldosas (como Ciudad Jubileo): la llegada por la A-6 y, desde la
 	# glorieta del Arco, todo Argüelles hasta la Plaza de España. Las calles reales (Princesa,

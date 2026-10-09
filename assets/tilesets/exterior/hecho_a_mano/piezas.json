@@ -10,5 +10,13 @@
   "arco_victoria": {"fuente": 27, "puerta": null, "huella": "base"},
   "templo_debod": {"fuente": 28, "puerta": [2, 0]},
   "puerta_debod": {"fuente": 29, "puerta": null, "huella": "base"},
-  "faro_moncloa": {"fuente": 30, "puerta": null, "huella": "base"}
+  "faro_moncloa": {"fuente": 30, "puerta": null, "huella": "base"},
+  "casa_correos": {"fuente": 31, "puerta": [5, 0]},
+  "oso_madrono": {"fuente": 32, "puerta": null},
+  "soportales": {"fuente": 33, "puerta": null},
+  "soportales_arco": {"fuente": 34, "puerta": null, "huella": "base"},
+  "casa_panaderia": {"fuente": 35, "puerta": [6, 0]},
+  "mercado_san_miguel": {"fuente": 36, "puerta": [3, 0]},
+  "edificio_metropolis": {"fuente": 37, "puerta": [2, 0]},
+  "edificio_carrion": {"fuente": 38, "puerta": [3, 0]}
 }

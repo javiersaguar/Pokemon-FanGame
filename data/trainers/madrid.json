@@ -37,5 +37,82 @@
         "level": 12
       }
     ]
+  },
+  "madrid_cunado": {
+    "class": "cunado",
+    "name": "Paco",
+    "intro_text": "Mira, chaval, yo esto de los Pokémon lo arreglaba en dos días. Y lo de la vivienda, en uno.",
+    "lose_text": "Has tenido suerte. Yo es que hoy no he desayunado.",
+    "win_text": "¿Ves? Es que no escuchas. Yo ya te lo dije.",
+    "after_text": "El bocata de calamares, en la Plaza Mayor. Lo demás son guiris y tonterías.",
+    "items": [],
+    "party": [
+      {
+        "species": "lechonk",
+        "level": 12
+      },
+      {
+        "species": "trubbish",
+        "level": 13
+      }
+    ]
+  },
+  "madrid_influencer": {
+    "class": "influencerlinkedin",
+    "gender": "female",
+    "name": "Cayetana",
+    "intro_text": "Estoy muy orgullosa de anunciar que voy a combatir contigo. #Liderazgo #GranVía",
+    "lose_text": "Hoy he aprendido que fracasar también es crecer. 3.400 recomendaciones.",
+    "win_text": "Agradecida por esta oportunidad de networking.",
+    "after_text": "¿Me das like? Es para un estudio de mercado de mi startup de alquiler de patinetes.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidove",
+        "level": 12
+      },
+      {
+        "species": "meowth",
+        "level": 13
+      }
+    ]
+  },
+  "madrid_tertuliano": {
+    "class": "tertuliano",
+    "name": "Ramón",
+    "intro_text": "Yo de esto no sé nada, pero opino. Y opino que te voy a ganar.",
+    "lose_text": "Esto es una cortina de humo del Gobierno.",
+    "win_text": "Lo dije en la tertulia de las nueve y lo repito en la de las diez.",
+    "after_text": "Mañana salgo en tres cadenas explicando por qué he perdido. Y en ninguna diré lo mismo.",
+    "items": [],
+    "party": [
+      {
+        "species": "chatot",
+        "level": 13
+      },
+      {
+        "species": "purrloin",
+        "level": 13
+      }
+    ]
+  },
+  "madrid_turista": {
+    "class": "turistachanclas",
+    "name": "Hans",
+    "intro_text": "¡Hola! ¿Sangría? ¿Paella? ¿Combate? ¡Todo incluido!",
+    "lose_text": "Ach. Mejor me voy a tomar otra sangría a la Plaza Mayor. Doce euros.",
+    "win_text": "¡Olé! ¿Se dice así?",
+    "after_text": "En Madrid se cena a las diez. En mi país a esa hora ya estamos desayunando.",
+    "items": [],
+    "party": [
+      {
+        "species": "wingull",
+        "level": 12
+      },
+      {
+        "species": "lechonk",
+        "level": 13
+      }
+    ]
   }
 }
