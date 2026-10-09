@@ -1,0 +1,40 @@
+# Tramo de verja de hierro con puntas doradas sobre un murete de piedra (Plaza de la Armería, Palacio de
+# la Moncloa...). Se pone en fila. 16x32 del arte (1x2 casillas). PROVISIONAL.
+@leyenda  . = transparente   K = piedra_1   D = piedra_2   d = piedra_3   g = piedra_4   l = piedra_5   L = piedra_6
+@leyenda  S = piedra_1@90   B = pizarra_4   p = pizarra_2   P = pizarra_1   q = pizarra_3   r = teja_3   R = teja_2
+@leyenda  m = tierra_4   o = tierra_5   O = tierra_6   w = madera_2   W = madera_4   y = acento_amarillo   n = metal_2
+@leyenda  v = hierba_1   V = hierba_2   h = hierba_4   e = acento_rojo   a = agua_4   A = agua_5   u = ui_6
+@salida res://assets/tilesets/exterior/hecho_a_mano/verja.png
+---
+................
+................
+.yy..yy..yy..yy.
+.yy..yy..yy..yy.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+KKKKKKKKKKKKKKKK
+KKKKKKKKKKKKKKKK
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+.KK..KK..KK..KK.
+LLLLLLLLLLLLLLLL
+gggggggggggggggg
+gggggggggggggggg
+gggggggggggggggg
+gggggggggggggggg
+gggggggggggggggg

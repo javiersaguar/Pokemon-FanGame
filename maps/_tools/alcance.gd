@@ -83,6 +83,9 @@ func _initialize() -> void:
 	for c: Resource in map.get(&"data").connections:
 		var count := 0
 		for t: Vector2i in seen:
+			var along := t.y if c.edge in ["east", "west"] else t.x
+			if c.span != Vector2i.ZERO and (along < c.span.x or along >= c.span.y):
+				continue
 			if (c.edge == "north" and t.y == bounds.position.y) or (c.edge == "south" and t.y == bounds.end.y - 1) \
 					or (c.edge == "west" and t.x == bounds.position.x) or (c.edge == "east" and t.x == bounds.end.x - 1):
 				count += 1

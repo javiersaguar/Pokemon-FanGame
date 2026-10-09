@@ -330,12 +330,14 @@ func trainer(node_name: String, trainer_id: StringName, cell: Vector2i, facing: 
 	entities.add_child(node)
 
 
-## Conexión sin fundido con el mapa vecino por un borde (MapConnection).
-func connect_edge(edge: String, target_map: StringName, offset: int = 0) -> void:
+## Conexión sin fundido con el mapa vecino por un borde (MapConnection); `span` = solo un tramo del
+## borde [desde, hasta), para que un borde lleve a varios mapas.
+func connect_edge(edge: String, target_map: StringName, offset: int = 0, span: Vector2i = Vector2i.ZERO) -> void:
 	var c := MapConnection.new()
 	c.edge = edge
 	c.target_map = target_map
 	c.offset = offset
+	c.span = span
 	root.get(&"data").connections.append(c)
 
 

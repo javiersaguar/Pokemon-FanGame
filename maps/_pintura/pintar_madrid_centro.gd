@@ -41,7 +41,8 @@ func _paint(painter: GDScript) -> RefCounted:
 	data.region_map_position = Vector2i(14, 11)
 	var p: RefCounted = painter.new("MadridCentro", SIZE, data, 1766)
 	p.fill_grass(0.1)
-	p.connect_edge("west", &"madrid/moncloa", 38)
+	p.connect_edge("west", &"madrid/moncloa", 38, Vector2i(0, 24))
+	p.connect_edge("west", &"madrid/palacio_real", 14, Vector2i(24, 34))  # Arenal hacia el Palacio
 	p.paving(Rect2i(0, 0, SIZE.x, SIZE.y))
 	p.build_paving()
 

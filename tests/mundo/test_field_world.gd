@@ -20,6 +20,24 @@ func test_conexiones_cuatro_bordes_y_offset() -> void:
 		assert_false(connection.matches(Vector2i(4, 4), bounds))
 		assert_eq(connection.arrival(samples[edge][0], bounds), samples[edge][1])
 
+func test_conexion_por_tramo_del_borde() -> void:
+	var bounds := Rect2i(0, 0, 10, 8)
+	var top := MapConnection.new()
+	top.edge = "west"
+	top.span = Vector2i(0, 4)
+	var bottom := MapConnection.new()
+	bottom.edge = "west"
+	bottom.span = Vector2i(4, 8)
+	assert_true(top.matches(Vector2i(-1, 2), bounds))
+	assert_false(top.matches(Vector2i(-1, 5), bounds))
+	assert_true(bottom.matches(Vector2i(-1, 5), bounds))
+	assert_false(bottom.matches(Vector2i(-1, 3), bounds))
+	var south := MapConnection.new()
+	south.edge = "south"
+	south.span = Vector2i(3, 6)
+	assert_true(south.matches(Vector2i(4, 8), bounds))
+	assert_false(south.matches(Vector2i(7, 8), bounds))
+
 func test_herramienta_por_mochila_y_flag_sin_consumo() -> void:
 	assert_false(FieldActions.available(&"cut"), "ID pendiente deshabilita")
 	GameState.world_config.field.actions.cut = {"item": "bicycle", "required_flag": "test_tool"}
