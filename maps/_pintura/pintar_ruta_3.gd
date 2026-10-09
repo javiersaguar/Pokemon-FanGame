@@ -42,6 +42,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta3", SIZE, data, 1858)
 	p.fill_grass(0.2)
 	p.connect_edge("north", &"ruta_2/exterior")
+	p.connect_edge("south", &"ruta_4/exterior")
 
 	# --- El puerto, nevado (arriba) ---
 	p.snow(Rect2i(0, 0, SIZE.x, 26))

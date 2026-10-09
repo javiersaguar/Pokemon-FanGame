@@ -1,0 +1,25 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "pidove", "min": 9, "max": 11, "weight": 30},
+      {"species": "lechonk", "min": 9, "max": 11, "weight": 25},
+      {"species": "skwovet", "min": 9, "max": 11, "weight": 25},
+      {"species": "deerling", "min": 10, "max": 12, "weight": 20}
+    ],
+    "night": [
+      {"species": "hoothoot", "min": 9, "max": 11, "weight": 35},
+      {"species": "skwovet", "min": 9, "max": 11, "weight": 25},
+      {"species": "deerling", "min": 10, "max": 12, "weight": 20},
+      {"species": "duskull", "min": 10, "max": 12, "weight": 20}
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": [
+    {"species": "skwovet", "min": 10, "max": 12, "weight": 100}
+  ]
+}

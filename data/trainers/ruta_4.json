@@ -1,0 +1,41 @@
+{
+  "ruta4_alvaro": {
+    "class": "padretarjeta",
+    "name": "Álvaro",
+    "intro_text": "¿Sabes cuánto pago de comunidad en la urbanización? Más que tú de alquiler. Y aun así te reto.",
+    "lose_text": "Esto no lo cubre el seguro del chalet.",
+    "win_text": "Lo que no se arregla con la tarjeta, se arregla con otra tarjeta.",
+    "after_text": "Aquí todos tenemos piscina. La usamos tres semanas al año, pero la tenemos.",
+    "items": [],
+    "party": [
+      {
+        "species": "lechonk",
+        "level": 10
+      },
+      {
+        "species": "skwovet",
+        "level": 11
+      }
+    ]
+  },
+  "ruta4_carla": {
+    "class": "crossfitero",
+    "gender": "female",
+    "name": "Carla",
+    "intro_text": "Vengo de hacer un WOD en el box de la urbanización. ¡Aún me quedan burpees para ti!",
+    "lose_text": "Me falta proteína. O me sobras tú.",
+    "win_text": "¡No pain, no gain! ¡Y no gain, no Pokémon!",
+    "after_text": "En la sierra se entrena mejor: el aire es más puro y el gimnasio, más caro.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidove",
+        "level": 10
+      },
+      {
+        "species": "deerling",
+        "level": 12
+      }
+    ]
+  }
+}
