@@ -1818,5 +1818,139 @@
 			"overworld walk/hair/boy 2/boy 2 brown.png",
 			"overworld walk/hats/straw hat.png"
 		]
+	},
+	"costalero": {
+		"idea": "Costalero de Semana Santa: camisa blanca, pantalón negro y el costal (la faja) en la cabeza.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/headband.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/headband.png"
+		]
+	},
+	"flamenca": {
+		"idea": "Flamenca de la Feria de Abril: traje rojo, falda larga rosa, moño y flor en el pelo.",
+		"frente": [
+			"trainer front female/base/base medium.png",
+			"trainer front female/bottoms/long skirt/long skirt pink.png",
+			"trainer front female/tops/formal top/formal top red.png",
+			"trainer front female/hair/hair 4/4 black.png",
+			"trainer front female/hats/flower/flower red.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base medium.png",
+			"overworld walk/bottoms/long skirt/long skirt pink.png",
+			"overworld walk/tops/formal top/formal red.png",
+			"overworld walk/hair/girl 4/4 black.png",
+			"overworld walk/hats/flower/flower red.png"
+		]
+	},
+	"rociero": {
+		"idea": "Romero del Rocío: camisa blanca, pantalón con botas camperas y sombrero de ala ancha.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/pants and boots/pants and boots grey.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/fedora.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/pants and boots/pants and boots grey.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/fedora.png"
+		]
+	},
+	"guarda_parque": {
+		"idea": "Guarda del Parque Nacional de Doñana: chaleco de campo, pantalón con botas y gorra.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/pants and boots/pants and boots beige.png",
+			"trainer front male/tops/vest/vest grey.png",
+			"trainer front male/hair/hair 2/2 brown.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/pants and boots/pants and boots beige.png",
+			"overworld walk/tops/vest/vest grey.png",
+			"overworld walk/hair/boy 2/boy 2 brown.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"marinero": {
+		"idea": "Marinero del puerto de Huelva: camiseta de rayas, vaqueros y gorra.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/shirt combo/shirt combo blue.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/shirt combo/shirt combo blue.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"surfista": {
+		"idea": "Surfista de Las Canteras: bañador, camiseta de playa y el pelo quemado por el sol.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/beach bottom/beach bottom green.png",
+			"trainer front male/tops/beach top/beach top blue.png",
+			"trainer front male/hair/hair 1/1 blonde.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/beach bottom m/beach bottom m green.png",
+			"overworld walk/tops/beach top m/beach top  m blue.png",
+			"overworld walk/hair/boy 1/boy 1 blond.png"
+		]
+	},
+	"guaguero": {
+		"idea": "Guagüero de Gran Canaria (conductor de guagua): camisa azul, pantalón azul marino y gorra.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/classy pants/classy pants navy.png",
+			"trainer front male/tops/collared shirt/collared shirt light blue.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m navy.png",
+			"overworld walk/tops/collared shirt/collared shirt light blue.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"fan_quevedo": {
+		"idea": "Fan de Quevedo en el concierto de la playa: sudadera negra, pantalón corto y gafas de sol.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/shorts/short black.png",
+			"trainer front female/tops/hoodie/hoodie  black.png",
+			"trainer front female/hair/hair 3/3 black.png",
+			"trainer front female/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/hoodie/hoodie black.png",
+			"overworld walk/hair/girl  3/3 black.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
 	}
 }

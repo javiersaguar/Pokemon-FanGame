@@ -1,0 +1,60 @@
+{
+  "ruta15_surfista": {
+    "class": "surfista",
+    "name": "Aday",
+    "intro_text": "¡Otra vez yo! Me he venido en la guagua para ganarte en otra playa.",
+    "lose_text": "Hoy el mar no me quiere.",
+    "win_text": "¡Las olas del sur son las mejores!",
+    "after_text": "En Pozo Izquierdo hay campeonatos de windsurf. Con este viento, hasta los Pidgey hacen windsurf.",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 36
+      },
+      {
+        "species": "barraskewda",
+        "level": 37
+      }
+    ]
+  },
+  "ruta15_nadadora": {
+    "class": "nadador",
+    "name": "Nayra",
+    "gender": "female",
+    "intro_text": "Las playas de arena negra queman, pero el agua está buenísima. ¡Combate en la orilla!",
+    "lose_text": "Me voy a remojar las penas.",
+    "win_text": "¡Al agua, patos!",
+    "after_text": "Aquí hay más cremas solares que Pokémon. Y más guiris que cremas.",
+    "items": [],
+    "party": [
+      {
+        "species": "wishiwashi",
+        "level": 37
+      },
+      {
+        "species": "lanturn",
+        "level": 37
+      }
+    ]
+  },
+  "ruta15_guaguero": {
+    "class": "guaguero",
+    "name": "Echedey",
+    "intro_text": "¡Esta es la guagua directa al sur! Parada obligatoria: combate.",
+    "lose_text": "Me he pasado la parada.",
+    "win_text": "¡Siguiente parada: la derrota!",
+    "after_text": "Con la guagua tardas una hora a Maspalomas. Con el coche, dos: hay que aparcar.",
+    "items": [],
+    "party": [
+      {
+        "species": "krokorok",
+        "level": 36
+      },
+      {
+        "species": "hippowdon",
+        "level": 38
+      }
+    ]
+  }
+}

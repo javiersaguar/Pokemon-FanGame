@@ -1,0 +1,71 @@
+# Puerta del León del Real Alcázar de Sevilla (Sevilla · Centro): la muralla almenada roja con sus
+# saeteras y la puerta, con el panel de azulejos del león encima del arco. Dibujada a mano. 96x64 del
+# arte (6x4 casillas). PROVISIONAL hasta que la apruebe Javier.
+@leyenda  . = transparente   K = piedra_1   g = piedra_4   u = ui_6   T = teja_5   t = teja_4   r = teja_3
+@leyenda  c = teja_6   q = agua_3   y = acento_amarillo
+@salida res://assets/tilesets/exterior/hecho_a_mano/puerta_leon.png
+---
+....................................TT..TT..TT..TT..TT..TT......................................
+....................................TT..TT..TT..TT..TT..TT......................................
+....................................TT..TT..TT..TT..TT..TT......................................
+....................................TT..TT..TT..TT..TT..TT......................................
+....................................cccccccccccccccccccccccc....................................
+....................................cTTTTTTTTTTTTTTTTTTTTTTr....................................
+....................................cTTTTTTTTTTTTTTTTTTTTTTr....................................
+....................................cTTTTTTTTTTTTTTTTTTTTTTr....................................
+TT..TT..TT..TT..TT..TT..TT..TT..TT..cTTTTTTTTTTTTTTTTTTTTTTrTT..TT..TT..TT..TT..TT..TT..TT..TT..
+TT..TT..TT..TT..TT..TT..TT..TT..TT..cTTTTTTTTTTTTTTTTTTTTTTrTT..TT..TT..TT..TT..TT..TT..TT..TT..
+TT..TT..TT..TT..TT..TT..TT..TT..TT..cTTTuuuuuuuuuuuuuuuuTTTrTT..TT..TT..TT..TT..TT..TT..TT..TT..
+TT..TT..TT..TT..TT..TT..TT..TT..TT..cTTTuqqqqqqqqqqqqqquTTTrTT..TT..TT..TT..TT..TT..TT..TT..TT..
+cccccccccccccccccccccccccccccccccccccTTTuqqqqyyyqqqqqqquTTTrcccccccccccccccccccccccccccccccccccc
+ctttttttttttttttttttttttttttttttttttcTTTuqqqyyyyyqqqqqquTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuqqqyyqyyyyyyyquTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuqqqqyyyyyyyyyquTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuqqqqqyyyyyyyyquTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuqqqqqyqqyqqyqyuTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuqqqqqyqqyqqyqquTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuqqqqqqqqqqqqqquTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuqqqqqqqqqqqqqquTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTuuuuuuuuuuuuuuuuTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttttttttttttttttttttttttttttr
+cttttttttKttttttttttttttttKtttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttKttttttttttttttttKttttttttr
+cttttttttKttttttttttttttttKtttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttKttttttttttttttttKttttttttr
+cttttttttKttttttttttttttttKtttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttKttttttttttttttttKttttttttr
+cttttttttKttttttttttttttttKtttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttKttttttttttttttttKttttttttr
+cttttttttKttttttttttttttttKtttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttKttttttttttttttttKttttttttr
+cttttttttKttttttttttttttttKtttttttttcTTTTTTTTTTTTTTTTTTTTTTrtttttttttKttttttttttttttttKttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTTTTTKKKKTTTTTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTTTKKKKKKKKTTTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTTKKKKKKKKKKTTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+ctttttttttttttttttttttttttttttttttttcTTTTTKKKKKKKKKKKKTTTTTrtttttttttttttttttttttttttttttttttttr
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg

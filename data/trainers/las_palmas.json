@@ -1,0 +1,84 @@
+{
+  "lp_surfista": {
+    "class": "surfista",
+    "name": "Aday",
+    "intro_text": "¡En Las Canteras las olas rompen en la Barra! Yo rompo récords. Y Pokémon.",
+    "lose_text": "Me has revolcado como una ola de La Cícer.",
+    "win_text": "¡Ola perfecta, mi niño!",
+    "after_text": "Para surfear de verdad hay que ir a La Cícer, al final de la playa. Allí rompe; aquí, solo el bronceado.",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 35
+      },
+      {
+        "species": "lanturn",
+        "level": 36
+      }
+    ]
+  },
+  "lp_nadadora": {
+    "class": "nadador",
+    "name": "Yaiza",
+    "gender": "female",
+    "intro_text": "¡Nado de punta a punta de Las Canteras cada mañana! Tres kilómetros. Y luego, churros.",
+    "lose_text": "Me he quedado sin aire. Y sin churros.",
+    "win_text": "¡El agua aquí está a 22 grados todo el año!",
+    "after_text": "En invierno vienen los suecos a bañarse. Nosotros, en invierno, nos ponemos el abrigo a 19 grados.",
+    "items": [],
+    "party": [
+      {
+        "species": "mantine",
+        "level": 35
+      },
+      {
+        "species": "pyukumuku",
+        "level": 36
+      }
+    ]
+  },
+  "lp_guaguero": {
+    "class": "guaguero",
+    "name": "Echedey",
+    "intro_text": "¡Esta guagua no para hasta que me ganes! Bueno, tampoco para en las paradas.",
+    "lose_text": "Fin de trayecto. Todo el mundo abajo.",
+    "win_text": "¡Pase al fondo, que hay sitio!",
+    "after_text": "La guagua de Playa del Inglés sale cada media hora. O cada hora. Depende de cómo me levante.",
+    "items": [],
+    "party": [
+      {
+        "species": "cramorant",
+        "level": 36
+      },
+      {
+        "species": "carkol",
+        "level": 33
+      },
+      {
+        "species": "krokorok",
+        "level": 37
+      }
+    ]
+  },
+  "lp_turista": {
+    "class": "turistachanclas",
+    "name": "Ingrid",
+    "gender": "female",
+    "intro_text": "¡Vengo de Noruega y aquí hay sol en enero! Combate al sol, por favor.",
+    "lose_text": "Me voy a la sombra. Bueno, aquí no hay.",
+    "win_text": "¡Sol, playa y combates! Esto es el paraíso.",
+    "after_text": "Mi apartamento lo pagan los noruegos que vienen después. Así funciona el turismo, ¿no?",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 35
+      },
+      {
+        "species": "torkoal",
+        "level": 36
+      }
+    ]
+  }
+}

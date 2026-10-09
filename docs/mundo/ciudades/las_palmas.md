@@ -6,6 +6,11 @@
 
 **Ojo con la geografía:** Playa del Inglés no está en Las Palmas, sino en el **sur de la isla** (municipio de San Bartolomé de Tirajana), a unos 50–55 km. Propuesta: Las Palmas es la ciudad (Centro Pokémon, tiendas, puerto del ferry) y el **gimnasio está al final de la Ruta 15**, en Playa del Inglés, junto a las dunas de Maspalomas.
 
+## Estado (2026-10-09)
+
+- **Pintados** (Agente 1, tramo sur): `las_palmas/canteras` (64×48: la playa de **Las Canteras** con la Barra, La Isleta, el **Castillo de la Luz**, el Mercado del Puerto y el **puerto con el ferry** de Huelva), `las_palmas/vegueta_triana` (56×48: Triana con la calle Mayor, San Telmo, el Centro Pokémon y el estanco; Vegueta con la **Catedral de Santa Ana** y sus perros, la Casa de Colón y el mercado), la `ruta_15` y `playa_del_ingles/exterior` (64×56: el **aeropuerto** con el mostrador de los vuelos a Vigo, los hoteles, el Yumbo y los locales, el **escenario de Quevedo** en la playa (gimnasio 5), las **Dunas de Maspalomas** con la Charca y el **Faro**). Unidos en cadena: Canteras → Vegueta → Ruta 15 → Playa del Inglés.
+- **Pendiente:** el vuelo a Vigo (lo une el Agente 5: casilla libre (11, 6) entre la terminal y el mostrador); el interior del aeropuerto y del concierto.
+
 ## Cómo se reparte en el juego
 
 | Mapa (id propuesto) | Zona real | Qué hay |

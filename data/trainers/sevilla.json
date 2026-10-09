@@ -1,0 +1,80 @@
+{
+  "sevilla_costalero": {
+    "class": "costalero",
+    "name": "Antonio",
+    "intro_text": "¡Al cielo con ella! Llevo el paso de mi hermandad desde los quince. A ti te llevo por delante.",
+    "lose_text": "Me has dejado más reventado que una madrugá entera.",
+    "win_text": "Esto es fuerza de costal, quillo: de los riñones.",
+    "after_text": "En Semana Santa no hay quien ande por el centro. Ni los Pokémon: se quedan en casa viéndolo por la tele.",
+    "items": [],
+    "party": [
+      {"species": "machoke", "level": 31},
+      {"species": "gurdurr", "level": 33}
+    ]
+  },
+  "sevilla_flamenca": {
+    "class": "flamenca",
+    "name": "Rocío",
+    "intro_text": "¡Olé! Vengo de la Feria con los zapatos en la mano. Te combato descalza.",
+    "lose_text": "Ay, que se me ha caído la flor del pelo. Y el combate.",
+    "win_text": "¡Arsa! Así se baila una sevillana: con duende y con tus Pokémon por los suelos.",
+    "after_text": "En la caseta de la Feria solo entras si conoces a alguien. Yo conozco a todos. Bueno, a su primo.",
+    "items": [],
+    "party": [
+      {"species": "oricorio", "level": 31},
+      {"species": "lilligant", "level": 32}
+    ]
+  },
+  "sevilla_flamenca_triana": {
+    "class": "flamenca",
+    "name": "Macarena",
+    "intro_text": "En Triana se canta, se baila y se combate. ¡Y todo con compás!",
+    "lose_text": "Me has sacado del compás. Eso en Triana no se perdona.",
+    "win_text": "Esto es Triana, mi arma. Aquí hasta el río tiene duende.",
+    "after_text": "Al club de la comedia vienen a reírse los de Sevilla de los de Triana. Y viceversa.",
+    "items": [],
+    "party": [
+      {"species": "oricorio", "level": 32},
+      {"species": "whimsicott", "level": 33}
+    ]
+  },
+  "sevilla_guiri": {
+    "class": "turistachanclas",
+    "name": "Hans",
+    "intro_text": "¡He pedido una paella en Sevilla y me han mirado mal! ¿Combate para quitarme la vergüenza?",
+    "lose_text": "Nein... Me voy a pedir otra paella para olvidar.",
+    "win_text": "¡Sangría para todos! Bueno, para mí.",
+    "after_text": "Me he hecho una foto con la Torre del Oro. Me han cobrado tres euros por estar en medio.",
+    "items": [],
+    "party": [
+      {"species": "pelipper", "level": 31},
+      {"species": "torkoal", "level": 33}
+    ]
+  },
+  "sevilla_palomas": {
+    "class": "domadorpalomas",
+    "name": "Curro",
+    "intro_text": "Las palomas de la Plaza de España me obedecen. Bueno, me obedecen si llevo pipas.",
+    "lose_text": "Se me han volado todas. Y alguna me ha dejado un recuerdo en el hombro.",
+    "win_text": "¡Ni una paloma se ha movido de su sitio!",
+    "after_text": "Aquí había más palomas que turistas. Ahora hay más turistas que palomas. Las palomas protestan.",
+    "items": [],
+    "party": [
+      {"species": "tranquill", "level": 31},
+      {"species": "unfezant", "level": 33}
+    ]
+  },
+  "sevilla_tuno": {
+    "class": "tuno",
+    "name": "Pepe",
+    "intro_text": "¡Clavelitos, clavelitos! Te canto una serenata y luego te gano. En ese orden.",
+    "lose_text": "Se me ha roto una cuerda de la bandurria. Y el orgullo.",
+    "win_text": "Diecinueve años en la tuna y aún no he terminado la carrera. Pero combatir, sé.",
+    "after_text": "La tuna canta en la Plaza de España a las parejas. Si no hay propina, cantamos más alto.",
+    "items": [],
+    "party": [
+      {"species": "kricketune", "level": 31},
+      {"species": "toxtricity", "level": 33}
+    ]
+  }
+}

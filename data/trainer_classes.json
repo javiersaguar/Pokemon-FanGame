@@ -1040,5 +1040,85 @@
     "overworld_sprite": "res://assets/sprites/characters/aceitero.png",
     "intro_bgm": "encounter_tough",
     "battle_bgm": "battle_trainer"
+  },
+  "costalero": {
+    "name": "Costalero",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/costalero.png",
+    "overworld_sprite": "res://assets/sprites/characters/costalero.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "flamenca": {
+    "name": "Flamenca",
+    "gender": "female",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/flamenca.png",
+    "overworld_sprite": "res://assets/sprites/characters/flamenca.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "rociero": {
+    "name": "Rociero",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/rociero.png",
+    "overworld_sprite": "res://assets/sprites/characters/rociero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "guarda_parque": {
+    "name": "Guarda del parque",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/guarda_parque.png",
+    "overworld_sprite": "res://assets/sprites/characters/guarda_parque.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "marinero": {
+    "name": "Marinero",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/marinero.png",
+    "overworld_sprite": "res://assets/sprites/characters/marinero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "surfista": {
+    "name": "Surfista",
+    "gender": "male",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/surfista.png",
+    "overworld_sprite": "res://assets/sprites/characters/surfista.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "guaguero": {
+    "name": "Guagüero",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/guaguero.png",
+    "overworld_sprite": "res://assets/sprites/characters/guaguero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "fan_quevedo": {
+    "name": "Fan de Quevedo",
+    "gender": "female",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/fan_quevedo.png",
+    "overworld_sprite": "res://assets/sprites/characters/fan_quevedo.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

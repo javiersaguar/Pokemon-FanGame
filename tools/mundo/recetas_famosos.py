@@ -217,6 +217,22 @@ SPECS = {
                    "Aceitunero de Jaén: camisa blanca remangada, pantalón de faena con botas y sombrero de paja."),
     "aceitero": ("m", "light", (4, "black"), ("americana", "beige"), ("vestir", "beige"), ("glasses", None),
                  "Vendedor de aceite «a precio de oro»: americana y pantalón beis, pelo engominado y gafas."),
+    "costalero": ("m", "medium", (2, "black"), ("camisa", "white"), ("vestir", "black"), ("headband", None),
+                  "Costalero de Semana Santa: camisa blanca, pantalón negro y el costal (la faja) en la cabeza."),
+    "flamenca": ("f", "medium", (4, "black"), ("traje", "red"), ("falda_larga", "pink"), ("flower", "red"),
+                 "Flamenca de la Feria de Abril: traje rojo, falda larga rosa, moño y flor en el pelo."),
+    "rociero": ("m", "medium", (2, "black"), ("camisa", "white"), ("botas", "grey"), ("fedora", None),
+                "Romero del Rocío: camisa blanca, pantalón con botas camperas y sombrero de ala ancha."),
+    "guarda_parque": ("m", "light", (2, "brown"), ("chaleco", "grey"), ("botas", "beige"), ("youngster hat", None),
+                      "Guarda del Parque Nacional de Doñana: chaleco de campo, pantalón con botas y gorra."),
+    "marinero": ("m", "dark", (2, "black"), ("rayas", "blue"), ("vaqueros", "navy"), ("youngster hat", None),
+                 "Marinero del puerto de Huelva: camiseta de rayas, vaqueros y gorra."),
+    "surfista": ("m", "light", (1, "blond"), ("playa", "blue"), ("playa", "green"), None,
+                 "Surfista de Las Canteras: bañador, camiseta de playa y el pelo quemado por el sol."),
+    "guaguero": ("m", "medium", (2, "black"), ("camisa", "blue"), ("vestir", "navy"), ("youngster hat", None),
+                 "Guagüero de Gran Canaria (conductor de guagua): camisa azul, pantalón azul marino y gorra."),
+    "fan_quevedo": ("f", "light", (3, "black"), ("sudadera", "black"), ("corto", "black"), ("glasses", None),
+                    "Fan de Quevedo en el concierto de la playa: sudadera negra, pantalón corto y gafas de sol."),
 }
 
 

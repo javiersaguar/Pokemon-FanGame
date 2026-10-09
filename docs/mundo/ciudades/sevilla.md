@@ -4,6 +4,11 @@
 >
 > Plano real: [`../planos/sevilla.svg`](../planos/sevilla.svg) (casilla = 30 m).
 
+## Estado (2026-10-09)
+
+- **Pintados** (Agente 1, tramo sur): `sevilla/centro` (64×56: las Setas, la Avenida con el Centro Pokémon, el Mercadona y el Basic-Fit, la **Catedral** y la **Giralda**, el Archivo de Indias, la **Puerta del León** del Alcázar con sus jardines y **Santa Cruz** con el estanco), `sevilla/rio` (56×56: el Guadalquivir con el **Puente de Triana**, la **Maestranza** y la Torre del Oro en el Paseo de Colón, y Triana con el **club de la comedia**, gimnasio 4) y `sevilla/maria_luisa` (56×48: la **Plaza de España** y el Parque de María Luisa). Monumentos dibujados a mano; la Torre del Oro es la torre octogonal del pack 01 (provisional). Unidos entre sí, con la Ruta 13 (este del Centro) y con la Ruta 14 (oeste del Río).
+- **Pendiente:** Heliópolis y el Benito Villamarín; la Torre del Oro dibujada a mano; el interior del club de la comedia.
+
 ## Cómo se reparte en el juego
 
 | Mapa (id propuesto) | Zona real | Qué hay |

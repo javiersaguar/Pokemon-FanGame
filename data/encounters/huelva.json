@@ -1,0 +1,20 @@
+{
+  "land_rate": 10,
+  "land": {"day": [], "night": []},
+  "water": [
+    {"species": "tentacruel", "min": 33, "max": 35, "weight": 35},
+    {"species": "pelipper", "min": 33, "max": 35, "weight": 30},
+    {"species": "lanturn", "min": 33, "max": 35, "weight": 20},
+    {"species": "finizen", "min": 33, "max": 35, "weight": 15}
+  ],
+  "old_rod": [
+    {"species": "magikarp", "min": 28, "max": 30, "weight": 100}
+  ],
+  "good_rod": [
+    {"species": "lanturn", "min": 33, "max": 35, "weight": 60},
+    {"species": "cramorant", "min": 34, "max": 35, "weight": 40}
+  ],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

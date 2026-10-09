@@ -526,5 +526,18 @@
   "conde_ansurez": {"fuente": 356, "puerta": null},
   "alhambra": {"fuente": 150, "puerta": null},
   "olivo": {"fuente": 151, "puerta": null, "huella": "base"},
-  "mezquita": {"fuente": 152, "puerta": null}
+  "mezquita": {"fuente": 152, "puerta": null},
+  "giralda": {"fuente": 153, "puerta": null},
+  "catedral_sevilla": {"fuente": 154, "puerta": [3, 0]},
+  "setas": {"fuente": 155, "puerta": null, "huella": "base"},
+  "plaza_espana": {"fuente": 156, "puerta": null},
+  "puerta_leon": {"fuente": 157, "puerta": [3, 0]},
+  "puente_triana": {"fuente": 158, "puerta": null, "huella": "ninguna"},
+  "maestranza": {"fuente": 159, "puerta": [4, 0]},
+  "fe_descubridora": {"fuente": 160, "puerta": null},
+  "muelle_tinto": {"fuente": 161, "puerta": null, "huella": "ninguna"},
+  "catedral_santa_ana": {"fuente": 162, "puerta": [3, 0]},
+  "castillo_luz": {"fuente": 163, "puerta": [2, 0]},
+  "terminal_aeropuerto": {"fuente": 164, "puerta": null},
+  "mostrador_vuelos": {"fuente": 165, "puerta": null}
 }

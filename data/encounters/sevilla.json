@@ -1,0 +1,34 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "cottonee", "min": 30, "max": 32, "weight": 25},
+      {"species": "petilil", "min": 30, "max": 32, "weight": 25},
+      {"species": "tranquill", "min": 30, "max": 31, "weight": 20},
+      {"species": "persian", "min": 30, "max": 32, "weight": 10},
+      {"species": "murkrow", "min": 30, "max": 32, "weight": 10},
+      {"species": "torkoal", "min": 31, "max": 32, "weight": 10}
+    ],
+    "night": [
+      {"species": "murkrow", "min": 30, "max": 32, "weight": 30},
+      {"species": "persian", "min": 30, "max": 32, "weight": 25},
+      {"species": "cottonee", "min": 30, "max": 32, "weight": 25},
+      {"species": "noctowl", "min": 31, "max": 32, "weight": 20}
+    ]
+  },
+  "water": [
+    {"species": "basculin", "min": 30, "max": 33, "weight": 60},
+    {"species": "seaking", "min": 31, "max": 33, "weight": 30},
+    {"species": "feebas", "min": 30, "max": 32, "weight": 10}
+  ],
+  "old_rod": [
+    {"species": "magikarp", "min": 25, "max": 28, "weight": 100}
+  ],
+  "good_rod": [
+    {"species": "basculin", "min": 30, "max": 32, "weight": 70},
+    {"species": "feebas", "min": 30, "max": 32, "weight": 30}
+  ],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

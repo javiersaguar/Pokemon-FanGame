@@ -1,0 +1,114 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "krokorok",
+        "min": 36,
+        "max": 38,
+        "weight": 30
+      },
+      {
+        "species": "vibrava",
+        "min": 36,
+        "max": 38,
+        "weight": 25
+      },
+      {
+        "species": "sandaconda",
+        "min": 36,
+        "max": 38,
+        "weight": 20
+      },
+      {
+        "species": "hippowdon",
+        "min": 36,
+        "max": 38,
+        "weight": 15
+      },
+      {
+        "species": "pelipper",
+        "min": 36,
+        "max": 38,
+        "weight": 10
+      }
+    ],
+    "night": [
+      {
+        "species": "krokorok",
+        "min": 36,
+        "max": 38,
+        "weight": 40
+      },
+      {
+        "species": "noctowl",
+        "min": 36,
+        "max": 38,
+        "weight": 30
+      },
+      {
+        "species": "sandaconda",
+        "min": 36,
+        "max": 38,
+        "weight": 30
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "pelipper",
+      "min": 35,
+      "max": 37,
+      "weight": 30
+    },
+    {
+      "species": "mantine",
+      "min": 35,
+      "max": 37,
+      "weight": 20
+    },
+    {
+      "species": "pyukumuku",
+      "min": 35,
+      "max": 37,
+      "weight": 20
+    },
+    {
+      "species": "wishiwashi",
+      "min": 35,
+      "max": 37,
+      "weight": 20
+    },
+    {
+      "species": "finizen",
+      "min": 35,
+      "max": 37,
+      "weight": 10
+    }
+  ],
+  "old_rod": [
+    {
+      "species": "magikarp",
+      "min": 30,
+      "max": 32,
+      "weight": 100
+    }
+  ],
+  "good_rod": [
+    {
+      "species": "finizen",
+      "min": 36,
+      "max": 37,
+      "weight": 60
+    },
+    {
+      "species": "barraskewda",
+      "min": 36,
+      "max": 38,
+      "weight": 40
+    }
+  ],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

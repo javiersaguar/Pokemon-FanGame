@@ -1,0 +1,28 @@
+{
+  "huelva_marinero": {
+    "class": "marinero",
+    "name": "Juanma",
+    "intro_text": "¡Llevo veinte años en la mar! En tierra me mareo. Combatimos rapidito.",
+    "lose_text": "Me voy al barco, que en tierra no hago pie.",
+    "win_text": "¡A toda vela!",
+    "after_text": "De aquí salía el mineral para Inglaterra y vuelven los cruceros de Inglaterra. Siempre los mismos, pero al revés.",
+    "items": [],
+    "party": [
+      {"species": "tentacruel", "level": 34},
+      {"species": "cramorant", "level": 35}
+    ]
+  },
+  "huelva_regatista": {
+    "class": "regatista",
+    "name": "Lucía",
+    "intro_text": "En la ría del Odiel hay viento todo el año. ¡Y yo, ganas de combatir!",
+    "lose_text": "Se me ha caído la vela. Y el ánimo.",
+    "win_text": "Viento de popa y Pokémon a favor.",
+    "after_text": "Mi sueño es cruzar a Canarias a vela. De momento, cojo el ferry como todo el mundo.",
+    "items": [],
+    "party": [
+      {"species": "pelipper", "level": 34},
+      {"species": "lanturn", "level": 35}
+    ]
+  }
+}

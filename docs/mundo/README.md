@@ -63,14 +63,15 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Valencia | ✅ | Malvarrosa ✅ provisional ([captura](../arte/comparativas/valencia_malvarrosa_mapa.png)); Ciutat Vella y Turia pendientes | — | tronista y despedida de soltero; ferry de Ibiza | — |
 | Alicante | ✅ | — | — | — | — |
 | Murcia | ✅ | — | — | — | — |
-| Sevilla | ✅ | — | — | — | — |
-| Las Palmas de Gran Canaria | ✅ | — | — | — | — |
+| Sevilla | ✅ | Centro, Río y Triana y Plaza de España ✅ provisionales ([Centro](../arte/comparativas/sevilla_centro_mapa.png), [Río](../arte/comparativas/sevilla_rio_mapa.png), [Plaza de España](../arte/comparativas/sevilla_maria_luisa_mapa.png)) | — | costalero, flamencas, guiri, domador de palomas, tuno; club de la comedia (gimnasio 4) con su cartel | — |
+| Las Palmas de Gran Canaria | ✅ | Las Canteras, Vegueta y Triana y Playa del Inglés ✅ provisionales ([Canteras](../arte/comparativas/las_palmas_canteras_mapa.png), [Vegueta](../arte/comparativas/las_palmas_vegueta_triana_mapa.png), [Playa del Inglés](../arte/comparativas/playa_del_ingles_mapa.png)) | — | surfistas, nadadoras, guagüero, turistas, fan de Quevedo; ferry de Huelva; escenario de Quevedo (gimnasio 5); aeropuerto | — |
 | Vigo | ✅ | ✅ provisional ([captura](../arte/comparativas/vigo_mapa.png)) | — | regatista y nadadora; llegada en avión (`from_avion`) | — |
 | Santander | ✅ | — | — | — | — |
 | Bilbao | ✅ | — | — | — | — |
 | Pamplona | ✅ | — | — | — | — |
 | Valladolid | ✅ | ✅ provisional ([captura](../arte/comparativas/valladolid_mapa.png)) | — | cuatro locales señalizados, aficionado y paseante; gimnasio 7 reservado | — |
 | Puertollano | ✅ | — | — | — | — |
+| Huelva | ✅ | ✅ provisional ([captura](../arte/comparativas/huelva_mapa.png)) | — | marinero y regatista; ferry a Las Palmas | — |
 | Málaga | ✅ | — | — | — | — |
 
 ## Tramo centro y final (Agente 3, 2026-10-09)

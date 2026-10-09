@@ -1,0 +1,42 @@
+{
+  "ruta14_ornitologa": {
+    "class": "ornitologa",
+    "name": "Elena",
+    "intro_text": "¡Shhh! Que espantas a los flamencos. Bueno, ya que estás, combatimos en silencio.",
+    "lose_text": "Has espantado a toda la colonia. Y a mis Pokémon.",
+    "win_text": "La paciencia del pajarero: horas quieta y luego, ¡zas!",
+    "after_text": "Este año han venido menos aves. La marisma tiene menos agua y más pozos que nunca.",
+    "items": [],
+    "party": [
+      {"species": "flamigo", "level": 33},
+      {"species": "swanna", "level": 35}
+    ]
+  },
+  "ruta14_rociero": {
+    "class": "rociero",
+    "name": "Rafa",
+    "intro_text": "¡Viva la Blanca Paloma! Llevo cuatro días de romería sin dormir. Combatir, todavía puedo.",
+    "lose_text": "Me voy a la ermita a pedir por mis Pokémon.",
+    "win_text": "¡Olé! Esto es fe y es aguante.",
+    "after_text": "En el Rocío no se duerme: se canta, se reza y se bebe. Y luego se duerme en el camino de vuelta.",
+    "items": [],
+    "party": [
+      {"species": "ponyta", "level": 33},
+      {"species": "mudsdale", "level": 35}
+    ]
+  },
+  "ruta14_guarda": {
+    "class": "guarda_parque",
+    "name": "Paco",
+    "intro_text": "Alto: esto es un Parque Nacional. Aquí no se pisa, no se pesca... pero sí se combate.",
+    "lose_text": "Me voy a contar linces. Tardo poco: quedan pocos.",
+    "win_text": "Al parque se le cuida con mano dura. Y con Pokémon.",
+    "after_text": "Mi trabajo es vigilar que nadie saque agua del parque. Los regantes me saludan con la manguera puesta.",
+    "items": [],
+    "party": [
+      {"species": "quagsire", "level": 34},
+      {"species": "marshtomp", "level": 34},
+      {"species": "noctowl", "level": 35}
+    ]
+  }
+}

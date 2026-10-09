@@ -1,0 +1,59 @@
+{
+  "pi_fan": {
+    "class": "fan_quevedo",
+    "name": "Laura",
+    "intro_text": "¡Fila uno para ver a Quevedo! Llevo desde ayer aquí. Si me quitas el sitio, combate.",
+    "lose_text": "Me quedo... con las ganas.",
+    "win_text": "¡Quédate! Pero en tu sitio, que este es el mío.",
+    "after_text": "Quevedo es de Madrid, pero creció en Gran Canaria. Aquí lo queremos más que al mojo.",
+    "items": [],
+    "party": [
+      {
+        "species": "wishiwashi",
+        "level": 37
+      },
+      {
+        "species": "mantine",
+        "level": 37
+      }
+    ]
+  },
+  "pi_turista": {
+    "class": "turistachanclas",
+    "name": "Sven",
+    "intro_text": "¡Llevo tres semanas tumbado en esta hamaca! Me levanto solo para combatir.",
+    "lose_text": "Vuelvo a la hamaca.",
+    "win_text": "¡Sonnenschein und Pokémon!",
+    "after_text": "Las Dunas de Maspalomas no se pisan: es reserva natural. Yo las piso con la toalla, que es distinto.",
+    "items": [],
+    "party": [
+      {
+        "species": "sandaconda",
+        "level": 37
+      },
+      {
+        "species": "vibrava",
+        "level": 38
+      }
+    ]
+  },
+  "pi_surfista": {
+    "class": "surfista",
+    "name": "Acoidan",
+    "intro_text": "¡Las olas del sur son para expertos! ¿Eres experto en perder?",
+    "lose_text": "Me has hecho una buena revolcada.",
+    "win_text": "¡Olé, mi niño!",
+    "after_text": "Quevedo canta en la playa esta noche. Los Pokémon de agua también vienen: se oye desde el mar.",
+    "items": [],
+    "party": [
+      {
+        "species": "palafin",
+        "level": 38
+      },
+      {
+        "species": "pelipper",
+        "level": 37
+      }
+    ]
+  }
+}
