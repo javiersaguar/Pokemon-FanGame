@@ -171,5 +171,24 @@
         "level": 14
       }
     ]
+  },
+  "madrid_camarero": {
+    "class": "camarero",
+    "name": "Julián",
+    "intro_text": "¿Qué te pongo? ¿Una caña, unas bravas y un combate? Marchando.",
+    "lose_text": "Esta ronda corre de mi cuenta. Bueno, de la tuya: son catorce euros.",
+    "win_text": "¡Otra de bravas para la mesa siete!",
+    "after_text": "En Madrid no se cierra un bar ni aunque llueva. Lo que se cierra es la cocina, a las cuatro.",
+    "items": [],
+    "party": [
+      {
+        "species": "slurpuff",
+        "level": 14
+      },
+      {
+        "species": "cufant",
+        "level": 14
+      }
+    ]
   }
 }

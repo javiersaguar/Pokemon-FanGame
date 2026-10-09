@@ -1147,6 +1147,32 @@
 		],
 		"source": 6
 	},
+	"boca_metro": {
+		"coords": [
+			0,
+			0
+		],
+		"door": [
+			1,
+			0
+		],
+		"file": "hecho_a_mano/boca_metro.png",
+		"footprint": [
+			[
+				1,
+				-1
+			],
+			[
+				1,
+				0
+			]
+		],
+		"size": [
+			2,
+			3
+		],
+		"source": 55
+	},
 	"busto": {
 		"coords": [
 			25,

@@ -1,53 +1,54 @@
 [gd_resource type="TileSet" format=3]
 
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/gen4.png" id="1_8yoti"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/autotiles.png" id="2_7blcd"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/animados.png" id="3_ejkqb"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/iglesia_san_miguel.png" id="4_bwy4o"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/ermita_virgen_del_rio.png" id="5_rgqsf"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/acueducto_segovia.png" id="6_h2tyg"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/acueducto_segovia_tramo.png" id="7_u8euf"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/cruz_cuelgamuros.png" id="8_8gl4g"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/basilica_cuelgamuros.png" id="9_5rr0d"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/monasterio_escorial.png" id="10_dedme"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/arco_victoria.png" id="11_aukdc"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/templo_debod.png" id="12_7u6ol"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/puerta_debod.png" id="13_pauf4"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/casas.png" id="14_arf2v"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/faro_moncloa.png" id="15_nhhod"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/casa_correos.png" id="16_su4qb"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/oso_madrono.png" id="17_cxrpg"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/soportales.png" id="18_jkr6u"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/soportales_arco.png" id="19_444gh"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/casa_panaderia.png" id="20_1y1dc"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/mercado_san_miguel.png" id="21_3vp0j"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/edificio_metropolis.png" id="22_63cfi"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/edificio_carrion.png" id="23_am5lj"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/palacio_real.png" id="24_6jfik"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/arboles.png" id="25_csp5f"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/catedral_almudena.png" id="26_rgbu4"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/teatro_real.png" id="27_k2o5u"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/felipe_iv.png" id="28_faj52"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/estatua_rey.png" id="29_2rlt7"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/verja.png" id="30_wsxly"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/cibeles.png" id="31_iqndj"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/palacio_cibeles.png" id="32_8h41w"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/puerta_alcala.png" id="33_ifmr1"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/congreso.png" id="34_tsy02"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/leon_congreso.png" id="35_pi53a"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/flora.png" id="36_y3e5m"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/museo_prado.png" id="37_ksg1h"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/fuente_neptuno.png" id="38_b410v"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/estacion_atocha.png" id="39_2skim"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/monumento_alfonso_xii.png" id="40_lk6yp"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/palacio_cristal.png" id="41_6d370"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/casas_dppt.png" id="42_rdhlq"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/vallas.png" id="43_2xe46"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/edificios.png" id="44_i4t5m"]
-[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/adornos.png" id="45_rcg2o"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/gen4.png" id="1_7blcd"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/autotiles.png" id="2_ejkqb"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/animados.png" id="3_bwy4o"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/iglesia_san_miguel.png" id="4_rgqsf"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/ermita_virgen_del_rio.png" id="5_h2tyg"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/acueducto_segovia.png" id="6_u8euf"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/acueducto_segovia_tramo.png" id="7_8gl4g"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/cruz_cuelgamuros.png" id="8_5rr0d"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/basilica_cuelgamuros.png" id="9_dedme"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/monasterio_escorial.png" id="10_aukdc"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/arco_victoria.png" id="11_7u6ol"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/templo_debod.png" id="12_pauf4"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/puerta_debod.png" id="13_arf2v"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/casas.png" id="14_nhhod"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/faro_moncloa.png" id="15_su4qb"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/casa_correos.png" id="16_cxrpg"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/oso_madrono.png" id="17_jkr6u"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/soportales.png" id="18_444gh"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/soportales_arco.png" id="19_1y1dc"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/casa_panaderia.png" id="20_3vp0j"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/mercado_san_miguel.png" id="21_63cfi"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/edificio_metropolis.png" id="22_am5lj"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/edificio_carrion.png" id="23_6jfik"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/palacio_real.png" id="24_csp5f"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/arboles.png" id="25_rgbu4"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/catedral_almudena.png" id="26_k2o5u"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/teatro_real.png" id="27_faj52"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/felipe_iv.png" id="28_2rlt7"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/estatua_rey.png" id="29_wsxly"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/verja.png" id="30_iqndj"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/cibeles.png" id="31_8h41w"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/palacio_cibeles.png" id="32_ifmr1"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/puerta_alcala.png" id="33_tsy02"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/congreso.png" id="34_pi53a"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/leon_congreso.png" id="35_y3e5m"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/flora.png" id="36_ksg1h"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/museo_prado.png" id="37_b410v"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/fuente_neptuno.png" id="38_2skim"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/estacion_atocha.png" id="39_lk6yp"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/monumento_alfonso_xii.png" id="40_6d370"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/palacio_cristal.png" id="41_rdhlq"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/hecho_a_mano/boca_metro.png" id="42_2xe46"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/casas_dppt.png" id="43_i4t5m"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/vallas.png" id="44_rcg2o"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/edificios.png" id="45_rm80k"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/adornos.png" id="46_hm3cr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rm80k"]
-texture = ExtResource("1_8yoti")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vx5f3"]
+texture = ExtResource("1_7blcd")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/custom_data_0 = "grass"
@@ -735,8 +736,8 @@ texture_region_size = Vector2i(32, 32)
 6:38/0 = 0
 7:38/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hm3cr"]
-texture = ExtResource("2_7blcd")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwiwc"]
+texture = ExtResource("2_ejkqb")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -1632,8 +1633,8 @@ texture_region_size = Vector2i(32, 32)
 6:11/0/custom_data_0 = "path"
 6:11/0/custom_data_2 = "dirt"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vx5f3"]
-texture = ExtResource("3_ejkqb")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibi0g"]
+texture = ExtResource("3_bwy4o")
 texture_region_size = Vector2i(32, 32)
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 0.25
@@ -1654,8 +1655,8 @@ texture_region_size = Vector2i(32, 32)
 0:2/animation_frame_1/duration = 0.6
 0:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwiwc"]
-texture = ExtResource("4_bwy4o")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6m7x"]
+texture = ExtResource("4_rgqsf")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(5, 6)
 0:0/0 = 0
@@ -1685,8 +1686,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_21/points = PackedVector2Array(112, -16, 144, -16, 144, 16, 112, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibi0g"]
-texture = ExtResource("5_rgqsf")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82hsx"]
+texture = ExtResource("5_h2tyg")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(3, 4)
 0:0/0 = 0
@@ -1703,40 +1704,40 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_8/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6m7x"]
-texture = ExtResource("6_h2tyg")
-texture_region_size = Vector2i(32, 32)
-0:0/size_in_atlas = Vector2i(14, 7)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(-208, 96)
-0:0/0/y_sort_origin = 15
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
-0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(112, -16, 144, -16, 144, 16, 112, 16)
-0:0/0/physics_layer_0/polygon_3/points = PackedVector2Array(176, -16, 208, -16, 208, 16, 176, 16)
-0:0/0/physics_layer_0/polygon_4/points = PackedVector2Array(240, -16, 272, -16, 272, 16, 240, 16)
-0:0/0/physics_layer_0/polygon_5/points = PackedVector2Array(304, -16, 336, -16, 336, 16, 304, 16)
-0:0/0/physics_layer_0/polygon_6/points = PackedVector2Array(368, -16, 400, -16, 400, 16, 368, 16)
-0:0/0/custom_data_0 = "house"
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82hsx"]
-texture = ExtResource("7_u8euf")
-texture_region_size = Vector2i(32, 32)
-0:0/size_in_atlas = Vector2i(14, 7)
-0:0/0 = 0
-0:0/0/texture_origin = Vector2i(-208, 96)
-0:0/0/y_sort_origin = 15
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
-0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
-0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(112, -16, 144, -16, 144, 16, 112, 16)
-0:0/0/physics_layer_0/polygon_3/points = PackedVector2Array(176, -16, 208, -16, 208, 16, 176, 16)
-0:0/0/physics_layer_0/polygon_4/points = PackedVector2Array(240, -16, 272, -16, 272, 16, 240, 16)
-0:0/0/physics_layer_0/polygon_5/points = PackedVector2Array(304, -16, 336, -16, 336, 16, 304, 16)
-0:0/0/physics_layer_0/polygon_6/points = PackedVector2Array(368, -16, 400, -16, 400, 16, 368, 16)
-0:0/0/custom_data_0 = "house"
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c5hkr"]
-texture = ExtResource("8_8gl4g")
+texture = ExtResource("6_u8euf")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(14, 7)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-208, 96)
+0:0/0/y_sort_origin = 15
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
+0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(112, -16, 144, -16, 144, 16, 112, 16)
+0:0/0/physics_layer_0/polygon_3/points = PackedVector2Array(176, -16, 208, -16, 208, 16, 176, 16)
+0:0/0/physics_layer_0/polygon_4/points = PackedVector2Array(240, -16, 272, -16, 272, 16, 240, 16)
+0:0/0/physics_layer_0/polygon_5/points = PackedVector2Array(304, -16, 336, -16, 336, 16, 304, 16)
+0:0/0/physics_layer_0/polygon_6/points = PackedVector2Array(368, -16, 400, -16, 400, 16, 368, 16)
+0:0/0/custom_data_0 = "house"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogum2"]
+texture = ExtResource("7_8gl4g")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(14, 7)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-208, 96)
+0:0/0/y_sort_origin = 15
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
+0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(112, -16, 144, -16, 144, 16, 112, 16)
+0:0/0/physics_layer_0/polygon_3/points = PackedVector2Array(176, -16, 208, -16, 208, 16, 176, 16)
+0:0/0/physics_layer_0/polygon_4/points = PackedVector2Array(240, -16, 272, -16, 272, 16, 240, 16)
+0:0/0/physics_layer_0/polygon_5/points = PackedVector2Array(304, -16, 336, -16, 336, 16, 304, 16)
+0:0/0/physics_layer_0/polygon_6/points = PackedVector2Array(368, -16, 400, -16, 400, 16, 368, 16)
+0:0/0/custom_data_0 = "house"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v7n34"]
+texture = ExtResource("8_5rr0d")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(4, 10)
 0:0/0 = 0
@@ -1772,8 +1773,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_27/points = PackedVector2Array(80, -16, 112, -16, 112, 16, 80, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogum2"]
-texture = ExtResource("9_5rr0d")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwdf1"]
+texture = ExtResource("9_dedme")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(10, 5)
 0:0/0 = 0
@@ -1830,8 +1831,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_48/points = PackedVector2Array(272, -16, 304, -16, 304, 16, 272, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v7n34"]
-texture = ExtResource("10_dedme")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_keh0l"]
+texture = ExtResource("10_aukdc")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(16, 8)
 0:0/0 = 0
@@ -1934,8 +1935,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_94/points = PackedVector2Array(464, -16, 496, -16, 496, 16, 464, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwdf1"]
-texture = ExtResource("11_aukdc")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sxjca"]
+texture = ExtResource("11_7u6ol")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(8, 8)
 0:0/0 = 0
@@ -1949,8 +1950,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_5/points = PackedVector2Array(208, -16, 240, -16, 240, 16, 208, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_keh0l"]
-texture = ExtResource("12_7u6ol")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_618q4"]
+texture = ExtResource("12_pauf4")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(6, 4)
 0:0/0 = 0
@@ -1981,8 +1982,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_22/points = PackedVector2Array(144, -16, 176, -16, 176, 16, 144, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sxjca"]
-texture = ExtResource("13_pauf4")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qthf"]
+texture = ExtResource("13_arf2v")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(3, 4)
 0:0/0 = 0
@@ -1992,8 +1993,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_618q4"]
-texture = ExtResource("14_arf2v")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24ch3"]
+texture = ExtResource("14_nhhod")
 texture_region_size = Vector2i(32, 32)
 15:0/size_in_atlas = Vector2i(8, 8)
 15:0/0 = 0
@@ -2085,8 +2086,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_14/points = PackedVector2Array(112, -48, 144, -48, 144, -16, 112, -16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qthf"]
-texture = ExtResource("15_nhhod")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfda1"]
+texture = ExtResource("15_su4qb")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(3, 12)
 0:0/0 = 0
@@ -2095,8 +2096,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 48, -16, 48, 16, 16, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24ch3"]
-texture = ExtResource("16_su4qb")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oq7ne"]
+texture = ExtResource("16_cxrpg")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(12, 9)
 0:0/0 = 0
@@ -2179,8 +2180,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_74/points = PackedVector2Array(336, -16, 368, -16, 368, 16, 336, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfda1"]
-texture = ExtResource("17_cxrpg")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1rqix"]
+texture = ExtResource("17_jkr6u")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(2, 3)
 0:0/0 = 0
@@ -2193,8 +2194,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_4/points = PackedVector2Array(16, -16, 48, -16, 48, 16, 16, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oq7ne"]
-texture = ExtResource("18_jkr6u")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mw4d"]
+texture = ExtResource("18_444gh")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(4, 6)
 0:0/0 = 0
@@ -2226,8 +2227,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_23/points = PackedVector2Array(80, -16, 112, -16, 112, 16, 80, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1rqix"]
-texture = ExtResource("19_444gh")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56fwl"]
+texture = ExtResource("19_1y1dc")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(4, 6)
 0:0/0 = 0
@@ -2237,8 +2238,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(80, -16, 112, -16, 112, 16, 80, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mw4d"]
-texture = ExtResource("20_1y1dc")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aslh1"]
+texture = ExtResource("20_3vp0j")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(12, 7)
 0:0/0 = 0
@@ -2317,8 +2318,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_70/points = PackedVector2Array(336, -16, 368, -16, 368, 16, 336, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56fwl"]
-texture = ExtResource("21_3vp0j")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gnno"]
+texture = ExtResource("21_63cfi")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(8, 5)
 0:0/0 = 0
@@ -2362,8 +2363,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_35/points = PackedVector2Array(208, -16, 240, -16, 240, 16, 208, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aslh1"]
-texture = ExtResource("22_63cfi")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4l6m"]
+texture = ExtResource("22_am5lj")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(6, 11)
 0:0/0 = 0
@@ -2425,8 +2426,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_53/points = PackedVector2Array(144, -16, 176, -16, 176, 16, 144, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gnno"]
-texture = ExtResource("23_am5lj")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfo8o"]
+texture = ExtResource("23_6jfik")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(7, 12)
 0:0/0 = 0
@@ -2511,8 +2512,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_76/points = PackedVector2Array(176, -16, 208, -16, 208, 16, 176, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4l6m"]
-texture = ExtResource("24_6jfik")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l437q"]
+texture = ExtResource("24_csp5f")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(20, 12)
 0:0/0 = 0
@@ -2723,8 +2724,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_202/points = PackedVector2Array(592, -16, 624, -16, 624, 16, 592, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfo8o"]
-texture = ExtResource("25_csp5f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etxrf"]
+texture = ExtResource("25_rgbu4")
 texture_region_size = Vector2i(32, 32)
 10:0/size_in_atlas = Vector2i(3, 4)
 10:0/0 = 0
@@ -2780,8 +2781,8 @@ texture_region_size = Vector2i(32, 32)
 16:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(16, -16, 48, -16, 48, 16, 16, 16)
 16:0/0/custom_data_0 = "tree"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l437q"]
-texture = ExtResource("26_rgbu4")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkcd1"]
+texture = ExtResource("26_k2o5u")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(10, 10)
 0:0/0 = 0
@@ -2868,8 +2869,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_78/points = PackedVector2Array(272, -16, 304, -16, 304, 16, 272, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etxrf"]
-texture = ExtResource("27_k2o5u")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ag7q"]
+texture = ExtResource("27_faj52")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(8, 7)
 0:0/0 = 0
@@ -2928,8 +2929,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_50/points = PackedVector2Array(208, -16, 240, -16, 240, 16, 208, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dkcd1"]
-texture = ExtResource("28_faj52")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6qk6"]
+texture = ExtResource("28_2rlt7")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(3, 6)
 0:0/0 = 0
@@ -2949,8 +2950,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_11/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ag7q"]
-texture = ExtResource("29_2rlt7")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngbc8"]
+texture = ExtResource("29_wsxly")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(1, 3)
 0:0/0 = 0
@@ -2961,8 +2962,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6qk6"]
-texture = ExtResource("30_wsxly")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ls41c"]
+texture = ExtResource("30_iqndj")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(1, 2)
 0:0/0 = 0
@@ -2972,8 +2973,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngbc8"]
-texture = ExtResource("31_iqndj")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8bu4"]
+texture = ExtResource("31_8h41w")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(4, 4)
 0:0/0 = 0
@@ -2992,8 +2993,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_10/points = PackedVector2Array(80, -16, 112, -16, 112, 16, 80, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ls41c"]
-texture = ExtResource("32_8h41w")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8rbt"]
+texture = ExtResource("32_ifmr1")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(10, 11)
 0:0/0 = 0
@@ -3090,8 +3091,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_88/points = PackedVector2Array(272, -16, 304, -16, 304, 16, 272, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8bu4"]
-texture = ExtResource("33_ifmr1")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0456h"]
+texture = ExtResource("33_tsy02")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(8, 6)
 0:0/0 = 0
@@ -3107,8 +3108,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_7/points = PackedVector2Array(208, -16, 240, -16, 240, 16, 208, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8rbt"]
-texture = ExtResource("34_tsy02")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58xwv"]
+texture = ExtResource("34_pi53a")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(10, 6)
 0:0/0 = 0
@@ -3165,8 +3166,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_48/points = PackedVector2Array(272, -16, 304, -16, 304, 16, 272, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0456h"]
-texture = ExtResource("35_pi53a")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5ovt"]
+texture = ExtResource("35_y3e5m")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
@@ -3177,8 +3178,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(16, -16, 48, -16, 48, 16, 16, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58xwv"]
-texture = ExtResource("36_y3e5m")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y1u31"]
+texture = ExtResource("36_ksg1h")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/custom_data_0 = "flowers"
@@ -3469,8 +3470,8 @@ texture_region_size = Vector2i(32, 32)
 3:29/0/custom_data_0 = "flowers"
 3:29/0/custom_data_2 = "grass"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5ovt"]
-texture = ExtResource("37_ksg1h")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ye0sh"]
+texture = ExtResource("37_b410v")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(12, 6)
 0:0/0 = 0
@@ -3543,8 +3544,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_64/points = PackedVector2Array(336, -16, 368, -16, 368, 16, 336, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y1u31"]
-texture = ExtResource("38_b410v")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvocb"]
+texture = ExtResource("38_2skim")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(3, 3)
 0:0/0 = 0
@@ -3559,8 +3560,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_6/points = PackedVector2Array(48, -16, 80, -16, 80, 16, 48, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ye0sh"]
-texture = ExtResource("39_2skim")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_omi7b"]
+texture = ExtResource("39_lk6yp")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(14, 8)
 0:0/0 = 0
@@ -3659,8 +3660,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_90/points = PackedVector2Array(400, -16, 432, -16, 432, 16, 400, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvocb"]
-texture = ExtResource("40_lk6yp")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfgof"]
+texture = ExtResource("40_6d370")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(12, 7)
 0:0/0 = 0
@@ -3721,8 +3722,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_52/points = PackedVector2Array(336, -16, 368, -16, 368, 16, 336, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_omi7b"]
-texture = ExtResource("41_6d370")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkg01"]
+texture = ExtResource("41_rdhlq")
 texture_region_size = Vector2i(32, 32)
 0:0/size_in_atlas = Vector2i(8, 7)
 0:0/0 = 0
@@ -3771,8 +3772,18 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_40/points = PackedVector2Array(208, -16, 240, -16, 240, 16, 208, 16)
 0:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfgof"]
-texture = ExtResource("42_rdhlq")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37oe3"]
+texture = ExtResource("42_2xe46")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(2, 3)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-16, 32)
+0:0/0/y_sort_origin = 15
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -48, 48, -48, 48, -16, 16, -16)
+0:0/0/custom_data_0 = "house"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbky2"]
+texture = ExtResource("43_i4t5m")
 texture_region_size = Vector2i(32, 32)
 60:0/size_in_atlas = Vector2i(7, 8)
 60:0/0 = 0
@@ -4170,8 +4181,8 @@ texture_region_size = Vector2i(32, 32)
 47:0/0/physics_layer_0/polygon_20/points = PackedVector2Array(80, -48, 112, -48, 112, -16, 80, -16)
 47:0/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkg01"]
-texture = ExtResource("43_2xe46")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_efqp8"]
+texture = ExtResource("44_rcg2o")
 texture_region_size = Vector2i(32, 32)
 1:0/size_in_atlas = Vector2i(1, 2)
 1:0/0 = 0
@@ -4192,8 +4203,8 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:0/0/custom_data_0 = "fence"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_37oe3"]
-texture = ExtResource("44_i4t5m")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wvk4q"]
+texture = ExtResource("45_rm80k")
 texture_region_size = Vector2i(32, 32)
 3:21/size_in_atlas = Vector2i(7, 6)
 3:21/0 = 0
@@ -4998,8 +5009,8 @@ texture_region_size = Vector2i(32, 32)
 40:9/0/physics_layer_0/polygon_8/points = PackedVector2Array(144, -16, 176, -16, 176, 16, 144, 16)
 40:9/0/custom_data_0 = "house"
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbky2"]
-texture = ExtResource("45_rcg2o")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iogqr"]
+texture = ExtResource("46_hm3cr")
 texture_region_size = Vector2i(32, 32)
 27:0/size_in_atlas = Vector2i(3, 4)
 27:0/0 = 0
@@ -5105,48 +5116,49 @@ custom_data_layer_1/name = "encounter"
 custom_data_layer_1/type = 1
 custom_data_layer_2/name = "footstep_sound"
 custom_data_layer_2/type = 4
-sources/0 = SubResource("TileSetAtlasSource_rm80k")
-sources/1 = SubResource("TileSetAtlasSource_hm3cr")
-sources/2 = SubResource("TileSetAtlasSource_vx5f3")
-sources/5 = SubResource("TileSetAtlasSource_58xwv")
-sources/3 = SubResource("TileSetAtlasSource_618q4")
-sources/4 = SubResource("TileSetAtlasSource_lfo8o")
-sources/6 = SubResource("TileSetAtlasSource_cfgof")
-sources/7 = SubResource("TileSetAtlasSource_lkg01")
-sources/8 = SubResource("TileSetAtlasSource_37oe3")
-sources/9 = SubResource("TileSetAtlasSource_lbky2")
-sources/22 = SubResource("TileSetAtlasSource_k6m7x")
-sources/23 = SubResource("TileSetAtlasSource_82hsx")
-sources/27 = SubResource("TileSetAtlasSource_bwdf1")
-sources/25 = SubResource("TileSetAtlasSource_ogum2")
-sources/31 = SubResource("TileSetAtlasSource_24ch3")
-sources/35 = SubResource("TileSetAtlasSource_5mw4d")
-sources/40 = SubResource("TileSetAtlasSource_l437q")
-sources/45 = SubResource("TileSetAtlasSource_ngbc8")
-sources/48 = SubResource("TileSetAtlasSource_w8rbt")
-sources/24 = SubResource("TileSetAtlasSource_c5hkr")
-sources/38 = SubResource("TileSetAtlasSource_1gnno")
-sources/37 = SubResource("TileSetAtlasSource_aslh1")
-sources/21 = SubResource("TileSetAtlasSource_ibi0g")
-sources/52 = SubResource("TileSetAtlasSource_ye0sh")
-sources/43 = SubResource("TileSetAtlasSource_6ag7q")
-sources/30 = SubResource("TileSetAtlasSource_1qthf")
-sources/42 = SubResource("TileSetAtlasSource_dkcd1")
-sources/51 = SubResource("TileSetAtlasSource_y1u31")
-sources/20 = SubResource("TileSetAtlasSource_gwiwc")
-sources/49 = SubResource("TileSetAtlasSource_0456h")
-sources/36 = SubResource("TileSetAtlasSource_56fwl")
-sources/26 = SubResource("TileSetAtlasSource_v7n34")
-sources/53 = SubResource("TileSetAtlasSource_yvocb")
-sources/50 = SubResource("TileSetAtlasSource_n5ovt")
-sources/32 = SubResource("TileSetAtlasSource_xfda1")
-sources/46 = SubResource("TileSetAtlasSource_ls41c")
-sources/54 = SubResource("TileSetAtlasSource_omi7b")
-sources/39 = SubResource("TileSetAtlasSource_p4l6m")
-sources/47 = SubResource("TileSetAtlasSource_m8bu4")
-sources/29 = SubResource("TileSetAtlasSource_sxjca")
-sources/33 = SubResource("TileSetAtlasSource_oq7ne")
-sources/34 = SubResource("TileSetAtlasSource_1rqix")
-sources/41 = SubResource("TileSetAtlasSource_etxrf")
-sources/28 = SubResource("TileSetAtlasSource_keh0l")
-sources/44 = SubResource("TileSetAtlasSource_y6qk6")
+sources/0 = SubResource("TileSetAtlasSource_vx5f3")
+sources/1 = SubResource("TileSetAtlasSource_gwiwc")
+sources/2 = SubResource("TileSetAtlasSource_ibi0g")
+sources/5 = SubResource("TileSetAtlasSource_y1u31")
+sources/3 = SubResource("TileSetAtlasSource_24ch3")
+sources/4 = SubResource("TileSetAtlasSource_etxrf")
+sources/6 = SubResource("TileSetAtlasSource_lbky2")
+sources/7 = SubResource("TileSetAtlasSource_efqp8")
+sources/8 = SubResource("TileSetAtlasSource_wvk4q")
+sources/9 = SubResource("TileSetAtlasSource_iogqr")
+sources/22 = SubResource("TileSetAtlasSource_c5hkr")
+sources/23 = SubResource("TileSetAtlasSource_ogum2")
+sources/27 = SubResource("TileSetAtlasSource_sxjca")
+sources/25 = SubResource("TileSetAtlasSource_bwdf1")
+sources/55 = SubResource("TileSetAtlasSource_37oe3")
+sources/31 = SubResource("TileSetAtlasSource_oq7ne")
+sources/35 = SubResource("TileSetAtlasSource_aslh1")
+sources/40 = SubResource("TileSetAtlasSource_dkcd1")
+sources/45 = SubResource("TileSetAtlasSource_m8bu4")
+sources/48 = SubResource("TileSetAtlasSource_58xwv")
+sources/24 = SubResource("TileSetAtlasSource_v7n34")
+sources/38 = SubResource("TileSetAtlasSource_lfo8o")
+sources/37 = SubResource("TileSetAtlasSource_p4l6m")
+sources/21 = SubResource("TileSetAtlasSource_82hsx")
+sources/52 = SubResource("TileSetAtlasSource_omi7b")
+sources/43 = SubResource("TileSetAtlasSource_ngbc8")
+sources/30 = SubResource("TileSetAtlasSource_xfda1")
+sources/42 = SubResource("TileSetAtlasSource_y6qk6")
+sources/51 = SubResource("TileSetAtlasSource_yvocb")
+sources/20 = SubResource("TileSetAtlasSource_k6m7x")
+sources/49 = SubResource("TileSetAtlasSource_n5ovt")
+sources/36 = SubResource("TileSetAtlasSource_1gnno")
+sources/26 = SubResource("TileSetAtlasSource_keh0l")
+sources/53 = SubResource("TileSetAtlasSource_cfgof")
+sources/50 = SubResource("TileSetAtlasSource_ye0sh")
+sources/32 = SubResource("TileSetAtlasSource_1rqix")
+sources/46 = SubResource("TileSetAtlasSource_w8rbt")
+sources/54 = SubResource("TileSetAtlasSource_lkg01")
+sources/39 = SubResource("TileSetAtlasSource_l437q")
+sources/47 = SubResource("TileSetAtlasSource_0456h")
+sources/29 = SubResource("TileSetAtlasSource_1qthf")
+sources/33 = SubResource("TileSetAtlasSource_5mw4d")
+sources/34 = SubResource("TileSetAtlasSource_56fwl")
+sources/41 = SubResource("TileSetAtlasSource_6ag7q")
+sources/28 = SubResource("TileSetAtlasSource_618q4")
+sources/44 = SubResource("TileSetAtlasSource_ls41c")
