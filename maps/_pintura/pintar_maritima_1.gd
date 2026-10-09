@@ -35,6 +35,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Maritima1", SIZE, data, 1977)
 	p.fill_grass(0.0)
 	p.connect_edge("north", &"palma/exterior", 12)
+	p.connect_edge("south", &"ibiza/exterior", 8)
 
 	# Todo es mar menos los islotes (arena, rocas y matorral).
 	var islets: Array[Rect2i] = [Rect2i(4, 8, 12, 6), Rect2i(26, 28, 10, 5), Rect2i(8, 44, 6, 4)]

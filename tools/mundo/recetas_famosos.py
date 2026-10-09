@@ -200,6 +200,8 @@ SPECS = {
                 "Nadador de aguas abiertas: bañador y camiseta de playa azules."),
     "nadador_f": ("f", "light", (2, "blond"), ("playa", "red"), ("playa", "red"), None,
                   "Nadadora de aguas abiertas: bañador de playa rojo."),
+    "hippie": ("f", "light", (4, "blond"), ("chaleco", "beige"), ("falda_larga", "purple"), ("flower", None),
+               "Hippie del mercadillo de Las Dalias: chaleco de flecos, falda larga y flores en el pelo."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
 }

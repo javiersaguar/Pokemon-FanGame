@@ -1,0 +1,40 @@
+{
+  "ibiza_hippie": {
+    "class": "hippie",
+    "name": "Luna",
+    "intro_text": "Paz, amor y un combate. Mis Pokémon y yo estamos en otra vibración.",
+    "lose_text": "Lo acepto. El universo sabrá por qué.",
+    "win_text": "Las energías estaban de mi lado. Y Mercurio, retrógrado.",
+    "after_text": "Vine a Ibiza en 1972 a pasar un verano. Aún no he vuelto.",
+    "items": [],
+    "party": [
+      {
+        "species": "spinda",
+        "level": 24
+      },
+      {
+        "species": "comfey",
+        "level": 25
+      }
+    ]
+  },
+  "ibiza_relaciones": {
+    "class": "raver",
+    "name": "Tito",
+    "intro_text": "¡Eh, eh! ¿Entradas para el club de esta noche? Mitad de precio si me ganas.",
+    "lose_text": "Vale, vale. Entras gratis. Pero la copa vale 25 euros.",
+    "win_text": "¡Hasta el amanecer, hermano!",
+    "after_text": "En Ibiza nadie duerme. Por eso los hoteles cobran tanto: por las horas que no usas la cama.",
+    "items": [],
+    "party": [
+      {
+        "species": "noibat",
+        "level": 24
+      },
+      {
+        "species": "toxel",
+        "level": 25
+      }
+    ]
+  }
+}

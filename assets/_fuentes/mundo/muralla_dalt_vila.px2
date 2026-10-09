@@ -1,0 +1,89 @@
+# Muralla de Dalt Vila (Ibiza): el lienzo renacentista con su parapeto y el Portal de ses Taules, con el
+# escudo de Felipe II y las estatuas romanas. Por el portal se pasa (solo choca la base). Dibujada a
+# mano. 128x80 del arte (8x5 casillas), a x2. PROVISIONAL hasta que la apruebe Javier.
+@leyenda  . = transparente   K = piedra_1   D = piedra_2   d = piedra_3   g = piedra_4   l = piedra_5   L = piedra_6
+@leyenda  S = piedra_1@90   B = pizarra_4   p = pizarra_2   P = pizarra_1   q = pizarra_3   r = teja_3   R = teja_2
+@leyenda  m = tierra_4   o = tierra_5   O = tierra_6   w = madera_2   W = madera_4   y = acento_amarillo   n = metal_2
+@leyenda  v = hierba_1   V = hierba_2   h = hierba_4   e = acento_rojo   a = agua_4   A = agua_5   u = ui_6
+@salida res://assets/tilesets/exterior/hecho_a_mano/muralla_dalt_vila.png
+---
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+................................................................................................................................
+ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...
+ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...
+ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...
+ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...
+ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...
+ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...ooooo...
+oooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOOoooooOOO
+OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooomooooooooooooooomooooooooooooooomooooooooooooooomooooooooooooooomooooooooooooooomooooooooooooooomooooooooooooooomoooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLLLeeeeeeeeeeeeLLLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLLLeeeeeeeeeeeeLLLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooomooooooooooooooomooooooooooooLLlllllLLLLLLLeeeeeeeeeeeeLLLLLLlllllLLLooooooooooomooooooooooooooomooooooooooooooom
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeyyyyyyeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeyyyyyyeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeyyyyyyeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeyyyyyyeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeyyyyyyeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooomooooooooooooooomooooooooooooooomooooLLlllllLLLLLLLeeeyyyyyyeeeLLLLLLlllllLLLooomooooooooooooooomooooooooooooooomoooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeyyyyyyeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeeeeeeeeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeeeeeeeeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLeeeeeeeeeeeeLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLlllllLLLLLLLLLLLLLLLLLLLLLLLLLlllllLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooomooooooooooooooomooooooooooooLLlllllLLLLLLLLLLLLLLLLLLLLLLLLLlllllLLLooooooooooomooooooooooooooomooooooooooooooom
+ooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooLLLLLLLLLLLLLLLLoooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooLLLLLL......LLLLLLooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooomooooooooooooooomooooooooooooooomoooooooooooooLLLLL............LLLLLoooooooooooomooooooooooooooomooooooooooooooomoooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooooLLLL..............LLLLooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooLLLL................LLLLoooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooLLLL..................LLLLooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooLLL....................LLLooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooLLLL....................LLLLoooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooomooooooooooooooomooooooooooooooomooLLL......................LLLomooooooooooooooomooooooooooooooomooooooooooooooom
+ooooooooooooooooooooooooooooooooooooooooooooooooooLLL......................LLLoooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooLLL......................LLLoooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooLLL......................LLLoooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooomooooooooooooooomooooooooooooooomoooooooooooo........................ooooooooooomooooooooooooooomooooooooooooooomoooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooomooooooooooooooomooooooooooooooomoooo........................ooomooooooooooooooomooooooooooooooomooooooooooooooom
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooomooooooooooooooomooooooooooooooomoooooooooooo........................ooooooooooomooooooooooooooomooooooooooooooomoooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooooooooooo........................oooooooooooooooooooooooooooooooooooooooooooooooooooo
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg

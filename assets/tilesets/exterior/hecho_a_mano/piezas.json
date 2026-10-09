@@ -58,5 +58,9 @@
   "ferry": {"fuente": 75, "puerta": null},
   "catedral_palma": {"fuente": 76, "puerta": [6, 0]},
   "castillo_bellver": {"fuente": 77, "puerta": [3, 0]},
-  "es_vedra": {"fuente": 78, "puerta": null}
+  "es_vedra": {"fuente": 78, "puerta": null},
+  "muralla_dalt_vila": {"fuente": 79, "puerta": null, "huella": "base"},
+  "catedral_ibiza": {"fuente": 80, "puerta": [3, 0]},
+  "casa_ibicenca": {"fuente": 81, "puerta": [1, 0]},
+  "club_ibiza": {"fuente": 82, "puerta": [4, 0]}
 }

@@ -4,6 +4,11 @@
 >
 > Plano real: [`../planos/ibiza.svg`](../planos/ibiza.svg) (casilla = 15 m).
 
+## Estado (2026-10-09)
+
+- **Mapa pintado** (`maps/_pintura/pintar_ibiza.gd`, 64×56): se llega haciendo Surf por el norte (Ruta marítima 1); el puerto con el ferry a Valencia atracado (aún sin pasarela: falta Valencia), La Marina de **casas encaladas** (dibujadas a mano) con Centro Pokémon, Mercadona y estanco; la **muralla de Dalt Vila** con sus portales y, dentro, callejuelas y la **catedral**; el **club** y la **playa d'en Bossa** con sombrillas y socorrista; mar al sur. Entrenadores en `data/trainers/ibiza.json` (hippie, clase nueva, y un relaciones públicas).
+- **Pendiente:** la pasarela del ferry a Valencia; Es Cubells y Sant Antoni (puestas de sol), el mercadillo hippie de Las Dalias.
+
 ## Lugares reales y cómo se ven
 
 | Lugar | Qué es | En el juego | Arte |

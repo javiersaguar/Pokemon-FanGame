@@ -59,7 +59,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Zaragoza | ✅ | ✅ provisional ([captura](../arte/comparativas/zaragoza_mapa.png)) | — | carteles, vecinos, baturro y camarero de El Tubo | — |
 | Barcelona | ✅ | Les Corts, Eixample y Ciutat Vella ✅ provisionales ([Les Corts](../arte/comparativas/barcelona_les_corts_mapa.png), [Eixample](../arte/comparativas/barcelona_eixample_mapa.png), [Ciutat Vella](../arte/comparativas/barcelona_ciutat_vella_mapa.png)) | — | soci, obrero, startup, guiri, carterista, bañista | — |
 | Palma de Mallorca | ✅ | ✅ provisional ([captura](../arte/comparativas/palma_mapa.png)) | — | ferry a Barcelona (pasarela), regatista y alemán | — |
-| Ibiza | ✅ | — | — | — | — |
+| Ibiza | ✅ | ✅ provisional ([captura](../arte/comparativas/ibiza_mapa.png)) | — | hippie y relaciones públicas; Surf desde la Ruta marítima 1 | — |
 | Valencia | ✅ | — | — | — | — |
 | Alicante | ✅ | — | — | — | — |
 | Murcia | ✅ | — | — | — | — |
