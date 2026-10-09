@@ -1,0 +1,40 @@
+{
+  "ruta3_borja": {
+    "class": "esquiador",
+    "name": "Borja",
+    "intro_text": "¿Esquiar? Hoy no hay nieve suficiente. Pero el forfait ya lo he pagado, así que algo tendré que hacer.",
+    "lose_text": "Ni esquiar ni combatir. Me vuelvo a la cafetería.",
+    "win_text": "En Baqueira esto no pasa, ¿eh? Pero mi padre no me deja la casa.",
+    "after_text": "La estación de Navacerrada cierra y abre más que un bar de pueblo.",
+    "items": [],
+    "party": [
+      {
+        "species": "swinub",
+        "level": 8
+      },
+      {
+        "species": "snorunt",
+        "level": 8
+      }
+    ]
+  },
+  "ruta3_lucia": {
+    "class": "montanera",
+    "name": "Lucía",
+    "intro_text": "He subido a la Bola del Mundo antes de desayunar. ¿Tú qué has hecho hoy?",
+    "lose_text": "Vale, tú has hecho más que yo.",
+    "win_text": "La montaña pone a cada uno en su sitio. A ti, en el suelo.",
+    "after_text": "Lleva siempre agua, chubasquero y algo de batería. La sierra no perdona.",
+    "items": [],
+    "party": [
+      {
+        "species": "snover",
+        "level": 8
+      },
+      {
+        "species": "ponyta",
+        "level": 9
+      }
+    ]
+  }
+}

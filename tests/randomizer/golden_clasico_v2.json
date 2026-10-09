@@ -1,5 +1,5 @@
 {
-	"fingerprint": "7c449a0b93034b711eaa14d65a5ba7d413f330e238be61fd1f6e81016acab395",
+	"fingerprint": "82442f39cdfb024a5fc2f5726c76ec3f47d12919673922a76f82a7699ca74d18",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -174,6 +174,82 @@
 				"super_rod": [],
 				"water": []
 			},
+			"ruta_3": {
+				"good_rod": [],
+				"headbutt": [
+					{
+						"max": 9.0,
+						"min": 7.0,
+						"species": "snivy",
+						"weight": 100.0
+					}
+				],
+				"land": {
+					"day": [
+						{
+							"max": 8.0,
+							"min": 6.0,
+							"species": "volbeat",
+							"weight": 25.0
+						},
+						{
+							"max": 8.0,
+							"min": 6.0,
+							"species": "flittle",
+							"weight": 25.0
+						},
+						{
+							"max": 9.0,
+							"min": 7.0,
+							"species": "capsakid",
+							"weight": 20.0
+						},
+						{
+							"max": 9.0,
+							"min": 7.0,
+							"species": "sinisteaantique",
+							"weight": 20.0
+						},
+						{
+							"max": 9.0,
+							"min": 7.0,
+							"species": "maractus",
+							"weight": 10.0
+						}
+					],
+					"night": [
+						{
+							"max": 9.0,
+							"min": 7.0,
+							"species": "drilbur",
+							"weight": 35.0
+						},
+						{
+							"max": 9.0,
+							"min": 7.0,
+							"species": "sinisteaantique",
+							"weight": 25.0
+						},
+						{
+							"max": 8.0,
+							"min": 6.0,
+							"species": "flittle",
+							"weight": 20.0
+						},
+						{
+							"max": 8.0,
+							"min": 6.0,
+							"species": "impidimp",
+							"weight": 20.0
+						}
+					]
+				},
+				"land_rate": 10.0,
+				"old_rod": [],
+				"rock_smash": [],
+				"super_rod": [],
+				"water": []
+			},
 			"test_outdoor": {
 				"good_rod": [],
 				"headbutt": [],
@@ -231,7 +307,7 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "bda115001950449bbb3c9de912690d0d5672d5bb4b309e15d1eed2d379eda82a",
+		"input_hash": "5a4ad54326b68a2397cc0ec4296255594dfaaab7a693e787e6c9ab20ef3880cb",
 		"items": {
 			"test/muestra_pueblo/Pocion": "kangaskhancandy",
 			"test/muestra_ruta/Pocion": "firestone",
@@ -75627,19 +75703,43 @@
 					}
 				]
 			},
+			"ruta3_borja": {
+				"party": [
+					{
+						"level": 8.0,
+						"species": "swinub"
+					},
+					{
+						"level": 8.0,
+						"species": "spheal"
+					}
+				]
+			},
+			"ruta3_lucia": {
+				"party": [
+					{
+						"level": 8.0,
+						"species": "munna"
+					},
+					{
+						"level": 9.0,
+						"species": "buneary"
+					}
+				]
+			},
 			"sarah_santaolalla": {
 				"party": [
 					{
 						"level": 46.0,
-						"species": "rabsca"
+						"species": "indeedeef"
 					},
 					{
 						"level": 46.0,
-						"species": "mrrime"
+						"species": "rapidashgalar"
 					},
 					{
 						"level": 47.0,
-						"species": "veluza"
+						"species": "armarouge"
 					}
 				]
 			},
@@ -75647,15 +75747,15 @@
 				"party": [
 					{
 						"level": 15.0,
-						"species": "wishiwashischool"
+						"species": "nihilego"
 					},
 					{
 						"level": 15.0,
-						"species": "dracovish"
+						"species": "ironjugulis"
 					},
 					{
 						"level": 16.0,
-						"species": "ironmoth"
+						"species": "ironthorns"
 					}
 				]
 			},
@@ -75663,15 +75763,15 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "screamtail"
+						"species": "lilligant"
 					},
 					{
 						"level": 32.0,
-						"species": "pignite"
+						"species": "ninetalesalola"
 					},
 					{
 						"level": 33.0,
-						"species": "dipplin"
+						"species": "ninetales"
 					}
 				]
 			},
@@ -75679,15 +75779,15 @@
 				"party": [
 					{
 						"level": 29.0,
-						"species": "throh"
-					},
-					{
-						"level": 29.0,
 						"species": "hitmontop"
 					},
 					{
+						"level": 29.0,
+						"species": "throh"
+					},
+					{
 						"level": 30.0,
-						"species": "pheromosa"
+						"species": "hitmonlee"
 					}
 				]
 			},
@@ -75695,11 +75795,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "ragingbolt"
+						"species": "weavile"
 					},
 					{
 						"level": 19.0,
-						"species": "probopass"
+						"species": "duraludon"
 					}
 				]
 			},
@@ -75707,15 +75807,15 @@
 				"party": [
 					{
 						"level": 13.0,
-						"species": "squawkabillyblue"
+						"species": "squawkabillyyellow"
 					},
 					{
 						"level": 14.0,
-						"species": "emolga"
+						"species": "gligar"
 					},
 					{
 						"level": 15.0,
-						"species": "aerodactyl"
+						"species": "oricorio"
 					}
 				]
 			},
@@ -75723,11 +75823,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "klefki"
+						"species": "probopass"
 					},
 					{
 						"level": 19.0,
-						"species": "orthworm"
+						"species": "togedemarutotem"
 					}
 				]
 			}

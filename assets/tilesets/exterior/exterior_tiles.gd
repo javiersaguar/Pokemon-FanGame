@@ -42,6 +42,10 @@ const LOG_RIGHT: Array[Vector2i] = [Vector2i(6, 5), Vector2i(7, 5)]
 ## Bosque de pinos: columnas 1–5 (la 1 es lo que sobresale por la izquierda),
 ## filas 0–5 (0–1 copas de arriba, 2–3 se repiten, 4–5 troncos).
 const FOREST_ORIGIN := Vector2i(1, 0)
+## Nieve (Sierra de Guadarrama, Pirineos...): suelo con 2 variantes y bosque de pinos nevados con la
+## misma forma que el de FOREST_ORIGIN (columna 0 = lo que sobresale por la izquierda).
+const SNOW: Array[Vector2i] = [Vector2i(3, 32), Vector2i(4, 32)]
+const SNOW_FOREST_ORIGIN := Vector2i(0, 33)
 ## Recuadros 3×3 (esquina superior izquierda).
 const SAND_PATCH := Vector2i(0, 6)
 const POND := Vector2i(5, 6)

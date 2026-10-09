@@ -1533,5 +1533,39 @@
 			"overworld walk/hair/boy 3/boy 3 black.png",
 			"overworld walk/hats/straw hat.png"
 		]
+	},
+	"esquiador": {
+		"idea": "Esquiador de Navacerrada: sudadera roja, pantalón con botas y gorro de lana negro.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/pants and boots/pants and boots black.png",
+			"trainer front male/tops/hoodie/hoodie red.png",
+			"trainer front male/hair/hair 2/2 blonde.png",
+			"trainer front male/hats/beanie/beanie black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/pants and boots/pants and boots black.png",
+			"overworld walk/tops/hoodie/hoodie red.png",
+			"overworld walk/hair/boy 2/boy 2 blond.png",
+			"overworld walk/hats/beanie/beanie black.png"
+		]
+	},
+	"montanera": {
+		"idea": "Montañera de la Sierra de Guadarrama: sudadera azul, botas y gorro de lana morado.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/pants and boots/pants and boots grey.png",
+			"trainer front female/tops/hoodie/hoodie blue.png",
+			"trainer front female/hair/hair 4/4 black.png",
+			"trainer front female/hats/beanie/beanie purple.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/pants and boots/pants and boots grey.png",
+			"overworld walk/tops/hoodie/hoodie blue.png",
+			"overworld walk/hair/girl 4/4 black.png",
+			"overworld walk/hats/beanie/beanie purple.png"
+		]
 	}
 }

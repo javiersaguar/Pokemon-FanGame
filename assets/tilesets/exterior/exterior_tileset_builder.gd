@@ -113,6 +113,14 @@ static func _gen4(ts: TileSet) -> void:
 	_tile_rect(s, Rect2i(forest + Vector2i(1, 0), Vector2i(4, 6)), "tree", WALL)
 	_tile_rect(s, Rect2i(forest + Vector2i(0, 1), Vector2i(1, 4)), "tree")
 	_tile_rect(s, Rect2i(ExteriorTiles.SAND_PATCH, Vector2i(5, 3)), "sand", -1, "sand")
+	# Nieve: como la nieve honda de DPPt, salen Pokémon al andar por ella.
+	for c: Vector2i in ExteriorTiles.SNOW:
+		_tile(s, c, "snow", -1, "snow")
+		if s.has_tile(c):
+			s.get_tile_data(c, 0).set_custom_data("encounter", true)
+	var snow_forest := ExteriorTiles.SNOW_FOREST_ORIGIN
+	_tile_rect(s, Rect2i(snow_forest + Vector2i(1, 0), Vector2i(4, 6)), "tree", WALL)
+	_tile_rect(s, Rect2i(snow_forest + Vector2i(0, 1), Vector2i(1, 4)), "tree")
 	_tile_rect(s, Rect2i(ExteriorTiles.POND, Vector2i(3, 3)), "water", WATER)
 	for c: Vector2i in ExteriorTiles.LEDGE:
 		_tile(s, c, "ledge_down", WALL, "grass")

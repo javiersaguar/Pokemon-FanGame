@@ -29,8 +29,9 @@ const FLORA := "04_big_flora_pack/tileset.png"
 const KEYS_HGSS := ["ff00ff", "f05ba1", "fff568"]
 const CHECKER_GEN4 := ["ffaec9", "efe4b0"]
 
-## Franjas de filas del pack 02 que se copian: [primera fila, nº de filas].
-const GEN4_BANDS := [[0, 9], [19, 1], [31, 5], [46, 11], [242, 6]]
+## Franjas de filas del pack 02 que se copian: [primera fila, nº de filas]. Las nuevas van
+## siempre al final, para no mover las casillas de los mapas ya pintados (nieve: filas 32–38).
+const GEN4_BANDS := [[0, 9], [19, 1], [31, 5], [46, 11], [242, 6], [11, 1], [25, 6]]
 
 ## Retoque de paleta de los verdes (respuesta 17 de Javier: el pueblo "plano y
 ## descolorido"; tiene que ser "saturado"). La hierba de DPPt tira a amarillo

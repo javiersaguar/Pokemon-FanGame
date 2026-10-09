@@ -886,5 +886,25 @@
     "overworld_sprite": "res://assets/sprites/characters/resinero.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "esquiador": {
+    "name": "Esquiador",
+    "gender": "male",
+    "base_money": 28,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/esquiador.png",
+    "overworld_sprite": "res://assets/sprites/characters/esquiador.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "montanera": {
+    "name": "Montañera",
+    "gender": "female",
+    "base_money": 28,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/montanera.png",
+    "overworld_sprite": "res://assets/sprites/characters/montanera.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

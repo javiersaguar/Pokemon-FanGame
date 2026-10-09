@@ -180,6 +180,10 @@ SPECS = {
                    "Piragüista de las Hoces del Duratón: camiseta roja de tirantes, pantalón corto y cinta."),
     "resinero": ("m", "dark", (3, "black"), ("chaleco", "grey"), ("botas", "grey"), ("straw hat", None),
                  "Resinero de la Tierra de Pinares: chaleco gris de faena, pantalón con botas y sombrero de paja."),
+    "esquiador": ("m", "light", (2, "blond"), ("sudadera", "red"), ("botas", "black"), ("beanie", "black"),
+                  "Esquiador de Navacerrada: sudadera roja, pantalón con botas y gorro de lana negro."),
+    "montanera": ("f", "light", (4, "black"), ("sudadera", "blue"), ("botas", "grey"), ("beanie", "purple"),
+                  "Montañera de la Sierra de Guadarrama: sudadera azul, botas y gorro de lana morado."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
 }

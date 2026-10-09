@@ -1,0 +1,26 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "ponyta", "min": 6, "max": 8, "weight": 25},
+      {"species": "swinub", "min": 6, "max": 8, "weight": 25},
+      {"species": "snover", "min": 7, "max": 9, "weight": 20},
+      {"species": "snorunt", "min": 7, "max": 9, "weight": 20},
+      {"species": "stantler", "min": 7, "max": 9, "weight": 10}
+    ],
+    "night": [
+      {"species": "duskull", "min": 7, "max": 9, "weight": 35},
+      {"species": "snorunt", "min": 7, "max": 9, "weight": 25},
+      {"species": "swinub", "min": 6, "max": 8, "weight": 20},
+      {"species": "hoothoot", "min": 6, "max": 8, "weight": 20}
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": [
+    {"species": "pineco", "min": 7, "max": 9, "weight": 100}
+  ]
+}

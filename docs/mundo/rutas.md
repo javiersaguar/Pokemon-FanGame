@@ -7,7 +7,8 @@ Cada ruta toma su paisaje del camino real entre las dos ciudades.
 **Pintadas** (mapa en `maps/ruta_<n>/exterior.tscn`, script en `maps/_pintura/pintar_ruta_<n>.gd`, captura en `docs/arte/comparativas/ruta_<n>_mapa.png`, entrenadores en `data/trainers/ruta_<n>.json` y encuentros en `data/encounters/ruta_<n>.json`):
 
 - **Ruta 1:** Manolo (el de los Chupachups), Dani (piragüista) y Marta (ornitóloga).
-- **Ruta 2:** Eusebio (resinero) y Steve (turista). El Acueducto cruza el Azoguejo de lado a lado y se pasa por debajo de los arcos. La salida sur (Ruta 3) está cerrada por nieve hasta que se pinte. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
+- **Ruta 2:** Eusebio (resinero) y Steve (turista). El Acueducto cruza el Azoguejo de lado a lado y se pasa por debajo de los arcos.
+- **Ruta 3:** Borja (esquiador) y Lucía (montañera). Se entra por arriba, al puerto nevado (en la nieve salen Pokémon), y se baja por escaleras; el Valle de Cuelgamuros (cruz y basílica dibujadas a mano) está abajo a la izquierda. **Franco (fantasma)** no está puesto: dónde va cada famoso lo decide Javier. La salida sur (Ruta 4) aún no tiene conexión. Tamaño orientativo: las rutas normales, entre 20 × 50 y 30 × 70 casillas; las de "zona" (Monegros, La Mancha), más anchas.
 
 | Ruta | Paisaje real | Qué tiene en el juego | Entrenadores y personajes | Pokémon propuestos |
 |------|--------------|----------------------|---------------------------|--------------------|

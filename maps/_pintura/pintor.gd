@@ -192,15 +192,22 @@ func soil(rect: Rect2i) -> void:
 # --- Bosque ---
 
 ## Bosque de pinos del pack 02 (árboles de 2 columnas). Usa x e y pares y
-## tamaños pares; las zonas que se tocan se unen solas.
-func forest(rect: Rect2i) -> void:
+## tamaños pares; las zonas que se tocan se unen solas. `snowy` = pinos nevados.
+func forest(rect: Rect2i, snowy: bool = false) -> void:
 	for cell: Vector2i in cells(rect):
-		_forest[cell] = true
+		_forest[cell] = ExteriorTiles.SNOW_FOREST_ORIGIN if snowy else ExteriorTiles.FOREST_ORIGIN
+
+
+## Suelo nevado (sus variantes repartidas). En la nieve salen Pokémon, como en la hierba alta.
+func snow(rect: Rect2i) -> void:
+	for cell: Vector2i in cells(rect):
+		var pieces := ExteriorTiles.SNOW
+		ground.set_cell(cell, ExteriorTiles.SRC_GEN4, pieces[rng.randi() % pieces.size()])
 
 
 func build_forest() -> void:
-	var o := ExteriorTiles.FOREST_ORIGIN
 	for cell: Vector2i in _forest:
+		var o: Vector2i = _forest[cell]
 		var col: int
 		if cell.x % 2 == 0:
 			col = 1 if not _forest.has(cell + Vector2i.LEFT) else 3

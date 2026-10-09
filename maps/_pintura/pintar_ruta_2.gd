@@ -3,8 +3,8 @@ extends SceneTree
 ## Duratón a Segovia (docs/mundo/rutas.md): arriba, los pinares de Cantalejo (resineros y el
 ## taller de trillos); abajo, Segovia: la plaza del Azoguejo, que cruza de lado a lado el
 ## Acueducto (se pasa por debajo de los arcos), el mesón del cochinillo y la avenida hacia la
-## sierra. Se une sin fundido con la Ruta 1 por el norte (mismas columnas). El sur (Ruta 3, Puerto
-## de Navacerrada) está cerrado por nieve hasta que exista la Ruta 3.
+## sierra. Se une sin fundido con la Ruta 1 por el norte y con la Ruta 3 (Puerto de Navacerrada)
+## por el sur, en las mismas columnas.
 ## Uso: godot --headless --path . -s res://maps/_pintura/pintar_ruta_2.gd -- --force
 
 const OUT := "res://maps/ruta_2/exterior.tscn"
@@ -43,6 +43,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta2", SIZE, data, 2002)
 	p.fill_grass(0.2)
 	p.connect_edge("north", &"ruta_1/exterior")
+	p.connect_edge("south", &"ruta_3/exterior")
 
 	# --- Segovia: plaza del Azoguejo, avenida y calle del mesón (baldosas) ---
 	p.paving(Rect2i(0, 34, 36, 12))
@@ -102,7 +103,6 @@ func _paint(painter: GDScript) -> RefCounted:
 	for cell: Vector2i in [Vector2i(33, 52), Vector2i(2, 70), Vector2i(33, 70), Vector2i(6, 61)]:
 		p.object(&"arbol_redondo", cell)
 	p.flowers(Rect2i(32, 46, 4, 2), 0.4)
-	p.fence(18, 23, 71)
 
 	p.sprinkle(Rect2i(0, 0, SIZE.x, 34), 0.05, [ExteriorTiles.TUFT, ExteriorTiles.TUFT_TALL, ExteriorTiles.MUSHROOMS])
 
@@ -135,7 +135,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.npc("Mesonero", "camarero", Vector2i(30, 54), DOWN, PackedStringArray([
 		"El cochinillo se corta con el canto del plato, para que veas lo tierno que está.",
 		"Luego el plato se tira al suelo. Y luego se cobra el plato."]))
-	p.npc("Guardia", "npc_man", Vector2i(21, 69), DOWN, PackedStringArray([
-		"El Puerto de Navacerrada está cerrado por nieve. Cadenas obligatorias.",
-		"¿Que es octubre? Ya, pero aquí nieva cuando le da la gana."]))
+	p.npc("Guardia", "npc_man", Vector2i(17, 68), RIGHT, PackedStringArray([
+		"Por ahí se sube al Puerto de Navacerrada. Cadenas obligatorias.",
+		"¿Que es octubre? Ya, pero en la sierra nieva cuando le da la gana."]))
 	return p
