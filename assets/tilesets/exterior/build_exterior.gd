@@ -44,13 +44,19 @@ const GREEN_RETOUCH := {"hue_from": 0.15, "hue_to": 0.40, "fade": 0.05, "hue_tar
 
 ## Casas de DPPt del pack 02 (estilo único con el suelo, respuesta 17): casilla
 ## de arriba a la izquierda, tamaño en casillas y puerta (relativa a la casilla de
-## abajo a la izquierda; se pisa para entrar).
+## abajo a la izquierda; se pisa para entrar). Del rectángulo solo se copia el
+## bloque principal, para no arrastrar trozos de las piezas vecinas de la hoja.
 const HOUSES_DPPT := {
 	"casa_roja": [Vector2i(0, 140), Vector2i(7, 7), Vector2i(1, -2)],
 	"casa_azul": [Vector2i(0, 147), Vector2i(7, 7), Vector2i(1, -2)],
 	"casa_azul_pequena": [Vector2i(0, 155), Vector2i(5, 6), Vector2i(1, -1)],
 	"casa_naranja": [Vector2i(3, 68), Vector2i(4, 7), Vector2i(1, -1)],
 	"casa_tejado_rojo": [Vector2i(0, 59), Vector2i(7, 7), Vector2i(2, -1)],
+	"casa_roja_chimenea": [Vector2i(0, 133), Vector2i(5, 7), Vector2i(1, -1)],
+	"casa_dos_aguas": [Vector2i(4, 108), Vector2i(4, 7), Vector2i(1, -1)],
+	"casa_madera": [Vector2i(4, 87), Vector2i(4, 7), Vector2i(1, -1)],
+	"casa_granero": [Vector2i(0, 236), Vector2i(4, 7), Vector2i(1, -1)],
+	"edificio_cupula": [Vector2i(0, 97), Vector2i(5, 7), Vector2i(1, -1)],
 }
 
 ## Valla de madera del pack 01 (×1): tramo horizontal de 3 piezas (izquierda,
@@ -65,6 +71,60 @@ const HOUSES := {
 	"casa_pequena": [Rect2i(736, 0, 112, 96), [Rect2i(828, 0, 20, 96)], Vector2i(2, -1)],
 	"casa_grande": [Rect2i(736, 112, 128, 128), [], Vector2i(2, -1)],
 	"casa_escalera": [Rect2i(736, 240, 128, 128), [Rect2i(736, 240, 8, 128)], Vector2i(2, -2)],
+}
+## Edificios de ciudad del pack 01 (BuildingsRMXP.png, a ×1): rectángulo de la pieza en la hoja
+## (números del catálogo de tools/mundo/catalogo_edificios.gd, ver docs/mundo/arte_ciudades.md) y
+## puerta (relativa a la casilla de abajo a la izquierda; Vector2i(-1, -1) = se calcula: el centro de
+## la fila de abajo). Del rectángulo solo se copia el bloque principal (lo que se toca), para no
+## arrastrar trozos de la pieza vecina de la hoja.
+const CITY_BUILDINGS := {
+	"centro_pokemon": [Rect2i(28, 12, 92, 92), Vector2i(-1, -1)],
+	"centro_pokemon_grande": [Rect2i(2320, 144, 104, 136), Vector2i(-1, -1)],
+	"tienda_azul": [Rect2i(16, 268, 76, 76), Vector2i(-1, -1)],
+	"tienda_morada": [Rect2i(16, 380, 76, 76), Vector2i(-1, -1)],
+	"grandes_almacenes": [Rect2i(1168, 768, 120, 124), Vector2i(-1, -1)],
+	"puesto_mercado": [Rect2i(1524, 164, 60, 72), Vector2i(-1, -1)],
+	"oficinas_verdes": [Rect2i(2032, 1132, 108, 136), Vector2i(-1, -1)],
+	"oficinas_azules": [Rect2i(1024, 352, 100, 120), Vector2i(-1, -1)],
+	"bloque_pisos": [Rect2i(2176, 96, 96, 124), Vector2i(-1, -1)],
+	"atico_jardin": [Rect2i(888, 552, 120, 96), Vector2i(-1, -1)],
+	"teatro": [Rect2i(1024, 1028, 88, 88), Vector2i(-1, -1)],
+	"gimnasio_madera": [Rect2i(2320, 1112, 120, 92), Vector2i(-1, -1)],
+	"faro": [Rect2i(1600, 4, 128, 192), Vector2i(-1, -1)],
+	"torre_octogonal": [Rect2i(1468, 352, 64, 112), Vector2i(-1, -1)],
+	"velero": [Rect2i(1460, 1136, 88, 88), Vector2i(-1, -1)],
+	"torre_socorrista": [Rect2i(1772, 124, 40, 68), Vector2i(-1, -1)],
+	"arco": [Rect2i(1024, 176, 104, 84), Vector2i(-1, -1)],
+	"casa_tejado_azul": [Rect2i(1612, 488, 76, 84), Vector2i(-1, -1)],
+	"casa_tejado_azul_2": [Rect2i(1612, 580, 76, 88), Vector2i(-1, -1)],
+	"casa_teja": [Rect2i(1896, 8, 100, 116), Vector2i(-1, -1)],
+	"tienda_verde": [Rect2i(1900, 256, 76, 72), Vector2i(-1, -1)],
+	"tienda_verde_2": [Rect2i(1900, 336, 76, 76), Vector2i(-1, -1)],
+	"casa_roja_pequena": [Rect2i(2176, 1064, 68, 84), Vector2i(-1, -1)],
+	"casa_rosa": [Rect2i(2176, 1176, 68, 84), Vector2i(-1, -1)],
+	"tienda_naranja": [Rect2i(2188, 324, 80, 84), Vector2i(-1, -1)],
+	"casa_gris": [Rect2i(2188, 456, 68, 84), Vector2i(-1, -1)],
+	"tienda_flores": [Rect2i(2200, 228, 84, 92), Vector2i(-1, -1)],
+	"casa_paja": [Rect2i(888, 948, 80, 108), Vector2i(-1, -1)],
+	"casa_paja_2": [Rect2i(888, 1060, 80, 104), Vector2i(-1, -1)],
+	"cabana": [Rect2i(1756, 204, 76, 76), Vector2i(-1, -1)],
+}
+## Adornos urbanos del pack 01 (UrbanRMXP.png, a ×1): farolas, fuentes, bancos, jardineras...
+## (catálogo de tools/mundo/catalogo_edificios.gd con --hoja=UrbanRMXP.png). Solo se copia el
+## bloque principal de cada rectángulo.
+const URBAN_PROPS := {
+	"farola_roja": Rect2i(592, 372, 20, 40),
+	"farola_rosa": Rect2i(656, 372, 22, 40),
+	"farola_verde": Rect2i(656, 180, 24, 44),
+	"farola_verde_2": Rect2i(592, 188, 24, 36),
+	"fuente_cano": Rect2i(592, 517, 32, 36),
+	"fuente_plaza": Rect2i(764, 220, 56, 44),
+	"banco": Rect2i(364, 848, 56, 18),
+	"jardinera": Rect2i(642, 424, 60, 32),
+	"sombrilla": Rect2i(752, 376, 72, 64),
+	"busto": Rect2i(756, 484, 28, 48),
+	"abeto_maceta": Rect2i(616, 572, 48, 64),
+	"aerogenerador": Rect2i(744, 24, 40, 84),
 }
 ## Árboles del pack 03: zona a ×1 (se recorta a lo visible) y ancho en casillas
 ## de la base que choca.
@@ -113,6 +173,9 @@ func _build_pngs() -> void:
 	_save(_retouched(_flora()), "flora.png")
 	_save(_retouched(_houses_dppt(objects)), "casas_dppt.png")
 	_save(_fences(objects), "vallas.png")
+	_save(_city_buildings(objects), "edificios.png")
+	_save(_urban_props(objects), "adornos.png")
+	_hand_made(objects)
 	var file := FileAccess.open(OUT + "objetos.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(objects, "\t", true) + "\n")
 	file.close()
@@ -248,12 +311,184 @@ func _houses_dppt(objects: Dictionary) -> Image:
 		var size: Vector2i = HOUSES_DPPT[id][1]
 		var part := src.get_region(Rect2i(origin * T, size * T))
 		_clear_checker_tiles(part)
+		part = _main_block(part, false)
 		out.blit_rect(part, Rect2i(Vector2i.ZERO, part.get_size()), Vector2i(x * T, 0))
 		var door: Vector2i = HOUSES_DPPT[id][2]
 		objects[id] = {"source": ExteriorTiles.SRC_CASAS_DPPT, "coords": [x, 0], "size": [size.x, size.y],
 			"footprint": _solid_cells(part), "door": [door.x, door.y]}
 		x += size.x
 	return out
+
+
+## Edificios de ciudad: el bloque principal de cada pieza a ×2, apoyado abajo en su caja de
+## casillas, en filas de hasta 48 casillas de ancho.
+func _city_buildings(objects: Dictionary) -> Image:
+	var src := _load(HGSS_BUILDINGS)
+	_key_out(src, KEYS_HGSS)
+	var parts := {}
+	for id: String in CITY_BUILDINGS:
+		var piece := _main_block(src.get_region(CITY_BUILDINGS[id][0]))
+		var art := _double(piece)
+		var cells := Vector2i(ceili(art.get_width() / float(T)), ceili(art.get_height() / float(T)))
+		var box := _empty(cells.x * T, cells.y * T)
+		box.blit_rect(art, Rect2i(Vector2i.ZERO, art.get_size()),
+			Vector2i((box.get_width() - art.get_width()) / 2, box.get_height() - art.get_height()))
+		parts[id] = box
+	var max_cols := 48
+	var cursor := Vector2i.ZERO
+	var row_h := 0
+	var width := 0
+	var placed := {}
+	for id: String in parts:
+		var size: Vector2i = (parts[id] as Image).get_size() / T
+		if cursor.x + size.x > max_cols:
+			cursor = Vector2i(0, cursor.y + row_h)
+			row_h = 0
+		placed[id] = cursor
+		cursor.x += size.x
+		row_h = maxi(row_h, size.y)
+		width = maxi(width, cursor.x)
+	var out := _empty(width * T, (cursor.y + row_h) * T)
+	for id: String in parts:
+		var part: Image = parts[id]
+		var at: Vector2i = placed[id]
+		out.blit_rect(part, Rect2i(Vector2i.ZERO, part.get_size()), at * T)
+		var size := part.get_size() / T
+		var footprint := _solid_cells(part)
+		var door: Vector2i = CITY_BUILDINGS[id][1]
+		if door.x < 0:
+			door = _bottom_center(footprint, size.x)
+		objects[id] = {"source": ExteriorTiles.SRC_EDIFICIOS, "coords": [at.x, at.y], "size": [size.x, size.y],
+			"footprint": footprint, "door": [door.x, door.y]}
+	return out
+
+
+## Adornos urbanos: como los edificios, cada uno en su caja de casillas apoyado abajo.
+func _urban_props(objects: Dictionary) -> Image:
+	var src := _load(HGSS_URBAN)
+	_key_out(src, KEYS_HGSS)
+	var parts := {}
+	var width := 0
+	var height := 0
+	for id: String in URBAN_PROPS:
+		var art := _double(_main_block(src.get_region(URBAN_PROPS[id])))
+		var cells := Vector2i(ceili(art.get_width() / float(T)), ceili(art.get_height() / float(T)))
+		var box := _empty(cells.x * T, cells.y * T)
+		box.blit_rect(art, Rect2i(Vector2i.ZERO, art.get_size()),
+			Vector2i((box.get_width() - art.get_width()) / 2, box.get_height() - art.get_height()))
+		parts[id] = box
+		width += cells.x
+		height = maxi(height, cells.y)
+	var out := _empty(width * T, height * T)
+	var x := 0
+	for id: String in parts:
+		var part: Image = parts[id]
+		out.blit_rect(part, Rect2i(Vector2i.ZERO, part.get_size()), Vector2i(x * T, 0))
+		var size := part.get_size() / T
+		# Choca solo la fila de abajo (la base): se puede pasar por detrás de la farola.
+		var footprint := []
+		for cell: Array in _solid_cells(part):
+			if int(cell[1]) == 0:
+				footprint.append(cell)
+		if footprint.is_empty():
+			footprint = [[size.x / 2, 0]]
+		objects[id] = {"source": ExteriorTiles.SRC_ADORNOS, "coords": [x, 0], "size": [size.x, size.y],
+			"footprint": footprint}
+		x += size.x
+	return out
+
+
+## Edificios y monumentos dibujados a mano (assets/_fuentes/mundo/*.px2, exportados por
+## exportar_mundo.gd a hecho_a_mano/): cada PNG es una fuente propia del TileSet. Su número de
+## fuente (desde SRC_HECHO_A_MANO) y su puerta están en hecho_a_mano/piezas.json; el número no
+## cambia nunca, porque los mapas ya pintados lo guardan. Un PNG que no esté apuntado es un error.
+func _hand_made(objects: Dictionary) -> void:
+	var dir := OUT + "hecho_a_mano/"
+	var pieces := JsonFile.read_dict(dir + "piezas.json")
+	var files := Array(DirAccess.get_files_at(dir)).filter(func(f: String) -> bool: return f.get_extension() == "png")
+	files.sort()
+	var used := {}
+	for file: String in files:
+		var id := file.get_basename()
+		if not pieces.has(id):
+			push_error("hecho_a_mano/%s no está en piezas.json (dale un número de fuente libre)." % file)
+			continue
+		var source := int(pieces[id]["fuente"])
+		if source < ExteriorTiles.SRC_HECHO_A_MANO or used.has(source):
+			push_error("piezas.json: la fuente %d de '%s' está repetida o es menor que %d." % [source, id,
+				ExteriorTiles.SRC_HECHO_A_MANO])
+			continue
+		used[source] = true
+		var img := Image.load_from_file(ProjectSettings.globalize_path(dir + file))
+		img.convert(Image.FORMAT_RGBA8)
+		var size := Vector2i(ceili(img.get_width() / float(T)), ceili(img.get_height() / float(T)))
+		var footprint := _solid_cells(img)
+		var door := _bottom_center(footprint, size.x)
+		if pieces[id].has("puerta"):
+			door = Vector2i(int(pieces[id]["puerta"][0]), int(pieces[id]["puerta"][1]))
+		objects[id] = {"source": source, "file": "hecho_a_mano/" + file,
+			"coords": [0, 0], "size": [size.x, size.y], "footprint": footprint, "door": [door.x, door.y]}
+
+
+## Lo que se toca con el centro de la pieza (o con su grupo más grande): se borran los trozos
+## sueltos de las piezas vecinas que entran en el rectángulo de la hoja. Deja la imagen recortada
+## a ese bloque.
+static func _main_block(img: Image, crop: bool = true) -> Image:
+	var w := img.get_width()
+	var h := img.get_height()
+	var label := PackedInt32Array()
+	label.resize(w * h)
+	var sizes := [0]
+	var bounds := [Rect2i()]
+	for y: int in h:
+		for x: int in w:
+			if img.get_pixel(x, y).a <= 0.02 or label[y * w + x] != 0:
+				continue
+			var id := sizes.size()
+			var count := 0
+			var r := Rect2i(x, y, 1, 1)
+			var stack: Array[Vector2i] = [Vector2i(x, y)]
+			label[y * w + x] = id
+			while not stack.is_empty():
+				var p: Vector2i = stack.pop_back()
+				count += 1
+				r = r.merge(Rect2i(p, Vector2i.ONE))
+				for dy: int in range(-2, 3):
+					for dx: int in range(-2, 3):
+						var q := p + Vector2i(dx, dy)
+						if q.x < 0 or q.y < 0 or q.x >= w or q.y >= h or label[q.y * w + q.x] != 0:
+							continue
+						if img.get_pixel(q.x, q.y).a > 0.02:
+							label[q.y * w + q.x] = id
+							stack.append(q)
+			sizes.append(count)
+			bounds.append(r)
+	var best := 0
+	for i: int in range(1, sizes.size()):
+		if best == 0 or sizes[i] > sizes[best]:
+			best = i
+	if best == 0:
+		return img
+	var out := _empty(w, h)
+	for y: int in h:
+		for x: int in w:
+			if label[y * w + x] == best:
+				out.set_pixel(x, y, img.get_pixel(x, y))
+	return out.get_region(bounds[best]) if crop else out
+
+
+## Puerta por defecto: la casilla sólida de la fila de abajo más cercana al centro.
+static func _bottom_center(footprint: Array, width: int) -> Vector2i:
+	var bottom := -999
+	for cell: Array in footprint:
+		bottom = maxi(bottom, int(cell[1]))
+	var best := Vector2i(width / 2, bottom)
+	var best_d := 999
+	for cell: Array in footprint:
+		if int(cell[1]) == bottom and absi(int(cell[0]) * 2 + 1 - width) < best_d:
+			best_d = absi(int(cell[0]) * 2 + 1 - width)
+			best = Vector2i(int(cell[0]), bottom)
+	return best
 
 
 ## Valla de madera: 3 piezas de 1×2 casillas que se colocan como objetos (se

@@ -24,6 +24,7 @@ var size: Vector2i
 var rng := RandomNumberGenerator.new()
 var _forest := {}
 var _paving := {}
+var _water := {}
 ## Casillas que tapa cada objeto grande (para no poner adornos debajo).
 var _covered := {}
 var _catalog: Dictionary
@@ -96,6 +97,35 @@ func build_paving() -> void:
 		var cx := 1 if left == right else (0 if not left else 2)
 		var cy := 1 if up == down else (0 if not up else 2)
 		ground.set_cell(cell, ExteriorTiles.SRC_GEN4, o + Vector2i(cx, cy))
+
+
+## Agua con orilla (ríos, embalses, mar): se marcan las casillas y build_water() elige la pieza del
+## estanque del pack 02 según las vecinas. Fuera del mapa cuenta como agua (el río sigue). Las
+## esquinas hacia dentro no existen en el pack: ahí va agua sin orilla.
+func water(rect: Rect2i) -> void:
+	for cell: Vector2i in cells(rect):
+		_water[cell] = true
+
+
+func build_water(shine_chance: float = 0.2) -> void:
+	var o := ExteriorTiles.POND
+	for cell: Vector2i in _water:
+		var left := _is_water(cell + Vector2i.LEFT)
+		var right := _is_water(cell + Vector2i.RIGHT)
+		var up := _is_water(cell + Vector2i.UP)
+		var down := _is_water(cell + Vector2i.DOWN)
+		var cx := 1 if left == right else (0 if not left else 2)
+		var cy := 1 if up == down else (0 if not up else 2)
+		ground.set_cell(cell, ExteriorTiles.SRC_GEN4, o + Vector2i(cx, cy))
+		_covered[cell] = true
+		if cx == 1 and cy == 1 and rng.randf() < shine_chance:
+			decor.set_cell(cell, ExteriorTiles.SRC_ANIM, ExteriorTiles.WATER_SHINE)
+
+
+func _is_water(cell: Vector2i) -> bool:
+	if cell.x < 0 or cell.y < 0 or cell.x >= size.x or cell.y >= size.y:
+		return true
+	return _water.has(cell)
 
 
 ## Recuadro 3×3 estirado a `rect` (esquinas, bordes y centro).

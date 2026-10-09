@@ -17,6 +17,10 @@ const SRC_ARBOLES := 4    ## arboles.png: 03_big_tree_pack (×2)
 const SRC_FLORA := 5      ## flora.png: 04_big_flora_pack (×2)
 const SRC_CASAS_DPPT := 6 ## casas_dppt.png: casas de DPPt del pack 02 (×2 tal cual)
 const SRC_VALLAS := 7     ## vallas.png: valla de madera del pack 01 (×2)
+const SRC_EDIFICIOS := 8  ## edificios.png: edificios de ciudad del pack 01 (×2), docs/mundo/arte_ciudades.md
+const SRC_ADORNOS := 9    ## adornos.png: farolas, fuentes, bancos... del pack 01 (UrbanRMXP, ×2)
+## hecho_a_mano/*.png: monumentos dibujados a mano (assets/_fuentes/mundo/*.px2), uno por fuente desde aquí.
+const SRC_HECHO_A_MANO := 20
 
 ## Conjunto de terrenos de Godot (pintar con autotile en el editor).
 const TERRAIN_SET := 0
@@ -83,5 +87,6 @@ static func objects() -> Dictionary:
 			"size": Vector2i(int(o["size"][0]), int(o["size"][1])),
 			"footprint": footprint,
 			"door": Vector2i(int(o["door"][0]), int(o["door"][1])) if o.has("door") else Vector2i(-1, -1),
+			"file": str(o.get("file", "")),
 		}
 	return out

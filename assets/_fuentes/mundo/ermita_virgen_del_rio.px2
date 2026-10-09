@@ -1,0 +1,75 @@
+# Ermita de la Virgen del Río, San Miguel de Bernuy (docs/mundo/ciudades/san_miguel_de_bernuy.md).
+# Dibujada a mano (ningún pack trae ermitas): neorrománica, junto al río a la entrada sur del pueblo.
+# Fachada de sillería con espadaña de una campana y cruz de hierro, óculo con vidriera y puerta de
+# arquivoltas de medio punto; tejado de teja árabe detrás. Misma leyenda, luz (arriba a la izquierda)
+# y sombra (a la derecha) que iglesia_san_miguel.px2. 48×64 píxeles del arte (3×4 casillas), exportada
+# a ×2. PROVISIONAL hasta que la apruebe Javier.
+@leyenda  . = transparente   K = piedra_1   s = piedra_1@90   d = tierra_2   c = tierra_3
+@leyenda  b = tierra_4   a = tierra_5   A = tierra_6   R = teja_2   r = teja_3   t = teja_4   T = teja_5   H = teja_6
+@leyenda  w = madera_2   W = madera_4   n = madera_3   y = acento_amarillo   o = acento_rojo
+@salida res://assets/tilesets/exterior/hecho_a_mano/ermita_virgen_del_rio.png
+---
+.....................dd.........................
+....................dddd........................
+.....................dd.........................
+.....................dd.........................
+....................dAad........................
+...................dAAaad.......................
+..................dAAAaaad......................
+.................dAAAAaaaad.....................
+................dAAAAAaaaaad....................
+...............AAAAAAAAAAAAAA...................
+..RRRRRRRRRRRRRccccccccccccccRRRRRRRRRRRRR......
+..HHHHHHHHHHHHHHAaaaacaaaaabHHHHHHHHHHHHHH......
+..HTtrHTtrHTtrHTAaaaKKKKaaabtrHTtrHTtrHTtr......
+..TTtrTTtrTTtrTTAaaKKKKKKaabtrTTtrTTtrTTtr......
+..TTtrTTtrTTtrTTAaaKKddKKaabtrTTtrTTtrTTtrssss..
+..TTtrTTtrTTtrTTAccKKyyKKccbtrTTtrTTtrTTtrssss..
+..TTtrTTtrTTtrTTAacKyyyyKaabtrTTtrTTtrTTtrssss..
+..trRRtrRRtrRRtrAacKyyyyKaabRRtrRRtrRRtrRRssss..
+..HTtrHTtrHTtrHTAacKyyyyKaabtrHTtrHTtrHTtrssss..
+..TTtrTTtrTTtrTTAacyyyyyyaabtrTTtrTTtrTTtrssss..
+..TTtrTTtrTTtrTTAccKKddKKccbtrTTtrTTtrTTtrssss..
+..TTtrTTtrTTtrTTAaaKKKKKKaabtrTTtrTTtrTTtrssss..
+..TTtrTTtrTTtrTTAaaKKKKKKaabtrTTtrTTtrTTtrssss..
+..trRRtrRRtrRRtrAaaKKKKKKaabRRtrRRtrRRtrRRssss..
+..HTtrHTtrHTtrHTAaAAAAAAAAabtrHTtrHTtrHTtrssss..
+..TTtrTTtrTTtrTTAccccccccccbtrTTtrTTtrTTtrssss..
+..TTtrTTtrTTtrTTAacaaaaacaabtrTTtrTTtrTTtrssss..
+..TTtrTTtrTTtrTTAacaaaaacaabtrTTtrTTtrTTtrssss..
+..RRRRRRRRRRRRRRAacaaaaacaabRRRRRRRRRRRRRRssss..
+..rrrrrrrrrrrrrrAacaaaaacaabrrrrrrrrrrrrrrssss..
+..AcccccccccccccAccccccccccbcccccccccccccbssss..
+..AAcccAcccAcccAcccAcccAcccAcccAcccAcccAcbssss..
+..Aaaaaaacaaaaaaacaaaaaaacaaaaaaacaaaaaaabssss..
+..Aaaaaaacaaaaaaacaaaaaaacaaaaaaacaaaaaaabssss..
+..AaaaaaacaaaaaaacaAAAAAAcaaaaaaacaaaaaaabssss..
+..AaaaaaacaaaaaaacAAKKKKAAaaaaaaacaaaaaaabssss..
+..AcccccccccccccccAKyooyKAcccccccccccccccbssss..
+..AaacaaaaaaacaaaaAKooooKAaaacaaaaaaacaaabssss..
+..AaacaaaaaaacaaaaAKooooKAaaacaaaaaaacaaabssss..
+..AaacaaaaaaacaaaaAKyooyKAaaacaaaaaaacaaabssss..
+..AaacaaaaaaacaaaaAAKKKKAAaaacaaaaaaacaaabssss..
+..AccccccccccccccccAAAAAAccccccccccccccccbssss..
+..Aaaaaaacaaaaaaacaaaabbacaaaaaaacaaaaaaabssss..
+..Aaaaaaacaaaaaaacaaaabbbbaaaaaaacaaaaaaabssss..
+..AaaaaaKKAaaaaaaaaccccccbbbaaaaacKKAaaaabssss..
+..AaaaaaKKAaaaaaaccAAAAAAccbaaaaacKKAaaaabssss..
+..AcccccKKAccccaacAAnnnnAAcbbcccccKKAccccbssss..
+..AaacaaKKAaacaacAAnwWwwnAAcbbaaaaKKAcaaabssss..
+..AaacaaKKAaacaacAnwwWwwWnAcbbaaaaKKAcaaabssss..
+..AaacaaKKAaacacAAnwwWwwWnAAcbaaaaKKAcaaabssss..
+..AaacaaKKAaacacAwWwwWwwWwwAcbaaaaKKAcaaabssss..
+..AcccccccccccacAwWwwWwwWwwAcbcccccccccccbssss..
+..AaaaaaacaaaaacAwKKKWwKKKwAcbaaacaaaaaaabssss..
+..AaaaaaacaaaaacAwWwwWwwWwwAcbaaacaaaaaaabssss..
+..AaaaaaacaaaaacAwWwwWwwWwwAcbaaacaaaaaaabssss..
+..AaaaaaacaaaaacAwWwwWwwWwwAcbaaacaaaaaaabssss..
+..AcccccccccccacAwKKKWwKKKwAcbcccccccccccbssss..
+..AaacaaaaaaacacAwWwwWwwWwwAcbaaaaaaacaaabssss..
+..AaacaaaaaaacacAwWwwWwwWwwAcbaaaaaaacaaabssss..
+..AaacaaaaaaacacAwWwwWwwWwwAcbaaaaaaacaaabssss..
+..bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbssss..
+..ddddddddddddddddddddddddddddddddddddddddssss..
+...............AAAAAAAAAAAAAA...................
+...............cccccccccccccc...................

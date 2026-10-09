@@ -41,7 +41,11 @@ static func build() -> void:
 	_flora(ts)
 	var objects := ExteriorTiles.objects()
 	var object_files := {ExteriorTiles.SRC_CASAS: "casas.png", ExteriorTiles.SRC_ARBOLES: "arboles.png",
-		ExteriorTiles.SRC_CASAS_DPPT: "casas_dppt.png", ExteriorTiles.SRC_VALLAS: "vallas.png"}
+		ExteriorTiles.SRC_CASAS_DPPT: "casas_dppt.png", ExteriorTiles.SRC_VALLAS: "vallas.png",
+		ExteriorTiles.SRC_EDIFICIOS: "edificios.png", ExteriorTiles.SRC_ADORNOS: "adornos.png"}
+	for id: StringName in objects:
+		if int(objects[id]["source"]) >= ExteriorTiles.SRC_HECHO_A_MANO:
+			object_files[int(objects[id]["source"])] = objects[id]["file"]
 	for src_id: int in object_files:
 		_objects(ts, src_id, object_files[src_id], objects)
 	var err := ResourceSaver.save(ts, OUT + "exterior.tres")
@@ -192,7 +196,8 @@ static func _objects(ts: TileSet, src_id: int, file: String, objects: Dictionary
 		var base_dy := door.y if door.x >= 0 else 0
 		tile.y_sort_origin = base_dy * T + T / 2 - 1
 		var terrain := "tree"
-		if src_id in [ExteriorTiles.SRC_CASAS, ExteriorTiles.SRC_CASAS_DPPT]:
+		if src_id in [ExteriorTiles.SRC_CASAS, ExteriorTiles.SRC_CASAS_DPPT, ExteriorTiles.SRC_EDIFICIOS] \
+				or src_id >= ExteriorTiles.SRC_HECHO_A_MANO:
 			terrain = "house"
 		elif src_id == ExteriorTiles.SRC_VALLAS:
 			terrain = "fence"

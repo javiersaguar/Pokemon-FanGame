@@ -1,0 +1,5 @@
+{
+  "_": "Edificios dibujados a mano: número de fuente del TileSet (fijo: los mapas pintados lo guardan; uno nuevo toma el siguiente libre) y puerta (casilla relativa a la de abajo a la izquierda; sin puerta = centro de la fila de abajo).",
+  "iglesia_san_miguel": {"fuente": 20, "puerta": [3, 0]},
+  "ermita_virgen_del_rio": {"fuente": 21, "puerta": [1, 0]}
+}

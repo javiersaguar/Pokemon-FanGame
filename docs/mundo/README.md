@@ -53,7 +53,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 
 | Ciudad | Ficha | Mapa exterior | Interiores | Lógica | Aprobada |
 |--------|-------|---------------|------------|--------|----------|
-| San Miguel de Bernuy | ✅ | — | — | — | — |
+| San Miguel de Bernuy | ✅ | ✅ provisional ([captura](../arte/comparativas/san_miguel_mapa.png)) | — | carteles y vecinos | — |
 | Madrid (y Palacio Real) | ✅ | — | — | — | — |
 | Móstoles, Leganés y Getafe | ✅ | — | — | — | — |
 | Zaragoza | ✅ | — | — | — | — |
