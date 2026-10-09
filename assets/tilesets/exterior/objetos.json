@@ -738,6 +738,28 @@
 		],
 		"source": 4
 	},
+	"arbol_navidad_vigo": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/arbol_navidad_vigo.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			]
+		],
+		"size": [
+			2,
+			3
+		],
+		"source": 250
+	},
 	"arbol_redondo": {
 		"coords": [
 			6,
@@ -16851,6 +16873,24 @@
 			16
 		],
 		"source": 69
+	},
+	"sireno_vigo": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/sireno_vigo.png",
+		"footprint": [
+			[
+				0,
+				0
+			]
+		],
+		"size": [
+			1,
+			2
+		],
+		"source": 251
 	},
 	"sombrilla": {
 		"coords": [

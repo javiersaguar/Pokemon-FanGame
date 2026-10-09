@@ -1,0 +1,29 @@
+{
+  "vigo_regatista": {
+    "class": "regatista",
+    "name": "Uxío",
+    "intro_text": "Salgo a la ría antes de que enciendan el árbol. ¡Hoy el viento sopla a tu favor, o al mío!",
+    "lose_text": "Me he quedado sin vela.",
+    "win_text": "¡Viento de norte, como la Ruta 16!",
+    "after_text": "En julio ya hay luces en las farolas. El calendario de Vigo no consulta a nadie.",
+    "items": [],
+    "party": [
+      {"species": "pelipper", "level": 37},
+      {"species": "floatzel", "level": 38}
+    ]
+  },
+  "vigo_nadadora": {
+    "class": "nadador",
+    "name": "Sabela",
+    "gender": "female",
+    "intro_text": "Vengo de Samil. El agua está helada y yo también. ¡Combate!",
+    "lose_text": "Me vuelvo a la orilla.",
+    "win_text": "¡La ría no perdona!",
+    "after_text": "Las Cíes tienen cupo. La cola del muelle, no: aquí se espera igual.",
+    "items": [],
+    "party": [
+      {"species": "gastrodon", "level": 36},
+      {"species": "wailmer", "level": 37}
+    ]
+  }
+}

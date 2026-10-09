@@ -42,6 +42,14 @@ Ría: Shellos (oeste), Mareep (en el monte), Clauncher, Wailmer; Cíes: Pelipper
 - **Norte:** Ruta 16 (Rías Baixas) → Ruta 17 → Ruta 18 → Santander.
 - **Puerto:** barco a las Islas Cíes (opcional).
 
+## Estado (2026-10-09)
+
+- **`vigo/exterior` pintado** (`maps/_pintura/pintar_vigo.gd`, 56×46): ciudad pavimentada. Centro con el **árbol de Navidad** y el **Sireno** (dibujados a mano, fuentes 250 y 251). Casco Vello al suroeste (casas de DPPt). Centro Pokémon, Mercadona (`tienda_verde`), estanco (`tienda_morada`) y Basic-Fit (`tienda_azul`). Al sur, la ría y un muelle. Al este, el aeropuerto de Peinador.
+- **Llegada en avión:** spawn `from_avion` en la columna **50**, fila **34** (casilla libre junto al mostrador). La pasarela la une el Agente 5; aquí no hay warp al vuelo.
+- **Norte:** `connect_edge` a `ruta_16/exterior` en las columnas **24–29** (fila 0). Spawn `from_ruta_16` en la columna **26**, fila **1**.
+- Entrenadores en `data/trainers/vigo.json` (Uxío, regatista; Sabela, nadadora). Encuentros en `data/encounters/vigo.json` (propuesta: Shellos, Mareep, ría con Wailmer y Clauncher, Lapras raro). Abel Caballero, Pereira7 y Amancio no están en el mapa: como mucho, el cartel de la Porta do Sol.
+- **Pendiente:** Islas Cíes, Samil, Balaídos, Castrelos y el castillo de O Castro. Interiores bloqueados.
+
 ## Fuentes
 
 - Luces: [El Debate (julio de 2026)](https://www.eldebate.com/espana/galicia/20260729/abel-caballero-comienza-montaje-luces-navidad-plena-ola-calor_444868.html) · [Moncloa.com](https://www.moncloa.com/2026/07/31/navidad-vigo-luces-led-julio-3408645/) · [Xataka](https://www.xataka.com/magnet/plena-ola-calor-vacaciones-verano-vigo-tiene-clara-su-prioridad-ha-empezado-a-montar-su-navidad)

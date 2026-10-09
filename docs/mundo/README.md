@@ -65,7 +65,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Murcia | ✅ | — | — | — | — |
 | Sevilla | ✅ | — | — | — | — |
 | Las Palmas de Gran Canaria | ✅ | — | — | — | — |
-| Vigo | ✅ | — | — | — | — |
+| Vigo | ✅ | ✅ provisional ([captura](../arte/comparativas/vigo_mapa.png)) | — | regatista y nadadora; llegada en avión (`from_avion`) | — |
 | Santander | ✅ | — | — | — | — |
 | Bilbao | ✅ | — | — | — | — |
 | Pamplona | ✅ | — | — | — | — |
