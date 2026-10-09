@@ -278,9 +278,17 @@ def notable(tags: dict) -> bool:
 
 
 def simplify(points: list, tol: float) -> list:
-    """Douglas-Peucker: quita puntos que se desvían menos de `tol` píxeles."""
+    """Douglas-Peucker: quita puntos que se desvían menos de `tol` píxeles. Un anillo cerrado (primer
+    punto = último) se parte por el punto más lejano del primero y se simplifica cada mitad: si no,
+    la recta entre sus extremos mide cero y el polígono entero se queda en dos puntos."""
     if len(points) < 3 or tol <= 0:
         return points
+    if points[0] == points[-1]:
+        x0, y0 = points[0]
+        far_i = max(range(len(points)), key=lambda i: math.hypot(points[i][0] - x0, points[i][1] - y0))
+        if far_i == 0:
+            return points[:1]
+        return simplify(points[:far_i + 1], tol)[:-1] + simplify(points[far_i:], tol)
     (x1, y1), (x2, y2) = points[0], points[-1]
     dx, dy = x2 - x1, y2 - y1
     norm = math.hypot(dx, dy) or 1e-9

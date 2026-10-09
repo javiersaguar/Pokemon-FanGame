@@ -43,6 +43,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta4", SIZE, data, 1563)
 	p.fill_grass(0.2)
 	p.connect_edge("north", &"ruta_3/exterior")
+	p.connect_edge("east", &"madrid/moncloa", -16)  # la calle (y 30-32) llega a la A-6 de Moncloa (y 14-16)
 
 	# La lonja del Monasterio y la calle que cruza la urbanización hacia Madrid.
 	p.paving(Rect2i(0, 25, 26, 5))

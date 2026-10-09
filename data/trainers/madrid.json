@@ -1,0 +1,41 @@
+{
+  "madrid_recluta_1": {
+    "class": "recluta_clan",
+    "name": "",
+    "intro_text": "¡Alto! Esto es Ferraz. Aquí solo entran los del Clan... y los que traen sobres.",
+    "lose_text": "¡Me has hecho perder la confianza del aparato!",
+    "win_text": "¡Al Clan no se le gana: se le vota!",
+    "after_text": "Yo no he visto nada. Yo no sé nada. Yo solo pasaba por aquí con un sobre.",
+    "items": [],
+    "party": [
+      {
+        "species": "purrloin",
+        "level": 11
+      },
+      {
+        "species": "koffing",
+        "level": 11
+      }
+    ]
+  },
+  "madrid_recluta_2": {
+    "class": "recluta_clan",
+    "gender": "female",
+    "name": "",
+    "intro_text": "¿Vienes a afiliarte? Primero tienes que pasar el control de calidad. O sea, perder.",
+    "lose_text": "Esto lo llevamos al Comité Federal.",
+    "win_text": "¡Puño y rosa! ¡Y patada!",
+    "after_text": "El jefe está en la Moncloa, pero los papeles importantes están aquí. O en una gasolinera.",
+    "items": [],
+    "party": [
+      {
+        "species": "trubbish",
+        "level": 11
+      },
+      {
+        "species": "purrloin",
+        "level": 12
+      }
+    ]
+  }
+}

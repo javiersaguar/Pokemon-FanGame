@@ -46,7 +46,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 3. **Pinta el exterior** con el pintor de mapas (`maps/_pintura/`, tiles de los packs; está prohibido el arte generado por código). Sigue la distribución de la ficha: las calles y los monumentos tienen que estar **donde están en la ciudad real** (orientación norte arriba, a escala de juego).
 4. **Interiores** (Centro Pokémon, Mercadona, Estanco, Basic Fit, gimnasio, casas) con su tileset de interiores.
 5. **Lógica**: warps, carteles, NPCs, entrenadores (`data/trainers/<ciudad>.json`), encuentros (`data/encounters/`), tienda (`data/shops.json`) y conexión con sus rutas (`region.md`).
-6. **Captura y comparativa** en `docs/arte/comparativas/` y fila en `docs/arte/seguimiento.md`. Nada es definitivo hasta que lo aprueba Javier.
+6. **Comprueba que se llega a todo** con `godot --headless --path . -s res://maps/_tools/alcance.gd -- <id del mapa>` (puertas, carteles, personajes y bordes con conexión) y saca la **captura y comparativa** (`maps/_tools/captura_mapa.gd`, necesita ventana) en `docs/arte/comparativas/`, con su fila en `docs/arte/seguimiento.md`. Nada es definitivo hasta que lo aprueba Javier.
 7. **Marca la ciudad como hecha** en la tabla de estado de abajo.
 
 ## Estado de cada ciudad
@@ -54,7 +54,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Ciudad | Ficha | Mapa exterior | Interiores | Lógica | Aprobada |
 |--------|-------|---------------|------------|--------|----------|
 | San Miguel de Bernuy | ✅ | ✅ provisional ([captura](../arte/comparativas/san_miguel_mapa.png)) | — | carteles y vecinos | — |
-| Madrid (y Palacio Real) | ✅ | — | — | — | — |
+| Madrid (y Palacio Real) | ✅ | Moncloa ✅ provisional ([captura](../arte/comparativas/madrid_moncloa_mapa.png)); centro, Palacio Real, Retiro y Chamberí pendientes | — | carteles, vecinos, reclutas del Clan | — |
 | Móstoles, Leganés y Getafe | ✅ | — | — | — | — |
 | Zaragoza | ✅ | — | — | — | — |
 | Barcelona | ✅ | — | — | — | — |

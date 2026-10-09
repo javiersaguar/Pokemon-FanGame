@@ -6,5 +6,9 @@
   "acueducto_segovia_tramo": {"fuente": 23, "puerta": null, "huella": "base"},
   "cruz_cuelgamuros": {"fuente": 24, "puerta": null},
   "basilica_cuelgamuros": {"fuente": 25, "puerta": [4, 0]},
-  "monasterio_escorial": {"fuente": 26, "puerta": [7, 0]}
+  "monasterio_escorial": {"fuente": 26, "puerta": [7, 0]},
+  "arco_victoria": {"fuente": 27, "puerta": null, "huella": "base"},
+  "templo_debod": {"fuente": 28, "puerta": [2, 0]},
+  "puerta_debod": {"fuente": 29, "puerta": null, "huella": "base"},
+  "faro_moncloa": {"fuente": 30, "puerta": null, "huella": "base"}
 }

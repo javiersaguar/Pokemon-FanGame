@@ -4,6 +4,12 @@
 >
 > Planos reales: [`../planos/madrid_centro.svg`](../planos/madrid_centro.svg) (casilla = 30 m), [`../planos/madrid_palacio_real.svg`](../planos/madrid_palacio_real.svg) (casilla = 6 m) y [`../planos/madrid_bernabeu_castellana.svg`](../planos/madrid_bernabeu_castellana.svg).
 
+## Estado (2026-10-09)
+
+- **`madrid/moncloa` pintado** (`maps/_pintura/pintar_madrid_moncloa.gd`, 64×52): llegada por la A-6 desde la Ruta 4 (oeste, sin fundido), Palacio de la Moncloa tras la verja (la puerta no se alcanza: hay un escolta; se abrirá con la trama), Faro de Moncloa, glorieta del **Arco de la Victoria** (se pasa por debajo), Princesa, **Ferraz 70** (sede del Clan, con dos reclutas: `data/trainers/madrid.json`), El Corte Inglés de Princesa, **Centro Pokémon**, **Mercadona** y **estanco** de Argüelles, Plaza de España (Cervantes provisional: fuente y busto) y el Parque del Oeste con el **Templo de Debod**, su puerta y el estanque. Encuentros de la ciudad en `data/encounters/madrid.json`.
+- Monumentos dibujados a mano: Arco de la Victoria, Templo de Debod (y su puerta), Faro de Moncloa.
+- **Pendiente:** conexiones al este (`madrid/centro`, por la Gran Vía) y al sur (`madrid/palacio_real`, por Bailén) desde la Plaza de España; el monumento a Cervantes de verdad; Ábalos y Koldo (los coloca Javier); interiores.
+
 ## Cómo se reparte en el juego
 
 Madrid no cabe en un mapa: se divide en **barrios conectados** (como Ciudad Azafrán o Ciudad Luminalia), cada uno con lo más reconocible de esa zona y las calles en su orientación real.

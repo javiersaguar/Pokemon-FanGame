@@ -58,6 +58,9 @@ const HOUSES_DPPT := {
 	"casa_madera": [Vector2i(4, 87), Vector2i(4, 7), Vector2i(1, -1)],
 	"casa_granero": [Vector2i(0, 236), Vector2i(4, 7), Vector2i(1, -1)],
 	"edificio_cupula": [Vector2i(0, 97), Vector2i(5, 7), Vector2i(1, -1)],
+	"edificio_cristal": [Vector2i(0, 77), Vector2i(8, 10), Vector2i(4, -2)],
+	"bloque_verde": [Vector2i(0, 116), Vector2i(7, 8), Vector2i(3, -1)],
+	"bloque_verde_2": [Vector2i(0, 126), Vector2i(8, 5), Vector2i(3, 0)],
 }
 
 ## Valla de madera del pack 01 (×1): tramo horizontal de 3 piezas (izquierda,
