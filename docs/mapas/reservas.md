@@ -4,3 +4,5 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
+| `leganes/exterior` | Agente 3 | 2026-10-09 | Centro, Butarque, Polvoranca y museo |
+| `getafe/exterior` | Agente 3 | 2026-10-09 | Solo conexión occidental con Leganés |
