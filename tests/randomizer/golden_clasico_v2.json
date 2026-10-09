@@ -1,5 +1,5 @@
 {
-	"fingerprint": "10cd79cde9bf7ff377391ae24ebf02ea031f402ec5b05ed83b99b9d171fb86a3",
+	"fingerprint": "a8c9160614f79ec484d957b2abe900226bb8f5e19258f54964fd317b3b2ec51b",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -658,13 +658,102 @@
 						"weight": 100.0
 					}
 				]
+			},
+			"zaragoza": {
+				"good_rod": [],
+				"headbutt": [],
+				"land": {
+					"day": [
+						{
+							"max": 19.0,
+							"min": 17.0,
+							"species": "zigzagoongalar",
+							"weight": 30.0
+						},
+						{
+							"max": 19.0,
+							"min": 17.0,
+							"species": "swinub",
+							"weight": 25.0
+						},
+						{
+							"max": 19.0,
+							"min": 17.0,
+							"species": "meowth",
+							"weight": 25.0
+						},
+						{
+							"max": 20.0,
+							"min": 18.0,
+							"species": "horsea",
+							"weight": 10.0
+						},
+						{
+							"max": 19.0,
+							"min": 17.0,
+							"species": "toxel",
+							"weight": 10.0
+						}
+					],
+					"night": [
+						{
+							"max": 19.0,
+							"min": 17.0,
+							"species": "gastly",
+							"weight": 40.0
+						},
+						{
+							"max": 19.0,
+							"min": 17.0,
+							"species": "swinub",
+							"weight": 30.0
+						},
+						{
+							"max": 19.0,
+							"min": 17.0,
+							"species": "charcadet",
+							"weight": 30.0
+						}
+					]
+				},
+				"land_rate": 10.0,
+				"old_rod": [
+					{
+						"max": 18.0,
+						"min": 15.0,
+						"species": "azurill",
+						"weight": 100.0
+					}
+				],
+				"rock_smash": [],
+				"super_rod": [],
+				"water": [
+					{
+						"max": 22.0,
+						"min": 18.0,
+						"species": "barboach",
+						"weight": 50.0
+					},
+					{
+						"max": 22.0,
+						"min": 18.0,
+						"species": "toxel",
+						"weight": 30.0
+					},
+					{
+						"max": 22.0,
+						"min": 18.0,
+						"species": "azurill",
+						"weight": 20.0
+					}
+				]
 			}
 		},
 		"generator_version": 2,
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "83acd1990ce058965f38ffe204485f7d95af00cf396e32c5eb2a8f6fa19d19aa",
+		"input_hash": "a2dab78db58ce9d51c610c0da3e8824c83c08aac6a1f385e831bdb0f558df7df",
 		"items": {
 			"test/muestra_pueblo/Pocion": "kangaskhancandy",
 			"test/muestra_ruta/Pocion": "firestone",
@@ -76389,6 +76478,30 @@
 					{
 						"level": 19.0,
 						"species": "sandslashalola"
+					}
+				]
+			},
+			"zaragoza_baturro": {
+				"party": [
+					{
+						"level": 18.0,
+						"species": "nidoranm"
+					},
+					{
+						"level": 19.0,
+						"species": "farigiraf"
+					}
+				]
+			},
+			"zaragoza_tubo": {
+				"party": [
+					{
+						"level": 18.0,
+						"species": "lucario"
+					},
+					{
+						"level": 19.0,
+						"species": "fomantis"
 					}
 				]
 			}

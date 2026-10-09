@@ -406,7 +406,7 @@ func _urban_props(objects: Dictionary) -> Image:
 ## exportar_mundo.gd a hecho_a_mano/): cada PNG es una fuente propia del TileSet. Su número de
 ## fuente (desde SRC_HECHO_A_MANO) y su puerta están en hecho_a_mano/piezas.json; el número no
 ## cambia nunca, porque los mapas ya pintados lo guardan. Un PNG que no esté apuntado es un error.
-## "huella": "base" = solo choca la fila de abajo; "puerta": null = no tiene puerta.
+## "huella": "base" = solo choca la fila de abajo; "ninguna" = no choca; "puerta": null = no tiene puerta.
 func _hand_made(objects: Dictionary) -> void:
 	var dir := OUT + "hecho_a_mano/"
 	var pieces := JsonFile.read_dict(dir + "piezas.json")
@@ -431,6 +431,9 @@ func _hand_made(objects: Dictionary) -> void:
 		if pieces[id].get("huella", "") == "base":
 			# Solo choca la fila de abajo (pilares de un acueducto, de un puente...): se pasa por debajo.
 			footprint = footprint.filter(func(cell: Array) -> bool: return int(cell[1]) == 0)
+		elif pieces[id].get("huella", "") == "ninguna":
+			# No choca nada (el tablero de un puente: se pinta debajo de los personajes).
+			footprint = []
 		objects[id] = {"source": source, "file": "hecho_a_mano/" + file,
 			"coords": [0, 0], "size": [size.x, size.y], "footprint": footprint}
 		if pieces[id].get("puerta", []) == null:

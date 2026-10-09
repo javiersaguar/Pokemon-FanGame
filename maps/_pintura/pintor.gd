@@ -243,6 +243,13 @@ func object(id: StringName, cell: Vector2i) -> Dictionary:
 	return o
 
 
+## Pieza que va DEBAJO de los personajes (en la capa Decor, sin ordenar): el tablero de un puente sobre
+## el río. Debajo hay que dejar suelo pisable (no agua) donde se camina.
+func object_under(id: StringName, cell: Vector2i) -> void:
+	var o: Dictionary = _catalog[id]
+	decor.set_cell(cell, o["source"], o["coords"])
+
+
 ## Casilla de la puerta de una casa colocada en `cell` (abajo a la izquierda).
 func door_of(id: StringName, cell: Vector2i) -> Vector2i:
 	return cell + (_catalog[id]["door"] as Vector2i)

@@ -42,6 +42,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta6", SIZE, data, 1975)
 	p.fill_grass(0.3)
 	p.connect_edge("west", &"ruta_5/exterior", -4, Vector2i(18, 22))
+	p.connect_edge("east", &"zaragoza/exterior", -4, Vector2i(18, 22))
 
 	# La carretera (A-2 vieja) cruza el páramo de oeste a este; calles de Calatayud.
 	p.paving(Rect2i(0, 18, 72, 4))

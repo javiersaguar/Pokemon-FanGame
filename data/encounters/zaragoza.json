@@ -1,0 +1,29 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "hoppip", "min": 17, "max": 19, "weight": 30},
+      {"species": "bidoof", "min": 17, "max": 19, "weight": 25},
+      {"species": "pidove", "min": 17, "max": 19, "weight": 25},
+      {"species": "skiploom", "min": 18, "max": 20, "weight": 10},
+      {"species": "marill", "min": 17, "max": 19, "weight": 10}
+    ],
+    "night": [
+      {"species": "drifloon", "min": 17, "max": 19, "weight": 40},
+      {"species": "bidoof", "min": 17, "max": 19, "weight": 30},
+      {"species": "hoothoot", "min": 17, "max": 19, "weight": 30}
+    ]
+  },
+  "water": [
+    {"species": "buizel", "min": 18, "max": 22, "weight": 50},
+    {"species": "marill", "min": 18, "max": 22, "weight": 30},
+    {"species": "magikarp", "min": 18, "max": 22, "weight": 20}
+  ],
+  "old_rod": [
+    {"species": "magikarp", "min": 15, "max": 18, "weight": 100}
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

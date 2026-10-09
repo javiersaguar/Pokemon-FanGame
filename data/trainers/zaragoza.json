@@ -1,0 +1,40 @@
+{
+  "zaragoza_baturro": {
+    "class": "baturro",
+    "name": "Jorge",
+    "intro_text": "¡Que sí, que el Pilar está por aquí! ¿Que lo estás viendo? Pues por eso. ¡Combate!",
+    "lose_text": "¡Recontra! Pues sería por el cierzo.",
+    "win_text": "¡Más tozudo que un maño no hay nadie! Bueno, mi suegra.",
+    "after_text": "Aquí el cierzo sopla tan fuerte que los Pidove vuelan hacia atrás.",
+    "items": [],
+    "party": [
+      {
+        "species": "hoppip",
+        "level": 18
+      },
+      {
+        "species": "tauros",
+        "level": 19
+      }
+    ]
+  },
+  "zaragoza_tubo": {
+    "class": "camarero",
+    "name": "Chema",
+    "intro_text": "¡Bienvenido a El Tubo! Aquí se viene de tapas... y de combates, si te dejas.",
+    "lose_text": "Te pongo un tostadico de la casa, que te lo has ganado.",
+    "win_text": "¡Otra ronda de croquetas para la barra!",
+    "after_text": "Prueba las madejas y los huevos rotos. Y no le digas a nadie de Madrid que aquí se come mejor.",
+    "items": [],
+    "party": [
+      {
+        "species": "slurpuff",
+        "level": 18
+      },
+      {
+        "species": "lechonk",
+        "level": 19
+      }
+    ]
+  }
+}

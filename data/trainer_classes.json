@@ -916,5 +916,15 @@
     "overworld_sprite": "res://assets/sprites/characters/pastor.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "baturro": {
+    "name": "Baturro",
+    "gender": "male",
+    "base_money": 28,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/baturro.png",
+    "overworld_sprite": "res://assets/sprites/characters/baturro.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }
