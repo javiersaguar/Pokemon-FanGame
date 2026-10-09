@@ -1,0 +1,29 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "roggenrola", "min": 18, "max": 20, "weight": 30},
+      {"species": "natu", "min": 18, "max": 20, "weight": 25},
+      {"species": "timburr", "min": 18, "max": 20, "weight": 25},
+      {"species": "pidgeotto", "min": 19, "max": 21, "weight": 15},
+      {"species": "boldore", "min": 21, "max": 21, "weight": 5}
+    ],
+    "night": [
+      {"species": "roggenrola", "min": 18, "max": 20, "weight": 30},
+      {"species": "noctowl", "min": 19, "max": 21, "weight": 25},
+      {"species": "natu", "min": 18, "max": 20, "weight": 25},
+      {"species": "misdreavus", "min": 19, "max": 21, "weight": 20}
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [
+    {"species": "roggenrola", "min": 19, "max": 21, "weight": 80},
+    {"species": "boldore", "min": 21, "max": 22, "weight": 20}
+  ],
+  "headbutt": [
+    {"species": "pineco", "min": 18, "max": 20, "weight": 100}
+  ]
+}

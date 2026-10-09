@@ -1,0 +1,40 @@
+{
+  "ruta8_laia": {
+    "class": "montanera",
+    "name": "Laia",
+    "intro_text": "He subido a Sant Jeroni por el camino de los monjes. Ahora te toca bajar a ti.",
+    "lose_text": "Ostres, qué bien combates. Bajo en cremallera, que me has dejado sin piernas.",
+    "win_text": "La montaña siempre gana. Y yo con ella.",
+    "after_text": "Los dedos de Montserrat son de conglomerado: piedras y arena pegadas. Como mi tupper de lunes.",
+    "items": [],
+    "party": [
+      {
+        "species": "roggenrola",
+        "level": 19
+      },
+      {
+        "species": "natu",
+        "level": 20
+      }
+    ]
+  },
+  "ruta8_flautista": {
+    "class": "flautista",
+    "name": "Oriol",
+    "intro_text": "Toco en la plaza del monasterio para los turistas. Y para los Pokémon que me paran por el camino.",
+    "lose_text": "Me has desafinado.",
+    "win_text": "¡Do, re, mi, fa, KO!",
+    "after_text": "La Escolanía canta mejor que yo. Pero yo cobro en la gorra.",
+    "items": [],
+    "party": [
+      {
+        "species": "chatot",
+        "level": 19
+      },
+      {
+        "species": "timburr",
+        "level": 20
+      }
+    ]
+  }
+}

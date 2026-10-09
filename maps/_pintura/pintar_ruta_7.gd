@@ -42,6 +42,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta7", SIZE, data, 2012)
 	p.fill_grass(0.1)
 	p.connect_edge("west", &"zaragoza/exterior", 0, Vector2i(14, 18))
+	p.connect_edge("east", &"ruta_8/exterior", 0, Vector2i(14, 18))
 
 	# El desierto: arena de lado a lado.
 	p.soil(Rect2i(0, 0, SIZE.x, SIZE.y))
