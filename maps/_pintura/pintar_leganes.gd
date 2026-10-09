@@ -54,6 +54,7 @@ func _initialize() -> void:
 	p.spawn("from_getafe", Vector2i(63, 27))
 	p.spawn("from_mostoles", Vector2i(0, 27))
 	p.spawn("from_cercanias", Vector2i(9, 14))
+	p.connect_edge("west", &"mostoles/exterior", 0, Vector2i(26, 30))
 	p.connect_edge("east", &"getafe/exterior", 0, Vector2i(26, 30))
 	p.trainer("Pepinero", &"leganes_aficionado", Vector2i(49, 12), 0, 3)
 	p.trainer("Estudiante", &"leganes_estudiante", Vector2i(16, 37), 2, 2)

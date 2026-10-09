@@ -71,7 +71,7 @@ Trubbish, Zigzagoon, Rattata, Pidove, Patrat (polígonos); en las riberas del Ma
 |---|---|---|
 | `getafe/exterior` · 64×64 | Coliseum al norte; estación y Hospitalillo al oeste; plaza y Magdalena en el centro; Cerro de los Ángeles al este y ribera en el borde oriental; salida sur a Ruta 24 | Pintado provisional, 15 puertas alcanzables |
 | `leganes/exterior` · 64×56 | San Salvador, Plaza Mayor, cuartel, Butarque al noreste, Polvoranca al suroeste y museo al sureste | Pintado provisional, 12 puertas alcanzables |
-| `mostoles/exterior` | Pradillo, Asunción, Casa Torrejón, campus y El Soto | siguiente |
+| `mostoles/exterior` · 64×56 | Pradillo, Asunción, Casa Torrejón, campus al noroeste y El Soto al oeste | Pintado provisional |
 | `cercanias_c5/anden` | Andén exterior y accesos de Atocha, Leganés y Móstoles | siguiente |
 
 ### Getafe · Estado (2026-10-09)
@@ -91,3 +91,11 @@ Exterior y cuatro locales. San Salvador adapta la iglesia propia (fuente 360); l
 Conexiones: este a Getafe, filas 26–29, offset 0 recíproco; oeste reservado hacia Móstoles en las mismas filas. Estación `from_cercanias` (9,14), pendiente del andén C-5. Alcance desde ambos bordes y estación: 0 problemas, 12 puertas. Carga 100,44 ms.
 
 Fuentes primarias: [Historia, Ayuntamiento de Leganés](https://www.leganes.org/web/guest/w/historia-de-leganes), [Museo municipal Luis Arencibia](https://www.leganes.org/w/museo-de-escultura-leganes), [Butarque, CD Leganés](https://www.cdleganes.com/en/news/cd-leganes-and-leganes-city-council-reach-a-historic-agreement-for-the-concession-of-the-estadio-municipal-butarque-for-fifty-years). [Plano propio regenerado OSM](../planos/leganes.svg), © colaboradores, ODbL.
+
+### Móstoles · Estado (2026-10-09)
+
+Exterior 64×56 con cuatro locales, Pradillo, Casa Torrejón, campus y lago de El Soto. Fuente de los Peces (362): pedestal y dos tritones, dibujados a mano. Asunción (365): torre rectangular y bandas de arcos del ábside en interpretación compacta propia; la planta, el volumen curvo y la fidelidad de fachada necesitan revisión. Ermita de los Santos compuesta con la ermita del set propio. Arte provisional, sin interiores ni personajes famosos.
+
+Conexión este con Leganés, filas 26–29, offset 0 recíproco. Estación `from_cercanias` (24,12), para el ramal Móstoles-El Soto de C-5; transbordo hacia Leganés por Atocha. Dos entrenadores genéricos y encuentros 14–17 provisionales; revisión de la curva temprana/regreso pendiente Javier.
+
+Fuentes primarias: [Fuente de los Peces, Ayuntamiento](https://www.mostoles.es/es/localizaciones/monumentos/fuente-peces), [Asunción, Ayuntamiento](https://www.mostoles.es/es/localizaciones/monumentos/iglesia-senora-asuncion), [Ermita, Hermandad](https://www.patronademostoles.es/es/la-ermita/). [Plano OSM regenerado](../planos/mostoles.svg), norte arriba, © colaboradores de OpenStreetMap, ODbL. Distancias comprimidas.

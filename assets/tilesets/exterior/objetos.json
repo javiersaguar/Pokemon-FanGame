@@ -1066,6 +1066,56 @@
 		],
 		"source": 27
 	},
+	"asuncion_mostoles": {
+		"coords": [
+			0,
+			0
+		],
+		"door": [
+			1,
+			0
+		],
+		"file": "hecho_a_mano/asuncion_mostoles.png",
+		"footprint": [
+			[
+				0,
+				-3
+			],
+			[
+				0,
+				-2
+			],
+			[
+				0,
+				-1
+			],
+			[
+				1,
+				-1
+			],
+			[
+				2,
+				-1
+			],
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			],
+			[
+				2,
+				0
+			]
+		],
+		"size": [
+			3,
+			4
+		],
+		"source": 365
+	},
 	"atico_jardin": {
 		"coords": [
 			6,
@@ -12765,6 +12815,28 @@
 			3
 		],
 		"source": 51
+	},
+	"fuente_peces": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/fuente_peces.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			]
+		],
+		"size": [
+			2,
+			2
+		],
+		"source": 362
 	},
 	"fuente_plaza": {
 		"coords": [

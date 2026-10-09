@@ -1,0 +1,40 @@
+{
+  "mostoles_estudiante": {
+    "class": "estudianteinge",
+    "name": "Marcos",
+    "intro_text": "Tengo las prácticas y el combate sin convalidar.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Mi currículum tiene más páginas que mi contrato.",
+    "items": [],
+    "party": [
+      {
+        "species": "porygon",
+        "level": 16
+      },
+      {
+        "species": "electrike",
+        "level": 17
+      }
+    ]
+  },
+  "mostoles_paseante": {
+    "class": "domadorpalomas",
+    "name": "Paco",
+    "intro_text": "Los pájaros del Soto me conocen por la bolsa.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Comida de aves. El pan es para mi bocata.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidove",
+        "level": 16
+      },
+      {
+        "species": "taillow",
+        "level": 17
+      }
+    ]
+  }
+}

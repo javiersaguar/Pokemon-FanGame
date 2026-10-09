@@ -1,0 +1,82 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "pidove",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      },
+      {
+        "species": "patrat",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      },
+      {
+        "species": "hoppip",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      },
+      {
+        "species": "electrike",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      }
+    ],
+    "night": [
+      {
+        "species": "hoothoot",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      },
+      {
+        "species": "zigzagoon",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      },
+      {
+        "species": "trubbish",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      },
+      {
+        "species": "murkrow",
+        "min": 14,
+        "max": 17,
+        "weight": 25
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "psyduck",
+      "min": 14,
+      "max": 17,
+      "weight": 33
+    },
+    {
+      "species": "ducklett",
+      "min": 14,
+      "max": 17,
+      "weight": 33
+    },
+    {
+      "species": "lotad",
+      "min": 14,
+      "max": 17,
+      "weight": 33
+    }
+  ],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

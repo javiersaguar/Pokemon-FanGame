@@ -172,3 +172,4 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Mundo centro: Getafe | Fuentes 358–359; cancha y edificios compuestos | PROVISIONAL, pendiente Javier | `comparativas/getafe.md` |
 
 | Mundo centro: Leganés | Fuentes 360–361; Butarque y cuartel compuestos | PROVISIONAL, pendiente Javier | `comparativas/leganes.md` |
+| Mundo centro: Móstoles | Fuentes 362/365; El Soto y campus compuestos | PROVISIONAL, pendiente Javier | `comparativas/mostoles.md` |
