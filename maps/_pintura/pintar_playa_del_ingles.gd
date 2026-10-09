@@ -96,6 +96,9 @@ func _paint(painter: GDScript) -> RefCounted:
 	# --- Apariciones, entrenadores y vecinos ---
 	p.spawn("default", Vector2i(13, 1))
 	p.spawn("from_ruta_15", Vector2i(13, 0))
+	p.spawn("from_avion", Vector2i(11, 7))
+	# El avión a Vigo (y la vuelta desde Peinador).
+	p.warp("AvionVigo", Vector2i(11, 6), &"vigo/exterior", &"from_avion", &"")
 	p.trainer("Laura", &"pi_fan", Vector2i(49, 24), LEFT, 3)
 	p.trainer("Sven", &"pi_turista", Vector2i(47, 38), DOWN, 3)
 	p.trainer("Acoidan", &"pi_surfista", Vector2i(53, 46), UP, 3)

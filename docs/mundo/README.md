@@ -74,6 +74,10 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Huelva | ✅ | ✅ provisional ([captura](../arte/comparativas/huelva_mapa.png)) | — | marinero y regatista; ferry a Las Palmas | — |
 | Málaga | ✅ | — | — | — | — |
 
+## Conexiones
+
+Cómo se unen los mapas pintados (bordes y pasarelas), qué grupos quedan aislados del pueblo inicial y qué uniones faltan: [`conexiones.md`](conexiones.md), generado con `python3 tools/mundo/grafo_mundo.py`.
+
 ## Tramo centro y final (Agente 3, 2026-10-09)
 
 | Lugar | Exterior | Alcance | Revisión |

@@ -57,6 +57,7 @@ func _initialize() -> void:
 	p.spawn("default", Vector2i(63, 27))
 	p.spawn("from_leganes", Vector2i(63, 27))
 	p.spawn("from_cercanias", Vector2i(24, 12))
+	p.warp("CercaniasAtocha", Vector2i(27, 11), &"madrid/retiro", &"from_cercanias", &"")
 	p.connect_edge("east", &"leganes/exterior", 0, Vector2i(26, 30))
 	p.trainer("Campus", &"mostoles_estudiante", Vector2i(10, 11), 0, 3)
 	p.trainer("Soto", &"mostoles_paseante", Vector2i(17, 47), 1, 2)

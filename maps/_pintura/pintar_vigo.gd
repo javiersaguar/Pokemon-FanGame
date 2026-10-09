@@ -81,6 +81,8 @@ func _paint(painter: GDScript) -> RefCounted:
 
 	p.spawn("default", Vector2i(26, 24))
 	p.spawn("from_avion", Vector2i(50, 34))
+	# El avión de vuelta a Gran Canaria.
+	p.warp("AvionGranCanaria", Vector2i(50, 35), &"playa_del_ingles/exterior", &"from_avion", &"")
 	p.spawn("from_ruta_16", Vector2i(26, 1))
 	p.trainer("Uxio", &"vigo_regatista", Vector2i(24, 42), UP, 3)
 	p.trainer("Sabela", &"vigo_nadadora", Vector2i(12, 36), RIGHT, 3)

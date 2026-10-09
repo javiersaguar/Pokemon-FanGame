@@ -119,6 +119,9 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.deco(Vector2i(28, 58), ExteriorTiles.SIGN)
 	p.sign_text("CartelAtocha", Vector2i(28, 58), PackedStringArray(["ESTACIÓN DE ATOCHA. AVE y Cercanías.",
 		"Próximas salidas: Valladolid, Málaga y Barcelona. Retraso estimado: sí."]))
+	p.deco(Vector2i(32, 58), ExteriorTiles.SIGN)
+	p.sign_text("CartelC5", Vector2i(32, 58), PackedStringArray(["CERCANÍAS C-5.",
+		"← Andén 1: Leganés.   → Andén 2: Móstoles-El Soto.", "Frecuencia: cada 10 minutos. O cada 40. Depende del día."]))
 	p.deco(Vector2i(49, 20), ExteriorTiles.SIGN)
 	p.sign_text("CartelEstanque", Vector2i(49, 20), PackedStringArray(["ESTANQUE GRANDE DEL RETIRO.",
 		"Alquiler de barcas: 8 € los 45 minutos. Con Surf, gratis."]))
@@ -127,6 +130,10 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.spawn("default", Vector2i(1, 15))
 	p.spawn("from_gran_via", Vector2i(0, 15))
 	p.spawn("from_sol", Vector2i(0, 31))
+	p.spawn("from_cercanias", Vector2i(30, 58))
+	# Cercanías C-5 desde Atocha: un andén a Leganés y otro a Móstoles.
+	p.warp("CercaniasLeganes", Vector2i(29, 59), &"leganes/exterior", &"from_cercanias", &"")
+	p.warp("CercaniasMostoles", Vector2i(31, 59), &"mostoles/exterior", &"from_cercanias", &"")
 	p.trainer("Emilio", &"madrid_palomas", Vector2i(49, 40), RIGHT, 3)
 	p.trainer("Iker", &"madrid_patinetero", Vector2i(13, 27), DOWN, 4)
 	p.trainer("Borja", &"madrid_crossfitero", Vector2i(60, 34), LEFT, 4)
