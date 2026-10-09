@@ -75,5 +75,44 @@
         "level": 22
       }
     ]
+  },
+  "bcn_carterista": {
+    "class": "carterista",
+    "name": "Nando",
+    "intro_text": "¿Me das la hora? ...Y la cartera. Y ya que estamos, un combate.",
+    "lose_text": "Vale, vale. Te devuelvo la Poké Ball que te había quitado. Y una que no era tuya.",
+    "win_text": "En La Rambla, el que se despista paga.",
+    "after_text": "Consejo de profesional: la mochila, por delante. Y el móvil, en el bolsillo de dentro.",
+    "items": [],
+    "party": [
+      {
+        "species": "purrloin",
+        "level": 22
+      },
+      {
+        "species": "sneasel",
+        "level": 23
+      }
+    ]
+  },
+  "bcn_banyista": {
+    "class": "turistachanclas",
+    "gender": "female",
+    "name": "Sophie",
+    "intro_text": "¡Barceloneta! Arena, sol y un combate. Y luego una paella a 30 euros.",
+    "lose_text": "Me he quemado. Del sol y de perder.",
+    "win_text": "¡Sí! ¡Vacaciones perfectas!",
+    "after_text": "Aquí te venden mojitos, latas y masajes sin moverte de la toalla. Es como Amazon, pero con arena.",
+    "items": [],
+    "party": [
+      {
+        "species": "krabby",
+        "level": 22
+      },
+      {
+        "species": "wingull",
+        "level": 23
+      }
+    ]
   }
 }
