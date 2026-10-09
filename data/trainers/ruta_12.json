@@ -1,0 +1,63 @@
+{
+  "ruta12_esquiador": {
+    "class": "esquiador",
+    "name": "Iker",
+    "intro_text": "¡En Sierra Nevada esquías por la mañana y por la tarde te bañas en Motril! Bueno, eso dicen.",
+    "lose_text": "Me he caído más que el forfait de precio.",
+    "win_text": "La pista negra no perdona. Y el forfait, menos.",
+    "after_text": "Sesenta euros el día de esquí. Por ese precio, en Murcia te dan un piso. Bueno, la fianza.",
+    "items": [],
+    "party": [
+      {
+        "species": "frosmoth",
+        "level": 30
+      },
+      {
+        "species": "sneasel",
+        "level": 31
+      }
+    ]
+  },
+  "ruta12_montanera": {
+    "class": "montanera",
+    "name": "Paqui",
+    "intro_text": "¡He subido al Veleta andando! Los del coche oficial suben en helicóptero.",
+    "lose_text": "Me falta oxígeno. A 3.396 metros, y a ti te sobra.",
+    "win_text": "Aquí arriba gana quien respira mejor.",
+    "after_text": "Desde la cima se ve África cuando no hay calima. O sea, nunca.",
+    "items": [],
+    "party": [
+      {
+        "species": "gligar",
+        "level": 30
+      },
+      {
+        "species": "cubchoo",
+        "level": 30
+      },
+      {
+        "species": "skarmory",
+        "level": 31
+      }
+    ]
+  },
+  "ruta12_invitada": {
+    "class": "invitada_boda",
+    "name": "Rocío",
+    "intro_text": "¡Has venido a la boda sin invitación! Aquí el que no se ha colado es porque no ha querido.",
+    "lose_text": "Ay, que se me ha corrido el rímel. Y la flor.",
+    "win_text": "¡Vivan los novios! Y vivan mis Pokémon.",
+    "after_text": "En esta boda hay más fotógrafos que invitados. Y más besos de los que deberían, según dicen.",
+    "items": [],
+    "party": [
+      {
+        "species": "vullaby",
+        "level": 30
+      },
+      {
+        "species": "frosmoth",
+        "level": 32
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "dolliv",
+        "min": 30,
+        "max": 32,
+        "weight": 30
+      },
+      {
+        "species": "steenee",
+        "min": 30,
+        "max": 32,
+        "weight": 20
+      },
+      {
+        "species": "mudsdale",
+        "min": 31,
+        "max": 33,
+        "weight": 15
+      },
+      {
+        "species": "staravia",
+        "min": 31,
+        "max": 33,
+        "weight": 15
+      },
+      {
+        "species": "greedent",
+        "min": 30,
+        "max": 31,
+        "weight": 20
+      }
+    ],
+    "night": [
+      {
+        "species": "murkrow",
+        "min": 30,
+        "max": 32,
+        "weight": 30
+      },
+      {
+        "species": "dolliv",
+        "min": 30,
+        "max": 32,
+        "weight": 30
+      },
+      {
+        "species": "greedent",
+        "min": 30,
+        "max": 32,
+        "weight": 25
+      },
+      {
+        "species": "noctowl",
+        "min": 31,
+        "max": 33,
+        "weight": 15
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "basculin",
+      "min": 30,
+      "max": 33,
+      "weight": 60
+    },
+    {
+      "species": "seaking",
+      "min": 31,
+      "max": 33,
+      "weight": 30
+    },
+    {
+      "species": "feebas",
+      "min": 30,
+      "max": 32,
+      "weight": 10
+    }
+  ],
+  "old_rod": [
+    {
+      "species": "magikarp",
+      "min": 25,
+      "max": 28,
+      "weight": 100
+    }
+  ],
+  "good_rod": [
+    {
+      "species": "basculin",
+      "min": 30,
+      "max": 32,
+      "weight": 70
+    },
+    {
+      "species": "feebas",
+      "min": 30,
+      "max": 32,
+      "weight": 30
+    }
+  ],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

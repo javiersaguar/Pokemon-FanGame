@@ -1010,5 +1010,35 @@
     "overworld_sprite": "res://assets/sprites/characters/arqueologo.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "invitada_boda": {
+    "name": "Invitada de boda",
+    "gender": "female",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/invitada_boda.png",
+    "overworld_sprite": "res://assets/sprites/characters/invitada_boda.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "aceitunero": {
+    "name": "Aceitunero",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/aceitunero.png",
+    "overworld_sprite": "res://assets/sprites/characters/aceitunero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "aceitero": {
+    "name": "Vendedor de aceite",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/aceitero.png",
+    "overworld_sprite": "res://assets/sprites/characters/aceitero.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
   }
 }

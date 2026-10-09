@@ -1,0 +1,63 @@
+{
+  "ruta13_aceitunero": {
+    "class": "aceitunero",
+    "name": "Manuel",
+    "intro_text": "¡Desde que amanece varo olivos! A ti también te vareo.",
+    "lose_text": "Me has dejado como una aceituna en noviembre: por los suelos.",
+    "win_text": "Aquí se trabaja de sol a sol. Y el sol de Jaén no perdona.",
+    "after_text": "La aceituna la pagan a nada y el aceite lo venden a oro. Por el camino, alguien se hace rico. Yo no.",
+    "items": [],
+    "party": [
+      {
+        "species": "dolliv",
+        "level": 30
+      },
+      {
+        "species": "greedent",
+        "level": 32
+      }
+    ]
+  },
+  "ruta13_aceitero": {
+    "class": "aceitero",
+    "name": "Rafael",
+    "intro_text": "¿Buscas aceite? Tengo el mejor. Y el más caro. Y no hay otro.",
+    "lose_text": "Te lo dejo a precio de amigo: el doble.",
+    "win_text": "El oro líquido no se regala. Se cotiza.",
+    "after_text": "Cuando baje el precio del aceite, te aviso. Siéntate, que va para largo.",
+    "items": [],
+    "party": [
+      {
+        "species": "steenee",
+        "level": 31
+      },
+      {
+        "species": "dolliv",
+        "level": 32
+      },
+      {
+        "species": "tsareena",
+        "level": 33
+      }
+    ]
+  },
+  "ruta13_turista": {
+    "class": "turistachanclas",
+    "name": "Gunnar",
+    "intro_text": "¡Vengo de Noruega a ver la Mezquita! Y a ponerme rojo como una gamba.",
+    "lose_text": "Tanto sol y tú me dejas a la sombra.",
+    "win_text": "¡En Noruega no hay esto! Ni sol, ni olivos, ni combates a 40 grados.",
+    "after_text": "He visto la Mezquita, el Puente Romano y la Calahorra. Bueno, la Calahorra no, que no la encuentro.",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 31
+      },
+      {
+        "species": "torkoal",
+        "level": 32
+      }
+    ]
+  }
+}

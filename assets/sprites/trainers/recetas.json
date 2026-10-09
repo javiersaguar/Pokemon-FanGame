@@ -1734,6 +1734,57 @@
 			"overworld walk/hats/glasses/glasses blue.png"
 		]
 	},
+	"invitada_boda": {
+		"idea": "Invitada de una boda en un cortijo de Granada: traje rosa, falda de tubo y flor en el pelo.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/pencil skirt/skirt pencil black.png",
+			"trainer front female/tops/formal top/formal top pink.png",
+			"trainer front female/hair/hair 4/4 brown.png",
+			"trainer front female/hats/flower/flower blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/pencil skirt/pencil skirt black.png",
+			"overworld walk/tops/formal top/formal pink.png",
+			"overworld walk/hair/girl 4/4 brown.png",
+			"overworld walk/hats/flower/flower blue.png"
+		]
+	},
+	"aceitunero": {
+		"idea": "Aceitunero de Jaén: camisa blanca remangada, pantalón de faena con botas y sombrero de paja.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/pants and boots/pants and boots grey.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 black.png",
+			"trainer front male/hats/straw hat.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/pants and boots/pants and boots grey.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 black.png",
+			"overworld walk/hats/straw hat.png"
+		]
+	},
+	"aceitero": {
+		"idea": "Vendedor de aceite «a precio de oro»: americana y pantalón beis, pelo engominado y gafas.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/classy pants/classy pants beige.png",
+			"trainer front male/tops/classy top/classy top beige.png",
+			"trainer front male/hair/hair 4/4 black.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m beige.png",
+			"overworld walk/tops/classy top m/classy top m beige.png",
+			"overworld walk/hair/boy 4/boy 4 black.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
 	"vendimiador": {
 		"idea": "Vendimiador riojano: camisa verde y sombrero de faena.",
 		"frente": [

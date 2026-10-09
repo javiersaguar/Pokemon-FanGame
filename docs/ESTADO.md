@@ -95,6 +95,21 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 1 — Mundo y arquitectura
 
+### Tramo sur (2026-10-09)
+
+Worktree `pokemon-panchito-agente1`, rama `feat/agente1-mundo-sur`. Tramo: Ruta 12 → Ruta 13 → Sevilla → Ruta 14 → Huelva (ferry) → Las Palmas → Ruta 15 → Playa del Inglés (con el aeropuerto). Números de fuente en `piezas.json`: 150–249.
+
+**Hecho:**
+- **Ruta 12 · Sierra Nevada y Granada** (`maps/ruta_12/exterior.tscn`, 72×40): altiplano de Guadix, Sierra Nevada en dos alturas con nieve (Pradollano y el Veleta), la vega con la **Alhambra** (dibujada a mano, fuente 150) y el cortijo de la boda. Entrenadores Iker, Paqui y Rocío (clase nueva `invitada_boda`); encuentros `ruta_12`. Alcance: 0 problemas.
+- **Ruta 13 · Mar de olivos** (`maps/ruta_13/exterior.tscn`, 76×46): olivares en hileras (**olivo** dibujado a mano, fuente 151), el cortijo del aceite y Córdoba con la **Mezquita-Catedral** (fuente 152) y el Puente Romano sobre el Guadalquivir. Entrenadores Manuel y Rafael (clases nuevas `aceitunero` y `aceitero`) y Gunnar (turista); encuentros `ruta_13` (también de agua). Unida con la Ruta 12 (filas 20 a 29) y con Sevilla. Alcance: 0 problemas.
+- Los equipos y los encuentros respetan la etapa de evolución que pide el generador del RandomLocke para cada nivel (si no, la ROM sale con errores: `Etapa no acorde al nivel`).
+
+**Uniones pendientes (las hace el Agente 5):**
+- `ruta_12`: aparición `from_murcia` en (71, 27), en el **borde este**, abierto en las **filas 22 a 29** (el camino entra por las filas 26 a 28). Falta `connect_edge("east", &"murcia/…")` en la Ruta 12 y el lado de Murcia.
+
+**Pendiente:** el resto del tramo.
+
+
 **He leído** (2026-10-05) las DIRECTRICES actuales, el último aviso y «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente1`, rama `feat/agente1-bloque-i`, actualizado desde `origin/main`; autoría de Javier y hooks activos.
 
 **En qué estoy:** lista de sesión completada en todo lo independiente: 1/1b/2/3/4/7/8/9/10 con pruebas, comparativas e integración. Tareas 5/6 y tag v0.1 siguen bloqueadas por aprobación nueva del pueblo y entrega de mapas reales de A4; el perfil test se conserva. Acciones de campo sin IDs/desbloqueos decididos, luces/clima sin arte y destinos/errantes sin contenido permanecen deshabilitados por datos. APIs y sustitutos de pantallas listos para A3. Queda diagnosticar el aviso de referencias al cerrar smoke reducido, descrito en robustez.md (sin Nodes huérfanos; suite completa y arranque normal limpios).

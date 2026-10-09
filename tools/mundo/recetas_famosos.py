@@ -210,6 +210,13 @@ SPECS = {
                  "Tronista de playa: camiseta de tirantes blanca, bañador, gafas de sol y mucho gimnasio."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
+    # Tramo sur (Agente 1): Granada, Jaén y Córdoba, Sevilla, Doñana, Huelva y Gran Canaria.
+    "invitada_boda": ("f", "light", (4, "brown"), ("traje", "pink"), ("falda_tubo", "black"), ("flower", None),
+                      "Invitada de una boda en un cortijo de Granada: traje rosa, falda de tubo y flor en el pelo."),
+    "aceitunero": ("m", "medium", (2, "black"), ("camisa", "white"), ("botas", "grey"), ("straw hat", None),
+                   "Aceitunero de Jaén: camisa blanca remangada, pantalón de faena con botas y sombrero de paja."),
+    "aceitero": ("m", "light", (4, "black"), ("americana", "beige"), ("vestir", "beige"), ("glasses", None),
+                 "Vendedor de aceite «a precio de oro»: americana y pantalón beis, pelo engominado y gafas."),
 }
 
 

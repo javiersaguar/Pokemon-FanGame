@@ -1,0 +1,74 @@
+# La Alhambra de Granada vista de lejos (Ruta 12): la Torre de la Vela con la bandera a la izquierda,
+# la muralla almenada, la Torre de Comares con sus ventanas en arco, los palacios nazaríes más claros,
+# la Torre de las Damas y los cipreses delante, sobre la colina de la Sabika. Roja, como su nombre
+# (al-Hamrā'): luz arriba a la izquierda. Dibujada a mano. 128x64 del arte (8x4 casillas).
+# PROVISIONAL hasta que la apruebe Javier.
+@leyenda  . = transparente   K = piedra_1   T = teja_5   t = teja_4   r = teja_3   c = teja_6
+@leyenda  o = tierra_5   O = tierra_6   m = tierra_4   v = hierba_1   V = hierba_2   H = hierba_3
+@leyenda  h = hierba_4   x = hierba_5   e = acento_rojo   y = acento_amarillo   w = madera_2
+@salida res://assets/tilesets/exterior/hecho_a_mano/alhambra.png
+---
+................................................................................................................................
+................................................................................................................................
+.................weeeee.........................................................................................................
+.................wyyyyy.........................................................................................................
+.................weeeee.........................................................................................................
+.................w..............................................................................................................
+.................w..............................cc..cc..cc..cc..cc..cc..........................................................
+.................w..............................cc..cc..cc..cc..cc..cc..........................................................
+.................w..............................cccccccccccccccccccccccc........................................................
+.................w..............................cTTTTTTTTTTTTTTTTTTTrrrr........................................................
+........cc..cc..cc..cc..cccc....................cTTTTTTTTTTTTTTTTTTTrrrr........................................................
+........cc..cc..cc..cc..cccc....................cTTTTTTTTTTTTTTTTTTTrrrr........................................................
+........cccccccccccccccccccc....................cTTTTTTTTTTTTTTTTTTTrrrr........................................................
+........cTTTTTTTTTTTTTTTrrrr....................cTTTTTTTTTTTTTTTTTTTrrrr........................................................
+........cTTTTTTTTTTTTTTTrrrr....................cTTTTTKTTTTTKTTTTTKTrrrr........................................................
+........cTTTTTTTTTTTTTTTrrrr....................cTTTTKKKTTTKKKTTTKKKrrrr........................................................
+........cTTTTTTTTTTTTTTTrrrr....................cTTTTKKKTTTKKKTTTKKKrrrr........................cc..cc..cc......................
+........cTTTTTTTTTTTTTTTrrrr....................cTTTTKKKTTTKKKTTTKKKrrrr........................cc..cc..cc......................
+........cTTTTKTTTTTTTKTTrrrr....................cTTTTKKKTTTKKKTTTKKKrrrr........................cccccccccccc....................
+........cTTTKKKTTTTTKKKTrrrr....................cTTTTKKKTTTKKKTTTKKKrrrr........................cTTTTTTTTTrr....................
+........cTTTKKKTTTTTKKKTrrrr....................cTTTTTTTTTTTTTTTTTTTrrrr........................cTTTTTTTTTrr............cc..cc..
+........cTTTKKKTTTTTKKKTrrrr....................cTTTTTTTTTTTTTTTTTTTrrrr........................cTTTTTTTTTrr............cc..cc..
+........cTTTKKKTTTTTKKKTrrrr....................cTTTTTTTTTTTTTTTTTTTrrrrOO..OO..OO..OO..OO..OO..cTTTTTTTTTrr............cccccccc
+........cTTTKKKTTTTTKKKTrrrr....................cTTTTTTTTTTTTTTTTTTTrrrrOO..OO..OO..OO..OO..OO..cTTTTTTTTTrr............cTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrtt..tt..tt..tt..tt..cTTTTTTTTTTTTTTTTTTTrrrrOOOOOOOOOOOOOOOOOOOOOOOOcTTTTKTTTTrr............cTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrtt..tt..tt..tt..tt..cTTTTTTTTTTTTTTTTTTTrrrroooooooooooooooooooooommcTTTKKKTTTrr............cTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttttcTTTTTTTTTTTTTTTTTTTrrrroooooooooooooooooooooommcTTTKKKTTTrrtt..tt..tt..cTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttrrcTTTTTTTTTTTTTTTTTTTrrrroooooooooooooooooooooommcTTTKKKTTTrrtt..tt..tt..cTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttrrcTTTTTKTTTTTKTTTTTKTrrrroooooooooooooooooooooommcTTTKKKTTTrrttttttttttttcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttrrcTTTTKKKTTTKKKTTTKKKrrrroooooooooooooooooooooommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttrrcTTTTKKKTTTKKKTTTKKKrrrroooKKoooKKoooKKoooKKoommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttrrcTTTTKKKTTTKKKTTTKKKrrrroooKKoooKKoooKKoooKKoommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttrrcTTTTKKKTTTKKKTTTKKKrrrroooKKoooKKoooKKoooKKoommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttttttttttttttrrcTTTTKKKTTTKKKTTTKKKrrrroooooooooooooooooooooommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTTKTTTTTTTKTTrrrrttttttttttttttttttrrcTTTTTTTTTTTTTTTTTTTrrrroooooooVVooooooooooooommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTKKKTTTTTKKKTrrrrttttttttttttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTKKKTTTTTKKKTrrrrtttttttVVtttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTKKKTTTTTKKKTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTKKKTTTTTKKKTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttttttttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrtttVVtttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+........cTTTTTTTTTTTTTTTrrrrttttttVVVvttttttttrrcTTTTTTTTTTTTTTTTTTTrrrrooooooVVVvoooooooooooommcTTTTTTTTTrrttVVVvttttrrcTTTTTrr
+....HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHVVVvHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHVVVvHHHHHHHHHHHHHHHHHHHHHHHHHHHHVVVvHHHHHHHHHH....
+..HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHVVVvHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHVVVvHHHHHHHHHHHHHHHHHHHHHHHHHHHHVVVvHHHHHHHHHHHH..
+.hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhvvhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhvvhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhvvhhhhhhhhhhhhhh.
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
