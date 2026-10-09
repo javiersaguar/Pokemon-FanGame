@@ -35,6 +35,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("BarcelonaLesCorts", SIZE, data, 1957)
 	p.fill_grass(0.15)
 	p.connect_edge("west", &"ruta_8/exterior", 0, Vector2i(14, 18))
+	p.connect_edge("east", &"barcelona/eixample", -8, Vector2i(14, 18))  # la Diagonal sigue en el Eixample
 	p.paving(Rect2i(0, 14, SIZE.x, 34))
 	p.paving(Rect2i(0, 0, SIZE.x, 14))
 	p.build_paving()

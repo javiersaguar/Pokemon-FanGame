@@ -36,5 +36,44 @@
         "level": 22
       }
     ]
+  },
+  "bcn_startup": {
+    "class": "influencerlinkedin",
+    "gender": "female",
+    "name": "Mireia",
+    "intro_text": "Tengo una startup de patinetes compartidos con blockchain. ¿Inviertes o combatimos?",
+    "lose_text": "Pivotamos. Ahora somos una startup de perder combates.",
+    "win_text": "¡Ronda de financiación cerrada!",
+    "after_text": "En el Eixample los pisos cuestan como un riñón. El mío lo alquilo por habitaciones. Y el baño, por horas.",
+    "items": [],
+    "party": [
+      {
+        "species": "pawmo",
+        "level": 21
+      },
+      {
+        "species": "rotom",
+        "level": 22
+      }
+    ]
+  },
+  "bcn_guiri": {
+    "class": "turistachanclas",
+    "name": "Kevin",
+    "intro_text": "¡Hola! ¿Paella? ¿Sangría? ¿Gaudí? ¿Combate? ¡Todo en un día!",
+    "lose_text": "Oh no. Me han robado la cartera en la Rambla y ahora también el orgullo.",
+    "win_text": "¡Olé! ¡Visca Barça! ¡Hala Madrid! No sé cuál se dice aquí.",
+    "after_text": "He hecho 400 fotos a la Sagrada Família. Ninguna sin grúa.",
+    "items": [],
+    "party": [
+      {
+        "species": "wingull",
+        "level": 21
+      },
+      {
+        "species": "spinda",
+        "level": 22
+      }
+    ]
   }
 }

@@ -57,7 +57,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Madrid (y Palacio Real) | ✅ | Moncloa, Sol/Gran Vía, Palacio Real y Retiro ✅ provisionales ([Moncloa](../arte/comparativas/madrid_moncloa_mapa.png), [centro](../arte/comparativas/madrid_centro_mapa.png), [Palacio](../arte/comparativas/madrid_palacio_real_mapa.png), [Retiro](../arte/comparativas/madrid_retiro_mapa.png), [Chamberí](../arte/comparativas/madrid_chamberi_mapa.png)); falta la Calle de la Victoria | — | carteles, vecinos, reclutas del Clan, entrenadores de ciudad | — |
 | Móstoles, Leganés y Getafe | ✅ | — | — | — | — |
 | Zaragoza | ✅ | ✅ provisional ([captura](../arte/comparativas/zaragoza_mapa.png)) | — | carteles, vecinos, baturro y camarero de El Tubo | — |
-| Barcelona | ✅ | Les Corts ✅ provisional ([captura](../arte/comparativas/barcelona_les_corts_mapa.png)); Eixample y Ciutat Vella pendientes | — | soci y obrero | — |
+| Barcelona | ✅ | Les Corts y Eixample ✅ provisionales ([Les Corts](../arte/comparativas/barcelona_les_corts_mapa.png), [Eixample](../arte/comparativas/barcelona_eixample_mapa.png)); Ciutat Vella pendiente | — | soci y obrero | — |
 | Palma de Mallorca | ✅ | — | — | — | — |
 | Ibiza | ✅ | — | — | — | — |
 | Valencia | ✅ | — | — | — | — |

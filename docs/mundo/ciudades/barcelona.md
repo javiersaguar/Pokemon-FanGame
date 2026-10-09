@@ -7,7 +7,8 @@
 ## Estado (2026-10-09)
 
 - **`barcelona/les_corts` pintado** (`maps/_pintura/pintar_barcelona_les_corts.gd`, 64×48): se llega por la Diagonal desde la Ruta 8 (sin fundido). Al norte, Pedralbes y Les Corts; al sur, la explanada del **Spotify Camp Nou** (gimnasio 2, dibujado a mano con la tercera grada sin acabar y asientos vacíos) con dos grúas, La Masia, la tienda del Barça y el Basic-Fit. Entrenadores en `data/trainers/barcelona.json` (un socio y el jubilado de las obras) y encuentros de la ciudad en `data/encounters/barcelona.json` (con agua de mar para la Barceloneta y el puerto).
-- **Pendiente:** `barcelona/eixample` (al este por la Diagonal) y `barcelona/ciutat_vella` con el puerto y el ferry a Palma.
+- **`barcelona/eixample` pintado** (`maps/_pintura/pintar_barcelona_eixample.gd`, 72×60, unido con Les Corts por la Diagonal): la cuadrícula de Cerdà (recta), el Passeig de Gràcia con **La Pedrera** y la **Casa Batlló**, la **Sagrada Família** con su grúa, Mercadona, estanco y la **Plaça de Catalunya** con fuentes, El Corte Inglés y el Centro Pokémon. Entrenadores: una de startup y un guiri.
+- **Pendiente:** `barcelona/ciutat_vella` (La Rambla sale de la Plaça de Catalunya por el sur) con el puerto y el ferry a Palma.
 
 ## Cómo se reparte en el juego
 
