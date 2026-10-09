@@ -266,6 +266,36 @@
 		],
 		"source": 8
 	},
+	"arco_medinaceli": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/arco_medinaceli.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			],
+			[
+				4,
+				0
+			],
+			[
+				5,
+				0
+			]
+		],
+		"size": [
+			6,
+			5
+		],
+		"source": 59
+	},
 	"arco_victoria": {
 		"coords": [
 			0,
@@ -11987,6 +12017,32 @@
 			5
 		],
 		"source": 8
+	},
+	"torre_mudejar": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/torre_mudejar.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			],
+			[
+				2,
+				0
+			]
+		],
+		"size": [
+			3,
+			10
+		],
+		"source": 60
 	},
 	"torre_octogonal": {
 		"coords": [

@@ -1,0 +1,40 @@
+{
+  "ruta6_pastor": {
+    "class": "pastor",
+    "name": "Cirilo",
+    "intro_text": "En este pueblo quedamos tres: yo, mi perro y mis ovejas. Y las ovejas no votan.",
+    "lose_text": "Hala, a contar ovejas otra vez. Me salen menos cada año.",
+    "win_text": "En el páramo se aprende a aguantar. El frío, la soledad y a los de la capital.",
+    "after_text": "Aquí la cobertura viene y va, como el médico. Pero el cielo de noche no lo tenéis en Madrid.",
+    "items": [],
+    "party": [
+      {
+        "species": "mareep",
+        "level": 16
+      },
+      {
+        "species": "wooloo",
+        "level": 17
+      }
+    ]
+  },
+  "ruta6_jubilado": {
+    "class": "jubiladoobras",
+    "name": "Anselmo",
+    "intro_text": "Llevo treinta años mirando cómo arreglan la carretera de Calatayud. ¡Tú también vas a mirar!",
+    "lose_text": "Bueno, ya me miraré yo solo la obra.",
+    "win_text": "Esto no lo hacían así en mis tiempos. Lo hacían peor.",
+    "after_text": "Si vas a Calatayud, pregunta por la Dolores. Todos te dirán una copla, ninguno la dirección.",
+    "items": [],
+    "party": [
+      {
+        "species": "geodude",
+        "level": 16
+      },
+      {
+        "species": "skiddo",
+        "level": 18
+      }
+    ]
+  }
+}

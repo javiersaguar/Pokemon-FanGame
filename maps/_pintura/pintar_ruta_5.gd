@@ -42,6 +42,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta5", SIZE, data, 1547)
 	p.fill_grass(0.2)
 	p.connect_edge("west", &"madrid/retiro", -8, Vector2i(8, 22))
+	p.connect_edge("east", &"ruta_6/exterior", 4, Vector2i(14, 18))
 
 	# La vía de servicio de la A-2, las plazas de Alcalá y la de Guadalajara.
 	for r: Rect2i in [Rect2i(0, 14, 72, 4), Rect2i(24, 13, 22, 1), Rect2i(37, 18, 9, 8), Rect2i(50, 13, 14, 1)]:

@@ -906,5 +906,15 @@
     "overworld_sprite": "res://assets/sprites/characters/montanera.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "pastor": {
+    "name": "Pastor",
+    "gender": "male",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/pastor.png",
+    "overworld_sprite": "res://assets/sprites/characters/pastor.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

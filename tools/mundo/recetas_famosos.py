@@ -184,6 +184,8 @@ SPECS = {
                   "Esquiador de Navacerrada: sudadera roja, pantalón con botas y gorro de lana negro."),
     "montanera": ("f", "light", (4, "black"), ("sudadera", "blue"), ("botas", "grey"), ("beanie", "purple"),
                   "Montañera de la Sierra de Guadarrama: sudadera azul, botas y gorro de lana morado."),
+    "pastor": ("m", "medium", (3, "white"), ("gabardina", "beige"), ("vestir", "brown"), ("beret", None),
+               "Pastor de los páramos de Soria: pelo canoso, gabardina de paño, pantalón de faena y boina."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
 }

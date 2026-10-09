@@ -1567,5 +1567,22 @@
 			"overworld walk/hair/girl 4/4 black.png",
 			"overworld walk/hats/beanie/beanie purple.png"
 		]
+	},
+	"pastor": {
+		"idea": "Pastor de los páramos de Soria: pelo canoso, gabardina de paño, pantalón de faena y boina.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/formal pants/formal pants brown.png",
+			"trainer front male/tops/trench coat/trench coat beige.png",
+			"trainer front male/hair/hair 3/3 white.png",
+			"trainer front male/hats/beret.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m brown.png",
+			"overworld walk/tops/trenchcoat/trenchcoat beige.png",
+			"overworld walk/hair/boy 3/boy 3 white.png",
+			"overworld walk/hats/beret.png"
+		]
 	}
 }
