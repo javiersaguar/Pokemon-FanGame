@@ -1,0 +1,40 @@
+{
+  "leganes_aficionado": {
+    "class": "cunado",
+    "name": "Dani",
+    "intro_text": "¡Arriba los pepineros!",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "La huerta tiene más técnica de lo que parece.",
+    "items": [],
+    "party": [
+      {
+        "species": "hoppip",
+        "level": 17
+      },
+      {
+        "species": "breloom",
+        "level": 18
+      }
+    ]
+  },
+  "leganes_estudiante": {
+    "class": "estudianteinge",
+    "name": "Álvaro",
+    "intro_text": "Voy al campus. Esto también cuenta como práctica.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "La nota de corte no corta mis nervios.",
+    "items": [],
+    "party": [
+      {
+        "species": "porygon",
+        "level": 16
+      },
+      {
+        "species": "electrike",
+        "level": 17
+      }
+    ]
+  }
+}

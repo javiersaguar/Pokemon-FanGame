@@ -57,6 +57,7 @@ func _initialize() -> void:
 		p.object(&"farola_verde", at)
 	p.object(&"banco", Vector2i(33, 24))
 	p.flowers(Rect2i(12, 51, 5, 4))
+	p.connect_edge("west", &"leganes/exterior", 0, Vector2i(26, 30))
 	p.spawn("default", Vector2i(1, 27))
 	p.spawn("from_leganes", Vector2i(0, 27))
 	p.spawn("from_ruta_24", Vector2i(47, 63))

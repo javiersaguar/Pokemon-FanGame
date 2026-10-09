@@ -168,3 +168,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Mundo centro: Ruta 23 y acceso San Miguel | Castillo fuente 357; puente existente | PROVISIONAL, pendiente Javier | `comparativas/ruta_23.md` |
 
 | Mundo centro: Getafe | Fuentes 358–359; cancha y edificios compuestos | PROVISIONAL, pendiente Javier | `comparativas/getafe.md` |
+
+| Mundo centro: Leganés | Fuentes 360–361; Butarque y cuartel compuestos | PROVISIONAL, pendiente Javier | `comparativas/leganes.md` |

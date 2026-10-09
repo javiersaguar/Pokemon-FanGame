@@ -70,7 +70,7 @@ Trubbish, Zigzagoon, Rattata, Pidove, Patrat (polígonos); en las riberas del Ma
 | Mapa | Distribución norte arriba | Estado |
 |---|---|---|
 | `getafe/exterior` · 64×64 | Coliseum al norte; estación y Hospitalillo al oeste; plaza y Magdalena en el centro; Cerro de los Ángeles al este y ribera en el borde oriental; salida sur a Ruta 24 | Pintado provisional, 15 puertas alcanzables |
-| `leganes/exterior` | San Salvador, Plaza Mayor, cuartel, Butarque al noreste, Polvoranca al suroeste y museo al sureste | siguiente |
+| `leganes/exterior` · 64×56 | San Salvador, Plaza Mayor, cuartel, Butarque al noreste, Polvoranca al suroeste y museo al sureste | Pintado provisional, 12 puertas alcanzables |
 | `mostoles/exterior` | Pradillo, Asunción, Casa Torrejón, campus y El Soto | siguiente |
 | `cercanias_c5/anden` | Andén exterior y accesos de Atocha, Leganés y Móstoles | siguiente |
 
@@ -83,3 +83,11 @@ Spawn `from_leganes` (0,27), corredor oeste filas 26–29 reservado hasta pintar
 Fuentes primarias: [Magdalena, Ayuntamiento](https://getafe.es/placemarks/catedral-de-la-magdalena/), [Catedral, Comunidad de Madrid](https://www.madrid.org/monumentoscercanias/catedral-santa-m-magdalena.html), [Monumento actual, Santuario del Cerro](https://cerrodelosangeles.es/monumento/). [Plano propio regenerado de OSM](../planos/getafe.svg), © colaboradores, ODbL.
 
 Corrección geográfica: **Getafe Centro pertenece a C-4, no C-5**. Se propone el acceso urbano por Leganés. La C-5 se integra por Atocha hacia Leganés y Móstoles. [Esquema CRTM](https://www.crtm.es/datos_lineas/horarios/5C5H2.pdf). Las condiciones de viaje y retrasos requieren decisión de Javier.
+
+### Leganés · Estado (2026-10-09)
+
+Exterior y cuatro locales. San Salvador adapta la iglesia propia (fuente 360); la escultura abstracta propia (361) representa el museo, **sin atribuir ni reproducir una obra concreta de su colección**. La fidelidad arquitectónica de la iglesia y una selección de obra real para el museo quedan pendientes de revisión. Butarque con cancha y graderíos compuestos. Dos entrenadores genéricos, encuentros 14–17 como Getafe; no se colocan famosos.
+
+Conexiones: este a Getafe, filas 26–29, offset 0 recíproco; oeste reservado hacia Móstoles en las mismas filas. Estación `from_cercanias` (9,14), pendiente del andén C-5. Alcance desde ambos bordes y estación: 0 problemas, 12 puertas. Carga 100,44 ms.
+
+Fuentes primarias: [Historia, Ayuntamiento de Leganés](https://www.leganes.org/web/guest/w/historia-de-leganes), [Museo municipal Luis Arencibia](https://www.leganes.org/w/museo-de-escultura-leganes), [Butarque, CD Leganés](https://www.cdleganes.com/en/news/cd-leganes-and-leganes-city-council-reach-a-historic-agreement-for-the-concession-of-the-estadio-municipal-butarque-for-fifty-years). [Plano propio regenerado OSM](../planos/leganes.svg), © colaboradores, ODbL.
