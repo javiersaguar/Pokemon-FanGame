@@ -1,0 +1,26 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "trapinch", "min": 17, "max": 19, "weight": 30},
+      {"species": "sandile", "min": 17, "max": 19, "weight": 25},
+      {"species": "cacnea", "min": 17, "max": 19, "weight": 25},
+      {"species": "hippopotas", "min": 18, "max": 20, "weight": 15},
+      {"species": "sandshrew", "min": 17, "max": 19, "weight": 5}
+    ],
+    "night": [
+      {"species": "sandile", "min": 17, "max": 19, "weight": 35},
+      {"species": "cacnea", "min": 17, "max": 19, "weight": 30},
+      {"species": "trapinch", "min": 17, "max": 19, "weight": 20},
+      {"species": "noibat", "min": 18, "max": 20, "weight": 15}
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [
+    {"species": "roggenrola", "min": 18, "max": 20, "weight": 100}
+  ],
+  "headbutt": []
+}

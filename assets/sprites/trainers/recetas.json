@@ -1601,5 +1601,39 @@
 			"overworld walk/hair/boy 2/boy 2 black.png",
 			"overworld walk/hats/headband.png"
 		]
+	},
+	"raver": {
+		"idea": "Raver del festival de Los Monegros: camiseta de tirantes, pantalón corto y gafas de sol.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/shorts/shorts black.png",
+			"trainer front male/tops/tank top/tank top black.png",
+			"trainer front male/hair/hair 1/1 blonde.png",
+			"trainer front male/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/tank top/tank top black.png",
+			"overworld walk/hair/boy 1/boy 1 blond.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
+	},
+	"raver_f": {
+		"idea": "Raver del festival de Los Monegros: pelo rosa, camiseta de tirantes y gafas de sol.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/shorts/short black.png",
+			"trainer front female/tops/tank top/tank top red.png",
+			"trainer front female/hair/hair 4/4 pink.png",
+			"trainer front female/hats/glasses/glasses blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/shorts/shorts black.png",
+			"overworld walk/tops/tank top/tank top red.png",
+			"overworld walk/hair/girl 4/4 pink.png",
+			"overworld walk/hats/glasses/glasses blue.png"
+		]
 	}
 }

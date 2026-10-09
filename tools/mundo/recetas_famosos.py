@@ -188,6 +188,10 @@ SPECS = {
                "Pastor de los páramos de Soria: pelo canoso, gabardina de paño, pantalón de faena y boina."),
     "baturro": ("m", "light", (2, "black"), ("chaleco", "black"), ("vestir", "black"), ("headband", None),
                 "Baturro de Zaragoza: cachirulo en la cabeza, chaleco y pantalón negros, como en las jotas."),
+    "raver": ("m", "light", (1, "blond"), ("tirantes", "black"), ("corto", "black"), ("glasses", None),
+              "Raver del festival de Los Monegros: camiseta de tirantes, pantalón corto y gafas de sol."),
+    "raver_f": ("f", "light", (4, "pink"), ("tirantes", "red"), ("corto", "black"), ("glasses", None),
+                "Raver del festival de Los Monegros: pelo rosa, camiseta de tirantes y gafas de sol."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
 }

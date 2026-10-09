@@ -44,6 +44,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Zaragoza", SIZE, data, 1118)
 	p.fill_grass(0.2)
 	p.connect_edge("west", &"ruta_6/exterior", 4, Vector2i(14, 18))
+	p.connect_edge("east", &"ruta_7/exterior", 0, Vector2i(14, 18))
 
 	# La ciudad de la orilla sur, toda de baldosas; la orilla norte, ribera con hierba alta.
 	p.paving(Rect2i(0, 14, 72, 44))

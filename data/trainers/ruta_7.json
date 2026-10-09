@@ -1,0 +1,41 @@
+{
+  "ruta7_raver": {
+    "class": "raver",
+    "name": "Kike",
+    "intro_text": "¡Llevo tres días bailando en el desierto! ¿Qué día es hoy? ¡Da igual, combate!",
+    "lose_text": "Bajón... Necesito agua. Y dormir. Y agua.",
+    "win_text": "¡Uuuuuh! ¡Que suba ese bajo!",
+    "after_text": "El festival es en mitad de Los Monegros: no hay sombra, ni agua, ni cobertura. Es perfecto.",
+    "items": [],
+    "party": [
+      {
+        "species": "noibat",
+        "level": 18
+      },
+      {
+        "species": "toxel",
+        "level": 19
+      }
+    ]
+  },
+  "ruta7_raver_f": {
+    "class": "raver",
+    "gender": "female",
+    "name": "Vane",
+    "intro_text": "¡El DJ acaba de pinchar mi tema! ¡A combatir al ritmo!",
+    "lose_text": "Me has cortado el rollo. Y la música, que se ha ido la luz.",
+    "win_text": "¡Uh, uh, uh! ¡Esto es Monegros!",
+    "after_text": "Los Trapinch se meten en las tiendas de campaña. Revisa los sacos antes de dormir.",
+    "items": [],
+    "party": [
+      {
+        "species": "sandile",
+        "level": 18
+      },
+      {
+        "species": "hoppip",
+        "level": 19
+      }
+    ]
+  }
+}

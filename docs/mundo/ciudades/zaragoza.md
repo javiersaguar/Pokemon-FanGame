@@ -7,7 +7,8 @@
 ## Estado (2026-10-09)
 
 - **Mapa pintado** (`maps/_pintura/pintar_zaragoza.gd`, 72×58, unido con la Ruta 6 por el oeste): el Ebro con el **Puente de Piedra** (tablero dibujado a mano que va debajo de los personajes, con cuatro leones provisionales) y el de Santiago; la orilla norte con hierba alta (Buizel, Marill y Magikarp en el agua); la **Plaza del Pilar** con la **Basílica del Pilar**, el Ayuntamiento, **La Seo**, la fuente de la Hispanidad (provisional) y Goya (busto provisional), Centro Pokémon, Mercadona y Basic-Fit; **El Tubo** con el estanco y callejuelas de una casilla; el teatro romano de Caesaraugusta (ruinas de piedras). Entrenadores en `data/trainers/zaragoza.json` (baturro, clase nueva, y un camarero) y encuentros en `data/encounters/zaragoza.json`.
-- **Pendiente:** la salida este hacia la Ruta 7 (Monegros); la Aljafería y la Expo con la Torre del Agua (al oeste); el cierzo como mecánica.
+- Unida con la Ruta 7 (Monegros) por el este.
+- **Pendiente:** la Aljafería y la Expo con la Torre del Agua (al oeste); el cierzo como mecánica.
 
 ## Lugares reales y cómo se ven
 

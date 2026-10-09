@@ -926,5 +926,17 @@
     "overworld_sprite": "res://assets/sprites/characters/baturro.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "raver": {
+    "name": "Raver",
+    "gender": "mixed",
+    "base_money": 28,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/raver.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/raver_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/raver.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/raver_f.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }
