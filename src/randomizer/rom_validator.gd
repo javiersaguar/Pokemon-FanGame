@@ -301,8 +301,10 @@ static func _check_extra(input: RandomizerInput, patch: RomPatch, problems: Pack
 	for id: Variant in input.data.get("required_items", []):
 		if not obtainable.has(str(id)):
 			problems.append("Objeto necesario no obtenible: %s." % id)
+	# Una sola vez: recorre entrenadores, encuentros y evoluciones, y aquí se consulta por cada MT y tutor.
+	var in_play := species_in_play(patch)
 	var obtained_moves: Dictionary = {}
-	for id: StringName in species_in_play(patch):
+	for id: StringName in in_play:
 		for entry: Array in level_moves(patch, id):
 			obtained_moves[str(entry[1])] = true
 	for kind: String in ["tm", "tutor"]:
@@ -312,7 +314,7 @@ static func _check_extra(input: RandomizerInput, patch: RomPatch, problems: Pack
 			var move_id := str(table[id].get("move", ""))
 			if not input.has_move(StringName(move_id)):
 				problems.append("Movimiento desconocido en %s." % id)
-			for species_id: StringName in species_in_play(patch):
+			for species_id: StringName in in_play:
 				var compat: Array = patch.section(kind + "_compat").get(String(species_id), input.data.get(kind + "_compat", {}).get(String(species_id), []))
 				if id in compat:
 					obtained_moves[move_id] = true
