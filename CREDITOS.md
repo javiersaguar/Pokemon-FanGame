@@ -107,3 +107,5 @@ Eclosión: `Graphics/Pokemon/Eggs/000.png` y `000_cracks.png` del Generation 9 P
 Plano Ruta 23: © colaboradores de OpenStreetMap, ODbL.
 
 Subidas y bajadas de estadísticas: partícula original `ebStatParticle.png` de **Elite Battle: DX (Luka S.J.)**, sin modificar, rotar ni escalar. Manifiesto con original y hash en `data/battle_motion_assets.json`; presentación direccional y rótulo de estadística en la escena.
+
+Plano Ruta 24: © colaboradores de OpenStreetMap, ODbL. Molino manchego: dibujo propio de Javier Saguar, referencia arquitectónica municipal de Consuegra y Turismo de Castilla-La Mancha.

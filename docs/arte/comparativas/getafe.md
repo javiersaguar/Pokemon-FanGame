@@ -9,3 +9,5 @@ Referencia de escala y suelo: [Valladolid](valladolid_mapa.png) y [Añil](../ref
 | ![Cerro](../../../assets/tilesets/exterior/hecho_a_mano/sagrado_corazon_getafe.png) | ![Magdalena](../../../assets/tilesets/exterior/hecho_a_mano/magdalena_getafe.png) | ![Origen](../../../assets/tilesets/exterior/hecho_a_mano/iglesia_san_miguel.png) |
 
 Figura y pedestal dibujados a mano, exportación ×2. La catedral adapta el dibujo propio: **no representa todavía todos los volúmenes renacentistas**. Graderío del Coliseum compuesto con soportales y cancha de tiles de hierba. Hospitalillo y Ayuntamiento, aproximaciones de edificios DPPt. Revisión arquitectónica y visual pendiente Javier, con [referencia de Magdalena](https://www.madrid.org/monumentoscercanias/catedral-santa-m-magdalena.html) y [monumento del Cerro](https://cerrodelosangeles.es/monumento/). Sin aprobación final ni interiores.
+
+2026-10-10: conexión sur de cuatro casillas con Ruta 24, offset −22 y vuelta +22. Captura actualizada; quince puertas y salidas oeste/sur accesibles, 0 problemas.

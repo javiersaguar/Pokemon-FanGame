@@ -176,3 +176,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 
 | Menú de pruebas F9 | Sesión independiente, editor y juego continuo; recursos/UI existentes | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_menu_pruebas.md) |
 | Animación de estadísticas | Partícula original EBDX, dirección y rótulo; reducción accesible | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_menu_pruebas.md) |
+
+| Mundo centro: Ruta 24 · La Mancha | Molino manual fuente 366, llanura y dos conjuntos comprimidos | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/ruta_24.md) |

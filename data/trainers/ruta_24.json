@@ -1,0 +1,40 @@
+{
+  "ruta24_caballero": {
+    "class": "cunado",
+    "name": "Caballero",
+    "intro_text": "¡Ese molino me ha mirado mal! Primero practicaré contigo.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Era una ventana. Lo he comprobado después del combate.",
+    "items": [],
+    "party": [
+      {
+        "species": "rapidash",
+        "level": 49
+      },
+      {
+        "species": "sirfetchd",
+        "level": 50
+      }
+    ]
+  },
+  "ruta24_escudero": {
+    "class": "pastor",
+    "name": "Escudero",
+    "intro_text": "Yo solo venía a sujetar las riendas. Ya que estamos, ¡combate!",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Mi jefe confunde aspas con brazos. Yo confundo dieta con descanso.",
+    "items": [],
+    "party": [
+      {
+        "species": "mudsdale",
+        "level": 49
+      },
+      {
+        "species": "tauros",
+        "level": 51
+      }
+    ]
+  }
+}

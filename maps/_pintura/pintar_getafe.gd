@@ -57,6 +57,7 @@ func _initialize() -> void:
 		p.object(&"farola_verde", at)
 	p.object(&"banco", Vector2i(33, 24))
 	p.flowers(Rect2i(12, 51, 5, 4))
+	p.connect_edge("south", &"ruta_24/exterior", -22, Vector2i(46, 50))
 	p.connect_edge("west", &"leganes/exterior", 0, Vector2i(26, 30))
 	p.spawn("default", Vector2i(1, 27))
 	p.spawn("from_leganes", Vector2i(0, 27))
@@ -69,7 +70,7 @@ func _initialize() -> void:
 	_sign(p, "Ayuntamiento", Vector2i(17, 22), ["PLAZA DE LA CONSTITUCIÓN", "Centro de Getafe. Si te piden otra fotocopia, combate no cuenta como trámite."])
 	_sign(p, "Cerro", Vector2i(49, 46), ["CERRO DE LOS ÁNGELES", "Mirador de la península y santuario del Sagrado Corazón."])
 	_sign(p, "Estacion", Vector2i(7, 10), ["GETAFE CENTRO · C-4", "La C-5 pasa por Leganés. Acceso urbano al oeste."])
-	_sign(p, "Sur", Vector2i(50, 61), ["SUR · RUTA 24, LA MANCHA", "Molinos y Puertollano. Enlace al pintar la ruta."])
+	_sign(p, "Sur", Vector2i(50, 61), ["SUR · RUTA 24, LA MANCHA", "Molinos de La Mancha al sur. Puertollano más adelante."])
 	for local: Array in [["Centro", 4, "CENTRO POKÉMON"], ["Mercadona", 15, "MERCADONA"], ["Estanco", 25, "ESTANCO"], ["BasicFit", 34, "BASIC-FIT"]]:
 		_sign(p, local[0], Vector2i(local[1], 37), [local[2], "Interior pendiente."])
 	p.npc("Vecino", "npc_man", Vector2i(12, 27), 0, PackedStringArray(["Aquí está el sur de Madrid. La capital acaba donde empieza tu abono.", "Para Leganés, sigue hacia el oeste."]))

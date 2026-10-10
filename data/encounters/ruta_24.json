@@ -1,0 +1,63 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "hoppip",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      },
+      {
+        "species": "swablu",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      },
+      {
+        "species": "tauros",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      },
+      {
+        "species": "doduo",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      }
+    ],
+    "night": [
+      {
+        "species": "hoppip",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      },
+      {
+        "species": "swablu",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      },
+      {
+        "species": "tauros",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      },
+      {
+        "species": "doduo",
+        "min": 48,
+        "max": 51,
+        "weight": 25
+      }
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

@@ -15683,6 +15683,40 @@
 		],
 		"source": 85
 	},
+	"molino_mancha": {
+		"coords": [
+			0,
+			0
+		],
+		"door": [
+			1,
+			0
+		],
+		"file": "hecho_a_mano/molino_mancha.png",
+		"footprint": [
+			[
+				0,
+				-1
+			],
+			[
+				1,
+				-1
+			],
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			]
+		],
+		"size": [
+			2,
+			3
+		],
+		"source": 366
+	},
 	"monasterio_escorial": {
 		"coords": [
 			0,
