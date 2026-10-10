@@ -1,0 +1,63 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "pidove",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "sewaddle",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "grimer",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "koffing",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      }
+    ],
+    "night": [
+      {
+        "species": "pidove",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "sewaddle",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "grimer",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "koffing",
+        "min": 49,
+        "max": 52,
+        "weight": 25
+      }
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

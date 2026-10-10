@@ -1,0 +1,40 @@
+{
+  "puertollano_minero": {
+    "class": "jubiladoobras",
+    "name": "Aurelio",
+    "intro_text": "De joven picaba roca. Ahora miro las obras y entreno.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Al castillete lo escuchaba antes de verlo. Ahora está aquí para recordarlo.",
+    "items": [],
+    "party": [
+      {
+        "species": "boldore",
+        "level": 50
+      },
+      {
+        "species": "golem",
+        "level": 51
+      }
+    ]
+  },
+  "puertollano_poligono": {
+    "class": "cunado",
+    "name": "Rafa",
+    "intro_text": "Vengo del polígono. A ver quién tiene más resistencia.",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Entre un turno y otro, aprovecho para combatir.",
+    "items": [],
+    "party": [
+      {
+        "species": "muk",
+        "level": 50
+      },
+      {
+        "species": "garbodor",
+        "level": 52
+      }
+    ]
+  }
+}

@@ -6939,6 +6939,19 @@
 		],
 		"source": 6
 	},
+	"castillete_minero": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/castillete_minero.png",
+		"footprint": [],
+		"size": [
+			2,
+			4
+		],
+		"source": 368
+	},
 	"castillo_bellver": {
 		"coords": [
 			0,
@@ -12753,6 +12766,44 @@
 		],
 		"source": 75
 	},
+	"fuente_agria": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/fuente_agria.png",
+		"footprint": [
+			[
+				1,
+				-2
+			],
+			[
+				0,
+				-1
+			],
+			[
+				2,
+				-1
+			],
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			],
+			[
+				2,
+				0
+			]
+		],
+		"size": [
+			3,
+			3
+		],
+		"source": 367
+	},
 	"fuente_cano": {
 		"coords": [
 			6,
@@ -15682,6 +15733,28 @@
 			12
 		],
 		"source": 85
+	},
+	"minero_puertollano": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/minero_puertollano.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			]
+		],
+		"size": [
+			2,
+			4
+		],
+		"source": 369
 	},
 	"molino_mancha": {
 		"coords": [

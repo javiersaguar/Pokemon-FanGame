@@ -109,3 +109,5 @@ Plano Ruta 23: © colaboradores de OpenStreetMap, ODbL.
 Subidas y bajadas de estadísticas: partícula original `ebStatParticle.png` de **Elite Battle: DX (Luka S.J.)**, sin modificar, rotar ni escalar. Manifiesto con original y hash en `data/battle_motion_assets.json`; presentación direccional y rótulo de estadística en la escena.
 
 Plano Ruta 24: © colaboradores de OpenStreetMap, ODbL. Molino manchego: dibujo propio de Javier Saguar, referencia arquitectónica municipal de Consuegra y Turismo de Castilla-La Mancha.
+
+Puertollano: dibujos propios de Javier Saguar (Fuente Agria, castillete y versión compacta del Monumento al Minero de **Pepe Noja**); referencias arquitectónicas del Ayuntamiento y Turismo de Castilla-La Mancha. Plano © colaboradores de OpenStreetMap, ODbL.
