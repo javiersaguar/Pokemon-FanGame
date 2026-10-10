@@ -4,6 +4,10 @@
 >
 > Plano real: [`../planos/malaga.svg`](../planos/malaga.svg) (casilla = 25 m).
 
+## Estado (2026-10-10, Agente 3)
+
+96×80, norte arriba: río al oeste, fortaleza/mirador al este, puerto y playa al sur, cuatro locales. Catedral adaptada 371 y cubo manual 372 provisionales; Atarazanas compuesto con puestos/soportales. Ruta 26 unida; AVE, gimnasio 8 e interiores pendientes de reglas/guion/recursos. Banderas y demás famosos sin colocar. [Comparativa y límites](../../arte/comparativas/malaga.md).
+
 ## Lugares reales y cómo se ven
 
 | Lugar | Qué es | En el juego | Arte |

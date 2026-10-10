@@ -4,5 +4,3 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
-| malaga/exterior | A3 | 2026-10-10 | Exterior, patrimonio, puerto y enlace Torcal |
-| ruta_26/exterior | A3 | 2026-10-10 | Solo conexión sur a Málaga |

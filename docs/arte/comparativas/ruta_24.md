@@ -12,7 +12,7 @@ Molino dibujado a mano por filas en `molino_mancha.px2`, a 32×48 y exportado a 
 
 Parcelas de secano con suelo y vallas existentes; aún sin sprite específico de cereal. Hierba de encuentros fuera del camino principal: Hoppip, Swablu, Tauros y Doduo, niveles 48–51 según `data/region.json`. Caballero y escudero genéricos, con clases existentes cuñado/pastor; guiño previsto en `rutas.md`, sin personaje famoso ni guion nuevo. Equipos por ID de DataDB, compatibles con RandomLocke. Interiores pendientes de tileset.
 
-Getafe sur columnas 46–49 ⇄ Ruta 24 norte 24–27, offsets −22/+22; cuatro casillas libres por borde. Llegada sur `from_puertollano` preparada, sin conectar con un mapa inexistente. Prueba de alcance desde norte y sur: diez puertas, carteles, entrenadores y salida norte accesibles. Getafe: quince puertas y sus dos conexiones accesibles. El menú F9 incorpora automáticamente este mapa.
+Getafe sur columnas 46–49 ⇄ Ruta 24 norte 24–27, offsets −22/+22; cuatro casillas libres por borde. Ruta 24 sur 24–27 ⇄ Puertollano norte 34–37, offsets +10/−10. Prueba de alcance desde norte y sur: diez puertas, carteles, entrenadores y salida norte accesibles. Getafe: quince puertas y sus dos conexiones accesibles. El menú F9 incorpora automáticamente este mapa.
 
 2026-10-10: abierta la unión sur con Puertollano, offsets +10/−10, cuatro casillas libres por lado; cartel actualizado.
 

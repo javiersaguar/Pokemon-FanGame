@@ -70,9 +70,9 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Bilbao | ✅ | — | — | — | — |
 | Pamplona | ✅ | — | — | — | — |
 | Valladolid | ✅ | ✅ provisional ([captura](../arte/comparativas/valladolid_mapa.png)) | — | cuatro locales señalizados, aficionado y paseante; gimnasio 7 reservado | — |
-| Puertollano | ✅ | — | — | — | — |
+| Puertollano | ✅ | [Exterior provisional](../arte/comparativas/puertollano.md) | — | Paseo, Fuente Agria, Pozo Norte, cuatro locales, entrenadores y rutas 24/25 | — |
 | Huelva | ✅ | ✅ provisional ([captura](../arte/comparativas/huelva_mapa.png)) | — | marinero y regatista; ferry a Las Palmas | — |
-| Málaga | ✅ | — | — | — | — |
+| Málaga | ✅ | [Exterior provisional](../arte/comparativas/malaga.md) | — | Casco, fortalezas, puerto, cuatro locales, entrenadores y enlace del Torcal | — |
 
 ## Conexiones
 
@@ -85,3 +85,16 @@ Cómo se unen los mapas pintados (bordes y pasarelas), qué grupos quedan aislad
 | Ruta 21 · Viñedos | [Captura](../arte/comparativas/ruta_21_mapa.png), [ficha](ruta_21.md) | desde `from_pamplona`, 0 problemas | pendiente Javier |
 | Ruta 22 · Burgos y Atapuerca | [Captura](../arte/comparativas/ruta_22_mapa.png), [ficha](ruta_22.md) | norte y Ruta 21, 0 problemas | pendiente Javier |
 | Ruta 23 · Cuéllar y regreso San Miguel | [Captura](../arte/comparativas/ruta_23_mapa.png), [ficha](ruta_23.md) | Valladolid y pueblo, 0 problemas | pendiente Javier |
+
+## Continuación del tramo centro y final (Agente 3, 2026-10-10)
+
+| Lugar | Exterior y comparativa | Conexión comprobada | Revisión |
+|---|---|---|---|
+| Ruta 24 · La Mancha | [Molinos y campos](../arte/comparativas/ruta_24.md) | Getafe ⇄ Ruta 24 ⇄ Puertollano | pendiente Javier |
+| Puertollano | [Paseo, fuente y mina](../arte/comparativas/puertollano.md) | Rutas 24/25, 17 puertas accesibles | pendiente Javier |
+| Ruta 25 · Despeñaperros | [Paso y embalse](../arte/comparativas/ruta_25.md) | Puertollano ⇄ Ruta 25 ⇄ Ruta 26 | pendiente Javier |
+| Ruta 26 · El Torcal | [Caliza y dolmen](../arte/comparativas/ruta_26.md) | Ruta 25 ⇄ Ruta 26 ⇄ Málaga | pendiente Javier |
+| Málaga | [Ciudad y puerto](../arte/comparativas/malaga.md) | Torcal, 18 puertas accesibles | pendiente Javier |
+| Calle de la Victoria | [Traspaso del bloqueo](calle_victoria.md) | Exteriores de Sol/Palacio existentes; interior pendiente | pendiente recursos y Javier |
+
+Cada comparativa de los cinco mapas nuevos contiene vista general y captura real del juego a 512×384. El menú F9 descubre estos mapas sin mantener una lista separada. Las puertas de locales y monumentos esperan interiores; los carteles no sustituyen los gimnasios ni el guion.

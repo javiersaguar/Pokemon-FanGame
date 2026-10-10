@@ -21,6 +21,12 @@ Cada ruta toma su paisaje del camino real entre las dos ciudades.
 - **Ruta 14:** Elena (ornitóloga), Rafa (rociero) y Paco (guarda del parque; las dos clases son nuevas). El pinar, la aldea de El Rocío (la ermita, pendiente de dibujar), las marismas con su vereda y el observatorio, y las dunas. Unida con Sevilla · Río (este) y con Huelva (oeste).
 - **Ruta 15:** Aday (surfista, clase nueva), Nayra (nadadora) y Echedey (guagüero, clase nueva). La costa este de Gran Canaria: malpaís, playas de arena negra de Telde, un barranco con su escalera y las salinas de Arinaga. Unida con Vegueta y Triana (norte) y con Playa del Inglés (sur).
 
+
+- **Ruta 24:** molinos de Consuegra y Campo de Criptana comprimidos, campos de secano, caballero y escudero genéricos; encuentros 48–51. Getafe ⇄ Ruta 24 ⇄ Puertollano. [Comparativa](../arte/comparativas/ruta_24.md).
+- **Ruta 25:** paso con curvas, riscos y embalse del Montoro comprimido al noroeste; camionero y montañera, encuentros 49–52. Puertollano ⇄ Ruta 25 ⇄ Ruta 26. Los Órganos esperan su pieza específica. [Comparativa](../arte/comparativas/ruta_25.md).
+- **Ruta 26:** caliza apilada del Torcal y entrada de dolmen bajo túmulo; guía y escaladora, encuentros 50–53. Ruta 25 ⇄ Ruta 26 ⇄ Málaga. Coto Matamoros y la cámara interior quedan pendientes. [Comparativa](../arte/comparativas/ruta_26.md).
+- **Calle de la Victoria:** interior bloqueado por recursos/recorrido pendiente; [traspaso](calle_victoria.md), sin mapa pintado ni enlace ficticio.
+
 | Ruta | Paisaje real | Qué tiene en el juego | Entrenadores y personajes | Pokémon propuestos |
 |------|--------------|----------------------|---------------------------|--------------------|
 | **Ruta 1 · Hoces del Duratón** | Cañón del Duratón entre San Miguel de Bernuy y Sepúlveda: paredes de caliza, **buitres leonados**, la ermita de San Frutos en lo alto, canoas en el río | Camino por la ribera con hierba alta; mirador de los buitres; ruinas de Los Sanmartines | Piragüistas, ornitólogos con prismáticos | Pidgey, Bidoof, Vullaby, Psyduck, Magikarp |

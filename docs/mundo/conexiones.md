@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Grupos de mapas unidos entre sí
 
-- Se llega desde San Miguel de Bernuy (35 mapas): `barcelona/ciutat_vella`, `barcelona/eixample`, `barcelona/les_corts`, `getafe/exterior`, `ibiza/exterior`, `leganes/exterior`, `madrid/centro`, `madrid/chamberi`, `madrid/moncloa`, `madrid/palacio_real`, `madrid/retiro`, `maritima_1/exterior`, `mostoles/exterior`, `palma/exterior`, `pueblo_inicial/exterior`, `puertollano/exterior`, `ruta_1/exterior`, `ruta_2/exterior`, `ruta_21/exterior`, `ruta_22/exterior`, `ruta_23/exterior`, `ruta_24/exterior`, `ruta_25/exterior`, `ruta_26/exterior`, `ruta_3/exterior`, `ruta_4/exterior`, `ruta_5/exterior`, `ruta_6/exterior`, `ruta_7/exterior`, `ruta_8/exterior`, `valencia/ciutat_vella`, `valencia/malvarrosa`, `valencia/turia`, `valladolid/exterior`, `zaragoza/exterior`
+- Se llega desde San Miguel de Bernuy (36 mapas): `barcelona/ciutat_vella`, `barcelona/eixample`, `barcelona/les_corts`, `getafe/exterior`, `ibiza/exterior`, `leganes/exterior`, `madrid/centro`, `madrid/chamberi`, `madrid/moncloa`, `madrid/palacio_real`, `madrid/retiro`, `malaga/exterior`, `maritima_1/exterior`, `mostoles/exterior`, `palma/exterior`, `pueblo_inicial/exterior`, `puertollano/exterior`, `ruta_1/exterior`, `ruta_2/exterior`, `ruta_21/exterior`, `ruta_22/exterior`, `ruta_23/exterior`, `ruta_24/exterior`, `ruta_25/exterior`, `ruta_26/exterior`, `ruta_3/exterior`, `ruta_4/exterior`, `ruta_5/exterior`, `ruta_6/exterior`, `ruta_7/exterior`, `ruta_8/exterior`, `valencia/ciutat_vella`, `valencia/malvarrosa`, `valencia/turia`, `valladolid/exterior`, `zaragoza/exterior`
 - **Aislado del pueblo inicial** (13 mapas): `huelva/exterior`, `las_palmas/canteras`, `las_palmas/vegueta_triana`, `playa_del_ingles/exterior`, `ruta_12/exterior`, `ruta_13/exterior`, `ruta_14/exterior`, `ruta_15/exterior`, `ruta_16/exterior`, `sevilla/centro`, `sevilla/maria_luisa`, `sevilla/rio`, `vigo/exterior`
 
 ## Uniones pendientes
@@ -31,6 +31,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 | `madrid/moncloa` | Madrid · Moncloa | west → `ruta_4/exterior`, east → `madrid/centro`, east → `madrid/chamberi` | — |
 | `madrid/palacio_real` | Madrid · Palacio Real | east → `madrid/centro` | — |
 | `madrid/retiro` | Madrid · Retiro y Prado | west → `madrid/centro`, west → `madrid/centro`, east → `ruta_5/exterior` | CercaniasLeganes → `leganes/exterior`, CercaniasMostoles → `mostoles/exterior` |
+| `malaga/exterior` | Málaga | north → `ruta_26/exterior` | — |
 | `maritima_1/exterior` | Ruta marítima 1 · Canal de Ibiza | north → `palma/exterior`, south → `ibiza/exterior` | — |
 | `mostoles/exterior` | Móstoles | east → `leganes/exterior` | CercaniasAtocha → `madrid/retiro` |
 | `palma/exterior` | Palma de Mallorca | south → `maritima_1/exterior` | FerryBarcelona → `barcelona/ciutat_vella` |
@@ -49,7 +50,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 | `ruta_23/exterior` | Ruta 23 · Cuéllar y Tierra de Pinares | west → `valladolid/exterior`, east → `pueblo_inicial/exterior` | — |
 | `ruta_24/exterior` | Ruta 24 · La Mancha | south → `puertollano/exterior`, north → `getafe/exterior` | — |
 | `ruta_25/exterior` | Ruta 25 · Despeñaperros | south → `ruta_26/exterior`, north → `puertollano/exterior` | — |
-| `ruta_26/exterior` | Ruta 26 · El Torcal de Antequera | north → `ruta_25/exterior` | — |
+| `ruta_26/exterior` | Ruta 26 · El Torcal de Antequera | south → `malaga/exterior`, north → `ruta_25/exterior` | — |
 | `ruta_3/exterior` | Ruta 3 · Puerto de Navacerrada | north → `ruta_2/exterior`, south → `ruta_4/exterior` | — |
 | `ruta_4/exterior` | Ruta 4 · El Escorial y Galapagar | north → `ruta_3/exterior`, east → `madrid/moncloa` | — |
 | `ruta_5/exterior` | Ruta 5 · Corredor del Henares | west → `madrid/retiro`, east → `ruta_6/exterior` | — |

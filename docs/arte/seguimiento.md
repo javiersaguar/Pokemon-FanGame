@@ -184,3 +184,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Mundo centro: Ruta 25 · Despeñaperros | Curvas, riscos y presa con recursos existentes; Los Órganos sin pieza específica | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/ruta_25.md) |
 
 | Mundo centro: Ruta 26 · Torcal/Antequera | Caliza y entrada manuales 373–374, túmulo y pasos entre bases | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/ruta_26.md) |
+
+| Mundo centro: Málaga | Catedral adaptada 371, cubo manual 372, puerto y patrimonio compuesto | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/malaga.md) |

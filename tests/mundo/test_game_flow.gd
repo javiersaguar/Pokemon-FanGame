@@ -219,7 +219,9 @@ func test_flujo_randomlocke_modo_ajustes_resumen_intro_sin_debug() -> void:
 		done[0] = true
 	start.call()
 	var chose_mode := false
-	for frame: int in 420:
+	# El flujo incluye un hilo y varias pantallas; su avance no depende del número de frames.
+	var deadline := Time.get_ticks_msec() + 15000
+	while not done[0] and Time.get_ticks_msec() < deadline:
 		await wait_physics_frames(1)
 		for node: Node in SceneManager.ui_layer.get_children():
 			if node is NameKeyboard:

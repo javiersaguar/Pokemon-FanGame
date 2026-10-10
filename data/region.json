@@ -22,7 +22,7 @@
     "pamplona": {"name": "Pamplona", "kind": "city", "cell": [19, 4], "map": "", "latlon": [42.81, -1.64]},
     "valladolid": {"name": "Valladolid", "kind": "city", "cell": [11, 7], "map": "", "latlon": [41.65, -4.72], "gym": {"order": 7, "leader": "Juanmi Latasa", "place": "Plaza Mayor"}},
     "puertollano": {"name": "Puertollano", "kind": "city", "cell": [13, 16], "map": "puertollano/exterior", "latlon": [38.69, -4.11]},
-    "malaga": {"name": "Málaga", "kind": "city", "cell": [12, 22], "map": "", "latlon": [36.72, -4.42], "gym": {"order": 8, "leader": "Antonio Banderas", "place": "El rodaje de otra película"}}
+    "malaga": {"name": "Málaga", "kind": "city", "cell": [12, 22], "map": "malaga/exterior", "latlon": [36.72, -4.42], "gym": {"order": 8, "leader": "Antonio Banderas", "place": "El rodaje de otra película"}}
   },
   "landmarks": {
     "segovia": {"name": "Acueducto de Segovia", "cell": [13, 9], "on": "ruta_2"},

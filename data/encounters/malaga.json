@@ -1,0 +1,82 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "murkrow",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      },
+      {
+        "species": "zorua",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      },
+      {
+        "species": "pidove",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      },
+      {
+        "species": "meowth",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      }
+    ],
+    "night": [
+      {
+        "species": "murkrow",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      },
+      {
+        "species": "zorua",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      },
+      {
+        "species": "sableye",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      },
+      {
+        "species": "meowth",
+        "min": 51,
+        "max": 54,
+        "weight": 25
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "wingull",
+      "min": 51,
+      "max": 54,
+      "weight": 33
+    },
+    {
+      "species": "finneon",
+      "min": 51,
+      "max": 54,
+      "weight": 33
+    },
+    {
+      "species": "frillish",
+      "min": 51,
+      "max": 54,
+      "weight": 33
+    }
+  ],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

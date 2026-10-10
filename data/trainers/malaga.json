@@ -1,0 +1,40 @@
+{
+  "malaga_rodaje": {
+    "class": "influencerlinkedin",
+    "name": "Sergio",
+    "intro_text": "Estamos entre tomas. ¿Rodamos un combate?",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "El guion del gimnasio lo decide el director. Yo reviso los focos.",
+    "items": [],
+    "party": [
+      {
+        "species": "zorua",
+        "level": 52
+      },
+      {
+        "species": "houndoom",
+        "level": 53
+      }
+    ]
+  },
+  "malaga_playa": {
+    "class": "turistachanclas",
+    "name": "Dani",
+    "intro_text": "¡El descanso también incluye entrenar!",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Del paseo a la playa, y de la playa al paseo.",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 52
+      },
+      {
+        "species": "frillish",
+        "level": 54
+      }
+    ]
+  }
+}

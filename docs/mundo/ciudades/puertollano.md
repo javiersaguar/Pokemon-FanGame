@@ -6,6 +6,12 @@
 
 Ciudad minera e industrial de Ciudad Real, en el valle entre dos sierras, con **estación de AVE** en la línea Madrid–Andalucía. Encaja como parada **antes de bajar a Málaga** (tramo 24 de `region.md`).
 
+## Estado (2026-10-10, Agente 3)
+
+72×64, norte arriba. Paseo central, Santa Ana al noreste y Pozo Norte al sureste. Tres piezas propias provisionales (367–369); Asunción adaptada del dibujo de Móstoles, pendiente fidelidad. Cuatro locales preparados sin interiores ficticios. Encuentros 49–52 y dos entrenadores genéricos por DataDB. Fuente sin curación/recompensa, mina sin acceso y AVE sin viaje hasta aprobar sus reglas y disponer de recursos.
+
+Fuente primaria para la corrección de altura/autor del monumento: [Ayuntamiento de Puertollano](https://mapas.puertollano.es/es/global/resource/r/monumento-al-minero_602). [Comparativa](../../arte/comparativas/puertollano.md).
+
 ## Lugares reales y cómo se ven
 
 | Lugar | Qué es | En el juego | Arte |
@@ -48,9 +54,3 @@ Mina: Roggenrola, Boldore, Drilbur, Rolycoly, Carkol, Diglett; refinería: Grime
 
 - [Hoteles.net: qué ver en Puertollano](https://www.hoteles.net/reportajes/que-ver-y-hacer-en-puertollano.html) · [Civitatis: visita guiada](https://www.civitatis.com/es/puertollano/visita-guiada-puertollano?aid=3886) · [Planomato: reapertura del Museo de la Minería](https://planomato.com/es/albacete/n/reapertura-museo-mineria-gratis)
 - Plano: © colaboradores de OpenStreetMap (ODbL).
-
-## Exterior implementado (A3, 2026-10-10)
-
-72×64, norte arriba. Paseo central, Santa Ana al noreste y Pozo Norte al sureste. Tres piezas propias provisionales (367–369); Asunción adaptada del dibujo de Móstoles, pendiente fidelidad. Cuatro locales preparados sin interiores ficticios. Encuentros 49–52 y dos entrenadores genéricos por DataDB. Fuente sin curación/recompensa, mina sin acceso y AVE sin viaje hasta aprobar sus reglas y disponer de recursos.
-
-Fuente primaria para la corrección de altura/autor del monumento: [Ayuntamiento de Puertollano](https://mapas.puertollano.es/es/global/resource/r/monumento-al-minero_602). [Comparativa](../../arte/comparativas/puertollano.md).
