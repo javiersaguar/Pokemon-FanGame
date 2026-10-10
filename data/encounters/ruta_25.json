@@ -1,0 +1,51 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "gligar",
+        "min": 49,
+        "max": 52,
+        "weight": 33
+      },
+      {
+        "species": "rhyhorn",
+        "min": 49,
+        "max": 52,
+        "weight": 33
+      },
+      {
+        "species": "zubat",
+        "min": 49,
+        "max": 52,
+        "weight": 33
+      }
+    ],
+    "night": [
+      {
+        "species": "gligar",
+        "min": 49,
+        "max": 52,
+        "weight": 33
+      },
+      {
+        "species": "rhyhorn",
+        "min": 49,
+        "max": 52,
+        "weight": 33
+      },
+      {
+        "species": "zubat",
+        "min": 49,
+        "max": 52,
+        "weight": 33
+      }
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

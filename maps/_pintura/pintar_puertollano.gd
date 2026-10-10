@@ -59,6 +59,7 @@ func _initialize() -> void:
 	p.spawn("from_ruta_24", Vector2i(35, 0))
 	p.spawn("from_ruta_25", Vector2i(35, 63))
 	p.spawn("from_ave", Vector2i(7, 37))
+	p.connect_edge("south", &"ruta_25/exterior", -10, Vector2i(34, 38))
 	p.connect_edge("north", &"ruta_24/exterior", -10, Vector2i(34, 38))
 	p.trainer("JubiladoMinero", &"puertollano_minero", Vector2i(52, 50), 0, 3)
 	p.trainer("Poligono", &"puertollano_poligono", Vector2i(57, 34), 1, 3)
@@ -69,7 +70,7 @@ func _initialize() -> void:
 	_sign(p, "Asuncion", Vector2i(17, 44), ["IGLESIA DE NUESTRA SEÑORA DE LA ASUNCIÓN", "Fachada provisional adaptada del set propio; interior pendiente."])
 	_sign(p, "Museo", Vector2i(53, 61), ["MUSEO DE LA MINERÍA · POZO NORTE", "Castillete y pasado industrial. La Mina Imagen espera a los interiores."])
 	_sign(p, "Estacion", Vector2i(8, 37), ["PUERTOLLANO · AVE", "Madrid y Andalucía por ferrocarril. Transporte pendiente de reglas."])
-	_sign(p, "Sur", Vector2i(38, 62), ["SUR · RUTA 25, DESPEÑAPERROS", "El enlace abrirá al pintar la ruta."])
+	_sign(p, "Sur", Vector2i(38, 62), ["SUR · RUTA 25, DESPEÑAPERROS", "Paso hacia Sierra Morena y Andalucía."])
 	for local: Array in [["Centro", 4, 53, "CENTRO POKÉMON"], ["Mercadona", 19, 53, "MERCADONA"], ["Estanco", 40, 52, "ESTANCO"], ["BasicFit", 62, 52, "BASIC-FIT"]]:
 		_sign(p, local[0], Vector2i(local[1], local[2]), [local[3], "Interior pendiente."])
 	p.npc("Paseante", "npc_old_man", Vector2i(31, 30), 0, PackedStringArray(["Mi abuelo bajaba al pozo. Yo bajo al paseo a estirar las piernas.", "El castillete recuerda el pasado minero de esta ciudad."]))

@@ -1,0 +1,40 @@
+{
+  "ruta25_camionero": {
+    "class": "cunado",
+    "name": "Tomás",
+    "intro_text": "He parado a estirar las piernas. ¡Ahora toca entrenar!",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Entre curvas y combates, hoy no llego a comer.",
+    "items": [],
+    "party": [
+      {
+        "species": "rhyhorn",
+        "level": 50
+      },
+      {
+        "species": "snorlax",
+        "level": 51
+      }
+    ]
+  },
+  "ruta25_montanera": {
+    "class": "montanera",
+    "name": "Lola",
+    "intro_text": "¿Sigues el camino o vienes a subir a los riscos?",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "El paso natural lo abrió el río. Yo solo sigo los senderos.",
+    "items": [],
+    "party": [
+      {
+        "species": "gligar",
+        "level": 50
+      },
+      {
+        "species": "lycanroc",
+        "level": 52
+      }
+    ]
+  }
+}

@@ -111,3 +111,5 @@ Subidas y bajadas de estadísticas: partícula original `ebStatParticle.png` de 
 Plano Ruta 24: © colaboradores de OpenStreetMap, ODbL. Molino manchego: dibujo propio de Javier Saguar, referencia arquitectónica municipal de Consuegra y Turismo de Castilla-La Mancha.
 
 Puertollano: dibujos propios de Javier Saguar (Fuente Agria, castillete y versión compacta del Monumento al Minero de **Pepe Noja**); referencias arquitectónicas del Ayuntamiento y Turismo de Castilla-La Mancha. Plano © colaboradores de OpenStreetMap, ODbL.
+
+Plano Ruta 25: © colaboradores de OpenStreetMap, ODbL. Paisaje de Despeñaperros y presa compuestos con los recursos de exteriores acreditados, referencias de la Junta de Andalucía y Ayuntamiento de Puertollano.

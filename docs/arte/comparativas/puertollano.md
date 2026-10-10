@@ -17,3 +17,13 @@ Referencias primarias: [Fuente Agria, Turismo de Castilla-La Mancha](https://www
 Encuentros 49–52 en el paseo/zona industrial, dos entrenadores genéricos con clases existentes jubiladoobras/cunado. Equipos por DataDB y parcheables por RandomLocke. La fuente aún no cura ni regala objetos; mina, AVE y famosos esperan recursos/reglas/guion. El gimnasio 8 está reservado a Málaga.
 
 Ruta 24 sur columnas 24–27 ⇄ Puertollano norte 34–37, offsets +10/−10, cuatro salidas libres. `from_ruta_25` en (35,63) preparado para el siguiente mapa. Alcance desde ambas entradas: 17 puertas, carteles y entrenadores accesibles, 0 problemas. Carga medida 115,53 ms antes del último ajuste de decorado. El menú F9 descubre automáticamente el mapa.
+
+2026-10-10: abierto el enlace sur a Ruta 25, offsets −10/+10; las 17 puertas y ambos bordes pasan alcance sin problemas.
+
+## Escala del juego: 512×384
+
+| Añil | Juego real, sesión temporal F9 |
+|---|---|
+| ![Referencia](../referencias/anil_pueblo.png) | ![Juego](puertollano_juego.png) |
+
+Captura nativa con personaje y seguidor, sin reescalar el mundo ni los sprites.

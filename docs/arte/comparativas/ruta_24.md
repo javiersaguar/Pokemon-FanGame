@@ -15,3 +15,11 @@ Parcelas de secano con suelo y vallas existentes; aún sin sprite específico de
 Getafe sur columnas 46–49 ⇄ Ruta 24 norte 24–27, offsets −22/+22; cuatro casillas libres por borde. Llegada sur `from_puertollano` preparada, sin conectar con un mapa inexistente. Prueba de alcance desde norte y sur: diez puertas, carteles, entrenadores y salida norte accesibles. Getafe: quince puertas y sus dos conexiones accesibles. El menú F9 incorpora automáticamente este mapa.
 
 2026-10-10: abierta la unión sur con Puertollano, offsets +10/−10, cuatro casillas libres por lado; cartel actualizado.
+
+## Escala del juego: 512×384
+
+| Añil | Juego real, sesión temporal F9 |
+|---|---|
+| ![Referencia](../referencias/anil_ruta.png) | ![Juego](ruta_24_juego.png) |
+
+Captura nativa con personaje y seguidor, sin reescalar el mundo ni los sprites.
