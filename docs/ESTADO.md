@@ -227,6 +227,10 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-mundo-sur`. Tramo: Ruta 
 
 **Cierre (Agente 5, 2026-10-09):** Móstoles, que quedó en la rama sin integrar al acabarse el uso, está en `main` (validado con el resto). El **Cercanías C-5** está hecho como pasarelas: Atocha (`madrid/retiro`, andenes en (29, 59) y (31, 59), llegada `from_cercanias` en (30, 58)) ⇄ Leganés (9, 12) y Móstoles (27, 11). Siguen pendientes de Javier sus reglas (coste, desbloqueo, retraso). Siguiente del tramo: Ruta 24 desde Getafe (`from_ruta_24` en (47, 63)) → Puertollano → Rutas 25 y 26 → Málaga; la Calle de la Victoria; Pamplona ⇄ Ruta 21 cuando exista Pamplona.
 
+### Continuación del tramo (2026-10-10)
+
+Main `47ca2f19` incorporado; Móstoles y las pasarelas C-5 se conservan. **Primero: menú de pruebas**, según el aviso. Javier decide (2026-10-10): **F9 solo debug, sesión separada, todo lo jugable de forma continua**; saltos entre ciudades, equipos/movimientos/objetos, combates y animaciones. Pide mejorar mucho la animación de subidas/bajadas de estadísticas, o dejarlo apuntado. **Hecho:** menú F9 con sesión temporal restaurable, viaje por mapas/llegadas, edición de equipos/movimientos/objetos/teratipo, combates simples/dobles y mecánicas, pantallas y galerías reales, RandomLocke. Subidas/bajadas: partícula original EBDX, oleadas direccionales y rótulo; reducción mantiene texto. [Comparativa y recorrido](arte/comparativas/a3_menu_pruebas.md). **Validación final:** 471/471 tests, 18.027 aserciones, 411,76 s; arte 10.906 PNG, 0 errores/avisos; datos 0 errores (3 avisos previos). Petición 70 documenta la conexión mínima del backend. **Siguiente:** Ruta 24 desde Getafe, Puertollano, rutas 25/26, Málaga y Calle de la Victoria. Arte provisional, fuentes 350–449.
+
 **He leído** (2026-10-07, sesión con 3 agentes) el último aviso, las respuestas de Javier, la tabla de propiedad nueva y mi lista de «Próxima sesión». El arte del mundo y de los entrenadores es del Agente 4; yo sigo con la interfaz, el audio, los datos de entrenadores y `TrainerNPC`. Worktree `pokemon-panchito-agente3`, rama `feat/agente3-sesion`.
 
 **En qué estoy:** sesión con 3 agentes del 7 de octubre, de arriba abajo. Recuperado el trabajo pendiente de Opciones antes de sincronizar. Tareas 1 y 2 funcionales publicadas; mapa gráfico/ocho medallas bloqueados por petición 65/pregunta 30. Presentación de tarea 5 publicada; integración persistente pendiente de API A2 (petición 66). Tarea 6 pendiente de APIs de sistemas (petición 67); Tarea 7 terminada; tarea 8 terminada: 76 capturas y 11 tests nuevos, integración final 452/452 verde. Trabajo independiente cerrado; quedan las dependencias explícitas de tareas 2/5/6. A5 es ahora dueño del motor; la escena sigue siendo mía. Identidad/logo/música y arte del mundo pendientes de Javier.
@@ -489,20 +493,9 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo-norte`. Fuentes de
 
 ### Lo primero: menú de pruebas (idea de Javier, 2026-10-09)
 
-Javier quiere **un menú de pruebas donde ver todo lo que llevamos hecho**. Se **idea con él al empezar** (no está decidido); estas son solo ideas de partida:
-- **Base que ya existe:** el menú de depuración (F9, solo en builds de debug; `src/autoload/debug.gd`) con la lista de mapas y los comandos `tp`, `trainerbattle`, `wildbattle`, `givepkmn`, `party`, `flag`, `hour`, `noclip`, `bgm`… (`help` los lista).
-- **Qué podría enseñar:**
-  - **Mapas:** todos los mapas pintados, con un salto a cada aparición, según `docs/mundo/conexiones.md`.
-  - **Monumentos:** una galería de las piezas dibujadas a mano, con su comparativa.
-  - **Entrenadores y famosos:** el sprite de mapa, el de combate y la foto real, y un combate de prueba contra cada uno.
-  - **Pokémon:** la Pokédex con sprites, shinies y gritos.
-  - **Combate:** fondos, animaciones de movimientos y megas.
-  - **Música y sonidos.**
-  - **RandomLocke:** generar una ROM y ver su registro.
-- **A decidir con Javier:**
-  - cómo se entra: desde el menú inicial, con una opción oculta o solo en debug;
-  - si va dentro de una partida o aparte;
-  - qué es lo más urgente de ver.
+**Decidido por Javier (2026-10-10): F9 solo debug, sesión separada, todo lo ya jugable de forma continua.** Cambiar de ciudad, equipos/movimientos/objetos, combates y animaciones para revisar con sus propios ojos. Mejorar mucho las subidas/bajadas de estadísticas o dejarlo apuntado.
+
+Implementado por A3: pestaña Pruebas y copia temporal restaurable, catálogos y pantallas reales; 471/471 tests, arte y datos sin errores. [Recorrido y comparativas](arte/comparativas/a3_menu_pruebas.md). Después continúa cada tramo por su lista pendiente.
 
 *Sesión larga del 2026-10-05 con **4 agentes**. Reglas de la sesión:*
 - *Cada agente sigue **su lista de arriba abajo**. Al terminar una tarea: tests en verde, merge a `main`, `git push origin main`, tu sección de ESTADO al día y **la siguiente tarea sin esperar**.*
@@ -657,6 +650,8 @@ Javier quiere **un menú de pruebas donde ver todo lo que llevamos hecho**. Se *
 | 68 | A3 → A1 | Dos líneas en SceneManager.start_new_game aplican el valor Correr siempre elegido desde el título; cargar conserva el de la partida. Test real de nueva partida/guardar/cargar. Además, test_game_flow de cancelar código espera frames de proceso, pues los de física podían coincidir con el frame protegido de apertura: repro aislado antes fallaba, después pasa (petición 60 de A5). | hecha por A3 en ausencia de A1 (revisar al volver) |
 
 | 69 | A3 → A2 | La ficha ya lista Pokemon.ribbons. Falta catálogo por ID con nombre español y recurso de cinta; por ahora conserva los registros guardados. Publicar consulta/datos cuando se incorporen cintas al mundo; no invento nombres ni dibujos. | pendiente de catálogo |
+| 70 | A3 → A1 | Conexiones mínimas para el menú de pruebas aprobado por Javier: panel preferido en Debug, restauración en memoria en SceneManager y protección de mutadores de SaveManager durante la sesión separada. No cambia guardados ni el flujo normal. Tests reales de aislamiento, ROM, ranuras, equipos y F9. | hecha por A3 en ausencia de A1 (revisar al volver) |
+
 
 ---
 
@@ -728,6 +723,8 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 
 ### Tramo centro: transporte y nivel gráfico (2026-10-09, Agente 3)
 
+- **RESUELTO JAVIER (2026-10-10):** menú de pruebas desde F9 solo debug, sesión separada y todo lo jugable de forma continua (mapas, equipos, movimientos, animaciones y objetos). Mejorar mucho las subidas/bajadas de estadísticas o dejarlo apuntado.
+- **PENDIENTE JAVIER, revisión visual:** menú y animaciones de estadísticas entregados; [recorrido, comparativas y límites actuales](arte/comparativas/a3_menu_pruebas.md). El trabajo continúa por Ruta 24.
 - **PENDIENTE JAVIER:** sur de Madrid se visita opcionalmente después del gimnasio 1 y se cruza al volver para bajar a La Mancha. ¿Los entrenadores de Getafe/Leganés/Móstoles mantienen niveles tempranos o se prepara una segunda versión para el regreso? Propuesta actual de encuentros: 14–17, sin escalado dinámico.
 - **PENDIENTE JAVIER:** C-5: costes, condición de desbloqueo y duración del retraso aleatorio. El pintado prepara los accesos exteriores; no se fijan esas reglas ni se inventa una parada en Getafe Centro (C-4).
 - **PENDIENTE JAVIER:** revisión visual de monumentos del tramo, especialmente textura/escala del castillo de Cuéllar y volumen de catedrales adaptadas. Comparativas en `docs/arte/comparativas/`; ninguna pieza se marca final.

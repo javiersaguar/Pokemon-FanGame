@@ -9,6 +9,8 @@ var _remaining := 0.0
 var name_screen: NameKeyboard
 var _nickname_active := false
 var _generation := 0
+var playtest: PlaytestSession
+var playtest_menu: PlaytestMenu
 
 func _ready() -> void:
 	UiPreferences.initialize()
@@ -37,6 +39,13 @@ func _ready() -> void:
 		zone.hide())
 	EventBus.menu_closed.connect(_menu_closed)
 	EventBus.always_run_changed.connect(_run_changed)
+	if OS.is_debug_build():
+		playtest = PlaytestSession.new()
+		playtest_menu = PlaytestMenu.new()
+		playtest_menu.session = playtest
+		Debug.register_panel("Pruebas",playtest_menu,true)
+		tree_exiting.connect(func() -> void:
+			if is_instance_valid(playtest_menu): Debug.unregister_panel(playtest_menu))
 	Cutscene.name_requested.connect(_name_requested)
 	EventBus.locke_nickname_requested.connect(_nickname_requested)
 

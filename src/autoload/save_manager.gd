@@ -11,6 +11,9 @@ extends Node
 ## Escritura segura: se escribe a .tmp, la versión anterior pasa a .bak y el
 ## .tmp se renombra. Si el archivo principal está dañado, se carga el .bak.
 
+## La sesión de pruebas es temporal: ninguna entrada de UI/consola toca ranuras.
+var test_session_active := false
+
 const SAVE_DIR := "user://saves"
 const INDEX_PATH := "user://saves/index.json"
 ## Ranuras si data/world.json → saves.slots no dice otra cosa (mínimo 8).
@@ -62,6 +65,8 @@ func last_used_slot() -> int:
 ## Guarda la partida en `slot` (0 = la ranura en curso). Con la miniatura y, en
 ## RandomLocke, el parche de la ROM.
 func save_game(slot: int = 0) -> Error:
+	if test_session_active:
+		return ERR_UNAUTHORIZED
 	if GameState.locke != null:
 		GameState.locke.sync()
 	if slot <= 0:
@@ -99,6 +104,8 @@ func peek_state(slot: int) -> Dictionary:
 ## DataDB). No cambia de mapa: para entrar en la partida usa
 ## SceneManager.continue_game(slot).
 func load_game(slot: int) -> Error:
+	if test_session_active:
+		return ERR_UNAUTHORIZED
 	var data := _read_save(slot_path(slot))
 	if data.is_empty():
 		return ERR_FILE_NOT_FOUND
@@ -179,6 +186,8 @@ func thumbnail(slot: int) -> Texture2D:
 
 ## Copia la ranura `from` en `to` (sobrescribe `to`; la confirmación es cosa de la UI).
 func copy_slot(from: int, to: int) -> Error:
+	if test_session_active:
+		return ERR_UNAUTHORIZED
 	if from == to or not has_save(from):
 		return ERR_INVALID_PARAMETER
 	delete_save(to)
@@ -194,6 +203,8 @@ func copy_slot(from: int, to: int) -> Error:
 
 ## Borra la ranura entera (la confirmación doble es cosa de la UI).
 func delete_save(slot: int) -> void:
+	if test_session_active:
+		return
 	var path := slot_path(slot)
 	for file: String in [path, path + ".bak", path + ".tmp", thumbnail_path(slot),
 			rom_patch_path(slot), rom_patch_path(slot) + ".bak", rom_patch_path(slot) + ".tmp"]:

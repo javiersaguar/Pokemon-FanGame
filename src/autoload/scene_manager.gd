@@ -183,6 +183,44 @@ func continue_game(slot: int) -> Error:
 	return OK
 
 
+## Restauración temporal de debug, sin cargar ni escribir una ranura.
+## Valida el destino antes de abandonar el mundo de pruebas.
+func restore_test_snapshot(snapshot: Dictionary) -> Error:
+	if not OS.is_debug_build():
+		return ERR_UNAUTHORIZED
+	if is_busy():
+		return ERR_BUSY
+	var state: Dictionary = snapshot.get("state", {})
+	if bool(snapshot.get("in_game", false)):
+		var destination_error := MapLoader.check_position(state)
+		if destination_error != OK:
+			return destination_error
+	await fade_out()
+	_leave_game()
+	GameState.rom_patch = snapshot.get("rom_patch", {}).duplicate(true)
+	if state.get("mode", "normal") == "randomlocke":
+		var patch_error := SaveManager.apply_patch_data(GameState.rom_patch)
+		if patch_error != OK:
+			return patch_error
+	GameState.from_dict(state)
+	GameState.slot = int(snapshot.get("slot", 0))
+	if bool(snapshot.get("in_game", false)):
+		_enter_game()
+		var error := await change_map_at(GameState.map_id, GameState.player_tile, GameState.player_facing)
+		if error != OK:
+			return error
+		# Restaurar no cuenta como un desplazamiento del jugador para los errantes.
+		GameState.roamers = state.get("roamers",{}).duplicate(true)
+		GameState.play_time = float(state.get("player",{}).get("play_time",0.0))
+		resume_pending_nicknames()
+	else:
+		if ResourceLoader.exists(TITLE_SCENE):
+			_title = (load(TITLE_SCENE) as PackedScene).instantiate()
+			_title.set("skip_sequence", true)
+			ui_layer.add_child(_title)
+		await fade_in()
+	return OK
+
 # --- Mapas ---
 
 ## Cambia al mapa `map_id` y coloca al jugador en el spawn `spawn_id`.

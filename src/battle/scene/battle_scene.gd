@@ -189,9 +189,10 @@ func _play_event(event: Variant) -> void:
 			_data_box(side).set_status(StringName(data.get("status", "")))
 		&"boost":
 			var amount := int(data.get("amount", 0))
-			AudioManager.play_se(&"stat_up" if amount > 0 else &"stat_down")
-			var tint := Color("f87858") if amount > 0 else Color("5888f8")
-			await BattleFx.sparkle(_fx, _sprite(side).center(), tint, _t(0.6))
+			if amount != 0 and not fast:
+				AudioManager.play_se(&"stat_up" if amount > 0 else &"stat_down")
+				await BattleStatChange.play(_fx, _sprite(side).center(), str(data.get("stat","")), amount,
+					0.2 if UiPreferences.reduce_motion() else 0.85)
 		&"cant_move":
 			await BattleFx.sparkle(_fx, _sprite(side).center(), Color("d8d8d8"), _t(0.4))
 		&"faint":

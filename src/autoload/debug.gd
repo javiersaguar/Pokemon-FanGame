@@ -8,6 +8,8 @@ var noclip := false
 var encounters_disabled := false
 
 var is_open := false
+signal opened
+var _preferred_panel: Control
 
 var _commands: Dictionary[String, Dictionary] = {}
 var _panel: PanelContainer
@@ -55,6 +57,9 @@ func open() -> void:
 	GameState.lock_input(&"debug")
 	_refresh()
 	_panel.show()
+	if is_instance_valid(_preferred_panel):
+		_tabs.current_tab = _preferred_panel.get_index()
+	opened.emit()
 	_tabs.get_tab_bar().grab_focus()
 
 
@@ -80,6 +85,23 @@ func register_command(command: String, callable: Callable, help: String = "",
 		button.pressed.connect(_exec.bind(command))
 		_buttons_box.add_child(button)
 
+
+## Paneles aportados por las pantallas, sin acoplar Debug a su implementación.
+func register_panel(title: String, panel: Control, preferred := false) -> void:
+	if not OS.is_debug_build():
+		return
+	panel.name = title
+	_tabs.add_child(panel)
+	if preferred:
+		_preferred_panel = panel
+		_panel.theme = panel.theme
+		_tabs.add_theme_font_size_override(&"font_size",12)
+
+func unregister_panel(panel: Control) -> void:
+	if _preferred_panel == panel:
+		_preferred_panel = null
+	if is_instance_valid(panel):
+		panel.queue_free()
 
 ## Ejecuta una línea de consola ("tp test/test_room") y devuelve su salida.
 func run_command(line: String) -> String:

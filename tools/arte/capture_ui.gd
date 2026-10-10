@@ -22,7 +22,54 @@ func run() -> void:
 		root.add_child(main)
 		root.get_node("SceneManager").register_main(main)
 		root.get_node("SceneManager")._fade.hide()
-	if case_name in ["dialogue","choice","volume"]:
+	if case_name.begins_with("playtest_"):
+		main = load("res://src/main/main.tscn").instantiate()
+		main.set_script(null)
+		root.add_child(main)
+		var manager = root.get_node("SceneManager")
+		manager.register_main(main)
+		screen = root.get_node("Debug")._preferred_panel
+		await screen.session.begin(&"getafe/exterior")
+		root.get_node("Debug").open()
+		screen.pages.current_tab = {"playtest_world":0,"playtest_team":1,"playtest_battle":2,"playtest_items":3,"playtest_gallery":4}.get(case_name,0)
+		if case_name == "playtest_before":
+			root.get_node("Debug").unregister_panel(screen)
+			await process_frame
+			root.get_node("Debug")._panel.theme = null
+			root.get_node("Debug")._tabs.remove_theme_font_size_override(&"font_size")
+			root.get_node("Debug")._tabs.current_tab = 0
+			screen = Control.new()
+			root.add_child(screen)
+		elif case_name == "playtest_picker":
+			root.get_node("Debug").close()
+			var menu := screen
+			screen = load("res://src/ui/playtest/playtest_picker.gd").new()
+			screen.caption = "Especies y formas"
+			screen.entries = menu._catalogue("species")
+			manager.push_menu(screen)
+			screen.search.text = "char"
+			screen._filter("char")
+
+	elif case_name in ["stat_before","stat_up","stat_down","stat_reduced"]:
+		screen = load("res://src/battle/scene/battle_scene.tscn").instantiate()
+		root.add_child(screen)
+		screen._background.set_environment(&"grass")
+		screen._apply_bases()
+		screen.get_node("Canvas/Curtain").hide()
+		screen._player_sprite.set_pokemon({"species":&"charizard"})
+		screen._foe_sprite.set_pokemon({"species":&"magikarp"})
+		screen._player_box.show_pokemon({"name":"Charizard","level":50,"hp":150,"max_hp":150})
+		screen._foe_box.show_pokemon({"name":"Magikarp","level":50,"hp":100,"max_hp":100})
+		screen._player_box.show()
+		screen._foe_box.show()
+		if case_name == "stat_before":
+			var fx = load("res://src/battle/scene/battle_fx.gd").create(screen._fx,2,screen._player_sprite.center(),screen._player_sprite.center(),{"asset":"eb519_2","frame":[]},Color("f87858"))
+			fx.progress = 0.45
+		else:
+			var down := case_name == "stat_down"
+			var fx = load("res://src/battle/scene/battle_stat_change.gd").create(screen._fx,screen._foe_sprite.center() if down else screen._player_sprite.center(),"def" if down else "atk",-1 if down else 2,case_name == "stat_reduced")
+			fx.progress = 0.45
+	elif case_name in ["dialogue","choice","volume"]:
 		if case_name == "volume":
 			screen = load("res://src/ui/widgets/choice_screen.gd").new()
 			screen.caption = "Volumen / Música"

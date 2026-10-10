@@ -1323,6 +1323,20 @@ Formato de la guía (Fase 5.7) con dos añadidos:
 
 ---
 
+### 9.9 Menú de pruebas (2026-10-10)
+
+Decisión de Javier: **F9 solo debug, sesión separada y juego continuo**. `UiRuntime` aporta `PlaytestMenu` a Debug mediante `register_panel(title, panel, preferred)`; se retira al liberar el runtime. `Debug.opened` refresca la información sin borrar el borrador del editor. No se instancia en builds de release.
+
+`PlaytestSession.begin(map_id, spawn)` valida la llegada y conserva `GameState.to_dict()`, ranura, ROM, condición título/partida, preferencias y trucos. Inicia una copia normal con slot 0, equipo/objetos/transporte de prueba. `finish()` restaura en memoria mediante `SceneManager.restore_test_snapshot(snapshot)`; no carga una ranura. La ROM original se aplica antes de reconstruir Pokémon/reglas, la hora antes del mapa y las preferencias antes del estado para no pisar el estilo propio de la partida. Restaurar no mueve los errantes ni añade tiempo de juego. Se rechaza empezar/restaurar/editar con combate, transición, diálogo, evento o menú en curso.
+
+Mientras la sesión está activa, `SaveManager.test_session_active` bloquea guardar/cargar/copiar/borrar desde cualquier pantalla o consola; las consultas siguen siendo de lectura. `UiPreferences.set_value` no escribe ui.cfg. La marca vive fuera de GameState y sobrevive a cambios de mapa, al título y a reiniciar en RandomLocke dentro de las pruebas.
+
+`set_member(side,index,spec)` valida especie, 1–4 movimientos y objeto antes de mutar (hasta 6 miembros); `battle_setup(trainer,custom_foes,options)` usa el equipo real del jugador y clones nuevos del rival con UID distinto en cada combate. Los combates pueden perderse y vuelven al mapa. Catálogos por DataDB y mapas/llegadas por MapLoader, sin crear destinos inexistentes. Las pantallas de mochila/equipo/PC/tienda/Pokédex/mapa/tarjeta/Opciones/RandomLocke se abren mediante sus APIs existentes.
+
+`BattleStatChange` reproduce eventos `boost {stat,amount,stage}` con oleadas direccionales de `ebStatParticle.png` original EBDX y rótulo con nombre/signo. Respeta `fast` y la reducción de animaciones (solo texto, sin partículas). Manifiesto/tamaño/hash en `battle_motion_assets.json`; comparación en `docs/arte/comparativas/a3_menu_pruebas.md`.
+
+---
+
 ## 10. RandomLocke (Agente 2; lo construyó el Agente 4)
 
 Contrato v2 (continuación del traspaso A2) publicado el 2026-10-04. Motor puro (`RefCounted`, sin nodos ni corrutinas), independiente de los autoloads. Implementación en `src/randomizer/`; fixtures y adaptadores usan únicamente tipos JSON. La base de datos y los presets son parte de la versión del generador: cambiar resultados requiere subirla. Misma base + versión + semilla + ajustes normalizados produce los mismos bytes.

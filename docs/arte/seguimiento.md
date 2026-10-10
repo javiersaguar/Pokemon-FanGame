@@ -173,3 +173,6 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 
 | Mundo centro: Leganés | Fuentes 360–361; Butarque y cuartel compuestos | PROVISIONAL, pendiente Javier | `comparativas/leganes.md` |
 | Mundo centro: Móstoles | Fuentes 362/365; El Soto y campus compuestos | PROVISIONAL, pendiente Javier | `comparativas/mostoles.md` |
+
+| Menú de pruebas F9 | Sesión independiente, editor y juego continuo; recursos/UI existentes | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_menu_pruebas.md) |
+| Animación de estadísticas | Partícula original EBDX, dirección y rótulo; reducción accesible | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_menu_pruebas.md) |

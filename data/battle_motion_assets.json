@@ -369,6 +369,16 @@
         384
       ],
       "sha256": "a6ebe8a5a8f2ed4647d4a4323682b3cf06c72c189b604fdc3956d17ddcb02400"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Graphics/EBDX/Animations/Moves/ebStatParticle.png",
+      "target": "assets/sprites/ui/battle/moves/ebStatParticle.png",
+      "size": [
+        22,
+        22
+      ],
+      "sha256": "d7bfc5928ac3266370fa85a83577f6ffe04e1d3ebb97a79b7e34814384db6134"
     }
   ]
 }

@@ -32,7 +32,7 @@ static func set_value(key: String, value: Variant, save := true) -> void:
 			if GameState.in_game: GameState.set_var(&"battle_style",str(value))
 		_:
 			if StringName(key) in AudioManager.BUSES: AudioManager.set_volume(StringName(key),float(value))
-	if save:
+	if save and not SaveManager.test_session_active:
 		var config := ConfigFile.new()
 		config.load("user://ui.cfg")
 		for field: String in values: config.set_value("options",field,values[field])
