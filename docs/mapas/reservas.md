@@ -4,3 +4,5 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
+| puertollano/exterior | A3 | 2026-10-10 | Exterior, hitos mineros y enlace Ruta 24 |
+| ruta_24/exterior | A3 | 2026-10-10 | Solo enlace sur a Puertollano |
