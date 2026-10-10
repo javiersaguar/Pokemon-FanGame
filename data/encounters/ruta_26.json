@@ -1,0 +1,51 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {
+        "species": "roggenrola",
+        "min": 50,
+        "max": 53,
+        "weight": 33
+      },
+      {
+        "species": "carbink",
+        "min": 50,
+        "max": 53,
+        "weight": 33
+      },
+      {
+        "species": "nosepass",
+        "min": 50,
+        "max": 53,
+        "weight": 33
+      }
+    ],
+    "night": [
+      {
+        "species": "roggenrola",
+        "min": 50,
+        "max": 53,
+        "weight": 33
+      },
+      {
+        "species": "carbink",
+        "min": 50,
+        "max": 53,
+        "weight": 33
+      },
+      {
+        "species": "nosepass",
+        "min": 50,
+        "max": 53,
+        "weight": 33
+      }
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

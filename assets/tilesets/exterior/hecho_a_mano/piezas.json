@@ -613,5 +613,17 @@
     "fuente": 369,
     "puerta": null,
     "huella": "base"
+  },
+  "roca_torcal": {
+    "fuente": 373,
+    "puerta": null,
+    "huella": "base"
+  },
+  "dolmen_antequera": {
+    "fuente": 374,
+    "puerta": [
+      1,
+      0
+    ]
   }
 }

@@ -19,3 +19,5 @@ Alcance desde norte y sur: dos puertas, carteles y entrenadores accesibles, 0 pr
 | ![Referencia](../referencias/anil_ruta.png) | ![Juego](ruta_25_juego.png) |
 
 Captura nativa con personaje y seguidor, sin reescalar el mundo ni los sprites.
+
+2026-10-10: abierto el enlace sur a Ruta 26, columnas 24–27 y offset 0 en ambos sentidos; alcance sin problemas.

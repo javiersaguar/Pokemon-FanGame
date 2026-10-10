@@ -182,3 +182,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Mundo centro: Puertollano | Fuentes manuales 367–369, paseo y parque minero, cuatro locales | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/puertollano.md) |
 
 | Mundo centro: Ruta 25 · Despeñaperros | Curvas, riscos y presa con recursos existentes; Los Órganos sin pieza específica | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/ruta_25.md) |
+
+| Mundo centro: Ruta 26 · Torcal/Antequera | Caliza y entrada manuales 373–374, túmulo y pasos entre bases | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/ruta_26.md) |

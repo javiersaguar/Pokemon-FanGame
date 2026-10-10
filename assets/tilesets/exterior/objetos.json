@@ -10207,6 +10207,48 @@
 		],
 		"source": 352
 	},
+	"dolmen_antequera": {
+		"coords": [
+			0,
+			0
+		],
+		"door": [
+			1,
+			0
+		],
+		"file": "hecho_a_mano/dolmen_antequera.png",
+		"footprint": [
+			[
+				0,
+				-1
+			],
+			[
+				1,
+				-1
+			],
+			[
+				2,
+				-1
+			],
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			],
+			[
+				2,
+				0
+			]
+		],
+		"size": [
+			3,
+			2
+		],
+		"source": 374
+	},
 	"edificio_carrion": {
 		"coords": [
 			0,
@@ -20394,6 +20436,28 @@
 			5
 		],
 		"source": 8
+	},
+	"roca_torcal": {
+		"coords": [
+			0,
+			0
+		],
+		"file": "hecho_a_mano/roca_torcal.png",
+		"footprint": [
+			[
+				0,
+				0
+			],
+			[
+				1,
+				0
+			]
+		],
+		"size": [
+			2,
+			3
+		],
+		"source": 373
 	},
 	"sagrada_familia": {
 		"coords": [

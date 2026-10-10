@@ -1,0 +1,40 @@
+{
+  "ruta26_guia": {
+    "class": "arqueologo",
+    "name": "Elena",
+    "intro_text": "La piedra tiene memoria. ¡Vamos a añadirle otro combate!",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Los dólmenes quedan bajo túmulos. El Torcal es un paisaje natural, no una ruina.",
+    "items": [],
+    "party": [
+      {
+        "species": "carbink",
+        "level": 51
+      },
+      {
+        "species": "nosepass",
+        "level": 52
+      }
+    ]
+  },
+  "ruta26_escaladora": {
+    "class": "montanera",
+    "name": "Inés",
+    "intro_text": "Antes de subir, ¡calentamos con un combate!",
+    "lose_text": "Hoy no era mi día.",
+    "win_text": "¡Otra ronda!",
+    "after_text": "Las repisas se forman al erosionarse los distintos estratos.",
+    "items": [],
+    "party": [
+      {
+        "species": "boldore",
+        "level": 51
+      },
+      {
+        "species": "probopass",
+        "level": 53
+      }
+    ]
+  }
+}
