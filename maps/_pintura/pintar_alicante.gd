@@ -36,6 +36,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Alicante", SIZE, data, 1490)
 	p.fill_grass(0.2)
 	p.connect_edge("north", &"ruta_10/exterior", -11, Vector2i(36, 40))
+	p.connect_edge("west", &"ruta_11/exterior", -18, Vector2i(34, 38))
 
 	# La ciudad, Santa Cruz y el muelle.
 	p.paving(Rect2i(0, 0, 46, 50))

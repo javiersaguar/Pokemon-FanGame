@@ -1,0 +1,59 @@
+{
+  "ruta11_ornitologa": {
+    "class": "ornitologa",
+    "name": "Carmen",
+    "intro_text": "¡Flamencos! ¡Trescientos! ¡Y tú espantándomelos! Esto se arregla combatiendo.",
+    "lose_text": "Ya se han ido todos. Los flamencos y mis Pokémon.",
+    "win_text": "Rosa de envidia te vas a quedar.",
+    "after_text": "Se ponen rosas por lo que comen en las salinas. Yo llevo años comiendo gambas y nada.",
+    "items": [],
+    "party": [
+      {
+        "species": "ducklett",
+        "level": 29
+      },
+      {
+        "species": "flamigo",
+        "level": 30
+      }
+    ]
+  },
+  "ruta11_estudiante": {
+    "class": "estudianteinge",
+    "name": "Sergio",
+    "intro_text": "Estudio Ingeniería en Elche y hago las prácticas en una fábrica de zapatos. Sin cobrar. ¡Combate!",
+    "lose_text": "Otro suspenso. Este no lo convalido.",
+    "win_text": "Aprobado. Raspado, pero aprobado.",
+    "after_text": "Cuando acabe la carrera me voy a Alemania, como toda mi promoción. Quedamos allí los jueves.",
+    "items": [],
+    "party": [
+      {
+        "species": "magnemite",
+        "level": 29
+      },
+      {
+        "species": "manectric",
+        "level": 30
+      }
+    ]
+  },
+  "ruta11_huertano": {
+    "class": "huertano",
+    "name": "Pencho",
+    "intro_text": "¡Acho! ¿Tú has visto qué granadas? Pues no las quiere nadie. A ver si quieres un combate.",
+    "lose_text": "Acho, pijo. Me has dejado como la acequia en agosto: seco.",
+    "win_text": "¡Esto es huerta, pijo!",
+    "after_text": "Agua para todos, decían. Para todos los campos de golf, sería.",
+    "items": [],
+    "party": [
+      {
+        "species": "sunflora",
+        "level": 29
+      },
+      {
+        "species": "cherrim",
+        "level": 30
+      }
+    ]
+  }
+}

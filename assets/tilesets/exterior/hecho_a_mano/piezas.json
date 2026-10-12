@@ -705,5 +705,32 @@
       4,
       0
     ]
+  },
+  "dama_elche": {
+    "fuente": 103,
+    "puerta": null
+  },
+  "basilica_elche": {
+    "fuente": 104,
+    "puerta": [
+      3,
+      0
+    ]
+  },
+  "palmera_imperial": {
+    "fuente": 105,
+    "puerta": null,
+    "huella": "base"
+  },
+  "catedral_murcia": {
+    "fuente": 106,
+    "puerta": [
+      6,
+      0
+    ]
+  },
+  "sardina_segura": {
+    "fuente": 107,
+    "puerta": null
   }
 }

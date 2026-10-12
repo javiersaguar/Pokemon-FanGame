@@ -210,6 +210,8 @@ SPECS = {
                  "Tronista de playa: camiseta de tirantes blanca, bañador, gafas de sol y mucho gimnasio."),
     "pescador": ("m", "dark", (3, "black"), ("camisa", "white"), ("botas", "grey"), ("straw hat", None),
                  "Pescador de la Albufera: camisa blanca, pantalón con botas de agua y sombrero de paja."),
+    "huertano": ("m", "medium", (3, "black"), ("chaleco", "black"), ("corto", "blue"), ("straw hat", None),
+                 "Huertano de la Vega del Segura: chaleco negro, zaragüelles y sombrero de paja."),
     "ornitologa": ("f", "light", (2, "brown"), ("chaleco", "brown"), ("botas", "beige"), ("sun hat", None),
                    "Ornitóloga que cuenta buitres: chaleco marrón de campo, pantalón con botas y sombrero de sol."),
     # Tramo sur (Agente 1): Granada, Jaén y Córdoba, Sevilla, Doñana, Huelva y Gran Canaria.
