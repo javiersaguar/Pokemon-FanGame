@@ -3,14 +3,22 @@ extends Node2D
 ## Sprite de un Pokémon en el campo, a 1:1 en píxeles de pantalla (frente de
 ## 192×192 y espalda de 288×288, como vienen en el pack). El nodo está en el borde
 ## inferior del lienzo; la imagen se dibuja encima.
-## Reglas de píxel (BIBLIA.md §3): nada de escalar ni rotar. Salir de la Ball,
-## volver a ella y debilitarse se hacen recortando la imagen (región) y con
-## destellos; las posiciones se redondean a píxeles del arte.
+## Reglas de píxel (BIBLIA.md §3): no se rota. Salir de la Ball, volver a ella y
+## debilitarse se hacen recortando la imagen (región) y con destellos; las
+## posiciones se redondean a píxeles del arte. En dobles, un sprite que no cabe
+## en su puesto pasa a escala 0.5 (píxeles cuadrados, filtro nearest).
 
 const SPRITES_DIR := "res://assets/sprites/pokemon/"
 ## Reposo: 1 píxel de arte arriba y abajo (el set actual no está animado).
 const IDLE_INTERVAL := 0.45
 const FLASH := Color(3.5, 3.5, 3.5)
+## En dobles el lienzo es el mismo (512×384) y hay cuatro sprites. Si el dibujo
+## opaco no cabe en su puesto, se reduce a la mitad (1 píxel de arte = 1 de
+## pantalla). Los pequeños se quedan a 1:1. El dinamax puede crecer, pero no
+## por encima de este tope × DYNAMAX_ROOM.
+const DOUBLE_PLAYER_LIMIT := Vector2(150, 168)
+const DOUBLE_FOE_LIMIT := Vector2(140, 128)
+const DYNAMAX_ROOM := 1.6
 
 ## true = sprite de espaldas (el Pokémon del jugador).
 @export var back := false
@@ -21,8 +29,14 @@ var idle := true
 var _sprite: Sprite2D
 ## Filas vacías bajo los pies en la imagen: se compensan para que los pies queden en el nodo.
 var _gap := 0.0
+## Ancho y alto del dibujo opaco, en píxeles del pack.
+var _opaque := Vector2.ZERO
+## Tope del puesto. Cero = combate individual, sin reducir.
+var _slot_limit := Vector2.ZERO
+var _big := false
 var _home := Vector2.ZERO
 static var _gaps: Dictionary[String, int] = {}
+static var _opaque_cache: Dictionary[String, Vector2] = {}
 var _idle_time := 0.0
 var _idle_up := false
 
@@ -57,6 +71,8 @@ func set_pokemon(pokemon: Dictionary) -> void:
 		texture = PlaceholderArt.pokemon(pokemon.get("types", []), back)
 	_sprite.texture = texture
 	_gap = _bottom_gap(texture)
+	_opaque = _opaque_size(texture)
+	_apply_scale()
 	reset()
 
 
@@ -196,6 +212,54 @@ static func _bottom_gap(texture: Texture2D) -> int:
 	return gap
 
 
+static func _opaque_size(texture: Texture2D) -> Vector2:
+	var key := texture.resource_path
+	if key != "" and _opaque_cache.has(key):
+		return _opaque_cache[key]
+	var img := texture.get_image()
+	var size := texture.get_size()
+	if img == null:
+		return size
+	var min_x := img.get_width()
+	var max_x := -1
+	var min_y := img.get_height()
+	var max_y := -1
+	for y: int in img.get_height():
+		for x: int in img.get_width():
+			if img.get_pixel(x, y).a8 <= 0:
+				continue
+			min_x = mini(min_x, x)
+			max_x = maxi(max_x, x)
+			min_y = mini(min_y, y)
+			max_y = maxi(max_y, y)
+	var opaque := size if max_x < 0 else Vector2(max_x - min_x + 1, max_y - min_y + 1)
+	if key != "":
+		_opaque_cache[key] = opaque
+	return opaque
+
+
+## 1 en individual. En dobles, 1 si cabe y 0.5 si el dibujo se sale del puesto.
+## El dinamax pide 2 y baja un paso mientras se pase del tope ampliado.
+static func display_scale(opaque: Vector2, limit: Vector2, big: bool) -> float:
+	var s := 2.0 if big else 1.0
+	if limit.x <= 0.0 or limit.y <= 0.0 or opaque.x <= 0.0 or opaque.y <= 0.0:
+		return s
+	var cap := limit * (DYNAMAX_ROOM if big else 1.0)
+	while s > 0.5 and (opaque.x * s > cap.x or opaque.y * s > cap.y):
+		s *= 0.5
+	return s
+
+
+func _apply_scale() -> void:
+	var s := display_scale(_opaque, _slot_limit, _big)
+	scale = Vector2(s, s)
+
+
+func set_slot_limit(limit: Vector2) -> void:
+	_slot_limit = limit
+	_apply_scale()
+
+
 func _height() -> float:
 	return _sprite.texture.get_height() if _sprite.texture else 32.0
 
@@ -214,4 +278,5 @@ func set_home(at: Vector2) -> void:
 	position = _home
 
 func set_big(on: bool) -> void:
-	scale = Vector2(2,2) if on else Vector2.ONE
+	_big = on
+	_apply_scale()

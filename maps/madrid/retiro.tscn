@@ -184,6 +184,72 @@ target_map = &"mostoles/exterior"
 target_spawn = &"from_cercanias"
 sound = &""
 
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=120258633]
+position = Vector2(1168, 1872)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/atocha/mercadona"
+arrival_facing = 4
+
+[node name="Sala28_13" type="Node2D" parent="Warps" unique_id=661875082]
+position = Vector2(912, 432)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_28_13"
+arrival_facing = 4
+
+[node name="Sala55_47" type="Node2D" parent="Warps" unique_id=961205261]
+position = Vector2(1776, 1520)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_55_47"
+arrival_facing = 4
+
+[node name="Sala4_29" type="Node2D" parent="Warps" unique_id=1401987970]
+position = Vector2(144, 944)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_4_29"
+arrival_facing = 4
+
+[node name="Sala23_44" type="Node2D" parent="Warps" unique_id=1706759134]
+position = Vector2(752, 1424)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_23_44"
+arrival_facing = 4
+
+[node name="Sala20_58" type="Node2D" parent="Warps" unique_id=287337173]
+position = Vector2(656, 1872)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_20_58"
+arrival_facing = 4
+
+[node name="Sala3_13" type="Node2D" parent="Warps" unique_id=662554903]
+position = Vector2(112, 432)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_3_13"
+arrival_facing = 4
+
+[node name="Sala39_13" type="Node2D" parent="Warps" unique_id=1109289435]
+position = Vector2(1264, 432)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_39_13"
+arrival_facing = 4
+
+[node name="Sala23_31" type="Node2D" parent="Warps" unique_id=1766221194]
+position = Vector2(752, 1008)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_23_31"
+arrival_facing = 4
+
+[node name="Sala36_37" type="Node2D" parent="Warps" unique_id=1238006881]
+position = Vector2(1168, 1200)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_36_37"
+arrival_facing = 4
+
+[node name="Sala3_47" type="Node2D" parent="Warps" unique_id=1435501996]
+position = Vector2(112, 1520)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/sala_retiro_3_47"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1269126223]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=30780810]
@@ -198,12 +264,37 @@ position = Vector2(16, 1008)
 [node name="from_cercanias" type="Marker2D" parent="Spawns" unique_id=1170641323]
 position = Vector2(976, 1872)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=575108378]
-[node name="Mercadona" type="Node2D" parent="Warps" unique_id=120258633]
-position = Vector2(1168, 1872)
-script = ExtResource("15_m0dj4")
-target_map = &"madrid/atocha/mercadona"
-arrival_facing = 4
-
 [node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=1632062104]
 position = Vector2(1168, 1904)
+
+[node name="from_sala_28_13" type="Marker2D" parent="Spawns" unique_id=1650374545]
+position = Vector2(912, 464)
+
+[node name="from_sala_55_47" type="Marker2D" parent="Spawns" unique_id=472098908]
+position = Vector2(1776, 1552)
+
+[node name="from_sala_4_29" type="Marker2D" parent="Spawns" unique_id=1832445417]
+position = Vector2(144, 976)
+
+[node name="from_sala_23_44" type="Marker2D" parent="Spawns" unique_id=562059199]
+position = Vector2(752, 1456)
+
+[node name="from_sala_20_58" type="Marker2D" parent="Spawns" unique_id=524981584]
+position = Vector2(656, 1904)
+
+[node name="from_sala_3_13" type="Marker2D" parent="Spawns" unique_id=1244980709]
+position = Vector2(112, 464)
+
+[node name="from_sala_39_13" type="Marker2D" parent="Spawns" unique_id=1608952039]
+position = Vector2(1264, 464)
+
+[node name="from_sala_23_31" type="Marker2D" parent="Spawns" unique_id=657950366]
+position = Vector2(752, 1040)
+
+[node name="from_sala_36_37" type="Marker2D" parent="Spawns" unique_id=1378664606]
+position = Vector2(1168, 1232)
+
+[node name="from_sala_3_47" type="Marker2D" parent="Spawns" unique_id=1787416416]
+position = Vector2(112, 1552)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=575108378]

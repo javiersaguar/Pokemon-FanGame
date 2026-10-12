@@ -1,9 +1,183 @@
 {
-  "getafe_mercadona_cortesia": {
-    "placement": "getafe/mercadona/Cliente",
-    "quantity": 1,
-    "flag": "npc_reward:getafe_mercadona_cortesia",
-    "proposal": "Cantidad de demostración: balance pendiente Javier",
-    "item": "potion"
-  }
+	"getafe_from_casa_1": {
+		"flag": "npc_reward:getafe_from_casa_1",
+		"item": "potion",
+		"placement": "getafe/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"getafe_mercadona_cortesia": {
+		"flag": "npc_reward:getafe_mercadona_cortesia",
+		"item": "potion",
+		"placement": "getafe/mercadona/Cliente",
+		"proposal": "Cantidad de demostración: balance pendiente Javier",
+		"quantity": 1.0
+	},
+	"huelva_from_casa_1": {
+		"flag": "npc_reward:huelva_from_casa_1",
+		"item": "potion",
+		"placement": "huelva/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ibiza_from_casa_1": {
+		"flag": "npc_reward:ibiza_from_casa_1",
+		"item": "potion",
+		"placement": "ibiza/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"leganes_from_casa_1": {
+		"flag": "npc_reward:leganes_from_casa_1",
+		"item": "potion",
+		"placement": "leganes/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"malaga_from_casa_1": {
+		"flag": "npc_reward:malaga_from_casa_1",
+		"item": "potion",
+		"placement": "malaga/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"mostoles_from_casa_1": {
+		"flag": "npc_reward:mostoles_from_casa_1",
+		"item": "potion",
+		"placement": "mostoles/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"palma_from_casa_1": {
+		"flag": "npc_reward:palma_from_casa_1",
+		"item": "potion",
+		"placement": "palma/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"pueblo_inicial_from_casa_1": {
+		"flag": "npc_reward:pueblo_inicial_from_casa_1",
+		"item": "potion",
+		"placement": "pueblo_inicial/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"puertollano_from_casa_1": {
+		"flag": "npc_reward:puertollano_from_casa_1",
+		"item": "potion",
+		"placement": "puertollano/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_12_from_casa_1": {
+		"flag": "npc_reward:ruta_12_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_12/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_13_from_casa_1": {
+		"flag": "npc_reward:ruta_13_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_13/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_14_from_casa_1": {
+		"flag": "npc_reward:ruta_14_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_14/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_15_from_casa_1": {
+		"flag": "npc_reward:ruta_15_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_15/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_16_from_casa_1": {
+		"flag": "npc_reward:ruta_16_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_16/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_21_from_casa_1": {
+		"flag": "npc_reward:ruta_21_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_21/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_22_from_casa_1": {
+		"flag": "npc_reward:ruta_22_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_22/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_23_from_casa_1": {
+		"flag": "npc_reward:ruta_23_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_23/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_24_from_casa_1": {
+		"flag": "npc_reward:ruta_24_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_24/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_25_from_casa_1": {
+		"flag": "npc_reward:ruta_25_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_25/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_26_from_casa_1": {
+		"flag": "npc_reward:ruta_26_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_26/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_2_from_casa_1": {
+		"flag": "npc_reward:ruta_2_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_2/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_3_from_casa_1": {
+		"flag": "npc_reward:ruta_3_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_3/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_4_from_casa_1": {
+		"flag": "npc_reward:ruta_4_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_4/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_5_from_casa_1": {
+		"flag": "npc_reward:ruta_5_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_5/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_6_from_casa_1": {
+		"flag": "npc_reward:ruta_6_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_6/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"ruta_8_from_casa_1": {
+		"flag": "npc_reward:ruta_8_from_casa_1",
+		"item": "potion",
+		"placement": "ruta_8/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"valladolid_from_casa_1": {
+		"flag": "npc_reward:valladolid_from_casa_1",
+		"item": "potion",
+		"placement": "valladolid/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"vigo_from_casa_1": {
+		"flag": "npc_reward:vigo_from_casa_1",
+		"item": "potion",
+		"placement": "vigo/casa_1/VecinoRegalo",
+		"quantity": 1
+	},
+	"zaragoza_from_casa_1": {
+		"flag": "npc_reward:zaragoza_from_casa_1",
+		"item": "potion",
+		"placement": "zaragoza/casa_1/VecinoRegalo",
+		"quantity": 1
+	}
 }

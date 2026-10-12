@@ -46,7 +46,7 @@ func _ready() -> void:
 	status.custom_minimum_size.y = 24
 	pages = TabContainer.new()
 	pages.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	pages.add_theme_font_size_override(&"font_size",16)
+	pages.add_theme_font_size_override(&"font_size",20)
 	add_child(pages)
 	_build_world(_page("Mundo"))
 	_build_team(_page("Equipo"))
@@ -118,7 +118,7 @@ func _button(parent: Node, text: String, callback: Callable, active_only := true
 	button.text = text
 	button.clip_text = true
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	button.custom_minimum_size.y = 32
+	button.custom_minimum_size.y = 36
 	button.pressed.connect(callback)
 	parent.add_child(button)
 	if active_only:
@@ -153,7 +153,7 @@ func _finish() -> void:
 	_message(await session.finish(),"Partida anterior restaurada.")
 
 func _build_world(box: VBoxContainer) -> void:
-	_button(box,"Mapa · pulsa una zona para viajar",_open_world_map,false)
+	_button(box,"Mapa de la región · viajar",_open_world_map,false)
 	_label(box,"Todos los mapas disponibles, también los aún aislados.")
 	map_button = _button(box,"San Miguel de Bernuy · elegir destino",_choose_map,false)
 	var row := _row(box)

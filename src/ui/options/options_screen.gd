@@ -4,6 +4,7 @@ const SPEEDS := [20,40,80,0]
 const BUS_NAMES := {&"BGM":"Música",&"SE":"Efectos",&"ME":"Melodías",&"Cries":"Gritos",&"Ambient":"Ambiente"}
 func _ready() -> void:
 	UiPreferences.initialize()
+	wide = true
 	build_choices()
 	super._ready()
 func run_label() -> String:
@@ -11,18 +12,18 @@ func run_label() -> String:
 func build_choices() -> void:
 	caption = "Opciones"
 	choices = [run_label(),"Texto: %s" % {20:"Lento",40:"Normal",80:"Rápido",0:"Instantáneo"}.get(Dialogue.text_speed,"Normal"),"Combate: %s" % ("Cambio" if UiPreferences.battle_style() == &"shift" else "Fijo"),"Marco: %s" % UiPreferences.FRAME_NAMES[int(UiPreferences.values.frame)],"Pantalla completa: %s" % ("Sí" if UiPreferences.values.fullscreen else "No")]
-	notes = ["R / Y: alternar correr. Mayús / B: correr, o andar si está activado. Se guarda con la partida; desde el título elige el valor de las nuevas partidas.","Velocidad de los diálogos. A cambia entre lenta, normal, rápida e instantánea.","Cambio ofrece sustituir al Pokémon entre rivales de un entrenador. Fijo mantiene el actual. Las reglas Locke pueden forzar Fijo.","Marco de los menús y diálogos claros, con gráficos originales ya publicados.","Alternar entre ventana y pantalla completa."]
+	notes = ["R/Y lo deja fijo. Mayús corre un momento.","Lenta, normal, rápida o al instante.","Cambio pregunta. Fijo se queda.","Color del marco de los menús.","Cubre el monitor, sin perder nitidez."]
 	for bus: StringName in AudioManager.BUSES:
 		choices.append("%s: %d %%" % [BUS_NAMES[bus],roundi(AudioManager.get_volume(bus)*100)])
-		notes.append("Volumen de %s, incluido silencio." % BUS_NAMES[bus].to_lower())
+		notes.append("Volumen de %s. 0 %% es silencio." % BUS_NAMES[bus].to_lower())
 	choices.append("Animación: %s" % ("Reducida" if UiPreferences.reduce_motion() else "Normal"))
-	notes.append("Reduce desplazamientos, destellos y parpadeos. Conserva los mensajes y las acciones del combate.")
+	notes.append("Menos destellos y desplazamientos.")
 	choices.append("Controles")
-	notes.append("Consultar teclas y botones de movimiento, menús, correr y nombres.")
+	notes.append("Teclas y botones del mando.")
 	choices.append("Fotos reales: %s" % ("Sí" if UiPreferences.real_photos() else "No"))
-	notes.append("En combate, enseña la foto real de los personajes famosos si está en la carpeta fotos_reales.")
+	notes.append("Foto del personaje en el combate, si existe.")
 	choices.append("Volver")
-	notes.append("Volver al menú anterior.")
+	notes.append("Vuelve al menú anterior.")
 func run() -> void:
 	while is_inside_tree() and not _done:
 		var index := await menu.choose()

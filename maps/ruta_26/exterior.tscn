@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="7_xbti8"]
 [ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_li23l"]
 [ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_eapm1"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_3u3lm"]
 
 [sub_resource type="Resource" id="Resource_n4fuq"]
 script = ExtResource("2_3u3lm")
@@ -96,6 +97,12 @@ tile_set = ExtResource("4_skb2e")
 
 [node name="Warps" type="Node2D" parent="." unique_id=1756379079]
 
+[node name="Casa1" type="Node2D" parent="Warps" unique_id=1063524613]
+position = Vector2(1136, 304)
+script = ExtResource("10_3u3lm")
+target_map = &"ruta_26/casa_1"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=45705454]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=454782035]
@@ -106,5 +113,8 @@ position = Vector2(816, 16)
 
 [node name="from_malaga" type="Marker2D" parent="Spawns" unique_id=1717760322]
 position = Vector2(816, 2032)
+
+[node name="from_casa_1" type="Marker2D" parent="Spawns" unique_id=2047318424]
+position = Vector2(1136, 336)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=1954990476]

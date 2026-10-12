@@ -1,5 +1,5 @@
 {
-	"fingerprint": "c86f4324e0312edc66aaaeb140ae9ad6d1a5bd252982001c2228e72f06e8d188",
+	"fingerprint": "5028ab5eb73d519179d8fc76f3317ad087cc8f8c5f6548ddec3d03b908b35f18",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -3302,15 +3302,44 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "33a1a094baa5fe30d2b7cdd79f194a271a3d8a9270786f8df92e73881fcfb1d8",
+		"input_hash": "6ae265bc3f0c6f2894a85f9add7e7c03ba93303e5e747b29642c8e86dd5426d9",
 		"items": {
-			"getafe/mercadona/Cliente": "kangaskhancandy",
+			"getafe/casa_1/VecinoRegalo": "kangaskhancandy",
+			"getafe/mercadona/Cliente": "firestone",
+			"huelva/casa_1/VecinoRegalo": "healthmochi",
+			"ibiza/casa_1/VecinoRegalo": "timerball",
+			"leganes/casa_1/VecinoRegalo": "bigpearl",
+			"malaga/casa_1/VecinoRegalo": "blunderpolicy",
+			"mostoles/casa_1/VecinoRegalo": "venonatcandy",
+			"palma/casa_1/VecinoRegalo": "escaperope",
+			"pueblo_inicial/casa_1/VecinoRegalo": "weaknesspolicy",
+			"puertollano/casa_1/VecinoRegalo": "grepaberry",
+			"ruta_12/casa_1/VecinoRegalo": "metalcoat",
+			"ruta_13/casa_1/VecinoRegalo": "zapplate",
+			"ruta_14/casa_1/VecinoRegalo": "colburberry",
+			"ruta_15/casa_1/VecinoRegalo": "twistedspoon",
+			"ruta_16/casa_1/VecinoRegalo": "luxuryball",
+			"ruta_2/casa_1/VecinoRegalo": "psychicterashard",
+			"ruta_21/casa_1/VecinoRegalo": "zoomlens",
+			"ruta_22/casa_1/VecinoRegalo": "shelldercandy",
+			"ruta_23/casa_1/VecinoRegalo": "resistmochi",
+			"ruta_24/casa_1/VecinoRegalo": "koffingcandy",
+			"ruta_25/casa_1/VecinoRegalo": "mightycandy",
+			"ruta_26/casa_1/VecinoRegalo": "blacksludge",
+			"ruta_3/casa_1/VecinoRegalo": "pinsircandy",
+			"ruta_4/casa_1/VecinoRegalo": "swiftmochi",
+			"ruta_5/casa_1/VecinoRegalo": "dragonscale",
+			"ruta_6/casa_1/VecinoRegalo": "gooeymulch",
+			"ruta_8/casa_1/VecinoRegalo": "sunstone",
 			"test/muestra_pueblo/Pocion": "firestone",
-			"test/muestra_ruta/Pocion": "healthmochi",
-			"test/test_outdoor/PocionOculta": "timerball",
-			"test/test_outdoor/PokeBalls": "bigpearl",
-			"test/test_room/CarameloOculto": "blunderpolicy",
-			"test/test_room/Pocion": "venonatcandy"
+			"test/muestra_ruta/Pocion": "reapercloth",
+			"test/test_outdoor/PocionOculta": "lumiosegalette",
+			"test/test_outdoor/PokeBalls": "maxrepel",
+			"test/test_room/CarameloOculto": "enigmaberry",
+			"test/test_room/Pocion": "enigmaberry",
+			"valladolid/casa_1/VecinoRegalo": "passhoberry",
+			"vigo/casa_1/VecinoRegalo": "spearowcandy",
+			"zaragoza/casa_1/VecinoRegalo": "psychicterashard"
 		},
 		"learnsets": {
 			"abomasnow": [

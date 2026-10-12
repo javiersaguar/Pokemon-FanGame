@@ -1,7 +1,5 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="locales_0"]
-
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_h1r8p"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_qxeu1"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_w1fiw"]
@@ -14,6 +12,7 @@
 [ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="10_h0tf7"]
 [ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="11_m1xqt"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="12_07fp0"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="locales_0"]
 
 [sub_resource type="Resource" id="Resource_2id4h"]
 script = ExtResource("2_qxeu1")
@@ -109,6 +108,24 @@ tile_set = ExtResource("4_is5dv")
 
 [node name="Warps" type="Node2D" parent="." unique_id=1516664281]
 
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=1885289596]
+position = Vector2(976, 496)
+script = ExtResource("locales_0")
+target_map = &"ruta_23/cuellar/mercadona"
+arrival_facing = 4
+
+[node name="Casa1" type="Node2D" parent="Warps" unique_id=503565057]
+position = Vector2(208, 880)
+script = ExtResource("locales_0")
+target_map = &"ruta_23/casa_1"
+arrival_facing = 4
+
+[node name="Casa2" type="Node2D" parent="Warps" unique_id=84733772]
+position = Vector2(688, 880)
+script = ExtResource("locales_0")
+target_map = &"ruta_23/casa_2"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1141828967]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=823122819]
@@ -120,12 +137,13 @@ position = Vector2(16, 656)
 [node name="from_san_miguel" type="Marker2D" parent="Spawns" unique_id=1000911202]
 position = Vector2(2032, 656)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=509480317]
-[node name="Mercadona" type="Node2D" parent="Warps" unique_id=1885289596]
-position = Vector2(976, 496)
-script = ExtResource("locales_0")
-target_map = &"ruta_23/cuellar/mercadona"
-arrival_facing = 4
-
 [node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=1985359338]
 position = Vector2(976, 528)
+
+[node name="from_casa_1" type="Marker2D" parent="Spawns" unique_id=2109488010]
+position = Vector2(208, 912)
+
+[node name="from_casa_2" type="Marker2D" parent="Spawns" unique_id=1753161962]
+position = Vector2(688, 912)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=509480317]

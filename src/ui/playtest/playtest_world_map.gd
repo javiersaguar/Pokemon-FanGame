@@ -12,17 +12,23 @@ var search: LineEdit
 var zones: VBoxContainer
 var _finished := false
 var selected_group := ""
+## Dentro de una pestaña de F9: no cierra el menú al pulsar y se puede viajar otra vez.
+var embedded := false
 
 func _ready() -> void:
-	position = Vector2(8,8)
-	size = Vector2(496,368)
+	if embedded:
+		size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		size_flags_vertical = Control.SIZE_EXPAND_FILL
+	else:
+		position = Vector2(8,8)
+		size = Vector2(496,368)
 	theme = PlaytestPicker.menu_theme()
 	var box := VBoxContainer.new()
 	add_child(box)
 	var head := HBoxContainer.new()
 	box.add_child(head)
 	var title := Label.new()
-	title.text = "Mapa de pruebas / clic para viajar"
+	title.text = "Región · clic en una ciudad para viajar"
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	head.add_child(title)
 	var back := Button.new()
@@ -69,7 +75,7 @@ func _ready() -> void:
 	detail = Label.new()
 	detail.text = "Sesión temporal. Pasa por un punto para ver sus zonas.\nPulsa para viajar. Gris: mapa pendiente."
 	detail.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	detail.custom_minimum_size.y = 38
+	detail.custom_minimum_size.y = 52
 	box.add_child(detail)
 	for entry: Dictionary in entries:
 		var key := str(entry.id).get_slice("/",0)
@@ -98,7 +104,7 @@ func _ready() -> void:
 func _point(board: Control, key: String, caption: String, cell: Vector2, text: String) -> void:
 	var button := Button.new()
 	button.text = text
-	button.add_theme_font_size_override("font_size",12)
+	button.add_theme_font_size_override("font_size",10)
 	var ideal := cell*Vector2(330.0/32,268.0/26)-Vector2(9,9)
 	button.position = ideal
 	var offsets: Array[Vector2] = [Vector2.ZERO]
@@ -131,7 +137,16 @@ func _point(board: Control, key: String, caption: String, cell: Vector2, text: S
 	buttons[key] = button
 
 func _primary(key: String) -> String:
-	var preferred := {"madrid":"madrid/centro","barcelona":"barcelona/eixample","valencia":"valencia/ciutat_vella","sevilla":"sevilla/centro","las_palmas":"las_palmas/vegueta_triana"}
+	var preferred := {
+		"madrid": "madrid/centro", "barcelona": "barcelona/eixample",
+		"valencia": "valencia/malvarrosa", "sevilla": "sevilla/centro",
+		"las_palmas": "las_palmas/vegueta_triana", "vigo": "vigo/exterior",
+		"valladolid": "valladolid/exterior", "zaragoza": "zaragoza/exterior",
+		"palma": "palma/exterior", "ibiza": "ibiza/exterior",
+		"malaga": "malaga/exterior", "puertollano": "puertollano/exterior",
+		"pueblo_inicial": "pueblo_inicial/exterior", "huelva": "huelva/exterior",
+		"playa_del_ingles": "playa_del_ingles/exterior", "getafe": "getafe/exterior",
+	}
 	var available: Array = groups.get(key,[])
 	for entry: Dictionary in available:
 		if entry.id == preferred.get(key,""): return str(entry.id)
@@ -157,7 +172,7 @@ func _show_zones(key: String, query := "") -> void:
 		var button := Button.new()
 		button.text = str(entry.label).replace(" · "," / ")
 		button.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		button.custom_minimum_size.y = 30
+		button.custom_minimum_size.y = 36
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.tooltip_text = str(entry.id)+" · clic para viajar"
 		button.pressed.connect(func() -> void: _complete(str(entry.id)))
@@ -169,11 +184,14 @@ func _show_zones(key: String, query := "") -> void:
 		zones.add_child(label)
 
 func _unhandled_input(event: InputEvent) -> void:
+	if embedded or not is_visible_in_tree():
+		return
 	if event.is_action_pressed(&"cancel") or event.is_action_pressed(&"debug"):
 		get_viewport().set_input_as_handled()
 		_complete("")
 
 func _complete(id: String) -> void:
 	if _finished: return
-	_finished = true
+	if not embedded:
+		_finished = true
 	completed.emit(id)

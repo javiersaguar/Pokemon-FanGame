@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="13_rffno"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_lass.png" id="14_sgxsc"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_man.png" id="15_3cjlg"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="16_3giix"]
 
 [sub_resource type="Resource" id="Resource_y3ads"]
 script = ExtResource("2_3giix")
@@ -153,6 +154,12 @@ tile_set = ExtResource("4_uak8h")
 
 [node name="Warps" type="Node2D" parent="." unique_id=1344364969]
 
+[node name="Casa1" type="Node2D" parent="Warps" unique_id=1841134576]
+position = Vector2(304, 656)
+script = ExtResource("16_3giix")
+target_map = &"ruta_12/casa_1"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=2143776481]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1656133514]
@@ -163,5 +170,8 @@ position = Vector2(2288, 880)
 
 [node name="from_ruta_13" type="Marker2D" parent="Spawns" unique_id=52413019]
 position = Vector2(16, 816)
+
+[node name="from_casa_1" type="Marker2D" parent="Spawns" unique_id=1866109054]
+position = Vector2(304, 688)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=481589416]

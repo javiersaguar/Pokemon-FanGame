@@ -1,7 +1,5 @@
 [gd_scene format=4]
 
-[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
-
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_btlgy"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_thkof"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_noy0o"]
@@ -16,6 +14,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="12_txdns"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="13_u5y6b"]
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="14_sk0yv"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
 
 [sub_resource type="Resource" id="Resource_qm0nm"]
 script = ExtResource("2_thkof")
@@ -117,15 +116,6 @@ target_map = &"ibiza/exterior"
 target_spawn = &"from_ferry"
 sound = &""
 
-[node name="Spawns" type="Node2D" parent="." unique_id=610011764]
-
-[node name="default" type="Marker2D" parent="Spawns" unique_id=910574327]
-position = Vector2(528, 1456)
-
-[node name="from_ferry" type="Marker2D" parent="Spawns" unique_id=1670013060]
-position = Vector2(528, 1488)
-
-[node name="Triggers" type="Node2D" parent="." unique_id=506418754]
 [node name="Hospital" type="Node2D" parent="Warps" unique_id=560972005]
 position = Vector2(688, 336)
 script = ExtResource("14_sk0yv")
@@ -144,6 +134,92 @@ script = ExtResource("14_sk0yv")
 target_map = &"valencia/malvarrosa/estanco"
 arrival_facing = 4
 
+[node name="Sala43_20" type="Node2D" parent="Warps" unique_id=1341789334]
+position = Vector2(1392, 656)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_43_20"
+arrival_facing = 4
+
+[node name="Sala3_8" type="Node2D" parent="Warps" unique_id=640069272]
+position = Vector2(112, 272)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_3_8"
+arrival_facing = 4
+
+[node name="Sala8_8" type="Node2D" parent="Warps" unique_id=1341640575]
+position = Vector2(272, 272)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_8_8"
+arrival_facing = 4
+
+[node name="Sala13_8" type="Node2D" parent="Warps" unique_id=1739322096]
+position = Vector2(432, 272)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_13_8"
+arrival_facing = 4
+
+[node name="Sala3_21" type="Node2D" parent="Warps" unique_id=1430731026]
+position = Vector2(112, 688)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_3_21"
+arrival_facing = 4
+
+[node name="Sala8_21" type="Node2D" parent="Warps" unique_id=1163480324]
+position = Vector2(272, 688)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_8_21"
+arrival_facing = 4
+
+[node name="Sala21_22" type="Node2D" parent="Warps" unique_id=828191285]
+position = Vector2(688, 720)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_21_22"
+arrival_facing = 4
+
+[node name="Sala27_22" type="Node2D" parent="Warps" unique_id=324460808]
+position = Vector2(880, 720)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_27_22"
+arrival_facing = 4
+
+[node name="Sala5_35" type="Node2D" parent="Warps" unique_id=290139386]
+position = Vector2(176, 1136)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_5_35"
+arrival_facing = 4
+
+[node name="Sala14_35" type="Node2D" parent="Warps" unique_id=877215538]
+position = Vector2(464, 1136)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_14_35"
+arrival_facing = 4
+
+[node name="Sala22_35" type="Node2D" parent="Warps" unique_id=872502576]
+position = Vector2(720, 1136)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_22_35"
+arrival_facing = 4
+
+[node name="Sala30_35" type="Node2D" parent="Warps" unique_id=1859081887]
+position = Vector2(976, 1136)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_30_35"
+arrival_facing = 4
+
+[node name="Sala49_11" type="Node2D" parent="Warps" unique_id=385013137]
+position = Vector2(1584, 368)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/sala_malvarrosa_49_11"
+arrival_facing = 4
+
+[node name="Spawns" type="Node2D" parent="." unique_id=610011764]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=910574327]
+position = Vector2(528, 1456)
+
+[node name="from_ferry" type="Marker2D" parent="Spawns" unique_id=1670013060]
+position = Vector2(528, 1488)
+
 [node name="from_hospital" type="Marker2D" parent="Spawns" unique_id=499352370]
 position = Vector2(688, 368)
 
@@ -152,6 +228,47 @@ position = Vector2(944, 304)
 
 [node name="from_estanco" type="Marker2D" parent="Spawns" unique_id=1360235472]
 position = Vector2(496, 752)
+
+[node name="from_sala_43_20" type="Marker2D" parent="Spawns" unique_id=602827808]
+position = Vector2(1392, 688)
+
+[node name="from_sala_3_8" type="Marker2D" parent="Spawns" unique_id=1678255781]
+position = Vector2(112, 304)
+
+[node name="from_sala_8_8" type="Marker2D" parent="Spawns" unique_id=2031202582]
+position = Vector2(272, 304)
+
+[node name="from_sala_13_8" type="Marker2D" parent="Spawns" unique_id=1882894660]
+position = Vector2(432, 304)
+
+[node name="from_sala_3_21" type="Marker2D" parent="Spawns" unique_id=133270670]
+position = Vector2(112, 720)
+
+[node name="from_sala_8_21" type="Marker2D" parent="Spawns" unique_id=1677682968]
+position = Vector2(272, 720)
+
+[node name="from_sala_21_22" type="Marker2D" parent="Spawns" unique_id=1855699557]
+position = Vector2(688, 752)
+
+[node name="from_sala_27_22" type="Marker2D" parent="Spawns" unique_id=1865850325]
+position = Vector2(880, 752)
+
+[node name="from_sala_5_35" type="Marker2D" parent="Spawns" unique_id=1674465343]
+position = Vector2(176, 1168)
+
+[node name="from_sala_14_35" type="Marker2D" parent="Spawns" unique_id=1178955163]
+position = Vector2(464, 1168)
+
+[node name="from_sala_22_35" type="Marker2D" parent="Spawns" unique_id=274794412]
+position = Vector2(720, 1168)
+
+[node name="from_sala_30_35" type="Marker2D" parent="Spawns" unique_id=1018600362]
+position = Vector2(976, 1168)
+
+[node name="from_sala_49_11" type="Marker2D" parent="Spawns" unique_id=753408330]
+position = Vector2(1584, 400)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=506418754]
 
 [node name="RotuloHospital" type="Label" parent="." unique_id=599293219]
 offset_left = 640.0

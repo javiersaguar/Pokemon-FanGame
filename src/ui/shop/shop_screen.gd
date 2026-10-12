@@ -29,8 +29,35 @@ func run() -> void:
 			closed.emit()
 			return
 		while true:
-			var ids := ShopTransactions.stock(shop_id) if action == 0 else (GameState.bag as Bag).all_items().filter(func(id: StringName) -> bool: return ShopTransactions.sale_price(id) > 0)
-			var item := await BagScreen.choose_from(ids, "Comprar" if action == 0 else "Vender", action == 0, shop_id)
+			var ids: Array[StringName] = []
+			var title := "Comprar"
+			if action == 0:
+				ids = ShopTransactions.stock(shop_id)
+			else:
+				var pockets := PackedStringArray()
+				var pocket_ids: Array[StringName] = []
+				for i: int in BagScreen.POCKETS.size():
+					var pocket: StringName = BagScreen.POCKETS[i]
+					var any := false
+					for id: StringName in GameState.bag.all_items():
+						if DataDB.item(id).pocket == pocket and ShopTransactions.sale_price(id) > 0:
+							any = true
+							break
+					if any:
+						pockets.append(BagScreen.NAMES[i])
+						pocket_ids.append(pocket)
+				if pockets.is_empty():
+					await Dialogue.say("No tienes nada que vender.")
+					break
+				pockets.append("Volver")
+				var pocket_pick := await ChoiceScreen.pick("Vender", pockets)
+				if pocket_pick < 0 or pocket_pick >= pocket_ids.size():
+					break
+				for id: StringName in GameState.bag.all_items():
+					if DataDB.item(id).pocket == pocket_ids[pocket_pick] and ShopTransactions.sale_price(id) > 0:
+						ids.append(id)
+				title = "Vender / %s" % pockets[pocket_pick]
+			var item := await BagScreen.choose_from(ids, title, action == 0, shop_id)
 			if item == &"": break
 			var unit := ShopTransactions.price(shop_id, item) if action == 0 else ShopTransactions.sale_price(item)
 			var limit := mini(Bag.MAX_COUNT - GameState.bag.count(item), GameState.money / unit) if action == 0 else mini(GameState.bag.count(item), (GameState.max_money() - GameState.money) / unit)

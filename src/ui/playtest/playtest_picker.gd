@@ -23,8 +23,9 @@ static func pick(title: String, catalogue: Array[Dictionary]) -> String:
 
 static func menu_theme() -> Theme:
 	var result := preload("res://src/ui/theme/main_theme.tres").duplicate()
-	result.default_font = result.get_font(&"font",&"SmallLabel")
-	result.default_font_size = 16
+	# El menú de F9 está en la pantalla de 512×384, no en el lienzo ×2.
+	# La fuente es de píxel a tamaño 10: aquí se dibuja al doble (20) para verse nítida.
+	result.default_font_size = 20
 	result.set_stylebox(&"panel",&"TabContainer",result.get_stylebox(&"panel",&"PanelContainer"))
 	result.set_color(&"font_selected_color",&"TabContainer",Color("303048"))
 	result.set_color(&"font_unselected_color",&"TabContainer",Color("586870"))

@@ -24,6 +24,7 @@ var _hour_spin: SpinBox
 var _buttons_box: HFlowContainer
 var _log: RichTextLabel
 var _console_input: LineEdit
+var _region: PlaytestWorldMap
 
 
 ## La interfaz se crea en _init para que otros autoloads puedan registrar
@@ -55,6 +56,7 @@ func open() -> void:
 		return
 	is_open = true
 	GameState.lock_input(&"debug")
+	_ensure_region()
 	_refresh()
 	_panel.show()
 	if is_instance_valid(_preferred_panel):
@@ -95,7 +97,7 @@ func register_panel(title: String, panel: Control, preferred := false) -> void:
 	if preferred:
 		_preferred_panel = panel
 		_panel.theme = panel.theme
-		_tabs.add_theme_font_size_override(&"font_size",12)
+		_tabs.add_theme_font_size_override(&"font_size",20)
 
 func unregister_panel(panel: Control) -> void:
 	if _preferred_panel == panel:
@@ -272,7 +274,9 @@ func _build_ui() -> void:
 	_panel.hide()
 
 	_tabs = TabContainer.new()
+	_tabs.add_theme_font_size_override(&"font_size", 20)
 	_panel.add_child(_tabs)
+	_panel.theme = PlaytestPicker.menu_theme()
 
 	_maps = ItemList.new()
 	_maps.name = "Mapas"
@@ -348,6 +352,39 @@ func _on_console_submitted(text: String) -> void:
 
 func _exec(line: String) -> void:
 	_print(run_command(line))
+
+
+func _ensure_region() -> void:
+	if _region != null:
+		return
+	_region = PlaytestWorldMap.new()
+	_region.name = "Región"
+	_region.embedded = true
+	_region.entries.assign(PlaytestSession.maps())
+	_region.completed.connect(_on_region_pick)
+	_tabs.add_child(_region)
+	_tabs.move_child(_region, 0)
+
+
+func _on_region_pick(id: String) -> void:
+	if id == "":
+		return
+	close()
+	if GameState.in_game and player_ready():
+		SceneManager.change_map(StringName(id))
+		return
+	var menu: PlaytestMenu = _preferred_panel as PlaytestMenu
+	if menu != null and menu.session.available():
+		menu.map_id = StringName(id)
+		if menu.is_node_ready():
+			menu._refresh_spawns()
+		menu._begin()
+		return
+	SceneManager.start_new_game(StringName(id))
+
+
+func player_ready() -> bool:
+	return SceneManager.player != null
 
 
 func _refresh() -> void:

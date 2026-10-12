@@ -1,7 +1,5 @@
 [gd_scene format=4]
 
-[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
-
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_5uhdr"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_ma4at"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_wuapx"]
@@ -16,6 +14,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="12_coe3y"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_lass.png" id="13_aq1f2"]
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="14_li46x"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
 
 [sub_resource type="Resource" id="Resource_bhe58"]
 script = ExtResource("2_ma4at")
@@ -121,6 +120,84 @@ target_map = &"palma/exterior"
 target_spawn = &"from_ferry"
 sound = &""
 
+[node name="Hospital" type="Node2D" parent="Warps" unique_id=1084365319]
+position = Vector2(1584, 1584)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/barceloneta/hospital"
+arrival_facing = 4
+
+[node name="Sala5_13" type="Node2D" parent="Warps" unique_id=1625298332]
+position = Vector2(176, 432)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_5_13"
+arrival_facing = 4
+
+[node name="Sala12_13" type="Node2D" parent="Warps" unique_id=237727193]
+position = Vector2(400, 432)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_12_13"
+arrival_facing = 4
+
+[node name="Sala22_13" type="Node2D" parent="Warps" unique_id=1882037623]
+position = Vector2(720, 432)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_22_13"
+arrival_facing = 4
+
+[node name="Sala5_27" type="Node2D" parent="Warps" unique_id=589601623]
+position = Vector2(176, 880)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_5_27"
+arrival_facing = 4
+
+[node name="Sala13_26" type="Node2D" parent="Warps" unique_id=715842644]
+position = Vector2(432, 848)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_13_26"
+arrival_facing = 4
+
+[node name="Sala22_27" type="Node2D" parent="Warps" unique_id=2058275183]
+position = Vector2(720, 880)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_22_27"
+arrival_facing = 4
+
+[node name="Sala5_40" type="Node2D" parent="Warps" unique_id=583409768]
+position = Vector2(176, 1296)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_5_40"
+arrival_facing = 4
+
+[node name="Sala25_40" type="Node2D" parent="Warps" unique_id=2072809260]
+position = Vector2(816, 1296)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_25_40"
+arrival_facing = 4
+
+[node name="Sala6_49" type="Node2D" parent="Warps" unique_id=291260484]
+position = Vector2(208, 1584)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_6_49"
+arrival_facing = 4
+
+[node name="Sala44_22" type="Node2D" parent="Warps" unique_id=1537631802]
+position = Vector2(1424, 720)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_44_22"
+arrival_facing = 4
+
+[node name="Sala47_6" type="Node2D" parent="Warps" unique_id=1935471411]
+position = Vector2(1520, 208)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_47_6"
+arrival_facing = 4
+
+[node name="Sala57_27" type="Node2D" parent="Warps" unique_id=1820559240]
+position = Vector2(1840, 880)
+script = ExtResource("14_li46x")
+target_map = &"barcelona/sala_ciutat_vella_57_27"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1960431836]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1049936609]
@@ -132,15 +209,46 @@ position = Vector2(1008, 16)
 [node name="from_ferry" type="Marker2D" parent="Spawns" unique_id=142033570]
 position = Vector2(464, 1616)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=2049047200]
-[node name="Hospital" type="Node2D" parent="Warps" unique_id=1084365319]
-position = Vector2(1584, 1584)
-script = ExtResource("14_li46x")
-target_map = &"barcelona/barceloneta/hospital"
-arrival_facing = 4
-
 [node name="from_hospital" type="Marker2D" parent="Spawns" unique_id=804820591]
 position = Vector2(1584, 1616)
+
+[node name="from_sala_5_13" type="Marker2D" parent="Spawns" unique_id=1180071924]
+position = Vector2(176, 464)
+
+[node name="from_sala_12_13" type="Marker2D" parent="Spawns" unique_id=1435950639]
+position = Vector2(400, 464)
+
+[node name="from_sala_22_13" type="Marker2D" parent="Spawns" unique_id=278943169]
+position = Vector2(720, 464)
+
+[node name="from_sala_5_27" type="Marker2D" parent="Spawns" unique_id=829531721]
+position = Vector2(176, 912)
+
+[node name="from_sala_13_26" type="Marker2D" parent="Spawns" unique_id=715579638]
+position = Vector2(432, 880)
+
+[node name="from_sala_22_27" type="Marker2D" parent="Spawns" unique_id=184052970]
+position = Vector2(720, 912)
+
+[node name="from_sala_5_40" type="Marker2D" parent="Spawns" unique_id=1802273460]
+position = Vector2(176, 1328)
+
+[node name="from_sala_25_40" type="Marker2D" parent="Spawns" unique_id=1360215624]
+position = Vector2(816, 1328)
+
+[node name="from_sala_6_49" type="Marker2D" parent="Spawns" unique_id=1760790920]
+position = Vector2(208, 1616)
+
+[node name="from_sala_44_22" type="Marker2D" parent="Spawns" unique_id=503444798]
+position = Vector2(1424, 752)
+
+[node name="from_sala_47_6" type="Marker2D" parent="Spawns" unique_id=1388900424]
+position = Vector2(1520, 240)
+
+[node name="from_sala_57_27" type="Marker2D" parent="Spawns" unique_id=1293651090]
+position = Vector2(1840, 912)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=2049047200]
 
 [node name="RotuloHospital" type="Label" parent="." unique_id=498623385]
 offset_left = 1536.0

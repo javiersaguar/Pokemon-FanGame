@@ -77,6 +77,29 @@ func test_engine_driver_uses_current_request_and_all_active_members() -> void:
 	assert_true(driver.player_party()[0].active)
 	assert_true(driver.player_party()[1].active)
 	assert_false(driver.player_party()[2].active)
+func test_large_pokemon_shrink_to_fit_the_double_slots() -> void:
+	assert_eq(BattlePokemonSprite.display_scale(Vector2(281, 195), BattlePokemonSprite.DOUBLE_PLAYER_LIMIT, false), 0.5)
+	assert_eq(BattlePokemonSprite.display_scale(Vector2(120, 120), BattlePokemonSprite.DOUBLE_PLAYER_LIMIT, false), 1.0)
+	assert_eq(BattlePokemonSprite.display_scale(Vector2(120, 120), BattlePokemonSprite.DOUBLE_PLAYER_LIMIT, true), 2.0)
+	assert_eq(BattlePokemonSprite.display_scale(Vector2(120, 120), Vector2.ZERO, true), 2.0)
+	var scene := SCENE.instantiate() as BattleScene
+	scene.fast = true
+	add_child_autofree(scene)
+	scene._info = {"format": &"double"}
+	scene._configure_field()
+	await scene._play_event({"type": &"switch_in", "side": 0, "slot": 0, "data": {"species": &"wailord", "name": "Wailord", "hp": 20, "max_hp": 20}})
+	await scene._play_event({"type": &"switch_in", "side": 0, "slot": 1, "data": {"species": &"pidgey", "name": "Pidgey", "hp": 20, "max_hp": 20}})
+	await scene._play_event({"type": &"switch_in", "side": 1, "slot": 0, "data": {"species": &"wailord", "name": "Wailord", "hp": 20, "max_hp": 20}})
+	await scene._play_event({"type": &"switch_in", "side": 1, "slot": 1, "data": {"species": &"pidgey", "name": "Pidgey", "hp": 20, "max_hp": 20}})
+	assert_eq(scene._sprite(0, 0).scale, Vector2(0.5, 0.5))
+	assert_eq(scene._sprite(0, 1).scale, Vector2.ONE)
+	assert_eq(scene._sprite(1, 0).scale, Vector2(0.5, 0.5))
+	assert_eq(scene._sprite(1, 1).scale, Vector2.ONE)
+	assert_lt(scene._sprite(0, 0).home().x, scene._sprite(0, 1).home().x)
+	assert_lt(scene._sprite(1, 0).home().x, scene._sprite(1, 1).home().x)
+	await scene._play_event({"type": &"dynamax", "side": 0, "slot": 1, "data": {"hp": 40, "max_hp": 40}})
+	assert_eq(scene._sprite(0, 1).scale, Vector2(2, 2))
+	assert_eq(scene._sprite(0, 0).scale, Vector2(0.5, 0.5))
 func test_trainer_pair_combines_both_parties_in_one_setup() -> void:
 	var a := TrainerNPC.new()
 	var b := TrainerNPC.new()

@@ -1,7 +1,5 @@
 [gd_scene format=4]
 
-[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
-
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_iqavr"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_r1rg7"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_fbsyu"]
@@ -16,6 +14,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="12_85ifs"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="13_t2587"]
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="14_gf5pn"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
 
 [sub_resource type="Resource" id="Resource_4fv0a"]
 script = ExtResource("2_r1rg7")
@@ -139,18 +138,6 @@ target_map = &"vigo/exterior"
 target_spawn = &"from_avion"
 sound = &""
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1166915922]
-
-[node name="default" type="Marker2D" parent="Spawns" unique_id=221897470]
-position = Vector2(432, 48)
-
-[node name="from_ruta_15" type="Marker2D" parent="Spawns" unique_id=872234825]
-position = Vector2(432, 16)
-
-[node name="from_avion" type="Marker2D" parent="Spawns" unique_id=776337686]
-position = Vector2(368, 240)
-
-[node name="Triggers" type="Node2D" parent="." unique_id=892192454]
 [node name="Hospital" type="Node2D" parent="Warps" unique_id=264914682]
 position = Vector2(720, 240)
 script = ExtResource("14_gf5pn")
@@ -169,6 +156,65 @@ script = ExtResource("14_gf5pn")
 target_map = &"playa_del_ingles/estanco"
 arrival_facing = 4
 
+[node name="Sala41_7" type="Node2D" parent="Warps" unique_id=21639150]
+position = Vector2(1328, 240)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_41_7"
+arrival_facing = 4
+
+[node name="Sala5_20" type="Node2D" parent="Warps" unique_id=1759627305]
+position = Vector2(176, 656)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_5_20"
+arrival_facing = 4
+
+[node name="Sala16_18" type="Node2D" parent="Warps" unique_id=1876615947]
+position = Vector2(528, 592)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_16_18"
+arrival_facing = 4
+
+[node name="Sala24_21" type="Node2D" parent="Warps" unique_id=730356730]
+position = Vector2(784, 688)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_24_21"
+arrival_facing = 4
+
+[node name="Sala33_20" type="Node2D" parent="Warps" unique_id=849953401]
+position = Vector2(1072, 656)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_33_20"
+arrival_facing = 4
+
+[node name="Sala39_21" type="Node2D" parent="Warps" unique_id=1335147813]
+position = Vector2(1264, 688)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_39_21"
+arrival_facing = 4
+
+[node name="Sala53_11" type="Node2D" parent="Warps" unique_id=1075037121]
+position = Vector2(1712, 368)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_53_11"
+arrival_facing = 4
+
+[node name="Sala7_54" type="Node2D" parent="Warps" unique_id=1944123742]
+position = Vector2(240, 1744)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/sala_calle_7_54"
+arrival_facing = 4
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1166915922]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=221897470]
+position = Vector2(432, 48)
+
+[node name="from_ruta_15" type="Marker2D" parent="Spawns" unique_id=872234825]
+position = Vector2(432, 16)
+
+[node name="from_avion" type="Marker2D" parent="Spawns" unique_id=776337686]
+position = Vector2(368, 240)
+
 [node name="from_hospital" type="Marker2D" parent="Spawns" unique_id=566706515]
 position = Vector2(720, 272)
 
@@ -177,6 +223,32 @@ position = Vector2(944, 208)
 
 [node name="from_estanco" type="Marker2D" parent="Spawns" unique_id=939808900]
 position = Vector2(1168, 240)
+
+[node name="from_sala_41_7" type="Marker2D" parent="Spawns" unique_id=1256430316]
+position = Vector2(1328, 272)
+
+[node name="from_sala_5_20" type="Marker2D" parent="Spawns" unique_id=384256181]
+position = Vector2(176, 688)
+
+[node name="from_sala_16_18" type="Marker2D" parent="Spawns" unique_id=1822728429]
+position = Vector2(528, 624)
+
+[node name="from_sala_24_21" type="Marker2D" parent="Spawns" unique_id=379068628]
+position = Vector2(784, 720)
+
+[node name="from_sala_33_20" type="Marker2D" parent="Spawns" unique_id=1575545450]
+position = Vector2(1072, 688)
+
+[node name="from_sala_39_21" type="Marker2D" parent="Spawns" unique_id=259990089]
+position = Vector2(1264, 720)
+
+[node name="from_sala_53_11" type="Marker2D" parent="Spawns" unique_id=819245304]
+position = Vector2(1712, 400)
+
+[node name="from_sala_7_54" type="Marker2D" parent="Spawns" unique_id=149208631]
+position = Vector2(240, 1776)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=892192454]
 
 [node name="RotuloHospital" type="Label" parent="." unique_id=1007416664]
 offset_left = 672.0

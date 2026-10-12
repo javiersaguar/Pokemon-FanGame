@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="10_qn7ji"]
 [ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="11_xkdxx"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="12_p0cpq"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="13_8jhme"]
 
 [sub_resource type="Resource" id="Resource_sb2lp"]
 script = ExtResource("2_8jhme")
@@ -108,6 +109,18 @@ tile_set = ExtResource("4_g35cm")
 
 [node name="Warps" type="Node2D" parent="." unique_id=546509133]
 
+[node name="Casa1" type="Node2D" parent="Warps" unique_id=1787839878]
+position = Vector2(528, 816)
+script = ExtResource("13_8jhme")
+target_map = &"ruta_22/casa_1"
+arrival_facing = 4
+
+[node name="Casa2" type="Node2D" parent="Warps" unique_id=2006580329]
+position = Vector2(80, 496)
+script = ExtResource("13_8jhme")
+target_map = &"ruta_22/casa_2"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=892145050]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1618287100]
@@ -118,5 +131,11 @@ position = Vector2(784, 16)
 
 [node name="from_valladolid" type="Marker2D" parent="Spawns" unique_id=893314042]
 position = Vector2(784, 2032)
+
+[node name="from_casa_1" type="Marker2D" parent="Spawns" unique_id=342427779]
+position = Vector2(528, 848)
+
+[node name="from_casa_2" type="Marker2D" parent="Spawns" unique_id=755744211]
+position = Vector2(80, 528)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=950903128]

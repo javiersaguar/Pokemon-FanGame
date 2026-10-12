@@ -1,7 +1,5 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="locales_0"]
-
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_giqja"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_ccmqe"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_o2m47"]
@@ -15,6 +13,7 @@
 [ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="11_48020"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/influencerlinkedin.png" id="12_04t85"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/turistachanclas.png" id="13_lqpne"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="locales_0"]
 
 [sub_resource type="Resource" id="Resource_x87yv"]
 script = ExtResource("2_ccmqe")
@@ -116,6 +115,90 @@ tile_set = ExtResource("4_kaouu")
 
 [node name="Warps" type="Node2D" parent="." unique_id=1980101784]
 
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=2051182981]
+position = Vector2(1744, 400)
+script = ExtResource("locales_0")
+target_map = &"barcelona/les_corts/mercadona"
+arrival_facing = 4
+
+[node name="Sala4_13" type="Node2D" parent="Warps" unique_id=1020143237]
+position = Vector2(144, 432)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_4_13"
+arrival_facing = 4
+
+[node name="Sala13_12" type="Node2D" parent="Warps" unique_id=678827656]
+position = Vector2(432, 400)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_13_12"
+arrival_facing = 4
+
+[node name="Sala21_12" type="Node2D" parent="Warps" unique_id=817368940]
+position = Vector2(688, 400)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_21_12"
+arrival_facing = 4
+
+[node name="Sala30_12" type="Node2D" parent="Warps" unique_id=1851273536]
+position = Vector2(976, 400)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_30_12"
+arrival_facing = 4
+
+[node name="Sala38_13" type="Node2D" parent="Warps" unique_id=565452514]
+position = Vector2(1232, 432)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_38_13"
+arrival_facing = 4
+
+[node name="Sala46_13" type="Node2D" parent="Warps" unique_id=324197833]
+position = Vector2(1488, 432)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_46_13"
+arrival_facing = 4
+
+[node name="Sala60_13" type="Node2D" parent="Warps" unique_id=556167424]
+position = Vector2(1936, 432)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_60_13"
+arrival_facing = 4
+
+[node name="Sala26_40" type="Node2D" parent="Warps" unique_id=296473984]
+position = Vector2(848, 1296)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_26_40"
+arrival_facing = 4
+
+[node name="Sala47_29" type="Node2D" parent="Warps" unique_id=1432879207]
+position = Vector2(1520, 944)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_47_29"
+arrival_facing = 4
+
+[node name="Sala55_30" type="Node2D" parent="Warps" unique_id=1899980180]
+position = Vector2(1776, 976)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_55_30"
+arrival_facing = 4
+
+[node name="Sala49_41" type="Node2D" parent="Warps" unique_id=220209447]
+position = Vector2(1584, 1328)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_49_41"
+arrival_facing = 4
+
+[node name="Sala57_41" type="Node2D" parent="Warps" unique_id=350567912]
+position = Vector2(1840, 1328)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_57_41"
+arrival_facing = 4
+
+[node name="Sala4_46" type="Node2D" parent="Warps" unique_id=88425775]
+position = Vector2(144, 1488)
+script = ExtResource("locales_0")
+target_map = &"barcelona/sala_les_corts_4_46"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1547287290]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=196431941]
@@ -124,12 +207,46 @@ position = Vector2(48, 496)
 [node name="from_ruta_8" type="Marker2D" parent="Spawns" unique_id=1170780373]
 position = Vector2(16, 496)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1559549265]
-[node name="Mercadona" type="Node2D" parent="Warps" unique_id=2051182981]
-position = Vector2(1744, 400)
-script = ExtResource("locales_0")
-target_map = &"barcelona/les_corts/mercadona"
-arrival_facing = 4
-
 [node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=1375773163]
 position = Vector2(1744, 432)
+
+[node name="from_sala_4_13" type="Marker2D" parent="Spawns" unique_id=270926173]
+position = Vector2(144, 464)
+
+[node name="from_sala_13_12" type="Marker2D" parent="Spawns" unique_id=128101486]
+position = Vector2(432, 432)
+
+[node name="from_sala_21_12" type="Marker2D" parent="Spawns" unique_id=2075887579]
+position = Vector2(688, 432)
+
+[node name="from_sala_30_12" type="Marker2D" parent="Spawns" unique_id=1676955364]
+position = Vector2(976, 432)
+
+[node name="from_sala_38_13" type="Marker2D" parent="Spawns" unique_id=712322207]
+position = Vector2(1232, 464)
+
+[node name="from_sala_46_13" type="Marker2D" parent="Spawns" unique_id=15293435]
+position = Vector2(1488, 464)
+
+[node name="from_sala_60_13" type="Marker2D" parent="Spawns" unique_id=1240910810]
+position = Vector2(1936, 464)
+
+[node name="from_sala_26_40" type="Marker2D" parent="Spawns" unique_id=1323666898]
+position = Vector2(848, 1328)
+
+[node name="from_sala_47_29" type="Marker2D" parent="Spawns" unique_id=245816619]
+position = Vector2(1520, 976)
+
+[node name="from_sala_55_30" type="Marker2D" parent="Spawns" unique_id=1254352286]
+position = Vector2(1776, 1008)
+
+[node name="from_sala_49_41" type="Marker2D" parent="Spawns" unique_id=830548827]
+position = Vector2(1584, 1360)
+
+[node name="from_sala_57_41" type="Marker2D" parent="Spawns" unique_id=258473461]
+position = Vector2(1840, 1360)
+
+[node name="from_sala_4_46" type="Marker2D" parent="Spawns" unique_id=151715052]
+position = Vector2(144, 1520)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1559549265]

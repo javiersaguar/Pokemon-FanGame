@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="9_pl4lf"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/turistachanclas_f.png" id="10_yj78t"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_man.png" id="11_1c1ud"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="12_atkt8"]
 
 [sub_resource type="Resource" id="Resource_22iea"]
 script = ExtResource("2_atkt8")
@@ -114,6 +115,36 @@ tile_set = ExtResource("4_d8jau")
 
 [node name="Warps" type="Node2D" parent="." unique_id=413318879]
 
+[node name="Sala23_30" type="Node2D" parent="Warps" unique_id=1520264619]
+position = Vector2(752, 976)
+script = ExtResource("12_atkt8")
+target_map = &"madrid/sala_palacio_real_23_30"
+arrival_facing = 4
+
+[node name="Sala23_54" type="Node2D" parent="Warps" unique_id=1007897245]
+position = Vector2(752, 1744)
+script = ExtResource("12_atkt8")
+target_map = &"madrid/sala_palacio_real_23_54"
+arrival_facing = 4
+
+[node name="Sala59_25" type="Node2D" parent="Warps" unique_id=33427170]
+position = Vector2(1904, 816)
+script = ExtResource("12_atkt8")
+target_map = &"madrid/sala_palacio_real_59_25"
+arrival_facing = 4
+
+[node name="Sala46_11" type="Node2D" parent="Warps" unique_id=294367495]
+position = Vector2(1488, 368)
+script = ExtResource("12_atkt8")
+target_map = &"madrid/sala_palacio_real_46_11"
+arrival_facing = 4
+
+[node name="Sala54_11" type="Node2D" parent="Warps" unique_id=226631634]
+position = Vector2(1744, 368)
+script = ExtResource("12_atkt8")
+target_map = &"madrid/sala_palacio_real_54_11"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1817411161]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1386359299]
@@ -121,5 +152,20 @@ position = Vector2(2000, 1360)
 
 [node name="from_centro" type="Marker2D" parent="Spawns" unique_id=1317607147]
 position = Vector2(2032, 1360)
+
+[node name="from_sala_23_30" type="Marker2D" parent="Spawns" unique_id=1400909575]
+position = Vector2(752, 1008)
+
+[node name="from_sala_23_54" type="Marker2D" parent="Spawns" unique_id=1617266751]
+position = Vector2(752, 1776)
+
+[node name="from_sala_59_25" type="Marker2D" parent="Spawns" unique_id=57809498]
+position = Vector2(1904, 848)
+
+[node name="from_sala_46_11" type="Marker2D" parent="Spawns" unique_id=2091880466]
+position = Vector2(1488, 400)
+
+[node name="from_sala_54_11" type="Marker2D" parent="Spawns" unique_id=1170877944]
+position = Vector2(1744, 400)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=1517468989]

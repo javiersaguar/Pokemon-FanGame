@@ -36,7 +36,7 @@ func _refresh() -> void:
 		notes.append("%s / Nv%d\nPS %d/%d\nObjeto: %s" % [p.species().name, p.level, p.current_hp, p.max_hp(), DataDB.item(p.held_item).name if DataDB.has_item(p.held_item) else "Ninguno"] if p else "A: depositar desde el equipo. Al mover, A intercambia con este hueco.")
 		images.append(UiTextures.pokemon_icon(p) if p else null)
 	super._refresh()
-	hint.text = "Izq/Der: huecos / C: cajas / B: volver"
+	hint.text = "Izq/Der: huecos / C: dejar o coger / B: volver"
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"menu") and menu.is_choosing and Engine.get_process_frames() != menu._active_frame:
@@ -49,18 +49,20 @@ func run() -> void:
 		var index := await menu.choose()
 		if index == -2: _refresh(); continue
 		if index == -3:
-			var action := await ChoiceScreen.pick("Cajas del PC", ["Caja anterior", "Caja siguiente", "Elegir caja", "Renombrar caja", "Cancelar movimiento", "Volver"])
+			var action := await ChoiceScreen.pick("PC", ["Dejar un Pokémon", "Coger un Pokémon", "Caja anterior", "Caja siguiente", "Elegir caja", "Renombrar caja", "Cancelar movimiento", "Volver"])
 			match action:
-				0, 1: GameState.pc.current_box = wrapi(GameState.pc.current_box + (-1 if action == 0 else 1), 0, GameState.pc.box_count()); page = 0
-				2:
+				0: await _deposit_from_party()
+				1: await _withdraw_to_party()
+				2, 3: GameState.pc.current_box = wrapi(GameState.pc.current_box + (-1 if action == 2 else 1), 0, GameState.pc.box_count()); page = 0
+				4:
 					var names := PackedStringArray()
 					for box: int in GameState.pc.box_count(): names.append(GameState.pc.box_name(box))
-					var box := await ChoiceScreen.pick("Elegir caja", names)
-					if box >= 0: GameState.pc.current_box = box; page = 0
-				3:
+					var chosen := await ChoiceScreen.pick("Elegir caja", names)
+					if chosen >= 0: GameState.pc.current_box = chosen; page = 0
+				5:
 					var name := await NameKeyboard.ask(SceneManager.ui_layer,"Nombre de la caja",GameState.pc.box_name(GameState.pc.current_box),true,12)
 					if not name.strip_edges().is_empty(): GameState.pc.rename_box(GameState.pc.current_box,name)
-				4: moving = PCStorage.NO_SLOT
+				6: moving = PCStorage.NO_SLOT
 			_refresh()
 			continue
 		if index < 0:
@@ -91,3 +93,45 @@ func run() -> void:
 						if await Dialogue.ask_yes_no("¿Confirmas que quieres liberarlo?"): GameState.pc.release(box,slot)
 		_refresh()
 		menu.select(index)
+
+
+func _deposit_from_party() -> void:
+	var member := await PartyScreen.pick_member("Dejar en el PC")
+	if member < 0:
+		return
+	var p: Pokemon = GameState.party.get_at(member)
+	if p == null:
+		return
+	if GameState.party.size() <= 1 or (not p.is_fainted() and GameState.party.able_count() <= 1):
+		await Dialogue.say("Conserva al menos un Pokémon capaz de combatir.")
+		return
+	if GameState.pc.is_full():
+		await Dialogue.say("El PC está lleno.")
+		return
+	var placed: Vector2i = GameState.pc.deposit(p)
+	if placed == PCStorage.NO_SLOT:
+		await Dialogue.say("No hay hueco libre.")
+		return
+	GameState.party.remove_at(member)
+	GameState.pc.current_box = placed.x
+	await Dialogue.say("%s se ha quedado en %s." % [p.display_name(), GameState.pc.box_name(placed.x)])
+
+
+func _withdraw_to_party() -> void:
+	var names := PackedStringArray()
+	var slots: Array[Vector2i] = []
+	for slot: int in GameState.pc.box_size():
+		var p: Pokemon = GameState.pc.get_pokemon(GameState.pc.current_box, slot)
+		if p == null:
+			continue
+		names.append("%s / Nv%d" % [p.display_name(), p.level])
+		slots.append(Vector2i(GameState.pc.current_box, slot))
+	if names.is_empty():
+		await Dialogue.say("Esta caja está vacía.")
+		return
+	names.append("Volver")
+	var pick := await ChoiceScreen.pick("Coger de %s" % GameState.pc.box_name(GameState.pc.current_box), names)
+	if pick < 0 or pick >= slots.size():
+		return
+	if withdraw_member(slots[pick].x, slots[pick].y) != OK:
+		await Dialogue.say("El equipo está lleno.")

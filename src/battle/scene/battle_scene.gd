@@ -772,16 +772,19 @@ func _end_low_hp_music() -> void:
 func _configure_field() -> void:
 	_field_slots = {BattleDriver.PLAYER:0,BattleDriver.FOE:0}
 	if _info.get("format",&"single") != &"double": return
-	_player_sprite.set_home(Vector2(68,292))
-	_foe_sprite.set_home(Vector2(304,108))
-	_foe_shadow.position = Vector2(304,100)
+	_player_sprite.set_home(Vector2(48,296))
+	_player_sprite.set_slot_limit(BattlePokemonSprite.DOUBLE_PLAYER_LIMIT)
+	_foe_sprite.set_home(Vector2(292,112))
+	_foe_sprite.set_slot_limit(BattlePokemonSprite.DOUBLE_FOE_LIMIT)
+	_foe_shadow.position = Vector2(292,104)
 	_player_box.position = Vector2(132,70)
 	_foe_box.position = Vector2(4,4)
 	for side: int in [BattleDriver.PLAYER,BattleDriver.FOE]:
 		if _second_sprites.has(side): continue
 		var sprite := BattlePokemonSprite.new()
 		sprite.back = side == BattleDriver.PLAYER
-		sprite.position = Vector2(188,312) if sprite.back else Vector2(422,132)
+		sprite.position = Vector2(208,318) if sprite.back else Vector2(436,138)
+		sprite.set_slot_limit(BattlePokemonSprite.DOUBLE_PLAYER_LIMIT if sprite.back else BattlePokemonSprite.DOUBLE_FOE_LIMIT)
 		$World.add_child(sprite)
 		$World.move_child(sprite,_fx.get_index())
 		_second_sprites[side] = sprite

@@ -8,6 +8,8 @@ var choices := PackedStringArray()
 var notes := PackedStringArray()
 var images: Array[Texture2D] = []
 var page := 0
+## Opciones: lista a todo el ancho y la explicación con la fuente normal (tamaño 10).
+var wide := false
 var _detail_scroll: ScrollContainer
 var _detail_hint: Label
 var _body: Label
@@ -28,26 +30,32 @@ static func pick(title: String, labels: PackedStringArray, descriptions := Packe
 	return index
 
 func _ready() -> void:
-	panel(Rect2(160, 34, 88, 130))
+	if wide:
+		fill(Rect2(4, 146, 248, 26), Color("fff4d8"))
+	else:
+		panel(Rect2(160, 34, 88, 130))
 	_icon = Sprite2D.new()
 	_icon.position = Vector2(204, 58)
 	_icon.scale = Vector2(0.5, 0.5)
 	canvas.add_child(_icon)
-	_body = label("", Rect2(168, 83, 72, 78), Color("382a38"), 8)
+	var detail := Rect2(168, 83, 72, 78) if not wide else Rect2(8, 148, 240, 24)
+	var detail_size := 8 if not wide else 10
+	_body = label("", detail, Color("382a38"), detail_size)
 	_body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_detail_scroll = ScrollContainer.new()
-	_detail_scroll.position = Vector2(168, 83)
-	_detail_scroll.size = Vector2(72, 65)
+	_detail_scroll.position = detail.position
+	_detail_scroll.size = detail.size
 	_detail_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	_detail_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
 	canvas.add_child(_detail_scroll)
 	canvas.remove_child(_body)
 	_body.position = Vector2.ZERO
-	_body.size = Vector2(70, 0)
-	_body.custom_minimum_size.x = 70
+	_body.size = Vector2(detail.size.x - 2, 0)
+	_body.custom_minimum_size.x = detail.size.x - 2
 	_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_detail_scroll.add_child(_body)
 	_detail_hint = label("", Rect2(168, 151, 72, 10), Color("382a38"), 8)
+	_detail_hint.visible = not wide
 	_refresh()
 	run.call_deferred()
 
@@ -57,13 +65,21 @@ func _refresh() -> void:
 		menu.queue_free()
 	heading.text = caption
 	var count := ceili(float(choices.size()) / ROWS)
-	hint.text = "Izq/Der %d/%d / Z/A: elegir / X/B: volver" % [page + 1, maxi(count, 1)]
+	if wide:
+		hint.add_theme_font_size_override(&"font_size", 10)
+		hint.position = Vector2(8, 175)
+		hint.size = Vector2(240, 16)
+		hint.text = "Izq/Der  %d/%d     A: elegir     B: volver" % [page + 1, maxi(count, 1)]
+	else:
+		hint.text = "Izq/Der %d/%d / Z/A: elegir / X/B: volver" % [page + 1, maxi(count, 1)]
 	var labels := choices.slice(page * ROWS, mini((page + 1) * ROWS, choices.size()))
 	if labels.is_empty(): labels = ["Sin contenido"]
-	menu = make_menu(labels, Rect2(12, 34, 140, 126))
+	menu = make_menu(labels, Rect2(8, 28, 240, 118) if wide else Rect2(12, 34, 140, 126))
+	if wide:
+		menu.add_theme_constant_override(&"v_separation", 1)
 	for button: BattleButton in menu.get_children():
-		button.compact = true
-		button.align_left = true
+		button.compact = not wide
+		button.align_left = not wide
 	menu.set_disabled(0, choices.is_empty())
 	menu.selection_changed.connect(_show_detail)
 	_show_detail(0)
@@ -99,7 +115,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		menu._finish(-2)
 
 func _process(delta: float) -> void:
-	if _detail_scroll:
+	if wide:
+		_detail_hint.visible = false
+	elif _detail_scroll:
 		var limit := maxi(0, ceili(_body.get_minimum_size().y - _detail_scroll.size.y))
 		_detail_hint.visible = limit > 0
 		_detail_hint.text = "C/Start %d/%d" % [ceili(float(_detail_scroll.scroll_vertical) / 32) + 1, ceili(float(limit) / 32) + 1]
