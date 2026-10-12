@@ -53,6 +53,7 @@ Resultados de la comparación turno a turno del combate con el simulador de Pok�
 | Aguijón Letal | Subía el Ataque con el golpe que acaba el combate | No sube (va después de procesar los KO) |
 | Tornado y Ciclón | Daño normal contra quien está en el aire | ×2 |
 | Síntesis, Sol Matinal, Luz Lunar | Redondeaban las mitades hacia arriba y con sol curaban 2/3 exactos | Mismo redondeo y factores que Showdown (`this.modify(maxhp, 0,5 / 0,667 / 0,25)`) |
+| Fuego sobre un congelado | Lo descongelaba antes de los efectos secundarios, así que el mismo golpe podía quemarlo | Descongela después (`DamagingHit`): la quemadura falla porque aún está congelado |
 
 ## Diferencias pendientes de investigar
 

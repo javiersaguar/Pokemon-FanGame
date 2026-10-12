@@ -1464,11 +1464,13 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 				_msg(tr("¡%s ha perdido energía!") % BattleText.cap_name(target, wild))
 		if crit:
 			_msg(tr("¡Un golpe crítico!"))
-		if target.pokemon.status == &"frz" and not target.is_fainted() and (move.type == &"fire" or move.thaws_target):
-			_cure_status(target)
 		for sec: Dictionary in move.secondaries:
 			if rand_chance(&"secondary", int(sec.get("chance", 100)), 100):
 				_apply_secondary(user, target, sec)
+		# El fuego descongela después de los efectos secundarios (DamagingHit de Showdown): un Lanzallamas
+		# sobre un congelado no puede quemarlo, porque al aplicar la quemadura aún está congelado.
+		if target.pokemon.status == &"frz" and not target.is_fainted() and (move.type == &"fire" or move.thaws_target):
+			_cure_status(target)
 		# Con cada golpe que hace daño, aunque debilite (DamagingHit de Showdown): Casco Dentado,
 		# Nerviosismo...
 		if dealt > 0:

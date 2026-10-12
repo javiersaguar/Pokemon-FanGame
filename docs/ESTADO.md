@@ -462,6 +462,8 @@ Worktree `pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Tramo: Ruta 9 
 - **Resultado:** de 146/200 (73 %) a **1.181/1.200 (99,4 % sin contar el límite de turnos)** combates idénticos a Showdown en tres lotes. Suite: 404/404.
 - **3.ª tanda, 8 fallos más:** Saña, Enfado y Danza Pétalo reescritos como el `lockedmove` de Showdown (se cortan si un turno no golpea; la fatiga solo si era el último; la parálisis descuenta), Golpe Bajo contra un rival que recarga, Ráfaga Escamas en el golpe que acaba el combate, el final de turno que seguía con un bando ya sin Pokémon, el orden veneno → quemadura, Mudar al 33 %, y Nerviosismo y Casco Dentado con cada golpe (también con el que debilita). **2.000/2.000 sin objetos.** 29 tests de regresión. Suite: 415/415.
 
+- **2026-10-12, vuelta al motor (petición 81):** repetida la comparación tras tres días de cambios ajenos: 1.100 combates, uno distinto. Era un fallo nuestro: un movimiento de Fuego sobre un congelado lo descongelaba antes de los efectos secundarios y el mismo golpe podía quemarlo. Corregido, con su test de regresión (44). **Punto de partida de la cobertura** (`run_ours.gd --capabilities`): 29 habilidades de 316, 510 movimientos de 951 y 38 objetos. Orden previsto de las habilidades, por número de especies que las llevan: Robustez, Levitación, Foco Interno, Gula, Potencia Bruta, Presión, Pararrayos, Ritmo Propio, Sebo, Electricidad Estática…
+
 **Bloqueos:** ninguno.
 
 ---
