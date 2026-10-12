@@ -636,5 +636,23 @@
   "cubo_pompidou": {
     "fuente": 372,
     "puerta": null
+  },
+  "barraca": {
+    "fuente": 92,
+    "puerta": [
+      2,
+      0
+    ]
+  },
+  "palau_ducal_gandia": {
+    "fuente": 93,
+    "puerta": [
+      5,
+      0
+    ]
+  },
+  "barca_albufera": {
+    "fuente": 94,
+    "puerta": null
   }
 }

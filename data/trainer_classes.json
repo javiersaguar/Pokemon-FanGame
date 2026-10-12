@@ -1120,5 +1120,15 @@
     "overworld_sprite": "res://assets/sprites/characters/fan_quevedo.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "pescador": {
+    "name": "Pescador",
+    "gender": "male",
+    "base_money": 28,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/pescador.png",
+    "overworld_sprite": "res://assets/sprites/characters/pescador.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

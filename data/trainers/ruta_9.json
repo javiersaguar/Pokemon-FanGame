@@ -1,0 +1,87 @@
+{
+  "ruta9_pescador": {
+    "class": "pescador",
+    "name": "Vicent",
+    "intro_text": "¡Llevo toda la mañana sin pescar una anguila! A ver si pesco un combate.",
+    "lose_text": "Ni anguilas ni combates. Hoy cenamos arroz solo.",
+    "win_text": "¡Al all i pebre contigo!",
+    "after_text": "Antes en la Albufera se vivía de la pesca. Ahora se vive de decir que antes se vivía de la pesca.",
+    "items": [],
+    "party": [
+      {
+        "species": "goldeen",
+        "level": 27
+      },
+      {
+        "species": "wooper",
+        "level": 27
+      },
+      {
+        "species": "lombre",
+        "level": 28
+      }
+    ]
+  },
+  "ruta9_ornitologa": {
+    "class": "ornitologa",
+    "name": "Pilar",
+    "intro_text": "¡Chis! Estoy contando garzas. Ya me he descontado. Por tu culpa, combate.",
+    "lose_text": "Doscientas doce... ¿o trece? Da igual, he perdido.",
+    "win_text": "En la Albufera hay más de trescientas especies de aves. Y tú no eres ninguna.",
+    "after_text": "Los flamencos vuelven cada año. Los vecinos de El Palmar dicen que vienen por la paella.",
+    "items": [],
+    "party": [
+      {
+        "species": "ducklett",
+        "level": 27
+      },
+      {
+        "species": "pelipper",
+        "level": 29
+      }
+    ]
+  },
+  "ruta9_tronista": {
+    "class": "tronista",
+    "name": "Iván",
+    "intro_text": "Me presenté al casting de un reality aquí en Gandía. No me cogieron por exceso de bíceps.",
+    "lose_text": "Esto en la tele no sale. Que no salga, por favor.",
+    "win_text": "¡Brazo, brazo, brazo! Y algo de pierna, que no se diga.",
+    "after_text": "Labrador es mi ídolo. Combate en Akuarela. Yo de mayor quiero ser él, pero con más seguidores.",
+    "items": [],
+    "party": [
+      {
+        "species": "machop",
+        "level": 27
+      },
+      {
+        "species": "scraggy",
+        "level": 28
+      }
+    ]
+  },
+  "ruta9_nadadora": {
+    "class": "nadador",
+    "gender": "female",
+    "name": "Nerea",
+    "intro_text": "¡Del faro de Cullera a la playa de Gandía a nado! Bueno, en eso estoy.",
+    "lose_text": "Me rindo. Me vuelvo andando por el paseo.",
+    "win_text": "¡Sin manguitos, ni nada!",
+    "after_text": "En agosto la playa de Gandía tiene más toallas que arena. Yo nado para no buscar sitio.",
+    "items": [],
+    "party": [
+      {
+        "species": "marill",
+        "level": 27
+      },
+      {
+        "species": "wingull",
+        "level": 27
+      },
+      {
+        "species": "krabby",
+        "level": 28
+      }
+    ]
+  }
+}

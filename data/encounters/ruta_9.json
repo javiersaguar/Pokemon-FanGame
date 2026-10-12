@@ -1,0 +1,32 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "lombre", "min": 26, "max": 28, "weight": 30},
+      {"species": "wooper", "min": 26, "max": 28, "weight": 25},
+      {"species": "ducklett", "min": 27, "max": 29, "weight": 20},
+      {"species": "psyduck", "min": 26, "max": 28, "weight": 15},
+      {"species": "azumarill", "min": 27, "max": 29, "weight": 10}
+    ],
+    "night": [
+      {"species": "wooper", "min": 26, "max": 28, "weight": 30},
+      {"species": "lombre", "min": 26, "max": 28, "weight": 25},
+      {"species": "hoothoot", "min": 26, "max": 28, "weight": 25},
+      {"species": "gastly", "min": 27, "max": 29, "weight": 20}
+    ]
+  },
+  "water": [
+    {"species": "lombre", "min": 26, "max": 30, "weight": 40},
+    {"species": "goldeen", "min": 26, "max": 30, "weight": 30},
+    {"species": "magikarp", "min": 26, "max": 29, "weight": 25},
+    {"species": "ludicolo", "min": 29, "max": 31, "weight": 5}
+  ],
+  "old_rod": [
+    {"species": "magikarp", "min": 22, "max": 25, "weight": 60},
+    {"species": "goldeen", "min": 22, "max": 25, "weight": 40}
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

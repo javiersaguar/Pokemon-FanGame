@@ -404,6 +404,15 @@ Main `47ca2f19` incorporado; Móstoles y las pasarelas C-5 se conservan. **Prime
 
 ## Agente 5 — Calidad y motor de combate (desde el 2026-10-07)
 
+### Tramo de Levante (2026-10-12)
+
+Worktree `pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Tramo: Ruta 9 → Ruta 10 → Alicante → Ruta 11 → Murcia, y la unión de Murcia con la Ruta 12. Números de fuente en `piezas.json`: 92–149. Solo exteriores, reservados en `docs/mapas/reservas.md`; **no toco interiores, puertas (`locales.json`, `enlazar_puertas.gd`), recompensas, personajes colocados ni el menú F9**, que lleva otro agente a la vez.
+
+**Hecho:**
+- **Ruta 9 · La Albufera y Gandía** (`ruta_9/exterior`, 48×76): sale del Jardín del Turia por el sur (columnas 58–61 del Turia ⇄ 25–28 de la ruta). La Devesa del Saler, El Palmar con cuatro **barracas** y dos **barcas** de vela latina, la huerta, los arrozales, Cullera y Gandía con el **Palau Ducal dels Borja**. Vicent (clase nueva `pescador`), Pilar, Iván y Nerea; encuentros 26–29 con la etapa que pide el RandomLocke. Alcance: 0 problemas. Salida sur hacia la Ruta 10: columnas 25–28, aparición `from_ruta_10` en (26, 75).
+
+**Para quien lleva puertas e interiores:** la Ruta 9 tiene 18 puertas sin interior (barracas, casas de Gandía, Palau Ducal, faro, heladería). Cuando publique Alicante y Murcia lo aviso aquí para abrir sus servicios.
+
 **Worktree:** `/home/javier/proyectos/pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Propiedad de la sesión: `src/battle/engine/`, `src/battle/effects/`, `src/battle/ai/`, `tests/combate/`, `tools/showdown_diff/` y `docs/combate/` (ver «Sesión con 3 agentes»).
 
 **En qué estoy:** tarea 1 cerrada: 2.000 combates sin objetos y 2.400 con objetos idénticos a Showdown (12 fallos más corregidos con objetos: bayas, drenaje, Elección, Picoteo, relevos tras KO…; muestra fija de 50 combates). Empiezo la tarea 2 (cobertura): faltan 226 habilidades (orden por especies: Levitación, Robustez, Presión, Velo Arena…), 441 movimientos con script y los objetos. `Effects` ya carga `abilities/<id>.gd` e `items/<id>.gd`; el arnés etiqueta el azar de habilidades y objetos como `ability_<id>` / `item_<id>`.
