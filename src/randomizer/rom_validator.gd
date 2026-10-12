@@ -5,7 +5,13 @@ extends RefCounted
 
 
 static func validate(input_or_patch: Variant, with_patch: RomPatch = null) -> Array[String]:
+	if with_patch == null and input_or_patch is not RomPatch:
+		return ["Falta la ROM que se quiere validar."]
+	if with_patch != null and input_or_patch is not RandomizerInput:
+		return ["Falta el snapshot de datos de la ROM."]
 	var patch: RomPatch = with_patch if with_patch != null else input_or_patch
+	if patch == null:
+		return ["Falta la ROM que se quiere validar."]
 	if with_patch != null:
 		patch.input = input_or_patch
 	elif patch.input == null:
@@ -498,14 +504,22 @@ static func _check_structure(input: RandomizerInput, patch: RomPatch, problems: 
 
 static func _preflight(input: RandomizerInput, patch: RomPatch) -> Array[String]:
 	var problems: Array[String] = []
+	problems.append_array(patch.errors)
+	if patch.data.has("errors"):
+		problems.append("La ROM conserva errores de generación.")
 	if patch.data.get("settings") is not Dictionary:
 		problems.append("Faltan los ajustes de la ROM.")
 		return problems
 	problems.append_array(RandomizerSettings.errors(patch.data.settings))
+	if not problems.is_empty():
+		return problems
+	problems.append_array(_metadata_errors(input, patch))
 	for section: String in RomPatch.KEYS:
-		if patch.data.get(section, {}) is not Dictionary:
+		if patch.data.get(section) is not Dictionary:
 			problems.append("Tabla inválida: %s." % section)
 			return problems
+	if not problems.is_empty():
+		return problems
 	for id: String in patch.section("species"):
 		if not input.has_species(StringName(id)) or patch.section("species")[id] is not Dictionary:
 			problems.append("Registro de especie inválido: %s." % id)
@@ -522,12 +536,42 @@ static func _preflight(input: RandomizerInput, patch: RomPatch) -> Array[String]
 			problems.append("Learnset inválido: %s." % id)
 			continue
 		for entry: Variant in patch.section("learnsets")[id]:
-			if entry is not Array or entry.size() != 2 or entry[0] is not int and entry[0] is not float:
+			if entry is not Array or entry.size() != 2 or not _integer_in_range(entry[0],0,100) or entry[1] is not String:
 				problems.append("Fila de aprendizaje inválida: %s." % id)
 	for kind: String in ["trainers", "encounters", "shops", "trades", "abilities", "tm_moves", "tutor_moves"]:
 		for id: String in patch.section(kind):
 			if patch.section(kind)[id] is not Dictionary:
 				problems.append("Registro inválido en %s: %s." % [kind, id])
+	if not problems.is_empty():
+		return problems
+	for id: String in patch.section("trainers"):
+		var party: Variant = patch.section("trainers")[id].get("party", input.trainer(StringName(id)).get("party", []))
+		if party is not Array:
+			problems.append("Equipo inválido: %s." % id)
+			continue
+		for member: Variant in party:
+			if member is not Dictionary or member.get("species") is not String or not _integer_in_range(member.get("level"),1,100):
+				problems.append("Miembro de equipo inválido: %s." % id)
+	for id: String in patch.section("shops"):
+		var stock: Variant = patch.section("shops")[id].get("stock", [])
+		if stock is not Array:
+			problems.append("Stock de tienda inválido: %s." % id)
+			continue
+		for tier: Variant in stock:
+			if tier is not Dictionary or tier.get("items", []) is not Array:
+				problems.append("Tramo de tienda inválido: %s." % id)
+	for kind: String in ["tm_compat", "tutor_compat"]:
+		for id: String in patch.section(kind):
+			if patch.section(kind)[id] is not Array:
+				problems.append("Compatibilidad inválida en %s: %s." % [kind,id])
+	for id: String in patch.section("species"):
+		var held: Variant = patch.section("species")[id].get("held_items", [])
+		if held is not Array:
+			problems.append("Objetos equipados inválidos: %s." % id)
+			continue
+		for row: Variant in held:
+			if row is not Dictionary and row is not String:
+				problems.append("Objeto equipado inválido: %s." % id)
 	if not problems.is_empty():
 		return problems
 	var visited: Dictionary = {}
@@ -551,3 +595,33 @@ static func _cycle(input: RandomizerInput, patch: RomPatch, id: String, visited:
 	visiting.erase(id)
 	visited[id] = true
 	return false
+
+## JSON representa números como float; acepta enteros exactos, nunca truncados ni infinitos.
+static func _integer_in_range(value: Variant, minimum: int, maximum: int) -> bool:
+	if value is not int and value is not float:
+		return false
+	return is_finite(float(value)) and value >= minimum and value <= maximum and value == floorf(float(value))
+
+## Solo usa el snapshot recibido; no decodifica presets desde archivos ni desde DataDB.
+static func _metadata_errors(input: RandomizerInput, patch: RomPatch) -> Array[String]:
+	var problems: Array[String] = []
+	if patch.data.get("input_hash") != input.fingerprint:
+		problems.append("La ROM corresponde a otros datos base (input_hash).")
+	var version: Variant = patch.data.get("generator_version")
+	var seed_value: Variant = patch.data.get("seed")
+	var attempt: Variant = patch.data.get("subseed")
+	if not _integer_in_range(version,1,31) or int(version) != Randomizer.GENERATOR_VERSION:
+		problems.append("Versión de generador inválida para esta validación.")
+	if not _integer_in_range(seed_value,0,0xFFFFFFFF):
+		problems.append("Semilla inválida: debe ser un entero de 32 bits sin signo.")
+	var attempts := maxi(1,int(input.data.config.get("validation_attempts",25)))
+	if not _integer_in_range(attempt,0,attempts-1):
+		problems.append("Número de intento inválido.")
+	if not problems.is_empty():
+		return problems
+	var settings := patch.settings()
+	settings.preset_reference = RandomizerSettings.normalize(input.data.config.presets[settings.preset]) if input.data.config.get("presets",{}).has(settings.preset) else {}
+	var expected := SeedCode.encode(int(seed_value),settings,int(version))
+	if patch.data.get("seed_code") is not String or patch.seed_code() != expected:
+		problems.append("El código de semilla no corresponde a la semilla, los ajustes y la versión de la ROM.")
+	return problems

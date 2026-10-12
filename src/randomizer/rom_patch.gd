@@ -30,7 +30,15 @@ static func create(seed_value: int, settings: RandomizerSettings) -> RomPatch:
 static func from_dict(d: Dictionary) -> RomPatch:
 	var p := RomPatch.new()
 	p.data = d.duplicate(true)
-	p.errors.assign(d.get("errors", []))
+	var saved_errors: Variant = d.get("errors", [])
+	if saved_errors is not Array and saved_errors is not PackedStringArray:
+		p.errors.append("El campo errors de la ROM no es una lista.")
+	else:
+		for error: Variant in saved_errors:
+			if error is not String:
+				p.errors.append("Hay un error de la ROM que no es texto.")
+			else:
+				p.errors.append(error)
 	return p
 
 
@@ -97,4 +105,4 @@ func canonical_json() -> String:
 	return to_json()
 
 func is_valid() -> bool:
-	return errors.is_empty() and data.has("input_hash")
+	return errors.is_empty() and not data.has("errors") and data.get("input_hash") is String and not str(data.input_hash).is_empty()

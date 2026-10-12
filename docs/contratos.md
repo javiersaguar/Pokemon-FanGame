@@ -1389,6 +1389,12 @@ El formato corto `PANCHITO-XXXX-XXXX-XX` contiene 32 bits de semilla, 5 de versi
 
 `apply_patch(patch) -> Array[String]`: validar referencias y hash antes de aplicar, de forma atómica, conservar base inmutable y copia profunda del parche. Error no cambia el parche activo. Consultas `species`, `learnset`, `tm_compat`, `tm_move`, `tutor_compat`, `tutor_move`, `trainer`, `encounters`, `starter`, `gift`, `static_encounter`, `trade`, `placement_item`, `shop` ven reemplazos y vuelven a base donde no haya reemplazo. `species()` combina tipos, estadísticas, habilidades, evoluciones y objetos equipados; no usa `species_map` para remapear el ID de la consulta. `species_map` describe la correspondencia global de salvajes, ya materializada en `encounters`: **no volver a aplicarla**. Hábitats y textos se calculan sobre esas consultas. `clear_patch()` elimina toda la capa y restaura la base, sin tocar instancias de Pokémon guardadas. Aplicar antes de cargar el mapa y limpiar al título/modo normal. Petición formal en ESTADO.
 
+### Validación de ROM y errores (2026-10-12)
+
+Por encargo expreso de Javier, A3 refuerza `RomValidator` sin cambiar generador v2 ni resultados: preflight exige metadatos/código coherentes con el snapshot y tablas completas de la versión actual, y comprueba tipos/rangos antes de recorrer datos tipados. No crea secciones ausentes ni aplica el parche. Float JSON integral se acepta; fracciones y no finitos se rechazan. Los errores son Array[String], incluida una entrada/ROM ausente. Reconstruye el código con presets de input.config, manteniendo validación pura en hilo.
+
+`RomPatch.from_dict` recupera errors mal formados sin una conversión fallida de tipos. El marcador errors hace inválida la ROM, al igual que una huella ausente/vacía/no textual. `is_valid` es una comprobación rápida de generación, no certificación completa de datos editados; se comprueba el resultado de RomValidator antes de aceptar un parche externo. Carga de ROM antiguas mediante su parche guardado conservada; no se regeneran ni pasan por el validador de generación actual.
+
 ### LockeRules y llamadas del mundo
 
 ```gdscript

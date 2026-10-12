@@ -133,3 +133,23 @@ PANCHITO_UPDATE_GOLDEN=1 godot --headless --path . -s addons/gut/gut_cmdln.gd -g
 ```
 
 Fixture: 40 especies, ramificaciones de nivel, legendario, mascota protegida, varias tablas compartiendo zona, líder, rival en tres momentos, regalo/estático/trueque, objeto clave, tienda, MT y tutor. Suite normal: 200 semillas **por preset**; lenta: 1000 por preset, además de tests de cada regla, roundtrip, corrupción, orden de IDs, aislamiento, equilibrio y progreso. Integración real: 20 semillas clásicas con muestras de caos, aplicación/reversión en DataDB y tiempo <3 s; rendimiento se omite con aviso si no existe data/generated.
+
+## Validación de ROM dañadas · 2026-10-12
+
+`RomValidator.validate(input, patch)` valida una **ROM de la versión actual**, también después de recuperar su JSON. La validación de los datos del parche es de lectura: no rellena tablas ausentes ni aplica cambios a DataDB. Devuelve errores antes de recorrer estructuras mal formadas.
+
+| Caso | Resultado |
+|---|---|
+| Seed/code/settings/version contradictorios | Rechazo; el código se recompone con la configuración del snapshot |
+| Huella de otra base o intento fuera de la política | Rechazo previo |
+| Tabla de la ROM ausente | Rechazo, conserva el parche incompleto |
+| Nivel fraccionario, no finito o fuera de 0–100 | Rechazo; 0 se admite para movimientos de evolución |
+| Números JSON integrales como 5.0 | Se admiten como 5, sin truncar fracciones |
+| Equipo, stock, compatibilidad u objetos equipados mal formados | Mensaje de error, sin acceso a una fila de tipo incorrecto |
+| Campo errors presente | ROM inválida; no se pierde el fallo de generación |
+
+`RomPatch.from_dict` copia los datos y recupera errors mal formados con mensajes, sin fallar por la conversión a una lista de textos. `is_valid()` es la comprobación rápida del resultado de generación (errores y huella presente/no vacía); **no sustituye al validador completo** para un parche externo o editado. Cada llamador debe comprobar la lista devuelta por `validate` antes de aceptarlo. Esta comprobación conserva la vía existente para cargar ROM antiguas desde su parche guardado, sin regenerarlas ni intentar interpretarlas como una ROM actual.
+
+El cálculo del código durante la validación recibe los presets desde `input.config`, sin leer archivos ni usar DataDB. Probado en Thread, incluso alterando el catálogo global de presets: los datos de la ROM siguen idénticos. La validación mantiene v2 porque no modifica los resultados del generador; se comprueban los dos dorados existentes sin regenerarlos.
+
+Regresiones: `tests/randomizer/test_rom_validation.gd`; 10/10 y 70 aserciones. Suite completa **518/518, 34.025 aserciones, 376,39 s**, con ambos dorados sin cambios. Arte: 10.962 PNG, 0 errores/avisos; datos: 0 errores y 3 avisos previos.
