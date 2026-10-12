@@ -1086,13 +1086,119 @@
     26,
     26
    ]
+  },
+  {
+   "id": "abalos",
+   "entrenador": "abalos",
+   "mapa": "madrid/moncloa",
+   "cerca": [
+    27.0,
+    39.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Ferraz, la sede del Clan PSOE",
+   "pareja": "koldo",
+   "casilla": [
+    27,
+    40
+   ]
+  },
+  {
+   "id": "koldo",
+   "entrenador": "koldo",
+   "mapa": "madrid/moncloa",
+   "cerca": [
+    29.0,
+    39.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Ferraz, con Ábalos y sus cajas",
+   "casilla": [
+    29,
+    39
+   ]
+  },
+  {
+   "id": "recluta_clan",
+   "entrenador": "recluta_clan",
+   "mapa": "madrid/moncloa",
+   "cerca": [
+    17.0,
+    15.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "A las puertas de Moncloa",
+   "casilla": [
+    17,
+    15
+   ]
+  },
+  {
+   "id": "leire_diez",
+   "entrenador": "leire_diez",
+   "mapa": "madrid/retiro",
+   "cerca": [
+    16.0,
+    60.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Atocha, bajando a las cloacas",
+   "requiere": {
+    "medallas": 2.0
+   },
+   "casilla": [
+    13,
+    58
+   ]
+  },
+  {
+   "id": "piloto_falcon",
+   "sprite": "npc_man",
+   "mapa": "playa_del_ingles/exterior",
+   "cerca": [
+    9.0,
+    9.0
+   ],
+   "mira": "abajo",
+   "lugar": "El Falcon del Líder Supremo, aparcado en el aeropuerto",
+   "frases": [
+    "Este avión es oficial. Ha venido a una reunión muy importante.",
+    "Bueno, a una boda. Pero en la boda se habló de política, así que cuenta."
+   ],
+   "casilla": [
+    9,
+    9
+   ]
+  },
+  {
+   "id": "felipe_vi",
+   "entrenador": "felipe_vi",
+   "mapa": "madrid/palacio_real",
+   "cerca": [
+    20.0,
+    34.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Palacio Real, después de ganar la Liga",
+   "requiere": {
+    "flag": "liga_superada"
+   },
+   "casilla": [
+    20,
+    35
+   ]
   }
  ],
  "pendientes": [
   {
    "id": "aupa_athletic",
    "lugar": "San Mamés (Bilbao)",
-   "motivo": "Bilbao aún no está pintado (Agente 2)"
+   "motivo": "Bilbao aún no está pintado (Agente 2). Aspecto ya decidido por Javier: el del vídeo del Aupa Athletic"
   },
   {
    "id": "nico_williams",
@@ -1145,21 +1251,6 @@
    "motivo": "Historia: va con la Liga y el Clan"
   },
   {
-   "id": "abalos",
-   "lugar": "Moncloa, Ferraz, la Albufera...",
-   "motivo": "Historia del Clan PSOE"
-  },
-  {
-   "id": "koldo",
-   "lugar": "Moncloa, Ferraz, Pamplona...",
-   "motivo": "Historia del Clan PSOE"
-  },
-  {
-   "id": "leire_diez",
-   "lugar": "Cloacas de Madrid",
-   "motivo": "Mazmorra sin hacer"
-  },
-  {
    "id": "iniesta",
    "lugar": "Liga, Palacio Real",
    "motivo": "Interior de la Liga sin hacer"
@@ -1178,16 +1269,6 @@
    "id": "alonso",
    "lugar": "Liga, Palacio Real",
    "motivo": "Interior de la Liga sin hacer"
-  },
-  {
-   "id": "felipe_vi",
-   "lugar": "Salón del Trono, después de la Liga",
-   "motivo": "Después de la Liga"
-  },
-  {
-   "id": "recluta_clan",
-   "lugar": "Por toda la región",
-   "motivo": "Historia del Clan PSOE"
   }
  ]
 }

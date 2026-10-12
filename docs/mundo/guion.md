@@ -2,6 +2,8 @@
 
 > **Borrador para que Javier lo retoque.** Humor negro sobre la España actual, sin líneas rojas (decisión de Javier, 2026-10-08), apoyado en lo que cada personaje es en la vida real y en sus memes más conocidos de redes. Todo es **propuesta**: nada de esto está en el juego hasta que Javier lo apruebe.
 >
+> **Ya en el juego (2026-10-12):** los cuatro textos de los líderes, la Liga, el Clan PSOE y los famosos que salen aquí están pasados a `data/trainers/liga.json` y `famosos.json`; las líneas **Extra** y las escenas de la historia, todavía no.
+>
 > **Cómo se pasa al juego.** Cada entrenador tiene cuatro textos en `data/trainers/*.json`: **Antes** = `intro_text` (cuando te ve), **Pierde** = `lose_text` (cuando le ganas), **Gana** = `win_text` (si pierdes tú), **Después** = `after_text` (si le hablas otra vez). Las líneas **Extra** son para NPCs, carteles o escenas. Dónde está cada uno: `data/personajes_en_el_mapa.json` y [`gimnasios.md`](gimnasios.md).
 
 ## 1. La historia
@@ -81,11 +83,11 @@ El Clan aparece por toda la región: en Moncloa, en Ferraz, en la Albufera, en P
 - **Después:** "Nací en Madrid, pero me crié aquí. Por eso mis Pokémon son de agua: aquí todo acaba en la playa."
 - **Extra:** "Las fans llevan dos días en la fila. Yo llevo dos días durmiendo." · "¿Columbia? Es una canción, no un viaje."
 
-### 6 · La chica del *Aupa Athletic* (Bilbao, Lucha/Fuego) — **PENDIENTE JAVIER quién es**
+### 6 · La chica del *Aupa Athletic* (Bilbao, Lucha/Fuego) — la del vídeo (decidido por Javier)
 - **Antes:** "¡Aupa Athletic! En San Mamés se viene a sufrir… y hoy sufres tú."
 - **Pierde:** "Agur, medalla. Pero que sepas que en Copa te gano."
 - **Gana:** "¡Athletic, eup! Aquí solo ganan los de casa."
-- **Después:** "En mi equipo solo juegan los de casa. Mis Pokémon también son de Bizkaia. Bueno, casi."
+- **Después:** "Grabé un vídeo diciendo «¡Aupa Athletic!» y ahora soy líder de gimnasio. Así funciona internet."
 
 ### 7 · Juanmi Latasa (Valladolid, Hielo)
 - **Antes:** "En Valladolid hace un frío que pela. Y yo, en el área, también."
@@ -192,4 +194,4 @@ Cada uno con su sitio (si está colocado), sus cuatro textos y alguna línea ext
 
 - Pasar los textos que Javier apruebe a `data/trainers/*.json`.
 - Escribir las escenas del Clan PSOE como eventos (`src/events/`): Moncloa, Ferraz, la Albufera, Doñana, el aeropuerto de Gran Canaria, las cloacas y la Liga.
-- Decidir con Javier: quién es la chica del *Aupa Athletic*, si los tríos son combate triple o tres seguidos, y qué personajes quiere cambiar de sitio.
+- Decidir con Javier: si los tríos son combate triple o tres seguidos, qué personajes quiere cambiar de sitio y cómo sale él (pelo, ropa y equipo) para su combate con siete medallas.

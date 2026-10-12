@@ -120,6 +120,8 @@ Rama `feat/agente1-portada-gimnasios`. Para no pisarme con quien hace el mapa de
 - **Personajes en su sitio** (`data/personajes_en_el_mapa.json` + `src/overworld/character_placements.gd`, enganchado en `MapLoader.prepare`): 67 colocados (líderes a la puerta de su gimnasio, sus entrenadores y los famosos donde dice `personajes.md`), 20 pendientes con su motivo. Las casillas las calcula `maps/_tools/colocar_personajes.gd` sin tapar puertas, pasarelas ni pasillos; test `tests/mundo/test_personajes_colocados.gd`.
 - **Guion** (`docs/mundo/guion.md`): historia del Clan PSOE arco por arco, diálogos de líderes, Liga, Clan y famosos, para que Javier los retoque.
 
+- **2026-10-12 (2):** la chica del *Aupa Athletic* ya tiene aspecto (el del vídeo que ha pasado Javier: melena castaña clara y camiseta verde del Athletic; sprites rehechos). Los textos de `guion.md` pasados a `liga.json` y `famosos.json` (60 personajes). Cada líder da además su **MT** (`premio_mt`). Colocaciones con condición (`requiere`: medallas o flag) y el Clan PSOE en el mapa: Ábalos y Koldo en Ferraz, un recluta en Moncloa, Leire Díez en Atocha (con 2 medallas), el piloto del Falcon en el aeropuerto de Gran Canaria y Felipe VI en el Palacio Real (con `liga_superada`). No he usado la foto de la chica como imagen de combate: no es un personaje público.
+
 **Para quien haga los interiores de los gimnasios:** cuando haya interior, mueve al líder y a sus entrenadores cambiando `mapa` y `cerca` en `data/personajes_en_el_mapa.json` y pasa `colocar_personajes.gd`; el diseño de cada interior está en `gimnasios.md`.
 
 ### Tramo sur (2026-10-09)
