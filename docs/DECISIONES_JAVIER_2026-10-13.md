@@ -54,7 +54,12 @@
 | **Ábalos y Koldo** | Segundo encuentro en la Albufera (con 3 medallas). También se les puede encontrar más adelante en la **cárcel de Soto del Real**. **Cuando les ganas un combate, aparecen coches de policía y se los llevan detenidos.** |
 | **Abascal** | Dos apariciones, como jefe recurrente. |
 | **Javier** | En San Miguel de Bernuy al volver por la Ruta 23, con equipo fuerte y su foto real. |
-| **Sekiam y PokeAlex** | Javier adjunta una foto de cada uno: [`streamer_1_sekiam_o_pokealex.webp`](arte/referencias/javier_2026-10-13/streamer_1_sekiam_o_pokealex.webp) y [`streamer_2_sekiam_o_pokealex.webp`](arte/referencias/javier_2026-10-13/streamer_2_sekiam_o_pokealex.webp). **Falta que Javier confirme cuál es cuál** (no venían con nombre). |
+| **Sekiam** | El de la cabeza rapada: [`sekiam.webp`](arte/referencias/javier_2026-10-13/sekiam.webp). |
+| **PokeAlex** | [`pokealex_el_otro.webp`](arte/referencias/javier_2026-10-13/pokealex_el_otro.webp). **Cuando aparece, al lado del nombre pone «(el otro)»**: «PokeAlex (el otro)». |
+| **Gabriel Rufián** | Lleva la **estelada como capa**: [`rufian_capa_estelada.webp`](arte/referencias/javier_2026-10-13/rufian_capa_estelada.webp). Su casa de Barcelona tiene habitación propia (allí aparece Vito Quiles). |
+| **Vinicius Jr.** | Aparece, **en su forma con barba**: [`vinicius_con_barba.webp`](arte/referencias/javier_2026-10-13/vinicius_con_barba.webp). Dónde, por decidir. |
+| **Mbappé** | Aparece, **en modo dictador** (uniforme militar): [`mbappe_dictador.png`](arte/referencias/javier_2026-10-13/mbappe_dictador.png). Dónde, por decidir. |
+| **Paache** (streamer) | Está en **Galicia**: [`paache.png`](arte/referencias/javier_2026-10-13/paache.png). |
 | **Zapatero** | Imagen con las joyas: [`zapatero_joyas.png`](arte/referencias/javier_2026-10-13/zapatero_joyas.png). **Cuando le ganas en combate te da las joyas, y se pueden vender por muchas monedas (euros).** |
 | Combates triples (Lamine y familia; Folagor, Sekiam y PokeAlex) | **Tres combates seguidos, con curación automática después de cada uno.** No se hacen triples de verdad. |
 | Líderes: tipos y equipos | Vale la propuesta de `docs/mundo/region.md`. |
@@ -81,12 +86,18 @@
 | Modo difícil | Sí, opcional: +10 % de nivel e IA un nivel más alta. |
 | **RandomLocke** | **Caramelos raros infinitos y tope de nivel (*level cap*).** |
 
-## 7. Lo que queda abierto tras estas respuestas
+## 7. Cómo se une el inicio nuevo con el mapa (propuesta del Agente 5; Javier: «conéctalo como veas conveniente»)
 
-1. Cuál de las dos fotos es Sekiam y cuál PokeAlex.
-2. Qué papel tiene San Miguel de Bernuy ahora que se empieza en Pozuelo o en Orcasitas, y cómo se llega desde allí al resto del mapa.
-3. Nombre por defecto del rival y si también cambia según el personaje elegido.
-4. Uso de la mochila del Basic-Fit.
-5. Qué *skins* llevan qué Pokémon.
-6. Dónde va cada famoso que aún no está colocado.
-7. En los sprites de referencia de Rufián y Zapatero, se entiende que el de arriba es Rufián y el de abajo Zapatero (por el orden en que los nombró Javier); confirmar.
+- **Pozuelo de Alarcón** (cayetano/cayetana) y **Orcasitas** (cani/choni) son dos pueblos iniciales pequeños, cada uno con la casa del jugador, la del rival y un vecindario a juego (chalets y urbanización; bloques y descampado).
+- **El laboratorio del profesor Unicoos está en Madrid · Moncloa** (Ciudad Universitaria), el mismo para los dos inicios: allí se recibe el inicial aleatorio.
+- Cada pueblo llega a Madrid por **una ruta inicial corta propia** (niveles 2–6): Pozuelo → *Casa de Campo* → Moncloa; Orcasitas → *Madrid Río* → Atocha (`madrid/retiro`). En la de Orcasitas está El Jincho.
+- **San Miguel de Bernuy y las Rutas 1 a 4 dejan de ser el principio.** Se quedan donde están en el mapa, pero pasan a ser la **vuelta a casa de Javier**: se llega tras la 7.ª medalla desde Valladolid por la Ruta 23, y desde San Miguel se baja a Madrid por las Rutas 1–4. Hay que **subir sus niveles** (ahora 2–15) a los de ese momento (unos 48–55) y rehacer sus equipos y encuentros. Hasta entonces, la salida de Moncloa hacia la Ruta 4 está cortada (obras en la A-6).
+- El resto del orden de la aventura (`docs/mundo/region.md`) no cambia.
+
+## 8. Lo que queda abierto tras estas respuestas
+
+1. Nombre por defecto del rival y si cambia según el personaje elegido (Javier: falta por decidir).
+2. Uso de la mochila del Basic-Fit.
+3. Qué *skins* llevan qué Pokémon.
+4. Dónde van Vinicius, Mbappé y los famosos que aún no están colocados.
+5. Javier tiene que dar el visto bueno a la propuesta del §7.
