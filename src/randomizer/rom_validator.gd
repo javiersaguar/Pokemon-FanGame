@@ -257,6 +257,22 @@ static func _check_extra(input: RandomizerInput, patch: RomPatch, problems: Pack
 				problems.append("Registro protegido en %s: %s." % [section_name, id])
 			if section_name in ["species", "abilities", "learnsets", "tm_compat", "tutor_compat"] and input.has_species(StringName(id)) and not input.mutable_species(StringName(id)):
 				problems.append("Especie protegida: %s." % id)
+	# Ayudante con el índice de preevoluciones: se monta una vez y sirve para todos los reemplazos.
+	var helper := Randomizer.new()
+	helper.input = input
+	helper.patch = patch
+	helper.settings = settings
+	helper.config = input.data.config
+	helper._index_prevos()
+	# Líneas de los iniciales originales: el rival lleva el inicial que le toca (rival_starter), así que
+	# esos huecos siguen a los iniciales y, como ellos, no pasan por la tolerancia de fuerza.
+	var starter_lines := {}
+	if settings.rival_starter:
+		for starter_id: StringName in input.starter_ids():
+			var starter_species := input.starter(starter_id)
+			if input.has_species(starter_species):
+				for member: StringName in helper._chain(helper._root(starter_species), false):
+					starter_lines[member] = true
 	# Validación de cada aparición reemplazada: nivel, BST, prohibidos, duplicados y flags de slot.
 	for table_id: String in input.ids("encounters"):
 		var before: Array[Dictionary] = _entries(input.data.encounters[table_id])
@@ -267,14 +283,17 @@ static func _check_extra(input: RandomizerInput, patch: RomPatch, problems: Pack
 			var sid := StringName(str(row.get("species", "")))
 			capturable = capturable or input.has_species(sid) and input.species(sid).catch_rate > 0
 			if i < before.size() and patch.section("encounters").has(table_id):
-				_check_replacement(input, patch, before[i], row, problems, "Zona " + table_id, bool(input.data.encounters[table_id].get("early", false)))
+				_check_replacement(input, patch, before[i], row, problems, "Zona " + table_id, bool(input.data.encounters[table_id].get("early", false)), helper)
 		if not before.is_empty() and not capturable:
 			problems.append("Zona sin especie capturable: %s." % table_id)
 	for id: String in patch.section("trainers"):
 		var before: Array = input.data.trainers.get(id, {}).get("party", [])
 		var after: Array = patch.section("trainers")[id].get("party", [])
+		var trainer: Dictionary = input.data.trainers.get(id, {})
+		var is_rival: bool = trainer.get("rival", false) or str(trainer.get("class", "")) == "rival"
 		for i: int in mini(before.size(), after.size()):
-			_check_replacement(input, patch, before[i], after[i], problems, "Entrenador " + id)
+			var follows_starter: bool = is_rival and starter_lines.has(StringName(str(before[i].get("species", ""))))
+			_check_replacement(input, patch, before[i], after[i], problems, "Entrenador " + id, false, helper, follows_starter)
 	# IDs de objetos y máquinas; objetos de progreso nunca se retiran.
 	var obtainable: Dictionary = {}
 	for pid: String in input.ids("placements"):
@@ -349,7 +368,7 @@ static func _bst(stats: Dictionary) -> int:
 		result += int(value)
 	return result
 
-static func _check_replacement(input: RandomizerInput, patch: RomPatch, before: Dictionary, after: Dictionary, problems: PackedStringArray, label: String, early: bool = false) -> void:
+static func _check_replacement(input: RandomizerInput, patch: RomPatch, before: Dictionary, after: Dictionary, problems: PackedStringArray, label: String, early: bool = false, helper: Randomizer = null, follows_starter: bool = false) -> void:
 	var original := StringName(str(before.get("species", "")))
 	var chosen := StringName(str(after.get("species", "")))
 	if before.get("randomize", true) == false or not input.mutable_species(original):
@@ -368,17 +387,19 @@ static func _check_replacement(input: RandomizerInput, patch: RomPatch, before: 
 		legendary = legendary or String(tag) in input.data.config.get("legendary_tags", [])
 	if legendary and (not settings.allow_legendaries or settings.no_early_legendaries and (early or low < int(input.data.config.get("early_legendary_level", 30)))):
 		problems.append("Legendario excluido en %s." % label)
-	if settings.similar_strength and input.has_species(original):
+	if settings.similar_strength and not follows_starter and input.has_species(original):
 		var bst := _bst(input.species(original).base_stats)
 		if absf(_bst(input.species(chosen).base_stats) - bst) > bst * settings.strength_tolerance / 100.0:
 			problems.append("Fuera de tolerancia BST: %s." % label)
 	if settings.level_appropriate:
-		var r := Randomizer.new()
-		r.input = input
-		r.patch = patch
-		r.settings = settings
-		r.config = input.data.config
-		r._index_prevos()
+		var r := helper
+		if r == null:
+			r = Randomizer.new()
+			r.input = input
+			r.patch = patch
+			r.settings = settings
+			r.config = input.data.config
+			r._index_prevos()
 		if r._min_level(chosen) > low or high >= r._max_level(chosen):
 			problems.append("Etapa no acorde al nivel: %s." % label)
 

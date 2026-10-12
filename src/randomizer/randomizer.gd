@@ -32,6 +32,7 @@ var _legendary: Dictionary = {}
 var _starter_map: Dictionary = {}
 var _prevo: Dictionary = {}
 var _min_level_memo: Dictionary = {}
+var _max_level_memo: Dictionary = {}
 var _moves: Array[StringName] = []
 var _move_power: Dictionary = {}
 var _move_type: Dictionary = {}
@@ -109,6 +110,7 @@ func _build() -> void:
 	_starter_map.clear()
 	_prevo.clear()
 	_min_level_memo.clear()
+	_max_level_memo.clear()
 	if settings.evolutions:
 		_seed_module("evolutions")
 		_randomize_evolutions()
@@ -276,6 +278,8 @@ func _min_level(id: StringName) -> int:
 
 ## Nivel a partir del cual ya no debería aparecer sin evolucionar (101 = sin límite).
 func _max_level(id: StringName) -> int:
+	if _max_level_memo.has(id):
+		return _max_level_memo[id]
 	if input.species(id).raw.has("max_level"):
 		return int(input.species(id).raw.max_level) + 1
 	var best := input.MAX_LEVEL + 1
@@ -287,6 +291,7 @@ func _max_level(id: StringName) -> int:
 			best = mini(best, int(evo["level"]) + gap)
 		else:
 			best = mini(best, _min_level(id) + int(config.get("evolution_gap", 15)) + gap)
+	_max_level_memo[id] = best
 	return best
 
 
