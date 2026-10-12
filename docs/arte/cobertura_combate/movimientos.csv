@@ -1,0 +1,952 @@
+id,nombre,tipo,requiere_script,efecto_registrado,animacion_propia
+10000000voltthunderbolt,Gigarrayo Fulminante,electric,true,false,false
+absorb,Absorber,grass,false,false,false
+accelerock,Roca Veloz,rock,false,false,false
+acid,Ácido,poison,false,false,false
+acidarmor,Armadura Ácida,poison,false,false,false
+aciddownpour,Diluvio Corrosivo,poison,true,false,false
+acidspray,Bomba Ácida,poison,false,false,false
+acrobatics,Acróbata,flying,true,true,false
+acupressure,Acupresión,normal,true,false,false
+aerialace,Golpe Aéreo,flying,false,false,false
+aeroblast,Aerochorro,flying,false,false,false
+afteryou,Cede Paso,normal,true,false,false
+agility,Agilidad,psychic,false,false,false
+aircutter,Aire Afilado,flying,false,false,false
+airslash,Tajo Aéreo,flying,false,false,false
+alloutpummeling,Ráfaga Demoledora,fighting,true,false,false
+alluringvoice,Canto Encantador,fairy,true,false,false
+allyswitch,Cambio de Banda,psychic,true,false,false
+amnesia,Amnesia,psychic,false,false,false
+anchorshot,Anclaje,steel,true,false,false
+ancientpower,Poder Pasado,rock,false,false,false
+appleacid,Ácido Málico,grass,false,false,false
+aquacutter,Tajo Acuático,water,false,false,false
+aquajet,Acua Jet,water,false,false,false
+aquaring,Acua Aro,water,true,false,false
+aquastep,Danza Acuática,water,false,false,false
+aquatail,Acua Cola,water,false,false,false
+armorcannon,Cañón Armadura,fire,false,false,false
+armthrust,Empujón,fighting,false,false,false
+aromatherapy,Aromaterapia,grass,true,true,false
+aromaticmist,Niebla Aromática,fairy,false,false,true
+assist,Ayuda,normal,true,false,false
+assurance,Buena Baza,dark,true,true,false
+astonish,Impresionar,ghost,false,false,false
+astralbarrage,Orbes Espectro,ghost,false,false,false
+attackorder,Al Ataque,bug,false,false,false
+attract,Atracción,normal,true,true,false
+aurasphere,Esfera Aural,fighting,false,false,false
+aurawheel,Rueda Aural,electric,true,false,false
+aurorabeam,Rayo Aurora,ice,false,false,false
+auroraveil,Velo Aurora,ice,true,false,false
+autotomize,Aligerar,steel,true,false,false
+avalanche,Alud,ice,true,false,false
+axekick,Patada Hacha,fighting,true,false,false
+babydolleyes,Ojitos Tiernos,fairy,false,false,false
+baddybad,Umbreozona,dark,true,false,false
+banefulbunker,Búnker,poison,true,false,false
+barbbarrage,Mil Púas Tóxicas,poison,true,false,false
+barrage,Bombardeo,normal,false,false,false
+barrier,Barrera,psychic,false,false,false
+batonpass,Relevo,normal,true,true,false
+beakblast,Pico Cañón,flying,true,false,false
+beatup,Paliza,dark,true,false,false
+behemothbash,Embate Supremo,steel,false,false,false
+behemothblade,Tajo Supremo,steel,false,false,false
+belch,Eructo,poison,true,false,false
+bellydrum,Tambor,normal,true,false,false
+bestow,Ofrenda,normal,true,false,false
+bide,Venganza,normal,true,false,false
+bind,Atadura,normal,true,true,false
+bite,Mordisco,dark,false,false,false
+bitterblade,Espada Lamento,fire,false,false,false
+bittermalice,Rencor Reprimido,ghost,false,false,false
+blackholeeclipse,Agujero Negro Aniquilador,dark,true,false,false
+blastburn,Anillo Ígneo,fire,true,true,false
+blazekick,Patada Ígnea,fire,false,false,false
+blazingtorque,Pirochoque,fire,false,false,false
+bleakwindstorm,Vendaval Gélido,flying,true,false,false
+blizzard,Ventisca,ice,true,false,false
+block,Bloqueo,normal,true,false,false
+bloodmoon,Luna Roja,normal,false,false,false
+bloomdoom,Megatón Floral,grass,true,false,false
+blueflare,Llama Azul,fire,false,false,false
+bodypress,Plancha Corporal,fighting,true,false,false
+bodyslam,Golpe Cuerpo,normal,false,false,false
+boltbeak,Electropico,electric,true,false,false
+boltstrike,Ataque Fulgor,electric,false,false,false
+boneclub,Hueso Palo,ground,false,false,false
+bonemerang,Huesomerang,ground,false,false,false
+bonerush,Ataque Óseo,ground,false,false,false
+boomburst,Estruendo,normal,false,false,false
+bounce,Bote,flying,true,true,false
+bouncybubble,Vapodrenaje,water,false,false,false
+branchpoke,Punzada Rama,grass,false,false,false
+bravebird,Pájaro Osado,flying,false,false,false
+breakingswipe,Vasto Impacto,dragon,false,false,false
+breakneckblitz,Carrera Arrolladora,normal,true,false,false
+brickbreak,Demolición,fighting,true,false,false
+brine,Salmuera,water,true,true,false
+brutalswing,Giro Vil,dark,false,false,false
+bubble,Burbuja,water,false,false,false
+bubblebeam,Rayo Burbuja,water,false,false,false
+bugbite,Picadura,bug,true,true,false
+bugbuzz,Zumbido,bug,false,false,false
+bulkup,Corpulencia,fighting,false,false,false
+bulldoze,Terratemblor,ground,false,false,false
+bulletpunch,Puño Bala,steel,false,false,false
+bulletseed,Semilladora,grass,false,false,false
+burningbulwark,Llama Protectora,fire,true,false,false
+burningjealousy,Envidia Ardiente,fire,true,false,false
+burnup,Llama Final,fire,true,false,false
+buzzybuzz,Joltioparálisis,electric,false,false,false
+calmmind,Paz Mental,psychic,false,false,false
+camouflage,Camuflaje,normal,true,false,false
+captivate,Seducción,normal,true,false,false
+catastropika,Pikavoltio Letal,electric,true,false,false
+ceaselessedge,Tajo Metralla,dark,true,false,false
+celebrate,Celebración,normal,true,false,false
+charge,Carga,electric,true,false,false
+chargebeam,Rayo Carga,electric,false,false,false
+charm,Encanto,fairy,false,false,false
+chatter,Cháchara,flying,false,false,false
+chillingwater,Agua Fría,water,false,false,false
+chillyreception,Fría Acogida,ice,true,false,false
+chipaway,Guardia Baja,normal,false,false,false
+chloroblast,Clorofiláser,grass,true,false,false
+circlethrow,Llave Giro,fighting,true,false,false
+clamp,Tenaza,water,true,true,false
+clangingscales,Fragor Escamas,dragon,false,false,false
+clangoroussoul,Estruendo Escama,dragon,true,false,false
+clangoroussoulblaze,Estruendo Implacable,dragon,true,false,false
+clearsmog,Niebla Clara,poison,true,false,false
+closecombat,A Bocajarro,fighting,false,false,false
+coaching,Motivación,fighting,false,false,false
+coil,Enrosque,poison,false,false,false
+collisioncourse,Nitrochoque,fighting,true,false,false
+combattorque,Pugnachoque,fighting,false,false,false
+cometpunch,Puño Cometa,normal,false,false,false
+comeuppance,Resarcimiento,dark,true,false,false
+confide,Confidencia,normal,false,false,false
+confuseray,Rayo Confuso,ghost,false,false,false
+confusion,Confusión,psychic,false,false,false
+constrict,Restricción,normal,false,false,false
+continentalcrush,Aplastamiento Gigalítico,rock,true,false,false
+conversion,Conversión,normal,true,false,false
+conversion2,Conversión 2,normal,true,false,false
+copycat,Copión,normal,true,false,false
+coreenforcer,Núcleo Castigo,dragon,true,false,false
+corkscrewcrash,Hélice Trepanadora,steel,true,false,false
+corrosivegas,Gas Corrosivo,poison,true,false,false
+cosmicpower,Masa Cósmica,psychic,false,false,false
+cottonguard,Rizo Algodón,grass,false,false,false
+cottonspore,Esporagodón,grass,false,false,false
+counter,Contraataque,fighting,true,false,false
+courtchange,Cambio de Cancha,normal,true,false,false
+covet,Antojo,normal,true,false,false
+crabhammer,Martillazo,water,false,false,false
+craftyshield,Truco Defensa,fairy,true,false,false
+crosschop,Tajo Cruzado,fighting,false,false,false
+crosspoison,Veneno X,poison,false,false,false
+crunch,Triturar,dark,false,false,false
+crushclaw,Garra Brutal,normal,false,false,false
+crushgrip,Agarrón,normal,true,false,false
+curse,Maldición,ghost,true,false,false
+cut,Corte,normal,false,false,false
+darkestlariat,Lariat Oscuro,dark,false,false,false
+darkpulse,Pulso Umbrío,dark,false,false,false
+darkvoid,Brecha Negra,dark,true,false,false
+dazzlinggleam,Brillo Mágico,fairy,false,false,false
+decorate,Decoración,fairy,false,false,false
+defendorder,A Defender,bug,false,false,false
+defensecurl,Rizo Defensa,normal,true,true,true
+defog,Despejar,flying,true,true,false
+destinybond,Mismo Destino,ghost,true,false,false
+detect,Detección,fighting,true,true,false
+devastatingdrake,Dracoaliento Devastador,dragon,true,false,false
+diamondstorm,Tormenta de Diamantes,rock,true,false,false
+dig,Excavar,ground,true,false,false
+direclaw,Garra Nociva,poison,true,false,false
+disable,Anulación,normal,true,false,false
+disarmingvoice,Voz Cautivadora,fairy,false,false,false
+discharge,Chispazo,electric,false,false,false
+dive,Buceo,water,true,false,false
+dizzypunch,Puño Mareo,normal,false,false,false
+doodle,Decalcomanía,normal,true,false,false
+doomdesire,Deseo Oculto,steel,true,false,false
+doubleedge,Doble Filo,normal,false,false,false
+doublehit,Doble Golpe,normal,false,false,false
+doubleironbash,Ferropuño Doble,steel,false,false,false
+doublekick,Doble Patada,fighting,false,false,false
+doubleshock,Electropalmas,electric,true,false,false
+doubleslap,Doble Bofetón,normal,false,false,false
+doubleteam,Doble Equipo,normal,false,false,false
+dracometeor,Cometa Draco,dragon,false,false,false
+dragonascent,Ascenso Draco,flying,false,false,false
+dragonbreath,Dragoaliento,dragon,false,false,false
+dragoncheer,Bramido Dragón,dragon,true,false,false
+dragonclaw,Garra Dragón,dragon,false,false,false
+dragondance,Danza Dragón,dragon,false,false,false
+dragondarts,Dracoflechas,dragon,true,false,false
+dragonenergy,Dracoenergía,dragon,true,false,false
+dragonhammer,Martillo Dragón,dragon,false,false,false
+dragonpulse,Pulso Dragón,dragon,false,false,false
+dragonrage,Furia Dragón,dragon,false,false,false
+dragonrush,Carga Dragón,dragon,false,false,false
+dragontail,Cola Dragón,dragon,true,false,false
+drainingkiss,Beso Drenaje,fairy,false,false,false
+drainpunch,Puño Drenaje,fighting,false,false,false
+dreameater,Comesueños,psychic,true,true,false
+drillpeck,Pico Taladro,flying,false,false,false
+drillrun,Taladradora,ground,false,false,false
+drumbeating,Batería Asalto,grass,false,false,false
+dualchop,Golpe Bis,dragon,false,false,false
+dualwingbeat,Ala Bis,flying,false,false,false
+dynamaxcannon,Cañón Dinamax,dragon,false,false,false
+dynamicpunch,Puño Dinámico,fighting,false,false,false
+earthpower,Tierra Viva,ground,false,false,false
+earthquake,Terremoto,ground,false,false,true
+echoedvoice,Eco Voz,normal,true,true,false
+eerieimpulse,Onda Anómala,electric,false,false,false
+eeriespell,Conjuro Funesto,psychic,true,false,false
+eggbomb,Bomba Huevo,normal,false,false,false
+electricterrain,Campo Eléctrico,electric,true,false,false
+electrify,Electrificación,electric,true,false,false
+electroball,Bola Voltio,electric,true,false,false
+electrodrift,Electroderrape,electric,true,false,false
+electroshot,Electrorrayo,electric,true,false,false
+electroweb,Electrotela,electric,false,false,false
+embargo,Embargo,dark,true,false,false
+ember,Ascuas,fire,false,false,true
+encore,Otra Vez,normal,true,false,false
+endeavor,Esfuerzo,normal,true,true,false
+endure,Aguante,normal,true,false,false
+energyball,Energibola,grass,false,false,false
+entrainment,Danza Amiga,normal,true,true,false
+eruption,Estallido,fire,true,false,false
+esperwing,Ala Aural,psychic,false,false,false
+eternabeam,Rayo Infinito,dragon,true,false,false
+expandingforce,Vasta Fuerza,psychic,true,false,false
+explosion,Explosión,normal,false,false,false
+extrasensory,Paranormal,psychic,false,false,false
+extremeevoboost,Novena Potencia,normal,true,false,false
+extremespeed,Velocidad Extrema,normal,false,false,false
+facade,Fachada,normal,true,false,false
+fairylock,Cerrojo Feérico,fairy,true,false,false
+fairywind,Viento Feérico,fairy,false,false,false
+fakeout,Sorpresa,normal,true,false,false
+faketears,Llanto Falso,dark,false,false,false
+falsesurrender,Irreverencia,dark,false,false,false
+falseswipe,Falso Tortazo,normal,true,false,false
+featherdance,Danza Pluma,flying,false,false,false
+feint,Amago,normal,false,false,false
+feintattack,Finta,dark,false,false,false
+fellstinger,Aguijón Letal,bug,true,true,false
+ficklebeam,Láser Veleidoso,dragon,true,false,false
+fierydance,Danza Llama,fire,false,false,false
+fierywrath,Furia Candente,dark,false,false,false
+filletaway,Deslome,normal,true,false,false
+finalgambit,Sacrificio,fighting,true,false,false
+fireblast,Llamarada,fire,false,false,false
+firefang,Colmillo Ígneo,fire,false,false,false
+firelash,Látigo Ígneo,fire,false,false,false
+firepledge,Voto Fuego,fire,true,false,false
+firepunch,Puño Fuego,fire,false,false,false
+firespin,Giro Fuego,fire,true,true,false
+firstimpression,Escaramuza,bug,true,false,false
+fishiousrend,Branquibocado,water,true,false,false
+fissure,Fisura,ground,false,false,false
+flail,Azote,normal,true,true,false
+flameburst,Pirotecnia,fire,true,false,false
+flamecharge,Nitrocarga,fire,false,false,false
+flamethrower,Lanzallamas,fire,false,false,true
+flamewheel,Rueda Fuego,fire,false,false,false
+flareblitz,Envite Ígneo,fire,false,false,false
+flash,Destello,normal,false,false,false
+flashcannon,Cañón Resplandor,steel,false,false,false
+flatter,Camelo,dark,false,false,false
+fleurcannon,Cañón Floral,fairy,false,false,false
+fling,Lanzamiento,dark,true,false,false
+flipturn,Viraje,water,true,true,false
+floatyfall,Pikapicado,flying,false,false,false
+floralhealing,Cura Floral,fairy,true,false,false
+flowershield,Defensa Floral,fairy,true,false,false
+flowertrick,Truco Floral,grass,false,false,false
+fly,Vuelo,flying,true,true,false
+flyingpress,Plancha Voladora,fighting,true,false,false
+focusblast,Onda Certera,fighting,false,false,false
+focusenergy,Foco Energía,normal,true,true,false
+focuspunch,Puño Certero,fighting,true,false,false
+followme,Señuelo,normal,true,true,false
+forcepalm,Palmeo,fighting,false,false,false
+foresight,Profecía,normal,true,false,false
+forestscurse,Condena Silvana,grass,true,false,false
+foulplay,Juego Sucio,dark,true,false,false
+freezedry,Liofilización,ice,true,false,false
+freezeshock,Rayo Gélido,ice,true,false,false
+freezingglare,Mirada Heladora,psychic,false,false,false
+freezyfrost,Glaceoprisma,ice,true,false,false
+frenzyplant,Planta Feroz,grass,true,true,false
+frostbreath,Vaho Gélido,ice,false,false,false
+frustration,Frustración,normal,true,false,false
+furyattack,Ataque Furia,normal,false,false,false
+furycutter,Corte Furia,bug,true,false,false
+furyswipes,Golpes Furia,normal,false,false,false
+fusionbolt,Rayo Fusión,electric,true,false,false
+fusionflare,Llama Fusión,fire,true,false,false
+futuresight,Premonición,psychic,true,false,false
+gastroacid,Bilis,poison,true,false,false
+geargrind,Rueda Doble,steel,false,false,false
+gearup,Piñón Auxiliar,steel,true,false,false
+genesissupernova,Supernova Original,psychic,true,false,false
+geomancy,Geocontrol,fairy,true,false,false
+gigadrain,Gigadrenado,grass,false,false,false
+gigaimpact,Gigaimpacto,normal,true,true,false
+gigatonhammer,Martillo Colosal,steel,false,false,false
+gigavolthavoc,Gigavoltio Destructor,electric,true,false,false
+glaciallance,Lanza Glacial,ice,false,false,false
+glaciate,Mundo Gélido,ice,false,false,false
+glaiverush,Asalto Espadón,dragon,true,false,false
+glare,Deslumbrar,normal,false,false,false
+glitzyglow,Espeaura,psychic,true,false,false
+gmaxbefuddle,G-Max Befuddle,bug,true,false,false
+gmaxcannonade,G-Max Cannonade,water,true,false,false
+gmaxcentiferno,G-Max Centiferno,fire,true,false,false
+gmaxchistrike,G-Max Chi Strike,fighting,true,false,false
+gmaxcuddle,G-Max Cuddle,normal,true,false,false
+gmaxdepletion,G-Max Depletion,dragon,true,false,false
+gmaxdrumsolo,G-Max Drum Solo,grass,true,false,false
+gmaxfinale,G-Max Finale,fairy,true,false,false
+gmaxfireball,G-Max Fireball,fire,true,false,false
+gmaxfoamburst,G-Max Foam Burst,water,true,false,false
+gmaxgoldrush,G-Max Gold Rush,normal,true,false,false
+gmaxgravitas,G-Max Gravitas,psychic,true,false,false
+gmaxhydrosnipe,G-Max Hydrosnipe,water,true,false,false
+gmaxmalodor,G-Max Malodor,poison,true,false,false
+gmaxmeltdown,G-Max Meltdown,steel,true,false,false
+gmaxoneblow,G-Max One Blow,dark,true,false,false
+gmaxrapidflow,G-Max Rapid Flow,water,true,false,false
+gmaxreplenish,G-Max Replenish,normal,true,false,false
+gmaxresonance,G-Max Resonance,ice,true,false,false
+gmaxsandblast,G-Max Sandblast,ground,true,false,false
+gmaxsmite,G-Max Smite,fairy,true,false,false
+gmaxsnooze,G-Max Snooze,dark,true,false,false
+gmaxsteelsurge,G-Max Steelsurge,steel,true,false,false
+gmaxstonesurge,G-Max Stonesurge,water,true,false,false
+gmaxstunshock,G-Max Stun Shock,electric,true,false,false
+gmaxsweetness,G-Max Sweetness,grass,true,false,false
+gmaxtartness,G-Max Tartness,grass,true,false,false
+gmaxterror,G-Max Terror,ghost,true,false,false
+gmaxvinelash,G-Max Vine Lash,grass,true,false,false
+gmaxvolcalith,G-Max Volcalith,rock,true,false,false
+gmaxvoltcrash,G-Max Volt Crash,electric,true,false,false
+gmaxwildfire,G-Max Wildfire,fire,true,false,false
+gmaxwindrage,G-Max Wind Rage,flying,true,false,false
+grassknot,Hierba Lazo,grass,true,false,false
+grasspledge,Voto Planta,grass,true,false,false
+grasswhistle,Silbato,grass,false,false,false
+grassyglide,Fitoimpulso,grass,true,false,false
+grassyterrain,Campo de Hierba,grass,true,false,false
+gravapple,Fuerza G,grass,true,false,false
+gravity,Gravedad,psychic,true,false,false
+growl,Gruñido,normal,false,false,true
+growth,Desarrollo,normal,true,true,false
+grudge,Rabia,ghost,true,false,false
+guardianofalola,Cólera del Guardián,fairy,true,false,false
+guardsplit,Isoguardia,psychic,true,false,false
+guardswap,Cambiadefensa,psychic,true,false,false
+guillotine,Guillotina,normal,false,false,false
+gunkshot,Lanzamugre,poison,false,false,false
+gust,Tornado,flying,false,false,false
+gyroball,Giro Bola,steel,true,false,false
+hail,Granizo,ice,true,false,false
+hammerarm,Machada,fighting,false,false,false
+happyhour,Paga Extra,normal,true,false,false
+harden,Fortaleza,normal,false,false,false
+hardpress,Prensa Metálica,steel,true,false,false
+haze,Niebla,ice,true,false,false
+headbutt,Golpe Cabeza,normal,false,false,false
+headcharge,Ariete,normal,false,false,false
+headlongrush,Arremetida,ground,false,false,false
+headsmash,Testarazo,rock,false,false,false
+healbell,Cascabel Cura,normal,true,true,false
+healblock,Anticura,psychic,true,false,false
+healingwish,Deseo Cura,psychic,true,false,false
+healorder,Auxilio,bug,false,false,false
+healpulse,Pulso Cura,psychic,true,false,false
+heartstamp,Arrumaco,psychic,false,false,false
+heartswap,Cambiaalmas,psychic,true,false,false
+heatcrash,Golpe Calor,fire,true,false,false
+heatwave,Onda Ígnea,fire,false,false,false
+heavyslam,Cuerpo Pesado,steel,true,false,false
+helpinghand,Refuerzo,normal,true,true,false
+hex,Infortunio,ghost,true,false,false
+hiddenpower,Poder Oculto,normal,true,false,false
+hiddenpowerbug,Poder Oculto (Bicho),bug,true,false,false
+hiddenpowerdark,Poder Oculto (Siniestro),dark,true,false,false
+hiddenpowerdragon,Poder Oculto (Dragón),dragon,true,false,false
+hiddenpowerelectric,Poder Oculto (Eléctrico),electric,true,false,false
+hiddenpowerfighting,Poder Oculto (Lucha),fighting,true,false,false
+hiddenpowerfire,Poder Oculto (Fuego),fire,true,false,false
+hiddenpowerflying,Poder Oculto (Volador),flying,true,false,false
+hiddenpowerghost,Poder Oculto (Fantasma),ghost,true,false,false
+hiddenpowergrass,Poder Oculto (Planta),grass,true,false,false
+hiddenpowerground,Poder Oculto (Tierra),ground,true,false,false
+hiddenpowerice,Poder Oculto (Hielo),ice,true,false,false
+hiddenpowerpoison,Poder Oculto (Veneno),poison,true,false,false
+hiddenpowerpsychic,Poder Oculto (Psíquico),psychic,true,false,false
+hiddenpowerrock,Poder Oculto (Roca),rock,true,false,false
+hiddenpowersteel,Poder Oculto (Acero),steel,true,false,false
+hiddenpowerwater,Poder Oculto (Agua),water,true,false,false
+highhorsepower,Fuerza Equina,ground,false,false,false
+highjumpkick,Patada Salto Alta,fighting,true,false,false
+holdback,Clemencia,normal,true,false,false
+holdhands,Manos Juntas,normal,false,false,false
+honeclaws,Afilagarras,dark,false,false,false
+hornattack,Cornada,normal,false,false,false
+horndrill,Perforador,normal,false,false,false
+hornleech,Asta Drenaje,grass,false,false,false
+howl,Aullido,normal,false,false,false
+hurricane,Vendaval,flying,true,true,false
+hydrocannon,Hidrocañón,water,true,true,false
+hydropump,Hidrobomba,water,false,false,false
+hydrosteam,Hidrovapor,water,false,false,false
+hydrovortex,Hidrovórtice Abisal,water,true,false,false
+hyperbeam,Hiperrayo,normal,true,true,false
+hyperdrill,Hipertaladro,normal,false,false,false
+hyperfang,Hipercolmillo,normal,false,false,false
+hyperspacefury,Cerco Dimensión,dark,true,false,false
+hyperspacehole,Paso Dimensional,psychic,false,false,false
+hypervoice,Vozarrón,normal,false,false,false
+hypnosis,Hipnosis,psychic,false,false,false
+iceball,Bola Hielo,ice,true,false,false
+icebeam,Rayo Hielo,ice,false,false,true
+iceburn,Llama Gélida,ice,true,false,false
+icefang,Colmillo Hielo,ice,false,false,false
+icehammer,Martillo Hielo,ice,false,false,false
+icepunch,Puño Hielo,ice,false,false,false
+iceshard,Esquirla Helada,ice,false,false,false
+icespinner,Pirueta Helada,ice,true,false,false
+iciclecrash,Chuzos,ice,false,false,false
+iciclespear,Carámbano,ice,false,false,false
+icywind,Viento Hielo,ice,false,false,false
+imprison,Sellar,psychic,true,false,false
+incinerate,Calcinación,fire,true,false,false
+infernalparade,Marcha Espectral,ghost,true,false,false
+inferno,Infierno,fire,false,false,false
+infernooverdrive,Hecatombe Pírica,fire,true,false,false
+infestation,Acoso,bug,true,true,false
+ingrain,Arraigo,grass,true,false,false
+instruct,Mandato,psychic,true,false,false
+iondeluge,Cortina Plasma,electric,true,false,false
+irondefense,Defensa Férrea,steel,false,false,false
+ironhead,Cabeza de Hierro,steel,false,false,false
+irontail,Cola Férrea,steel,false,false,false
+ivycudgel,Garrote Liana,grass,true,false,false
+jawlock,Presa Maxilar,dark,true,false,false
+jetpunch,Puño Jet,water,false,false,false
+judgment,Sentencia,normal,true,false,false
+jumpkick,Patada Salto,fighting,true,false,false
+junglehealing,Cura Selvática,grass,true,false,false
+karatechop,Golpe Kárate,fighting,false,false,false
+kinesis,Kinético,psychic,false,false,false
+kingsshield,Escudo Real,steel,true,false,false
+knockoff,Desarme,dark,true,false,false
+kowtowcleave,Genufendiente,dark,false,false,false
+landswrath,Fuerza Telúrica,ground,false,false,false
+laserfocus,Aguzar,normal,true,false,false
+lashout,Desahogo,dark,true,false,false
+lastresort,Última Baza,normal,true,false,false
+lastrespects,Homenaje Póstumo,ghost,true,false,false
+lavaplume,Humareda,fire,false,false,false
+leafage,Follaje,grass,false,false,false
+leafblade,Hoja Aguda,grass,false,false,false
+leafstorm,Lluevehojas,grass,false,false,false
+leaftornado,Ciclón de Hojas,grass,false,false,false
+leechlife,Chupavidas,bug,false,false,false
+leechseed,Drenadoras,grass,true,true,false
+leer,Malicioso,normal,false,false,false
+letssnuggleforever,Somanta Amistosa,fairy,true,false,false
+lick,Lengüetazo,ghost,false,false,false
+lifedew,Gota Vital,water,false,false,false
+lightofruin,Luz Aniquiladora,fairy,false,false,false
+lightscreen,Pantalla de Luz,psychic,true,true,false
+lightthatburnsthesky,Fotodestrucción Apocalíptica,psychic,true,false,false
+liquidation,Hidroariete,water,false,false,false
+lockon,Fijar Blanco,normal,true,false,false
+lovelykiss,Beso Amoroso,normal,false,false,false
+lowkick,Patada Baja,fighting,true,false,false
+lowsweep,Puntapié,fighting,false,false,false
+luckychant,Conjuro,normal,true,false,false
+luminacrash,Fotocolisión,psychic,false,false,false
+lunarblessing,Plegaria Lunar,psychic,true,false,false
+lunardance,Danza Lunar,psychic,true,false,false
+lunge,Plancha,bug,false,false,false
+lusterpurge,Resplandor,psychic,false,false,false
+machpunch,Ultrapuño,fighting,false,false,false
+magicalleaf,Hoja Mágica,grass,false,false,false
+magicaltorque,Feerichoque,fairy,false,false,false
+magiccoat,Capa Mágica,psychic,true,false,false
+magicpowder,Polvo Mágico,psychic,true,false,false
+magicroom,Zona Mágica,psychic,true,false,false
+magmastorm,Lluvia Ígnea,fire,true,true,false
+magnetbomb,Bomba Imán,steel,false,false,false
+magneticflux,Aura Magnética,electric,true,false,false
+magnetrise,Levitón,electric,true,false,false
+magnitude,Magnitud,ground,true,false,false
+makeitrain,Fiebre Dorada,steel,false,false,false
+maliciousmoonsault,Hiperplancha Oscura,dark,true,false,false
+malignantchain,Cadena Virulenta,poison,false,false,false
+matblock,Escudo Tatami,fighting,true,false,false
+matchagotcha,Cañón Batidor,grass,false,false,false
+maxairstream,Maxiciclón,flying,true,false,false
+maxdarkness,Maxisombra,dark,true,false,false
+maxflare,Maxignición,fire,true,false,false
+maxflutterby,Maxinsecto,bug,true,false,false
+maxgeyser,Maxichorro,water,true,false,false
+maxguard,Maxibarrera,normal,true,false,false
+maxhailstorm,Maxihelada,ice,true,false,false
+maxknuckle,Maxipuño,fighting,true,false,false
+maxlightning,Maxitormenta,electric,true,false,false
+maxmindstorm,Maxionda,psychic,true,false,false
+maxooze,Maxiácido,poison,true,false,false
+maxovergrowth,Maxiflora,grass,true,false,false
+maxphantasm,Maxiespectro,ghost,true,false,false
+maxquake,Maxitemblor,ground,true,false,false
+maxrockfall,Maxilito,rock,true,false,false
+maxstarfall,Maxiestela,fairy,true,false,false
+maxsteelspike,Maximetal,steel,true,false,false
+maxstrike,Maxiataque,normal,true,false,false
+maxwyrmwind,Maxidraco,dragon,true,false,false
+meanlook,Mal de Ojo,normal,true,false,false
+meditate,Meditación,psychic,false,false,false
+mefirst,Yo Primero,normal,true,false,false
+megadrain,Megaagotar,grass,false,false,false
+megahorn,Megacuerno,bug,false,false,false
+megakick,Megapatada,normal,false,false,false
+megapunch,Megapuño,normal,false,false,false
+memento,Legado,dark,false,false,false
+menacingmoonrazemaelstrom,Deflagración Lunar,ghost,true,false,false
+metalburst,Represión Metal,steel,true,false,false
+metalclaw,Garra Metal,steel,false,false,false
+metalsound,Eco Metálico,steel,false,false,false
+meteorassault,Asalto Estelar,fighting,true,false,false
+meteorbeam,Rayo Meteórico,rock,true,false,false
+meteormash,Puño Meteoro,steel,false,false,false
+metronome,Metrónomo,normal,true,false,false
+mightycleave,Filo Potente,rock,false,false,false
+milkdrink,Batido,normal,false,false,false
+mimic,Mimético,normal,true,false,false
+mindblown,Cabeza Sorpresa,fire,true,false,false
+mindreader,Telépata,normal,true,false,false
+minimize,Reducción,normal,true,false,false
+miracleeye,Gran Ojo,psychic,true,false,false
+mirrorcoat,Manto Espejo,psychic,true,false,false
+mirrormove,Espejo,flying,true,true,false
+mirrorshot,Disparo Espejo,steel,false,false,false
+mist,Neblina,ice,true,false,false
+mistball,Bola Neblina,psychic,false,false,false
+mistyexplosion,Bruma Explosiva,fairy,true,false,false
+mistyterrain,Campo de Niebla,fairy,true,true,false
+moonblast,Fuerza Lunar,fairy,false,false,false
+moongeistbeam,Rayo Umbrío,ghost,false,false,false
+moonlight,Luz Lunar,fairy,true,true,false
+morningsun,Sol Matinal,normal,true,true,false
+mortalspin,Giro Mortífero,poison,true,false,false
+mountaingale,Viento Carámbano,ice,false,false,false
+mudbomb,Bomba Fango,ground,false,false,false
+muddywater,Agua Lodosa,water,false,false,false
+mudshot,Disparo Lodo,ground,false,false,false
+mudslap,Bofetón Lodo,ground,false,false,false
+mudsport,Chapoteo Lodo,ground,true,false,false
+multiattack,Multiataque,normal,true,false,false
+mysticalfire,Llama Embrujada,fire,false,false,false
+mysticalpower,Poder Místico,psychic,false,false,false
+nastyplot,Maquinación,dark,false,false,false
+naturalgift,Don Natural,normal,true,false,false
+naturepower,Adaptación,normal,true,false,false
+naturesmadness,Furia Natural,fairy,true,false,false
+needlearm,Brazo Pincho,grass,false,false,false
+neverendingnightmare,Presa Espectral,ghost,true,false,false
+nightdaze,Pulso Noche,dark,false,false,false
+nightmare,Pesadilla,ghost,true,false,false
+nightshade,Tinieblas,ghost,false,false,false
+nightslash,Tajo Umbrío,dark,false,false,false
+nihillight,Nihil Light,dragon,false,false,false
+nobleroar,Rugido de Guerra,normal,false,false,false
+noretreat,Bastión Final,fighting,true,false,false
+noxioustorque,Ponzochoque,poison,false,false,false
+nuzzle,Moflete Estático,electric,false,false,false
+oblivionwing,Ala Mortífera,flying,false,false,false
+obstruct,Obstrucción,dark,true,false,false
+oceanicoperetta,Sinfonía de la Diva Marina,water,true,false,false
+octazooka,Pulpocañón,water,false,false,false
+octolock,Octopresa,fighting,true,false,false
+odorsleuth,Rastreo,normal,true,false,false
+ominouswind,Viento Aciago,ghost,false,false,false
+orderup,Oído Cocina,dragon,true,false,false
+originpulse,Pulso Primigenio,water,false,false,false
+outrage,Enfado,dragon,true,true,false
+overdrive,Amplificador,electric,false,false,false
+overheat,Sofoco,fire,false,false,false
+painsplit,Divide Dolor,normal,true,false,false
+paraboliccharge,Carga Parábola,electric,false,false,false
+partingshot,Última Palabra,dark,true,false,false
+payback,Vendetta,dark,true,false,false
+payday,Día de Pago,normal,false,false,false
+peck,Picotazo,flying,false,false,true
+perishsong,Canto Mortal,normal,true,false,false
+petalblizzard,Tormenta Floral,grass,false,false,false
+petaldance,Danza Pétalo,grass,true,true,false
+phantomforce,Golpe Fantasma,ghost,true,false,false
+photongeyser,Géiser Fotónico,psychic,true,false,false
+pikapapow,Pikatormenta,electric,true,false,false
+pinmissile,Pin Misil,bug,false,false,false
+plasmafists,Puños Plasma,electric,true,false,false
+playnice,Camaradería,normal,false,false,true
+playrough,Carantoña,fairy,false,false,false
+pluck,Picoteo,flying,true,true,false
+poisonfang,Colmillo Veneno,poison,false,false,false
+poisongas,Gas Venenoso,poison,false,false,false
+poisonjab,Puya Nociva,poison,false,false,false
+poisonpowder,Polvo Veneno,poison,false,false,false
+poisonsting,Picotazo Veneno,poison,false,false,true
+poisontail,Cola Veneno,poison,false,false,false
+pollenpuff,Bola de Polen,bug,true,false,false
+poltergeist,Poltergeist,ghost,true,false,false
+populationbomb,Proliferación,normal,true,false,false
+pounce,Brinco,bug,false,false,false
+pound,Destructor,normal,false,false,false
+powder,Polvo Explosivo,bug,true,false,false
+powdersnow,Nieve Polvo,ice,false,false,false
+powergem,Joya de Luz,rock,false,false,false
+powershift,Cambiapoder,normal,true,false,false
+powersplit,Isofuerza,psychic,true,false,false
+powerswap,Cambiafuerza,psychic,true,false,false
+powertrick,Truco Fuerza,psychic,true,false,false
+powertrip,Chulería,dark,true,false,false
+poweruppunch,Puño Incremento,fighting,false,false,false
+powerwhip,Latigazo,grass,false,false,false
+precipiceblades,Filo del Abismo,ground,false,false,false
+present,Presente,normal,true,false,false
+prismaticlaser,Láser Prisma,psychic,true,false,false
+protect,Protección,normal,true,true,false
+psybeam,Psicorrayo,psychic,false,false,false
+psyblade,Psicohojas,psychic,true,false,false
+psychic,Psíquico,psychic,false,false,true
+psychicfangs,Psicocolmillo,psychic,true,false,false
+psychicnoise,Psicorruido,psychic,true,false,false
+psychicterrain,Campo Psíquico,psychic,true,false,false
+psychoboost,Psicoataque,psychic,false,false,false
+psychocut,Psicocorte,psychic,false,false,false
+psychoshift,Psicocambio,psychic,true,false,false
+psychup,Autosugestión,normal,true,false,false
+psyshieldbash,Asalto Barrera,psychic,false,false,false
+psyshock,Psicocarga,psychic,true,false,false
+psystrike,Onda Mental,psychic,true,false,false
+psywave,Psicoonda,psychic,true,false,false
+pulverizingpancake,Arrojo Intempestivo,normal,true,false,false
+punishment,Castigo,dark,true,false,false
+purify,Purificación,poison,true,false,false
+pursuit,Persecución,dark,true,true,false
+pyroball,Balón Ígneo,fire,false,false,false
+quash,Último Lugar,dark,true,false,false
+quickattack,Ataque Rápido,normal,false,false,true
+quickguard,Anticipo,fighting,true,false,false
+quiverdance,Danza Aleteo,bug,false,false,false
+rage,Furia,normal,true,false,false
+ragefist,Puño Furia,ghost,true,false,false
+ragepowder,Polvo Ira,bug,true,true,false
+ragingbull,Furia Taurina,normal,true,false,false
+ragingfury,Erupción de Ira,fire,true,false,false
+raindance,Danza Lluvia,water,true,true,false
+rapidspin,Giro Rápido,normal,true,true,false
+razorleaf,Hoja Afilada,grass,false,false,false
+razorshell,Concha Filo,water,false,false,false
+razorwind,Viento Cortante,normal,true,false,false
+recover,Recuperación,normal,false,false,false
+recycle,Reciclaje,normal,true,false,false
+reflect,Reflejo,psychic,true,true,false
+reflecttype,Clonatipo,normal,true,false,false
+refresh,Alivio,normal,true,false,false
+relicsong,Canto Arcaico,normal,true,false,false
+rest,Descanso,psychic,true,true,false
+retaliate,Represalia,normal,true,false,false
+return,Retribución,normal,true,false,false
+revelationdance,Danza Despertar,normal,true,false,false
+revenge,Desquite,fighting,true,false,false
+reversal,Inversión,fighting,true,true,false
+revivalblessing,Plegaria Vital,normal,true,false,false
+risingvoltage,Alto Voltaje,electric,true,false,false
+roar,Rugido,normal,true,true,false
+roaroftime,Distorsión,dragon,true,false,false
+rockblast,Pedrada,rock,false,false,false
+rockclimb,Treparrocas,normal,false,false,false
+rockpolish,Pulimento,rock,false,false,false
+rockslide,Avalancha,rock,false,false,false
+rocksmash,Golpe Roca,fighting,false,false,false
+rockthrow,Lanzarrocas,rock,false,false,false
+rocktomb,Tumba Rocas,rock,false,false,false
+rockwrecker,Romperrocas,rock,true,true,false
+roleplay,Imitación,psychic,true,false,false
+rollingkick,Patada Giro,fighting,false,false,false
+rollout,Rodar,rock,true,false,false
+roost,Respiro,flying,true,true,false
+rototiller,Fertilizante,ground,true,false,false
+round,Canon,normal,true,true,false
+ruination,Calamidad,dark,true,false,false
+sacredfire,Fuego Sagrado,fire,false,false,false
+sacredsword,Espada Santa,fighting,false,false,false
+safeguard,Velo Sagrado,normal,true,true,false
+saltcure,Salazón,rock,true,false,false
+sandattack,Ataque Arena,ground,false,false,false
+sandsearstorm,Simún de Arena,ground,true,false,false
+sandstorm,Tormenta de Arena,rock,true,true,false
+sandtomb,Bucle Arena,ground,true,true,false
+sappyseed,Leafitobombas,grass,true,false,false
+savagespinout,Guadaña Sedosa,bug,true,false,false
+scald,Escaldar,water,false,false,false
+scaleshot,Ráfaga Escamas,dragon,false,false,false
+scaryface,Cara Susto,normal,false,false,false
+scorchingsands,Arenas Ardientes,ground,false,false,false
+scratch,Arañazo,normal,false,false,true
+screech,Chirrido,normal,false,false,false
+searingshot,Bomba Ígnea,fire,false,false,false
+searingsunrazesmash,Embestida Solar,steel,true,false,false
+secretpower,Daño Secreto,normal,true,false,false
+secretsword,Sable Místico,fighting,true,false,false
+seedbomb,Bomba Germen,grass,false,false,false
+seedflare,Fulgor Semilla,grass,false,false,false
+seismictoss,Sísmico,fighting,false,false,false
+selfdestruct,Autodestrucción,normal,false,false,false
+shadowball,Bola Sombra,ghost,false,false,true
+shadowbone,Hueso Sombrío,ghost,false,false,false
+shadowclaw,Garra Umbría,ghost,false,false,false
+shadowforce,Golpe Umbrío,ghost,true,false,false
+shadowpunch,Puño Sombra,ghost,false,false,false
+shadowsneak,Sombra Vil,ghost,false,false,false
+sharpen,Afilar,normal,false,false,false
+shatteredpsyche,Disruptor Psíquico,psychic,true,false,false
+shedtail,Autotomía,normal,true,false,false
+sheercold,Frío Polar,ice,false,false,false
+shellsidearm,Moluscañón,poison,true,false,false
+shellsmash,Rompecoraza,normal,false,false,false
+shelltrap,Coraza Trampa,fire,true,false,false
+shelter,Retracción,steel,false,false,false
+shiftgear,Cambio de Marcha,steel,false,false,false
+shockwave,Onda Voltio,electric,false,false,false
+shoreup,Recogearena,ground,true,false,false
+signalbeam,Rayo Señal,bug,false,false,false
+silktrap,Telatrampa,bug,true,false,false
+silverwind,Viento Plata,bug,false,false,false
+simplebeam,Onda Simple,normal,true,false,false
+sing,Canto,normal,false,false,false
+sinisterarrowraid,Aluvión de Flechas Sombrías,ghost,true,false,false
+sizzlyslide,Flarembestida,fire,false,false,false
+sketch,Esquema,normal,true,false,false
+skillswap,Intercambio,psychic,true,false,false
+skittersmack,Golpe Rastrero,bug,false,false,false
+skullbash,Cabezazo,normal,true,false,false
+skyattack,Ataque Aéreo,flying,true,true,false
+skydrop,Caída Libre,flying,true,false,false
+skyuppercut,Gancho Alto,fighting,false,false,false
+slackoff,Relajo,normal,false,false,false
+slam,Atizar,normal,false,false,false
+slash,Cuchillada,normal,false,false,false
+sleeppowder,Somnífero,grass,false,false,false
+sleeptalk,Sonámbulo,normal,true,false,false
+sludge,Residuos,poison,false,false,false
+sludgebomb,Bomba Lodo,poison,false,false,false
+sludgewave,Onda Tóxica,poison,false,false,false
+smackdown,Antiaéreo,rock,true,false,false
+smartstrike,Cuerno Certero,steel,false,false,false
+smellingsalts,Estímulo,normal,true,false,false
+smog,Polución,poison,false,false,false
+smokescreen,Pantalla de Humo,normal,false,false,false
+snaptrap,Cepo,grass,true,false,false
+snarl,Alarido,dark,false,false,false
+snatch,Robo,dark,true,false,false
+snipeshot,Disparo Certero,water,true,false,false
+snore,Ronquido,normal,true,false,false
+snowscape,Paisaje Nevado,ice,true,true,false
+soak,Empapar,water,true,false,false
+softboiled,Ovocuración,normal,false,false,false
+solarbeam,Rayo Solar,grass,true,true,false
+solarblade,Cuchilla Solar,grass,true,true,false
+sonicboom,Bomba Sónica,normal,false,false,false
+soulstealing7starstrike,Constelación Robaalmas,ghost,true,false,false
+spacialrend,Corte Vacío,dragon,false,false,false
+spark,Chispa,electric,false,false,false
+sparklingaria,Aria Burbuja,water,true,false,false
+sparklyswirl,Sylveotornado,fairy,true,false,false
+spectralthief,Robasombra,ghost,true,false,false
+speedswap,Cambiavelocidad,psychic,true,false,false
+spicyextract,Extracto Picante,grass,false,false,false
+spiderweb,Telaraña,bug,true,false,false
+spikecannon,Clavo Cañón,normal,false,false,false
+spikes,Púas,ground,true,true,false
+spikyshield,Barrera Espinosa,grass,true,false,false
+spinout,Quemarrueda,steel,false,false,false
+spiritbreak,Choque Anímico,fairy,false,false,false
+spiritshackle,Puntada Sombría,ghost,true,false,false
+spite,Rencor,ghost,true,false,false
+spitup,Escupir,normal,true,false,false
+splash,Salpicadura,normal,true,true,true
+splinteredstormshards,Tempestad Rocosa,rock,true,false,false
+splishysplash,Salpikasurf,water,false,false,false
+spore,Espora,grass,false,false,false
+spotlight,Foco,normal,true,false,false
+springtidestorm,Ciclón Primavera,fairy,false,false,false
+stealthrock,Trampa Rocas,rock,true,true,false
+steameruption,Chorro de Vapor,water,false,false,false
+steamroller,Rodillo de Púas,bug,false,false,false
+steelbeam,Metaláser,steel,true,false,false
+steelroller,Allanador Férreo,steel,true,false,false
+steelwing,Ala de Acero,steel,false,false,false
+stickyweb,Red Viscosa,bug,true,true,false
+stockpile,Reserva,normal,true,false,false
+stokedsparksurfer,Surfeo Galvánico,electric,true,false,false
+stomp,Pisotón,normal,false,false,false
+stompingtantrum,Pataleta,ground,true,false,false
+stoneaxe,Hachazo Pétreo,rock,true,false,false
+stoneedge,Roca Afilada,rock,false,false,false
+storedpower,Poder Reserva,psychic,true,false,false
+stormthrow,Llave Corsé,fighting,false,false,false
+strangesteam,Cautivapor,fairy,false,false,false
+strength,Fuerza,normal,false,false,false
+strengthsap,Absorbefuerza,grass,true,false,false
+stringshot,Disparo Demora,bug,false,false,true
+struggle,Forcejeo,normal,true,false,false
+strugglebug,Estoicismo,bug,false,false,false
+stuffcheeks,Atiborramiento,normal,true,false,false
+stunspore,Paralizador,grass,false,false,false
+submission,Sumisión,fighting,false,false,false
+substitute,Sustituto,normal,true,false,false
+subzeroslammer,Crioaliento Despiadado,ice,true,false,false
+suckerpunch,Golpe Bajo,dark,true,true,false
+sunnyday,Día Soleado,fire,true,true,false
+sunsteelstrike,Meteoimpacto,steel,false,false,false
+supercellslam,Plancha Voltaica,electric,true,false,false
+superfang,Superdiente,normal,true,true,false
+superpower,Fuerza Bruta,fighting,false,false,false
+supersonic,Supersónico,normal,false,false,false
+supersonicskystrike,Picado Supersónico,flying,true,false,false
+surf,Surf,water,false,false,false
+surgingstrikes,Azote Torrencial,water,false,false,false
+swagger,Fanfarronear,normal,false,false,false
+swallow,Tragar,normal,true,false,false
+sweetkiss,Beso Dulce,fairy,false,false,false
+sweetscent,Dulce Aroma,normal,false,false,true
+swift,Meteoros,normal,false,false,false
+switcheroo,Trapicheo,dark,true,false,false
+swordsdance,Danza Espada,normal,false,false,false
+synchronoise,Sincrorruido,psychic,true,false,false
+synthesis,Fotosíntesis,grass,true,true,false
+syrupbomb,Bomba Caramelo,grass,true,false,false
+tachyoncutter,Tajo Taquión,steel,false,false,false
+tackle,Placaje,normal,false,false,true
+tailglow,Luminicola,bug,false,false,false
+tailslap,Plumerazo,normal,false,false,false
+tailwhip,Agitacola,normal,false,false,true
+tailwind,Viento Afín,flying,true,true,false
+takedown,Derribo,normal,false,false,false
+takeheart,Bálsamo Osado,psychic,true,false,false
+tarshot,Alquitranazo,rock,true,false,false
+taunt,Mofa,dark,true,false,false
+tearfullook,Ojos Llorosos,normal,false,false,false
+teatime,Hora del Té,normal,true,false,false
+technoblast,Tecno Shock,normal,true,false,false
+tectonicrage,Barrena Telúrica,ground,true,false,false
+teeterdance,Danza Caos,normal,false,false,false
+telekinesis,Telequinesis,psychic,true,false,false
+teleport,Teletransporte,psychic,true,false,false
+temperflare,Cólera Ardiente,fire,true,false,false
+terablast,Teraexplosión,normal,true,false,false
+terastarstorm,Teraclúster,normal,true,false,false
+terrainpulse,Pulso de Campo,normal,true,false,false
+thief,Ladrón,dark,true,false,false
+thousandarrows,Mil Flechas,ground,true,false,false
+thousandwaves,Mil Temblores,ground,true,false,false
+thrash,Saña,normal,true,true,false
+throatchop,Golpe Mordaza,dark,true,false,false
+thunder,Trueno,electric,true,true,false
+thunderbolt,Rayo,electric,false,false,true
+thundercage,Electrojaula,electric,true,false,false
+thunderclap,Relámpago Súbito,electric,true,false,false
+thunderfang,Colmillo Rayo,electric,false,false,false
+thunderouskick,Patada Relámpago,fighting,false,false,false
+thunderpunch,Puño Trueno,electric,false,false,false
+thundershock,Impactrueno,electric,false,false,false
+thunderwave,Onda Trueno,electric,false,false,false
+tickle,Cosquillas,normal,false,false,false
+tidyup,Limpieza General,normal,true,false,false
+topsyturvy,Reversión,dark,true,false,false
+torchsong,Canto Ardiente,fire,false,false,false
+torment,Tormento,dark,true,false,false
+toxic,Tóxico,poison,false,false,false
+toxicspikes,Púas Tóxicas,poison,true,true,false
+toxicthread,Hilo Venenoso,poison,false,false,false
+trailblaze,Abrecaminos,grass,false,false,false
+transform,Transformación,normal,true,false,false
+triattack,Triataque,normal,true,false,false
+trick,Truco,psychic,true,false,false
+trickortreat,Halloween,ghost,true,false,false
+trickroom,Espacio Raro,psychic,true,false,false
+triplearrows,Triple Flecha,fighting,false,false,false
+tripleaxel,Triple Axel,ice,true,false,false
+tripledive,Triple Inmersión,water,false,false,false
+triplekick,Triple Patada,fighting,true,false,false
+tropkick,Patada Tropical,grass,false,false,false
+trumpcard,As Oculto,normal,true,false,false
+twinbeam,Láser Doble,psychic,false,false,false
+twineedle,Doble Ataque,bug,false,false,false
+twinkletackle,Arrumaco Sideral,fairy,true,false,false
+twister,Ciclón,dragon,false,false,false
+upperhand,Palma Rauda,fighting,true,false,false
+uproar,Alboroto,normal,true,true,false
+uturn,Ida y Vuelta,bug,true,true,false
+vacuumwave,Onda Vacío,fighting,false,false,false
+vcreate,V de Fuego,fire,false,false,false
+veeveevolley,Eevimpacto,normal,true,false,false
+venomdrench,Trampa Venenosa,poison,true,false,false
+venoshock,Carga Tóxica,poison,true,false,false
+victorydance,Danza Triunfal,fighting,false,false,false
+vinewhip,Látigo Cepa,grass,false,false,true
+visegrip,Agarre,normal,false,false,false
+vitalthrow,Llave Vital,fighting,false,false,false
+voltswitch,Voltiocambio,electric,true,true,false
+volttackle,Placaje Eléctrico,electric,false,false,false
+wakeupslap,Espabila,fighting,true,false,false
+waterfall,Cascada,water,false,false,false
+watergun,Pistola Agua,water,false,false,true
+waterpledge,Voto Agua,water,true,false,false
+waterpulse,Hidropulso,water,false,false,false
+watershuriken,Shuriken de Agua,water,true,false,false
+watersport,Hidrochorro,water,true,false,false
+waterspout,Salpicar,water,true,false,false
+wavecrash,Envite Acuático,water,false,false,false
+weatherball,Meteorobola,normal,true,false,false
+whirlpool,Torbellino,water,true,true,false
+whirlwind,Remolino,normal,true,true,false
+wickedblow,Golpe Oscuro,dark,false,false,false
+wickedtorque,Ominochoque,dark,false,false,false
+wideguard,Vasta Guardia,rock,true,false,false
+wildboltstorm,Electormenta,electric,true,false,false
+wildcharge,Voltio Cruel,electric,false,false,false
+willowisp,Fuego Fatuo,fire,false,false,false
+wingattack,Ataque Ala,flying,false,false,false
+wish,Deseo,normal,true,true,false
+withdraw,Refugio,water,false,false,false
+wonderroom,Zona Extraña,psychic,true,false,false
+woodhammer,Mazazo,grass,false,false,false
+workup,Avivar,normal,false,false,false
+worryseed,Abatidoras,grass,true,true,false
+wrap,Constricción,normal,true,true,false
+wringout,Estrujón,normal,true,false,false
+xscissor,Tijera X,bug,false,false,false
+yawn,Bostezo,normal,true,false,false
+zapcannon,Electrocañón,electric,false,false,false
+zenheadbutt,Cabezazo Zen,psychic,false,false,false
+zingzap,Electropunzada,electric,false,false,false
+zippyzap,Pikaturbo,electric,false,false,false

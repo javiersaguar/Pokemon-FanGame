@@ -86,6 +86,9 @@ func set_member(side: int, index: int, spec: Dictionary) -> Error:
 	if moves.is_empty() or moves.size() > Pokemon.MAX_MOVES: return ERR_INVALID_DATA
 	for id: Variant in moves:
 		if not DataDB.has_move(StringName(id)): return ERR_INVALID_DATA
+	if spec.has("ability"):
+		var ability := StringName(spec.ability)
+		if not DataDB.has_ability(ability) or ability not in DataDB.species(StringName(spec.species)).abilities.values(): return ERR_INVALID_DATA
 	var item := StringName(spec.get("item",""))
 	if item != &"" and not DataDB.has_item(item): return ERR_INVALID_DATA
 	var p := Pokemon.from_spec(spec)

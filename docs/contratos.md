@@ -1492,3 +1492,9 @@ F9 → Equipo → Quitar movimiento opera en el borrador del editor; cancelar co
 ### Interacciones de cortesía (2026-10-12, A3)
 
 `npc_reward_event.gd`, parámetro `reward_id`: consulta `data/npc_rewards.json` (placement, item, quantity, flag). El escáner ItemPlacements incorpora la colocación del NPC y valida que corresponda a `<map_id>/<nombre>` y a un objeto existente. El evento resuelve por DataDB la colocación y su parche; la flag solo se activa tras añadir toda la cantidad. Rechazo y falta de espacio no la consumen. Se usa la flag persistente de GameState. Primera cantidad de demostración, pendiente balance Javier. `ServiceDisplay` permite consultar el stock/descripcion/precio de una tienda al examinar una estantería desde abajo, sin comprar; la compra sigue en ShopScreen.
+
+### Habilidades y secuencias por fases (2026-10-12, A3)
+
+`PlaytestSession.set_member` admite `ability` opcional: debe existir en DataDB y en los slots de habilidad de la especie; un valor inválido devuelve `ERR_INVALID_DATA` antes de reemplazar al miembro. PlaytestMenu conserva el ID efectivo al cargarlo y al editar otros campos. Selección de habilidad y set por nivel son borradores, confirmados con Aplicar; no cambian las partidas guardadas. PlaytestPicker conserva la nota íntegra en un contenedor desplazable; C/Start avanza sin emitir completed y cambia de selección al inicio del texto.
+
+`battle_motion_moves.json` admite `phases` sin romper las secuencias anteriores de una sola fase. Cada fase declara recurso, kind, patrón, cantidad, duración, cuadro, foco e impacto. BattleMoveAnimation reproduce en orden, omite FX en modo rápido/reducido y deja el efecto genérico para IDs sin secuencia. No altera el motor de daño ni de habilidades. Auditoría de presentación/registro mediante `tools/arte/auditar_combate.gd`, con CSV/JSON y alcance explícito en su README.

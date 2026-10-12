@@ -199,5 +199,274 @@
     "focus": "target",
     "impact": false,
     "status_asset": true
+  },
+  "icebeam": {
+    "asset": "eb536",
+    "kind": "burst",
+    "pattern": "charge",
+    "count": 3,
+    "duration": 0.6499999999999999,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb536",
+        "kind": "burst",
+        "pattern": "charge",
+        "count": 3,
+        "duration": 0.12,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb536",
+        "kind": "orb",
+        "pattern": "beam",
+        "count": 6,
+        "duration": 0.35,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb250",
+        "kind": "burst",
+        "pattern": "ice_shards",
+        "count": 4,
+        "duration": 0.18,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "thunderbolt": {
+    "asset": "eb069_3",
+    "kind": "burst",
+    "pattern": "charge",
+    "count": 3,
+    "duration": 0.58,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb069_3",
+        "kind": "burst",
+        "pattern": "charge",
+        "count": 3,
+        "duration": 0.12,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb069_3",
+        "kind": "burst",
+        "pattern": "lightning",
+        "count": 5,
+        "duration": 0.3,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb069_3",
+        "kind": "burst",
+        "pattern": "lightning",
+        "count": 3,
+        "duration": 0.16,
+        "focus": "target",
+        "frame": [],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "psychic": {
+    "asset": "eb460",
+    "kind": "burst",
+    "pattern": "psychic_rings",
+    "count": 4,
+    "duration": 0.65,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb460",
+        "kind": "burst",
+        "pattern": "psychic_rings",
+        "count": 4,
+        "duration": 0.2,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb460",
+        "kind": "orb",
+        "pattern": "rings",
+        "count": 3,
+        "duration": 0.25,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb460",
+        "kind": "burst",
+        "pattern": "psychic_rings",
+        "count": 5,
+        "duration": 0.2,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "earthquake": {
+    "asset": "eb429_2_2",
+    "kind": "burst",
+    "pattern": "ground_wave",
+    "count": 6,
+    "duration": 0.55,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb429_2_2",
+        "kind": "burst",
+        "pattern": "ground_wave",
+        "count": 6,
+        "duration": 0.2,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb429_2_2",
+        "kind": "burst",
+        "pattern": "ground_wave",
+        "count": 6,
+        "duration": 0.35,
+        "focus": "target",
+        "frame": [],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "shadowball": {
+    "asset": "eb175",
+    "kind": "burst",
+    "pattern": "charge",
+    "count": 2,
+    "duration": 0.65,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb175",
+        "kind": "burst",
+        "pattern": "charge",
+        "count": 2,
+        "duration": 0.15,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb430",
+        "kind": "orb",
+        "pattern": "projectile",
+        "count": 1,
+        "duration": 0.3,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb175_1",
+        "kind": "burst",
+        "pattern": "shadow_burst",
+        "count": 6,
+        "duration": 0.2,
+        "focus": "target",
+        "frame": [],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "flamethrower": {
+    "asset": "eb136",
+    "kind": "orb",
+    "pattern": "jet",
+    "count": 4,
+    "duration": 0.55,
+    "focus": "target",
+    "frame": [
+      53,
+      101
+    ],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb136",
+        "kind": "orb",
+        "pattern": "jet",
+        "count": 4,
+        "duration": 0.3,
+        "focus": "target",
+        "frame": [
+          53,
+          101
+        ],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb136",
+        "kind": "burst",
+        "pattern": "flames",
+        "count": 4,
+        "duration": 0.25,
+        "focus": "target",
+        "frame": [
+          53,
+          101
+        ],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
   }
 }

@@ -89,4 +89,42 @@ func test_specific_mvp_sequences_cover_configured_moves_and_restore_user_positio
 	assert_eq(get_child_count(), count)
 	assert_true(await BattleMoveAnimation.play(self,user,target,{"move":&"ember"},true))
 	assert_eq(get_child_count(),count, "fast omite secuencia específica")
-	assert_false(await BattleMoveAnimation.play(self,user,target,{"move":&"icebeam"},false), "fuera del MVP usa genérica")
+	assert_false(await BattleMoveAnimation.play(self,user,target,{"move":&"judgment"},false), "fuera del MVP usa genérica")
+
+func test_secuencias_por_fases_se_distinguen_y_no_dejan_efectos_ni_desplazan_pokemon() -> void:
+	var user := BattlePokemonSprite.new()
+	user.back = true
+	user.position = Vector2(110,280)
+	add_child_autofree(user)
+	user.set_pokemon({"species":&"charizard"})
+	var target := BattlePokemonSprite.new()
+	target.position = Vector2(360,180)
+	add_child_autofree(target)
+	target.set_pokemon({"species":&"gengar"})
+	var patterns := {}
+	for id: StringName in [&"icebeam",&"thunderbolt",&"psychic",&"earthquake",&"shadowball",&"flamethrower"]:
+		var spec := BattleMoveAnimation.sequence(id)
+		assert_true(spec.has("phases"),String(id))
+		var signature := ""
+		for phase: Dictionary in spec.phases:
+			assert_true(ResourceLoader.exists(BattleFx.DIR+str(phase.asset)+".png"))
+			signature += str(phase.pattern)+":"+str(phase.duration)+";"
+			var style := BattleFx.Kind.ORB if phase.kind == "orb" else BattleFx.Kind.BURST
+			var fx := BattleFx.create(self,style,user.center(),target.center(),phase,Color.WHITE)
+			for progress: float in [0,.25,.5,.75,1]:
+				fx.progress = progress
+				for particle: Sprite2D in fx.particles:
+					assert_eq(particle.position,particle.position.round())
+					assert_eq(particle.scale,Vector2.ONE)
+			fx.queue_free()
+			await wait_process_frames(2)
+		assert_false(patterns.has(signature),"Secuencias distintas")
+		patterns[signature] = true
+		var children := get_child_count()
+		assert_true(await BattleMoveAnimation.play(self,user,target,{"move":id,"type":DataDB.move(id).type},false))
+		await wait_process_frames(2)
+		assert_eq(user.position,user.home())
+		assert_eq(target.position,target.home())
+		assert_eq(get_child_count(),children)
+		assert_true(await BattleMoveAnimation.play(self,user,target,{"move":id},true))
+		assert_eq(get_child_count(),children,"Modo rápido/reducido no crea partículas")

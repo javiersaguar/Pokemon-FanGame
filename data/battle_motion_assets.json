@@ -379,6 +379,36 @@
         22
       ],
       "sha256": "d7bfc5928ac3266370fa85a83577f6ffe04e1d3ebb97a79b7e34814384db6134"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Graphics/EBDX/Animations/Moves/eb536.png",
+      "target": "assets/sprites/ui/battle/moves/eb536.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "6ffad0e349d95ea4a9966aec2b42ff7a862e8fd3a9a5821a88fa2d123bc62b11"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Graphics/EBDX/Animations/Moves/eb175.png",
+      "target": "assets/sprites/ui/battle/moves/eb175.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "8799c17f2aaceb1656141a1110d2bb745addd65062d3b4d6ddec8363dce7f977"
+    },
+    {
+      "pack": "16_elite_battle_dx",
+      "source": "Graphics/EBDX/Animations/Moves/eb430.png",
+      "target": "assets/sprites/ui/battle/moves/eb430.png",
+      "size": [
+        94,
+        28
+      ],
+      "sha256": "daacd7681dce6e3dd55be49c36e8150b127473eba90adefbe37c0c035fe480e3"
     }
   ]
 }

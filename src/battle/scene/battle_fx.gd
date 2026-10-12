@@ -89,7 +89,7 @@ func _pose() -> void:
 				sprite.position = origin.lerp(destination, phase).round() + Vector2(0, (i - 1.5) * 12).round()
 			Kind.BURST:
 				var offsets := [Vector2(-24,-24),Vector2(24,-16),Vector2(-16,16),Vector2(16,24)]
-				sprite.position = (destination + offsets[i] * (1.0 + phase * 0.5)).round()
+				sprite.position = (destination + offsets[i % offsets.size()] * (1.0 + phase * 0.5)).round()
 			Kind.SPARKLE:
 				sprite.position = (destination + Vector2((i-2.5)*16, 20 - phase*80)).round()
 		match str(profile.get("pattern", "")):
@@ -100,6 +100,22 @@ func _pose() -> void:
 			"petals": sprite.position = (origin.lerp(destination,phase)+Vector2(sin(phase*TAU+i)*20,(i%5-2)*12)).round()
 			"rings": sprite.position = origin.lerp(destination,phase).round()
 			"mist": sprite.position = (destination+Vector2((i-1.5)*24,-phase*28)).round()
+			"charge":
+				var angle := i*TAU/maxi(1,particles.size())
+				sprite.position = (destination+Vector2(cos(angle),sin(angle))*(28*(1-phase))).round()
+			"beam": sprite.position = (origin.lerp(destination,phase)+Vector2(0,(i%3-1)*4)).round()
+			"ice_shards": sprite.position = (destination+Vector2((i-1.5)*16,-phase*30)).round()
+			"lightning": sprite.position = (destination+Vector2((1 if i%2 == 0 else -1)*12,-64+phase*80+i*8)).round()
+			"psychic_rings":
+				var angle := i*TAU/maxi(1,particles.size())+phase*PI
+				sprite.position = (destination+Vector2(cos(angle),sin(angle))*28*sin(phase*PI)).round()
+			"ground_wave": sprite.position = (destination+Vector2((i-(particles.size()-1)*.5)*20,56-absf(sin(phase*PI))*12)).round()
+			"projectile": sprite.position = origin.lerp(destination,phase).round()
+			"shadow_burst":
+				var angle := i*TAU/maxi(1,particles.size())
+				sprite.position = (destination+Vector2(cos(angle),sin(angle))*phase*38).round()
+			"flames": sprite.position = (destination+Vector2((i-1.5)*12,12-phase*42)).round()
+	impact.position = (destination+Vector2(0,48 if profile.get("pattern","") == "ground_wave" else 0)).round()
 	impact.visible = bool(profile.get("impact",kind != Kind.SPARKLE))
 	impact.modulate.a = maxf(0.0, sin(clampf((progress - 0.65) / 0.35, 0, 1) * PI))
 	impact.frame = 0 if progress < 0.85 else 1

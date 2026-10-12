@@ -1,6 +1,6 @@
 class_name BattleMoveAnimation
 extends RefCounted
-## Secuencias explícitas de los movimientos de los equipos/encuentros MVP.
+## Secuencias de ataque con fases explícitas y recursos originales.
 static var _moves: Dictionary = {}
 static func sequence(id: StringName) -> Dictionary:
 	if _moves.is_empty(): _moves = JSON.parse_string(FileAccess.get_file_as_string("res://data/battle_motion_moves.json"))
@@ -21,8 +21,11 @@ static func play(parent: Node, user: BattlePokemonSprite, target: BattlePokemonS
 				user.position = (home+offset).round(), 0.0, 1.0, duration*.65)
 			await tween.finished
 			user.position = home
-	var focus := user.center() if spec.focus == "user" else target.center()
-	var style := BattleFx.Kind.ORB if spec.kind == "orb" else (BattleFx.Kind.SPARKLE if spec.kind == "sparkle" else BattleFx.Kind.BURST)
-	var fx := BattleFx.create(parent,style,user.center(),focus,spec,UiColors.type_color(StringName(details.get("type","normal"))))
-	await BattleFx._play(fx,duration)
+	var phases: Array = spec.get("phases",[spec])
+	for phase: Dictionary in phases:
+		if not is_instance_valid(user) or not is_instance_valid(target) or not is_instance_valid(parent): return true
+		var focus := user.center() if phase.get("focus","target") == "user" else target.center()
+		var style := BattleFx.Kind.ORB if phase.kind == "orb" else (BattleFx.Kind.SPARKLE if phase.kind == "sparkle" else BattleFx.Kind.BURST)
+		var fx := BattleFx.create(parent,style,user.center(),focus,phase,UiColors.type_color(StringName(details.get("type","normal"))))
+		await BattleFx._play(fx,float(phase.get("duration",duration)))
 	return true

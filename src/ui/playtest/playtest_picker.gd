@@ -9,6 +9,8 @@ var list: ItemList
 var search: LineEdit
 var note: Label
 var _finished := false
+var detail_scroll: ScrollContainer
+var detail_hint: Label
 
 static func pick(title: String, catalogue: Array[Dictionary]) -> String:
 	var picker := PlaytestPicker.new()
@@ -56,12 +58,20 @@ func _ready() -> void:
 	box.add_child(search)
 	list = ItemList.new()
 	list.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	list.item_selected.connect(func(index: int) -> void: note.text = str(shown[index].get("note","")))
+	list.item_selected.connect(_show_note)
 	list.item_activated.connect(_choose)
 	box.add_child(list)
+	detail_scroll = ScrollContainer.new()
+	detail_scroll.custom_minimum_size.y = 60
+	detail_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	detail_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
+	box.add_child(detail_scroll)
 	note = Label.new()
-	note.clip_text = true
-	box.add_child(note)
+	note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	note.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	detail_scroll.add_child(note)
+	detail_hint = Label.new()
+	box.add_child(detail_hint)
 	var row := HBoxContainer.new()
 	box.add_child(row)
 	var choose := Button.new()
@@ -92,8 +102,10 @@ func _filter(value: String) -> void:
 			list.add_item(str(entry.label))
 	if not shown.is_empty():
 		list.select(0)
-		note.text = str(shown[0].get("note",""))
-	else: note.text = "Sin resultados"
+		_show_note(0)
+	else:
+		detail_scroll.scroll_vertical = 0
+		note.text = "Sin resultados"
 
 static func _search_text(value: String) -> String:
 	var normalized := value.to_lower().strip_edges()
@@ -105,8 +117,21 @@ func _choose(index: int) -> void:
 	if index >= 0 and index < shown.size():
 		_complete(str(shown[index].id))
 
+func _show_note(index: int) -> void:
+	detail_scroll.scroll_vertical = 0
+	note.text = str(shown[index].get("note",""))
+
+func _process(_delta: float) -> void:
+	var limit := maxi(0,ceili(note.get_minimum_size().y-detail_scroll.size.y))
+	detail_hint.visible = limit > 0
+	detail_hint.text = "C/Start %d/%d" % [ceili(float(detail_scroll.scroll_vertical)/48)+1,ceili(float(limit)/48)+1]
+
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(&"cancel"):
+	if event.is_action_pressed(&"menu"):
+		var limit := maxi(0,ceili(note.get_minimum_size().y-detail_scroll.size.y))
+		detail_scroll.scroll_vertical = 0 if detail_scroll.scroll_vertical >= limit else mini(limit,detail_scroll.scroll_vertical+48)
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed(&"cancel"):
 		get_viewport().set_input_as_handled()
 		_complete("")
 	elif event.is_action_pressed(&"accept") and list.has_focus() and not list.get_selected_items().is_empty():

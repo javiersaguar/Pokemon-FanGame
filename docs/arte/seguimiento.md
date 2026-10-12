@@ -214,3 +214,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | 28 interiores adicionales / 13 exteriores | Akizakura16 y personajes existentes, puertas/rótulos | PROVISIONAL, pendiente Javier | [Trece comparativas](../mundo/auditoria_locales.md) |
 
 | Repaso Getafe/Ruta 24 y casa visitable | Recursos originales y mobiliario/interacciones | PROVISIONAL, pendiente Javier | [Antes/después](comparativas/a3_densidad_getafe_ruta24.md) |
+
+| Seis ataques por fases y selector F9 de habilidades/sets | EBDX/NikDie a escala nativa y controles existentes | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_fases_y_habilidades.md) |

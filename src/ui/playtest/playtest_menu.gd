@@ -14,6 +14,7 @@ var side_pick: OptionButton
 var member_pick: OptionButton
 var species_button: Button
 var item_button: Button
+var ability_button: Button
 var move_buttons: Array[Button] = []
 var remove_move_button: Button
 var level_pick: SpinBox
@@ -256,6 +257,9 @@ func _build_team(box: VBoxContainer) -> void:
 	var names := _row(box)
 	species_button = _button(names,"Elegir Pokémon",_choose_species)
 	item_button = _button(names,"Sin objeto",_choose_held)
+	var ability_row := _row(box)
+	ability_button = _button(ability_row,"Elegir habilidad",_choose_ability)
+	_button(ability_row,"Set por nivel",_moves_for_level)
 	var grid := GridContainer.new()
 	grid.columns = 2
 	box.add_child(grid)
@@ -263,19 +267,16 @@ func _build_team(box: VBoxContainer) -> void:
 		var button := _button(grid,"Movimiento %d" % (i+1),_choose_move.bind(i))
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		move_buttons.append(button)
+	var controls := _row(box)
+	_button(controls,"Aplicar",_apply_member)
+	_button(controls,"Quitar puesto",_remove_member)
+	_button(controls,"Ver equipo",func() -> void: await _screen(&"party"))
 	var editing := _row(box)
 	remove_move_button = _button(editing,"Quitar movimiento",_remove_move)
 	_label(editing,"Conserva al menos uno.")
-	var controls := _row(box)
-	_button(controls,"Aplicar / añadir",_apply_member)
-	_button(controls,"Quitar puesto",_remove_member)
-	_button(controls,"Ver equipo / ficha",func() -> void: await _screen(&"party"))
 	team_line = _label(box,"")
 	team_line.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	var advanced := _row(box)
-	_button(advanced,"Movimientos por nivel",func() -> void:
-		spec.moves = DataDB.default_moves(StringName(spec.species),int(spec.level)).map(func(id: StringName) -> String: return String(id))
-		_update_editor())
 	_button(advanced,"Elegir teratipo",func() -> void:
 		var id := await _pick("types","Teratipo")
 		if id != "": spec.tera_type = "" if id == "-" else id)
@@ -288,6 +289,7 @@ func _load_member() -> void:
 	spec = {"species":String(p.species_id) if p else "charizard", "level":p.level if p else 50,
 		"item":String(p.held_item) if p else "", "shiny":p.shiny if p else false,
 		"tera_type":String(p.tera_type) if p else "",
+		"ability":String(p.ability_id()) if p else String(DataDB.species(&"charizard").ability("0")),
 		"moves":p.moves.map(func(m: MoveSlot) -> String: return String(m.id)) if p else []}
 	if spec.moves.is_empty(): spec.moves = DataDB.default_moves(StringName(spec.species),int(spec.level)).map(func(id: StringName) -> String: return String(id))
 	_update_editor()
@@ -298,6 +300,7 @@ func _update_editor() -> void:
 	var species := DataDB.species(StringName(spec.species))
 	species_button.text = _species_title(species)
 	species_button.tooltip_text = species_button.text
+	ability_button.text = DataDB.ability(StringName(spec.ability)).name if DataDB.has_ability(StringName(spec.ability)) else "Elegir habilidad"
 	item_button.text = DataDB.item(StringName(spec.item)).name if spec.item != "" else "Sin objeto"
 	level_pick.set_value_no_signal(int(spec.level))
 	shiny_pick.set_pressed_no_signal(bool(spec.shiny))
@@ -308,8 +311,36 @@ func _choose_species() -> void:
 	var id := await _pick("species","Especie y forma")
 	if id == "": return
 	spec.species = id
+	spec.ability = String(DataDB.species(StringName(id)).ability("0"))
 	spec.moves = DataDB.default_moves(StringName(id),int(spec.level)).map(func(move: StringName) -> String: return String(move))
 	_update_editor()
+
+func _moves_for_level() -> void:
+	if not session.active or not session.available(): return
+	var moves := DataDB.default_moves(StringName(spec.species),int(spec.level))
+	if moves.is_empty(): return
+	spec.moves = moves.map(func(id: StringName) -> String: return String(id))
+	_update_editor()
+	status.text = "Movimientos por nivel cargados. Pulsa Aplicar."
+
+func _choose_ability() -> void:
+	if not session.active or not session.available(): return
+	var entries: Array[Dictionary] = []
+	var species := DataDB.species(StringName(spec.species))
+	for slot: String in species.abilities:
+		var id: StringName = species.abilities[slot]
+		var ability := DataDB.ability(id)
+		var note := ability.description if not ability.description.is_empty() else "Descripción pendiente de revisión."
+		note += " / Oculta" if slot == "H" else ""
+		note += " / Efecto registrado; revisión pendiente." if Effects.ability(id) != null else " / Cobertura de efectos pendiente de revisar."
+		entries.append({"id":String(id),"label":ability.name+(" / Oculta" if slot == "H" else ""),"note":note})
+	Debug.close()
+	var id := await PlaytestPicker.pick("Habilidad de la especie",entries)
+	Debug.open()
+	if id == "": return
+	spec.ability = id
+	_update_editor()
+	status.text = "Habilidad elegida. Pulsa Aplicar."
 
 func _choose_move(index: int) -> void:
 	var id := await _pick("moves","Movimiento %d" % (index+1))
