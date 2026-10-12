@@ -1,6 +1,6 @@
 extends "res://src/overworld/trainers/trainer_challenge_event.gd"
-## Desafío de un líder de gimnasio: el combate normal y, si le ganas, la medalla de su gimnasio
-## (data/gimnasios.json). Hablarle después solo repite su after_text (TrainerNPC).
+## Desafío de un líder de gimnasio: el combate normal y, si le ganas, la medalla de su gimnasio y su
+## MT (data/gimnasios.json). Hablarle después solo repite su after_text (TrainerNPC).
 
 const GYMS := "res://data/gimnasios.json"
 
@@ -20,6 +20,21 @@ static func award(leader_id: StringName) -> void:
 		return
 	AudioManager.play_me(&"level_up")
 	await Dialogue.say("¡Has conseguido la %s del gimnasio de %s!" % [gym["nombre_medalla"], gym["ciudad"]])
+	var machine := machine_for(StringName(str(gym.get("premio_mt", ""))))
+	if machine != &"" and GameState.bag != null and GameState.bag.add(machine, 1) == 1:
+		var item := DataDB.item(machine)
+		var move := DataDB.move(MoveLessons.machine_move(machine))
+		await Dialogue.say("Y te da la %s: %s." % [item.name if item else String(machine), move.name if move else ""])
+
+
+## La MT que enseña `move_id` (&"" si no hay ninguna).
+static func machine_for(move_id: StringName) -> StringName:
+	if move_id == &"":
+		return &""
+	for machine: StringName in MoveLessons.machine_ids():
+		if MoveLessons.machine_move(machine) == move_id:
+			return machine
+	return &""
 
 
 ## Apunta la medalla en la partida. Devuelve el gimnasio, o {} si no es líder o ya la tenías.

@@ -13,7 +13,11 @@ func _doc() -> Dictionary:
 func test_cada_personaje_existe_y_tiene_casilla() -> void:
 	var placed := {}
 	for entry: Dictionary in _doc()["colocados"]:
-		assert_true(TrainerData.exists(StringName(entry["entrenador"])), "falta el entrenador %s" % entry["entrenador"])
+		if entry.has("entrenador"):
+			assert_true(TrainerData.exists(StringName(entry["entrenador"])), "falta el entrenador %s" % entry["entrenador"])
+		else:
+			assert_true(ResourceLoader.exists("res://assets/sprites/characters/%s.png" % entry["sprite"]), "%s sin sprite" % entry["id"])
+			assert_false(Array(entry.get("frases", [])).is_empty(), "%s no dice nada" % entry["id"])
 		assert_true(entry.has("casilla"), "%s sin casilla: pasa maps/_tools/colocar_personajes.gd" % entry["id"])
 		assert_true(ResourceLoader.exists(MapRoot.path_from_id(StringName(entry["mapa"]))), "no existe %s" % entry["mapa"])
 		assert_false(placed.has(entry["id"]), "%s está dos veces" % entry["id"])
@@ -38,6 +42,8 @@ func test_salen_en_su_mapa_sin_pisar_a_nadie() -> void:
 				assert_false(tiles.has(tile), "%s y %s en la misma casilla %s de %s" % [node.name, tiles.get(tile, ""), tile, map_id])
 				tiles[tile] = node.name
 		for entry: Dictionary in CharacterPlacements.for_map(StringName(map_id)):
+			if not CharacterPlacements.is_available(entry):
+				continue
 			var node := map.get_entities().get_node_or_null(CharacterPlacements.node_name(entry)) as Node2D
 			assert_not_null(node, "%s no sale en %s" % [entry["id"], map_id])
 			if node:
@@ -69,3 +75,28 @@ func test_el_lider_entrega_su_medalla_una_vez() -> void:
 	assert_true(GymLeaderEvent.grant(&"ibai").is_empty(), "un famoso no da medallas")
 	assert_eq(GameState.badges, [&"medalla_arte"] as Array[StringName])
 	GameState.badges.clear()
+
+
+func test_los_que_tienen_condicion_solo_salen_al_cumplirla() -> void:
+	GameState.badges.clear()
+	var leire := {"requiere": {"medallas": 2}}
+	assert_false(CharacterPlacements.is_available(leire))
+	GameState.badges.assign([&"medalla_libertad", &"medalla_palanca"])
+	assert_true(CharacterPlacements.is_available(leire))
+	var rey := {"requiere": {"flag": "liga_superada"}}
+	assert_false(CharacterPlacements.is_available(rey))
+	GameState.set_flag(&"liga_superada")
+	assert_true(CharacterPlacements.is_available(rey))
+	GameState.clear_flag(&"liga_superada")
+	GameState.badges.clear()
+	assert_true(CharacterPlacements.is_available({}))
+
+
+func test_cada_gimnasio_da_una_mt_que_existe() -> void:
+	var gyms: Dictionary = JsonFile.read_dict(GymLeaderEvent.GYMS)["gimnasios"]
+	var seen := {}
+	for city: String in gyms:
+		var machine := GymLeaderEvent.machine_for(StringName(gyms[city]["premio_mt"]))
+		assert_ne(machine, &"", "no hay MT de %s (%s)" % [gyms[city]["premio_mt"], city])
+		assert_false(seen.has(machine), "MT repetida")
+		seen[machine] = true

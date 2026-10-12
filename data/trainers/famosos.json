@@ -2,8 +2,8 @@
   "ibai": {
     "class": "ibai",
     "name": "Ibai",
-    "intro_text": "¡Chat, chat! ¡Que nos han retado en directo! Esto es contenido.",
-    "lose_text": "Esto lo cortamos del directo. Tú no has visto nada.",
+    "intro_text": "¡Qué pasa, chavales! Esto es la Velada de los Pokémon.",
+    "lose_text": "Esto lo arreglamos con una carta secreta.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Esto lo cortamos del directo. Tú no has visto nada.",
     "items": [],
@@ -25,9 +25,9 @@
   "lamine": {
     "class": "lamine",
     "name": "Lamine",
-    "intro_text": "304, ¿sabes lo que es? Pues ahora lo vas a saber.",
-    "lose_text": "Tengo 19 años. Ya te ganaré cuando sea mayor.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Tengo diecisiete años y más títulos que tú. ¡Rocafonda 304!",
+    "lose_text": "Me voy, que mañana tengo examen de mates.",
+    "win_text": "304, hermano.",
     "after_text": "Tengo 19 años. Ya te ganaré cuando sea mayor.",
     "items": [],
     "party": [
@@ -44,7 +44,7 @@
   "hustlehard304": {
     "class": "hustlehard304",
     "name": "HustleHard304",
-    "intro_text": "¡Ese es mi hijo! ¡Y esto es Rocafonda!",
+    "intro_text": "Con Lamine se gana. Contra él, no.",
     "lose_text": "Todo lo que digan de mi hijo, que me lo digan a mí.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Todo lo que digan de mi hijo, que me lo digan a mí.",
@@ -63,7 +63,7 @@
   "keyne": {
     "class": "keyne",
     "name": "Keyne",
-    "intro_text": "¡Mi hermano es el mejor del mundo!",
+    "intro_text": "Somos del barrio. El barrio no pierde.",
     "lose_text": "¡Se lo voy a decir a mi hermano!",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "¡Se lo voy a decir a mi hermano!",
@@ -82,9 +82,9 @@
   "rosalia": {
     "class": "rosalia",
     "name": "Rosalía",
-    "intro_text": "Chiqui chiqui chi... ¡Saoko! Ahora te toca a ti.",
-    "lose_text": "Qué malamente. Me voy a hacer otro disco.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Chicken teriyaki, chicken teriyaki... y combate.",
+    "lose_text": "Saoko, papi, saoko. Me voy en moto.",
+    "win_text": "Motomami, motomami.",
     "after_text": "Qué malamente. Me voy a hacer otro disco.",
     "items": [],
     "party": [
@@ -105,9 +105,9 @@
   "enrique_iglesias": {
     "class": "enrique_iglesias",
     "name": "Enrique",
-    "intro_text": "Bailando, bailando... ¡te voy a ganar bailando!",
-    "lose_text": "Quiero ser tu héroe, pero hoy no ha podido ser.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Bailando, bailando... ¿te bailo y te gano?",
+    "lose_text": "Experiencia religiosa, la tuya.",
+    "win_text": "Héroe. Así me llaman.",
     "after_text": "Quiero ser tu héroe, pero hoy no ha podido ser.",
     "items": [],
     "party": [
@@ -128,9 +128,9 @@
   "julio_iglesias": {
     "class": "julio_iglesias",
     "name": "Julio",
-    "intro_text": "Y lo sabes. Te voy a ganar... y lo sabes.",
-    "lose_text": "He perdido mil veces en mi vida. Esta es la mil una.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Soy el padre de todos los Pokémon de España... y lo sabes.",
+    "lose_text": "Me voy a mi yate a cantar «Me olvidé de vivir».",
+    "win_text": "Y lo sabes.",
     "after_text": "He perdido mil veces en mi vida. Esta es la mil una.",
     "items": [],
     "party": [
@@ -153,8 +153,8 @@
     "name": "Sergio Ramos",
     "intro_text": "Minuto 93. Siempre aparezco en el 93.",
     "lose_text": "Me han expulsado. Pero que conste que fue con elegancia.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Me han expulsado. Pero que conste que fue con elegancia.",
+    "win_text": "92:48. Apúntalo.",
+    "after_text": "Además de futbolista soy cantante. Lo segundo no lo sabe nadie.",
     "items": [],
     "party": [
       {
@@ -174,10 +174,10 @@
   "guardiola": {
     "class": "guardiola",
     "name": "Pep",
-    "intro_text": "La posesión es lo más importante. Y la tuya es muy mejorable.",
-    "lose_text": "Era un tema de... ¿cómo se dice? De talento. El tuyo.",
+    "intro_text": "Te voy a hacer un rondo que no vas a tocar la bola.",
+    "lose_text": "Felicidades. Es un orgullo perder contra alguien así.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Era un tema de... ¿cómo se dice? De talento. El tuyo.",
+    "after_text": "Me quedo calvo de pensar en ti. Bueno, ya lo era.",
     "items": [],
     "party": [
       {
@@ -197,10 +197,10 @@
   "pique": {
     "class": "pique",
     "name": "Piqué",
-    "intro_text": "Contigo, el que factura soy yo.",
-    "lose_text": "Me has ganado. Esto lo arreglo en la Kings League.",
+    "intro_text": "Esto es la Kings League: aquí las reglas las pongo yo. Y las cambio.",
+    "lose_text": "Esto lo arreglamos con una carta secreta.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Me has ganado. Esto lo arreglo en la Kings League.",
+    "after_text": "Cambié un Ferrari por un Twingo y un Rolex por un Casio. Y una medalla por ti, parece.",
     "items": [],
     "party": [
       {
@@ -220,9 +220,9 @@
   "aitana": {
     "class": "aitana",
     "name": "Aitana",
-    "intro_text": "Esto es un concierto, así que toca: ¡vas a perder!",
-    "lose_text": "Me has dejado sin medalla y sin bis.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Mon amour, mon amour... ¿combatimos?",
+    "lose_text": "Me voy a Los Ángeles a escribir una canción sobre esto.",
+    "win_text": "Otra canción de amor. La tuya, de derrota.",
     "after_text": "Me has dejado sin medalla y sin bis.",
     "items": [],
     "party": [
@@ -243,9 +243,9 @@
   "ester_exposito": {
     "class": "ester_exposito",
     "name": "Ester",
-    "intro_text": "Esto es un estreno. Solo me hago fotos con los que ganan.",
-    "lose_text": "Corten... digo, buen combate.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Es mi estreno y tú estás en medio de la alfombra roja.",
+    "lose_text": "Ya me pasaba en Élite: siempre gana el que menos te esperas.",
+    "win_text": "¡Corten! Me quedo con este plano.",
     "after_text": "Corten... digo, buen combate.",
     "items": [],
     "party": [
@@ -266,7 +266,7 @@
   "elxokas": {
     "class": "elxokas",
     "name": "Elxokas",
-    "intro_text": "¿Qué haces aquí? ¿Me vienes a molestar en mi directo? ¡Venga, combate!",
+    "intro_text": "¡Bo día! Te voy a ganar en gallego, que duele más.",
     "lose_text": "¡No! ¡No me lo creo! Chat, eso no cuenta.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "¡No! ¡No me lo creo! Chat, eso no cuenta.",
@@ -289,7 +289,7 @@
   "folagor": {
     "class": "folagor",
     "name": "Folagor",
-    "intro_text": "¿Nuzlocke? Aquí, si te debilitan uno, se va para siempre.",
+    "intro_text": "¿Sabías que Pokémon Spain no existe? Pues te gano igual.",
     "lose_text": "Uno menos para el cementerio. ¡Gran combate!",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Uno menos para el cementerio. ¡Gran combate!",
@@ -312,7 +312,7 @@
   "sekiam": {
     "class": "sekiam",
     "name": "Sekiam",
-    "intro_text": "Hoy toca contenido de Pokémon del bueno.",
+    "intro_text": "Mi equipo está en el top del ranking. Del mío.",
     "lose_text": "Lo subo igual, que ha quedado bonito.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Lo subo igual, que ha quedado bonito.",
@@ -335,7 +335,7 @@
   "pokealex": {
     "class": "pokealex",
     "name": "PokeAlex",
-    "intro_text": "En dobles te gano. En triples, ni te cuento.",
+    "intro_text": "Esto es un evento competitivo. Gana el que más sobres abra.",
     "lose_text": "Bien jugado. Me apunto este equipo.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Bien jugado. Me apunto este equipo.",
@@ -361,8 +361,8 @@
   "amancio_ortega": {
     "class": "amancio_ortega",
     "name": "Amancio",
-    "intro_text": "No concedo entrevistas. Ni combates. Bueno, uno.",
-    "lose_text": "Lo apunto para la próxima colección.",
+    "intro_text": "Mis Pokémon visten de Zara. Y los tuyos, de rebajas.",
+    "lose_text": "Dono la medalla a un hospital.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Lo apunto para la próxima colección.",
     "items": [],
@@ -384,9 +384,9 @@
   "abascal": {
     "class": "abascal",
     "name": "Abascal",
-    "intro_text": "Vengo a defender estas tierras. A caballo, como Dios manda.",
-    "lose_text": "Esto es un pucherazo. Que se repita.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "¡Santiago y cierra combate!",
+    "lose_text": "Me vuelvo a la reconquista. En caballo, que el coche contamina.",
+    "win_text": "España, una, grande y mía.",
     "after_text": "Esto es un pucherazo. Que se repita.",
     "items": [],
     "party": [
@@ -407,7 +407,7 @@
   "topuria": {
     "class": "topuria",
     "name": "Topuria",
-    "intro_text": "Te lo digo antes: te voy a noquear en el primer asalto.",
+    "intro_text": "El Matador no pierde. Y tú tampoco vas a ser el primero.",
     "lose_text": "Primera vez que me ganan. Quiero la revancha.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Primera vez que me ganan. Quiero la revancha.",
@@ -468,7 +468,7 @@
   "pereira7": {
     "class": "pereira7",
     "name": "Pereira7",
-    "intro_text": "¡Me estáis viendo 300.000 personas! ¡No me hagas quedar mal!",
+    "intro_text": "Un café y un combate, por favor. El café lo pagas tú.",
     "lose_text": "Corta, corta el directo...",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Corta, corta el directo...",
@@ -491,9 +491,9 @@
   "broncano": {
     "class": "broncano",
     "name": "Broncano",
-    "intro_text": "Bienvenido a La Revuelta. Primera pregunta: ¿cuánto dinero tienes en la cuenta?",
-    "lose_text": "Pues ya está. Le damos un jamón al ganador.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Dos preguntas: ¿cuánto dinero tienes en el banco? ¿Y cuántos combates has ganado este mes?",
+    "lose_text": "Esto en El Hormiguero no pasa. Allí tienen hormigas.",
+    "win_text": "Jorge, ¿qué hora es? ¡La hora de ganarte!",
     "after_text": "Pues ya está. Le damos un jamón al ganador.",
     "items": [],
     "party": [
@@ -518,9 +518,9 @@
   "oscar_puente": {
     "class": "oscar_puente",
     "name": "Óscar Puente",
-    "intro_text": "El tren llegará. Más tarde, pero llegará. Mientras, combatimos.",
-    "lose_text": "Abriré una investigación sobre esta derrota.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Soy ministro de Transportes. Este combate sale con retraso, como todos.",
+    "lose_text": "Lo tuiteo y lo arreglo. O no.",
+    "win_text": "Puntualidad británica. Bueno, británica no, de Renfe.",
     "after_text": "Abriré una investigación sobre esta derrota.",
     "items": [],
     "party": [
@@ -541,9 +541,9 @@
   "mario_casas": {
     "class": "mario_casas",
     "name": "Mario Casas",
-    "intro_text": "Tres metros sobre el cielo. Y tú, a tres metros bajo tierra.",
-    "lose_text": "Me quedo sin escena. Se la doy a Banderas.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Tres metros sobre el cielo y yo, en el suelo de este rodaje.",
+    "lose_text": "Me voy a quitar la camiseta, que me sienta mejor perder sin ella.",
+    "win_text": "¡Hache nunca pierde!",
     "after_text": "Me quedo sin escena. Se la doy a Banderas.",
     "items": [],
     "party": [
@@ -564,10 +564,10 @@
   "pablo_iglesias": {
     "class": "pablo_iglesias",
     "name": "Pablo",
-    "intro_text": "¡Desde nuestra humilde casita de Galapagar, el pueblo te reta!",
-    "lose_text": "Esto lo analizaremos en la Taberna Garibaldi.",
+    "intro_text": "Cuando vivía en Vallecas era más de izquierdas. Ahora tengo piscina.",
+    "lose_text": "Esto es lawfare.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Esto lo analizaremos en la Taberna Garibaldi.",
+    "after_text": "Me corté la coleta y ahora tengo una taberna. La revolución, de cañas.",
     "items": [],
     "party": [
       {
@@ -583,8 +583,8 @@
   "irene_montero": {
     "class": "irene_montero",
     "name": "Irene",
-    "intro_text": "¡Sí se puede! ¡Combate!",
-    "lose_text": "Esto lo llevamos a Bruselas.",
+    "intro_text": "Solo sí es sí. ¿Combatimos?",
+    "lose_text": "Esto es lawfare.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Esto lo llevamos a Bruselas.",
     "items": [],
@@ -602,9 +602,9 @@
   "franco": {
     "class": "franco",
     "name": "Franco",
-    "intro_text": "Me sacaron del Valle en 2019 sin preguntar. Así que ahora vago por aquí.",
-    "lose_text": "Esto no lo dice el Nodo.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Franco ha muerto. Bueno, más o menos.",
+    "lose_text": "Me voy a Mingorrubio. Otra vez.",
+    "win_text": "Cuarenta años sin perder... y ahora esto.",
     "after_text": "Esto no lo dice el Nodo.",
     "items": [],
     "party": [
@@ -625,8 +625,8 @@
   "almeida": {
     "class": "almeida",
     "name": "Almeida",
-    "intro_text": "Madrid está en obras. Tú también vas a estarlo.",
-    "lose_text": "Lo apunto en la lista de obras pendientes.",
+    "intro_text": "Soy alcalde de Madrid y del Atleti. Las dos cosas sufren igual.",
+    "lose_text": "Esto lo arreglo con una obra. Otra.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Lo apunto en la lista de obras pendientes.",
     "items": [],
@@ -648,8 +648,8 @@
   "chicote": {
     "class": "chicote",
     "name": "Chicote",
-    "intro_text": "¡Esto es una pesadilla en la cocina! ¡Y tu equipo, también!",
-    "lose_text": "¡Feliz año! Para ti, no tanto.",
+    "intro_text": "¡Esto es una pocilga! ¿Quién ha dejado este combate sin fregar?",
+    "lose_text": "¡Que se nos pasan las uvas!",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "¡Feliz año! Para ti, no tanto.",
     "items": [],
@@ -667,10 +667,10 @@
   "pedroche": {
     "class": "pedroche",
     "name": "Pedroche",
-    "intro_text": "¡Atentos, que vienen los cuartos! Y después, ¡las doce campanadas de tu derrota!",
-    "lose_text": "¡Feliz año! ¿A que no adivinas mi vestido del año que viene?",
+    "intro_text": "Este año el vestido es un Pokémon. No digo cuál.",
+    "lose_text": "¡Que se nos pasan las uvas!",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "¡Feliz año! ¿A que no adivinas mi vestido del año que viene?",
+    "after_text": "Llevo años dando las campanadas. El vestido de este año es transparente, como el Gobierno.",
     "items": [],
     "party": [
       {
@@ -686,7 +686,7 @@
   "rubiales": {
     "class": "rubiales",
     "name": "Rubiales",
-    "intro_text": "¡No voy a dimitir! ¡No voy a dimitir!",
+    "intro_text": "¡No voy a dimitir! ¡No voy a dimitir! ¡No voy a dimitir!",
     "lose_text": "Esto es un falso feminismo de los combates.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Esto es un falso feminismo de los combates.",
@@ -706,7 +706,7 @@
     "class": "jenni_hermoso",
     "name": "Jenni",
     "intro_text": "Campeona del mundo. A ver qué traes tú.",
-    "lose_text": "Buen partido. Pero la estrella en la camiseta es mía.",
+    "lose_text": "Se acabó.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Buen partido. Pero la estrella en la camiseta es mía.",
     "items": [],
@@ -724,8 +724,8 @@
   "jorge_javier": {
     "class": "jorge_javier",
     "name": "Jorge Javier",
-    "intro_text": "¡Soy rojo, soy de izquierdas y soy el que te va a ganar!",
-    "lose_text": "¡Corten la publicidad! Esto no se emite.",
+    "intro_text": "Soy rojo y maricón, y te voy a ganar.",
+    "lose_text": "¡Andreíta, cómete el pollo!",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "¡Corten la publicidad! Esto no se emite.",
     "items": [],
@@ -747,9 +747,9 @@
   "coto_matamoros": {
     "class": "coto_matamoros",
     "name": "Coto",
-    "intro_text": "¡A mí no me hables así, que te reviento en el plató!",
-    "lose_text": "Me voy a Marbella a reírme de ti.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "Yo opino de todo. Y de ti, también.",
+    "lose_text": "Esto en el plató lo arreglo gritando más fuerte.",
+    "win_text": "Lo dije en la tertulia: ibas a perder.",
     "after_text": "Me voy a Marbella a reírme de ti.",
     "items": [],
     "party": [
@@ -770,10 +770,10 @@
   "belen_esteban": {
     "class": "belen_esteban",
     "name": "Belén",
-    "intro_text": "¡Yo por mi hija mato! ¡Y por mi medalla, también!",
-    "lose_text": "¡Andreíta, cómete el filete!",
+    "intro_text": "¡Yo por mis Pokémon MATO!",
+    "lose_text": "¡Andreíta, cómete el pollo!",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "¡Andreíta, cómete el filete!",
+    "after_text": "Llevo treinta años en la tele hablando de mí. Y aún no he terminado.",
     "items": [],
     "party": [
       {
@@ -793,8 +793,8 @@
   "melendi": {
     "class": "melendi",
     "name": "Melendi",
-    "intro_text": "Caminando por la vida... me encontré contigo y te reté.",
-    "lose_text": "Tengo un lunes de resaca y me has ganado.",
+    "intro_text": "Caminando por la vida... me he encontrado contigo.",
+    "lose_text": "Tengo un vicio: perder contigo.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Tengo un lunes de resaca y me has ganado.",
     "items": [],
@@ -842,10 +842,10 @@
   "juan_carlos": {
     "class": "juan_carlos",
     "name": "Juan Carlos",
-    "intro_text": "Lo siento mucho, me he equivocado y no volverá a ocurrir. Ahora, combate.",
-    "lose_text": "Me vuelvo a Abu Dabi. Allí no me gana nadie.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Me vuelvo a Abu Dabi. Allí no me gana nadie.",
+    "intro_text": "Lo siento mucho, me he equivocado, no volverá a ocurrir. Pero antes, combatimos.",
+    "lose_text": "Me vuelvo a Abu Dabi. Allí no hay Pokémon ni Hacienda.",
+    "win_text": "Campechano, pero no tonto.",
+    "after_text": "En Botsuana cacé elefantes. Aquí cazo regatas.",
     "items": [],
     "party": [
       {
@@ -865,8 +865,8 @@
   "sarah_santaolalla": {
     "class": "sarah_santaolalla",
     "name": "Sarah",
-    "intro_text": "Te voy a hacer un zasca en directo.",
-    "lose_text": "Esto lo debato mañana en otra cadena.",
+    "intro_text": "En la tertulia digo lo que pienso. Y pienso que vas a perder.",
+    "lose_text": "Lo comentamos después de la publicidad.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Esto lo debato mañana en otra cadena.",
     "items": [],
@@ -888,10 +888,10 @@
   "vito_quiles": {
     "class": "vito_quiles",
     "name": "Vito",
-    "intro_text": "¡Una pregunta! ¡Solo una pregunta! ¿Por qué no combates?",
-    "lose_text": "Esto lo subo a mis redes recortado.",
+    "intro_text": "¿Cuándo vas a dimitir? ¡Responde a la pregunta!",
+    "lose_text": "Esto es censura. Lo subo a X.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Esto lo subo a mis redes recortado.",
+    "after_text": "Soy periodista. Bueno, tengo un micrófono, que es casi lo mismo.",
     "items": [],
     "party": [
       {
@@ -911,8 +911,8 @@
   "bertrand_ndongo": {
     "class": "bertrand_ndongo",
     "name": "Bertrand",
-    "intro_text": "¡Te voy a grabar para mis redes! ¡Combate!",
-    "lose_text": "Esto es censura.",
+    "intro_text": "Lo estoy grabando todo.",
+    "lose_text": "Esto es censura. Lo subo a X.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Esto es censura.",
     "items": [],
@@ -934,8 +934,8 @@
   "vegeta": {
     "class": "vegeta",
     "name": "Vegeta",
-    "intro_text": "¡Bienvenido a Andorra! Aquí los impuestos los pagas tú.",
-    "lose_text": "Lo grabamos para el canal secundario.",
+    "intro_text": "Nos vamos a Andorra. Allí los combates pagan menos impuestos.",
+    "lose_text": "Nos lo deducimos.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Lo grabamos para el canal secundario.",
     "items": [],
@@ -953,8 +953,8 @@
   "willyrex": {
     "class": "willyrex",
     "name": "Willyrex",
-    "intro_text": "¡Willy y Vegeta, otra vez juntos!",
-    "lose_text": "Lo grabamos para el canal secundario.",
+    "intro_text": "Nos vamos a Andorra. Allí los combates pagan menos impuestos.",
+    "lose_text": "Nos lo deducimos.",
     "win_text": "Ja. Vuelve cuando sepas combatir.",
     "after_text": "Lo grabamos para el canal secundario.",
     "items": [],
@@ -972,9 +972,9 @@
   "ferran_torres": {
     "class": "ferran_torres",
     "name": "Ferran",
-    "intro_text": "Me llaman el Tiburón. Ahora verás por qué.",
-    "lose_text": "Ahora estoy de bajón. Mañana marco dos.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "¡Tiburón! Nado en el Turia aunque no tenga agua.",
+    "lose_text": "Vuelvo a Foios a por fuerzas.",
+    "win_text": "Gol, y me pongo las aletas.",
     "after_text": "Ahora estoy de bajón. Mañana marco dos.",
     "items": [],
     "party": [
@@ -995,9 +995,9 @@
   "juan_roig": {
     "class": "juan_roig",
     "name": "Juan Roig",
-    "intro_text": "En Mercadona, el cliente es el jefe. Pero el que gana soy yo.",
-    "lose_text": "Te lo dejo a precio Hacendado.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "intro_text": "En Mercadona la cultura es del esfuerzo. Y la tuya, de perder.",
+    "lose_text": "Te hago un descuento: Hacendado.",
+    "win_text": "El jefe soy yo. Lo pone en la puerta.",
     "after_text": "Te lo dejo a precio Hacendado.",
     "items": [],
     "party": [

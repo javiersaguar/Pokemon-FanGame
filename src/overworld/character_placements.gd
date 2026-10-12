@@ -2,7 +2,7 @@ class_name CharacterPlacements
 extends RefCounted
 ## Personajes colocados por datos (data/personajes_en_el_mapa.json): famosos, líderes de gimnasio y sus
 ## entrenadores. Se añaden a Entities al preparar el mapa (MapLoader.prepare), así que no hace falta
-## tocar los mapas pintados. Las casillas las calcula maps/_tools/colocar_personajes.gd (la libre y
+## tocar los mapas pintados. Con "requiere", solo salen si tienes esas medallas o ese flag. Las casillas las calcula maps/_tools/colocar_personajes.gd (la libre y
 ## alcanzable más cercana al sitio que dice "cerca") y un test comprueba que siguen libres.
 
 const DATA := "res://data/personajes_en_el_mapa.json"
@@ -29,6 +29,14 @@ static func for_map(map_id: StringName) -> Array:
 	return _by_map.get(map_id, [])
 
 
+## Sale si cumple su "requiere": {"medallas": n} (al menos n medallas) y {"flag": "..."} (flag activo).
+static func is_available(entry: Dictionary) -> bool:
+	var needs: Dictionary = entry.get("requiere", {})
+	if GameState.badges.size() < int(needs.get("medallas", 0)):
+		return false
+	return not needs.has("flag") or GameState.flag(StringName(str(needs["flag"])))
+
+
 static func node_name(entry: Dictionary) -> String:
 	return "Personaje_" + str(entry["id"])
 
@@ -40,7 +48,7 @@ static func apply(map: MapRoot) -> void:
 		return
 	for entry: Dictionary in for_map(map.get_map_id()):
 		var name := node_name(entry)
-		if entities.has_node(name):
+		if entities.has_node(name) or not is_available(entry):
 			continue
 		var is_trainer := entry.has("entrenador")
 		var node: Node2D = (load(TRAINER_SCENE if is_trainer else NPC_SCENE) as PackedScene).instantiate()
