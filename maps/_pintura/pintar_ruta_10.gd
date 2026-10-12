@@ -43,6 +43,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta10", SIZE, data, 1960)
 	p.fill_grass(0.25)
 	p.connect_edge("north", &"ruta_9/exterior", 0, Vector2i(25, 29))
+	p.connect_edge("south", &"alicante/exterior", 11, Vector2i(25, 29))
 
 	# La N-332 de norte a sur, Benidorm entero y el paseo de La Vila.
 	p.paving(Rect2i(25, 0, 4, SIZE.y))

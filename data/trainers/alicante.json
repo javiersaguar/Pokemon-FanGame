@@ -1,0 +1,68 @@
+{
+  "alc_regatista": {
+    "class": "regatista",
+    "name": "Nacho",
+    "intro_text": "Tengo el velero amarrado aquí todo el año. Lo saco en agosto, a motor. ¡Combate en el pantalán!",
+    "lose_text": "Hundido. Y eso que no he soltado amarras.",
+    "win_text": "Viento en popa.",
+    "after_text": "El amarre me cuesta más que el piso. Bueno: el piso lo vendí para pagar el amarre.",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 29
+      },
+      {
+        "species": "remoraid",
+        "level": 29
+      },
+      {
+        "species": "tentacool",
+        "level": 30
+      }
+    ]
+  },
+  "alc_nadadora": {
+    "class": "nadador",
+    "gender": "female",
+    "name": "Lucía",
+    "intro_text": "Me hago el Postiguet de punta a punta antes de que lleguen los cruceros. ¡Y luego combato!",
+    "lose_text": "Glub.",
+    "win_text": "¡Al agua contigo!",
+    "after_text": "A mediodía hay tanta gente que no se ve la arena. Dicen que debajo sigue habiendo playa.",
+    "items": [],
+    "party": [
+      {
+        "species": "krabby",
+        "level": 29
+      },
+      {
+        "species": "corphish",
+        "level": 30
+      }
+    ]
+  },
+  "alc_luchador": {
+    "class": "crossfitero",
+    "name": "Borja",
+    "intro_text": "Entreno en el mismo club que el campeón. Bueno, a otra hora. Bueno, barro el tatami. ¡Combate!",
+    "lose_text": "Me rindo. Palmeo, palmeo.",
+    "win_text": "¡Y nuevo...! Nada, que me hacía ilusión decirlo.",
+    "after_text": "El campeón siempre dice que es el mejor del mundo. Lo malo es que luego va y gana.",
+    "items": [],
+    "party": [
+      {
+        "species": "machop",
+        "level": 29
+      },
+      {
+        "species": "scraggy",
+        "level": 29
+      },
+      {
+        "species": "makuhita",
+        "level": 30
+      }
+    ]
+  }
+}

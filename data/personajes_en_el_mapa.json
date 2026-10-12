@@ -1192,6 +1192,22 @@
     20,
     35
    ]
+  },
+  {
+   "id": "topuria",
+   "entrenador": "topuria",
+   "mapa": "alicante/exterior",
+   "cerca": [
+    6.0,
+    22.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Alicante, a la puerta del club de artes marciales donde creció",
+   "casilla": [
+    6,
+    22
+   ]
   }
  ],
  "pendientes": [
@@ -1239,11 +1255,6 @@
    "id": "melendi",
    "lugar": "Ruta 18 (Asturias)",
    "motivo": "Ruta 18 sin pintar"
-  },
-  {
-   "id": "topuria",
-   "lugar": "Alicante (gimnasio de MMA)",
-   "motivo": "Alicante sin pintar"
   },
   {
    "id": "pedro_sanchez",

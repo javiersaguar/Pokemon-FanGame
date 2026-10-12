@@ -4,6 +4,13 @@
 >
 > Plano real: [`../planos/alicante.svg`](../planos/alicante.svg) (casilla = 20 m).
 
+## Estado (2026-10-12)
+
+- **`alicante/exterior` pintado** (`maps/_pintura/pintar_alicante.gd`, 72×60): el monte Benacantil con el **Castillo de Santa Bárbara** (se sube por la cuesta desde Santa Cruz), el barrio de **Santa Cruz** de casas encaladas, la **Concatedral de San Nicolás**, la plaza de los Luceros, el Teatro Principal, los grandes almacenes, la **Explanada** con su **mosaico ondulado** y sus palmeras, la **Casa Carbonell**, el puerto y la playa del Postiguet. Castillo, mosaico, concatedral y Casa Carbonell, dibujados a mano. Centro Pokémon (en la Explanada), Mercadona, estanco y Basic-Fit con su fachada; **las puertas aún no llevan a ningún interior**.
+- Entrenadores en `data/trainers/alicante.json` (Nacho, Lucía y Borja) y encuentros en `data/encounters/alicante.json` (28–31). **Topuria** está colocado por datos a la puerta del club de artes marciales (`data/personajes_en_el_mapa.json`).
+- Entra la Ruta 10 por el norte (columnas 36–39); la Ruta 11 saldrá por el oeste (filas 34–37, aparición `from_ruta_11`).
+- **Pendiente:** el ascensor del castillo y la Cara del Moro (ahora solo un cartel y una guía), el Mercado Central y los interiores.
+
 ## Lugares reales y cómo se ven
 
 | Lugar | Qué es | En el juego | Arte |

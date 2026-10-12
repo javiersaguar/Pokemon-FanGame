@@ -63,7 +63,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Palma de Mallorca | ✅ | ✅ provisional ([captura](../arte/comparativas/palma_mapa.png)) | — | ferry a Barcelona (pasarela), regatista y alemán | — |
 | Ibiza | ✅ | ✅ provisional ([captura](../arte/comparativas/ibiza_mapa.png)) | — | hippie y relaciones públicas; Surf desde la Ruta marítima 1 | — |
 | Valencia | ✅ | Malvarrosa, Ciutat Vella y Turia ✅ provisionales ([Malvarrosa](../arte/comparativas/valencia_malvarrosa_mapa.png), [Ciutat Vella](../arte/comparativas/valencia_ciutat_vella_mapa.png), [Turia](../arte/comparativas/valencia_turia_mapa.png)) | — | tronista y despedida de soltero; ferry de Ibiza | — |
-| Alicante | ✅ | — | — | — | — |
+| Alicante | ✅ | ✅ provisional ([captura](../arte/comparativas/alicante_mapa.png)) | — | regatista, nadadora y aspirante de artes marciales; Topuria a la puerta de su club | — |
 | Murcia | ✅ | — | — | — | — |
 | Sevilla | ✅ | Centro, Río y Triana y Plaza de España ✅ provisionales ([Centro](../arte/comparativas/sevilla_centro_mapa.png), [Río](../arte/comparativas/sevilla_rio_mapa.png), [Plaza de España](../arte/comparativas/sevilla_maria_luisa_mapa.png)) | — | costalero, flamencas, guiri, domador de palomas, tuno; club de la comedia (gimnasio 4) con su cartel | — |
 | Las Palmas de Gran Canaria | ✅ | Las Canteras, Vegueta y Triana y Playa del Inglés ✅ provisionales ([Canteras](../arte/comparativas/las_palmas_canteras_mapa.png), [Vegueta](../arte/comparativas/las_palmas_vegueta_triana_mapa.png), [Playa del Inglés](../arte/comparativas/playa_del_ingles_mapa.png)) | — | surfistas, nadadoras, guagüero, turistas, fan de Quevedo; ferry de Huelva; escenario de Quevedo (gimnasio 5); aeropuerto | — |
