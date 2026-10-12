@@ -27,4 +27,6 @@ F9 → Equipo permite elegir únicamente habilidades de la especie, incluidas la
 
 Validación dirigida: animaciones 8/8 pruebas, 4.969 aserciones; habilidades y sets 2/2, 22 aserciones; controles de catálogos 4/4, 27 aserciones. La auditoría distingue catálogo, efectos registrados y animaciones, en [cobertura_combate](../cobertura_combate/README.md).
 
-Validación integrada: **497/497 tests, 24.815 aserciones, 607,76 s**, con headless a 120 FPS; remate visual/lectura verificado además con 14/14 pruebas dirigidas, 5.018 aserciones. Arte 10.930 PNG, 0 errores/avisos; datos 0 errores y 3 avisos previos. Suite completa sin fugas al cerrar; las pruebas aisladas de sesión conservan recursos en caché al salir de su proceso.
+Validación integrada: **499/499 tests, 24.881 aserciones, 584,60 s**, con headless a 120 FPS; remate visual/lectura verificado además con 14/14 pruebas dirigidas, 5.018 aserciones. Arte 10.930 PNG, 0 errores/avisos; datos 0 errores y 3 avisos previos. Suite completa sin fugas al cerrar; las pruebas aisladas de sesión conservan recursos en caché al salir de su proceso.
+
+Reproducción adicional a través de los eventos reales de BattleScene: los seis ataques desde ambos lados, 12 secuencias completas; terminan sin nodos FX ni desplazamientos residuales. Última integración A1 conservada (gimnasios con MT y condiciones de aparición de personajes).
