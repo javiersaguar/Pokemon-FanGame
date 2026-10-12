@@ -476,10 +476,33 @@ func _build_gallery(box: VBoxContainer) -> void:
 	_button(row,"Pokédex / gritos",func() -> void: await _screen(&"dex"))
 	_button(row,"Monumentos",_monument)
 	_button(row,"Música y sonidos",_audio)
+	_button(box,"Animaciones / elegir y repetir",_preview_moves)
 	_button(box,"RandomLocke: ajustes, ROM y resumen",_rom)
 	_label(box,"Los Pokémon del catálogo incluyen formas y shinies oficiales.")
 	_label(box,"Elige movimientos en Equipo para ver sus animaciones en combate.")
 	_label(box,"Los entrenadores muestran sus sprites o fotos al iniciar el combate.")
+
+func _preview_moves() -> void:
+	if not session.active or not session.available() or session.foes.is_empty(): return
+	var index := member_pick.selected
+	var player_index := index if side_pick.selected == 0 and index < GameState.party.size() else 0
+	var foe_index := index if side_pick.selected == 1 and index < session.foes.size() else 0
+	var screen := PlaytestMovePreview.new()
+	screen.player = _motion_summary(GameState.party.get_at(player_index))
+	screen.foe = _motion_summary(session.foes[foe_index])
+	screen.environment = environment_pick.get_selected_metadata()
+	screen.move_id = StringName(spec.moves[0]) if not spec.get("moves",[]).is_empty() else &"surf"
+	if not _catalogues.has("moves"): _catalogues.moves = _catalogue("moves")
+	screen.entries.assign(_catalogues.moves)
+	Debug.close()
+	SceneManager.push_menu(screen)
+	await screen.closed
+	SceneManager.pop_menu(screen)
+	Debug.open()
+
+static func _motion_summary(p: Pokemon) -> Dictionary:
+	return {"species":p.species_id,"shiny":p.shiny,"name":p.display_name(),"level":p.level,
+		"hp":p.current_hp,"max_hp":p.max_hp(),"status":p.status,"gender":p.gender}
 
 func _screen(kind: StringName) -> void:
 	if not session.active or not session.available(): return

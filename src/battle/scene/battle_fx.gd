@@ -62,6 +62,10 @@ func _ready() -> void:
 	for i: int in int(profile.get("count", 6 if kind == Kind.SPARKLE else 4)):
 		var sprite := Sprite2D.new()
 		sprite.texture = load(DIR + ("eb519_2" if kind == Kind.SPARKLE and not profile.get("status_asset",false) else str(profile.asset)) + ".png")
+		var region: Array = profile.get("region",[])
+		if region.size() == 4:
+			sprite.region_enabled = true
+			sprite.region_rect = Rect2(region[0],region[1],region[2],region[3])
 		var frame: Array = [] if kind == Kind.SPARKLE and not profile.get("status_asset",false) else profile.get("frame", [])
 		if frame.size() == 2:
 			sprite.hframes = int(sprite.texture.get_width() / int(frame[0]))
@@ -115,6 +119,24 @@ func _pose() -> void:
 				var angle := i*TAU/maxi(1,particles.size())
 				sprite.position = (destination+Vector2(cos(angle),sin(angle))*phase*38).round()
 			"flames": sprite.position = (destination+Vector2((i-1.5)*12,12-phase*42)).round()
+			"wave":
+				sprite.position = Vector2(lerpf(origin.x,destination.x,phase),lerpf(origin.y+48,destination.y+96,phase)).round()
+			"water_splash":
+				var angle := i*TAU/maxi(1,particles.size())
+				sprite.position = (destination+Vector2(cos(angle)*phase*48,72+sin(angle)*phase*24)).round()
+			"pressure_jet": sprite.position = (origin.lerp(destination,phase)+Vector2(0,(i%2*2-1)*5)).round()
+			"shield": sprite.position = destination.round()
+			"shield_motes":
+				var angle := i*TAU/maxi(1,particles.size())
+				sprite.position = (destination+Vector2(cos(angle)*48,sin(angle)*64)).round()
+			"healing": sprite.position = (destination+Vector2((i%4-1.5)*20,38-phase*76-i/4.0*12)).round()
+			"swords":
+				var angle := i*TAU/maxi(1,particles.size())+phase*TAU
+				sprite.position = (destination+Vector2(cos(angle)*38,sin(angle)*18-28*phase)).round()
+			"punch": sprite.position = (destination+Vector2(24*(1-phase)*(-1 if destination.x >= origin.x else 1),0)).round()
+			"ice_fragments":
+				var angle := i*TAU/maxi(1,particles.size())
+				sprite.position = (destination+Vector2(cos(angle)*phase*36,sin(angle)*phase*28)).round()
 	impact.position = (destination+Vector2(0,96 if profile.get("pattern","") == "ground_wave" else 0)).round()
 	impact.visible = bool(profile.get("impact",kind != Kind.SPARKLE))
 	impact.modulate.a = maxf(0.0, sin(clampf((progress - 0.65) / 0.35, 0, 1) * PI))

@@ -128,3 +128,36 @@ func test_secuencias_por_fases_se_distinguen_y_no_dejan_efectos_ni_desplazan_pok
 		assert_eq(get_child_count(),children)
 		assert_true(await BattleMoveAnimation.play(self,user,target,{"move":id},true))
 		assert_eq(get_child_count(),children,"Modo rápido/reducido no crea partículas")
+
+func test_ocho_secuencias_nuevas_usan_recursos_nativos_y_terminan_limpias() -> void:
+	var user := BattlePokemonSprite.new()
+	user.back = true
+	user.position = Vector2(128,336)
+	add_child_autofree(user)
+	user.set_pokemon({"species":&"blastoise"})
+	var target := BattlePokemonSprite.new()
+	target.position = Vector2(384,204)
+	add_child_autofree(target)
+	target.set_pokemon({"species":&"gengar"})
+	for id: StringName in [&"surf",&"hydropump",&"protect",&"recover",&"swordsdance",&"firepunch",&"icepunch",&"thunderpunch"]:
+		var spec := BattleMoveAnimation.sequence(id)
+		assert_false(spec.is_empty(),String(id))
+		for phase: Dictionary in spec.phases:
+			var focus := user.center() if phase.focus == "user" else target.center()
+			var fx := BattleFx.create(self,BattleFx.Kind.ORB if phase.kind == "orb" else BattleFx.Kind.BURST,user.center(),focus,phase)
+			for t: float in [0,.25,.5,.75,1]:
+				fx.progress = t
+				for particle: Sprite2D in fx.particles:
+					assert_eq(particle.scale,Vector2.ONE)
+					assert_eq(particle.rotation,0.0)
+					assert_eq(particle.position,particle.position.round())
+					if particle.region_enabled:
+						assert_true(Rect2(Vector2.ZERO,particle.texture.get_size()).encloses(particle.region_rect),"Recorte nativo dentro del recurso")
+			fx.queue_free()
+			await wait_process_frames(2)
+		var count := get_child_count()
+		assert_true(await BattleMoveAnimation.play(self,user,target,{"move":id,"type":DataDB.move(id).type},false))
+		await wait_process_frames(2)
+		assert_eq(get_child_count(),count)
+		assert_eq(user.position,user.home())
+		assert_eq(target.position,target.home())

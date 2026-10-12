@@ -468,5 +468,322 @@
         "status_asset": true
       }
     ]
+  },
+  "surf": {
+    "asset": "eb624_PU",
+    "kind": "orb",
+    "pattern": "wave",
+    "count": 1,
+    "duration": 0.72,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "region": [
+      900,
+      0,
+      512,
+      320
+    ],
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb624_PU",
+        "kind": "orb",
+        "pattern": "wave",
+        "count": 1,
+        "duration": 0.5,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true,
+        "region": [
+          900,
+          0,
+          512,
+          320
+        ]
+      },
+      {
+        "asset": "eb540_4",
+        "kind": "burst",
+        "pattern": "water_splash",
+        "count": 10,
+        "duration": 0.22,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "hydropump": {
+    "asset": "eb536",
+    "kind": "burst",
+    "pattern": "charge",
+    "count": 2,
+    "duration": 0.7,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb536",
+        "kind": "burst",
+        "pattern": "charge",
+        "count": 2,
+        "duration": 0.12,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb551",
+        "kind": "orb",
+        "pattern": "pressure_jet",
+        "count": 10,
+        "duration": 0.4,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb540_4",
+        "kind": "burst",
+        "pattern": "water_splash",
+        "count": 8,
+        "duration": 0.18,
+        "focus": "target",
+        "frame": [],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "protect": {
+    "asset": "eb605",
+    "kind": "burst",
+    "pattern": "shield",
+    "count": 1,
+    "duration": 0.62,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb605",
+        "kind": "burst",
+        "pattern": "shield",
+        "count": 1,
+        "duration": 0.46,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb540_4",
+        "kind": "burst",
+        "pattern": "shield_motes",
+        "count": 6,
+        "duration": 0.16,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "recover": {
+    "asset": "eb195",
+    "kind": "burst",
+    "pattern": "healing",
+    "count": 8,
+    "duration": 0.64,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb195",
+        "kind": "burst",
+        "pattern": "healing",
+        "count": 8,
+        "duration": 0.44,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb195",
+        "kind": "burst",
+        "pattern": "healing",
+        "count": 4,
+        "duration": 0.2,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "swordsdance": {
+    "asset": "eb615_1",
+    "kind": "burst",
+    "pattern": "swords",
+    "count": 4,
+    "duration": 0.62,
+    "focus": "user",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb615_1",
+        "kind": "burst",
+        "pattern": "swords",
+        "count": 4,
+        "duration": 0.44,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb195",
+        "kind": "burst",
+        "pattern": "healing",
+        "count": 4,
+        "duration": 0.18,
+        "focus": "user",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "firepunch": {
+    "asset": "eb108",
+    "kind": "burst",
+    "pattern": "punch",
+    "count": 1,
+    "duration": 0.42,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb108",
+        "kind": "burst",
+        "pattern": "punch",
+        "count": 1,
+        "duration": 0.14,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb136",
+        "kind": "burst",
+        "pattern": "flames",
+        "count": 4,
+        "duration": 0.28,
+        "focus": "target",
+        "frame": [
+          53,
+          101
+        ],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "icepunch": {
+    "asset": "eb108",
+    "kind": "burst",
+    "pattern": "punch",
+    "count": 1,
+    "duration": 0.42,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb108",
+        "kind": "burst",
+        "pattern": "punch",
+        "count": 1,
+        "duration": 0.14,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb248",
+        "kind": "burst",
+        "pattern": "ice_fragments",
+        "count": 6,
+        "duration": 0.28,
+        "focus": "target",
+        "frame": [
+          26,
+          42
+        ],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "thunderpunch": {
+    "asset": "eb108",
+    "kind": "burst",
+    "pattern": "punch",
+    "count": 1,
+    "duration": 0.42,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb108",
+        "kind": "burst",
+        "pattern": "punch",
+        "count": 1,
+        "duration": 0.14,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb064_2",
+        "kind": "burst",
+        "pattern": "lightning",
+        "count": 4,
+        "duration": 0.28,
+        "focus": "target",
+        "frame": [],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
   }
 }
