@@ -109,13 +109,13 @@ func _pose() -> void:
 			"psychic_rings":
 				var angle := i*TAU/maxi(1,particles.size())+phase*PI
 				sprite.position = (destination+Vector2(cos(angle),sin(angle))*28*sin(phase*PI)).round()
-			"ground_wave": sprite.position = (destination+Vector2((i-(particles.size()-1)*.5)*20,56-absf(sin(phase*PI))*12)).round()
+			"ground_wave": sprite.position = (destination+Vector2((i-(particles.size()-1)*.5)*20,96-absf(sin(phase*PI))*12)).round()
 			"projectile": sprite.position = origin.lerp(destination,phase).round()
 			"shadow_burst":
 				var angle := i*TAU/maxi(1,particles.size())
 				sprite.position = (destination+Vector2(cos(angle),sin(angle))*phase*38).round()
 			"flames": sprite.position = (destination+Vector2((i-1.5)*12,12-phase*42)).round()
-	impact.position = (destination+Vector2(0,48 if profile.get("pattern","") == "ground_wave" else 0)).round()
+	impact.position = (destination+Vector2(0,96 if profile.get("pattern","") == "ground_wave" else 0)).round()
 	impact.visible = bool(profile.get("impact",kind != Kind.SPARKLE))
 	impact.modulate.a = maxf(0.0, sin(clampf((progress - 0.65) / 0.35, 0, 1) * PI))
 	impact.frame = 0 if progress < 0.85 else 1
