@@ -124,7 +124,7 @@ func _paint_house(interior: String, city: String, exterior: String, return_spawn
 		"Si buscas el Mercadona o el estanco, están en la misma ciudad."]))
 	if gift:
 		var reward_id := "%s_%s" % [city, return_spawn]
-		var placement := "%s/VecinoRegalo" % interior
+		var placement := "%s/Anfitrion" % interior
 		rewards[reward_id] = {
 			"placement": placement,
 			"quantity": 1,

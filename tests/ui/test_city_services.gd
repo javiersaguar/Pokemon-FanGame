@@ -320,3 +320,26 @@ func test_casa_visitable_conserva_zona_salida_y_pc_real() -> void:
  assert_eq(SceneManager.player.tile_position(),Vector2i(47,24))
  assert_null(SceneManager.current_map.warp_at(Vector2i(47,24)))
  await session.finish()
+
+func test_casa_rehecha_entrega_el_objeto_de_la_rom_anterior_y_prioriza_el_id_actual() -> void:
+ assert_eq(await session.begin(&"getafe/casa_1"),OK)
+ var current := "getafe/casa_1/Anfitrion"
+ var legacy := "getafe/casa_1/VecinoRegalo"
+ var flag := &"npc_reward:getafe_from_casa_1"
+ for entry: Dictionary in [
+  {"patch":{legacy:"hyperpotion"},"expected":&"hyperpotion"},
+  {"patch":{legacy:"hyperpotion",current:"superpotion"},"expected":&"superpotion"},
+ ]:
+  GameState.clear_flag(flag)
+  assert_eq(DataDB.apply_patch({"items":entry.patch}),[])
+  var before: int = GameState.bag.count(entry.expected)
+  SceneManager.player.place_at(Vector2i(12,7),Vector2i.UP)
+  SceneManager.player._interact()
+  await _finish_interaction()
+  assert_false(GameState.input_locked)
+  assert_eq(GameState.bag.count(entry.expected),before+1)
+  assert_true(GameState.flag(flag))
+  SceneManager.player._interact()
+  await _finish_interaction()
+  assert_eq(GameState.bag.count(entry.expected),before+1,"Rehablar no duplica el regalo")
+ await session.finish()

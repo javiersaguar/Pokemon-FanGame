@@ -216,3 +216,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Repaso Getafe/Ruta 24 y casa visitable | Recursos originales y mobiliario/interacciones | PROVISIONAL, pendiente Javier | [Antes/después](comparativas/a3_densidad_getafe_ruta24.md) |
 
 | Seis ataques por fases y selector F9 de habilidades/sets | EBDX/NikDie a escala nativa y controles existentes | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_fases_y_habilidades.md) |
+
+| Compatibilidad de regalos de las casas ampliadas | Interiores existentes y entrega real de objetos | PROVISIONAL, pendiente Javier | [ROM anterior/actual](comparativas/a3_casas_recompensas.md) |

@@ -10,7 +10,11 @@ func run() -> void:
 		await Dialogue.say("¡Que te vaya bien! Ya te di el objeto de cortesía.",source_entity())
 		return
 	var placement := StringName(cfg.get("placement",""))
-	var item := DataDB.placed_item(placement,StringName(DataDB.item_placements().get(String(placement),"")))
+	var item := DataDB.placed_item(placement,&"")
+	# Conserva las ROM anteriores al cambio del nombre de este NPC.
+	if item == &"" and cfg.has("legacy_placement"):
+		item = DataDB.placed_item(StringName(cfg.legacy_placement),&"")
+	if item == &"": item = StringName(DataDB.item_placements().get(String(placement),""))
 	var quantity := int(cfg.get("quantity",0))
 	if not DataDB.has_item(item) or quantity <= 0: return
 	if not await Dialogue.ask_yes_no("Tengo un objeto de cortesía. ¿Lo quieres?",source_entity()): return
