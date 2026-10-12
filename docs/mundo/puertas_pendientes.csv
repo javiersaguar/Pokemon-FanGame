@@ -1,0 +1,485 @@
+mapa,nombre_mapa,objeto_catalogo,anclaje_x,anclaje_y,puerta_x,puerta_y
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,bloque_pisos,3,13,5,13
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,oficinas_azules,10,13,12,13
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,boqueria,19,13,22,13
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,bloque_pisos,3,27,5,27
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,bloque_verde_2,10,26,13,26
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,teatro,21,27,22,27
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,bloque_pisos,3,40,5,40
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,tienda_morada,22,40,25,40
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,oficinas_azules,4,49,6,49
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,catedral_barcelona,40,22,44,22
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,bloque_verde_2,44,6,47,6
+barcelona/ciutat_vella,Barcelona · Ciutat Vella,torre_socorrista,56,28,57,27
+barcelona/eixample,Barcelona · Eixample,bloque_pisos,3,19,5,19
+barcelona/eixample,Barcelona · Eixample,oficinas_azules,15,19,17,19
+barcelona/eixample,Barcelona · Eixample,la_pedrera,34,19,37,19
+barcelona/eixample,Barcelona · Eixample,bloque_verde,49,19,52,18
+barcelona/eixample,Barcelona · Eixample,bloque_pisos,57,19,59,19
+barcelona/eixample,Barcelona · Eixample,oficinas_azules,66,19,68,19
+barcelona/eixample,Barcelona · Eixample,bloque_pisos,15,31,17,31
+barcelona/eixample,Barcelona · Eixample,casa_batllo,23,31,25,31
+barcelona/eixample,Barcelona · Eixample,bloque_verde_2,34,31,37,31
+barcelona/eixample,Barcelona · Eixample,bloque_pisos,3,41,5,41
+barcelona/eixample,Barcelona · Eixample,oficinas_azules,15,41,17,41
+barcelona/eixample,Barcelona · Eixample,tienda_flores,22,41,25,41
+barcelona/eixample,Barcelona · Eixample,bloque_pisos,35,41,37,41
+barcelona/eixample,Barcelona · Eixample,sagrada_familia,50,41,55,41
+barcelona/eixample,Barcelona · Eixample,grandes_almacenes,58,51,61,51
+barcelona/eixample,Barcelona · Eixample,tienda_azul,9,19,12,19
+barcelona/eixample,Barcelona · Eixample,tienda_verde_2,43,19,45,18
+barcelona/eixample,Barcelona · Eixample,bloque_pisos,8,31,10,31
+barcelona/eixample,Barcelona · Eixample,oficinas_azules,42,31,44,31
+barcelona/eixample,Barcelona · Eixample,tienda_morada,9,41,12,41
+barcelona/eixample,Barcelona · Eixample,bloque_verde_2,41,41,44,41
+barcelona/eixample,Barcelona · Eixample,bloque_verde_2,2,5,5,5
+barcelona/eixample,Barcelona · Eixample,bloque_verde_2,14,5,17,5
+barcelona/eixample,Barcelona · Eixample,bloque_verde_2,36,5,39,5
+barcelona/eixample,Barcelona · Eixample,bloque_verde_2,48,5,51,5
+barcelona/eixample,Barcelona · Eixample,bloque_verde_2,60,5,63,5
+barcelona/les_corts,Barcelona · Les Corts,bloque_pisos,2,13,4,13
+barcelona/les_corts,Barcelona · Les Corts,oficinas_verdes,10,13,13,12
+barcelona/les_corts,Barcelona · Les Corts,oficinas_verdes,18,13,21,12
+barcelona/les_corts,Barcelona · Les Corts,bloque_verde,27,13,30,12
+barcelona/les_corts,Barcelona · Les Corts,oficinas_azules,36,13,38,13
+barcelona/les_corts,Barcelona · Les Corts,bloque_pisos,44,13,46,13
+barcelona/les_corts,Barcelona · Les Corts,bloque_pisos,58,13,60,13
+barcelona/les_corts,Barcelona · Les Corts,camp_nou,16,40,26,40
+barcelona/les_corts,Barcelona · Les Corts,casa_granero,46,30,47,29
+barcelona/les_corts,Barcelona · Les Corts,tienda_azul,52,30,55,30
+barcelona/les_corts,Barcelona · Les Corts,tienda_morada,46,41,49,41
+barcelona/les_corts,Barcelona · Les Corts,bloque_verde_2,54,41,57,41
+barcelona/les_corts,Barcelona · Les Corts,bloque_pisos,2,46,4,46
+getafe/exterior,Getafe,oficinas_azules,3,9,5,9
+getafe/exterior,Getafe,casa_roja,14,9,15,7
+getafe/exterior,Getafe,casa_dos_aguas,3,21,4,20
+getafe/exterior,Getafe,magdalena_getafe,24,21,27,21
+getafe/exterior,Getafe,casa_naranja,15,21,16,20
+getafe/exterior,Getafe,tienda_azul,34,36,37,36
+getafe/exterior,Getafe,casa_granero,3,47,4,46
+getafe/exterior,Getafe,casa_madera,20,47,21,46
+getafe/exterior,Getafe,oficinas_azules,29,47,31,47
+getafe/exterior,Getafe,casa_dos_aguas,18,59,19,58
+getafe/exterior,Getafe,casa_roja_chimenea,3,59,4,58
+getafe/exterior,Getafe,ermita_virgen_del_rio,53,44,54,44
+huelva/exterior,Huelva,palacio_infantado,16,12,20,12
+huelva/exterior,Huelva,catedral_ibiza,28,12,31,12
+huelva/exterior,Huelva,casa_roja_chimenea,36,9,37,8
+huelva/exterior,Huelva,casa_roja_chimenea,42,9,43,8
+huelva/exterior,Huelva,casa_roja_chimenea,48,9,49,8
+huelva/exterior,Huelva,casa_roja_chimenea,54,9,55,8
+huelva/exterior,Huelva,tienda_naranja,36,27,39,27
+huelva/exterior,Huelva,bloque_pisos,44,31,46,31
+ibiza/exterior,Ibiza,casa_ibicenca,2,15,3,15
+ibiza/exterior,Ibiza,casa_ibicenca,7,15,8,15
+ibiza/exterior,Ibiza,casa_ibicenca,20,15,21,15
+ibiza/exterior,Ibiza,casa_ibicenca,31,15,32,15
+ibiza/exterior,Ibiza,casa_ibicenca,36,15,37,15
+ibiza/exterior,Ibiza,casa_ibicenca,2,25,3,25
+ibiza/exterior,Ibiza,casa_ibicenca,7,25,8,25
+ibiza/exterior,Ibiza,casa_ibicenca,18,25,19,25
+ibiza/exterior,Ibiza,casa_ibicenca,36,25,37,25
+ibiza/exterior,Ibiza,casa_ibicenca,5,38,6,38
+ibiza/exterior,Ibiza,casa_ibicenca,10,38,11,38
+ibiza/exterior,Ibiza,casa_ibicenca,26,38,27,38
+ibiza/exterior,Ibiza,casa_ibicenca,5,46,6,46
+ibiza/exterior,Ibiza,catedral_ibiza,16,47,19,47
+ibiza/exterior,Ibiza,casa_ibicenca,26,46,27,46
+ibiza/exterior,Ibiza,club_ibiza,44,33,48,33
+ibiza/exterior,Ibiza,torre_socorrista,60,40,61,39
+las_palmas/canteras,Las Palmas · Las Canteras,castillo_luz,41,15,43,15
+las_palmas/canteras,Las Palmas · Las Canteras,puesto_mercado,24,20,26,19
+las_palmas/canteras,Las Palmas · Las Canteras,tienda_naranja,36,21,39,21
+las_palmas/canteras,Las Palmas · Las Canteras,edificio_cristal,21,34,25,32
+las_palmas/canteras,Las Palmas · Las Canteras,bloque_pisos,31,32,33,32
+las_palmas/canteras,Las Palmas · Las Canteras,bloque_verde,38,32,41,31
+las_palmas/canteras,Las Palmas · Las Canteras,oficinas_azules,22,46,24,46
+las_palmas/canteras,Las Palmas · Las Canteras,bloque_pisos,39,46,41,46
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_teja,2,9,4,8
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_tejado_azul,8,8,11,8
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,edificio_cupula,17,9,18,8
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_teja,23,9,25,8
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_tejado_azul_2,17,20,19,19
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_madera,23,20,24,19
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,catedral_santa_ana,18,38,21,38
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_madera,30,38,31,37
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_granero,35,38,36,37
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,puesto_mercado,40,38,42,37
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_madera,2,36,3,35
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_granero,7,36,8,35
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_madera,2,47,3,46
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_dos_aguas,36,47,37,46
+las_palmas/vegueta_triana,Las Palmas · Vegueta y Triana,casa_madera,41,47,42,46
+leganes/exterior,Leganés,oficinas_azules,3,13,5,13
+leganes/exterior,Leganés,casa_dos_aguas,16,11,17,10
+leganes/exterior,Leganés,casa_roja,26,11,27,9
+leganes/exterior,Leganés,san_salvador_leganes,17,21,20,21
+leganes/exterior,Leganés,casa_naranja,28,21,29,20
+leganes/exterior,Leganés,tienda_azul,53,23,56,23
+leganes/exterior,Leganés,oficinas_azules,3,36,5,36
+leganes/exterior,Leganés,casa_granero,18,36,19,35
+leganes/exterior,Leganés,casa_madera,36,36,37,35
+madrid/centro,Madrid · Sol y Gran Vía,bloque_verde_2,2,5,5,5
+madrid/centro,Madrid · Sol y Gran Vía,tienda_azul,11,5,14,5
+madrid/centro,Madrid · Sol y Gran Vía,edificio_carrion,22,13,25,13
+madrid/centro,Madrid · Sol y Gran Vía,teatro,30,13,31,13
+madrid/centro,Madrid · Sol y Gran Vía,bloque_verde_2,38,7,41,7
+madrid/centro,Madrid · Sol y Gran Vía,oficinas_verdes,37,17,40,16
+madrid/centro,Madrid · Sol y Gran Vía,teatro,45,17,46,17
+madrid/centro,Madrid · Sol y Gran Vía,bloque_pisos,51,17,53,17
+madrid/centro,Madrid · Sol y Gran Vía,edificio_metropolis,60,21,62,21
+madrid/centro,Madrid · Sol y Gran Vía,oficinas_azules,66,21,68,21
+madrid/centro,Madrid · Sol y Gran Vía,bloque_pisos,2,19,4,19
+madrid/centro,Madrid · Sol y Gran Vía,oficinas_azules,9,19,11,19
+madrid/centro,Madrid · Sol y Gran Vía,bloque_verde_2,2,27,5,27
+madrid/centro,Madrid · Sol y Gran Vía,tienda_morada,11,27,14,27
+madrid/centro,Madrid · Sol y Gran Vía,grandes_almacenes,19,27,22,27
+madrid/centro,Madrid · Sol y Gran Vía,casa_correos,34,31,39,31
+madrid/centro,Madrid · Sol y Gran Vía,casa_panaderia,14,42,20,42
+madrid/centro,Madrid · Sol y Gran Vía,mercado_san_miguel,1,48,4,48
+madrid/centro,Madrid · Sol y Gran Vía,bloque_verde_2,51,31,54,31
+madrid/centro,Madrid · Sol y Gran Vía,tienda_morada,60,31,63,31
+madrid/centro,Madrid · Sol y Gran Vía,teatro,66,31,67,31
+madrid/centro,Madrid · Sol y Gran Vía,bloque_pisos,51,42,53,42
+madrid/centro,Madrid · Sol y Gran Vía,oficinas_azules,58,41,60,41
+madrid/centro,Madrid · Sol y Gran Vía,bloque_verde,65,42,68,41
+madrid/centro,Madrid · Sol y Gran Vía,teatro,52,52,53,52
+madrid/centro,Madrid · Sol y Gran Vía,tienda_flores,59,52,62,52
+madrid/centro,Madrid · Sol y Gran Vía,puesto_mercado,16,5,18,4
+madrid/centro,Madrid · Sol y Gran Vía,tienda_azul,30,6,33,6
+madrid/centro,Madrid · Sol y Gran Vía,tienda_morada,46,10,49,10
+madrid/centro,Madrid · Sol y Gran Vía,oficinas_azules,51,8,53,8
+madrid/centro,Madrid · Sol y Gran Vía,bloque_pisos,66,13,68,13
+madrid/centro,Madrid · Sol y Gran Vía,bloque_verde_2,46,26,49,26
+madrid/centro,Madrid · Sol y Gran Vía,bloque_pisos,33,50,35,50
+madrid/centro,Madrid · Sol y Gran Vía,oficinas_azules,1,39,3,39
+madrid/chamberi,Madrid · Chamberí,bloque_pisos,1,7,3,7
+madrid/chamberi,Madrid · Chamberí,oficinas_azules,8,7,10,7
+madrid/chamberi,Madrid · Chamberí,bloque_verde_2,15,6,18,6
+madrid/chamberi,Madrid · Chamberí,bloque_pisos,37,7,39,7
+madrid/chamberi,Madrid · Chamberí,edificio_cupula,28,7,29,6
+madrid/chamberi,Madrid · Chamberí,bloque_pisos,1,18,3,18
+madrid/chamberi,Madrid · Chamberí,oficinas_azules,37,20,39,20
+madrid/chamberi,Madrid · Chamberí,puesto_mercado,14,29,16,28
+madrid/chamberi,Madrid · Chamberí,atico_jardin,28,32,31,32
+madrid/chamberi,Madrid · Chamberí,bloque_pisos,37,33,39,33
+madrid/chamberi,Madrid · Chamberí,tienda_azul,43,33,46,33
+madrid/chamberi,Madrid · Chamberí,bloque_verde_2,1,41,4,41
+madrid/chamberi,Madrid · Chamberí,bloque_pisos,36,42,38,42
+madrid/chamberi,Madrid · Chamberí,boca_metro,23,40,24,40
+madrid/chamberi,Madrid · Chamberí,bloque_verde_2,14,19,17,19
+madrid/chamberi,Madrid · Chamberí,bloque_pisos,27,22,29,22
+madrid/chamberi,Madrid · Chamberí,oficinas_azules,1,35,3,35
+madrid/chamberi,Madrid · Chamberí,oficinas_azules,42,12,44,12
+madrid/moncloa,Madrid · Moncloa,casa_azul,4,10,5,8
+madrid/moncloa,Madrid · Moncloa,templo_debod,5,41,7,41
+madrid/moncloa,Madrid · Moncloa,oficinas_azules,21,37,23,37
+madrid/moncloa,Madrid · Moncloa,bloque_pisos,21,49,23,49
+madrid/moncloa,Madrid · Moncloa,oficinas_verdes,37,17,40,16
+madrid/moncloa,Madrid · Moncloa,bloque_pisos,45,17,47,17
+madrid/moncloa,Madrid · Moncloa,grandes_almacenes,53,17,56,17
+madrid/moncloa,Madrid · Moncloa,bloque_pisos,56,29,58,29
+madrid/moncloa,Madrid · Moncloa,oficinas_azules,37,39,39,39
+madrid/moncloa,Madrid · Moncloa,bloque_verde_2,56,39,59,39
+madrid/moncloa,Madrid · Moncloa,puesto_mercado,32,39,34,38
+madrid/moncloa,Madrid · Moncloa,bloque_verde_2,29,49,32,49
+madrid/moncloa,Madrid · Moncloa,teatro,37,49,38,49
+madrid/palacio_real,Madrid · Palacio Real,palacio_real,14,30,23,30
+madrid/palacio_real,Madrid · Palacio Real,catedral_almudena,19,54,23,54
+madrid/palacio_real,Madrid · Palacio Real,teatro_real,56,25,59,25
+madrid/palacio_real,Madrid · Palacio Real,bloque_pisos,44,11,46,11
+madrid/palacio_real,Madrid · Palacio Real,oficinas_azules,52,11,54,11
+madrid/retiro,Madrid · Retiro y Prado,palacio_cibeles,24,13,28,13
+madrid/retiro,Madrid · Retiro y Prado,palacio_cristal,52,47,55,47
+madrid/retiro,Madrid · Retiro y Prado,congreso,0,29,4,29
+madrid/retiro,Madrid · Retiro y Prado,museo_prado,18,44,23,44
+madrid/retiro,Madrid · Retiro y Prado,estacion_atocha,14,58,20,58
+madrid/retiro,Madrid · Retiro y Prado,oficinas_azules,1,13,3,13
+madrid/retiro,Madrid · Retiro y Prado,bloque_verde_2,36,13,39,13
+madrid/retiro,Madrid · Retiro y Prado,oficinas_azules,21,31,23,31
+madrid/retiro,Madrid · Retiro y Prado,bloque_verde_2,33,37,36,37
+madrid/retiro,Madrid · Retiro y Prado,bloque_pisos,1,47,3,47
+malaga/exterior,Málaga,tienda_azul,47,42,50,42
+malaga/exterior,Málaga,catedral_malaga,44,35,48,35
+malaga/exterior,Málaga,casa_dos_aguas,23,11,24,10
+malaga/exterior,Málaga,casa_roja_chimenea,47,11,48,10
+malaga/exterior,Málaga,casa_naranja,57,11,58,10
+malaga/exterior,Málaga,puesto_mercado,21,40,23,39
+malaga/exterior,Málaga,puesto_mercado,27,40,29,39
+malaga/exterior,Málaga,puesto_mercado,33,40,35,39
+malaga/exterior,Málaga,oficinas_azules,23,54,25,54
+malaga/exterior,Málaga,oficinas_azules,3,57,5,57
+malaga/exterior,Málaga,castillo_luz,74,16,76,16
+malaga/exterior,Málaga,castillo_luz,58,35,60,35
+malaga/exterior,Málaga,velero,65,70,67,70
+malaga/exterior,Málaga,casa_madera,82,65,83,64
+malaga/exterior,Málaga,torre_socorrista,76,66,77,65
+maritima_1/exterior,Ruta marítima 1 · Canal de Ibiza,velero,18,32,20,32
+mostoles/exterior,Móstoles,oficinas_azules,21,11,23,11
+mostoles/exterior,Móstoles,casa_dos_aguas,38,11,39,10
+mostoles/exterior,Móstoles,casa_granero,53,11,54,10
+mostoles/exterior,Móstoles,asuncion_mostoles,19,20,20,20
+mostoles/exterior,Móstoles,ermita_virgen_del_rio,29,20,30,20
+mostoles/exterior,Móstoles,casa_naranja,38,20,39,19
+mostoles/exterior,Móstoles,casa_madera,4,24,5,23
+mostoles/exterior,Móstoles,casa_roja_pequena,21,29,24,29
+mostoles/exterior,Móstoles,casa_azul_pequena,38,29,39,28
+mostoles/exterior,Móstoles,casa_pequena,53,29,55,28
+mostoles/exterior,Móstoles,tienda_azul,53,37,56,37
+mostoles/exterior,Móstoles,oficinas_azules,39,49,41,49
+mostoles/exterior,Móstoles,casa_roja_chimenea,24,49,25,48
+mostoles/exterior,Móstoles,casa_dos_aguas,52,49,53,48
+mostoles/exterior,Móstoles,oficinas_azules,3,10,5,10
+palma/exterior,Palma de Mallorca,castillo_bellver,4,14,7,14
+palma/exterior,Palma de Mallorca,catedral_palma,36,41,42,41
+palma/exterior,Palma de Mallorca,torre_octogonal,31,41,32,40
+palma/exterior,Palma de Mallorca,bloque_pisos,65,13,67,13
+palma/exterior,Palma de Mallorca,casa_roja_chimenea,32,13,33,12
+palma/exterior,Palma de Mallorca,casa_dos_aguas,38,13,39,12
+palma/exterior,Palma de Mallorca,casa_madera,43,13,44,12
+palma/exterior,Palma de Mallorca,bloque_verde_2,18,27,21,27
+palma/exterior,Palma de Mallorca,tienda_azul,42,26,45,26
+palma/exterior,Palma de Mallorca,bloque_pisos,52,30,54,30
+palma/exterior,Palma de Mallorca,oficinas_azules,59,30,61,30
+palma/exterior,Palma de Mallorca,casa_granero,66,30,67,29
+palma/exterior,Palma de Mallorca,bloque_pisos,57,43,59,43
+palma/exterior,Palma de Mallorca,bloque_verde_2,63,43,66,43
+playa_del_ingles/exterior,Playa del Inglés,tienda_naranja,38,7,41,7
+playa_del_ingles/exterior,Playa del Inglés,grandes_almacenes,2,20,5,20
+playa_del_ingles/exterior,Playa del Inglés,edificio_cristal,12,20,16,18
+playa_del_ingles/exterior,Playa del Inglés,bloque_pisos,22,21,24,21
+playa_del_ingles/exterior,Playa del Inglés,bloque_verde,30,21,33,20
+playa_del_ingles/exterior,Playa del Inglés,oficinas_azules,37,21,39,21
+playa_del_ingles/exterior,Playa del Inglés,torre_socorrista,52,12,53,11
+playa_del_ingles/exterior,Playa del Inglés,faro,4,55,7,54
+pueblo_inicial/exterior,San Miguel de Bernuy,iglesia_san_miguel,16,14,19,14
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_naranja,23,15,24,14
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_granero,27,15,28,14
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_roja_chimenea,35,15,36,14
+pueblo_inicial/exterior,San Miguel de Bernuy,edificio_cupula,29,22,30,21
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_madera,37,22,38,21
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_roja,11,30,12,28
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_azul_pequena,24,30,25,29
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_dos_aguas,30,30,31,29
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_granero,35,30,36,29
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_madera,24,40,25,39
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_dos_aguas,29,40,30,39
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_roja_chimenea,35,40,36,39
+pueblo_inicial/exterior,San Miguel de Bernuy,casa_tejado_rojo,11,47,13,46
+pueblo_inicial/exterior,San Miguel de Bernuy,ermita_virgen_del_rio,25,48,26,48
+puertollano/exterior,Puertollano,ermita_virgen_del_rio,29,12,30,12
+puertollano/exterior,Puertollano,oficinas_azules,42,35,44,35
+puertollano/exterior,Puertollano,casa_roja,4,11,5,9
+puertollano/exterior,Puertollano,casa_dos_aguas,16,12,17,11
+puertollano/exterior,Puertollano,casa_madera,5,24,6,23
+puertollano/exterior,Puertollano,casa_naranja,18,25,19,24
+puertollano/exterior,Puertollano,bloque_pisos,5,61,7,61
+puertollano/exterior,Puertollano,casa_dos_aguas,20,61,21,60
+puertollano/exterior,Puertollano,oficinas_azules,4,36,6,36
+puertollano/exterior,Puertollano,asuncion_mostoles,15,43,16,43
+puertollano/exterior,Puertollano,casa_roja_chimenea,21,43,22,42
+puertollano/exterior,Puertollano,tienda_azul,62,51,65,51
+puertollano/exterior,Puertollano,oficinas_azules,60,33,62,33
+puertollano/exterior,Puertollano,oficinas_azules,49,60,51,60
+ruta_12/exterior,Ruta 12 · Sierra Nevada y Granada,casa_dos_aguas,8,21,9,20
+ruta_13/exterior,Ruta 13 · Mar de olivos,casa_granero,25,29,26,28
+ruta_13/exterior,Ruta 13 · Mar de olivos,casa_dos_aguas,46,13,47,12
+ruta_14/exterior,Ruta 14 · Doñana,casa_ibicenca,38,9,39,9
+ruta_14/exterior,Ruta 14 · Doñana,casa_ibicenca,43,9,44,9
+ruta_14/exterior,Ruta 14 · Doñana,casa_ibicenca,52,9,53,9
+ruta_14/exterior,Ruta 14 · Doñana,casa_ibicenca,52,17,53,17
+ruta_14/exterior,Ruta 14 · Doñana,casa_ibicenca,56,9,57,9
+ruta_14/exterior,Ruta 14 · Doñana,cabana,31,13,34,13
+ruta_15/exterior,Ruta 15 · Costa de Gran Canaria,casa_ibicenca,12,28,13,28
+ruta_15/exterior,Ruta 15 · Costa de Gran Canaria,casa_ibicenca,16,28,17,28
+ruta_16/exterior,Ruta 16 · Rías Baixas,casa_dos_aguas,26,24,27,23
+ruta_16/exterior,Ruta 16 · Rías Baixas,casa_madera,30,38,31,37
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_madera,6,19,7,18
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_roja,9,52,10,50
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_tejado_rojo,25,52,27,51
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_dos_aguas,8,62,9,61
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_granero,13,62,14,61
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_roja_chimenea,26,62,27,61
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_azul_pequena,1,52,2,51
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_naranja,1,62,2,61
+ruta_2/exterior,Ruta 2 · Tierra de Pinares y Acueducto,casa_madera,32,62,33,61
+ruta_21/exterior,Ruta 21 · Viñedos de La Rioja,casa_granero,9,17,10,16
+ruta_21/exterior,Ruta 21 · Viñedos de La Rioja,casa_roja_chimenea,32,17,33,16
+ruta_21/exterior,Ruta 21 · Viñedos de La Rioja,casa_madera,9,39,10,38
+ruta_21/exterior,Ruta 21 · Viñedos de La Rioja,casa_dos_aguas,32,39,33,38
+ruta_22/exterior,Ruta 22 · Burgos y Atapuerca,catedral_burgos,6,26,8,26
+ruta_22/exterior,Ruta 22 · Burgos y Atapuerca,casa_roja_chimenea,15,26,16,25
+ruta_22/exterior,Ruta 22 · Burgos y Atapuerca,casa_madera,1,16,2,15
+ruta_22/exterior,Ruta 22 · Burgos y Atapuerca,casa_granero,15,16,16,15
+ruta_23/exterior,Ruta 23 · Cuéllar y Tierra de Pinares,castillo_cuellar,10,11,12,11
+ruta_23/exterior,Ruta 23 · Cuéllar y Tierra de Pinares,iglesia_san_miguel,19,11,22,11
+ruta_23/exterior,Ruta 23 · Cuéllar y Tierra de Pinares,casa_roja_chimenea,5,28,6,27
+ruta_23/exterior,Ruta 23 · Cuéllar y Tierra de Pinares,casa_granero,20,28,21,27
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,2,10,3,10
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,6,10,7,10
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,10,10,11,10
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,14,10,15,10
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,18,10,19,10
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,32,30,33,30
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,36,30,37,30
+ruta_24/exterior,Ruta 24 · La Mancha,molino_mancha,40,30,41,30
+ruta_24/exterior,Ruta 24 · La Mancha,casa_granero,3,59,4,58
+ruta_24/exterior,Ruta 24 · La Mancha,casa_madera,34,16,35,15
+ruta_25/exterior,Ruta 25 · Despeñaperros,casa_madera,16,20,17,19
+ruta_25/exterior,Ruta 25 · Despeñaperros,casa_granero,3,55,4,54
+ruta_26/exterior,Ruta 26 · El Torcal de Antequera,dolmen_antequera,8,9,9,9
+ruta_26/exterior,Ruta 26 · El Torcal de Antequera,casa_madera,34,10,35,9
+ruta_3/exterior,Ruta 3 · Puerto de Navacerrada,casa_madera,24,10,25,9
+ruta_3/exterior,Ruta 3 · Puerto de Navacerrada,casa_granero,29,10,30,9
+ruta_3/exterior,Ruta 3 · Puerto de Navacerrada,basilica_cuelgamuros,2,66,6,66
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,monasterio_escorial,2,24,9,24
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_granero,23,22,24,21
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_madera,28,15,29,14
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_dos_aguas,33,15,34,14
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_azul,28,29,29,27
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_tejado_rojo,36,29,38,28
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_roja_chimenea,44,29,45,28
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_roja,29,40,30,38
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_azul_pequena,37,40,38,39
+ruta_4/exterior,Ruta 4 · El Escorial y Galapagar,casa_naranja,43,40,44,39
+ruta_5/exterior,Ruta 5 · Corredor del Henares,universidad_alcala,26,12,31,12
+ruta_5/exterior,Ruta 5 · Corredor del Henares,casa_naranja,29,25,30,24
+ruta_5/exterior,Ruta 5 · Corredor del Henares,casa_roja_chimenea,19,12,20,11
+ruta_5/exterior,Ruta 5 · Corredor del Henares,palacio_infantado,52,12,56,12
+ruta_5/exterior,Ruta 5 · Corredor del Henares,casa_roja_chimenea,64,12,65,11
+ruta_5/exterior,Ruta 5 · Corredor del Henares,casa_dos_aguas,46,12,47,11
+ruta_5/exterior,Ruta 5 · Corredor del Henares,bloque_pisos,56,27,58,27
+ruta_6/exterior,Ruta 6 · Medinaceli y Calatayud,casa_naranja,23,11,24,10
+ruta_6/exterior,Ruta 6 · Medinaceli y Calatayud,casa_granero,9,11,10,10
+ruta_6/exterior,Ruta 6 · Medinaceli y Calatayud,casa_roja_chimenea,31,17,32,16
+ruta_6/exterior,Ruta 6 · Medinaceli y Calatayud,casa_madera,41,17,42,16
+ruta_6/exterior,Ruta 6 · Medinaceli y Calatayud,casa_dos_aguas,46,17,47,16
+ruta_6/exterior,Ruta 6 · Medinaceli y Calatayud,casa_granero,60,17,61,16
+ruta_6/exterior,Ruta 6 · Medinaceli y Calatayud,casa_roja,64,17,65,15
+ruta_8/exterior,Ruta 8 · Montserrat,monasterio_montserrat,32,10,36,10
+ruta_8/exterior,Ruta 8 · Montserrat,casa_roja_chimenea,16,37,17,36
+ruta_8/exterior,Ruta 8 · Montserrat,casa_dos_aguas,22,37,23,36
+ruta_8/exterior,Ruta 8 · Montserrat,casa_madera,50,37,51,36
+ruta_8/exterior,Ruta 8 · Montserrat,casa_granero,55,37,56,36
+sevilla/centro,Sevilla · Centro,bloque_pisos,1,8,3,8
+sevilla/centro,Sevilla · Centro,casa_teja,8,8,10,7
+sevilla/centro,Sevilla · Centro,oficinas_verdes,40,9,43,8
+sevilla/centro,Sevilla · Centro,bloque_verde_2,50,6,53,6
+sevilla/centro,Sevilla · Centro,casa_rosa,18,6,21,6
+sevilla/centro,Sevilla · Centro,edificio_cupula,58,12,59,11
+sevilla/centro,Sevilla · Centro,casa_roja_chimenea,37,20,38,19
+sevilla/centro,Sevilla · Centro,casa_granero,43,20,44,19
+sevilla/centro,Sevilla · Centro,bloque_pisos,48,20,50,20
+sevilla/centro,Sevilla · Centro,casa_madera,55,20,56,19
+sevilla/centro,Sevilla · Centro,casa_teja,1,41,3,40
+sevilla/centro,Sevilla · Centro,casa_rosa,7,41,10,41
+sevilla/centro,Sevilla · Centro,bloque_pisos,1,53,3,53
+sevilla/centro,Sevilla · Centro,casa_tejado_azul,7,53,10,53
+sevilla/centro,Sevilla · Centro,oficinas_azules,31,47,33,47
+sevilla/centro,Sevilla · Centro,tienda_naranja,25,21,28,21
+sevilla/centro,Sevilla · Centro,catedral_sevilla,19,40,22,40
+sevilla/centro,Sevilla · Centro,puerta_leon,21,51,24,51
+sevilla/centro,Sevilla · Centro,casa_ibicenca,36,33,37,33
+sevilla/centro,Sevilla · Centro,casa_ibicenca,41,33,42,33
+sevilla/centro,Sevilla · Centro,casa_ibicenca,46,33,47,33
+sevilla/centro,Sevilla · Centro,casa_ibicenca,36,39,37,39
+sevilla/centro,Sevilla · Centro,casa_ibicenca,42,39,43,39
+sevilla/centro,Sevilla · Centro,casa_ibicenca,48,39,49,39
+sevilla/centro,Sevilla · Centro,casa_ibicenca,53,36,54,36
+sevilla/centro,Sevilla · Centro,casa_ibicenca,58,33,59,33
+sevilla/centro,Sevilla · Centro,casa_ibicenca,58,42,59,42
+sevilla/rio,Sevilla · Río y Triana,maestranza,40,14,44,14
+sevilla/rio,Sevilla · Río y Triana,torre_octogonal,36,46,37,45
+sevilla/rio,Sevilla · Río y Triana,casa_teja,49,13,51,12
+sevilla/rio,Sevilla · Río y Triana,oficinas_azules,44,34,46,34
+sevilla/rio,Sevilla · Río y Triana,bloque_pisos,50,46,52,46
+sevilla/rio,Sevilla · Río y Triana,teatro_real,42,54,45,54
+sevilla/rio,Sevilla · Río y Triana,casa_dos_aguas,49,24,50,23
+sevilla/rio,Sevilla · Río y Triana,casa_granero,39,24,40,23
+sevilla/rio,Sevilla · Río y Triana,casa_madera,44,24,45,23
+sevilla/rio,Sevilla · Río y Triana,casa_roja_chimenea,38,6,39,5
+sevilla/rio,Sevilla · Río y Triana,casa_teja,43,7,45,6
+sevilla/rio,Sevilla · Río y Triana,teatro,8,31,9,31
+sevilla/rio,Sevilla · Río y Triana,puesto_mercado,13,16,15,15
+sevilla/rio,Sevilla · Río y Triana,tienda_flores,2,16,5,16
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,2,6,3,6
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,7,6,8,6
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,12,6,13,6
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,17,6,18,6
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,2,44,3,44
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,7,44,8,44
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,12,44,13,44
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,17,44,18,44
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,2,52,3,52
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,12,52,13,52
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,16,37,17,37
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,7,52,8,52
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,17,52,18,52
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,2,37,3,37
+sevilla/rio,Sevilla · Río y Triana,casa_ibicenca,17,22,18,22
+valencia/ciutat_vella,Valencia · Ciutat Vella,micalet_catedral,26,27,31,27
+valencia/ciutat_vella,Valencia · Ciutat Vella,lonja_seda,5,24,9,24
+valencia/ciutat_vella,Valencia · Ciutat Vella,mercado_central,4,38,9,38
+valencia/ciutat_vella,Valencia · Ciutat Vella,bloque_pisos,2,10,4,10
+valencia/ciutat_vella,Valencia · Ciutat Vella,casa_dos_aguas,9,10,10,9
+valencia/ciutat_vella,Valencia · Ciutat Vella,casa_madera,14,10,15,9
+valencia/ciutat_vella,Valencia · Ciutat Vella,bloque_verde_2,46,8,49,8
+valencia/ciutat_vella,Valencia · Ciutat Vella,bloque_pisos,56,10,58,10
+valencia/ciutat_vella,Valencia · Ciutat Vella,puesto_mercado,20,38,22,37
+valencia/ciutat_vella,Valencia · Ciutat Vella,bloque_pisos,56,38,58,38
+valencia/ciutat_vella,Valencia · Ciutat Vella,oficinas_verdes,24,53,27,52
+valencia/ciutat_vella,Valencia · Ciutat Vella,bloque_pisos,2,53,4,53
+valencia/ciutat_vella,Valencia · Ciutat Vella,oficinas_azules,10,53,12,53
+valencia/ciutat_vella,Valencia · Ciutat Vella,bloque_verde_2,44,51,47,51
+valencia/ciutat_vella,Valencia · Ciutat Vella,bloque_pisos,55,53,57,53
+valencia/malvarrosa,Valencia · Malvarrosa,akuarela,38,20,43,20
+valencia/malvarrosa,Valencia · Malvarrosa,casa_dos_aguas,2,9,3,8
+valencia/malvarrosa,Valencia · Malvarrosa,casa_madera,7,9,8,8
+valencia/malvarrosa,Valencia · Malvarrosa,casa_roja_chimenea,12,9,13,8
+valencia/malvarrosa,Valencia · Malvarrosa,casa_granero,2,22,3,21
+valencia/malvarrosa,Valencia · Malvarrosa,casa_dos_aguas,7,22,8,21
+valencia/malvarrosa,Valencia · Malvarrosa,tienda_azul,18,22,21,22
+valencia/malvarrosa,Valencia · Malvarrosa,bloque_pisos,25,22,27,22
+valencia/malvarrosa,Valencia · Malvarrosa,bloque_verde_2,2,35,5,35
+valencia/malvarrosa,Valencia · Malvarrosa,oficinas_azules,12,35,14,35
+valencia/malvarrosa,Valencia · Malvarrosa,bloque_pisos,20,35,22,35
+valencia/malvarrosa,Valencia · Malvarrosa,oficinas_azules,28,35,30,35
+valencia/malvarrosa,Valencia · Malvarrosa,torre_socorrista,48,12,49,11
+valladolid/exterior,Valladolid,ayuntamiento_valladolid,30,18,35,18
+valladolid/exterior,Valladolid,tienda_azul,61,38,64,38
+valladolid/exterior,Valladolid,san_pablo_valladolid,18,15,23,15
+valladolid/exterior,Valladolid,casa_roja,37,9,38,7
+valladolid/exterior,Valladolid,catedral_valladolid,53,16,59,16
+valladolid/exterior,Valladolid,bloque_pisos,64,14,66,14
+valladolid/exterior,Valladolid,casa_madera,53,38,54,37
+valladolid/exterior,Valladolid,casa_dos_aguas,64,51,65,50
+valladolid/exterior,Valladolid,oficinas_azules,50,59,52,59
+valladolid/exterior,Valladolid,casa_roja_chimenea,2,19,3,18
+valladolid/exterior,Valladolid,casa_dos_aguas,46,10,47,9
+valladolid/exterior,Valladolid,casa_madera,49,27,50,26
+valladolid/exterior,Valladolid,oficinas_azules,18,51,20,51
+valladolid/exterior,Valladolid,casa_dos_aguas,55,49,56,48
+vigo/exterior,Vigo,tienda_azul,30,18,33,18
+vigo/exterior,Vigo,bloque_pisos,40,18,42,18
+vigo/exterior,Vigo,casa_dos_aguas,2,30,3,29
+vigo/exterior,Vigo,casa_madera,10,30,11,29
+vigo/exterior,Vigo,casa_granero,16,30,17,29
+vigo/exterior,Vigo,oficinas_azules,40,32,42,32
+vigo/exterior,Vigo,bloque_verde,46,32,49,31
+zaragoza/exterior,Zaragoza,basilica_pilar,16,29,24,29
+zaragoza/exterior,Zaragoza,oficinas_azules,36,29,38,29
+zaragoza/exterior,Zaragoza,la_seo,43,31,49,31
+zaragoza/exterior,Zaragoza,tienda_azul,62,30,65,30
+zaragoza/exterior,Zaragoza,casa_dos_aguas,16,44,17,43
+zaragoza/exterior,Zaragoza,casa_granero,27,44,28,43
+zaragoza/exterior,Zaragoza,casa_madera,32,44,33,43
+zaragoza/exterior,Zaragoza,casa_dos_aguas,37,44,38,43
+zaragoza/exterior,Zaragoza,casa_roja_chimenea,16,54,17,53
+zaragoza/exterior,Zaragoza,casa_madera,22,54,23,53
+zaragoza/exterior,Zaragoza,casa_granero,27,54,28,53
+zaragoza/exterior,Zaragoza,casa_dos_aguas,32,54,33,53
+zaragoza/exterior,Zaragoza,casa_roja_chimenea,37,54,38,53
+zaragoza/exterior,Zaragoza,bloque_pisos,2,46,4,46
+zaragoza/exterior,Zaragoza,oficinas_azules,2,56,4,56
+zaragoza/exterior,Zaragoza,bloque_pisos,60,46,62,46
+zaragoza/exterior,Zaragoza,bloque_verde_2,62,56,65,56

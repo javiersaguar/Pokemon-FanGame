@@ -227,6 +227,16 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-mundo-sur`. Tramo: Ruta 
 
 **Cierre (Agente 5, 2026-10-09):** Móstoles, que quedó en la rama sin integrar al acabarse el uso, está en `main` (validado con el resto). El **Cercanías C-5** está hecho como pasarelas: Atocha (`madrid/retiro`, andenes en (29, 59) y (31, 59), llegada `from_cercanias` en (30, 58)) ⇄ Leganés (9, 12) y Móstoles (27, 11). Siguen pendientes de Javier sus reglas (coste, desbloqueo, retraso). Siguiente del tramo: Ruta 24 desde Getafe (`from_ruta_24` en (47, 63)) → Puertollano → Rutas 25 y 26 → Málaga; la Calle de la Victoria; Pamplona ⇄ Ruta 21 cuando exista Pamplona.
 
+### Mapa F9 y entradas adicionales (2026-10-12)
+
+**Solicitud de Javier:** viajar pulsando zonas del mapa de debug y empezar todas las entradas a edificios. **Hecho:** F9 → Mundo → Mapa, puntos de ciudad/ruta y botones de barrio/interior con viaje directo; búsqueda de los 116 mapas existentes, incluidos seis de pruebas/muestras. Primer clic inicia la sesión temporal; cancelar no la inicia y salir restaura la partida. Destinos inexistentes grises, sin viaje; diálogo/combate bloquea el cambio. [Comparativa del mapa](arte/comparativas/a3_mapa_f9.md). El mapa de vuelo normal mantiene sus reglas.
+
+**Entradas:** 28 interiores nuevos y sus puertas exteriores, **61 servicios abiertos** en total: Zaragoza, Huelva, Palma, Ibiza, Vigo, Playa del Inglés, Cuéllar, Chamberí, Atocha, Sol, Les Corts, Barceloneta y Malvarrosa. Nueve sanitarios y diecinueve tiendas nuevos. Hospital en los barrios de ciudades con gimnasio; en las demás se conserva Centro Pokémon. Se usa el fundido de Warp y llegada frente a la puerta, sin reentrada. Suelo, decoración y conexiones anteriores conservados. Reservas hechas en commit antes de pintar; namespaces de interiores separados de los exteriores y `zone_id` conservado. [Auditoría y trece comparativas](mundo/auditoria_locales.md).
+
+**Validación dirigida:** mapa 3/3 tests, 2.281 aserciones; servicios 7/7, 630 aserciones, 113,81 s (61 parejas de puertas, curación, PC y compras). Veintiocho interiores y trece exteriores con acceso a locales; Palma/Ibiza pasan con Surf para sus salidas marítimas. Arte 10.926 PNG, 0 errores/avisos; datos 0 errores y los 3 avisos previos. Dorado regenerado: cambia la huella de entrada y `rom/input_hash`, resultados aleatorios conservados. Mundo: **110 mapas, 2 grupos**. **Suite completa: 486/486 tests, 20.889 aserciones, 579,59 s; sin errores de script ni fugas al cerrar.** Se conserva una espera antigua deprecada de GUT. Las pruebas aisladas conservan fugas al terminar su proceso; la suite completa cierra limpia. La comprobación final de colocación del mapa añade 2.256 aserciones dirigidas y pasa con 3/3 tests, 2.281 aserciones.
+
+**Siguiente contenido y límites:** [inventario de 484 puertas potenciales sin Warp](mundo/puertas_pendientes.md); no todas son interiores previstos. Casas, gimnasios, Palacio/Clan y otros edificios especiales requieren su contenido/guion; Basic-Fit/lotería esperan reglas; Metro/Calle de la Victoria, recorrido y recursos; Bilbao aún sin exterior. Los 46 famosos ya tienen sprites/datos y esperan ubicaciones/guion. Ninguna fachada morada se renombra como estanco sin identificación inequívoca. Arte provisional, pendiente revisión de Javier.
+
 ### Continuación de interfaz (2026-10-11)
 
 **Hecho:** selector de objetos con C/Start y página de texto visibles; ayuda de elegir/volver sin recorte. Era texto desplazable, no una descripción perdida: se conserva y se hace explícito cómo leerla. Navegación con teclado/mando y animaciones reducidas. F9 permite quitar un movimiento del set mediante lista, cancelar sin cambios y aplicar al jugador o al rival; sin huecos ni sets vacíos. **Validación cerrada (2026-10-12):** 16/16 pruebas dirigidas, 100 aserciones; suite completa **482/482 tests, 20.287 aserciones, 523,74 s**, sin fugas al cerrar. Arte 10.926 PNG, 0 errores/avisos; datos 0 errores y 3 avisos previos. El recorrido integral RandomLocke agotó el límite en un intento, también reproducido en main sin estos cambios; repetición completa en verde. Conserva la espera antigua deprecada de GUT. [Comparativa](arte/comparativas/a3_lectura_y_sets.md). Siguiente: servicios todavía cerrados de las localidades con mapa; inventario preparado sin cambiar edificios ni inventar guion.
@@ -667,11 +677,14 @@ Implementado por A3: pestaña Pruebas y copia temporal restaurable, catálogos y
 | 74 | A3 → A2 | Hospitales de las ocho ciudades: Bilbao aún no tiene mapa exterior; interior/puertas no se conectan a un destino inexistente. Avisar en ESTADO al publicar el exterior para abrir allí el mismo conjunto de servicios. | pendiente de exterior de Bilbao |
 | 75 | A3 → A1/A4 | Hecha por A3 en ausencia de A1/A4: abrir los servicios ya pintados de Getafe, Leganés, Móstoles y Puertollano, según continuación de Javier. Se conservan Centro Pokémon y geometría exterior; se conectan puertas y llegadas de Centro/Mercadona/estanco y se actualizan sus carteles. Datos de tiendas y comparativas incluidos. | hecha; 480/480 tests y validadores en verde |
 | 76 | A3 → A2 | Actualización del parche dorado por las ocho tiendas añadidas: comparación del JSON confirma que solo cambia `input_hash`; todos los resultados aleatorios permanecen idénticos. La huella del test de integración omitía las tiendas pese a que el generador las lee; se añade `DataDB._shops` a esa huella y se regenera la referencia con el mecanismo existente. Motor y ajustes conservados. | hecha; 480/480 tests en verde |
+| 77 | A3 → A1 | Mapa F9 solicitado por Javier: viajes directos por clic dentro de sesión temporal, llegadas válidas, bloqueo durante diálogo/combate y restauración. No cambia el vuelo de la partida normal. | hecho por A3; pruebas con ratón y mando |
+| 78 | A3 → A1/A4/A2 | 28 locales adicionales y sus puertas en trece exteriores, reservados antes de pintar, según solicitud de Javier. Misma curación/PC/tiendas; geometría anterior conservada. IDs de salas de barrio separados del exterior; datos de 19 tiendas y dorado actualizado solo por huella/input_hash. | hecho por A3; revisar fachadas al volver |
 
 
 
 
 ---
+
 
 
 
@@ -738,6 +751,12 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 | 31 | A3 | Recordador/tutor: API y pantallas listas, con confirmación/cancelación. ¿Dónde y con qué disponibilidad/coste se ofrecen? El mundo debe pasar el catálogo del tutor; no he añadido un tutor global ni elegido un precio. MT de mochila ya operativas. | PENDIENTE JAVIER |
 
 ---
+
+### Mapa de pruebas y próximas entradas (2026-10-12, Agente 3)
+
+- **HECHO, según solicitud de Javier:** mapa F9 con viaje por clic y 28 servicios más conectados; [comparativa](arte/comparativas/a3_mapa_f9.md), [entradas restantes](mundo/puertas_pendientes.md). Los puntos grises corresponden a mapas aún inexistentes.
+- **PENDIENTE JAVIER, contenido:** de las casas/edificios potenciales del inventario, ¿cuáles deben tener interior visitable y qué función/personajes llevan? Para los ocho gimnasios, faltan recorrido/puzzles y contenido de salas; se conserva la decisión de líderes/emplazamientos. Botiga del Barça y otras tiendas moradas sin identificación no se convierten en estancos. Basic-Fit/lotería siguen pendientes de reglas concretas.
+- **PENDIENTE JAVIER, visual:** revisar el mapa de pruebas y los interiores/fachadas de las trece comparativas; son provisionales. El recurso de puerta sonora estándar no está en los packs copiados, por lo que los warps actuales usan el fundido visual pero todavía no suena ese efecto.
 
 ### Hospitales e interiores (2026-10-10, Agente 3)
 

@@ -103,4 +103,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"En Huelva nos llaman choqueros por los chocos. Y gamba blanca, la mejor del mundo. Lo dice todo el mundo... de Huelva."]))
 	p.npc("Vecina", "npc_old_woman", Vector2i(46, 14), DOWN, PackedStringArray([
 		"Mi abuelo trabajaba en las minas de Riotinto. Los ingleses le enseñaron a jugar al fútbol y a no cobrar las horas extra."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"huelva/exterior")
 	return p

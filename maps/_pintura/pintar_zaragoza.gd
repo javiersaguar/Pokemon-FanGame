@@ -123,4 +123,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Y si me toca la lotería, un ramo de rosas. Que la Virgen se lo merece."]))
 	p.npc("Remero", "npc_fisherman", Vector2i(30, 15), UP, PackedStringArray([
 		"Con Surf podrás remontar el Ebro. Cuidado con los siluros: hay más que zaragozanos."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"zaragoza/exterior")
 	return p

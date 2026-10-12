@@ -87,4 +87,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Con zapatillas de deporte no se entra. Bueno, a este gimnasio sí."]))
 	p.npc("Abuela", "npc_old_woman", Vector2i(10, 15), DOWN, PackedStringArray([
 		"Esta casa del Cabanyal tiene la fachada de azulejos de mi abuelo. Los turistas le hacen fotos; yo, la colada."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"valencia/malvarrosa")
 	return p

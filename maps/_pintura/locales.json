@@ -196,5 +196,210 @@
       40,
       51
     ]
+  },
+  "zaragoza": {
+    "name": "Zaragoza",
+    "zone": "zaragoza",
+    "heading_y": 18,
+    "centro": [
+      "zaragoza/exterior",
+      2,
+      28
+    ],
+    "mercadona": [
+      "zaragoza/exterior",
+      56,
+      30
+    ],
+    "estanco": [
+      "zaragoza/exterior",
+      21,
+      44
+    ]
+  },
+  "huelva": {
+    "name": "Huelva",
+    "zone": "huelva",
+    "heading_y": 18,
+    "centro": [
+      "huelva/exterior",
+      16,
+      26
+    ],
+    "mercadona": [
+      "huelva/exterior",
+      24,
+      26
+    ],
+    "estanco": [
+      "huelva/exterior",
+      30,
+      26
+    ]
+  },
+  "palma": {
+    "name": "Palma",
+    "zone": "palma",
+    "heading_y": 18,
+    "centro": [
+      "palma/exterior",
+      52,
+      13
+    ],
+    "mercadona": [
+      "palma/exterior",
+      59,
+      13
+    ],
+    "estanco": [
+      "palma/exterior",
+      20,
+      13
+    ]
+  },
+  "ibiza": {
+    "name": "Ibiza",
+    "zone": "ibiza",
+    "heading_y": 18,
+    "centro": [
+      "ibiza/exterior",
+      12,
+      16
+    ],
+    "mercadona": [
+      "ibiza/exterior",
+      12,
+      25
+    ],
+    "estanco": [
+      "ibiza/exterior",
+      25,
+      16
+    ]
+  },
+  "vigo": {
+    "name": "Vigo",
+    "zone": "vigo",
+    "heading_y": 18,
+    "centro": [
+      "vigo/exterior",
+      2,
+      18
+    ],
+    "mercadona": [
+      "vigo/exterior",
+      14,
+      18
+    ],
+    "estanco": [
+      "vigo/exterior",
+      22,
+      18
+    ]
+  },
+  "playa_del_ingles": {
+    "name": "Playa del Inglés",
+    "zone": "playa_del_ingles",
+    "heading_y": 18,
+    "hospital": [
+      "playa_del_ingles/exterior",
+      20,
+      7
+    ],
+    "mercadona": [
+      "playa_del_ingles/exterior",
+      27,
+      6
+    ],
+    "estanco": [
+      "playa_del_ingles/exterior",
+      33,
+      6
+    ]
+  },
+  "ruta_23/cuellar": {
+    "name": "Cuéllar",
+    "zone": "ruta_23",
+    "heading_y": 18,
+    "mercadona": [
+      "ruta_23/exterior",
+      28,
+      16
+    ]
+  },
+  "madrid/chamberi": {
+    "name": "Chamberí",
+    "zone": "madrid",
+    "heading_y": 18,
+    "mercadona": [
+      "madrid/chamberi",
+      8,
+      17
+    ],
+    "estanco": [
+      "madrid/chamberi",
+      1,
+      28
+    ]
+  },
+  "madrid/atocha": {
+    "name": "Atocha",
+    "zone": "madrid",
+    "heading_y": 18,
+    "mercadona": [
+      "madrid/retiro",
+      34,
+      59
+    ]
+  },
+  "madrid/sol": {
+    "name": "Sol",
+    "zone": "madrid",
+    "heading_y": 18,
+    "hospital": [
+      "madrid/centro",
+      40,
+      48
+    ]
+  },
+  "barcelona/les_corts": {
+    "name": "Les Corts",
+    "zone": "barcelona",
+    "heading_y": 18,
+    "mercadona": [
+      "barcelona/les_corts",
+      52,
+      13
+    ]
+  },
+  "barcelona/barceloneta": {
+    "name": "Barceloneta",
+    "zone": "barcelona",
+    "heading_y": 18,
+    "hospital": [
+      "barcelona/ciutat_vella",
+      47,
+      49
+    ]
+  },
+  "valencia/malvarrosa": {
+    "name": "Malvarrosa",
+    "zone": "valencia",
+    "heading_y": 18,
+    "hospital": [
+      "valencia/malvarrosa",
+      19,
+      10
+    ],
+    "mercadona": [
+      "valencia/malvarrosa",
+      27,
+      9
+    ],
+    "estanco": [
+      "valencia/malvarrosa",
+      12,
+      22
+    ]
   }
 }

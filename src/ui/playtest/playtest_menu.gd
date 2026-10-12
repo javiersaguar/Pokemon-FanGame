@@ -152,6 +152,7 @@ func _finish() -> void:
 	_message(await session.finish(),"Partida anterior restaurada.")
 
 func _build_world(box: VBoxContainer) -> void:
+	_button(box,"Mapa · pulsa una zona para viajar",_open_world_map,false)
 	_label(box,"Todos los mapas disponibles, también los aún aislados.")
 	map_button = _button(box,"San Miguel de Bernuy · elegir destino",_choose_map,false)
 	var row := _row(box)
@@ -183,6 +184,27 @@ func _build_world(box: VBoxContainer) -> void:
 	_button(screens,"Opciones",func() -> void: await _screen(&"options"))
 	_label(box,"Camina, habla, compra y usa Surf o la bici de la sesión.")
 	_label(box,"El arte de los mapas sigue pendiente de revisión de Javier.")
+
+func _open_world_map() -> void:
+	if not session.available(): return
+	Debug.close()
+	if not _catalogues.has("maps"): _catalogues.maps = PlaytestSession.maps()
+	var screen := PlaytestWorldMap.new()
+	screen.entries.assign(_catalogues.maps)
+	SceneManager.push_menu(screen)
+	var id: String = await screen.completed
+	SceneManager.pop_menu(screen)
+	if id == "": Debug.open(); return
+	map_id = StringName(id)
+	for entry: Dictionary in _catalogues.maps:
+		if entry.id == id: map_button.text = str(entry.label)+" · elegir destino"
+	_refresh_spawns()
+	if spawn_pick.item_count == 0:
+		status.text = "Este mapa no tiene una llegada válida."
+		Debug.open()
+		return
+	if session.active: await _travel()
+	else: await _begin()
 
 func _choose_map() -> void:
 	Debug.close()

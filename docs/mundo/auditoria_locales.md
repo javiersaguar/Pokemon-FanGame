@@ -39,3 +39,31 @@ Otros **12 interiores**, sumando **33 locales abiertos** en once localidades con
 Los dieciséis mapas del conjunto (12 interiores + 4 exteriores) tienen alcance **0 problemas**. La regresión de servicios recorre las 33 puertas por `Player._after_step`, comprueba el barrio de retorno y evita reentrada; además cura, vuelve tras derrota, abre el PC y compra una poción en los cuatro pueblos. Prueba aislada: **6/6**, **342 aserciones**, **67,19 s**; sus fugas de recursos al terminar el proceso aislado siguen presentes, como en la entrega anterior. Suite completa de cierre: **480/480 tests, 20.254 aserciones, 499,10 s**, sin fugas al terminar; conserva una espera antigua marcada deprecada por GUT. El parche dorado se actualiza por los datos de tiendas: comparación del JSON confirma que solo cambia `input_hash`, sin alterar los resultados aleatorios; su huella de prueba incorpora ahora las tiendas. Grafo: **82 mapas, 2 grupos**. Validadores: arte **10.926 PNG, 0 errores/avisos**; datos **0 errores, 3 avisos previos**.
 
 Bilbao espera mapa. El resto de locales todavía cerrados y Basic-Fit no se presentan como jugables. Metro/Calle de la Victoria y colocaciones definitivas de famosos continúan pendientes de sus decisiones y recursos específicos.
+
+## Entradas y servicios adicionales (2026-10-12)
+
+**28 interiores nuevos; 61 locales abiertos en total**. Nueve sanitarios (cinco Centros Pokémon y cuatro hospitales) y diecinueve tiendas nuevas. Hospital también en Sol, Barceloneta, Malvarrosa y Playa del Inglés (sede del gimnasio 5); nombres y fachadas sanitarias genéricos hasta revisión. Mercadona de Cuéllar conservado dentro de Ruta 23.
+
+| Área | Nuevos interiores | Revisión |
+|---|---|---|
+| Zaragoza | centro, mercadona, estanco | [Comparativa](../arte/comparativas/zaragoza_ampliacion_locales.md) |
+| Huelva | centro, mercadona, estanco | [Comparativa](../arte/comparativas/huelva_ampliacion_locales.md) |
+| Palma | centro, mercadona, estanco | [Comparativa](../arte/comparativas/palma_ampliacion_locales.md) |
+| Ibiza | centro, mercadona, estanco | [Comparativa](../arte/comparativas/ibiza_ampliacion_locales.md) |
+| Vigo | centro, mercadona, estanco | [Comparativa](../arte/comparativas/vigo_ampliacion_locales.md) |
+| Playa del Inglés | hospital, mercadona, estanco | [Comparativa](../arte/comparativas/playa_del_ingles_ampliacion_locales.md) |
+| Cuéllar | mercadona | [Comparativa](../arte/comparativas/ruta_23_cuellar_ampliacion_locales.md) |
+| Chamberí | mercadona, estanco | [Comparativa](../arte/comparativas/madrid_chamberi_ampliacion_locales.md) |
+| Atocha | mercadona | [Comparativa](../arte/comparativas/madrid_atocha_ampliacion_locales.md) |
+| Sol | hospital | [Comparativa](../arte/comparativas/madrid_sol_ampliacion_locales.md) |
+| Les Corts | mercadona | [Comparativa](../arte/comparativas/barcelona_les_corts_ampliacion_locales.md) |
+| Barceloneta | hospital | [Comparativa](../arte/comparativas/barcelona_barceloneta_ampliacion_locales.md) |
+| Malvarrosa | hospital, mercadona, estanco | [Comparativa](../arte/comparativas/valencia_malvarrosa_ampliacion_locales.md) |
+
+Veintiocho interiores y trece exteriores comprobados. Cero problemas de acceso a los locales; los exteriores de Palma/Ibiza dan cero problemas con Surf, que es necesario para sus salidas marítimas. La comparación de los constructores confirma suelo/decoración/bordes sin cambios; en el exterior se incorporan solo nodos de puerta/llegada y rótulos, carteles de servicios y cuatro fachadas sanitarias. Mundo: **110 mapas, 2 grupos**.
+
+Identificadores de salas de barrio separados del mapa exterior: `madrid/sol/hospital`, `madrid/chamberi/mercadona`, etc. Conservan `zone_id` de Madrid/Barcelona/Valencia/Ruta 23. Los IDs de tienda cambian `/` por `_`, conservando los IDs previos. El parche dorado se actualiza por los datos de tienda, sin cambiar resultados aleatorios.
+
+[Inventario de otras puertas](puertas_pendientes.md). La Botiga del Barça y otras tiendas moradas sin identificación inequívoca no se convierten en estancos. Bilbao aún sin exterior; interiores de gimnasios y casas de historia siguen pendientes de diseño/contenido.
+
+Cierre de la suite completa: **486/486 tests, 20.889 aserciones, 579,59 s**, sin errores de script ni fugas al terminar. Arte: 10.926 PNG, 0 errores/avisos; datos: 0 errores y 3 avisos previos.

@@ -1,5 +1,7 @@
 [gd_scene format=4]
 
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
+
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_btlgy"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_thkof"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_noy0o"]
@@ -48,7 +50,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1793445454]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAmABQAVAAAAAAAAAAkAAYAUwAAAAAAAAAkAAwAUwAAAAAAAAAkABwAUwAAAAAAAAAkACIAUwAAAAAAAAAkACgAUwAAAAAAAAACAAkABgAjAAAAAAAHAAkABgAnAAAAAAAMAAkABgAeAAAAAAATAAoACAAAAAAAAAAbAAkACAAaABUAAAACABYABgArAAAAAAAHABYABgAjAAAAAAAMABYACAASAAAAAAASABYACAANAAAAAAAZABYACAAAAAkAAAACACMABgBDAAAAAAAMACMACAAqAAAAAAAUACMACAAAAAkAAAAcACMACAAqAAAAAAAIADcASwAAAAAAAAAsAAYACQAUAAAAAAAuAB4ACQAUAAAAAAArACgACQAUAAAAAAAwAAwACAAAABUAAAA=")
+tile_map_data = PackedByteArray("AAAmABQAVAAAAAAAAAAkAAYAUwAAAAAAAAAkAAwAUwAAAAAAAAAkABwAUwAAAAAAAAAkACIAUwAAAAAAAAAkACgAUwAAAAAAAAACAAkABgAjAAAAAAAHAAkABgAnAAAAAAAMAAkABgAeAAAAAAATAAoACAAqAAAAAAAbAAkACAAaABUAAAACABYABgArAAAAAAAHABYABgAjAAAAAAAMABYACAASAAAAAAASABYACAANAAAAAAAZABYACAAAAAkAAAACACMABgBDAAAAAAAMACMACAAqAAAAAAAUACMACAAAAAkAAAAcACMACAAqAAAAAAAIADcASwAAAAAAAAAsAAYACQAUAAAAAAAuAB4ACQAUAAAAAAArACgACQAUAAAAAAAwAAwACAAAABUAAAA=")
 tile_set = ExtResource("4_j5dg8")
 
 [node name="CartelAkuarela" type="Node2D" parent="Entities" unique_id=48569128 instance=ExtResource("5_t6blx")]
@@ -124,3 +126,42 @@ position = Vector2(528, 1456)
 position = Vector2(528, 1488)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=506418754]
+[node name="Hospital" type="Node2D" parent="Warps" unique_id=560972005]
+position = Vector2(688, 336)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/malvarrosa/hospital"
+arrival_facing = 4
+
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=250726461]
+position = Vector2(944, 272)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/malvarrosa/mercadona"
+arrival_facing = 4
+
+[node name="Estanco" type="Node2D" parent="Warps" unique_id=725274881]
+position = Vector2(496, 720)
+script = ExtResource("14_sk0yv")
+target_map = &"valencia/malvarrosa/estanco"
+arrival_facing = 4
+
+[node name="from_hospital" type="Marker2D" parent="Spawns" unique_id=499352370]
+position = Vector2(688, 368)
+
+[node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=303295802]
+position = Vector2(944, 304)
+
+[node name="from_estanco" type="Marker2D" parent="Spawns" unique_id=1360235472]
+position = Vector2(496, 752)
+
+[node name="RotuloHospital" type="Label" parent="." unique_id=599293219]
+offset_left = 640.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("locales_0")
+theme_override_font_sizes/font_size = 16
+text = "HOSPITAL"

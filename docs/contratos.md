@@ -1482,3 +1482,9 @@ Los Centros Pokémon de localidades sin gimnasio reutilizan estos mismos servici
 `ChoiceScreen` conserva la descripción íntegra en su contenedor: C/Start avanza y al final vuelve al inicio, sin emitir `chosen`. Se indican páginas únicamente si el texto desborda. Cambiar la elección vuelve al inicio; reducción de animaciones conserva la lectura.
 
 F9 → Equipo → Quitar movimiento opera en el borrador del editor; cancelar conserva los movimientos y **Aplicar / añadir** llama a `PlaytestSession.set_member`. Se compactan posiciones, conservando al menos uno. Funciona en los dos equipos, sin ampliar los permisos de guardado ni habilitar el menú fuera de debug.
+
+### Mapa del banco de pruebas (2026-10-12, A3)
+
+`PlaytestWorldMap` emite `completed(id)` con un mapa existente o cadena vacía al cancelar. Catálogo de `PlaytestSession.maps()` añade `outdoor`, manteniendo id/label/note. F9 → Mundo → Mapa usa los puntos de la región y una lista de zonas/interiores por área; cualquier clic sobre destino viaja sin confirmar. Sin sesión, `PlaytestSession.begin`; con sesión, `SceneManager.change_map`; siempre se cierra el menú antes de comprobar disponibilidad. Se elige `default` válida o la primera llegada válida. Un diálogo/combate/cambio impide abrir el mapa. Se conserva el selector de mapa/spawn avanzado y el aislamiento de guardados. Este contrato no cambia `RegionMapScreen`/WorldTravel de la partida.
+
+`maps/_pintura/locales.json` admite claves con namespace (p. ej. `madrid/sol`), campo `zone` opcional y `heading_y` opcional. Sala `maps/<clave>/<servicio>.tscn`; IDs de tiendas sustituyen `/` por `_`. `servicios_locales.apply_all(p,map_id)` conecta únicamente registros del exterior indicado; conserva las aplicaciones por ciudad anteriores. Nombres sanitarios genéricos hasta aprobación de Javier. Entradas y salidas usan `Warp`, fundido existente y orientación UP/DOWN.

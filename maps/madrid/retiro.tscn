@@ -199,3 +199,11 @@ position = Vector2(16, 1008)
 position = Vector2(976, 1872)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=575108378]
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=120258633]
+position = Vector2(1168, 1872)
+script = ExtResource("15_m0dj4")
+target_map = &"madrid/atocha/mercadona"
+arrival_facing = 4
+
+[node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=1632062104]
+position = Vector2(1168, 1904)

@@ -40,6 +40,11 @@ func run() -> void:
 			root.get_node("Debug")._tabs.current_tab = 0
 			screen = Control.new()
 			root.add_child(screen)
+		elif case_name == "playtest_map":
+			screen._open_world_map()
+			await process_frame
+			screen = manager.top_menu()
+			screen._show_zones("madrid")
 		elif case_name in ["playtest_picker","playtest_search","playtest_no_results"]:
 			root.get_node("Debug").close()
 			var menu := screen

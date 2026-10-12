@@ -32,7 +32,7 @@ func _paint(kind: String) -> void:
  var d := MapData.new()
  d.id = StringName(city+"/"+kind)
  d.display_name = ("Hospital" if kind == "hospital" else ("Centro Pokémon" if kind == "centro" else kind.capitalize()))+" · "+city_name
- d.zone_id = StringName(city)
+ d.zone_id = StringName(locations.get("zone",city))
  d.outdoor = false
  d.fixed_camera = true
  d.can_bike = false
@@ -97,13 +97,13 @@ func _shop(p: Pintor,kind: String) -> void:
  for at: Vector2i in [Vector2i(2,3),Vector2i(12,3),Vector2i(2,7),Vector2i(12,7)]:
   _fragment(p,at,2,stock)
  _desk(p,Vector2i(7,4))
- p.npc("Dependiente","npc_youngster",Vector2i(8,3),0,[],{"display_name":kind.capitalize(),"event":load("res://src/events/common/open_shop_event.gd"),"event_params":{"shop_id":kind+"_"+city}})
+ p.npc("Dependiente","npc_youngster",Vector2i(8,3),0,[],{"display_name":kind.capitalize(),"event":load("res://src/events/common/open_shop_event.gd"),"event_params":{"shop_id":kind+"_"+city.replace("/","_")}})
  p.npc("Cliente","npc_woman",Vector2i(5,7),0,["Poké Balls, curas y repelentes: pregunta en la caja." if kind == "mercadona" else "Aquí venden objetos para preparar el combate."])
 func _heading(p: Pintor,title: String) -> void:
  var label := Label.new()
  label.name = "Rotulo"
- label.position = Vector2(40,18) if locations.has("centro") else Vector2(40,8)
- label.size = Vector2(432,24) if locations.has("centro") else Vector2(432,32)
+ label.position = Vector2(40,float(locations.get("heading_y",18 if locations.has("centro") else 8)))
+ label.size = Vector2(432,24) if label.position.y == 18 else Vector2(432,32)
  label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
  label.text = title.to_upper().replace(" · "," / ")
  label.add_theme_font_override("font",load("res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf"))

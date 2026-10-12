@@ -135,7 +135,7 @@ static func maps() -> Array[Dictionary]:
 		var result := MapLoader.prepare(id)
 		if result.error != OK: continue
 		var map: MapRoot = result.map
-		entries.append({"id":String(id), "label":map.get_display_name(),"note":String(id)})
+		entries.append({"id":String(id), "label":map.get_display_name(),"note":String(id),"outdoor":map.data != null and map.data.outdoor})
 		map.free()
 	entries.sort_custom(func(a: Dictionary,b: Dictionary) -> bool: return str(a.label)+str(a.id) < str(b.label)+str(b.id))
 	return entries

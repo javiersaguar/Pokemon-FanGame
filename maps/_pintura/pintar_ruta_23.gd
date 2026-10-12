@@ -46,6 +46,7 @@ func _initialize() -> void:
 	_sign(p, "Cuellar", Vector2i(25, 20), ["CUÉLLAR · TIERRA DE PINARES", "Este: San Miguel de Bernuy. Oeste: Valladolid."])
 	_sign(p, "Mercadona", Vector2i(32, 17), ["MERCADONA · CUÉLLAR", "Para comprar sin ir hasta Segovia. Interior pendiente."])
 	p.npc("Vecino", "npc_man", Vector2i(8, 21), 0, PackedStringArray(["En Cuéllar los encierros salen al campo, acompañados por caballos.", "Yo corro cuando anuncian el cierre del supermercado."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"ruta_23/exterior")
 	print("Ruta 23 · Cuéllar y Tierra de Pinares: ", error_string(p.save(OUT)))
 	quit()
 func _sign(p: Pintor, label: String, at: Vector2i, lines: Array) -> void:

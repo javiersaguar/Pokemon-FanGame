@@ -725,6 +725,631 @@
         }
       ],
       "prices": {}
+    },
+    "mercadona_zaragoza": {
+      "name": "Mercadona · Zaragoza",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_zaragoza": {
+      "name": "Estanco · Zaragoza",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_huelva": {
+      "name": "Mercadona · Huelva",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_huelva": {
+      "name": "Estanco · Huelva",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_palma": {
+      "name": "Mercadona · Palma",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_palma": {
+      "name": "Estanco · Palma",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_ibiza": {
+      "name": "Mercadona · Ibiza",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_ibiza": {
+      "name": "Estanco · Ibiza",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_vigo": {
+      "name": "Mercadona · Vigo",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_vigo": {
+      "name": "Estanco · Vigo",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_playa_del_ingles": {
+      "name": "Mercadona · Playa del Inglés",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_playa_del_ingles": {
+      "name": "Estanco · Playa del Inglés",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_ruta_23_cuellar": {
+      "name": "Mercadona · Cuéllar",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_madrid_chamberi": {
+      "name": "Mercadona · Chamberí",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_madrid_chamberi": {
+      "name": "Estanco · Chamberí",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_madrid_atocha": {
+      "name": "Mercadona · Atocha",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_barcelona_les_corts": {
+      "name": "Mercadona · Les Corts",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_valencia_malvarrosa": {
+      "name": "Mercadona · Malvarrosa",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_valencia_malvarrosa": {
+      "name": "Estanco · Malvarrosa",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
     }
   }
 }

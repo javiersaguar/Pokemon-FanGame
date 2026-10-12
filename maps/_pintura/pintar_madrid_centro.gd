@@ -155,4 +155,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Dentro está el gimnasio de Ayuso. Prepárate: hay terrazas y cañas en cada sala."]))
 	p.npc("Madrileno", "npc_old_man", Vector2i(45, 41), LEFT, PackedStringArray([
 		"El oso no come madroños: come las uvas de Nochevieja. Doce, una por campanada."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"madrid/centro")
 	return p

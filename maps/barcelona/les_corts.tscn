@@ -1,5 +1,7 @@
 [gd_scene format=4]
 
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="locales_0"]
+
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_giqja"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_ccmqe"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_o2m47"]
@@ -123,3 +125,11 @@ position = Vector2(48, 496)
 position = Vector2(16, 496)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=1559549265]
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=2051182981]
+position = Vector2(1744, 400)
+script = ExtResource("locales_0")
+target_map = &"barcelona/les_corts/mercadona"
+arrival_facing = 4
+
+[node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=1375773163]
+position = Vector2(1744, 432)

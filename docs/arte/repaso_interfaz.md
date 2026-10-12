@@ -50,3 +50,7 @@ Se conserva la distinción entre pantallas revisadas, integración pendiente y a
 Selector común: control C/Start visible junto al texto largo y paginación de lectura; ayuda principal acortada para que se lea entera. Se comprueba teclado, mando y movimiento reducido. El recorte del contenedor conserva acceso al texto completo y no cambia la elección ni dispara una compra.
 
 F9: retirada de movimientos mediante catálogo del set actual, con cancelación, aplicación explícita y último movimiento protegido en ambos equipos. [Comparativa](comparativas/a3_lectura_y_sets.md).
+
+## Mapa de pruebas (2026-10-12)
+
+Mapa F9 con viaje de ciudad/ruta por clic y zonas de barrio/interiores; búsqueda global y cancelación con mando. Reutiliza plano documental, panel a 512×384 y controles nativos. Puntos separados para poder pulsarlos; destinos sin mapa deshabilitados. Primer viaje inicia la sesión temporal, cuya salida restaura la partida. [Comparativa](comparativas/a3_mapa_f9.md).

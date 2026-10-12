@@ -1,5 +1,7 @@
 [gd_scene format=4]
 
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="locales_0"]
+
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_bldpd"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_7qs5v"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_8dxxo"]
@@ -141,3 +143,29 @@ position = Vector2(48, 496)
 position = Vector2(16, 496)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=616160294]
+[node name="Centro" type="Node2D" parent="Warps" unique_id=1370073896]
+position = Vector2(144, 880)
+script = ExtResource("locales_0")
+target_map = &"zaragoza/centro"
+arrival_facing = 4
+
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=464476484]
+position = Vector2(1872, 944)
+script = ExtResource("locales_0")
+target_map = &"zaragoza/mercadona"
+arrival_facing = 4
+
+[node name="Estanco" type="Node2D" parent="Warps" unique_id=996705775]
+position = Vector2(784, 1424)
+script = ExtResource("locales_0")
+target_map = &"zaragoza/estanco"
+arrival_facing = 4
+
+[node name="from_centro" type="Marker2D" parent="Spawns" unique_id=1968882896]
+position = Vector2(144, 912)
+
+[node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=32167311]
+position = Vector2(1872, 976)
+
+[node name="from_estanco" type="Marker2D" parent="Spawns" unique_id=1733460054]
+position = Vector2(784, 1456)

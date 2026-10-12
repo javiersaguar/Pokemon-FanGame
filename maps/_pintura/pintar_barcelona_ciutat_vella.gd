@@ -96,4 +96,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Ocho horas de travesía. Trae biodramina."]))
 	p.spawn("from_ferry", Vector2i(14, 50))
 	p.warp("FerryPalma", Vector2i(14, 51), &"palma/exterior", &"from_ferry", &"")
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"barcelona/ciutat_vella")
 	return p

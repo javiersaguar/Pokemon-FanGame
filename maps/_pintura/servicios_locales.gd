@@ -30,9 +30,18 @@ static func apply(p: RefCounted,city: String,map_id: String,entries: Dictionary)
    if entries.has("hospital"):
     for index: int in lines.size():
      lines[index] = lines[index].replace("Centro Pokémon","Hospital").replace("CENTRO POKÉMON","HOSPITAL")
-   var service := String(node.name).to_lower()
+   var service := String(node.name).trim_prefix("Cartel").to_lower()
    if entries.has(service):
     for index: int in lines.size():
-     if lines[index] == "Interior pendiente.":
+     if "Interior pendiente." in lines[index]:
       lines[index] = "Curación y PC. Entra por la puerta." if service == "centro" else "Tienda abierta. Entra por la puerta."
    node.set("lines",lines)
+
+static func apply_all(p: RefCounted,map_id: String) -> void:
+ var locations := JsonFile.read_dict("res://maps/_pintura/locales.json")
+ for id: String in locations:
+  var entries: Dictionary = locations[id]
+  for kind: String in ["hospital","centro","mercadona","estanco"]:
+   if entries.has(kind) and entries[kind][0] == map_id:
+    apply(p,id,map_id,entries)
+    break

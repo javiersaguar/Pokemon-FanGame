@@ -31,3 +31,5 @@ Los planos de `planos/` marcan con un cuadrado de color **dónde están de verda
 
 - Tiendas en `data/shops.json`: `mercadona_<ciudad>` (stock por medallas, como `tienda_ciudad2`), `estanco_<ciudad>` (objetos de combate) y `basicfit` (servicio de entrenamiento, no es tienda: necesita un evento propio).
 - La lotería del Estanco y el servicio de Basic Fit son mecánicas nuevas: van a la lista de tareas de `README.md`.
+
+**Actualización del 2026-10-12:** se abren 28 locales adicionales, sumando 61, incluidos servicios de otros barrios de Madrid/Barcelona/Valencia, Playa del Inglés y el Mercadona de Cuéllar. [Detalle y comparativas](auditoria_locales.md). Casas/gimnasios y edificios especiales se recogen en [puertas pendientes](puertas_pendientes.md); no se añaden reglas de lotería/entrenamiento ni guion inventado.

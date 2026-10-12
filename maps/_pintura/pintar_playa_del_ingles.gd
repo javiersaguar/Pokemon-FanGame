@@ -106,4 +106,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Bandera verde: báñate. Bandera amarilla: con cuidado. Bandera roja: hoy canta Quevedo, no hay sitio."]))
 	p.npc("Azafata", "npc_woman", Vector2i(15, 8), UP, PackedStringArray([
 		"Los vuelos a Vigo salen por aquí. El embarque aún no está abierto: la pasarela, de momento, no lleva a ningún sitio."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"playa_del_ingles/exterior")
 	return p

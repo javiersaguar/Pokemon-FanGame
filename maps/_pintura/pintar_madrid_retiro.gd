@@ -145,4 +145,5 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.npc("Revisor", "revisorcercanias", Vector2i(23, 59), DOWN, PackedStringArray([
 		"El Cercanías C-5 a Móstoles, Leganés y Getafe sale... cuando salga.",
 		"Y el AVE, cuando el Ministerio diga. Hoy dice que no."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"madrid/retiro")
 	return p

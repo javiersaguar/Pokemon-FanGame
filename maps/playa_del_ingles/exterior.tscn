@@ -1,5 +1,7 @@
 [gd_scene format=4]
 
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="locales_0"]
+
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_iqavr"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_r1rg7"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_fbsyu"]
@@ -47,7 +49,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1859531426]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAABAAYApAAAAAAAAAAMAAYApQAAAAAAAAAUAAcACAAAAAAAAAAbAAYACAAaABUAAAAhAAYACAASAAAAAAAmAAcACAAAAB0AAAACABQACAAXAAAAAAAMABQABgA0AAAAAAAWABUACAAAAAkAAAAeABUABgA8AAAAAAAlABUACAAqAAAAAAAtABYAQAAAAAAAAAAtAAYACQAUAAAAAAAwACAACQAUAAAAAAAtACwACQAUAAAAAAA0AAwACAAAABUAAAAZACgAUwAAAAAAAAAkACUAUwAAAAAAAAAaACUAUwAAAAAAAAAkAC4AUwAAAAAAAAAEADcACAAcAAkAAAA=")
+tile_map_data = PackedByteArray("AAABAAYApAAAAAAAAAAMAAYApQAAAAAAAAAUAAcACAAqAAAAAAAbAAYACAAaABUAAAAhAAYACAASAAAAAAAmAAcACAAAAB0AAAACABQACAAXAAAAAAAMABQABgA0AAAAAAAWABUACAAAAAkAAAAeABUABgA8AAAAAAAlABUACAAqAAAAAAAtABYAQAAAAAAAAAAtAAYACQAUAAAAAAAwACAACQAUAAAAAAAtACwACQAUAAAAAAA0AAwACAAAABUAAAAZACgAUwAAAAAAAAAkACUAUwAAAAAAAAAaACUAUwAAAAAAAAAkAC4AUwAAAAAAAAAEADcACAAcAAkAAAA=")
 tile_set = ExtResource("4_tjl02")
 
 [node name="CartelVuelos" type="Node2D" parent="Entities" unique_id=516555903 instance=ExtResource("5_qv53v")]
@@ -149,3 +151,42 @@ position = Vector2(432, 16)
 position = Vector2(368, 240)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=892192454]
+[node name="Hospital" type="Node2D" parent="Warps" unique_id=264914682]
+position = Vector2(720, 240)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/hospital"
+arrival_facing = 4
+
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=1618625759]
+position = Vector2(944, 176)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/mercadona"
+arrival_facing = 4
+
+[node name="Estanco" type="Node2D" parent="Warps" unique_id=1850872362]
+position = Vector2(1168, 208)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/estanco"
+arrival_facing = 4
+
+[node name="from_hospital" type="Marker2D" parent="Spawns" unique_id=566706515]
+position = Vector2(720, 272)
+
+[node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=441643090]
+position = Vector2(944, 208)
+
+[node name="from_estanco" type="Marker2D" parent="Spawns" unique_id=939808900]
+position = Vector2(1168, 240)
+
+[node name="RotuloHospital" type="Label" parent="." unique_id=1007416664]
+offset_left = 672.0
+offset_top = 160.0
+offset_right = 672.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("locales_0")
+theme_override_font_sizes/font_size = 16
+text = "HOSPITAL"

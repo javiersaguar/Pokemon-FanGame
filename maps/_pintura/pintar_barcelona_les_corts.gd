@@ -83,4 +83,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Laporta te espera en el césped. Dice que la grada que falta no hace falta para ganarte."]))
 	p.npc("Guiri", "turistachanclas", Vector2i(45, 22), LEFT, PackedStringArray([
 		"I came to see Messi! ...He is not here? Since when? Oh."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"barcelona/les_corts")
 	return p

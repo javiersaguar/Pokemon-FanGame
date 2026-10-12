@@ -101,4 +101,5 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.npc("Payesa", "npc_old_woman", Vector2i(13, 41), DOWN, PackedStringArray([
 		"Yo nací aquí cuando Ibiza era de pescadores y payeses. Ahora mi casa vale como un yate.",
 		"Y la vendería, pero entonces, ¿dónde vivo? ¿En el yate?"]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"ibiza/exterior")
 	return p

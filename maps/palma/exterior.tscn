@@ -125,3 +125,29 @@ position = Vector2(336, 1392)
 position = Vector2(336, 1424)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=355957329]
+[node name="Centro" type="Node2D" parent="Warps" unique_id=1999845776]
+position = Vector2(1744, 400)
+script = ExtResource("13_vi0w7")
+target_map = &"palma/centro"
+arrival_facing = 4
+
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=263387069]
+position = Vector2(1968, 400)
+script = ExtResource("13_vi0w7")
+target_map = &"palma/mercadona"
+arrival_facing = 4
+
+[node name="Estanco" type="Node2D" parent="Warps" unique_id=374437941]
+position = Vector2(752, 432)
+script = ExtResource("13_vi0w7")
+target_map = &"palma/estanco"
+arrival_facing = 4
+
+[node name="from_centro" type="Marker2D" parent="Spawns" unique_id=798108183]
+position = Vector2(1744, 432)
+
+[node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=186258587]
+position = Vector2(1968, 432)
+
+[node name="from_estanco" type="Marker2D" parent="Spawns" unique_id=1772648651]
+position = Vector2(752, 464)

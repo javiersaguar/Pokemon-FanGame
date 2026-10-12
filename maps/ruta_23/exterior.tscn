@@ -1,5 +1,7 @@
 [gd_scene format=4]
 
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="locales_0"]
+
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_h1r8p"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_qxeu1"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_w1fiw"]
@@ -90,7 +92,7 @@ show_sprite = false
 [node name="Mercadona" type="Node2D" parent="Entities" unique_id=466647682 instance=ExtResource("8_met4r")]
 position = Vector2(1040, 560)
 script = ExtResource("9_36ly1")
-lines = PackedStringArray("MERCADONA · CUÉLLAR", "Para comprar sin ir hasta Segovia. Interior pendiente.")
+lines = PackedStringArray("MERCADONA · CUÉLLAR", "Tienda abierta. Entra por la puerta.")
 show_sprite = false
 
 [node name="Vecino" type="Node2D" parent="Entities" unique_id=1940519246 instance=ExtResource("10_h0tf7")]
@@ -119,3 +121,11 @@ position = Vector2(16, 656)
 position = Vector2(2032, 656)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=509480317]
+[node name="Mercadona" type="Node2D" parent="Warps" unique_id=1885289596]
+position = Vector2(976, 496)
+script = ExtResource("locales_0")
+target_map = &"ruta_23/cuellar/mercadona"
+arrival_facing = 4
+
+[node name="from_mercadona" type="Marker2D" parent="Spawns" unique_id=1985359338]
+position = Vector2(976, 528)

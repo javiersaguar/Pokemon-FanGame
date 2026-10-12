@@ -92,4 +92,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Si le ganas también aquí, te llevas la medalla. Y una caña."]))
 	p.npc("Vecina", "npc_old_woman", Vector2i(24, 42), UP, PackedStringArray([
 		"Yo bajo a Andén 0 a coger el metro de 1919. Llega igual de puntual que el de ahora."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"madrid/chamberi")
 	return p

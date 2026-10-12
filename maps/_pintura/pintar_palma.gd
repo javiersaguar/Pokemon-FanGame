@@ -108,4 +108,5 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.npc("Vecina", "npc_old_woman", Vector2i(28, 19), RIGHT, PackedStringArray([
 		"Aquí antes vivía gente. Ahora viven maletas con ruedas.",
 		"La ensaimada, en Ca'n Joan de s'Aigo. Y no se lo digas a los alemanes, que la compran."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"palma/exterior")
 	return p

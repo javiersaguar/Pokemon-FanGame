@@ -33,3 +33,9 @@ godot --headless --path . -s maps/_pintura/pintar_locales.gd -- --all getafe leg
 ```
 
 Las doce puertas y sus salidas se comprueban junto con las 21 anteriores. Los cuatro Centros se prueban con interacción real desde el mostrador, PS/estado/PP, derrota y PC. Las ocho tiendas usan datos propios en `shops.json`, heredando el catálogo existente sin nuevas reglas. Rótulos de estos locales desplazados dentro de la cabecera para que el aviso F9 no tape el nombre en sesiones de pruebas. Comparativas por localidad en `docs/arte/comparativas/*_locales.md`.
+
+## Entradas adicionales (2026-10-12)
+
+Veintiocho salas nuevas conectadas a trece exteriores ya pintados; **61 servicios** en total. Los namespaces de barrio (`madrid/sol/hospital`, etc.) evitan sustituir escenas exteriores y conservan la identidad de captura de la ciudad. Constructor del exterior: `servicios_locales.apply_all(p,map_id)`; interiores: `pintar_locales.gd -- --all <claves del manifiesto>`. Campos opcionales `zone` y `heading_y` conservan valores anteriores cuando faltan. Stock/precios ya existentes en 19 nuevas tiendas. [Comparativas y alcance](../mundo/auditoria_locales.md).
+
+Todos los interiores alcanzables; Palma/Ibiza requieren Surf en la salida exterior marítima. El fundido visual del motor común de Warp se conserva. El SE `door` sigue sin archivo; no se sustituye por un sonido ajeno. Casas/gimnasios y edificios especiales: [inventario](../mundo/puertas_pendientes.md) y contenido pendiente de Javier.

@@ -93,4 +93,5 @@ func _paint(painter: GDScript) -> RefCounted:
 		"La pasarela del avión está en esta casilla. No te quedes en el medio."]))
 	p.npc("Ostrera", "npc_old_woman", Vector2i(20, 36), LEFT, PackedStringArray([
 		"Rúa das Ostras. Una docena, y el cupo de las Cíes se acaba antes que las ostras."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"vigo/exterior")
 	return p

@@ -190,3 +190,45 @@ func test_centros_del_tramo_curan_fijan_recuperacion_y_abren_pc() -> void:
   assert_eq(GameState.money,money-price)
   assert_eq(GameState.bag.count(&"potion"),quantity+1)
  await session.finish()
+
+func test_servicios_adicionales_curan_y_tiendas_de_barrios_usan_su_catalogo() -> void:
+ await session.begin(&"huelva/centro")
+ for id: String in ["huelva/centro","madrid/sol/hospital"]:
+  assert_eq(await SceneManager.change_map(StringName(id)),OK)
+  var p: Pokemon = GameState.party.get_at(0)
+  p.current_hp = 1
+  p.status = &"psn"
+  p.moves[0].pp = 0
+  SceneManager.player.place_at(Vector2i(8,5),Vector2i.UP)
+  SceneManager.player._interact()
+  var until := Time.get_ticks_msec()+8000
+  while GameState.input_locked and Time.get_ticks_msec()<until:
+   await wait_process_frames(2)
+   if Dialogue.is_open: _press()
+  assert_false(GameState.input_locked)
+  assert_eq(p.current_hp,p.max_hp())
+  assert_eq(p.status,&"")
+  assert_gt(p.moves[0].pp,0)
+  assert_eq(GameState.healing_map,StringName(id))
+  SceneManager.player.place_at(Vector2i(12,10),Vector2i.UP)
+  SceneManager.player._interact()
+  await wait_until(func() -> bool: return SceneManager.top_menu() is PCScreen,2.0)
+  assert_true(SceneManager.top_menu() is PCScreen)
+  await wait_process_frames(3)
+  _press(&"cancel")
+  await wait_process_frames(3)
+  assert_false(GameState.input_locked)
+ var locations := JsonFile.read_dict("res://maps/_pintura/locales.json")
+ for key: String in locations:
+  if not locations[key].has("heading_y"): continue
+  for kind: String in ["mercadona","estanco"]:
+   if not locations[key].has(kind): continue
+   var shop := StringName(kind+"_"+key.replace("/","_"))
+   var item := &"potion" if kind == "mercadona" else &"xattack"
+   var before: int = GameState.money
+   var count: int = GameState.bag.count(item)
+   assert_has(ShopTransactions.stock(shop),item)
+   assert_eq(ShopTransactions.buy(shop,item,1),OK)
+   assert_eq(GameState.money,before-DataDB.item(item).price)
+   assert_eq(GameState.bag.count(item),count+1)
+ await session.finish()
