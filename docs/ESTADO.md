@@ -110,6 +110,18 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 1 — Mundo y arquitectura
 
+### Portada, gimnasios y personajes (2026-10-12)
+
+Rama `feat/agente1-portada-gimnasios`. Para no pisarme con quien hace el mapa de teletransporte del Debug y las puertas e interiores, no toco `src/ui/ui_debug.gd`, el panel de pruebas, los interiores, `data/shops.json`, `maps/_pintura/locales.json` ni los `pintar_*.gd`: los personajes se colocan por datos, sin editar mapas.
+
+**Hecho:**
+- **Portada** (`src/ui/title/title_screen.gd`, imagen `assets/sprites/ui/title/portada.png`): la portada de Javier sustituye al decorado y al logo de texto; la imagen recorre la pantalla de lado a lado, el logo brilla (`portada_brillo.gdshader`, solo aclara los píxeles amarillos del logo), destello al aparecer, "Pulsa START" sube y parpadea, y en el menú el fondo se oscurece, el menú entra por la izquierda con los botones uno a uno y la ficha por la derecha. Con "reducir animaciones", todo quieto. Comparativas `docs/arte/comparativas/portada_titulo.png` y `portada_menu.png`.
+- **Gimnasios** (`docs/mundo/gimnasios.md`, `data/gimnasios.json`, `data/trainers/gimnasios.json`): tipo, medalla, nivel tope, reto del interior y tres entrenadores por gimnasio (24). **El líder entrega la medalla** al ganarle (`src/events/gym_leader_event.gd`) y la ficha de entrenador enseña su nombre.
+- **Personajes en su sitio** (`data/personajes_en_el_mapa.json` + `src/overworld/character_placements.gd`, enganchado en `MapLoader.prepare`): 67 colocados (líderes a la puerta de su gimnasio, sus entrenadores y los famosos donde dice `personajes.md`), 20 pendientes con su motivo. Las casillas las calcula `maps/_tools/colocar_personajes.gd` sin tapar puertas, pasarelas ni pasillos; test `tests/mundo/test_personajes_colocados.gd`.
+- **Guion** (`docs/mundo/guion.md`): historia del Clan PSOE arco por arco, diálogos de líderes, Liga, Clan y famosos, para que Javier los retoque.
+
+**Para quien haga los interiores de los gimnasios:** cuando haya interior, mueve al líder y a sus entrenadores cambiando `mapa` y `cerca` en `data/personajes_en_el_mapa.json` y pasa `colocar_personajes.gd`; el diseño de cada interior está en `gimnasios.md`.
+
 ### Tramo sur (2026-10-09)
 
 Worktree `pokemon-panchito-agente1`, rama `feat/agente1-mundo-sur`. Tramo: Ruta 12 → Ruta 13 → Sevilla → Ruta 14 → Huelva (ferry) → Las Palmas → Ruta 15 → Playa del Inglés (con el aeropuerto). Números de fuente en `piezas.json`: 150–249 (usados 150–165).

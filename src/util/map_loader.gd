@@ -28,6 +28,7 @@ static func prepare(map_id: StringName) -> Dictionary:
 	if map.data == null or map.get_ground() == null or map.get_ground().get_used_rect().size == Vector2i.ZERO or map.get_map_id() != map_id:
 		map.free()
 		return {"error": ERR_INVALID_DATA}
+	CharacterPlacements.apply(map)
 	return {"error": OK, "map": map, "prepare_usec": Time.get_ticks_usec() - started}
 
 static func spawn_tile(map: MapRoot, spawn_id: StringName) -> Variant:

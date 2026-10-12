@@ -4,6 +4,8 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 
 > Decisiones de Javier (2026-10-09): ciudades, líderes, Alto Mando, Campeón, otras ciudades, personajes y locales de la lista de abajo. **El lore de cada ciudad lo decide Javier más adelante.** Todo lo que no viene de él va marcado como **propuesta** o **PENDIENTE JAVIER**.
 
+> **Gimnasios y personajes en su sitio:** [`gimnasios.md`](gimnasios.md) (diseño de los ocho gimnasios, medallas y dónde está cada personaje). **Guion, diálogos y lore para retocar:** [`guion.md`](guion.md).
+
 ## Índice
 
 | Documento | Qué tiene |
