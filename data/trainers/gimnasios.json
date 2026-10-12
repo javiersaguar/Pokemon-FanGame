@@ -1,0 +1,465 @@
+{
+  "gym1_padretarjeta": {
+    "class": "padretarjeta",
+    "name": "Borja",
+    "intro_text": "Mi padre me ha pagado el máster, el piso y este combate. ¡A ver si tú puedes decir lo mismo!",
+    "lose_text": "Voy a llamar a papá. Él lo arregla todo.",
+    "win_text": "Esto es libertad: la de mi padre para pagar.",
+    "after_text": "En Madrid el alquiler es libre. Libre de subir.",
+    "items": [],
+    "party": [
+      {
+        "species": "growlithe",
+        "level": 11
+      },
+      {
+        "species": "houndour",
+        "level": 12
+      }
+    ]
+  },
+  "gym1_camarero": {
+    "class": "camarero",
+    "name": "Paco",
+    "intro_text": "Terraza llena, tres cañas en la mano y aún me queda una para combatir.",
+    "lose_text": "Me voy a la barra, que me están llamando.",
+    "win_text": "¡Marchando una de victoria!",
+    "after_text": "Aquí se trabaja doce horas y se cobran ocho. Pero el ambiente, oye, inmejorable.",
+    "items": [],
+    "party": [
+      {
+        "species": "litleo",
+        "level": 12
+      },
+      {
+        "species": "ponyta",
+        "level": 12
+      }
+    ]
+  },
+  "gym1_influencer": {
+    "class": "influencerlinkedin",
+    "name": "Cayetana",
+    "gender": "female",
+    "intro_text": "Estoy orgullosa de anunciar que voy a ganarte. #Libertad #Emprendimiento",
+    "lose_text": "Aprendizajes de esta derrota: diez. Te los cuento en un hilo.",
+    "win_text": "Like si te he ganado.",
+    "after_text": "Ayuso me sigue en redes. Bueno, sigue a todo el que la nombra.",
+    "items": [],
+    "party": [
+      {
+        "species": "fletchling",
+        "level": 12
+      },
+      {
+        "species": "charcadet",
+        "level": 13
+      }
+    ]
+  },
+  "gym2_tertuliano": {
+    "class": "tertuliano",
+    "name": "Jordi",
+    "intro_text": "¡El Camp Nou estará acabado para 2026! ¿Qué año es? Bueno, pues 2027.",
+    "lose_text": "Esto es culpa del VAR.",
+    "win_text": "¡Visca el Barça i visca les palanques!",
+    "after_text": "Laporta vende el futuro para pagar el presente. Como mi hipoteca.",
+    "items": [],
+    "party": [
+      {
+        "species": "magnemite",
+        "level": 18
+      },
+      {
+        "species": "bronzor",
+        "level": 18
+      }
+    ]
+  },
+  "gym2_carterista": {
+    "class": "carterista",
+    "name": "Pau",
+    "intro_text": "¿Tu cartera? Ni idea. ¿Tu medalla? Esa la quiero.",
+    "lose_text": "Vale, vale, te devuelvo el móvil.",
+    "win_text": "Gracias por el donativo.",
+    "after_text": "En la Rambla hay más carteristas que turistas. Y más turistas que barceloneses.",
+    "items": [],
+    "party": [
+      {
+        "species": "pawniard",
+        "level": 18
+      },
+      {
+        "species": "klink",
+        "level": 19
+      }
+    ]
+  },
+  "gym2_revisor": {
+    "class": "revisorcercanias",
+    "name": "Montse",
+    "gender": "female",
+    "intro_text": "Rodalies: este tren sufre un retraso de cuarenta minutos. Hasta entonces, combatimos.",
+    "lose_text": "Incidencia en la vía: mi equipo.",
+    "win_text": "Billete y medalla, por favor.",
+    "after_text": "La R2 hoy no pasa. Mañana tampoco. Pero el gimnasio sí abre.",
+    "items": [],
+    "party": [
+      {
+        "species": "tinkatink",
+        "level": 19
+      },
+      {
+        "species": "klefki",
+        "level": 20
+      }
+    ]
+  },
+  "gym3_crossfitero": {
+    "class": "crossfitero",
+    "name": "Vicent",
+    "intro_text": "¿Has hecho WOD hoy? Yo tres. Y ahora el cuarto contigo.",
+    "lose_text": "Necesito un batido de proteínas y llorar un rato.",
+    "win_text": "¡Burpees de celebración!",
+    "after_text": "Labrador entrena aquí. Dice que el secreto es el gimnasio y el bronceador.",
+    "items": [],
+    "party": [
+      {
+        "species": "machop",
+        "level": 23
+      },
+      {
+        "species": "timburr",
+        "level": 24
+      }
+    ]
+  },
+  "gym3_tronista": {
+    "class": "tronista",
+    "name": "Rubén",
+    "intro_text": "Vengo de Mujeres y Hombres a buscar el amor. De momento, encuentro rivales.",
+    "lose_text": "Me has dejado más plantado que en la elección.",
+    "win_text": "La pista es mía, y la medalla también.",
+    "after_text": "En Akuarela se liga, se baila y se combate. En ese orden, si hay suerte.",
+    "items": [],
+    "party": [
+      {
+        "species": "mankey",
+        "level": 24
+      },
+      {
+        "species": "makuhita",
+        "level": 24
+      }
+    ]
+  },
+  "gym3_raver": {
+    "class": "raver",
+    "name": "Nerea",
+    "gender": "female",
+    "intro_text": "¡Esta noche no se duerme hasta que te gane!",
+    "lose_text": "Se me ha bajado el subidón.",
+    "win_text": "¡Bum, bum, bum!",
+    "after_text": "Labrador pincha a las tres de la mañana. Y combate a las cinco. Duerme en agosto.",
+    "items": [],
+    "party": [
+      {
+        "species": "pawmo",
+        "level": 24
+      },
+      {
+        "species": "riolu",
+        "level": 25
+      }
+    ]
+  },
+  "gym4_cunado": {
+    "class": "cunado",
+    "name": "Manolo",
+    "intro_text": "¿Monólogos? Yo hago monólogos en todas las comidas familiares. ¡Agárrate!",
+    "lose_text": "No me reía de ti, me reía contigo. Bueno, de ti.",
+    "win_text": "Y eso que no he contado el del Bulbasaur.",
+    "after_text": "Joaquín me ha robado tres chistes. Y yo se los robé a mi suegro.",
+    "items": [],
+    "party": [
+      {
+        "species": "gloom",
+        "level": 29
+      },
+      {
+        "species": "steenee",
+        "level": 30
+      }
+    ]
+  },
+  "gym4_flamenca": {
+    "class": "flamenca",
+    "name": "Lola",
+    "gender": "female",
+    "intro_text": "¡Al compás! Este club de la comedia tiene más arte que el Teatro de la Maestranza.",
+    "lose_text": "Me has dejado sin palmas.",
+    "win_text": "¡Arsa!",
+    "after_text": "Joaquín cuenta el chiste del Betis cada noche. Y cada noche pierde.",
+    "items": [],
+    "party": [
+      {
+        "species": "sunflora",
+        "level": 29
+      },
+      {
+        "species": "dolliv",
+        "level": 30
+      }
+    ]
+  },
+  "gym4_costalero": {
+    "class": "costalero",
+    "name": "Curro",
+    "intro_text": "El paso pesa más que tu equipo. ¡Y yo lo llevo sin quejarme!",
+    "lose_text": "Me han dejado sin costal.",
+    "win_text": "¡Al cielo con ella!",
+    "after_text": "Si te ríes de un chiste de Joaquín, te da puntos. Si no, también.",
+    "items": [],
+    "party": [
+      {
+        "species": "skiddo",
+        "level": 30
+      },
+      {
+        "species": "petilil",
+        "level": 31
+      }
+    ]
+  },
+  "gym5_fan": {
+    "class": "fan_quevedo",
+    "name": "Saray",
+    "gender": "female",
+    "intro_text": "¡Llevo dos días en la fila del concierto! No me vas a quitar el sitio.",
+    "lose_text": "Me quedo... sin sitio.",
+    "win_text": "¡Quédate, que te gano otra vez!",
+    "after_text": "Quevedo llena estadios. Yo lleno su bandeja de mensajes.",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 35
+      },
+      {
+        "species": "mantine",
+        "level": 36
+      }
+    ]
+  },
+  "gym5_surfista": {
+    "class": "surfista",
+    "name": "Yeray",
+    "intro_text": "Las olas del sur son de expertos. ¿Y tú, sabes nadar?",
+    "lose_text": "Me has revolcado, mi niño.",
+    "win_text": "¡Ola buena!",
+    "after_text": "Antes de que cante Quevedo, el mar canta solo. Y gratis.",
+    "items": [],
+    "party": [
+      {
+        "species": "floatzel",
+        "level": 35
+      },
+      {
+        "species": "wishiwashi",
+        "level": 36
+      }
+    ]
+  },
+  "gym5_nadador": {
+    "class": "nadador",
+    "name": "Airam",
+    "intro_text": "Nado desde Gran Canaria hasta el escenario. Bueno, desde la orilla.",
+    "lose_text": "Me he quedado sin aire.",
+    "win_text": "¡Al agua, patos!",
+    "after_text": "Quevedo creció aquí. Dice que el agua de Canarias es su tipo. Literalmente.",
+    "items": [],
+    "party": [
+      {
+        "species": "lanturn",
+        "level": 36
+      },
+      {
+        "species": "barraskewda",
+        "level": 37
+      }
+    ]
+  },
+  "gym6_crossfitero": {
+    "class": "crossfitero",
+    "name": "Aitor",
+    "intro_text": "¡Levanto piedras como un harrijasotzaile! Y a ti también te levanto.",
+    "lose_text": "Agur, medalla.",
+    "win_text": "¡Aupa!",
+    "after_text": "La líder entrena con txapela y botas de monte. Y no suda.",
+    "items": [],
+    "party": [
+      {
+        "species": "hawlucha",
+        "level": 40
+      },
+      {
+        "species": "scrafty",
+        "level": 41
+      }
+    ]
+  },
+  "gym6_tertuliano": {
+    "class": "tertuliano",
+    "name": "Iñaki",
+    "intro_text": "En San Mamés se viene a sufrir. Hoy sufres tú.",
+    "lose_text": "Esto en Copa no pasa.",
+    "win_text": "¡Athletic, Athletic, eup!",
+    "after_text": "Jugamos solo con los de casa. Con los Pokémon, igual.",
+    "items": [],
+    "party": [
+      {
+        "species": "emboar",
+        "level": 41
+      },
+      {
+        "species": "machoke",
+        "level": 41
+      }
+    ]
+  },
+  "gym6_camarero": {
+    "class": "camarero",
+    "name": "Josu",
+    "intro_text": "Pintxo y combate por dos euros. El combate es gratis; el pintxo, no.",
+    "lose_text": "Me llevo la barra puesta.",
+    "win_text": "¡Otro txakoli!",
+    "after_text": "En Bilbao todo es más grande: el Guggen, el pintxo y la derrota.",
+    "items": [],
+    "party": [
+      {
+        "species": "blaziken",
+        "level": 41
+      },
+      {
+        "species": "lucario",
+        "level": 42
+      }
+    ]
+  },
+  "gym7_esquiador": {
+    "class": "esquiador",
+    "name": "Álvaro",
+    "intro_text": "En Valladolid hace tanto frío que no me quito los esquís ni en la Plaza Mayor.",
+    "lose_text": "Me he quedado helado.",
+    "win_text": "¡Pista negra!",
+    "after_text": "Latasa dice que el frío conserva. A él no le va mal.",
+    "items": [],
+    "party": [
+      {
+        "species": "glalie",
+        "level": 44
+      },
+      {
+        "species": "piloswine",
+        "level": 44
+      }
+    ]
+  },
+  "gym7_opositor": {
+    "class": "opositor",
+    "name": "Sergio",
+    "intro_text": "Llevo ocho años opositando a notario. Este combate es el tema 214.",
+    "lose_text": "Me ha caído el tema que no me sabía.",
+    "win_text": "Aprobado. Con plaza.",
+    "after_text": "El temario es más largo que el invierno de Pucela.",
+    "items": [],
+    "party": [
+      {
+        "species": "cetitan",
+        "level": 45
+      },
+      {
+        "species": "arctibax",
+        "level": 45
+      }
+    ]
+  },
+  "gym7_montanera": {
+    "class": "montanera",
+    "name": "Elena",
+    "gender": "female",
+    "intro_text": "He bajado de la Sierra de Gredos solo para este combate. Abrígate.",
+    "lose_text": "Me voy a por un lechazo, que hace hambre.",
+    "win_text": "El frío es mi aliado.",
+    "after_text": "En la Plaza Mayor hay ochenta grados de diferencia entre agosto y enero.",
+    "items": [],
+    "party": [
+      {
+        "species": "abomasnow",
+        "level": 45
+      },
+      {
+        "species": "avalugg",
+        "level": 46
+      }
+    ]
+  },
+  "gym8_extra": {
+    "class": "turistachanclas",
+    "name": "Brian",
+    "intro_text": "¡Soy extra en la película de Banderas! Hago de turista. No me ha costado prepararlo.",
+    "lose_text": "Corten. Me voy a la playa.",
+    "win_text": "¡Plano secuencia de victoria!",
+    "after_text": "Me pagan en bocadillos. Y el bocadillo es de mortadela.",
+    "items": [],
+    "party": [
+      {
+        "species": "mightyena",
+        "level": 49
+      },
+      {
+        "species": "liepard",
+        "level": 50
+      }
+    ]
+  },
+  "gym8_productor": {
+    "class": "influencerlinkedin",
+    "name": "Marta",
+    "gender": "female",
+    "intro_text": "Productora ejecutiva. Este combate tiene presupuesto de superproducción y guion de telenovela.",
+    "lose_text": "Lo arreglamos en postproducción.",
+    "win_text": "¡Taquillazo!",
+    "after_text": "Banderas dirige, protagoniza y produce. Si pudiera, también se compraría la entrada.",
+    "items": [],
+    "party": [
+      {
+        "species": "honchkrow",
+        "level": 50
+      },
+      {
+        "species": "krookodile",
+        "level": 50
+      }
+    ]
+  },
+  "gym8_camarero": {
+    "class": "camarero",
+    "name": "Antonio",
+    "intro_text": "Catering del rodaje. Te sirvo un espeto... de derrota.",
+    "lose_text": "Me voy a por el pescaíto.",
+    "win_text": "¡Marchando!",
+    "after_text": "Aquí todo el mundo quiere salir en la película. Hasta las gaviotas.",
+    "items": [],
+    "party": [
+      {
+        "species": "weavile",
+        "level": 50
+      },
+      {
+        "species": "bisharp",
+        "level": 51
+      }
+    ]
+  }
+}

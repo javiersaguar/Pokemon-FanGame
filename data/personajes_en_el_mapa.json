@@ -1,0 +1,1193 @@
+{
+ "_doc": "Dónde está cada personaje (docs/mundo/gimnasios.md y docs/mundo/personajes.md). Lo decide Javier; esto es la propuesta. 'cerca' es el sitio que se busca; 'casilla' la calcula maps/_tools/colocar_personajes.gd (la libre y alcanzable más cercana). Los líderes esperan a la puerta de su gimnasio hasta que haya interiores. 'pareja' = combate doble.",
+ "colocados": [
+  {
+   "id": "ayuso",
+   "entrenador": "ayuso",
+   "mapa": "madrid/centro",
+   "cerca": [
+    36.0,
+    33.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Líder del gimnasio 1: delante de la Real Casa de Correos",
+   "lider": true,
+   "casilla": [
+    37,
+    35
+   ]
+  },
+  {
+   "id": "gym1_padretarjeta",
+   "entrenador": "gym1_padretarjeta",
+   "mapa": "madrid/centro",
+   "cerca": [
+    31.0,
+    35.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 1",
+   "casilla": [
+    31,
+    35
+   ]
+  },
+  {
+   "id": "gym1_camarero",
+   "entrenador": "gym1_camarero",
+   "mapa": "madrid/centro",
+   "cerca": [
+    36.0,
+    36.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 1",
+   "casilla": [
+    36,
+    36
+   ]
+  },
+  {
+   "id": "gym1_influencer",
+   "entrenador": "gym1_influencer",
+   "mapa": "madrid/centro",
+   "cerca": [
+    40.0,
+    34.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 1",
+   "casilla": [
+    40,
+    34
+   ]
+  },
+  {
+   "id": "laporta",
+   "entrenador": "laporta",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    27.0,
+    43.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Líder del gimnasio 2: delante del Spotify Camp Nou",
+   "lider": true,
+   "casilla": [
+    27,
+    45
+   ]
+  },
+  {
+   "id": "gym2_tertuliano",
+   "entrenador": "gym2_tertuliano",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    22.0,
+    45.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 2",
+   "casilla": [
+    22,
+    45
+   ]
+  },
+  {
+   "id": "gym2_carterista",
+   "entrenador": "gym2_carterista",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    27.0,
+    46.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 2",
+   "casilla": [
+    27,
+    46
+   ]
+  },
+  {
+   "id": "gym2_revisor",
+   "entrenador": "gym2_revisor",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    32.0,
+    45.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 2",
+   "casilla": [
+    32,
+    45
+   ]
+  },
+  {
+   "id": "labrador",
+   "entrenador": "labrador",
+   "mapa": "valencia/malvarrosa",
+   "cerca": [
+    40.0,
+    23.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Líder del gimnasio 3: delante de Akuarela Playa",
+   "lider": true,
+   "casilla": [
+    40,
+    23
+   ]
+  },
+  {
+   "id": "gym3_crossfitero",
+   "entrenador": "gym3_crossfitero",
+   "mapa": "valencia/malvarrosa",
+   "cerca": [
+    36.0,
+    25.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 3",
+   "casilla": [
+    36,
+    25
+   ]
+  },
+  {
+   "id": "gym3_tronista",
+   "entrenador": "gym3_tronista",
+   "mapa": "valencia/malvarrosa",
+   "cerca": [
+    41.0,
+    26.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 3",
+   "casilla": [
+    41,
+    26
+   ]
+  },
+  {
+   "id": "gym3_raver",
+   "entrenador": "gym3_raver",
+   "mapa": "valencia/malvarrosa",
+   "cerca": [
+    46.0,
+    24.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 3",
+   "casilla": [
+    46,
+    24
+   ]
+  },
+  {
+   "id": "joaquin",
+   "entrenador": "joaquin",
+   "mapa": "sevilla/rio",
+   "cerca": [
+    12.0,
+    34.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Líder del gimnasio 4: delante del club de la comedia",
+   "lider": true,
+   "casilla": [
+    12,
+    34
+   ]
+  },
+  {
+   "id": "gym4_cunado",
+   "entrenador": "gym4_cunado",
+   "mapa": "sevilla/rio",
+   "cerca": [
+    6.0,
+    36.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 4",
+   "casilla": [
+    6,
+    36
+   ]
+  },
+  {
+   "id": "gym4_flamenca",
+   "entrenador": "gym4_flamenca",
+   "mapa": "sevilla/rio",
+   "cerca": [
+    11.0,
+    37.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 4",
+   "casilla": [
+    11,
+    37
+   ]
+  },
+  {
+   "id": "gym4_costalero",
+   "entrenador": "gym4_costalero",
+   "mapa": "sevilla/rio",
+   "cerca": [
+    15.0,
+    36.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 4",
+   "casilla": [
+    15,
+    36
+   ]
+  },
+  {
+   "id": "quevedo",
+   "entrenador": "quevedo",
+   "mapa": "playa_del_ingles/exterior",
+   "cerca": [
+    51.0,
+    25.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Líder del gimnasio 5: delante del escenario del concierto",
+   "lider": true,
+   "casilla": [
+    51,
+    25
+   ]
+  },
+  {
+   "id": "gym5_fan",
+   "entrenador": "gym5_fan",
+   "mapa": "playa_del_ingles/exterior",
+   "cerca": [
+    46.0,
+    28.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 5",
+   "casilla": [
+    46,
+    28
+   ]
+  },
+  {
+   "id": "gym5_surfista",
+   "entrenador": "gym5_surfista",
+   "mapa": "playa_del_ingles/exterior",
+   "cerca": [
+    50.0,
+    29.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 5",
+   "casilla": [
+    50,
+    29
+   ]
+  },
+  {
+   "id": "gym5_nadador",
+   "entrenador": "gym5_nadador",
+   "mapa": "playa_del_ingles/exterior",
+   "cerca": [
+    54.0,
+    28.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 5",
+   "casilla": [
+    54,
+    28
+   ]
+  },
+  {
+   "id": "latasa",
+   "entrenador": "latasa",
+   "mapa": "valladolid/exterior",
+   "cerca": [
+    36.0,
+    31.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Líder del gimnasio 7: en el centro de la Plaza Mayor",
+   "lider": true,
+   "casilla": [
+    36,
+    31
+   ]
+  },
+  {
+   "id": "gym7_esquiador",
+   "entrenador": "gym7_esquiador",
+   "mapa": "valladolid/exterior",
+   "cerca": [
+    32.0,
+    29.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 7",
+   "casilla": [
+    32,
+    29
+   ]
+  },
+  {
+   "id": "gym7_opositor",
+   "entrenador": "gym7_opositor",
+   "mapa": "valladolid/exterior",
+   "cerca": [
+    36.0,
+    28.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 7",
+   "casilla": [
+    36,
+    28
+   ]
+  },
+  {
+   "id": "gym7_montanera",
+   "entrenador": "gym7_montanera",
+   "mapa": "valladolid/exterior",
+   "cerca": [
+    40.0,
+    30.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 7",
+   "casilla": [
+    40,
+    30
+   ]
+  },
+  {
+   "id": "banderas",
+   "entrenador": "banderas",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    58.0,
+    63.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Líder del gimnasio 8: en el rodaje, junto al puerto",
+   "lider": true,
+   "casilla": [
+    58,
+    63
+   ]
+  },
+  {
+   "id": "gym8_extra",
+   "entrenador": "gym8_extra",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    53.0,
+    64.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 8",
+   "casilla": [
+    53,
+    64
+   ]
+  },
+  {
+   "id": "gym8_productor",
+   "entrenador": "gym8_productor",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    57.0,
+    66.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 8",
+   "casilla": [
+    57,
+    66
+   ]
+  },
+  {
+   "id": "gym8_camarero",
+   "entrenador": "gym8_camarero",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    61.0,
+    65.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Entrenador del gimnasio 8",
+   "casilla": [
+    61,
+    65
+   ]
+  },
+  {
+   "id": "ester_exposito",
+   "entrenador": "ester_exposito",
+   "mapa": "madrid/centro",
+   "cerca": [
+    31.0,
+    24.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Gran Vía, en el estreno de su película",
+   "casilla": [
+    31,
+    24
+   ]
+  },
+  {
+   "id": "broncano",
+   "entrenador": "broncano",
+   "mapa": "madrid/centro",
+   "cerca": [
+    26.0,
+    25.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Gran Vía, a la puerta del Teatro Príncipe (La Revuelta)",
+   "casilla": [
+    26,
+    25
+   ]
+  },
+  {
+   "id": "chicote",
+   "entrenador": "chicote",
+   "mapa": "madrid/centro",
+   "cerca": [
+    44.0,
+    41.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Puerta del Sol, preparando las campanadas",
+   "pareja": "pedroche",
+   "casilla": [
+    43,
+    41
+   ]
+  },
+  {
+   "id": "pedroche",
+   "entrenador": "pedroche",
+   "mapa": "madrid/centro",
+   "cerca": [
+    46.0,
+    42.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Puerta del Sol, con el vestido de las campanadas",
+   "casilla": [
+    47,
+    42
+   ]
+  },
+  {
+   "id": "abascal",
+   "entrenador": "abascal",
+   "mapa": "madrid/retiro",
+   "cerca": [
+    4.0,
+    35.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Puerta del Congreso, a caballo",
+   "casilla": [
+    4,
+    35
+   ]
+  },
+  {
+   "id": "vito_quiles",
+   "entrenador": "vito_quiles",
+   "mapa": "madrid/retiro",
+   "cerca": [
+    8.0,
+    35.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Puerta del Congreso, micrófono en mano",
+   "pareja": "bertrand_ndongo",
+   "casilla": [
+    8,
+    35
+   ]
+  },
+  {
+   "id": "bertrand_ndongo",
+   "entrenador": "bertrand_ndongo",
+   "mapa": "madrid/retiro",
+   "cerca": [
+    10.0,
+    35.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Puerta del Congreso, con Vito Quiles",
+   "casilla": [
+    10,
+    35
+   ]
+  },
+  {
+   "id": "almeida",
+   "entrenador": "almeida",
+   "mapa": "madrid/retiro",
+   "cerca": [
+    30.0,
+    15.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Ayuntamiento de Cibeles",
+   "casilla": [
+    30,
+    15
+   ]
+  },
+  {
+   "id": "enrique_iglesias",
+   "entrenador": "enrique_iglesias",
+   "mapa": "madrid/chamberi",
+   "cerca": [
+    24.0,
+    24.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Camino del Bernabéu, de concierto",
+   "casilla": [
+    24,
+    24
+   ]
+  },
+  {
+   "id": "jorge_javier",
+   "entrenador": "jorge_javier",
+   "mapa": "madrid/moncloa",
+   "cerca": [
+    22.0,
+    15.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Plató de televisión",
+   "pareja": "belen_esteban",
+   "casilla": [
+    22,
+    15
+   ]
+  },
+  {
+   "id": "belen_esteban",
+   "entrenador": "belen_esteban",
+   "mapa": "madrid/moncloa",
+   "cerca": [
+    24.0,
+    15.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Plató de televisión, con Jorge Javier",
+   "casilla": [
+    24,
+    15
+   ]
+  },
+  {
+   "id": "ibai",
+   "entrenador": "ibai",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    44.0,
+    32.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Kings League, junto a La Masia",
+   "pareja": "pique",
+   "casilla": [
+    43,
+    32
+   ]
+  },
+  {
+   "id": "pique",
+   "entrenador": "pique",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    46.0,
+    32.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Kings League, con Ibai",
+   "casilla": [
+    47,
+    32
+   ]
+  },
+  {
+   "id": "lamine",
+   "entrenador": "lamine",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    16.0,
+    44.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Camp Nou (viene de Rocafonda, Mataró)",
+   "casilla": [
+    16,
+    44
+   ]
+  },
+  {
+   "id": "hustlehard304",
+   "entrenador": "hustlehard304",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    14.0,
+    45.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Con Lamine",
+   "casilla": [
+    14,
+    45
+   ]
+  },
+  {
+   "id": "keyne",
+   "entrenador": "keyne",
+   "mapa": "barcelona/les_corts",
+   "cerca": [
+    18.0,
+    45.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Con Lamine",
+   "casilla": [
+    18,
+    45
+   ]
+  },
+  {
+   "id": "aitana",
+   "entrenador": "aitana",
+   "mapa": "barcelona/eixample",
+   "cerca": [
+    24.0,
+    52.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "De gira (Palau Sant Jordi)",
+   "casilla": [
+    24,
+    52
+   ]
+  },
+  {
+   "id": "rosalia",
+   "entrenador": "rosalia",
+   "mapa": "ruta_8/exterior",
+   "cerca": [
+    54.0,
+    33.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Sant Esteve Sesrovires, su pueblo",
+   "casilla": [
+    54,
+    31
+   ]
+  },
+  {
+   "id": "guardiola",
+   "entrenador": "guardiola",
+   "mapa": "ruta_8/exterior",
+   "cerca": [
+    15.0,
+    33.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Santpedor, su pueblo",
+   "casilla": [
+    15,
+    33
+   ]
+  },
+  {
+   "id": "vegeta",
+   "entrenador": "vegeta",
+   "mapa": "zaragoza/exterior",
+   "cerca": [
+    47.0,
+    13.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Salida hacia la Puerta de los Pirineos (camino de Andorra)",
+   "pareja": "willyrex",
+   "casilla": [
+    49,
+    13
+   ]
+  },
+  {
+   "id": "willyrex",
+   "entrenador": "willyrex",
+   "mapa": "zaragoza/exterior",
+   "cerca": [
+    49.0,
+    13.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Con Vegeta, camino de Andorra",
+   "casilla": [
+    49,
+    14
+   ]
+  },
+  {
+   "id": "ferran_torres",
+   "entrenador": "ferran_torres",
+   "mapa": "valencia/turia",
+   "cerca": [
+    26.0,
+    32.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "El jardín del Turia",
+   "casilla": [
+    26,
+    32
+   ]
+  },
+  {
+   "id": "juan_roig",
+   "entrenador": "juan_roig",
+   "mapa": "valencia/ciutat_vella",
+   "cerca": [
+    8.0,
+    40.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Junto al Mercado Central",
+   "casilla": [
+    7,
+    40
+   ]
+  },
+  {
+   "id": "sergio_ramos",
+   "entrenador": "sergio_ramos",
+   "mapa": "sevilla/rio",
+   "cerca": [
+    44.0,
+    16.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Junto a la Maestranza",
+   "casilla": [
+    44,
+    17
+   ]
+  },
+  {
+   "id": "julio_iglesias",
+   "entrenador": "julio_iglesias",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    63.0,
+    68.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Su yate, en el Muelle Uno",
+   "casilla": [
+    63,
+    68
+   ]
+  },
+  {
+   "id": "mario_casas",
+   "entrenador": "mario_casas",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    61.0,
+    62.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "En el rodaje de Banderas",
+   "casilla": [
+    61,
+    62
+   ]
+  },
+  {
+   "id": "coto_matamoros",
+   "entrenador": "coto_matamoros",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    88.0,
+    64.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "El paseo marítimo",
+   "casilla": [
+    88,
+    64
+   ]
+  },
+  {
+   "id": "sarah_santaolalla",
+   "entrenador": "sarah_santaolalla",
+   "mapa": "valladolid/exterior",
+   "cerca": [
+    26.0,
+    21.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Tertulia de radio, Valladolid",
+   "casilla": [
+    26,
+    20
+   ]
+  },
+  {
+   "id": "oscar_puente",
+   "entrenador": "oscar_puente",
+   "mapa": "valladolid/exterior",
+   "cerca": [
+    46.0,
+    33.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Camino de la estación de Valladolid",
+   "casilla": [
+    46,
+    32
+   ]
+  },
+  {
+   "id": "pereira7",
+   "entrenador": "pereira7",
+   "mapa": "vigo/exterior",
+   "cerca": [
+    30.0,
+    30.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Una cafetería de Vigo",
+   "casilla": [
+    30,
+    30
+   ]
+  },
+  {
+   "id": "folagor",
+   "entrenador": "folagor",
+   "mapa": "getafe/exterior",
+   "cerca": [
+    30.0,
+    10.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "La tienda de cartas de Getafe",
+   "casilla": [
+    30,
+    10
+   ]
+  },
+  {
+   "id": "sekiam",
+   "entrenador": "sekiam",
+   "mapa": "getafe/exterior",
+   "cerca": [
+    33.0,
+    10.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "La tienda de cartas, con Folagor",
+   "casilla": [
+    33,
+    10
+   ]
+  },
+  {
+   "id": "pokealex",
+   "entrenador": "pokealex",
+   "mapa": "getafe/exterior",
+   "cerca": [
+    36.0,
+    10.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "La tienda de cartas, con Folagor",
+   "casilla": [
+    36,
+    10
+   ]
+  },
+  {
+   "id": "franco",
+   "entrenador": "franco",
+   "mapa": "ruta_3/exterior",
+   "cerca": [
+    10.0,
+    68.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Valle de Cuelgamuros",
+   "casilla": [
+    10,
+    67
+   ]
+  },
+  {
+   "id": "pablo_iglesias",
+   "entrenador": "pablo_iglesias",
+   "mapa": "ruta_4/exterior",
+   "cerca": [
+    27.0,
+    35.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Su chalet de Galapagar",
+   "pareja": "irene_montero",
+   "casilla": [
+    28,
+    35
+   ]
+  },
+  {
+   "id": "irene_montero",
+   "entrenador": "irene_montero",
+   "mapa": "ruta_4/exterior",
+   "cerca": [
+    29.0,
+    35.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Su chalet de Galapagar",
+   "casilla": [
+    29,
+    33
+   ]
+  },
+  {
+   "id": "rubiales",
+   "entrenador": "rubiales",
+   "mapa": "ruta_12/exterior",
+   "cerca": [
+    14.0,
+    19.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "La boda en el cortijo de Granada",
+   "pareja": "jenni_hermoso",
+   "casilla": [
+    14,
+    19
+   ]
+  },
+  {
+   "id": "jenni_hermoso",
+   "entrenador": "jenni_hermoso",
+   "mapa": "ruta_12/exterior",
+   "cerca": [
+    15.0,
+    19.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "La boda en el cortijo de Granada",
+   "casilla": [
+    15,
+    18
+   ]
+  },
+  {
+   "id": "juan_carlos",
+   "entrenador": "juan_carlos",
+   "mapa": "ruta_16/exterior",
+   "cerca": [
+    26.0,
+    26.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Las regatas de Sanxenxo",
+   "casilla": [
+    26,
+    26
+   ]
+  }
+ ],
+ "pendientes": [
+  {
+   "id": "aupa_athletic",
+   "lugar": "San Mamés (Bilbao)",
+   "motivo": "Bilbao aún no está pintado (Agente 2)"
+  },
+  {
+   "id": "nico_williams",
+   "lugar": "San Mamés (Bilbao)",
+   "motivo": "Bilbao aún no está pintado"
+  },
+  {
+   "id": "inaki_williams",
+   "lugar": "San Mamés (Bilbao)",
+   "motivo": "Bilbao aún no está pintado"
+  },
+  {
+   "id": "gym6_crossfitero",
+   "lugar": "San Mamés (Bilbao)",
+   "motivo": "Bilbao aún no está pintado"
+  },
+  {
+   "id": "gym6_tertuliano",
+   "lugar": "San Mamés (Bilbao)",
+   "motivo": "Bilbao aún no está pintado"
+  },
+  {
+   "id": "gym6_camarero",
+   "lugar": "San Mamés (Bilbao)",
+   "motivo": "Bilbao aún no está pintado"
+  },
+  {
+   "id": "elxokas",
+   "lugar": "Ruta 17 (Galicia)",
+   "motivo": "Ruta 17 sin pintar"
+  },
+  {
+   "id": "amancio_ortega",
+   "lugar": "Ruta 17 (Arteixo)",
+   "motivo": "Ruta 17 sin pintar"
+  },
+  {
+   "id": "melendi",
+   "lugar": "Ruta 18 (Asturias)",
+   "motivo": "Ruta 18 sin pintar"
+  },
+  {
+   "id": "topuria",
+   "lugar": "Alicante (gimnasio de MMA)",
+   "motivo": "Alicante sin pintar"
+  },
+  {
+   "id": "pedro_sanchez",
+   "lugar": "Palacio Real (Liga) y el Clan PSOE",
+   "motivo": "Historia: va con la Liga y el Clan"
+  },
+  {
+   "id": "abalos",
+   "lugar": "Moncloa, Ferraz, la Albufera...",
+   "motivo": "Historia del Clan PSOE"
+  },
+  {
+   "id": "koldo",
+   "lugar": "Moncloa, Ferraz, Pamplona...",
+   "motivo": "Historia del Clan PSOE"
+  },
+  {
+   "id": "leire_diez",
+   "lugar": "Cloacas de Madrid",
+   "motivo": "Mazmorra sin hacer"
+  },
+  {
+   "id": "iniesta",
+   "lugar": "Liga, Palacio Real",
+   "motivo": "Interior de la Liga sin hacer"
+  },
+  {
+   "id": "nadal",
+   "lugar": "Liga, Palacio Real",
+   "motivo": "Interior de la Liga sin hacer"
+  },
+  {
+   "id": "gasol",
+   "lugar": "Liga, Palacio Real",
+   "motivo": "Interior de la Liga sin hacer"
+  },
+  {
+   "id": "alonso",
+   "lugar": "Liga, Palacio Real",
+   "motivo": "Interior de la Liga sin hacer"
+  },
+  {
+   "id": "felipe_vi",
+   "lugar": "Salón del Trono, después de la Liga",
+   "motivo": "Después de la Liga"
+  },
+  {
+   "id": "recluta_clan",
+   "lugar": "Por toda la región",
+   "motivo": "Historia del Clan PSOE"
+  }
+ ]
+}

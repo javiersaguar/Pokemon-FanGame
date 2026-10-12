@@ -31,8 +31,13 @@ func _unhandled_input(event: InputEvent) -> void:
 func _show_badges() -> void:
 	var names := PackedStringArray()
 	var notes := PackedStringArray()
+	var gyms: Dictionary = JsonFile.read_dict("res://data/gimnasios.json").get("gimnasios", {})
 	for id: StringName in GameState.badges:
-		names.append(String(id))
-		notes.append("Medalla obtenida y guardada en la partida. Nombre e ilustración definitivos pendientes.")
+		var gym: Dictionary = {}
+		for city: String in gyms:
+			if str(gyms[city].get("medalla", "")) == String(id):
+				gym = gyms[city]
+		names.append(str(gym.get("nombre_medalla", String(id))))
+		notes.append("Gimnasio de %s. Ilustración pendiente." % gym["ciudad"] if not gym.is_empty() else "Medalla obtenida y guardada en la partida. Nombre e ilustración definitivos pendientes.")
 	if names.is_empty(): names.append("Sin medallas"); notes.append("Todavía no has obtenido ninguna medalla.")
 	await ChoiceScreen.pick("Estuche de medallas",names,notes)
