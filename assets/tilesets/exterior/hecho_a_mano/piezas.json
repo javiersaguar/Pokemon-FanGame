@@ -654,5 +654,30 @@
   "barca_albufera": {
     "fuente": 94,
     "puerta": null
+  },
+  "penon_ifach": {
+    "fuente": 95,
+    "puerta": null
+  },
+  "iglesia_altea": {
+    "fuente": 96,
+    "puerta": [
+      2,
+      0
+    ]
+  },
+  "rascacielos_benidorm": {
+    "fuente": 97,
+    "puerta": [
+      1,
+      0
+    ]
+  },
+  "intempo": {
+    "fuente": 98,
+    "puerta": [
+      2,
+      0
+    ]
   }
 }

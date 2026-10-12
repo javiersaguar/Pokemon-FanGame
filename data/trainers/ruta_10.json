@@ -1,0 +1,82 @@
+{
+  "ruta10_surfista": {
+    "class": "surfista",
+    "name": "Marc",
+    "intro_text": "¡Hoy no hay ni una ola! En el Mediterráneo nunca hay. Pues combatimos.",
+    "lose_text": "Me has pasado por encima. Como una ola, mira.",
+    "win_text": "¡Al agua, patos!",
+    "after_text": "Subir al Peñón está chupado. Lo difícil es bajar al que sube en chanclas.",
+    "items": [],
+    "party": [
+      {
+        "species": "wingull",
+        "level": 28
+      },
+      {
+        "species": "tentacool",
+        "level": 28
+      },
+      {
+        "species": "pelipper",
+        "level": 29
+      }
+    ]
+  },
+  "ruta10_guiri": {
+    "class": "turistachanclas",
+    "name": "Gary",
+    "intro_text": "«Oi, mate!» Tercer día en Benidorm y todavía no me he puesto crema. ¡A combatir!",
+    "lose_text": "«Bloody hell!» Estoy más rojo que mi Corphish.",
+    "win_text": "«Easy peasy!» Otra pinta para celebrarlo.",
+    "after_text": "Vengo desde 1994. No he visto la ciudad vieja. ¿Hay ciudad vieja?",
+    "items": [],
+    "party": [
+      {
+        "species": "chatot",
+        "level": 28
+      },
+      {
+        "species": "corphish",
+        "level": 29
+      }
+    ]
+  },
+  "ruta10_jubilado": {
+    "class": "jubiladoobras",
+    "name": "Paco",
+    "intro_text": "Llevo desde el desarrollismo mirando grúas en Benidorm. Esta es la mejor obra en años. ¡No me tapes!",
+    "lose_text": "Ya me he perdido cómo hormigonaban la planta doce.",
+    "win_text": "En mis tiempos esto eran bancales. Y combatíamos mejor.",
+    "after_text": "Cuando vine, aquí había cuatro barcas. Ahora hay cuatrocientos hoteles. Barcas quedan tres.",
+    "items": [],
+    "party": [
+      {
+        "species": "trumbeak",
+        "level": 28
+      },
+      {
+        "species": "graveler",
+        "level": 29
+      }
+    ]
+  },
+  "ruta10_camarero": {
+    "class": "camarero",
+    "name": "Kevin",
+    "intro_text": "Doce horas de turno, tres idiomas y cobro en propinas. ¡Tú no te vas sin consumir un combate!",
+    "lose_text": "La cuenta, por favor. La mía, digo.",
+    "win_text": "Marchando una derrota para la mesa cuatro.",
+    "after_text": "En temporada alta duermo en el almacén. El alquiler aquí cuesta más que mi sueldo.",
+    "items": [],
+    "party": [
+      {
+        "species": "greedent",
+        "level": 29
+      },
+      {
+        "species": "oinkologne",
+        "level": 29
+      }
+    ]
+  }
+}

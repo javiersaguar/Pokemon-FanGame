@@ -1,0 +1,32 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "wingull", "min": 27, "max": 29, "weight": 30},
+      {"species": "trumbeak", "min": 27, "max": 29, "weight": 20},
+      {"species": "chatot", "min": 27, "max": 29, "weight": 20},
+      {"species": "corphish", "min": 27, "max": 29, "weight": 20},
+      {"species": "exeggutor", "min": 29, "max": 30, "weight": 10}
+    ],
+    "night": [
+      {"species": "wingull", "min": 27, "max": 29, "weight": 30},
+      {"species": "corphish", "min": 27, "max": 29, "weight": 30},
+      {"species": "gastly", "min": 27, "max": 29, "weight": 20},
+      {"species": "noibat", "min": 27, "max": 29, "weight": 20}
+    ]
+  },
+  "water": [
+    {"species": "tentacool", "min": 27, "max": 30, "weight": 35},
+    {"species": "wingull", "min": 27, "max": 30, "weight": 25},
+    {"species": "krabby", "min": 27, "max": 30, "weight": 25},
+    {"species": "remoraid", "min": 27, "max": 30, "weight": 15}
+  ],
+  "old_rod": [
+    {"species": "krabby", "min": 23, "max": 26, "weight": 50},
+    {"species": "magikarp", "min": 23, "max": 26, "weight": 50}
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}
