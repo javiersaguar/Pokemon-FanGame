@@ -11,6 +11,7 @@ const OUTPUT := "res://data/item_placements.json"
 ## Recorre todos los mapas y devuelve {placement_id: item_id}, ordenado.
 static func scan() -> Dictionary:
 	var out := {}
+	var rewards := JsonFile.read_dict("res://data/npc_rewards.json")
 	for map_id: StringName in MapRoot.list_all():
 		var scene := load(MapRoot.path_from_id(map_id)) as PackedScene
 		if scene == null:
@@ -20,6 +21,14 @@ static func scan() -> Dictionary:
 			if node is ItemBall:
 				var ball := node as ItemBall
 				out["%s/%s" % [map_id, ball.name]] = String(ball.item_id)
+			elif node is NPC and node.event != null and node.event.resource_path == "res://src/events/common/npc_reward_event.gd":
+				var cfg: Dictionary = rewards.get(str(node.event_params.get("reward_id","")),{})
+				var placement := "%s/%s" % [map_id,node.name]
+				var item := StringName(cfg.get("item",""))
+				if str(cfg.get("placement","")) != placement or not DataDB.has_item(item):
+					push_error("Recompensa de NPC inválida: %s." % placement)
+					continue
+				out[placement] = String(item)
 		root.free()
 	var keys := out.keys()
 	keys.sort()

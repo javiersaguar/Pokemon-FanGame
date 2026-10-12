@@ -232,3 +232,91 @@ func test_servicios_adicionales_curan_y_tiendas_de_barrios_usan_su_catalogo() ->
    assert_eq(GameState.money,before-DataDB.item(item).price)
    assert_eq(GameState.bag.count(item),count+1)
  await session.finish()
+
+func _finish_interaction() -> void:
+ var until := Time.get_ticks_msec()+6000
+ while GameState.input_locked and Time.get_ticks_msec()<until:
+  await wait_process_frames(2)
+  if Dialogue.is_open: _press()
+
+func test_recompensa_de_npc_resuelve_randomlocke_cancela_y_no_se_duplica() -> void:
+ assert_eq(await session.begin(&"getafe/mercadona"),OK)
+ var placement := "getafe/mercadona/Cliente"
+ assert_eq(DataDB.apply_patch({"items":{placement:"superpotion"}}),[])
+ var count: int = GameState.bag.count(&"superpotion")
+ SceneManager.player.place_at(Vector2i(5,8),Vector2i.UP)
+ SceneManager.player._interact()
+ await wait_process_frames(3)
+ _press(&"cancel")
+ await wait_process_frames(3)
+ assert_false(GameState.flag(&"npc_reward:getafe_mercadona_cortesia"))
+ assert_eq(GameState.bag.count(&"superpotion"),count)
+ for times: int in 2:
+  SceneManager.player._interact()
+  await _finish_interaction()
+  assert_false(GameState.input_locked)
+  assert_eq(GameState.bag.count(&"superpotion"),count+1)
+ assert_true(GameState.flag(&"npc_reward:getafe_mercadona_cortesia"))
+ assert_has(GameState.to_dict().flags,"npc_reward:getafe_mercadona_cortesia")
+ await session.finish()
+
+func test_mochila_llena_no_consume_regalo_y_expositor_muestra_catalogo_real() -> void:
+ assert_eq(await session.begin(&"getafe/mercadona"),OK)
+ GameState.bag.add(&"potion",Bag.MAX_COUNT)
+ SceneManager.player.place_at(Vector2i(5,8),Vector2i.UP)
+ SceneManager.player._interact()
+ await _finish_interaction()
+ assert_false(GameState.flag(&"npc_reward:getafe_mercadona_cortesia"))
+ GameState.bag.remove(&"potion",1)
+ SceneManager.player._interact()
+ await _finish_interaction()
+ assert_true(GameState.flag(&"npc_reward:getafe_mercadona_cortesia"))
+ assert_eq(GameState.bag.count(&"potion"),Bag.MAX_COUNT)
+ SceneManager.player.place_at(Vector2i(3,6),Vector2i.UP)
+ SceneManager.player._interact()
+ await wait_process_frames(4)
+ var screen := SceneManager.top_menu() as ChoiceScreen
+ assert_not_null(screen)
+ if screen != null:
+  assert_eq(screen.choices.size(),ShopTransactions.stock(&"mercadona_getafe").size())
+  assert_true(screen.choices[0].contains(str(ShopTransactions.price(&"mercadona_getafe",ShopTransactions.stock(&"mercadona_getafe")[0]))))
+  assert_true(screen.notes[0].contains("Compra en la caja"))
+  _press(&"cancel")
+  await wait_process_frames(3)
+ assert_false(GameState.input_locked)
+ await session.finish()
+
+func test_puesto_del_mercado_abre_compra_de_objetos_existentes() -> void:
+ assert_eq(await session.begin(&"getafe/exterior"),OK)
+ SceneManager.player.place_at(Vector2i(25,30),Vector2i.UP)
+ SceneManager.player._interact()
+ var until := Time.get_ticks_msec()+4000
+ while not SceneManager.top_menu() is ShopScreen and Time.get_ticks_msec()<until:
+  await wait_process_frames(2)
+  if Dialogue.is_open: _press()
+ assert_true(SceneManager.top_menu() is ShopScreen)
+ await wait_process_frames(3)
+ _press(&"cancel")
+ await _finish_interaction()
+ assert_false(GameState.input_locked)
+ await session.finish()
+
+func test_casa_visitable_conserva_zona_salida_y_pc_real() -> void:
+ assert_eq(await session.begin(&"getafe/exterior"),OK)
+ SceneManager.player.place_at(Vector2i(47,23),Vector2i.UP)
+ await SceneManager.player._after_step()
+ assert_eq(GameState.map_id,&"getafe/casa_vecina")
+ assert_eq(SceneManager.current_map.get_zone_id(),&"getafe")
+ SceneManager.player.place_at(Vector2i(8,5),Vector2i.UP)
+ SceneManager.player._interact()
+ await wait_until(func() -> bool: return SceneManager.top_menu() is PCScreen,2.0)
+ assert_true(SceneManager.top_menu() is PCScreen)
+ await wait_process_frames(3)
+ _press(&"cancel")
+ await wait_process_frames(3)
+ SceneManager.player.place_at(Vector2i(8,11),Vector2i.DOWN)
+ await SceneManager.player._after_step()
+ assert_eq(GameState.map_id,&"getafe/exterior")
+ assert_eq(SceneManager.player.tile_position(),Vector2i(47,24))
+ assert_null(SceneManager.current_map.warp_at(Vector2i(47,24)))
+ await session.finish()

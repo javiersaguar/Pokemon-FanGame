@@ -211,3 +211,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 
 | Mapa interactivo F9 | Plano documental y controles de depuración | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_mapa_f9.md) |
 | 28 interiores adicionales / 13 exteriores | Akizakura16 y personajes existentes, puertas/rótulos | PROVISIONAL, pendiente Javier | [Trece comparativas](../mundo/auditoria_locales.md) |
+
+| Repaso Getafe/Ruta 24 y casa visitable | Recursos originales y mobiliario/interacciones | PROVISIONAL, pendiente Javier | [Antes/después](comparativas/a3_densidad_getafe_ruta24.md) |

@@ -15,7 +15,9 @@ func _initialize() -> void:
 	d.region_map_position = Vector2i(14, 12)
 	var p := Pintor.new("Getafe", SIZE, d, 2122)
 	p.fill_grass(0.18)
-	p.paving(Rect2i(1, 1, 41, 62))
+	# Avenidas y calles entre manzanas; jardines en vez de una losa vacía.
+	for rect: Rect2i in [Rect2i(10,6,4,58),Rect2i(1,9,42,4),Rect2i(1,22,40,8),Rect2i(1,36,41,5),Rect2i(1,47,41,5),Rect2i(1,59,49,4),Rect2i(43,25,17,5)]:
+		p.paving(rect)
 	p.paving(Rect2i(0, 26, 64, 4))
 	p.paving(Rect2i(40, 56, 13, 8))
 	p.build_paving()
@@ -43,6 +45,15 @@ func _initialize() -> void:
 	p.object(&"oficinas_azules", Vector2i(29, 47))
 	p.object(&"casa_dos_aguas", Vector2i(18, 59))
 	p.object(&"casa_roja_chimenea", Vector2i(3, 59))
+	p.object(&"casa_madera",Vector2i(46,24))
+	p.object(&"casa_dos_aguas",Vector2i(54,24))
+	p.object(&"casa_granero",Vector2i(29,59))
+	p.object(&"puesto_mercado",Vector2i(23,28))
+	for at: Vector2i in [Vector2i(1,14),Vector2i(17,14),Vector2i(38,19),Vector2i(1,39),Vector2i(36,54),Vector2i(43,30)]:
+		p.object(&"arbol_redondo",at)
+	p.object(&"banco",Vector2i(32,28))
+	p.flowers(Rect2i(15,40,4,4))
+	p.flowers(Rect2i(31,15,6,3))
 	# Cerro de los Ángeles al este; riberas del Manzanares aún más al este.
 	p.plateau(Rect2i(43, 33, 17, 23), [50, 51])
 	p.object(&"sagrado_corazon_getafe", Vector2i(44, 44))
@@ -74,6 +85,24 @@ func _initialize() -> void:
 	for local: Array in [["Centro", 4, "CENTRO POKÉMON"], ["Mercadona", 15, "MERCADONA"], ["Estanco", 25, "ESTANCO"], ["BasicFit", 34, "BASIC-FIT"]]:
 		_sign(p, local[0], Vector2i(local[1], 37), [local[2], "Interior pendiente."])
 	p.npc("Vecino", "npc_man", Vector2i(12, 27), 0, PackedStringArray(["Aquí está el sur de Madrid. La capital acaba donde empieza tu abono.", "Para Leganés, sigue hacia el oeste."]))
+	_sign(p,"CruceOeste",Vector2i(3,30),["← LEGANÉS · CERCANÍAS C-5","Sur: Centro Pokémon, Mercadona y estanco. Ruta 24 por la avenida sur."])
+	_sign(p,"CruceSur",Vector2i(38,53),["RUTA 24 ↓","Sigue la calle hacia el sur y después al este. La salida está junto al cartel del sur."])
+	p.npc("Tendero","npc_old_man",Vector2i(25,29),0,[],{"display_name":"Puesto del mercado","event":load("res://src/events/common/open_shop_event.gd"),"event_params":{"shop_id":"mercadona_getafe"}})
+	p.npc("Paseante","npc_lass",Vector2i(34,30),1,["Al oeste está Leganés. La Ruta 24 sale por el sur."],{"wander":true,"wander_radius":1})
+	p.npc("VecinaBarrio","npc_old_woman",Vector2i(51,27),0,["Estas calles llegan a las casas. Puedes atravesar la plaza para volver a los comercios."])
+	p.npc("Aficionada","npc_girl",Vector2i(18,12),0,["El Coliseum está al norte. Sigue la avenida; el cartel está frente a las gradas."])
+	p.npc("ClienteEstanco","npc_man",Vector2i(29,40),2,["Los objetos del estanco preparan el combate. Las curas están en Mercadona."])
+	# Ramales cortos desde la calle a los portales que quedan por encima de ella.
+	for row: Array in [[&"casa_roja",Vector2i(14,9)],[&"casa_dos_aguas",Vector2i(3,21)],[&"casa_naranja",Vector2i(15,21)],[&"casa_madera",Vector2i(46,24)],[&"casa_dos_aguas",Vector2i(54,24)],[&"casa_roja_chimenea",Vector2i(3,59)]]:
+		var front: Vector2i = row[1]+ExteriorTiles.objects()[row[0]].door+Vector2i.DOWN
+		for step: int in 4:
+			var at := front+Vector2i(0,step)
+			if p._paving.has(at): break
+			p.paving(Rect2i(at-Vector2i(1,0),Vector2i(3,1)))
+	p.build_paving()
+	p.spawn("from_casa_vecina",Vector2i(47,24))
+	p.warp("CasaVecina",Vector2i(47,23),&"getafe/casa_vecina",&"default")
+	p.root.get_node("Warps/CasaVecina").arrival_facing = Warp.Facing.UP
 	load("res://maps/_pintura/servicios_locales.gd").apply(p,"getafe","getafe/exterior",JsonFile.read_dict("res://maps/_pintura/locales.json")["getafe"])
 	print("Getafe: ", error_string(p.save(OUT)))
 	quit()

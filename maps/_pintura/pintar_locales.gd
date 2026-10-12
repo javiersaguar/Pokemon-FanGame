@@ -12,12 +12,12 @@ func _initialize() -> void:
  if "--all" in args:
   var cities := JsonFile.read_dict("res://maps/_pintura/locales.json")
   for id: String in cities:
-   if args.size() > 1 and id not in args: continue
+   if Array(args).filter(func(arg: String) -> bool: return not arg.begins_with("--")).size() > 0 and id not in args: continue
    city = id
    city_name = cities[id].name
    locations = cities[id]
    for kind: String in ["hospital","centro","mercadona","estanco"]:
-    if locations.has(kind): _paint(kind)
+    if locations.has(kind) and ("--kind=mercadona" not in args or kind == "mercadona"): _paint(kind)
   quit()
   return
  if args.size() >= 3:
@@ -64,6 +64,7 @@ func _paint(kind: String) -> void:
   _hospital(p,kind)
  else:
   _shop(p,kind)
+ if city == "getafe" and kind == "mercadona": _detail_getafe(p)
  var result := p.save("res://maps/"+String(d.id)+".tscn")
  print(d.id,": ",error_string(result))
 func _fragment(p: Pintor, at: Vector2i, source: int, rect: Rect2i) -> void:
@@ -113,3 +114,32 @@ func _heading(p: Pintor,title: String) -> void:
  label.add_theme_constant_override("shadow_offset_x",1)
  label.add_theme_constant_override("shadow_offset_y",1)
  p.root.add_child(label)
+
+func _detail_getafe(p: Pintor) -> void:
+ _fragment(p,Vector2i(2,3),2,Rect2i(5,27,2,3))
+ _fragment(p,Vector2i(12,3),2,Rect2i(1,9,2,3))
+ _fragment(p,Vector2i(1,9),2,Rect2i(4,38,1,1))
+ var display: Node2D = load("res://src/overworld/sign/sign.tscn").instantiate()
+ display.set_script(load("res://src/overworld/service_display.gd"))
+ display.name = "Expositor"
+ display.position = Grid.to_world(Vector2i(3,5))
+ display.set("shop_id",&"mercadona_getafe")
+ p.entities.add_child(display)
+ p.sign_text("AvisoCaja",Vector2i(11,1),PackedStringArray(["HACENDADO · MERCADONA","Examina las estanterías para consultar objetos y precios. Compra en la caja."]))
+ var notice: Node = p.entities.get_node("AvisoCaja")
+ notice.set("show_sprite",false)
+ var atlas := AtlasTexture.new()
+ atlas.atlas = load("res://assets/tilesets/exterior/gen4.png")
+ atlas.region = Rect2(Vector2(ExteriorTiles.SIGN*Grid.TILE),Vector2(32,32))
+ var poster := Sprite2D.new()
+ poster.name = "AvisoVisible"
+ poster.position = Grid.to_world(Vector2i(11,1))
+ poster.texture = atlas
+ poster.z_index = 1
+ p.root.add_child(poster)
+ var customer: Node = p.entities.get_node("Cliente")
+ customer.set("display_name","Reponedora")
+ customer.set("lines",PackedStringArray())
+ customer.set("event",load("res://src/events/common/npc_reward_event.gd"))
+ customer.set("event_params",{"reward_id":"getafe_mercadona_cortesia"})
+ p.npc("Compradora","npc_lass",Vector2i(10,8),1,["Puedes leer qué hace cada objeto antes de comprarlo. El precio es el mismo que en la caja."])

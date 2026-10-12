@@ -1,5 +1,5 @@
 {
-	"fingerprint": "79145a645040812198e2669c4b66f6e3f82debc9a62b50bacae2c5ab5ee34b62",
+	"fingerprint": "fed06d13db9da64d2d4e489317ad093d075cff2845271df284458c500f02db06",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -3302,14 +3302,15 @@
 		"gifts": {
 			"gift_prueba": "chingling"
 		},
-		"input_hash": "9d8ec79a7341f7d340b2bd5d3e53cfc16a6babe4b2531d9db36c10a2c30f5759",
+		"input_hash": "46275811950f8370b856d95d770571928afc02b06119760d0678cfdeffd17352",
 		"items": {
-			"test/muestra_pueblo/Pocion": "kangaskhancandy",
-			"test/muestra_ruta/Pocion": "firestone",
-			"test/test_outdoor/PocionOculta": "healthmochi",
-			"test/test_outdoor/PokeBalls": "timerball",
-			"test/test_room/CarameloOculto": "bigpearl",
-			"test/test_room/Pocion": "blunderpolicy"
+			"getafe/mercadona/Cliente": "kangaskhancandy",
+			"test/muestra_pueblo/Pocion": "firestone",
+			"test/muestra_ruta/Pocion": "healthmochi",
+			"test/test_outdoor/PocionOculta": "timerball",
+			"test/test_outdoor/PokeBalls": "bigpearl",
+			"test/test_room/CarameloOculto": "blunderpolicy",
+			"test/test_room/Pocion": "venonatcandy"
 		},
 		"learnsets": {
 			"abomasnow": [

@@ -55,3 +55,5 @@ La tabla sirve para decidir el siguiente conjunto sin alterar entradas ya conect
 Siguientes casos que requieren contenido: casas con NPC/guion, gimnasios con recorrido y combates, edificios especiales (Botiga del Barça, lotería, museos, Palacio/Clan), Basic-Fit y salas de Metro/Calle de la Victoria. Los servicios concretos/guion no aprobados van a Preguntas para Javier. El motor común `Warp` ya da fundido, cambio, orientación de llegada y retorno, y puede usarse en cada conjunto al disponer de su interior.
 
 Bilbao espera exterior. San Miguel conserva su trama existente; no se cambian casas por salas sanitarias. La lista de famosos ya tiene 46 sprites/datos, pero sus ubicaciones y diálogos siguen pendientes de Javier.
+
+**Repaso posterior del 2026-10-12:** la casa oriental de Getafe está abierta; se añaden tres viviendas urbanas y dos rurales, y un puesto con compra sin interior. El CSV anterior es el inventario previo a este repaso; habrá que volver a escanear al decidir el próximo conjunto de interiores. [Entrega y límites](../arte/comparativas/a3_densidad_getafe_ruta24.md).

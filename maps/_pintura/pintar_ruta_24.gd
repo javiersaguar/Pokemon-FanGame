@@ -17,7 +17,8 @@ func _initialize() -> void:
 	p.fill_grass(0.20)
 	# Cerro Calderico al oeste; Campo de Criptana queda al este, comprimido.
 	p.plateau(Rect2i(0, -1, 21, 23), [16, 17])
-	p.terrain(Pintor.cells(Rect2i(24, 0, 4, 64)), ExteriorTiles.TERRAIN_PATH)
+	for rect: Rect2i in [Rect2i(24,0,4,21),Rect2i(22,20,6,3),Rect2i(22,22,4,6),Rect2i(22,26,6,3),Rect2i(24,28,4,12),Rect2i(24,38,6,4),Rect2i(26,41,4,8),Rect2i(24,47,6,4),Rect2i(24,50,4,14)]:
+		p.terrain(Pintor.cells(rect),ExteriorTiles.TERRAIN_PATH)
 	p.terrain(Pintor.cells(Rect2i(9, 22, 19, 4)), ExteriorTiles.TERRAIN_PATH)
 	p.terrain(Pintor.cells(Rect2i(16, 10, 2, 12)), ExteriorTiles.TERRAIN_PATH)
 	p.terrain(Pintor.cells(Rect2i(28, 31, 18, 3)), ExteriorTiles.TERRAIN_PATH)
@@ -34,6 +35,12 @@ func _initialize() -> void:
 		p.fence(33, 43, y)
 	p.object(&"casa_granero", Vector2i(3, 59))
 	p.object(&"casa_madera", Vector2i(34, 16))
+	p.object(&"casa_granero",Vector2i(3,29))
+	p.object(&"casa_dos_aguas",Vector2i(34,41))
+	for rect: Rect2i in [Rect2i(26,16,11,3),Rect2i(4,29,22,3),Rect2i(26,41,12,3),Rect2i(4,59,24,3)]:
+		p.terrain(Pintor.cells(rect),ExteriorTiles.TERRAIN_PATH)
+	for at: Vector2i in [Vector2i(30,20),Vector2i(46,41),Vector2i(20,49),Vector2i(31,57),Vector2i(1,48),Vector2i(43,58)]:
+		p.object(&"arbol_redondo",at)
 	p.terrain(Pintor.cells(Rect2i(3, 46, 15, 5)), ExteriorTiles.TERRAIN_TALL_GRASS)
 	p.terrain(Pintor.cells(Rect2i(32, 4, 12, 5)), ExteriorTiles.TERRAIN_TALL_GRASS)
 	for at: Vector2i in [Vector2i(21, 33), Vector2i(20, 57), Vector2i(31, 37), Vector2i(45, 18)]:
@@ -50,6 +57,9 @@ func _initialize() -> void:
 	_sign(p, "Criptana", Vector2i(37, 34), ["CAMPO DE CRIPTANA · SIERRA DE LOS MOLINOS", "El mapa reúne dos conjuntos de La Mancha; las distancias están comprimidas."])
 	_sign(p, "Sur", Vector2i(29, 62), ["RUTA 24 · LA MANCHA", "Norte: Getafe. Sur: Puertollano."])
 	p.npc("Agricultora", "npc_old_woman", Vector2i(8, 44), 0, PackedStringArray(["La llanura parece vacía hasta que te toca recorrerla con calor.", "Los molinos aprovechaban el viento para moler el cereal."]))
+	_sign(p,"Norte",Vector2i(29,3),["GETAFE ↑","Sigue el camino principal. Los ramales llevan a molinos y fincas."])
+	p.npc("Caminante","npc_man",Vector2i(30,50),1,["Puertollano está al sur. En los cruces, sigue el camino ancho."])
+	p.npc("Molinera","npc_woman",Vector2i(11,30),0,["El ramal del norte lleva a los molinos. El camino principal une Getafe y Puertollano."])
 	print("Ruta 24 · La Mancha: ", error_string(p.save(OUT)))
 	quit()
 func _sign(p: Pintor, label: String, at: Vector2i, lines: Array) -> void:
