@@ -17,7 +17,7 @@ Surf cruza el campo con la cresta de la ola y acaba en salpicaduras. Hidrobomba 
 
 ## Repetir desde F9
 
-F9 → Pruebas → Galería → **Animaciones / elegir y repetir**. Usa el Pokémon seleccionado en Equipo y un oponente de la sesión, y el entorno escogido en Combate. «Elegir» abre la búsqueda de todos los movimientos; «Repetir» o Z/A reproduce; Jugador/Rival cambia quién lo usa; X/B vuelve. Si se vuelve durante un efecto, termina sus fases y cierra limpiamente. Las descripciones siguen accesibles en el selector. Elegir un movimiento no reutiliza A/Z para activar el botón de debajo.
+F9 → Pruebas → Galería → **Animaciones / elegir y repetir**. Usa el Pokémon seleccionado y aplicado en Equipo y un oponente de la sesión (si el puesto está vacío, usa el primero), y el entorno escogido en Combate. «Elegir» abre la búsqueda de todos los movimientos; «Repetir» o Z/A reproduce; Jugador/Rival cambia quién lo usa; X/B vuelve. Si se vuelve durante un efecto, termina sus fases y cierra limpiamente. Las descripciones siguen accesibles en el selector. Elegir un movimiento no reutiliza A/Z para activar el botón de debajo.
 
 | Acceso en Galería | Vista con controles |
 |---|---|
@@ -26,3 +26,5 @@ F9 → Pruebas → Galería → **Animaciones / elegir y repetir**. Usa el Poké
 Es una revisión de presentación: no consume PS, PP ni objetos, no aplica el efecto del movimiento y no cambia los equipos ni preferencias. Los movimientos sin secuencia propia conservan el efecto común de tipo/categoría. El combate de verdad sigue disponible en la pestaña Combate.
 
 Pruebas dirigidas: animaciones 9/9, 6.155 aserciones; vista 3/3, 37 aserciones (mando, selección/cancelación, ambos lados, regreso durante el efecto y modo reducido). Total: 30 movimientos con secuencia visual propia, separados de la cobertura del motor en [la auditoría](../cobertura_combate/README.md).
+
+Validación completa: **507/507 tests, 30.938 aserciones, 701,01 s**. Tras integrar Ruta 10: interfaz **170/170**, mapas **5/5** y dorado **1/1**; arte **10.947 PNG, 0 errores/avisos**, datos 0 errores y 3 avisos previos. Las dos ejecuciones de interfaz/completa cierran sin fugas; las pruebas aisladas de sesión pueden conservar recursos en caché al cerrar su proceso.
