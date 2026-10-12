@@ -3,7 +3,7 @@ extends SceneTree
 ## mar de olivos (oeste) por la A-92 (docs/mundo/rutas.md): el altiplano seco de Guadix y Baza con sus
 ## casas cueva; Sierra Nevada en dos alturas, con nieve, pinos nevados, la estación de esquí de
 ## Pradollano y el Pico Veleta arriba del todo; y la vega de Granada, con la Alhambra en su colina y
-## un cortijo en plena boda. La unión con Murcia la hace el Agente 5 (aparición from_murcia en el
+## un cortijo en plena boda. Unida con Murcia por el este (filas 26 a 28; aparición from_murcia en el
 ## borde este, filas 26-28); se une sin fundido con la Ruta 13 por el oeste.
 ## Uso: godot --headless --path . -s res://maps/_pintura/pintar_ruta_12.gd -- --force
 
@@ -43,6 +43,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta12", SIZE, data, 1238)
 	p.fill_grass(0.25)
 	p.connect_edge("west", &"ruta_13/exterior", 0, Vector2i(20, 30))
+	p.connect_edge("east", &"murcia/exterior", 4, Vector2i(26, 29))
 
 	# La A-92: camino de tierra con curvas de este a oeste, y el desvío a las escaleras de la sierra.
 	p.terrain(rects([Rect2i(56, 26, 16, 3), Rect2i(40, 28, 18, 3), Rect2i(20, 26, 22, 3), Rect2i(0, 24, 22, 3),

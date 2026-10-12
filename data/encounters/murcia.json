@@ -1,0 +1,32 @@
+{
+  "land_rate": 10,
+  "land": {
+    "day": [
+      {"species": "sunflora", "min": 29, "max": 31, "weight": 25},
+      {"species": "weepinbell", "min": 29, "max": 31, "weight": 25},
+      {"species": "cherrim", "min": 29, "max": 31, "weight": 20},
+      {"species": "numel", "min": 29, "max": 31, "weight": 20},
+      {"species": "heatmor", "min": 30, "max": 32, "weight": 10}
+    ],
+    "night": [
+      {"species": "weepinbell", "min": 29, "max": 31, "weight": 30},
+      {"species": "haunter", "min": 29, "max": 31, "weight": 25},
+      {"species": "noibat", "min": 29, "max": 31, "weight": 25},
+      {"species": "numel", "min": 29, "max": 31, "weight": 20}
+    ]
+  },
+  "water": [
+    {"species": "quagsire", "min": 29, "max": 32, "weight": 35},
+    {"species": "barboach", "min": 29, "max": 32, "weight": 30},
+    {"species": "goldeen", "min": 29, "max": 32, "weight": 20},
+    {"species": "psyduck", "min": 29, "max": 32, "weight": 15}
+  ],
+  "old_rod": [
+    {"species": "barboach", "min": 25, "max": 28, "weight": 60},
+    {"species": "goldeen", "min": 25, "max": 28, "weight": 40}
+  ],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": []
+}

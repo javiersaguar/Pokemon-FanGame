@@ -42,6 +42,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta11", SIZE, data, 1265)
 	p.fill_grass(0.25)
 	p.connect_edge("east", &"alicante/exterior", 18, Vector2i(16, 20))
+	p.connect_edge("west", &"murcia/exterior", -2, Vector2i(16, 20))
 
 	# La A-7 de este a oeste y las calles de Elche y de Orihuela.
 	p.paving(Rect2i(0, 16, SIZE.x, 4))

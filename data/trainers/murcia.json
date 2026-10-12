@@ -1,0 +1,60 @@
+{
+  "mur_huertano": {
+    "class": "huertano",
+    "name": "Perico",
+    "intro_text": "¡Acho, zagal! Estos limoneros los plantó mi abuelo. El agua para regarlos aún la estamos esperando.",
+    "lose_text": "Me has dejado más seco que el Segura en agosto.",
+    "win_text": "¡Huerta de Europa, pijo!",
+    "after_text": "Mandamos lechugas a medio continente. A cambio nos mandan decir que no existimos.",
+    "items": [],
+    "party": [
+      {
+        "species": "weepinbell",
+        "level": 30
+      },
+      {
+        "species": "sunflora",
+        "level": 31
+      }
+    ]
+  },
+  "mur_opositora": {
+    "class": "opositor",
+    "gender": "female",
+    "name": "Fuensanta",
+    "intro_text": "Llevo seis años opositando a la sombra de este jardín. Me sé el temario y dónde da el sol a cada hora.",
+    "lose_text": "Otra convocatoria que se me va.",
+    "win_text": "¡Plaza! Bueno, combate. Algo es algo.",
+    "after_text": "Somos cuatro mil para doce plazas. Las doce ya tienen dueño, pero el temario es precioso.",
+    "items": [],
+    "party": [
+      {
+        "species": "hoothoot",
+        "level": 29
+      },
+      {
+        "species": "kadabra",
+        "level": 31
+      }
+    ]
+  },
+  "mur_camarero": {
+    "class": "camarero",
+    "name": "Ginés",
+    "intro_text": "¡Marchando dos marineras y un pastel de carne! Y para ti, un combate, que te veo con hambre.",
+    "lose_text": "Acho, me has dejado la barra temblando.",
+    "win_text": "La casa invita. A perder, digo.",
+    "after_text": "En agosto la terraza está a cuarenta y cinco grados. Sirvo la caña y llega caldo.",
+    "items": [],
+    "party": [
+      {
+        "species": "numel",
+        "level": 30
+      },
+      {
+        "species": "heatmor",
+        "level": 31
+      }
+    ]
+  }
+}

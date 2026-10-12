@@ -23,10 +23,16 @@ edge = "west"
 target_map = &"ruta_13/exterior"
 span = Vector2i(20, 30)
 
+[sub_resource type="Resource" id="Resource_3giix"]
+script = ExtResource("2_3giix")
+target_map = &"murcia/exterior"
+offset = 4
+span = Vector2i(26, 29)
+
 [sub_resource type="Resource" id="Resource_84n88"]
 script = ExtResource("3_s0b43")
 id = &"ruta_12/exterior"
-connections = Array[ExtResource("2_3giix")]([SubResource("Resource_y3ads")])
+connections = Array[ExtResource("2_3giix")]([SubResource("Resource_y3ads"), SubResource("Resource_3giix")])
 display_name = "Ruta 12 · Sierra Nevada y Granada"
 encounter_table = &"ruta_12"
 zone_id = &"ruta_12"
