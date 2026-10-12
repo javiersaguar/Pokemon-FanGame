@@ -153,3 +153,5 @@ Fixture: 40 especies, ramificaciones de nivel, legendario, mascota protegida, va
 El cálculo del código durante la validación recibe los presets desde `input.config`, sin leer archivos ni usar DataDB. Probado en Thread, incluso alterando el catálogo global de presets: los datos de la ROM siguen idénticos. La validación mantiene v2 porque no modifica los resultados del generador; se comprueban los dos dorados existentes sin regenerarlos.
 
 Regresiones: `tests/randomizer/test_rom_validation.gd`; 10/10 y 70 aserciones. Suite completa **518/518, 34.025 aserciones, 376,39 s**, con ambos dorados sin cambios. Arte: 10.962 PNG, 0 errores/avisos; datos: 0 errores y 3 avisos previos.
+
+Después de integrar la corrección de fuego de A5: combate **137/137**; regresiones de ROM **10/10**; flujo **9/9** y recorrido RandomLocke **1/1**. Validadores repetidos en verde. La suite completa cerró sin fugas; las ejecuciones aisladas de flujo mantienen 7 ObjectDB/un recurso al cerrar.
