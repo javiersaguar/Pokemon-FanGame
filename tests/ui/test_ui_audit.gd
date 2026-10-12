@@ -230,3 +230,37 @@ func test_pokedex_help_and_generating_explanation_fit_screen_and_panel() -> void
 			assert_lte(node.position.x + node.size.x,228.0)
 			assert_lte(node.position.y + node.size.y,151.0)
 	SceneManager.pop_menu(generator)
+
+func test_descripciones_largas_se_leen_con_teclado_y_mando_sin_elegir() -> void:
+	UiPreferences.set_value(&"reduce_motion",true,false)
+	var screen := ChoiceScreen.new()
+	screen.choices = ["Poké Ball", "Poción"]
+	screen.notes = [DataDB.item(&"pokeball").description.repeat(4), "Texto breve."]
+	SceneManager.push_menu(screen)
+	await wait_process_frames(4)
+	watch_signals(screen)
+	assert_true(screen._detail_hint.visible)
+	assert_true(screen._detail_hint.text.begins_with("C/Start 1/"))
+	assert_lte(screen.hint.get_minimum_size().x,screen.hint.size.x)
+	assert_lte(screen._detail_hint.get_minimum_size().x,screen._detail_hint.size.x)
+	await key(KEY_C)
+	assert_gt(screen._detail_scroll.scroll_vertical,0)
+	var previous := screen._detail_scroll.scroll_vertical
+	await joy(JOY_BUTTON_START)
+	assert_gt(screen._detail_scroll.scroll_vertical,previous)
+	assert_eq(screen.menu.selected,0)
+	assert_signal_not_emitted(screen,&"chosen")
+	var limit := ceili(screen._body.get_minimum_size().y-screen._detail_scroll.size.y)
+	for step: int in ceili(float(limit)/32)+1:
+		if screen._detail_scroll.scroll_vertical >= limit: break
+		await key(KEY_C)
+	assert_eq(screen._detail_scroll.scroll_vertical,limit,"Se alcanza el final del texto")
+	await key(KEY_C)
+	assert_eq(screen._detail_scroll.scroll_vertical,0,"Al terminar el texto vuelve al principio")
+	await joy(JOY_BUTTON_DPAD_DOWN)
+	assert_eq(screen.menu.selected,1)
+	assert_eq(screen._detail_scroll.scroll_vertical,0)
+	assert_false(screen._detail_hint.visible,"Texto breve no anuncia páginas inexistentes")
+	await joy(JOY_BUTTON_B)
+	assert_signal_emitted_with_parameters(screen,&"chosen",[-1])
+	SceneManager.pop_menu(screen)

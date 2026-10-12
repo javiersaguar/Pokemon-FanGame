@@ -9,6 +9,7 @@ var notes := PackedStringArray()
 var images: Array[Texture2D] = []
 var page := 0
 var _detail_scroll: ScrollContainer
+var _detail_hint: Label
 var _body: Label
 var _icon: Sprite2D
 var _done := false
@@ -36,7 +37,7 @@ func _ready() -> void:
 	_body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_detail_scroll = ScrollContainer.new()
 	_detail_scroll.position = Vector2(168, 83)
-	_detail_scroll.size = Vector2(72, 78)
+	_detail_scroll.size = Vector2(72, 65)
 	_detail_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	_detail_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_SHOW_NEVER
 	canvas.add_child(_detail_scroll)
@@ -46,6 +47,7 @@ func _ready() -> void:
 	_body.custom_minimum_size.x = 70
 	_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_detail_scroll.add_child(_body)
+	_detail_hint = label("", Rect2(168, 151, 72, 10), Color("382a38"), 8)
 	_refresh()
 	run.call_deferred()
 
@@ -55,7 +57,7 @@ func _refresh() -> void:
 		menu.queue_free()
 	heading.text = caption
 	var count := ceili(float(choices.size()) / ROWS)
-	hint.text = "Izq/Der %d/%d / C: texto / Z/A: elegir / X/B: volver" % [page + 1, maxi(count, 1)]
+	hint.text = "Izq/Der %d/%d / Z/A: elegir / X/B: volver" % [page + 1, maxi(count, 1)]
 	var labels := choices.slice(page * ROWS, mini((page + 1) * ROWS, choices.size()))
 	if labels.is_empty(): labels = ["Sin contenido"]
 	menu = make_menu(labels, Rect2(12, 34, 140, 126))
@@ -97,6 +99,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		menu._finish(-2)
 
 func _process(delta: float) -> void:
+	if _detail_scroll:
+		var limit := maxi(0, ceili(_body.get_minimum_size().y - _detail_scroll.size.y))
+		_detail_hint.visible = limit > 0
+		_detail_hint.text = "C/Start %d/%d" % [ceili(float(_detail_scroll.scroll_vertical) / 32) + 1, ceili(float(limit) / 32) + 1]
 	if UiPreferences.reduce_motion(): return
 	_frame_time += delta
 	var atlas := _icon.texture as AtlasTexture if _icon else null

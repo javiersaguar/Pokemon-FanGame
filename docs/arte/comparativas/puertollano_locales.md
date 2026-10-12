@@ -22,4 +22,4 @@ Verificación: alcance de los cuatro mapas **0 problemas**, doce parejas de puer
 
 ![Compra abierta desde el dependiente](puertollano_compra_servicios.png)
 
-Captura del flujo real: hablar desde el mostrador → Comprar → catálogo con iconos y precios. La pantalla es la tienda existente, sin interfaz alternativa para estos locales. La descripción larga de Poké Ball se recorta en el panel existente; queda anotado como pulido de la interfaz común para la siguiente tarea.
+Captura del flujo real: hablar desde el mostrador → Comprar → catálogo con iconos y precios. La pantalla es la tienda existente, sin interfaz alternativa para estos locales. La captura muestra el panel anterior. Pulido de lectura cerrado el 2026-10-11: [C/Start y paginación visibles](a3_lectura_y_sets.md).

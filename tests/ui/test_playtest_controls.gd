@@ -80,3 +80,53 @@ func test_mando_b_cancela_busqueda_y_a_elige_una_sola_vez() -> void:
 	_press(JOY_BUTTON_A)
 	await wait_process_frames(2)
 	assert_eq(answers, ["quickattack"])
+
+func test_quitar_movimiento_cancela_o_edita_sin_huecos_y_conserva_el_ultimo() -> void:
+	assert_eq(await menu.session.begin(&"getafe/exterior"),OK)
+	assert_eq(menu.session.set_member(0,0,{"species":"pikachu","level":50,"moves":["tackle","growl","quickattack","thunderbolt"]}),OK)
+	Debug.open()
+	menu.pages.current_tab = 1
+	await wait_process_frames(3)
+	menu.remove_move_button.grab_focus()
+	_press(JOY_BUTTON_A)
+	await wait_process_frames(3)
+	assert_true(SceneManager.top_menu() is PlaytestPicker)
+	_press(JOY_BUTTON_B)
+	await wait_process_frames(3)
+	assert_eq(menu.spec.moves,["tackle","growl","quickattack","thunderbolt"])
+	for remaining: int in [3,2,1]:
+		menu.remove_move_button.grab_focus()
+		_press(JOY_BUTTON_A)
+		await wait_process_frames(3)
+		var picker := SceneManager.top_menu() as PlaytestPicker
+		assert_not_null(picker)
+		if picker == null: break
+		picker.list.select(1)
+		picker.list.grab_focus()
+		_press(JOY_BUTTON_A)
+		await wait_process_frames(3)
+		assert_eq(menu.spec.moves.size(),remaining)
+	assert_eq(menu.spec.moves,["tackle"])
+	assert_true(menu.remove_move_button.disabled)
+	assert_eq(GameState.party.get_at(0).moves.size(),4,"El editor espera Aplicar")
+	menu._remove_move()
+	assert_false(SceneManager.is_menu_open(),"No permite quitar el último movimiento")
+	menu._apply_member()
+	assert_eq(GameState.party.get_at(0).moves.map(func(m: MoveSlot) -> String: return String(m.id)),["tackle"])
+	menu.side_pick.selected = 1
+	menu.member_pick.selected = 0
+	assert_eq(menu.session.set_member(1,0,{"species":"magikarp","level":50,"moves":["tackle","splash"]}),OK)
+	await wait_process_frames(3)
+	menu.remove_move_button.grab_focus()
+	_press(JOY_BUTTON_A)
+	await wait_process_frames(3)
+	var picker := SceneManager.top_menu() as PlaytestPicker
+	assert_not_null(picker)
+	if picker != null:
+		picker.list.select(0)
+		picker.list.grab_focus()
+		_press(JOY_BUTTON_A)
+		await wait_process_frames(3)
+		menu._apply_member()
+	assert_eq(menu.session.foes[0].moves.map(func(m: MoveSlot) -> String: return String(m.id)),["splash"])
+	assert_eq(await menu.session.finish(),OK)

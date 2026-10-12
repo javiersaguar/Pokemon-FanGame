@@ -44,3 +44,9 @@ Validación final, tras integrar las últimas correcciones de A5: **452/452 test
 - Milcery/sabor: petición 58 de A2 y decisión de Javier; la interfaz no decide un resultado de evolución.
 
 Se conserva la distinción entre pantallas revisadas, integración pendiente y arte pendiente de aprobación; no se declara cerrada v0.1.
+
+## Continuación del 2026-10-11
+
+Selector común: control C/Start visible junto al texto largo y paginación de lectura; ayuda principal acortada para que se lea entera. Se comprueba teclado, mando y movimiento reducido. El recorte del contenedor conserva acceso al texto completo y no cambia la elección ni dispara una compra.
+
+F9: retirada de movimientos mediante catálogo del set actual, con cancelación, aplicación explícita y último movimiento protegido en ambos equipos. [Comparativa](comparativas/a3_lectura_y_sets.md).

@@ -15,6 +15,7 @@ var member_pick: OptionButton
 var species_button: Button
 var item_button: Button
 var move_buttons: Array[Button] = []
+var remove_move_button: Button
 var level_pick: SpinBox
 var shiny_pick: CheckBox
 var team_line: Label
@@ -73,6 +74,7 @@ func _process(_delta: float) -> void:
 	if ready != _last_ready:
 		_last_ready = ready
 		for button: Button in actions: button.disabled = not ready
+	remove_move_button.disabled = not ready or spec.get("moves", []).size() <= 1
 	start_button.disabled = session.active or not session.available()
 	finish_button.disabled = not ready
 	badge.visible = session.active and not Debug.is_open and not SceneManager.is_menu_open() and not Dialogue.is_open
@@ -239,6 +241,9 @@ func _build_team(box: VBoxContainer) -> void:
 		var button := _button(grid,"Movimiento %d" % (i+1),_choose_move.bind(i))
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		move_buttons.append(button)
+	var editing := _row(box)
+	remove_move_button = _button(editing,"Quitar movimiento",_remove_move)
+	_label(editing,"Conserva al menos uno.")
 	var controls := _row(box)
 	_button(controls,"Aplicar / añadir",_apply_member)
 	_button(controls,"Quitar puesto",_remove_member)
@@ -293,6 +298,21 @@ func _choose_move(index: int) -> void:
 	if index == spec.moves.size(): spec.moves.append(id)
 	else: spec.moves[index] = id
 	_update_editor()
+
+func _remove_move() -> void:
+	if not session.active or not session.available() or spec.moves.size() <= 1: return
+	var entries: Array[Dictionary] = []
+	for index: int in spec.moves.size():
+		entries.append({"id":str(index),"label":DataDB.move(StringName(spec.moves[index])).name,"note":"Quitar del set; se aplica al pulsar Aplicar / añadir."})
+	Debug.close()
+	var answer := await PlaytestPicker.pick("Quitar movimiento",entries)
+	Debug.open()
+	if answer == "" or not session.active: return
+	var index := int(answer)
+	if index < 0 or index >= spec.moves.size() or spec.moves.size() <= 1: return
+	spec.moves.remove_at(index)
+	_update_editor()
+	status.text = "Movimiento retirado del editor. Pulsa Aplicar / añadir."
 
 func _choose_held() -> void:
 	var id := await _pick("held","Objeto equipado")

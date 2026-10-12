@@ -1476,3 +1476,9 @@ ControlsScreen (en Opciones) muestra los bindings reales de InputMap y explica l
 Las tiendas conservan `open_shop_event.gd` y `ShopTransactions`, con `shop_id` de `data/shops.json`; precios de DataDB y stock progresivo por medallas. Los mapas hospitalarios son interiores sin encuentros, bicicleta, carrera ni seguidores. Puertas con Warp normal y llegada exterior una casilla al sur, para evitar reentrada. No cambian el formato de guardado.
 
 Los Centros Pokémon de localidades sin gimnasio reutilizan estos mismos servicios, con `place: "Centro Pokémon de [localidad]"` y spawn `recovery`. El manifiesto `maps/_pintura/locales.json` identifica el servicio sanitario mediante `hospital` o `centro`; cada registro conserva el mapa exterior real y el anclaje. La fachada original del Centro se conserva cuando se usa `centro`. F9 descubre sus nuevos mapas sin una lista paralela.
+
+### Pulido de lectura y sets (2026-10-11, A3)
+
+`ChoiceScreen` conserva la descripción íntegra en su contenedor: C/Start avanza y al final vuelve al inicio, sin emitir `chosen`. Se indican páginas únicamente si el texto desborda. Cambiar la elección vuelve al inicio; reducción de animaciones conserva la lectura.
+
+F9 → Equipo → Quitar movimiento opera en el borrador del editor; cancelar conserva los movimientos y **Aplicar / añadir** llama a `PlaytestSession.set_member`. Se compactan posiciones, conservando al menos uno. Funciona en los dos equipos, sin ampliar los permisos de guardado ni habilitar el menú fuera de debug.
