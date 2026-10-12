@@ -3,7 +3,7 @@ extends SceneTree
 ## un parque largo tras la riada de 1957, de oeste a este: entra desde las Torres de Serranos (Ciutat
 ## Vella, al sur), sigue entre árboles, hierba alta y caminos, y termina en la Ciudad de las Artes y las
 ## Ciencias (Palau de les Arts, Hemisfèric y Museu de les Ciències) sobre sus láminas de agua. Por el
-## este se sale hacia la Malvarrosa.
+## este se sale hacia la Malvarrosa y por el sur, junto al Hemisfèric, a la Ruta 9.
 ## Uso: godot --headless --path . -s res://maps/_pintura/pintar_valencia_turia.gd -- --force
 
 const OUT := "res://maps/valencia/turia.tscn"
@@ -43,6 +43,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.fill_grass(0.25)
 	p.connect_edge("south", &"valencia/ciutat_vella", 8, Vector2i(20, 30))
 	p.connect_edge("east", &"valencia/malvarrosa", -4, Vector2i(26, 34))
+	p.connect_edge("south", &"ruta_9/exterior", -33, Vector2i(58, 62))
 
 	# Las avenidas a los dos lados del antiguo cauce y la explanada de la Ciudad de las Artes.
 	p.paving(Rect2i(0, 0, SIZE.x, 4))
@@ -71,6 +72,9 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.deco(Vector2i(24, 31), ExteriorTiles.SIGN)
 	p.sign_text("CartelTuria", Vector2i(24, 31), PackedStringArray(["JARDÍ DEL TÚRIA.",
 		"Nueve kilómetros de parque donde antes había un río. Dentro, el Gulliver gigante: tú eres el liliputiense."]))
+	p.deco(Vector2i(63, 33), ExteriorTiles.SIGN)
+	p.sign_text("CartelRuta9", Vector2i(63, 33), PackedStringArray(["↓ RUTA 9 · La Albufera, El Palmar y Gandía.",
+		"Por la CV-500. Si hueles a paella, vas bien."]))
 	p.deco(Vector2i(53, 27), ExteriorTiles.SIGN)
 	p.sign_text("CartelArtes", Vector2i(53, 27), PackedStringArray(["CIUTAT DE LES ARTS I LES CIÈNCIES.",
 		"Calatrava, 1998. Costó tres veces lo previsto. El ojo del Hemisfèric aún no se lo cree."]))
@@ -78,6 +82,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	# --- Apariciones, entrenadores y vecinos ---
 	p.spawn("default", Vector2i(24, 34))
 	p.spawn("from_ciutat_vella", Vector2i(24, 35))
+	p.spawn("from_ruta_9", Vector2i(59, 35))
 	p.trainer("Andrea", &"vlc_corredora", Vector2i(30, 17), LEFT, 4)
 	p.trainer("Amparo", &"vlc_abuela", Vector2i(12, 17), RIGHT, 3)
 	p.npc("Guia", "npc_man", Vector2i(62, 30), DOWN, PackedStringArray([
