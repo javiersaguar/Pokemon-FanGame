@@ -126,7 +126,7 @@ coaching,Motivación,fighting,false,false,false
 coil,Enrosque,poison,false,false,false
 collisioncourse,Nitrochoque,fighting,true,false,false
 combattorque,Pugnachoque,fighting,false,false,false
-cometpunch,Puño Cometa,normal,false,false,false
+cometpunch,Puño Cometa,normal,false,false,true
 comeuppance,Resarcimiento,dark,true,false,false
 confide,Confidencia,normal,false,false,false
 confuseray,Rayo Confuso,ghost,false,false,false
@@ -153,7 +153,7 @@ crunch,Triturar,dark,false,false,false
 crushclaw,Garra Brutal,normal,false,false,false
 crushgrip,Agarrón,normal,true,false,false
 curse,Maldición,ghost,true,false,false
-cut,Corte,normal,false,false,false
+cut,Corte,normal,false,false,true
 darkestlariat,Lariat Oscuro,dark,false,false,false
 darkpulse,Pulso Umbrío,dark,false,false,false
 darkvoid,Brecha Negra,dark,true,false,false
@@ -180,7 +180,7 @@ doublehit,Doble Golpe,normal,false,false,false
 doubleironbash,Ferropuño Doble,steel,false,false,false
 doublekick,Doble Patada,fighting,false,false,false
 doubleshock,Electropalmas,electric,true,false,false
-doubleslap,Doble Bofetón,normal,false,false,false
+doubleslap,Doble Bofetón,normal,false,false,true
 doubleteam,Doble Equipo,normal,false,false,false
 dracometeor,Cometa Draco,dragon,false,false,false
 dragonascent,Ascenso Draco,flying,false,false,false
@@ -358,7 +358,7 @@ guardsplit,Isoguardia,psychic,true,false,false
 guardswap,Cambiadefensa,psychic,true,false,false
 guillotine,Guillotina,normal,false,false,false
 gunkshot,Lanzamugre,poison,false,false,false
-gust,Tornado,flying,false,false,false
+gust,Tornado,flying,false,false,true
 gyroball,Giro Bola,steel,true,false,false
 hail,Granizo,ice,true,false,false
 hammerarm,Machada,fighting,false,false,false
@@ -449,7 +449,7 @@ jetpunch,Puño Jet,water,false,false,false
 judgment,Sentencia,normal,true,false,false
 jumpkick,Patada Salto,fighting,true,false,false
 junglehealing,Cura Selvática,grass,true,false,false
-karatechop,Golpe Kárate,fighting,false,false,false
+karatechop,Golpe Kárate,fighting,false,false,true
 kinesis,Kinético,psychic,false,false,false
 kingsshield,Escudo Real,steel,true,false,false
 knockoff,Desarme,dark,true,false,false
@@ -525,7 +525,7 @@ mefirst,Yo Primero,normal,true,false,false
 megadrain,Megaagotar,grass,false,false,false
 megahorn,Megacuerno,bug,false,false,false
 megakick,Megapatada,normal,false,false,false
-megapunch,Megapuño,normal,false,false,false
+megapunch,Megapuño,normal,false,false,true
 memento,Legado,dark,false,false,false
 menacingmoonrazemaelstrom,Deflagración Lunar,ghost,true,false,false
 metalburst,Represión Metal,steel,true,false,false
@@ -594,7 +594,7 @@ painsplit,Divide Dolor,normal,true,false,false
 paraboliccharge,Carga Parábola,electric,false,false,false
 partingshot,Última Palabra,dark,true,false,false
 payback,Vendetta,dark,true,false,false
-payday,Día de Pago,normal,false,false,false
+payday,Día de Pago,normal,false,false,true
 peck,Picotazo,flying,false,false,true
 perishsong,Canto Mortal,normal,true,false,false
 petalblizzard,Tormenta Floral,grass,false,false,false
@@ -617,7 +617,7 @@ pollenpuff,Bola de Polen,bug,true,false,false
 poltergeist,Poltergeist,ghost,true,false,false
 populationbomb,Proliferación,normal,true,false,false
 pounce,Brinco,bug,false,false,false
-pound,Destructor,normal,false,false,false
+pound,Destructor,normal,false,false,true
 powder,Polvo Explosivo,bug,true,false,false
 powdersnow,Nieve Polvo,ice,false,false,false
 powergem,Joya de Luz,rock,false,false,false

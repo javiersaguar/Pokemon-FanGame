@@ -161,3 +161,47 @@ func test_ocho_secuencias_nuevas_usan_recursos_nativos_y_terminan_limpias() -> v
 		assert_eq(get_child_count(),count)
 		assert_eq(user.position,user.home())
 		assert_eq(target.position,target.home())
+
+func test_movimientos_por_indice_conservan_escena_y_distinguen_golpes_sucesivos() -> void:
+	var user := BattlePokemonSprite.new()
+	user.position = Vector2(128,336)
+	user.back = true
+	add_child_autofree(user)
+	user.set_pokemon({"species":&"charizard"})
+	var target := BattlePokemonSprite.new()
+	target.position = Vector2(384,204)
+	add_child_autofree(target)
+	target.set_pokemon({"species":&"gengar"})
+	for id: StringName in [&"pound",&"karatechop",&"doubleslap",&"cometpunch",&"megapunch",&"payday",&"cut",&"gust"]:
+		var spec := BattleMoveAnimation.sequence(id)
+		for phase: Dictionary in spec.phases:
+			var style := BattleFx.Kind.ORB if phase.kind == "orb" else BattleFx.Kind.BURST
+			var fx := BattleFx.create(self,style,user.center(),target.center(),phase)
+			for progress: float in [0,.25,.5,.75,1]:
+				fx.progress = progress
+				for sprite: Sprite2D in fx.particles:
+					assert_eq(sprite.position,sprite.position.round())
+					assert_eq(sprite.scale,Vector2.ONE)
+					assert_eq(sprite.rotation,0.0)
+					assert_lt(sprite.frame,sprite.hframes*sprite.vframes)
+			fx.queue_free()
+			await wait_process_frames(2)
+		var count := get_child_count()
+		assert_true(await BattleMoveAnimation.play(self,user,target,{"move":id},false))
+		await wait_process_frames(2)
+		assert_eq(get_child_count(),count)
+		assert_eq(user.position,user.home())
+		assert_eq(target.position,target.home())
+		assert_true(await BattleMoveAnimation.play(self,user,target,{"move":id},true))
+		assert_eq(get_child_count(),count)
+	var slap := BattleMoveAnimation.sequence(&"doubleslap")
+	assert_eq(slap.phases[0].strike_side,-1)
+	assert_eq(slap.phases[1].strike_side,1)
+	var fx := BattleFx.create(self,BattleFx.Kind.BURST,Vector2.ZERO,Vector2(100,100),slap.phases[0])
+	fx.progress = .5
+	var left := fx.particles[0].position.x
+	fx.queue_free()
+	fx = BattleFx.create(self,BattleFx.Kind.BURST,Vector2.ZERO,Vector2(100,100),slap.phases[1])
+	fx.progress = .5
+	assert_gt(fx.particles[0].position.x,left,"Los bofetones vienen de lados opuestos")
+	fx.queue_free()

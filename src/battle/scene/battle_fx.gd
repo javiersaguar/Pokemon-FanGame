@@ -134,6 +134,18 @@ func _pose() -> void:
 				var angle := i*TAU/maxi(1,particles.size())+phase*TAU
 				sprite.position = (destination+Vector2(cos(angle)*38,sin(angle)*18-28*phase)).round()
 			"punch": sprite.position = (destination+Vector2(24*(1-phase)*(-1 if destination.x >= origin.x else 1),0)).round()
+			"palm": sprite.position = destination.round()
+			"chop": sprite.position = (destination+Vector2(0,-40+phase*64)).round()
+			"slap": sprite.position = (destination+Vector2(float(profile.get("strike_side",1))*(32-24*phase),0)).round()
+			"strike_sparks":
+				var angle := i*TAU/maxi(1,particles.size())
+				sprite.position = (destination+Vector2(cos(angle),sin(angle))*phase*44).round()
+			"heavy_punch": sprite.position = (destination+Vector2(52*(1-phase)*(-1 if destination.x >= origin.x else 1),0)).round()
+			"coins": sprite.position = (destination+Vector2((i-2.5)*12*phase,-sin(phase*PI)*42+phase*32)).round()
+			"cut": sprite.position = (destination+Vector2(32-64*phase,-32+64*phase)).round()
+			"gust":
+				sprite.frame = 4+mini(3,int(progress*12)%4)
+				sprite.position = origin.lerp(destination,phase).round()
 			"ice_fragments":
 				var angle := i*TAU/maxi(1,particles.size())
 				sprite.position = (destination+Vector2(cos(angle)*phase*36,sin(angle)*phase*28)).round()

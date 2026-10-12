@@ -7473,7 +7473,7 @@
    "id": "cometpunch",
    "name": "Puño Cometa",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7689,7 +7689,7 @@
    "id": "cut",
    "name": "Corte",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7905,7 +7905,7 @@
    "id": "doubleslap",
    "name": "Doble Bofetón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9329,7 +9329,7 @@
    "id": "gust",
    "name": "Tornado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -10057,7 +10057,7 @@
    "id": "karatechop",
    "name": "Golpe Kárate",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10665,7 +10665,7 @@
    "id": "megapunch",
    "name": "Megapuño",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11217,7 +11217,7 @@
    "id": "payday",
    "name": "Día de Pago",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11401,7 +11401,7 @@
    "id": "pound",
    "name": "Destructor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -14067,6 +14067,6 @@
   "ability_effects_registered": 29,
   "moves": 951,
   "moves_needing_unregistered_script": 441,
-  "specific_move_animations": 30
+  "specific_move_animations": 38
  }
 }

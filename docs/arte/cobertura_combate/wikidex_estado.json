@@ -1,0 +1,251 @@
+{
+  "reference_date": "2026-10-12",
+  "sources": {
+    "moves": "https://www.wikidex.net/wiki/Lista_de_movimientos",
+    "abilities": "https://www.wikidex.net/wiki/Lista_de_habilidades"
+  },
+  "moves": {
+    "reference_entries": 935,
+    "local_entries": 951,
+    "missing": [],
+    "index_differences": [],
+    "english_fallback": [
+      {
+        "id": "nihillight",
+        "local": "Nihil Light",
+        "wikidex": "Luz Devastadora"
+      },
+      {
+        "id": "gmaxbefuddle",
+        "local": "G-Max Befuddle",
+        "wikidex": "Gigaestupor"
+      },
+      {
+        "id": "gmaxcannonade",
+        "local": "G-Max Cannonade",
+        "wikidex": "Gigacañonazo"
+      },
+      {
+        "id": "gmaxcentiferno",
+        "local": "G-Max Centiferno",
+        "wikidex": "Gigacienfuegos"
+      },
+      {
+        "id": "gmaxchistrike",
+        "local": "G-Max Chi Strike",
+        "wikidex": "Gigapuñición"
+      },
+      {
+        "id": "gmaxcuddle",
+        "local": "G-Max Cuddle",
+        "wikidex": "Gigaternura"
+      },
+      {
+        "id": "gmaxdepletion",
+        "local": "G-Max Depletion",
+        "wikidex": "Gigadesgaste"
+      },
+      {
+        "id": "gmaxdrumsolo",
+        "local": "G-Max Drum Solo",
+        "wikidex": "Gigarredoble"
+      },
+      {
+        "id": "gmaxfinale",
+        "local": "G-Max Finale",
+        "wikidex": "Gigacolofón"
+      },
+      {
+        "id": "gmaxfireball",
+        "local": "G-Max Fireball",
+        "wikidex": "Gigaesfera Ígnea"
+      },
+      {
+        "id": "gmaxfoamburst",
+        "local": "G-Max Foam Burst",
+        "wikidex": "Gigaespuma"
+      },
+      {
+        "id": "gmaxgoldrush",
+        "local": "G-Max Gold Rush",
+        "wikidex": "Gigamonedas"
+      },
+      {
+        "id": "gmaxgravitas",
+        "local": "G-Max Gravitas",
+        "wikidex": "Gigabóveda"
+      },
+      {
+        "id": "gmaxhydrosnipe",
+        "local": "G-Max Hydrosnipe",
+        "wikidex": "Gigadisparo"
+      },
+      {
+        "id": "gmaxmalodor",
+        "local": "G-Max Malodor",
+        "wikidex": "Gigapestilencia"
+      },
+      {
+        "id": "gmaxmeltdown",
+        "local": "G-Max Meltdown",
+        "wikidex": "Gigafundido"
+      },
+      {
+        "id": "gmaxoneblow",
+        "local": "G-Max One Blow",
+        "wikidex": "Gigagolpe Brusco"
+      },
+      {
+        "id": "gmaxrapidflow",
+        "local": "G-Max Rapid Flow",
+        "wikidex": "Gigagolpe Fluido"
+      },
+      {
+        "id": "gmaxreplenish",
+        "local": "G-Max Replenish",
+        "wikidex": "Gigarreciclaje"
+      },
+      {
+        "id": "gmaxresonance",
+        "local": "G-Max Resonance",
+        "wikidex": "Gigamelodía"
+      },
+      {
+        "id": "gmaxsandblast",
+        "local": "G-Max Sandblast",
+        "wikidex": "Gigapolvareda"
+      },
+      {
+        "id": "gmaxsmite",
+        "local": "G-Max Smite",
+        "wikidex": "Gigacastigo"
+      },
+      {
+        "id": "gmaxsnooze",
+        "local": "G-Max Snooze",
+        "wikidex": "Gigasopor"
+      },
+      {
+        "id": "gmaxsteelsurge",
+        "local": "G-Max Steelsurge",
+        "wikidex": "Gigatrampa Acero"
+      },
+      {
+        "id": "gmaxstonesurge",
+        "local": "G-Max Stonesurge",
+        "wikidex": "Gigatrampa Rocas"
+      },
+      {
+        "id": "gmaxstunshock",
+        "local": "G-Max Stun Shock",
+        "wikidex": "Gigadescarga"
+      },
+      {
+        "id": "gmaxsweetness",
+        "local": "G-Max Sweetness",
+        "wikidex": "Giganéctar"
+      },
+      {
+        "id": "gmaxtartness",
+        "local": "G-Max Tartness",
+        "wikidex": "Gigacorrosión"
+      },
+      {
+        "id": "gmaxterror",
+        "local": "G-Max Terror",
+        "wikidex": "Gigaaparición"
+      },
+      {
+        "id": "gmaxvinelash",
+        "local": "G-Max Vine Lash",
+        "wikidex": "Gigalianas"
+      },
+      {
+        "id": "gmaxvolcalith",
+        "local": "G-Max Volcalith",
+        "wikidex": "Gigarroca Ígnea"
+      },
+      {
+        "id": "gmaxvoltcrash",
+        "local": "G-Max Volt Crash",
+        "wikidex": "Gigatronada"
+      },
+      {
+        "id": "gmaxwildfire",
+        "local": "G-Max Wildfire",
+        "wikidex": "Gigallamarada"
+      },
+      {
+        "id": "gmaxwindrage",
+        "local": "G-Max Wind Rage",
+        "wikidex": "Gigahuracán"
+      }
+    ],
+    "local_variants_outside_reference": [
+      "hiddenpowerbug",
+      "hiddenpowerdark",
+      "hiddenpowerdragon",
+      "hiddenpowerelectric",
+      "hiddenpowerfighting",
+      "hiddenpowerfire",
+      "hiddenpowerflying",
+      "hiddenpowerghost",
+      "hiddenpowergrass",
+      "hiddenpowerground",
+      "hiddenpowerice",
+      "hiddenpowerpoison",
+      "hiddenpowerpsychic",
+      "hiddenpowerrock",
+      "hiddenpowersteel",
+      "hiddenpowerwater"
+    ],
+    "unused_reference": []
+  },
+  "abilities": {
+    "reference_entries": 317,
+    "local_entries": 316,
+    "missing": [
+      {
+        "id": "auraguard",
+        "index": 319,
+        "name_en": "Aura Guard",
+        "name_es": "Aura Protectora",
+        "unused": false
+      }
+    ],
+    "index_differences": [
+      {
+        "id": "tabletsofruin",
+        "local": 284,
+        "wikidex": 286
+      },
+      {
+        "id": "beadsofruin",
+        "local": 284,
+        "wikidex": 287
+      }
+    ],
+    "english_fallback": [
+      {
+        "id": "eelevate",
+        "local": "Eelevate",
+        "wikidex": "Impulso Anguila"
+      },
+      {
+        "id": "firemane",
+        "local": "Fire Mane",
+        "wikidex": "Crin de Fuego"
+      }
+    ],
+    "local_variants_outside_reference": [],
+    "unused_reference": [
+      {
+        "id": "cacophony",
+        "index": null,
+        "name_en": "Cacophony",
+        "name_es": "Cacofonía",
+        "unused": true
+      }
+    ]
+  }
+}

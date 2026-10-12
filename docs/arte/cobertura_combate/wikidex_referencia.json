@@ -1,0 +1,9736 @@
+{
+  "checked_on": "2026-10-12",
+  "sources": {
+    "moves": "https://www.wikidex.net/wiki/Lista_de_movimientos",
+    "abilities": "https://www.wikidex.net/wiki/Lista_de_habilidades"
+  },
+  "scope": "Tablas de las dos listas; nombres e índices, sin descripciones.",
+  "moves": [
+    {
+      "id": "10000000voltthunderbolt",
+      "name_en": "10,000,000 Volt Thunderbolt",
+      "name_es": "Gigarrayo Fulminante",
+      "indices": [
+        719
+      ]
+    },
+    {
+      "id": "absorb",
+      "name_en": "Absorb",
+      "name_es": "Absorción/Absorber",
+      "indices": [
+        71
+      ]
+    },
+    {
+      "id": "accelerock",
+      "name_en": "Accelerock",
+      "name_es": "Roca Veloz",
+      "indices": [
+        709
+      ]
+    },
+    {
+      "id": "acid",
+      "name_en": "Acid",
+      "name_es": "Ácido",
+      "indices": [
+        51
+      ]
+    },
+    {
+      "id": "acidarmor",
+      "name_en": "Acid Armor",
+      "name_es": "Armadura Ácida",
+      "indices": [
+        151
+      ]
+    },
+    {
+      "id": "aciddownpour",
+      "name_en": "Acid Downpour",
+      "name_es": "Diluvio Corrosivo",
+      "indices": [
+        628,
+        629
+      ]
+    },
+    {
+      "id": "acidspray",
+      "name_en": "Acid Spray",
+      "name_es": "Bomba Ácida",
+      "indices": [
+        491
+      ]
+    },
+    {
+      "id": "acrobatics",
+      "name_en": "Acrobatics",
+      "name_es": "Acrobacia/Acróbata",
+      "indices": [
+        512
+      ]
+    },
+    {
+      "id": "acupressure",
+      "name_en": "Acupressure",
+      "name_es": "Acupresión",
+      "indices": [
+        367
+      ]
+    },
+    {
+      "id": "aerialace",
+      "name_en": "Aerial Ace",
+      "name_es": "As Aéreo/Golpe Aéreo",
+      "indices": [
+        332
+      ]
+    },
+    {
+      "id": "aeroblast",
+      "name_en": "Aeroblast",
+      "name_es": "Aerochorro",
+      "indices": [
+        177
+      ]
+    },
+    {
+      "id": "afteryou",
+      "name_en": "After You",
+      "name_es": "Ceda el Paso/Cede Paso",
+      "indices": [
+        495
+      ]
+    },
+    {
+      "id": "agility",
+      "name_en": "Agility",
+      "name_es": "Agilidad",
+      "indices": [
+        97
+      ]
+    },
+    {
+      "id": "aircutter",
+      "name_en": "Air Cutter",
+      "name_es": "Aire Cortante/Aire Afilado",
+      "indices": [
+        314
+      ]
+    },
+    {
+      "id": "airslash",
+      "name_en": "Air Slash",
+      "name_es": "Corte Aéreo/Tajo Aéreo",
+      "indices": [
+        403
+      ]
+    },
+    {
+      "id": "alloutpummeling",
+      "name_en": "All-Out Pummeling",
+      "name_es": "Ráfaga Demoledora",
+      "indices": [
+        624,
+        625
+      ]
+    },
+    {
+      "id": "alluringvoice",
+      "name_en": "Alluring Voice",
+      "name_es": "Canto Encantador",
+      "indices": [
+        914
+      ]
+    },
+    {
+      "id": "allyswitch",
+      "name_en": "Ally Switch",
+      "name_es": "Cambio de Lado/Cambio de Banda",
+      "indices": [
+        502
+      ]
+    },
+    {
+      "id": "amnesia",
+      "name_en": "Amnesia",
+      "name_es": "Amnesia",
+      "indices": [
+        133
+      ]
+    },
+    {
+      "id": "anchorshot",
+      "name_en": "Anchor Shot",
+      "name_es": "Anclaje",
+      "indices": [
+        677
+      ]
+    },
+    {
+      "id": "ancientpower",
+      "name_en": "Ancient Power",
+      "name_es": "Poder Antiguo/Poder Pasado",
+      "indices": [
+        246
+      ]
+    },
+    {
+      "id": "appleacid",
+      "name_en": "Apple Acid",
+      "name_es": "Ácido Málico",
+      "indices": [
+        787
+      ]
+    },
+    {
+      "id": "aquacutter",
+      "name_en": "Aqua Cutter",
+      "name_es": "Corte Acuático/Tajo Acuático",
+      "indices": [
+        895
+      ]
+    },
+    {
+      "id": "aquajet",
+      "name_en": "Aqua Jet",
+      "name_es": "Acuajet/Acua Jet",
+      "indices": [
+        453
+      ]
+    },
+    {
+      "id": "aquaring",
+      "name_en": "Aqua Ring",
+      "name_es": "Acuaanillo/Acua Aro",
+      "indices": [
+        392
+      ]
+    },
+    {
+      "id": "aquastep",
+      "name_en": "Aqua Step",
+      "name_es": "Danza Acuática",
+      "indices": [
+        872
+      ]
+    },
+    {
+      "id": "aquatail",
+      "name_en": "Aqua Tail",
+      "name_es": "Cola de Agua/Acua Cola",
+      "indices": [
+        401
+      ]
+    },
+    {
+      "id": "armorcannon",
+      "name_en": "Armor Cannon",
+      "name_es": "Cañón Armadura",
+      "indices": [
+        890
+      ]
+    },
+    {
+      "id": "armthrust",
+      "name_en": "Arm Thrust",
+      "name_es": "Empujón",
+      "indices": [
+        292
+      ]
+    },
+    {
+      "id": "aromatherapy",
+      "name_en": "Aromatherapy",
+      "name_es": "Aromaterapia",
+      "indices": [
+        312
+      ]
+    },
+    {
+      "id": "aromaticmist",
+      "name_en": "Aromatic Mist",
+      "name_es": "Niebla Aromática",
+      "indices": [
+        597
+      ]
+    },
+    {
+      "id": "assist",
+      "name_en": "Assist",
+      "name_es": "Ayuda",
+      "indices": [
+        274
+      ]
+    },
+    {
+      "id": "assurance",
+      "name_en": "Assurance",
+      "name_es": "Garantía/Buena Baza",
+      "indices": [
+        372
+      ]
+    },
+    {
+      "id": "astonish",
+      "name_en": "Astonish",
+      "name_es": "Impresión/Impresionar",
+      "indices": [
+        310
+      ]
+    },
+    {
+      "id": "astralbarrage",
+      "name_en": "Astral Barrage",
+      "name_es": "Orbes Espectro",
+      "indices": [
+        825
+      ]
+    },
+    {
+      "id": "attackorder",
+      "name_en": "Attack Order",
+      "name_es": "Al Ataque",
+      "indices": [
+        454
+      ]
+    },
+    {
+      "id": "attract",
+      "name_en": "Attract",
+      "name_es": "Atracción",
+      "indices": [
+        213
+      ]
+    },
+    {
+      "id": "aurasphere",
+      "name_en": "Aura Sphere",
+      "name_es": "Aura Esfera/Esfera Aural",
+      "indices": [
+        396
+      ]
+    },
+    {
+      "id": "aurawheel",
+      "name_en": "Aura Wheel",
+      "name_es": "Rueda Aural",
+      "indices": [
+        783
+      ]
+    },
+    {
+      "id": "aurorabeam",
+      "name_en": "Aurora Beam",
+      "name_es": "Rayo Aurora",
+      "indices": [
+        62
+      ]
+    },
+    {
+      "id": "auroraveil",
+      "name_en": "Aurora Veil",
+      "name_es": "Velo Aurora",
+      "indices": [
+        694
+      ]
+    },
+    {
+      "id": "autotomize",
+      "name_en": "Autotomize",
+      "name_es": "Aligerar",
+      "indices": [
+        475
+      ]
+    },
+    {
+      "id": "avalanche",
+      "name_en": "Avalanche",
+      "name_es": "Alud",
+      "indices": [
+        419
+      ]
+    },
+    {
+      "id": "axekick",
+      "name_en": "Axe Kick",
+      "name_es": "Patada Hacha",
+      "indices": [
+        853
+      ]
+    },
+    {
+      "id": "babydolleyes",
+      "name_en": "Baby-Doll Eyes",
+      "name_es": "Ojitos Tiernos",
+      "indices": [
+        608
+      ]
+    },
+    {
+      "id": "baddybad",
+      "name_en": "Baddy Bad",
+      "name_es": "Umbreozona",
+      "indices": [
+        737
+      ]
+    },
+    {
+      "id": "banefulbunker",
+      "name_en": "Baneful Bunker",
+      "name_es": "Búnker",
+      "indices": [
+        661
+      ]
+    },
+    {
+      "id": "barbbarrage",
+      "name_en": "Barb Barrage",
+      "name_es": "Mil Púas Tóxicas",
+      "indices": [
+        839
+      ]
+    },
+    {
+      "id": "barrage",
+      "name_en": "Barrage",
+      "name_es": "Bombardeo",
+      "indices": [
+        140
+      ]
+    },
+    {
+      "id": "barrier",
+      "name_en": "Barrier",
+      "name_es": "Barrera",
+      "indices": [
+        112
+      ]
+    },
+    {
+      "id": "batonpass",
+      "name_en": "Baton Pass",
+      "name_es": "Relevo",
+      "indices": [
+        226
+      ]
+    },
+    {
+      "id": "beakblast",
+      "name_en": "Beak Blast",
+      "name_es": "Pico Cañón",
+      "indices": [
+        690
+      ]
+    },
+    {
+      "id": "beatup",
+      "name_en": "Beat Up",
+      "name_es": "Paliza",
+      "indices": [
+        251
+      ]
+    },
+    {
+      "id": "behemothbash",
+      "name_en": "Behemoth Bash",
+      "name_es": "Golpe Supremo/Embate Supremo",
+      "indices": [
+        782
+      ]
+    },
+    {
+      "id": "behemothblade",
+      "name_en": "Behemoth Blade",
+      "name_es": "Corte Supremo/Tajo Supremo",
+      "indices": [
+        781
+      ]
+    },
+    {
+      "id": "belch",
+      "name_en": "Belch",
+      "name_es": "Eructo",
+      "indices": [
+        562
+      ]
+    },
+    {
+      "id": "bellydrum",
+      "name_en": "Belly Drum",
+      "name_es": "Tambor",
+      "indices": [
+        187
+      ]
+    },
+    {
+      "id": "bestow",
+      "name_en": "Bestow",
+      "name_es": "Ofrenda",
+      "indices": [
+        516
+      ]
+    },
+    {
+      "id": "bide",
+      "name_en": "Bide",
+      "name_es": "Venganza",
+      "indices": [
+        117
+      ]
+    },
+    {
+      "id": "bind",
+      "name_en": "Bind",
+      "name_es": "Atadura",
+      "indices": [
+        20
+      ]
+    },
+    {
+      "id": "bite",
+      "name_en": "Bite",
+      "name_es": "Mordida/Mordisco",
+      "indices": [
+        44
+      ]
+    },
+    {
+      "id": "bitterblade",
+      "name_en": "Bitter Blade",
+      "name_es": "Espada Lamento",
+      "indices": [
+        891
+      ]
+    },
+    {
+      "id": "bittermalice",
+      "name_en": "Bitter Malice",
+      "name_es": "Rencor Reprimido",
+      "indices": [
+        841
+      ]
+    },
+    {
+      "id": "blackholeeclipse",
+      "name_en": "Black Hole Eclipse",
+      "name_es": "Agujero Negro Aniquilador",
+      "indices": [
+        654,
+        655
+      ]
+    },
+    {
+      "id": "blastburn",
+      "name_en": "Blast Burn",
+      "name_es": "Anillo de Fuego/Anillo Ígneo",
+      "indices": [
+        307
+      ]
+    },
+    {
+      "id": "blazekick",
+      "name_en": "Blaze Kick",
+      "name_es": "Patada Ígnea",
+      "indices": [
+        299
+      ]
+    },
+    {
+      "id": "blazingtorque",
+      "name_en": "Blazing Torque",
+      "name_es": "Pirochoque",
+      "indices": [
+        896
+      ]
+    },
+    {
+      "id": "bleakwindstorm",
+      "name_en": "Bleakwind Storm",
+      "name_es": "Vendaval Gélido",
+      "indices": [
+        846
+      ]
+    },
+    {
+      "id": "blizzard",
+      "name_en": "Blizzard",
+      "name_es": "Ventisca",
+      "indices": [
+        59
+      ]
+    },
+    {
+      "id": "block",
+      "name_en": "Block",
+      "name_es": "Bloqueo",
+      "indices": [
+        335
+      ]
+    },
+    {
+      "id": "bloodmoon",
+      "name_en": "Blood Moon",
+      "name_es": "Luna Roja",
+      "indices": [
+        901
+      ]
+    },
+    {
+      "id": "bloomdoom",
+      "name_en": "Bloom Doom",
+      "name_es": "Megatón Floral",
+      "indices": [
+        644,
+        645
+      ]
+    },
+    {
+      "id": "blueflare",
+      "name_en": "Blue Flare",
+      "name_es": "Llama Azul",
+      "indices": [
+        551
+      ]
+    },
+    {
+      "id": "bodypress",
+      "name_en": "Body Press",
+      "name_es": "Plancha Corporal",
+      "indices": [
+        776
+      ]
+    },
+    {
+      "id": "bodyslam",
+      "name_en": "Body Slam",
+      "name_es": "Golpe de Cuerpo/Golpe Cuerpo",
+      "indices": [
+        34
+      ]
+    },
+    {
+      "id": "boltbeak",
+      "name_en": "Bolt Beak",
+      "name_es": "Electropico",
+      "indices": [
+        754
+      ]
+    },
+    {
+      "id": "boltstrike",
+      "name_en": "Bolt Strike",
+      "name_es": "Ataque Fulgor",
+      "indices": [
+        550
+      ]
+    },
+    {
+      "id": "boneclub",
+      "name_en": "Bone Club",
+      "name_es": "Maza de Hueso/Hueso Palo",
+      "indices": [
+        125
+      ]
+    },
+    {
+      "id": "bonemerang",
+      "name_en": "Bonemerang",
+      "name_es": "Huesomerang",
+      "indices": [
+        155
+      ]
+    },
+    {
+      "id": "bonerush",
+      "name_en": "Bone Rush",
+      "name_es": "Hueso Veloz/Ataque Óseo",
+      "indices": [
+        198
+      ]
+    },
+    {
+      "id": "boomburst",
+      "name_en": "Boomburst",
+      "name_es": "Estruendo",
+      "indices": [
+        586
+      ]
+    },
+    {
+      "id": "bounce",
+      "name_en": "Bounce",
+      "name_es": "Rebote/Bote",
+      "indices": [
+        340
+      ]
+    },
+    {
+      "id": "bouncybubble",
+      "name_en": "Bouncy Bubble",
+      "name_es": "Vapodrenaje",
+      "indices": [
+        733
+      ]
+    },
+    {
+      "id": "branchpoke",
+      "name_en": "Branch Poke",
+      "name_es": "Ramazo Punzante/Punzada Rama",
+      "indices": [
+        785
+      ]
+    },
+    {
+      "id": "bravebird",
+      "name_en": "Brave Bird",
+      "name_es": "Ave Brava/Pájaro Osado",
+      "indices": [
+        413
+      ]
+    },
+    {
+      "id": "breakingswipe",
+      "name_en": "Breaking Swipe",
+      "name_es": "Vasto Impacto",
+      "indices": [
+        784
+      ]
+    },
+    {
+      "id": "breakneckblitz",
+      "name_en": "Breakneck Blitz",
+      "name_es": "Carrera Arrolladora",
+      "indices": [
+        622,
+        623
+      ]
+    },
+    {
+      "id": "brickbreak",
+      "name_en": "Brick Break",
+      "name_es": "Karatazo/Demolición",
+      "indices": [
+        280
+      ]
+    },
+    {
+      "id": "brine",
+      "name_en": "Brine",
+      "name_es": "Agua Salada/Salmuera",
+      "indices": [
+        362
+      ]
+    },
+    {
+      "id": "brutalswing",
+      "name_en": "Brutal Swing",
+      "name_es": "Giro Vil",
+      "indices": [
+        693
+      ]
+    },
+    {
+      "id": "bubble",
+      "name_en": "Bubble",
+      "name_es": "Burbuja",
+      "indices": [
+        145
+      ]
+    },
+    {
+      "id": "bubblebeam",
+      "name_en": "Bubble Beam",
+      "name_es": "Rayo Burbuja",
+      "indices": [
+        61
+      ]
+    },
+    {
+      "id": "bugbite",
+      "name_en": "Bug Bite",
+      "name_es": "Picadura",
+      "indices": [
+        450
+      ]
+    },
+    {
+      "id": "bugbuzz",
+      "name_en": "Bug Buzz",
+      "name_es": "Zumbido",
+      "indices": [
+        405
+      ]
+    },
+    {
+      "id": "bulkup",
+      "name_en": "Bulk Up",
+      "name_es": "Corpulencia",
+      "indices": [
+        339
+      ]
+    },
+    {
+      "id": "bulldoze",
+      "name_en": "Bulldoze",
+      "name_es": "Terratemblor",
+      "indices": [
+        523
+      ]
+    },
+    {
+      "id": "bulletpunch",
+      "name_en": "Bullet Punch",
+      "name_es": "Puño Bala",
+      "indices": [
+        418
+      ]
+    },
+    {
+      "id": "bulletseed",
+      "name_en": "Bullet Seed",
+      "name_es": "Bala Semilla/Semilladora",
+      "indices": [
+        331
+      ]
+    },
+    {
+      "id": "burningbulwark",
+      "name_en": "Burning Bulwark",
+      "name_es": "Llama Protectora",
+      "indices": [
+        908
+      ]
+    },
+    {
+      "id": "burningjealousy",
+      "name_en": "Burning Jealousy",
+      "name_es": "Envidia Ardiente",
+      "indices": [
+        807
+      ]
+    },
+    {
+      "id": "burnup",
+      "name_en": "Burn Up",
+      "name_es": "Llama Final",
+      "indices": [
+        682
+      ]
+    },
+    {
+      "id": "buzzybuzz",
+      "name_en": "Buzzy Buzz",
+      "name_es": "Joltioparálisis",
+      "indices": [
+        734
+      ]
+    },
+    {
+      "id": "calmmind",
+      "name_en": "Calm Mind",
+      "name_es": "Paz Mental",
+      "indices": [
+        347
+      ]
+    },
+    {
+      "id": "camouflage",
+      "name_en": "Camouflage",
+      "name_es": "Camuflaje",
+      "indices": [
+        293
+      ]
+    },
+    {
+      "id": "captivate",
+      "name_en": "Captivate",
+      "name_es": "Seducción",
+      "indices": [
+        445
+      ]
+    },
+    {
+      "id": "catastropika",
+      "name_en": "Catastropika",
+      "name_es": "Pikavoltio Letal",
+      "indices": [
+        658
+      ]
+    },
+    {
+      "id": "ceaselessedge",
+      "name_en": "Ceaseless Edge",
+      "name_es": "Corte Metralla/Tajo Metralla",
+      "indices": [
+        845
+      ]
+    },
+    {
+      "id": "celebrate",
+      "name_en": "Celebrate",
+      "name_es": "Celebración",
+      "indices": [
+        606
+      ]
+    },
+    {
+      "id": "charge",
+      "name_en": "Charge",
+      "name_es": "Carga",
+      "indices": [
+        268
+      ]
+    },
+    {
+      "id": "chargebeam",
+      "name_en": "Charge Beam",
+      "name_es": "Rayo Carga",
+      "indices": [
+        451
+      ]
+    },
+    {
+      "id": "charm",
+      "name_en": "Charm",
+      "name_es": "Encanto",
+      "indices": [
+        204
+      ]
+    },
+    {
+      "id": "chatter",
+      "name_en": "Chatter",
+      "name_es": "Parloteo/Cháchara",
+      "indices": [
+        448
+      ]
+    },
+    {
+      "id": "chillingwater",
+      "name_en": "Chilling Water",
+      "name_es": "Agua Fría",
+      "indices": [
+        886
+      ]
+    },
+    {
+      "id": "chillyreception",
+      "name_en": "Chilly Reception",
+      "name_es": "Respuesta Fría/Fría Acogida",
+      "indices": [
+        881
+      ]
+    },
+    {
+      "id": "chipaway",
+      "name_en": "Chip Away",
+      "name_es": "Guardia Baja",
+      "indices": [
+        498
+      ]
+    },
+    {
+      "id": "chloroblast",
+      "name_en": "Chloroblast",
+      "name_es": "Clorofiláser",
+      "indices": [
+        835
+      ]
+    },
+    {
+      "id": "circlethrow",
+      "name_en": "Circle Throw",
+      "name_es": "Llave Giro",
+      "indices": [
+        509
+      ]
+    },
+    {
+      "id": "clamp",
+      "name_en": "Clamp",
+      "name_es": "Tenaza",
+      "indices": [
+        128
+      ]
+    },
+    {
+      "id": "clangingscales",
+      "name_en": "Clanging Scales",
+      "name_es": "Fragor Escamas",
+      "indices": [
+        691
+      ]
+    },
+    {
+      "id": "clangoroussoul",
+      "name_en": "Clangorous Soul",
+      "name_es": "Estruendo Escama",
+      "indices": [
+        775
+      ]
+    },
+    {
+      "id": "clangoroussoulblaze",
+      "name_en": "Clangorous Soulblaze",
+      "name_es": "Estruendo Implacable",
+      "indices": [
+        728
+      ]
+    },
+    {
+      "id": "clearsmog",
+      "name_en": "Clear Smog",
+      "name_es": "Humo Claro/Niebla Clara",
+      "indices": [
+        499
+      ]
+    },
+    {
+      "id": "closecombat",
+      "name_en": "Close Combat",
+      "name_es": "Cuerpo a Cuerpo/A Bocajarro",
+      "indices": [
+        370
+      ]
+    },
+    {
+      "id": "coaching",
+      "name_en": "Coaching",
+      "name_es": "Motivación",
+      "indices": [
+        811
+      ]
+    },
+    {
+      "id": "coil",
+      "name_en": "Coil",
+      "name_es": "Enrosque",
+      "indices": [
+        489
+      ]
+    },
+    {
+      "id": "collisioncourse",
+      "name_en": "Collision Course",
+      "name_es": "Nitrochoque",
+      "indices": [
+        878
+      ]
+    },
+    {
+      "id": "combattorque",
+      "name_en": "Combat Torque",
+      "name_es": "Pugnachoque",
+      "indices": [
+        899
+      ]
+    },
+    {
+      "id": "cometpunch",
+      "name_en": "Comet Punch",
+      "name_es": "Puño Cometa",
+      "indices": [
+        4
+      ]
+    },
+    {
+      "id": "comeuppance",
+      "name_en": "Comeuppance",
+      "name_es": "Resarcimiento",
+      "indices": [
+        894
+      ]
+    },
+    {
+      "id": "confide",
+      "name_en": "Confide",
+      "name_es": "Confidencia",
+      "indices": [
+        590
+      ]
+    },
+    {
+      "id": "confuseray",
+      "name_en": "Confuse Ray",
+      "name_es": "Rayo de Confusión/Rayo Confuso",
+      "indices": [
+        109
+      ]
+    },
+    {
+      "id": "confusion",
+      "name_en": "Confusion",
+      "name_es": "Confusión",
+      "indices": [
+        93
+      ]
+    },
+    {
+      "id": "constrict",
+      "name_en": "Constrict",
+      "name_es": "Restricción",
+      "indices": [
+        132
+      ]
+    },
+    {
+      "id": "continentalcrush",
+      "name_en": "Continental Crush",
+      "name_es": "Aplastamiento Gigalítico",
+      "indices": [
+        632,
+        633
+      ]
+    },
+    {
+      "id": "conversion",
+      "name_en": "Conversion",
+      "name_es": "Conversión",
+      "indices": [
+        160
+      ]
+    },
+    {
+      "id": "conversion2",
+      "name_en": "Conversion 2",
+      "name_es": "Conversión 2",
+      "indices": [
+        176
+      ]
+    },
+    {
+      "id": "copycat",
+      "name_en": "Copycat",
+      "name_es": "Copión",
+      "indices": [
+        383
+      ]
+    },
+    {
+      "id": "coreenforcer",
+      "name_en": "Core Enforcer",
+      "name_es": "Núcleo Castigo",
+      "indices": [
+        687
+      ]
+    },
+    {
+      "id": "corkscrewcrash",
+      "name_en": "Corkscrew Crash",
+      "name_es": "Hélice Trepanadora",
+      "indices": [
+        638,
+        639
+      ]
+    },
+    {
+      "id": "corrosivegas",
+      "name_en": "Corrosive Gas",
+      "name_es": "Gas Corrosivo",
+      "indices": [
+        810
+      ]
+    },
+    {
+      "id": "cosmicpower",
+      "name_en": "Cosmic Power",
+      "name_es": "Masa Cósmica",
+      "indices": [
+        322
+      ]
+    },
+    {
+      "id": "cottonguard",
+      "name_en": "Cotton Guard",
+      "name_es": "Guardialgodón/Rizo Algodón",
+      "indices": [
+        538
+      ]
+    },
+    {
+      "id": "cottonspore",
+      "name_en": "Cotton Spore",
+      "name_es": "Esporagodón",
+      "indices": [
+        178
+      ]
+    },
+    {
+      "id": "counter",
+      "name_en": "Counter",
+      "name_es": "Contraataque",
+      "indices": [
+        68
+      ]
+    },
+    {
+      "id": "courtchange",
+      "name_en": "Court Change",
+      "name_es": "Cambio de Cancha",
+      "indices": [
+        756
+      ]
+    },
+    {
+      "id": "covet",
+      "name_en": "Covet",
+      "name_es": "Antojo",
+      "indices": [
+        343
+      ]
+    },
+    {
+      "id": "crabhammer",
+      "name_en": "Crabhammer",
+      "name_es": "Martillazo",
+      "indices": [
+        152
+      ]
+    },
+    {
+      "id": "craftyshield",
+      "name_en": "Crafty Shield",
+      "name_es": "Truco Defensa",
+      "indices": [
+        578
+      ]
+    },
+    {
+      "id": "crosschop",
+      "name_en": "Cross Chop",
+      "name_es": "Golpe Cruzado/Tajo Cruzado",
+      "indices": [
+        238
+      ]
+    },
+    {
+      "id": "crosspoison",
+      "name_en": "Cross Poison",
+      "name_es": "Veneno X",
+      "indices": [
+        440
+      ]
+    },
+    {
+      "id": "crunch",
+      "name_en": "Crunch",
+      "name_es": "Triturar",
+      "indices": [
+        242
+      ]
+    },
+    {
+      "id": "crushclaw",
+      "name_en": "Crush Claw",
+      "name_es": "Garra Brutal",
+      "indices": [
+        306
+      ]
+    },
+    {
+      "id": "crushgrip",
+      "name_en": "Crush Grip",
+      "name_es": "Garra Aplastante/Agarrón",
+      "indices": [
+        462
+      ]
+    },
+    {
+      "id": "curse",
+      "name_en": "Curse",
+      "name_es": "Maldición",
+      "indices": [
+        174
+      ]
+    },
+    {
+      "id": "cut",
+      "name_en": "Cut",
+      "name_es": "Corte",
+      "indices": [
+        15
+      ]
+    },
+    {
+      "id": "darkestlariat",
+      "name_en": "Darkest Lariat",
+      "name_es": "Lariat Oscuro",
+      "indices": [
+        663
+      ]
+    },
+    {
+      "id": "darkpulse",
+      "name_en": "Dark Pulse",
+      "name_es": "Pulso Oscuro/Pulso Umbrío",
+      "indices": [
+        399
+      ]
+    },
+    {
+      "id": "darkvoid",
+      "name_en": "Dark Void",
+      "name_es": "Abismo Negro/Brecha Negra",
+      "indices": [
+        464
+      ]
+    },
+    {
+      "id": "dazzlinggleam",
+      "name_en": "Dazzling Gleam",
+      "name_es": "Brillo Mágico",
+      "indices": [
+        605
+      ]
+    },
+    {
+      "id": "decorate",
+      "name_en": "Decorate",
+      "name_es": "Decoración",
+      "indices": [
+        777
+      ]
+    },
+    {
+      "id": "defendorder",
+      "name_en": "Defend Order",
+      "name_es": "A Defender",
+      "indices": [
+        455
+      ]
+    },
+    {
+      "id": "defensecurl",
+      "name_en": "Defense Curl",
+      "name_es": "Hacerse Bolita/Rizo Defensa",
+      "indices": [
+        111
+      ]
+    },
+    {
+      "id": "defog",
+      "name_en": "Defog",
+      "name_es": "Desempañar/Despejar",
+      "indices": [
+        432
+      ]
+    },
+    {
+      "id": "destinybond",
+      "name_en": "Destiny Bond",
+      "name_es": "Lazo del Destino/Mismo Destino",
+      "indices": [
+        194
+      ]
+    },
+    {
+      "id": "detect",
+      "name_en": "Detect",
+      "name_es": "Detección",
+      "indices": [
+        197
+      ]
+    },
+    {
+      "id": "devastatingdrake",
+      "name_en": "Devastating Drake",
+      "name_es": "Dracoaliento Devastador",
+      "indices": [
+        652,
+        653
+      ]
+    },
+    {
+      "id": "diamondstorm",
+      "name_en": "Diamond Storm",
+      "name_es": "Tormenta de Diamantes",
+      "indices": [
+        591
+      ]
+    },
+    {
+      "id": "dig",
+      "name_en": "Dig",
+      "name_es": "Excavar",
+      "indices": [
+        91
+      ]
+    },
+    {
+      "id": "direclaw",
+      "name_en": "Dire Claw",
+      "name_es": "Garra Nociva",
+      "indices": [
+        827
+      ]
+    },
+    {
+      "id": "disable",
+      "name_en": "Disable",
+      "name_es": "Anulación",
+      "indices": [
+        50
+      ]
+    },
+    {
+      "id": "disarmingvoice",
+      "name_en": "Disarming Voice",
+      "name_es": "Voz Encantadora/Voz Cautivadora",
+      "indices": [
+        574
+      ]
+    },
+    {
+      "id": "discharge",
+      "name_en": "Discharge",
+      "name_es": "Chispazo",
+      "indices": [
+        435
+      ]
+    },
+    {
+      "id": "dive",
+      "name_en": "Dive",
+      "name_es": "Buceo",
+      "indices": [
+        291
+      ]
+    },
+    {
+      "id": "dizzypunch",
+      "name_en": "Dizzy Punch",
+      "name_es": "Puño Mareador/Puño Mareo",
+      "indices": [
+        146
+      ]
+    },
+    {
+      "id": "doodle",
+      "name_en": "Doodle",
+      "name_es": "Plagio/Decalcomanía",
+      "indices": [
+        867
+      ]
+    },
+    {
+      "id": "doomdesire",
+      "name_en": "Doom Desire",
+      "name_es": "Deseo Final/Deseo Oculto",
+      "indices": [
+        353
+      ]
+    },
+    {
+      "id": "doubleedge",
+      "name_en": "Double-Edge",
+      "name_es": "Doble Filo",
+      "indices": [
+        38
+      ]
+    },
+    {
+      "id": "doublehit",
+      "name_en": "Double Hit",
+      "name_es": "Doble Golpe",
+      "indices": [
+        458
+      ]
+    },
+    {
+      "id": "doubleironbash",
+      "name_en": "Double Iron Bash",
+      "name_es": "Ferropuño Doble",
+      "indices": [
+        742
+      ]
+    },
+    {
+      "id": "doublekick",
+      "name_en": "Double Kick",
+      "name_es": "Doble Patada",
+      "indices": [
+        24
+      ]
+    },
+    {
+      "id": "doubleshock",
+      "name_en": "Double Shock",
+      "name_es": "Electropalmas",
+      "indices": [
+        892
+      ]
+    },
+    {
+      "id": "doubleslap",
+      "name_en": "Double Slap",
+      "name_es": "Doble Bofetón",
+      "indices": [
+        3
+      ]
+    },
+    {
+      "id": "doubleteam",
+      "name_en": "Double Team",
+      "name_es": "Doble Equipo",
+      "indices": [
+        104
+      ]
+    },
+    {
+      "id": "dracometeor",
+      "name_en": "Draco Meteor",
+      "name_es": "Meteoro Dragón/Cometa Draco",
+      "indices": [
+        434
+      ]
+    },
+    {
+      "id": "dragonascent",
+      "name_en": "Dragon Ascent",
+      "name_es": "Ascenso Dracónico/Ascenso Draco",
+      "indices": [
+        620
+      ]
+    },
+    {
+      "id": "dragonbreath",
+      "name_en": "Dragon Breath",
+      "name_es": "Aliento Dragón/Dragoaliento",
+      "indices": [
+        225
+      ]
+    },
+    {
+      "id": "dragoncheer",
+      "name_en": "Dragon Cheer",
+      "name_es": "Bramido Dragón",
+      "indices": [
+        913
+      ]
+    },
+    {
+      "id": "dragonclaw",
+      "name_en": "Dragon Claw",
+      "name_es": "Garra Dragón",
+      "indices": [
+        337
+      ]
+    },
+    {
+      "id": "dragondance",
+      "name_en": "Dragon Dance",
+      "name_es": "Danza de Dragón/Danza Dragón",
+      "indices": [
+        349
+      ]
+    },
+    {
+      "id": "dragondarts",
+      "name_en": "Dragon Darts",
+      "name_es": "Dracoflechas",
+      "indices": [
+        751
+      ]
+    },
+    {
+      "id": "dragonenergy",
+      "name_en": "Dragon Energy",
+      "name_es": "Dracoenergía",
+      "indices": [
+        820
+      ]
+    },
+    {
+      "id": "dragonhammer",
+      "name_en": "Dragon Hammer",
+      "name_es": "Martillo Dragón",
+      "indices": [
+        692
+      ]
+    },
+    {
+      "id": "dragonpulse",
+      "name_en": "Dragon Pulse",
+      "name_es": "Pulso Dragón",
+      "indices": [
+        406
+      ]
+    },
+    {
+      "id": "dragonrage",
+      "name_en": "Dragon Rage",
+      "name_es": "Furia Dragón",
+      "indices": [
+        82
+      ]
+    },
+    {
+      "id": "dragonrush",
+      "name_en": "Dragon Rush",
+      "name_es": "Carga Dragón",
+      "indices": [
+        407
+      ]
+    },
+    {
+      "id": "dragontail",
+      "name_en": "Dragon Tail",
+      "name_es": "Cola de Dragón/Cola Dragón",
+      "indices": [
+        525
+      ]
+    },
+    {
+      "id": "drainingkiss",
+      "name_en": "Draining Kiss",
+      "name_es": "Beso Drenador/Beso Drenaje",
+      "indices": [
+        577
+      ]
+    },
+    {
+      "id": "drainpunch",
+      "name_en": "Drain Punch",
+      "name_es": "Puño Drenador/Puño Drenaje",
+      "indices": [
+        409
+      ]
+    },
+    {
+      "id": "dreameater",
+      "name_en": "Dream Eater",
+      "name_es": "Comesueños",
+      "indices": [
+        138
+      ]
+    },
+    {
+      "id": "drillpeck",
+      "name_en": "Drill Peck",
+      "name_es": "Pico Taladro",
+      "indices": [
+        65
+      ]
+    },
+    {
+      "id": "drillrun",
+      "name_en": "Drill Run",
+      "name_es": "Taladradora",
+      "indices": [
+        529
+      ]
+    },
+    {
+      "id": "drumbeating",
+      "name_en": "Drum Beating",
+      "name_es": "Batería Asalto",
+      "indices": [
+        778
+      ]
+    },
+    {
+      "id": "dualchop",
+      "name_en": "Dual Chop",
+      "name_es": "Golpe Dual/Golpe Bis",
+      "indices": [
+        530
+      ]
+    },
+    {
+      "id": "dualwingbeat",
+      "name_en": "Dual Wingbeat",
+      "name_es": "Aletazo Doble/Ala Bis",
+      "indices": [
+        814
+      ]
+    },
+    {
+      "id": "dynamaxcannon",
+      "name_en": "Dynamax Cannon",
+      "name_es": "Cañón Dinamax",
+      "indices": [
+        744
+      ]
+    },
+    {
+      "id": "dynamicpunch",
+      "name_en": "Dynamic Punch",
+      "name_es": "Puño Dinámico",
+      "indices": [
+        223
+      ]
+    },
+    {
+      "id": "earthpower",
+      "name_en": "Earth Power",
+      "name_es": "Poder Terrestre/Tierra Viva",
+      "indices": [
+        414
+      ]
+    },
+    {
+      "id": "earthquake",
+      "name_en": "Earthquake",
+      "name_es": "Terremoto",
+      "indices": [
+        89
+      ]
+    },
+    {
+      "id": "echoedvoice",
+      "name_en": "Echoed Voice",
+      "name_es": "Eco Voz",
+      "indices": [
+        497
+      ]
+    },
+    {
+      "id": "eerieimpulse",
+      "name_en": "Eerie Impulse",
+      "name_es": "Onda Anómala",
+      "indices": [
+        598
+      ]
+    },
+    {
+      "id": "eeriespell",
+      "name_en": "Eerie Spell",
+      "name_es": "Conjuro Funesto",
+      "indices": [
+        826
+      ]
+    },
+    {
+      "id": "eggbomb",
+      "name_en": "Egg Bomb",
+      "name_es": "Bomba Huevo",
+      "indices": [
+        121
+      ]
+    },
+    {
+      "id": "electricterrain",
+      "name_en": "Electric Terrain",
+      "name_es": "Campo Eléctrico",
+      "indices": [
+        604
+      ]
+    },
+    {
+      "id": "electrify",
+      "name_en": "Electrify",
+      "name_es": "Electrificación",
+      "indices": [
+        582
+      ]
+    },
+    {
+      "id": "electroball",
+      "name_en": "Electro Ball",
+      "name_es": "Electrobola/Bola Voltio",
+      "indices": [
+        486
+      ]
+    },
+    {
+      "id": "electrodrift",
+      "name_en": "Electro Drift",
+      "name_es": "Electroderrape",
+      "indices": [
+        879
+      ]
+    },
+    {
+      "id": "electroshot",
+      "name_en": "Electro Shot",
+      "name_es": "Electrorrayo",
+      "indices": [
+        905
+      ]
+    },
+    {
+      "id": "electroweb",
+      "name_en": "Electroweb",
+      "name_es": "Electrotela",
+      "indices": [
+        527
+      ]
+    },
+    {
+      "id": "embargo",
+      "name_en": "Embargo",
+      "name_es": "Embargo",
+      "indices": [
+        373
+      ]
+    },
+    {
+      "id": "ember",
+      "name_en": "Ember",
+      "name_es": "Brasas/Ascuas",
+      "indices": [
+        52
+      ]
+    },
+    {
+      "id": "encore",
+      "name_en": "Encore",
+      "name_es": "Otra Vez",
+      "indices": [
+        227
+      ]
+    },
+    {
+      "id": "endeavor",
+      "name_en": "Endeavor",
+      "name_es": "Esfuerzo",
+      "indices": [
+        283
+      ]
+    },
+    {
+      "id": "endure",
+      "name_en": "Endure",
+      "name_es": "Aguante",
+      "indices": [
+        203
+      ]
+    },
+    {
+      "id": "energyball",
+      "name_en": "Energy Ball",
+      "name_es": "Bola de Energía/Energibola",
+      "indices": [
+        412
+      ]
+    },
+    {
+      "id": "entrainment",
+      "name_en": "Entrainment",
+      "name_es": "Danza Amiga",
+      "indices": [
+        494
+      ]
+    },
+    {
+      "id": "eruption",
+      "name_en": "Eruption",
+      "name_es": "Estallido",
+      "indices": [
+        284
+      ]
+    },
+    {
+      "id": "esperwing",
+      "name_en": "Esper Wing",
+      "name_es": "Ala Aural",
+      "indices": [
+        840
+      ]
+    },
+    {
+      "id": "eternabeam",
+      "name_en": "Eternabeam",
+      "name_es": "Rayo Infinito",
+      "indices": [
+        795
+      ]
+    },
+    {
+      "id": "expandingforce",
+      "name_en": "Expanding Force",
+      "name_es": "Vasta Fuerza",
+      "indices": [
+        797
+      ]
+    },
+    {
+      "id": "explosion",
+      "name_en": "Explosion",
+      "name_es": "Explosión",
+      "indices": [
+        153
+      ]
+    },
+    {
+      "id": "extrasensory",
+      "name_en": "Extrasensory",
+      "name_es": "Extrasensorial/Paranormal",
+      "indices": [
+        326
+      ]
+    },
+    {
+      "id": "extremeevoboost",
+      "name_en": "Extreme Evoboost",
+      "name_es": "Novena Potencia",
+      "indices": [
+        702
+      ]
+    },
+    {
+      "id": "extremespeed",
+      "name_en": "Extreme Speed",
+      "name_es": "Velocidad Extrema",
+      "indices": [
+        245
+      ]
+    },
+    {
+      "id": "facade",
+      "name_en": "Facade",
+      "name_es": "Fachada",
+      "indices": [
+        263
+      ]
+    },
+    {
+      "id": "fairylock",
+      "name_en": "Fairy Lock",
+      "name_es": "Cerrojo Feérico",
+      "indices": [
+        587
+      ]
+    },
+    {
+      "id": "fairywind",
+      "name_en": "Fairy Wind",
+      "name_es": "Viento Feérico",
+      "indices": [
+        584
+      ]
+    },
+    {
+      "id": "fakeout",
+      "name_en": "Fake Out",
+      "name_es": "Sorpresa",
+      "indices": [
+        252
+      ]
+    },
+    {
+      "id": "faketears",
+      "name_en": "Fake Tears",
+      "name_es": "Llanto Falso",
+      "indices": [
+        313
+      ]
+    },
+    {
+      "id": "falsesurrender",
+      "name_en": "False Surrender",
+      "name_es": "Irreverencia",
+      "indices": [
+        793
+      ]
+    },
+    {
+      "id": "falseswipe",
+      "name_en": "False Swipe",
+      "name_es": "Falsa Bofetada/Falso Tortazo",
+      "indices": [
+        206
+      ]
+    },
+    {
+      "id": "featherdance",
+      "name_en": "Feather Dance",
+      "name_es": "Danza de Plumas/Danza Pluma",
+      "indices": [
+        297
+      ]
+    },
+    {
+      "id": "feint",
+      "name_en": "Feint",
+      "name_es": "Amago",
+      "indices": [
+        364
+      ]
+    },
+    {
+      "id": "feintattack",
+      "name_en": "Feint Attack",
+      "name_es": "Ataque Finta/Finta",
+      "indices": [
+        185
+      ]
+    },
+    {
+      "id": "fellstinger",
+      "name_en": "Fell Stinger",
+      "name_es": "Aguijón Letal",
+      "indices": [
+        565
+      ]
+    },
+    {
+      "id": "ficklebeam",
+      "name_en": "Fickle Beam",
+      "name_es": "Láser Caprichoso/Láser Veleidoso",
+      "indices": [
+        907
+      ]
+    },
+    {
+      "id": "fierydance",
+      "name_en": "Fiery Dance",
+      "name_es": "Danza de Llamas/Danza Llama",
+      "indices": [
+        552
+      ]
+    },
+    {
+      "id": "fierywrath",
+      "name_en": "Fiery Wrath",
+      "name_es": "Furia Candente",
+      "indices": [
+        822
+      ]
+    },
+    {
+      "id": "filletaway",
+      "name_en": "Fillet Away",
+      "name_es": "Fileteo/Deslome",
+      "indices": [
+        868
+      ]
+    },
+    {
+      "id": "finalgambit",
+      "name_en": "Final Gambit",
+      "name_es": "Sacrificio",
+      "indices": [
+        515
+      ]
+    },
+    {
+      "id": "fireblast",
+      "name_en": "Fire Blast",
+      "name_es": "Llamarada",
+      "indices": [
+        126
+      ]
+    },
+    {
+      "id": "firefang",
+      "name_en": "Fire Fang",
+      "name_es": "Colmillo Fuego/Colmillo Ígneo",
+      "indices": [
+        424
+      ]
+    },
+    {
+      "id": "firelash",
+      "name_en": "Fire Lash",
+      "name_es": "Látigo Ígneo",
+      "indices": [
+        680
+      ]
+    },
+    {
+      "id": "firepledge",
+      "name_en": "Fire Pledge",
+      "name_es": "Voto Fuego",
+      "indices": [
+        519
+      ]
+    },
+    {
+      "id": "firepunch",
+      "name_en": "Fire Punch",
+      "name_es": "Puño Fuego",
+      "indices": [
+        7
+      ]
+    },
+    {
+      "id": "firespin",
+      "name_en": "Fire Spin",
+      "name_es": "Giro Fuego",
+      "indices": [
+        83
+      ]
+    },
+    {
+      "id": "firstimpression",
+      "name_en": "First Impression",
+      "name_es": "Escaramuza",
+      "indices": [
+        660
+      ]
+    },
+    {
+      "id": "fishiousrend",
+      "name_en": "Fishious Rend",
+      "name_es": "Branquibocado",
+      "indices": [
+        755
+      ]
+    },
+    {
+      "id": "fissure",
+      "name_en": "Fissure",
+      "name_es": "Fisura",
+      "indices": [
+        90
+      ]
+    },
+    {
+      "id": "flail",
+      "name_en": "Flail",
+      "name_es": "Azote",
+      "indices": [
+        175
+      ]
+    },
+    {
+      "id": "flameburst",
+      "name_en": "Flame Burst",
+      "name_es": "Golpe de Fuego/Pirotecnia",
+      "indices": [
+        481
+      ]
+    },
+    {
+      "id": "flamecharge",
+      "name_en": "Flame Charge",
+      "name_es": "Carga de Fuego/Nitrocarga",
+      "indices": [
+        488
+      ]
+    },
+    {
+      "id": "flamethrower",
+      "name_en": "Flamethrower",
+      "name_es": "Lanzallamas",
+      "indices": [
+        53
+      ]
+    },
+    {
+      "id": "flamewheel",
+      "name_en": "Flame Wheel",
+      "name_es": "Rueda Ígnea/Rueda Fuego",
+      "indices": [
+        172
+      ]
+    },
+    {
+      "id": "flareblitz",
+      "name_en": "Flare Blitz",
+      "name_es": "Erupción/Envite Ígneo",
+      "indices": [
+        394
+      ]
+    },
+    {
+      "id": "flash",
+      "name_en": "Flash",
+      "name_es": "Destello",
+      "indices": [
+        148
+      ]
+    },
+    {
+      "id": "flashcannon",
+      "name_en": "Flash Cannon",
+      "name_es": "Cañón Resplandor",
+      "indices": [
+        430
+      ]
+    },
+    {
+      "id": "flatter",
+      "name_en": "Flatter",
+      "name_es": "Halago/Camelo",
+      "indices": [
+        260
+      ]
+    },
+    {
+      "id": "fleurcannon",
+      "name_en": "Fleur Cannon",
+      "name_es": "Cañón Floral",
+      "indices": [
+        705
+      ]
+    },
+    {
+      "id": "fling",
+      "name_en": "Fling",
+      "name_es": "Lanzamiento",
+      "indices": [
+        374
+      ]
+    },
+    {
+      "id": "flipturn",
+      "name_en": "Flip Turn",
+      "name_es": "Viraje",
+      "indices": [
+        812
+      ]
+    },
+    {
+      "id": "floatyfall",
+      "name_en": "Floaty Fall",
+      "name_es": "Pikaída/Pikapicado",
+      "indices": [
+        731
+      ]
+    },
+    {
+      "id": "floralhealing",
+      "name_en": "Floral Healing",
+      "name_es": "Flores Sanadoras/Cura Floral",
+      "indices": [
+        666
+      ]
+    },
+    {
+      "id": "flowershield",
+      "name_en": "Flower Shield",
+      "name_es": "Defensa Floral",
+      "indices": [
+        579
+      ]
+    },
+    {
+      "id": "flowertrick",
+      "name_en": "Flower Trick",
+      "name_es": "Truco Floral",
+      "indices": [
+        870
+      ]
+    },
+    {
+      "id": "fly",
+      "name_en": "Fly",
+      "name_es": "Vuelo",
+      "indices": [
+        19
+      ]
+    },
+    {
+      "id": "flyingpress",
+      "name_en": "Flying Press",
+      "name_es": "Plancha Voladora",
+      "indices": [
+        560
+      ]
+    },
+    {
+      "id": "focusblast",
+      "name_en": "Focus Blast",
+      "name_es": "Ataque Centrado/Onda Certera",
+      "indices": [
+        411
+      ]
+    },
+    {
+      "id": "focusenergy",
+      "name_en": "Focus Energy",
+      "name_es": "Centrar Energía/Foco Energía",
+      "indices": [
+        116
+      ]
+    },
+    {
+      "id": "focuspunch",
+      "name_en": "Focus Punch",
+      "name_es": "Puño Centrado/Puño Certero",
+      "indices": [
+        264
+      ]
+    },
+    {
+      "id": "followme",
+      "name_en": "Follow Me",
+      "name_es": "Señuelo",
+      "indices": [
+        266
+      ]
+    },
+    {
+      "id": "forcepalm",
+      "name_en": "Force Palm",
+      "name_es": "Fuerza de Palma/Palmeo",
+      "indices": [
+        395
+      ]
+    },
+    {
+      "id": "foresight",
+      "name_en": "Foresight",
+      "name_es": "Visión/Profecía",
+      "indices": [
+        193
+      ]
+    },
+    {
+      "id": "forestscurse",
+      "name_en": "Forest's Curse",
+      "name_es": "Condena Silvana",
+      "indices": [
+        571
+      ]
+    },
+    {
+      "id": "foulplay",
+      "name_en": "Foul Play",
+      "name_es": "Juego Sucio",
+      "indices": [
+        492
+      ]
+    },
+    {
+      "id": "freezedry",
+      "name_en": "Freeze-Dry",
+      "name_es": "Liofilización",
+      "indices": [
+        573
+      ]
+    },
+    {
+      "id": "freezeshock",
+      "name_en": "Freeze Shock",
+      "name_es": "Rayo Gélido",
+      "indices": [
+        553
+      ]
+    },
+    {
+      "id": "freezingglare",
+      "name_en": "Freezing Glare",
+      "name_es": "Mirada Glacial/Mirada Heladora",
+      "indices": [
+        821
+      ]
+    },
+    {
+      "id": "freezyfrost",
+      "name_en": "Freezy Frost",
+      "name_es": "Glaceoprisma",
+      "indices": [
+        739
+      ]
+    },
+    {
+      "id": "frenzyplant",
+      "name_en": "Frenzy Plant",
+      "name_es": "Planta Feroz",
+      "indices": [
+        338
+      ]
+    },
+    {
+      "id": "frostbreath",
+      "name_en": "Frost Breath",
+      "name_es": "Vaho Helado/Vaho Gélido",
+      "indices": [
+        524
+      ]
+    },
+    {
+      "id": "frustration",
+      "name_en": "Frustration",
+      "name_es": "Frustración",
+      "indices": [
+        218
+      ]
+    },
+    {
+      "id": "furyattack",
+      "name_en": "Fury Attack",
+      "name_es": "Ataque Furia",
+      "indices": [
+        31
+      ]
+    },
+    {
+      "id": "furycutter",
+      "name_en": "Fury Cutter",
+      "name_es": "Corte Furia",
+      "indices": [
+        210
+      ]
+    },
+    {
+      "id": "furyswipes",
+      "name_en": "Fury Swipes",
+      "name_es": "Garras Furiosas/Golpes Furia",
+      "indices": [
+        154
+      ]
+    },
+    {
+      "id": "fusionbolt",
+      "name_en": "Fusion Bolt",
+      "name_es": "Rayo Fusión",
+      "indices": [
+        559
+      ]
+    },
+    {
+      "id": "fusionflare",
+      "name_en": "Fusion Flare",
+      "name_es": "Llama Fusión",
+      "indices": [
+        558
+      ]
+    },
+    {
+      "id": "futuresight",
+      "name_en": "Future Sight",
+      "name_es": "Premonición",
+      "indices": [
+        248
+      ]
+    },
+    {
+      "id": "gastroacid",
+      "name_en": "Gastro Acid",
+      "name_es": "Ácido Gástrico/Bilis",
+      "indices": [
+        380
+      ]
+    },
+    {
+      "id": "geargrind",
+      "name_en": "Gear Grind",
+      "name_es": "Rueda Doble",
+      "indices": [
+        544
+      ]
+    },
+    {
+      "id": "gearup",
+      "name_en": "Gear Up",
+      "name_es": "Engranajes/Piñón Auxiliar",
+      "indices": [
+        674
+      ]
+    },
+    {
+      "id": "genesissupernova",
+      "name_en": "Genesis Supernova",
+      "name_es": "Supernova Original",
+      "indices": [
+        703
+      ]
+    },
+    {
+      "id": "geomancy",
+      "name_en": "Geomancy",
+      "name_es": "Geocontrol",
+      "indices": [
+        601
+      ]
+    },
+    {
+      "id": "gigadrain",
+      "name_en": "Giga Drain",
+      "name_es": "Gigadrenado",
+      "indices": [
+        202
+      ]
+    },
+    {
+      "id": "gigaimpact",
+      "name_en": "Giga Impact",
+      "name_es": "Gigaimpacto",
+      "indices": [
+        416
+      ]
+    },
+    {
+      "id": "gigatonhammer",
+      "name_en": "Gigaton Hammer",
+      "name_es": "Martillo Colosal",
+      "indices": [
+        893
+      ]
+    },
+    {
+      "id": "gigavolthavoc",
+      "name_en": "Gigavolt Havoc",
+      "name_es": "Gigavoltio Destructor",
+      "indices": [
+        646,
+        647
+      ]
+    },
+    {
+      "id": "glaciallance",
+      "name_en": "Glacial Lance",
+      "name_es": "Lanza Glacial",
+      "indices": [
+        824
+      ]
+    },
+    {
+      "id": "glaciate",
+      "name_en": "Glaciate",
+      "name_es": "Mundo Gélido",
+      "indices": [
+        549
+      ]
+    },
+    {
+      "id": "glaiverush",
+      "name_en": "Glaive Rush",
+      "name_es": "Asalto Espadón",
+      "indices": [
+        862
+      ]
+    },
+    {
+      "id": "glare",
+      "name_en": "Glare",
+      "name_es": "Fulmirada/Deslumbrar",
+      "indices": [
+        137
+      ]
+    },
+    {
+      "id": "glitzyglow",
+      "name_en": "Glitzy Glow",
+      "name_es": "Espeaura",
+      "indices": [
+        736
+      ]
+    },
+    {
+      "id": "gmaxbefuddle",
+      "name_en": "G-Max Befuddle",
+      "name_es": "Gigaestupor",
+      "indices": [
+        "gigamax:02"
+      ]
+    },
+    {
+      "id": "gmaxcannonade",
+      "name_en": "G-Max Cannonade",
+      "name_es": "Gigacañonazo",
+      "indices": [
+        "gigamax:28"
+      ]
+    },
+    {
+      "id": "gmaxcentiferno",
+      "name_en": "G-Max Centiferno",
+      "name_es": "Gigacienfuegos",
+      "indices": [
+        "gigamax:26"
+      ]
+    },
+    {
+      "id": "gmaxchistrike",
+      "name_en": "G-Max Chi Strike",
+      "name_es": "Gigapuñición",
+      "indices": [
+        "gigamax:05"
+      ]
+    },
+    {
+      "id": "gmaxcuddle",
+      "name_en": "G-Max Cuddle",
+      "name_es": "Gigaternura",
+      "indices": [
+        "gigamax:08"
+      ]
+    },
+    {
+      "id": "gmaxdepletion",
+      "name_en": "G-Max Depletion",
+      "name_es": "Gigadesgaste",
+      "indices": [
+        "gigamax:15"
+      ]
+    },
+    {
+      "id": "gmaxdrumsolo",
+      "name_en": "G-Max Drum Solo",
+      "name_es": "Gigarredoble",
+      "indices": [
+        "gigamax:29"
+      ]
+    },
+    {
+      "id": "gmaxfinale",
+      "name_en": "G-Max Finale",
+      "name_es": "Gigacolofón",
+      "indices": [
+        "gigamax:14"
+      ]
+    },
+    {
+      "id": "gmaxfireball",
+      "name_en": "G-Max Fireball",
+      "name_es": "Gigaesfera Ígnea",
+      "indices": [
+        "gigamax:30"
+      ]
+    },
+    {
+      "id": "gmaxfoamburst",
+      "name_en": "G-Max Foam Burst",
+      "name_es": "Gigaespuma",
+      "indices": [
+        "gigamax:25"
+      ]
+    },
+    {
+      "id": "gmaxgoldrush",
+      "name_en": "G-Max Gold Rush",
+      "name_es": "Gigamonedas",
+      "indices": [
+        "gigamax:04"
+      ]
+    },
+    {
+      "id": "gmaxgravitas",
+      "name_en": "G-Max Gravitas",
+      "name_es": "Gigabóveda",
+      "indices": [
+        "gigamax:16"
+      ]
+    },
+    {
+      "id": "gmaxhydrosnipe",
+      "name_en": "G-Max Hydrosnipe",
+      "name_es": "Gigadisparo",
+      "indices": [
+        "gigamax:31"
+      ]
+    },
+    {
+      "id": "gmaxmalodor",
+      "name_en": "G-Max Malodor",
+      "name_es": "Gigapestilencia",
+      "indices": [
+        "gigamax:10"
+      ]
+    },
+    {
+      "id": "gmaxmeltdown",
+      "name_en": "G-Max Meltdown",
+      "name_es": "Gigafundido",
+      "indices": [
+        "gigamax:24"
+      ]
+    },
+    {
+      "id": "gmaxoneblow",
+      "name_en": "G-Max One Blow",
+      "name_es": "Gigagolpe Brusco",
+      "indices": [
+        "gigamax:32"
+      ]
+    },
+    {
+      "id": "gmaxrapidflow",
+      "name_en": "G-Max Rapid Flow",
+      "name_es": "Gigagolpe Fluido",
+      "indices": [
+        "gigamax:33"
+      ]
+    },
+    {
+      "id": "gmaxreplenish",
+      "name_en": "G-Max Replenish",
+      "name_es": "Gigarreciclaje",
+      "indices": [
+        "gigamax:09"
+      ]
+    },
+    {
+      "id": "gmaxresonance",
+      "name_en": "G-Max Resonance",
+      "name_es": "Gigamelodía",
+      "indices": [
+        "gigamax:07"
+      ]
+    },
+    {
+      "id": "gmaxsandblast",
+      "name_en": "G-Max Sandblast",
+      "name_es": "Gigapolvareda",
+      "indices": [
+        "gigamax:18"
+      ]
+    },
+    {
+      "id": "gmaxsmite",
+      "name_en": "G-Max Smite",
+      "name_es": "Gigacastigo",
+      "indices": [
+        "gigamax:22"
+      ]
+    },
+    {
+      "id": "gmaxsnooze",
+      "name_en": "G-Max Snooze",
+      "name_es": "Gigasopor",
+      "indices": [
+        "gigamax:19"
+      ]
+    },
+    {
+      "id": "gmaxsteelsurge",
+      "name_en": "G-Max Steelsurge",
+      "name_es": "Gigatrampa Acero",
+      "indices": [
+        "gigamax:23"
+      ]
+    },
+    {
+      "id": "gmaxstonesurge",
+      "name_en": "G-Max Stonesurge",
+      "name_es": "Gigatrampa Rocas",
+      "indices": [
+        "gigamax:11"
+      ]
+    },
+    {
+      "id": "gmaxstunshock",
+      "name_en": "G-Max Stun Shock",
+      "name_es": "Gigadescarga",
+      "indices": [
+        "gigamax:13"
+      ]
+    },
+    {
+      "id": "gmaxsweetness",
+      "name_en": "G-Max Sweetness",
+      "name_es": "Giganéctar",
+      "indices": [
+        "gigamax:21"
+      ]
+    },
+    {
+      "id": "gmaxtartness",
+      "name_en": "G-Max Tartness",
+      "name_es": "Gigacorrosión",
+      "indices": [
+        "gigamax:20"
+      ]
+    },
+    {
+      "id": "gmaxterror",
+      "name_en": "G-Max Terror",
+      "name_es": "Gigaaparición",
+      "indices": [
+        "gigamax:06"
+      ]
+    },
+    {
+      "id": "gmaxvinelash",
+      "name_en": "G-Max Vine Lash",
+      "name_es": "Gigalianas",
+      "indices": [
+        "gigamax:27"
+      ]
+    },
+    {
+      "id": "gmaxvolcalith",
+      "name_en": "G-Max Volcalith",
+      "name_es": "Gigarroca Ígnea",
+      "indices": [
+        "gigamax:17"
+      ]
+    },
+    {
+      "id": "gmaxvoltcrash",
+      "name_en": "G-Max Volt Crash",
+      "name_es": "Gigatronada",
+      "indices": [
+        "gigamax:03"
+      ]
+    },
+    {
+      "id": "gmaxwildfire",
+      "name_en": "G-Max Wildfire",
+      "name_es": "Gigallamarada",
+      "indices": [
+        "gigamax:01"
+      ]
+    },
+    {
+      "id": "gmaxwindrage",
+      "name_en": "G-Max Wind Rage",
+      "name_es": "Gigahuracán",
+      "indices": [
+        "gigamax:12"
+      ]
+    },
+    {
+      "id": "grassknot",
+      "name_en": "Grass Knot",
+      "name_es": "Nudo de Pasto/Hierba Lazo",
+      "indices": [
+        447
+      ]
+    },
+    {
+      "id": "grasspledge",
+      "name_en": "Grass Pledge",
+      "name_es": "Voto Planta",
+      "indices": [
+        520
+      ]
+    },
+    {
+      "id": "grasswhistle",
+      "name_en": "Grass Whistle",
+      "name_es": "Silbato de Hoja/Silbato",
+      "indices": [
+        320
+      ]
+    },
+    {
+      "id": "grassyglide",
+      "name_en": "Grassy Glide",
+      "name_es": "Fitoimpulso",
+      "indices": [
+        803
+      ]
+    },
+    {
+      "id": "grassyterrain",
+      "name_en": "Grassy Terrain",
+      "name_es": "Campo de Césped/Campo de Hierba",
+      "indices": [
+        580
+      ]
+    },
+    {
+      "id": "gravapple",
+      "name_en": "Grav Apple",
+      "name_es": "Fuerza G",
+      "indices": [
+        788
+      ]
+    },
+    {
+      "id": "gravity",
+      "name_en": "Gravity",
+      "name_es": "Gravedad",
+      "indices": [
+        356
+      ]
+    },
+    {
+      "id": "growl",
+      "name_en": "Growl",
+      "name_es": "Gruñido",
+      "indices": [
+        45
+      ]
+    },
+    {
+      "id": "growth",
+      "name_en": "Growth",
+      "name_es": "Crecimiento/Desarrollo",
+      "indices": [
+        74
+      ]
+    },
+    {
+      "id": "grudge",
+      "name_en": "Grudge",
+      "name_es": "Rabia",
+      "indices": [
+        288
+      ]
+    },
+    {
+      "id": "guardianofalola",
+      "name_en": "Guardian of Alola",
+      "name_es": "Cólera del Guardián",
+      "indices": [
+        698
+      ]
+    },
+    {
+      "id": "guardsplit",
+      "name_en": "Guard Split",
+      "name_es": "Guardia Dividida/Isoguardia",
+      "indices": [
+        470
+      ]
+    },
+    {
+      "id": "guardswap",
+      "name_en": "Guard Swap",
+      "name_es": "Cambiadefensa",
+      "indices": [
+        385
+      ]
+    },
+    {
+      "id": "guillotine",
+      "name_en": "Guillotine",
+      "name_es": "Guillotina",
+      "indices": [
+        12
+      ]
+    },
+    {
+      "id": "gunkshot",
+      "name_en": "Gunk Shot",
+      "name_es": "Lanzamugre",
+      "indices": [
+        441
+      ]
+    },
+    {
+      "id": "gust",
+      "name_en": "Gust",
+      "name_es": "Ráfaga de Aire/Tornado",
+      "indices": [
+        16
+      ]
+    },
+    {
+      "id": "gyroball",
+      "name_en": "Gyro Ball",
+      "name_es": "Giro Bola",
+      "indices": [
+        360
+      ]
+    },
+    {
+      "id": "hail",
+      "name_en": "Hail",
+      "name_es": "Granizo",
+      "indices": [
+        258
+      ]
+    },
+    {
+      "id": "hammerarm",
+      "name_en": "Hammer Arm",
+      "name_es": "Brazo Martillo/Machada",
+      "indices": [
+        359
+      ]
+    },
+    {
+      "id": "happyhour",
+      "name_en": "Happy Hour",
+      "name_es": "Paga Extra",
+      "indices": [
+        603
+      ]
+    },
+    {
+      "id": "harden",
+      "name_en": "Harden",
+      "name_es": "Fortaleza",
+      "indices": [
+        106
+      ]
+    },
+    {
+      "id": "hardpress",
+      "name_en": "Hard Press",
+      "name_es": "Prensa Metálica",
+      "indices": [
+        912
+      ]
+    },
+    {
+      "id": "haze",
+      "name_en": "Haze",
+      "name_es": "Niebla",
+      "indices": [
+        114
+      ]
+    },
+    {
+      "id": "headbutt",
+      "name_en": "Headbutt",
+      "name_es": "Golpe Cabeza",
+      "indices": [
+        29
+      ]
+    },
+    {
+      "id": "headcharge",
+      "name_en": "Head Charge",
+      "name_es": "Carga de Cabeza/Ariete",
+      "indices": [
+        543
+      ]
+    },
+    {
+      "id": "headlongrush",
+      "name_en": "Headlong Rush",
+      "name_es": "Asalto Frontal/Arremetida",
+      "indices": [
+        838
+      ]
+    },
+    {
+      "id": "headsmash",
+      "name_en": "Head Smash",
+      "name_es": "Topetazo/Testarazo",
+      "indices": [
+        457
+      ]
+    },
+    {
+      "id": "healbell",
+      "name_en": "Heal Bell",
+      "name_es": "Cascabel Sanador/Cascabel Cura",
+      "indices": [
+        215
+      ]
+    },
+    {
+      "id": "healblock",
+      "name_en": "Heal Block",
+      "name_es": "Anticuración/Anticura",
+      "indices": [
+        377
+      ]
+    },
+    {
+      "id": "healingwish",
+      "name_en": "Healing Wish",
+      "name_es": "Deseo Sanador/Deseo Cura",
+      "indices": [
+        361
+      ]
+    },
+    {
+      "id": "healorder",
+      "name_en": "Heal Order",
+      "name_es": "Auxilio",
+      "indices": [
+        456
+      ]
+    },
+    {
+      "id": "healpulse",
+      "name_en": "Heal Pulse",
+      "name_es": "Pulso Sanador/Pulso Cura",
+      "indices": [
+        505
+      ]
+    },
+    {
+      "id": "heartstamp",
+      "name_en": "Heart Stamp",
+      "name_es": "Sello de Corazón/Arrumaco",
+      "indices": [
+        531
+      ]
+    },
+    {
+      "id": "heartswap",
+      "name_en": "Heart Swap",
+      "name_es": "Cambiaalmas",
+      "indices": [
+        391
+      ]
+    },
+    {
+      "id": "heatcrash",
+      "name_en": "Heat Crash",
+      "name_es": "Golpe de Calor/Golpe Calor",
+      "indices": [
+        535
+      ]
+    },
+    {
+      "id": "heatwave",
+      "name_en": "Heat Wave",
+      "name_es": "Onda Ígnea",
+      "indices": [
+        257
+      ]
+    },
+    {
+      "id": "heavyslam",
+      "name_en": "Heavy Slam",
+      "name_es": "Golpe Pesado/Cuerpo Pesado",
+      "indices": [
+        484
+      ]
+    },
+    {
+      "id": "helpinghand",
+      "name_en": "Helping Hand",
+      "name_es": "Refuerzos/Refuerzo",
+      "indices": [
+        270
+      ]
+    },
+    {
+      "id": "hex",
+      "name_en": "Hex",
+      "name_es": "Infortunio",
+      "indices": [
+        506
+      ]
+    },
+    {
+      "id": "hiddenpower",
+      "name_en": "Hidden Power",
+      "name_es": "Poder Oculto",
+      "indices": [
+        237
+      ]
+    },
+    {
+      "id": "highhorsepower",
+      "name_en": "High Horsepower",
+      "name_es": "Fuerza Equina",
+      "indices": [
+        667
+      ]
+    },
+    {
+      "id": "highjumpkick",
+      "name_en": "High Jump Kick",
+      "name_es": "Patada Salto Alto/Patada Salto Alta",
+      "indices": [
+        136
+      ]
+    },
+    {
+      "id": "holdback",
+      "name_en": "Hold Back",
+      "name_es": "Clemencia",
+      "indices": [
+        610
+      ]
+    },
+    {
+      "id": "holdhands",
+      "name_en": "Hold Hands",
+      "name_es": "Manos Juntas",
+      "indices": [
+        607
+      ]
+    },
+    {
+      "id": "honeclaws",
+      "name_en": "Hone Claws",
+      "name_es": "Afilagarras",
+      "indices": [
+        468
+      ]
+    },
+    {
+      "id": "hornattack",
+      "name_en": "Horn Attack",
+      "name_es": "Ataque Cuerno/Cornada",
+      "indices": [
+        30
+      ]
+    },
+    {
+      "id": "horndrill",
+      "name_en": "Horn Drill",
+      "name_es": "Cuerno Taladro/Perforador",
+      "indices": [
+        32
+      ]
+    },
+    {
+      "id": "hornleech",
+      "name_en": "Horn Leech",
+      "name_es": "Drenacuerno/Asta Drenaje",
+      "indices": [
+        532
+      ]
+    },
+    {
+      "id": "howl",
+      "name_en": "Howl",
+      "name_es": "Aullido",
+      "indices": [
+        336
+      ]
+    },
+    {
+      "id": "hurricane",
+      "name_en": "Hurricane",
+      "name_es": "Huracán/Vendaval",
+      "indices": [
+        542
+      ]
+    },
+    {
+      "id": "hydrocannon",
+      "name_en": "Hydro Cannon",
+      "name_es": "Hidrocañón",
+      "indices": [
+        308
+      ]
+    },
+    {
+      "id": "hydropump",
+      "name_en": "Hydro Pump",
+      "name_es": "Hidrobomba",
+      "indices": [
+        56
+      ]
+    },
+    {
+      "id": "hydrosteam",
+      "name_en": "Hydro Steam",
+      "name_es": "Hidrovapor",
+      "indices": [
+        876
+      ]
+    },
+    {
+      "id": "hydrovortex",
+      "name_en": "Hydro Vortex",
+      "name_es": "Hidrovórtice Abisal",
+      "indices": [
+        642,
+        643
+      ]
+    },
+    {
+      "id": "hyperbeam",
+      "name_en": "Hyper Beam",
+      "name_es": "Hiperrayo",
+      "indices": [
+        63
+      ]
+    },
+    {
+      "id": "hyperdrill",
+      "name_en": "Hyper Drill",
+      "name_es": "Hipertaladro",
+      "indices": [
+        887
+      ]
+    },
+    {
+      "id": "hyperfang",
+      "name_en": "Hyper Fang",
+      "name_es": "Hipercolmillo",
+      "indices": [
+        158
+      ]
+    },
+    {
+      "id": "hyperspacefury",
+      "name_en": "Hyperspace Fury",
+      "name_es": "Cerco Dimensión",
+      "indices": [
+        621
+      ]
+    },
+    {
+      "id": "hyperspacehole",
+      "name_en": "Hyperspace Hole",
+      "name_es": "Paso Dimensional",
+      "indices": [
+        593
+      ]
+    },
+    {
+      "id": "hypervoice",
+      "name_en": "Hyper Voice",
+      "name_es": "Hipervoz/Vozarrón",
+      "indices": [
+        304
+      ]
+    },
+    {
+      "id": "hypnosis",
+      "name_en": "Hypnosis",
+      "name_es": "Hipnosis",
+      "indices": [
+        95
+      ]
+    },
+    {
+      "id": "iceball",
+      "name_en": "Ice Ball",
+      "name_es": "Bola Hielo",
+      "indices": [
+        301
+      ]
+    },
+    {
+      "id": "icebeam",
+      "name_en": "Ice Beam",
+      "name_es": "Rayo de Hielo/Rayo Hielo",
+      "indices": [
+        58
+      ]
+    },
+    {
+      "id": "iceburn",
+      "name_en": "Ice Burn",
+      "name_es": "Llama Gélida",
+      "indices": [
+        554
+      ]
+    },
+    {
+      "id": "icefang",
+      "name_en": "Ice Fang",
+      "name_es": "Colmillo Hielo",
+      "indices": [
+        423
+      ]
+    },
+    {
+      "id": "icehammer",
+      "name_en": "Ice Hammer",
+      "name_es": "Martillo Hielo",
+      "indices": [
+        665
+      ]
+    },
+    {
+      "id": "icepunch",
+      "name_en": "Ice Punch",
+      "name_es": "Puño Hielo",
+      "indices": [
+        8
+      ]
+    },
+    {
+      "id": "iceshard",
+      "name_en": "Ice Shard",
+      "name_es": "Esquirla Helada",
+      "indices": [
+        420
+      ]
+    },
+    {
+      "id": "icespinner",
+      "name_en": "Ice Spinner",
+      "name_es": "Pirueta Helada",
+      "indices": [
+        861
+      ]
+    },
+    {
+      "id": "iciclecrash",
+      "name_en": "Icicle Crash",
+      "name_es": "Carámbano/Chuzos",
+      "indices": [
+        556
+      ]
+    },
+    {
+      "id": "iciclespear",
+      "name_en": "Icicle Spear",
+      "name_es": "Lanza de Hielo/Carámbano",
+      "indices": [
+        333
+      ]
+    },
+    {
+      "id": "icywind",
+      "name_en": "Icy Wind",
+      "name_es": "Viento Helado/Viento Hielo",
+      "indices": [
+        196
+      ]
+    },
+    {
+      "id": "imprison",
+      "name_en": "Imprison",
+      "name_es": "Sellar",
+      "indices": [
+        286
+      ]
+    },
+    {
+      "id": "incinerate",
+      "name_en": "Incinerate",
+      "name_es": "Incinerar/Calcinación",
+      "indices": [
+        510
+      ]
+    },
+    {
+      "id": "infernalparade",
+      "name_en": "Infernal Parade",
+      "name_es": "Marcha Espectral",
+      "indices": [
+        844
+      ]
+    },
+    {
+      "id": "inferno",
+      "name_en": "Inferno",
+      "name_es": "Infierno",
+      "indices": [
+        517
+      ]
+    },
+    {
+      "id": "infernooverdrive",
+      "name_en": "Inferno Overdrive",
+      "name_es": "Hecatombe Pírica",
+      "indices": [
+        640,
+        641
+      ]
+    },
+    {
+      "id": "infestation",
+      "name_en": "Infestation",
+      "name_es": "Infestación/Acoso",
+      "indices": [
+        611
+      ]
+    },
+    {
+      "id": "ingrain",
+      "name_en": "Ingrain",
+      "name_es": "Arraigo",
+      "indices": [
+        275
+      ]
+    },
+    {
+      "id": "instruct",
+      "name_en": "Instruct",
+      "name_es": "Mandato",
+      "indices": [
+        689
+      ]
+    },
+    {
+      "id": "iondeluge",
+      "name_en": "Ion Deluge",
+      "name_es": "Cortina Plasma",
+      "indices": [
+        569
+      ]
+    },
+    {
+      "id": "irondefense",
+      "name_en": "Iron Defense",
+      "name_es": "Defensa de Hierro/Defensa Férrea",
+      "indices": [
+        334
+      ]
+    },
+    {
+      "id": "ironhead",
+      "name_en": "Iron Head",
+      "name_es": "Cabeza de Hierro",
+      "indices": [
+        442
+      ]
+    },
+    {
+      "id": "irontail",
+      "name_en": "Iron Tail",
+      "name_es": "Cola de Hierro/Cola Férrea",
+      "indices": [
+        231
+      ]
+    },
+    {
+      "id": "ivycudgel",
+      "name_en": "Ivy Cudgel",
+      "name_es": "Garrote Liana",
+      "indices": [
+        904
+      ]
+    },
+    {
+      "id": "jawlock",
+      "name_en": "Jaw Lock",
+      "name_es": "Presa Maxilar",
+      "indices": [
+        746
+      ]
+    },
+    {
+      "id": "jetpunch",
+      "name_en": "Jet Punch",
+      "name_es": "Puño Jet",
+      "indices": [
+        857
+      ]
+    },
+    {
+      "id": "judgment",
+      "name_en": "Judgment",
+      "name_es": "Juicio Final/Sentencia",
+      "indices": [
+        449
+      ]
+    },
+    {
+      "id": "jumpkick",
+      "name_en": "Jump Kick",
+      "name_es": "Patada Salto",
+      "indices": [
+        26
+      ]
+    },
+    {
+      "id": "junglehealing",
+      "name_en": "Jungle Healing",
+      "name_es": "Selva Sanadora/Cura Selvática",
+      "indices": [
+        816
+      ]
+    },
+    {
+      "id": "karatechop",
+      "name_en": "Karate Chop",
+      "name_es": "Golpe Karate/Golpe Kárate",
+      "indices": [
+        2
+      ]
+    },
+    {
+      "id": "kinesis",
+      "name_en": "Kinesis",
+      "name_es": "Kinético",
+      "indices": [
+        134
+      ]
+    },
+    {
+      "id": "kingsshield",
+      "name_en": "King's Shield",
+      "name_es": "Escudo Real",
+      "indices": [
+        588
+      ]
+    },
+    {
+      "id": "knockoff",
+      "name_en": "Knock Off",
+      "name_es": "Desarme",
+      "indices": [
+        282
+      ]
+    },
+    {
+      "id": "kowtowcleave",
+      "name_en": "Kowtow Cleave",
+      "name_es": "Genufendiente",
+      "indices": [
+        869
+      ]
+    },
+    {
+      "id": "landswrath",
+      "name_en": "Land's Wrath",
+      "name_es": "Fuerza Telúrica",
+      "indices": [
+        616
+      ]
+    },
+    {
+      "id": "laserfocus",
+      "name_en": "Laser Focus",
+      "name_es": "Agudizar/Aguzar",
+      "indices": [
+        673
+      ]
+    },
+    {
+      "id": "lashout",
+      "name_en": "Lash Out",
+      "name_es": "Desahogo",
+      "indices": [
+        808
+      ]
+    },
+    {
+      "id": "lastresort",
+      "name_en": "Last Resort",
+      "name_es": "Último Recurso/Última Baza",
+      "indices": [
+        387
+      ]
+    },
+    {
+      "id": "lastrespects",
+      "name_en": "Last Respects",
+      "name_es": "Homenaje Póstumo",
+      "indices": [
+        854
+      ]
+    },
+    {
+      "id": "lavaplume",
+      "name_en": "Lava Plume",
+      "name_es": "Bomba de Lava/Humareda",
+      "indices": [
+        436
+      ]
+    },
+    {
+      "id": "leafage",
+      "name_en": "Leafage",
+      "name_es": "Follaje",
+      "indices": [
+        670
+      ]
+    },
+    {
+      "id": "leafblade",
+      "name_en": "Leaf Blade",
+      "name_es": "Hoja Aguda",
+      "indices": [
+        348
+      ]
+    },
+    {
+      "id": "leafstorm",
+      "name_en": "Leaf Storm",
+      "name_es": "Tormenta de Hojas/Lluevehojas",
+      "indices": [
+        437
+      ]
+    },
+    {
+      "id": "leaftornado",
+      "name_en": "Leaf Tornado",
+      "name_es": "Ciclón de Hojas",
+      "indices": [
+        536
+      ]
+    },
+    {
+      "id": "leechlife",
+      "name_en": "Leech Life",
+      "name_es": "Chupavidas",
+      "indices": [
+        141
+      ]
+    },
+    {
+      "id": "leechseed",
+      "name_en": "Leech Seed",
+      "name_es": "Drenadoras",
+      "indices": [
+        73
+      ]
+    },
+    {
+      "id": "leer",
+      "name_en": "Leer",
+      "name_es": "Malicioso",
+      "indices": [
+        43
+      ]
+    },
+    {
+      "id": "letssnuggleforever",
+      "name_en": "Let's Snuggle Forever",
+      "name_es": "Paliza Amistosa/Somanta Amistosa",
+      "indices": [
+        726
+      ]
+    },
+    {
+      "id": "lick",
+      "name_en": "Lick",
+      "name_es": "Lengüetazo",
+      "indices": [
+        122
+      ]
+    },
+    {
+      "id": "lifedew",
+      "name_en": "Life Dew",
+      "name_es": "Gota Vital",
+      "indices": [
+        791
+      ]
+    },
+    {
+      "id": "lightofruin",
+      "name_en": "Light of Ruin",
+      "name_es": "Luz Aniquiladora",
+      "indices": [
+        617
+      ]
+    },
+    {
+      "id": "lightscreen",
+      "name_en": "Light Screen",
+      "name_es": "Pantalla de Luz",
+      "indices": [
+        113
+      ]
+    },
+    {
+      "id": "lightthatburnsthesky",
+      "name_en": "Light That Burns the Sky",
+      "name_es": "Fotodestrucción Apocalíptica",
+      "indices": [
+        723
+      ]
+    },
+    {
+      "id": "liquidation",
+      "name_en": "Liquidation",
+      "name_es": "Hidroariete",
+      "indices": [
+        710
+      ]
+    },
+    {
+      "id": "lockon",
+      "name_en": "Lock-On",
+      "name_es": "Fijar Blanco",
+      "indices": [
+        199
+      ]
+    },
+    {
+      "id": "lovelykiss",
+      "name_en": "Lovely Kiss",
+      "name_es": "Beso Amoroso",
+      "indices": [
+        142
+      ]
+    },
+    {
+      "id": "lowkick",
+      "name_en": "Low Kick",
+      "name_es": "Patada Baja",
+      "indices": [
+        67
+      ]
+    },
+    {
+      "id": "lowsweep",
+      "name_en": "Low Sweep",
+      "name_es": "Barredora/Puntapié",
+      "indices": [
+        490
+      ]
+    },
+    {
+      "id": "luckychant",
+      "name_en": "Lucky Chant",
+      "name_es": "Cántico Suerte/Conjuro",
+      "indices": [
+        381
+      ]
+    },
+    {
+      "id": "luminacrash",
+      "name_en": "Lumina Crash",
+      "name_es": "Fotocolisión",
+      "indices": [
+        855
+      ]
+    },
+    {
+      "id": "lunarblessing",
+      "name_en": "Lunar Blessing",
+      "name_es": "Plegaria Lunar",
+      "indices": [
+        849
+      ]
+    },
+    {
+      "id": "lunardance",
+      "name_en": "Lunar Dance",
+      "name_es": "Danza de la Luna/Danza Lunar",
+      "indices": [
+        461
+      ]
+    },
+    {
+      "id": "lunge",
+      "name_en": "Lunge",
+      "name_es": "Plancha",
+      "indices": [
+        679
+      ]
+    },
+    {
+      "id": "lusterpurge",
+      "name_en": "Luster Purge",
+      "name_es": "Resplandor",
+      "indices": [
+        295
+      ]
+    },
+    {
+      "id": "machpunch",
+      "name_en": "Mach Punch",
+      "name_es": "Superpuño/Ultrapuño",
+      "indices": [
+        183
+      ]
+    },
+    {
+      "id": "magicalleaf",
+      "name_en": "Magical Leaf",
+      "name_es": "Hojas Mágicas/Hoja Mágica",
+      "indices": [
+        345
+      ]
+    },
+    {
+      "id": "magicaltorque",
+      "name_en": "Magical Torque",
+      "name_es": "Feerichoque",
+      "indices": [
+        900
+      ]
+    },
+    {
+      "id": "magiccoat",
+      "name_en": "Magic Coat",
+      "name_es": "Capa Mágica",
+      "indices": [
+        277
+      ]
+    },
+    {
+      "id": "magicpowder",
+      "name_en": "Magic Powder",
+      "name_es": "Polvo Magia/Polvo Mágico",
+      "indices": [
+        750
+      ]
+    },
+    {
+      "id": "magicroom",
+      "name_en": "Magic Room",
+      "name_es": "Zona Mágica",
+      "indices": [
+        478
+      ]
+    },
+    {
+      "id": "magmastorm",
+      "name_en": "Magma Storm",
+      "name_es": "Lluvia Ígnea",
+      "indices": [
+        463
+      ]
+    },
+    {
+      "id": "magnetbomb",
+      "name_en": "Magnet Bomb",
+      "name_es": "Magnetobomba/Bomba Imán",
+      "indices": [
+        443
+      ]
+    },
+    {
+      "id": "magneticflux",
+      "name_en": "Magnetic Flux",
+      "name_es": "Aura Magnética",
+      "indices": [
+        602
+      ]
+    },
+    {
+      "id": "magnetrise",
+      "name_en": "Magnet Rise",
+      "name_es": "Superimán/Levitón",
+      "indices": [
+        393
+      ]
+    },
+    {
+      "id": "magnitude",
+      "name_en": "Magnitude",
+      "name_es": "Magnitud",
+      "indices": [
+        222
+      ]
+    },
+    {
+      "id": "makeitrain",
+      "name_en": "Make It Rain",
+      "name_es": "Fiebre Dorada",
+      "indices": [
+        874
+      ]
+    },
+    {
+      "id": "maliciousmoonsault",
+      "name_en": "Malicious Moonsault",
+      "name_es": "Hiperplancha Oscura",
+      "indices": [
+        696
+      ]
+    },
+    {
+      "id": "malignantchain",
+      "name_en": "Malignant Chain",
+      "name_es": "Cadena Virulenta",
+      "indices": [
+        919
+      ]
+    },
+    {
+      "id": "matblock",
+      "name_en": "Mat Block",
+      "name_es": "Escudo Tatami",
+      "indices": [
+        561
+      ]
+    },
+    {
+      "id": "matchagotcha",
+      "name_en": "Matcha Gotcha",
+      "name_es": "Cañón Batidor",
+      "indices": [
+        902
+      ]
+    },
+    {
+      "id": "maxairstream",
+      "name_en": "Max Airstream",
+      "name_es": "Maxiciclón",
+      "indices": [
+        766
+      ]
+    },
+    {
+      "id": "maxdarkness",
+      "name_en": "Max Darkness",
+      "name_es": "Maxisombra",
+      "indices": [
+        772
+      ]
+    },
+    {
+      "id": "maxflare",
+      "name_en": "Max Flare",
+      "name_es": "Maxignición",
+      "indices": [
+        757
+      ]
+    },
+    {
+      "id": "maxflutterby",
+      "name_en": "Max Flutterby",
+      "name_es": "Maxinsecto",
+      "indices": [
+        758
+      ]
+    },
+    {
+      "id": "maxgeyser",
+      "name_en": "Max Geyser",
+      "name_es": "Maxichorro",
+      "indices": [
+        765
+      ]
+    },
+    {
+      "id": "maxguard",
+      "name_en": "Max Guard",
+      "name_es": "Maxibarrera",
+      "indices": [
+        743
+      ]
+    },
+    {
+      "id": "maxhailstorm",
+      "name_en": "Max Hailstorm",
+      "name_es": "Maxihelada",
+      "indices": [
+        763
+      ]
+    },
+    {
+      "id": "maxknuckle",
+      "name_en": "Max Knuckle",
+      "name_es": "Maxipuño",
+      "indices": [
+        761
+      ]
+    },
+    {
+      "id": "maxlightning",
+      "name_en": "Max Lightning",
+      "name_es": "Maxitormenta",
+      "indices": [
+        759
+      ]
+    },
+    {
+      "id": "maxmindstorm",
+      "name_en": "Max Mindstorm",
+      "name_es": "Maxionda",
+      "indices": [
+        769
+      ]
+    },
+    {
+      "id": "maxooze",
+      "name_en": "Max Ooze",
+      "name_es": "Maxiácido",
+      "indices": [
+        764
+      ]
+    },
+    {
+      "id": "maxovergrowth",
+      "name_en": "Max Overgrowth",
+      "name_es": "Maxiflora",
+      "indices": [
+        773
+      ]
+    },
+    {
+      "id": "maxphantasm",
+      "name_en": "Max Phantasm",
+      "name_es": "Maxiespectro",
+      "indices": [
+        762
+      ]
+    },
+    {
+      "id": "maxquake",
+      "name_en": "Max Quake",
+      "name_es": "Maxitemblor",
+      "indices": [
+        771
+      ]
+    },
+    {
+      "id": "maxrockfall",
+      "name_en": "Max Rockfall",
+      "name_es": "Maxirroca/Maxilito",
+      "indices": [
+        770
+      ]
+    },
+    {
+      "id": "maxstarfall",
+      "name_en": "Max Starfall",
+      "name_es": "Maxiestela",
+      "indices": [
+        767
+      ]
+    },
+    {
+      "id": "maxsteelspike",
+      "name_en": "Max Steelspike",
+      "name_es": "Maximetal",
+      "indices": [
+        774
+      ]
+    },
+    {
+      "id": "maxstrike",
+      "name_en": "Max Strike",
+      "name_es": "Maxiataque",
+      "indices": [
+        760
+      ]
+    },
+    {
+      "id": "maxwyrmwind",
+      "name_en": "Max Wyrmwind",
+      "name_es": "Maxidraco",
+      "indices": [
+        768
+      ]
+    },
+    {
+      "id": "meanlook",
+      "name_en": "Mean Look",
+      "name_es": "Mal de Ojo",
+      "indices": [
+        212
+      ]
+    },
+    {
+      "id": "meditate",
+      "name_en": "Meditate",
+      "name_es": "Meditación",
+      "indices": [
+        96
+      ]
+    },
+    {
+      "id": "mefirst",
+      "name_en": "Me First",
+      "name_es": "Yo Primero",
+      "indices": [
+        382
+      ]
+    },
+    {
+      "id": "megadrain",
+      "name_en": "Mega Drain",
+      "name_es": "Megadrenado/Megaagotar",
+      "indices": [
+        72
+      ]
+    },
+    {
+      "id": "megahorn",
+      "name_en": "Megahorn",
+      "name_es": "Megacuerno",
+      "indices": [
+        224
+      ]
+    },
+    {
+      "id": "megakick",
+      "name_en": "Mega Kick",
+      "name_es": "Megapatada",
+      "indices": [
+        25
+      ]
+    },
+    {
+      "id": "megapunch",
+      "name_en": "Mega Punch",
+      "name_es": "Megapuño",
+      "indices": [
+        5
+      ]
+    },
+    {
+      "id": "memento",
+      "name_en": "Memento",
+      "name_es": "Recuerdo/Legado",
+      "indices": [
+        262
+      ]
+    },
+    {
+      "id": "menacingmoonrazemaelstrom",
+      "name_en": "Menacing Moonraze Maelstrom",
+      "name_es": "Deflagración Lunar",
+      "indices": [
+        725
+      ]
+    },
+    {
+      "id": "metalburst",
+      "name_en": "Metal Burst",
+      "name_es": "Explosión Metálica/Represión Metal",
+      "indices": [
+        368
+      ]
+    },
+    {
+      "id": "metalclaw",
+      "name_en": "Metal Claw",
+      "name_es": "Garra de Metal/Garra Metal",
+      "indices": [
+        232
+      ]
+    },
+    {
+      "id": "metalsound",
+      "name_en": "Metal Sound",
+      "name_es": "Sonido Metálico/Eco Metálico",
+      "indices": [
+        319
+      ]
+    },
+    {
+      "id": "meteorassault",
+      "name_en": "Meteor Assault",
+      "name_es": "Asalto Estelar",
+      "indices": [
+        794
+      ]
+    },
+    {
+      "id": "meteorbeam",
+      "name_en": "Meteor Beam",
+      "name_es": "Rayo Meteórico",
+      "indices": [
+        800
+      ]
+    },
+    {
+      "id": "meteormash",
+      "name_en": "Meteor Mash",
+      "name_es": "Puño Meteoro",
+      "indices": [
+        309
+      ]
+    },
+    {
+      "id": "metronome",
+      "name_en": "Metronome",
+      "name_es": "Metrónomo",
+      "indices": [
+        118
+      ]
+    },
+    {
+      "id": "mightycleave",
+      "name_en": "Mighty Cleave",
+      "name_es": "Corte Potente/Filo Potente",
+      "indices": [
+        910
+      ]
+    },
+    {
+      "id": "milkdrink",
+      "name_en": "Milk Drink",
+      "name_es": "Licuado/Batido",
+      "indices": [
+        208
+      ]
+    },
+    {
+      "id": "mimic",
+      "name_en": "Mimic",
+      "name_es": "Mímica/Mimético",
+      "indices": [
+        102
+      ]
+    },
+    {
+      "id": "mindblown",
+      "name_en": "Mind Blown",
+      "name_es": "Cabeza Sorpresa",
+      "indices": [
+        720
+      ]
+    },
+    {
+      "id": "mindreader",
+      "name_en": "Mind Reader",
+      "name_es": "Telépata",
+      "indices": [
+        170
+      ]
+    },
+    {
+      "id": "minimize",
+      "name_en": "Minimize",
+      "name_es": "Reducción",
+      "indices": [
+        107
+      ]
+    },
+    {
+      "id": "miracleeye",
+      "name_en": "Miracle Eye",
+      "name_es": "Gran Ojo",
+      "indices": [
+        357
+      ]
+    },
+    {
+      "id": "mirrorcoat",
+      "name_en": "Mirror Coat",
+      "name_es": "Escudo Espejo/Manto Espejo",
+      "indices": [
+        243
+      ]
+    },
+    {
+      "id": "mirrormove",
+      "name_en": "Mirror Move",
+      "name_es": "Espejo",
+      "indices": [
+        119
+      ]
+    },
+    {
+      "id": "mirrorshot",
+      "name_en": "Mirror Shot",
+      "name_es": "Disparo Espejo",
+      "indices": [
+        429
+      ]
+    },
+    {
+      "id": "mist",
+      "name_en": "Mist",
+      "name_es": "Neblina",
+      "indices": [
+        54
+      ]
+    },
+    {
+      "id": "mistball",
+      "name_en": "Mist Ball",
+      "name_es": "Bola Neblina",
+      "indices": [
+        296
+      ]
+    },
+    {
+      "id": "mistyexplosion",
+      "name_en": "Misty Explosion",
+      "name_es": "Bruma Explosiva",
+      "indices": [
+        802
+      ]
+    },
+    {
+      "id": "mistyterrain",
+      "name_en": "Misty Terrain",
+      "name_es": "Campo de Niebla",
+      "indices": [
+        581
+      ]
+    },
+    {
+      "id": "moonblast",
+      "name_en": "Moonblast",
+      "name_es": "Fuerza Lunar",
+      "indices": [
+        585
+      ]
+    },
+    {
+      "id": "moongeistbeam",
+      "name_en": "Moongeist Beam",
+      "name_es": "Rayo Umbrío",
+      "indices": [
+        714
+      ]
+    },
+    {
+      "id": "moonlight",
+      "name_en": "Moonlight",
+      "name_es": "Luz Lunar",
+      "indices": [
+        236
+      ]
+    },
+    {
+      "id": "morningsun",
+      "name_en": "Morning Sun",
+      "name_es": "Sol Matutino/Sol Matinal",
+      "indices": [
+        234
+      ]
+    },
+    {
+      "id": "mortalspin",
+      "name_en": "Mortal Spin",
+      "name_es": "Giro Mortífero",
+      "indices": [
+        866
+      ]
+    },
+    {
+      "id": "mountaingale",
+      "name_en": "Mountain Gale",
+      "name_es": "Viento Carámbano",
+      "indices": [
+        836
+      ]
+    },
+    {
+      "id": "mudbomb",
+      "name_en": "Mud Bomb",
+      "name_es": "Bomba Fango",
+      "indices": [
+        426
+      ]
+    },
+    {
+      "id": "muddywater",
+      "name_en": "Muddy Water",
+      "name_es": "Agua Lodosa",
+      "indices": [
+        330
+      ]
+    },
+    {
+      "id": "mudshot",
+      "name_en": "Mud Shot",
+      "name_es": "Disparo de Lodo/Disparo Lodo",
+      "indices": [
+        341
+      ]
+    },
+    {
+      "id": "mudslap",
+      "name_en": "Mud-Slap",
+      "name_es": "Bofetón Lodo",
+      "indices": [
+        189
+      ]
+    },
+    {
+      "id": "mudsport",
+      "name_en": "Mud Sport",
+      "name_es": "Chapoteo de Lodo/Chapoteo Lodo",
+      "indices": [
+        300
+      ]
+    },
+    {
+      "id": "multiattack",
+      "name_en": "Multi-Attack",
+      "name_es": "Multiataque",
+      "indices": [
+        718
+      ]
+    },
+    {
+      "id": "mysticalfire",
+      "name_en": "Mystical Fire",
+      "name_es": "Fuego Místico/Llama Embrujada",
+      "indices": [
+        595
+      ]
+    },
+    {
+      "id": "mysticalpower",
+      "name_en": "Mystical Power",
+      "name_es": "Poder Místico",
+      "indices": [
+        832
+      ]
+    },
+    {
+      "id": "nastyplot",
+      "name_en": "Nasty Plot",
+      "name_es": "Maquinación",
+      "indices": [
+        417
+      ]
+    },
+    {
+      "id": "naturalgift",
+      "name_en": "Natural Gift",
+      "name_es": "Don Natural",
+      "indices": [
+        363
+      ]
+    },
+    {
+      "id": "naturepower",
+      "name_en": "Nature Power",
+      "name_es": "Adaptación",
+      "indices": [
+        267
+      ]
+    },
+    {
+      "id": "naturesmadness",
+      "name_en": "Nature's Madness",
+      "name_es": "Ira Natural/Furia Natural",
+      "indices": [
+        717
+      ]
+    },
+    {
+      "id": "needlearm",
+      "name_en": "Needle Arm",
+      "name_es": "Brazo Aguja/Brazo Pincho",
+      "indices": [
+        302
+      ]
+    },
+    {
+      "id": "neverendingnightmare",
+      "name_en": "Never-Ending Nightmare",
+      "name_es": "Presa Espectral",
+      "indices": [
+        636,
+        637
+      ]
+    },
+    {
+      "id": "nightdaze",
+      "name_en": "Night Daze",
+      "name_es": "Pulso Nocturno/Pulso Noche",
+      "indices": [
+        539
+      ]
+    },
+    {
+      "id": "nightmare",
+      "name_en": "Nightmare",
+      "name_es": "Pesadilla",
+      "indices": [
+        171
+      ]
+    },
+    {
+      "id": "nightshade",
+      "name_en": "Night Shade",
+      "name_es": "Tinieblas",
+      "indices": [
+        101
+      ]
+    },
+    {
+      "id": "nightslash",
+      "name_en": "Night Slash",
+      "name_es": "Corte Umbrío/Tajo Umbrío",
+      "indices": [
+        400
+      ]
+    },
+    {
+      "id": "nihillight",
+      "name_en": "Nihil Light",
+      "name_es": "Luz Devastadora",
+      "indices": [
+        920
+      ]
+    },
+    {
+      "id": "nobleroar",
+      "name_en": "Noble Roar",
+      "name_es": "Rugido de Guerra",
+      "indices": [
+        568
+      ]
+    },
+    {
+      "id": "noretreat",
+      "name_en": "No Retreat",
+      "name_es": "Bastión Final",
+      "indices": [
+        748
+      ]
+    },
+    {
+      "id": "noxioustorque",
+      "name_en": "Noxious Torque",
+      "name_es": "Ponzochoque",
+      "indices": [
+        898
+      ]
+    },
+    {
+      "id": "nuzzle",
+      "name_en": "Nuzzle",
+      "name_es": "Frote/Moflete Estático",
+      "indices": [
+        609
+      ]
+    },
+    {
+      "id": "oblivionwing",
+      "name_en": "Oblivion Wing",
+      "name_es": "Ala del Olvido/Ala Mortífera",
+      "indices": [
+        613
+      ]
+    },
+    {
+      "id": "obstruct",
+      "name_en": "Obstruct",
+      "name_es": "Obstrucción",
+      "indices": [
+        792
+      ]
+    },
+    {
+      "id": "oceanicoperetta",
+      "name_en": "Oceanic Operetta",
+      "name_es": "Sinfonía de la Diva Marina",
+      "indices": [
+        697
+      ]
+    },
+    {
+      "id": "octazooka",
+      "name_en": "Octazooka",
+      "name_es": "Octazuca/Pulpocañón",
+      "indices": [
+        190
+      ]
+    },
+    {
+      "id": "octolock",
+      "name_en": "Octolock",
+      "name_es": "Octopresa",
+      "indices": [
+        753
+      ]
+    },
+    {
+      "id": "odorsleuth",
+      "name_en": "Odor Sleuth",
+      "name_es": "Rastreo",
+      "indices": [
+        316
+      ]
+    },
+    {
+      "id": "ominouswind",
+      "name_en": "Ominous Wind",
+      "name_es": "Viento Ominoso/Viento Aciago",
+      "indices": [
+        466
+      ]
+    },
+    {
+      "id": "orderup",
+      "name_en": "Order Up",
+      "name_es": "Emplatar/Oído Cocina",
+      "indices": [
+        856
+      ]
+    },
+    {
+      "id": "originpulse",
+      "name_en": "Origin Pulse",
+      "name_es": "Pulso Primigenio",
+      "indices": [
+        618
+      ]
+    },
+    {
+      "id": "outrage",
+      "name_en": "Outrage",
+      "name_es": "Enfado",
+      "indices": [
+        200
+      ]
+    },
+    {
+      "id": "overdrive",
+      "name_en": "Overdrive",
+      "name_es": "Amplificador",
+      "indices": [
+        786
+      ]
+    },
+    {
+      "id": "overheat",
+      "name_en": "Overheat",
+      "name_es": "Supercalor/Sofoco",
+      "indices": [
+        315
+      ]
+    },
+    {
+      "id": "painsplit",
+      "name_en": "Pain Split",
+      "name_es": "Dividedolor/Divide Dolor",
+      "indices": [
+        220
+      ]
+    },
+    {
+      "id": "paraboliccharge",
+      "name_en": "Parabolic Charge",
+      "name_es": "Carga Parabólica/Carga Parábola",
+      "indices": [
+        570
+      ]
+    },
+    {
+      "id": "partingshot",
+      "name_en": "Parting Shot",
+      "name_es": "Última Palabra",
+      "indices": [
+        575
+      ]
+    },
+    {
+      "id": "payback",
+      "name_en": "Payback",
+      "name_es": "Revancha/Vendetta",
+      "indices": [
+        371
+      ]
+    },
+    {
+      "id": "payday",
+      "name_en": "Pay Day",
+      "name_es": "Día de Pago",
+      "indices": [
+        6
+      ]
+    },
+    {
+      "id": "peck",
+      "name_en": "Peck",
+      "name_es": "Picotazo",
+      "indices": [
+        64
+      ]
+    },
+    {
+      "id": "perishsong",
+      "name_en": "Perish Song",
+      "name_es": "Canto Mortal",
+      "indices": [
+        195
+      ]
+    },
+    {
+      "id": "petalblizzard",
+      "name_en": "Petal Blizzard",
+      "name_es": "Tormenta de Pétalos/Tormenta Floral",
+      "indices": [
+        572
+      ]
+    },
+    {
+      "id": "petaldance",
+      "name_en": "Petal Dance",
+      "name_es": "Danza de Pétalos/Danza Pétalo",
+      "indices": [
+        80
+      ]
+    },
+    {
+      "id": "phantomforce",
+      "name_en": "Phantom Force",
+      "name_es": "Golpe Fantasma",
+      "indices": [
+        566
+      ]
+    },
+    {
+      "id": "photongeyser",
+      "name_en": "Photon Geyser",
+      "name_es": "Géiser Fotónico",
+      "indices": [
+        722
+      ]
+    },
+    {
+      "id": "pikapapow",
+      "name_en": "Pika Papow",
+      "name_es": "Pikatormenta",
+      "indices": [
+        732
+      ]
+    },
+    {
+      "id": "pinmissile",
+      "name_en": "Pin Missile",
+      "name_es": "Misil Aguja/Pin Misil",
+      "indices": [
+        42
+      ]
+    },
+    {
+      "id": "plasmafists",
+      "name_en": "Plasma Fists",
+      "name_es": "Puños Plasma",
+      "indices": [
+        721
+      ]
+    },
+    {
+      "id": "playnice",
+      "name_en": "Play Nice",
+      "name_es": "Camaradería",
+      "indices": [
+        589
+      ]
+    },
+    {
+      "id": "playrough",
+      "name_en": "Play Rough",
+      "name_es": "Juego Rudo/Carantoña",
+      "indices": [
+        583
+      ]
+    },
+    {
+      "id": "pluck",
+      "name_en": "Pluck",
+      "name_es": "Picoteo",
+      "indices": [
+        365
+      ]
+    },
+    {
+      "id": "poisonfang",
+      "name_en": "Poison Fang",
+      "name_es": "Colmillo Veneno",
+      "indices": [
+        305
+      ]
+    },
+    {
+      "id": "poisongas",
+      "name_en": "Poison Gas",
+      "name_es": "Gas Venenoso",
+      "indices": [
+        139
+      ]
+    },
+    {
+      "id": "poisonjab",
+      "name_en": "Poison Jab",
+      "name_es": "Golpe Venenoso/Puya Nociva",
+      "indices": [
+        398
+      ]
+    },
+    {
+      "id": "poisonpowder",
+      "name_en": "Poison Powder",
+      "name_es": "Polvo Venenoso/Polvo Veneno",
+      "indices": [
+        77
+      ]
+    },
+    {
+      "id": "poisonsting",
+      "name_en": "Poison Sting",
+      "name_es": "Piquete Venenoso/Picotazo Veneno",
+      "indices": [
+        40
+      ]
+    },
+    {
+      "id": "poisontail",
+      "name_en": "Poison Tail",
+      "name_es": "Cola Venenosa/Cola Veneno",
+      "indices": [
+        342
+      ]
+    },
+    {
+      "id": "pollenpuff",
+      "name_en": "Pollen Puff",
+      "name_es": "Bola de Polen",
+      "indices": [
+        676
+      ]
+    },
+    {
+      "id": "poltergeist",
+      "name_en": "Poltergeist",
+      "name_es": "Poltergeist",
+      "indices": [
+        809
+      ]
+    },
+    {
+      "id": "populationbomb",
+      "name_en": "Population Bomb",
+      "name_es": "Proliferación",
+      "indices": [
+        860
+      ]
+    },
+    {
+      "id": "pounce",
+      "name_en": "Pounce",
+      "name_es": "Brinco",
+      "indices": [
+        884
+      ]
+    },
+    {
+      "id": "pound",
+      "name_en": "Pound",
+      "name_es": "Destructor",
+      "indices": [
+        1
+      ]
+    },
+    {
+      "id": "powder",
+      "name_en": "Powder",
+      "name_es": "Pólvora/Polvo Explosivo",
+      "indices": [
+        600
+      ]
+    },
+    {
+      "id": "powdersnow",
+      "name_en": "Powder Snow",
+      "name_es": "Polvo de Nieve/Nieve Polvo",
+      "indices": [
+        181
+      ]
+    },
+    {
+      "id": "powergem",
+      "name_en": "Power Gem",
+      "name_es": "Joya de Luz",
+      "indices": [
+        408
+      ]
+    },
+    {
+      "id": "powershift",
+      "name_en": "Power Shift",
+      "name_es": "Cambiapoder",
+      "indices": [
+        829
+      ]
+    },
+    {
+      "id": "powersplit",
+      "name_en": "Power Split",
+      "name_es": "Fuerza Dividida/Isofuerza",
+      "indices": [
+        471
+      ]
+    },
+    {
+      "id": "powerswap",
+      "name_en": "Power Swap",
+      "name_es": "Cambiafuerza",
+      "indices": [
+        384
+      ]
+    },
+    {
+      "id": "powertrick",
+      "name_en": "Power Trick",
+      "name_es": "Truco Fuerza",
+      "indices": [
+        379
+      ]
+    },
+    {
+      "id": "powertrip",
+      "name_en": "Power Trip",
+      "name_es": "Arrogancia/Chulería",
+      "indices": [
+        681
+      ]
+    },
+    {
+      "id": "poweruppunch",
+      "name_en": "Power-Up Punch",
+      "name_es": "Puño Incremento",
+      "indices": [
+        612
+      ]
+    },
+    {
+      "id": "powerwhip",
+      "name_en": "Power Whip",
+      "name_es": "Latigazo",
+      "indices": [
+        438
+      ]
+    },
+    {
+      "id": "precipiceblades",
+      "name_en": "Precipice Blades",
+      "name_es": "Filo del Abismo",
+      "indices": [
+        619
+      ]
+    },
+    {
+      "id": "present",
+      "name_en": "Present",
+      "name_es": "Obsequio/Presente",
+      "indices": [
+        217
+      ]
+    },
+    {
+      "id": "prismaticlaser",
+      "name_en": "Prismatic Laser",
+      "name_es": "Láser Prisma",
+      "indices": [
+        711
+      ]
+    },
+    {
+      "id": "protect",
+      "name_en": "Protect",
+      "name_es": "Protección",
+      "indices": [
+        182
+      ]
+    },
+    {
+      "id": "psybeam",
+      "name_en": "Psybeam",
+      "name_es": "Psicorrayo",
+      "indices": [
+        60
+      ]
+    },
+    {
+      "id": "psyblade",
+      "name_en": "Psyblade",
+      "name_es": "Psicohojas",
+      "indices": [
+        875
+      ]
+    },
+    {
+      "id": "psychic",
+      "name_en": "Psychic",
+      "name_es": "Fuerza Psíquica/Psíquico",
+      "indices": [
+        94
+      ]
+    },
+    {
+      "id": "psychicfangs",
+      "name_en": "Psychic Fangs",
+      "name_es": "Psicocolmillo",
+      "indices": [
+        706
+      ]
+    },
+    {
+      "id": "psychicnoise",
+      "name_en": "Psychic Noise",
+      "name_es": "Psicorruido",
+      "indices": [
+        917
+      ]
+    },
+    {
+      "id": "psychicterrain",
+      "name_en": "Psychic Terrain",
+      "name_es": "Campo Psíquico",
+      "indices": [
+        678
+      ]
+    },
+    {
+      "id": "psychoboost",
+      "name_en": "Psycho Boost",
+      "name_es": "Psicoimpulso/Psicoataque",
+      "indices": [
+        354
+      ]
+    },
+    {
+      "id": "psychocut",
+      "name_en": "Psycho Cut",
+      "name_es": "Psicocorte",
+      "indices": [
+        427
+      ]
+    },
+    {
+      "id": "psychoshift",
+      "name_en": "Psycho Shift",
+      "name_es": "Psicocambio",
+      "indices": [
+        375
+      ]
+    },
+    {
+      "id": "psychup",
+      "name_en": "Psych Up",
+      "name_es": "Autosugestión",
+      "indices": [
+        244
+      ]
+    },
+    {
+      "id": "psyshieldbash",
+      "name_en": "Psyshield Bash",
+      "name_es": "Asalto Barrera",
+      "indices": [
+        828
+      ]
+    },
+    {
+      "id": "psyshock",
+      "name_en": "Psyshock",
+      "name_es": "Choque Psíquico/Psicocarga",
+      "indices": [
+        473
+      ]
+    },
+    {
+      "id": "psystrike",
+      "name_en": "Psystrike",
+      "name_es": "Onda Mental",
+      "indices": [
+        540
+      ]
+    },
+    {
+      "id": "psywave",
+      "name_en": "Psywave",
+      "name_es": "Psicoonda",
+      "indices": [
+        149
+      ]
+    },
+    {
+      "id": "pulverizingpancake",
+      "name_en": "Pulverizing Pancake",
+      "name_es": "Arrojo Intempestivo",
+      "indices": [
+        701
+      ]
+    },
+    {
+      "id": "punishment",
+      "name_en": "Punishment",
+      "name_es": "Castigo",
+      "indices": [
+        386
+      ]
+    },
+    {
+      "id": "purify",
+      "name_en": "Purify",
+      "name_es": "Purificación",
+      "indices": [
+        685
+      ]
+    },
+    {
+      "id": "pursuit",
+      "name_en": "Pursuit",
+      "name_es": "Persecución",
+      "indices": [
+        228
+      ]
+    },
+    {
+      "id": "pyroball",
+      "name_en": "Pyro Ball",
+      "name_es": "Balón Ígneo",
+      "indices": [
+        780
+      ]
+    },
+    {
+      "id": "quash",
+      "name_en": "Quash",
+      "name_es": "Último Lugar",
+      "indices": [
+        511
+      ]
+    },
+    {
+      "id": "quickattack",
+      "name_en": "Quick Attack",
+      "name_es": "Ataque Rápido",
+      "indices": [
+        98
+      ]
+    },
+    {
+      "id": "quickguard",
+      "name_en": "Quick Guard",
+      "name_es": "Defensa Rápida/Anticipo",
+      "indices": [
+        501
+      ]
+    },
+    {
+      "id": "quiverdance",
+      "name_en": "Quiver Dance",
+      "name_es": "Danza del Aleteo/Danza Aleteo",
+      "indices": [
+        483
+      ]
+    },
+    {
+      "id": "rage",
+      "name_en": "Rage",
+      "name_es": "Furia",
+      "indices": [
+        99
+      ]
+    },
+    {
+      "id": "ragefist",
+      "name_en": "Rage Fist",
+      "name_es": "Puño Furia",
+      "indices": [
+        889
+      ]
+    },
+    {
+      "id": "ragepowder",
+      "name_en": "Rage Powder",
+      "name_es": "Polvo Ira",
+      "indices": [
+        476
+      ]
+    },
+    {
+      "id": "ragingbull",
+      "name_en": "Raging Bull",
+      "name_es": "Furia Taurina",
+      "indices": [
+        873
+      ]
+    },
+    {
+      "id": "ragingfury",
+      "name_en": "Raging Fury",
+      "name_es": "Erupción de Ira",
+      "indices": [
+        833
+      ]
+    },
+    {
+      "id": "raindance",
+      "name_en": "Rain Dance",
+      "name_es": "Danza de Lluvia/Danza Lluvia",
+      "indices": [
+        240
+      ]
+    },
+    {
+      "id": "rapidspin",
+      "name_en": "Rapid Spin",
+      "name_es": "Giro Rápido",
+      "indices": [
+        229
+      ]
+    },
+    {
+      "id": "razorleaf",
+      "name_en": "Razor Leaf",
+      "name_es": "Hojas Navaja/Hoja Afilada",
+      "indices": [
+        75
+      ]
+    },
+    {
+      "id": "razorshell",
+      "name_en": "Razor Shell",
+      "name_es": "Coraza Afilada/Concha Filo",
+      "indices": [
+        534
+      ]
+    },
+    {
+      "id": "razorwind",
+      "name_en": "Razor Wind",
+      "name_es": "Viento Cortante",
+      "indices": [
+        13
+      ]
+    },
+    {
+      "id": "recover",
+      "name_en": "Recover",
+      "name_es": "Recuperación",
+      "indices": [
+        105
+      ]
+    },
+    {
+      "id": "recycle",
+      "name_en": "Recycle",
+      "name_es": "Reciclaje",
+      "indices": [
+        278
+      ]
+    },
+    {
+      "id": "reflect",
+      "name_en": "Reflect",
+      "name_es": "Reflejo",
+      "indices": [
+        115
+      ]
+    },
+    {
+      "id": "reflecttype",
+      "name_en": "Reflect Type",
+      "name_es": "Clonatipo",
+      "indices": [
+        513
+      ]
+    },
+    {
+      "id": "refresh",
+      "name_en": "Refresh",
+      "name_es": "Alivio",
+      "indices": [
+        287
+      ]
+    },
+    {
+      "id": "relicsong",
+      "name_en": "Relic Song",
+      "name_es": "Canto Arcaico",
+      "indices": [
+        547
+      ]
+    },
+    {
+      "id": "rest",
+      "name_en": "Rest",
+      "name_es": "Descanso",
+      "indices": [
+        156
+      ]
+    },
+    {
+      "id": "retaliate",
+      "name_en": "Retaliate",
+      "name_es": "Represalia",
+      "indices": [
+        514
+      ]
+    },
+    {
+      "id": "return",
+      "name_en": "Return",
+      "name_es": "Retribución",
+      "indices": [
+        216
+      ]
+    },
+    {
+      "id": "revelationdance",
+      "name_en": "Revelation Dance",
+      "name_es": "Danza Revelación/Danza Despertar",
+      "indices": [
+        686
+      ]
+    },
+    {
+      "id": "revenge",
+      "name_en": "Revenge",
+      "name_es": "Desquite",
+      "indices": [
+        279
+      ]
+    },
+    {
+      "id": "reversal",
+      "name_en": "Reversal",
+      "name_es": "Inversión",
+      "indices": [
+        179
+      ]
+    },
+    {
+      "id": "revivalblessing",
+      "name_en": "Revival Blessing",
+      "name_es": "Plegaria Vital",
+      "indices": [
+        863
+      ]
+    },
+    {
+      "id": "risingvoltage",
+      "name_en": "Rising Voltage",
+      "name_es": "Alto Voltaje",
+      "indices": [
+        804
+      ]
+    },
+    {
+      "id": "roar",
+      "name_en": "Roar",
+      "name_es": "Rugido",
+      "indices": [
+        46
+      ]
+    },
+    {
+      "id": "roaroftime",
+      "name_en": "Roar of Time",
+      "name_es": "Rugido Temporal/Distorsión",
+      "indices": [
+        459
+      ]
+    },
+    {
+      "id": "rockblast",
+      "name_en": "Rock Blast",
+      "name_es": "Pedrada",
+      "indices": [
+        350
+      ]
+    },
+    {
+      "id": "rockclimb",
+      "name_en": "Rock Climb",
+      "name_es": "Treparrocas",
+      "indices": [
+        431
+      ]
+    },
+    {
+      "id": "rockpolish",
+      "name_en": "Rock Polish",
+      "name_es": "Pulimento",
+      "indices": [
+        397
+      ]
+    },
+    {
+      "id": "rockslide",
+      "name_en": "Rock Slide",
+      "name_es": "Avalancha",
+      "indices": [
+        157
+      ]
+    },
+    {
+      "id": "rocksmash",
+      "name_en": "Rock Smash",
+      "name_es": "Golpe Roca",
+      "indices": [
+        249
+      ]
+    },
+    {
+      "id": "rockthrow",
+      "name_en": "Rock Throw",
+      "name_es": "Lanzarrocas",
+      "indices": [
+        88
+      ]
+    },
+    {
+      "id": "rocktomb",
+      "name_en": "Rock Tomb",
+      "name_es": "Tumba de Rocas/Tumba Rocas",
+      "indices": [
+        317
+      ]
+    },
+    {
+      "id": "rockwrecker",
+      "name_en": "Rock Wrecker",
+      "name_es": "Romperrocas",
+      "indices": [
+        439
+      ]
+    },
+    {
+      "id": "roleplay",
+      "name_en": "Role Play",
+      "name_es": "Imitación",
+      "indices": [
+        272
+      ]
+    },
+    {
+      "id": "rollingkick",
+      "name_en": "Rolling Kick",
+      "name_es": "Patada Giro",
+      "indices": [
+        27
+      ]
+    },
+    {
+      "id": "rollout",
+      "name_en": "Rollout",
+      "name_es": "Rodada/Rodar",
+      "indices": [
+        205
+      ]
+    },
+    {
+      "id": "roost",
+      "name_en": "Roost",
+      "name_es": "Respiro",
+      "indices": [
+        355
+      ]
+    },
+    {
+      "id": "rototiller",
+      "name_en": "Rototiller",
+      "name_es": "Fertilizante",
+      "indices": [
+        563
+      ]
+    },
+    {
+      "id": "round",
+      "name_en": "Round",
+      "name_es": "Canon",
+      "indices": [
+        496
+      ]
+    },
+    {
+      "id": "ruination",
+      "name_en": "Ruination",
+      "name_es": "Calamidad",
+      "indices": [
+        877
+      ]
+    },
+    {
+      "id": "sacredfire",
+      "name_en": "Sacred Fire",
+      "name_es": "Fuego Sagrado",
+      "indices": [
+        221
+      ]
+    },
+    {
+      "id": "sacredsword",
+      "name_en": "Sacred Sword",
+      "name_es": "Espada Sagrada/Espada Santa",
+      "indices": [
+        533
+      ]
+    },
+    {
+      "id": "safeguard",
+      "name_en": "Safeguard",
+      "name_es": "Velo Sagrado",
+      "indices": [
+        219
+      ]
+    },
+    {
+      "id": "saltcure",
+      "name_en": "Salt Cure",
+      "name_es": "Salación/Salazón",
+      "indices": [
+        864
+      ]
+    },
+    {
+      "id": "sandattack",
+      "name_en": "Sand Attack",
+      "name_es": "Ataque Arena",
+      "indices": [
+        28
+      ]
+    },
+    {
+      "id": "sandsearstorm",
+      "name_en": "Sandsear Storm",
+      "name_es": "Tifón de Arena/Simún de Arena",
+      "indices": [
+        848
+      ]
+    },
+    {
+      "id": "sandstorm",
+      "name_en": "Sandstorm",
+      "name_es": "Tormenta de Arena",
+      "indices": [
+        201
+      ]
+    },
+    {
+      "id": "sandtomb",
+      "name_en": "Sand Tomb",
+      "name_es": "Tumba de Arena/Bucle Arena",
+      "indices": [
+        328
+      ]
+    },
+    {
+      "id": "sappyseed",
+      "name_en": "Sappy Seed",
+      "name_es": "Leafitobombas",
+      "indices": [
+        738
+      ]
+    },
+    {
+      "id": "savagespinout",
+      "name_en": "Savage Spin-Out",
+      "name_es": "Guadaña Sedosa",
+      "indices": [
+        634,
+        635
+      ]
+    },
+    {
+      "id": "scald",
+      "name_en": "Scald",
+      "name_es": "Escaldar",
+      "indices": [
+        503
+      ]
+    },
+    {
+      "id": "scaleshot",
+      "name_en": "Scale Shot",
+      "name_es": "Disparo Escamas/Ráfaga Escamas",
+      "indices": [
+        799
+      ]
+    },
+    {
+      "id": "scaryface",
+      "name_en": "Scary Face",
+      "name_es": "Cara Aterradora/Cara Susto",
+      "indices": [
+        184
+      ]
+    },
+    {
+      "id": "scorchingsands",
+      "name_en": "Scorching Sands",
+      "name_es": "Arenas Ardientes",
+      "indices": [
+        815
+      ]
+    },
+    {
+      "id": "scratch",
+      "name_en": "Scratch",
+      "name_es": "Arañazo",
+      "indices": [
+        10
+      ]
+    },
+    {
+      "id": "screech",
+      "name_en": "Screech",
+      "name_es": "Chillido/Chirrido",
+      "indices": [
+        103
+      ]
+    },
+    {
+      "id": "searingshot",
+      "name_en": "Searing Shot",
+      "name_es": "Bomba Ígnea",
+      "indices": [
+        545
+      ]
+    },
+    {
+      "id": "searingsunrazesmash",
+      "name_en": "Searing Sunraze Smash",
+      "name_es": "Embestida Solar",
+      "indices": [
+        724
+      ]
+    },
+    {
+      "id": "secretpower",
+      "name_en": "Secret Power",
+      "name_es": "Poder Secreto/Daño Secreto",
+      "indices": [
+        290
+      ]
+    },
+    {
+      "id": "secretsword",
+      "name_en": "Secret Sword",
+      "name_es": "Espada Secreta/Sable Místico",
+      "indices": [
+        548
+      ]
+    },
+    {
+      "id": "seedbomb",
+      "name_en": "Seed Bomb",
+      "name_es": "Bomba Semilla/Bomba Germen",
+      "indices": [
+        402
+      ]
+    },
+    {
+      "id": "seedflare",
+      "name_en": "Seed Flare",
+      "name_es": "Fulgor Semilla",
+      "indices": [
+        465
+      ]
+    },
+    {
+      "id": "seismictoss",
+      "name_en": "Seismic Toss",
+      "name_es": "Sísmico",
+      "indices": [
+        69
+      ]
+    },
+    {
+      "id": "selfdestruct",
+      "name_en": "Self-Destruct",
+      "name_es": "Autodestrucción",
+      "indices": [
+        120
+      ]
+    },
+    {
+      "id": "shadowball",
+      "name_en": "Shadow Ball",
+      "name_es": "Bola Sombra",
+      "indices": [
+        247
+      ]
+    },
+    {
+      "id": "shadowbone",
+      "name_en": "Shadow Bone",
+      "name_es": "Hueso Sombrío",
+      "indices": [
+        708
+      ]
+    },
+    {
+      "id": "shadowclaw",
+      "name_en": "Shadow Claw",
+      "name_es": "Garra de Sombra/Garra Umbría",
+      "indices": [
+        421
+      ]
+    },
+    {
+      "id": "shadowforce",
+      "name_en": "Shadow Force",
+      "name_es": "Golpe Umbrío",
+      "indices": [
+        467
+      ]
+    },
+    {
+      "id": "shadowpunch",
+      "name_en": "Shadow Punch",
+      "name_es": "Puño Sombra",
+      "indices": [
+        325
+      ]
+    },
+    {
+      "id": "shadowsneak",
+      "name_en": "Shadow Sneak",
+      "name_es": "Sombra Vil",
+      "indices": [
+        425
+      ]
+    },
+    {
+      "id": "sharpen",
+      "name_en": "Sharpen",
+      "name_es": "Afilar",
+      "indices": [
+        159
+      ]
+    },
+    {
+      "id": "shatteredpsyche",
+      "name_en": "Shattered Psyche",
+      "name_es": "Disruptor Psíquico",
+      "indices": [
+        648,
+        649
+      ]
+    },
+    {
+      "id": "shedtail",
+      "name_en": "Shed Tail",
+      "name_es": "Autotomía",
+      "indices": [
+        880
+      ]
+    },
+    {
+      "id": "sheercold",
+      "name_en": "Sheer Cold",
+      "name_es": "Frío Extremo/Frío Polar",
+      "indices": [
+        329
+      ]
+    },
+    {
+      "id": "shellsidearm",
+      "name_en": "Shell Side Arm",
+      "name_es": "Moluscañón",
+      "indices": [
+        801
+      ]
+    },
+    {
+      "id": "shellsmash",
+      "name_en": "Shell Smash",
+      "name_es": "Rompecoraza",
+      "indices": [
+        504
+      ]
+    },
+    {
+      "id": "shelltrap",
+      "name_en": "Shell Trap",
+      "name_es": "Trampa Coraza/Coraza Trampa",
+      "indices": [
+        704
+      ]
+    },
+    {
+      "id": "shelter",
+      "name_en": "Shelter",
+      "name_es": "Retracción",
+      "indices": [
+        842
+      ]
+    },
+    {
+      "id": "shiftgear",
+      "name_en": "Shift Gear",
+      "name_es": "Cambio de Marcha",
+      "indices": [
+        508
+      ]
+    },
+    {
+      "id": "shockwave",
+      "name_en": "Shock Wave",
+      "name_es": "Onda de Choque/Onda Voltio",
+      "indices": [
+        351
+      ]
+    },
+    {
+      "id": "shoreup",
+      "name_en": "Shore Up",
+      "name_es": "Recogearena",
+      "indices": [
+        659
+      ]
+    },
+    {
+      "id": "signalbeam",
+      "name_en": "Signal Beam",
+      "name_es": "Rayo Señal",
+      "indices": [
+        324
+      ]
+    },
+    {
+      "id": "silktrap",
+      "name_en": "Silk Trap",
+      "name_es": "Telatrampa",
+      "indices": [
+        852
+      ]
+    },
+    {
+      "id": "silverwind",
+      "name_en": "Silver Wind",
+      "name_es": "Viento Plateado/Viento Plata",
+      "indices": [
+        318
+      ]
+    },
+    {
+      "id": "simplebeam",
+      "name_en": "Simple Beam",
+      "name_es": "Onda Simple",
+      "indices": [
+        493
+      ]
+    },
+    {
+      "id": "sing",
+      "name_en": "Sing",
+      "name_es": "Canto",
+      "indices": [
+        47
+      ]
+    },
+    {
+      "id": "sinisterarrowraid",
+      "name_en": "Sinister Arrow Raid",
+      "name_es": "Aluvión de Flechas Sombrías",
+      "indices": [
+        695
+      ]
+    },
+    {
+      "id": "sizzlyslide",
+      "name_en": "Sizzly Slide",
+      "name_es": "Flarembestida",
+      "indices": [
+        735
+      ]
+    },
+    {
+      "id": "sketch",
+      "name_en": "Sketch",
+      "name_es": "Boceto/Esquema",
+      "indices": [
+        166
+      ]
+    },
+    {
+      "id": "skillswap",
+      "name_en": "Skill Swap",
+      "name_es": "Intercambio",
+      "indices": [
+        285
+      ]
+    },
+    {
+      "id": "skittersmack",
+      "name_en": "Skitter Smack",
+      "name_es": "Golpe Rastrero",
+      "indices": [
+        806
+      ]
+    },
+    {
+      "id": "skullbash",
+      "name_en": "Skull Bash",
+      "name_es": "Cabezazo",
+      "indices": [
+        130
+      ]
+    },
+    {
+      "id": "skyattack",
+      "name_en": "Sky Attack",
+      "name_es": "Ataque Celestial/Ataque Aéreo",
+      "indices": [
+        143
+      ]
+    },
+    {
+      "id": "skydrop",
+      "name_en": "Sky Drop",
+      "name_es": "Caída Libre",
+      "indices": [
+        507
+      ]
+    },
+    {
+      "id": "skyuppercut",
+      "name_en": "Sky Uppercut",
+      "name_es": "Corte Elevado/Gancho Alto",
+      "indices": [
+        327
+      ]
+    },
+    {
+      "id": "slackoff",
+      "name_en": "Slack Off",
+      "name_es": "Relajar/Relajo",
+      "indices": [
+        303
+      ]
+    },
+    {
+      "id": "slam",
+      "name_en": "Slam",
+      "name_es": "Golpazo/Atizar",
+      "indices": [
+        21
+      ]
+    },
+    {
+      "id": "slash",
+      "name_en": "Slash",
+      "name_es": "Cuchillada",
+      "indices": [
+        163
+      ]
+    },
+    {
+      "id": "sleeppowder",
+      "name_en": "Sleep Powder",
+      "name_es": "Somnífero",
+      "indices": [
+        79
+      ]
+    },
+    {
+      "id": "sleeptalk",
+      "name_en": "Sleep Talk",
+      "name_es": "Sonámbulo",
+      "indices": [
+        214
+      ]
+    },
+    {
+      "id": "sludge",
+      "name_en": "Sludge",
+      "name_es": "Residuos",
+      "indices": [
+        124
+      ]
+    },
+    {
+      "id": "sludgebomb",
+      "name_en": "Sludge Bomb",
+      "name_es": "Bomba Lodo",
+      "indices": [
+        188
+      ]
+    },
+    {
+      "id": "sludgewave",
+      "name_en": "Sludge Wave",
+      "name_es": "Ola de Lodo/Onda Tóxica",
+      "indices": [
+        482
+      ]
+    },
+    {
+      "id": "smackdown",
+      "name_en": "Smack Down",
+      "name_es": "Antiaéreo",
+      "indices": [
+        479
+      ]
+    },
+    {
+      "id": "smartstrike",
+      "name_en": "Smart Strike",
+      "name_es": "Cuerno Certero",
+      "indices": [
+        684
+      ]
+    },
+    {
+      "id": "smellingsalts",
+      "name_en": "Smelling Salts",
+      "name_es": "Estímulo",
+      "indices": [
+        265
+      ]
+    },
+    {
+      "id": "smog",
+      "name_en": "Smog",
+      "name_es": "Humo/Polución",
+      "indices": [
+        123
+      ]
+    },
+    {
+      "id": "smokescreen",
+      "name_en": "Smokescreen",
+      "name_es": "Pantalla de Humo",
+      "indices": [
+        108
+      ]
+    },
+    {
+      "id": "snaptrap",
+      "name_en": "Snap Trap",
+      "name_es": "Trampa Presión/Cepo",
+      "indices": [
+        779
+      ]
+    },
+    {
+      "id": "snarl",
+      "name_en": "Snarl",
+      "name_es": "Alarido",
+      "indices": [
+        555
+      ]
+    },
+    {
+      "id": "snatch",
+      "name_en": "Snatch",
+      "name_es": "Robo",
+      "indices": [
+        289
+      ]
+    },
+    {
+      "id": "snipeshot",
+      "name_en": "Snipe Shot",
+      "name_es": "Disparo Certero",
+      "indices": [
+        745
+      ]
+    },
+    {
+      "id": "snore",
+      "name_en": "Snore",
+      "name_es": "Ronquido",
+      "indices": [
+        173
+      ]
+    },
+    {
+      "id": "snowscape",
+      "name_en": "Snowscape",
+      "name_es": "Paisaje Nevado",
+      "indices": [
+        883
+      ]
+    },
+    {
+      "id": "soak",
+      "name_en": "Soak",
+      "name_es": "Empapar",
+      "indices": [
+        487
+      ]
+    },
+    {
+      "id": "softboiled",
+      "name_en": "Soft-Boiled",
+      "name_es": "Ovocuración",
+      "indices": [
+        135
+      ]
+    },
+    {
+      "id": "solarbeam",
+      "name_en": "Solar Beam",
+      "name_es": "Rayo Solar",
+      "indices": [
+        76
+      ]
+    },
+    {
+      "id": "solarblade",
+      "name_en": "Solar Blade",
+      "name_es": "Cuchillada Solar/Cuchilla Solar",
+      "indices": [
+        669
+      ]
+    },
+    {
+      "id": "sonicboom",
+      "name_en": "Sonic Boom",
+      "name_es": "Explosión Sónica/Bomba Sónica",
+      "indices": [
+        49
+      ]
+    },
+    {
+      "id": "soulstealing7starstrike",
+      "name_en": "Soul-Stealing 7-Star Strike",
+      "name_es": "Constelación Robaalmas",
+      "indices": [
+        699
+      ]
+    },
+    {
+      "id": "spacialrend",
+      "name_en": "Spacial Rend",
+      "name_es": "Corte Espacial/Corte Vacío",
+      "indices": [
+        460
+      ]
+    },
+    {
+      "id": "spark",
+      "name_en": "Spark",
+      "name_es": "Chispa",
+      "indices": [
+        209
+      ]
+    },
+    {
+      "id": "sparklingaria",
+      "name_en": "Sparkling Aria",
+      "name_es": "Aria Burbuja",
+      "indices": [
+        664
+      ]
+    },
+    {
+      "id": "sparklyswirl",
+      "name_en": "Sparkly Swirl",
+      "name_es": "Sylveotornado",
+      "indices": [
+        740
+      ]
+    },
+    {
+      "id": "spectralthief",
+      "name_en": "Spectral Thief",
+      "name_es": "Robasombra",
+      "indices": [
+        712
+      ]
+    },
+    {
+      "id": "speedswap",
+      "name_en": "Speed Swap",
+      "name_es": "Cambiavelocidad",
+      "indices": [
+        683
+      ]
+    },
+    {
+      "id": "spicyextract",
+      "name_en": "Spicy Extract",
+      "name_es": "Extracto Picante",
+      "indices": [
+        858
+      ]
+    },
+    {
+      "id": "spiderweb",
+      "name_en": "Spider Web",
+      "name_es": "Telaraña",
+      "indices": [
+        169
+      ]
+    },
+    {
+      "id": "spikecannon",
+      "name_en": "Spike Cannon",
+      "name_es": "Cañón de Púas/Clavo Cañón",
+      "indices": [
+        131
+      ]
+    },
+    {
+      "id": "spikes",
+      "name_en": "Spikes",
+      "name_es": "Púas",
+      "indices": [
+        191
+      ]
+    },
+    {
+      "id": "spikyshield",
+      "name_en": "Spiky Shield",
+      "name_es": "Barrera Espinosa",
+      "indices": [
+        596
+      ]
+    },
+    {
+      "id": "spinout",
+      "name_en": "Spin Out",
+      "name_es": "Quemarrueda",
+      "indices": [
+        859
+      ]
+    },
+    {
+      "id": "spiritbreak",
+      "name_en": "Spirit Break",
+      "name_es": "Choque Anímico",
+      "indices": [
+        789
+      ]
+    },
+    {
+      "id": "spiritshackle",
+      "name_en": "Spirit Shackle",
+      "name_es": "Puntada Sombría",
+      "indices": [
+        662
+      ]
+    },
+    {
+      "id": "spite",
+      "name_en": "Spite",
+      "name_es": "Rencor",
+      "indices": [
+        180
+      ]
+    },
+    {
+      "id": "spitup",
+      "name_en": "Spit Up",
+      "name_es": "Escupida/Escupir",
+      "indices": [
+        255
+      ]
+    },
+    {
+      "id": "splash",
+      "name_en": "Splash",
+      "name_es": "Salpicadura",
+      "indices": [
+        150
+      ]
+    },
+    {
+      "id": "splinteredstormshards",
+      "name_en": "Splintered Stormshards",
+      "name_es": "Tempestad Rocosa",
+      "indices": [
+        727
+      ]
+    },
+    {
+      "id": "splishysplash",
+      "name_en": "Splishy Splash",
+      "name_es": "Salpikasurf",
+      "indices": [
+        730
+      ]
+    },
+    {
+      "id": "spore",
+      "name_en": "Spore",
+      "name_es": "Esporas/Espora",
+      "indices": [
+        147
+      ]
+    },
+    {
+      "id": "spotlight",
+      "name_en": "Spotlight",
+      "name_es": "Foco",
+      "indices": [
+        671
+      ]
+    },
+    {
+      "id": "springtidestorm",
+      "name_en": "Springtide Storm",
+      "name_es": "Ciclón Primavera",
+      "indices": [
+        831
+      ]
+    },
+    {
+      "id": "stealthrock",
+      "name_en": "Stealth Rock",
+      "name_es": "Trampa de Rocas/Trampa Rocas",
+      "indices": [
+        446
+      ]
+    },
+    {
+      "id": "steameruption",
+      "name_en": "Steam Eruption",
+      "name_es": "Chorro de Vapor",
+      "indices": [
+        592
+      ]
+    },
+    {
+      "id": "steamroller",
+      "name_en": "Steamroller",
+      "name_es": "Aplanadora/Rodillo de Púas",
+      "indices": [
+        537
+      ]
+    },
+    {
+      "id": "steelbeam",
+      "name_en": "Steel Beam",
+      "name_es": "Metaláser",
+      "indices": [
+        796
+      ]
+    },
+    {
+      "id": "steelroller",
+      "name_en": "Steel Roller",
+      "name_es": "Ferroaplanadora/Allanador Férreo",
+      "indices": [
+        798
+      ]
+    },
+    {
+      "id": "steelwing",
+      "name_en": "Steel Wing",
+      "name_es": "Ala de Acero",
+      "indices": [
+        211
+      ]
+    },
+    {
+      "id": "stickyweb",
+      "name_en": "Sticky Web",
+      "name_es": "Red Pegajosa/Red Viscosa",
+      "indices": [
+        564
+      ]
+    },
+    {
+      "id": "stockpile",
+      "name_en": "Stockpile",
+      "name_es": "Reserva",
+      "indices": [
+        254
+      ]
+    },
+    {
+      "id": "stokedsparksurfer",
+      "name_en": "Stoked Sparksurfer",
+      "name_es": "Surfeo Galvánico",
+      "indices": [
+        700
+      ]
+    },
+    {
+      "id": "stomp",
+      "name_en": "Stomp",
+      "name_es": "Pisotón",
+      "indices": [
+        23
+      ]
+    },
+    {
+      "id": "stompingtantrum",
+      "name_en": "Stomping Tantrum",
+      "name_es": "Pataleta",
+      "indices": [
+        707
+      ]
+    },
+    {
+      "id": "stoneaxe",
+      "name_en": "Stone Axe",
+      "name_es": "Hachazo Pétreo",
+      "indices": [
+        830
+      ]
+    },
+    {
+      "id": "stoneedge",
+      "name_en": "Stone Edge",
+      "name_es": "Roca Afilada",
+      "indices": [
+        444
+      ]
+    },
+    {
+      "id": "storedpower",
+      "name_en": "Stored Power",
+      "name_es": "Poder Acumulado/Poder Reserva",
+      "indices": [
+        500
+      ]
+    },
+    {
+      "id": "stormthrow",
+      "name_en": "Storm Throw",
+      "name_es": "Llave Tempestad/Llave Corsé",
+      "indices": [
+        480
+      ]
+    },
+    {
+      "id": "strangesteam",
+      "name_en": "Strange Steam",
+      "name_es": "Cautivapor",
+      "indices": [
+        790
+      ]
+    },
+    {
+      "id": "strength",
+      "name_en": "Strength",
+      "name_es": "Fuerza",
+      "indices": [
+        70
+      ]
+    },
+    {
+      "id": "strengthsap",
+      "name_en": "Strength Sap",
+      "name_es": "Absorbefuerza",
+      "indices": [
+        668
+      ]
+    },
+    {
+      "id": "stringshot",
+      "name_en": "String Shot",
+      "name_es": "Disparo de Seda/Disparo Demora",
+      "indices": [
+        81
+      ]
+    },
+    {
+      "id": "struggle",
+      "name_en": "Struggle",
+      "name_es": "Forcejeo",
+      "indices": [
+        165
+      ]
+    },
+    {
+      "id": "strugglebug",
+      "name_en": "Struggle Bug",
+      "name_es": "Lucha Insecto/Estoicismo",
+      "indices": [
+        522
+      ]
+    },
+    {
+      "id": "stuffcheeks",
+      "name_en": "Stuff Cheeks",
+      "name_es": "Atiborramiento",
+      "indices": [
+        747
+      ]
+    },
+    {
+      "id": "stunspore",
+      "name_en": "Stun Spore",
+      "name_es": "Paralizador",
+      "indices": [
+        78
+      ]
+    },
+    {
+      "id": "submission",
+      "name_en": "Submission",
+      "name_es": "Sumisión",
+      "indices": [
+        66
+      ]
+    },
+    {
+      "id": "substitute",
+      "name_en": "Substitute",
+      "name_es": "Sustituto",
+      "indices": [
+        164
+      ]
+    },
+    {
+      "id": "subzeroslammer",
+      "name_en": "Subzero Slammer",
+      "name_es": "Crioaliento Despiadado",
+      "indices": [
+        650,
+        651
+      ]
+    },
+    {
+      "id": "suckerpunch",
+      "name_en": "Sucker Punch",
+      "name_es": "Golpe Bajo",
+      "indices": [
+        389
+      ]
+    },
+    {
+      "id": "sunnyday",
+      "name_en": "Sunny Day",
+      "name_es": "Día Soleado",
+      "indices": [
+        241
+      ]
+    },
+    {
+      "id": "sunsteelstrike",
+      "name_en": "Sunsteel Strike",
+      "name_es": "Meteoimpacto",
+      "indices": [
+        713
+      ]
+    },
+    {
+      "id": "supercellslam",
+      "name_en": "Supercell Slam",
+      "name_es": "Golpe Voltaico/Plancha Voltaica",
+      "indices": [
+        916
+      ]
+    },
+    {
+      "id": "superfang",
+      "name_en": "Super Fang",
+      "name_es": "Supercolmillo/Superdiente",
+      "indices": [
+        162
+      ]
+    },
+    {
+      "id": "superpower",
+      "name_en": "Superpower",
+      "name_es": "Fuerza Bruta",
+      "indices": [
+        276
+      ]
+    },
+    {
+      "id": "supersonic",
+      "name_en": "Supersonic",
+      "name_es": "Supersónico",
+      "indices": [
+        48
+      ]
+    },
+    {
+      "id": "supersonicskystrike",
+      "name_en": "Supersonic Skystrike",
+      "name_es": "Picada Supersónica/Picado Supersónico",
+      "indices": [
+        626,
+        627
+      ]
+    },
+    {
+      "id": "surf",
+      "name_en": "Surf",
+      "name_es": "Surf",
+      "indices": [
+        57
+      ]
+    },
+    {
+      "id": "surgingstrikes",
+      "name_en": "Surging Strikes",
+      "name_es": "Golpe Torrencial/Azote Torrencial",
+      "indices": [
+        818
+      ]
+    },
+    {
+      "id": "swagger",
+      "name_en": "Swagger",
+      "name_es": "Fanfarronear",
+      "indices": [
+        207
+      ]
+    },
+    {
+      "id": "swallow",
+      "name_en": "Swallow",
+      "name_es": "Tragar",
+      "indices": [
+        256
+      ]
+    },
+    {
+      "id": "sweetkiss",
+      "name_en": "Sweet Kiss",
+      "name_es": "Beso Dulce",
+      "indices": [
+        186
+      ]
+    },
+    {
+      "id": "sweetscent",
+      "name_en": "Sweet Scent",
+      "name_es": "Dulce Aroma",
+      "indices": [
+        230
+      ]
+    },
+    {
+      "id": "swift",
+      "name_en": "Swift",
+      "name_es": "Meteoros",
+      "indices": [
+        129
+      ]
+    },
+    {
+      "id": "switcheroo",
+      "name_en": "Switcheroo",
+      "name_es": "Trueque/Trapicheo",
+      "indices": [
+        415
+      ]
+    },
+    {
+      "id": "swordsdance",
+      "name_en": "Swords Dance",
+      "name_es": "Danza de Espadas/Danza Espada",
+      "indices": [
+        14
+      ]
+    },
+    {
+      "id": "synchronoise",
+      "name_en": "Synchronoise",
+      "name_es": "Sincrorruido",
+      "indices": [
+        485
+      ]
+    },
+    {
+      "id": "synthesis",
+      "name_en": "Synthesis",
+      "name_es": "Fotosíntesis",
+      "indices": [
+        235
+      ]
+    },
+    {
+      "id": "syrupbomb",
+      "name_en": "Syrup Bomb",
+      "name_es": "Bomba Caramelo",
+      "indices": [
+        903
+      ]
+    },
+    {
+      "id": "tachyoncutter",
+      "name_en": "Tachyon Cutter",
+      "name_es": "Corte Taquión/Tajo Taquión",
+      "indices": [
+        911
+      ]
+    },
+    {
+      "id": "tackle",
+      "name_en": "Tackle",
+      "name_es": "Tacleada/Placaje",
+      "indices": [
+        33
+      ]
+    },
+    {
+      "id": "tailglow",
+      "name_en": "Tail Glow",
+      "name_es": "Luminicola",
+      "indices": [
+        294
+      ]
+    },
+    {
+      "id": "tailslap",
+      "name_en": "Tail Slap",
+      "name_es": "Golpe de Cola/Plumerazo",
+      "indices": [
+        541
+      ]
+    },
+    {
+      "id": "tailwhip",
+      "name_en": "Tail Whip",
+      "name_es": "Látigo de Cola/Agitacola",
+      "indices": [
+        39
+      ]
+    },
+    {
+      "id": "tailwind",
+      "name_en": "Tailwind",
+      "name_es": "Viento Afín",
+      "indices": [
+        366
+      ]
+    },
+    {
+      "id": "takedown",
+      "name_en": "Take Down",
+      "name_es": "Derribo",
+      "indices": [
+        36
+      ]
+    },
+    {
+      "id": "takeheart",
+      "name_en": "Take Heart",
+      "name_es": "Bálsamo Osado",
+      "indices": [
+        850
+      ]
+    },
+    {
+      "id": "tarshot",
+      "name_en": "Tar Shot",
+      "name_es": "Alquitranazo",
+      "indices": [
+        749
+      ]
+    },
+    {
+      "id": "taunt",
+      "name_en": "Taunt",
+      "name_es": "Provocación/Mofa",
+      "indices": [
+        269
+      ]
+    },
+    {
+      "id": "tearfullook",
+      "name_en": "Tearful Look",
+      "name_es": "Ojos Llorosos",
+      "indices": [
+        715
+      ]
+    },
+    {
+      "id": "teatime",
+      "name_en": "Teatime",
+      "name_es": "Hora del Té",
+      "indices": [
+        752
+      ]
+    },
+    {
+      "id": "technoblast",
+      "name_en": "Techno Blast",
+      "name_es": "Tecno Shock",
+      "indices": [
+        546
+      ]
+    },
+    {
+      "id": "tectonicrage",
+      "name_en": "Tectonic Rage",
+      "name_es": "Barrena Telúrica",
+      "indices": [
+        630,
+        631
+      ]
+    },
+    {
+      "id": "teeterdance",
+      "name_en": "Teeter Dance",
+      "name_es": "Danza del Caos/Danza Caos",
+      "indices": [
+        298
+      ]
+    },
+    {
+      "id": "telekinesis",
+      "name_en": "Telekinesis",
+      "name_es": "Telequinesis",
+      "indices": [
+        477
+      ]
+    },
+    {
+      "id": "teleport",
+      "name_en": "Teleport",
+      "name_es": "Teletransporte",
+      "indices": [
+        100
+      ]
+    },
+    {
+      "id": "temperflare",
+      "name_en": "Temper Flare",
+      "name_es": "Furia Ardiente/Cólera Ardiente",
+      "indices": [
+        915
+      ]
+    },
+    {
+      "id": "terablast",
+      "name_en": "Tera Blast",
+      "name_es": "Teraexplosión",
+      "indices": [
+        851
+      ]
+    },
+    {
+      "id": "terastarstorm",
+      "name_en": "Tera Starstorm",
+      "name_es": "Teraclúster",
+      "indices": [
+        906
+      ]
+    },
+    {
+      "id": "terrainpulse",
+      "name_en": "Terrain Pulse",
+      "name_es": "Pulso de Campo",
+      "indices": [
+        805
+      ]
+    },
+    {
+      "id": "thief",
+      "name_en": "Thief",
+      "name_es": "Ladrón",
+      "indices": [
+        168
+      ]
+    },
+    {
+      "id": "thousandarrows",
+      "name_en": "Thousand Arrows",
+      "name_es": "Mil Flechas",
+      "indices": [
+        614
+      ]
+    },
+    {
+      "id": "thousandwaves",
+      "name_en": "Thousand Waves",
+      "name_es": "Mil Temblores",
+      "indices": [
+        615
+      ]
+    },
+    {
+      "id": "thrash",
+      "name_en": "Thrash",
+      "name_es": "Golpiza/Saña",
+      "indices": [
+        37
+      ]
+    },
+    {
+      "id": "throatchop",
+      "name_en": "Throat Chop",
+      "name_es": "Golpe al Cuello/Golpe Mordaza",
+      "indices": [
+        675
+      ]
+    },
+    {
+      "id": "thunder",
+      "name_en": "Thunder",
+      "name_es": "Trueno",
+      "indices": [
+        87
+      ]
+    },
+    {
+      "id": "thunderbolt",
+      "name_en": "Thunderbolt",
+      "name_es": "Atactrueno/Rayo",
+      "indices": [
+        85
+      ]
+    },
+    {
+      "id": "thundercage",
+      "name_en": "Thunder Cage",
+      "name_es": "Electrojaula",
+      "indices": [
+        819
+      ]
+    },
+    {
+      "id": "thunderclap",
+      "name_en": "Thunderclap",
+      "name_es": "Relámpago Súbito",
+      "indices": [
+        909
+      ]
+    },
+    {
+      "id": "thunderfang",
+      "name_en": "Thunder Fang",
+      "name_es": "Colmillo Trueno/Colmillo Rayo",
+      "indices": [
+        422
+      ]
+    },
+    {
+      "id": "thunderouskick",
+      "name_en": "Thunderous Kick",
+      "name_es": "Patada Relámpago",
+      "indices": [
+        823
+      ]
+    },
+    {
+      "id": "thunderpunch",
+      "name_en": "Thunder Punch",
+      "name_es": "Puño Trueno",
+      "indices": [
+        9
+      ]
+    },
+    {
+      "id": "thundershock",
+      "name_en": "Thunder Shock",
+      "name_es": "Impactrueno",
+      "indices": [
+        84
+      ]
+    },
+    {
+      "id": "thunderwave",
+      "name_en": "Thunder Wave",
+      "name_es": "Onda Trueno",
+      "indices": [
+        86
+      ]
+    },
+    {
+      "id": "tickle",
+      "name_en": "Tickle",
+      "name_es": "Cosquillas",
+      "indices": [
+        321
+      ]
+    },
+    {
+      "id": "tidyup",
+      "name_en": "Tidy Up",
+      "name_es": "Limpieza General",
+      "indices": [
+        882
+      ]
+    },
+    {
+      "id": "topsyturvy",
+      "name_en": "Topsy-Turvy",
+      "name_es": "Reversión",
+      "indices": [
+        576
+      ]
+    },
+    {
+      "id": "torchsong",
+      "name_en": "Torch Song",
+      "name_es": "Canto Ígneo/Canto Ardiente",
+      "indices": [
+        871
+      ]
+    },
+    {
+      "id": "torment",
+      "name_en": "Torment",
+      "name_es": "Tormento",
+      "indices": [
+        259
+      ]
+    },
+    {
+      "id": "toxic",
+      "name_en": "Toxic",
+      "name_es": "Tóxico",
+      "indices": [
+        92
+      ]
+    },
+    {
+      "id": "toxicspikes",
+      "name_en": "Toxic Spikes",
+      "name_es": "Púas Tóxicas",
+      "indices": [
+        390
+      ]
+    },
+    {
+      "id": "toxicthread",
+      "name_en": "Toxic Thread",
+      "name_es": "Hilo Venenoso",
+      "indices": [
+        672
+      ]
+    },
+    {
+      "id": "trailblaze",
+      "name_en": "Trailblaze",
+      "name_es": "Abrecaminos",
+      "indices": [
+        885
+      ]
+    },
+    {
+      "id": "transform",
+      "name_en": "Transform",
+      "name_es": "Transformación",
+      "indices": [
+        144
+      ]
+    },
+    {
+      "id": "triattack",
+      "name_en": "Tri Attack",
+      "name_es": "Triataque",
+      "indices": [
+        161
+      ]
+    },
+    {
+      "id": "trick",
+      "name_en": "Trick",
+      "name_es": "Truco",
+      "indices": [
+        271
+      ]
+    },
+    {
+      "id": "trickortreat",
+      "name_en": "Trick-or-Treat",
+      "name_es": "Halloween",
+      "indices": [
+        567
+      ]
+    },
+    {
+      "id": "trickroom",
+      "name_en": "Trick Room",
+      "name_es": "Espacio Raro",
+      "indices": [
+        433
+      ]
+    },
+    {
+      "id": "triplearrows",
+      "name_en": "Triple Arrows",
+      "name_es": "Triple Flecha",
+      "indices": [
+        843
+      ]
+    },
+    {
+      "id": "tripleaxel",
+      "name_en": "Triple Axel",
+      "name_es": "Triple Axel",
+      "indices": [
+        813
+      ]
+    },
+    {
+      "id": "tripledive",
+      "name_en": "Triple Dive",
+      "name_es": "Triple Inmersión",
+      "indices": [
+        865
+      ]
+    },
+    {
+      "id": "triplekick",
+      "name_en": "Triple Kick",
+      "name_es": "Triple Patada",
+      "indices": [
+        167
+      ]
+    },
+    {
+      "id": "tropkick",
+      "name_en": "Trop Kick",
+      "name_es": "Patada Tropical",
+      "indices": [
+        688
+      ]
+    },
+    {
+      "id": "trumpcard",
+      "name_en": "Trump Card",
+      "name_es": "As Oculto",
+      "indices": [
+        376
+      ]
+    },
+    {
+      "id": "twinbeam",
+      "name_en": "Twin Beam",
+      "name_es": "Láser Doble",
+      "indices": [
+        888
+      ]
+    },
+    {
+      "id": "twineedle",
+      "name_en": "Twineedle",
+      "name_es": "Doble Aguijón/Doble Ataque",
+      "indices": [
+        41
+      ]
+    },
+    {
+      "id": "twinkletackle",
+      "name_en": "Twinkle Tackle",
+      "name_es": "Tacleada Sideral/Arrumaco Sideral",
+      "indices": [
+        656,
+        657
+      ]
+    },
+    {
+      "id": "twister",
+      "name_en": "Twister",
+      "name_es": "Tornado/Ciclón",
+      "indices": [
+        239
+      ]
+    },
+    {
+      "id": "upperhand",
+      "name_en": "Upper Hand",
+      "name_es": "Palma Rauda",
+      "indices": [
+        918
+      ]
+    },
+    {
+      "id": "uproar",
+      "name_en": "Uproar",
+      "name_es": "Alboroto",
+      "indices": [
+        253
+      ]
+    },
+    {
+      "id": "uturn",
+      "name_en": "U-turn",
+      "name_es": "Ida y Vuelta",
+      "indices": [
+        369
+      ]
+    },
+    {
+      "id": "vacuumwave",
+      "name_en": "Vacuum Wave",
+      "name_es": "Onda de Vacío/Onda Vacío",
+      "indices": [
+        410
+      ]
+    },
+    {
+      "id": "vcreate",
+      "name_en": "V-create",
+      "name_es": "V de Fuego",
+      "indices": [
+        557
+      ]
+    },
+    {
+      "id": "veeveevolley",
+      "name_en": "Veevee Volley",
+      "name_es": "Eevimpacto",
+      "indices": [
+        741
+      ]
+    },
+    {
+      "id": "venomdrench",
+      "name_en": "Venom Drench",
+      "name_es": "Trampa Venenosa",
+      "indices": [
+        599
+      ]
+    },
+    {
+      "id": "venoshock",
+      "name_en": "Venoshock",
+      "name_es": "Carga Tóxica",
+      "indices": [
+        474
+      ]
+    },
+    {
+      "id": "victorydance",
+      "name_en": "Victory Dance",
+      "name_es": "Danza Triunfal",
+      "indices": [
+        837
+      ]
+    },
+    {
+      "id": "vinewhip",
+      "name_en": "Vine Whip",
+      "name_es": "Látigo Cepa",
+      "indices": [
+        22
+      ]
+    },
+    {
+      "id": "visegrip",
+      "name_en": "Vise Grip",
+      "name_es": "Fuerza de Garra/Agarre",
+      "indices": [
+        11
+      ]
+    },
+    {
+      "id": "vitalthrow",
+      "name_en": "Vital Throw",
+      "name_es": "Llave Vital",
+      "indices": [
+        233
+      ]
+    },
+    {
+      "id": "voltswitch",
+      "name_en": "Volt Switch",
+      "name_es": "Cambiavoltaje/Voltiocambio",
+      "indices": [
+        521
+      ]
+    },
+    {
+      "id": "volttackle",
+      "name_en": "Volt Tackle",
+      "name_es": "Tacleada de Voltios/Placaje Eléctrico",
+      "indices": [
+        344
+      ]
+    },
+    {
+      "id": "wakeupslap",
+      "name_en": "Wake-Up Slap",
+      "name_es": "Despabilador/Espabila",
+      "indices": [
+        358
+      ]
+    },
+    {
+      "id": "waterfall",
+      "name_en": "Waterfall",
+      "name_es": "Cascada",
+      "indices": [
+        127
+      ]
+    },
+    {
+      "id": "watergun",
+      "name_en": "Water Gun",
+      "name_es": "Chorro de Agua/Pistola Agua",
+      "indices": [
+        55
+      ]
+    },
+    {
+      "id": "waterpledge",
+      "name_en": "Water Pledge",
+      "name_es": "Voto Agua",
+      "indices": [
+        518
+      ]
+    },
+    {
+      "id": "waterpulse",
+      "name_en": "Water Pulse",
+      "name_es": "Pulso de Agua/Hidropulso",
+      "indices": [
+        352
+      ]
+    },
+    {
+      "id": "watershuriken",
+      "name_en": "Water Shuriken",
+      "name_es": "Shuriken de Agua",
+      "indices": [
+        594
+      ]
+    },
+    {
+      "id": "watersport",
+      "name_en": "Water Sport",
+      "name_es": "Chapoteo de Agua/Hidrochorro",
+      "indices": [
+        346
+      ]
+    },
+    {
+      "id": "waterspout",
+      "name_en": "Water Spout",
+      "name_es": "Columna de Agua/Salpicar",
+      "indices": [
+        323
+      ]
+    },
+    {
+      "id": "wavecrash",
+      "name_en": "Wave Crash",
+      "name_es": "Acuatacleada/Envite Acuático",
+      "indices": [
+        834
+      ]
+    },
+    {
+      "id": "weatherball",
+      "name_en": "Weather Ball",
+      "name_es": "Meteorobola",
+      "indices": [
+        311
+      ]
+    },
+    {
+      "id": "whirlpool",
+      "name_en": "Whirlpool",
+      "name_es": "Remolino/Torbellino",
+      "indices": [
+        250
+      ]
+    },
+    {
+      "id": "whirlwind",
+      "name_en": "Whirlwind",
+      "name_es": "Torbellino/Remolino",
+      "indices": [
+        18
+      ]
+    },
+    {
+      "id": "wickedblow",
+      "name_en": "Wicked Blow",
+      "name_es": "Golpe Oscuro",
+      "indices": [
+        817
+      ]
+    },
+    {
+      "id": "wickedtorque",
+      "name_en": "Wicked Torque",
+      "name_es": "Ominochoque",
+      "indices": [
+        897
+      ]
+    },
+    {
+      "id": "wideguard",
+      "name_en": "Wide Guard",
+      "name_es": "Guardia Amplia/Vasta Guardia",
+      "indices": [
+        469
+      ]
+    },
+    {
+      "id": "wildboltstorm",
+      "name_en": "Wildbolt Storm",
+      "name_es": "Electormenta",
+      "indices": [
+        847
+      ]
+    },
+    {
+      "id": "wildcharge",
+      "name_en": "Wild Charge",
+      "name_es": "Carga Salvaje/Voltio Cruel",
+      "indices": [
+        528
+      ]
+    },
+    {
+      "id": "willowisp",
+      "name_en": "Will-O-Wisp",
+      "name_es": "Fuego Fatuo",
+      "indices": [
+        261
+      ]
+    },
+    {
+      "id": "wingattack",
+      "name_en": "Wing Attack",
+      "name_es": "Ataque de Ala/Ataque Ala",
+      "indices": [
+        17
+      ]
+    },
+    {
+      "id": "wish",
+      "name_en": "Wish",
+      "name_es": "Deseo",
+      "indices": [
+        273
+      ]
+    },
+    {
+      "id": "withdraw",
+      "name_en": "Withdraw",
+      "name_es": "Refugio",
+      "indices": [
+        110
+      ]
+    },
+    {
+      "id": "wonderroom",
+      "name_en": "Wonder Room",
+      "name_es": "Zona Extraña",
+      "indices": [
+        472
+      ]
+    },
+    {
+      "id": "woodhammer",
+      "name_en": "Wood Hammer",
+      "name_es": "Mazazo",
+      "indices": [
+        452
+      ]
+    },
+    {
+      "id": "workup",
+      "name_en": "Work Up",
+      "name_es": "Avivar",
+      "indices": [
+        526
+      ]
+    },
+    {
+      "id": "worryseed",
+      "name_en": "Worry Seed",
+      "name_es": "Abatidoras",
+      "indices": [
+        388
+      ]
+    },
+    {
+      "id": "wrap",
+      "name_en": "Wrap",
+      "name_es": "Constricción",
+      "indices": [
+        35
+      ]
+    },
+    {
+      "id": "wringout",
+      "name_en": "Wring Out",
+      "name_es": "Apretón/Estrujón",
+      "indices": [
+        378
+      ]
+    },
+    {
+      "id": "xscissor",
+      "name_en": "X-Scissor",
+      "name_es": "Tijera X",
+      "indices": [
+        404
+      ]
+    },
+    {
+      "id": "yawn",
+      "name_en": "Yawn",
+      "name_es": "Bostezo",
+      "indices": [
+        281
+      ]
+    },
+    {
+      "id": "zapcannon",
+      "name_en": "Zap Cannon",
+      "name_es": "Electrocañón",
+      "indices": [
+        192
+      ]
+    },
+    {
+      "id": "zenheadbutt",
+      "name_en": "Zen Headbutt",
+      "name_es": "Cabezazo Zen",
+      "indices": [
+        428
+      ]
+    },
+    {
+      "id": "zingzap",
+      "name_en": "Zing Zap",
+      "name_es": "Electropunzada",
+      "indices": [
+        716
+      ]
+    },
+    {
+      "id": "zippyzap",
+      "name_en": "Zippy Zap",
+      "name_es": "Pikaturbo",
+      "indices": [
+        729
+      ]
+    }
+  ],
+  "abilities": [
+    {
+      "id": "adaptability",
+      "index": 91,
+      "name_en": "Adaptability",
+      "name_es": "Adaptable",
+      "unused": false
+    },
+    {
+      "id": "aerilate",
+      "index": 184,
+      "name_en": "Aerilate",
+      "name_es": "Piel Celeste",
+      "unused": false
+    },
+    {
+      "id": "aftermath",
+      "index": 106,
+      "name_en": "Aftermath",
+      "name_es": "Detonación",
+      "unused": false
+    },
+    {
+      "id": "airlock",
+      "index": 76,
+      "name_en": "Air Lock",
+      "name_es": "Esclusa de Aire",
+      "unused": false
+    },
+    {
+      "id": "analytic",
+      "index": 148,
+      "name_en": "Analytic",
+      "name_es": "Cálculo Final",
+      "unused": false
+    },
+    {
+      "id": "angerpoint",
+      "index": 83,
+      "name_en": "Anger Point",
+      "name_es": "Irascible",
+      "unused": false
+    },
+    {
+      "id": "angershell",
+      "index": 271,
+      "name_en": "Anger Shell",
+      "name_es": "Coraza Ira",
+      "unused": false
+    },
+    {
+      "id": "anticipation",
+      "index": 107,
+      "name_en": "Anticipation",
+      "name_es": "Anticipación",
+      "unused": false
+    },
+    {
+      "id": "arenatrap",
+      "index": 71,
+      "name_en": "Arena Trap",
+      "name_es": "Trampa Arena",
+      "unused": false
+    },
+    {
+      "id": "armortail",
+      "index": 296,
+      "name_en": "Armor Tail",
+      "name_es": "Cola Armadura",
+      "unused": false
+    },
+    {
+      "id": "aromaveil",
+      "index": 165,
+      "name_en": "Aroma Veil",
+      "name_es": "Velo Aroma",
+      "unused": false
+    },
+    {
+      "id": "asoneglastrier",
+      "index": 266,
+      "name_en": "As One",
+      "name_es": "Unidad Ecuestre",
+      "unused": false
+    },
+    {
+      "id": "asonespectrier",
+      "index": 267,
+      "name_en": "As One",
+      "name_es": "Unidad Ecuestre",
+      "unused": false
+    },
+    {
+      "id": "aurabreak",
+      "index": 188,
+      "name_en": "Aura Break",
+      "name_es": "Rompeaura",
+      "unused": false
+    },
+    {
+      "id": "auraguard",
+      "index": 319,
+      "name_en": "Aura Guard",
+      "name_es": "Aura Protectora",
+      "unused": false
+    },
+    {
+      "id": "baddreams",
+      "index": 123,
+      "name_en": "Bad Dreams",
+      "name_es": "Mal Sueño",
+      "unused": false
+    },
+    {
+      "id": "ballfetch",
+      "index": 237,
+      "name_en": "Ball Fetch",
+      "name_es": "Recogebolas",
+      "unused": false
+    },
+    {
+      "id": "battery",
+      "index": 217,
+      "name_en": "Battery",
+      "name_es": "Batería",
+      "unused": false
+    },
+    {
+      "id": "battlearmor",
+      "index": 4,
+      "name_en": "Battle Armor",
+      "name_es": "Armadura Batalla",
+      "unused": false
+    },
+    {
+      "id": "battlebond",
+      "index": 210,
+      "name_en": "Battle Bond",
+      "name_es": "Fuerte Afecto",
+      "unused": false
+    },
+    {
+      "id": "beadsofruin",
+      "index": 287,
+      "name_en": "Beads of Ruin",
+      "name_es": "Abalorio Debacle",
+      "unused": false
+    },
+    {
+      "id": "beastboost",
+      "index": 224,
+      "name_en": "Beast Boost",
+      "name_es": "Ultraimpulso",
+      "unused": false
+    },
+    {
+      "id": "berserk",
+      "index": 201,
+      "name_en": "Berserk",
+      "name_es": "Cólera",
+      "unused": false
+    },
+    {
+      "id": "bigpecks",
+      "index": 145,
+      "name_en": "Big Pecks",
+      "name_es": "Sacapecho",
+      "unused": false
+    },
+    {
+      "id": "blaze",
+      "index": 66,
+      "name_en": "Blaze",
+      "name_es": "Mar Llamas",
+      "unused": false
+    },
+    {
+      "id": "bulletproof",
+      "index": 171,
+      "name_en": "Bulletproof",
+      "name_es": "Antibalas",
+      "unused": false
+    },
+    {
+      "id": "cacophony",
+      "index": null,
+      "name_en": "Cacophony",
+      "name_es": "Cacofonía",
+      "unused": true
+    },
+    {
+      "id": "cheekpouch",
+      "index": 167,
+      "name_en": "Cheek Pouch",
+      "name_es": "Carrillo",
+      "unused": false
+    },
+    {
+      "id": "chillingneigh",
+      "index": 264,
+      "name_en": "Chilling Neigh",
+      "name_es": "Relincho Blanco",
+      "unused": false
+    },
+    {
+      "id": "chlorophyll",
+      "index": 34,
+      "name_en": "Chlorophyll",
+      "name_es": "Clorofila",
+      "unused": false
+    },
+    {
+      "id": "clearbody",
+      "index": 29,
+      "name_en": "Clear Body",
+      "name_es": "Cuerpo Puro",
+      "unused": false
+    },
+    {
+      "id": "cloudnine",
+      "index": 13,
+      "name_en": "Cloud Nine",
+      "name_es": "Aclimatación",
+      "unused": false
+    },
+    {
+      "id": "colorchange",
+      "index": 16,
+      "name_en": "Color Change",
+      "name_es": "Cambio Color",
+      "unused": false
+    },
+    {
+      "id": "comatose",
+      "index": 213,
+      "name_en": "Comatose",
+      "name_es": "Letargo Perenne",
+      "unused": false
+    },
+    {
+      "id": "commander",
+      "index": 279,
+      "name_en": "Commander",
+      "name_es": "Comandar",
+      "unused": false
+    },
+    {
+      "id": "competitive",
+      "index": 172,
+      "name_en": "Competitive",
+      "name_es": "Tenacidad",
+      "unused": false
+    },
+    {
+      "id": "compoundeyes",
+      "index": 14,
+      "name_en": "Compound Eyes",
+      "name_es": "Ojo Compuesto",
+      "unused": false
+    },
+    {
+      "id": "contrary",
+      "index": 126,
+      "name_en": "Contrary",
+      "name_es": "Respondón",
+      "unused": false
+    },
+    {
+      "id": "corrosion",
+      "index": 212,
+      "name_en": "Corrosion",
+      "name_es": "Corrosión",
+      "unused": false
+    },
+    {
+      "id": "costar",
+      "index": 294,
+      "name_en": "Costar",
+      "name_es": "Unísono",
+      "unused": false
+    },
+    {
+      "id": "cottondown",
+      "index": 238,
+      "name_en": "Cotton Down",
+      "name_es": "Pelusa",
+      "unused": false
+    },
+    {
+      "id": "cudchew",
+      "index": 291,
+      "name_en": "Cud Chew",
+      "name_es": "Rumia",
+      "unused": false
+    },
+    {
+      "id": "curiousmedicine",
+      "index": 261,
+      "name_en": "Curious Medicine",
+      "name_es": "Medicina Extraña",
+      "unused": false
+    },
+    {
+      "id": "cursedbody",
+      "index": 130,
+      "name_en": "Cursed Body",
+      "name_es": "Cuerpo Maldito",
+      "unused": false
+    },
+    {
+      "id": "cutecharm",
+      "index": 56,
+      "name_en": "Cute Charm",
+      "name_es": "Gran Encanto",
+      "unused": false
+    },
+    {
+      "id": "damp",
+      "index": 6,
+      "name_en": "Damp",
+      "name_es": "Humedad",
+      "unused": false
+    },
+    {
+      "id": "dancer",
+      "index": 216,
+      "name_en": "Dancer",
+      "name_es": "Pareja de Baile",
+      "unused": false
+    },
+    {
+      "id": "darkaura",
+      "index": 186,
+      "name_en": "Dark Aura",
+      "name_es": "Aura Oscura",
+      "unused": false
+    },
+    {
+      "id": "dauntlessshield",
+      "index": 235,
+      "name_en": "Dauntless Shield",
+      "name_es": "Escudo Recio",
+      "unused": false
+    },
+    {
+      "id": "dazzling",
+      "index": 219,
+      "name_en": "Dazzling",
+      "name_es": "Cuerpo Vívido",
+      "unused": false
+    },
+    {
+      "id": "defeatist",
+      "index": 129,
+      "name_en": "Defeatist",
+      "name_es": "Flaqueza",
+      "unused": false
+    },
+    {
+      "id": "defiant",
+      "index": 128,
+      "name_en": "Defiant",
+      "name_es": "Competitivo",
+      "unused": false
+    },
+    {
+      "id": "deltastream",
+      "index": 191,
+      "name_en": "Delta Stream",
+      "name_es": "Ráfaga Delta",
+      "unused": false
+    },
+    {
+      "id": "desolateland",
+      "index": 190,
+      "name_en": "Desolate Land",
+      "name_es": "Tierra del Ocaso",
+      "unused": false
+    },
+    {
+      "id": "disguise",
+      "index": 209,
+      "name_en": "Disguise",
+      "name_es": "Disfraz",
+      "unused": false
+    },
+    {
+      "id": "download",
+      "index": 88,
+      "name_en": "Download",
+      "name_es": "Descarga",
+      "unused": false
+    },
+    {
+      "id": "dragonize",
+      "index": 312,
+      "name_en": "Dragonize",
+      "name_es": "Piel Dragontina",
+      "unused": false
+    },
+    {
+      "id": "dragonsmaw",
+      "index": 263,
+      "name_en": "—",
+      "name_es": "Mandíbula Dragón",
+      "unused": false
+    },
+    {
+      "id": "drizzle",
+      "index": 2,
+      "name_en": "Drizzle",
+      "name_es": "Llovizna",
+      "unused": false
+    },
+    {
+      "id": "drought",
+      "index": 70,
+      "name_en": "Drought",
+      "name_es": "Sequía",
+      "unused": false
+    },
+    {
+      "id": "dryskin",
+      "index": 87,
+      "name_en": "Dry Skin",
+      "name_es": "Piel Seca",
+      "unused": false
+    },
+    {
+      "id": "earlybird",
+      "index": 48,
+      "name_en": "Early Bird",
+      "name_es": "Madrugar",
+      "unused": false
+    },
+    {
+      "id": "eartheater",
+      "index": 297,
+      "name_en": "Earth Eater",
+      "name_es": "Geofagia",
+      "unused": false
+    },
+    {
+      "id": "eelevate",
+      "index": 313,
+      "name_en": "Eelevate",
+      "name_es": "Impulso Anguila",
+      "unused": false
+    },
+    {
+      "id": "effectspore",
+      "index": 27,
+      "name_en": "Effect Spore",
+      "name_es": "Efecto Espora",
+      "unused": false
+    },
+    {
+      "id": "electricsurge",
+      "index": 226,
+      "name_en": "Electric Surge",
+      "name_es": "Electrogénesis",
+      "unused": false
+    },
+    {
+      "id": "electromorphosis",
+      "index": 280,
+      "name_en": "Electromorphosis",
+      "name_es": "Dinamo",
+      "unused": false
+    },
+    {
+      "id": "embodyaspectcornerstone",
+      "index": 304,
+      "name_en": "Embody Aspect",
+      "name_es": "Evocarrecuerdos",
+      "unused": false
+    },
+    {
+      "id": "embodyaspecthearthflame",
+      "index": 303,
+      "name_en": "Embody Aspect",
+      "name_es": "Evocarrecuerdos",
+      "unused": false
+    },
+    {
+      "id": "embodyaspectteal",
+      "index": 301,
+      "name_en": "Embody Aspect",
+      "name_es": "Evocarrecuerdos",
+      "unused": false
+    },
+    {
+      "id": "embodyaspectwellspring",
+      "index": 302,
+      "name_en": "Embody Aspect",
+      "name_es": "Evocarrecuerdos",
+      "unused": false
+    },
+    {
+      "id": "emergencyexit",
+      "index": 194,
+      "name_en": "Emergency Exit",
+      "name_es": "Retirada",
+      "unused": false
+    },
+    {
+      "id": "fairyaura",
+      "index": 187,
+      "name_en": "Fairy Aura",
+      "name_es": "Aura Feérica",
+      "unused": false
+    },
+    {
+      "id": "filter",
+      "index": 111,
+      "name_en": "Filter",
+      "name_es": "Filtro",
+      "unused": false
+    },
+    {
+      "id": "firemane",
+      "index": 316,
+      "name_en": "Fire Mane",
+      "name_es": "Crin de Fuego",
+      "unused": false
+    },
+    {
+      "id": "flamebody",
+      "index": 49,
+      "name_en": "Flame Body",
+      "name_es": "Cuerpo Llama",
+      "unused": false
+    },
+    {
+      "id": "flareboost",
+      "index": 138,
+      "name_en": "Flare Boost",
+      "name_es": "Ímpetu Ardiente",
+      "unused": false
+    },
+    {
+      "id": "flashfire",
+      "index": 18,
+      "name_en": "Flash Fire",
+      "name_es": "Absorbe Fuego",
+      "unused": false
+    },
+    {
+      "id": "flowergift",
+      "index": 122,
+      "name_en": "Flower Gift",
+      "name_es": "Don Floral",
+      "unused": false
+    },
+    {
+      "id": "flowerveil",
+      "index": 166,
+      "name_en": "Flower Veil",
+      "name_es": "Velo Flor",
+      "unused": false
+    },
+    {
+      "id": "fluffy",
+      "index": 218,
+      "name_en": "Fluffy",
+      "name_es": "Peluche",
+      "unused": false
+    },
+    {
+      "id": "forecast",
+      "index": 59,
+      "name_en": "Forecast",
+      "name_es": "Predicción",
+      "unused": false
+    },
+    {
+      "id": "forewarn",
+      "index": 108,
+      "name_en": "Forewarn",
+      "name_es": "Alerta",
+      "unused": false
+    },
+    {
+      "id": "friendguard",
+      "index": 132,
+      "name_en": "Friend Guard",
+      "name_es": "Compiescolta",
+      "unused": false
+    },
+    {
+      "id": "frisk",
+      "index": 119,
+      "name_en": "Frisk",
+      "name_es": "Cacheo",
+      "unused": false
+    },
+    {
+      "id": "fullmetalbody",
+      "index": 230,
+      "name_en": "Full Metal Body",
+      "name_es": "Guardia Metálica",
+      "unused": false
+    },
+    {
+      "id": "furcoat",
+      "index": 169,
+      "name_en": "Fur Coat",
+      "name_es": "Pelaje Recio",
+      "unused": false
+    },
+    {
+      "id": "galewings",
+      "index": 177,
+      "name_en": "Gale Wings",
+      "name_es": "Alas Vendaval",
+      "unused": false
+    },
+    {
+      "id": "galvanize",
+      "index": 206,
+      "name_en": "Galvanize",
+      "name_es": "Piel Eléctrica",
+      "unused": false
+    },
+    {
+      "id": "gluttony",
+      "index": 82,
+      "name_en": "Gluttony",
+      "name_es": "Gula",
+      "unused": false
+    },
+    {
+      "id": "goodasgold",
+      "index": 283,
+      "name_en": "Good as Gold",
+      "name_es": "Cuerpo Áureo",
+      "unused": false
+    },
+    {
+      "id": "gooey",
+      "index": 183,
+      "name_en": "Gooey",
+      "name_es": "Baba",
+      "unused": false
+    },
+    {
+      "id": "gorillatactics",
+      "index": 255,
+      "name_en": "Gorilla Tactics",
+      "name_es": "Monotema",
+      "unused": false
+    },
+    {
+      "id": "grasspelt",
+      "index": 179,
+      "name_en": "Grass Pelt",
+      "name_es": "Manto Frondoso",
+      "unused": false
+    },
+    {
+      "id": "grassysurge",
+      "index": 229,
+      "name_en": "Grassy Surge",
+      "name_es": "Herbogénesis",
+      "unused": false
+    },
+    {
+      "id": "grimneigh",
+      "index": 265,
+      "name_en": "Grim Neigh",
+      "name_es": "Relincho Negro",
+      "unused": false
+    },
+    {
+      "id": "guarddog",
+      "index": 275,
+      "name_en": "Guard Dog",
+      "name_es": "Perro Guardián",
+      "unused": false
+    },
+    {
+      "id": "gulpmissile",
+      "index": 241,
+      "name_en": "Gulp Missile",
+      "name_es": "Tragamisil",
+      "unused": false
+    },
+    {
+      "id": "guts",
+      "index": 62,
+      "name_en": "Guts",
+      "name_es": "Agallas",
+      "unused": false
+    },
+    {
+      "id": "hadronengine",
+      "index": 289,
+      "name_en": "Hadron Engine",
+      "name_es": "Motor Hadrónico",
+      "unused": false
+    },
+    {
+      "id": "harvest",
+      "index": 139,
+      "name_en": "Harvest",
+      "name_es": "Cosecha",
+      "unused": false
+    },
+    {
+      "id": "healer",
+      "index": 131,
+      "name_en": "Healer",
+      "name_es": "Alma Cura",
+      "unused": false
+    },
+    {
+      "id": "heatproof",
+      "index": 85,
+      "name_en": "Heatproof",
+      "name_es": "Ignífugo",
+      "unused": false
+    },
+    {
+      "id": "heavymetal",
+      "index": 134,
+      "name_en": "Heavy Metal",
+      "name_es": "Metal Pesado",
+      "unused": false
+    },
+    {
+      "id": "honeygather",
+      "index": 118,
+      "name_en": "Honey Gather",
+      "name_es": "Recogemiel",
+      "unused": false
+    },
+    {
+      "id": "hospitality",
+      "index": 299,
+      "name_en": "Hospitality",
+      "name_es": "Hospitalidad",
+      "unused": false
+    },
+    {
+      "id": "hugepower",
+      "index": 37,
+      "name_en": "Huge Power",
+      "name_es": "Potencia",
+      "unused": false
+    },
+    {
+      "id": "hungerswitch",
+      "index": 258,
+      "name_en": "Hunger Switch",
+      "name_es": "Mutapetito",
+      "unused": false
+    },
+    {
+      "id": "hustle",
+      "index": 55,
+      "name_en": "Hustle",
+      "name_es": "Entusiasmo",
+      "unused": false
+    },
+    {
+      "id": "hydration",
+      "index": 93,
+      "name_en": "Hydration",
+      "name_es": "Hidratación",
+      "unused": false
+    },
+    {
+      "id": "hypercutter",
+      "index": 52,
+      "name_en": "Hyper Cutter",
+      "name_es": "Corte Fuerte",
+      "unused": false
+    },
+    {
+      "id": "icebody",
+      "index": 115,
+      "name_en": "Ice Body",
+      "name_es": "Gélido",
+      "unused": false
+    },
+    {
+      "id": "iceface",
+      "index": 248,
+      "name_en": "Ice Face",
+      "name_es": "Cara de Hielo",
+      "unused": false
+    },
+    {
+      "id": "icescales",
+      "index": 246,
+      "name_en": "Ice Scales",
+      "name_es": "Escama de Hielo",
+      "unused": false
+    },
+    {
+      "id": "illuminate",
+      "index": 35,
+      "name_en": "Illuminate",
+      "name_es": "Iluminación",
+      "unused": false
+    },
+    {
+      "id": "illusion",
+      "index": 149,
+      "name_en": "Illusion",
+      "name_es": "Ilusión",
+      "unused": false
+    },
+    {
+      "id": "immunity",
+      "index": 17,
+      "name_en": "Immunity",
+      "name_es": "Inmunidad",
+      "unused": false
+    },
+    {
+      "id": "imposter",
+      "index": 150,
+      "name_en": "Imposter",
+      "name_es": "Impostor",
+      "unused": false
+    },
+    {
+      "id": "infiltrator",
+      "index": 151,
+      "name_en": "Infiltrator",
+      "name_es": "Allanamiento",
+      "unused": false
+    },
+    {
+      "id": "innardsout",
+      "index": 215,
+      "name_en": "Innards Out",
+      "name_es": "Revés",
+      "unused": false
+    },
+    {
+      "id": "innerfocus",
+      "index": 39,
+      "name_en": "Inner Focus",
+      "name_es": "Fuerza Mental",
+      "unused": false
+    },
+    {
+      "id": "insomnia",
+      "index": 15,
+      "name_en": "Insomnia",
+      "name_es": "Insomnio",
+      "unused": false
+    },
+    {
+      "id": "intimidate",
+      "index": 22,
+      "name_en": "Intimidate",
+      "name_es": "Intimidación",
+      "unused": false
+    },
+    {
+      "id": "intrepidsword",
+      "index": 234,
+      "name_en": "Intrepid Sword",
+      "name_es": "Espada Indómita",
+      "unused": false
+    },
+    {
+      "id": "ironbarbs",
+      "index": 160,
+      "name_en": "Iron Barbs",
+      "name_es": "Punta Acero",
+      "unused": false
+    },
+    {
+      "id": "ironfist",
+      "index": 89,
+      "name_en": "Iron Fist",
+      "name_es": "Puño Férreo",
+      "unused": false
+    },
+    {
+      "id": "justified",
+      "index": 154,
+      "name_en": "Justified",
+      "name_es": "Justiciero",
+      "unused": false
+    },
+    {
+      "id": "keeneye",
+      "index": 51,
+      "name_en": "Keen Eye",
+      "name_es": "Vista Lince",
+      "unused": false
+    },
+    {
+      "id": "klutz",
+      "index": 103,
+      "name_en": "Klutz",
+      "name_es": "Zoquete",
+      "unused": false
+    },
+    {
+      "id": "leafguard",
+      "index": 102,
+      "name_en": "Leaf Guard",
+      "name_es": "Defensa Hoja",
+      "unused": false
+    },
+    {
+      "id": "levitate",
+      "index": 26,
+      "name_en": "Levitate",
+      "name_es": "Levitación",
+      "unused": false
+    },
+    {
+      "id": "libero",
+      "index": 236,
+      "name_en": "Libero",
+      "name_es": "Líbero",
+      "unused": false
+    },
+    {
+      "id": "lightmetal",
+      "index": 135,
+      "name_en": "Light Metal",
+      "name_es": "Metal Liviano",
+      "unused": false
+    },
+    {
+      "id": "lightningrod",
+      "index": 31,
+      "name_en": "Lightning Rod",
+      "name_es": "Pararrayos",
+      "unused": false
+    },
+    {
+      "id": "limber",
+      "index": 7,
+      "name_en": "Limber",
+      "name_es": "Flexibilidad",
+      "unused": false
+    },
+    {
+      "id": "lingeringaroma",
+      "index": 268,
+      "name_en": "Lingering Aroma",
+      "name_es": "Olor Persistente",
+      "unused": false
+    },
+    {
+      "id": "liquidooze",
+      "index": 64,
+      "name_en": "Liquid Ooze",
+      "name_es": "Viscosecreción",
+      "unused": false
+    },
+    {
+      "id": "liquidvoice",
+      "index": 204,
+      "name_en": "Liquid Voice",
+      "name_es": "Voz Fluida",
+      "unused": false
+    },
+    {
+      "id": "longreach",
+      "index": 203,
+      "name_en": "Long Reach",
+      "name_es": "Remoto",
+      "unused": false
+    },
+    {
+      "id": "magicbounce",
+      "index": 156,
+      "name_en": "Magic Bounce",
+      "name_es": "Espejo Mágico",
+      "unused": false
+    },
+    {
+      "id": "magicguard",
+      "index": 98,
+      "name_en": "Magic Guard",
+      "name_es": "Muro Mágico",
+      "unused": false
+    },
+    {
+      "id": "magician",
+      "index": 170,
+      "name_en": "Magician",
+      "name_es": "Prestidigitador",
+      "unused": false
+    },
+    {
+      "id": "magmaarmor",
+      "index": 40,
+      "name_en": "Magma Armor",
+      "name_es": "Escudo Magma",
+      "unused": false
+    },
+    {
+      "id": "magnetpull",
+      "index": 42,
+      "name_en": "Magnet Pull",
+      "name_es": "Imán",
+      "unused": false
+    },
+    {
+      "id": "marvelscale",
+      "index": 63,
+      "name_en": "Marvel Scale",
+      "name_es": "Escama Especial",
+      "unused": false
+    },
+    {
+      "id": "megalauncher",
+      "index": 178,
+      "name_en": "Mega Launcher",
+      "name_es": "Megadisparador",
+      "unused": false
+    },
+    {
+      "id": "megasol",
+      "index": 315,
+      "name_en": "Mega Sol",
+      "name_es": "Megasolar",
+      "unused": false
+    },
+    {
+      "id": "merciless",
+      "index": 196,
+      "name_en": "Merciless",
+      "name_es": "Ensañamiento",
+      "unused": false
+    },
+    {
+      "id": "mimicry",
+      "index": 250,
+      "name_en": "Mimicry",
+      "name_es": "Mimetismo",
+      "unused": false
+    },
+    {
+      "id": "mindseye",
+      "index": 300,
+      "name_en": "Mind's Eye",
+      "name_es": "Ojo Mental",
+      "unused": false
+    },
+    {
+      "id": "minus",
+      "index": 58,
+      "name_en": "Minus",
+      "name_es": "Menos",
+      "unused": false
+    },
+    {
+      "id": "mirrorarmor",
+      "index": 240,
+      "name_en": "Mirror Armor",
+      "name_es": "Coraza Reflejo",
+      "unused": false
+    },
+    {
+      "id": "mistysurge",
+      "index": 228,
+      "name_en": "Misty Surge",
+      "name_es": "Nebulogénesis",
+      "unused": false
+    },
+    {
+      "id": "moldbreaker",
+      "index": 104,
+      "name_en": "Mold Breaker",
+      "name_es": "Rompemoldes",
+      "unused": false
+    },
+    {
+      "id": "moody",
+      "index": 141,
+      "name_en": "Moody",
+      "name_es": "Veleta",
+      "unused": false
+    },
+    {
+      "id": "motordrive",
+      "index": 78,
+      "name_en": "Motor Drive",
+      "name_es": "Electromotor",
+      "unused": false
+    },
+    {
+      "id": "moxie",
+      "index": 153,
+      "name_en": "Moxie",
+      "name_es": "Autoestima",
+      "unused": false
+    },
+    {
+      "id": "multiscale",
+      "index": 136,
+      "name_en": "Multiscale",
+      "name_es": "Multiescamas",
+      "unused": false
+    },
+    {
+      "id": "multitype",
+      "index": 121,
+      "name_en": "Multitype",
+      "name_es": "Multitipo",
+      "unused": false
+    },
+    {
+      "id": "mummy",
+      "index": 152,
+      "name_en": "Mummy",
+      "name_es": "Momia",
+      "unused": false
+    },
+    {
+      "id": "myceliummight",
+      "index": 298,
+      "name_en": "Mycelium Might",
+      "name_es": "Poder Fúngico",
+      "unused": false
+    },
+    {
+      "id": "naturalcure",
+      "index": 30,
+      "name_en": "Natural Cure",
+      "name_es": "Cura Natural",
+      "unused": false
+    },
+    {
+      "id": "neuroforce",
+      "index": 233,
+      "name_en": "Neuroforce",
+      "name_es": "Fuerza Cerebral",
+      "unused": false
+    },
+    {
+      "id": "neutralizinggas",
+      "index": 256,
+      "name_en": "Neutralizing Gas",
+      "name_es": "Gas Reactivo",
+      "unused": false
+    },
+    {
+      "id": "noguard",
+      "index": 99,
+      "name_en": "No Guard",
+      "name_es": "Indefenso",
+      "unused": false
+    },
+    {
+      "id": "normalize",
+      "index": 96,
+      "name_en": "Normalize",
+      "name_es": "Normalidad",
+      "unused": false
+    },
+    {
+      "id": "oblivious",
+      "index": 12,
+      "name_en": "Oblivious",
+      "name_es": "Despiste",
+      "unused": false
+    },
+    {
+      "id": "opportunist",
+      "index": 290,
+      "name_en": "Opportunist",
+      "name_es": "Oportunista",
+      "unused": false
+    },
+    {
+      "id": "orichalcumpulse",
+      "index": 288,
+      "name_en": "Orichalcum Pulse",
+      "name_es": "Latido Oricalco",
+      "unused": false
+    },
+    {
+      "id": "overcoat",
+      "index": 142,
+      "name_en": "Overcoat",
+      "name_es": "Funda",
+      "unused": false
+    },
+    {
+      "id": "overgrow",
+      "index": 65,
+      "name_en": "Overgrow",
+      "name_es": "Espesura",
+      "unused": false
+    },
+    {
+      "id": "owntempo",
+      "index": 20,
+      "name_en": "Own Tempo",
+      "name_es": "Ritmo Propio",
+      "unused": false
+    },
+    {
+      "id": "parentalbond",
+      "index": 185,
+      "name_en": "Parental Bond",
+      "name_es": "Amor Filial",
+      "unused": false
+    },
+    {
+      "id": "pastelveil",
+      "index": 257,
+      "name_en": "Pastel Veil",
+      "name_es": "Velo Pastel",
+      "unused": false
+    },
+    {
+      "id": "perishbody",
+      "index": 253,
+      "name_en": "Perish Body",
+      "name_es": "Cuerpo Mortal",
+      "unused": false
+    },
+    {
+      "id": "pickpocket",
+      "index": 124,
+      "name_en": "Pickpocket",
+      "name_es": "Hurto",
+      "unused": false
+    },
+    {
+      "id": "pickup",
+      "index": 53,
+      "name_en": "Pickup",
+      "name_es": "Recogida",
+      "unused": false
+    },
+    {
+      "id": "piercingdrill",
+      "index": 311,
+      "name_en": "Piercing Drill",
+      "name_es": "Turbotaladro",
+      "unused": false
+    },
+    {
+      "id": "pixilate",
+      "index": 182,
+      "name_en": "Pixilate",
+      "name_es": "Piel Feérica",
+      "unused": false
+    },
+    {
+      "id": "plus",
+      "index": 57,
+      "name_en": "Plus",
+      "name_es": "Más",
+      "unused": false
+    },
+    {
+      "id": "poisonheal",
+      "index": 90,
+      "name_en": "Poison Heal",
+      "name_es": "Antídoto",
+      "unused": false
+    },
+    {
+      "id": "poisonpoint",
+      "index": 38,
+      "name_en": "Poison Point",
+      "name_es": "Punto Tóxico",
+      "unused": false
+    },
+    {
+      "id": "poisonpuppeteer",
+      "index": 310,
+      "name_en": "Poison Puppeteer",
+      "name_es": "Títere Tóxico",
+      "unused": false
+    },
+    {
+      "id": "poisontouch",
+      "index": 143,
+      "name_en": "Poison Touch",
+      "name_es": "Toque Tóxico",
+      "unused": false
+    },
+    {
+      "id": "powerconstruct",
+      "index": 211,
+      "name_en": "Power Construct",
+      "name_es": "Agrupamiento",
+      "unused": false
+    },
+    {
+      "id": "powerofalchemy",
+      "index": 223,
+      "name_en": "Power of Alchemy",
+      "name_es": "Reacción Química",
+      "unused": false
+    },
+    {
+      "id": "powerspot",
+      "index": 249,
+      "name_en": "Power Spot",
+      "name_es": "Fuente Energía",
+      "unused": false
+    },
+    {
+      "id": "prankster",
+      "index": 158,
+      "name_en": "Prankster",
+      "name_es": "Bromista",
+      "unused": false
+    },
+    {
+      "id": "pressure",
+      "index": 46,
+      "name_en": "Pressure",
+      "name_es": "Presión",
+      "unused": false
+    },
+    {
+      "id": "primordialsea",
+      "index": 189,
+      "name_en": "Primordial Sea",
+      "name_es": "Mar del Albor",
+      "unused": false
+    },
+    {
+      "id": "prismarmor",
+      "index": 232,
+      "name_en": "Prism Armor",
+      "name_es": "Armadura Prisma",
+      "unused": false
+    },
+    {
+      "id": "propellertail",
+      "index": 239,
+      "name_en": "Propeller Tail",
+      "name_es": "Hélice Caudal",
+      "unused": false
+    },
+    {
+      "id": "protean",
+      "index": 168,
+      "name_en": "Protean",
+      "name_es": "Mutatipo",
+      "unused": false
+    },
+    {
+      "id": "protosynthesis",
+      "index": 281,
+      "name_en": "Protosynthesis",
+      "name_es": "Paleosíntesis",
+      "unused": false
+    },
+    {
+      "id": "psychicsurge",
+      "index": 227,
+      "name_en": "Psychic Surge",
+      "name_es": "Psicogénesis",
+      "unused": false
+    },
+    {
+      "id": "punkrock",
+      "index": 244,
+      "name_en": "Punk Rock",
+      "name_es": "Punk Rock",
+      "unused": false
+    },
+    {
+      "id": "purepower",
+      "index": 74,
+      "name_en": "Pure Power",
+      "name_es": "Energía Pura",
+      "unused": false
+    },
+    {
+      "id": "purifyingsalt",
+      "index": 272,
+      "name_en": "Purifying Salt",
+      "name_es": "Sal Purificadora",
+      "unused": false
+    },
+    {
+      "id": "quarkdrive",
+      "index": 282,
+      "name_en": "Quark Drive",
+      "name_es": "Carga Cuark",
+      "unused": false
+    },
+    {
+      "id": "queenlymajesty",
+      "index": 214,
+      "name_en": "Queenly Majesty",
+      "name_es": "Regia Presencia",
+      "unused": false
+    },
+    {
+      "id": "quickdraw",
+      "index": 259,
+      "name_en": "Quick Draw",
+      "name_es": "Mano Rápida",
+      "unused": false
+    },
+    {
+      "id": "quickfeet",
+      "index": 95,
+      "name_en": "Quick Feet",
+      "name_es": "Pies Rápidos",
+      "unused": false
+    },
+    {
+      "id": "raindish",
+      "index": 44,
+      "name_en": "Rain Dish",
+      "name_es": "Cura Lluvia",
+      "unused": false
+    },
+    {
+      "id": "rattled",
+      "index": 155,
+      "name_en": "Rattled",
+      "name_es": "Cobardía",
+      "unused": false
+    },
+    {
+      "id": "receiver",
+      "index": 222,
+      "name_en": "Receiver",
+      "name_es": "Receptor",
+      "unused": false
+    },
+    {
+      "id": "reckless",
+      "index": 120,
+      "name_en": "Reckless",
+      "name_es": "Audaz",
+      "unused": false
+    },
+    {
+      "id": "refrigerate",
+      "index": 174,
+      "name_en": "Refrigerate",
+      "name_es": "Piel Helada",
+      "unused": false
+    },
+    {
+      "id": "regenerator",
+      "index": 144,
+      "name_en": "Regenerator",
+      "name_es": "Regeneración",
+      "unused": false
+    },
+    {
+      "id": "ripen",
+      "index": 247,
+      "name_en": "Ripen",
+      "name_es": "Maduración",
+      "unused": false
+    },
+    {
+      "id": "rivalry",
+      "index": 79,
+      "name_en": "Rivalry",
+      "name_es": "Rivalidad",
+      "unused": false
+    },
+    {
+      "id": "rkssystem",
+      "index": 225,
+      "name_en": "RKS System",
+      "name_es": "Sistema Alfa",
+      "unused": false
+    },
+    {
+      "id": "rockhead",
+      "index": 69,
+      "name_en": "Rock Head",
+      "name_es": "Cabeza Roca",
+      "unused": false
+    },
+    {
+      "id": "rockypayload",
+      "index": 276,
+      "name_en": "Rocky Payload",
+      "name_es": "Transportarrocas",
+      "unused": false
+    },
+    {
+      "id": "roughskin",
+      "index": 24,
+      "name_en": "Rough Skin",
+      "name_es": "Piel Tosca",
+      "unused": false
+    },
+    {
+      "id": "runaway",
+      "index": 50,
+      "name_en": "Run Away",
+      "name_es": "Fuga",
+      "unused": false
+    },
+    {
+      "id": "sandforce",
+      "index": 159,
+      "name_en": "Sand Force",
+      "name_es": "Poder Arena",
+      "unused": false
+    },
+    {
+      "id": "sandrush",
+      "index": 146,
+      "name_en": "Sand Rush",
+      "name_es": "Ímpetu Arena",
+      "unused": false
+    },
+    {
+      "id": "sandspit",
+      "index": 245,
+      "name_en": "Sand Spit",
+      "name_es": "Expulsarena",
+      "unused": false
+    },
+    {
+      "id": "sandstream",
+      "index": 45,
+      "name_en": "Sand Stream",
+      "name_es": "Chorro Arena",
+      "unused": false
+    },
+    {
+      "id": "sandveil",
+      "index": 8,
+      "name_en": "Sand Veil",
+      "name_es": "Velo Arena",
+      "unused": false
+    },
+    {
+      "id": "sapsipper",
+      "index": 157,
+      "name_en": "Sap Sipper",
+      "name_es": "Herbívoro",
+      "unused": false
+    },
+    {
+      "id": "schooling",
+      "index": 208,
+      "name_en": "Schooling",
+      "name_es": "Banco",
+      "unused": false
+    },
+    {
+      "id": "scrappy",
+      "index": 113,
+      "name_en": "Scrappy",
+      "name_es": "Intrépido",
+      "unused": false
+    },
+    {
+      "id": "screencleaner",
+      "index": 251,
+      "name_en": "Screen Cleaner",
+      "name_es": "Antibarrera",
+      "unused": false
+    },
+    {
+      "id": "seedsower",
+      "index": 269,
+      "name_en": "Seed Sower",
+      "name_es": "Disemillar",
+      "unused": false
+    },
+    {
+      "id": "serenegrace",
+      "index": 32,
+      "name_en": "Serene Grace",
+      "name_es": "Dicha",
+      "unused": false
+    },
+    {
+      "id": "shadowshield",
+      "index": 231,
+      "name_en": "Shadow Shield",
+      "name_es": "Guardia Espectro",
+      "unused": false
+    },
+    {
+      "id": "shadowtag",
+      "index": 23,
+      "name_en": "Shadow Tag",
+      "name_es": "Sombra Trampa",
+      "unused": false
+    },
+    {
+      "id": "sharpness",
+      "index": 292,
+      "name_en": "Sharpness",
+      "name_es": "Cortante",
+      "unused": false
+    },
+    {
+      "id": "shedskin",
+      "index": 61,
+      "name_en": "Shed Skin",
+      "name_es": "Mudar",
+      "unused": false
+    },
+    {
+      "id": "sheerforce",
+      "index": 125,
+      "name_en": "Sheer Force",
+      "name_es": "Potencia Bruta",
+      "unused": false
+    },
+    {
+      "id": "shellarmor",
+      "index": 75,
+      "name_en": "Shell Armor",
+      "name_es": "Caparazón",
+      "unused": false
+    },
+    {
+      "id": "shielddust",
+      "index": 19,
+      "name_en": "Shield Dust",
+      "name_es": "Polvo Escudo",
+      "unused": false
+    },
+    {
+      "id": "shieldsdown",
+      "index": 197,
+      "name_en": "Shields Down",
+      "name_es": "Escudo Limitado",
+      "unused": false
+    },
+    {
+      "id": "simple",
+      "index": 86,
+      "name_en": "Simple",
+      "name_es": "Simple",
+      "unused": false
+    },
+    {
+      "id": "skilllink",
+      "index": 92,
+      "name_en": "Skill Link",
+      "name_es": "Encadenado",
+      "unused": false
+    },
+    {
+      "id": "slowstart",
+      "index": 112,
+      "name_en": "Slow Start",
+      "name_es": "Inicio Lento",
+      "unused": false
+    },
+    {
+      "id": "slushrush",
+      "index": 202,
+      "name_en": "Slush Rush",
+      "name_es": "Quitanieves",
+      "unused": false
+    },
+    {
+      "id": "sniper",
+      "index": 97,
+      "name_en": "Sniper",
+      "name_es": "Francotirador",
+      "unused": false
+    },
+    {
+      "id": "snowcloak",
+      "index": 81,
+      "name_en": "Snow Cloak",
+      "name_es": "Manto Níveo",
+      "unused": false
+    },
+    {
+      "id": "snowwarning",
+      "index": 117,
+      "name_en": "Snow Warning",
+      "name_es": "Nevada",
+      "unused": false
+    },
+    {
+      "id": "solarpower",
+      "index": 94,
+      "name_en": "Solar Power",
+      "name_es": "Poder Solar",
+      "unused": false
+    },
+    {
+      "id": "solidrock",
+      "index": 116,
+      "name_en": "Solid Rock",
+      "name_es": "Roca Sólida",
+      "unused": false
+    },
+    {
+      "id": "soulheart",
+      "index": 220,
+      "name_en": "Soul-Heart",
+      "name_es": "Coránima",
+      "unused": false
+    },
+    {
+      "id": "soundproof",
+      "index": 43,
+      "name_en": "Soundproof",
+      "name_es": "Insonorizar",
+      "unused": false
+    },
+    {
+      "id": "speedboost",
+      "index": 3,
+      "name_en": "Speed Boost",
+      "name_es": "Impulso",
+      "unused": false
+    },
+    {
+      "id": "spicyspray",
+      "index": 318,
+      "name_en": "Spicy Spray",
+      "name_es": "Salpicante",
+      "unused": false
+    },
+    {
+      "id": "stakeout",
+      "index": 198,
+      "name_en": "Stakeout",
+      "name_es": "Vigilante",
+      "unused": false
+    },
+    {
+      "id": "stall",
+      "index": 100,
+      "name_en": "Stall",
+      "name_es": "Rezagado",
+      "unused": false
+    },
+    {
+      "id": "stalwart",
+      "index": 242,
+      "name_en": "Stalwart",
+      "name_es": "Acérrimo",
+      "unused": false
+    },
+    {
+      "id": "stamina",
+      "index": 192,
+      "name_en": "Stamina",
+      "name_es": "Firmeza",
+      "unused": false
+    },
+    {
+      "id": "stancechange",
+      "index": 176,
+      "name_en": "Stance Change",
+      "name_es": "Cambio Táctico",
+      "unused": false
+    },
+    {
+      "id": "static",
+      "index": 9,
+      "name_en": "Static",
+      "name_es": "Electricidad Estática",
+      "unused": false
+    },
+    {
+      "id": "steadfast",
+      "index": 80,
+      "name_en": "Steadfast",
+      "name_es": "Impasible",
+      "unused": false
+    },
+    {
+      "id": "steamengine",
+      "index": 243,
+      "name_en": "Steam Engine",
+      "name_es": "Combustible",
+      "unused": false
+    },
+    {
+      "id": "steelworker",
+      "index": 200,
+      "name_en": "Steelworker",
+      "name_es": "Acero Templado",
+      "unused": false
+    },
+    {
+      "id": "steelyspirit",
+      "index": 252,
+      "name_en": "Steely Spirit",
+      "name_es": "Alma Acerada",
+      "unused": false
+    },
+    {
+      "id": "stench",
+      "index": 1,
+      "name_en": "Stench",
+      "name_es": "Hedor",
+      "unused": false
+    },
+    {
+      "id": "stickyhold",
+      "index": 60,
+      "name_en": "Sticky Hold",
+      "name_es": "Viscosidad",
+      "unused": false
+    },
+    {
+      "id": "stormdrain",
+      "index": 114,
+      "name_en": "Storm Drain",
+      "name_es": "Colector",
+      "unused": false
+    },
+    {
+      "id": "strongjaw",
+      "index": 173,
+      "name_en": "Strong Jaw",
+      "name_es": "Mandíbula Fuerte",
+      "unused": false
+    },
+    {
+      "id": "sturdy",
+      "index": 5,
+      "name_en": "Sturdy",
+      "name_es": "Robustez",
+      "unused": false
+    },
+    {
+      "id": "suctioncups",
+      "index": 21,
+      "name_en": "Suction Cups",
+      "name_es": "Ventosas",
+      "unused": false
+    },
+    {
+      "id": "superluck",
+      "index": 105,
+      "name_en": "Super Luck",
+      "name_es": "Afortunado",
+      "unused": false
+    },
+    {
+      "id": "supersweetsyrup",
+      "index": 306,
+      "name_en": "Supersweet Syrup",
+      "name_es": "Néctar Dulce",
+      "unused": false
+    },
+    {
+      "id": "supremeoverlord",
+      "index": 293,
+      "name_en": "Supreme Overlord",
+      "name_es": "General Supremo",
+      "unused": false
+    },
+    {
+      "id": "surgesurfer",
+      "index": 207,
+      "name_en": "Surge Surfer",
+      "name_es": "Cola Surf",
+      "unused": false
+    },
+    {
+      "id": "swarm",
+      "index": 68,
+      "name_en": "Swarm",
+      "name_es": "Enjambre",
+      "unused": false
+    },
+    {
+      "id": "sweetveil",
+      "index": 175,
+      "name_en": "Sweet Veil",
+      "name_es": "Velo Dulce",
+      "unused": false
+    },
+    {
+      "id": "swiftswim",
+      "index": 33,
+      "name_en": "Swift Swim",
+      "name_es": "Nado Rápido",
+      "unused": false
+    },
+    {
+      "id": "swordofruin",
+      "index": 285,
+      "name_en": "Sword of Ruin",
+      "name_es": "Espada Debacle",
+      "unused": false
+    },
+    {
+      "id": "symbiosis",
+      "index": 180,
+      "name_en": "Symbiosis",
+      "name_es": "Simbiosis",
+      "unused": false
+    },
+    {
+      "id": "synchronize",
+      "index": 28,
+      "name_en": "Synchronize",
+      "name_es": "Sincronía",
+      "unused": false
+    },
+    {
+      "id": "tabletsofruin",
+      "index": 286,
+      "name_en": "Tablets of Ruin",
+      "name_es": "Tablilla Debacle",
+      "unused": false
+    },
+    {
+      "id": "tangledfeet",
+      "index": 77,
+      "name_en": "Tangled Feet",
+      "name_es": "Tumbos",
+      "unused": false
+    },
+    {
+      "id": "tanglinghair",
+      "index": 221,
+      "name_en": "Tangling Hair",
+      "name_es": "Rizos Rebeldes",
+      "unused": false
+    },
+    {
+      "id": "technician",
+      "index": 101,
+      "name_en": "Technician",
+      "name_es": "Experto",
+      "unused": false
+    },
+    {
+      "id": "telepathy",
+      "index": 140,
+      "name_en": "Telepathy",
+      "name_es": "Telepatía",
+      "unused": false
+    },
+    {
+      "id": "teraformzero",
+      "index": 309,
+      "name_en": "Teraform Zero",
+      "name_es": "Teraformación 0",
+      "unused": false
+    },
+    {
+      "id": "terashell",
+      "index": 308,
+      "name_en": "Tera Shell",
+      "name_es": "Teracaparazón",
+      "unused": false
+    },
+    {
+      "id": "terashift",
+      "index": 307,
+      "name_en": "Tera Shift",
+      "name_es": "Teracambio",
+      "unused": false
+    },
+    {
+      "id": "teravolt",
+      "index": 164,
+      "name_en": "Teravolt",
+      "name_es": "Terravoltaje",
+      "unused": false
+    },
+    {
+      "id": "thermalexchange",
+      "index": 270,
+      "name_en": "Thermal Exchange",
+      "name_es": "Termoconversión",
+      "unused": false
+    },
+    {
+      "id": "thickfat",
+      "index": 47,
+      "name_en": "Thick Fat",
+      "name_es": "Sebo",
+      "unused": false
+    },
+    {
+      "id": "tintedlens",
+      "index": 110,
+      "name_en": "Tinted Lens",
+      "name_es": "Cromolente",
+      "unused": false
+    },
+    {
+      "id": "torrent",
+      "index": 67,
+      "name_en": "Torrent",
+      "name_es": "Torrente",
+      "unused": false
+    },
+    {
+      "id": "toughclaws",
+      "index": 181,
+      "name_en": "Tough Claws",
+      "name_es": "Garra Dura",
+      "unused": false
+    },
+    {
+      "id": "toxicboost",
+      "index": 137,
+      "name_en": "Toxic Boost",
+      "name_es": "Ímpetu Tóxico",
+      "unused": false
+    },
+    {
+      "id": "toxicchain",
+      "index": 305,
+      "name_en": "Toxic Chain",
+      "name_es": "Cadena Tóxica",
+      "unused": false
+    },
+    {
+      "id": "toxicdebris",
+      "index": 295,
+      "name_en": "Toxic Debris",
+      "name_es": "Capa Tóxica",
+      "unused": false
+    },
+    {
+      "id": "trace",
+      "index": 36,
+      "name_en": "Trace",
+      "name_es": "Calco",
+      "unused": false
+    },
+    {
+      "id": "transistor",
+      "index": 262,
+      "name_en": "Transistor",
+      "name_es": "Transistor",
+      "unused": false
+    },
+    {
+      "id": "triage",
+      "index": 205,
+      "name_en": "Triage",
+      "name_es": "Primer auxilio",
+      "unused": false
+    },
+    {
+      "id": "truant",
+      "index": 54,
+      "name_en": "Truant",
+      "name_es": "Pereza",
+      "unused": false
+    },
+    {
+      "id": "turboblaze",
+      "index": 163,
+      "name_en": "Turboblaze",
+      "name_es": "Turbollama",
+      "unused": false
+    },
+    {
+      "id": "unaware",
+      "index": 109,
+      "name_en": "Unaware",
+      "name_es": "Ignorante",
+      "unused": false
+    },
+    {
+      "id": "unburden",
+      "index": 84,
+      "name_en": "Unburden",
+      "name_es": "Liviano",
+      "unused": false
+    },
+    {
+      "id": "unnerve",
+      "index": 127,
+      "name_en": "Unnerve",
+      "name_es": "Nerviosismo",
+      "unused": false
+    },
+    {
+      "id": "unseenfist",
+      "index": 260,
+      "name_en": "Unseen Fist",
+      "name_es": "Puño Invisible",
+      "unused": false
+    },
+    {
+      "id": "vesselofruin",
+      "index": 284,
+      "name_en": "Vessel of Ruin",
+      "name_es": "Caldero Debacle",
+      "unused": false
+    },
+    {
+      "id": "victorystar",
+      "index": 162,
+      "name_en": "Victory Star",
+      "name_es": "Tinovictoria",
+      "unused": false
+    },
+    {
+      "id": "vitalspirit",
+      "index": 72,
+      "name_en": "Vital Spirit",
+      "name_es": "Espíritu Vital",
+      "unused": false
+    },
+    {
+      "id": "voltabsorb",
+      "index": 10,
+      "name_en": "Volt Absorb",
+      "name_es": "Absorbe Electricidad",
+      "unused": false
+    },
+    {
+      "id": "wanderingspirit",
+      "index": 254,
+      "name_en": "Wandering Spirit",
+      "name_es": "Alma Errante",
+      "unused": false
+    },
+    {
+      "id": "waterabsorb",
+      "index": 11,
+      "name_en": "Water Absorb",
+      "name_es": "Absorbe Agua",
+      "unused": false
+    },
+    {
+      "id": "waterbubble",
+      "index": 199,
+      "name_en": "Water Bubble",
+      "name_es": "Pompa",
+      "unused": false
+    },
+    {
+      "id": "watercompaction",
+      "index": 195,
+      "name_en": "Water Compaction",
+      "name_es": "Hidrorrefuerzo",
+      "unused": false
+    },
+    {
+      "id": "waterveil",
+      "index": 41,
+      "name_en": "Water Veil",
+      "name_es": "Velo Agua",
+      "unused": false
+    },
+    {
+      "id": "weakarmor",
+      "index": 133,
+      "name_en": "Weak Armor",
+      "name_es": "Armadura Frágil",
+      "unused": false
+    },
+    {
+      "id": "wellbakedbody",
+      "index": 273,
+      "name_en": "Well-Baked Body",
+      "name_es": "Cuerpo Horneado",
+      "unused": false
+    },
+    {
+      "id": "whitesmoke",
+      "index": 73,
+      "name_en": "White Smoke",
+      "name_es": "Humo Blanco",
+      "unused": false
+    },
+    {
+      "id": "wimpout",
+      "index": 193,
+      "name_en": "Wimp Out",
+      "name_es": "Huida",
+      "unused": false
+    },
+    {
+      "id": "windpower",
+      "index": 277,
+      "name_en": "Wind Power",
+      "name_es": "Energía Eólica",
+      "unused": false
+    },
+    {
+      "id": "windrider",
+      "index": 274,
+      "name_en": "Wind Rider",
+      "name_es": "Surcavientos",
+      "unused": false
+    },
+    {
+      "id": "wonderguard",
+      "index": 25,
+      "name_en": "Wonder Guard",
+      "name_es": "Superguarda",
+      "unused": false
+    },
+    {
+      "id": "wonderskin",
+      "index": 147,
+      "name_en": "Wonder Skin",
+      "name_es": "Piel Milagro",
+      "unused": false
+    },
+    {
+      "id": "zenmode",
+      "index": 161,
+      "name_en": "Zen Mode",
+      "name_es": "Modo Daruma",
+      "unused": false
+    },
+    {
+      "id": "zerotohero",
+      "index": 278,
+      "name_en": "Zero to Hero",
+      "name_es": "Cambio Heroico",
+      "unused": false
+    }
+  ]
+}

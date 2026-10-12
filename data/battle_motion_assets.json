@@ -489,6 +489,46 @@
         48
       ],
       "sha256": "4d5dfd3c5cc87fc456b5608e8c2560491d8d76aac0fa582793bc2e1c8fc38b8b"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb244_2.png",
+      "target": "assets/sprites/ui/battle/moves/eb244_2.png",
+      "size": [
+        32,
+        32
+      ],
+      "sha256": "88265b38ba6e19b7daa2bfc11cf03299f31a583276ba355608cbb7918f3f7a0e"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb644.png",
+      "target": "assets/sprites/ui/battle/moves/eb644.png",
+      "size": [
+        50,
+        50
+      ],
+      "sha256": "d396cb2fe5baf33cd0e213e7c52884327f60984b7624246b7d4bfa5e8f96605f"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb644_2.png",
+      "target": "assets/sprites/ui/battle/moves/eb644_2.png",
+      "size": [
+        50,
+        50
+      ],
+      "sha256": "ca5ec3d602ff54d6f9b3559df89b077aa5891562153224ab86577e5591c65bf9"
+    },
+    {
+      "pack": "17_ebdx_anim_pack",
+      "source": "EBDX_Anim_Pack/Graphics/EBDX/Animations/Moves/eb602_4.png",
+      "target": "assets/sprites/ui/battle/moves/eb602_4.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "6016d11925ecec9a383f8c7acf409293e56a18e1e8831fd6b918149b539d7e94"
     }
   ]
 }

@@ -224,3 +224,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Compatibilidad de regalos de las casas ampliadas | Interiores existentes y entrega real de objetos | PROVISIONAL, pendiente Javier | [ROM anterior/actual](comparativas/a3_casas_recompensas.md) |
 
 | Ocho ataques adicionales y vista de repetición F9 | Recursos EBDX/NikDie del pack 17, recorte nativo de ola y controles existentes | PROVISIONAL, pendiente Javier | [Antes/después y acceso](comparativas/a3_ocho_y_vista_animaciones.md) |
+
+| Ocho movimientos por índice de WikiDex | Impactos, puños, monedas, corte y tornado de EBDX/NikDie; originales a escala nativa | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_movimientos_por_indice.md) |

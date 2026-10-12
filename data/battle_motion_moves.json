@@ -785,5 +785,306 @@
         "status_asset": true
       }
     ]
+  },
+  "pound": {
+    "asset": "eb303",
+    "kind": "burst",
+    "pattern": "palm",
+    "count": 1,
+    "duration": 0.22,
+    "focus": "target",
+    "frame": [
+      64,
+      64
+    ],
+    "impact": true,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb303",
+        "kind": "burst",
+        "pattern": "palm",
+        "count": 1,
+        "duration": 0.22,
+        "focus": "target",
+        "frame": [
+          64,
+          64
+        ],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "karatechop": {
+    "asset": "eb602_4",
+    "kind": "burst",
+    "pattern": "chop",
+    "count": 1,
+    "duration": 0.4,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb602_4",
+        "kind": "burst",
+        "pattern": "chop",
+        "count": 1,
+        "duration": 0.24,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb244_2",
+        "kind": "burst",
+        "pattern": "strike_sparks",
+        "count": 4,
+        "duration": 0.16,
+        "focus": "target",
+        "frame": [],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "doubleslap": {
+    "asset": "eb303",
+    "kind": "burst",
+    "pattern": "slap",
+    "count": 1,
+    "duration": 0.36,
+    "focus": "target",
+    "frame": [
+      64,
+      64
+    ],
+    "impact": false,
+    "status_asset": true,
+    "strike_side": -1,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb303",
+        "kind": "burst",
+        "pattern": "slap",
+        "count": 1,
+        "duration": 0.18,
+        "focus": "target",
+        "frame": [
+          64,
+          64
+        ],
+        "impact": false,
+        "status_asset": true,
+        "strike_side": -1
+      },
+      {
+        "asset": "eb303",
+        "kind": "burst",
+        "pattern": "slap",
+        "count": 1,
+        "duration": 0.18,
+        "focus": "target",
+        "frame": [
+          64,
+          64
+        ],
+        "impact": false,
+        "status_asset": true,
+        "strike_side": 1
+      }
+    ]
+  },
+  "cometpunch": {
+    "asset": "eb086",
+    "kind": "burst",
+    "pattern": "punch",
+    "count": 1,
+    "duration": 0.56,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb086",
+        "kind": "burst",
+        "pattern": "punch",
+        "count": 1,
+        "duration": 0.14,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb244_2",
+        "kind": "burst",
+        "pattern": "strike_sparks",
+        "count": 5,
+        "duration": 0.14,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb086",
+        "kind": "burst",
+        "pattern": "punch",
+        "count": 1,
+        "duration": 0.14,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb244_2",
+        "kind": "burst",
+        "pattern": "strike_sparks",
+        "count": 5,
+        "duration": 0.14,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "megapunch": {
+    "asset": "eb086",
+    "kind": "burst",
+    "pattern": "heavy_punch",
+    "count": 1,
+    "duration": 0.54,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb086",
+        "kind": "burst",
+        "pattern": "heavy_punch",
+        "count": 1,
+        "duration": 0.32,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb244_2",
+        "kind": "burst",
+        "pattern": "strike_sparks",
+        "count": 8,
+        "duration": 0.22,
+        "focus": "target",
+        "frame": [],
+        "impact": true,
+        "status_asset": true
+      }
+    ]
+  },
+  "payday": {
+    "asset": "eb644",
+    "kind": "orb",
+    "pattern": "projectile",
+    "count": 1,
+    "duration": 0.58,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb644",
+        "kind": "orb",
+        "pattern": "projectile",
+        "count": 1,
+        "duration": 0.26,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      },
+      {
+        "asset": "eb644_2",
+        "kind": "burst",
+        "pattern": "coins",
+        "count": 6,
+        "duration": 0.32,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "cut": {
+    "asset": "eb602_4",
+    "kind": "burst",
+    "pattern": "cut",
+    "count": 1,
+    "duration": 0.3,
+    "focus": "target",
+    "frame": [],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "lunge",
+    "phases": [
+      {
+        "asset": "eb602_4",
+        "kind": "burst",
+        "pattern": "cut",
+        "count": 1,
+        "duration": 0.3,
+        "focus": "target",
+        "frame": [],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
+  },
+  "gust": {
+    "asset": "eb637",
+    "kind": "orb",
+    "pattern": "gust",
+    "count": 1,
+    "duration": 0.5,
+    "focus": "target",
+    "frame": [
+      64,
+      128
+    ],
+    "impact": false,
+    "status_asset": true,
+    "user_motion": "",
+    "phases": [
+      {
+        "asset": "eb637",
+        "kind": "orb",
+        "pattern": "gust",
+        "count": 1,
+        "duration": 0.5,
+        "focus": "target",
+        "frame": [
+          64,
+          128
+        ],
+        "impact": false,
+        "status_asset": true
+      }
+    ]
   }
 }
