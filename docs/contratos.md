@@ -1500,3 +1500,9 @@ F9 → Equipo → Quitar movimiento opera en el borrador del editor; cancelar co
 `battle_motion_moves.json` admite `phases` sin romper las secuencias anteriores de una sola fase. Cada fase declara recurso, kind, patrón, cantidad, duración, cuadro, foco e impacto. BattleMoveAnimation reproduce en orden, omite FX en modo rápido/reducido y deja el efecto genérico para IDs sin secuencia. No altera el motor de daño ni de habilidades. Auditoría de presentación/registro mediante `tools/arte/auditar_combate.gd`, con CSV/JSON y alcance explícito en su README.
 
 `npc_rewards.json` admite `legacy_placement` opcional para un cambio anterior del nombre del NPC: se consulta el ID actual del parche, después el alias antiguo si el actual falta, y finalmente el objeto base del registro canónico. Se mantienen flag y cantidad; el alias no añade otra colocación al generador ni duplica la entrega.
+
+### Vista de animaciones F9 (2026-10-12, A3)
+
+`PlaytestMovePreview`, solo accesible desde la sesión temporal de debug: recibe resúmenes de los dos Pokémon y el catálogo, instancia BattleScene y reproduce únicamente eventos move. No crea un motor ni ejecuta daño, estados o consumo. El objetivo propio se resuelve mediante MoveData.SELF_TARGETS; se puede invertir quién actúa. Usa el entorno de la pestaña Combate. Cerrar durante una fase se difiere hasta su final; al salir se retira el menú y vuelve F9. A/Z del selector no activa Repetir en el mismo frame. Se respetan preferencias de movimiento reducido y un modo rápido local, sin modificar preferencias guardadas.
+
+BattleFx admite region [x,y,w,h] para recortar una parte nativa de un PNG intacto. Las fases anteriores sin region siguen iguales. El recurso, tamaño y SHA-256 se verifican mediante battle_motion_assets.json y las pruebas de arte/movimiento.

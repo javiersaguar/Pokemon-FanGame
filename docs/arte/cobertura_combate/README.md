@@ -9,7 +9,7 @@ Inventario reproducible de los datos y registros actuales, sin parche RandomLock
 | Habilidades sin descripción | 49 |
 | Movimientos en el catálogo | 951 |
 | Movimientos que requieren script y no lo tienen registrado | 441 |
-| Movimientos con secuencia visual propia | 22 |
+| Movimientos con secuencia visual propia | 30 |
 
 `habilidades.csv` recoge ID, número, nombre español/inglés, registro del efecto, necesidad de script, presencia de descripción y especies asociadas. `movimientos.csv` distingue efecto y presentación. `estado.json` contiene ambos y el resumen. Orden alfabético estable por ID; regenerar con:
 

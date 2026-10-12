@@ -8481,7 +8481,7 @@
    "id": "firepunch",
    "name": "Puño Fuego",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9745,7 +9745,7 @@
    "id": "hydropump",
    "name": "Hidrobomba",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9865,7 +9865,7 @@
    "id": "icepunch",
    "name": "Puño Hielo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -11513,7 +11513,7 @@
    "id": "protect",
    "name": "Protección",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11785,7 +11785,7 @@
    "id": "recover",
    "name": "Recuperación",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13121,7 +13121,7 @@
    "id": "surf",
    "name": "Surf",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13185,7 +13185,7 @@
    "id": "swordsdance",
    "name": "Danza Espada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13473,7 +13473,7 @@
    "id": "thunderpunch",
    "name": "Puño Trueno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -14067,6 +14067,6 @@
   "ability_effects_registered": 29,
   "moves": 951,
   "moves_needing_unregistered_script": 441,
-  "specific_move_animations": 22
+  "specific_move_animations": 30
  }
 }

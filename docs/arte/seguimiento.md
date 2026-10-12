@@ -218,3 +218,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Seis ataques por fases y selector F9 de habilidades/sets | EBDX/NikDie a escala nativa y controles existentes | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_fases_y_habilidades.md) |
 
 | Compatibilidad de regalos de las casas ampliadas | Interiores existentes y entrega real de objetos | PROVISIONAL, pendiente Javier | [ROM anterior/actual](comparativas/a3_casas_recompensas.md) |
+
+| Ocho ataques adicionales y vista de repetición F9 | Recursos EBDX/NikDie del pack 17, recorte nativo de ola y controles existentes | PROVISIONAL, pendiente Javier | [Antes/después y acceso](comparativas/a3_ocho_y_vista_animaciones.md) |

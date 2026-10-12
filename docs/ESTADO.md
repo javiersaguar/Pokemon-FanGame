@@ -241,6 +241,12 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-mundo-sur`. Tramo: Ruta 
 
 **Cierre (Agente 5, 2026-10-09):** Móstoles, que quedó en la rama sin integrar al acabarse el uso, está en `main` (validado con el resto). El **Cercanías C-5** está hecho como pasarelas: Atocha (`madrid/retiro`, andenes en (29, 59) y (31, 59), llegada `from_cercanias` en (30, 58)) ⇄ Leganés (9, 12) y Móstoles (27, 11). Siguen pendientes de Javier sus reglas (coste, desbloqueo, retraso). Siguiente del tramo: Ruta 24 desde Getafe (`from_ruta_24` en (47, 63)) → Puertollano → Rutas 25 y 26 → Málaga; la Calle de la Victoria; Pamplona ⇄ Ruta 21 cuando exista Pamplona.
 
+### Ocho ataques y revisión de animaciones (2026-10-12)
+
+**Hecho:** Surf, Hidrobomba, Protección, Recuperación, Danza Espada, Puño Fuego, Puño Hielo y Puño Trueno; total 30 movimientos con secuencia propia. Ocho recursos originales del pack 17, escala nativa y recorte de la ola intacta. F9 → Galería → Animaciones permite buscar/repetir cualquier movimiento, con el equipo/entorno escogidos y desde ambos lados; no consume PS/PP/objetos ni aplica efectos de motor. Cerrar en mitad del ataque vuelve al acabar sus fases, sin restos de FX ni locks. Reducida/rápida sin partículas; los movimientos restantes mantienen presentación por tipo. Corregida activación involuntaria del botón de debajo al aceptar un selector. [Comparativa y acceso](arte/comparativas/a3_ocho_y_vista_animaciones.md).
+
+**Pruebas dirigidas:** animaciones 9/9, 6.155 aserciones; vista 3/3, 37 aserciones. Capturas reales revisadas; auditoría actualizada a 30 animaciones. **Integración en curso:** suite completa y validadores; reserva del tramo de Levante del A5 incorporada sin editar sus mapas. Efectos/learnsets siguen en petición 81, separados de la animación.
+
 ### Continuación sobre la ampliación de interiores (2026-10-12)
 
 **Base recibida:** main `2d7e07a1` amplía interiores y modifica F9, tiendas, PC y tamaño de Pokémon en dobles. Se conserva esa entrega. **Regresión detectada al traerla:** 29 NPCs de cortesía se llaman Anfitrion, pero sus colocaciones figuraban como VecinoRegalo; fallaba `test_mundo::test_lista_de_objetos_colocados_al_dia` con errores de configuración. Corregidos datos y el generador de casas; registro R.2 regenerado, 36 objetos. Se preservan flags y cantidades. `legacy_placement` permite leer las ROM ya generadas con el ID anterior; un parche con el ID actual tiene prioridad. No se relaja la prueba ni se cambia el escáner.

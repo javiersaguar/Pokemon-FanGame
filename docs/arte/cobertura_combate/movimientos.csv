@@ -252,7 +252,7 @@ fireblast,Llamarada,fire,false,false,false
 firefang,Colmillo Ígneo,fire,false,false,false
 firelash,Látigo Ígneo,fire,false,false,false
 firepledge,Voto Fuego,fire,true,false,false
-firepunch,Puño Fuego,fire,false,false,false
+firepunch,Puño Fuego,fire,false,false,true
 firespin,Giro Fuego,fire,true,true,false
 firstimpression,Escaramuza,bug,true,false,false
 fishiousrend,Branquibocado,water,true,false,false
@@ -410,7 +410,7 @@ hornleech,Asta Drenaje,grass,false,false,false
 howl,Aullido,normal,false,false,false
 hurricane,Vendaval,flying,true,true,false
 hydrocannon,Hidrocañón,water,true,true,false
-hydropump,Hidrobomba,water,false,false,false
+hydropump,Hidrobomba,water,false,false,true
 hydrosteam,Hidrovapor,water,false,false,false
 hydrovortex,Hidrovórtice Abisal,water,true,false,false
 hyperbeam,Hiperrayo,normal,true,true,false
@@ -425,7 +425,7 @@ icebeam,Rayo Hielo,ice,false,false,true
 iceburn,Llama Gélida,ice,true,false,false
 icefang,Colmillo Hielo,ice,false,false,false
 icehammer,Martillo Hielo,ice,false,false,false
-icepunch,Puño Hielo,ice,false,false,false
+icepunch,Puño Hielo,ice,false,false,true
 iceshard,Esquirla Helada,ice,false,false,false
 icespinner,Pirueta Helada,ice,true,false,false
 iciclecrash,Chuzos,ice,false,false,false
@@ -631,7 +631,7 @@ powerwhip,Latigazo,grass,false,false,false
 precipiceblades,Filo del Abismo,ground,false,false,false
 present,Presente,normal,true,false,false
 prismaticlaser,Láser Prisma,psychic,true,false,false
-protect,Protección,normal,true,true,false
+protect,Protección,normal,true,true,true
 psybeam,Psicorrayo,psychic,false,false,false
 psyblade,Psicohojas,psychic,true,false,false
 psychic,Psíquico,psychic,false,false,true
@@ -665,7 +665,7 @@ rapidspin,Giro Rápido,normal,true,true,false
 razorleaf,Hoja Afilada,grass,false,false,false
 razorshell,Concha Filo,water,false,false,false
 razorwind,Viento Cortante,normal,true,false,false
-recover,Recuperación,normal,false,false,false
+recover,Recuperación,normal,false,false,true
 recycle,Reciclaje,normal,true,false,false
 reflect,Reflejo,psychic,true,true,false
 reflecttype,Clonatipo,normal,true,false,false
@@ -832,7 +832,7 @@ superfang,Superdiente,normal,true,true,false
 superpower,Fuerza Bruta,fighting,false,false,false
 supersonic,Supersónico,normal,false,false,false
 supersonicskystrike,Picado Supersónico,flying,true,false,false
-surf,Surf,water,false,false,false
+surf,Surf,water,false,false,true
 surgingstrikes,Azote Torrencial,water,false,false,false
 swagger,Fanfarronear,normal,false,false,false
 swallow,Tragar,normal,true,false,false
@@ -840,7 +840,7 @@ sweetkiss,Beso Dulce,fairy,false,false,false
 sweetscent,Dulce Aroma,normal,false,false,true
 swift,Meteoros,normal,false,false,false
 switcheroo,Trapicheo,dark,true,false,false
-swordsdance,Danza Espada,normal,false,false,false
+swordsdance,Danza Espada,normal,false,false,true
 synchronoise,Sincrorruido,psychic,true,false,false
 synthesis,Fotosíntesis,grass,true,true,false
 syrupbomb,Bomba Caramelo,grass,true,false,false
@@ -876,7 +876,7 @@ thundercage,Electrojaula,electric,true,false,false
 thunderclap,Relámpago Súbito,electric,true,false,false
 thunderfang,Colmillo Rayo,electric,false,false,false
 thunderouskick,Patada Relámpago,fighting,false,false,false
-thunderpunch,Puño Trueno,electric,false,false,false
+thunderpunch,Puño Trueno,electric,false,false,true
 thundershock,Impactrueno,electric,false,false,false
 thunderwave,Onda Trueno,electric,false,false,false
 tickle,Cosquillas,normal,false,false,false
