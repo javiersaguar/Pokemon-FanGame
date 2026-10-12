@@ -487,3 +487,14 @@ func test_tornado_hace_el_doble_a_quien_vuela() -> void:
 	var hit_ground := g.max_hp() - g.current_hp
 	assert_gt(hit_ground, 0)
 	assert_almost_eq(hit_air, 2 * hit_ground, 1)
+
+
+func test_el_fuego_descongela_pero_no_quema_en_el_mismo_golpe() -> void:
+	# secondary = 0: sale la quemadura de Lanzallamas; frz_thaw alto: no se descongela solo.
+	var luck := {"accuracy": 0.0, "crit": 0.999, "secondary": 0.0, "frz_thaw": 0.999}
+	var engine := _engine([_mon(&"snorlax", 60, ["splash"])], [_mon(&"growlithe", 20, ["flamethrower"])], luck)
+	var target := engine.active(BattleEngine.PLAYER).pokemon
+	target.status = &"frz"
+	engine.submit(BattleAction.fight(0))
+	assert_lt(target.current_hp, target.max_hp(), "el Lanzallamas golpea")
+	assert_eq(target.status, &"", "descongelado y sin quemadura: al aplicarla aún estaba congelado")
