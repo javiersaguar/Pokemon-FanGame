@@ -43,6 +43,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	var p: RefCounted = painter.new("Ruta9", SIZE, data, 1238)
 	p.fill_grass(0.25)
 	p.connect_edge("north", &"valencia/turia", 33, Vector2i(25, 29))
+	p.connect_edge("south", &"ruta_10/exterior", 0, Vector2i(25, 29))
 
 	# La CV-500 de norte a sur y las calles de Gandía.
 	p.paving(Rect2i(25, 0, 4, 57))

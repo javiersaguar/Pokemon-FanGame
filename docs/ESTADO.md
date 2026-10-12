@@ -410,6 +410,7 @@ Worktree `pokemon-panchito-agente5`, rama `feat/agente5-calidad`. Tramo: Ruta 9 
 
 **Hecho:**
 - **Ruta 9 · La Albufera y Gandía** (`ruta_9/exterior`, 48×76): sale del Jardín del Turia por el sur (columnas 58–61 del Turia ⇄ 25–28 de la ruta). La Devesa del Saler, El Palmar con cuatro **barracas** y dos **barcas** de vela latina, la huerta, los arrozales, Cullera y Gandía con el **Palau Ducal dels Borja**. Vicent (clase nueva `pescador`), Pilar, Iván y Nerea; encuentros 26–29 con la etapa que pide el RandomLocke. Alcance: 0 problemas. Salida sur hacia la Ruta 10: columnas 25–28, aparición `from_ruta_10` en (26, 75).
+- **Ruta 10 · Costa Blanca** (`ruta_10/exterior`, 60×64): unida con la Ruta 9 (columnas 25–28 en los dos mapas). Calp con el **Peñón de Ifach**, Altea con su **iglesia de la cúpula azul**, Benidorm con los **rascacielos**, el **Intempo**, la grúa, el pub inglés y la playa, y La Vila Joiosa. Marc, Gary, Paco y Kevin (clases que ya existían); encuentros 27–30. Alcance: 0 problemas. Salida sur hacia Alicante: columnas 25–28, aparición `from_alicante` en (26, 63).
 
 **Para quien lleva puertas e interiores:** la Ruta 9 tiene 18 puertas sin interior (barracas, casas de Gandía, Palau Ducal, faro, heladería). Cuando publique Alicante y Murcia lo aviso aquí para abrir sus servicios.
 
