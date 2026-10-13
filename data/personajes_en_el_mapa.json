@@ -1323,6 +1323,54 @@
     "Obras de ampliación de la A-6. Paso cortado hacia la Ruta 4 y El Escorial.",
     "Acabamos cuando tengas siete medallas. Lo pone en el cartel. El cartel lo puso el ministro."
    ]
+  },
+  {
+   "id": "averia_c5_1",
+   "sprite": "npc_man",
+   "mapa": "madrid/retiro",
+   "cerca": [
+    29,
+    59
+   ],
+   "casilla": [
+    29,
+    59
+   ],
+   "fija": true,
+   "bloquea_pasarela": true,
+   "mira": "arriba",
+   "lugar": "Andén del Cercanías C-5 en Atocha: averiado hasta la 1.ª medalla",
+   "hasta": {
+    "medallas": 1
+   },
+   "frases": [
+    "Cercanías C-5: servicio interrumpido por avería. Disculpen las molestias.",
+    "Volverá a funcionar cuando ganes tu primera medalla. Lo dice el ministro en un tuit, así que igual."
+   ]
+  },
+  {
+   "id": "averia_c5_2",
+   "sprite": "npc_man",
+   "mapa": "madrid/retiro",
+   "cerca": [
+    31,
+    59
+   ],
+   "casilla": [
+    31,
+    59
+   ],
+   "fija": true,
+   "bloquea_pasarela": true,
+   "mira": "arriba",
+   "lugar": "Andén del Cercanías C-5 en Atocha: averiado hasta la 1.ª medalla",
+   "hasta": {
+    "medallas": 1
+   },
+   "frases": [
+    "Cercanías C-5: servicio interrumpido por avería. Disculpen las molestias.",
+    "Volverá a funcionar cuando ganes tu primera medalla. Lo dice el ministro en un tuit, así que igual."
+   ]
   }
  ],
  "pendientes": [

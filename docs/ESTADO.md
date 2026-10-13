@@ -142,6 +142,8 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo`. Lista en `docs/S
 
 - **Tarea 2 · vuelta a casa (San Miguel y Rutas 1–4):** entrenadores y encuentros de las Rutas 1–4 subidos a la franja de después de la 7.ª medalla (Ruta 1: 48–50, Ruta 2: 49–51, Ruta 3: 51–53, Ruta 4: 53–55, de San Miguel hacia Madrid), cada especie evolucionada a la etapa de su nivel, con `tools/mundo/subir_niveles.py` (ROM clásica y caos sin errores). **Salida de Moncloa a la Ruta 4 cortada** por las obras de la A-6: cinco obreros en el borde oeste de `madrid/moncloa` (columna 0, filas 13–17) que se van con 7 medallas (colocaciones con `"hasta"` y `"fija"` en `data/personajes_en_el_mapa.json`). San Miguel no tiene encuentros; sus tres entrenadores son los combates del rival de la intro antigua (de la intro, Agente A) y no los toco. Javier en San Miguel va con la tarea 5.
 
+- **Tarea 3 (empezada) · C-5 averiado:** dos revisores tapan los andenes del Cercanías C-5 en Atocha (`madrid/retiro` (29, 59) y (31, 59)) y se van con la 1.ª medalla (`"hasta": {"medallas": 1}`, `"bloquea_pasarela": true`). **Falta de la tarea 3:** el hospital Quirón con enfermeros y Ayuso al final (que abre el gimnasio 1) y el combate final en la terraza del ático de Chamberí; el retraso de chiste del C-5 (1 de cada 4 viajes) es de sistemas.
+
 **Pendiente de la tarea 1:** PENDIENTE JAVIER el nombre por defecto del rival (decisiones §8). En `madrid/moncloa` la puerta de la casa azul (5, 8) sigue sin poder alcanzarse (ya pasaba antes).
 
 ### Portada, gimnasios y personajes (2026-10-12)

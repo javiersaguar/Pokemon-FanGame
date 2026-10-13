@@ -48,7 +48,10 @@ func test_salen_en_su_mapa_sin_pisar_a_nadie() -> void:
 			assert_not_null(node, "%s no sale en %s" % [entry["id"], map_id])
 			if node:
 				assert_eq(Grid.to_tile(node.position), Vector2i(int(entry["casilla"][0]), int(entry["casilla"][1])))
-				assert_null(map.warp_at(Grid.to_tile(node.position)), "%s está sobre una pasarela" % entry["id"])
+				if not bool(entry.get("bloquea_pasarela", false)):
+					assert_null(map.warp_at(Grid.to_tile(node.position)), "%s está sobre una pasarela" % entry["id"])
+				else:
+					assert_not_null(map.warp_at(Grid.to_tile(node.position)), "%s debería tapar una pasarela" % entry["id"])
 		map.free()
 
 
