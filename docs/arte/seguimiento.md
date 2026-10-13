@@ -356,3 +356,16 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/ester_exposito.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_7.md` |
 | `characters/famosos_atlas/folagor.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_7.md` |
 | `characters/famosos_atlas/pereira7.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_7.md` |
+
+## Famosos · entrega 8
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/amancio_ortega.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+| `characters/famosos_atlas/abascal.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+| `characters/famosos_atlas/topuria.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+| `characters/famosos_atlas/nico_williams.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+| `characters/famosos_atlas/inaki_williams.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+| `characters/famosos_atlas/broncano.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+| `characters/famosos_atlas/oscar_puente.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+| `characters/famosos_atlas/mario_casas.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
