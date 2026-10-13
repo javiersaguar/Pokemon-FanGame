@@ -117,8 +117,10 @@ func go_to_title() -> void:
 func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dictionary = {}) -> Error:
 	if is_busy():
 		return ERR_BUSY
+	var character := StringName(options.get("player_character", ""))
+	if character != &"" and PlayerIdentity.info(character).is_empty(): return ERR_INVALID_PARAMETER
 	var explicit_map := map != &""
-	var cfg: Dictionary = MvpLocations.new_game_config()
+	var cfg: Dictionary = MvpLocations.new_game_config(StringName(options.get("player_character", "")))
 	if map == &"":
 		map = StringName(cfg.get("map", ""))
 	if spawn == &"":
@@ -483,13 +485,15 @@ func _on_name_requested(kind: StringName, initial: String) -> void:
 
 
 ## API de A3: ROM ya generada, settings y familias de la misma entrada explícita.
-func start_randomlocke(rom: RomPatch, slot: int, intro: bool = true) -> Error:
+func start_randomlocke(rom: RomPatch, slot: int, intro: bool = true, options: Dictionary = {}) -> Error:
 	if rom == null or not rom.errors.is_empty() or rom.generator_version() != Randomizer.GENERATOR_VERSION:
 		return ERR_INVALID_DATA
 	var input := rom.input if rom.input != null else RandomizerInput.from_datadb()
-	return await start_new_game(&"", &"", {"slot": slot, "intro": intro, "mode": GameState.MODE_RANDOMLOCKE,
+	options = options.duplicate(true)
+	options.merge({"slot": slot, "intro": intro, "mode": GameState.MODE_RANDOMLOCKE,
 		"rom_patch": rom.to_dict(), "randomlocke": {"seed_code": rom.seed_code(), "settings": rom.data.settings,
-		"families": input.families(rom)}})
+		"families": input.families(rom)}}, true)
+	return await start_new_game(&"", &"", options)
 
 func request_text(prompt: String, initial: String = "", placeholder: String = "", allow_cancel: bool = false) -> String:
 	if ResourceLoader.exists("res://src/ui/name/name_keyboard.gd"):

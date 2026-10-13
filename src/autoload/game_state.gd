@@ -4,7 +4,7 @@ extends Node
 
 ## Súbelo cada vez que cambie el formato de to_dict() y añade la migración
 ## correspondiente en SaveManager.
-const SAVE_VERSION := 2
+const SAVE_VERSION := 3
 const WORLD_CONFIG_PATH := "res://data/world.json"
 
 ## Modos de partida (Fase R): normal o RandomLocke.
@@ -36,6 +36,7 @@ var roamers: Dictionary = {}
 var always_run := false
 var player_name: String = ""
 var player_gender: StringName = &"male"
+var player_character: StringName = &""
 var rival_name: String = ""
 var trainer_id: int = 0
 var secret_id: int = 0
@@ -105,6 +106,7 @@ func reset() -> void:
 	always_run = bool(world_config.get("new_game", {}).get("always_run", false))
 	player_name = ""
 	player_gender = &"male"
+	player_character = &""
 	rival_name = ""
 	trainer_id = 0
 	secret_id = 0
@@ -134,7 +136,10 @@ func new_game(options: Dictionary = {}) -> void:
 	rom_patch = options.get("rom_patch", {})
 	if is_randomlocke():
 		randomlocke.merge({"zones": {}, "deaths": 0, "status": "in_progress"})
-	var cfg: Dictionary = MvpLocations.new_game_config()
+	player_character = StringName(options.get("player_character", ""))
+	var identity := PlayerIdentity.info(player_character)
+	if not identity.is_empty(): player_gender = StringName(identity.gender)
+	var cfg: Dictionary = MvpLocations.new_game_config(player_character)
 	trainer_id = randi_range(0, 65535)
 	secret_id = randi_range(0, 65535)
 	money = int(cfg.get("money", 0))
@@ -294,6 +299,7 @@ func to_dict() -> Dictionary:
 		"player": {
 			"name": player_name,
 			"gender": String(player_gender),
+			"character": String(player_character),
 			"rival_name": rival_name,
 			"trainer_id": trainer_id,
 			"secret_id": secret_id,
@@ -329,6 +335,9 @@ func from_dict(data: Dictionary) -> void:
 	var p: Dictionary = data.get("player", {})
 	player_name = p.get("name", "")
 	player_gender = StringName(p.get("gender", "male"))
+	player_character = StringName(p.get("character", ""))
+	if not PlayerIdentity.info(player_character).is_empty():
+		player_gender = StringName(PlayerIdentity.info(player_character).gender)
 	rival_name = p.get("rival_name", "")
 	trainer_id = int(p.get("trainer_id", 0))
 	secret_id = int(p.get("secret_id", 0))

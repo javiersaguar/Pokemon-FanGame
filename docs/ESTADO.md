@@ -124,7 +124,7 @@ Rama `feat/agente1-inicio`, worktree `pokemon-panchito-agente1`. Lista de `SESIO
 
 **Contrato de inicio para el Agente B:** IDs acordados por la sesión: `pozuelo/exterior` (cayetano/cayetana) y `orcasitas/exterior` (cani/choni), aparición `default`. A prepara la elección persistente y sus gráficos; B pinta los mapas y sus entradas. El destino se valida antes de sustituir la partida: si falta el mapa no se inicia en un lugar distinto. El laboratorio físico en Moncloa es de B. Los IDs de casa/habitación y la llegada al laboratorio quedan por comunicar en ESTADO; A consume los destinos por datos.
 
-**En curso:** tarea 1, elección y gráficos de los cuatro protagonistas. Las partidas anteriores conservarán sus sprites anteriores cuando no tengan identidad nueva. Nombre del rival, skins concretas y uso de la mochila Basic-Fit siguen **PENDIENTE JAVIER** según las decisiones.
+**Tarea 1 terminada:** elección previa y cancelable de sexo/personaje, las cuatro hojas con frente/espalda/dieciséis pasos, persistencia de identidad y origen, guardado v3 con migración v2 (aspecto antiguo conservado). Comparativa `docs/arte/comparativas/a_inicio_personajes.md`. Suite completa **523/523**, **34.376 aserciones**, 358,301 s; arte **10.966 PNG, 0 errores, 0 avisos**; datos **0 errores, 3 avisos previos**. Gráficos provisionales hasta revisión. La entrada real de nueva partida valida `default` del pueblo antes de mutar; los mapas los está entregando B. Transporte específico de cada diseño pendiente: se conservan las variantes previas. **Siguiente:** tarea 2, iniciales aleatorios por partida. Las partidas anteriores conservarán sus sprites anteriores cuando no tengan identidad nueva. Nombre del rival, skins concretas y uso de la mochila Basic-Fit siguen **PENDIENTE JAVIER** según las decisiones.
 
 ### Agente B · Mundo y personajes (sesión del 2026-10-14)
 
@@ -882,6 +882,8 @@ Estas respuestas mandan sobre lo que diga la columna "Respuesta" de la tabla.
 - **PENDIENTE JAVIER, Calle de la Victoria:** la ficha propone cloacas y túneles del Metro, pero faltan recursos específicos de Metro/cloacas y el recorrido aprobado (salas, puzzles, encuentros y acceso a la Liga). ¿Cómo quieres estructurarlo? [Traspaso y accesos exteriores existentes](mundo/calle_victoria.md). Sin mapa subterráneo ni warps a destinos inexistentes.
 
 ## Avisos de cambios de contrato
+
+- **Agente A, sesión 2026-10-14:** identidad persistente `player_character` (save v3, migración desde v2), `PlayerIdentity`, `CharacterChoice` y opciones aditivas de `start_randomlocke`. Detalle en contratos §7b.1; destinos `pozuelo/exterior` y `orcasitas/exterior`, llegada `default`, para B.
 
 | Fecha | Agente | Cambio |
 |-------|--------|--------|

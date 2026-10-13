@@ -31,8 +31,14 @@ func intro() -> void:
 		return
 	var presentation := ProfessorIntro.begin()
 	await say("¡Bienvenido al mundo Pokémon! Soy el profesor {world:professor}.")
-	var gender := await choose("¿Cómo quieres empezar?", PackedStringArray(["Chico", "Chica"]))
-	GameState.player_gender = &"female" if gender == 1 else &"male"
+	if GameState.player_character == &"":
+		var gender := await choose("¿Cómo quieres empezar?", PackedStringArray(["Chico", "Chica"]))
+		GameState.player_gender = &"female" if gender == 1 else &"male"
+		var identities := PlayerIdentity.ids(GameState.player_gender)
+		var labels := PackedStringArray()
+		for id: StringName in identities: labels.append(PlayerIdentity.info(id).name)
+		var selected := await choose("Elige tu personaje", labels)
+		GameState.player_character = identities[selected]
 	# Identidades explícitas en sala; flujo definitivo pide teclado de A3.
 	GameState.player_name = str(param("player_name", "")).strip_edges()
 	if GameState.player_name.is_empty():
@@ -117,6 +123,9 @@ func choose(text: String, options: PackedStringArray) -> int:
 func request_name(kind: StringName, initial: String) -> String:
 	return await Cutscene.request_name(kind, initial)
 func travel(destination: String) -> void:
+	# El inicio nuevo ya está en su pueblo; B entregará los destinos interiores.
+	if GameState.player_character != &"" and destination == "bedroom" and (str(GameState.map_id).begins_with("pozuelo/") or str(GameState.map_id).begins_with("orcasitas/")):
+		return
 	var target: Dictionary = MvpLocations.target(StringName(destination))
 	if target.is_empty():
 		return

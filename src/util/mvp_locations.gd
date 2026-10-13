@@ -35,7 +35,7 @@ static func activate(profile: String) -> PackedStringArray:
 		GameState.world_config.mvp_locations.profile = profile
 	return errors
 
-static func new_game_config() -> Dictionary:
+static func new_game_config(character: StringName = &"") -> Dictionary:
 	var cfg: Dictionary = GameState.world_config.get("new_game", {}).duplicate()
 	var start := target(&"start")
 	if not start.is_empty():
@@ -44,4 +44,6 @@ static func new_game_config() -> Dictionary:
 	if not heal.is_empty():
 		cfg["healing_map"] = heal.get("map", "")
 		cfg["healing_spawn"] = heal.get("spawn", "default")
+	var origin := PlayerIdentity.destination(character)
+	if not origin.is_empty(): cfg.merge(origin, true)
 	return cfg

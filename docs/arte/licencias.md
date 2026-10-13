@@ -28,3 +28,7 @@ Datos (no arte), para los planos de referencia de `docs/mundo/planos/`: **OpenSt
 2. Añade la fila aquí y los autores en `CREDITOS.md` (sección de su tipo).
 3. Copia al repo **solo los archivos que se usen**, sin reescalar (`DIRECTRICES.md` §7.1).
 4. Apunta el asset en `docs/arte/seguimiento.md` con su fuente.
+
+## Protagonistas de Spain (sesión 2026-10-14)
+
+Cuatro diseños originales para el juego en `assets/sprites/characters/protagonistas/`, según la referencia aportada por Javier en `docs/arte/referencias/javier_2026-10-13/protagonistas_cayetana_choni_cayetano_cani.webp`. Se conserva cada PNG con alfa sin modificar; metadatos de regiones en `data/protagonistas.json`. No se ha copiado otro pack para estos cuatro diseños. Son provisionales y esperan revisión de Javier. Los recursos de transporte y de partidas anteriores siguen acreditados a sus autores originales.

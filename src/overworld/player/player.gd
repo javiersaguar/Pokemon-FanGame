@@ -80,16 +80,20 @@ func _unhandled_input(event: InputEvent) -> void:
 
 ## Sprite según el sexo elegido (GameState.player_gender).
 func refresh_appearance() -> void:
+	var appearance := get_node("Sprite") as ProtagonistSprite
 	var paths: Array = SHEETS.get(GameState.player_gender, SHEETS[&"male"])
 	var mode := FieldActions.transport()
 	var transport_sheet := FieldActions.sheet_path(mode, GameState.player_gender)
+	appearance.set_identity(&"")
 	if mode != &"walk" and not transport_sheet.is_empty() and ResourceLoader.exists(transport_sheet):
 		run_sprite_sheet = null
 		sprite_sheet = load(transport_sheet)
 	else:
 		GameState.set_var(&"transport", "walk")
-		run_sprite_sheet = load(paths[1])
-		sprite_sheet = load(paths[0])
+		appearance.set_identity(GameState.player_character)
+		if appearance.poses.is_empty():
+			run_sprite_sheet = load(paths[1])
+			sprite_sheet = load(paths[0])
 	if is_node_ready():
 		ray.collision_mask = BLOCKING_MASK & ~8 if FieldActions.transport() == &"surf" else BLOCKING_MASK
 

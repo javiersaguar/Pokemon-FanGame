@@ -1,7 +1,7 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://src/overworld/player/player.gd" id="1_player"]
-[ext_resource type="Script" path="res://src/overworld/character_sprite.gd" id="2_sprite"]
+[ext_resource type="Script" path="res://src/overworld/protagonist_sprite.gd" id="2_sprite"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/player_male.png" id="3_sheet"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/player_male_run.png" id="4_run"]
 

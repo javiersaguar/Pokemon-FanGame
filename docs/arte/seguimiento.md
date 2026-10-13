@@ -236,3 +236,15 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Ocho ataques adicionales y vista de repetición F9 | Recursos EBDX/NikDie del pack 17, recorte nativo de ola y controles existentes | PROVISIONAL, pendiente Javier | [Antes/después y acceso](comparativas/a3_ocho_y_vista_animaciones.md) |
 
 | Ocho movimientos por índice de WikiDex | Impactos, puños, monedas, corte y tornado de EBDX/NikDie; originales a escala nativa | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_movimientos_por_indice.md) |
+
+## Protagonistas de Spain · sesión del 14 de octubre
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/protagonistas/cayetano.png` | Frente, espalda y mapa | A | integrado, provisional | Diseño a partir de la referencia de Javier | ⏳ | Polo azul, jersey crema, pantalón beige; Pozuelo; comparativa `a_inicio_personajes.md` |
+| `characters/protagonistas/cani.png` | Frente, espalda y mapa | A | integrado, provisional | Diseño a partir de la referencia de Javier | ⏳ | Chándal negro/rojo; Orcasitas; misma comparativa |
+| `characters/protagonistas/cayetana.png` | Frente, espalda y mapa | A | integrado, provisional | Diseño a partir de la referencia de Javier | ⏳ | Chaqueta beige, diadema, bolso; Pozuelo; misma comparativa |
+| `characters/protagonistas/choni.png` | Frente, espalda y mapa | A | integrado, provisional | Diseño a partir de la referencia de Javier | ⏳ | Coleta, chaqueta rosa, aros; Orcasitas; misma comparativa |
+| Elección de personaje | Interfaz | A | integrado, provisional | Panel y controles existentes | ⏳ | Selección previa a nueva partida, cancelar seguro; `a_inicio_*.png` |
+
+Los PNG nuevos se conservan intactos; se muestran por regiones registradas y filtro nearest. En mapa se presentan a 56 px de alto; frente y espalda encajan proporcionalmente en la interfaz. Las variantes específicas de bici/surf/pesca siguen pendientes de estos cuatro diseños; siguen usando las hojas anteriores del pack. Los protagonistas anteriores siguen disponibles para las partidas migradas sin identidad nueva.

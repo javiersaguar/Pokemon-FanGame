@@ -569,6 +569,14 @@ Teclado A3: `Cutscene.request_name(kind: StringName, initial := "") -> String` e
 
 ---
 
+## 7b.1 Identidad del protagonista (sesión 2026-10-14, Agente A)
+
+`data/protagonistas.json` fija cuatro IDs (`cayetano`, `cani`, `cayetana`, `choni`), sexo, origen y regiones de sus atlas originales. `PlayerIdentity.info/ids/destination/texture/walk_frames` devuelve las definiciones y vistas, sin alterar los PNG. `CharacterChoice.pick()` elige sexo y diseño y devuelve ID o cadena vacía al cancelar. El flujo de nueva partida lo solicita antes de reemplazar la sesión; la intro reutiliza una elección recibida por `options.player_character`.
+
+`GameState.player_character` se guarda en `player.character`; `SaveManager` añade `player_character` al resumen. Formato **3**: migración desde 2 añade identidad vacía, conservando sexo, posición y módulos; el vacío muestra las hojas anteriores. Nueva identidad fija el sexo y el origen. `MvpLocations.new_game_config(character)` combina destino por identidad con la configuración general; `SceneManager.start_new_game` valida ID y aparición antes de mutar partida/parche. `start_randomlocke(rom,slot,intro,options)` admite opciones aditivas para la misma elección. Pozuelo/Orcasitas: `exterior`, aparición `default`; interiores los entrega B por datos. No se usa otro pueblo si falta el nuevo destino.
+
+`ProtagonistSprite`, compatible con `CharacterSprite`, presenta dieciséis regiones de pasos con altura visual 56 px y pies en el borde de la casilla. Caminar/correr alterna la misma hoja; las variantes dedicadas de transporte conservan el pack previo. Atlas intactos, filtro nearest; los recursos nuevos son provisionales hasta revisión de Javier.
+
 ## 7c. Integración Locke del mundo (Agente 1)
 
 `GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados. SAVE_VERSION 2 migra v1 conservando ROM, zonas y contadores antiguos (`legacy_death_count`), sin fabricar lápidas ni permisos para encuentros ya gastados.

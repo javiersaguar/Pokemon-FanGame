@@ -4,7 +4,10 @@ func run(slot: int) -> void:
 	var mode := await ChoiceScreen.pick("Modo de partida",["Normal","RandomLocke"],["Aventura con los datos originales del juego.","Una ROM por semilla, con reglas y ajustes configurables. Todas las especies pueden aparecer según ajustes y prohibidos."])
 	if mode < 0: return
 	if mode == 0:
-		await SceneManager.start_new_game(&"",&"",{"slot":slot,"intro":true})
+		var character := await CharacterChoice.pick()
+		if character == &"": return
+		var error := await SceneManager.start_new_game(&"",&"",{"slot":slot,"intro":true,"player_character":character})
+		if error != OK: await Dialogue.say("No se pudo iniciar en tu pueblo: %s." % error_string(error))
 		return
 	while not GameState.in_game:
 		var choice := await ChoiceScreen.pick("RandomLocke",["Clásico","Solo aleatorio","Caos","Personalizar","Usar código"],["Equilibrio y reglas Locke del preset.","Aleatorización sin las reglas Locke.","Más cambios con el preset Caos.","Configurar todos los ajustes disponibles.","Pegar un código compartido de esta versión."])
@@ -30,5 +33,7 @@ func run(slot: int) -> void:
 			await Dialogue.say("No se pudo generar la ROM. %s" % (str(rom.errors) if rom else "Datos no disponibles."))
 			continue
 		if not await RandomlockeSummaryScreen.confirm(rom): continue
-		var error := await SceneManager.start_randomlocke(rom,slot,true)
+		var character := await CharacterChoice.pick()
+		if character == &"": return
+		var error := await SceneManager.start_randomlocke(rom,slot,true,{"player_character":character})
 		if error != OK: await Dialogue.say("No se pudo iniciar: %s." % error_string(error))

@@ -548,8 +548,11 @@ func _list(prompt: String, labels: PackedStringArray, disabled: Array[bool], can
 func _intro(start_events: Array) -> void:
 	var trainer := _trainer()
 	# Sin sprite real (aún no hay entrenadores en combate) no se enseña ningún relleno.
-	var player_back := PlaceholderArt.load_texture(PLAYER_BACK_SPRITE % GameState.player_gender)
+	var player_back: Texture2D = PlayerIdentity.texture(GameState.player_character, &"back")
+	if player_back == null:
+		player_back = PlaceholderArt.load_texture(PLAYER_BACK_SPRITE % GameState.player_gender)
 	_set_trainer_texture(_player_trainer, player_back)
+	_player_trainer.scale = Vector2.ONE * minf(160.0 / player_back.get_width(), 180.0 / player_back.get_height()) if GameState.player_character != &"" and player_back else Vector2.ONE
 	_player_trainer.visible = player_back != null
 	if not trainer.is_empty():
 		# Foto real del personaje si existe (decisión de Javier); si no, su sprite.

@@ -222,6 +222,7 @@ func _make_summary() -> Dictionary:
 		"mode": String(GameState.mode),
 		"player_name": GameState.player_name,
 		"player_gender": String(GameState.player_gender),
+		"player_character": String(GameState.player_character),
 		"play_time": GameState.play_time,
 		"badges": GameState.badges.size(),
 		"money": GameState.money,
@@ -332,6 +333,10 @@ func _migrate(data: Dictionary) -> Dictionary:
 			1:
 				# v2 añade snapshot Locke/pendientes; WorldLocke restaura el legado sin regenerar la ROM.
 				version = 2
+				data["save_version"] = version
+			2:
+				data.state.get("player", {})["character"] = ""
+				version = 3
 				data["save_version"] = version
 			_:
 				push_error("SaveManager: no hay migración desde save_version %d." % version)
