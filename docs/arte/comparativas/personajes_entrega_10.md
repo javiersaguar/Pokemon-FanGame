@@ -4,7 +4,7 @@ Felipe VI, Juan Carlos I, Vito Quiles, Bertrand Ndongo, Belén Esteban, Coto Mat
 
 F9 → Galerías → Personajes / combate y mapa.
 
-La entrega quedó sin cerrar al acabarse el uso del agente que la hacía: los sprites, los datos y las capturas estaban hechos; la documentación y la validación las cerró el Agente 5 sin tocar el arte. **Las fotos de referencia de estos once están por documentar** en [personajes_fotograficos.md](../personajes_fotograficos.md).
+Fuentes completadas en [personajes_fotograficos.md](../personajes_fotograficos.md). **Corrección de Javier:** Melendi es el de joven de su fotografía adjunta, con rastas, camiseta blanca sin mangas, vaqueros y tatuaje en el brazo derecho. Sustituye la primera versión con gorra/chándal; tatuaje lateral y dirección de Vegetta corregidos antes de importar. Los reyes conservan capas/coronas del guion; Juan Carlos su bastón. Juan Roig conserva gafas y barba blanca de la referencia.
 
 ## Entradas conjuntas
 
