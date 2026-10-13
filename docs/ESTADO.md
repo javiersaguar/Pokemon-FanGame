@@ -150,7 +150,9 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo`. Lista en `docs/S
 
 - **Tarea 4 terminada · clases nuevas:** `perroflauta`, `cayetano_entrenador` (Cayetano), `cani_entrenador` (Cani), `pueblerino`, `gitano`, `mantero` y `turista` (chico y chica), con sprites del pack 11 (comparativa `docs/arte/comparativas/clases_nuevas_2026-10-14.png`). Los ids de cayetano y cani llevan `_entrenador` para no chocar con los protagonistas del Agente A. 18 entrenadores en `data/trainers/clases_nuevas.json`, colocados por datos: el cayetano en Pozuelo, el cani en Orcasitas, pueblerinos en las Rutas 6 y 7, gitanos en Triana, Santa Cruz y la boda de la Ruta 12, y manteros y turistas en Madrid, Barcelona, Valencia y Málaga. Test nuevo: ningún entrenador repite id entre archivos (había un `madrid_turista` en `madrid.json`).
 
-**Sin empezar (siguen en este orden):** la 5 (personajes nuevos y revanchas), la 6 (hospitales reales e interiores de los gimnasios según `gimnasios.md`), la 7 (el norte) y la 8 (Calle de la Victoria y Palos). Ninguna fila mía queda en `docs/mapas/reservas.md`.
+- **Tarea 5 (empezada) · Vinicius y Mbappé en el Bernabéu** (decisión de Javier del 2026-10-14): mapa nuevo `madrid/bernabeu` (la Castellana con el estadio dibujado a mano, fuente 375), unido con el **borde norte de Chamberí** (columnas 20–25). Vinicius (con barba; el pack 11 no tiene barbas) y Mbappé (dictador, guerrera negra y boina; el pack no tiene verde militar) colocados delante del estadio, y Enrique Iglesias, que esperaba "camino del Bernabéu" en Chamberí, ya en su concierto. **Ojo:** la fuente 366 que daba la sesión para el Agente B ya estaba usada (`molino_mancha`, 366–374): uso desde la 375.
+
+**Sin empezar (siguen en este orden):** el resto de la 5 (personajes nuevos y revanchas), la 6 (hospitales reales e interiores de los gimnasios según `gimnasios.md`), la 7 (el norte) y la 8 (Calle de la Victoria y Palos). Ninguna fila mía queda en `docs/mapas/reservas.md`.
 
 **Pendiente de la tarea 1:** PENDIENTE JAVIER el nombre por defecto del rival (decisiones §8). En `madrid/moncloa` la puerta de la casa azul (5, 8) sigue sin poder alcanzarse (ya pasaba antes).
 

@@ -592,17 +592,17 @@
   {
    "id": "enrique_iglesias",
    "entrenador": "enrique_iglesias",
-   "mapa": "madrid/chamberi",
+   "mapa": "madrid/bernabeu",
    "cerca": [
-    24.0,
-    24.0
+    30.0,
+    20.0
    ],
    "mira": "abajo",
    "vista": 3.0,
-   "lugar": "Camino del Bernabéu, de concierto",
+   "lugar": "Concierto en el Bernabéu",
    "casilla": [
-    24,
-    24
+    30,
+    20
    ]
   },
   {
@@ -1661,6 +1661,38 @@
    "casilla": [
     60,
     50
+   ]
+  },
+  {
+   "id": "vinicius",
+   "entrenador": "vinicius",
+   "mapa": "madrid/bernabeu",
+   "cerca": [
+    18.0,
+    18.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Delante del Santiago Bernabéu (decisión de Javier, 2026-10-14)",
+   "casilla": [
+    18,
+    18
+   ]
+  },
+  {
+   "id": "mbappe",
+   "entrenador": "mbappe",
+   "mapa": "madrid/bernabeu",
+   "cerca": [
+    22.0,
+    18.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Delante del Santiago Bernabéu, en modo dictador (decisión de Javier, 2026-10-14)",
+   "casilla": [
+    22,
+    18
    ]
   }
  ],

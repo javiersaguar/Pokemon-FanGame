@@ -2161,5 +2161,37 @@
 			"overworld walk/hair/girl 2/2 blonde.png",
 			"overworld walk/hats/sun hat.png"
 		]
+	},
+	"vinicius": {
+		"idea": "Vinicius Jr., en su forma con barba (decisión de Javier): camiseta y pantalón blancos del Madrid. El pack 11 no tiene barbas.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/shorts/shorts white.png",
+			"trainer front male/tops/t-shirt/t-shirt white.png",
+			"trainer front male/hair/hair 1/1 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/shorts/shorts white.png",
+			"overworld walk/tops/t-shirt/t-shirt white.png",
+			"overworld walk/hair/boy 1/boy 1 black.png"
+		]
+	},
+	"mbappe": {
+		"idea": "Mbappé en modo dictador (decisión de Javier): guerrera negra de uniforme y boina (el pack 11 no tiene verde militar).",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/classy top/classy top black.png",
+			"trainer front male/hair/hair 1/1 black.png",
+			"trainer front male/hats/beret.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/classy top m/classy top m black.png",
+			"overworld walk/hair/boy 1/boy 1 black.png",
+			"overworld walk/hats/beret.png"
+		]
 	}
 }

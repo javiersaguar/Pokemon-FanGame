@@ -22,10 +22,16 @@ target_map = &"madrid/moncloa"
 offset = 10
 span = Vector2i(4, 30)
 
+[sub_resource type="Resource" id="Resource_24e1y"]
+script = ExtResource("2_24e1y")
+edge = "north"
+target_map = &"madrid/bernabeu"
+span = Vector2i(20, 26)
+
 [sub_resource type="Resource" id="Resource_7hlsd"]
 script = ExtResource("3_02a6w")
 id = &"madrid/chamberi"
-connections = Array[ExtResource("2_24e1y")]([SubResource("Resource_h1x4n")])
+connections = Array[ExtResource("2_24e1y")]([SubResource("Resource_h1x4n"), SubResource("Resource_24e1y")])
 display_name = "Madrid · Chamberí"
 encounter_table = &"madrid"
 zone_id = &"madrid"

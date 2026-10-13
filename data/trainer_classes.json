@@ -1234,5 +1234,25 @@
     "overworld_sprite_female": "res://assets/sprites/characters/turista_f.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "vinicius": {
+    "name": "Futbolista",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/vinicius.png",
+    "overworld_sprite": "res://assets/sprites/characters/vinicius.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "mbappe": {
+    "name": "Dictador",
+    "gender": "male",
+    "base_money": 100,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/mbappe.png",
+    "overworld_sprite": "res://assets/sprites/characters/mbappe.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
   }
 }

@@ -1033,5 +1033,51 @@
         "level": 7
       }
     ]
+  },
+  "vinicius": {
+    "class": "vinicius",
+    "name": "Vinicius Jr.",
+    "intro_text": "¡Baila, baila! El Balón de Oro me lo robaron, pero este combate no me lo roba nadie.",
+    "lose_text": "Esto es culpa del árbitro. Y del VAR. Y de la UEFA.",
+    "win_text": "¡Baila! ¡Baila conmigo!",
+    "after_text": "Me he dejado barba para que no me reconozcan. No funciona: soy el único que baila en el córner.",
+    "items": [],
+    "party": [
+      {
+        "species": "zorua",
+        "level": 15
+      },
+      {
+        "species": "pawmi",
+        "level": 15
+      },
+      {
+        "species": "raboot",
+        "level": 17
+      }
+    ]
+  },
+  "mbappe": {
+    "class": "mbappe",
+    "name": "Mbappé",
+    "intro_text": "En este estadio mando yo. Florentino es el presidente, pero el que firma los decretos soy yo.",
+    "lose_text": "Golpe de Estado en el vestuario. Me exilio a París.",
+    "win_text": "Decreto número uno: tú pierdes.",
+    "after_text": "Llegué al Madrid como fichaje y ya soy el jefe del Estado. En París tardé más.",
+    "items": [],
+    "party": [
+      {
+        "species": "pawniard",
+        "level": 15
+      },
+      {
+        "species": "impidimp",
+        "level": 16
+      },
+      {
+        "species": "corvisquire",
+        "level": 18
+      }
+    ]
   }
 }
