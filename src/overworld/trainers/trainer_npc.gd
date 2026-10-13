@@ -36,6 +36,10 @@ func _ready() -> void:
 	var sheet := str(data.get("overworld_sprite", ""))
 	if sheet != "" and ResourceLoader.exists(sheet):
 		sprite_sheet = load(sheet)
+	var art := StringName(data.get("art_id", ""))
+	if art != &"":
+		sprite.set_script(CharacterArtSprite)
+		(sprite as CharacterArtSprite).set_art(art)
 	EventBus.player_stepped.connect(_on_player_stepped)
 
 

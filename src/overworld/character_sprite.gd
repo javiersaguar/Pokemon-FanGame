@@ -36,7 +36,7 @@ func _init() -> void:
 	hframes = 4
 	vframes = 4
 	centered = true
-	texture_changed.connect(_fit_to_tile)
+	if not texture_changed.is_connected(_fit_to_tile): texture_changed.connect(_fit_to_tile)
 
 
 func _ready() -> void:

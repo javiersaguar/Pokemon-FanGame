@@ -144,6 +144,7 @@ static func trainer_info(trainer_id: StringName, player_name_value: String = "")
 		"base_money": int(cls.get("base_money", 0)),
 		"ai_level": int(t.get("ai_level", cls.get("ai_level", 1))),
 		"battle_sprite": str(cls.get("battle_sprite_female", cls.get("battle_sprite", ""))) if female else str(cls.get("battle_sprite", "")),
+		"art_id": CharacterArt.resolve([trainer_id, class_id]),
 		"battle_bgm": str(t.get("battle_bgm", cls.get("battle_bgm", ""))),
 		"intro_bgm": str(cls.get("intro_bgm", "")),
 		"intro_text": _fill_names(str(t.get("intro_text", "")), player_name_value),

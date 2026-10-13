@@ -477,10 +477,16 @@ func _build_gallery(box: VBoxContainer) -> void:
 	_button(row,"Monumentos",_monument)
 	_button(row,"Música y sonidos",_audio)
 	_button(box,"Animaciones / elegir y repetir",_preview_moves)
+	_button(box,"Personajes / combate y mapa",_character_art,false)
 	_button(box,"RandomLocke: ajustes, ROM y resumen",_rom)
 	_label(box,"Los Pokémon del catálogo incluyen formas y shinies oficiales.")
 	_label(box,"Elige movimientos en Equipo para ver sus animaciones en combate.")
 	_label(box,"Los entrenadores muestran sus sprites o fotos al iniciar el combate.")
+
+func _character_art() -> void:
+	Debug.close()
+	await CharacterArtGallery.open()
+	Debug.open()
 
 func _preview_moves() -> void:
 	if not session.active or not session.available() or session.foes.is_empty(): return

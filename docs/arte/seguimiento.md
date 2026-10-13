@@ -274,3 +274,16 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
 |---|---|---|---|---|---|---|
 | Selección de dificultad y Caramelo Raro ∞ | Interfaz | A | integrado, provisional | Panel e icono existentes | ⏳ | `a_randomlocke_dificultad.md`; capturas reales |
+
+## Personajes con referencia fotográfica · entrega 1
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/rajoy.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
+| `characters/famosos_atlas/puigdemont.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
+| `characters/famosos_atlas/zapatero.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
+| `characters/famosos_atlas/rufian.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
+| `characters/famosos_atlas/almeida.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
+| `characters/famosos_atlas/trump.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
+| `characters/famosos_atlas/maduro.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
+| Galería de personajes | Interfaz debug | A | integrado, provisional | Paneles existentes | ⏳ | F9 → Galerías; caminar en cuatro direcciones |

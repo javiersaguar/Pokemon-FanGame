@@ -47,6 +47,10 @@ func _ready() -> void:
 	if not trainers.is_empty():
 		var path := str(trainers[0].get("battle_sprite", ""))
 		if not path.is_empty() and ResourceLoader.exists(path): _portrait.texture = load(path)
+		var art := CharacterArt.battle_texture(StringName(trainers[0].get("art_id", "")))
+		if art != null:
+			_portrait.texture = art
+			_portrait.scale = Vector2.ONE * CharacterArt.display_scale(art.get_size(),Vector2(160,180))
 	var canvas := UiCanvas.new()
 	add_child(canvas)
 	_title = Label.new()

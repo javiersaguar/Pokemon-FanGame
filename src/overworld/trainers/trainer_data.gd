@@ -37,6 +37,7 @@ static func get_trainer(trainer_id: StringName) -> Dictionary:
 		cls.get("overworld_sprite", ""))
 	# Foto real del personaje, si Javier la ha puesto (RealPhoto): por id del entrenador o de su clase.
 	trainer["real_photo"] = RealPhoto.find_path([trainer_id, trainer.get("class", "")])
+	trainer["art_id"] = CharacterArt.resolve([trainer_id, trainer.get("class", "")])
 	for key: String in ["intro_bgm", "battle_bgm", "ai_level", "base_money"]:
 		if not trainer.has(key) and cls.has(key):
 			trainer[key] = cls[key]

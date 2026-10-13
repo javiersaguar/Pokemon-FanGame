@@ -590,6 +590,12 @@ Teclado A3: `Cutscene.request_name(kind: StringName, initial := "") -> String` e
 
 `NewGameStory.apply` añade únicamente `ProfesorUnicoos` al preparar ese laboratorio y en la marca de B; no edita escena ni tabla de colocaciones. `ProfessorNPC` es examinable y usa sprite de mapa propio; su retrato es la imagen de la intro. Los gráficos se conservan intactos, con regiones por alfa y nearest. No modifica protagonistas, ciudades ni personajes ya colocados por B.
 
+## 7b.4 Arte de personajes por identidad (Agente A)
+
+`data/character_art.json` registra por ID nombre, PNG original, `battle_rect` y dieciséis `walk_frames` (abajo, izquierda, derecha, arriba; quieto, paso A, quieto, paso B). `CharacterArt.resolve([trainer_id, class])` devuelve la primera identidad disponible; `TrainerData` y `BattleSetup.trainer_info` añaden `art_id` sin cambiar equipos ni colocaciones. `battle_texture` y `walk_frames` devuelven AtlasTexture; los fotogramas tienen regiones ajustadas a su silueta y margen transparente común, sin incluir filas vecinas. `CharacterArtSprite` conserva las direcciones y pasos del actor y apoya los pies en la casilla. Los PNG permanecen intactos; nearest y escalas proporcionales por mitades.
+
+La entrada y escena de combate consumen `art_id`; la fotografía real existente mantiene su prioridad si está disponible. Sin atlas nuevo se conserva el sprite anterior. F9 → Galerías → Personajes / combate y mapa permite revisar retrato y cuatro direcciones, con A para andar/parar y B para volver; no muta ni guarda la sesión. El importador `tools/arte/import_character_atlas.gd -- id nombre archivo.png` solo copia y registra regiones; el capturador produce comparativas reales a 512×384. El validador de datos comprueba archivo, dieciséis poses y regiones dentro del atlas.
+
 ## 7c. Integración Locke del mundo (Agente 1)
 
 `GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados. SAVE_VERSION 2 migra v1 conservando ROM, zonas y contadores antiguos (`legacy_death_count`), sin fabricar lápidas ni permisos para encuentros ya gastados.

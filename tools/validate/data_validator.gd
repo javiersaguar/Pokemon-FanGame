@@ -37,6 +37,7 @@ static func run() -> DataValidator:
 	v._check_species()
 	v._check_regional_dex()
 	v._check_pokemon_skins()
+	v._check_character_art()
 	v._check_trainers()
 	v._check_encounters()
 	v._check_shops()
@@ -117,6 +118,24 @@ func _check_pokemon_skins() -> void:
 				var path: String = str(entry.get(key, ""))
 				if not path.begins_with("res://assets/sprites/pokemon/skins/") or not ResourceLoader.exists(path):
 					_error("pokemon_skins.json: %s.%s no apunta a una skin PNG existente." % [species_id, key])
+
+func _check_character_art() -> void:
+	for id: String in CharacterArt.entries():
+		var data := CharacterArt.info(StringName(id))
+		var path := str(data.get("atlas", ""))
+		if not ResourceLoader.exists(path):
+			_error("character_art.json: falta el atlas de %s." % id)
+			continue
+		var image := Image.load_from_file(ProjectSettings.globalize_path(path))
+		var frames: Array = data.get("walk_frames", [])
+		if frames.size() != 16: _error("character_art.json: %s necesita dieciséis poses de mapa." % id)
+		var regions := frames.duplicate()
+		regions.append(data.get("battle_rect", []))
+		for rect: Array in regions:
+			if rect.size() != 4 or float(rect[2]) <= 0 or float(rect[3]) <= 0:
+				_error("character_art.json: región inválida en %s." % id)
+			elif not Rect2(Vector2.ZERO,Vector2(image.get_size())).encloses(Rect2(float(rect[0]),float(rect[1]),float(rect[2]),float(rect[3]))):
+				_error("character_art.json: una región de %s sale del atlas." % id)
 
 
 ## Especies (base) que aparecen en encuentros y todas las que salen de ellas evolucionando.
