@@ -13,11 +13,14 @@ func _run() -> void:
 	var manager = root.get_node("SceneManager")
 	manager.register_main(main)
 	manager._fade.hide()
-	var battle := args.size() > 1 and args[1] == "battle"
+	var battle := args.size() > 1 and args[1] in ["battle","duo"]
 	if battle:
 		var screen = load("res://src/battle/scene/battle_entry_transition.gd").new()
 		screen.kind = &"trainer"
-		screen.info = {"trainers":[load("res://src/battle/engine/battle_setup.gd").trainer_info(StringName(id))]}
+		var trainers: Array = []
+		for member: String in id.split("+"):
+			trainers.append(load("res://src/battle/engine/battle_setup.gd").trainer_info(StringName(member)))
+		screen.info = {"trainers":trainers}
 		root.add_child(screen)
 		screen.set_progress(0.4)
 	else:

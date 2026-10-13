@@ -259,7 +259,8 @@ func _switch_in(side: int, data: Dictionary) -> void:
 		if _foe_trainer.visible:
 			await _slide_sprite(_foe_trainer, OFFSCREEN_RIGHT, _t(0.4))
 			_foe_trainer.hide()
-		await _message(tr("¡%s sacó a %s!") % [_trainer().get("display_name", ""), pokemon_name])
+		var trainers: Array = _info.get("trainers", [])
+		await _message(tr("¡%s sacaron a %s!") % [TrainerPortraits.names(trainers),pokemon_name] if trainers.size() > 1 else tr("¡%s sacó a %s!") % [_trainer().get("display_name", ""),pokemon_name])
 	else:
 		if _player_trainer.visible:
 			await _slide_sprite(_player_trainer, OFFSCREEN_LEFT, _t(0.4))
@@ -554,15 +555,8 @@ func _intro(start_events: Array) -> void:
 	_set_trainer_texture(_player_trainer, player_back)
 	_player_trainer.scale = Vector2.ONE * minf(160.0 / player_back.get_width(), 180.0 / player_back.get_height()) if GameState.player_character != &"" and player_back else Vector2.ONE
 	_player_trainer.visible = player_back != null
-	if not trainer.is_empty():
-		# Foto real del personaje si existe (decisión de Javier); si no, su sprite.
-		var photo := RealPhoto.load_texture(str(trainer.get("real_photo", "")))
-		var art := CharacterArt.battle_texture(StringName(trainer.get("art_id", "")))
-		var sprite: Texture2D = photo if photo != null else art if art != null else PlaceholderArt.load_texture(str(trainer.get("battle_sprite", "")))
-		_set_trainer_texture(_foe_trainer, sprite)
-		_foe_trainer.scale = RealPhoto.fit_scale(photo) if photo != null else Vector2.ONE * CharacterArt.display_scale(art.get_size(),CharacterArt.BATTLE_MAX) if art != null else Vector2.ONE
-		_foe_trainer.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR if photo != null else CanvasItem.TEXTURE_FILTER_PARENT_NODE
-		_foe_trainer.visible = sprite != null
+	var trainers: Array = _info.get("trainers", [])
+	TrainerPortraits.configure_group(_foe_trainer,trainers,true,true)
 	_curtain_a.hide()
 	_curtain_b.hide()
 	await BattleEntryTransition.play(self, _info, fast or UiPreferences.reduce_motion())
@@ -590,7 +584,7 @@ func _intro(start_events: Array) -> void:
 				_foe_sprite.position, _foe_sprite.home(), duration)
 		await tween.finished
 	if not trainer.is_empty():
-		await _message(tr("¡%s te desafía!") % trainer.get("display_name", ""))
+		await _message(tr("¡%s te desafían!") % TrainerPortraits.names(trainers) if trainers.size() > 1 else tr("¡%s te desafía!") % trainer.get("display_name", ""))
 
 
 func _outro(outcome: StringName) -> void:

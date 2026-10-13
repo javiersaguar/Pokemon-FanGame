@@ -43,16 +43,16 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `jorge_javier` | Jorge Javier Vázquez | pendiente | por documentar |
 | `almeida` | José Luis Martínez-Almeida | integrado, provisional | [Retrato de IFEMA](https://www.ifema.es/en/about-us/transparency/institutional-information/jose-luis-martinez-almeida) |
 | `zapatero` | José Luis Rodríguez Zapatero | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/zapatero_joyas.png) |
-| `abalos` | José Luis Ábalos | pendiente | por documentar |
+| `abalos` | José Luis Ábalos | integrado, provisional | [Retrato oficial de 2020](https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Luis_%C3%81balos_Meco_2020.jpg) |
 | `juan_carlos` | Juan Carlos I | pendiente | por documentar |
 | `juan_roig` | Juan Roig | pendiente | por documentar |
 | `julio_iglesias` | Julio Iglesias | pendiente | por documentar |
 | `keyne` | Keyne | pendiente | por documentar |
-| `koldo` | Koldo García | pendiente | por documentar |
+| `koldo` | Koldo García | integrado, provisional | [Retrato de El País](https://elpais.com/espana/2025-06-22/la-evolucion-de-koldo-garcia-se-piensan-que-soy-tonto-con-el-tiempo-aprendes.html) |
 | `labrador` | Labrador | integrado, provisional | [Foto promocional de Gandía Shore](https://www.bekia.es/television/fotos/galerias/concursantes-casa-gandia-shore-esplendor/jose-labrador-concursante-gandia-shore-casa-playa/) |
 | `lamine` | Lamine Yamal | pendiente | por documentar |
 | `latasa` | Latasa | integrado, provisional | [LaLiga](https://www.laliga.com/en-GB/player/juan-latasa) |
-| `leire_diez` | Leire | pendiente | por documentar |
+| `leire_diez` | Leire | integrado, provisional | [Fotografía de Europa Press](https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/) |
 | `rubiales` | Luis Rubiales | pendiente | por documentar |
 | `rajoy` | Mariano Rajoy | integrado, provisional | [Retrato oficial](https://commons.wikimedia.org/wiki/File:Mariano_Rajoy_2017b_(cropped).jpg) |
 | `mario_casas` | Mario Casas | pendiente | por documentar |

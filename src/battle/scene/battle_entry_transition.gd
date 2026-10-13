@@ -44,13 +44,7 @@ func _ready() -> void:
 	_portrait.position = Vector2(392, 231)
 	add_child(_portrait)
 	var trainers: Array = info.get("trainers", [])
-	if not trainers.is_empty():
-		var path := str(trainers[0].get("battle_sprite", ""))
-		if not path.is_empty() and ResourceLoader.exists(path): _portrait.texture = load(path)
-		var art := CharacterArt.battle_texture(StringName(trainers[0].get("art_id", "")))
-		if art != null:
-			_portrait.texture = art
-			_portrait.scale = Vector2.ONE * CharacterArt.display_scale(art.get_size(),CharacterArt.BATTLE_MAX)
+	TrainerPortraits.configure_group(_portrait,trainers)
 	var canvas := UiCanvas.new()
 	add_child(canvas)
 	_title = Label.new()
@@ -58,7 +52,7 @@ func _ready() -> void:
 	_title.position = Vector2(12, 164)
 	_title.size = Vector2(232, 20)
 	_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_title.text = "¡Un Pokémon salvaje!" if kind == &"wild" else str(trainers[0].get("display_name", "Entrenador")) if not trainers.is_empty() else "Líder de gimnasio" if kind == &"leader" else "Entrenador"
+	_title.text = "¡Un Pokémon salvaje!" if kind == &"wild" else TrainerPortraits.names(trainers) if not trainers.is_empty() else "Líder de gimnasio" if kind == &"leader" else "Entrenador"
 	canvas.add_child(_title)
 	set_progress(progress)
 

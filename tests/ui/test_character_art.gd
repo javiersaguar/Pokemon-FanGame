@@ -49,3 +49,34 @@ func test_entrada_muestra_capa_completa_y_nadal_no_se_reduce_a_mitad() -> void:
 	assert_lte(size.x,CharacterArt.BATTLE_MAX.x)
 	assert_lte(size.y,CharacterArt.BATTLE_MAX.y)
 	assert_gt(size.y,100.0,"raqueta y capa no vuelven diminuto al entrenador")
+
+func test_entrada_y_escena_doble_muestran_las_dos_identidades() -> void:
+	var trainers := [BattleSetup.trainer_info(&"abalos"),BattleSetup.trainer_info(&"koldo")]
+	var transition := BattleEntryTransition.new()
+	transition.kind = &"trainer"
+	transition.info = {"trainers":trainers}
+	add_child_autofree(transition)
+	transition.set_progress(0.4)
+	var first := transition._portrait
+	var partner := first.get_node(^"PartnerTrainer") as Sprite2D
+	assert_eq((first.texture as AtlasTexture).region,CharacterArt.battle_texture(&"abalos").region)
+	assert_eq((partner.texture as AtlasTexture).region,CharacterArt.battle_texture(&"koldo").region)
+	var a := first.get_global_transform() * first.get_rect()
+	var b := partner.get_global_transform() * partner.get_rect()
+	assert_false(a.intersects(b),"ambos retratos tienen espacio propio")
+	assert_lte(b.end.x,512.0)
+	assert_true(transition._title.text.contains("Ábalos") and transition._title.text.contains("Koldo"))
+	var scene: BattleScene = load("res://src/battle/scene/battle_scene.tscn").instantiate()
+	add_child_autofree(scene)
+	scene.fast = true
+	scene._box.text_speed = 0
+	scene._info = {"trainers":trainers}
+	await scene._intro([])
+	var world_partner := scene._foe_trainer.get_node(^"PartnerTrainer") as Sprite2D
+	assert_true(world_partner.is_visible_in_tree())
+	assert_eq((world_partner.texture as AtlasTexture).region,CharacterArt.battle_texture(&"koldo").region)
+	var first_feet := scene._foe_trainer.get_global_transform() * Vector2(0,0)
+	var partner_feet := world_partner.get_global_transform() * Vector2(0,0)
+	assert_eq(first_feet.y,partner_feet.y,"los dos apoyan los pies en la misma base")
+	scene._foe_trainer.hide()
+	assert_false(world_partner.is_visible_in_tree(),"salen juntos al sacar al Pokémon")

@@ -321,8 +321,12 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/gasol.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo con referencia documentada | ⏳ | Equipación española y bandera como capa; `personajes_entrega_4.md` |
 | `characters/famosos_atlas/alonso.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo con referencia documentada | ⏳ | Equipación española y bandera como capa; `personajes_entrega_4.md` |
 
-## Clan PSOE · entrega 5 en curso
+## Clan PSOE · entrega 5
 
 | Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
 |---|---|---|---|---|---|---|
 | `characters/famosos_atlas/pedro_sanchez.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según foto oficial | ⏳ | `personaje_pedro_sanchez.png`; traje azul, Líder Supremo |
+| `characters/famosos_atlas/abalos.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño con referencia documentada | ⏳ | `personajes_entrega_5.md` |
+| `characters/famosos_atlas/koldo.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño con referencia documentada | ⏳ | `personajes_entrega_5.md` |
+| `characters/famosos_atlas/leire_diez.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño con referencia documentada | ⏳ | `personajes_entrega_5.md` |
+| Entrada de combate en pareja | Interfaz | A | integrado, provisional | Retratos existentes y panel EBDX | ⏳ | Ambos retratos, movimiento y salida conjunta |
