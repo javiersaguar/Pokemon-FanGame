@@ -144,6 +144,8 @@ Rama `feat/agente1-inicio`, worktree `pokemon-panchito-agente1`. Lista de `SESIO
 
 **Personajes, entrega 5 terminada:** Pedro Sánchez, Ábalos, Koldo y Leire Díez con retrato y dieciséis poses, fuentes y comparativas en `personajes_entrega_5.md`. Koldo lleva cabeza rapada, gafas y barba de la foto actual; se conserva la cazadora oscura prevista. `TrainerPortraits` muestra las dos identidades en combates en pareja: entrada y escena, posiciones sin superponer, pies alineados, salida y regreso conjuntos; nombres y textos en plural. Conserva fotos opcionales, PNG anteriores y los equipos/colocaciones de B. Tests específicos **4/4**, 1.091 aserciones. Suite completa **540/540**, **38.993 aserciones**, 383,834 s; arte **11.024 PNG, 0 errores/avisos**; datos **0 errores, 2 avisos previos**. Arte provisional. Después continúa la lista de famosos.
 
+**Personajes, entrega 6 terminada:** Ibai, Elxokas, Rosalía, Lamine, HustleHard304, Keyne, Enrique y Julio Iglesias con retrato y dieciséis poses. Referencias de Google y fuentes registradas; comparativas reales en `personajes_entrega_6.md`. Pelo y rasgos según foto cuando difieren de las piezas antiguas. Atlas de Enrique corregido para el paso frontal y la transparencia. Sin cambios de mapa, equipos ni colocaciones. Suite completa **540/540**, **39.289 aserciones**, 369,276 s; arte **11.032 PNG, 0 errores/avisos**; datos **0 errores, 2 avisos previos**. Arte provisional. Siguiente: resto de famosos; Sarah llevará cabestrillo, según nueva indicación de Javier.
+
 ### Agente B · Mundo y personajes (sesión del 2026-10-14)
 
 Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo`. Lista en `docs/SESION_2026-10-14.md`. No toco la intro, los menús ni el generador del RandomLocke (Agente A).

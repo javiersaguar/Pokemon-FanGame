@@ -20,8 +20,8 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `pedroche` | Cristina Pedroche | pendiente | por documentar |
 | `trump` | Donald Trump | integrado, provisional | [Retrato oficial](https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-Trump-Official-Presidential-Portrait.png) |
 | `el_jincho` | El Jincho | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/el_jincho.png) |
-| `elxokas` | Elxokas | pendiente | por documentar |
-| `enrique_iglesias` | Enrique Iglesias | pendiente | por documentar |
+| `elxokas` | Elxokas | integrado, provisional | [Fotografía de Elxokas](https://masquealdia.com/elxokas-narra-su-dificil-viaje-a-japon-tras-la-cancelacion-de-vuelos-por-el-conflicto-en-oriente-medio/) |
+| `enrique_iglesias` | Enrique Iglesias | integrado, provisional | [Retrato de Enrique](https://www.livemusic.sk/skupina/enrique-iglesias) |
 | `ester_exposito` | Ester Expósito | pendiente | por documentar |
 | `felipe_vi` | Felipe VI | pendiente | por documentar |
 | `alonso` | Fernando Alonso | integrado, provisional; equipación española y bandera-capa | [Retrato de Aston Martin](https://www.astonmartinf1.com/en-GB/AMR24) |
@@ -30,8 +30,8 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `franco` | Franco | pendiente | por documentar |
 | `rufian` | Gabriel Rufián | integrado, provisional | [Retrato editorial](https://www.planetadelibros.com.mx/autor/gabriel-rufian/000053538) |
 | `pique` | Gerard Piqué | pendiente | por documentar |
-| `hustlehard304` | HustleHard304 | pendiente | por documentar |
-| `ibai` | Ibai Llanos | pendiente | por documentar |
+| `hustlehard304` | HustleHard304 | integrado, provisional | [Fotografía de Mounir Nasraoui](https://www.articulo14.es/deportes/futbol/por-que-apunalaron-al-padre-de-lamine-yamal-la-verdad-detras-del-intento-de-asesinato-20240815.html) |
+| `ibai` | Ibai Llanos | integrado, provisional | [Retrato de Ibai](https://www.lesnumeriques.com/vie-du-net/un-espagnol-reunit-3-3-millions-de-spectateurs-sur-twitch-et-bat-le-record-d-audience-de-la-plateforme-n186595.html) |
 | `topuria` | Ilia Topuria | pendiente | por documentar |
 | `irene_montero` | Irene | pendiente | por documentar |
 | `ayuso` | Isabel Díaz Ayuso | integrado, provisional | [Comunidad de Madrid](https://www.comunidad.madrid/transparencia/persona/isabel-diaz-ayuso) |
@@ -46,11 +46,11 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `abalos` | José Luis Ábalos | integrado, provisional | [Retrato oficial de 2020](https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Luis_%C3%81balos_Meco_2020.jpg) |
 | `juan_carlos` | Juan Carlos I | pendiente | por documentar |
 | `juan_roig` | Juan Roig | pendiente | por documentar |
-| `julio_iglesias` | Julio Iglesias | pendiente | por documentar |
-| `keyne` | Keyne | pendiente | por documentar |
+| `julio_iglesias` | Julio Iglesias | integrado, provisional | [Fotografía de Julio](https://as.com/tikitakas/famosos/habla-julio-iglesias-tras-las-denuncias-de-malos-tratos-y-abusos-sexuales-todo-se-va-a-aclarar-f202601-n/) |
+| `keyne` | Keyne | integrado, provisional | [Fotografía de los hermanos](https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles-video/lamine-yamal-s-brother-escapes-at-a-driving-range-and-gets-chased-by-security-2026-06-24) |
 | `koldo` | Koldo García | integrado, provisional | [Retrato de El País](https://elpais.com/espana/2025-06-22/la-evolucion-de-koldo-garcia-se-piensan-que-soy-tonto-con-el-tiempo-aprendes.html) |
 | `labrador` | Labrador | integrado, provisional | [Foto promocional de Gandía Shore](https://www.bekia.es/television/fotos/galerias/concursantes-casa-gandia-shore-esplendor/jose-labrador-concursante-gandia-shore-casa-playa/) |
-| `lamine` | Lamine Yamal | pendiente | por documentar |
+| `lamine` | Lamine Yamal | integrado, provisional | [Retrato con el Barça](https://www.zerozero.pt/noticias/espanyol-vs-barcelona-antevisao-ausencias-e-onzes-provaveis/813834) |
 | `latasa` | Latasa | integrado, provisional | [LaLiga](https://www.laliga.com/en-GB/player/juan-latasa) |
 | `leire_diez` | Leire | integrado, provisional | [Fotografía de Europa Press](https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/) |
 | `rubiales` | Luis Rubiales | pendiente | por documentar |
@@ -69,7 +69,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `pokealex` | PokeAlex (el otro) | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/pokealex_el_otro.webp) |
 | `quevedo` | Quevedo | integrado, provisional | [Retrato promocional](https://www.cifraclub.com/quevedo/) |
 | `nadal` | Rafa Nadal | integrado, provisional; equipación española y bandera-capa | [Fotografía de Julian Finney](https://www.mensjournal.com/sports/zen-and-the-art-of-rafael-nadal-20120827) |
-| `rosalia` | Rosalía | pendiente | por documentar |
+| `rosalia` | Rosalía | integrado, provisional | [Retrato de Rosalía](https://www.welt.de/kultur/article6915bfd858d2cfb625f5ac77/rosalia-es-tut-weh-wenn-schweigen-als-parteinahme-ausgelegt-wird.html) |
 | `abascal` | Santiago Abascal | pendiente | por documentar |
 | `sarah_santaolalla` | Sarah | pendiente | por documentar |
 | `sekiam` | Sekiam | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/sekiam.webp) |

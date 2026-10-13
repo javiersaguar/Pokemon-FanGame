@@ -330,3 +330,16 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/koldo.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño con referencia documentada | ⏳ | `personajes_entrega_5.md` |
 | `characters/famosos_atlas/leire_diez.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño con referencia documentada | ⏳ | `personajes_entrega_5.md` |
 | Entrada de combate en pareja | Interfaz | A | integrado, provisional | Retratos existentes y panel EBDX | ⏳ | Ambos retratos, movimiento y salida conjunta |
+
+## Famosos · entrega 6
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/ibai.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
+| `characters/famosos_atlas/elxokas.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
+| `characters/famosos_atlas/rosalia.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
+| `characters/famosos_atlas/lamine.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
+| `characters/famosos_atlas/hustlehard304.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
+| `characters/famosos_atlas/keyne.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
+| `characters/famosos_atlas/enrique_iglesias.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
+| `characters/famosos_atlas/julio_iglesias.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_6.md` |
