@@ -137,7 +137,7 @@ arrival_facing = 4
 [node name="Sala43_20" type="Node2D" parent="Warps" unique_id=1341789334]
 position = Vector2(1392, 656)
 script = ExtResource("14_sk0yv")
-target_map = &"valencia/sala_malvarrosa_43_20"
+target_map = &"valencia/gimnasio_1"
 arrival_facing = 4
 
 [node name="Sala3_8" type="Node2D" parent="Warps" unique_id=640069272]

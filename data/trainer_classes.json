@@ -1254,5 +1254,285 @@
     "overworld_sprite": "res://assets/sprites/characters/mbappe.png",
     "intro_bgm": "encounter_tough",
     "battle_bgm": "battle_trainer"
+  },
+  "concejal": {
+    "name": "Concejal",
+    "gender": "male",
+    "base_money": 48,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/tertuliano.png",
+    "overworld_sprite": "res://assets/sprites/characters/tertuliano.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "cule": {
+    "name": "Culé",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/crossfitero.png",
+    "overworld_sprite": "res://assets/sprites/characters/crossfitero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "alcoholico": {
+    "name": "Alcohólico",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/turistachanclas.png",
+    "overworld_sprite": "res://assets/sprites/characters/turistachanclas.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "porreta": {
+    "name": "Porreta",
+    "gender": "male",
+    "base_money": 32,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/perroflauta.png",
+    "overworld_sprite": "res://assets/sprites/characters/perroflauta.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "cocainomano": {
+    "name": "Cocainómano",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/raver.png",
+    "overworld_sprite": "res://assets/sprites/characters/raver.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "flamenco_traje": {
+    "name": "Flamenco",
+    "gender": "male",
+    "base_money": 48,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/camarero.png",
+    "overworld_sprite": "res://assets/sprites/characters/camarero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "quesito": {
+    "name": "Quesito",
+    "gender": "female",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/nadador_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/nadador_f.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "etarra": {
+    "name": "Etarra",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/esquiador.png",
+    "overworld_sprite": "res://assets/sprites/characters/esquiador.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "cayetano_casco": {
+    "name": "Cayetano",
+    "gender": "male",
+    "base_money": 90,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/cayetano_entrenador.png",
+    "overworld_sprite": "res://assets/sprites/characters/cayetano_entrenador.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "actor_reparto": {
+    "name": "Actor de reparto",
+    "gender": "male",
+    "base_money": 48,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/influencerlinkedin.png",
+    "overworld_sprite": "res://assets/sprites/characters/influencerlinkedin.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "rajoy": {
+    "name": "Expresidente",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/tertuliano.png",
+    "overworld_sprite": "res://assets/sprites/characters/tertuliano.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "casado": {
+    "name": "Máster",
+    "gender": "male",
+    "base_money": 100,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/tertuliano.png",
+    "overworld_sprite": "res://assets/sprites/characters/tertuliano.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "messi": {
+    "name": "D10S",
+    "gender": "male",
+    "base_money": 160,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/crossfitero.png",
+    "overworld_sprite": "res://assets/sprites/characters/crossfitero.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "julian_alvarez": {
+    "name": "Araña",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/crossfitero.png",
+    "overworld_sprite": "res://assets/sprites/characters/crossfitero.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "peter_lim": {
+    "name": "Dueño",
+    "gender": "male",
+    "base_money": 200,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/influencerlinkedin.png",
+    "overworld_sprite": "res://assets/sprites/characters/influencerlinkedin.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "antony": {
+    "name": "Extremo",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/crossfitero.png",
+    "overworld_sprite": "res://assets/sprites/characters/crossfitero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "jose_mota": {
+    "name": "Humorista",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/cunado.png",
+    "overworld_sprite": "res://assets/sprites/characters/cunado.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "buenafuente": {
+    "name": "Presentador",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/tertuliano.png",
+    "overworld_sprite": "res://assets/sprites/characters/tertuliano.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "berto_romero": {
+    "name": "Cómico",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/cunado.png",
+    "overworld_sprite": "res://assets/sprites/characters/cunado.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "dani_rovira": {
+    "name": "Monologuista",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/camarero.png",
+    "overworld_sprite": "res://assets/sprites/characters/camarero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "la_pantera": {
+    "name": "Cantante",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/raver.png",
+    "overworld_sprite": "res://assets/sprites/characters/raver.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "lucho_rk": {
+    "name": "Cantante",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/raver.png",
+    "overworld_sprite": "res://assets/sprites/characters/raver.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "cruz_cafune": {
+    "name": "Rapero",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/raver.png",
+    "overworld_sprite": "res://assets/sprites/characters/raver.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "otegi": {
+    "name": "Coordinador",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/tertuliano.png",
+    "overworld_sprite": "res://assets/sprites/characters/tertuliano.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "ronaldo_nazario": {
+    "name": "Presidente",
+    "gender": "male",
+    "base_money": 160,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/padretarjeta.png",
+    "overworld_sprite": "res://assets/sprites/characters/padretarjeta.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "javier_bardem": {
+    "name": "Actor",
+    "gender": "male",
+    "base_money": 160,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/camarero.png",
+    "overworld_sprite": "res://assets/sprites/characters/camarero.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "penelope_cruz": {
+    "name": "Actriz",
+    "gender": "female",
+    "base_money": 160,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/flamenca.png",
+    "overworld_sprite": "res://assets/sprites/characters/flamenca.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "torrente": {
+    "name": "Brazo de la ley",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/cunado.png",
+    "overworld_sprite": "res://assets/sprites/characters/cunado.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
   }
 }

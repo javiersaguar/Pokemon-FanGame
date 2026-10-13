@@ -1,13 +1,229 @@
 {
   "_doc": "Gimnasios de Pokémon Spain (docs/mundo/gimnasios.md). Líderes y sitios: decisión de Javier (data/region.json). Tipo, medalla, entrenadores y premio: propuesta. El líder entrega la medalla y la MT de premio_mt al ganarle (src/events/gym_leader_event.gd); dónde está cada uno en el mapa, en data/personajes_en_el_mapa.json.",
   "gimnasios": {
-    "madrid": {"orden": 1, "ciudad": "Madrid", "lugar": "La Real Casa de Correos (Puerta del Sol), con el ático de Ayuso arriba", "lider": "ayuso", "tipo": "fire", "medalla": "medalla_libertad", "nombre_medalla": "Medalla Libertad", "nivel_tope": 15, "premio_mt": "flamethrower", "entrenadores": ["gym1_padretarjeta", "gym1_camarero", "gym1_influencer"]},
-    "barcelona": {"orden": 2, "ciudad": "Barcelona", "lugar": "El Spotify Camp Nou, en obras", "lider": "laporta", "tipo": "steel", "medalla": "medalla_palanca", "nombre_medalla": "Medalla Palanca", "nivel_tope": 22, "premio_mt": "ironhead", "entrenadores": ["gym2_tertuliano", "gym2_carterista", "gym2_revisor"]},
-    "valencia": {"orden": 3, "ciudad": "Valencia", "lugar": "La discoteca Akuarela Playa", "lider": "labrador", "tipo": "fighting", "medalla": "medalla_tirantes", "nombre_medalla": "Medalla Tirantes", "nivel_tope": 28, "premio_mt": "brickbreak", "entrenadores": ["gym3_crossfitero", "gym3_tronista", "gym3_raver"]},
-    "sevilla": {"orden": 4, "ciudad": "Sevilla", "lugar": "El club de la comedia, en Triana", "lider": "joaquin", "tipo": "grass", "medalla": "medalla_arte", "nombre_medalla": "Medalla Arte", "nivel_tope": 34, "premio_mt": "gigadrain", "entrenadores": ["gym4_cunado", "gym4_flamenca", "gym4_costalero"]},
-    "las_palmas": {"orden": 5, "ciudad": "Las Palmas de Gran Canaria", "lugar": "El concierto en la playa de Playa del Inglés", "lider": "quevedo", "tipo": "water", "medalla": "medalla_quedate", "nombre_medalla": "Medalla Quédate", "nivel_tope": 40, "premio_mt": "liquidation", "entrenadores": ["gym5_fan", "gym5_surfista", "gym5_nadador"]},
-    "bilbao": {"orden": 6, "ciudad": "Bilbao", "lugar": "San Mamés", "lider": "aupa_athletic", "tipo": "fighting", "medalla": "medalla_txapela", "nombre_medalla": "Medalla Txapela", "nivel_tope": 45, "premio_mt": "focusblast", "entrenadores": ["gym6_crossfitero", "gym6_tertuliano", "gym6_camarero"]},
-    "valladolid": {"orden": 7, "ciudad": "Valladolid", "lugar": "La Plaza Mayor", "lider": "latasa", "tipo": "ice", "medalla": "medalla_pucela", "nombre_medalla": "Medalla Pucela", "nivel_tope": 49, "premio_mt": "icebeam", "entrenadores": ["gym7_esquiador", "gym7_opositor", "gym7_montanera"]},
-    "malaga": {"orden": 8, "ciudad": "Málaga", "lugar": "El rodaje de la nueva película de Banderas, junto al puerto", "lider": "banderas", "tipo": "dark", "medalla": "medalla_zorro", "nombre_medalla": "Medalla Zorro", "nivel_tope": 54, "premio_mt": "foulplay", "entrenadores": ["gym8_extra", "gym8_productor", "gym8_camarero"]}
+    "madrid": {
+      "orden": 1,
+      "ciudad": "Madrid",
+      "lugar": "La Real Casa de Correos (Puerta del Sol), con el ático de Ayuso arriba",
+      "lider": "ayuso",
+      "tipo": "fire",
+      "medalla": "medalla_libertad",
+      "nombre_medalla": "Medalla Libertad",
+      "nivel_tope": 15,
+      "premio_mt": "flamethrower",
+      "entrenadores": [
+        "gym1_concejal_1",
+        "gym1_concejal_2",
+        "almeida_gym",
+        "gym1_concejal_3",
+        "gym1_concejal_4",
+        "rajoy_gym",
+        "gym1_concejal_5",
+        "gym1_concejal_6",
+        "casado"
+      ],
+      "salas": [
+        "madrid/gimnasio_1",
+        "madrid/gimnasio_2",
+        "madrid/gimnasio_3",
+        "madrid/gimnasio_lider"
+      ]
+    },
+    "barcelona": {
+      "orden": 2,
+      "ciudad": "Barcelona",
+      "lugar": "El Spotify Camp Nou, en obras",
+      "lider": "laporta",
+      "tipo": "steel",
+      "medalla": "medalla_palanca",
+      "nombre_medalla": "Medalla Palanca",
+      "nivel_tope": 22,
+      "premio_mt": "ironhead",
+      "entrenadores": [
+        "gym2_cule_1",
+        "gym2_cule_2",
+        "pique_gym",
+        "gym2_cule_3",
+        "gym2_cule_4",
+        "julian_alvarez",
+        "gym2_cule_5",
+        "gym2_cule_6",
+        "messi"
+      ],
+      "salas": [
+        "barcelona/gimnasio_1",
+        "barcelona/gimnasio_2",
+        "barcelona/gimnasio_3",
+        "barcelona/gimnasio_lider"
+      ]
+    },
+    "valencia": {
+      "orden": 3,
+      "ciudad": "Valencia",
+      "lugar": "La discoteca Akuarela Playa",
+      "lider": "labrador",
+      "tipo": "fighting",
+      "medalla": "medalla_tirantes",
+      "nombre_medalla": "Medalla Tirantes",
+      "nivel_tope": 28,
+      "premio_mt": "brickbreak",
+      "entrenadores": [
+        "gym3_alcoholico_1",
+        "gym3_porreta_1",
+        "gym3_cocainomano_1",
+        "gym3_alcoholico_2",
+        "gym3_porreta_2",
+        "gym3_cocainomano_2",
+        "gym3_porreta_3",
+        "gym3_cocainomano_3",
+        "peter_lim"
+      ],
+      "salas": [
+        "valencia/gimnasio_1",
+        "valencia/gimnasio_2",
+        "valencia/gimnasio_3",
+        "valencia/gimnasio_lider"
+      ]
+    },
+    "sevilla": {
+      "orden": 4,
+      "ciudad": "Sevilla",
+      "lugar": "El club de la comedia, en Triana",
+      "lider": "joaquin",
+      "tipo": "grass",
+      "medalla": "medalla_arte",
+      "nombre_medalla": "Medalla Arte",
+      "nivel_tope": 34,
+      "premio_mt": "gigadrain",
+      "entrenadores": [
+        "gym4_flamenca_1",
+        "gym4_flamenco_1",
+        "antony",
+        "gym4_flamenca_2",
+        "berto_romero",
+        "gym4_flamenco_2",
+        "dani_rovira",
+        "buenafuente",
+        "jose_mota"
+      ],
+      "salas": [
+        "sevilla/gimnasio_1",
+        "sevilla/gimnasio_2",
+        "sevilla/gimnasio_3",
+        "sevilla/gimnasio_lider"
+      ]
+    },
+    "las_palmas": {
+      "orden": 5,
+      "ciudad": "Las Palmas de Gran Canaria",
+      "lugar": "El concierto en la playa de Playa del Inglés",
+      "lider": "quevedo",
+      "tipo": "water",
+      "medalla": "medalla_quedate",
+      "nombre_medalla": "Medalla Quédate",
+      "nivel_tope": 40,
+      "premio_mt": "liquidation",
+      "entrenadores": [
+        "gym5_quesito_1",
+        "gym5_quesito_2",
+        "la_pantera",
+        "gym5_quesito_3",
+        "gym5_quesito_4",
+        "lucho_rk",
+        "gym5_quesito_5",
+        "gym5_quesito_6",
+        "cruz_cafune"
+      ],
+      "salas": [
+        "playa_del_ingles/gimnasio_1",
+        "playa_del_ingles/gimnasio_2",
+        "playa_del_ingles/gimnasio_3",
+        "playa_del_ingles/gimnasio_lider"
+      ]
+    },
+    "bilbao": {
+      "orden": 6,
+      "ciudad": "Bilbao",
+      "lugar": "San Mamés",
+      "lider": "aupa_athletic",
+      "tipo": "fighting",
+      "medalla": "medalla_txapela",
+      "nombre_medalla": "Medalla Txapela",
+      "nivel_tope": 45,
+      "premio_mt": "focusblast",
+      "entrenadores": [
+        "gym6_etarra_1",
+        "gym6_etarra_2",
+        "gym6_etarra_3",
+        "gym6_etarra_4",
+        "gym6_etarra_5",
+        "inaki_williams_gym",
+        "gym6_etarra_6",
+        "nico_williams_gym",
+        "otegi"
+      ],
+      "salas": [
+        "bilbao/gimnasio_1",
+        "bilbao/gimnasio_2",
+        "bilbao/gimnasio_3",
+        "bilbao/gimnasio_lider"
+      ]
+    },
+    "valladolid": {
+      "orden": 7,
+      "ciudad": "Valladolid",
+      "lugar": "La Plaza Mayor",
+      "lider": "latasa",
+      "tipo": "ice",
+      "medalla": "medalla_pucela",
+      "nombre_medalla": "Medalla Pucela",
+      "nivel_tope": 49,
+      "premio_mt": "icebeam",
+      "entrenadores": [
+        "gym7_cayetano_1",
+        "gym7_cayetano_2",
+        "gym7_cayetano_3",
+        "gym7_cayetano_4",
+        "gym7_cayetano_5",
+        "oscar_puente_gym",
+        "gym7_cayetano_6",
+        "gym7_cayetano_7",
+        "ronaldo_nazario"
+      ],
+      "salas": [
+        "valladolid/gimnasio_1",
+        "valladolid/gimnasio_2",
+        "valladolid/gimnasio_3",
+        "valladolid/gimnasio_lider"
+      ]
+    },
+    "malaga": {
+      "orden": 8,
+      "ciudad": "Málaga",
+      "lugar": "El rodaje de la nueva película de Banderas, junto al puerto",
+      "lider": "banderas",
+      "tipo": "dark",
+      "medalla": "medalla_zorro",
+      "nombre_medalla": "Medalla Zorro",
+      "nivel_tope": 54,
+      "premio_mt": "foulplay",
+      "entrenadores": [
+        "gym8_actor_1",
+        "gym8_actor_2",
+        "mario_casas_gym",
+        "gym8_actor_3",
+        "ester_exposito_gym",
+        "gym8_actor_4",
+        "torrente",
+        "penelope_cruz",
+        "javier_bardem"
+      ],
+      "salas": [
+        "malaga/gimnasio_1",
+        "malaga/gimnasio_2",
+        "malaga/gimnasio_3",
+        "malaga/gimnasio_lider"
+      ]
+    }
   }
 }

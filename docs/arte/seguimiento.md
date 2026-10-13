@@ -404,3 +404,4 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
 |---|---|---|---|---|---|---|
 | 153 interiores de edificios (Alicante, Murcia, Pozuelo, Orcasitas, Bernabéu y casas de las rutas) y servicios de Alicante y Murcia | Mapa | Agente 5 | integrado | Tileset de interiores (Akizakura16) | ⏳ | Generados por tema; provisionales. Rótulo con el nombre del edificio |
+| Salas de los ocho gimnasios (32 mapas, `maps/<ciudad>/gimnasio_*.tscn`) | Mapa | Agente 5 | integrado | Tileset de interiores (Akizakura16) | ⏳ | Zigzag con vigilantes; personajes con sprite provisional. Comparativas `comparativas/gimnasio_*.png` |

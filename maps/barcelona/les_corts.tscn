@@ -166,7 +166,7 @@ arrival_facing = 4
 [node name="Sala26_40" type="Node2D" parent="Warps" unique_id=296473984]
 position = Vector2(848, 1296)
 script = ExtResource("locales_0")
-target_map = &"barcelona/sala_les_corts_26_40"
+target_map = &"barcelona/gimnasio_1"
 arrival_facing = 4
 
 [node name="Sala47_29" type="Node2D" parent="Warps" unique_id=1432879207]

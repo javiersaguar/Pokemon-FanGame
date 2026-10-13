@@ -209,7 +209,7 @@ arrival_facing = 4
 [node name="Sala9_31" type="Node2D" parent="Warps" unique_id=1909352712]
 position = Vector2(304, 1008)
 script = ExtResource("15_3haxt")
-target_map = &"sevilla/sala_rio_9_31"
+target_map = &"sevilla/gimnasio_1"
 arrival_facing = 4
 
 [node name="Sala15_15" type="Node2D" parent="Warps" unique_id=2059555940]

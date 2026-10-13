@@ -299,7 +299,7 @@ arrival_facing = 4
 [node name="Sala39_31" type="Node2D" parent="Warps" unique_id=1293817486]
 position = Vector2(1264, 1008)
 script = ExtResource("locales_0")
-target_map = &"madrid/sala_centro_39_31"
+target_map = &"madrid/gimnasio_1"
 arrival_facing = 4
 
 [node name="Sala20_42" type="Node2D" parent="Warps" unique_id=1975578158]

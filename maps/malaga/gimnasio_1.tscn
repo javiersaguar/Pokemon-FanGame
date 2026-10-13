@@ -1,0 +1,143 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_4jvu1"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_l335p"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_ho2jt"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_nqi6c"]
+[ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="5_nseq1"]
+[ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="6_ebiux"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="7_affbj"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="8_77703"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="9_x146y"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_lass.png" id="10_rk6fu"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_jhv4b"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_4x841"]
+
+[sub_resource type="Resource" id="Resource_ekh5w"]
+script = ExtResource("3_ho2jt")
+id = &"malaga/gimnasio_1"
+display_name = "Rodaje En El Puerto · Catering"
+outdoor = false
+zone_id = &"malaga"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="Gimnasio" type="Node2D" unique_id=1275232994]
+script = ExtResource("1_4jvu1")
+data = SubResource("Resource_ekh5w")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=25602551]
+tile_map_data = PackedByteArray("AAAAAAAAAAABADkAAAABAAAAAAABADkAAAACAAAAAAABADkAAAADAAAAAAABADkAAAAEAAAAAAABADkAAAAFAAAAAAABADkAAAAGAAAAAAABADkAAAAHAAAAAAABADkAAAAIAAAAAAABADkAAAAJAAAAAAABADkAAAAKAAAAAAABADkAAAALAAAAAAABADkAAAAMAAAAAAABADkAAAANAAAAAAABADkAAAAOAAAAAAABADkAAAAPAAAAAAABADkAAAAAAAEAAAABADkAAAABAAEAAAABADkAAAACAAEAAAABADkAAAADAAEAAAABADkAAAAEAAEAAAABADkAAAAFAAEAAAABADkAAAAGAAEAAAABADkAAAAHAAEAAAABADkAAAAIAAEAAAABADkAAAAJAAEAAAABADkAAAAKAAEAAAABADkAAAALAAEAAAABADkAAAAMAAEAAAABADkAAAANAAEAAAABADkAAAAOAAEAAAABADkAAAAPAAEAAAABADkAAAAAAAIAAAABADkAAAABAAIAAAABADkAAAACAAIAAAABADkAAAADAAIAAAABADkAAAAEAAIAAAABADkAAAAFAAIAAAABADkAAAAGAAIAAAABADkAAAAHAAIAAAABADkAAAAIAAIAAAABADkAAAAJAAIAAAABADkAAAAKAAIAAAABADkAAAALAAIAAAABADkAAAAMAAIAAAABADkAAAANAAIAAAABADkAAAAOAAIAAAABADkAAAAPAAIAAAABADkAAAAAAAMAAAABADkAAAABAAMAAAABADkAAAACAAMAAAABADkAAAADAAMAAAABADkAAAAEAAMAAAABADkAAAAFAAMAAAABADkAAAAGAAMAAAABADkAAAAHAAMAAAABADkAAAAIAAMAAAABADkAAAAJAAMAAAABADkAAAAKAAMAAAABADkAAAALAAMAAAABADkAAAAMAAMAAAABADkAAAANAAMAAAABADkAAAAOAAMAAAABADkAAAAPAAMAAAABADkAAAAAAAQAAAABADkAAAABAAQAAAABADkAAAACAAQAAAABADkAAAADAAQAAAABADkAAAAEAAQAAAABADkAAAAFAAQAAAABADkAAAAGAAQAAAABADkAAAAHAAQAAAABADkAAAAIAAQAAAABADkAAAAJAAQAAAABADkAAAAKAAQAAAABADkAAAALAAQAAAABADkAAAAMAAQAAAABADkAAAANAAQAAAABADkAAAAOAAQAAAABADkAAAAPAAQAAAABADkAAAAAAAUAAAABADkAAAABAAUAAAABADkAAAACAAUAAAABADkAAAADAAUAAAABADkAAAAEAAUAAAABADkAAAAFAAUAAAABADkAAAAGAAUAAAABADkAAAAHAAUAAAABADkAAAAIAAUAAAABADkAAAAJAAUAAAABADkAAAAKAAUAAAABADkAAAALAAUAAAABADkAAAAMAAUAAAABADkAAAANAAUAAAABADkAAAAOAAUAAAABADkAAAAPAAUAAAABADkAAAAAAAYAAAABADkAAAABAAYAAAABADkAAAACAAYAAAABADkAAAADAAYAAAABADkAAAAEAAYAAAABADkAAAAFAAYAAAABADkAAAAGAAYAAAABADkAAAAHAAYAAAABADkAAAAIAAYAAAABADkAAAAJAAYAAAABADkAAAAKAAYAAAABADkAAAALAAYAAAABADkAAAAMAAYAAAABADkAAAANAAYAAAABADkAAAAOAAYAAAABADkAAAAPAAYAAAABADkAAAAAAAcAAAABADkAAAABAAcAAAABADkAAAACAAcAAAABADkAAAADAAcAAAABADkAAAAEAAcAAAABADkAAAAFAAcAAAABADkAAAAGAAcAAAABADkAAAAHAAcAAAABADkAAAAIAAcAAAABADkAAAAJAAcAAAABADkAAAAKAAcAAAABADkAAAALAAcAAAABADkAAAAMAAcAAAABADkAAAANAAcAAAABADkAAAAOAAcAAAABADkAAAAPAAcAAAABADkAAAAAAAgAAAABADkAAAABAAgAAAABADkAAAACAAgAAAABADkAAAADAAgAAAABADkAAAAEAAgAAAABADkAAAAFAAgAAAABADkAAAAGAAgAAAABADkAAAAHAAgAAAABADkAAAAIAAgAAAABADkAAAAJAAgAAAABADkAAAAKAAgAAAABADkAAAALAAgAAAABADkAAAAMAAgAAAABADkAAAANAAgAAAABADkAAAAOAAgAAAABADkAAAAPAAgAAAABADkAAAAAAAkAAAABADkAAAABAAkAAAABADkAAAACAAkAAAABADkAAAADAAkAAAABADkAAAAEAAkAAAABADkAAAAFAAkAAAABADkAAAAGAAkAAAABADkAAAAHAAkAAAABADkAAAAIAAkAAAABADkAAAAJAAkAAAABADkAAAAKAAkAAAABADkAAAALAAkAAAABADkAAAAMAAkAAAABADkAAAANAAkAAAABADkAAAAOAAkAAAABADkAAAAPAAkAAAABADkAAAAAAAoAAAABADkAAAABAAoAAAABADkAAAACAAoAAAABADkAAAADAAoAAAABADkAAAAEAAoAAAABADkAAAAFAAoAAAABADkAAAAGAAoAAAABADkAAAAHAAoAAAABADkAAAAIAAoAAAABADkAAAAJAAoAAAABADkAAAAKAAoAAAABADkAAAALAAoAAAABADkAAAAMAAoAAAABADkAAAANAAoAAAABADkAAAAOAAoAAAABADkAAAAPAAoAAAABADkAAAAAAAsAAAABADkAAAABAAsAAAABADkAAAACAAsAAAABADkAAAADAAsAAAABADkAAAAEAAsAAAABADkAAAAFAAsAAAABADkAAAAGAAsAAAABADkAAAAHAAsAAAABADkAAAAIAAsAAAABADkAAAAJAAsAAAABADkAAAAKAAsAAAABADkAAAALAAsAAAABADkAAAAMAAsAAAABADkAAAANAAsAAAABADkAAAAOAAsAAAABADkAAAAPAAsAAAABADkAAAA=")
+tile_set = ExtResource("4_nqi6c")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1445235868]
+tile_map_data = PackedByteArray("AAAAAAAAAQABABIAAAAAAAEAAQABABMAAAAAAAsAAQABABMAAAABAAAAAQABABIAAAABAAEAAQABABMAAAABAAsAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAACAAsAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAADAAsAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAEAAsAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAFAAsAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAGAAsAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAHAAsAAQABABMAAAAIAAAAAQABABIAAAAIAAEA//////////8JAAAAAQABABIAAAAJAAEAAQABABMAAAAJAAsAAQABABMAAAAKAAAAAQABABIAAAAKAAEAAQABABMAAAAKAAsAAQABABMAAAALAAAAAQABABIAAAALAAEAAQABABMAAAALAAsAAQABABMAAAAMAAAAAQABABIAAAAMAAEAAQABABMAAAAMAAsAAQABABMAAAANAAAAAQABABIAAAANAAEAAQABABMAAAANAAsAAQABABMAAAAOAAAAAQABABIAAAAOAAEAAQABABMAAAAOAAsAAQABABMAAAAPAAAAAQABABIAAAAPAAEAAQABABMAAAAPAAsAAQABABMAAAAAAAIAAQABABMAAEAPAAIAAQABABMAAEAAAAMAAQABABMAAEAPAAMAAQABABMAAEAAAAQAAQABABMAAEAPAAQAAQABABMAAEAAAAUAAQABABMAAEAPAAUAAQABABMAAEAAAAYAAQABABMAAEAPAAYAAQABABMAAEAAAAcAAQABABMAAEAPAAcAAQABABMAAEAAAAgAAQABABMAAEAPAAgAAQABABMAAEAAAAkAAQABABMAAEAPAAkAAQABABMAAEAAAAoAAQABABMAAEAPAAoAAQABABMAAEABAAcAAQABABMAAAACAAcAAQABABMAAAADAAcAAQABABMAAAAEAAcAAQABABMAAAAFAAcAAQABABMAAAAGAAcAAQABABMAAAAHAAcAAQABABMAAAAIAAcAAQABABMAAAAJAAcAAQABABMAAAAKAAcAAQABABMAAAALAAcAAQABABMAAAAMAAcAAQABABMAAAAOAAcAAQABABMAAAABAAQAAQABABMAAAADAAQAAQABABMAAAAEAAQAAQABABMAAAAFAAQAAQABABMAAAAGAAQAAQABABMAAAAHAAQAAQABABMAAAAIAAQAAQABABMAAAAJAAQAAQABABMAAAAKAAQAAQABABMAAAALAAQAAQABABMAAAAMAAQAAQABABMAAAANAAQAAQABABMAAAAOAAQAAQABABMAAAAKAAkAAgADADQAAAALAAkAAgAEADQAAAAMAAkAAgAFADQAAAAKAAoAAgADADUAAAALAAoAAgAEADUAAAAMAAoAAgAFADUAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
+tile_set = ExtResource("4_nqi6c")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1922416531]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1479400881]
+y_sort_enabled = true
+tile_set = ExtResource("4_nqi6c")
+
+[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=365164498 instance=ExtResource("5_nseq1")]
+position = Vector2(144, 304)
+script = ExtResource("6_ebiux")
+trainer_id = &"gym8_actor_1"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_affbj")
+initial_facing = 2
+
+[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=1807283185 instance=ExtResource("8_77703")]
+position = Vector2(432, 240)
+script = ExtResource("9_x146y")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Paco. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_rk6fu")
+hidden_if_flag = &"trainer_defeated:gym8_actor_1"
+
+[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=103941700 instance=ExtResource("5_nseq1")]
+position = Vector2(368, 176)
+script = ExtResource("6_ebiux")
+trainer_id = &"gym8_actor_2"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_affbj")
+initial_facing = 1
+
+[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=2053228063 instance=ExtResource("8_77703")]
+position = Vector2(80, 144)
+script = ExtResource("9_x146y")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Curro. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_rk6fu")
+hidden_if_flag = &"trainer_defeated:gym8_actor_2"
+
+[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=787184525 instance=ExtResource("5_nseq1")]
+position = Vector2(176, 112)
+script = ExtResource("6_ebiux")
+trainer_id = &"mario_casas_gym"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_affbj")
+initial_facing = 2
+
+[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=1736220689 instance=ExtResource("8_77703")]
+position = Vector2(272, 80)
+script = ExtResource("9_x146y")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Mario Casas. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_rk6fu")
+hidden_if_flag = &"trainer_defeated:mario_casas_gym"
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1654738711]
+z_index = 10
+tile_set = ExtResource("4_nqi6c")
+
+[node name="Warps" type="Node2D" parent="." unique_id=1838506]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=831082795]
+position = Vector2(272, 368)
+script = ExtResource("11_jhv4b")
+target_map = &"malaga/exterior"
+target_spawn = &"from_gimnasio"
+arrival_facing = 1
+
+[node name="Siguiente" type="Node2D" parent="Warps" unique_id=1941407733]
+position = Vector2(272, 48)
+script = ExtResource("11_jhv4b")
+target_map = &"malaga/gimnasio_2"
+arrival_facing = 4
+
+[node name="Spawns" type="Node2D" parent="." unique_id=589058031]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=2043474533]
+position = Vector2(272, 336)
+
+[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=1956902785]
+position = Vector2(272, 80)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=751202646]
+
+[node name="Rotulo" type="Label" parent="." unique_id=535261418]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_4x841")
+theme_override_font_sizes/font_size = 16
+text = "RODAJE EN EL PUERTO: CATERING"
+horizontal_alignment = 1

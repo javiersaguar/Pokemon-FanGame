@@ -36,8 +36,12 @@ Y, de los gimnasios y Rocafonda: Pablo Casado, Messi, Julián Álvarez, Peter Li
 
 **Clases nuevas:** concejal del PP, fan culé, alcohólico, porreta, cocainómano, flamenca de feria y flamenco de traje, quesito, etarra, cayetano de pelo casco y actor de reparto.
 
-## 5. Sin decidir
+## 5. Respuestas de Javier del mismo día
+
+- **Salas:** bastantes, con puzle: hay que pasar obligatoriamente por todos los entrenadores antes de llegar al líder. *Hecho: tres salas y la del líder por gimnasio.*
+- **Equipos, frases y lore:** los propone el agente y van al guion; Javier los corregirá a mano. *Hecho: [`docs/mundo/guion.md` §8](mundo/guion.md).*
+
+## 6. Sin decidir
 
 - Dónde va cada uno de los once personajes del §4 que no pertenecen a un gimnasio.
-- Equipos y frases de los personajes nuevos (salvo las tres frases que ya ha dado Javier).
-- Cuántas salas tiene cada gimnasio y su puzle.
+- Si Javier quiere más salas o un puzle distinto en algún gimnasio.

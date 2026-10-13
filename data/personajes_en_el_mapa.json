@@ -70,23 +70,6 @@
    ]
   },
   {
-   "id": "laporta",
-   "entrenador": "laporta",
-   "mapa": "barcelona/les_corts",
-   "cerca": [
-    27.0,
-    43.0
-   ],
-   "mira": "abajo",
-   "vista": 0.0,
-   "lugar": "Líder del gimnasio 2: delante del Spotify Camp Nou",
-   "lider": true,
-   "casilla": [
-    27,
-    45
-   ]
-  },
-  {
    "id": "gym2_tertuliano",
    "entrenador": "gym2_tertuliano",
    "mapa": "barcelona/les_corts",
@@ -132,23 +115,6 @@
    "casilla": [
     32,
     45
-   ]
-  },
-  {
-   "id": "labrador",
-   "entrenador": "labrador",
-   "mapa": "valencia/malvarrosa",
-   "cerca": [
-    40.0,
-    23.0
-   ],
-   "mira": "abajo",
-   "vista": 0.0,
-   "lugar": "Líder del gimnasio 3: delante de Akuarela Playa",
-   "lider": true,
-   "casilla": [
-    40,
-    23
    ]
   },
   {
@@ -200,23 +166,6 @@
    ]
   },
   {
-   "id": "joaquin",
-   "entrenador": "joaquin",
-   "mapa": "sevilla/rio",
-   "cerca": [
-    12.0,
-    34.0
-   ],
-   "mira": "abajo",
-   "vista": 0.0,
-   "lugar": "Líder del gimnasio 4: delante del club de la comedia",
-   "lider": true,
-   "casilla": [
-    12,
-    34
-   ]
-  },
-  {
    "id": "gym4_cunado",
    "entrenador": "gym4_cunado",
    "mapa": "sevilla/rio",
@@ -262,23 +211,6 @@
    "casilla": [
     15,
     36
-   ]
-  },
-  {
-   "id": "quevedo",
-   "entrenador": "quevedo",
-   "mapa": "playa_del_ingles/exterior",
-   "cerca": [
-    51.0,
-    25.0
-   ],
-   "mira": "abajo",
-   "vista": 0.0,
-   "lugar": "Líder del gimnasio 5: delante del escenario del concierto",
-   "lider": true,
-   "casilla": [
-    51,
-    25
    ]
   },
   {
@@ -330,23 +262,6 @@
    ]
   },
   {
-   "id": "latasa",
-   "entrenador": "latasa",
-   "mapa": "valladolid/exterior",
-   "cerca": [
-    36.0,
-    31.0
-   ],
-   "mira": "abajo",
-   "vista": 0.0,
-   "lugar": "Líder del gimnasio 7: en el centro de la Plaza Mayor",
-   "lider": true,
-   "casilla": [
-    36,
-    31
-   ]
-  },
-  {
    "id": "gym7_esquiador",
    "entrenador": "gym7_esquiador",
    "mapa": "valladolid/exterior",
@@ -392,23 +307,6 @@
    "casilla": [
     40,
     30
-   ]
-  },
-  {
-   "id": "banderas",
-   "entrenador": "banderas",
-   "mapa": "malaga/exterior",
-   "cerca": [
-    58.0,
-    63.0
-   ],
-   "mira": "abajo",
-   "vista": 0.0,
-   "lugar": "Líder del gimnasio 8: en el rodaje, junto al puerto",
-   "lider": true,
-   "casilla": [
-    58,
-    63
    ]
   },
   {
@@ -1697,36 +1595,6 @@
   }
  ],
  "pendientes": [
-  {
-   "id": "aupa_athletic",
-   "lugar": "San Mamés (Bilbao)",
-   "motivo": "Bilbao aún no está pintado (Agente 2). Aspecto ya decidido por Javier: el del vídeo del Aupa Athletic"
-  },
-  {
-   "id": "nico_williams",
-   "lugar": "San Mamés (Bilbao)",
-   "motivo": "Bilbao aún no está pintado"
-  },
-  {
-   "id": "inaki_williams",
-   "lugar": "San Mamés (Bilbao)",
-   "motivo": "Bilbao aún no está pintado"
-  },
-  {
-   "id": "gym6_crossfitero",
-   "lugar": "San Mamés (Bilbao)",
-   "motivo": "Bilbao aún no está pintado"
-  },
-  {
-   "id": "gym6_tertuliano",
-   "lugar": "San Mamés (Bilbao)",
-   "motivo": "Bilbao aún no está pintado"
-  },
-  {
-   "id": "gym6_camarero",
-   "lugar": "San Mamés (Bilbao)",
-   "motivo": "Bilbao aún no está pintado"
-  },
   {
    "id": "elxokas",
    "lugar": "Ruta 17 (Galicia)",

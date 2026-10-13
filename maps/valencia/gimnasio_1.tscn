@@ -1,0 +1,143 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_afetd"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_dcwoy"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_swwgi"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_cmdwi"]
+[ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="5_y04qv"]
+[ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="6_sgyx1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="7_5qn3b"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="8_ctw36"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="9_a4nl0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_youngster.png" id="10_qyuox"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_4wf0r"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_yi2pu"]
+
+[sub_resource type="Resource" id="Resource_18m8k"]
+script = ExtResource("3_swwgi")
+id = &"valencia/gimnasio_1"
+display_name = "Akuarela Playa · Pista"
+outdoor = false
+zone_id = &"valencia"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="Gimnasio" type="Node2D" unique_id=256785755]
+script = ExtResource("1_afetd")
+data = SubResource("Resource_18m8k")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1337819744]
+tile_map_data = PackedByteArray("AAAAAAAAAAABACEAAAABAAAAAAABACEAAAACAAAAAAABACEAAAADAAAAAAABACEAAAAEAAAAAAABACEAAAAFAAAAAAABACEAAAAGAAAAAAABACEAAAAHAAAAAAABACEAAAAIAAAAAAABACEAAAAJAAAAAAABACEAAAAKAAAAAAABACEAAAALAAAAAAABACEAAAAMAAAAAAABACEAAAANAAAAAAABACEAAAAOAAAAAAABACEAAAAPAAAAAAABACEAAAAAAAEAAAABACEAAAABAAEAAAABACEAAAACAAEAAAABACEAAAADAAEAAAABACEAAAAEAAEAAAABACEAAAAFAAEAAAABACEAAAAGAAEAAAABACEAAAAHAAEAAAABACEAAAAIAAEAAAABACEAAAAJAAEAAAABACEAAAAKAAEAAAABACEAAAALAAEAAAABACEAAAAMAAEAAAABACEAAAANAAEAAAABACEAAAAOAAEAAAABACEAAAAPAAEAAAABACEAAAAAAAIAAAABACEAAAABAAIAAAABACEAAAACAAIAAAABACEAAAADAAIAAAABACEAAAAEAAIAAAABACEAAAAFAAIAAAABACEAAAAGAAIAAAABACEAAAAHAAIAAAABACEAAAAIAAIAAAABACEAAAAJAAIAAAABACEAAAAKAAIAAAABACEAAAALAAIAAAABACEAAAAMAAIAAAABACEAAAANAAIAAAABACEAAAAOAAIAAAABACEAAAAPAAIAAAABACEAAAAAAAMAAAABACEAAAABAAMAAAABACEAAAACAAMAAAABACEAAAADAAMAAAABACEAAAAEAAMAAAABACEAAAAFAAMAAAABACEAAAAGAAMAAAABACEAAAAHAAMAAAABACEAAAAIAAMAAAABACEAAAAJAAMAAAABACEAAAAKAAMAAAABACEAAAALAAMAAAABACEAAAAMAAMAAAABACEAAAANAAMAAAABACEAAAAOAAMAAAABACEAAAAPAAMAAAABACEAAAAAAAQAAAABACEAAAABAAQAAAABACEAAAACAAQAAAABACEAAAADAAQAAAABACEAAAAEAAQAAAABACEAAAAFAAQAAAABACEAAAAGAAQAAAABACEAAAAHAAQAAAABACEAAAAIAAQAAAABACEAAAAJAAQAAAABACEAAAAKAAQAAAABACEAAAALAAQAAAABACEAAAAMAAQAAAABACEAAAANAAQAAAABACEAAAAOAAQAAAABACEAAAAPAAQAAAABACEAAAAAAAUAAAABACEAAAABAAUAAAABACEAAAACAAUAAAABACEAAAADAAUAAAABACEAAAAEAAUAAAABACEAAAAFAAUAAAABACEAAAAGAAUAAAABACEAAAAHAAUAAAABACEAAAAIAAUAAAABACEAAAAJAAUAAAABACEAAAAKAAUAAAABACEAAAALAAUAAAABACEAAAAMAAUAAAABACEAAAANAAUAAAABACEAAAAOAAUAAAABACEAAAAPAAUAAAABACEAAAAAAAYAAAABACEAAAABAAYAAAABACEAAAACAAYAAAABACEAAAADAAYAAAABACEAAAAEAAYAAAABACEAAAAFAAYAAAABACEAAAAGAAYAAAABACEAAAAHAAYAAAABACEAAAAIAAYAAAABACEAAAAJAAYAAAABACEAAAAKAAYAAAABACEAAAALAAYAAAABACEAAAAMAAYAAAABACEAAAANAAYAAAABACEAAAAOAAYAAAABACEAAAAPAAYAAAABACEAAAAAAAcAAAABACEAAAABAAcAAAABACEAAAACAAcAAAABACEAAAADAAcAAAABACEAAAAEAAcAAAABACEAAAAFAAcAAAABACEAAAAGAAcAAAABACEAAAAHAAcAAAABACEAAAAIAAcAAAABACEAAAAJAAcAAAABACEAAAAKAAcAAAABACEAAAALAAcAAAABACEAAAAMAAcAAAABACEAAAANAAcAAAABACEAAAAOAAcAAAABACEAAAAPAAcAAAABACEAAAAAAAgAAAABACEAAAABAAgAAAABACEAAAACAAgAAAABACEAAAADAAgAAAABACEAAAAEAAgAAAABACEAAAAFAAgAAAABACEAAAAGAAgAAAABACEAAAAHAAgAAAABACEAAAAIAAgAAAABACEAAAAJAAgAAAABACEAAAAKAAgAAAABACEAAAALAAgAAAABACEAAAAMAAgAAAABACEAAAANAAgAAAABACEAAAAOAAgAAAABACEAAAAPAAgAAAABACEAAAAAAAkAAAABACEAAAABAAkAAAABACEAAAACAAkAAAABACEAAAADAAkAAAABACEAAAAEAAkAAAABACEAAAAFAAkAAAABACEAAAAGAAkAAAABACEAAAAHAAkAAAABACEAAAAIAAkAAAABACEAAAAJAAkAAAABACEAAAAKAAkAAAABACEAAAALAAkAAAABACEAAAAMAAkAAAABACEAAAANAAkAAAABACEAAAAOAAkAAAABACEAAAAPAAkAAAABACEAAAAAAAoAAAABACEAAAABAAoAAAABACEAAAACAAoAAAABACEAAAADAAoAAAABACEAAAAEAAoAAAABACEAAAAFAAoAAAABACEAAAAGAAoAAAABACEAAAAHAAoAAAABACEAAAAIAAoAAAABACEAAAAJAAoAAAABACEAAAAKAAoAAAABACEAAAALAAoAAAABACEAAAAMAAoAAAABACEAAAANAAoAAAABACEAAAAOAAoAAAABACEAAAAPAAoAAAABACEAAAAAAAsAAAABACEAAAABAAsAAAABACEAAAACAAsAAAABACEAAAADAAsAAAABACEAAAAEAAsAAAABACEAAAAFAAsAAAABACEAAAAGAAsAAAABACEAAAAHAAsAAAABACEAAAAIAAsAAAABACEAAAAJAAsAAAABACEAAAAKAAsAAAABACEAAAALAAsAAAABACEAAAAMAAsAAAABACEAAAANAAsAAAABACEAAAAOAAsAAAABACEAAAAPAAsAAAABACEAAAA=")
+tile_set = ExtResource("4_cmdwi")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1884014252]
+tile_map_data = PackedByteArray("AAAAAAAAAQABAD8AAAAAAAEAAQABAEAAAAAAAAsAAQABAEAAAAABAAAAAQABAD8AAAABAAEAAQABAEAAAAABAAsAAQABAEAAAAACAAAAAQABAD8AAAACAAEAAQABAEAAAAACAAsAAQABAEAAAAADAAAAAQABAD8AAAADAAEAAQABAEAAAAADAAsAAQABAEAAAAAEAAAAAQABAD8AAAAEAAEAAQABAEAAAAAEAAsAAQABAEAAAAAFAAAAAQABAD8AAAAFAAEAAQABAEAAAAAFAAsAAQABAEAAAAAGAAAAAQABAD8AAAAGAAEAAQABAEAAAAAGAAsAAQABAEAAAAAHAAAAAQABAD8AAAAHAAEAAQABAEAAAAAHAAsAAQABAEAAAAAIAAAAAQABAD8AAAAIAAEA//////////8JAAAAAQABAD8AAAAJAAEAAQABAEAAAAAJAAsAAQABAEAAAAAKAAAAAQABAD8AAAAKAAEAAQABAEAAAAAKAAsAAQABAEAAAAALAAAAAQABAD8AAAALAAEAAQABAEAAAAALAAsAAQABAEAAAAAMAAAAAQABAD8AAAAMAAEAAQABAEAAAAAMAAsAAQABAEAAAAANAAAAAQABAD8AAAANAAEAAQABAEAAAAANAAsAAQABAEAAAAAOAAAAAQABAD8AAAAOAAEAAQABAEAAAAAOAAsAAQABAEAAAAAPAAAAAQABAD8AAAAPAAEAAQABAEAAAAAPAAsAAQABAEAAAAAAAAIAAQABAEAAAEAPAAIAAQABAEAAAEAAAAMAAQABAEAAAEAPAAMAAQABAEAAAEAAAAQAAQABAEAAAEAPAAQAAQABAEAAAEAAAAUAAQABAEAAAEAPAAUAAQABAEAAAEAAAAYAAQABAEAAAEAPAAYAAQABAEAAAEAAAAcAAQABAEAAAEAPAAcAAQABAEAAAEAAAAgAAQABAEAAAEAPAAgAAQABAEAAAEAAAAkAAQABAEAAAEAPAAkAAQABAEAAAEAAAAoAAQABAEAAAEAPAAoAAQABAEAAAEABAAcAAQABAEAAAAACAAcAAQABAEAAAAADAAcAAQABAEAAAAAEAAcAAQABAEAAAAAFAAcAAQABAEAAAAAGAAcAAQABAEAAAAAHAAcAAQABAEAAAAAIAAcAAQABAEAAAAAJAAcAAQABAEAAAAAKAAcAAQABAEAAAAALAAcAAQABAEAAAAAMAAcAAQABAEAAAAAOAAcAAQABAEAAAAABAAQAAQABAEAAAAADAAQAAQABAEAAAAAEAAQAAQABAEAAAAAFAAQAAQABAEAAAAAGAAQAAQABAEAAAAAHAAQAAQABAEAAAAAIAAQAAQABAEAAAAAJAAQAAQABAEAAAAAKAAQAAQABAEAAAAALAAQAAQABAEAAAAAMAAQAAQABAEAAAAANAAQAAQABAEAAAAAOAAQAAQABAEAAAAAKAAkAAgADADQAAAALAAkAAgAEADQAAAAMAAkAAgAFADQAAAAKAAoAAgADADUAAAALAAoAAgAEADUAAAAMAAoAAgAFADUAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
+tile_set = ExtResource("4_cmdwi")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1921209771]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1735487969]
+y_sort_enabled = true
+tile_set = ExtResource("4_cmdwi")
+
+[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=1541318160 instance=ExtResource("5_y04qv")]
+position = Vector2(144, 304)
+script = ExtResource("6_sgyx1")
+trainer_id = &"gym3_alcoholico_1"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_5qn3b")
+initial_facing = 2
+
+[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=550794592 instance=ExtResource("8_ctw36")]
+position = Vector2(432, 240)
+script = ExtResource("9_a4nl0")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Vicent. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_qyuox")
+hidden_if_flag = &"trainer_defeated:gym3_alcoholico_1"
+
+[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=784391162 instance=ExtResource("5_y04qv")]
+position = Vector2(368, 176)
+script = ExtResource("6_sgyx1")
+trainer_id = &"gym3_porreta_1"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_5qn3b")
+initial_facing = 1
+
+[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=574411289 instance=ExtResource("8_ctw36")]
+position = Vector2(80, 144)
+script = ExtResource("9_a4nl0")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Ximo. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_qyuox")
+hidden_if_flag = &"trainer_defeated:gym3_porreta_1"
+
+[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=1267854609 instance=ExtResource("5_y04qv")]
+position = Vector2(176, 112)
+script = ExtResource("6_sgyx1")
+trainer_id = &"gym3_cocainomano_1"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_5qn3b")
+initial_facing = 2
+
+[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=573996638 instance=ExtResource("8_ctw36")]
+position = Vector2(272, 80)
+script = ExtResource("9_a4nl0")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Borja. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_qyuox")
+hidden_if_flag = &"trainer_defeated:gym3_cocainomano_1"
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=170938136]
+z_index = 10
+tile_set = ExtResource("4_cmdwi")
+
+[node name="Warps" type="Node2D" parent="." unique_id=1054947323]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1411014006]
+position = Vector2(272, 368)
+script = ExtResource("11_4wf0r")
+target_map = &"valencia/malvarrosa"
+target_spawn = &"from_sala_43_20"
+arrival_facing = 1
+
+[node name="Siguiente" type="Node2D" parent="Warps" unique_id=1099863698]
+position = Vector2(272, 48)
+script = ExtResource("11_4wf0r")
+target_map = &"valencia/gimnasio_2"
+arrival_facing = 4
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1120723640]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=939362773]
+position = Vector2(272, 336)
+
+[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=1804838573]
+position = Vector2(272, 80)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=270941368]
+
+[node name="Rotulo" type="Label" parent="." unique_id=543786207]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_yi2pu")
+theme_override_font_sizes/font_size = 16
+text = "AKUARELA PLAYA: PISTA"
+horizontal_alignment = 1

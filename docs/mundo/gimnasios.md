@@ -10,6 +10,21 @@
 - **Mientras no haya interiores**, cada líder espera **a la puerta de su gimnasio** y sus tres entrenadores, delante, en fila (te ven a 3 casillas). Cuando el interior esté hecho, basta con cambiar su `mapa` y su `cerca` en `data/personajes_en_el_mapa.json` y pasar `maps/_tools/colocar_personajes.gd`.
 - Las puertas y los interiores los hace quien lleva los interiores; aquí va el diseño de cada uno para cuando se pinte.
 
+## Por dentro (2026-10-14)
+
+Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_2026-10-14.md)): **manda sobre los entrenadores que proponen las fichas de abajo.** Cada gimnasio son **cuatro mapas** (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider`), pintados por `maps/_pintura/pintar_gimnasios.gd` a partir de `maps/_pintura/gimnasios_salas.json`. Cada sala es un zigzag de tres tramos con un entrenador y un vigilante que tapa el paso hasta que le ganas; así es obligatorio ganar a todos antes del líder. Quién hay en cada sala, con su lore, equipo y frases: [`guion.md` §8](guion.md).
+
+| # | Se entra por | Entrenadores antes del líder |
+|---|---|---|
+| 1 | la Real Casa de Correos (`madrid/centro`); cerrado hasta que Ayuso da paso en el Quirón | 9: Borja Mari, Pelayo, Almeida, Jacobo, Gonzalo, Rajoy, Álvaro, Íñigo, Pablo Casado |
+| 2 | el Camp Nou (`barcelona/les_corts`) | 9: Jordi, Pau, Piqué, Arnau, Oriol, Julián Álvarez, Marc, Roger, Messi |
+| 3 | Akuarela (`valencia/malvarrosa`) | 9: Vicent, Ximo, Borja, Paco, Nando, Kevin, Rafa, Iván, Peter Lim |
+| 4 | el teatro del club de la comedia (`sevilla/rio`) | 9: Rocío, Curro, Antony, Macarena, Berto Romero, Manuel, Dani Rovira, Buenafuente, José Mota |
+| 5 | la escalera del escenario (`playa_del_ingles/exterior`, casilla (48, 23)) | 9: Yaiza, Nayra, La Pantera, Idaira, Tamara, Lucho RK, Guacimara, Dácil, Cruz Cafuné |
+| 6 | **sin entrada todavía**: Bilbao no tiene mapa exterior | 9: Aitor, Gorka, Iker, Unai, Asier, Iñaki Williams, Mikel, Nico Williams, Arnaldo Otegi |
+| 7 | el Ayuntamiento de la Plaza Mayor (`valladolid/exterior`) | 9: Borja, Jacobo, Pelayo, Beltrán, Tristán, Óscar Puente, Rodrigo, Álvaro, Ronaldo Nazário |
+| 8 | la carpa del rodaje (`malaga/exterior`, casilla (58, 60)) | 9: Paco, Curro, Mario Casas, Antonio, Ester Expósito, Manolo, Torrente, Penélope Cruz, Javier Bardem |
+
 ## Resumen
 
 | # | Ciudad | Sitio | Líder | Tipo | Medalla | Nivel tope | Dónde está ahora |

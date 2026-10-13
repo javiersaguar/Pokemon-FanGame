@@ -195,7 +195,7 @@ arrival_facing = 4
 [node name="Sala35_18" type="Node2D" parent="Warps" unique_id=268698545]
 position = Vector2(1136, 592)
 script = ExtResource("13_r37jv")
-target_map = &"valladolid/sala_calle_35_18"
+target_map = &"valladolid/gimnasio_1"
 arrival_facing = 4
 
 [node name="Sala64_38" type="Node2D" parent="Warps" unique_id=340444046]

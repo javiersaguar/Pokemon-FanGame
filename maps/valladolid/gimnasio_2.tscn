@@ -1,0 +1,143 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_bp83b"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_je5jt"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_x4ame"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_8syi7"]
+[ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="5_8pv4v"]
+[ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="6_vd3up"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="7_w03ad"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="8_fqonj"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="9_ykpoa"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="10_80yqd"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_qoxsv"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_734nv"]
+
+[sub_resource type="Resource" id="Resource_uxm47"]
+script = ExtResource("3_x4ame")
+id = &"valladolid/gimnasio_2"
+display_name = "Plaza Mayor · Salón De Plenos"
+outdoor = false
+zone_id = &"valladolid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="Gimnasio" type="Node2D" unique_id=1962880502]
+script = ExtResource("1_bp83b")
+data = SubResource("Resource_uxm47")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=406193469]
+tile_map_data = PackedByteArray("AAAAAAAAAAABADEAAAABAAAAAAABADEAAAACAAAAAAABADEAAAADAAAAAAABADEAAAAEAAAAAAABADEAAAAFAAAAAAABADEAAAAGAAAAAAABADEAAAAHAAAAAAABADEAAAAIAAAAAAABADEAAAAJAAAAAAABADEAAAAKAAAAAAABADEAAAALAAAAAAABADEAAAAMAAAAAAABADEAAAANAAAAAAABADEAAAAOAAAAAAABADEAAAAPAAAAAAABADEAAAAAAAEAAAABADEAAAABAAEAAAABADEAAAACAAEAAAABADEAAAADAAEAAAABADEAAAAEAAEAAAABADEAAAAFAAEAAAABADEAAAAGAAEAAAABADEAAAAHAAEAAAABADEAAAAIAAEAAAABADEAAAAJAAEAAAABADEAAAAKAAEAAAABADEAAAALAAEAAAABADEAAAAMAAEAAAABADEAAAANAAEAAAABADEAAAAOAAEAAAABADEAAAAPAAEAAAABADEAAAAAAAIAAAABADEAAAABAAIAAAABADEAAAACAAIAAAABADEAAAADAAIAAAABADEAAAAEAAIAAAABADEAAAAFAAIAAAABADEAAAAGAAIAAAABADEAAAAHAAIAAAABADEAAAAIAAIAAAABADEAAAAJAAIAAAABADEAAAAKAAIAAAABADEAAAALAAIAAAABADEAAAAMAAIAAAABADEAAAANAAIAAAABADEAAAAOAAIAAAABADEAAAAPAAIAAAABADEAAAAAAAMAAAABADEAAAABAAMAAAABADEAAAACAAMAAAABADEAAAADAAMAAAABADEAAAAEAAMAAAABADEAAAAFAAMAAAABADEAAAAGAAMAAAABADEAAAAHAAMAAAABADEAAAAIAAMAAAABADEAAAAJAAMAAAABADEAAAAKAAMAAAABADEAAAALAAMAAAABADEAAAAMAAMAAAABADEAAAANAAMAAAABADEAAAAOAAMAAAABADEAAAAPAAMAAAABADEAAAAAAAQAAAABADEAAAABAAQAAAABADEAAAACAAQAAAABADEAAAADAAQAAAABADEAAAAEAAQAAAABADEAAAAFAAQAAAABADEAAAAGAAQAAAABADEAAAAHAAQAAAABADEAAAAIAAQAAAABADEAAAAJAAQAAAABADEAAAAKAAQAAAABADEAAAALAAQAAAABADEAAAAMAAQAAAABADEAAAANAAQAAAABADEAAAAOAAQAAAABADEAAAAPAAQAAAABADEAAAAAAAUAAAABADEAAAABAAUAAAABADEAAAACAAUAAAABADEAAAADAAUAAAABADEAAAAEAAUAAAABADEAAAAFAAUAAAABADEAAAAGAAUAAAABADEAAAAHAAUAAAABADEAAAAIAAUAAAABADEAAAAJAAUAAAABADEAAAAKAAUAAAABADEAAAALAAUAAAABADEAAAAMAAUAAAABADEAAAANAAUAAAABADEAAAAOAAUAAAABADEAAAAPAAUAAAABADEAAAAAAAYAAAABADEAAAABAAYAAAABADEAAAACAAYAAAABADEAAAADAAYAAAABADEAAAAEAAYAAAABADEAAAAFAAYAAAABADEAAAAGAAYAAAABADEAAAAHAAYAAAABADEAAAAIAAYAAAABADEAAAAJAAYAAAABADEAAAAKAAYAAAABADEAAAALAAYAAAABADEAAAAMAAYAAAABADEAAAANAAYAAAABADEAAAAOAAYAAAABADEAAAAPAAYAAAABADEAAAAAAAcAAAABADEAAAABAAcAAAABADEAAAACAAcAAAABADEAAAADAAcAAAABADEAAAAEAAcAAAABADEAAAAFAAcAAAABADEAAAAGAAcAAAABADEAAAAHAAcAAAABADEAAAAIAAcAAAABADEAAAAJAAcAAAABADEAAAAKAAcAAAABADEAAAALAAcAAAABADEAAAAMAAcAAAABADEAAAANAAcAAAABADEAAAAOAAcAAAABADEAAAAPAAcAAAABADEAAAAAAAgAAAABADEAAAABAAgAAAABADEAAAACAAgAAAABADEAAAADAAgAAAABADEAAAAEAAgAAAABADEAAAAFAAgAAAABADEAAAAGAAgAAAABADEAAAAHAAgAAAABADEAAAAIAAgAAAABADEAAAAJAAgAAAABADEAAAAKAAgAAAABADEAAAALAAgAAAABADEAAAAMAAgAAAABADEAAAANAAgAAAABADEAAAAOAAgAAAABADEAAAAPAAgAAAABADEAAAAAAAkAAAABADEAAAABAAkAAAABADEAAAACAAkAAAABADEAAAADAAkAAAABADEAAAAEAAkAAAABADEAAAAFAAkAAAABADEAAAAGAAkAAAABADEAAAAHAAkAAAABADEAAAAIAAkAAAABADEAAAAJAAkAAAABADEAAAAKAAkAAAABADEAAAALAAkAAAABADEAAAAMAAkAAAABADEAAAANAAkAAAABADEAAAAOAAkAAAABADEAAAAPAAkAAAABADEAAAAAAAoAAAABADEAAAABAAoAAAABADEAAAACAAoAAAABADEAAAADAAoAAAABADEAAAAEAAoAAAABADEAAAAFAAoAAAABADEAAAAGAAoAAAABADEAAAAHAAoAAAABADEAAAAIAAoAAAABADEAAAAJAAoAAAABADEAAAAKAAoAAAABADEAAAALAAoAAAABADEAAAAMAAoAAAABADEAAAANAAoAAAABADEAAAAOAAoAAAABADEAAAAPAAoAAAABADEAAAAAAAsAAAABADEAAAABAAsAAAABADEAAAACAAsAAAABADEAAAADAAsAAAABADEAAAAEAAsAAAABADEAAAAFAAsAAAABADEAAAAGAAsAAAABADEAAAAHAAsAAAABADEAAAAIAAsAAAABADEAAAAJAAsAAAABADEAAAAKAAsAAAABADEAAAALAAsAAAABADEAAAAMAAsAAAABADEAAAANAAsAAAABADEAAAAOAAsAAAABADEAAAAPAAsAAAABADEAAAA=")
+tile_set = ExtResource("4_8syi7")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1209262763]
+tile_map_data = PackedByteArray("AAAAAAAAAQABAEQAAAAAAAEAAQABAEUAAAAAAAsAAQABAEUAAAABAAAAAQABAEQAAAABAAEAAQABAEUAAAABAAsAAQABAEUAAAACAAAAAQABAEQAAAACAAEAAQABAEUAAAACAAsAAQABAEUAAAADAAAAAQABAEQAAAADAAEAAQABAEUAAAADAAsAAQABAEUAAAAEAAAAAQABAEQAAAAEAAEAAQABAEUAAAAEAAsAAQABAEUAAAAFAAAAAQABAEQAAAAFAAEAAQABAEUAAAAFAAsAAQABAEUAAAAGAAAAAQABAEQAAAAGAAEAAQABAEUAAAAGAAsAAQABAEUAAAAHAAAAAQABAEQAAAAHAAEAAQABAEUAAAAHAAsAAQABAEUAAAAIAAAAAQABAEQAAAAIAAEA//////////8JAAAAAQABAEQAAAAJAAEAAQABAEUAAAAJAAsAAQABAEUAAAAKAAAAAQABAEQAAAAKAAEAAQABAEUAAAAKAAsAAQABAEUAAAALAAAAAQABAEQAAAALAAEAAQABAEUAAAALAAsAAQABAEUAAAAMAAAAAQABAEQAAAAMAAEAAQABAEUAAAAMAAsAAQABAEUAAAANAAAAAQABAEQAAAANAAEAAQABAEUAAAANAAsAAQABAEUAAAAOAAAAAQABAEQAAAAOAAEAAQABAEUAAAAOAAsAAQABAEUAAAAPAAAAAQABAEQAAAAPAAEAAQABAEUAAAAPAAsAAQABAEUAAAAAAAIAAQABAEUAAEAPAAIAAQABAEUAAEAAAAMAAQABAEUAAEAPAAMAAQABAEUAAEAAAAQAAQABAEUAAEAPAAQAAQABAEUAAEAAAAUAAQABAEUAAEAPAAUAAQABAEUAAEAAAAYAAQABAEUAAEAPAAYAAQABAEUAAEAAAAcAAQABAEUAAEAPAAcAAQABAEUAAEAAAAgAAQABAEUAAEAPAAgAAQABAEUAAEAAAAkAAQABAEUAAEAPAAkAAQABAEUAAEAAAAoAAQABAEUAAEAPAAoAAQABAEUAAEABAAcAAQABAEUAAAADAAcAAQABAEUAAAAEAAcAAQABAEUAAAAFAAcAAQABAEUAAAAGAAcAAQABAEUAAAAHAAcAAQABAEUAAAAIAAcAAQABAEUAAAAJAAcAAQABAEUAAAAKAAcAAQABAEUAAAALAAcAAQABAEUAAAAMAAcAAQABAEUAAAANAAcAAQABAEUAAAAOAAcAAQABAEUAAAABAAQAAQABAEUAAAACAAQAAQABAEUAAAADAAQAAQABAEUAAAAEAAQAAQABAEUAAAAFAAQAAQABAEUAAAAGAAQAAQABAEUAAAAHAAQAAQABAEUAAAAIAAQAAQABAEUAAAAJAAQAAQABAEUAAAAKAAQAAQABAEUAAAALAAQAAQABAEUAAAAMAAQAAQABAEUAAAAOAAQAAQABAEUAAAADAAkAAgADADQAAAAEAAkAAgAEADQAAAAFAAkAAgAFADQAAAADAAoAAgADADUAAAAEAAoAAgAEADUAAAAFAAoAAgAFADUAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
+tile_set = ExtResource("4_8syi7")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1243643484]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1355430355]
+y_sort_enabled = true
+tile_set = ExtResource("4_8syi7")
+
+[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=876791255 instance=ExtResource("5_8pv4v")]
+position = Vector2(368, 304)
+script = ExtResource("6_vd3up")
+trainer_id = &"gym7_cayetano_4"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_w03ad")
+initial_facing = 1
+
+[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=1136263573 instance=ExtResource("8_fqonj")]
+position = Vector2(80, 240)
+script = ExtResource("9_ykpoa")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Beltrán. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_80yqd")
+hidden_if_flag = &"trainer_defeated:gym7_cayetano_4"
+
+[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=2139360806 instance=ExtResource("5_8pv4v")]
+position = Vector2(144, 176)
+script = ExtResource("6_vd3up")
+trainer_id = &"gym7_cayetano_5"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_w03ad")
+initial_facing = 2
+
+[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=1872362519 instance=ExtResource("8_fqonj")]
+position = Vector2(432, 144)
+script = ExtResource("9_ykpoa")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Tristán. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_80yqd")
+hidden_if_flag = &"trainer_defeated:gym7_cayetano_5"
+
+[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=1334441362 instance=ExtResource("5_8pv4v")]
+position = Vector2(368, 112)
+script = ExtResource("6_vd3up")
+trainer_id = &"oscar_puente_gym"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_w03ad")
+initial_facing = 1
+
+[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=1956982473 instance=ExtResource("8_fqonj")]
+position = Vector2(272, 80)
+script = ExtResource("9_ykpoa")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Óscar Puente. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_80yqd")
+hidden_if_flag = &"trainer_defeated:oscar_puente_gym"
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1001402717]
+z_index = 10
+tile_set = ExtResource("4_8syi7")
+
+[node name="Warps" type="Node2D" parent="." unique_id=623969821]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=591105343]
+position = Vector2(272, 368)
+script = ExtResource("11_qoxsv")
+target_map = &"valladolid/gimnasio_1"
+target_spawn = &"from_arriba"
+arrival_facing = 1
+
+[node name="Siguiente" type="Node2D" parent="Warps" unique_id=865636588]
+position = Vector2(272, 48)
+script = ExtResource("11_qoxsv")
+target_map = &"valladolid/gimnasio_3"
+arrival_facing = 4
+
+[node name="Spawns" type="Node2D" parent="." unique_id=945513530]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=410305558]
+position = Vector2(272, 336)
+
+[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=1769138355]
+position = Vector2(272, 80)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=625287654]
+
+[node name="Rotulo" type="Label" parent="." unique_id=852450270]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_734nv")
+theme_override_font_sizes/font_size = 16
+text = "PLAZA MAYOR: SALÓN DE PLENOS"
+horizontal_alignment = 1

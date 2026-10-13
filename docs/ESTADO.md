@@ -500,6 +500,19 @@ Main `47ca2f19` incorporado; Móstoles y las pasarelas C-5 se conservan. **Prime
 
 ## Agente 5 — Calidad y motor de combate (desde el 2026-10-07)
 
+### Los ocho gimnasios por dentro (2026-10-14)
+
+Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](DECISIONES_JAVIER_2026-10-14.md)): bastantes salas con puzle, obligatorio ganar a todos antes del líder.
+
+- **32 mapas:** cada gimnasio tiene tres salas y la del líder (`<ciudad>/gimnasio_1..3` y `gimnasio_lider`), pintadas por `maps/_pintura/pintar_gimnasios.gd` desde `maps/_pintura/gimnasios_salas.json`.
+- **El puzle:** cada sala es un zigzag de tres tramos; el paso de un tramo al siguiente lo tapa un vigilante que solo se aparta al ganar al entrenador de ese tramo (`hidden_if_flag`). `tests/mundo/test_gimnasios_salas.gd` comprueba en las 32 salas que no se pasa sin ganar a todos y que sí se pasa después.
+- **72 entrenadores nuevos** en `data/trainers/gimnasios.json` (9 por gimnasio) con los personajes que pidió Javier, y 28 clases nuevas. Equipos del tipo del gimnasio y en la etapa que toca a su nivel; el RandomLocke genera sin reintentos.
+- **Gimnasio 1:** Ayuso ya no te lleva al ático desde el Quirón: allí da paso (`quiron_superado`) y el gimnasio es la Real Casa de Correos; al fondo, en su despacho, te sube a la terraza de Chamberí (`src/events/gym1_ayuso_event.gd`).
+- **Entradas:** Casa de Correos, Camp Nou, Akuarela, el teatro de Triana y el Ayuntamiento de Valladolid usan la puerta de su edificio; en Playa del Inglés se entra por la escalera del escenario (48, 23) y en Málaga por la carpa del rodaje (58, 60). **Bilbao no tiene entrada** porque no tiene mapa exterior: sus salas se ven desde el F9. Herramienta nueva: `maps/_tools/redirigir_puerta.gd`.
+- **Líderes:** ya no están en la calle; los pinta su sala. Los 24 entrenadores de gimnasio anteriores siguen en la calle como entrenadores normales.
+- **Lore, equipos y frases:** en [`docs/mundo/guion.md` §8](mundo/guion.md), generado desde los datos. Solo tres frases son de Javier; **el resto es propuesta y Javier lo va a corregir a mano**.
+- **Sin maquillar:** los sprites de los personajes nuevos no existen todavía; llevan uno provisional de otra clase (Messi sale con el del crossfitero) hasta que el agente de sprites los entregue con el mismo id. Las salas tienen suelo y pared distintos por gimnasio y poco mobiliario: el tema lo dan sobre todo los personajes y los rótulos. Los famosos de la lista sin gimnasio (Pablo Motos, Omar Montes…) y Rocafonda están sin hacer.
+
 ### Puertas e interiores de todos los edificios (2026-10-14)
 
 Decisión de Javier: todos los edificios tienen interior. **664 de 666 puertas de edificio llevan ya a un interior con su salida** (antes, 505). Las dos que quedan son a propósito: la casa azul de la Moncloa, detrás de la verja, y el velero de la Ruta marítima 1.

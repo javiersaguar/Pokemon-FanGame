@@ -204,6 +204,12 @@ script = ExtResource("14_gf5pn")
 target_map = &"playa_del_ingles/sala_calle_7_54"
 arrival_facing = 4
 
+[node name="Gimnasio" type="Node2D" parent="Warps" unique_id=1675249912]
+position = Vector2(1552, 752)
+script = ExtResource("14_gf5pn")
+target_map = &"playa_del_ingles/gimnasio_1"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1166915922]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=221897470]
@@ -247,6 +253,9 @@ position = Vector2(1712, 400)
 
 [node name="from_sala_7_54" type="Marker2D" parent="Spawns" unique_id=149208631]
 position = Vector2(240, 1776)
+
+[node name="from_gimnasio" type="Marker2D" parent="Spawns" unique_id=528215435]
+position = Vector2(1552, 784)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=892192454]
 

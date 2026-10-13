@@ -1,0 +1,143 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_67o7w"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_4e3gv"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_gad3k"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_w6t1s"]
+[ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="5_2bi3d"]
+[ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="6_doa2e"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="7_apr7n"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="8_kpe34"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="9_bwbhp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_man.png" id="10_voufj"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_s2scs"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_qxtkx"]
+
+[sub_resource type="Resource" id="Resource_1lhur"]
+script = ExtResource("3_gad3k")
+id = &"barcelona/gimnasio_1"
+display_name = "Spotify Camp Nou · Túnel De Vestuarios"
+outdoor = false
+zone_id = &"barcelona"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="Gimnasio" type="Node2D" unique_id=664424055]
+script = ExtResource("1_67o7w")
+data = SubResource("Resource_1lhur")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1073484858]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAkAAAABAAAAAAABAAkAAAACAAAAAAABAAkAAAADAAAAAAABAAkAAAAEAAAAAAABAAkAAAAFAAAAAAABAAkAAAAGAAAAAAABAAkAAAAHAAAAAAABAAkAAAAIAAAAAAABAAkAAAAJAAAAAAABAAkAAAAKAAAAAAABAAkAAAALAAAAAAABAAkAAAAMAAAAAAABAAkAAAANAAAAAAABAAkAAAAOAAAAAAABAAkAAAAPAAAAAAABAAkAAAAAAAEAAAABAAkAAAABAAEAAAABAAkAAAACAAEAAAABAAkAAAADAAEAAAABAAkAAAAEAAEAAAABAAkAAAAFAAEAAAABAAkAAAAGAAEAAAABAAkAAAAHAAEAAAABAAkAAAAIAAEAAAABAAkAAAAJAAEAAAABAAkAAAAKAAEAAAABAAkAAAALAAEAAAABAAkAAAAMAAEAAAABAAkAAAANAAEAAAABAAkAAAAOAAEAAAABAAkAAAAPAAEAAAABAAkAAAAAAAIAAAABAAkAAAABAAIAAAABAAkAAAACAAIAAAABAAkAAAADAAIAAAABAAkAAAAEAAIAAAABAAkAAAAFAAIAAAABAAkAAAAGAAIAAAABAAkAAAAHAAIAAAABAAkAAAAIAAIAAAABAAkAAAAJAAIAAAABAAkAAAAKAAIAAAABAAkAAAALAAIAAAABAAkAAAAMAAIAAAABAAkAAAANAAIAAAABAAkAAAAOAAIAAAABAAkAAAAPAAIAAAABAAkAAAAAAAMAAAABAAkAAAABAAMAAAABAAkAAAACAAMAAAABAAkAAAADAAMAAAABAAkAAAAEAAMAAAABAAkAAAAFAAMAAAABAAkAAAAGAAMAAAABAAkAAAAHAAMAAAABAAkAAAAIAAMAAAABAAkAAAAJAAMAAAABAAkAAAAKAAMAAAABAAkAAAALAAMAAAABAAkAAAAMAAMAAAABAAkAAAANAAMAAAABAAkAAAAOAAMAAAABAAkAAAAPAAMAAAABAAkAAAAAAAQAAAABAAkAAAABAAQAAAABAAkAAAACAAQAAAABAAkAAAADAAQAAAABAAkAAAAEAAQAAAABAAkAAAAFAAQAAAABAAkAAAAGAAQAAAABAAkAAAAHAAQAAAABAAkAAAAIAAQAAAABAAkAAAAJAAQAAAABAAkAAAAKAAQAAAABAAkAAAALAAQAAAABAAkAAAAMAAQAAAABAAkAAAANAAQAAAABAAkAAAAOAAQAAAABAAkAAAAPAAQAAAABAAkAAAAAAAUAAAABAAkAAAABAAUAAAABAAkAAAACAAUAAAABAAkAAAADAAUAAAABAAkAAAAEAAUAAAABAAkAAAAFAAUAAAABAAkAAAAGAAUAAAABAAkAAAAHAAUAAAABAAkAAAAIAAUAAAABAAkAAAAJAAUAAAABAAkAAAAKAAUAAAABAAkAAAALAAUAAAABAAkAAAAMAAUAAAABAAkAAAANAAUAAAABAAkAAAAOAAUAAAABAAkAAAAPAAUAAAABAAkAAAAAAAYAAAABAAkAAAABAAYAAAABAAkAAAACAAYAAAABAAkAAAADAAYAAAABAAkAAAAEAAYAAAABAAkAAAAFAAYAAAABAAkAAAAGAAYAAAABAAkAAAAHAAYAAAABAAkAAAAIAAYAAAABAAkAAAAJAAYAAAABAAkAAAAKAAYAAAABAAkAAAALAAYAAAABAAkAAAAMAAYAAAABAAkAAAANAAYAAAABAAkAAAAOAAYAAAABAAkAAAAPAAYAAAABAAkAAAAAAAcAAAABAAkAAAABAAcAAAABAAkAAAACAAcAAAABAAkAAAADAAcAAAABAAkAAAAEAAcAAAABAAkAAAAFAAcAAAABAAkAAAAGAAcAAAABAAkAAAAHAAcAAAABAAkAAAAIAAcAAAABAAkAAAAJAAcAAAABAAkAAAAKAAcAAAABAAkAAAALAAcAAAABAAkAAAAMAAcAAAABAAkAAAANAAcAAAABAAkAAAAOAAcAAAABAAkAAAAPAAcAAAABAAkAAAAAAAgAAAABAAkAAAABAAgAAAABAAkAAAACAAgAAAABAAkAAAADAAgAAAABAAkAAAAEAAgAAAABAAkAAAAFAAgAAAABAAkAAAAGAAgAAAABAAkAAAAHAAgAAAABAAkAAAAIAAgAAAABAAkAAAAJAAgAAAABAAkAAAAKAAgAAAABAAkAAAALAAgAAAABAAkAAAAMAAgAAAABAAkAAAANAAgAAAABAAkAAAAOAAgAAAABAAkAAAAPAAgAAAABAAkAAAAAAAkAAAABAAkAAAABAAkAAAABAAkAAAACAAkAAAABAAkAAAADAAkAAAABAAkAAAAEAAkAAAABAAkAAAAFAAkAAAABAAkAAAAGAAkAAAABAAkAAAAHAAkAAAABAAkAAAAIAAkAAAABAAkAAAAJAAkAAAABAAkAAAAKAAkAAAABAAkAAAALAAkAAAABAAkAAAAMAAkAAAABAAkAAAANAAkAAAABAAkAAAAOAAkAAAABAAkAAAAPAAkAAAABAAkAAAAAAAoAAAABAAkAAAABAAoAAAABAAkAAAACAAoAAAABAAkAAAADAAoAAAABAAkAAAAEAAoAAAABAAkAAAAFAAoAAAABAAkAAAAGAAoAAAABAAkAAAAHAAoAAAABAAkAAAAIAAoAAAABAAkAAAAJAAoAAAABAAkAAAAKAAoAAAABAAkAAAALAAoAAAABAAkAAAAMAAoAAAABAAkAAAANAAoAAAABAAkAAAAOAAoAAAABAAkAAAAPAAoAAAABAAkAAAAAAAsAAAABAAkAAAABAAsAAAABAAkAAAACAAsAAAABAAkAAAADAAsAAAABAAkAAAAEAAsAAAABAAkAAAAFAAsAAAABAAkAAAAGAAsAAAABAAkAAAAHAAsAAAABAAkAAAAIAAsAAAABAAkAAAAJAAsAAAABAAkAAAAKAAsAAAABAAkAAAALAAsAAAABAAkAAAAMAAsAAAABAAkAAAANAAsAAAABAAkAAAAOAAsAAAABAAkAAAAPAAsAAAABAAkAAAA=")
+tile_set = ExtResource("4_w6t1s")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2135835315]
+tile_map_data = PackedByteArray("AAAAAAAAAQABADAAAAAAAAEAAQABADEAAAAAAAsAAQABADEAAAABAAAAAQABADAAAAABAAEAAQABADEAAAABAAsAAQABADEAAAACAAAAAQABADAAAAACAAEAAQABADEAAAACAAsAAQABADEAAAADAAAAAQABADAAAAADAAEAAQABADEAAAADAAsAAQABADEAAAAEAAAAAQABADAAAAAEAAEAAQABADEAAAAEAAsAAQABADEAAAAFAAAAAQABADAAAAAFAAEAAQABADEAAAAFAAsAAQABADEAAAAGAAAAAQABADAAAAAGAAEAAQABADEAAAAGAAsAAQABADEAAAAHAAAAAQABADAAAAAHAAEAAQABADEAAAAHAAsAAQABADEAAAAIAAAAAQABADAAAAAIAAEA//////////8JAAAAAQABADAAAAAJAAEAAQABADEAAAAJAAsAAQABADEAAAAKAAAAAQABADAAAAAKAAEAAQABADEAAAAKAAsAAQABADEAAAALAAAAAQABADAAAAALAAEAAQABADEAAAALAAsAAQABADEAAAAMAAAAAQABADAAAAAMAAEAAQABADEAAAAMAAsAAQABADEAAAANAAAAAQABADAAAAANAAEAAQABADEAAAANAAsAAQABADEAAAAOAAAAAQABADAAAAAOAAEAAQABADEAAAAOAAsAAQABADEAAAAPAAAAAQABADAAAAAPAAEAAQABADEAAAAPAAsAAQABADEAAAAAAAIAAQABADEAAEAPAAIAAQABADEAAEAAAAMAAQABADEAAEAPAAMAAQABADEAAEAAAAQAAQABADEAAEAPAAQAAQABADEAAEAAAAUAAQABADEAAEAPAAUAAQABADEAAEAAAAYAAQABADEAAEAPAAYAAQABADEAAEAAAAcAAQABADEAAEAPAAcAAQABADEAAEAAAAgAAQABADEAAEAPAAgAAQABADEAAEAAAAkAAQABADEAAEAPAAkAAQABADEAAEAAAAoAAQABADEAAEAPAAoAAQABADEAAEABAAcAAQABADEAAAACAAcAAQABADEAAAADAAcAAQABADEAAAAEAAcAAQABADEAAAAFAAcAAQABADEAAAAGAAcAAQABADEAAAAHAAcAAQABADEAAAAIAAcAAQABADEAAAAJAAcAAQABADEAAAAKAAcAAQABADEAAAALAAcAAQABADEAAAAMAAcAAQABADEAAAAOAAcAAQABADEAAAABAAQAAQABADEAAAADAAQAAQABADEAAAAEAAQAAQABADEAAAAFAAQAAQABADEAAAAGAAQAAQABADEAAAAHAAQAAQABADEAAAAIAAQAAQABADEAAAAJAAQAAQABADEAAAAKAAQAAQABADEAAAALAAQAAQABADEAAAAMAAQAAQABADEAAAANAAQAAQABADEAAAAOAAQAAQABADEAAAAKAAkAAgADADQAAAALAAkAAgAEADQAAAAMAAkAAgAFADQAAAAKAAoAAgADADUAAAALAAoAAgAEADUAAAAMAAoAAgAFADUAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
+tile_set = ExtResource("4_w6t1s")
+
+[node name="Entities" type="Node2D" parent="." unique_id=517218118]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=363126102]
+y_sort_enabled = true
+tile_set = ExtResource("4_w6t1s")
+
+[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=1518102924 instance=ExtResource("5_2bi3d")]
+position = Vector2(144, 304)
+script = ExtResource("6_doa2e")
+trainer_id = &"gym2_cule_1"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_apr7n")
+initial_facing = 2
+
+[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=869253898 instance=ExtResource("8_kpe34")]
+position = Vector2(432, 240)
+script = ExtResource("9_bwbhp")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Jordi. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_voufj")
+hidden_if_flag = &"trainer_defeated:gym2_cule_1"
+
+[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=339766516 instance=ExtResource("5_2bi3d")]
+position = Vector2(368, 176)
+script = ExtResource("6_doa2e")
+trainer_id = &"gym2_cule_2"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_apr7n")
+initial_facing = 1
+
+[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=1401257005 instance=ExtResource("8_kpe34")]
+position = Vector2(80, 144)
+script = ExtResource("9_bwbhp")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Pau. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_voufj")
+hidden_if_flag = &"trainer_defeated:gym2_cule_2"
+
+[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=386704158 instance=ExtResource("5_2bi3d")]
+position = Vector2(176, 112)
+script = ExtResource("6_doa2e")
+trainer_id = &"pique_gym"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("7_apr7n")
+initial_facing = 2
+
+[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=1661504577 instance=ExtResource("8_kpe34")]
+position = Vector2(272, 80)
+script = ExtResource("9_bwbhp")
+lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Piqué. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_voufj")
+hidden_if_flag = &"trainer_defeated:pique_gym"
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=53661403]
+z_index = 10
+tile_set = ExtResource("4_w6t1s")
+
+[node name="Warps" type="Node2D" parent="." unique_id=1724813830]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1683412207]
+position = Vector2(272, 368)
+script = ExtResource("11_s2scs")
+target_map = &"barcelona/les_corts"
+target_spawn = &"from_sala_26_40"
+arrival_facing = 1
+
+[node name="Siguiente" type="Node2D" parent="Warps" unique_id=1927744656]
+position = Vector2(272, 48)
+script = ExtResource("11_s2scs")
+target_map = &"barcelona/gimnasio_2"
+arrival_facing = 4
+
+[node name="Spawns" type="Node2D" parent="." unique_id=2143955839]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=166471055]
+position = Vector2(272, 336)
+
+[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=471405482]
+position = Vector2(272, 80)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1952265693]
+
+[node name="Rotulo" type="Label" parent="." unique_id=299235723]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_qxtkx")
+theme_override_font_sizes/font_size = 16
+text = "SPOTIFY CAMP NOU: TÚNEL DE VESTUARIOS"
+horizontal_alignment = 1

@@ -1,0 +1,501 @@
+{
+  "madrid": {
+    "lider": "ayuso",
+    "ciudad": "Madrid",
+    "suelo": 6,
+    "pared": 5,
+    "guardia": "npc_man",
+    "salas": [
+      {
+        "titulo": "REAL CASA DE CORREOS · REGISTRO",
+        "entrenadores": [
+          {
+            "id": "gym1_concejal_1",
+            "nombre": "Borja Mari"
+          },
+          {
+            "id": "gym1_concejal_2",
+            "nombre": "Pelayo"
+          },
+          {
+            "id": "almeida_gym",
+            "nombre": "Almeida"
+          }
+        ]
+      },
+      {
+        "titulo": "REAL CASA DE CORREOS · GRUPO POPULAR",
+        "entrenadores": [
+          {
+            "id": "gym1_concejal_3",
+            "nombre": "Jacobo"
+          },
+          {
+            "id": "gym1_concejal_4",
+            "nombre": "Gonzalo"
+          },
+          {
+            "id": "rajoy_gym",
+            "nombre": "Rajoy"
+          }
+        ]
+      },
+      {
+        "titulo": "REAL CASA DE CORREOS · ARCHIVO DE TÍTULOS",
+        "entrenadores": [
+          {
+            "id": "gym1_concejal_5",
+            "nombre": "Álvaro"
+          },
+          {
+            "id": "gym1_concejal_6",
+            "nombre": "Íñigo"
+          },
+          {
+            "id": "casado",
+            "nombre": "Pablo Casado"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "REAL CASA DE CORREOS · DESPACHO DE LA PRESIDENTA",
+    "lider_previos": []
+  },
+  "barcelona": {
+    "lider": "laporta",
+    "ciudad": "Barcelona",
+    "suelo": 2,
+    "pared": 9,
+    "guardia": "npc_old_man",
+    "salas": [
+      {
+        "titulo": "SPOTIFY CAMP NOU · TÚNEL DE VESTUARIOS",
+        "entrenadores": [
+          {
+            "id": "gym2_cule_1",
+            "nombre": "Jordi"
+          },
+          {
+            "id": "gym2_cule_2",
+            "nombre": "Pau"
+          },
+          {
+            "id": "pique_gym",
+            "nombre": "Piqué"
+          }
+        ]
+      },
+      {
+        "titulo": "SPOTIFY CAMP NOU · SALA DE PALANCAS",
+        "entrenadores": [
+          {
+            "id": "gym2_cule_3",
+            "nombre": "Arnau"
+          },
+          {
+            "id": "gym2_cule_4",
+            "nombre": "Oriol"
+          },
+          {
+            "id": "julian_alvarez",
+            "nombre": "Julián Álvarez"
+          }
+        ]
+      },
+      {
+        "titulo": "SPOTIFY CAMP NOU · PALCO",
+        "entrenadores": [
+          {
+            "id": "gym2_cule_5",
+            "nombre": "Marc"
+          },
+          {
+            "id": "gym2_cule_6",
+            "nombre": "Roger"
+          },
+          {
+            "id": "messi",
+            "nombre": "Messi"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "SPOTIFY CAMP NOU · DESPACHO DEL PRESIDENT",
+    "lider_previos": []
+  },
+  "valencia": {
+    "lider": "labrador",
+    "ciudad": "Valencia",
+    "suelo": 8,
+    "pared": 12,
+    "guardia": "npc_youngster",
+    "salas": [
+      {
+        "titulo": "AKUARELA PLAYA · PISTA",
+        "entrenadores": [
+          {
+            "id": "gym3_alcoholico_1",
+            "nombre": "Vicent"
+          },
+          {
+            "id": "gym3_porreta_1",
+            "nombre": "Ximo"
+          },
+          {
+            "id": "gym3_cocainomano_1",
+            "nombre": "Borja"
+          }
+        ]
+      },
+      {
+        "titulo": "AKUARELA PLAYA · RESERVADO",
+        "entrenadores": [
+          {
+            "id": "gym3_alcoholico_2",
+            "nombre": "Paco"
+          },
+          {
+            "id": "gym3_porreta_2",
+            "nombre": "Nando"
+          },
+          {
+            "id": "gym3_cocainomano_2",
+            "nombre": "Kevin"
+          }
+        ]
+      },
+      {
+        "titulo": "AKUARELA PLAYA · ZONA VIP",
+        "entrenadores": [
+          {
+            "id": "gym3_porreta_3",
+            "nombre": "Rafa"
+          },
+          {
+            "id": "gym3_cocainomano_3",
+            "nombre": "Iván"
+          },
+          {
+            "id": "peter_lim",
+            "nombre": "Peter Lim"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "AKUARELA PLAYA · CABINA",
+    "lider_previos": []
+  },
+  "sevilla": {
+    "lider": "joaquin",
+    "ciudad": "Sevilla",
+    "suelo": 4,
+    "pared": 2,
+    "guardia": "npc_woman",
+    "salas": [
+      {
+        "titulo": "EL CLUB DE LA COMEDIA · PLATEA",
+        "entrenadores": [
+          {
+            "id": "gym4_flamenca_1",
+            "nombre": "Rocío"
+          },
+          {
+            "id": "gym4_flamenco_1",
+            "nombre": "Curro"
+          },
+          {
+            "id": "antony",
+            "nombre": "Antony"
+          }
+        ]
+      },
+      {
+        "titulo": "EL CLUB DE LA COMEDIA · CAMERINOS",
+        "entrenadores": [
+          {
+            "id": "gym4_flamenca_2",
+            "nombre": "Macarena"
+          },
+          {
+            "id": "berto_romero",
+            "nombre": "Berto Romero"
+          }
+        ]
+      },
+      {
+        "titulo": "EL CLUB DE LA COMEDIA · ENTRE BAMBALINAS",
+        "entrenadores": [
+          {
+            "id": "gym4_flamenco_2",
+            "nombre": "Manuel"
+          },
+          {
+            "id": "dani_rovira",
+            "nombre": "Dani Rovira"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "EL CLUB DE LA COMEDIA · ESCENARIO",
+    "lider_previos": [
+      {
+        "id": "buenafuente",
+        "nombre": "Buenafuente"
+      },
+      {
+        "id": "jose_mota",
+        "nombre": "José Mota"
+      }
+    ]
+  },
+  "playa_del_ingles": {
+    "lider": "quevedo",
+    "ciudad": "Las Palmas de Gran Canaria",
+    "suelo": 0,
+    "pared": 7,
+    "guardia": "npc_boy",
+    "salas": [
+      {
+        "titulo": "CONCIERTO EN LA PLAYA · PISTA",
+        "entrenadores": [
+          {
+            "id": "gym5_quesito_1",
+            "nombre": "Yaiza"
+          },
+          {
+            "id": "gym5_quesito_2",
+            "nombre": "Nayra"
+          },
+          {
+            "id": "la_pantera",
+            "nombre": "La Pantera"
+          }
+        ]
+      },
+      {
+        "titulo": "CONCIERTO EN LA PLAYA · ZONA VIP",
+        "entrenadores": [
+          {
+            "id": "gym5_quesito_3",
+            "nombre": "Idaira"
+          },
+          {
+            "id": "gym5_quesito_4",
+            "nombre": "Tamara"
+          },
+          {
+            "id": "lucho_rk",
+            "nombre": "Lucho RK"
+          }
+        ]
+      },
+      {
+        "titulo": "CONCIERTO EN LA PLAYA · BACKSTAGE",
+        "entrenadores": [
+          {
+            "id": "gym5_quesito_5",
+            "nombre": "Guacimara"
+          },
+          {
+            "id": "gym5_quesito_6",
+            "nombre": "Dácil"
+          },
+          {
+            "id": "cruz_cafune",
+            "nombre": "Cruz Cafuné"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "CONCIERTO EN LA PLAYA · ESCENARIO",
+    "lider_previos": []
+  },
+  "bilbao": {
+    "lider": "aupa_athletic",
+    "ciudad": "Bilbao",
+    "suelo": 10,
+    "pared": 1,
+    "guardia": "npc_old_man",
+    "salas": [
+      {
+        "titulo": "SAN MAMÉS · GRADA DE ANIMACIÓN",
+        "entrenadores": [
+          {
+            "id": "gym6_etarra_1",
+            "nombre": "Aitor"
+          },
+          {
+            "id": "gym6_etarra_2",
+            "nombre": "Gorka"
+          },
+          {
+            "id": "gym6_etarra_3",
+            "nombre": "Iker"
+          }
+        ]
+      },
+      {
+        "titulo": "SAN MAMÉS · VESTUARIO",
+        "entrenadores": [
+          {
+            "id": "gym6_etarra_4",
+            "nombre": "Unai"
+          },
+          {
+            "id": "gym6_etarra_5",
+            "nombre": "Asier"
+          },
+          {
+            "id": "inaki_williams_gym",
+            "nombre": "Iñaki Williams"
+          }
+        ]
+      },
+      {
+        "titulo": "SAN MAMÉS · TÚNEL",
+        "entrenadores": [
+          {
+            "id": "gym6_etarra_6",
+            "nombre": "Mikel"
+          },
+          {
+            "id": "nico_williams_gym",
+            "nombre": "Nico Williams"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "SAN MAMÉS · CÉSPED",
+    "lider_previos": [
+      {
+        "id": "otegi",
+        "nombre": "Arnaldo Otegi"
+      }
+    ]
+  },
+  "valladolid": {
+    "lider": "latasa",
+    "ciudad": "Valladolid",
+    "suelo": 12,
+    "pared": 13,
+    "guardia": "npc_old_woman",
+    "salas": [
+      {
+        "titulo": "PLAZA MAYOR · SOPORTALES",
+        "entrenadores": [
+          {
+            "id": "gym7_cayetano_1",
+            "nombre": "Borja"
+          },
+          {
+            "id": "gym7_cayetano_2",
+            "nombre": "Jacobo"
+          },
+          {
+            "id": "gym7_cayetano_3",
+            "nombre": "Pelayo"
+          }
+        ]
+      },
+      {
+        "titulo": "PLAZA MAYOR · SALÓN DE PLENOS",
+        "entrenadores": [
+          {
+            "id": "gym7_cayetano_4",
+            "nombre": "Beltrán"
+          },
+          {
+            "id": "gym7_cayetano_5",
+            "nombre": "Tristán"
+          },
+          {
+            "id": "oscar_puente_gym",
+            "nombre": "Óscar Puente"
+          }
+        ]
+      },
+      {
+        "titulo": "PLAZA MAYOR · PALCO DEL ZORRILLA",
+        "entrenadores": [
+          {
+            "id": "gym7_cayetano_6",
+            "nombre": "Rodrigo"
+          },
+          {
+            "id": "gym7_cayetano_7",
+            "nombre": "Álvaro"
+          },
+          {
+            "id": "ronaldo_nazario",
+            "nombre": "Ronaldo Nazário"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "PLAZA MAYOR · BALCÓN DEL AYUNTAMIENTO",
+    "lider_previos": []
+  },
+  "malaga": {
+    "lider": "banderas",
+    "ciudad": "Málaga",
+    "suelo": 14,
+    "pared": 3,
+    "guardia": "npc_lass",
+    "salas": [
+      {
+        "titulo": "RODAJE EN EL PUERTO · CATERING",
+        "entrenadores": [
+          {
+            "id": "gym8_actor_1",
+            "nombre": "Paco"
+          },
+          {
+            "id": "gym8_actor_2",
+            "nombre": "Curro"
+          },
+          {
+            "id": "mario_casas_gym",
+            "nombre": "Mario Casas"
+          }
+        ]
+      },
+      {
+        "titulo": "RODAJE EN EL PUERTO · CAMERINOS",
+        "entrenadores": [
+          {
+            "id": "gym8_actor_3",
+            "nombre": "Antonio"
+          },
+          {
+            "id": "ester_exposito_gym",
+            "nombre": "Ester Expósito"
+          }
+        ]
+      },
+      {
+        "titulo": "RODAJE EN EL PUERTO · MAQUILLAJE",
+        "entrenadores": [
+          {
+            "id": "gym8_actor_4",
+            "nombre": "Manolo"
+          },
+          {
+            "id": "torrente",
+            "nombre": "Torrente"
+          },
+          {
+            "id": "penelope_cruz",
+            "nombre": "Penélope Cruz"
+          }
+        ]
+      }
+    ],
+    "lider_titulo": "RODAJE EN EL PUERTO · PLATÓ",
+    "lider_previos": [
+      {
+        "id": "javier_bardem",
+        "nombre": "Javier Bardem"
+      }
+    ]
+  }
+}

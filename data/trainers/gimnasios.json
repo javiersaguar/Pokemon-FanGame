@@ -461,5 +461,1473 @@
         "level": 51
       }
     ]
+  },
+  "gym1_concejal_1": {
+    "class": "concejal",
+    "name": "Borja Mari",
+    "intro_text": "Soy concejal de Urbanismo. Ese solar es zona verde hasta que yo diga lo contrario. ¡Combate recalificado!",
+    "lose_text": "Lo recurriré. Tengo un primo en el Constitucional.",
+    "win_text": "Aprobado por mayoría absoluta: la mía.",
+    "after_text": "En Madrid se viene a trabajar. O a que trabajen otros, que también es libertad.",
+    "items": [],
+    "party": [
+      {
+        "species": "growlithe",
+        "level": 10
+      },
+      {
+        "species": "litleo",
+        "level": 11
+      }
+    ]
+  },
+  "gym1_concejal_2": {
+    "class": "concejal",
+    "name": "Pelayo",
+    "intro_text": "He inaugurado esta rotonda tres veces. La cuarta, contigo dentro. ¡A combatir!",
+    "lose_text": "Esto es culpa de la herencia recibida.",
+    "win_text": "Otra inauguración. Traed la cinta.",
+    "after_text": "Bajamos impuestos todos los años. A los mismos, pero todos los años.",
+    "items": [],
+    "party": [
+      {
+        "species": "houndour",
+        "level": 11
+      },
+      {
+        "species": "ponyta",
+        "level": 11
+      }
+    ]
+  },
+  "almeida_gym": {
+    "class": "almeida",
+    "name": "Almeida",
+    "intro_text": "¿Tú otra vez? Vengo de inaugurar un túnel y de ver perder al Atleti. Hoy pago mis penas contigo.",
+    "lose_text": "Otra derrota. Estoy entrenado: soy del Atleti.",
+    "win_text": "Madrid es la ciudad más segura del mundo. Para mí.",
+    "after_text": "He talado dos mil árboles para que se vea mejor el asfalto. De nada.",
+    "items": [],
+    "party": [
+      {
+        "species": "numel",
+        "level": 12
+      },
+      {
+        "species": "slugma",
+        "level": 12
+      },
+      {
+        "species": "fletchling",
+        "level": 12
+      }
+    ]
+  },
+  "gym1_concejal_3": {
+    "class": "concejal",
+    "name": "Jacobo",
+    "intro_text": "Llevo la pulsera con la bandera, el chaleco acolchado y un acta de concejal. ¿Qué llevas tú?",
+    "lose_text": "Me he quedado sin argumentario.",
+    "win_text": "España va bien. Yo, mejor.",
+    "after_text": "La presidenta nos pasa el argumentario a las ocho. A las ocho y cinco ya lo creemos.",
+    "items": [],
+    "party": [
+      {
+        "species": "vulpix",
+        "level": 12
+      },
+      {
+        "species": "torchic",
+        "level": 12
+      }
+    ]
+  },
+  "gym1_concejal_4": {
+    "class": "concejal",
+    "name": "Gonzalo",
+    "intro_text": "Soy concejal de Urbanismo. Ese solar es zona verde hasta que yo diga lo contrario. ¡Combate recalificado!",
+    "lose_text": "Lo recurriré. Tengo un primo en el Constitucional.",
+    "win_text": "Aprobado por mayoría absoluta: la mía.",
+    "after_text": "En Madrid se viene a trabajar. O a que trabajen otros, que también es libertad.",
+    "items": [],
+    "party": [
+      {
+        "species": "tepig",
+        "level": 12
+      },
+      {
+        "species": "litten",
+        "level": 13
+      }
+    ]
+  },
+  "rajoy_gym": {
+    "class": "rajoy",
+    "name": "Rajoy",
+    "intro_text": "Mire usted: un combate es un combate y un Pokémon es un Pokémon. Y cuanto peor, mejor para todos; y cuanto peor para todos, mejor.",
+    "lose_text": "Fin de la cita.",
+    "win_text": "Es el vecino el que elige al ganador, y es el ganador el que quiere que sean los vecinos el ganador.",
+    "after_text": "Yo me voy a andar rápido y a leer el Marca. Lo demás ya tal.",
+    "items": [],
+    "party": [
+      {
+        "species": "cyndaquil",
+        "level": 13
+      },
+      {
+        "species": "charmander",
+        "level": 13
+      },
+      {
+        "species": "magby",
+        "level": 13
+      }
+    ]
+  },
+  "gym1_concejal_5": {
+    "class": "concejal",
+    "name": "Álvaro",
+    "intro_text": "He inaugurado esta rotonda tres veces. La cuarta, contigo dentro. ¡A combatir!",
+    "lose_text": "Esto es culpa de la herencia recibida.",
+    "win_text": "Otra inauguración. Traed la cinta.",
+    "after_text": "Bajamos impuestos todos los años. A los mismos, pero todos los años.",
+    "items": [],
+    "party": [
+      {
+        "species": "fennekin",
+        "level": 13
+      },
+      {
+        "species": "growlithe",
+        "level": 13
+      }
+    ]
+  },
+  "gym1_concejal_6": {
+    "class": "concejal",
+    "name": "Íñigo",
+    "intro_text": "Llevo la pulsera con la bandera, el chaleco acolchado y un acta de concejal. ¿Qué llevas tú?",
+    "lose_text": "Me he quedado sin argumentario.",
+    "win_text": "España va bien. Yo, mejor.",
+    "after_text": "La presidenta nos pasa el argumentario a las ocho. A las ocho y cinco ya lo creemos.",
+    "items": [],
+    "party": [
+      {
+        "species": "scorbunny",
+        "level": 13
+      },
+      {
+        "species": "houndour",
+        "level": 14
+      }
+    ]
+  },
+  "casado": {
+    "class": "casado",
+    "name": "Pablo Casado",
+    "intro_text": "Si pude robar el máster, no me robarás la victoria.",
+    "lose_text": "Este combate también me lo convalidan, ¿no?",
+    "win_text": "Aprobado sin ir a clase. Como siempre.",
+    "after_text": "Tengo el título colgado en el despacho. El despacho ya no lo tengo.",
+    "items": [],
+    "party": [
+      {
+        "species": "fuecoco",
+        "level": 14
+      },
+      {
+        "species": "litleo",
+        "level": 14
+      },
+      {
+        "species": "ponyta",
+        "level": 14
+      }
+    ]
+  },
+  "gym2_cule_1": {
+    "class": "cule",
+    "name": "Jordi",
+    "intro_text": "¡Visca el Barça! Soy socio desde antes de nacer. Mi carné lo tiene mi abuelo, que tampoco puede entrar: hay obras.",
+    "lose_text": "Això és un robatori. Como siempre.",
+    "win_text": "Més que un club. Més que un combat.",
+    "after_text": "El estadio estará terminado el año que viene. Lo dice el president cada año.",
+    "items": [],
+    "party": [
+      {
+        "species": "magnemite",
+        "level": 17
+      },
+      {
+        "species": "aron",
+        "level": 18
+      }
+    ]
+  },
+  "gym2_cule_2": {
+    "class": "cule",
+    "name": "Pau",
+    "intro_text": "He hipotecado el piso para el abono. Y el club ha hipotecado el club. ¡Vamos empatados!",
+    "lose_text": "Otra palanca rota.",
+    "win_text": "Tiki, taka, y a casa.",
+    "after_text": "Aquí el césped se cambia más que el entrenador. Y eso que el entrenador...",
+    "items": [],
+    "party": [
+      {
+        "species": "klink",
+        "level": 18
+      },
+      {
+        "species": "bronzor",
+        "level": 18
+      }
+    ]
+  },
+  "pique_gym": {
+    "class": "pique",
+    "name": "Piqué",
+    "intro_text": "He montado una liga, una copa y un negocio con cada uno de los tres. A ti te gano y lo retransmito.",
+    "lose_text": "Clara-mente, no era mi día.",
+    "win_text": "Contigo me río. Y cobro.",
+    "after_text": "Cambié un Rolex por un Casio. El Casio da la hora igual y no sale en canciones.",
+    "items": [],
+    "party": [
+      {
+        "species": "ferroseed",
+        "level": 19
+      },
+      {
+        "species": "honedge",
+        "level": 19
+      },
+      {
+        "species": "pawniard",
+        "level": 19
+      }
+    ]
+  },
+  "gym2_cule_3": {
+    "class": "cule",
+    "name": "Arnau",
+    "intro_text": "Yo vi jugar a Messi aquí. Bueno, vi la grúa que hay donde jugaba Messi. ¡Combate!",
+    "lose_text": "Culpa del arbitraje. Lo ponía en un informe.",
+    "win_text": "Así, así, así gana el Barça. A veces.",
+    "after_text": "Dicen que debemos mil millones. Pero con mucho estilo.",
+    "items": [],
+    "party": [
+      {
+        "species": "beldum",
+        "level": 18
+      },
+      {
+        "species": "cufant",
+        "level": 19
+      }
+    ]
+  },
+  "gym2_cule_4": {
+    "class": "cule",
+    "name": "Oriol",
+    "intro_text": "¡Visca el Barça! Soy socio desde antes de nacer. Mi carné lo tiene mi abuelo, que tampoco puede entrar: hay obras.",
+    "lose_text": "Això és un robatori. Como siempre.",
+    "win_text": "Més que un club. Més que un combat.",
+    "after_text": "El estadio estará terminado el año que viene. Lo dice el president cada año.",
+    "items": [],
+    "party": [
+      {
+        "species": "tinkatink",
+        "level": 19
+      },
+      {
+        "species": "mawile",
+        "level": 19
+      }
+    ]
+  },
+  "julian_alvarez": {
+    "class": "julian_alvarez",
+    "name": "Julián Álvarez",
+    "intro_text": "¡Por fin he logrado escapar!",
+    "lose_text": "Me vuelven a encerrar en el Metropolitano.",
+    "win_text": "¡Gol de la Araña! Y este no me lo anulan.",
+    "after_text": "Salí por la M-30 de noche, con la camiseta del revés. Nadie hizo preguntas.",
+    "items": [],
+    "party": [
+      {
+        "species": "magnemite",
+        "level": 19
+      },
+      {
+        "species": "aron",
+        "level": 20
+      },
+      {
+        "species": "skarmory",
+        "level": 20
+      }
+    ]
+  },
+  "gym2_cule_5": {
+    "class": "cule",
+    "name": "Marc",
+    "intro_text": "He hipotecado el piso para el abono. Y el club ha hipotecado el club. ¡Vamos empatados!",
+    "lose_text": "Otra palanca rota.",
+    "win_text": "Tiki, taka, y a casa.",
+    "after_text": "Aquí el césped se cambia más que el entrenador. Y eso que el entrenador...",
+    "items": [],
+    "party": [
+      {
+        "species": "klefki",
+        "level": 20
+      },
+      {
+        "species": "bronzor",
+        "level": 20
+      }
+    ]
+  },
+  "gym2_cule_6": {
+    "class": "cule",
+    "name": "Roger",
+    "intro_text": "Yo vi jugar a Messi aquí. Bueno, vi la grúa que hay donde jugaba Messi. ¡Combate!",
+    "lose_text": "Culpa del arbitraje. Lo ponía en un informe.",
+    "win_text": "Así, así, así gana el Barça. A veces.",
+    "after_text": "Dicen que debemos mil millones. Pero con mucho estilo.",
+    "items": [],
+    "party": [
+      {
+        "species": "pawniard",
+        "level": 20
+      },
+      {
+        "species": "honedge",
+        "level": 20
+      }
+    ]
+  },
+  "messi": {
+    "class": "messi",
+    "name": "Messi",
+    "intro_text": "¿Qué mirás, bobo? Andá p'allá. Bueno, ya que estás: combatí.",
+    "lose_text": "Me voy otra vez. Y otra vez llorando.",
+    "win_text": "Tranquilo. Me pasa desde los trece.",
+    "after_text": "Firmé en una servilleta y me fui en una rueda de prensa. Lo del medio estuvo bien.",
+    "items": [],
+    "party": [
+      {
+        "species": "mawile",
+        "level": 20
+      },
+      {
+        "species": "klink",
+        "level": 21
+      },
+      {
+        "species": "skarmory",
+        "level": 21
+      }
+    ]
+  },
+  "gym3_alcoholico_1": {
+    "class": "alcoholico",
+    "name": "Vicent",
+    "intro_text": "¡Hip! Llevo desde las Fallas de 2019 sin salir de aquí. ¿Tú eres el del cubata o el del combate?",
+    "lose_text": "Camarero, otra. De lo que sea.",
+    "win_text": "¡Ronda para todos! Paga este.",
+    "after_text": "El agua de Valencia no lleva agua. Me enteré tarde, pero me enteré bien.",
+    "items": [],
+    "party": [
+      {
+        "species": "machop",
+        "level": 23
+      },
+      {
+        "species": "makuhita",
+        "level": 23
+      }
+    ]
+  },
+  "gym3_porreta_1": {
+    "class": "porreta",
+    "name": "Ximo",
+    "intro_text": "Tranqui, tío... ¿Un combate? Buah, qué pereza. Venga, va, pero despacito.",
+    "lose_text": "Se me ha ido la olla. Y el Pokémon.",
+    "win_text": "Buah, tío. He ganado. Creo.",
+    "after_text": "Lo mío es terapéutico. Tengo estrés de no hacer nada.",
+    "items": [],
+    "party": [
+      {
+        "species": "mankey",
+        "level": 24
+      },
+      {
+        "species": "croagunk",
+        "level": 24
+      }
+    ]
+  },
+  "gym3_cocainomano_1": {
+    "class": "cocainomano",
+    "name": "Borja",
+    "intro_text": "¡Eh, eh, eh! Tengo veinte ideas de negocio y te las cuento todas mientras combatimos. ¡YA!",
+    "lose_text": "Voy un momento al baño y vuelvo.",
+    "win_text": "¡VAMOS! ¡VAMOS! ¿Otra? ¡Otra!",
+    "after_text": "Llevo tres días sin dormir y nunca he estado más centrado. ¿De qué hablábamos?",
+    "items": [],
+    "party": [
+      {
+        "species": "meditite",
+        "level": 24
+      },
+      {
+        "species": "scraggy",
+        "level": 24
+      }
+    ]
+  },
+  "gym3_alcoholico_2": {
+    "class": "alcoholico",
+    "name": "Paco",
+    "intro_text": "Yo controlo. Controlo perfectamente. ¿Cuál de los tres eres tú?",
+    "lose_text": "Me voy a sentar un momento. En el suelo.",
+    "win_text": "¡Salud! Y pesetas.",
+    "after_text": "Mañana lo dejo. Lo llevo diciendo desde que esto era una discoteca de las de antes.",
+    "items": [],
+    "party": [
+      {
+        "species": "tyrogue",
+        "level": 24
+      },
+      {
+        "species": "timburr",
+        "level": 24
+      }
+    ]
+  },
+  "gym3_porreta_2": {
+    "class": "porreta",
+    "name": "Nando",
+    "intro_text": "¿Tú también oyes el bombo o es mi corazón? Da igual. ¡Combate!",
+    "lose_text": "Qué mal viaje.",
+    "win_text": "Paz, hermano. Y victoria.",
+    "after_text": "En la Ruta del Bakalao se bailaba de viernes a lunes. Yo sigo en el domingo.",
+    "items": [],
+    "party": [
+      {
+        "species": "pancham",
+        "level": 25
+      },
+      {
+        "species": "makuhita",
+        "level": 25
+      }
+    ]
+  },
+  "gym3_cocainomano_2": {
+    "class": "cocainomano",
+    "name": "Kevin",
+    "intro_text": "Soy muy amigo del dueño. Y del portero. Y tuyo. ¡Te quiero, tío! ¡Combate!",
+    "lose_text": "Me ha bajado todo de golpe.",
+    "win_text": "¡Soy el mejor! Lo he dicho yo, así que es verdad.",
+    "after_text": "Esto no es vicio: es networking.",
+    "items": [],
+    "party": [
+      {
+        "species": "hitmonlee",
+        "level": 25
+      },
+      {
+        "species": "hitmonchan",
+        "level": 25
+      }
+    ]
+  },
+  "gym3_porreta_3": {
+    "class": "porreta",
+    "name": "Rafa",
+    "intro_text": "Tranqui, tío... ¿Un combate? Buah, qué pereza. Venga, va, pero despacito.",
+    "lose_text": "Se me ha ido la olla. Y el Pokémon.",
+    "win_text": "Buah, tío. He ganado. Creo.",
+    "after_text": "Lo mío es terapéutico. Tengo estrés de no hacer nada.",
+    "items": [],
+    "party": [
+      {
+        "species": "croagunk",
+        "level": 25
+      },
+      {
+        "species": "scraggy",
+        "level": 26
+      }
+    ]
+  },
+  "gym3_cocainomano_3": {
+    "class": "cocainomano",
+    "name": "Iván",
+    "intro_text": "¡Eh, eh, eh! Tengo veinte ideas de negocio y te las cuento todas mientras combatimos. ¡YA!",
+    "lose_text": "Voy un momento al baño y vuelvo.",
+    "win_text": "¡VAMOS! ¡VAMOS! ¿Otra? ¡Otra!",
+    "after_text": "Llevo tres días sin dormir y nunca he estado más centrado. ¿De qué hablábamos?",
+    "items": [],
+    "party": [
+      {
+        "species": "hitmontop",
+        "level": 26
+      },
+      {
+        "species": "hawlucha",
+        "level": 26
+      }
+    ]
+  },
+  "peter_lim": {
+    "class": "peter_lim",
+    "name": "Peter Lim",
+    "intro_text": "Compré el Valencia en 2014 y aún no sé dónde está Mestalla. Me han dicho que aquí se combate.",
+    "lose_text": "Vendo. A plazos y con cláusula.",
+    "win_text": "Otro activo que rinde.",
+    "after_text": "Los aficionados me escriben «Lim go home». Yo ya estoy en home: en Singapur.",
+    "items": [],
+    "party": [
+      {
+        "species": "meditite",
+        "level": 26
+      },
+      {
+        "species": "hariyama",
+        "level": 26
+      },
+      {
+        "species": "falinks",
+        "level": 27
+      }
+    ]
+  },
+  "gym4_flamenca_1": {
+    "class": "flamenca",
+    "name": "Rocío",
+    "intro_text": "¡Ole! Llevo el traje de gitana desde la Feria de Abril. De la del año pasado. ¡Arsa, a combatir!",
+    "lose_text": "Ay, qué fatiguita.",
+    "win_text": "¡Ole, ole y ole!",
+    "after_text": "En la caseta solo se entra si conoces a alguien. Como en todo lo demás en Sevilla.",
+    "items": [],
+    "party": [
+      {
+        "species": "lombre",
+        "level": 29
+      },
+      {
+        "species": "cherrim",
+        "level": 29
+      }
+    ]
+  },
+  "gym4_flamenco_1": {
+    "class": "flamenco_traje",
+    "name": "Curro",
+    "intro_text": "Traje, corbata y treinta y cinco grados a la sombra. Un señorito no suda: brilla. ¡Combate!",
+    "lose_text": "Qué poca vergüenza. Con lo bien que iba vestido.",
+    "win_text": "Con arte. Como tiene que ser.",
+    "after_text": "Tengo caseta propia, caballo propio y deudas propias.",
+    "items": [],
+    "party": [
+      {
+        "species": "nuzleaf",
+        "level": 29
+      },
+      {
+        "species": "weepinbell",
+        "level": 30
+      }
+    ]
+  },
+  "antony": {
+    "class": "antony",
+    "name": "Antony",
+    "intro_text": "En Mánchester no me querían y en Heliópolis me cantan. Doy tres vueltas sobre el balón y te gano.",
+    "lose_text": "Me he mareado con mi propio giro.",
+    "win_text": "¡Musho Betis! Lo digo regular, pero lo siento.",
+    "after_text": "Vine cedido por unos meses. Llevo aquí desde entonces y ya pido la manzanilla sola.",
+    "items": [],
+    "party": [
+      {
+        "species": "breloom",
+        "level": 30
+      },
+      {
+        "species": "cacnea",
+        "level": 30
+      },
+      {
+        "species": "scovillain",
+        "level": 30
+      }
+    ]
+  },
+  "gym4_flamenca_2": {
+    "class": "flamenca",
+    "name": "Macarena",
+    "intro_text": "Miarma, aquí se viene a reír y a bailar. Y a combatir, si queda rebujito.",
+    "lose_text": "Se me ha caído la flor.",
+    "win_text": "¡Esa es mi niña!",
+    "after_text": "La Feria dura una semana. La resaca, hasta el Rocío.",
+    "items": [],
+    "party": [
+      {
+        "species": "gloom",
+        "level": 30
+      },
+      {
+        "species": "sunflora",
+        "level": 30
+      }
+    ]
+  },
+  "berto_romero": {
+    "class": "berto_romero",
+    "name": "Berto Romero",
+    "intro_text": "Soy el de al lado de Buenafuente. Sí, el de la nariz. Sí, todavía. ¡Combate!",
+    "lose_text": "Nadie sabe nada. Yo, menos.",
+    "win_text": "Mucho que perder, poco que ganar. Y aun así he ganado.",
+    "after_text": "Soy de Cardona. Tenemos un castillo, una mina de sal y a mí. Por ese orden.",
+    "items": [],
+    "party": [
+      {
+        "species": "tropius",
+        "level": 30
+      },
+      {
+        "species": "maractus",
+        "level": 31
+      },
+      {
+        "species": "whimsicott",
+        "level": 31
+      }
+    ]
+  },
+  "gym4_flamenco_2": {
+    "class": "flamenco_traje",
+    "name": "Manuel",
+    "intro_text": "Vengo del Real de la Feria a pie porque el coche de caballos lo tengo en el taller. ¡Vamos allá!",
+    "lose_text": "Illo, qué ruina.",
+    "win_text": "Esto se celebra con un fino.",
+    "after_text": "Aquí el que no tiene un primo cofrade no es nadie.",
+    "items": [],
+    "party": [
+      {
+        "species": "quilladin",
+        "level": 31
+      },
+      {
+        "species": "floragato",
+        "level": 31
+      }
+    ]
+  },
+  "dani_rovira": {
+    "class": "dani_rovira",
+    "name": "Dani Rovira",
+    "intro_text": "Soy de Málaga y me hice famoso haciendo de sevillano que hace de vasco. Así que combatir contigo no me da miedo.",
+    "lose_text": "Ocho apellidos y ni una victoria.",
+    "win_text": "¡Viva el Betis manque pierda! Pero hoy gano yo.",
+    "after_text": "Presenté los Goya tres veces. La tercera ya me sabía los chistes malos.",
+    "items": [],
+    "party": [
+      {
+        "species": "dolliv",
+        "level": 32
+      },
+      {
+        "species": "steenee",
+        "level": 32
+      },
+      {
+        "species": "skiddo",
+        "level": 32
+      }
+    ]
+  },
+  "buenafuente": {
+    "class": "buenafuente",
+    "name": "Buenafuente",
+    "intro_text": "Buenas noches. Hoy en el programa: tú, perdiendo. Con todos ustedes, mi equipo.",
+    "lose_text": "Se nos ha ido el programa de las manos.",
+    "win_text": "Y hasta aquí el combate de hoy. Sean felices.",
+    "after_text": "Soy de Reus, como el vermut. Lo mío también se toma antes de comer.",
+    "items": [],
+    "party": [
+      {
+        "species": "grotle",
+        "level": 31
+      },
+      {
+        "species": "servine",
+        "level": 31
+      },
+      {
+        "species": "lilligant",
+        "level": 31
+      }
+    ]
+  },
+  "jose_mota": {
+    "class": "jose_mota",
+    "name": "José Mota",
+    "intro_text": "Si hay que combatir, se combate. Pero combatir pa ná es tontería.",
+    "lose_text": "Hoy no... ¡mañaaana!",
+    "win_text": "¡Las gallinas que entran por las que van saliendo!",
+    "after_text": "Ahora vas y lo cascas.",
+    "items": [],
+    "party": [
+      {
+        "species": "breloom",
+        "level": 32
+      },
+      {
+        "species": "scovillain",
+        "level": 33
+      },
+      {
+        "species": "deerling",
+        "level": 33
+      }
+    ]
+  },
+  "gym5_quesito_1": {
+    "class": "quesito",
+    "name": "Yaiza",
+    "intro_text": "¡Chacho! Llevo todo el día en primera fila esperando a Quevedo. A ti te despacho rápido.",
+    "lose_text": "Ños, qué palo.",
+    "win_text": "¡Quédate! Pero perdiendo.",
+    "after_text": "Me sé la sesión entera. La de Bizarrap y las de después.",
+    "items": [],
+    "party": [
+      {
+        "species": "golduck",
+        "level": 35
+      },
+      {
+        "species": "lumineon",
+        "level": 35
+      }
+    ]
+  },
+  "gym5_quesito_2": {
+    "class": "quesito",
+    "name": "Nayra",
+    "intro_text": "Mi niño, aquí se viene con protección cincuenta y con seis Pokémon. ¿Tú qué traes?",
+    "lose_text": "Me voy a refrescar al agua.",
+    "win_text": "¡Fuerte calor y fuerte paliza!",
+    "after_text": "En Canarias una hora menos. Por eso siempre llegamos antes a ganarte.",
+    "items": [],
+    "party": [
+      {
+        "species": "seaking",
+        "level": 35
+      },
+      {
+        "species": "pelipper",
+        "level": 36
+      }
+    ]
+  },
+  "la_pantera": {
+    "class": "la_pantera",
+    "name": "La Pantera",
+    "intro_text": "Vengo de La Isleta con la música puesta desde el coche. Bájale a tu equipo, que entro yo.",
+    "lose_text": "Se me fue el flow con la marea.",
+    "win_text": "De Las Palmas pal mundo.",
+    "after_text": "Aquí grabamos en un cuarto con un colchón en la pared. Ahora el colchón es de marca.",
+    "items": [],
+    "party": [
+      {
+        "species": "sharpedo",
+        "level": 36
+      },
+      {
+        "species": "crawdaunt",
+        "level": 36
+      },
+      {
+        "species": "floatzel",
+        "level": 36
+      }
+    ]
+  },
+  "gym5_quesito_3": {
+    "class": "quesito",
+    "name": "Idaira",
+    "intro_text": "¡Chacho! Llevo todo el día en primera fila esperando a Quevedo. A ti te despacho rápido.",
+    "lose_text": "Ños, qué palo.",
+    "win_text": "¡Quédate! Pero perdiendo.",
+    "after_text": "Me sé la sesión entera. La de Bizarrap y las de después.",
+    "items": [],
+    "party": [
+      {
+        "species": "tentacruel",
+        "level": 36
+      },
+      {
+        "species": "kingler",
+        "level": 36
+      }
+    ]
+  },
+  "gym5_quesito_4": {
+    "class": "quesito",
+    "name": "Tamara",
+    "intro_text": "Mi niño, aquí se viene con protección cincuenta y con seis Pokémon. ¿Tú qué traes?",
+    "lose_text": "Me voy a refrescar al agua.",
+    "win_text": "¡Fuerte calor y fuerte paliza!",
+    "after_text": "En Canarias una hora menos. Por eso siempre llegamos antes a ganarte.",
+    "items": [],
+    "party": [
+      {
+        "species": "gastrodon",
+        "level": 37
+      },
+      {
+        "species": "whiscash",
+        "level": 37
+      }
+    ]
+  },
+  "lucho_rk": {
+    "class": "lucho_rk",
+    "name": "Lucho RK",
+    "intro_text": "Madrileño de nacimiento y canario de vocación. Mi equipo tampoco sabe de dónde es, pero pega.",
+    "lose_text": "Me quedé sin estribillo.",
+    "win_text": "Otra para la lista de éxitos.",
+    "after_text": "Vine a grabar un tema y me quedé por el clima. Y por las papas arrugadas.",
+    "items": [],
+    "party": [
+      {
+        "species": "barraskewda",
+        "level": 37
+      },
+      {
+        "species": "octillery",
+        "level": 37
+      },
+      {
+        "species": "lanturn",
+        "level": 37
+      }
+    ]
+  },
+  "gym5_quesito_5": {
+    "class": "quesito",
+    "name": "Guacimara",
+    "intro_text": "¡Chacho! Llevo todo el día en primera fila esperando a Quevedo. A ti te despacho rápido.",
+    "lose_text": "Ños, qué palo.",
+    "win_text": "¡Quédate! Pero perdiendo.",
+    "after_text": "Me sé la sesión entera. La de Bizarrap y las de después.",
+    "items": [],
+    "party": [
+      {
+        "species": "swanna",
+        "level": 37
+      },
+      {
+        "species": "wailmer",
+        "level": 38
+      }
+    ]
+  },
+  "gym5_quesito_6": {
+    "class": "quesito",
+    "name": "Dácil",
+    "intro_text": "Mi niño, aquí se viene con protección cincuenta y con seis Pokémon. ¿Tú qué traes?",
+    "lose_text": "Me voy a refrescar al agua.",
+    "win_text": "¡Fuerte calor y fuerte paliza!",
+    "after_text": "En Canarias una hora menos. Por eso siempre llegamos antes a ganarte.",
+    "items": [],
+    "party": [
+      {
+        "species": "azumarill",
+        "level": 38
+      },
+      {
+        "species": "quagsire",
+        "level": 38
+      }
+    ]
+  },
+  "cruz_cafune": {
+    "class": "cruz_cafune",
+    "name": "Cruz Cafuné",
+    "intro_text": "Soy de Tenerife y estoy cantando en Gran Canaria. Eso es más peligroso que tu equipo.",
+    "lose_text": "Me vuelvo en el ferry.",
+    "win_text": "Me muero de la risa, como en la canción.",
+    "after_text": "El pleito insular lo resolvemos así: yo canto, ellos aplauden y nadie dice de qué isla es el mojo.",
+    "items": [],
+    "party": [
+      {
+        "species": "starmie",
+        "level": 38
+      },
+      {
+        "species": "lapras",
+        "level": 38
+      },
+      {
+        "species": "palafin",
+        "level": 39
+      }
+    ]
+  },
+  "gym6_etarra_1": {
+    "class": "etarra",
+    "name": "Aitor",
+    "intro_text": "¡Aupa! El pasamontañas es por el frío de San Mamés, que entra del Nervión. Lo otro ya lo dejé. ¡Combate!",
+    "lose_text": "Me acojo a mi derecho a no declarar.",
+    "win_text": "¡Gora el pintxo de después!",
+    "after_text": "Ahora milito en una sociedad gastronómica. Hay más normas que antes.",
+    "items": [],
+    "party": [
+      {
+        "species": "machoke",
+        "level": 40
+      },
+      {
+        "species": "hariyama",
+        "level": 40
+      }
+    ]
+  },
+  "gym6_etarra_2": {
+    "class": "etarra",
+    "name": "Gorka",
+    "intro_text": "Yo de aquí no me muevo: estoy empadronado en la grada. ¿Vienes a combatir o a pedir el RH?",
+    "lose_text": "Esto en Bilbao no pasa. Será que eres de Bilbao.",
+    "win_text": "Como el Athletic: solo con los de casa.",
+    "after_text": "Dicen que los de Bilbao nacemos donde queremos. Yo nací ganando.",
+    "items": [],
+    "party": [
+      {
+        "species": "primeape",
+        "level": 40
+      },
+      {
+        "species": "combusken",
+        "level": 41
+      }
+    ]
+  },
+  "gym6_etarra_3": {
+    "class": "etarra",
+    "name": "Iker",
+    "intro_text": "¡Aupa! El pasamontañas es por el frío de San Mamés, que entra del Nervión. Lo otro ya lo dejé. ¡Combate!",
+    "lose_text": "Me acojo a mi derecho a no declarar.",
+    "win_text": "¡Gora el pintxo de después!",
+    "after_text": "Ahora milito en una sociedad gastronómica. Hay más normas que antes.",
+    "items": [],
+    "party": [
+      {
+        "species": "medicham",
+        "level": 41
+      },
+      {
+        "species": "pangoro",
+        "level": 41
+      }
+    ]
+  },
+  "gym6_etarra_4": {
+    "class": "etarra",
+    "name": "Unai",
+    "intro_text": "Yo de aquí no me muevo: estoy empadronado en la grada. ¿Vienes a combatir o a pedir el RH?",
+    "lose_text": "Esto en Bilbao no pasa. Será que eres de Bilbao.",
+    "win_text": "Como el Athletic: solo con los de casa.",
+    "after_text": "Dicen que los de Bilbao nacemos donde queremos. Yo nací ganando.",
+    "items": [],
+    "party": [
+      {
+        "species": "gurdurr",
+        "level": 41
+      },
+      {
+        "species": "scrafty",
+        "level": 41
+      }
+    ]
+  },
+  "gym6_etarra_5": {
+    "class": "etarra",
+    "name": "Asier",
+    "intro_text": "¡Aupa! El pasamontañas es por el frío de San Mamés, que entra del Nervión. Lo otro ya lo dejé. ¡Combate!",
+    "lose_text": "Me acojo a mi derecho a no declarar.",
+    "win_text": "¡Gora el pintxo de después!",
+    "after_text": "Ahora milito en una sociedad gastronómica. Hay más normas que antes.",
+    "items": [],
+    "party": [
+      {
+        "species": "toxicroak",
+        "level": 42
+      },
+      {
+        "species": "hitmonlee",
+        "level": 42
+      }
+    ]
+  },
+  "inaki_williams_gym": {
+    "class": "inaki_williams",
+    "name": "Iñaki Williams",
+    "intro_text": "Jugué más de doscientos cincuenta partidos de Liga seguidos sin faltar a uno. A este combate tampoco voy a faltar.",
+    "lose_text": "Me cambio en el descanso. Que salga mi hermano.",
+    "win_text": "¡Aupa Athletic!",
+    "after_text": "Mis padres cruzaron el desierto a pie. Yo cruzo la banda derecha. Lo mío tiene menos mérito.",
+    "items": [],
+    "party": [
+      {
+        "species": "lucario",
+        "level": 42
+      },
+      {
+        "species": "hawlucha",
+        "level": 42
+      },
+      {
+        "species": "blaziken",
+        "level": 42
+      }
+    ]
+  },
+  "gym6_etarra_6": {
+    "class": "etarra",
+    "name": "Mikel",
+    "intro_text": "Yo de aquí no me muevo: estoy empadronado en la grada. ¿Vienes a combatir o a pedir el RH?",
+    "lose_text": "Esto en Bilbao no pasa. Será que eres de Bilbao.",
+    "win_text": "Como el Athletic: solo con los de casa.",
+    "after_text": "Dicen que los de Bilbao nacemos donde queremos. Yo nací ganando.",
+    "items": [],
+    "party": [
+      {
+        "species": "falinks",
+        "level": 42
+      },
+      {
+        "species": "heracross",
+        "level": 43
+      }
+    ]
+  },
+  "nico_williams_gym": {
+    "class": "nico_williams",
+    "name": "Nico Williams",
+    "intro_text": "Medio mundo quiso ficharme y me quedé en casa. Así que hoy tengo tiempo para ganarte.",
+    "lose_text": "Me has regateado tú a mí. Eso es nuevo.",
+    "win_text": "Por la banda, como siempre.",
+    "after_text": "Mi hermano me dice lo que tengo que hacer. Luego hago lo contrario y sale bien.",
+    "items": [],
+    "party": [
+      {
+        "species": "infernape",
+        "level": 43
+      },
+      {
+        "species": "mienfoo",
+        "level": 43
+      },
+      {
+        "species": "grapploct",
+        "level": 43
+      }
+    ]
+  },
+  "otegi": {
+    "class": "otegi",
+    "name": "Arnaldo Otegi",
+    "intro_text": "Kaixo. Traigo la ikurriña y un discurso de cuarenta minutos. Si prefieres, combatimos, que es más corto.",
+    "lose_text": "Habrá que abrir un nuevo ciclo político.",
+    "win_text": "Esto es la voluntad mayoritaria de mi equipo.",
+    "after_text": "Antes daba ruedas de prensa. Ahora doy apoyos de investidura. Se cobra más despacio, pero se cobra.",
+    "items": [],
+    "party": [
+      {
+        "species": "emboar",
+        "level": 43
+      },
+      {
+        "species": "bewear",
+        "level": 43
+      },
+      {
+        "species": "poliwrath",
+        "level": 44
+      }
+    ]
+  },
+  "gym7_cayetano_1": {
+    "class": "cayetano_casco",
+    "name": "Borja",
+    "intro_text": "Pelo casco, náuticos y chaleco. Mi padre conoce al tuyo: le despidió. ¡Combate!",
+    "lose_text": "Se lo voy a contar a papá.",
+    "win_text": "O sea, obvio.",
+    "after_text": "Estudio ADE y Derecho en la privada. Bueno, estudio: voy.",
+    "items": [],
+    "party": [
+      {
+        "species": "glalie",
+        "level": 44
+      },
+      {
+        "species": "piloswine",
+        "level": 44
+      }
+    ]
+  },
+  "gym7_cayetano_2": {
+    "class": "cayetano_casco",
+    "name": "Jacobo",
+    "intro_text": "Vengo de Pucela de toda la vida, tío. De la calle Santiago para arriba. Lo demás es pueblo.",
+    "lose_text": "Qué ordinariez.",
+    "win_text": "Ganar es de buena familia.",
+    "after_text": "El pelo no se mueve ni con el cierzo. Es laca de la buena, de la de mi abuela.",
+    "items": [],
+    "party": [
+      {
+        "species": "jynx",
+        "level": 44
+      },
+      {
+        "species": "sealeo",
+        "level": 45
+      }
+    ]
+  },
+  "gym7_cayetano_3": {
+    "class": "cayetano_casco",
+    "name": "Pelayo",
+    "intro_text": "Pelo casco, náuticos y chaleco. Mi padre conoce al tuyo: le despidió. ¡Combate!",
+    "lose_text": "Se lo voy a contar a papá.",
+    "win_text": "O sea, obvio.",
+    "after_text": "Estudio ADE y Derecho en la privada. Bueno, estudio: voy.",
+    "items": [],
+    "party": [
+      {
+        "species": "beartic",
+        "level": 45
+      },
+      {
+        "species": "cloyster",
+        "level": 45
+      }
+    ]
+  },
+  "gym7_cayetano_4": {
+    "class": "cayetano_casco",
+    "name": "Beltrán",
+    "intro_text": "Vengo de Pucela de toda la vida, tío. De la calle Santiago para arriba. Lo demás es pueblo.",
+    "lose_text": "Qué ordinariez.",
+    "win_text": "Ganar es de buena familia.",
+    "after_text": "El pelo no se mueve ni con el cierzo. Es laca de la buena, de la de mi abuela.",
+    "items": [],
+    "party": [
+      {
+        "species": "vanillish",
+        "level": 45
+      },
+      {
+        "species": "avalugg",
+        "level": 45
+      }
+    ]
+  },
+  "gym7_cayetano_5": {
+    "class": "cayetano_casco",
+    "name": "Tristán",
+    "intro_text": "Pelo casco, náuticos y chaleco. Mi padre conoce al tuyo: le despidió. ¡Combate!",
+    "lose_text": "Se lo voy a contar a papá.",
+    "win_text": "O sea, obvio.",
+    "after_text": "Estudio ADE y Derecho en la privada. Bueno, estudio: voy.",
+    "items": [],
+    "party": [
+      {
+        "species": "abomasnow",
+        "level": 46
+      },
+      {
+        "species": "dewgong",
+        "level": 46
+      }
+    ]
+  },
+  "oscar_puente_gym": {
+    "class": "oscar_puente",
+    "name": "Óscar Puente",
+    "intro_text": "Fui alcalde de esta plaza y ahora soy ministro de trenes. Llego tarde al combate, pero es por una incidencia en la catenaria.",
+    "lose_text": "Te bloqueo. En el combate y en redes.",
+    "win_text": "El tren ha llegado a su hora. Hacedle una foto.",
+    "after_text": "El tren vive el mejor momento de su historia. Lo digo yo, que soy quien lo dice.",
+    "items": [],
+    "party": [
+      {
+        "species": "weavile",
+        "level": 46
+      },
+      {
+        "species": "lapras",
+        "level": 46
+      },
+      {
+        "species": "arctibax",
+        "level": 46
+      }
+    ]
+  },
+  "gym7_cayetano_6": {
+    "class": "cayetano_casco",
+    "name": "Rodrigo",
+    "intro_text": "Vengo de Pucela de toda la vida, tío. De la calle Santiago para arriba. Lo demás es pueblo.",
+    "lose_text": "Qué ordinariez.",
+    "win_text": "Ganar es de buena familia.",
+    "after_text": "El pelo no se mueve ni con el cierzo. Es laca de la buena, de la de mi abuela.",
+    "items": [],
+    "party": [
+      {
+        "species": "froslass",
+        "level": 46
+      },
+      {
+        "species": "cryogonal",
+        "level": 47
+      }
+    ]
+  },
+  "gym7_cayetano_7": {
+    "class": "cayetano_casco",
+    "name": "Álvaro",
+    "intro_text": "Pelo casco, náuticos y chaleco. Mi padre conoce al tuyo: le despidió. ¡Combate!",
+    "lose_text": "Se lo voy a contar a papá.",
+    "win_text": "O sea, obvio.",
+    "after_text": "Estudio ADE y Derecho en la privada. Bueno, estudio: voy.",
+    "items": [],
+    "party": [
+      {
+        "species": "frosmoth",
+        "level": 47
+      },
+      {
+        "species": "eiscue",
+        "level": 47
+      }
+    ]
+  },
+  "ronaldo_nazario": {
+    "class": "ronaldo_nazario",
+    "name": "Ronaldo Nazário",
+    "intro_text": "Yo no sabía que eran travestis.",
+    "lose_text": "Vendo el club. Otra vez.",
+    "win_text": "Fenómeno. Me lo dicen desde el 96.",
+    "after_text": "Compré el Valladolid y lo vi dos veces: al firmar y al vender. Entre medias bajó, subió y volvió a bajar.",
+    "items": [],
+    "party": [
+      {
+        "species": "walrein",
+        "level": 47
+      },
+      {
+        "species": "glaceon",
+        "level": 47
+      },
+      {
+        "species": "mamoswine",
+        "level": 48
+      }
+    ]
+  },
+  "gym8_actor_1": {
+    "class": "actor_reparto",
+    "name": "Paco",
+    "intro_text": "Soy el camarero número dos de la película. Tengo una frase: «¿Algo más?». ¡Y un combate!",
+    "lose_text": "Corten. Esta toma no vale.",
+    "win_text": "¡Mi mejor escena!",
+    "after_text": "Llevo veinte años haciendo de policía que muere el primero. Ya ni me maquillan.",
+    "items": [],
+    "party": [
+      {
+        "species": "mightyena",
+        "level": 49
+      },
+      {
+        "species": "liepard",
+        "level": 49
+      }
+    ]
+  },
+  "gym8_actor_2": {
+    "class": "actor_reparto",
+    "name": "Curro",
+    "intro_text": "Me presenté al casting de protagonista. Me han dado «transeúnte con paraguas». ¡Combate dramático!",
+    "lose_text": "Nominado a nada, otra vez.",
+    "win_text": "¡Y el Goya es para mí!",
+    "after_text": "En el cine español comemos todos los días. Del catering, pero todos los días.",
+    "items": [],
+    "party": [
+      {
+        "species": "cacturne",
+        "level": 49
+      },
+      {
+        "species": "thievul",
+        "level": 50
+      }
+    ]
+  },
+  "mario_casas_gym": {
+    "class": "mario_casas",
+    "name": "Mario Casas",
+    "intro_text": "Me he quitado la camiseta para esta escena. Y para la siguiente. Y para el combate.",
+    "lose_text": "Tres metros bajo el suelo.",
+    "win_text": "Tengo ganas de ti. De ganarte, digo.",
+    "after_text": "En el guion pone «H. entra y mira intensamente». Llevo quince años mirando intensamente.",
+    "items": [],
+    "party": [
+      {
+        "species": "houndoom",
+        "level": 50
+      },
+      {
+        "species": "zoroark",
+        "level": 50
+      },
+      {
+        "species": "absol",
+        "level": 50
+      }
+    ]
+  },
+  "gym8_actor_3": {
+    "class": "actor_reparto",
+    "name": "Antonio",
+    "intro_text": "Soy el camarero número dos de la película. Tengo una frase: «¿Algo más?». ¡Y un combate!",
+    "lose_text": "Corten. Esta toma no vale.",
+    "win_text": "¡Mi mejor escena!",
+    "after_text": "Llevo veinte años haciendo de policía que muere el primero. Ya ni me maquillan.",
+    "items": [],
+    "party": [
+      {
+        "species": "skuntank",
+        "level": 50
+      },
+      {
+        "species": "sableye",
+        "level": 50
+      }
+    ]
+  },
+  "ester_exposito_gym": {
+    "class": "ester_exposito",
+    "name": "Ester Expósito",
+    "intro_text": "¿Otra vez tú? En Madrid me pillaste entre dos rodajes. Aquí tengo camerino, maquilladora y ganas.",
+    "lose_text": "Esto no lo subo a redes.",
+    "win_text": "Otro millón de seguidores.",
+    "after_text": "Hice de niña rica en un instituto donde moría alguien cada curso. Luego dicen de la pública.",
+    "items": [],
+    "party": [
+      {
+        "species": "umbreon",
+        "level": 50
+      },
+      {
+        "species": "weavile",
+        "level": 51
+      },
+      {
+        "species": "liepard",
+        "level": 51
+      }
+    ]
+  },
+  "gym8_actor_4": {
+    "class": "actor_reparto",
+    "name": "Manolo",
+    "intro_text": "Me presenté al casting de protagonista. Me han dado «transeúnte con paraguas». ¡Combate dramático!",
+    "lose_text": "Nominado a nada, otra vez.",
+    "win_text": "¡Y el Goya es para mí!",
+    "after_text": "En el cine español comemos todos los días. Del catering, pero todos los días.",
+    "items": [],
+    "party": [
+      {
+        "species": "krookodile",
+        "level": 51
+      },
+      {
+        "species": "drapion",
+        "level": 51
+      }
+    ]
+  },
+  "torrente": {
+    "class": "torrente",
+    "name": "Torrente",
+    "intro_text": "José Luis Torrente, policía. Bueno, expolicía. Bueno: aficionado. Del Atleti y del Fary. ¡Venga, que te invito a que me invites!",
+    "lose_text": "Esto con Franco no pasaba.",
+    "win_text": "¡Toma, toma y toma! Apúntalo en mi cuenta.",
+    "after_text": "Yo soy el brazo tonto de la ley. Pero brazo, ¿eh? Que conste.",
+    "items": [],
+    "party": [
+      {
+        "species": "obstagoon",
+        "level": 51
+      },
+      {
+        "species": "malamar",
+        "level": 51
+      },
+      {
+        "species": "pangoro",
+        "level": 51
+      }
+    ]
+  },
+  "penelope_cruz": {
+    "class": "penelope_cruz",
+    "name": "Penélope Cruz",
+    "intro_text": "¡Pedrooo! Ah, no, que no eres Pedro. Da igual: tengo un Óscar y lo sé usar.",
+    "lose_text": "Corten. Repetimos y esta vez gano yo.",
+    "win_text": "And the winner is... yo.",
+    "after_text": "Soy de Alcobendas. Lo digo en inglés, en italiano y en francés, y suena igual de bien.",
+    "items": [],
+    "party": [
+      {
+        "species": "honchkrow",
+        "level": 52
+      },
+      {
+        "species": "meowscarada",
+        "level": 52
+      },
+      {
+        "species": "zoroark",
+        "level": 52
+      }
+    ]
+  },
+  "javier_bardem": {
+    "class": "javier_bardem",
+    "name": "Javier Bardem",
+    "intro_text": "He hecho de narco, de poeta, de villano de Bond y de gusano de arena, casi. Hacer de tu rival me sale solo.",
+    "lose_text": "Otra nominación sin premio.",
+    "win_text": "Hay que decirlo más: he ganado.",
+    "after_text": "Mi madre era actriz, mi abuelo era actor y mi tío dirigía. En mi casa el que no actuaba fregaba.",
+    "items": [],
+    "party": [
+      {
+        "species": "incineroar",
+        "level": 52
+      },
+      {
+        "species": "bisharp",
+        "level": 52
+      },
+      {
+        "species": "grimmsnarl",
+        "level": 53
+      }
+    ]
   }
 }
