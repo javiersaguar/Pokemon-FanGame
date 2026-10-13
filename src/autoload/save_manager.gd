@@ -338,6 +338,10 @@ func _migrate(data: Dictionary) -> Dictionary:
 				data.state.get("player", {})["character"] = ""
 				version = 3
 				data["save_version"] = version
+			3:
+				data.state["normal_starters"] = {}
+				version = 4
+				data["save_version"] = version
 			_:
 				push_error("SaveManager: no hay migración desde save_version %d." % version)
 				return {}

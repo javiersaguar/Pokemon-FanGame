@@ -577,6 +577,12 @@ Teclado A3: `Cutscene.request_name(kind: StringName, initial := "") -> String` e
 
 `ProtagonistSprite`, compatible con `CharacterSprite`, presenta dieciséis regiones de pasos con altura visual 56 px y pies en el borde de la casilla. Caminar/correr alterna la misma hoja; las variantes dedicadas de transporte conservan el pack previo. Atlas intactos, filtro nearest; los recursos nuevos son provisionales hasta revisión de Javier.
 
+## 7b.2 Iniciales por partida normal (sesión 2026-10-14, Agente A)
+
+`NormalStarters.generate(seed)` toma todas las especies base de DataDB con número Pokédex positivo, sin formas exclusivas de Mega/Dinamax. Conserva los tres IDs y niveles de `starters.json`, elige sin reemplazo y no cambia el catálogo base. `GameState.normal_starters` fija las fichas de la oferta en cada partida normal y se guarda completo. Formato **4**: v3→v4 añade oferta vacía; una partida anterior conserva los iniciales base que conocía, sin tirada al cargar. `new_game` admite `starter_seed` para reproducción y `normal_starters` como fixture explícita.
+
+`DataDB.starter_spec` devuelve la ficha por partida solo en Normal sin parche activo; devuelve copia profunda. RandomLocke/parche activo sigue consultando la ROM. `base_starter_spec` es la consulta base explícita para generar la oferta; `randomizer_input` sigue tomando datos base y no se contamina con la sesión actual. `starter_slot` en la ficha del rival refiere otra opción de la oferta (se conserva la correspondencia de posiciones anterior). `DataDB.trainer` resuelve su especie solo para Normal nuevo; datos originales y equipos de ROM permanecen intactos. No se promete ventaja de tipo ni se escribe una especie dentro del evento.
+
 ## 7c. Integración Locke del mundo (Agente 1)
 
 `GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados. SAVE_VERSION 2 migra v1 conservando ROM, zonas y contadores antiguos (`legacy_death_count`), sin fabricar lápidas ni permisos para encuentros ya gastados.

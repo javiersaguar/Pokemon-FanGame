@@ -31,7 +31,7 @@ func test_v2_save_migration_keeps_legacy_gender_position_and_modules() -> void:
 	var state := GameState.to_dict()
 	state.player.erase("character")
 	var migrated := SaveManager._migrate({"save_version": 2, "state": state.duplicate(true)})
-	assert_eq(migrated.save_version, 3)
+	assert_eq(migrated.save_version, GameState.SAVE_VERSION)
 	GameState.from_dict(migrated.state)
 	assert_eq(GameState.player_character, &"")
 	assert_eq(GameState.player_gender, &"female")

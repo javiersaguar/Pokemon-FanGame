@@ -355,6 +355,13 @@ func trainer(id: StringName) -> Dictionary:
 	if patched is Dictionary and not t.is_empty():
 		t = t.duplicate(true)
 		t.merge(patched, true)
+	var state := get_node_or_null("/root/GameState")
+	if state != null and not state.is_randomlocke() and not has_patch() and t.has("starter_slot") and not state.normal_starters.is_empty():
+		t = t.duplicate(true)
+		var starter := starter_spec(StringName(t.starter_slot))
+		if not starter.is_empty() and not t.get("party", []).is_empty():
+			t.party[0].species = starter.species
+			t.party[0].erase("moves")
 	return t
 
 
@@ -412,7 +419,16 @@ func starter(id: StringName) -> StringName:
 
 ## Ficha completa del inicial ({species, level?...}; acepta "starter_1": "bulbasaur" o un diccionario).
 func starter_spec(id: StringName) -> Dictionary:
+	var state := get_node_or_null("/root/GameState")
+	if state != null and not state.is_randomlocke() and not has_patch():
+		var selected: Variant = state.normal_starters.get(String(id))
+		if selected is Dictionary: return selected.duplicate(true)
 	return _story_entry(_starters, "starters", id, "el inicial")
+
+
+func base_starter_spec(id: StringName) -> Dictionary:
+	var value: Variant = _starters.get(String(id), {})
+	return value.duplicate(true) if value is Dictionary else {"species": str(value)}
 
 
 func starter_ids() -> Array[StringName]:

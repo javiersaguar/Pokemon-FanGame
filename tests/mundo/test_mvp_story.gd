@@ -47,7 +47,7 @@ func before_each() -> void:
 	_config = GameState.world_config.duplicate(true)
 	_starters = DataDB._starters.duplicate(true)
 	DataDB._starters = {"starter_1": {"species": "bulbasaur", "level": 5}, "starter_2": {"species": "charmander", "level": 5}, "starter_3": {"species": "squirtle", "level": 5}}
-	GameState.new_game()
+	GameState.new_game({"normal_starters": _starters})
 
 func after_each() -> void:
 	GameState.world_config = _config

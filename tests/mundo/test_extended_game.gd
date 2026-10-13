@@ -72,7 +72,7 @@ func walkthrough(randomlocke: bool) -> void:
 		var rom := Randomizer.generate(42, RandomizerSettings.from_preset("clasico"))
 		assert_eq(await SceneManager.start_randomlocke(rom, SLOT, false), OK)
 	else:
-		assert_eq(await SceneManager.start_new_game(&"", &"", {"slot": SLOT}), OK)
+		assert_eq(await SceneManager.start_new_game(&"", &"", {"slot": SLOT, "starter_seed": 53}), OK)
 	await event(load("res://src/events/mvp/mvp_story_event.gd"), {"stage": "intro"})
 	await event(load("res://src/events/mvp/mvp_story_event.gd"), {"stage": "bedroom"})
 	assert_true(GameState.flag(&"story_lab_intro_done"))

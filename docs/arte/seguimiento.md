@@ -248,3 +248,5 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Elección de personaje | Interfaz | A | integrado, provisional | Panel y controles existentes | ⏳ | Selección previa a nueva partida, cancelar seguro; `a_inicio_*.png` |
 
 Los PNG nuevos se conservan intactos; se muestran por regiones registradas y filtro nearest. En mapa se presentan a 56 px de alto; frente y espalda encajan proporcionalmente en la interfaz. Las variantes específicas de bici/surf/pesca siguen pendientes de estos cuatro diseños; siguen usando las hojas anteriores del pack. Los protagonistas anteriores siguen disponibles para las partidas migradas sin identidad nueva.
+
+| Oferta de iniciales por partida | Interfaz de intro | A | integrado, provisional | Iconos del pack 06 existentes | ⏳ | `a_iniciales_aleatorios.md`; el profesor se sustituye en la tarea 3 |

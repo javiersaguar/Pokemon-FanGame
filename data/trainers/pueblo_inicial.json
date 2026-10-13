@@ -3,36 +3,48 @@
     "class": "rival",
     "name": "{rival}",
     "intro_text": "",
-    "lose_text": "¿¡Qué!? ¡Pero si he elegido el que tenía ventaja!",
+    "lose_text": "¡Pero si el mío me había salido buenísimo!",
     "win_text": "¡Ja! Te dije que el mío era mejor.",
     "after_text": "",
     "items": [],
     "party": [
-      {"species": "charmander", "level": 5}
-    ]
+      {
+        "species": "charmander",
+        "level": 5
+      }
+    ],
+    "starter_slot": "starter_2"
   },
   "rival_lab_2": {
     "class": "rival",
     "name": "{rival}",
     "intro_text": "",
-    "lose_text": "¿¡Qué!? ¡Pero si he elegido el que tenía ventaja!",
+    "lose_text": "¡Pero si el mío me había salido buenísimo!",
     "win_text": "¡Ja! Te dije que el mío era mejor.",
     "after_text": "",
     "items": [],
     "party": [
-      {"species": "squirtle", "level": 5}
-    ]
+      {
+        "species": "squirtle",
+        "level": 5
+      }
+    ],
+    "starter_slot": "starter_3"
   },
   "rival_lab_3": {
     "class": "rival",
     "name": "{rival}",
     "intro_text": "",
-    "lose_text": "¿¡Qué!? ¡Pero si he elegido el que tenía ventaja!",
+    "lose_text": "¡Pero si el mío me había salido buenísimo!",
     "win_text": "¡Ja! Te dije que el mío era mejor.",
     "after_text": "",
     "items": [],
     "party": [
-      {"species": "bulbasaur", "level": 5}
-    ]
+      {
+        "species": "bulbasaur",
+        "level": 5
+      }
+    ],
+    "starter_slot": "starter_1"
   }
 }
