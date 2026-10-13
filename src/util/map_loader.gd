@@ -29,6 +29,7 @@ static func prepare(map_id: StringName) -> Dictionary:
 		map.free()
 		return {"error": ERR_INVALID_DATA}
 	CharacterPlacements.apply(map)
+	NewGameStory.apply(map)
 	return {"error": OK, "map": map, "prepare_usec": Time.get_ticks_usec() - started}
 
 static func spawn_tile(map: MapRoot, spawn_id: StringName) -> Variant:

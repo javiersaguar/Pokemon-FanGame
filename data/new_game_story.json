@@ -1,0 +1,22 @@
+{
+  "laboratory": {
+    "map": "madrid/laboratorio",
+    "spawn": "default",
+    "professor_spawn": "profesor"
+  },
+  "professor": {
+    "name": "Unicoos",
+    "sprite": "res://assets/sprites/trainers/unicoos.png",
+    "map_sprite": "res://assets/sprites/characters/unicoos_mapa.png",
+    "map_rect": [
+      380,
+      185,
+      465,
+      925
+    ]
+  },
+  "opening": "Soy Unicoos. Aquí resolvemos ecuaciones y problemas; si el problema tiene dientes, lo capturamos.",
+  "directions": "Te espero en mi laboratorio de Ciudad Universitaria, en Moncloa. Tú busca Pokémon; yo intentaré que cuadren las cuentas.",
+  "starter_prompt": "Las probabilidades ya están calculadas. ¿Qué Pokémon quieres elegir?",
+  "after": "Aquí tienes tu Pokédex y las Poké Balls. El tutorial ha terminado; los exámenes de esta región se llaman gimnasios."
+}

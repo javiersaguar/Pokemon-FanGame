@@ -14,7 +14,8 @@ func test_decisiones_de_javier_en_los_datos_reales() -> void:
 	assert_eq(GameState.money, 3000)
 
 func test_nombres_en_un_solo_sitio_sin_inventarlos() -> void:
-	for key: String in ["town", "city_2", "professor", "rival", "region"]:
+	assert_eq(WorldNames.value(&"professor"), "Unicoos")
+	for key: String in ["town", "city_2", "rival", "region"]:
 		assert_eq(WorldNames.value(StringName(key)), "POR DEFINIR")
 	GameState.world_config.names.professor = "Profesor de prueba"
 	GameState.world_config.names.town = "Pueblo de prueba"

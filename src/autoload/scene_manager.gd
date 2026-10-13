@@ -157,7 +157,8 @@ func start_new_game(map: StringName = &"", spawn: StringName = &"", options: Dic
 	if map_error != OK:
 		return map_error
 	if bool(options.get("intro", false)):
-		await Cutscene.play(load("res://src/events/mvp/mvp_story_event.gd"), null, {"stage": "intro"})
+		var story_path := "res://src/events/new_game_story_event.gd" if GameState.player_character != &"" else "res://src/events/mvp/mvp_story_event.gd"
+		await Cutscene.play(load(story_path), null, {"stage": "intro"})
 	return OK
 
 

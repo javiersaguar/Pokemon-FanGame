@@ -22,21 +22,17 @@ func _ready() -> void:
 	panel(Rect2(12, 35, 95, 102))
 	panel(Rect2(115, 35, 128, 102))
 	var professor := Sprite2D.new()
-	var path := "res://assets/sprites/trainers/profesor.png"
-	if ResourceLoader.exists(path): professor.texture = load(path)
-	else:
-		var atlas := AtlasTexture.new()
-		atlas.atlas = load("res://assets/sprites/characters/profesor.png")
-		atlas.region = Rect2(0, 0, 64, 64)
-		professor.texture = atlas
-	professor.scale = Vector2(0.5, 0.5)
-	professor.position = Vector2(60, 85)
+	professor.texture = ProfessorNPC.portrait()
+	if professor.texture == null:
+		professor.texture = load("res://assets/sprites/trainers/profesor.png")
+	professor.scale = Vector2.ONE * minf(75.0 / professor.texture.get_width(), 68.0 / professor.texture.get_height())
+	professor.position = Vector2(60, 72)
 	canvas.add_child(professor)
 	label("Profesor\n%s" % WorldNames.value(&"professor"), Rect2(19, 109, 82, 27), Color("382a38"), 8)
 	var welcome := label("", Rect2(124, 43, 104, 54), Color("382a38"), 8)
 	welcome.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	welcome.clip_text = true
-	welcome.text = "Un mundo de Pokémon\ny una aventura por descubrir."
+	welcome.text = "Aprende con Unicoos.\nTu aventura empieza\naquí, en España."
 	for i: int in 3:
 		var species := DataDB.starter(StringName("starter_%d" % (i + 1)))
 		if species == &"": continue

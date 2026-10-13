@@ -250,3 +250,11 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 Los PNG nuevos se conservan intactos; se muestran por regiones registradas y filtro nearest. En mapa se presentan a 56 px de alto; frente y espalda encajan proporcionalmente en la interfaz. Las variantes específicas de bici/surf/pesca siguen pendientes de estos cuatro diseños; siguen usando las hojas anteriores del pack. Los protagonistas anteriores siguen disponibles para las partidas migradas sin identidad nueva.
 
 | Oferta de iniciales por partida | Interfaz de intro | A | integrado, provisional | Iconos del pack 06 existentes | ⏳ | `a_iniciales_aleatorios.md`; el profesor se sustituye en la tarea 3 |
+
+## Profesor Unicoos · sesión del 14 de octubre
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| `trainers/unicoos.png` | Retrato de intro | A | integrado, provisional | Diseño según foto de Javier | ⏳ | `a_unicoos.md`; gafas, canas, polo azul |
+| `characters/unicoos_mapa.png` | Personaje de mapa | A | integrado, provisional | Diseño según foto de Javier | ⏳ | Chibi idle, marca `profesor` del laboratorio de B |
+| Intro y recepción en Moncloa | Interfaz/guion | A | integrado, provisional | Recursos nuevos y panel existente | ⏳ | Oferta, tutorial y regalos sin repetir |

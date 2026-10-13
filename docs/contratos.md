@@ -583,6 +583,12 @@ Teclado A3: `Cutscene.request_name(kind: StringName, initial := "") -> String` e
 
 `DataDB.starter_spec` devuelve la ficha por partida solo en Normal sin parche activo; devuelve copia profunda. RandomLocke/parche activo sigue consultando la ROM. `base_starter_spec` es la consulta base explícita para generar la oferta; `randomizer_input` sigue tomando datos base y no se contamina con la sesión actual. `starter_slot` en la ficha del rival refiere otra opción de la oferta (se conserva la correspondencia de posiciones anterior). `DataDB.trainer` resuelve su especie solo para Normal nuevo; datos originales y equipos de ROM permanecen intactos. No se promete ventaja de tipo ni se escribe una especie dentro del evento.
 
+## 7b.3 Intro y profesor Unicoos (sesión 2026-10-14, Agente A)
+
+`data/new_game_story.json` define nombre, recursos y textos del inicio, y el laboratorio entregado por B (`madrid/laboratorio`, llegada `default`, marca `profesor`). `SceneManager` elige el evento nuevo con identidad recibida; el recorrido anterior de prueba se conserva sin identidad inicial. `NewGameStoryEvent` reutiliza recepción del inicial, reglas Locke, tutorial y premios existentes. La intro indica Moncloa y deja caminar por la ruta inicial; no transporta a una sala de pruebas. Al hablar con Unicoos: explica la oferta por DataDB, permite cancelar, pide confirmar el inicial, respeta mote pendiente, ejecuta el combate tutorial/curación y entrega Pokédex y los mismos cinco objetos del regalo registrado. Flags previas impiden repetición.
+
+`NewGameStory.apply` añade únicamente `ProfesorUnicoos` al preparar ese laboratorio y en la marca de B; no edita escena ni tabla de colocaciones. `ProfessorNPC` es examinable y usa sprite de mapa propio; su retrato es la imagen de la intro. Los gráficos se conservan intactos, con regiones por alfa y nearest. No modifica protagonistas, ciudades ni personajes ya colocados por B.
+
 ## 7c. Integración Locke del mundo (Agente 1)
 
 `GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados. SAVE_VERSION 2 migra v1 conservando ROM, zonas y contadores antiguos (`legacy_death_count`), sin fabricar lápidas ni permisos para encuentros ya gastados.

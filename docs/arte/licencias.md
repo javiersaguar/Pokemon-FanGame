@@ -32,3 +32,5 @@ Datos (no arte), para los planos de referencia de `docs/mundo/planos/`: **OpenSt
 ## Protagonistas de Spain (sesión 2026-10-14)
 
 Cuatro diseños originales para el juego en `assets/sprites/characters/protagonistas/`, según la referencia aportada por Javier en `docs/arte/referencias/javier_2026-10-13/protagonistas_cayetana_choni_cayetano_cani.webp`. Se conserva cada PNG con alfa sin modificar; metadatos de regiones en `data/protagonistas.json`. No se ha copiado otro pack para estos cuatro diseños. Son provisionales y esperan revisión de Javier. Los recursos de transporte y de partidas anteriores siguen acreditados a sus autores originales.
+
+Profesor Unicoos: dos diseños nuevos según la fotografía aportada por Javier en `profesor_unicoos.png`; retrato y chibi separados, PNG sin editar, sin copiar un pack de terceros. Ambos son provisionales hasta revisión. La fotografía se conserva como referencia y no se ha metido como imagen de combate.
