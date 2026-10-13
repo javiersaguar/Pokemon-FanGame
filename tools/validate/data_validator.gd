@@ -36,6 +36,7 @@ static func run() -> DataValidator:
 	var v := DataValidator.new()
 	v._check_species()
 	v._check_regional_dex()
+	v._check_pokemon_skins()
 	v._check_trainers()
 	v._check_encounters()
 	v._check_shops()
@@ -82,7 +83,8 @@ func _check_species() -> void:
 func _check_regional_dex() -> void:
 	var dex := DataDB.regional_dex()
 	if dex.is_empty():
-		_warn("La Pokédex regional (data/regional_dex.json) está vacía: la decide Javier.")
+		if DataDB.national_dex().is_empty():
+			_error("La Pokédex nacional no contiene especies base.")
 		return
 	var obtainable := _obtainable_species()
 	for id: StringName in dex:
@@ -98,6 +100,23 @@ func _check_regional_dex() -> void:
 			var method := str(evo.get("method", ""))
 			if not evo.has("region") and not EvolutionRules.implemented(evo):
 				_warn("%s → %s: el método '%s' no está implementado (%s)." % [id, evo.get("to", "?"), method, evo.get("condition", "")])
+
+
+func _check_pokemon_skins() -> void:
+	var entries := PokemonSkins.entries()
+	for species_id: String in entries:
+		if not DataDB.has_species(StringName(species_id)):
+			_error("pokemon_skins.json: '%s' no es una especie conocida." % species_id)
+		var entry: Variant = entries[species_id]
+		if entry is not Dictionary:
+			_error("pokemon_skins.json: '%s' debe tener ocho rutas de imagen." % species_id)
+			continue
+		for view: String in PokemonSkins.VIEWS:
+			for shiny: bool in [false, true]:
+				var key := view + ("_shiny" if shiny else "")
+				var path: String = str(entry.get(key, ""))
+				if not path.begins_with("res://assets/sprites/pokemon/skins/") or not ResourceLoader.exists(path):
+					_error("pokemon_skins.json: %s.%s no apunta a una skin PNG existente." % [species_id, key])
 
 
 ## Especies (base) que aparecen en encuentros y todas las que salen de ellas evolucionando.

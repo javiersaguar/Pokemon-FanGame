@@ -29,7 +29,7 @@ var _idle_frame := 0
 
 
 static func sheet_path(species_id: StringName, is_shiny: bool) -> String:
-	return (SHINY_SHEETS_DIR if is_shiny else SHEETS_DIR) + String(species_id) + ".png"
+	return PokemonSkins.path(species_id, "followers", is_shiny)
 
 
 static func has_sheet(species_id: StringName, is_shiny: bool) -> bool:

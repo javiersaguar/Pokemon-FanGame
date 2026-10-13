@@ -6,7 +6,7 @@ static func item(id: StringName) -> Texture2D:
 	return load(path) if ResourceLoader.exists(path) else null
 
 static func pokemon_icon(p: Pokemon) -> Texture2D:
-	var path := "res://assets/sprites/pokemon/%s/%s.png" % ["icons_shiny" if p.shiny else "icons", p.species_id]
+	var path := PokemonSkins.path(p.species_id, "icons", p.shiny)
 	if not ResourceLoader.exists(path): return null
 	var texture := load(path) as Texture2D
 	var atlas := AtlasTexture.new()

@@ -65,8 +65,7 @@ func _process(delta: float) -> void:
 
 func set_pokemon(pokemon: Dictionary) -> void:
 	species_id = StringName(pokemon.get("species", ""))
-	var folder := ("back" if back else "front") + ("_shiny" if pokemon.get("shiny", false) else "")
-	var texture := PlaceholderArt.load_texture("%s%s/%s.png" % [SPRITES_DIR, folder, species_id])
+	var texture := PlaceholderArt.load_texture(PokemonSkins.path(species_id, "back" if back else "front", pokemon.get("shiny", false)))
 	if texture == null:
 		texture = PlaceholderArt.pokemon(pokemon.get("types", []), back)
 	_sprite.texture = texture

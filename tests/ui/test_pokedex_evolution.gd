@@ -44,6 +44,18 @@ func test_dex_conceals_unseen_species_and_entry_text_until_caught() -> void:
 	await wait_process_frames(2)
 	assert_true("Captura" in entry._detail.text)
 
+
+func test_dex_muestra_todas_las_especies_nacionales_sin_revelar_las_no_vistas() -> void:
+	var screen := PokedexScreen.new()
+	SceneManager.push_menu(screen)
+	await wait_process_frames(2)
+	assert_eq(screen.species.size(), 1025)
+	assert_eq(screen.species[0], &"bulbasaur")
+	assert_eq(screen.species[1024], &"pecharunt")
+	assert_true("1025" in screen.heading.text)
+	assert_true("???" in screen.choices[1024])
+	assert_null(screen.images[1024])
+
 func test_cancel_evolution_keeps_species_item_nickname_and_dex() -> void:
 	var p := Pokemon.create(&"charmander", 16)
 	p.nickname = "Panchito"

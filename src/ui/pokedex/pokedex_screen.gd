@@ -9,20 +9,19 @@ static func open() -> void:
 	SceneManager.pop_menu(screen)
 
 func _refresh() -> void:
-	caption = "Pokédex / %d vistos / %d capt." % [GameState.pokedex.seen_count(), GameState.pokedex.caught_count()]
+	caption = "Pokédex %d/%d vistos / %d capt." % [GameState.pokedex.seen_count(), DataDB.national_dex().size(), GameState.pokedex.caught_count()]
 	if species.is_empty():
-		species = DataDB.regional_dex()
-		if species.is_empty(): species = DataDB.species_ids(false)
+		species = DataDB.national_dex()
 	choices.clear()
 	notes.clear()
 	images.clear()
 	for id: StringName in species:
 		var data := DataDB.species(id)
 		var seen: bool = GameState.pokedex.is_seen(id)
-		choices.append("%03d %s%s" % [DataDB.regional_number(id) if DataDB.regional_number(id) > 0 else data.num, data.name if seen else "???", " / C" if GameState.pokedex.is_caught(id) else ""])
+		choices.append("%04d %s%s" % [data.num, data.name if seen else "???", " / C" if GameState.pokedex.is_caught(id) else ""])
 		if seen:
 			notes.append("%s\n%s\n%s" % [data.name, " / ".join(data.types.map(func(id: StringName) -> String: return DataDB.type_name(id))), "Capturado" if GameState.pokedex.is_caught(id) else "Visto"])
-			var path := "res://assets/sprites/pokemon/icons/%s.png" % id
+			var path := PokemonSkins.path(id, "icons")
 			var sheet := load(path) as Texture2D if ResourceLoader.exists(path) else null
 			var icon := AtlasTexture.new()
 			if sheet:

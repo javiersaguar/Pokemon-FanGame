@@ -7,6 +7,25 @@ func test_criterio_de_hecho_de_la_fase_4() -> void:
 	assert_eq(DataDB.move(&"thunderbolt").name, "Rayo")
 
 
+func test_pokedex_nacional_contiene_todas_las_especies_base_en_orden() -> void:
+	var dex := DataDB.national_dex()
+	assert_eq(dex.size(), 1025)
+	assert_eq(dex.front(), &"bulbasaur")
+	assert_eq(dex.back(), &"pecharunt")
+	assert_true(dex.has(&"pikachu"))
+	assert_false(dex.has(&"raichualola"))
+	for i: int in range(1, dex.size()):
+		assert_lte(DataDB.species(dex[i - 1]).num, DataDB.species(dex[i]).num)
+
+
+func test_skins_sin_asignar_conservan_el_arte_original() -> void:
+	assert_true(PokemonSkins.entries().is_empty())
+	assert_eq(PokemonSkins.path(&"pikachu", "front"), "res://assets/sprites/pokemon/front/pikachu.png")
+	assert_eq(PokemonSkins.path(&"pikachu", "icons", true), "res://assets/sprites/pokemon/icons_shiny/pikachu.png")
+	var configured := {"pikachu": {"front": "res://assets/sprites/pokemon/front/raichu.png"}}
+	assert_eq(PokemonSkins.path(&"pikachu", "front", false, configured), "res://assets/sprites/pokemon/front/raichu.png")
+
+
 func test_especie_tipada() -> void:
 	var s := DataDB.species(&"pikachu")
 	assert_eq(s.num, 25)

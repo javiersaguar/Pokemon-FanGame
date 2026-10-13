@@ -708,6 +708,12 @@ DataDB.can_learn(species_id, move_id) -> bool
 # Pokédex regional
 DataDB.regional_dex() -> Array[StringName]
 DataDB.regional_number(species_id) -> int    # 1, 2, 3...; 0 = no está. Las formas usan el de su especie
+DataDB.national_dex() -> Array[StringName]   # 1.025 especies base en orden nacional; interfaz completa, formas en ficha
+
+# Skins predeterminadas (sin especies asignadas hasta decisión de Javier)
+data/pokemon_skins.json -> {"skins": {species_id: {front, front_shiny, back, back_shiny, icons, icons_shiny, followers, followers_shiny}}}
+PokemonSkins.path(species_id, view, shiny) -> String  # resuelve skin PNG o ruta original del pack
+PokemonSkins.entries() -> Dictionary  # copia de las asignaciones; validador exige las ocho rutas en assets/sprites/pokemon/skins/
 
 # Datos del Agente 3, en bruto (Dictionary tal cual está en el JSON)
 DataDB.trainer_class(id) / has_trainer_class(id)

@@ -36,7 +36,7 @@ func _ready() -> void:
 	for i: int in 3:
 		var species := DataDB.starter(StringName("starter_%d" % (i + 1)))
 		if species == &"": continue
-		var path_icon := "res://assets/sprites/pokemon/icons/%s.png" % species
+		var path_icon := PokemonSkins.path(species, "icons")
 		if not ResourceLoader.exists(path_icon): continue
 		var sheet := load(path_icon) as Texture2D
 		var atlas := AtlasTexture.new()

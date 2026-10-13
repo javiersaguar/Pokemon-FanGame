@@ -325,8 +325,7 @@ func _trait(p: Pokemon) -> String:
 
 
 func _icon_atlas(p: Pokemon) -> AtlasTexture:
-	var folder := "icons_shiny" if p.shiny else "icons"
-	var path := "res://assets/sprites/pokemon/%s/%s.png" % [folder, p.species_id]
+	var path := PokemonSkins.path(p.species_id, "icons", p.shiny)
 	if not ResourceLoader.exists(path):
 		path = "res://assets/sprites/pokemon/icons/%s.png" % p.species_id
 	if not ResourceLoader.exists(path):

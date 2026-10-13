@@ -140,6 +140,17 @@ func species_ids(include_forms: bool = true) -> Array[StringName]:
 	return out
 
 
+## Todas las especies base por número nacional. Las formas se consultan desde su ficha.
+func national_dex() -> Array[StringName]:
+	var ids := species_ids(false)
+	ids.sort_custom(func(a: StringName, b: StringName) -> bool:
+		var left: SpeciesData = _species[a]
+		var right: SpeciesData = _species[b]
+		return left.num < right.num if left.num != right.num else String(a) < String(b)
+	)
+	return ids
+
+
 # --- Movimientos, habilidades, naturalezas ---
 
 func move(id: StringName) -> MoveData:

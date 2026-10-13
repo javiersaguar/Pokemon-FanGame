@@ -258,3 +258,10 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `trainers/unicoos.png` | Retrato de intro | A | integrado, provisional | Diseño según foto de Javier | ⏳ | `a_unicoos.md`; gafas, canas, polo azul |
 | `characters/unicoos_mapa.png` | Personaje de mapa | A | integrado, provisional | Diseño según foto de Javier | ⏳ | Chibi idle, marca `profesor` del laboratorio de B |
 | Intro y recepción en Moncloa | Interfaz/guion | A | integrado, provisional | Recursos nuevos y panel existente | ⏳ | Oferta, tutorial y regalos sin repetir |
+
+## Pokédex nacional · sesión del 14 de octubre
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| Lista nacional de 1.025 especies | Interfaz | A | integrado, provisional | Panel e iconos existentes | ⏳ | Dos folios reales en `a_pokedex_nacional.md`; entradas ocultas hasta verse |
+| Asignaciones de skins | Sprite Pokémon | A | pendiente | PENDIENTE JAVIER | ⏳ | Base de datos y resolver listos; ninguna especie asignada |
