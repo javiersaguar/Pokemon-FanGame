@@ -144,6 +144,8 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo`. Lista en `docs/S
 
 - **Tarea 3 (empezada) · C-5 averiado:** dos revisores tapan los andenes del Cercanías C-5 en Atocha (`madrid/retiro` (29, 59) y (31, 59)) y se van con la 1.ª medalla (`"hasta": {"medallas": 1}`, `"bloquea_pasarela": true`). **Falta de la tarea 3:** el hospital Quirón con enfermeros y Ayuso al final (que abre el gimnasio 1) y el combate final en la terraza del ático de Chamberí; el retraso de chiste del C-5 (1 de cada 4 viajes) es de sistemas.
 
+**Sin empezar (siguen en este orden):** el resto de la tarea 3 (Quirón y terraza del ático de Chamberí), la 4 (clases perroflauta, cayetano, cani, pueblerino, gitano, mantero y turista), la 5 (personajes nuevos y revanchas), la 6 (hospitales reales e interiores de los gimnasios según `gimnasios.md`), la 7 (el norte) y la 8 (Calle de la Victoria y Palos). Ninguna fila mía queda en `docs/mapas/reservas.md`.
+
 **Pendiente de la tarea 1:** PENDIENTE JAVIER el nombre por defecto del rival (decisiones §8). En `madrid/moncloa` la puerta de la casa azul (5, 8) sigue sin poder alcanzarse (ya pasaba antes).
 
 ### Portada, gimnasios y personajes (2026-10-12)
