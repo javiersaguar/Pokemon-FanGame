@@ -1374,6 +1374,294 @@
     "Cercanías C-5: servicio interrumpido por avería. Disculpen las molestias.",
     "Volverá a funcionar cuando ganes tu primera medalla. Lo dice el ministro en un tuit, así que igual."
    ]
+  },
+  {
+   "id": "pozuelo_cayetano",
+   "entrenador": "pozuelo_cayetano",
+   "mapa": "pozuelo/exterior",
+   "cerca": [
+    34.0,
+    21.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    34,
+    21
+   ]
+  },
+  {
+   "id": "orcasitas_cani",
+   "entrenador": "orcasitas_cani",
+   "mapa": "orcasitas/exterior",
+   "cerca": [
+    30.0,
+    22.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    31,
+    22
+   ]
+  },
+  {
+   "id": "madrid_perroflauta",
+   "entrenador": "madrid_perroflauta",
+   "mapa": "madrid/centro",
+   "cerca": [
+    20.0,
+    40.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    20,
+    36
+   ]
+  },
+  {
+   "id": "madrid_mantero",
+   "entrenador": "madrid_mantero",
+   "mapa": "madrid/centro",
+   "cerca": [
+    30.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    30,
+    20
+   ]
+  },
+  {
+   "id": "madrid_turista_sol",
+   "entrenador": "madrid_turista_sol",
+   "mapa": "madrid/centro",
+   "cerca": [
+    50.0,
+    44.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    50,
+    44
+   ]
+  },
+  {
+   "id": "palacio_turista",
+   "entrenador": "palacio_turista",
+   "mapa": "madrid/palacio_real",
+   "cerca": [
+    30.0,
+    36.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    30,
+    35
+   ]
+  },
+  {
+   "id": "barcelona_mantero",
+   "entrenador": "barcelona_mantero",
+   "mapa": "barcelona/ciutat_vella",
+   "cerca": [
+    30.0,
+    30.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    30,
+    30
+   ]
+  },
+  {
+   "id": "barcelona_perroflauta",
+   "entrenador": "barcelona_perroflauta",
+   "mapa": "barcelona/ciutat_vella",
+   "cerca": [
+    20.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    20,
+    20
+   ]
+  },
+  {
+   "id": "barcelona_turista",
+   "entrenador": "barcelona_turista",
+   "mapa": "barcelona/eixample",
+   "cerca": [
+    45.0,
+    45.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    45,
+    45
+   ]
+  },
+  {
+   "id": "valencia_mantero",
+   "entrenador": "valencia_mantero",
+   "mapa": "valencia/malvarrosa",
+   "cerca": [
+    30.0,
+    30.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    30,
+    29
+   ]
+  },
+  {
+   "id": "valencia_turista",
+   "entrenador": "valencia_turista",
+   "mapa": "valencia/ciutat_vella",
+   "cerca": [
+    28.0,
+    32.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    28,
+    32
+   ]
+  },
+  {
+   "id": "sevilla_gitano",
+   "entrenador": "sevilla_gitano",
+   "mapa": "sevilla/rio",
+   "cerca": [
+    8.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    8,
+    20
+   ]
+  },
+  {
+   "id": "sevilla_gitano_2",
+   "entrenador": "sevilla_gitano_2",
+   "mapa": "sevilla/centro",
+   "cerca": [
+    44.0,
+    37.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    44,
+    35
+   ]
+  },
+  {
+   "id": "ruta12_gitano",
+   "entrenador": "ruta12_gitano",
+   "mapa": "ruta_12/exterior",
+   "cerca": [
+    6.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    7,
+    20
+   ]
+  },
+  {
+   "id": "ruta6_pueblerino",
+   "entrenador": "ruta6_pueblerino",
+   "mapa": "ruta_6/exterior",
+   "cerca": [
+    30.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    30,
+    20
+   ]
+  },
+  {
+   "id": "ruta7_pueblerino",
+   "entrenador": "ruta7_pueblerino",
+   "mapa": "ruta_7/exterior",
+   "cerca": [
+    30.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    30,
+    20
+   ]
+  },
+  {
+   "id": "malaga_turista",
+   "entrenador": "malaga_turista",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    80.0,
+    60.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    80,
+    60
+   ]
+  },
+  {
+   "id": "malaga_mantero",
+   "entrenador": "malaga_mantero",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    60.0,
+    50.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Clase nueva (decisiones del 2026-10-13, §4)",
+   "casilla": [
+    60,
+    50
+   ]
   }
  ],
  "pendientes": [

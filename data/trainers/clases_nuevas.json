@@ -1,0 +1,346 @@
+{
+  "pozuelo_cayetano": {
+    "class": "cayetano_entrenador",
+    "name": "Álvaro",
+    "intro_text": "¿Tú de qué colegio eres? Da igual: yo soy del mismo que tu padre, y te gano.",
+    "lose_text": "Esto lo arregla mi tío, que es abogado.",
+    "win_text": "Hay clases. Y la mía es la de arriba.",
+    "after_text": "En Pozuelo tenemos la renta más alta de España. Y el ego, también.",
+    "items": [],
+    "party": [
+      {
+        "species": "lechonk",
+        "level": 4
+      },
+      {
+        "species": "fidough",
+        "level": 5
+      }
+    ]
+  },
+  "orcasitas_cani": {
+    "class": "cani_entrenador",
+    "name": "Kevin",
+    "intro_text": "¿Qué miras, primo? ¿Quieres guerra? Pues guerra Pokémon.",
+    "lose_text": "Me has dejado más tirado que la moto de mi hermano.",
+    "win_text": "¡Toma ya, primo!",
+    "after_text": "Mi Pokémon lleva más oro que yo. Y yo llevo mucho.",
+    "items": [],
+    "party": [
+      {
+        "species": "yungoos",
+        "level": 4
+      },
+      {
+        "species": "tarountula",
+        "level": 5
+      }
+    ]
+  },
+  "madrid_perroflauta": {
+    "class": "perroflauta",
+    "name": "Lucas",
+    "intro_text": "Los Pokémon no son mascotas, son compañeros. Por eso combatimos en asamblea.",
+    "lose_text": "Lo votamos y has ganado. Por unanimidad, menos yo.",
+    "win_text": "¡Otro mundo es posible!",
+    "after_text": "Vivo en un piso compartido con seis personas y un Wooloo. El Wooloo paga más.",
+    "items": [],
+    "party": [
+      {
+        "species": "wooloo",
+        "level": 11
+      },
+      {
+        "species": "smoliv",
+        "level": 12
+      }
+    ]
+  },
+  "madrid_mantero": {
+    "class": "mantero",
+    "name": "Moussa",
+    "intro_text": "¡Bolsos, gafas, Pokémon! Todo original. Bueno, casi todo.",
+    "lose_text": "Recojo la manta, que viene la policía.",
+    "win_text": "Te hago precio: gratis la derrota.",
+    "after_text": "La manta se recoge en dos segundos. El combate, igual.",
+    "items": [],
+    "party": [
+      {
+        "species": "nickit",
+        "level": 12
+      },
+      {
+        "species": "sandile",
+        "level": 12
+      }
+    ]
+  },
+  "madrid_turista_sol": {
+    "class": "turista",
+    "name": "Jessica",
+    "gender": "female",
+    "intro_text": "Excuse me, ¿dónde está el Bernabéu? ¿No? Pues combat!",
+    "lose_text": "Me voy a por unos churros.",
+    "win_text": "¡Olé, olé!",
+    "after_text": "En Madrid se cena a las once. En mi país, a las seis. Aquí a las seis se come.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidove",
+        "level": 11
+      },
+      {
+        "species": "swablu",
+        "level": 12
+      }
+    ]
+  },
+  "palacio_turista": {
+    "class": "turista",
+    "name": "John",
+    "intro_text": "¡Quiero ver al rey! ¿No está? Bueno, me conformo con un combate.",
+    "lose_text": "The king is not here and I lose. Terrible day.",
+    "win_text": "Royal victory!",
+    "after_text": "Me han cobrado veinte euros por ver el Palacio por fuera. Por dentro, más.",
+    "items": [],
+    "party": [
+      {
+        "species": "toxel",
+        "level": 12
+      },
+      {
+        "species": "rookidee",
+        "level": 12
+      }
+    ]
+  },
+  "barcelona_mantero": {
+    "class": "mantero",
+    "name": "Ibrahima",
+    "intro_text": "Camisetas del Barça a cinco euros. El combate, gratis.",
+    "lose_text": "Recojo, que viene la Guardia Urbana.",
+    "win_text": "¡Oferta del día!",
+    "after_text": "La Rambla es nuestra tienda. La única que no paga alquiler.",
+    "items": [],
+    "party": [
+      {
+        "species": "zorua",
+        "level": 19
+      },
+      {
+        "species": "scraggy",
+        "level": 20
+      }
+    ]
+  },
+  "barcelona_perroflauta": {
+    "class": "perroflauta",
+    "name": "Pol",
+    "intro_text": "Esto antes era un barrio. Ahora es un parque temático de pisos turísticos. ¡Lucha!",
+    "lose_text": "Me voy a una okupa a reflexionar.",
+    "win_text": "¡No pasarán!",
+    "after_text": "Mi abuela vivía aquí. Ahora es un apartamento turístico con su foto en la pared.",
+    "items": [],
+    "party": [
+      {
+        "species": "cottonee",
+        "level": 18
+      },
+      {
+        "species": "skiddo",
+        "level": 19
+      }
+    ]
+  },
+  "barcelona_turista": {
+    "class": "turista",
+    "name": "Hans",
+    "intro_text": "Sagrada Família! Wunderbar! ¿Combate? Ja!",
+    "lose_text": "Más caro que la entrada.",
+    "win_text": "¡Sangría!",
+    "after_text": "La Sagrada Família la acabarán antes que mi crucero de vuelta.",
+    "items": [],
+    "party": [
+      {
+        "species": "wingull",
+        "level": 19
+      },
+      {
+        "species": "deerling",
+        "level": 20
+      }
+    ]
+  },
+  "valencia_mantero": {
+    "class": "mantero",
+    "name": "Ousmane",
+    "intro_text": "Gafas de sol para la Malvarrosa. Y para que no veas cómo pierdes.",
+    "lose_text": "Recojo la manta.",
+    "win_text": "¡Buen negocio!",
+    "after_text": "En verano hay más turistas que arena. Y más mantas que sombrillas.",
+    "items": [],
+    "party": [
+      {
+        "species": "sandile",
+        "level": 25
+      },
+      {
+        "species": "scraggy",
+        "level": 25
+      }
+    ]
+  },
+  "valencia_turista": {
+    "class": "turista",
+    "name": "Emma",
+    "gender": "female",
+    "intro_text": "¡Paella para desayunar! Y un combate de postre.",
+    "lose_text": "Me voy a por horchata.",
+    "win_text": "¡Qué bonito todo!",
+    "after_text": "Me han dicho que la paella con chorizo es delito. La he pedido igual.",
+    "items": [],
+    "party": [
+      {
+        "species": "swablu",
+        "level": 24
+      },
+      {
+        "species": "spritzee",
+        "level": 25
+      }
+    ]
+  },
+  "sevilla_gitano": {
+    "class": "gitano",
+    "name": "Rafael",
+    "intro_text": "¡En Triana se canta, se baila y se combate! Y en mi familia, las tres cosas a la vez.",
+    "lose_text": "Me voy a la boda de mi primo, que dura tres días.",
+    "win_text": "¡Olé, mi arma!",
+    "after_text": "Mi abuelo vendía en el mercadillo de los jueves. Yo vendo combates.",
+    "items": [],
+    "party": [
+      {
+        "species": "zoroark",
+        "level": 32
+      },
+      {
+        "species": "kricketune",
+        "level": 31
+      }
+    ]
+  },
+  "sevilla_gitano_2": {
+    "class": "gitano",
+    "name": "Antonio",
+    "intro_text": "¿Sabes cantar por bulerías? Pues entonces combate.",
+    "lose_text": "Me has quitado el compás.",
+    "win_text": "¡Arsa!",
+    "after_text": "En Santa Cruz no hay sitio para aparcar ni para perder.",
+    "items": [],
+    "party": [
+      {
+        "species": "persian",
+        "level": 31
+      },
+      {
+        "species": "liepard",
+        "level": 32
+      }
+    ]
+  },
+  "ruta12_gitano": {
+    "class": "gitano",
+    "name": "Juan",
+    "intro_text": "¡Has venido a la boda! Aquí la fiesta dura tres días y el combate, tres turnos.",
+    "lose_text": "Me voy a por otra copa.",
+    "win_text": "¡Vivan los novios!",
+    "after_text": "En nuestras bodas no falta de nada. Bueno, falta sitio.",
+    "items": [],
+    "party": [
+      {
+        "species": "mudsdale",
+        "level": 31
+      },
+      {
+        "species": "scraggy",
+        "level": 31
+      }
+    ]
+  },
+  "ruta6_pueblerino": {
+    "class": "pueblerino",
+    "name": "Eusebio",
+    "intro_text": "Aquí no viene nadie desde 1987. ¿Tú vienes a combatir o a comprar casa? Hay muchas.",
+    "lose_text": "Me voy al bar, que es lo único abierto.",
+    "win_text": "¡En el pueblo se vive mejor!",
+    "after_text": "Éramos 300 vecinos. Ahora somos siete y un Bibarel.",
+    "items": [],
+    "party": [
+      {
+        "species": "bibarel",
+        "level": 16
+      },
+      {
+        "species": "mudbray",
+        "level": 16
+      }
+    ]
+  },
+  "ruta7_pueblerino": {
+    "class": "pueblerino",
+    "name": "Tomás",
+    "intro_text": "¿Mus o combate? Combate, que al mus te gano seguro.",
+    "lose_text": "Órdago perdido.",
+    "win_text": "¡Envido!",
+    "after_text": "En los Monegros hay más ravers que agricultores. Pero los agricultores madrugan más.",
+    "items": [],
+    "party": [
+      {
+        "species": "skwovet",
+        "level": 17
+      },
+      {
+        "species": "wooloo",
+        "level": 18
+      }
+    ]
+  },
+  "malaga_turista": {
+    "class": "turista",
+    "name": "Gary",
+    "intro_text": "Cheers, mate! Málaga, sol y combates. ¿Hay pub inglés aquí? ¡Claro que sí!",
+    "lose_text": "Back to the pub.",
+    "win_text": "¡Lovely!",
+    "after_text": "Vivo en Benalmádena desde hace veinte años y aún no sé decir 'gracias'.",
+    "items": [],
+    "party": [
+      {
+        "species": "pelipper",
+        "level": 49
+      },
+      {
+        "species": "palossand",
+        "level": 50
+      }
+    ]
+  },
+  "malaga_mantero": {
+    "class": "mantero",
+    "name": "Mamadou",
+    "intro_text": "Gafas, bolsos y Pokémon de marca. De marca blanca.",
+    "lose_text": "Recojo, recojo.",
+    "win_text": "¡Buen precio!",
+    "after_text": "Por el Muelle Uno pasan los cruceros. Nosotros pasamos más rápido.",
+    "items": [],
+    "party": [
+      {
+        "species": "krookodile",
+        "level": 50
+      },
+      {
+        "species": "scrafty",
+        "level": 50
+      }
+    ]
+  }
+}

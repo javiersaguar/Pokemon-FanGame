@@ -136,3 +136,13 @@ func test_el_gimnasio_1_pasa_por_el_quiron_y_la_terraza() -> void:
 	var moncloa := MapLoader.prepare(&"madrid/moncloa")
 	assert_eq(String((moncloa["map"] as MapRoot).warp_at(Vector2i(58, 29)).target_map), "madrid/quiron")
 	(moncloa["map"] as MapRoot).free()
+
+
+func test_ningun_entrenador_repite_id_entre_archivos() -> void:
+	var seen := {}
+	for file: String in DirAccess.get_files_at("res://data/trainers"):
+		if not file.ends_with(".json"):
+			continue
+		for id: String in JsonFile.read_dict("res://data/trainers/" + file):
+			assert_false(seen.has(id), "%s está en %s y en %s" % [id, seen.get(id, ""), file])
+			seen[id] = file

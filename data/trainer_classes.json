@@ -1162,5 +1162,77 @@
     "overworld_sprite_female": "res://assets/sprites/characters/enfermero_f.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "perroflauta": {
+    "name": "Perroflauta",
+    "gender": "male",
+    "base_money": 16,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/perroflauta.png",
+    "overworld_sprite": "res://assets/sprites/characters/perroflauta.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "cayetano_entrenador": {
+    "name": "Cayetano",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/cayetano_entrenador.png",
+    "overworld_sprite": "res://assets/sprites/characters/cayetano_entrenador.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "cani_entrenador": {
+    "name": "Cani",
+    "gender": "male",
+    "base_money": 24,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/cani_entrenador.png",
+    "overworld_sprite": "res://assets/sprites/characters/cani_entrenador.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "pueblerino": {
+    "name": "Pueblerino",
+    "gender": "male",
+    "base_money": 20,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/pueblerino.png",
+    "overworld_sprite": "res://assets/sprites/characters/pueblerino.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "gitano": {
+    "name": "Gitano",
+    "gender": "male",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/gitano.png",
+    "overworld_sprite": "res://assets/sprites/characters/gitano.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "mantero": {
+    "name": "Mantero",
+    "gender": "male",
+    "base_money": 20,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/mantero.png",
+    "overworld_sprite": "res://assets/sprites/characters/mantero.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
+  },
+  "turista": {
+    "name": "Turista",
+    "gender": "mixed",
+    "base_money": 60,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/turista.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/turista_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/turista.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/turista_f.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

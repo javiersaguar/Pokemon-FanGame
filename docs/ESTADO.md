@@ -148,7 +148,9 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo`. Lista en `docs/S
 
 - **Tarea 3 terminada · Quirón y terraza:** `madrid/quiron` (la Fundación Jiménez Díaz de Moncloa: su puerta (58, 29) llevaba a una sala genérica, que queda sin entrada) con tres enfermeros (clase nueva `enfermero`, chico y chica) y Ayuso al fondo (`src/events/quiron_ayuso_event.gd`): sin ganar a los tres no te deja retarla; luego activa `quiron_superado` y te lleva a `madrid/atico_ayuso`, donde está como líder (colocada por datos con `requiere`) y da la medalla. De la terraza se baja a Chamberí.
 
-**Sin empezar (siguen en este orden):** la 4 (clases perroflauta, cayetano, cani, pueblerino, gitano, mantero y turista), la 5 (personajes nuevos y revanchas), la 6 (hospitales reales e interiores de los gimnasios según `gimnasios.md`), la 7 (el norte) y la 8 (Calle de la Victoria y Palos). Ninguna fila mía queda en `docs/mapas/reservas.md`.
+- **Tarea 4 terminada · clases nuevas:** `perroflauta`, `cayetano_entrenador` (Cayetano), `cani_entrenador` (Cani), `pueblerino`, `gitano`, `mantero` y `turista` (chico y chica), con sprites del pack 11 (comparativa `docs/arte/comparativas/clases_nuevas_2026-10-14.png`). Los ids de cayetano y cani llevan `_entrenador` para no chocar con los protagonistas del Agente A. 18 entrenadores en `data/trainers/clases_nuevas.json`, colocados por datos: el cayetano en Pozuelo, el cani en Orcasitas, pueblerinos en las Rutas 6 y 7, gitanos en Triana, Santa Cruz y la boda de la Ruta 12, y manteros y turistas en Madrid, Barcelona, Valencia y Málaga. Test nuevo: ningún entrenador repite id entre archivos (había un `madrid_turista` en `madrid.json`).
+
+**Sin empezar (siguen en este orden):** la 5 (personajes nuevos y revanchas), la 6 (hospitales reales e interiores de los gimnasios según `gimnasios.md`), la 7 (el norte) y la 8 (Calle de la Victoria y Palos). Ninguna fila mía queda en `docs/mapas/reservas.md`.
 
 **Pendiente de la tarea 1:** PENDIENTE JAVIER el nombre por defecto del rival (decisiones §8). En `madrid/moncloa` la puerta de la casa azul (5, 8) sigue sin poder alcanzarse (ya pasaba antes).
 

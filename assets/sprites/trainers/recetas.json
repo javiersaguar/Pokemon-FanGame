@@ -2031,5 +2031,135 @@
 			"overworld walk/tops/collared shirt/collared shirt white.png",
 			"overworld walk/hair/girl 4/4 brown.png"
 		]
+	},
+	"perroflauta": {
+		"idea": "Perroflauta: melena recogida bajo el gorro de lana, chaleco y pantalón pirata.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/capri/capri beige.png",
+			"trainer front male/tops/vest/vest grey.png",
+			"trainer front male/hair/hair 3/3 brown.png",
+			"trainer front male/hats/beanie/beanie black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/capris/capris beige.png",
+			"overworld walk/tops/vest/vest grey.png",
+			"overworld walk/hair/boy 3/boy 3 brown.png",
+			"overworld walk/hats/beanie/beanie black.png"
+		]
+	},
+	"cayetano_entrenador": {
+		"idea": "Cayetano: tupé rubio, camisa azul por dentro y chinos beis.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/classy pants/classy pants beige.png",
+			"trainer front male/tops/collared shirt/collared shirt light blue.png",
+			"trainer front male/hair/hair 2/2 blonde.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m beige.png",
+			"overworld walk/tops/collared shirt/collared shirt light blue.png",
+			"overworld walk/hair/boy 2/boy 2 blond.png"
+		]
+	},
+	"cani_entrenador": {
+		"idea": "Cani: gorra, sudadera y vaqueros, con el pelo rapado por los lados.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/jeans/jeans grey.png",
+			"trainer front male/tops/hoodie/hoodie black.png",
+			"trainer front male/hair/hair 1/1 black.png",
+			"trainer front male/hats/youngster hat/youngster cap blue.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/jeans/jeans grey.png",
+			"overworld walk/tops/hoodie/hoodie black.png",
+			"overworld walk/hair/boy 1/boy 1 black.png",
+			"overworld walk/hats/youngster hat/youngster cap blue.png"
+		]
+	},
+	"pueblerino": {
+		"idea": "Pueblerino: boina, camisa blanca y pantalón de pana, de los que juegan al mus en la plaza.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/formal pants/formal pants brown.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 white.png",
+			"trainer front male/hats/beret.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m brown.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 white.png",
+			"overworld walk/hats/beret.png"
+		]
+	},
+	"gitano": {
+		"idea": "Gitano: camisa negra y pantalón de vestir, listo para una boda o para el mercadillo.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/formal pants/formal pants black.png",
+			"trainer front male/tops/collared shirt/collared shirt black.png",
+			"trainer front male/hair/hair 3/3 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/formal bottoms m/formal bottoms m black.png",
+			"overworld walk/tops/collared shirt/collared shirt black.png",
+			"overworld walk/hair/boy 3/boy 3 black.png"
+		]
+	},
+	"mantero": {
+		"idea": "Mantero: camiseta y vaqueros, con la manta del top manta al hombro.",
+		"frente": [
+			"trainer front male/base/base dark.png",
+			"trainer front male/bottoms/jeans/jeans navy.png",
+			"trainer front male/tops/t-shirt/t-shirt red.png",
+			"trainer front male/hair/hair 1/1 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base dark.png",
+			"overworld walk/bottoms/jeans/jeans navy.png",
+			"overworld walk/tops/t-shirt/t-shirt red.png",
+			"overworld walk/hair/boy 1/boy 1 black.png"
+		]
+	},
+	"turista": {
+		"idea": "Turista: camisa de playa, pantalón corto y sombrero, quemado por el sol.",
+		"frente": [
+			"trainer front male/base/base light.png",
+			"trainer front male/bottoms/shorts/shorts red.png",
+			"trainer front male/tops/beach top/beach top red.png",
+			"trainer front male/hair/hair 2/2 blonde.png",
+			"trainer front male/hats/sun hat.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base light.png",
+			"overworld walk/bottoms/shorts/shorts red.png",
+			"overworld walk/tops/beach top m/beach top  m red.png",
+			"overworld walk/hair/boy 2/boy 2 blond.png",
+			"overworld walk/hats/sun hat.png"
+		]
+	},
+	"turista_f": {
+		"idea": "Turista: camiseta de playa, pantalón corto y sombrero.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/shorts/shorts white.png",
+			"trainer front female/tops/beach top/beach top blue.png",
+			"trainer front female/hair/Hair 2/2 blonde.png",
+			"trainer front female/hats/sun hat.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/shorts/shorts white.png",
+			"overworld walk/tops/beach top f/beach  top f blue.png",
+			"overworld walk/hair/girl 2/2 blonde.png",
+			"overworld walk/hats/sun hat.png"
+		]
 	}
 }
