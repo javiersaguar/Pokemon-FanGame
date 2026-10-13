@@ -2,6 +2,9 @@ extends SceneTree
 ## Un interior distinto para cada edificio con puerta de cada ciudad.
 ## La sala es de 16×12 (la cámara fija). El mobiliario sale del tileset de
 ## Akizakura16. No coloca personajes famosos ni abre combates de gimnasio.
+## Uso: -- [ciudad o mapa ...] [--solo-nuevas] [--rutas]
+##   --solo-nuevas  deja como están las puertas que ya tienen interior (no rehace casas ni locales)
+##   --rutas        incluye también las rutas (por defecto, solo ciudades y pueblos)
 
 const TILESET := "res://assets/tilesets/interior/interior.tres"
 const SIZE := Vector2i(16, 12)
@@ -37,6 +40,8 @@ var _made := 0
 var _repainted := 0
 var _detailed := 0
 var _linked := 0
+var _only_new := false
+var _routes := false
 
 
 func _initialize() -> void:
@@ -47,6 +52,8 @@ func _initialize() -> void:
 		var o: Dictionary = _catalog[id]
 		_by_cell["%s:%s" % [o["source"], o["coords"]]] = id
 	var only := PackedStringArray()
+	_only_new = "--solo-nuevas" in OS.get_cmdline_user_args()
+	_routes = "--rutas" in OS.get_cmdline_user_args()
 	for arg: String in OS.get_cmdline_user_args():
 		if not arg.begins_with("--"):
 			only.append(arg)
@@ -87,7 +94,7 @@ func _scan(map_id: String, dirty: Dictionary) -> void:
 		root.free()
 		return
 	var bounds := ground.get_used_rect()
-	var changed := _strip_salas(root)
+	var changed := false if _only_new else _strip_salas(root)
 	var city := map_id.get_slice("/", 0)
 	var city_name := _city_name(city)
 	var place := data.display_name if data.display_name != "" else city_name
@@ -106,6 +113,8 @@ func _scan(map_id: String, dirty: Dictionary) -> void:
 			continue
 		seen[door] = true
 		var warp := _warp_at(root, door)
+		if warp != null and _only_new:
+			continue
 		if warp == null:
 			var interior := "%s/sala_%s_%d_%d" % [city, _zone_slug(map_id), door.x, door.y]
 			_paint_new(interior, object_id, map_id, city, city_name, place, data.zone_id, "from_sala_%d_%d" % [door.x, door.y])
@@ -656,6 +665,10 @@ func _label(object_id: String) -> String:
 		"centro_pokemon": "Centro Pokémon", "centro_pokemon_grande": "Centro Pokémon",
 		"boca_metro": "Metro", "faro": "Faro", "torre_socorrista": "Torre de socorro",
 		"torre_octogonal": "Torre", "velero": "Velero", "arco": "Arco", "teatro": "Teatro",
+		"barraca": "Barraca", "palau_ducal_gandia": "Palau Ducal dels Borja", "iglesia_altea": "Iglesia de Altea",
+		"rascacielos_benidorm": "Apartamentos", "intempo": "Intempo", "castillo_santa_barbara": "Castillo de Santa Bárbara",
+		"concatedral_san_nicolas": "Concatedral de San Nicolás", "casa_carbonell": "Casa Carbonell",
+		"basilica_elche": "Basílica de Santa María", "catedral_murcia": "Catedral de Murcia",
 	}
 	if names.has(object_id):
 		return str(names[object_id])
@@ -670,6 +683,7 @@ func _theme(object_id: String) -> String:
 		["sagrada_familia", "nave"], ["templo", "nave"], ["gimnasio", "gym"], ["tienda", "shop"],
 		["mercado", "shop"], ["boqueria", "shop"], ["puesto", "shop"], ["panaderia", "shop"],
 		["grandes_almacenes", "shop"], ["casa_correos", "civic"], ["casa_batllo", "culture"],
+		["casa_carbonell", "culture"], ["barraca", "home"], ["rascacielos", "home"], ["intempo", "home"], ["palau", "civic"],
 		["casa_", "home"], ["cabana", "home"], ["bloque", "home"],
 		["atico", "home"], ["granero", "home"], ["palacio", "civic"], ["ayuntamiento", "civic"],
 		["congreso", "civic"], ["universidad", "civic"], ["oficinas", "civic"], ["edificio", "civic"],
@@ -900,10 +914,10 @@ func _collect(dir_path: String, out: PackedStringArray) -> void:
 			continue
 		var path := dir_path.path_join(file_name)
 		var id := path.trim_prefix("res://maps/")
-		if id.begins_with("ruta_") or id.begins_with("maritima") or id.begins_with("test/") or id.begins_with("muestras/"):
+		if (id.begins_with("ruta_") and not _routes) or id.begins_with("maritima") or id.begins_with("test/") or id.begins_with("muestras/"):
 			continue
 		out.append(path)
 	for sub: String in folder.get_directories():
-		if sub.begins_with("_") or sub == "test" or sub == "muestras" or sub.begins_with("ruta_") or sub == "maritima_1":
+		if sub.begins_with("_") or sub == "test" or sub == "muestras" or (sub.begins_with("ruta_") and not _routes) or sub == "maritima_1":
 			continue
 		_collect(dir_path.path_join(sub), out)

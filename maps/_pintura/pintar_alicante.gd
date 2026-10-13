@@ -156,4 +156,6 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Tengo cuatro horas de escala. Ya he visto el castillo desde abajo y me he comprado un imán. ¿Me falta algo?"]))
 	p.npc("Vecina", "npc_old_woman", Vector2i(53, 28), DOWN, PackedStringArray([
 		"En Santa Cruz quedamos cuatro vecinas y cuarenta pisos turísticos. Las macetas las riego yo todas."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply(p, "alicante", "alicante/exterior",
+		JsonFile.read_dict("res://maps/_pintura/locales.json")["alicante"])
 	return p

@@ -150,4 +150,6 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Cuando digo que soy de Murcia me contestan que Murcia no existe. Luego bien que se comen mis tomates."]))
 	p.npc("Vecina", "npc_old_woman", Vector2i(31, 46), RIGHT, PackedStringArray([
 		"Por este puente pasaba la Virgen de la Fuensanta cuando no llovía. Sigue pasando. Sigue sin llover."]))
+	load("res://maps/_pintura/servicios_locales.gd").apply(p, "murcia", "murcia/exterior",
+		JsonFile.read_dict("res://maps/_pintura/locales.json")["murcia"])
 	return p

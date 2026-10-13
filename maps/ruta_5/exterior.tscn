@@ -149,6 +149,36 @@ script = ExtResource("14_c5cy2")
 target_map = &"ruta_5/casa_2"
 arrival_facing = 4
 
+[node name="Sala31_12" type="Node2D" parent="Warps" unique_id=2114199534]
+position = Vector2(1008, 400)
+script = ExtResource("14_c5cy2")
+target_map = &"ruta_5/sala_calle_31_12"
+arrival_facing = 4
+
+[node name="Sala56_12" type="Node2D" parent="Warps" unique_id=1274064077]
+position = Vector2(1808, 400)
+script = ExtResource("14_c5cy2")
+target_map = &"ruta_5/sala_calle_56_12"
+arrival_facing = 4
+
+[node name="Sala65_11" type="Node2D" parent="Warps" unique_id=1491302515]
+position = Vector2(2096, 368)
+script = ExtResource("14_c5cy2")
+target_map = &"ruta_5/sala_calle_65_11"
+arrival_facing = 4
+
+[node name="Sala47_11" type="Node2D" parent="Warps" unique_id=165803102]
+position = Vector2(1520, 368)
+script = ExtResource("14_c5cy2")
+target_map = &"ruta_5/sala_calle_47_11"
+arrival_facing = 4
+
+[node name="Sala58_27" type="Node2D" parent="Warps" unique_id=74199236]
+position = Vector2(1872, 880)
+script = ExtResource("14_c5cy2")
+target_map = &"ruta_5/sala_calle_58_27"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=635951635]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1781050678]
@@ -162,5 +192,20 @@ position = Vector2(976, 816)
 
 [node name="from_casa_2" type="Marker2D" parent="Spawns" unique_id=1209550301]
 position = Vector2(656, 400)
+
+[node name="from_sala_31_12" type="Marker2D" parent="Spawns" unique_id=472218328]
+position = Vector2(1008, 432)
+
+[node name="from_sala_56_12" type="Marker2D" parent="Spawns" unique_id=1262336971]
+position = Vector2(1808, 432)
+
+[node name="from_sala_65_11" type="Marker2D" parent="Spawns" unique_id=703886416]
+position = Vector2(2096, 400)
+
+[node name="from_sala_47_11" type="Marker2D" parent="Spawns" unique_id=1502814796]
+position = Vector2(1520, 400)
+
+[node name="from_sala_58_27" type="Marker2D" parent="Spawns" unique_id=1272411752]
+position = Vector2(1872, 912)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=1228610951]

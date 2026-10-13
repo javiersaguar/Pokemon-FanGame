@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="14_dkgbb"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_girl.png" id="15_wew0t"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="16_e1803"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="17_mjago"]
 
 [sub_resource type="Resource" id="Resource_72tet"]
 script = ExtResource("2_mjago")
@@ -205,6 +206,114 @@ tile_set = ExtResource("4_simgg")
 
 [node name="Warps" type="Node2D" parent="." unique_id=698074202]
 
+[node name="Sala16_24" type="Node2D" parent="Warps" unique_id=1863622181]
+position = Vector2(528, 784)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_16_24"
+arrival_facing = 4
+
+[node name="Sala21_24" type="Node2D" parent="Warps" unique_id=905386978]
+position = Vector2(688, 784)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_21_24"
+arrival_facing = 4
+
+[node name="Sala17_33" type="Node2D" parent="Warps" unique_id=328190565]
+position = Vector2(560, 1072)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_17_33"
+arrival_facing = 4
+
+[node name="Sala22_33" type="Node2D" parent="Warps" unique_id=601192408]
+position = Vector2(720, 1072)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_22_33"
+arrival_facing = 4
+
+[node name="Sala18_15" type="Node2D" parent="Warps" unique_id=1309368307]
+position = Vector2(592, 496)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_18_15"
+arrival_facing = 4
+
+[node name="Sala22_40" type="Node2D" parent="Warps" unique_id=1107026066]
+position = Vector2(720, 1296)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_22_40"
+arrival_facing = 4
+
+[node name="Sala19_56" type="Node2D" parent="Warps" unique_id=425930443]
+position = Vector2(624, 1808)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_19_56"
+arrival_facing = 4
+
+[node name="Sala34_55" type="Node2D" parent="Warps" unique_id=551467271]
+position = Vector2(1104, 1776)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_34_55"
+arrival_facing = 4
+
+[node name="Sala7_66" type="Node2D" parent="Warps" unique_id=149193068]
+position = Vector2(240, 2128)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_7_66"
+arrival_facing = 4
+
+[node name="Sala15_65" type="Node2D" parent="Warps" unique_id=487356867]
+position = Vector2(496, 2096)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_15_65"
+arrival_facing = 4
+
+[node name="Sala22_66" type="Node2D" parent="Warps" unique_id=531176382]
+position = Vector2(720, 2128)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_22_66"
+arrival_facing = 4
+
+[node name="Sala5_74" type="Node2D" parent="Warps" unique_id=739624392]
+position = Vector2(176, 2384)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_5_74"
+arrival_facing = 4
+
+[node name="Sala11_74" type="Node2D" parent="Warps" unique_id=1739311703]
+position = Vector2(368, 2384)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_11_74"
+arrival_facing = 4
+
+[node name="Sala17_74" type="Node2D" parent="Warps" unique_id=508821218]
+position = Vector2(560, 2384)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_17_74"
+arrival_facing = 4
+
+[node name="Sala23_74" type="Node2D" parent="Warps" unique_id=193248363]
+position = Vector2(752, 2384)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_23_74"
+arrival_facing = 4
+
+[node name="Sala32_74" type="Node2D" parent="Warps" unique_id=1848807069]
+position = Vector2(1040, 2384)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_32_74"
+arrival_facing = 4
+
+[node name="Sala31_65" type="Node2D" parent="Warps" unique_id=1814471209]
+position = Vector2(1008, 2096)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_31_65"
+arrival_facing = 4
+
+[node name="Sala41_67" type="Node2D" parent="Warps" unique_id=1619838886]
+position = Vector2(1328, 2160)
+script = ExtResource("17_mjago")
+target_map = &"ruta_9/sala_calle_41_67"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1874259451]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=154715367]
@@ -215,5 +324,59 @@ position = Vector2(848, 16)
 
 [node name="from_ruta_10" type="Marker2D" parent="Spawns" unique_id=1167520707]
 position = Vector2(848, 2416)
+
+[node name="from_sala_16_24" type="Marker2D" parent="Spawns" unique_id=1673984197]
+position = Vector2(528, 816)
+
+[node name="from_sala_21_24" type="Marker2D" parent="Spawns" unique_id=2048534647]
+position = Vector2(688, 816)
+
+[node name="from_sala_17_33" type="Marker2D" parent="Spawns" unique_id=34393457]
+position = Vector2(560, 1104)
+
+[node name="from_sala_22_33" type="Marker2D" parent="Spawns" unique_id=777742848]
+position = Vector2(720, 1104)
+
+[node name="from_sala_18_15" type="Marker2D" parent="Spawns" unique_id=1234693411]
+position = Vector2(592, 528)
+
+[node name="from_sala_22_40" type="Marker2D" parent="Spawns" unique_id=1766579302]
+position = Vector2(720, 1328)
+
+[node name="from_sala_19_56" type="Marker2D" parent="Spawns" unique_id=1698191759]
+position = Vector2(624, 1840)
+
+[node name="from_sala_34_55" type="Marker2D" parent="Spawns" unique_id=620446773]
+position = Vector2(1104, 1808)
+
+[node name="from_sala_7_66" type="Marker2D" parent="Spawns" unique_id=368453763]
+position = Vector2(240, 2160)
+
+[node name="from_sala_15_65" type="Marker2D" parent="Spawns" unique_id=241713289]
+position = Vector2(496, 2128)
+
+[node name="from_sala_22_66" type="Marker2D" parent="Spawns" unique_id=645628682]
+position = Vector2(720, 2160)
+
+[node name="from_sala_5_74" type="Marker2D" parent="Spawns" unique_id=238480014]
+position = Vector2(176, 2416)
+
+[node name="from_sala_11_74" type="Marker2D" parent="Spawns" unique_id=1661197760]
+position = Vector2(368, 2416)
+
+[node name="from_sala_17_74" type="Marker2D" parent="Spawns" unique_id=820644222]
+position = Vector2(560, 2416)
+
+[node name="from_sala_23_74" type="Marker2D" parent="Spawns" unique_id=339319243]
+position = Vector2(752, 2416)
+
+[node name="from_sala_32_74" type="Marker2D" parent="Spawns" unique_id=256789994]
+position = Vector2(1040, 2416)
+
+[node name="from_sala_31_65" type="Marker2D" parent="Spawns" unique_id=2048078415]
+position = Vector2(1008, 2128)
+
+[node name="from_sala_41_67" type="Marker2D" parent="Spawns" unique_id=143189579]
+position = Vector2(1328, 2192)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=1680992664]

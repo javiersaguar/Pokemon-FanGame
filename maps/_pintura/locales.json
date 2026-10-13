@@ -401,5 +401,41 @@
       12,
       22
     ]
+  },
+  "alicante": {
+    "name": "Alicante",
+    "centro": [
+      "alicante/exterior",
+      26,
+      43
+    ],
+    "mercadona": [
+      "alicante/exterior",
+      2,
+      32
+    ],
+    "estanco": [
+      "alicante/exterior",
+      9,
+      32
+    ]
+  },
+  "murcia": {
+    "name": "Murcia",
+    "centro": [
+      "murcia/exterior",
+      48,
+      12
+    ],
+    "mercadona": [
+      "murcia/exterior",
+      16,
+      26
+    ],
+    "estanco": [
+      "murcia/exterior",
+      48,
+      26
+    ]
   }
 }

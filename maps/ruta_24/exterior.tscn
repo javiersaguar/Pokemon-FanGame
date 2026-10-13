@@ -143,6 +143,66 @@ script = ExtResource("15_aev16")
 target_map = &"ruta_24/casa_2"
 arrival_facing = 4
 
+[node name="Sala3_10" type="Node2D" parent="Warps" unique_id=582967278]
+position = Vector2(112, 336)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_3_10"
+arrival_facing = 4
+
+[node name="Sala7_10" type="Node2D" parent="Warps" unique_id=337116245]
+position = Vector2(240, 336)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_7_10"
+arrival_facing = 4
+
+[node name="Sala11_10" type="Node2D" parent="Warps" unique_id=434645553]
+position = Vector2(368, 336)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_11_10"
+arrival_facing = 4
+
+[node name="Sala15_10" type="Node2D" parent="Warps" unique_id=208720871]
+position = Vector2(496, 336)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_15_10"
+arrival_facing = 4
+
+[node name="Sala19_10" type="Node2D" parent="Warps" unique_id=743722992]
+position = Vector2(624, 336)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_19_10"
+arrival_facing = 4
+
+[node name="Sala33_30" type="Node2D" parent="Warps" unique_id=380661943]
+position = Vector2(1072, 976)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_33_30"
+arrival_facing = 4
+
+[node name="Sala37_30" type="Node2D" parent="Warps" unique_id=808953808]
+position = Vector2(1200, 976)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_37_30"
+arrival_facing = 4
+
+[node name="Sala41_30" type="Node2D" parent="Warps" unique_id=1252072684]
+position = Vector2(1328, 976)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_41_30"
+arrival_facing = 4
+
+[node name="Sala4_28" type="Node2D" parent="Warps" unique_id=2033771500]
+position = Vector2(144, 912)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_4_28"
+arrival_facing = 4
+
+[node name="Sala35_40" type="Node2D" parent="Warps" unique_id=1438658700]
+position = Vector2(1136, 1296)
+script = ExtResource("15_aev16")
+target_map = &"ruta_24/sala_calle_35_40"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=629434350]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1898334286]
@@ -159,5 +219,35 @@ position = Vector2(144, 1904)
 
 [node name="from_casa_2" type="Marker2D" parent="Spawns" unique_id=52828649]
 position = Vector2(1136, 528)
+
+[node name="from_sala_3_10" type="Marker2D" parent="Spawns" unique_id=2026498393]
+position = Vector2(112, 368)
+
+[node name="from_sala_7_10" type="Marker2D" parent="Spawns" unique_id=1049747076]
+position = Vector2(240, 368)
+
+[node name="from_sala_11_10" type="Marker2D" parent="Spawns" unique_id=19402491]
+position = Vector2(368, 368)
+
+[node name="from_sala_15_10" type="Marker2D" parent="Spawns" unique_id=58576317]
+position = Vector2(496, 368)
+
+[node name="from_sala_19_10" type="Marker2D" parent="Spawns" unique_id=216009744]
+position = Vector2(624, 368)
+
+[node name="from_sala_33_30" type="Marker2D" parent="Spawns" unique_id=1022265398]
+position = Vector2(1072, 1008)
+
+[node name="from_sala_37_30" type="Marker2D" parent="Spawns" unique_id=65064107]
+position = Vector2(1200, 1008)
+
+[node name="from_sala_41_30" type="Marker2D" parent="Spawns" unique_id=591132473]
+position = Vector2(1328, 1008)
+
+[node name="from_sala_4_28" type="Marker2D" parent="Spawns" unique_id=644112040]
+position = Vector2(144, 944)
+
+[node name="from_sala_35_40" type="Marker2D" parent="Spawns" unique_id=1253041685]
+position = Vector2(1136, 1328)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=919309045]

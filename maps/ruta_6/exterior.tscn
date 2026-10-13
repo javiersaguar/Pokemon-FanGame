@@ -125,6 +125,36 @@ script = ExtResource("13_u7r1w")
 target_map = &"ruta_6/casa_2"
 arrival_facing = 4
 
+[node name="Sala32_16" type="Node2D" parent="Warps" unique_id=271860060]
+position = Vector2(1040, 528)
+script = ExtResource("13_u7r1w")
+target_map = &"ruta_6/sala_calle_32_16"
+arrival_facing = 4
+
+[node name="Sala42_16" type="Node2D" parent="Warps" unique_id=34033222]
+position = Vector2(1360, 528)
+script = ExtResource("13_u7r1w")
+target_map = &"ruta_6/sala_calle_42_16"
+arrival_facing = 4
+
+[node name="Sala47_16" type="Node2D" parent="Warps" unique_id=295668894]
+position = Vector2(1520, 528)
+script = ExtResource("13_u7r1w")
+target_map = &"ruta_6/sala_calle_47_16"
+arrival_facing = 4
+
+[node name="Sala61_16" type="Node2D" parent="Warps" unique_id=239287837]
+position = Vector2(1968, 528)
+script = ExtResource("13_u7r1w")
+target_map = &"ruta_6/sala_calle_61_16"
+arrival_facing = 4
+
+[node name="Sala65_15" type="Node2D" parent="Warps" unique_id=170553695]
+position = Vector2(2096, 496)
+script = ExtResource("13_u7r1w")
+target_map = &"ruta_6/sala_calle_65_15"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=746557536]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=2116774981]
@@ -138,5 +168,20 @@ position = Vector2(784, 368)
 
 [node name="from_casa_2" type="Marker2D" parent="Spawns" unique_id=823322583]
 position = Vector2(336, 368)
+
+[node name="from_sala_32_16" type="Marker2D" parent="Spawns" unique_id=1175060376]
+position = Vector2(1040, 560)
+
+[node name="from_sala_42_16" type="Marker2D" parent="Spawns" unique_id=1517033551]
+position = Vector2(1360, 560)
+
+[node name="from_sala_47_16" type="Marker2D" parent="Spawns" unique_id=1543938777]
+position = Vector2(1520, 560)
+
+[node name="from_sala_61_16" type="Marker2D" parent="Spawns" unique_id=1868162493]
+position = Vector2(1968, 560)
+
+[node name="from_sala_65_15" type="Marker2D" parent="Spawns" unique_id=295578525]
+position = Vector2(2096, 528)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=46045622]

@@ -1350,6 +1350,130 @@
         }
       ],
       "prices": {}
+    },
+    "mercadona_alicante": {
+      "name": "Mercadona · Alicante",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_alicante": {
+      "name": "Estanco · Alicante",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_murcia": {
+      "name": "Mercadona · Murcia",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_murcia": {
+      "name": "Estanco · Murcia",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
     }
   }
 }

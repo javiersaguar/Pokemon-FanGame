@@ -398,3 +398,9 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | Melendi (`characters/famosos_atlas/melendi.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_melendi.png` |
 | Vegetta777 (`characters/famosos_atlas/vegeta.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_vegeta.png` |
 | Willyrex (`characters/famosos_atlas/willyrex.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_willyrex.png` |
+
+## Interiores · 2026-10-14
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| 153 interiores de edificios (Alicante, Murcia, Pozuelo, Orcasitas, Bernabéu y casas de las rutas) y servicios de Alicante y Murcia | Mapa | Agente 5 | integrado | Tileset de interiores (Akizakura16) | ⏳ | Generados por tema; provisionales. Rótulo con el nombre del edificio |

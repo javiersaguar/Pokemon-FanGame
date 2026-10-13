@@ -104,6 +104,30 @@ script = ExtResource("11_6vti2")
 target_map = &"orcasitas/casa_rival"
 arrival_facing = 4
 
+[node name="Sala28_12" type="Node2D" parent="Warps" unique_id=1051109460]
+position = Vector2(912, 400)
+script = ExtResource("11_6vti2")
+target_map = &"orcasitas/sala_calle_28_12"
+arrival_facing = 4
+
+[node name="Sala36_9" type="Node2D" parent="Warps" unique_id=715885164]
+position = Vector2(1168, 304)
+script = ExtResource("11_6vti2")
+target_map = &"orcasitas/sala_calle_36_9"
+arrival_facing = 4
+
+[node name="Sala5_32" type="Node2D" parent="Warps" unique_id=911149311]
+position = Vector2(176, 1040)
+script = ExtResource("11_6vti2")
+target_map = &"orcasitas/sala_calle_5_32"
+arrival_facing = 4
+
+[node name="Sala29_20" type="Node2D" parent="Warps" unique_id=702403798]
+position = Vector2(944, 656)
+script = ExtResource("11_6vti2")
+target_map = &"orcasitas/sala_calle_29_20"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1215778846]
 
 [node name="from_casa_jugador" type="Marker2D" parent="Spawns" unique_id=1895183651]
@@ -117,5 +141,17 @@ position = Vector2(176, 464)
 
 [node name="from_madrid_rio" type="Marker2D" parent="Spawns" unique_id=1809706078]
 position = Vector2(656, 16)
+
+[node name="from_sala_28_12" type="Marker2D" parent="Spawns" unique_id=760033142]
+position = Vector2(912, 432)
+
+[node name="from_sala_36_9" type="Marker2D" parent="Spawns" unique_id=588843475]
+position = Vector2(1168, 336)
+
+[node name="from_sala_5_32" type="Marker2D" parent="Spawns" unique_id=1396442689]
+position = Vector2(176, 1072)
+
+[node name="from_sala_29_20" type="Marker2D" parent="Spawns" unique_id=227580910]
+position = Vector2(944, 688)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=616113456]

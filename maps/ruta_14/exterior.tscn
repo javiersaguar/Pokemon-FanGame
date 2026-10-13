@@ -146,6 +146,30 @@ script = ExtResource("14_b0pqa")
 target_map = &"ruta_14/casa_2"
 arrival_facing = 4
 
+[node name="Sala53_9" type="Node2D" parent="Warps" unique_id=813716521]
+position = Vector2(1712, 304)
+script = ExtResource("14_b0pqa")
+target_map = &"ruta_14/sala_calle_53_9"
+arrival_facing = 4
+
+[node name="Sala53_17" type="Node2D" parent="Warps" unique_id=1393700450]
+position = Vector2(1712, 560)
+script = ExtResource("14_b0pqa")
+target_map = &"ruta_14/sala_calle_53_17"
+arrival_facing = 4
+
+[node name="Sala57_9" type="Node2D" parent="Warps" unique_id=642235453]
+position = Vector2(1840, 304)
+script = ExtResource("14_b0pqa")
+target_map = &"ruta_14/sala_calle_57_9"
+arrival_facing = 4
+
+[node name="Sala34_13" type="Node2D" parent="Warps" unique_id=1657842051]
+position = Vector2(1104, 432)
+script = ExtResource("14_b0pqa")
+target_map = &"ruta_14/sala_calle_34_13"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1655439446]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1707612455]
@@ -162,5 +186,17 @@ position = Vector2(1264, 336)
 
 [node name="from_casa_2" type="Marker2D" parent="Spawns" unique_id=1364365589]
 position = Vector2(1424, 336)
+
+[node name="from_sala_53_9" type="Marker2D" parent="Spawns" unique_id=901339980]
+position = Vector2(1712, 336)
+
+[node name="from_sala_53_17" type="Marker2D" parent="Spawns" unique_id=311341324]
+position = Vector2(1712, 592)
+
+[node name="from_sala_57_9" type="Marker2D" parent="Spawns" unique_id=1387498098]
+position = Vector2(1840, 336)
+
+[node name="from_sala_34_13" type="Marker2D" parent="Spawns" unique_id=868798072]
+position = Vector2(1104, 464)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=150685544]

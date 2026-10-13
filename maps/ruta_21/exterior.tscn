@@ -112,6 +112,18 @@ script = ExtResource("13_nd3fn")
 target_map = &"ruta_21/casa_2"
 arrival_facing = 4
 
+[node name="Sala10_38" type="Node2D" parent="Warps" unique_id=1070021685]
+position = Vector2(336, 1232)
+script = ExtResource("13_nd3fn")
+target_map = &"ruta_21/sala_calle_10_38"
+arrival_facing = 4
+
+[node name="Sala33_38" type="Node2D" parent="Warps" unique_id=1521535864]
+position = Vector2(1072, 1232)
+script = ExtResource("13_nd3fn")
+target_map = &"ruta_21/sala_calle_33_38"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1011121453]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=1833970283]
@@ -128,5 +140,11 @@ position = Vector2(336, 560)
 
 [node name="from_casa_2" type="Marker2D" parent="Spawns" unique_id=107167985]
 position = Vector2(1072, 560)
+
+[node name="from_sala_10_38" type="Marker2D" parent="Spawns" unique_id=723238462]
+position = Vector2(336, 1264)
+
+[node name="from_sala_33_38" type="Marker2D" parent="Spawns" unique_id=318911668]
+position = Vector2(1072, 1264)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=326339451]
