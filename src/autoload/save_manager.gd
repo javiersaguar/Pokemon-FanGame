@@ -220,6 +220,7 @@ func _make_summary() -> Dictionary:
 		map_name = SceneManager.current_map.get_display_name()
 	var summary := {
 		"mode": String(GameState.mode),
+		"hard_mode": GameState.hard_mode,
 		"player_name": GameState.player_name,
 		"player_gender": String(GameState.player_gender),
 		"player_character": String(GameState.player_character),
@@ -341,6 +342,10 @@ func _migrate(data: Dictionary) -> Dictionary:
 			3:
 				data.state["normal_starters"] = {}
 				version = 4
+				data["save_version"] = version
+			4:
+				data.state["hard_mode"] = false
+				version = 5
 				data["save_version"] = version
 			_:
 				push_error("SaveManager: no hay migración desde save_version %d." % version)

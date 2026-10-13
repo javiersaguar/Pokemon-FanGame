@@ -6,7 +6,9 @@ func run(slot: int) -> void:
 	if mode == 0:
 		var character := await CharacterChoice.pick()
 		if character == &"": return
-		var error := await SceneManager.start_new_game(&"",&"",{"slot":slot,"intro":true,"player_character":character})
+		var difficulty := await ChoiceScreen.pick("Dificultad", ["Normal", "Difícil"], ["Niveles e IA habituales.", "Rivales con un 10 % más de nivel e IA +1."])
+		if difficulty < 0: return
+		var error := await SceneManager.start_new_game(&"",&"",{"slot":slot,"intro":true,"player_character":character,"hard_mode":difficulty == 1})
 		if error != OK: await Dialogue.say("No se pudo iniciar en tu pueblo: %s." % error_string(error))
 		return
 	while not GameState.in_game:
@@ -24,7 +26,7 @@ func run(slot: int) -> void:
 			settings = decoded.settings
 			seed_value = decoded.seed
 		else:
-			settings = RandomizerSettings.from_preset(RandomizerSettings.PRESETS[choice] if choice < 3 else "clasico")
+			settings = RandomizerSettings.for_new_game(RandomizerSettings.PRESETS[choice] if choice < 3 else "clasico")
 			if choice == 3:
 				settings = await RandomlockeSettingsScreen.edit(settings)
 				if settings == null: continue
@@ -35,5 +37,7 @@ func run(slot: int) -> void:
 		if not await RandomlockeSummaryScreen.confirm(rom): continue
 		var character := await CharacterChoice.pick()
 		if character == &"": return
-		var error := await SceneManager.start_randomlocke(rom,slot,true,{"player_character":character})
+		var difficulty := await ChoiceScreen.pick("Dificultad", ["Normal", "Difícil"], ["Niveles e IA habituales.", "Rivales con un 10 % más de nivel e IA +1."])
+		if difficulty < 0: return
+		var error := await SceneManager.start_randomlocke(rom,slot,true,{"player_character":character,"hard_mode":difficulty == 1})
 		if error != OK: await Dialogue.say("No se pudo iniciar: %s." % error_string(error))

@@ -4,7 +4,7 @@ extends Node
 
 ## Súbelo cada vez que cambie el formato de to_dict() y añade la migración
 ## correspondiente en SaveManager.
-const SAVE_VERSION := 4
+const SAVE_VERSION := 5
 const WORLD_CONFIG_PATH := "res://data/world.json"
 
 ## Modos de partida (Fase R): normal o RandomLocke.
@@ -28,6 +28,7 @@ var mode: StringName = MODE_NORMAL
 ## Datos del RandomLocke (vacío en modo normal): seed_code, settings,
 ## generator_version, rules, zones {zone_id: estado}, deaths y status.
 var randomlocke: Dictionary = {}
+var hard_mode := false
 ## Errantes liberados: identidad y salud completas, estado y mapa.
 var roamers: Dictionary = {}
 ## Oferta inicial de esta partida normal, por ID canónico de DataDB.
@@ -102,6 +103,7 @@ func reset() -> void:
 	unlock_input(&"locke_nickname")
 	mode = MODE_NORMAL
 	randomlocke = {}
+	hard_mode = false
 	roamers = {}
 	normal_starters = {}
 	slot = 0
@@ -136,6 +138,7 @@ func new_game(options: Dictionary = {}) -> void:
 	slot = int(options.get("slot", 0))
 	mode = StringName(options.get("mode", MODE_NORMAL))
 	randomlocke = (options.get("randomlocke", {}) as Dictionary).duplicate(true)
+	hard_mode = bool(options.get("hard_mode", false))
 	rom_patch = options.get("rom_patch", {})
 	if is_randomlocke():
 		randomlocke.merge({"zones": {}, "deaths": 0, "status": "in_progress"})
@@ -300,6 +303,7 @@ func to_dict() -> Dictionary:
 		"always_run": always_run,
 		"mode": String(mode),
 		"randomlocke": randomlocke.duplicate(true),
+		"hard_mode": hard_mode,
 		"roamers": roamers.duplicate(true),
 		"normal_starters": normal_starters.duplicate(true),
 		"player": {
@@ -337,6 +341,7 @@ func from_dict(data: Dictionary) -> void:
 	always_run = bool(data.get("always_run", world_config.get("new_game", {}).get("always_run", false)))
 	mode = StringName(data.get("mode", String(MODE_NORMAL)))
 	randomlocke = (data.get("randomlocke", {}) as Dictionary).duplicate(true)
+	hard_mode = bool(data.get("hard_mode", false))
 	roamers = (data.get("roamers", {}) as Dictionary).duplicate(true)
 	normal_starters = (data.get("normal_starters", {}) as Dictionary).duplicate(true)
 	var p: Dictionary = data.get("player", {})

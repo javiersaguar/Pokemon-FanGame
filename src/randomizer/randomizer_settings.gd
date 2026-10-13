@@ -117,6 +117,15 @@ static func from_preset(preset_name: String) -> RandomizerSettings:
 	return s
 
 
+## Ajuste de las partidas nuevas. Los presets v2 existentes no cambian de significado.
+static func for_new_game(preset_name: String) -> RandomizerSettings:
+	var settings := from_preset(preset_name)
+	if settings.locke_rules:
+		settings.level_cap = true
+		settings.preset = CUSTOM
+	return settings
+
+
 static func prepare() -> void:
 	if _preset_catalog.is_empty():
 		_preset_catalog = JsonFile.read_dict("res://data/randomizer/presets.json")

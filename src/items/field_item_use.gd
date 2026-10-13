@@ -2,7 +2,7 @@ class_name FieldItemUse
 extends RefCounted
 ## Usos del inventario del MVP, sin recalcular estadísticas ni efectos de combate.
 static func can_use(item_id: StringName, p: Pokemon = null, move_index := -1) -> bool:
-	if not DataDB.has_item(item_id) or not (GameState.bag is Bag) or not GameState.bag.has(item_id): return false
+	if not DataDB.has_item(item_id) or not (GameState.bag is Bag) or not (GameState.bag.has(item_id) or infinite_candy(item_id)): return false
 	var item := DataDB.item(item_id)
 	if item.pocket == &"machines":
 		if p == null: return false
@@ -14,6 +14,8 @@ static func can_use(item_id: StringName, p: Pokemon = null, move_index := -1) ->
 	if p == null: return false
 	if GameState.locke != null and GameState.locke.rules.snapshot().deaths.has(p.uid): return false
 	match item.effect:
+		&"level_up":
+			return not p.is_fainted() and p.level < level_limit()
 		&"heal_hp": return not p.is_fainted() and p.current_hp < p.max_hp()
 		&"heal_and_cure": return not p.is_fainted() and (p.current_hp < p.max_hp() or p.status != &"")
 		&"cure_status": return not p.is_fainted() and String(p.status) in item.param("statuses", [])
@@ -33,6 +35,8 @@ static func use(item_id: StringName, p: Pokemon = null, move_index := -1) -> Err
 		GameState.bag.remove(item_id)
 		return OK
 	match item.effect:
+		&"level_up":
+			p.set_level(mini(level_limit(), p.level + int(item.param("levels", 1))))
 		&"repel": GameState.set_var(&"repel_steps", int(item.param("steps", 100)))
 		&"heal_hp", &"heal_and_cure":
 			var amount := int(item.param("amount", 0))
@@ -46,5 +50,16 @@ static func use(item_id: StringName, p: Pokemon = null, move_index := -1) -> Err
 				if bool(item.param("all_moves", false)) or i == move_index or (move_index < 0 and p.moves[i].pp < p.moves[i].max_pp()):
 					p.moves[i].restore(-1 if bool(item.param("full", false)) else int(item.param("amount", 10)))
 					if not bool(item.param("all_moves", false)): break
-	GameState.bag.remove(item_id)
+	if not infinite_candy(item_id): GameState.bag.remove(item_id)
 	return OK
+
+
+static func infinite_candy(item_id: StringName) -> bool:
+	return item_id == &"rarecandy" and GameState.is_randomlocke() and GameState.locke != null
+
+
+static func level_limit() -> int:
+	if not GameState.is_randomlocke() or GameState.locke == null:
+		return DataDB.MAX_LEVEL
+	var limit := GameState.locke.rules.level_cap(GymProgression.next_ace_level(GameState.badges))
+	return limit if limit > 0 else DataDB.MAX_LEVEL

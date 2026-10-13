@@ -268,3 +268,9 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 |---|---|---|---|---|---|---|
 | Lista nacional de 1.025 especies | Interfaz | A | integrado, provisional | Panel e iconos existentes | ⏳ | Dos folios reales en `a_pokedex_nacional.md`; entradas ocultas hasta verse |
 | Asignaciones de skins | Sprite Pokémon | A | pendiente | PENDIENTE JAVIER | ⏳ | Base de datos y resolver listos; ninguna especie asignada |
+
+## Dificultad y RandomLocke · sesión del 14 de octubre
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| Selección de dificultad y Caramelo Raro ∞ | Interfaz | A | integrado, provisional | Panel e icono existentes | ⏳ | `a_randomlocke_dificultad.md`; capturas reales |

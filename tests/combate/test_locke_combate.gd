@@ -155,13 +155,14 @@ func test_el_setup_lee_las_reglas_de_la_partida() -> void:
 		"locke_rules": true, "permadeath": true, "level_cap": true, "fixed_battle": true,
 		"battle_items": "limited", "battle_item_limit": 2,
 	}, "families": {}}})
-	GameState.randomlocke["next_ace_level"] = 18
 	var s := BattleSetup.wild(&"pidgey", 3, {"battle_style": "shift"})
 	assert_true(s.locke_rules)
 	assert_not_null(s.locke)
-	assert_eq(s.next_ace_level, 18)
+	assert_eq(s.next_ace_level, 15)
 	assert_eq(s.locke.battle_mode(), "fixed")
-	assert_eq(s.locke.level_cap(s.next_ace_level), 18)
+	assert_eq(s.locke.level_cap(s.next_ace_level), 15)
+	GameState.add_badge(&"medalla_libertad")
+	assert_eq(BattleSetup.wild(&"pidgey", 3).next_ace_level, 22)
 	var engine := BattleEngine.new(s)
 	assert_false(engine._style_is_shift(), "el fijo de Locke gana al estilo del jugador")
 

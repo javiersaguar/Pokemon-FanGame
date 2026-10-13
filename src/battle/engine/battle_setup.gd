@@ -77,10 +77,16 @@ static func wild(what: Variant, level: int = 5, options: Dictionary = {}) -> Bat
 	s.kind = Kind.WILD
 	s.can_run = true
 	s.bgm = DEFAULT_WILD_BGM
-	var p: Pokemon = what if what is Pokemon else Pokemon.create(StringName(str(what)), level)
+	var scaled_level := mini(DataDB.MAX_LEVEL, ceili(float(level) * 1.1)) if GameState.hard_mode and not bool(options.get("tutorial", false)) else level
+	var p: Pokemon = what if what is Pokemon else Pokemon.create(StringName(str(what)), scaled_level)
+	if what is Pokemon and GameState.hard_mode and not bool(options.get("tutorial", false)):
+		p = Pokemon.from_dict(p.to_dict())
+		p.set_level(mini(DataDB.MAX_LEVEL, ceili(float(p.level) * 1.1)))
 	if p != null:
 		s.foe_party.append(p)
 	s.fill_from_game_state()
+	if GameState.hard_mode and not bool(options.get("tutorial", false)):
+		s.ai_level += 1
 	s.apply_options(options)
 	return s
 
@@ -96,11 +102,17 @@ static func trainer(trainer_id: StringName, options: Dictionary = {}) -> BattleS
 		return s
 	s.trainers.append(info)
 	s.ai_level = int(info["ai_level"])
+	if GameState.hard_mode and not bool(options.get("tutorial", false)):
+		s.ai_level += 1
+		info["ai_level"] = s.ai_level
 	s.bgm = StringName(info["battle_bgm"]) if str(info["battle_bgm"]) != "" else DEFAULT_TRAINER_BGM
 	var rng := RandomNumberGenerator.new()
 	rng.seed = hash(String(trainer_id))
 	for spec: Dictionary in DataDB.trainer(trainer_id).get("party", []):
-		var p := Pokemon.from_spec(spec, rng)
+		var foe_spec := spec.duplicate(true)
+		if GameState.hard_mode and not bool(options.get("tutorial", false)):
+			foe_spec["level"] = mini(DataDB.MAX_LEVEL, ceili(float(spec.get("level", 1)) * 1.1))
+		var p := Pokemon.from_spec(foe_spec, rng)
 		if p != null:
 			p.original_trainer = str(info["name"])
 			s.foe_party.append(p)
@@ -164,7 +176,7 @@ func fill_from_game_state() -> void:
 		locke_rules = bool(rules_dict.get("locke_rules", true)) and bool(rules_dict.get("permadeath", true))
 		if locke.battle_mode() == "fixed":
 			battle_style = &"fixed"
-		next_ace_level = int(GameState.randomlocke.get("next_ace_level", 0))
+		next_ace_level = GymProgression.next_ace_level(GameState.badges)
 
 
 ## options: can_lose, can_run, allow_items, exp_enabled, exp_share, locke_rules, tutorial,

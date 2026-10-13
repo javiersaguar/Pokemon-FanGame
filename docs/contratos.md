@@ -114,6 +114,7 @@ Autoload `GameState` (`src/autoload/game_state.gd`): estado de la partida.
 | Campo | Tipo | Notas |
 |-------|------|-------|
 | `mode` | `StringName` | `GameState.MODE_NORMAL` (`&"normal"`) o `MODE_RANDOMLOCKE` (`&"randomlocke"`). Se elige al crear la partida |
+| `hard_mode` | `bool` | Opcional; +10 % de nivel rival redondeado hacia arriba e IA +1, salvo tutorial. Persistido desde save v5 |
 | `randomlocke` | `Dictionary` | Vacío en modo normal. En RandomLocke: `seed_code`, `settings`, `generator_version`, `rules`, `zones` (`{zone_id: estado}`), `deaths` y `status` (`"in_progress"`/`"finished"`) |
 | `slot` | `int` | Ranura de la partida en curso (0 = ninguna). No va en el JSON |
 | `rom_patch` | `Dictionary` | Parche de la ROM del RandomLocke. Se guarda aparte (`slot_<n>.rom.json`) |
@@ -138,7 +139,7 @@ Autoload `GameState` (`src/autoload/game_state.gd`): estado de la partida.
 
 ```gdscript
 GameState.reset() -> void                # sin partida
-GameState.new_game(options := {}) -> void   # data/world.json → new_game; options: slot, mode, randomlocke, rom_patch
+GameState.new_game(options := {}) -> void   # data/world.json → new_game; options: slot, mode, randomlocke, rom_patch, hard_mode
 GameState.is_randomlocke() -> bool
 GameState.flag(key) -> bool
 GameState.set_flag(key, value := true) -> void
@@ -602,6 +603,8 @@ Teclado A3: `Cutscene.request_name(kind: StringName, initial := "") -> String` e
 - Los muertos salen de party/PC utilizable y quedan completos en `snapshot.cemetery`; curar y derrota filtran muertos antes de operar. Un superviviente en PC evita game over y puede pasar al equipo al reaparecer. Al terminar, se bloquea el mundo (`locke_finished`) y SceneManager guarda la ranura si ya está asignada. `continue_game()` rechaza una ranura `finished` con `ERR_UNAUTHORIZED`; `SaveManager.load_game()` sigue permitiendo consultar su contenido para Cementerio/resumen.
 
 Las reglas individuales de EXP, modo fijo y límites de objetos pertenecen al motor A2 (petición 23). Este adaptador no añade pantallas ni cambia las clases de combate/UI de otros agentes.
+
+**Sesión 2026-10-14:** `GymProgression.next_ace_level(badges)` lee `data/gimnasios.json` por `orden`: devuelve `nivel_tope` del primer gimnasio pendiente y 100 tras las ocho medallas. `BattleSetup` pasa ese valor al motor en RandomLocke, cuyo límite de EXP ya lo aplica `LockeRules.level_cap`. `FieldItemUse.level_limit()` usa el mismo límite para Caramelo Raro; `FieldItemUse.infinite_candy(rarecandy)` lo hace visible en la mochila y utilizable sin almacenarlo ni gastarlo en RandomLocke. Al subir, la interfaz ofrece movimientos y evolución. Para partidas nuevas con reglas Locke, `RandomizerSettings.for_new_game` activa el tope y emite un código personalizado v2; los códigos de presets anteriores conservan su significado. La opción de modo difícil se elige después del personaje tanto en Normal como en RandomLocke; no altera la ROM y se guarda en v5. v4→v5 pone `hard_mode=false`.
 
 ---
 
