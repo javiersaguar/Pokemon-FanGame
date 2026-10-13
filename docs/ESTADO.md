@@ -118,6 +118,14 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 1 — Mundo y arquitectura
 
+### Sesión del 14 de octubre · Inicio y sistemas (Agente A)
+
+Rama `feat/agente1-inicio`, worktree `pokemon-panchito-agente1`. Lista de `SESION_2026-10-14.md` en curso, de arriba abajo. No se editan ciudades ni personajes colocados.
+
+**Contrato de inicio para el Agente B:** IDs acordados por la sesión: `pozuelo/exterior` (cayetano/cayetana) y `orcasitas/exterior` (cani/choni), aparición `default`. A prepara la elección persistente y sus gráficos; B pinta los mapas y sus entradas. El destino se valida antes de sustituir la partida: si falta el mapa no se inicia en un lugar distinto. El laboratorio físico en Moncloa es de B. Los IDs de casa/habitación y la llegada al laboratorio quedan por comunicar en ESTADO; A consume los destinos por datos.
+
+**En curso:** tarea 1, elección y gráficos de los cuatro protagonistas. Las partidas anteriores conservarán sus sprites anteriores cuando no tengan identidad nueva. Nombre del rival, skins concretas y uso de la mochila Basic-Fit siguen **PENDIENTE JAVIER** según las decisiones.
+
 ### Portada, gimnasios y personajes (2026-10-12)
 
 Rama `feat/agente1-portada-gimnasios`. Para no pisarme con quien hace el mapa de teletransporte del Debug y las puertas e interiores, no toco `src/ui/ui_debug.gd`, el panel de pruebas, los interiores, `data/shops.json`, `maps/_pintura/locales.json` ni los `pintar_*.gd`: los personajes se colocan por datos, sin editar mapas.
