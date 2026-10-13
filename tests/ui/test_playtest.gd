@@ -106,7 +106,9 @@ func test_equipo_configurado_se_usa_en_combate_real() -> void:
 	assert_eq(await session.begin(&"test/test_room"),OK)
 	assert_eq(session.set_member(0,0,{"species":"charizard","level":60,"shiny":true,"item":"charizarditex","moves":["swordsdance","flamethrower","protect","growl"]}),OK)
 	assert_eq(session.set_member(1,0,{"species":"magikarp","level":50,"moves":["splash","tackle"]}),OK)
+	assert_eq(session.set_member(1,1,{"species":"magikarp","level":50,"moves":["splash"]}),OK)
 	var setup := session.battle_setup(&"",true,{"double":true,"mega":true,"z":true,"dynamax":true,"tera":true,"environment":"city"})
+	setup.seed = 53
 	assert_not_null(setup)
 	assert_eq(setup.format,BattleSetup.Format.DOUBLE)
 	assert_eq(setup.player_party[0].species_id,&"charizard")

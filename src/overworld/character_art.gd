@@ -2,25 +2,33 @@ class_name CharacterArt
 extends RefCounted
 ## Atlas intactos: retrato de combate y dieciséis poses del mapa por personaje.
 const CONFIG := "res://data/character_art.json"
+const BATTLE_MAX := Vector2(176,180)
 static var _characters: Dictionary = {}
 static var _loaded := false
 
-static func entries() -> Dictionary:
+static func _ensure_loaded() -> void:
 	if not _loaded:
 		_loaded = true
 		_characters = JsonFile.read_dict(CONFIG).get("characters", {})
+
+static func entries() -> Dictionary:
+	_ensure_loaded()
 	return _characters.duplicate(true)
 
 static func info(id: StringName) -> Dictionary:
-	return entries().get(String(id), {})
+	_ensure_loaded()
+	var data: Dictionary = _characters.get(String(id), {})
+	return data.duplicate(true)
 
 static func resolve(ids: Array) -> StringName:
+	_ensure_loaded()
 	for id: Variant in ids:
-		if not info(StringName(str(id))).is_empty(): return StringName(str(id))
+		if _characters.has(str(id)): return StringName(str(id))
 	return &""
 
 static func texture(id: StringName, rect: Array) -> AtlasTexture:
-	var data := info(id)
+	_ensure_loaded()
+	var data: Dictionary = _characters.get(String(id), {})
 	if data.is_empty() or rect.size() != 4 or not ResourceLoader.exists(str(data.get("atlas", ""))): return null
 	var atlas := AtlasTexture.new()
 	atlas.atlas = load(str(data.atlas))

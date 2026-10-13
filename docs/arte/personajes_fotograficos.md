@@ -9,9 +9,9 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `aitana` | Aitana | pendiente | por documentar |
 | `chicote` | Alberto Chicote | pendiente | por documentar |
 | `amancio_ortega` | Amancio | pendiente | por documentar |
-| `iniesta` | Andrés Iniesta | pendiente | por documentar |
-| `aupa_athletic` | Aupa Athletic | pendiente | por documentar |
-| `banderas` | Banderas | pendiente | por documentar |
+| `iniesta` | Andrés Iniesta | integrado, provisional; equipación española y bandera-capa | [Retrato del FC Barcelona](https://media-public.fcbarcelona.com/20157/0/document_thumbnail/20197/177/3/234/48890801/1.0-3/48890801.jpg?t=1498728810000) |
+| `aupa_athletic` | Aupa Athletic | integrado, provisional | [Fotograma con la camiseta verde](https://www.reddit.com/r/fulbo/comments/1algaqm/en_qu%C3%A9_club_juega_esta_chica_o_por_qu%C3%A9_es_tan/) |
+| `banderas` | Banderas | integrado, provisional | [La Cinémathèque française](https://www.cinematheque.fr/film/63765.html) |
 | `belen_esteban` | Belén Esteban | pendiente | por documentar |
 | `bertrand_ndongo` | Bertrand | pendiente | por documentar |
 | `broncano` | Broncano | pendiente | por documentar |
@@ -24,7 +24,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `enrique_iglesias` | Enrique Iglesias | pendiente | por documentar |
 | `ester_exposito` | Ester Expósito | pendiente | por documentar |
 | `felipe_vi` | Felipe VI | pendiente | por documentar |
-| `alonso` | Fernando Alonso | pendiente | por documentar |
+| `alonso` | Fernando Alonso | integrado, provisional; equipación española y bandera-capa | [Retrato de Aston Martin](https://www.astonmartinf1.com/en-GB/AMR24) |
 | `ferran_torres` | Ferran | pendiente | por documentar |
 | `folagor` | Folagor | pendiente | por documentar |
 | `franco` | Franco | pendiente | por documentar |
@@ -34,12 +34,12 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `ibai` | Ibai Llanos | pendiente | por documentar |
 | `topuria` | Ilia Topuria | pendiente | por documentar |
 | `irene_montero` | Irene | pendiente | por documentar |
-| `ayuso` | Isabel Díaz Ayuso | pendiente | por documentar |
+| `ayuso` | Isabel Díaz Ayuso | integrado, provisional | [Comunidad de Madrid](https://www.comunidad.madrid/transparencia/persona/isabel-diaz-ayuso) |
 | `inaki_williams` | Iñaki Williams | pendiente | por documentar |
 | `javier` | Javier Saguar | PENDIENTE JAVIER: falta referencia de su aspecto | por documentar |
 | `jenni_hermoso` | Jenni Hermoso | pendiente | por documentar |
-| `laporta` | Joan Laporta | pendiente | por documentar |
-| `joaquin` | Joaquín Sánchez | pendiente | por documentar |
+| `laporta` | Joan Laporta | integrado, provisional | [FC Barcelona](https://www.fcbarcelona.es/es/ficha/2072312/joan-laporta-i-estruch) |
+| `joaquin` | Joaquín Sánchez | integrado, provisional | [Foto de Kirill Venediktov](https://commons.wikimedia.org/wiki/File:Joaqu%C3%ADn_S%C3%A1nchez_2022.jpg) |
 | `jorge_javier` | Jorge Javier Vázquez | pendiente | por documentar |
 | `almeida` | José Luis Martínez-Almeida | integrado, provisional | [Retrato de IFEMA](https://www.ifema.es/en/about-us/transparency/institutional-information/jose-luis-martinez-almeida) |
 | `zapatero` | José Luis Rodríguez Zapatero | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/zapatero_joyas.png) |
@@ -49,9 +49,9 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `julio_iglesias` | Julio Iglesias | pendiente | por documentar |
 | `keyne` | Keyne | pendiente | por documentar |
 | `koldo` | Koldo García | pendiente | por documentar |
-| `labrador` | Labrador | pendiente | por documentar |
+| `labrador` | Labrador | integrado, provisional | [Foto promocional de Gandía Shore](https://www.bekia.es/television/fotos/galerias/concursantes-casa-gandia-shore-esplendor/jose-labrador-concursante-gandia-shore-casa-playa/) |
 | `lamine` | Lamine Yamal | pendiente | por documentar |
-| `latasa` | Latasa | pendiente | por documentar |
+| `latasa` | Latasa | integrado, provisional | [LaLiga](https://www.laliga.com/en-GB/player/juan-latasa) |
 | `leire_diez` | Leire | pendiente | por documentar |
 | `rubiales` | Luis Rubiales | pendiente | por documentar |
 | `rajoy` | Mariano Rajoy | integrado, provisional | [Retrato oficial](https://commons.wikimedia.org/wiki/File:Mariano_Rajoy_2017b_(cropped).jpg) |
@@ -62,13 +62,13 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `maduro` | Nicolás Maduro | integrado, provisional | [Retrato de Ricardo Stuckert](https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Maduro_in_2023_(cropped).jpg) |
 | `paache` | Paache | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/paache.png) |
 | `pablo_iglesias` | Pablo | pendiente | por documentar |
-| `gasol` | Pau Gasol | pendiente | por documentar |
-| `pedro_sanchez` | Pedro Sánchez | pendiente | por documentar |
+| `gasol` | Pau Gasol | integrado, provisional; equipación española y bandera-capa | [Retrato con la selección española](https://as01.epimg.net/baloncesto/imagenes/2017/09/07/mas_baloncesto/1504820760_328565_1504821040_noticia_normal.jpg) |
+| `pedro_sanchez` | Pedro Sánchez | integrado, provisional | [Foto oficial, Borja Puig de la Bellacasa](https://commons.wikimedia.org/wiki/File:Presidente_del_Gobierno,_Pedro_S%C3%A1nchez.jpg) |
 | `guardiola` | Pep Guardiola | pendiente | por documentar |
 | `pereira7` | Pereira7 | pendiente | por documentar |
 | `pokealex` | PokeAlex (el otro) | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/pokealex_el_otro.webp) |
-| `quevedo` | Quevedo | pendiente | por documentar |
-| `nadal` | Rafa Nadal | pendiente | por documentar |
+| `quevedo` | Quevedo | integrado, provisional | [Retrato promocional](https://www.cifraclub.com/quevedo/) |
+| `nadal` | Rafa Nadal | integrado, provisional; equipación española y bandera-capa | [Fotografía de Julian Finney](https://www.mensjournal.com/sports/zen-and-the-art-of-rafael-nadal-20120827) |
 | `rosalia` | Rosalía | pendiente | por documentar |
 | `abascal` | Santiago Abascal | pendiente | por documentar |
 | `sarah_santaolalla` | Sarah | pendiente | por documentar |

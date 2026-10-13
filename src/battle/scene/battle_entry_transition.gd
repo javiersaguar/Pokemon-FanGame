@@ -50,7 +50,7 @@ func _ready() -> void:
 		var art := CharacterArt.battle_texture(StringName(trainers[0].get("art_id", "")))
 		if art != null:
 			_portrait.texture = art
-			_portrait.scale = Vector2.ONE * CharacterArt.display_scale(art.get_size(),Vector2(160,180))
+			_portrait.scale = Vector2.ONE * CharacterArt.display_scale(art.get_size(),CharacterArt.BATTLE_MAX)
 	var canvas := UiCanvas.new()
 	add_child(canvas)
 	_title = Label.new()

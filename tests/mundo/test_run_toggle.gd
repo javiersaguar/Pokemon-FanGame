@@ -36,19 +36,19 @@ func test_toggle_emite_aviso_y_respeta_bloqueo() -> void:
 	var event := InputEventAction.new()
 	event.action = &"run_toggle"
 	event.pressed = true
-	Input.parse_input_event(event)
+	Input.parse_input_event(event.duplicate())
 	await wait_physics_frames(2)
 	event.pressed = false
-	Input.parse_input_event(event)
+	Input.parse_input_event(event.duplicate())
 	assert_true(GameState.always_run)
 	assert_signal_emit_count(EventBus, "always_run_changed", 1)
 	GameState.lock_input(&"test")
 	await wait_physics_frames(1)
 	event.pressed = true
-	Input.parse_input_event(event)
+	Input.parse_input_event(event.duplicate())
 	await wait_physics_frames(2)
 	event.pressed = false
-	Input.parse_input_event(event)
+	Input.parse_input_event(event.duplicate())
 	assert_true(GameState.always_run)
 	assert_signal_emit_count(EventBus, "always_run_changed", 1)
 func test_interiores_zonas_prohibidas_y_transporte_no_corren() -> void:

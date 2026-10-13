@@ -298,3 +298,31 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/pokealex.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
 | `characters/famosos_atlas/paache.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
 | `characters/famosos_atlas/el_jincho.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
+
+## Líderes · entrega 3
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/ayuso.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+| `characters/famosos_atlas/laporta.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+| `characters/famosos_atlas/labrador.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+| `characters/famosos_atlas/joaquin.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+| `characters/famosos_atlas/quevedo.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+| `characters/famosos_atlas/latasa.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+| `characters/famosos_atlas/banderas.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+| `characters/famosos_atlas/aupa_athletic.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; fuente en `personajes_fotograficos.md` | ⏳ | `personajes_entrega_3.md` |
+
+## Alto Mando · entrega 4
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/iniesta.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo con referencia documentada | ⏳ | Equipación española y bandera como capa; `personajes_entrega_4.md` |
+| `characters/famosos_atlas/nadal.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo con referencia documentada | ⏳ | Equipación española y bandera como capa; `personajes_entrega_4.md` |
+| `characters/famosos_atlas/gasol.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo con referencia documentada | ⏳ | Equipación española y bandera como capa; `personajes_entrega_4.md` |
+| `characters/famosos_atlas/alonso.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo con referencia documentada | ⏳ | Equipación española y bandera como capa; `personajes_entrega_4.md` |
+
+## Clan PSOE · entrega 5 en curso
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/pedro_sanchez.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según foto oficial | ⏳ | `personaje_pedro_sanchez.png`; traje azul, Líder Supremo |

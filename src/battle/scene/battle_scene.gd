@@ -560,7 +560,7 @@ func _intro(start_events: Array) -> void:
 		var art := CharacterArt.battle_texture(StringName(trainer.get("art_id", "")))
 		var sprite: Texture2D = photo if photo != null else art if art != null else PlaceholderArt.load_texture(str(trainer.get("battle_sprite", "")))
 		_set_trainer_texture(_foe_trainer, sprite)
-		_foe_trainer.scale = RealPhoto.fit_scale(photo) if photo != null else Vector2.ONE * CharacterArt.display_scale(art.get_size(),Vector2(160,180)) if art != null else Vector2.ONE
+		_foe_trainer.scale = RealPhoto.fit_scale(photo) if photo != null else Vector2.ONE * CharacterArt.display_scale(art.get_size(),CharacterArt.BATTLE_MAX) if art != null else Vector2.ONE
 		_foe_trainer.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR if photo != null else CanvasItem.TEXTURE_FILTER_PARENT_NODE
 		_foe_trainer.visible = sprite != null
 	_curtain_a.hide()
