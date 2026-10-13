@@ -13,12 +13,23 @@ func test_sombra_queda_en_suelo_durante_salto() -> void:
 	var character: Character = load("res://src/overworld/npc/npc.tscn").instantiate()
 	add_child_autofree(character)
 	character.place_at(Vector2i(4, 4))
+	var previous := get_tree().get_processed_tweens()
 	character.jump(Vector2i.RIGHT)
-	await get_tree().create_timer(0.15).timeout
+	var jump_tweens: Array[Tween] = []
+	for tween: Tween in get_tree().get_processed_tweens():
+		if not previous.has(tween): jump_tweens.append(tween)
+	assert_gt(jump_tweens.size(), 0, "el salto crea sus animaciones")
+	if jump_tweens.is_empty(): return
+	for tween: Tween in jump_tweens:
+		tween.pause()
+		tween.custom_step(Character.JUMP_TIME * 0.5)
 	var shadow := character.get_node("GroundShadow") as Sprite2D
 	assert_lt(character.sprite.global_position.y, character.global_position.y)
 	assert_eq(shadow.global_position.y, character.global_position.y)
-	await character.step_finished
-	await get_tree().create_timer(0.4).timeout
+	for tween: Tween in jump_tweens:
+		if tween.is_valid(): tween.custom_step(Character.JUMP_TIME)
+	await get_tree().process_frame
+	assert_false(character.moving)
 	assert_eq(character.sprite.position, Vector2.ZERO)
 	assert_eq(shadow.position, Vector2.ZERO)
+	await get_tree().create_timer(0.4).timeout

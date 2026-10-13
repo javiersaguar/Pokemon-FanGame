@@ -7,7 +7,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | ID | Personaje | Diseño de combate y mapa | Referencia usada |
 |---|---|---|---|
 | `aitana` | Aitana | integrado, provisional | [Retrato de Aitana](https://los40.com/tag/aitana_ocana_morales/a/) |
-| `chicote` | Alberto Chicote | pendiente | por documentar |
+| `chicote` | Alberto Chicote | integrado, provisional | [Referencia fotográfica](https://www.revistagq.com/la-buena-vida/hombre-gq-de-la-semana/articulos/alberto-chicote-hombre-gq-de-la-semana/21876) |
 | `amancio_ortega` | Amancio Ortega | integrado, provisional | [Referencia fotográfica](https://www.eexcellence.es/images/2018/10/30/amancio-ortega-750_large.jpg) |
 | `iniesta` | Andrés Iniesta | integrado, provisional; equipación española y bandera-capa | [Retrato del FC Barcelona](https://media-public.fcbarcelona.com/20157/0/document_thumbnail/20197/177/3/234/48890801/1.0-3/48890801.jpg?t=1498728810000) |
 | `aupa_athletic` | Aupa Athletic | integrado, provisional | [Fotograma con la camiseta verde](https://www.reddit.com/r/fulbo/comments/1algaqm/en_qu%C3%A9_club_juega_esta_chica_o_por_qu%C3%A9_es_tan/) |
@@ -17,7 +17,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `broncano` | David Broncano | integrado, provisional | [Referencia fotográfica](https://www.vemostv.com/noticias/13233/horario-la-revuelta-broncano-tve-expulsa-4-estrellas) |
 | `puigdemont` | Carles Puigdemont | integrado, provisional | [Retrato oficial](https://www.simfonicadecoblaicorda.cat/es/la-simfonica/mensajes-institucionales/palabras-del-muy-honorable-sr-carles-puigdemont-sobre-canco-d-amor-i-de-guerra/) |
 | `coto_matamoros` | Coto Matamoros | pendiente | por documentar |
-| `pedroche` | Cristina Pedroche | pendiente | por documentar |
+| `pedroche` | Cristina Pedroche | integrado, provisional | [Referencia fotográfica](https://cadenaser.com/nacional/2025/07/18/cristina-pedroche-y-dabiz-munoz-reciben-a-su-segundo-hijo-isai-cadena-ser/) |
 | `trump` | Donald Trump | integrado, provisional | [Retrato oficial](https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-Trump-Official-Presidential-Portrait.png) |
 | `el_jincho` | El Jincho | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/el_jincho.png) |
 | `elxokas` | Elxokas | integrado, provisional | [Fotografía de Elxokas](https://masquealdia.com/elxokas-narra-su-dificil-viaje-a-japon-tras-la-cancelacion-de-vuelos-por-el-conflicto-en-oriente-medio/) |
@@ -27,20 +27,20 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `alonso` | Fernando Alonso | integrado, provisional; equipación española y bandera-capa | [Retrato de Aston Martin](https://www.astonmartinf1.com/en-GB/AMR24) |
 | `ferran_torres` | Ferran | pendiente | por documentar |
 | `folagor` | Folagor03 | integrado, provisional | [Fotografía de Folagor](https://www.flooxernow.com/fan/folagor-presenta-serie-vida-dualocke-rubius_202601266977817ef21351044da9635d.html) |
-| `franco` | Franco | pendiente | por documentar |
+| `franco` | Francisco Franco | integrado, provisional | [Referencia fotográfica](https://www.abc.es/historia/abci-cuarenta-anos-inamovible-mando-301116890966-20180726110221_galeria.html) |
 | `rufian` | Gabriel Rufián | integrado, provisional | [Retrato editorial](https://www.planetadelibros.com.mx/autor/gabriel-rufian/000053538) |
 | `pique` | Gerard Piqué | integrado, provisional | [Retrato de Piqué](https://entertainment.ie/person/gerard-pique/) |
 | `hustlehard304` | HustleHard304 | integrado, provisional | [Fotografía de Mounir Nasraoui](https://www.articulo14.es/deportes/futbol/por-que-apunalaron-al-padre-de-lamine-yamal-la-verdad-detras-del-intento-de-asesinato-20240815.html) |
 | `ibai` | Ibai Llanos | integrado, provisional | [Retrato de Ibai](https://www.lesnumeriques.com/vie-du-net/un-espagnol-reunit-3-3-millions-de-spectateurs-sur-twitch-et-bat-le-record-d-audience-de-la-plateforme-n186595.html) |
 | `topuria` | Ilia Topuria | integrado, provisional | [Referencia fotográfica](https://www.tomaticket.es/artista/ilia-topuria/sevilla) |
-| `irene_montero` | Irene | pendiente | por documentar |
+| `irene_montero` | Irene Montero | integrado, provisional | [Referencia fotográfica](https://commons.wikimedia.org/wiki/File:Irene_Montero_Gil.jpg) |
 | `ayuso` | Isabel Díaz Ayuso | integrado, provisional | [Comunidad de Madrid](https://www.comunidad.madrid/transparencia/persona/isabel-diaz-ayuso) |
 | `inaki_williams` | Iñaki Williams | integrado, provisional | [Referencia fotográfica](https://www.zerozero.pt/jogador/inaki-williams/365565?epoca_id=154) |
 | `javier` | Javier Saguar | PENDIENTE JAVIER: falta referencia de su aspecto | por documentar |
-| `jenni_hermoso` | Jenni Hermoso | pendiente | por documentar |
+| `jenni_hermoso` | Jenni Hermoso | integrado, provisional | [Referencia fotográfica](https://www.zerozero.pt/jogador/jenni-hermoso/191996?epoca_id=152) |
 | `laporta` | Joan Laporta | integrado, provisional | [FC Barcelona](https://www.fcbarcelona.es/es/ficha/2072312/joan-laporta-i-estruch) |
 | `joaquin` | Joaquín Sánchez | integrado, provisional | [Foto de Kirill Venediktov](https://commons.wikimedia.org/wiki/File:Joaqu%C3%ADn_S%C3%A1nchez_2022.jpg) |
-| `jorge_javier` | Jorge Javier Vázquez | pendiente | por documentar |
+| `jorge_javier` | Jorge Javier Vázquez | integrado, provisional | [Referencia fotográfica](https://www.infobae.com/espana/2025/07/25/jorge-javier-vazquez-cumple-55-anos-una-vida-dedicada-a-su-gran-pasion-una-dura-perdida-y-la-complicada-relacion-con-su-padre/) |
 | `almeida` | José Luis Martínez-Almeida | integrado, provisional | [Retrato de IFEMA](https://www.ifema.es/en/about-us/transparency/institutional-information/jose-luis-martinez-almeida) |
 | `zapatero` | José Luis Rodríguez Zapatero | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/zapatero_joyas.png) |
 | `abalos` | José Luis Ábalos | integrado, provisional | [Retrato oficial de 2020](https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Luis_%C3%81balos_Meco_2020.jpg) |
@@ -53,7 +53,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `lamine` | Lamine Yamal | integrado, provisional | [Retrato con el Barça](https://www.zerozero.pt/noticias/espanyol-vs-barcelona-antevisao-ausencias-e-onzes-provaveis/813834) |
 | `latasa` | Latasa | integrado, provisional | [LaLiga](https://www.laliga.com/en-GB/player/juan-latasa) |
 | `leire_diez` | Leire | integrado, provisional | [Fotografía de Europa Press](https://orain.eus/es/politica/2026/05/27/es-el-caso-leire-diez-investiga-el-juez-pedraz/) |
-| `rubiales` | Luis Rubiales | pendiente | por documentar |
+| `rubiales` | Luis Rubiales | integrado, provisional | [Referencia fotográfica](https://www.notimerica.com/deportes/noticia-luis-rubiales-reelegido-comite-ejecutivo-uefa-2027-20230405134605.html) |
 | `rajoy` | Mariano Rajoy | integrado, provisional | [Retrato oficial](https://commons.wikimedia.org/wiki/File:Mariano_Rajoy_2017b_(cropped).jpg) |
 | `mario_casas` | Mario Casas | integrado, provisional | [Referencia fotográfica](https://uznayvse.ru/znamenitosti/biografiya-mario-kasas.html) |
 | `mbappe` | Mbappé | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/mbappe_dictador.png) |
@@ -61,7 +61,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `nico_williams` | Nico Williams | integrado, provisional | [Referencia fotográfica](https://www.playmakerstats.com/player/nico-williams/831534?epoca_id=154) |
 | `maduro` | Nicolás Maduro | integrado, provisional | [Retrato de Ricardo Stuckert](https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Maduro_in_2023_(cropped).jpg) |
 | `paache` | Paache | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/paache.png) |
-| `pablo_iglesias` | Pablo | pendiente | por documentar |
+| `pablo_iglesias` | Pablo Iglesias | integrado, provisional | [Referencia fotográfica](https://medium.com/@karlesvilla/el-cambio-de-imagen-de-pablo-iglesias-turri%C3%B3n-secretario-general-de-podemos-a9169fc119f8) |
 | `gasol` | Pau Gasol | integrado, provisional; equipación española y bandera-capa | [Retrato con la selección española](https://as01.epimg.net/baloncesto/imagenes/2017/09/07/mas_baloncesto/1504820760_328565_1504821040_noticia_normal.jpg) |
 | `pedro_sanchez` | Pedro Sánchez | integrado, provisional | [Foto oficial, Borja Puig de la Bellacasa](https://commons.wikimedia.org/wiki/File:Presidente_del_Gobierno,_Pedro_S%C3%A1nchez.jpg) |
 | `guardiola` | Pep Guardiola | integrado, provisional | [Retrato de Guardiola](https://lifebeyondsportmedia.com/Pep-Guardiola) |

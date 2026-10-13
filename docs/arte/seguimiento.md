@@ -369,3 +369,16 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/broncano.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
 | `characters/famosos_atlas/oscar_puente.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
 | `characters/famosos_atlas/mario_casas.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_8.md` |
+
+## Famosos · entrega 9
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/pablo_iglesias.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+| `characters/famosos_atlas/irene_montero.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+| `characters/famosos_atlas/franco.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+| `characters/famosos_atlas/chicote.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+| `characters/famosos_atlas/pedroche.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+| `characters/famosos_atlas/rubiales.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+| `characters/famosos_atlas/jenni_hermoso.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+| `characters/famosos_atlas/jorge_javier.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
