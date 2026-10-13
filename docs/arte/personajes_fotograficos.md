@@ -6,31 +6,31 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 
 | ID | Personaje | Diseño de combate y mapa | Referencia usada |
 |---|---|---|---|
-| `aitana` | Aitana | integrado, provisional | [Retrato de Aitana](https://los40.com/tag/aitana_ocana_morales/a/) |
+| `aitana` | Aitana | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/aitana.png) |
 | `chicote` | Alberto Chicote | integrado, provisional | [Referencia fotográfica](https://www.revistagq.com/la-buena-vida/hombre-gq-de-la-semana/articulos/alberto-chicote-hombre-gq-de-la-semana/21876) |
 | `amancio_ortega` | Amancio Ortega | integrado, provisional | [Referencia fotográfica](https://www.eexcellence.es/images/2018/10/30/amancio-ortega-750_large.jpg) |
 | `iniesta` | Andrés Iniesta | integrado, provisional; equipación española y bandera-capa | [Retrato del FC Barcelona](https://media-public.fcbarcelona.com/20157/0/document_thumbnail/20197/177/3/234/48890801/1.0-3/48890801.jpg?t=1498728810000) |
 | `aupa_athletic` | Aupa Athletic | integrado, provisional | [Fotograma con la camiseta verde](https://www.reddit.com/r/fulbo/comments/1algaqm/en_qu%C3%A9_club_juega_esta_chica_o_por_qu%C3%A9_es_tan/) |
 | `banderas` | Banderas | integrado, provisional | [La Cinémathèque française](https://www.cinematheque.fr/film/63765.html) |
-| `belen_esteban` | Belén Esteban | integrado, provisional | [Referencia fotográfica](https://www.planetadelibros.com.co/autor/belen-esteban-mendez/000032306) |
-| `bertrand_ndongo` | Bertrand | integrado, provisional | [Referencia fotográfica](https://www.diariocritico.com/nacional/ndongo-amenaza-denunciar-belarra-acusa-darle-asco-personas-negras) |
-| `broncano` | David Broncano | integrado, provisional | [Referencia fotográfica](https://www.vemostv.com/noticias/13233/horario-la-revuelta-broncano-tve-expulsa-4-estrellas) |
+| `belen_esteban` | Belén Esteban | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/belen_esteban.png) |
+| `bertrand_ndongo` | Bertrand | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/bertrand_ndongo.png) |
+| `broncano` | David Broncano | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/broncano.png) |
 | `puigdemont` | Carles Puigdemont | integrado, provisional | [Retrato oficial](https://www.simfonicadecoblaicorda.cat/es/la-simfonica/mensajes-institucionales/palabras-del-muy-honorable-sr-carles-puigdemont-sobre-canco-d-amor-i-de-guerra/) |
 | `coto_matamoros` | Coto Matamoros | integrado, provisional | [Referencia fotográfica](https://www.larazon.es/gente/tv/coto-matamoros-reaparece-desvela-dinero-que-gano-television-sentarme-discutir-4-idiotas_20240709668d0282099c89000156dc6f.html) |
-| `pedroche` | Cristina Pedroche | integrado, provisional | [Referencia fotográfica](https://cadenaser.com/nacional/2025/07/18/cristina-pedroche-y-dabiz-munoz-reciben-a-su-segundo-hijo-isai-cadena-ser/) |
+| `pedroche` | Cristina Pedroche | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/pedroche.png) |
 | `trump` | Donald Trump | integrado, provisional | [Retrato oficial](https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-Trump-Official-Presidential-Portrait.png) |
 | `el_jincho` | El Jincho | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/el_jincho.png) |
 | `elxokas` | Elxokas | integrado, provisional | [Fotografía de Elxokas](https://masquealdia.com/elxokas-narra-su-dificil-viaje-a-japon-tras-la-cancelacion-de-vuelos-por-el-conflicto-en-oriente-medio/) |
 | `enrique_iglesias` | Enrique Iglesias | integrado, provisional | [Retrato de Enrique](https://www.livemusic.sk/skupina/enrique-iglesias) |
-| `ester_exposito` | Ester Expósito | integrado, provisional | [Retrato de Carlos Villarejo](https://www.carlosvillarejo.com/portrait/ester-exposito) |
+| `ester_exposito` | Ester Expósito | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/ester_exposito.png) |
 | `felipe_vi` | Felipe VI | integrado, provisional | [Referencia fotográfica](https://lex.dk/Felipe_6.) |
 | `alonso` | Fernando Alonso | integrado, provisional; equipación española y bandera-capa | [Retrato de Aston Martin](https://www.astonmartinf1.com/en-GB/AMR24) |
-| `ferran_torres` | Ferran | integrado, provisional | [Referencia fotográfica](https://www.fcbarcelona.fr/fr/football/equipe-premiere/joueurs/43098/ferran-torres) |
-| `folagor` | Folagor03 | integrado, provisional | [Fotografía de Folagor](https://www.flooxernow.com/fan/folagor-presenta-serie-vida-dualocke-rubius_202601266977817ef21351044da9635d.html) |
+| `ferran_torres` | Ferran | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/ferran_torres.png) |
+| `folagor` | Folagor03 | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/folagor.png) |
 | `franco` | Francisco Franco | integrado, provisional | [Referencia fotográfica](https://www.abc.es/historia/abci-cuarenta-anos-inamovible-mando-301116890966-20180726110221_galeria.html) |
 | `rufian` | Gabriel Rufián | integrado, provisional | [Retrato editorial](https://www.planetadelibros.com.mx/autor/gabriel-rufian/000053538) |
 | `pique` | Gerard Piqué | integrado, provisional | [Retrato de Piqué](https://entertainment.ie/person/gerard-pique/) |
-| `hustlehard304` | HustleHard304 | integrado, provisional | [Fotografía de Mounir Nasraoui](https://www.articulo14.es/deportes/futbol/por-que-apunalaron-al-padre-de-lamine-yamal-la-verdad-detras-del-intento-de-asesinato-20240815.html) |
+| `hustlehard304` | HustleHard304 | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/hustlehard304.png) |
 | `ibai` | Ibai Llanos | integrado, provisional | [Retrato de Ibai](https://www.lesnumeriques.com/vie-du-net/un-espagnol-reunit-3-3-millions-de-spectateurs-sur-twitch-et-bat-le-record-d-audience-de-la-plateforme-n186595.html) |
 | `topuria` | Ilia Topuria | integrado, provisional | [Referencia fotográfica](https://www.tomaticket.es/artista/ilia-topuria/sevilla) |
 | `irene_montero` | Irene Montero | integrado, provisional | [Referencia fotográfica](https://commons.wikimedia.org/wiki/File:Irene_Montero_Gil.jpg) |
@@ -65,9 +65,9 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `gasol` | Pau Gasol | integrado, provisional; equipación española y bandera-capa | [Retrato con la selección española](https://as01.epimg.net/baloncesto/imagenes/2017/09/07/mas_baloncesto/1504820760_328565_1504821040_noticia_normal.jpg) |
 | `pedro_sanchez` | Pedro Sánchez | integrado, provisional | [Foto oficial, Borja Puig de la Bellacasa](https://commons.wikimedia.org/wiki/File:Presidente_del_Gobierno,_Pedro_S%C3%A1nchez.jpg) |
 | `guardiola` | Pep Guardiola | integrado, provisional | [Retrato de Guardiola](https://lifebeyondsportmedia.com/Pep-Guardiola) |
-| `pereira7` | Peereira7 | integrado, provisional | [Fotografía de Peereira7](https://as.com/meristation/streamers/quien-es-peereira7-el-rival-gallego-de-rivaldios-en-la-velada-5-de-ibai-que-comenzo-su-fama-a-traves-de-fortnite-n/) |
+| `pereira7` | Peereira7 | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/pereira7.png) |
 | `pokealex` | PokeAlex (el otro) | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/pokealex_el_otro.webp) |
-| `quevedo` | Quevedo | integrado, provisional | [Retrato promocional](https://www.cifraclub.com/quevedo/) |
+| `quevedo` | Quevedo | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/quevedo.png) |
 | `nadal` | Rafa Nadal | integrado, provisional; equipación española y bandera-capa | [Fotografía de Julian Finney](https://www.mensjournal.com/sports/zen-and-the-art-of-rafael-nadal-20120827) |
 | `rosalia` | Rosalía | integrado, provisional | [Retrato de Rosalía](https://www.welt.de/kultur/article6915bfd858d2cfb625f5ac77/rosalia-es-tut-weh-wenn-schweigen-als-parteinahme-ausgelegt-wird.html) |
 | `abascal` | Santiago Abascal | integrado, provisional | [Referencia fotográfica](https://www.laopiniondezamora.es/cambio-climatico/2019/12/04/santiago-abascal-conservacion-elites-progresistas-1015941.html) |
@@ -78,6 +78,8 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `vinicius` | Vinicius Jr. | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/vinicius_con_barba.webp) |
 | `vito_quiles` | Vito | integrado, provisional | [Referencia fotográfica](https://www.wikidata.org/wiki/Q134389895) |
 | `willyrex` | Willyrex | integrado, provisional | [Referencia fotográfica](https://elportaldemexico.com/entretenimiento/willyrex/) |
-| `oscar_puente` | Óscar Puente | integrado, provisional | [Referencia fotográfica](https://www.divinity.es/actualidad/20260330/oscar-puente-imagen-viral-adolescente-como-era-joven-comentarios-foto_18_018759589.html) |
+| `oscar_puente` | Óscar Puente | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/oscar_puente.png) |
 
 Catálogo inicial: 73 identidades; 72 con atlas completo. Javier está pendiente de referencia personal. La galería F9 → Galería → Personajes muestra las que ya tienen atlas completo. Las apariciones reales resuelven el arte por id de entrenador o de clase; las ubicaciones de B se conservan.
+
+Revisión del 2026-10-14: doce diseños actualizados según fotos de Javier; comparativa [antes/después](comparativas/personajes_revision_2026-10-14.md). Peereira7 incorpora paletas y cola de castor. Sarah conserva su diseño y cabestrillo.

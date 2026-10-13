@@ -405,3 +405,21 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 |---|---|---|---|---|---|---|
 | 153 interiores de edificios (Alicante, Murcia, Pozuelo, Orcasitas, Bernabéu y casas de las rutas) y servicios de Alicante y Murcia | Mapa | Agente 5 | integrado | Tileset de interiores (Akizakura16) | ⏳ | Generados por tema; provisionales. Rótulo con el nombre del edificio |
 | Salas de los ocho gimnasios (32 mapas, `maps/<ciudad>/gimnasio_*.tscn`) | Mapa | Agente 5 | integrado | Tileset de interiores (Akizakura16) | ⏳ | Zigzag con vigilantes; personajes con sprite provisional. Comparativas `comparativas/gimnasio_*.png` |
+
+
+## Revisión de personajes · 2026-10-14
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/aitana.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/belen_esteban.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/bertrand_ndongo.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/broncano.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/ester_exposito.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/ferran_torres.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/folagor.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/hustlehard304.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/oscar_puente.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/pedroche.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/pereira7.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+| `characters/famosos_atlas/quevedo.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
