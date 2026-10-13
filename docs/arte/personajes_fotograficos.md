@@ -6,7 +6,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 
 | ID | Personaje | Diseño de combate y mapa | Referencia usada |
 |---|---|---|---|
-| `aitana` | Aitana | pendiente | por documentar |
+| `aitana` | Aitana | integrado, provisional | [Retrato de Aitana](https://los40.com/tag/aitana_ocana_morales/a/) |
 | `chicote` | Alberto Chicote | pendiente | por documentar |
 | `amancio_ortega` | Amancio | pendiente | por documentar |
 | `iniesta` | Andrés Iniesta | integrado, provisional; equipación española y bandera-capa | [Retrato del FC Barcelona](https://media-public.fcbarcelona.com/20157/0/document_thumbnail/20197/177/3/234/48890801/1.0-3/48890801.jpg?t=1498728810000) |
@@ -22,14 +22,14 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `el_jincho` | El Jincho | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/el_jincho.png) |
 | `elxokas` | Elxokas | integrado, provisional | [Fotografía de Elxokas](https://masquealdia.com/elxokas-narra-su-dificil-viaje-a-japon-tras-la-cancelacion-de-vuelos-por-el-conflicto-en-oriente-medio/) |
 | `enrique_iglesias` | Enrique Iglesias | integrado, provisional | [Retrato de Enrique](https://www.livemusic.sk/skupina/enrique-iglesias) |
-| `ester_exposito` | Ester Expósito | pendiente | por documentar |
+| `ester_exposito` | Ester Expósito | integrado, provisional | [Retrato de Carlos Villarejo](https://www.carlosvillarejo.com/portrait/ester-exposito) |
 | `felipe_vi` | Felipe VI | pendiente | por documentar |
 | `alonso` | Fernando Alonso | integrado, provisional; equipación española y bandera-capa | [Retrato de Aston Martin](https://www.astonmartinf1.com/en-GB/AMR24) |
 | `ferran_torres` | Ferran | pendiente | por documentar |
-| `folagor` | Folagor | pendiente | por documentar |
+| `folagor` | Folagor03 | integrado, provisional | [Fotografía de Folagor](https://www.flooxernow.com/fan/folagor-presenta-serie-vida-dualocke-rubius_202601266977817ef21351044da9635d.html) |
 | `franco` | Franco | pendiente | por documentar |
 | `rufian` | Gabriel Rufián | integrado, provisional | [Retrato editorial](https://www.planetadelibros.com.mx/autor/gabriel-rufian/000053538) |
-| `pique` | Gerard Piqué | pendiente | por documentar |
+| `pique` | Gerard Piqué | integrado, provisional | [Retrato de Piqué](https://entertainment.ie/person/gerard-pique/) |
 | `hustlehard304` | HustleHard304 | integrado, provisional | [Fotografía de Mounir Nasraoui](https://www.articulo14.es/deportes/futbol/por-que-apunalaron-al-padre-de-lamine-yamal-la-verdad-detras-del-intento-de-asesinato-20240815.html) |
 | `ibai` | Ibai Llanos | integrado, provisional | [Retrato de Ibai](https://www.lesnumeriques.com/vie-du-net/un-espagnol-reunit-3-3-millions-de-spectateurs-sur-twitch-et-bat-le-record-d-audience-de-la-plateforme-n186595.html) |
 | `topuria` | Ilia Topuria | pendiente | por documentar |
@@ -64,16 +64,16 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `pablo_iglesias` | Pablo | pendiente | por documentar |
 | `gasol` | Pau Gasol | integrado, provisional; equipación española y bandera-capa | [Retrato con la selección española](https://as01.epimg.net/baloncesto/imagenes/2017/09/07/mas_baloncesto/1504820760_328565_1504821040_noticia_normal.jpg) |
 | `pedro_sanchez` | Pedro Sánchez | integrado, provisional | [Foto oficial, Borja Puig de la Bellacasa](https://commons.wikimedia.org/wiki/File:Presidente_del_Gobierno,_Pedro_S%C3%A1nchez.jpg) |
-| `guardiola` | Pep Guardiola | pendiente | por documentar |
-| `pereira7` | Pereira7 | pendiente | por documentar |
+| `guardiola` | Pep Guardiola | integrado, provisional | [Retrato de Guardiola](https://lifebeyondsportmedia.com/Pep-Guardiola) |
+| `pereira7` | Peereira7 | integrado, provisional | [Fotografía de Peereira7](https://as.com/meristation/streamers/quien-es-peereira7-el-rival-gallego-de-rivaldios-en-la-velada-5-de-ibai-que-comenzo-su-fama-a-traves-de-fortnite-n/) |
 | `pokealex` | PokeAlex (el otro) | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/pokealex_el_otro.webp) |
 | `quevedo` | Quevedo | integrado, provisional | [Retrato promocional](https://www.cifraclub.com/quevedo/) |
 | `nadal` | Rafa Nadal | integrado, provisional; equipación española y bandera-capa | [Fotografía de Julian Finney](https://www.mensjournal.com/sports/zen-and-the-art-of-rafael-nadal-20120827) |
 | `rosalia` | Rosalía | integrado, provisional | [Retrato de Rosalía](https://www.welt.de/kultur/article6915bfd858d2cfb625f5ac77/rosalia-es-tut-weh-wenn-schweigen-als-parteinahme-ausgelegt-wird.html) |
 | `abascal` | Santiago Abascal | pendiente | por documentar |
-| `sarah_santaolalla` | Sarah | pendiente | por documentar |
+| `sarah_santaolalla` | Sarah Santaolalla | integrado, provisional | [Foto con cabestrillo](https://www.eldiario.es/vertele/noticias/sarah-santaolalla-anuncia-deja-en-boca-de-todos-cuatro-ultima-encerrona-antonio-naranjo-nacho-abad-persona-decente-tolerar_1_13056854.html) |
 | `sekiam` | Sekiam | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/sekiam.webp) |
-| `sergio_ramos` | Sergio Ramos | pendiente | por documentar |
+| `sergio_ramos` | Sergio Ramos | integrado, provisional | [Retrato de Sergio Ramos](https://www.ogol.com.br/jogador/sergio-ramos/9894?epoca_id=146) |
 | `vegeta` | Vegetta777 | pendiente | por documentar |
 | `vinicius` | Vinicius Jr. | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/vinicius_con_barba.webp) |
 | `vito_quiles` | Vito | pendiente | por documentar |

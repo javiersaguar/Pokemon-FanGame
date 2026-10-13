@@ -146,6 +146,8 @@ Rama `feat/agente1-inicio`, worktree `pokemon-panchito-agente1`. Lista de `SESIO
 
 **Personajes, entrega 6 terminada:** Ibai, Elxokas, Rosalía, Lamine, HustleHard304, Keyne, Enrique y Julio Iglesias con retrato y dieciséis poses. Referencias de Google y fuentes registradas; comparativas reales en `personajes_entrega_6.md`. Pelo y rasgos según foto cuando difieren de las piezas antiguas. Atlas de Enrique corregido para el paso frontal y la transparencia. Sin cambios de mapa, equipos ni colocaciones. Suite completa **540/540**, **39.289 aserciones**, 369,276 s; arte **11.032 PNG, 0 errores/avisos**; datos **0 errores, 2 avisos previos**. Arte provisional. Siguiente: resto de famosos; Sarah llevará cabestrillo, según nueva indicación de Javier.
 
+**Personajes, entrega 7 terminada:** Sarah Santaolalla con cabestrillo verde en el brazo izquierdo y apariencia de la foto elegida por Javier; Sergio Ramos, Guardiola, Piqué, Aitana, Ester Expósito, Folagor y Peereira7. Retrato y dieciséis poses por personaje, comparativas reales y fuentes en `personajes_entrega_7.md`. Sarah y Aitana sustituyen el pelo rubio genérico por la melena oscura de las referencias. Sin cambios de mapas, equipos ni colocaciones. Suite completa **540/540**, **39.585 aserciones**, 365,642 s; arte **11.040 PNG, 0 errores/avisos**; datos **0 errores, 2 avisos previos**. Arte provisional. Después, el resto del catálogo.
+
 ### Agente B · Mundo y personajes (sesión del 2026-10-14)
 
 Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo`. Lista en `docs/SESION_2026-10-14.md`. No toco la intro, los menús ni el generador del RandomLocke (Agente A).
