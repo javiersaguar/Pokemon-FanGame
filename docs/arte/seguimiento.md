@@ -382,3 +382,19 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/rubiales.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
 | `characters/famosos_atlas/jenni_hermoso.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
 | `characters/famosos_atlas/jorge_javier.png` | Combate y 16 poses de mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_9.md` |
+
+## Famosos · entrega 10
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| Felipe VI (`characters/famosos_atlas/felipe_vi.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_felipe_vi.png` |
+| Juan Carlos I (`characters/famosos_atlas/juan_carlos.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_juan_carlos.png` |
+| Vito Quiles (`characters/famosos_atlas/vito_quiles.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_vito_quiles.png` |
+| Bertrand Ndongo (`characters/famosos_atlas/bertrand_ndongo.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_bertrand_ndongo.png` |
+| Belén Esteban (`characters/famosos_atlas/belen_esteban.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_belen_esteban.png` |
+| Coto Matamoros (`characters/famosos_atlas/coto_matamoros.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_coto_matamoros.png` |
+| Ferran Torres (`characters/famosos_atlas/ferran_torres.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_ferran_torres.png` |
+| Juan Roig (`characters/famosos_atlas/juan_roig.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_juan_roig.png` |
+| Melendi (`characters/famosos_atlas/melendi.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_melendi.png` |
+| Vegetta777 (`characters/famosos_atlas/vegeta.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_vegeta.png` |
+| Willyrex (`characters/famosos_atlas/willyrex.png`) | Personaje | Agente A; cierre del Agente 5 | integrado | Referencia por documentar | ⏳ | Retrato y dieciséis poses. Comparativa `comparativas/personaje_willyrex.png` |

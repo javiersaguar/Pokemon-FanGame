@@ -12,20 +12,20 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `iniesta` | Andrés Iniesta | integrado, provisional; equipación española y bandera-capa | [Retrato del FC Barcelona](https://media-public.fcbarcelona.com/20157/0/document_thumbnail/20197/177/3/234/48890801/1.0-3/48890801.jpg?t=1498728810000) |
 | `aupa_athletic` | Aupa Athletic | integrado, provisional | [Fotograma con la camiseta verde](https://www.reddit.com/r/fulbo/comments/1algaqm/en_qu%C3%A9_club_juega_esta_chica_o_por_qu%C3%A9_es_tan/) |
 | `banderas` | Banderas | integrado, provisional | [La Cinémathèque française](https://www.cinematheque.fr/film/63765.html) |
-| `belen_esteban` | Belén Esteban | pendiente | por documentar |
-| `bertrand_ndongo` | Bertrand | pendiente | por documentar |
+| `belen_esteban` | Belén Esteban | integrado, provisional | por documentar |
+| `bertrand_ndongo` | Bertrand | integrado, provisional | por documentar |
 | `broncano` | David Broncano | integrado, provisional | [Referencia fotográfica](https://www.vemostv.com/noticias/13233/horario-la-revuelta-broncano-tve-expulsa-4-estrellas) |
 | `puigdemont` | Carles Puigdemont | integrado, provisional | [Retrato oficial](https://www.simfonicadecoblaicorda.cat/es/la-simfonica/mensajes-institucionales/palabras-del-muy-honorable-sr-carles-puigdemont-sobre-canco-d-amor-i-de-guerra/) |
-| `coto_matamoros` | Coto Matamoros | pendiente | por documentar |
+| `coto_matamoros` | Coto Matamoros | integrado, provisional | por documentar |
 | `pedroche` | Cristina Pedroche | integrado, provisional | [Referencia fotográfica](https://cadenaser.com/nacional/2025/07/18/cristina-pedroche-y-dabiz-munoz-reciben-a-su-segundo-hijo-isai-cadena-ser/) |
 | `trump` | Donald Trump | integrado, provisional | [Retrato oficial](https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-Trump-Official-Presidential-Portrait.png) |
 | `el_jincho` | El Jincho | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/el_jincho.png) |
 | `elxokas` | Elxokas | integrado, provisional | [Fotografía de Elxokas](https://masquealdia.com/elxokas-narra-su-dificil-viaje-a-japon-tras-la-cancelacion-de-vuelos-por-el-conflicto-en-oriente-medio/) |
 | `enrique_iglesias` | Enrique Iglesias | integrado, provisional | [Retrato de Enrique](https://www.livemusic.sk/skupina/enrique-iglesias) |
 | `ester_exposito` | Ester Expósito | integrado, provisional | [Retrato de Carlos Villarejo](https://www.carlosvillarejo.com/portrait/ester-exposito) |
-| `felipe_vi` | Felipe VI | pendiente | por documentar |
+| `felipe_vi` | Felipe VI | integrado, provisional | por documentar |
 | `alonso` | Fernando Alonso | integrado, provisional; equipación española y bandera-capa | [Retrato de Aston Martin](https://www.astonmartinf1.com/en-GB/AMR24) |
-| `ferran_torres` | Ferran | pendiente | por documentar |
+| `ferran_torres` | Ferran | integrado, provisional | por documentar |
 | `folagor` | Folagor03 | integrado, provisional | [Fotografía de Folagor](https://www.flooxernow.com/fan/folagor-presenta-serie-vida-dualocke-rubius_202601266977817ef21351044da9635d.html) |
 | `franco` | Francisco Franco | integrado, provisional | [Referencia fotográfica](https://www.abc.es/historia/abci-cuarenta-anos-inamovible-mando-301116890966-20180726110221_galeria.html) |
 | `rufian` | Gabriel Rufián | integrado, provisional | [Retrato editorial](https://www.planetadelibros.com.mx/autor/gabriel-rufian/000053538) |
@@ -44,8 +44,8 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `almeida` | José Luis Martínez-Almeida | integrado, provisional | [Retrato de IFEMA](https://www.ifema.es/en/about-us/transparency/institutional-information/jose-luis-martinez-almeida) |
 | `zapatero` | José Luis Rodríguez Zapatero | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/zapatero_joyas.png) |
 | `abalos` | José Luis Ábalos | integrado, provisional | [Retrato oficial de 2020](https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Luis_%C3%81balos_Meco_2020.jpg) |
-| `juan_carlos` | Juan Carlos I | pendiente | por documentar |
-| `juan_roig` | Juan Roig | pendiente | por documentar |
+| `juan_carlos` | Juan Carlos I | integrado, provisional | por documentar |
+| `juan_roig` | Juan Roig | integrado, provisional | por documentar |
 | `julio_iglesias` | Julio Iglesias | integrado, provisional | [Fotografía de Julio](https://as.com/tikitakas/famosos/habla-julio-iglesias-tras-las-denuncias-de-malos-tratos-y-abusos-sexuales-todo-se-va-a-aclarar-f202601-n/) |
 | `keyne` | Keyne | integrado, provisional | [Fotografía de los hermanos](https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles-video/lamine-yamal-s-brother-escapes-at-a-driving-range-and-gets-chased-by-security-2026-06-24) |
 | `koldo` | Koldo García | integrado, provisional | [Retrato de El País](https://elpais.com/espana/2025-06-22/la-evolucion-de-koldo-garcia-se-piensan-que-soy-tonto-con-el-tiempo-aprendes.html) |
@@ -57,7 +57,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `rajoy` | Mariano Rajoy | integrado, provisional | [Retrato oficial](https://commons.wikimedia.org/wiki/File:Mariano_Rajoy_2017b_(cropped).jpg) |
 | `mario_casas` | Mario Casas | integrado, provisional | [Referencia fotográfica](https://uznayvse.ru/znamenitosti/biografiya-mario-kasas.html) |
 | `mbappe` | Mbappé | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/mbappe_dictador.png) |
-| `melendi` | Melendi | pendiente | por documentar |
+| `melendi` | Melendi | integrado, provisional | por documentar |
 | `nico_williams` | Nico Williams | integrado, provisional | [Referencia fotográfica](https://www.playmakerstats.com/player/nico-williams/831534?epoca_id=154) |
 | `maduro` | Nicolás Maduro | integrado, provisional | [Retrato de Ricardo Stuckert](https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Maduro_in_2023_(cropped).jpg) |
 | `paache` | Paache | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/paache.png) |
@@ -74,10 +74,10 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `sarah_santaolalla` | Sarah Santaolalla | integrado, provisional | [Foto con cabestrillo](https://www.eldiario.es/vertele/noticias/sarah-santaolalla-anuncia-deja-en-boca-de-todos-cuatro-ultima-encerrona-antonio-naranjo-nacho-abad-persona-decente-tolerar_1_13056854.html) |
 | `sekiam` | Sekiam | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/sekiam.webp) |
 | `sergio_ramos` | Sergio Ramos | integrado, provisional | [Retrato de Sergio Ramos](https://www.ogol.com.br/jogador/sergio-ramos/9894?epoca_id=146) |
-| `vegeta` | Vegetta777 | pendiente | por documentar |
+| `vegeta` | Vegetta777 | integrado, provisional | por documentar |
 | `vinicius` | Vinicius Jr. | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/vinicius_con_barba.webp) |
-| `vito_quiles` | Vito | pendiente | por documentar |
-| `willyrex` | Willyrex | pendiente | por documentar |
+| `vito_quiles` | Vito | integrado, provisional | por documentar |
+| `willyrex` | Willyrex | integrado, provisional | por documentar |
 | `oscar_puente` | Óscar Puente | integrado, provisional | [Referencia fotográfica](https://www.divinity.es/actualidad/20260330/oscar-puente-imagen-viral-adolescente-como-era-joven-comentarios-foto_18_018759589.html) |
 
 Total: 73 identidades. La galería F9 → Galería → Personajes muestra las que ya tienen atlas completo. Las apariciones reales resuelven el arte por id de entrenador o de clase; las ubicaciones de B se conservan.
