@@ -1014,5 +1014,24 @@
         "level": 28
       }
     ]
+  },
+  "el_jincho": {
+    "class": "el_jincho",
+    "name": "El Jincho",
+    "intro_text": "¡Orcasitas no se toca, chaval! Te canto un tema y luego te gano. O al revés.",
+    "lose_text": "Esto lo meto en el próximo disco: «Me ganó un crío en Madrid Río».",
+    "win_text": "¡Sabe Dios, chaval!",
+    "after_text": "Yo empecé aquí, en Orcasitas. Tú empiezas hoy. A ver si llegas a algo.",
+    "items": [],
+    "party": [
+      {
+        "species": "nickit",
+        "level": 6
+      },
+      {
+        "species": "shroodle",
+        "level": 7
+      }
+    ]
   }
 }

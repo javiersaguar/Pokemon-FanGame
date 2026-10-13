@@ -126,6 +126,20 @@ Rama `feat/agente1-inicio`, worktree `pokemon-panchito-agente1`. Lista de `SESIO
 
 **En curso:** tarea 1, elección y gráficos de los cuatro protagonistas. Las partidas anteriores conservarán sus sprites anteriores cuando no tengan identidad nueva. Nombre del rival, skins concretas y uso de la mochila Basic-Fit siguen **PENDIENTE JAVIER** según las decisiones.
 
+### Agente B · Mundo y personajes (sesión del 2026-10-14)
+
+Worktree `pokemon-panchito-agente2`, rama `feat/agente2-mundo`. Lista en `docs/SESION_2026-10-14.md`. No toco la intro, los menús ni el generador del RandomLocke (Agente A).
+
+**Hecho:**
+- **Tarea 1 · pueblos iniciales y rutas a Madrid** (decisiones §7):
+  - `pozuelo/exterior` (urbanización de chalets) y `orcasitas/exterior` (bloques y descampado), cada uno con la **casa del jugador** (`pozuelo/casa_jugador`, `orcasitas/casa_jugador`) y la **del rival** (`…/casa_rival`), enlazadas.
+  - `casa_de_campo/exterior` (Pozuelo → Moncloa: entra por el **borde sur de Moncloa, columnas 4–9**) y `madrid_rio/exterior` (Orcasitas → Atocha: entra por el **borde sur de `madrid/retiro`, columnas 6–11**), niveles 2–6, con encuentros y dos entrenadores cada una. **El Jincho** (clase y sprite nuevos) en el Puente de Toledo de Madrid Río.
+  - **Laboratorio de Unicoos** (`madrid/laboratorio`): el edificio de oficinas de la Ciudad Universitaria de Moncloa (puerta en (40, 16), que antes llevaba a una sala genérica, `madrid/sala_moncloa_40_16`, que queda sin puerta). Marca `profesor` en (10, 6) para la escena.
+  - Herramienta nueva `maps/_tools/enlazar_puerta.gd`: enlaza la puerta de un mapa ya pintado con un interior sin repintarlo.
+- **Para el Agente A (intro):** ids `pozuelo/exterior` y `orcasitas/exterior`, aparición `default` delante de la casa del jugador, como pide su contrato; la partida puede empezar en `pozuelo/casa_jugador` u `orcasitas/casa_jugador`, aparición `default` (junto a la puerta; si prefieres que se despierte en la cama, dime la casilla). En el laboratorio, `madrid/laboratorio`, el profesor va en la aparición `profesor`; la ayudante y la pizarra son provisionales. Los textos de la madre son provisionales: cámbialos si los pone la intro.
+
+**Pendiente de la tarea 1:** PENDIENTE JAVIER el nombre por defecto del rival (decisiones §8). En `madrid/moncloa` la puerta de la casa azul (5, 8) sigue sin poder alcanzarse (ya pasaba antes).
+
 ### Portada, gimnasios y personajes (2026-10-12)
 
 Rama `feat/agente1-portada-gimnasios`. Para no pisarme con quien hace el mapa de teletransporte del Debug y las puertas e interiores, no toco `src/ui/ui_debug.gd`, el panel de pruebas, los interiores, `data/shops.json`, `maps/_pintura/locales.json` ni los `pintar_*.gd`: los personajes se colocan por datos, sin editar mapas.

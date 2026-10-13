@@ -36,10 +36,17 @@ target_map = &"ruta_5/exterior"
 offset = 8
 span = Vector2i(0, 14)
 
+[sub_resource type="Resource" id="Resource_knkb7"]
+script = ExtResource("2_7nd1s")
+edge = "south"
+target_map = &"madrid_rio/exterior"
+offset = 8
+span = Vector2i(6, 12)
+
 [sub_resource type="Resource" id="Resource_b00pj"]
 script = ExtResource("3_iouxd")
 id = &"madrid/retiro"
-connections = Array[ExtResource("2_7nd1s")]([SubResource("Resource_3jek6"), SubResource("Resource_i7ege"), SubResource("Resource_5qe01")])
+connections = Array[ExtResource("2_7nd1s")]([SubResource("Resource_3jek6"), SubResource("Resource_i7ege"), SubResource("Resource_5qe01"), SubResource("Resource_knkb7")])
 display_name = "Madrid · Retiro y Prado"
 encounter_table = &"madrid"
 zone_id = &"madrid"

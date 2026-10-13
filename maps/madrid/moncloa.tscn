@@ -36,10 +36,17 @@ target_map = &"madrid/chamberi"
 offset = -10
 span = Vector2i(14, 40)
 
+[sub_resource type="Resource" id="Resource_4yfms"]
+script = ExtResource("2_10682")
+edge = "south"
+target_map = &"casa_de_campo/exterior"
+offset = 26
+span = Vector2i(4, 10)
+
 [sub_resource type="Resource" id="Resource_ohak7"]
 script = ExtResource("3_twxih")
 id = &"madrid/moncloa"
-connections = Array[ExtResource("2_10682")]([SubResource("Resource_h2liq"), SubResource("Resource_oyi6i"), SubResource("Resource_trol3")])
+connections = Array[ExtResource("2_10682")]([SubResource("Resource_h2liq"), SubResource("Resource_oyi6i"), SubResource("Resource_trol3"), SubResource("Resource_4yfms")])
 display_name = "Madrid · Moncloa"
 encounter_table = &"madrid"
 zone_id = &"madrid"
@@ -203,7 +210,7 @@ arrival_facing = 4
 [node name="Sala40_16" type="Node2D" parent="Warps" unique_id=1344601216]
 position = Vector2(1296, 528)
 script = ExtResource("16_3nfmr")
-target_map = &"madrid/sala_moncloa_40_16"
+target_map = &"madrid/laboratorio"
 arrival_facing = 4
 
 [node name="Sala47_17" type="Node2D" parent="Warps" unique_id=327908504]

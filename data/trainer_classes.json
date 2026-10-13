@@ -1140,5 +1140,15 @@
     "overworld_sprite": "res://assets/sprites/characters/huertano.png",
     "intro_bgm": "encounter_cheerful",
     "battle_bgm": "battle_trainer"
+  },
+  "el_jincho": {
+    "name": "Rapero",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/el_jincho.png",
+    "overworld_sprite": "res://assets/sprites/characters/el_jincho.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
   }
 }

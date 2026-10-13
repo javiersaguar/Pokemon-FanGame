@@ -1,0 +1,21 @@
+{
+  "madridrio_repartidor": {
+    "class": "repartidorbici",
+    "name": "Dani",
+    "intro_text": "Tengo doce pedidos y siete minutos. Te combato en el semáforo.",
+    "lose_text": "Se me ha enfriado la hamburguesa.",
+    "win_text": "¡Pedido entregado!",
+    "after_text": "Cobro por pedido. Si me paras, me pagas tú.",
+    "items": [],
+    "party": [
+      {
+        "species": "pidove",
+        "level": 4
+      },
+      {
+        "species": "nymble",
+        "level": 5
+      }
+    ]
+  }
+}

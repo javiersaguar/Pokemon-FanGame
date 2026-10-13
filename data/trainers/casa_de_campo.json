@@ -1,0 +1,36 @@
+{
+  "casadecampo_padretarjeta": {
+    "class": "padretarjeta",
+    "name": "Borja",
+    "intro_text": "¿Tú también vienes de Pozuelo? Mi padre me ha comprado este Pokémon. Y el máster. Y el combate.",
+    "lose_text": "Voy a llamar a papá.",
+    "win_text": "El dinero no da la felicidad, pero da victorias.",
+    "after_text": "En la Casa de Campo se corre, se monta en bici y se pierde. Hoy he hecho lo tercero.",
+    "items": [],
+    "party": [
+      {
+        "species": "lechonk",
+        "level": 4
+      },
+      {
+        "species": "rookidee",
+        "level": 5
+      }
+    ]
+  },
+  "casadecampo_patinetero": {
+    "class": "patinetero",
+    "name": "Lucas",
+    "intro_text": "¡Voy a 25 por el carril bici en un patinete que no frena! Apártate o combate.",
+    "lose_text": "Me he estampado contra un pino.",
+    "win_text": "¡Fiuuu!",
+    "after_text": "Los patinetes están prohibidos en el parque. Por eso voy tan rápido.",
+    "items": [],
+    "party": [
+      {
+        "species": "skwovet",
+        "level": 5
+      }
+    ]
+  }
+}

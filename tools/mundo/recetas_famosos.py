@@ -173,6 +173,8 @@ SPECS = {
                  "Willyrex: sudadera azul."),
     "ferran_torres": ("m", "light", (2, "black"), ("rayas", "blue"), ("corto", "blue"), None,
                       "Ferran Torres: camiseta azulgrana."),
+    "el_jincho": ("m", "light", (1, "black"), ("camiseta", "blue"), ("vaqueros", "black"), ("youngster hat", None),
+                  "El Jincho, rapero de Orcasitas (ruta de Madrid Río): gorra morada hacia atrás, camiseta azul clara y cadenas."),
     "juan_roig": ("m", "light", (2, "white"), ("camisa", "white"), ("vestir", "grey"), None,
                   "Juan Roig: camisa blanca y chaleco de Mercadona."),
     "vendimiador": ("m", "medium", (3, "black"), ("camisa", "green"), ("botas", "brown"), ("straw hat", None),
