@@ -2001,5 +2001,35 @@
 			"overworld walk/hair/boy 1/boy 1 black.png",
 			"overworld walk/hats/youngster hat/youngster cap blue.png"
 		]
+	},
+	"enfermero": {
+		"idea": "Enfermero del hospital Quirón de Madrid: camisa blanca y pantalón azul marino.",
+		"frente": [
+			"trainer front male/base/base medium.png",
+			"trainer front male/bottoms/classy pants/classy pants navy.png",
+			"trainer front male/tops/collared shirt/collared shirt white.png",
+			"trainer front male/hair/hair 2/2 black.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/m base medium.png",
+			"overworld walk/bottoms/classy bottom m/classy bottom m navy.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/boy 2/boy 2 black.png"
+		]
+	},
+	"enfermero_f": {
+		"idea": "Enfermera del hospital Quirón de Madrid: uniforme blanco y coleta.",
+		"frente": [
+			"trainer front female/base/base  light.png",
+			"trainer front female/bottoms/pencil skirt/skirt pencil grey.png",
+			"trainer front female/tops/collared shirt/collared shirt white.png",
+			"trainer front female/hair/hair 4/4 brown.png"
+		],
+		"mapa": [
+			"overworld walk/bases mf/f base light.png",
+			"overworld walk/bottoms/pencil skirt/pencil skirt grey.png",
+			"overworld walk/tops/collared shirt/collared shirt white.png",
+			"overworld walk/hair/girl 4/4 brown.png"
+		]
 	}
 }

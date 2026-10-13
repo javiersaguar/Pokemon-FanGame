@@ -108,3 +108,31 @@ func test_cada_gimnasio_da_una_mt_que_existe() -> void:
 		assert_ne(machine, &"", "no hay MT de %s (%s)" % [gyms[city]["premio_mt"], city])
 		assert_false(seen.has(machine), "MT repetida")
 		seen[machine] = true
+
+
+func test_el_gimnasio_1_pasa_por_el_quiron_y_la_terraza() -> void:
+	var quiron := MapLoader.prepare(&"madrid/quiron")
+	assert_eq(quiron["error"], OK)
+	var map: MapRoot = quiron["map"]
+	var ayuso := map.get_entities().get_node_or_null(^"Ayuso")
+	assert_not_null(ayuso, "Ayuso espera al fondo del Quirón")
+	assert_eq((ayuso.get(&"event") as GDScript).resource_path, "res://src/events/quiron_ayuso_event.gd")
+	var nurses := 0
+	for node: Node in map.get_entities().get_children():
+		if node is TrainerNPC:
+			nurses += 1
+			assert_true(TrainerData.exists((node as TrainerNPC).trainer_id))
+	assert_eq(nurses, 3, "tres enfermeros")
+	map.free()
+	var leader: Dictionary = {}
+	for entry: Dictionary in JsonFile.read_dict(CharacterPlacements.DATA)["colocados"]:
+		if entry["id"] == "ayuso":
+			leader = entry
+	assert_eq(leader["mapa"], "madrid/atico_ayuso")
+	assert_false(CharacterPlacements.is_available(leader), "sin pasar por el Quirón no se la puede retar")
+	GameState.set_flag(&"quiron_superado")
+	assert_true(CharacterPlacements.is_available(leader))
+	GameState.clear_flag(&"quiron_superado")
+	var moncloa := MapLoader.prepare(&"madrid/moncloa")
+	assert_eq(String((moncloa["map"] as MapRoot).warp_at(Vector2i(58, 29)).target_map), "madrid/quiron")
+	(moncloa["map"] as MapRoot).free()

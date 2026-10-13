@@ -1,0 +1,61 @@
+{
+  "quiron_enfermera_1": {
+    "class": "enfermero",
+    "name": "Lorena",
+    "gender": "female",
+    "intro_text": "¿Tiene cita? ¿No? Pues combate, que la lista de espera es de seis meses.",
+    "lose_text": "Le doy el alta. Siguiente.",
+    "win_text": "Tómese esto cada ocho horas: una derrota.",
+    "after_text": "Hago doble turno desde 2020. Me aplaudían en los balcones; ahora me aplauden en los combates.",
+    "items": [],
+    "party": [
+      {
+        "species": "chansey",
+        "level": 12
+      },
+      {
+        "species": "happiny",
+        "level": 11
+      }
+    ]
+  },
+  "quiron_enfermero_2": {
+    "class": "enfermero",
+    "name": "Rubén",
+    "intro_text": "Planta tercera, habitación 302. Su combate está programado para ahora mismo.",
+    "lose_text": "Necesito una baja. Mental.",
+    "win_text": "Esto es sanidad de calidad.",
+    "after_text": "La presidenta viene a hacerse fotos con nosotros. Las fotos son públicas; el hospital, privado.",
+    "items": [],
+    "party": [
+      {
+        "species": "indeedee",
+        "level": 12
+      },
+      {
+        "species": "comfey",
+        "level": 13
+      }
+    ]
+  },
+  "quiron_enfermera_3": {
+    "class": "enfermero",
+    "name": "Marisa",
+    "gender": "female",
+    "intro_text": "La presidenta está al fondo. Para llegar a ella hay que pasar por mí. Y por la ventanilla.",
+    "lose_text": "Pase usted. Pero no toque nada.",
+    "win_text": "¡Siguiente paciente!",
+    "after_text": "Al fondo está Ayuso. Te llevará a su ático: dice que allí se combate mejor. Y se cobra menos IRPF.",
+    "items": [],
+    "party": [
+      {
+        "species": "audino",
+        "level": 13
+      },
+      {
+        "species": "chansey",
+        "level": 14
+      }
+    ]
+  }
+}

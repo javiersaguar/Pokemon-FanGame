@@ -1150,5 +1150,17 @@
     "overworld_sprite": "res://assets/sprites/characters/el_jincho.png",
     "intro_bgm": "encounter_tough",
     "battle_bgm": "battle_trainer"
+  },
+  "enfermero": {
+    "name": "Enfermero",
+    "gender": "mixed",
+    "base_money": 40,
+    "ai_level": 1,
+    "battle_sprite": "res://assets/sprites/trainers/enfermero.png",
+    "battle_sprite_female": "res://assets/sprites/trainers/enfermero_f.png",
+    "overworld_sprite": "res://assets/sprites/characters/enfermero.png",
+    "overworld_sprite_female": "res://assets/sprites/characters/enfermero_f.png",
+    "intro_bgm": "encounter_cheerful",
+    "battle_bgm": "battle_trainer"
   }
 }

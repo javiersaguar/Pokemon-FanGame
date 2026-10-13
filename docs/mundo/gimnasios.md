@@ -14,7 +14,7 @@
 
 | # | Ciudad | Sitio | Líder | Tipo | Medalla | Nivel tope | Dónde está ahora |
 |---|--------|-------|-------|------|---------|------------|------------------|
-| 1 | Madrid | Real Casa de Correos (Sol), con el ático de Ayuso | Isabel Díaz Ayuso | Fuego | **Medalla Libertad** | 15 | `madrid/centro`, a la puerta de Correos |
+| 1 | Madrid | Hospital Quirón (Moncloa) y la terraza de su ático en Chamberí (decisión de Javier, 2026-10-13) | Isabel Díaz Ayuso | Fuego | **Medalla Libertad** | 15 | `madrid/quiron` (tres enfermeros y Ayuso al fondo) → `madrid/atico_ayuso` (el combate) |
 | 2 | Barcelona | Spotify Camp Nou (en obras) | Joan Laporta | Acero | **Medalla Palanca** | 22 | `barcelona/les_corts`, delante del estadio |
 | 3 | Valencia | Discoteca Akuarela Playa | Labrador | Lucha | **Medalla Tirantes** | 28 | `valencia/malvarrosa`, a la puerta de Akuarela |
 | 4 | Sevilla | El club de la comedia (Triana) | Joaquín Sánchez | Planta | **Medalla Arte** | 34 | `sevilla/rio`, a la puerta del club |
@@ -24,6 +24,8 @@
 | 8 | Málaga | El rodaje de otra película | Antonio Banderas | Siniestro | **Medalla Zorro** | 54 | `malaga/exterior`, en el rodaje |
 
 ## 1 · Madrid — Ayuso (Fuego) · Medalla Libertad
+
+- **Ya en el juego (decisión de Javier):** el hospital **Quirón** (la Fundación Jiménez Díaz de Moncloa, puerta en (58, 29)) tiene tres enfermeros que combaten y a Ayuso al fondo. Hasta ganarles no te deja retarla; después te lleva a la **terraza de su ático en Chamberí** (`madrid/atico_ayuso`), donde se combate y te da la medalla. De la terraza se baja a Chamberí. Los tres entrenadores de la puerta de Correos siguen allí.
 
 - **El interior:** la Real Casa de Correos por dentro, con el ático de Ayuso arriba del todo. **Reto:** tres salas-terraza; en cada una hay que "pagar la caña" (hablar con el camarero) para que se abra la siguiente puerta. Si te sientas en una mesa sin pedir, el camarero te echa a la entrada. El reloj de las campanadas marca cuánto falta para que se cierre la terraza (decorativo).
 - **Entrenadores:** Borja (padre con la tarjeta: Growlithe y Houndour), Paco (camarero: Litleo y Ponyta) y Cayetana (influencer de LinkedIn: Fletchling y Charcadet).

@@ -228,7 +228,7 @@ arrival_facing = 4
 [node name="Sala58_29" type="Node2D" parent="Warps" unique_id=1325275124]
 position = Vector2(1872, 944)
 script = ExtResource("16_3nfmr")
-target_map = &"madrid/sala_moncloa_58_29"
+target_map = &"madrid/quiron"
 arrival_facing = 4
 
 [node name="Sala39_39" type="Node2D" parent="Warps" unique_id=546773113]
