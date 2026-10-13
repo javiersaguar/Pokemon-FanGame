@@ -2,24 +2,79 @@
   "land_rate": 10,
   "land": {
     "day": [
-      {"species": "pidgey", "min": 2, "max": 4, "weight": 35},
-      {"species": "bidoof", "min": 2, "max": 4, "weight": 25},
-      {"species": "rattata", "min": 2, "max": 4, "weight": 15},
-      {"species": "sentret", "min": 3, "max": 4, "weight": 15},
-      {"species": "vullaby", "min": 3, "max": 5, "weight": 10}
+      {
+        "species": "pidgeot",
+        "min": 48,
+        "max": 48,
+        "weight": 35
+      },
+      {
+        "species": "bibarel",
+        "min": 48,
+        "max": 48,
+        "weight": 25
+      },
+      {
+        "species": "raticate",
+        "min": 48,
+        "max": 48,
+        "weight": 15
+      },
+      {
+        "species": "furret",
+        "min": 48,
+        "max": 48,
+        "weight": 15
+      },
+      {
+        "species": "vullaby",
+        "min": 48,
+        "max": 49,
+        "weight": 10
+      }
     ],
     "night": [
-      {"species": "hoothoot", "min": 2, "max": 4, "weight": 40},
-      {"species": "rattata", "min": 2, "max": 4, "weight": 30},
-      {"species": "spinarak", "min": 3, "max": 4, "weight": 30}
+      {
+        "species": "noctowl",
+        "min": 48,
+        "max": 48,
+        "weight": 40
+      },
+      {
+        "species": "raticate",
+        "min": 48,
+        "max": 48,
+        "weight": 30
+      },
+      {
+        "species": "ariados",
+        "min": 48,
+        "max": 48,
+        "weight": 30
+      }
     ]
   },
   "water": [
-    {"species": "psyduck", "min": 5, "max": 10, "weight": 60},
-    {"species": "magikarp", "min": 5, "max": 10, "weight": 40}
+    {
+      "species": "golduck",
+      "min": 49,
+      "max": 50,
+      "weight": 60
+    },
+    {
+      "species": "gyarados",
+      "min": 49,
+      "max": 50,
+      "weight": 40
+    }
   ],
   "old_rod": [
-    {"species": "magikarp", "min": 5, "max": 8, "weight": 100}
+    {
+      "species": "gyarados",
+      "min": 49,
+      "max": 50,
+      "weight": 100
+    }
   ],
   "good_rod": [],
   "super_rod": [],

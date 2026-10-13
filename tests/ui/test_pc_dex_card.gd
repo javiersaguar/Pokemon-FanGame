@@ -44,7 +44,7 @@ func test_pc_boxes_and_dex_forms_do_not_show_unseen_variants() -> void:
 	add_child_autofree(entry)
 	assert_eq(entry.forms,[&"raichualola"])
 	assert_false(entry._detail.text.contains(DataDB.species(&"raichualola").dex_entry))
-	assert_true(PokedexEntry.areas(&"pidgey").has("ruta 1"))
+	assert_true(PokedexEntry.areas(&"pidgeot").has("ruta 1"))
 	assert_false(PokedexEntry.areas(&"mew").has("ruta 1"))
 func test_region_destinations_only_visited_and_card_saved_badges() -> void:
 	GameState.reset()

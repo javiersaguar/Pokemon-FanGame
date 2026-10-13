@@ -2,7 +2,8 @@ extends SceneTree
 ## Calcula la casilla de cada personaje de data/personajes_en_el_mapa.json: la libre y alcanzable más
 ## cercana a su "cerca", que no esté en hierba alta, ni en una puerta o pasarela (ni al lado), ni en
 ## el borde del mapa, ni en un pasillo estrecho, y que no deje sin camino ninguna casilla a la que
-## antes se llegaba. Escribe "casilla" en el JSON. Rehazlo si cambia un mapa.
+## antes se llegaba. Escribe "casilla" en el JSON. Rehazlo si cambia un mapa. Las entradas con "fija": true
+## conservan su casilla (las obras que cortan un borde, por ejemplo).
 ## Uso: godot --headless --path . -s res://maps/_tools/colocar_personajes.gd
 
 const DATA := "res://data/personajes_en_el_mapa.json"
@@ -75,6 +76,9 @@ func _place_in(map_id: String, entries: Array) -> int:
 	var taken := {}
 	var problems := 0
 	for entry: Dictionary in entries:
+		if bool(entry.get("fija", false)):
+			taken[Vector2i(int(entry["casilla"][0]), int(entry["casilla"][1]))] = true
+			continue
 		var target := Vector2i(int(entry["cerca"][0]), int(entry["cerca"][1]))
 		var candidates: Array = reach.keys().filter(func(c: Vector2i) -> bool:
 			return not banned.has(c) and not taken.has(c) and c.x > bounds.position.x and c.y > bounds.position.y \

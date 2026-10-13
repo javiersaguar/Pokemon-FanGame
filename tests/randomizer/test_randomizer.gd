@@ -174,13 +174,14 @@ func test_cada_especie_tiene_ataque_con_stab_al_nivel_1() -> void:
 
 
 func test_la_rom_se_aplica_a_datadb() -> void:
+	var original: String = DataDB.encounter_table(&"ruta_1")["land"]["day"][0]["species"]
 	var rom := Randomizer.generate(31337, _clasico())
 	var new_species: String = rom.section("encounters")["ruta_1"]["land"]["day"][0]["species"]
 	rom.apply()
 	assert_eq(DataDB.encounter_table(&"ruta_1")["land"]["day"][0]["species"], new_species)
 	assert_eq(String(DataDB.starter(&"starter_1")), str(rom.section("starters")["starter_1"]))
 	DataDB.clear_patch()
-	assert_eq(DataDB.encounter_table(&"ruta_1")["land"]["day"][0]["species"], "pidgey")
+	assert_eq(DataDB.encounter_table(&"ruta_1")["land"]["day"][0]["species"], original)
 
 
 func test_se_genera_rapido() -> void:

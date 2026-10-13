@@ -84,7 +84,7 @@ func test_run_from_wild_battle() -> void:
 
 
 func test_cannot_run_from_trainer_but_can_win() -> void:
-	_start(FakeBattle.new({"trainer_id": "ruta1_manolo"}, 3))
+	_start(FakeBattle.new({"trainer_id": "casadecampo_padretarjeta"}, 3))
 	await _autoplay(BattleScene.Command.FIGHT, BattleScene.Command.RUN)
 	assert_eq(_outcome, SceneManager.OUTCOME_WIN, "no se puede huir, pero se gana luchando")
 
@@ -136,7 +136,7 @@ func test_real_engine_catch_spends_balls_and_adds_to_party() -> void:
 
 func test_real_engine_trainer_battle_cannot_run() -> void:
 	_engine_party(14)
-	_start(BattleSetup.trainer(&"ruta1_manolo", {"seed": 3}))
+	_start(BattleSetup.trainer(&"casadecampo_padretarjeta", {"seed": 3}))
 	await _autoplay(BattleScene.Command.FIGHT, BattleScene.Command.RUN)
 	assert_eq(_outcome, SceneManager.OUTCOME_WIN)
 	GameState.reset()

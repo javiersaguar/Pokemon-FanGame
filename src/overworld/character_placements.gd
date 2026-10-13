@@ -29,12 +29,18 @@ static func for_map(map_id: StringName) -> Array:
 	return _by_map.get(map_id, [])
 
 
-## Sale si cumple su "requiere": {"medallas": n} (al menos n medallas) y {"flag": "..."} (flag activo).
+## Sale si cumple su "requiere" ({"medallas": n}: al menos n medallas; {"flag": "..."}: flag activo) y
+## todavía no ha llegado su "hasta" (con esas medallas o ese flag se va: las obras de la A-6, por ejemplo).
 static func is_available(entry: Dictionary) -> bool:
 	var needs: Dictionary = entry.get("requiere", {})
 	if GameState.badges.size() < int(needs.get("medallas", 0)):
 		return false
-	return not needs.has("flag") or GameState.flag(StringName(str(needs["flag"])))
+	if needs.has("flag") and not GameState.flag(StringName(str(needs["flag"]))):
+		return false
+	var until: Dictionary = entry.get("hasta", {})
+	if until.has("medallas") and GameState.badges.size() >= int(until["medallas"]):
+		return false
+	return not (until.has("flag") and GameState.flag(StringName(str(until["flag"]))))
 
 
 static func node_name(entry: Dictionary) -> String:

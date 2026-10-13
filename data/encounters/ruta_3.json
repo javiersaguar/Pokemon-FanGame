@@ -2,17 +2,62 @@
   "land_rate": 10,
   "land": {
     "day": [
-      {"species": "ponyta", "min": 6, "max": 8, "weight": 25},
-      {"species": "swinub", "min": 6, "max": 8, "weight": 25},
-      {"species": "snover", "min": 7, "max": 9, "weight": 20},
-      {"species": "snorunt", "min": 7, "max": 9, "weight": 20},
-      {"species": "stantler", "min": 7, "max": 9, "weight": 10}
+      {
+        "species": "rapidash",
+        "min": 51,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "mamoswine",
+        "min": 51,
+        "max": 52,
+        "weight": 25
+      },
+      {
+        "species": "abomasnow",
+        "min": 52,
+        "max": 53,
+        "weight": 20
+      },
+      {
+        "species": "glalie",
+        "min": 52,
+        "max": 53,
+        "weight": 20
+      },
+      {
+        "species": "wyrdeer",
+        "min": 52,
+        "max": 53,
+        "weight": 10
+      }
     ],
     "night": [
-      {"species": "duskull", "min": 7, "max": 9, "weight": 35},
-      {"species": "snorunt", "min": 7, "max": 9, "weight": 25},
-      {"species": "swinub", "min": 6, "max": 8, "weight": 20},
-      {"species": "hoothoot", "min": 6, "max": 8, "weight": 20}
+      {
+        "species": "dusknoir",
+        "min": 52,
+        "max": 53,
+        "weight": 35
+      },
+      {
+        "species": "glalie",
+        "min": 52,
+        "max": 53,
+        "weight": 25
+      },
+      {
+        "species": "mamoswine",
+        "min": 51,
+        "max": 52,
+        "weight": 20
+      },
+      {
+        "species": "noctowl",
+        "min": 51,
+        "max": 52,
+        "weight": 20
+      }
     ]
   },
   "water": [],
@@ -21,6 +66,11 @@
   "super_rod": [],
   "rock_smash": [],
   "headbutt": [
-    {"species": "pineco", "min": 7, "max": 9, "weight": 100}
+    {
+      "species": "forretress",
+      "min": 52,
+      "max": 53,
+      "weight": 100
+    }
   ]
 }

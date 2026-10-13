@@ -2,18 +2,68 @@
   "land_rate": 10,
   "land": {
     "day": [
-      {"species": "pineco", "min": 4, "max": 6, "weight": 30},
-      {"species": "seedot", "min": 4, "max": 6, "weight": 25},
-      {"species": "combee", "min": 5, "max": 6, "weight": 20},
-      {"species": "pidgey", "min": 4, "max": 6, "weight": 15},
-      {"species": "stantler", "min": 6, "max": 7, "weight": 10}
+      {
+        "species": "forretress",
+        "min": 49,
+        "max": 50,
+        "weight": 30
+      },
+      {
+        "species": "shiftry",
+        "min": 49,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "vespiquen",
+        "min": 50,
+        "max": 50,
+        "weight": 20
+      },
+      {
+        "species": "pidgeot",
+        "min": 49,
+        "max": 50,
+        "weight": 15
+      },
+      {
+        "species": "wyrdeer",
+        "min": 50,
+        "max": 51,
+        "weight": 10
+      }
     ],
     "night": [
-      {"species": "hoothoot", "min": 4, "max": 6, "weight": 35},
-      {"species": "pineco", "min": 4, "max": 6, "weight": 25},
-      {"species": "spinarak", "min": 4, "max": 6, "weight": 20},
-      {"species": "stantler", "min": 6, "max": 7, "weight": 15},
-      {"species": "nuzleaf", "min": 7, "max": 7, "weight": 5}
+      {
+        "species": "noctowl",
+        "min": 49,
+        "max": 50,
+        "weight": 35
+      },
+      {
+        "species": "forretress",
+        "min": 49,
+        "max": 50,
+        "weight": 25
+      },
+      {
+        "species": "ariados",
+        "min": 49,
+        "max": 50,
+        "weight": 20
+      },
+      {
+        "species": "wyrdeer",
+        "min": 50,
+        "max": 51,
+        "weight": 15
+      },
+      {
+        "species": "shiftry",
+        "min": 51,
+        "max": 51,
+        "weight": 5
+      }
     ]
   },
   "water": [],
@@ -22,7 +72,17 @@
   "super_rod": [],
   "rock_smash": [],
   "headbutt": [
-    {"species": "pineco", "min": 5, "max": 7, "weight": 70},
-    {"species": "combee", "min": 5, "max": 7, "weight": 30}
+    {
+      "species": "forretress",
+      "min": 50,
+      "max": 51,
+      "weight": 70
+    },
+    {
+      "species": "vespiquen",
+      "min": 50,
+      "max": 51,
+      "weight": 30
+    }
   ]
 }

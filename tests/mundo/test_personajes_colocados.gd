@@ -90,6 +90,11 @@ func test_los_que_tienen_condicion_solo_salen_al_cumplirla() -> void:
 	GameState.clear_flag(&"liga_superada")
 	GameState.badges.clear()
 	assert_true(CharacterPlacements.is_available({}))
+	var obras := {"hasta": {"medallas": 7}}
+	assert_true(CharacterPlacements.is_available(obras), "las obras están al principio")
+	GameState.badges.assign([&"a", &"b", &"c", &"d", &"e", &"f", &"g"])
+	assert_false(CharacterPlacements.is_available(obras), "con 7 medallas se han ido")
+	GameState.badges.clear()
 
 
 func test_cada_gimnasio_da_una_mt_que_existe() -> void:
