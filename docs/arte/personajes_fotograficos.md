@@ -19,7 +19,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `coto_matamoros` | Coto Matamoros | pendiente | por documentar |
 | `pedroche` | Cristina Pedroche | pendiente | por documentar |
 | `trump` | Donald Trump | integrado, provisional | [Retrato oficial](https://www.whitehouse.gov/wp-content/uploads/2025/06/President-Donald-Trump-Official-Presidential-Portrait.png) |
-| `el_jincho` | El Jincho | pendiente | por documentar |
+| `el_jincho` | El Jincho | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/el_jincho.png) |
 | `elxokas` | Elxokas | pendiente | por documentar |
 | `enrique_iglesias` | Enrique Iglesias | pendiente | por documentar |
 | `ester_exposito` | Ester Expósito | pendiente | por documentar |
@@ -56,26 +56,26 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `rubiales` | Luis Rubiales | pendiente | por documentar |
 | `rajoy` | Mariano Rajoy | integrado, provisional | [Retrato oficial](https://commons.wikimedia.org/wiki/File:Mariano_Rajoy_2017b_(cropped).jpg) |
 | `mario_casas` | Mario Casas | pendiente | por documentar |
-| `mbappe` | Mbappé | pendiente | por documentar |
+| `mbappe` | Mbappé | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/mbappe_dictador.png) |
 | `melendi` | Melendi | pendiente | por documentar |
 | `nico_williams` | Nico Williams | pendiente | por documentar |
 | `maduro` | Nicolás Maduro | integrado, provisional | [Retrato de Ricardo Stuckert](https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Maduro_in_2023_(cropped).jpg) |
-| `paache` | Paache | pendiente | por documentar |
+| `paache` | Paache | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/paache.png) |
 | `pablo_iglesias` | Pablo | pendiente | por documentar |
 | `gasol` | Pau Gasol | pendiente | por documentar |
 | `pedro_sanchez` | Pedro Sánchez | pendiente | por documentar |
 | `guardiola` | Pep Guardiola | pendiente | por documentar |
 | `pereira7` | Pereira7 | pendiente | por documentar |
-| `pokealex` | PokeAlex (el otro) | pendiente | por documentar |
+| `pokealex` | PokeAlex (el otro) | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/pokealex_el_otro.webp) |
 | `quevedo` | Quevedo | pendiente | por documentar |
 | `nadal` | Rafa Nadal | pendiente | por documentar |
 | `rosalia` | Rosalía | pendiente | por documentar |
 | `abascal` | Santiago Abascal | pendiente | por documentar |
 | `sarah_santaolalla` | Sarah | pendiente | por documentar |
-| `sekiam` | Sekiam | pendiente | por documentar |
+| `sekiam` | Sekiam | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/sekiam.webp) |
 | `sergio_ramos` | Sergio Ramos | pendiente | por documentar |
 | `vegeta` | Vegetta777 | pendiente | por documentar |
-| `vinicius` | Vinicius Jr. | pendiente | por documentar |
+| `vinicius` | Vinicius Jr. | integrado, provisional | [Referencia de Javier](referencias/javier_2026-10-13/vinicius_con_barba.webp) |
 | `vito_quiles` | Vito | pendiente | por documentar |
 | `willyrex` | Willyrex | pendiente | por documentar |
 | `oscar_puente` | Óscar Puente | pendiente | por documentar |

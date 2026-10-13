@@ -287,3 +287,14 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/trump.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
 | `characters/famosos_atlas/maduro.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño nuevo; referencias en `personajes_fotograficos.md` | ⏳ | Comparativa `personajes_entrega_1.md`; original conservado |
 | Galería de personajes | Interfaz debug | A | integrado, provisional | Paneles existentes | ⏳ | F9 → Galerías; caminar en cuatro direcciones |
+
+## Personajes con referencia fotográfica · entrega 2
+
+| Asset | Tipo | Dueño | Estado | Fuente / licencia | Aprobado por Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/mbappe.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
+| `characters/famosos_atlas/vinicius.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
+| `characters/famosos_atlas/sekiam.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
+| `characters/famosos_atlas/pokealex.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
+| `characters/famosos_atlas/paache.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
+| `characters/famosos_atlas/el_jincho.png` | Combate y 16 poses de mapa | A | integrado, provisional | Diseño según referencia de Javier | ⏳ | `personajes_entrega_2.md`; PNG intacto |
