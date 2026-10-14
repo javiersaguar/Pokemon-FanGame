@@ -93,7 +93,7 @@ func _initialize() -> void:
 	_sign(p, "Mercado", Vector2i(29, 41), ["MERCADO DE ATARAZANAS", "Puestos de productos frescos. El acceso interior está cerrado."])
 	_sign(p, "Pompidou", Vector2i(63, 62), ["CENTRE POMPIDOU · MUELLE UNO", "El Cubo de vidrio coloreado. El acceso interior está cerrado."])
 	_sign(p, "Gimnasio", Vector2i(56, 62), ["GIMNASIO 8 · RODAJE DE PELÍCULA", "Líder: Antonio Banderas. Acceso todavía cerrado."])
-	_sign(p, "Estacion", Vector2i(8, 58), ["MÁLAGA MARÍA ZAMBRANO · AVE", "El servicio a Madrid todavía no está disponible."])
+	_sign(p, "Estacion", Vector2i(8, 58), ["MÁLAGA MARÍA ZAMBRANO · AVE", "AVE a Madrid. Puntualidad garantizada: llega seguro, aunque no se sabe cuándo."])
 	for local: Array in [["Hospital", 27, 22, "HOSPITAL"], ["Mercadona", 46, 22, "MERCADONA"], ["Estanco", 52, 22, "ESTANCO"], ["BasicFit", 47, 43, "BASIC-FIT"]]:
 		_sign(p, local[0], Vector2i(local[1], local[2]), [local[3], "Cura y PC en recepción." if local[0] == "Hospital" else ("El acceso está cerrado por ahora." if local[0] == "BasicFit" else "Puedes entrar y comprar en la caja.")])
 	# El agua auxiliar de borde no amplía los límites caminables del mapa.

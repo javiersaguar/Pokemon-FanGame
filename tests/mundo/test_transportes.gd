@@ -20,6 +20,13 @@ const FLIGHTS: Array = [
 	["playa_del_ingles/exterior", "AvionVigo", "playa_del_ingles/aeropuerto", "transporte/avion_gran_canaria_vigo", "vigo/aeropuerto", "vigo/exterior"],
 	["vigo/exterior", "AvionGranCanaria", "vigo/aeropuerto", "transporte/avion_vigo_gran_canaria", "playa_del_ingles/aeropuerto", "playa_del_ingles/exterior"],
 ]
+## [estación, andén, tren, estación de llegada, calle de la llegada, aparición en esa calle, destino que abre el andén].
+const TRAINS: Array = [
+	["madrid/sala_retiro_20_58", "Anden1", "transporte/ave_madrid_valladolid", "valladolid/sala_calle_52_59", "valladolid/exterior", "from_sala_52_59", "valladolid/exterior"],
+	["madrid/sala_retiro_20_58", "Anden2", "transporte/ave_madrid_malaga", "malaga/sala_calle_5_57", "malaga/exterior", "from_sala_5_57", "malaga/exterior"],
+	["valladolid/sala_calle_52_59", "Anden1", "transporte/ave_valladolid_madrid", "madrid/sala_retiro_20_58", "madrid/retiro", "from_sala_20_58", "madrid/retiro"],
+	["malaga/sala_calle_5_57", "Anden1", "transporte/ave_malaga_madrid", "madrid/sala_retiro_20_58", "madrid/retiro", "from_sala_20_58", "madrid/retiro"],
+]
 
 var _map: Node2D
 
@@ -70,6 +77,22 @@ func test_cada_pasarela_lleva_al_viaje_y_el_viaje_al_destino() -> void:
 		_trip_trigger(f[3])
 		_leads(f[3], "Bajar", f[4], "from_llegadas")
 		_leads(f[4], "Salida", f[5], "from_avion")
+	for t: Array in TRAINS:
+		_leads(t[0], t[1], t[2], "default")
+		_trip_trigger(t[2])
+		_leads(t[2], "Bajar", t[3], "from_llegadas")
+		_leads(t[3], "Salida", t[4], t[5])
+
+
+## El andén del AVE lo tapa un revisor hasta haber estado en el destino (viaje rápido entre estaciones ya visitadas).
+func test_el_ave_solo_lleva_a_destinos_ya_visitados() -> void:
+	for t: Array in TRAINS:
+		var station := _scene(t[0])
+		var guard := station.get_node("Entities/Revisor" + String(t[1]).trim_prefix("Anden")) as MapEntity
+		var gate := Grid.to_tile((station.get_node("Warps/" + t[1]) as Node2D).position)
+		assert_eq(Grid.to_tile(guard.position), gate + Vector2i.DOWN, "%s: el revisor tapa el andén" % t[0])
+		assert_eq(String(guard.hidden_if_flag), "visited_map:%s" % t[6], "%s/%s" % [t[0], t[1]])
+		station.free()
 
 
 ## Casillas a las que se llega andando desde `spawn`, sin pisar `blocked`.

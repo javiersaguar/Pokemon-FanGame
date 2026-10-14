@@ -121,7 +121,7 @@ show_sprite = false
 [node name="Estacion" type="Node2D" parent="Entities" unique_id=496266200 instance=ExtResource("8_mxvtc")]
 position = Vector2(272, 1872)
 script = ExtResource("9_7eqyo")
-lines = PackedStringArray("MÁLAGA MARÍA ZAMBRANO · AVE", "El servicio a Madrid todavía no está disponible.")
+lines = PackedStringArray("MÁLAGA MARÍA ZAMBRANO · AVE", "AVE a Madrid. Puntualidad garantizada: llega seguro, aunque no se sabe cuándo.")
 show_sprite = false
 
 [node name="Hospital" type="Node2D" parent="Entities" unique_id=215299761 instance=ExtResource("8_mxvtc")]

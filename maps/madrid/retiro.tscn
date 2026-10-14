@@ -178,7 +178,7 @@ initial_facing = 3
 [node name="Revisor" type="Node2D" parent="Entities" unique_id=483366063 instance=ExtResource("10_6j2ry")]
 position = Vector2(752, 1904)
 script = ExtResource("11_12upc")
-lines = PackedStringArray("El Cercanías C-5 a Móstoles, Leganés y Getafe sale... cuando salga.", "Y el AVE, cuando el Ministerio diga. Hoy dice que no.")
+lines = PackedStringArray("El Cercanías C-5 a Móstoles, Leganés y Getafe sale... cuando salga.", "El AVE a Valladolid y a Málaga sale de la estación, a mi espalda. Con retraso, eso sí: aquí el retraso viene de serie.")
 turn_to_player = true
 sprite_sheet = ExtResource("14_bna27")
 

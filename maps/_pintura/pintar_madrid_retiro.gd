@@ -144,6 +144,6 @@ func _paint(painter: GDScript) -> RefCounted:
 		"Las barcas del Retiro: cuarenta y cinco minutos remando para dar una vuelta. Como la política."]))
 	p.npc("Revisor", "revisorcercanias", Vector2i(23, 59), DOWN, PackedStringArray([
 		"El Cercanías C-5 a Móstoles, Leganés y Getafe sale... cuando salga.",
-		"Y el AVE, cuando el Ministerio diga. Hoy dice que no."]))
+		"El AVE a Valladolid y a Málaga sale de la estación, a mi espalda. Con retraso, eso sí: aquí el retraso viene de serie."]))
 	load("res://maps/_pintura/servicios_locales.gd").apply_all(p,"madrid/retiro")
 	return p

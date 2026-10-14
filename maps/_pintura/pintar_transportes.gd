@@ -6,6 +6,11 @@ extends SceneTree
 ##   Avión: <ciudad>/aeropuerto (terminal con facturación y control de seguridad,
 ##   src/events/control_seguridad_event.gd) → transporte/avion_<origen>_<destino> (cabina) → la
 ##   terminal de llegada. Las pasarelas de los exteriores se redirigen con maps/_tools/redirigir_puerta.gd.
+##   AVE: la estación (vestíbulo con taquilla, panel y andenes; ocupa el id del interior que ya tenía el
+##   edificio, así que la puerta de la calle no cambia) → transporte/ave_<origen>_<destino> (vagón) → la
+##   estación de llegada. Un revisor tapa el andén hasta haber estado en el destino (visited_map:...),
+##   como el viaje rápido entre estaciones ya visitadas de region.md. Si se repintan los interiores de
+##   esas ciudades sin --solo-nuevas, hay que volver a pasar este pintor.
 ## Uso: godot --headless --path . -s res://maps/_pintura/pintar_transportes.gd
 
 const INTERIOR := "res://assets/tilesets/interior/interior.tres"
@@ -120,6 +125,57 @@ var AIRPORTS: Array = [
 ]
 
 
+## Trenes: [mapa, título, estación de llegada, salida, trayecto, llegada, pasajeros].
+var TRAINS: Array = [
+	["transporte/ave_madrid_valladolid", "AVE Madrid · Valladolid", "valladolid/sala_calle_52_59", [
+		"Renfe les da la bienvenida a bordo del AVE con destino Valladolid Campo Grande. Llegada prevista en una hora.",
+		"Prevista. La palabra importante es prevista."],
+		["El tren se para en mitad de la meseta. Por megafonía nadie dice nada. Un señor llama al ministro por Twitter."],
+		["Llegamos a Valladolid Campo Grande con cuarenta minutos de retraso, por una incidencia en la infraestructura.",
+		"El ministro ya ha contestado en redes: la culpa es del anterior."], [
+		["Funcionaria", "npc_woman", Vector2i(2, 9), RIGHT, ["Voy todos los días a Madrid y vuelvo. Ochenta minutos si todo va bien. Nunca va todo bien."]],
+		["Pucelano", "npc_old_man", Vector2i(13, 9), LEFT, ["Valladolid está a una hora de Madrid. Madrid está a una hora y cuarenta de Valladolid. No me preguntes por qué."]],
+	]],
+	["transporte/ave_valladolid_madrid", "AVE Valladolid · Madrid", "madrid/sala_retiro_20_58", [
+		"Renfe les da la bienvenida a bordo del AVE con destino Madrid. Llegada prevista en una hora.",
+		"Por obras en el túnel de Guadarrama, puede haber pequeñas incidencias. Grandes, también."],
+		["El tren espera media hora en la boca del túnel. Alguien abre una bolsa de pipas. Nadie se queja: es tradición."],
+		["Llegamos a Madrid con treinta y cinco minutos de retraso. Les recordamos que tienen derecho a una compensación.",
+		"Rellenen el formulario. En papel. En la estación. En horario de oficina."], [
+		["Estudiante", "estudianteinge", Vector2i(2, 9), RIGHT, ["Vuelvo a la universidad. Llevo tuppers para toda la semana; mi madre cree que en Madrid no hay comida."]],
+		["Guiri", "turista", Vector2i(13, 9), LEFT, ["In Germany the trains are always late. Aquí también. Me siento como en casa."]],
+	]],
+	["transporte/ave_madrid_malaga", "AVE Madrid · Málaga", "malaga/sala_calle_5_57", [
+		"Renfe les da la bienvenida a bordo del AVE con destino Málaga María Zambrano. Duración: dos horas y cuarenta minutos.",
+		"El vagón cafetería está al fondo. El café cuesta lo mismo que el abono de Cercanías de un mes."],
+		["Despeñaperros pasa por la ventana en un suspiro. Después, olivos. Después, más olivos. Después, ya ni los cuentas."],
+		["Llegamos a Málaga María Zambrano con cincuenta minutos de retraso por un robo de cable.",
+		"El ministro ha dicho que no es culpa suya. Esta vez, a lo mejor, es verdad."], [
+		["Malaguena", "npc_woman", Vector2i(2, 9), RIGHT, ["¡Vuelvo a casa! En Madrid hace un frío que no es normal. Bueno, catorce grados."]],
+		["Ejecutivo", "influencerlinkedin", Vector2i(13, 9), LEFT, ["Teletrabajo desde el AVE. Bueno, desde el túnel no. Ni desde Despeñaperros. Ni desde Córdoba."]],
+	]],
+	["transporte/ave_malaga_madrid", "AVE Málaga · Madrid", "madrid/sala_retiro_20_58", [
+		"Renfe les da la bienvenida a bordo del AVE con destino Madrid Puerta de Atocha. Duración: dos horas y cuarenta minutos.",
+		"Les rogamos que no suban el volumen del móvil. Ni del altavoz. Ni de la guitarra."],
+		["El tren sube por Despeñaperros. En el vagón, alguien empieza a cantar por bulerías. Nadie le para."],
+		["Llegamos a Madrid Puerta de Atocha con una hora de retraso. ¡Gracias por elegir Renfe! Bueno, tampoco había otra cosa."], [
+		["Torero", "npc_man", Vector2i(2, 9), RIGHT, ["Voy a Las Ventas. Si el tren llega a tiempo, toreo. Si no, me quedo de espectador."]],
+		["Abuela", "abuela", Vector2i(13, 9), LEFT, ["Le llevo a mi nieto boquerones en vinagre. En el táper. Sí, huele. Que se aguante el vagón."]],
+	]],
+]
+
+## Estaciones: [mapa (el interior que ya tenía el edificio), título, calle, aparición en la calle,
+## andenes [[tren, destino que hay que haber visitado, nombre del destino]...]].
+var STATIONS: Array = [
+	["madrid/sala_retiro_20_58", "Estación de Atocha", "madrid/retiro", "from_sala_20_58", [
+		["transporte/ave_madrid_valladolid", "valladolid/exterior", "Valladolid"],
+		["transporte/ave_madrid_malaga", "malaga/exterior", "Málaga"]]],
+	["valladolid/sala_calle_52_59", "Estación Campo Grande · Valladolid", "valladolid/exterior", "from_sala_52_59", [
+		["transporte/ave_valladolid_madrid", "madrid/retiro", "Madrid"]]],
+	["malaga/sala_calle_5_57", "Estación María Zambrano · Málaga", "malaga/exterior", "from_sala_5_57", [
+		["transporte/ave_malaga_madrid", "madrid/retiro", "Madrid"]]],
+]
+
 func _initialize() -> void:
 	await process_frame
 	for f: Array in FERRIES:
@@ -128,6 +184,10 @@ func _initialize() -> void:
 		_flight(f)
 	for a: Array in AIRPORTS:
 		_airport(a)
+	for t: Array in TRAINS:
+		_train(t)
+	for st: Array in STATIONS:
+		_station(st)
 	quit()
 
 
@@ -290,6 +350,52 @@ func _airport(a: Array) -> void:
 	_save_with_trigger(p, map_id, "ControlSeguridad", Vector2i(4, 6), SECURITY_EVENT,
 		{"flag": a[5], "guardia": "Guardia Civil"}, 0)
 
+
+## Vagón del AVE: asientos a los dos lados del pasillo, la cafetería al fondo y la puerta delante.
+func _train(t: Array) -> void:
+	var map_id: String = t[0]
+	var p := _shell(map_id, t[1], "transporte", 13, 9)
+	for y: int in [3, 5, 7]:
+		for x: int in [2, 3, 5, 6, 10, 11, 13]:
+			_piece(p, Vector2i(x, y), SEAT if x < 8 else SEAT_B)
+	_piece(p, Vector2i(10, 9), BAR, 3)
+	p.npc("Revisor", "revisorcercanias", Vector2i(8, 4), DOWN, PackedStringArray([
+		"Billetes, por favor. ¿Tarjeta Dorada? ¿Carné joven? ¿Abono? Da igual: el retraso es para todos.",
+		"Si el tren llega con más de una hora de retraso, le devolvemos la mitad. Por eso llegamos con cincuenta y nueve minutos."]))
+	_passengers(p, t[6])
+	_door(p, "Bajar", Vector2i(8, 1), t[2], "from_llegadas", Warp.Facing.DOWN)
+	p.spawn("default", Vector2i(8, 10))
+	_save_with_trigger(p, map_id, "Viaje", Vector2i(8, 10), TRIP_EVENT,
+		{"hablante": "Megafonía", "salida": t[3], "trayecto": t[4], "llegada": t[5]}, 1)
+
+
+## Vestíbulo de estación: taquilla, panel de salidas, andenes arriba (cada uno con su revisor) y la calle abajo.
+func _station(st: Array) -> void:
+	var map_id: String = st[0]
+	var p := _shell(map_id, st[1], map_id.get_slice("/", 0), 12, 1)
+	_piece(p, Vector2i(11, 7), BAR, 3)
+	_piece(p, Vector2i(1, 8), SOFA)
+	_piece(p, Vector2i(14, 9), PLANT_B)
+	_piece(p, Vector2i(1, 2), PLANT_A)
+	p.npc("Taquilla", "npc_lass", Vector2i(12, 9), UP, PackedStringArray([
+		"Venta de billetes. ¿Ida y vuelta? La vuelta no se la garantizo, pero se la cobro.",
+		"Los andenes, arriba. El panel dice «en hora». El panel es optimista."]), {"display_name": "Renfe"})
+	p.sign_text("Panel", Vector2i(8, 2), PackedStringArray([
+		"PANEL DE SALIDAS.", "Todos los trenes: «retraso estimado: indeterminado». La hora la pone el ministro."]))
+	var platforms: Array = st[4]
+	var doors: Array = [Vector2i(4, 1), Vector2i(12, 1)]
+	for i: int in platforms.size():
+		var pl: Array = platforms[i]
+		var door: Vector2i = doors[i]
+		_door(p, "Anden%d" % (i + 1), door, pl[0], "default", Warp.Facing.UP)
+		p.npc("Revisor%d" % (i + 1), "revisorcercanias", door + Vector2i.DOWN, DOWN, PackedStringArray([
+			"Andén del AVE a %s. Si no ha estado nunca allí, no le puedo dejar subir." % pl[2],
+			"Es la nueva política: solo viajan los que ya conocen el destino. Así nadie se queja de lo que encuentra."]),
+			{"hidden_if_flag": StringName("visited_map:%s" % pl[1]), "display_name": "Revisor"})
+	p.spawn("from_llegadas", Vector2i(8, 3))
+	_door(p, "Salida", Vector2i(8, 11), st[2], st[3], Warp.Facing.DOWN)
+	p.spawn("default", Vector2i(8, 10))
+	print("%s: %s" % [map_id, error_string(p.save("res://maps/%s.tscn" % map_id))])
 
 func _piece(p: Pintor, at: Vector2i, rect: Rect2i, source: int = 2) -> void:
 	for y: int in rect.size.y:

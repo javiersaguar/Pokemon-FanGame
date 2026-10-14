@@ -28,6 +28,8 @@
 - También hay que meter a **la abuela de Lamine**.
 - Hay un **campo de fútbol con niños jugando**.
 
+*Hecho (2026-10-14): `rocafonda/exterior`, al este del Eixample; ver `docs/mundo/rutas.md`.*
+
 ## 4. Más personajes que hay que crear (sprites)
 
 Pablo Motos · Omar Montes · Zona Gemelos · El Churumbel de Málaga · Joan Pradells · JC Reyes · Marc Cucurella · David Bisbal · Eduardo Gómez (en su papel de **Mente Fría**, de *La que se avecina*) · Amador Rivas · Antonio Recio.
