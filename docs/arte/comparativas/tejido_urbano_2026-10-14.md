@@ -8,7 +8,7 @@ Las **89 casas cortadas** usaban cuatro módulos incompletos del pack DPPt (`cas
 
 Se editan las escenas actuales. Se conservan los monumentos, servicios, personajes colocados, entrenadores, puertas anteriores y puntos de aparición. Los interiores nuevos usan el método de interiores ya integrado, con mobiliario y dos vecinos, entrada y regreso. Los parques y playas reciben detalle sin añadir viviendas. No se rehacen desde los pintores antiguos.
 
-La herramienta incremental está en `maps/_tools/detallar_ciudades.gd`; las casas se reparan con `completar_casas.gd`, y los vecinos del paseo se revisan con `ajustar_vecinos_paseo.gd`. La marca de escena `detalle_urbano` evita duplicar la ampliación. Para ver cada mapa en el juego: **F9 → Mapa de pruebas → pulsar su zona**.
+La herramienta incremental está en `maps/_tools/detallar_ciudades.gd`; las casas se reparan con `completar_casas.gd`, y los vecinos del paseo se revisan con `ajustar_vecinos_paseo.gd`. La marca de escena `detalle_urbano` evita duplicar la ampliación. Para ver cada mapa en el juego: **F9 → Mapa de la región · viajar → pulsar su zona**.
 
 Las pruebas de regresión comparan las conexiones y apariciones anteriores y comprueban físicamente la entrada y el regreso de las 62 viviendas nuevas. No se decide equipo, ubicación ni diálogo de los personajes famosos pendientes de Javier.
 
