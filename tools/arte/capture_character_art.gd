@@ -14,6 +14,7 @@ func _run() -> void:
 	manager.register_main(main)
 	manager._fade.hide()
 	var battle := args.size() > 1 and args[1] in ["battle","duo"]
+	var before := "--sin-arte" in args
 	if battle:
 		var screen = load("res://src/battle/scene/battle_entry_transition.gd").new()
 		screen.kind = &"trainer"
@@ -21,7 +22,9 @@ func _run() -> void:
 		for member: String in id.split("+"):
 			var member_id := StringName(member)
 			if root.get_node("DataDB").has_trainer(member_id):
-				trainers.append(load("res://src/battle/engine/battle_setup.gd").trainer_info(member_id))
+				var info: Dictionary = load("res://src/battle/engine/battle_setup.gd").trainer_info(member_id)
+				if before: info["art_id"] = &""
+				trainers.append(info)
 			else:
 				var art := CharacterArt.info(member_id)
 				if art.is_empty():
@@ -41,7 +44,7 @@ func _run() -> void:
 		manager.push_menu(screen)
 	await process_frame
 	await create_timer(0.1).timeout
-	var path := "res://docs/arte/comparativas/personaje_%s%s.png" % [id,"_entrada" if battle else ""]
+	var path := "res://docs/arte/comparativas/personaje_%s%s%s.png" % [id,"_antes" if before else "","_entrada" if battle else ""]
 	root.get_texture().get_image().save_png(ProjectSettings.globalize_path(path))
 	print("Captura: ",path)
 	quit()

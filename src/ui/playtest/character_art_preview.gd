@@ -36,6 +36,9 @@ func _ready() -> void:
 		sprite.position = Vector2(316+(i%2)*112,165+floori(float(i)/2.0)*102)
 		_poses.append(sprite)
 	hint.text = "A: andar / parar    B: volver"
+	if str(CharacterArt.info(art_id).get("frame_mode", "")) == "static":
+		walking = false
+		hint.text = "Mapa provisional: 4 poses quietas    B: volver"
 
 func _process(delta: float) -> void:
 	if not walking: return
@@ -48,6 +51,9 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"cancel"): closed.emit()
 	elif event.is_action_pressed(&"accept"):
+		if str(CharacterArt.info(art_id).get("frame_mode", "")) == "static":
+			get_viewport().set_input_as_handled()
+			return
 		walking = not walking
 		for sprite: CharacterArtSprite in _poses: sprite._show(0)
 	else: return

@@ -98,3 +98,18 @@ Catálogo inicial y altas del 14 de octubre: 85 identidades; 84 con atlas comple
 Revisión del 2026-10-14: doce diseños actualizados según fotos de Javier; comparativa [antes/después](comparativas/personajes_revision_2026-10-14.md). Peereira7 incorpora paletas y cola de castor. Sarah conserva su diseño y cabestrillo.
 
 Altas del 2026-10-14: once entradas de la petición de Javier, doce identidades al separar los dos integrantes de Zona Gemelos. Referencias individuales de Carlos/Dani verificadas en su web oficial. [Comparativas y entradas](comparativas/personajes_entrega_11.md). Sus equipos y emplazamientos aún no están decididos; disponibles en la galería F9.
+
+
+## Gimnasios · entrega 12
+
+| Identidad | ID | Recurso | Fuente | Estado |
+|---|---|---|---|---|
+| Pablo Casado | `casado` | `famosos_atlas/casado.png` | https://www.telecinco.es/noticias/gente/20240618/vida-pablo-casado-politica-buena-noticia-profesional_18_012792865.html; https://commons.wikimedia.org/wiki/File:Pablo_Casado.jpg | Integrado, provisional |
+| Messi | `messi` | Dos PNG originales | Iberia V2.10, copia de Javier; cuatro poses quietas | Integrado, provisional |
+| Julián Álvarez | `julian_alvarez` | `famosos_atlas/julian_alvarez.png` | https://www.atleticodemadrid.com/jugadores/julian-alvarez-2025-2026; https://www.futwiz.com/fc25/career-mode/player/julian-alvarez/11120 | Integrado, provisional |
+| Peter Lim | `peter_lim` | `famosos_atlas/peter_lim.png` | https://www.moneydigest.sg/5-ways-to-make-money-like-singapore-billionaire-peter-lim/ | Integrado, provisional |
+| Antony | `antony` | `famosos_atlas/antony.png` | https://www.laliga.com/en-GB/player/antony; https://www.realbetisbalompie.es/primer-equipo/plantilla | Integrado, provisional |
+| José Mota | `jose_mota` | `famosos_atlas/jose_mota.png` | https://www.famousfix.com/topic/jose-mota-actor; https://www.rtve.es/television/jose-mota-presenta/ | Integrado, provisional |
+| Andreu Buenafuente | `buenafuente` | `famosos_atlas/buenafuente.png` | https://www.planetadelibros.com.pe/autor/andreu-buenafuente/000000264 | Integrado, provisional |
+| Berto Romero | `berto_romero` | `famosos_atlas/berto_romero.png` | https://elpais.com/elpais/2020/08/18/eps/1597746480_231088.html | Integrado, provisional |
+| Dani Rovira | `dani_rovira` | `famosos_atlas/dani_rovira.png` | https://www.huffingtonpost.es/virales/le-dicen-dani-rovira-vale-actor-hablar-politica-replica-goya.html | Integrado, provisional |

@@ -450,3 +450,18 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | 33 mapas urbanos: viviendas, paseos, mobiliario y vecinos | Mundo | A | integrado, provisional | Packs de exteriores existentes | ⏳ | 62 viviendas, 962 adornos/arbolado, 99 vecinos. Comparativa `tejido_urbano_2026-10-14.md` |
 | 89 casas antes incompletas, en ciudades, rutas y muestras | Mundo | A | integrado, provisional | Piezas completas del pack DPPt | ⏳ | La puerta queda en la misma casilla; colores de algunas casas cambiados. Capturas antes/después |
 | 62 interiores nuevos | Interiores | A | integrado, provisional | Método de interiores existente, Akizakura16 | ⏳ | Mobiliario, dos vecinos y entrada/regreso. Una captura por interior en la comparativa |
+
+
+## Personajes · entrega 12 · gimnasios
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| `casado` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+| `messi` | Combate y mapa | A | integrado, provisional | Pokémon Iberia V2.10 | ⏳ | `personajes_entrega_12.md`; cuatro poses quietas |
+| `julian_alvarez` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+| `peter_lim` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+| `antony` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+| `jose_mota` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+| `buenafuente` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+| `berto_romero` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+| `dani_rovira` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |

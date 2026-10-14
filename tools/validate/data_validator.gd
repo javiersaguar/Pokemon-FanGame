@@ -131,10 +131,18 @@ func _check_character_art() -> void:
 		if frames.size() != 16: _error("character_art.json: %s necesita dieciséis poses de mapa." % id)
 		var regions := frames.duplicate()
 		regions.append(data.get("battle_rect", []))
-		for rect: Array in regions:
+		for index: int in regions.size():
+			var rect: Array = regions[index]
+			var region_image := image
+			if index == regions.size() - 1 and data.has("battle_atlas"):
+				var battle_path := str(data.battle_atlas)
+				if not ResourceLoader.exists(battle_path):
+					_error("character_art.json: falta la hoja de combate de %s." % id)
+					continue
+				region_image = Image.load_from_file(ProjectSettings.globalize_path(battle_path))
 			if rect.size() != 4 or float(rect[2]) <= 0 or float(rect[3]) <= 0:
 				_error("character_art.json: región inválida en %s." % id)
-			elif not Rect2(Vector2.ZERO,Vector2(image.get_size())).encloses(Rect2(float(rect[0]),float(rect[1]),float(rect[2]),float(rect[3]))):
+			elif not Rect2(Vector2.ZERO,Vector2(region_image.get_size())).encloses(Rect2(float(rect[0]),float(rect[1]),float(rect[2]),float(rect[3]))):
 				_error("character_art.json: una región de %s sale del atlas." % id)
 
 

@@ -37,6 +37,29 @@ func test_entrenador_resuelve_su_clase_en_mapa_y_combate_sin_cambiar_colocacion(
 	assert_true(actor.sprite is CharacterArtSprite)
 	assert_eq((actor.sprite as CharacterArtSprite).poses.size(),16)
 
+func test_gimnasios_resuelven_sus_personajes_propios() -> void:
+	for id: StringName in [&"casado",&"messi",&"julian_alvarez",&"peter_lim",&"antony",&"jose_mota",&"buenafuente",&"berto_romero",&"dani_rovira"]:
+		assert_eq(BattleSetup.trainer_info(id).art_id,id)
+		var actor: TrainerNPC = load("res://src/overworld/trainers/trainer_npc.tscn").instantiate()
+		actor.trainer_id = id
+		actor.sight_range = 0
+		add_child_autofree(actor)
+		assert_true(actor.sprite is CharacterArtSprite,str(id))
+		assert_eq((actor.sprite.texture as AtlasTexture).atlas.resource_path,CharacterArt.info(id).atlas)
+
+func test_messi_usa_las_dos_hojas_intactas_y_declara_sus_poses_quietas() -> void:
+	var data := CharacterArt.info(&"messi")
+	assert_eq(CharacterArt.battle_texture(&"messi").atlas.resource_path,data.battle_atlas)
+	assert_ne(data.battle_atlas,data.atlas)
+	var poses := CharacterArt.walk_frames(&"messi")
+	assert_eq(poses[0].region,poses[1].region)
+	assert_ne(poses[0].region,poses[4].region)
+	var preview := CharacterArtPreview.new()
+	preview.art_id = &"messi"
+	add_child_autofree(preview)
+	assert_false(preview.walking)
+	assert_true(preview.hint.text.contains("4 poses quietas"))
+
 func test_entrada_muestra_capa_completa_y_nadal_no_se_reduce_a_mitad() -> void:
 	var transition := BattleEntryTransition.new()
 	transition.kind = &"trainer"

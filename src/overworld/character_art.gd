@@ -26,17 +26,20 @@ static func resolve(ids: Array) -> StringName:
 		if _characters.has(str(id)): return StringName(str(id))
 	return &""
 
-static func texture(id: StringName, rect: Array) -> AtlasTexture:
+static func texture(id: StringName, rect: Array, source: String = "") -> AtlasTexture:
 	_ensure_loaded()
 	var data: Dictionary = _characters.get(String(id), {})
-	if data.is_empty() or rect.size() != 4 or not ResourceLoader.exists(str(data.get("atlas", ""))): return null
+	if data.is_empty() or rect.size() != 4: return null
+	var path := source if not source.is_empty() else str(data.get("atlas", ""))
+	if not ResourceLoader.exists(path): return null
 	var atlas := AtlasTexture.new()
-	atlas.atlas = load(str(data.atlas))
+	atlas.atlas = load(path)
 	atlas.region = Rect2(float(rect[0]),float(rect[1]),float(rect[2]),float(rect[3]))
 	return atlas
 
 static func battle_texture(id: StringName) -> AtlasTexture:
-	return texture(id, info(id).get("battle_rect", []))
+	var data := info(id)
+	return texture(id, data.get("battle_rect", []), str(data.get("battle_atlas", "")))
 
 static func walk_frames(id: StringName) -> Array[AtlasTexture]:
 	var frames: Array[AtlasTexture] = []
