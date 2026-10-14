@@ -2,7 +2,7 @@ class_name TrainerPortraits
 extends RefCounted
 ## Retratos unidos al mismo portador: entran, salen y se ocultan juntos.
 const PAIR_MAX := Vector2(112,180)
-const SEPARATION := 48.0
+const SEPARATION := (PAIR_MAX.x + 8.0) * 0.5
 
 static func configure_group(root: Sprite2D, trainers: Array, feet := false, photos := false) -> void:
 	var previous := root.get_node_or_null(^"PartnerTrainer")

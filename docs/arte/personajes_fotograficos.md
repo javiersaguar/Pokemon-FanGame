@@ -80,6 +80,21 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `willyrex` | Willyrex | integrado, provisional | [Referencia fotográfica](https://elportaldemexico.com/entretenimiento/willyrex/) |
 | `oscar_puente` | Óscar Puente | integrado, provisional | [Foto de Javier del 14 de octubre](referencias/javier_2026-10-14/oscar_puente.png) |
 
-Catálogo inicial: 73 identidades; 72 con atlas completo. Javier está pendiente de referencia personal. La galería F9 → Galería → Personajes muestra las que ya tienen atlas completo. Las apariciones reales resuelven el arte por id de entrenador o de clase; las ubicaciones de B se conservan.
+| `pablo_motos` | Pablo Motos | integrado, provisional | [Referencia fotográfica](https://www.mujerhoy.com/celebrities/pablo-motos-secretos-nino-problemas-ruina-dinero-divorcio-20241127172829-nt.html) |
+| `omar_montes` | Omar Montes | integrado, provisional | [Referencia fotográfica](https://www.letrasboom.com/letra/que-te-paso-omar-montes) |
+| `zona_gemelos_carlos` | Zona Gemelos: Carlos | integrado, provisional | [Referencia fotográfica](https://zonagemelos.tv/) |
+| `zona_gemelos_dani` | Zona Gemelos: Dani | integrado, provisional | [Referencia fotográfica](https://zonagemelos.tv/) |
+| `churumbel` | El Churumbel de Málaga | integrado, provisional | [Referencia fotográfica](https://www.telecinco.es/noticias/sociedad/20250707/detenido-churumbel-tiktoker-malagueno-amenazar-porteros-discoteca-martillo_18_016065065.html) |
+| `joan_pradells` | Joan Pradells | integrado, provisional | [Referencia fotográfica](https://www.cordobabn.com/articulo/deportes/joan-pradells/20220718103710136292.html) |
+| `jc_reyes` | JC Reyes | integrado, provisional | [Referencia fotográfica](https://los40.com/tag/juan_manuel_cortes_reyes/a/) |
+| `marc_cucurella` | Marc Cucurella | integrado, provisional | [Referencia fotográfica](https://www.ogol.com.br/jogador/marc-cucurella/436232?edicao_id=183453) |
+| `david_bisbal` | David Bisbal | integrado, provisional | [Referencia fotográfica](https://www.peakpx.com/en/hd-wallpaper-desktop-fupjl) |
+| `mente_fria` | Eduardo Gómez (Mente Fría) | integrado, provisional | [Referencia fotográfica](https://www.telecinco.es/laqueseavecina/mejores-frases-eduardo-gomez-maxi-lqsa_18_2793795020.html) |
+| `amador_rivas` | Amador Rivas | integrado, provisional | [Referencia fotográfica](https://www.dailymotion.com/video/x2upqgt) |
+| `antonio_recio` | Antonio Recio | integrado, provisional | [Referencia fotográfica](https://www.telecinco.es/laqueseavecina/temporadas/temporada-09/t09xc05/antonio-vuelve-vendiendo-segunda-internet_18_2173530190.html) |
+
+Catálogo inicial y altas del 14 de octubre: 85 identidades; 84 con atlas completo. Javier está pendiente de referencia personal. La galería F9 → Galería → Personajes muestra las que ya tienen atlas completo. Las apariciones reales resuelven el arte por id de entrenador o de clase; las ubicaciones de B se conservan.
 
 Revisión del 2026-10-14: doce diseños actualizados según fotos de Javier; comparativa [antes/después](comparativas/personajes_revision_2026-10-14.md). Peereira7 incorpora paletas y cola de castor. Sarah conserva su diseño y cabestrillo.
+
+Altas del 2026-10-14: once entradas de la petición de Javier, doce identidades al separar los dos integrantes de Zona Gemelos. Referencias individuales de Carlos/Dani verificadas en su web oficial. [Comparativas y entradas](comparativas/personajes_entrega_11.md). Sus equipos y emplazamientos aún no están decididos; disponibles en la galería F9.

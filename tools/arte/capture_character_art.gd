@@ -19,7 +19,18 @@ func _run() -> void:
 		screen.kind = &"trainer"
 		var trainers: Array = []
 		for member: String in id.split("+"):
-			trainers.append(load("res://src/battle/engine/battle_setup.gd").trainer_info(StringName(member)))
+			var member_id := StringName(member)
+			if root.get_node("DataDB").has_trainer(member_id):
+				trainers.append(load("res://src/battle/engine/battle_setup.gd").trainer_info(member_id))
+			else:
+				var art := CharacterArt.info(member_id)
+				if art.is_empty():
+					push_error("No hay entrenador ni atlas para '%s'." % member)
+					quit(1)
+					return
+				var art_name := str(art.get("name", member))
+				trainers.append({"id":member,"art_id":member,"display_name":art_name,
+					"name":art_name.trim_prefix("Zona Gemelos: ")})
 		screen.info = {"trainers":trainers}
 		root.add_child(screen)
 		screen.set_progress(0.4)

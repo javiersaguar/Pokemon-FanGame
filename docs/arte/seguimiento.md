@@ -423,3 +423,21 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/pedroche.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
 | `characters/famosos_atlas/pereira7.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
 | `characters/famosos_atlas/quevedo.png` | Combate y 16 poses | A | revisado, provisional | Foto de Javier | ⏳ | `personajes_revision_2026-10-14.md` |
+
+
+## Personajes nuevos · entrega 11
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| `characters/famosos_atlas/pablo_motos.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/omar_montes.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/zona_gemelos_carlos.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/zona_gemelos_dani.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/churumbel.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/joan_pradells.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/jc_reyes.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/marc_cucurella.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/david_bisbal.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/mente_fria.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/amador_rivas.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+| `characters/famosos_atlas/antonio_recio.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |

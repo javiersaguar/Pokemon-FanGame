@@ -80,3 +80,22 @@ func test_entrada_y_escena_doble_muestran_las_dos_identidades() -> void:
 	assert_eq(first_feet.y,partner_feet.y,"los dos apoyan los pies en la misma base")
 	scene._foe_trainer.hide()
 	assert_false(world_partner.is_visible_in_tree(),"salen juntos al sacar al Pokémon")
+
+func test_entrada_de_atlas_nuevos_tiene_espacio_sin_necesitar_equipos() -> void:
+	var transition := BattleEntryTransition.new()
+	transition.kind = &"trainer"
+	transition.info = {"trainers":[
+		{"art_id":"zona_gemelos_carlos","name":"Carlos"},
+		{"art_id":"zona_gemelos_dani","name":"Dani"}]}
+	add_child_autofree(transition)
+	transition.set_progress(0.4)
+	var first := transition._portrait
+	var partner := first.get_node(^"PartnerTrainer") as Sprite2D
+	assert_not_null(first.texture)
+	assert_not_null(partner.texture)
+	var a := first.get_global_transform() * first.get_rect()
+	var b := partner.get_global_transform() * partner.get_rect()
+	assert_false(a.intersects(b),"dos retratos anchos conservan su espacio")
+	assert_gte(a.position.x,0.0)
+	assert_lte(b.end.x,512.0)
+	assert_true(transition._title.text.contains("Carlos") and transition._title.text.contains("Dani"))
