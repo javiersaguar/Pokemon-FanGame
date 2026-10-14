@@ -48,7 +48,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1599778075]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAEABIACAAFAB0AAAARABIACAAkABUAAAAEAB0AAwAAAAAAAAAYABIABgAOAAAAAAABAAwABwAAAAAAAAACAAwABAAGAAAAAAADAAwABwACAAAAAAAJAAwABwAAAAAAAAAKAAwABwACAAAAAAARABoABwAAAAAAAAASABoABwACAAAAAAAPAB8ACQACAAAAAAARACIABwABAAAAAAARACQABwABAAAAAAAgACIABwABAAAAAAAgACQABwABAAAAAAAcAAoAZgAAAAAAAAAXAAYAUwAAAAAAAAAsAAgAUwAAAAAAAAAsABAABAAGAAAAAAA=")
+tile_map_data = PackedByteArray("AAAEABIAfgEAAAAAAAARABIACAAkABUAAAAEAB0AfgEAAAAAAAAYABIABgAOAAAAAAABAAwABwAAAAAAAAACAAwABAAGAAAAAAADAAwABwACAAAAAAAJAAwABwAAAAAAAAAKAAwABwACAAAAAAARABoABwAAAAAAAAASABoABwACAAAAAAAPAB8ACQACAAAAAAARACIABwABAAAAAAARACQABwABAAAAAAAgACIABwABAAAAAAAgACQABwABAAAAAAAcAAoAZgAAAAAAAAAXAAYAUwAAAAAAAAAsAAgAUwAAAAAAAAAsABAABAAGAAAAAAA=")
 tile_set = ExtResource("4_b45sb")
 
 [node name="CartelRocafonda" type="Node2D" parent="Entities" unique_id=208479480 instance=ExtResource("5_vvbce")]
@@ -129,9 +129,9 @@ tile_set = ExtResource("4_b45sb")
 [node name="Warps" type="Node2D" parent="." unique_id=1800295554]
 
 [node name="Sala5_17" type="Node2D" parent="Warps" unique_id=102594986]
-position = Vector2(176, 560)
+position = Vector2(208, 592)
 script = ExtResource("14_t1he3")
-target_map = &"rocafonda/sala_calle_5_17"
+target_map = &"rocafonda/ruinas"
 arrival_facing = 4
 
 [node name="Sala20_18" type="Node2D" parent="Warps" unique_id=1979922676]
@@ -141,9 +141,9 @@ target_map = &"rocafonda/sala_calle_20_18"
 arrival_facing = 4
 
 [node name="Sala6_28" type="Node2D" parent="Warps" unique_id=1708470328]
-position = Vector2(208, 912)
+position = Vector2(208, 944)
 script = ExtResource("14_t1he3")
-target_map = &"rocafonda/sala_calle_6_28"
+target_map = &"rocafonda/ruinas_2"
 arrival_facing = 4
 
 [node name="Sala25_17" type="Node2D" parent="Warps" unique_id=1032634935]
@@ -167,13 +167,13 @@ position = Vector2(80, 688)
 position = Vector2(16, 688)
 
 [node name="from_sala_5_17" type="Marker2D" parent="Spawns" unique_id=63551355]
-position = Vector2(176, 592)
+position = Vector2(208, 624)
 
 [node name="from_sala_20_18" type="Marker2D" parent="Spawns" unique_id=1008778483]
 position = Vector2(656, 624)
 
 [node name="from_sala_6_28" type="Marker2D" parent="Spawns" unique_id=1928965419]
-position = Vector2(208, 944)
+position = Vector2(208, 976)
 
 [node name="from_sala_25_17" type="Marker2D" parent="Spawns" unique_id=1025204416]
 position = Vector2(816, 592)

@@ -70,7 +70,7 @@ func _paint() -> Pintor:
 	p.object(&"teatro", Vector2i(31, 29))
 	p.object(&"tienda_azul", Vector2i(38, 29))
 	# Al sur, sobre el agua: el Centro Botín y Puertochico.
-	p.object(&"palau_arts", Vector2i(20, 39))
+	p.object(&"centro_botin", Vector2i(20, 37))
 	p.object(&"barca_albufera", Vector2i(4, 46))
 	p.object(&"barca_albufera", Vector2i(36, 47))
 	p.object(&"farola_verde", Vector2i(12, 35))

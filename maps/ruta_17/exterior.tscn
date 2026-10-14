@@ -53,7 +53,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=767691443]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAeAAcAXwEAAAAAAAAZAA0ACAAUABUAAAAiAA0ACAApABUAAAAEABkABgAjAAAAAAAKABkABgAeAAAAAAAuACYABgAOAAAAAAAaACcAOAAAAAAAAAAOABMABAAGAAAAAAAkABQABAAGAAAAAAAwAAYABAAGAAAAAAA4ACYABAAGAAAAAAACABQABAAGAAAAAAAuABsABAASAAAAAAA=")
+tile_map_data = PackedByteArray("AAAeAAcAXwEAAAAAAAAZAA0ACAAUABUAAAAiAA0ACAApABUAAAAEABkABgAjAAAAAAAKABkAewEAAAAAAAAuACYABgAOAAAAAAAaACcAOAAAAAAAAAAOABMABAAGAAAAAAAkABQABAAGAAAAAAAwAAYABAAGAAAAAAA4ACYABAAGAAAAAAACABQABAAGAAAAAAAuABsABAASAAAAAAA=")
 tile_set = ExtResource("4_1ov7v")
 
 [node name="CartelSur" type="Node2D" parent="Entities" unique_id=1275854833 instance=ExtResource("5_8pwbr")]
@@ -162,9 +162,9 @@ target_map = &"ruta_17/sala_calle_5_24"
 arrival_facing = 4
 
 [node name="Sala11_24" type="Node2D" parent="Warps" unique_id=1286691975]
-position = Vector2(368, 784)
+position = Vector2(368, 816)
 script = ExtResource("14_au52y")
-target_map = &"ruta_17/sala_calle_11_24"
+target_map = &"ruta_17/horreo"
 arrival_facing = 4
 
 [node name="Sala47_37" type="Node2D" parent="Warps" unique_id=651005101]
@@ -197,7 +197,7 @@ position = Vector2(1200, 464)
 position = Vector2(176, 816)
 
 [node name="from_sala_11_24" type="Marker2D" parent="Spawns" unique_id=1506045332]
-position = Vector2(368, 816)
+position = Vector2(368, 848)
 
 [node name="from_sala_47_37" type="Marker2D" parent="Spawns" unique_id=1881396653]
 position = Vector2(1520, 1232)

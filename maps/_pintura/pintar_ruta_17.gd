@@ -80,9 +80,9 @@ func _paint() -> Pintor:
 	p.object(&"casa_rosa", Vector2i(34, 13))
 	p.flowers(Rect2i(27, 4, 3, 2))
 
-	# Casas de labranza con su hórreo (el granero hace de hórreo hasta que haya pieza propia).
+	# Casas de labranza y el hórreo propio (horreo.px2).
 	p.object(&"casa_dos_aguas", Vector2i(4, 25))
-	p.object(&"casa_granero", Vector2i(10, 25))
+	p.object(&"horreo", Vector2i(10, 25))
 	p.object(&"casa_madera", Vector2i(46, 38))
 	# Arteixo: la nave de Inditex, al otro lado del río.
 	p.object(&"nave_logistica", Vector2i(26, 39))

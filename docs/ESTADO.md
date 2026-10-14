@@ -510,6 +510,24 @@ Main `47ca2f19` incorporado; Móstoles y las pasarelas C-5 se conservan. **Prime
 
 ## Agente 5 — Calidad y motor de combate (desde el 2026-10-07)
 
+### Piezas propias de los hitos prestados (2026-10-14)
+
+Sustituidas en el mapa, sin repintar (las demás puertas se quedan):
+
+- **Guggenheim con Puppy** (`guggenheim.px2`, fuente 377) en Bilbao, donde estaba el museo de Valencia. Tres salas: atrio, sala grande y rampa.
+- **Centro Botín** (`centro_botin.px2`, fuente 378) en Santander, un poco más al norte para que la puerta no caiga en la bahía. Dos salas.
+- **San Mamés:** la pieza 376, redibujada con fachada de láminas y grada rojiblanca. La puerta del gimnasio no se mueve.
+- **Hórreo** (`horreo.px2`, fuente 379) en la Ruta 17, en el sitio del granero. Una sala baja.
+- **Basílica de Covadonga** (`basilica_covadonga.px2`, fuente 380) en la Ruta 18, al pie de los Picos. Nave y cueva.
+- **Café Iruña** (`cafe_iruna.px2`, fuente 381) en la plaza del Castillo. Barra y comedor.
+- **Ruinas de Rocafonda** (`ruinas_rocafonda.px2`, fuente 382): dos casas del barrio. Una sala cada una. La mansión de Lamine no se toca.
+
+Alcance 0 problemas en esos exteriores y en las salas nuevas. El arte y los textos son provisionales.
+
+### Animación propia para cada movimiento (2026-10-14)
+
+Encargo de Javier. Los **951 movimientos** tienen secuencia propia: 38 a mano (anteriores), **457 traducidas de las animaciones originales de Elite Battle DX** (pack 17: gráficos, recortes, partículas, trayectoria, fondo, tinte del objetivo, temblor y duración) y **456 armadas con sus datos** (tipo, categoría, objetivo, contacto, puño, mordisco, corte, sonido, viento, curación, subidas). Herramienta: `tools/arte/animaciones_movimientos.py <recursos>`; 273 gráficos nuevos del pack, sin modificar, con su sha256. El motor admite fondo de ataque (color o imagen de 512×384), tinte y temblor del objetivo en píxeles pares. Tests: `tests/ui/test_battle_motion.gd` (todas las fichas válidas y el fondo, tinte y temblor terminan limpios). Capturas: `tools/arte/capturar_movimientos.tscn`, [comparativa](arte/comparativas/movimientos_2026-10-14.md). **Provisional:** es una traducción a los patrones del juego, no fotograma a fotograma; los hechos por datos se parecen dentro de un tipo; sin sonidos de EBDX todavía.
+
 ### El norte y los viajes (2026-10-14)
 
 Encargo de Javier: rutas que interconecten todo el mapa, el avión a Canarias y los viajes en ferry.
@@ -523,7 +541,7 @@ Encargo de Javier: rutas que interconecten todo el mapa, el avión a Canarias y 
 - **AVE:** estaciones de Atocha, Campo Grande y María Zambrano con andenes, y cuatro trenes (Madrid ⇄ Valladolid, Madrid ⇄ Málaga) con el mismo viaje que el ferry; cada andén abre al haber estado en el destino. Se aprovechan los interiores que ya tenían esos edificios, así que las puertas de la calle no cambian.
 - **Rocafonda (Mataró):** nuevo mapa al este del Eixample con el barrio, el campo de los niños, la mansión de Lamine (que se muda allí desde Les Corts) y su abuela (`abuela` provisional hasta que el agente de sprites entregue la suya). El mundo queda en **898 mapas, un grupo**.
 - **Ciudades del norte más llenas:** `maps/_tools/detallar_ciudades.gd` (el mismo del tejido urbano) añade a Santander, Bilbao y Pamplona viviendas, bancos, farolas, jardineras, árboles y vecinos que pasean, con sus interiores; las barcas de Santander y Castro Urdiales ya no tienen puerta (el velero del pack la tenía y quedaba un interior inalcanzable sobre el agua).
-- **Provisional / pendiente de Javier:** todo el arte (el Guggenheim y el Centro Botín usan piezas de edificio moderno de otra ciudad; los hórreos, el granero), los textos de carteles y entrenadores, el billete del ferry como objeto clave (no se pide) y el encierro de San Fermín.
+- **Provisional / pendiente de Javier:** el arte de estas piezas (ya no son prestadas: Guggenheim, Botín, San Mamés, hórreo, Covadonga, Café Iruña y las ruinas), los textos de carteles y entrenadores, el billete del ferry como objeto clave (no se pide) y el encierro de San Fermín.
 
 ### Los ocho gimnasios por dentro (2026-10-14)
 

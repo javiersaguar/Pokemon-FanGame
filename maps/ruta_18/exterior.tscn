@@ -52,7 +52,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1911942170]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAqAAwAFAAAAAAAAAATABMACAAUABUAAAAaABMABgAeAAAAAAAsABMABgAeAAAAAAAfABIABAAGAAAAAAA0AB8ABAAGAAAAAAAgAB4ABAANAAAAAAAiABwABAANAAAAAAA=")
+tile_map_data = PackedByteArray("AAAqAAwA//////////8TABMACAAUABUAAAAaABMABgAeAAAAAAAsABMABgAeAAAAAAAfABIABAAGAAAAAAA0AB8ABAAGAAAAAAAgAB4ABAANAAAAAAAiABwABAANAAAAAAAkABMAfAEAAAAAAAA=")
 tile_set = ExtResource("4_qojtv")
 
 [node name="CartelOeste" type="Node2D" parent="Entities" unique_id=1455716843 instance=ExtResource("5_b3ynm")]
@@ -138,9 +138,9 @@ tile_set = ExtResource("4_qojtv")
 [node name="Warps" type="Node2D" parent="." unique_id=323124791]
 
 [node name="Sala45_12" type="Node2D" parent="Warps" unique_id=1177879307]
-position = Vector2(1456, 400)
+position = Vector2(1232, 624)
 script = ExtResource("14_sncrd")
-target_map = &"ruta_18/sala_calle_45_12"
+target_map = &"ruta_18/covadonga"
 arrival_facing = 4
 
 [node name="Sala21_18" type="Node2D" parent="Warps" unique_id=3925861]
@@ -173,7 +173,7 @@ position = Vector2(16, 304)
 position = Vector2(2288, 688)
 
 [node name="from_sala_45_12" type="Marker2D" parent="Spawns" unique_id=432885607]
-position = Vector2(1456, 432)
+position = Vector2(1232, 656)
 
 [node name="from_sala_21_18" type="Marker2D" parent="Spawns" unique_id=1382416178]
 position = Vector2(688, 624)

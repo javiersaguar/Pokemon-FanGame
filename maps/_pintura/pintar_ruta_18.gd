@@ -74,7 +74,7 @@ func _paint() -> Pintor:
 	p.snow(Rect2i(31, 0, 8, 6))
 	p.forest(Rect2i(32, 0, 6, 4), true)
 	p.terrain(rects([Rect2i(22, 8, 7, 4)]), ExteriorTiles.TERRAIN_TALL_GRASS)
-	p.object(&"iglesia_san_miguel", Vector2i(42, 12))
+	p.object(&"basilica_covadonga", Vector2i(36, 19))
 
 	# El pueblo de la sidrería, junto al camino.
 	p.object(&"casa_teja", Vector2i(19, 19))

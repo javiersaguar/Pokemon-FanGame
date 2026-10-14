@@ -74,7 +74,7 @@ func _paint() -> Pintor:
 	p.object(&"arbol_redondo", Vector2i(55, 10))
 
 	# Junto a la ría: el Guggenheim (provisional, con pieza de museo moderno) y Puppy, la torre, el Arriaga.
-	p.object(&"museu_ciencies", Vector2i(3, 28))
+	p.object(&"guggenheim", Vector2i(3, 28))
 	p.flowers(Rect2i(18, 26, 3, 3))
 	p.object(&"edificio_cristal", Vector2i(25, 27))
 	p.object(&"bloque_verde", Vector2i(35, 27))

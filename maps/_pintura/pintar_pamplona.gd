@@ -72,7 +72,7 @@ func _paint() -> Pintor:
 	for x: int in [4, 8, 12, 16]:
 		p.object(&"soportales", Vector2i(x, 29))
 	p.object(&"fuente_plaza", Vector2i(23, 27))
-	p.object(&"casa_panaderia", Vector2i(36, 29))
+	p.object(&"cafe_iruna", Vector2i(36, 29))
 	p.object(&"casa_rosa", Vector2i(50, 29))
 	p.object(&"casa_roja_pequena", Vector2i(56, 29))
 	# La calle Estafeta baja hasta la plaza de toros.

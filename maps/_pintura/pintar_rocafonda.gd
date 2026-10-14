@@ -59,9 +59,9 @@ func _paint() -> Pintor:
 	]), ExteriorTiles.TERRAIN_TALL_GRASS)
 
 	# Las casas del barrio: pocas y algo derruidas (escombros, vallas rotas, tocones).
-	p.object(&"casa_gris", Vector2i(4, 18))
+	p.object(&"ruinas_rocafonda", Vector2i(4, 18))
 	p.object(&"casa_roja_pequena", Vector2i(17, 18))
-	p.object(&"casa_pequena", Vector2i(4, 29))
+	p.object(&"ruinas_rocafonda", Vector2i(4, 29))
 	p.object(&"casa_azul_pequena", Vector2i(24, 18))
 	for at: Vector2i in [Vector2i(10, 17), Vector2i(11, 18), Vector2i(3, 24), Vector2i(16, 26), Vector2i(27, 25), Vector2i(10, 27)]:
 		p.deco(at, ExteriorTiles.ROCK_BROWN)
