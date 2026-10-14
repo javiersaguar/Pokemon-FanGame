@@ -1,96 +1,100 @@
 {
  "alicante/exterior": {
-  "casas": 0,
-  "adornos": 39,
-  "vecinos": 4,
-  "paseo": 344,
-  "interiores": []
+  "adornos": 39.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 344.0,
+  "vecinos": 4.0
  },
  "barcelona/ciutat_vella": {
-  "casas": 2,
-  "adornos": 39,
-  "vecinos": 4,
-  "paseo": 264,
+  "adornos": 39.0,
+  "casas": 2.0,
   "interiores": [
    "barcelona/sala_ciutat_vella_13_36",
    "barcelona/sala_ciutat_vella_49_41"
-  ]
+  ],
+  "paseo": 264.0,
+  "vecinos": 4.0
  },
  "barcelona/eixample": {
-  "casas": 4,
-  "adornos": 39,
-  "vecinos": 4,
-  "paseo": 392,
+  "adornos": 39.0,
+  "casas": 4.0,
   "interiores": [
    "barcelona/sala_eixample_25_6",
    "barcelona/sala_eixample_33_7",
    "barcelona/sala_eixample_15_50",
    "barcelona/sala_eixample_33_53"
-  ]
+  ],
+  "paseo": 392.0,
+  "vecinos": 4.0
  },
  "barcelona/les_corts": {
-  "casas": 3,
-  "adornos": 27,
-  "vecinos": 2,
-  "paseo": 219,
+  "adornos": 27.0,
+  "casas": 3.0,
   "interiores": [
    "barcelona/sala_les_corts_53_6",
    "barcelona/sala_les_corts_21_23",
    "barcelona/sala_les_corts_53_22"
-  ]
+  ],
+  "paseo": 219.0,
+  "vecinos": 2.0
+ },
+ "bilbao/exterior": {
+  "adornos": 36.0,
+  "casas": 4.0,
+  "paseo": 218.0,
+  "vecinos": 4.0
  },
  "getafe/exterior": {
-  "casas": 2,
-  "adornos": 37,
-  "vecinos": 4,
-  "paseo": 327,
+  "adornos": 37.0,
+  "casas": 2.0,
   "interiores": [
    "getafe/sala_calle_51_6",
    "getafe/sala_calle_59_7"
-  ]
+  ],
+  "paseo": 327.0,
+  "vecinos": 4.0
  },
  "huelva/exterior": {
-  "casas": 1,
-  "adornos": 27,
-  "vecinos": 2,
-  "paseo": 182,
+  "adornos": 27.0,
+  "casas": 1.0,
   "interiores": [
    "huelva/sala_calle_53_17"
-  ]
+  ],
+  "paseo": 182.0,
+  "vecinos": 2.0
  },
  "ibiza/exterior": {
-  "casas": 2,
-  "adornos": 32,
-  "vecinos": 4,
-  "paseo": 238,
+  "adornos": 32.0,
+  "casas": 2.0,
   "interiores": [
    "ibiza/sala_calle_45_22",
    "ibiza/sala_calle_37_41"
-  ]
+  ],
+  "paseo": 238.0,
+  "vecinos": 4.0
  },
  "las_palmas/canteras": {
-  "casas": 0,
-  "adornos": 24,
-  "vecinos": 2,
-  "paseo": 128,
-  "interiores": []
+  "adornos": 24.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 128.0,
+  "vecinos": 2.0
  },
  "las_palmas/vegueta_triana": {
-  "casas": 3,
-  "adornos": 24,
-  "vecinos": 2,
-  "paseo": 234,
+  "adornos": 24.0,
+  "casas": 3.0,
   "interiores": [
    "las_palmas/sala_vegueta_triana_39_22",
    "las_palmas/sala_vegueta_triana_31_27",
    "las_palmas/sala_vegueta_triana_18_30"
-  ]
+  ],
+  "paseo": 234.0,
+  "vecinos": 2.0
  },
  "leganes/exterior": {
-  "casas": 6,
-  "adornos": 32,
-  "vecinos": 4,
-  "paseo": 221,
+  "adornos": 32.0,
+  "casas": 6.0,
   "interiores": [
    "leganes/sala_calle_53_6",
    "leganes/sala_calle_15_29",
@@ -98,50 +102,50 @@
    "leganes/sala_calle_44_37",
    "leganes/sala_calle_51_36",
    "leganes/sala_calle_59_37"
-  ]
+  ],
+  "paseo": 221.0,
+  "vecinos": 4.0
  },
  "madrid/centro": {
-  "casas": 0,
-  "adornos": 30,
-  "vecinos": 4,
-  "paseo": 479,
-  "interiores": []
+  "adornos": 30.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 479.0,
+  "vecinos": 4.0
  },
  "madrid/chamberi": {
-  "casas": 0,
-  "adornos": 19,
-  "vecinos": 2,
-  "paseo": 271,
-  "interiores": []
+  "adornos": 19.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 271.0,
+  "vecinos": 2.0
  },
  "madrid/moncloa": {
-  "casas": 1,
-  "adornos": 30,
-  "vecinos": 2,
-  "paseo": 309,
+  "adornos": 30.0,
+  "casas": 1.0,
   "interiores": [
    "madrid/sala_moncloa_29_32"
-  ]
+  ],
+  "paseo": 309.0,
+  "vecinos": 2.0
  },
  "madrid/retiro": {
-  "casas": 0,
-  "adornos": 39,
-  "vecinos": 2,
-  "paseo": 292,
-  "interiores": []
+  "adornos": 39.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 292.0,
+  "vecinos": 2.0
  },
  "madrid_rio/exterior": {
-  "casas": 0,
-  "adornos": 11,
-  "vecinos": 2,
-  "paseo": 53,
-  "interiores": []
+  "adornos": 11.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 53.0,
+  "vecinos": 2.0
  },
  "malaga/exterior": {
-  "casas": 6,
-  "adornos": 48,
-  "vecinos": 4,
-  "paseo": 436,
+  "adornos": 48.0,
+  "casas": 6.0,
   "interiores": [
    "malaga/sala_calle_3_6",
    "malaga/sala_calle_31_7",
@@ -149,66 +153,79 @@
    "malaga/sala_calle_80_9",
    "malaga/sala_calle_87_8",
    "malaga/sala_calle_5_13"
-  ]
+  ],
+  "paseo": 436.0,
+  "vecinos": 4.0
  },
  "mostoles/exterior": {
-  "casas": 4,
-  "adornos": 32,
-  "vecinos": 4,
-  "paseo": 279,
+  "adornos": 32.0,
+  "casas": 4.0,
   "interiores": [
    "mostoles/sala_calle_11_6",
    "mostoles/sala_calle_47_15",
    "mostoles/sala_calle_32_48",
    "mostoles/sala_calle_7_34"
-  ]
+  ],
+  "paseo": 279.0,
+  "vecinos": 4.0
  },
  "murcia/exterior": {
-  "casas": 0,
-  "adornos": 36,
-  "vecinos": 4,
-  "paseo": 352,
-  "interiores": []
+  "adornos": 36.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 352.0,
+  "vecinos": 4.0
  },
  "orcasitas/exterior": {
-  "casas": 0,
-  "adornos": 14,
-  "vecinos": 2,
-  "paseo": 92,
-  "interiores": []
+  "adornos": 14.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 92.0,
+  "vecinos": 2.0
  },
  "palma/exterior": {
-  "casas": 3,
-  "adornos": 36,
-  "vecinos": 4,
-  "paseo": 280,
+  "adornos": 36.0,
+  "casas": 3.0,
   "interiores": [
    "palma/sala_calle_19_6",
    "palma/sala_calle_57_21",
    "palma/sala_calle_3_38"
-  ]
+  ],
+  "paseo": 280.0,
+  "vecinos": 4.0
+ },
+ "pamplona/exterior": {
+  "adornos": 32.0,
+  "casas": 2.0,
+  "paseo": 202.0,
+  "vecinos": 4.0
  },
  "playa_del_ingles/exterior": {
-  "casas": 0,
-  "adornos": 30,
-  "vecinos": 2,
-  "paseo": 148,
-  "interiores": []
+  "adornos": 30.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 148.0,
+  "vecinos": 2.0
  },
  "pozuelo/exterior": {
-  "casas": 1,
-  "adornos": 14,
-  "vecinos": 2,
-  "paseo": 99,
+  "adornos": 14.0,
+  "casas": 1.0,
   "interiores": [
    "pozuelo/sala_calle_17_23"
-  ]
+  ],
+  "paseo": 99.0,
+  "vecinos": 2.0
+ },
+ "pueblo_inicial/exterior": {
+  "adornos": 9.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 223.0,
+  "vecinos": 2.0
  },
  "puertollano/exterior": {
-  "casas": 6,
-  "adornos": 41,
-  "vecinos": 4,
-  "paseo": 392,
+  "adornos": 41.0,
+  "casas": 6.0,
   "interiores": [
    "puertollano/sala_calle_51_6",
    "puertollano/sala_calle_59_7",
@@ -216,100 +233,101 @@
    "puertollano/sala_calle_38_13",
    "puertollano/sala_calle_61_16",
    "puertollano/sala_calle_37_21"
-  ]
+  ],
+  "paseo": 392.0,
+  "vecinos": 4.0
+ },
+ "santander/exterior": {
+  "adornos": 26,
+  "casas": 1,
+  "paseo": 97,
+  "vecinos": 2
  },
  "sevilla/centro": {
-  "casas": 2,
-  "adornos": 32,
-  "vecinos": 4,
-  "paseo": 396,
+  "adornos": 32.0,
+  "casas": 2.0,
   "interiores": [
    "sevilla/sala_centro_27_6",
    "sevilla/sala_centro_45_49"
-  ]
+  ],
+  "paseo": 396.0,
+  "vecinos": 4.0
  },
  "sevilla/maria_luisa": {
-  "casas": 0,
-  "adornos": 5,
-  "vecinos": 1,
-  "paseo": 17,
-  "interiores": []
+  "adornos": 5.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 17.0,
+  "vecinos": 1.0
  },
  "sevilla/rio": {
-  "casas": 0,
-  "adornos": 28,
-  "vecinos": 2,
-  "paseo": 366,
-  "interiores": []
+  "adornos": 28.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 366.0,
+  "vecinos": 2.0
  },
  "valencia/ciutat_vella": {
-  "casas": 3,
-  "adornos": 32,
-  "vecinos": 4,
-  "paseo": 317,
+  "adornos": 32.0,
+  "casas": 3.0,
   "interiores": [
    "valencia/sala_ciutat_vella_21_16",
    "valencia/sala_ciutat_vella_41_25",
    "valencia/sala_ciutat_vella_35_36"
-  ]
+  ],
+  "paseo": 317.0,
+  "vecinos": 4.0
  },
  "valencia/malvarrosa": {
-  "casas": 3,
-  "adornos": 30,
-  "vecinos": 4,
-  "paseo": 191,
+  "adornos": 30.0,
+  "casas": 3.0,
   "interiores": [
    "valencia/sala_malvarrosa_3_44",
    "valencia/sala_malvarrosa_23_45",
    "valencia/sala_malvarrosa_27_44"
-  ]
+  ],
+  "paseo": 191.0,
+  "vecinos": 4.0
  },
  "valencia/turia": {
-  "casas": 0,
-  "adornos": 25,
-  "vecinos": 2,
-  "paseo": 81,
-  "interiores": []
+  "adornos": 25.0,
+  "casas": 0.0,
+  "interiores": [],
+  "paseo": 81.0,
+  "vecinos": 2.0
  },
  "valladolid/exterior": {
-  "casas": 2,
-  "adornos": 41,
-  "vecinos": 4,
-  "paseo": 306,
+  "adornos": 41.0,
+  "casas": 2.0,
   "interiores": [
    "valladolid/sala_calle_3_6",
    "valladolid/sala_calle_49_47"
-  ]
+  ],
+  "paseo": 306.0,
+  "vecinos": 4.0
  },
  "vigo/exterior": {
-  "casas": 3,
-  "adornos": 23,
-  "vecinos": 2,
-  "paseo": 181,
+  "adornos": 23.0,
+  "casas": 3.0,
   "interiores": [
    "vigo/sala_calle_3_6",
    "vigo/sala_calle_11_7",
    "vigo/sala_calle_16_8"
-  ]
+  ],
+  "paseo": 181.0,
+  "vecinos": 2.0
  },
  "zaragoza/exterior": {
-  "casas": 5,
-  "adornos": 37,
-  "vecinos": 4,
-  "paseo": 282,
+  "adornos": 37.0,
+  "casas": 5.0,
   "interiores": [
    "zaragoza/sala_calle_7_20",
    "zaragoza/sala_calle_39_21",
    "zaragoza/sala_calle_58_22",
    "zaragoza/sala_calle_3_36",
    "zaragoza/sala_calle_13_39"
-  ]
- },
- "pueblo_inicial/exterior": {
-  "casas": 0,
-  "adornos": 9,
-  "vecinos": 2,
-  "paseo": 223,
-  "interiores": []
+  ],
+  "paseo": 282.0,
+  "vecinos": 4.0
  }
 }

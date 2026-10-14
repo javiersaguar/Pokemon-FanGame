@@ -71,7 +71,7 @@ func _paint() -> Pintor:
 	p.object(&"faro", Vector2i(30, 9))
 	p.object(&"casa_azul_pequena", Vector2i(51, 18))
 	p.object(&"casa_naranja", Vector2i(46, 19))
-	p.object(&"velero", Vector2i(48, 6))
+	p.object(&"barca_albufera", Vector2i(48, 6))
 	p.forest(Rect2i(0, 32, 56, 4))
 	p.forest(Rect2i(0, 16, 14, 6))
 	p.build_forest()

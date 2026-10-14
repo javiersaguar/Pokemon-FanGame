@@ -71,8 +71,8 @@ func _paint() -> Pintor:
 	p.object(&"tienda_azul", Vector2i(38, 29))
 	# Al sur, sobre el agua: el Centro Botín y Puertochico.
 	p.object(&"palau_arts", Vector2i(20, 39))
-	p.object(&"velero", Vector2i(4, 46))
-	p.object(&"velero", Vector2i(36, 47))
+	p.object(&"barca_albufera", Vector2i(4, 46))
+	p.object(&"barca_albufera", Vector2i(36, 47))
 	p.object(&"farola_verde", Vector2i(12, 35))
 	p.object(&"farola_verde", Vector2i(34, 35))
 	p.object(&"banco", Vector2i(6, 35))
