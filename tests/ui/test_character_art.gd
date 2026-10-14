@@ -38,7 +38,7 @@ func test_entrenador_resuelve_su_clase_en_mapa_y_combate_sin_cambiar_colocacion(
 	assert_eq((actor.sprite as CharacterArtSprite).poses.size(),16)
 
 func test_gimnasios_resuelven_sus_personajes_propios() -> void:
-	for id: StringName in [&"casado",&"messi",&"julian_alvarez",&"peter_lim",&"antony",&"jose_mota",&"buenafuente",&"berto_romero",&"dani_rovira"]:
+	for id: StringName in [&"casado",&"messi",&"julian_alvarez",&"peter_lim",&"antony",&"jose_mota",&"buenafuente",&"berto_romero",&"dani_rovira",&"la_pantera",&"lucho_rk",&"cruz_cafune",&"otegi",&"ronaldo_nazario",&"torrente",&"penelope_cruz",&"javier_bardem"]:
 		assert_eq(BattleSetup.trainer_info(id).art_id,id)
 		var actor: TrainerNPC = load("res://src/overworld/trainers/trainer_npc.tscn").instantiate()
 		actor.trainer_id = id

@@ -113,3 +113,17 @@ Altas del 2026-10-14: once entradas de la petición de Javier, doce identidades 
 | Andreu Buenafuente | `buenafuente` | `famosos_atlas/buenafuente.png` | https://www.planetadelibros.com.pe/autor/andreu-buenafuente/000000264 | Integrado, provisional |
 | Berto Romero | `berto_romero` | `famosos_atlas/berto_romero.png` | https://elpais.com/elpais/2020/08/18/eps/1597746480_231088.html | Integrado, provisional |
 | Dani Rovira | `dani_rovira` | `famosos_atlas/dani_rovira.png` | https://www.huffingtonpost.es/virales/le-dicen-dani-rovira-vale-actor-hablar-politica-replica-goya.html | Integrado, provisional |
+
+## Gimnasios · Entrega 13
+
+| Personaje | Referencias | Vista | Estado |
+| --- | --- | --- | --- |
+| La Pantera (`la_pantera`) | [Referencia 1](https://www.laprovincia.es/con-estilo/2024/10/31/pantera-inicia-primer-disco-solitario-111040289.amp.html) | [Combate](comparativas/personaje_la_pantera_entrada.png) y [mapa](comparativas/personaje_la_pantera.png) | Provisional, pendiente de Javier |
+| Lucho RK (`lucho_rk`) | [Referencia 1](https://www.santiagoturismo.com/axenda-cultural/lucho-rk) | [Combate](comparativas/personaje_lucho_rk_entrada.png) y [mapa](comparativas/personaje_lucho_rk.png) | Provisional, pendiente de Javier |
+| Cruz Cafuné (`cruz_cafune`) | [Referencia 1](https://www.visitfuerteventura.com/en/events/fuerteventura/cruz-cafune-en-concierto/) | [Combate](comparativas/personaje_cruz_cafune_entrada.png) y [mapa](comparativas/personaje_cruz_cafune.png) | Provisional, pendiente de Javier |
+| Arnaldo Otegi (`otegi`) | [Referencia 1](https://cadenaser.com/euskadi/2024/03/26/otegi-reivindica-la-independencia-del-pais-vasco-sin-ansia-ni-prisa-radio-san-sebastian/) | [Combate](comparativas/personaje_otegi_entrada.png) y [mapa](comparativas/personaje_otegi.png) | Provisional, pendiente de Javier |
+| Ronaldo Nazário (`ronaldo_nazario`) | [Referencia 1](https://www.uol.com.br/esporte/colunas/milton-neves/2024/11/22/ronaldo-fenomeno-na-cbf-ele-teria-o-meu-voto.htm) | [Combate](comparativas/personaje_ronaldo_nazario_entrada.png) y [mapa](comparativas/personaje_ronaldo_nazario.png) | Provisional, pendiente de Javier |
+| Torrente (`torrente`) | [Referencia 1](https://www.elblogdecineespanol.com/?p=77404) | [Combate](comparativas/personaje_torrente_entrada.png) y [mapa](comparativas/personaje_torrente.png) | Provisional, pendiente de Javier |
+| Penélope Cruz (`penelope_cruz`) | [Referencia 1](https://www.hola.com/belleza/20240426252727/penelope-cruz-cumpleanos-50-cambios-look-peinados/) | [Combate](comparativas/personaje_penelope_cruz_entrada.png) y [mapa](comparativas/personaje_penelope_cruz.png) | Provisional, pendiente de Javier |
+| Javier Bardem (`javier_bardem`) | [Referencia 1](https://elpais.com/diario/2008/06/19/cultura/1213826405_850215.html) | [Combate](comparativas/personaje_javier_bardem_entrada.png) y [mapa](comparativas/personaje_javier_bardem.png) | Provisional, pendiente de Javier |
+| Abuela de Lamine (`abuela_lamine`) | [Referencia 1](https://www.antena3.com/programas/espejo-publico/noticias/fatima-abuela-lamine-yamal-habla-amenazas-que-reciben-quieren-matarme-estoy-aqui_2024091866ead680fcf7b3000138ae67.html); [Referencia 2](https://www.skynewsarabia.com/varieties/1728489) | [Combate](comparativas/personaje_abuela_lamine_entrada.png) y [mapa](comparativas/personaje_abuela_lamine.png) | Provisional, pendiente de Javier |

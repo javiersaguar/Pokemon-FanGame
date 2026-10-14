@@ -465,3 +465,17 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `buenafuente` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
 | `berto_romero` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
 | `dani_rovira` | Combate y mapa | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_12.md`; dieciséis poses |
+
+## Gimnasios · Entrega 13
+
+| Personaje | Recurso | Revisión | Estado |
+| --- | --- | --- | --- |
+| La Pantera (`la_pantera`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Lucho RK (`lucho_rk`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Cruz Cafuné (`cruz_cafune`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Arnaldo Otegi (`otegi`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Ronaldo Nazário (`ronaldo_nazario`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Torrente (`torrente`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Penélope Cruz (`penelope_cruz`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Javier Bardem (`javier_bardem`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+| Abuela de Lamine (`abuela_lamine`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
