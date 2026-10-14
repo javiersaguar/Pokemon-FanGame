@@ -84,7 +84,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.sprinkle(Rect2i(0, 0, 18, 40), 0.05, [ExteriorTiles.TUFT, ExteriorTiles.WHITE_FLOWERS])
 
 	# --- Pasarela del ferry a Barcelona ---
-	p.warp("FerryBarcelona", Vector2i(10, 45), &"barcelona/ciutat_vella", &"from_ferry", &"")
+	p.warp("FerryBarcelona", Vector2i(10, 45), &"transporte/ferry_palma_barcelona", &"default", &"")
 
 	# --- Carteles ---
 	p.deco(Vector2i(35, 42), ExteriorTiles.SIGN)

@@ -7,7 +7,7 @@
 ## Estado (2026-10-09)
 
 - **Mapa pintado** (`maps/_pintura/pintar_palma.gd`, 72×56): el monte de Bellver (meseta con pinar y hierba alta) con el **Castillo de Bellver**; el puerto con el **ferry** atracado y su pasarela (Warp a `barcelona/ciutat_vella`, y desde allí de vuelta); el Passeig des Born con sus plátanos; **La Seu** sobre el paseo marítimo con la torre de la Almudaina (provisional: la torre octogonal del pack 01); el casco antiguo con Centro Pokémon, Mercadona, estanco y Basic-Fit; la bahía (Surf y caña). Entrenadores en `data/trainers/palma.json` (regatista, clase nueva, y un alemán que compra casas).
-- **Pendiente:** la Ruta marítima 1 (Surf a Ibiza) por el sur; la Almudaina y La Llotja de verdad; Rafa Nadal (lo coloca Javier). El ferry no pide billete ni medalla (falta el evento).
+- **Pendiente:** la Ruta marítima 1 (Surf a Ibiza) por el sur; la Almudaina y La Llotja de verdad; Rafa Nadal (lo coloca Javier). El ferry sube al barco (`transporte/ferry_palma_barcelona`) con su viaje; no pide billete ni medalla.
 
 ## Lugares reales y cómo se ven
 

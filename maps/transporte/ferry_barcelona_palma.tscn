@@ -1,0 +1,134 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/trigger/trigger.gd" id="trigger_script"]
+[ext_resource type="Script" path="res://src/events/viaje_event.gd" id="trigger_event"]
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_htpwr"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_jiypy"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_l3qg0"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_xqblh"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_tnd31"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_sjbr5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/camarero.png" id="7_x3q40"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/marinero.png" id="8_epyjo"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/turistachanclas.png" id="9_onjxj"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="10_0m7ih"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/regatista.png" id="11_vef23"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="12_dw0b1"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="13_ntejh"]
+
+[sub_resource type="Resource" id="Resource_xh6f0"]
+script = ExtResource("3_l3qg0")
+id = &"transporte/ferry_barcelona_palma"
+display_name = "Ferry Barcelona · Palma"
+outdoor = false
+zone_id = &"transporte"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="Transporte" type="Node2D" unique_id=482680781]
+script = ExtResource("1_htpwr")
+data = SubResource("Resource_xh6f0")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=754344609]
+tile_map_data = PackedByteArray("AAAAAAAAAAABABkAAAABAAAAAAABABkAAAACAAAAAAABABkAAAADAAAAAAABABkAAAAEAAAAAAABABkAAAAFAAAAAAABABkAAAAGAAAAAAABABkAAAAHAAAAAAABABkAAAAIAAAAAAABABkAAAAJAAAAAAABABkAAAAKAAAAAAABABkAAAALAAAAAAABABkAAAAMAAAAAAABABkAAAANAAAAAAABABkAAAAOAAAAAAABABkAAAAPAAAAAAABABkAAAAAAAEAAAABABkAAAABAAEAAAABABkAAAACAAEAAAABABkAAAADAAEAAAABABkAAAAEAAEAAAABABkAAAAFAAEAAAABABkAAAAGAAEAAAABABkAAAAHAAEAAAABABkAAAAIAAEAAAABABkAAAAJAAEAAAABABkAAAAKAAEAAAABABkAAAALAAEAAAABABkAAAAMAAEAAAABABkAAAANAAEAAAABABkAAAAOAAEAAAABABkAAAAPAAEAAAABABkAAAAAAAIAAAABABkAAAABAAIAAAABABkAAAACAAIAAAABABkAAAADAAIAAAABABkAAAAEAAIAAAABABkAAAAFAAIAAAABABkAAAAGAAIAAAABABkAAAAHAAIAAAABABkAAAAIAAIAAAABABkAAAAJAAIAAAABABkAAAAKAAIAAAABABkAAAALAAIAAAABABkAAAAMAAIAAAABABkAAAANAAIAAAABABkAAAAOAAIAAAABABkAAAAPAAIAAAABABkAAAAAAAMAAAABABkAAAABAAMAAAABABkAAAACAAMAAAABABkAAAADAAMAAAABABkAAAAEAAMAAAABABkAAAAFAAMAAAABABkAAAAGAAMAAAABABkAAAAHAAMAAAABABkAAAAIAAMAAAABABkAAAAJAAMAAAABABkAAAAKAAMAAAABABkAAAALAAMAAAABABkAAAAMAAMAAAABABkAAAANAAMAAAABABkAAAAOAAMAAAABABkAAAAPAAMAAAABABkAAAAAAAQAAAABABkAAAABAAQAAAABABkAAAACAAQAAAABABkAAAADAAQAAAABABkAAAAEAAQAAAABABkAAAAFAAQAAAABABkAAAAGAAQAAAABABkAAAAHAAQAAAABABkAAAAIAAQAAAABABkAAAAJAAQAAAABABkAAAAKAAQAAAABABkAAAALAAQAAAABABkAAAAMAAQAAAABABkAAAANAAQAAAABABkAAAAOAAQAAAABABkAAAAPAAQAAAABABkAAAAAAAUAAAABABkAAAABAAUAAAABABkAAAACAAUAAAABABkAAAADAAUAAAABABkAAAAEAAUAAAABABkAAAAFAAUAAAABABkAAAAGAAUAAAABABkAAAAHAAUAAAABABkAAAAIAAUAAAABABkAAAAJAAUAAAABABkAAAAKAAUAAAABABkAAAALAAUAAAABABkAAAAMAAUAAAABABkAAAANAAUAAAABABkAAAAOAAUAAAABABkAAAAPAAUAAAABABkAAAAAAAYAAAABABkAAAABAAYAAAABABkAAAACAAYAAAABABkAAAADAAYAAAABABkAAAAEAAYAAAABABkAAAAFAAYAAAABABkAAAAGAAYAAAABABkAAAAHAAYAAAABABkAAAAIAAYAAAABABkAAAAJAAYAAAABABkAAAAKAAYAAAABABkAAAALAAYAAAABABkAAAAMAAYAAAABABkAAAANAAYAAAABABkAAAAOAAYAAAABABkAAAAPAAYAAAABABkAAAAAAAcAAAABABkAAAABAAcAAAABABkAAAACAAcAAAABABkAAAADAAcAAAABABkAAAAEAAcAAAABABkAAAAFAAcAAAABABkAAAAGAAcAAAABABkAAAAHAAcAAAABABkAAAAIAAcAAAABABkAAAAJAAcAAAABABkAAAAKAAcAAAABABkAAAALAAcAAAABABkAAAAMAAcAAAABABkAAAANAAcAAAABABkAAAAOAAcAAAABABkAAAAPAAcAAAABABkAAAAAAAgAAAABABkAAAABAAgAAAABABkAAAACAAgAAAABABkAAAADAAgAAAABABkAAAAEAAgAAAABABkAAAAFAAgAAAABABkAAAAGAAgAAAABABkAAAAHAAgAAAABABkAAAAIAAgAAAABABkAAAAJAAgAAAABABkAAAAKAAgAAAABABkAAAALAAgAAAABABkAAAAMAAgAAAABABkAAAANAAgAAAABABkAAAAOAAgAAAABABkAAAAPAAgAAAABABkAAAAAAAkAAAABABkAAAABAAkAAAABABkAAAACAAkAAAABABkAAAADAAkAAAABABkAAAAEAAkAAAABABkAAAAFAAkAAAABABkAAAAGAAkAAAABABkAAAAHAAkAAAABABkAAAAIAAkAAAABABkAAAAJAAkAAAABABkAAAAKAAkAAAABABkAAAALAAkAAAABABkAAAAMAAkAAAABABkAAAANAAkAAAABABkAAAAOAAkAAAABABkAAAAPAAkAAAABABkAAAAAAAoAAAABABkAAAABAAoAAAABABkAAAACAAoAAAABABkAAAADAAoAAAABABkAAAAEAAoAAAABABkAAAAFAAoAAAABABkAAAAGAAoAAAABABkAAAAHAAoAAAABABkAAAAIAAoAAAABABkAAAAJAAoAAAABABkAAAAKAAoAAAABABkAAAALAAoAAAABABkAAAAMAAoAAAABABkAAAANAAoAAAABABkAAAAOAAoAAAABABkAAAAPAAoAAAABABkAAAAAAAsAAAABABkAAAABAAsAAAABABkAAAACAAsAAAABABkAAAADAAsAAAABABkAAAAEAAsAAAABABkAAAAFAAsAAAABABkAAAAGAAsAAAABABkAAAAHAAsAAAABABkAAAAIAAsAAAABABkAAAAJAAsAAAABABkAAAAKAAsAAAABABkAAAALAAsAAAABABkAAAAMAAsAAAABABkAAAANAAsAAAABABkAAAAOAAsAAAABABkAAAAPAAsAAAABABkAAAA=")
+tile_set = ExtResource("4_xqblh")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1319163133]
+tile_map_data = PackedByteArray("AAAAAAAAAQABAA0AAAAAAAEAAQABAA4AAAAAAAsAAQABAA4AAAABAAAAAQABAA0AAAABAAEAAQABAA4AAAABAAsAAQABAA4AAAACAAAAAQABAA0AAAACAAEAAQABAA4AAAACAAsAAQABAA4AAAADAAAAAQABAA0AAAADAAEAAQABAA4AAAADAAsAAQABAA4AAAAEAAAAAQABAA0AAAAEAAEAAQABAA4AAAAEAAsAAQABAA4AAAAFAAAAAQABAA0AAAAFAAEAAQABAA4AAAAFAAsAAQABAA4AAAAGAAAAAQABAA0AAAAGAAEAAQABAA4AAAAGAAsAAQABAA4AAAAHAAAAAQABAA0AAAAHAAEAAQABAA4AAAAHAAsAAQABAA4AAAAIAAAAAQABAA0AAAAIAAEAAQABAA4AAAAIAAsA//////////8JAAAAAQABAA0AAAAJAAEAAQABAA4AAAAJAAsAAQABAA4AAAAKAAAAAQABAA0AAAAKAAEAAQABAA4AAAAKAAsAAQABAA4AAAALAAAAAQABAA0AAAALAAEAAQABAA4AAAALAAsAAQABAA4AAAAMAAAAAQABAA0AAAAMAAEAAQABAA4AAAAMAAsAAQABAA4AAAANAAAAAQABAA0AAAANAAEAAQABAA4AAAANAAsAAQABAA4AAAAOAAAAAQABAA0AAAAOAAEAAQABAA4AAAAOAAsAAQABAA4AAAAPAAAAAQABAA0AAAAPAAEAAQABAA4AAAAPAAsAAQABAA4AAAAAAAIAAQABAA4AAEAPAAIAAQABAA4AAEAAAAMAAQABAA4AAEAPAAMAAQABAA4AAEAAAAQAAQABAA4AAEAPAAQAAQABAA4AAEAAAAUAAQABAA4AAEAPAAUAAQABAA4AAEAAAAYAAQABAA4AAEAPAAYAAQABAA4AAEAAAAcAAQABAA4AAEAPAAcAAQABAA4AAEAAAAgAAQABAA4AAEAPAAgAAQABAA4AAEAAAAkAAQABAA4AAEAPAAkAAQABAA4AAEAAAAoAAQABAA4AAEAPAAoAAQABAA4AAEABAAIAAwAAABEAAAACAAIAAwABABEAAAADAAIAAwACABEAAAABAAMAAwAAABIAAAACAAMAAwABABIAAAADAAMAAwACABIAAAABAAUAAgABAD4AAAACAAUAAgABAD4AAAADAAUAAgABAD4AAAAJAAMAAgADADsAAAAKAAMAAgAEADsAAAALAAMAAgAFADsAAAAJAAQAAgADADwAAAAKAAQAAgAEADwAAAALAAQAAgAFADwAAAAMAAMAAgADADsAAAANAAMAAgAEADsAAAAOAAMAAgAFADsAAAAMAAQAAgADADwAAAANAAQAAgAEADwAAAAOAAQAAgAFADwAAAAJAAcAAgADADsAAAAKAAcAAgAEADsAAAALAAcAAgAFADsAAAAJAAgAAgADADwAAAAKAAgAAgAEADwAAAALAAgAAgAFADwAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
+tile_set = ExtResource("4_xqblh")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1693826466]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=657176329]
+y_sort_enabled = true
+tile_set = ExtResource("4_xqblh")
+
+[node name="Camarero" type="Node2D" parent="Entities" unique_id=1059755384 instance=ExtResource("5_tnd31")]
+position = Vector2(144, 112)
+script = ExtResource("6_sjbr5")
+lines = PackedStringArray("¿Un café? Cuatro euros. Es que estamos en alta mar. Bueno, a la salida del puerto, pero cuenta.", "Bocadillo de tortilla, nueve euros. Sin tortilla, siete. Es pan con aceite, pero aquí lo llamamos «mediterráneo».")
+turn_to_player = true
+sprite_sheet = ExtResource("7_x3q40")
+
+[node name="Sobrecargo" type="Node2D" parent="Entities" unique_id=554464109 instance=ExtResource("5_tnd31")]
+position = Vector2(336, 336)
+script = ExtResource("6_sjbr5")
+lines = PackedStringArray("Por la puerta de abajo se baja al puerto. Cuando lleguemos, claro: nadar no te dejo.", "Si te mareas, mira al horizonte. Si no hay horizonte, mira al bar.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_epyjo")
+initial_facing = 1
+
+[node name="Aleman" type="Node2D" parent="Entities" unique_id=730425043 instance=ExtResource("5_tnd31")]
+position = Vector2(400, 208)
+script = ExtResource("6_sjbr5")
+lines = PackedStringArray("Ich habe die Tumbona reserviert. Con la toalla, ja. Desde Barcelona.", "En Mallorca hablamos todos alemán. Los mallorquines también, pero no les gusta.")
+turn_to_player = true
+sprite_sheet = ExtResource("9_onjxj")
+initial_facing = 1
+
+[node name="Abuela" type="Node2D" parent="Entities" unique_id=1991082422 instance=ExtResource("5_tnd31")]
+position = Vector2(112, 272)
+script = ExtResource("6_sjbr5")
+lines = PackedStringArray("Voy a Palma a ver a mi nieta. Le llevo fuet, que dice que allí no hay del bueno.", "Y una ensaimada de vuelta. En la caja redonda, que si no te miran mal en el puerto.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_0m7ih")
+initial_facing = 2
+
+[node name="Regatista" type="Node2D" parent="Entities" unique_id=526497300 instance=ExtResource("5_tnd31")]
+position = Vector2(432, 304)
+script = ExtResource("6_sjbr5")
+lines = PackedStringArray("Voy a la regata de la Copa del Rey. Del de ahora, que el otro ya navega en Sanxenxo.")
+turn_to_player = true
+sprite_sheet = ExtResource("11_vef23")
+initial_facing = 3
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1395598904]
+z_index = 10
+tile_set = ExtResource("4_xqblh")
+
+[node name="Warps" type="Node2D" parent="." unique_id=1336198309]
+
+[node name="Desembarcar" type="Node2D" parent="Warps" unique_id=120281816]
+position = Vector2(272, 368)
+script = ExtResource("12_dw0b1")
+target_map = &"palma/exterior"
+target_spawn = &"from_ferry"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1797839107]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1061820909]
+position = Vector2(272, 336)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1172600541]
+
+[node name="Rotulo" type="Label" parent="." unique_id=869200393]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_ntejh")
+theme_override_font_sizes/font_size = 16
+text = "Ferry Barcelona: Palma"
+horizontal_alignment = 1
+
+[node name="Viaje" type="Node2D" parent="Triggers"]
+position = Vector2(272, 336)
+script = ExtResource("trigger_script")
+event = ExtResource("trigger_event")
+event_params = {
+"hablante": "Megafonía",
+"llegada": ["Estamos atracando en el puerto de Palma. Los pasajeros a pie, por la puerta de abajo. Bon dia!"],
+"salida": ["Señores pasajeros, bienvenidos a bordo del ferry a Palma de Mallorca. Duración prevista: siete horas.", "El bar abre al salir del puerto. Las tumbonas de cubierta son por orden de llegada: una toalla encima no es una reserva."],
+"trayecto": ["El ferry cruza el Mediterráneo de noche. Alguien ronca en el sofá de al lado. Puede que seas tú."]
+}
+mode = 1

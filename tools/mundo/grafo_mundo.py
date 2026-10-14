@@ -78,7 +78,8 @@ def main() -> None:
                 missing.append((k, kind, t))
     for a in graph:
         for b in graph[a]:
-            if a not in graph[b]:
+            # Los viajes (transporte/*) son de ida a propósito: se sube en un puerto y se baja en otro.
+            if a not in graph[b] and not (a.startswith("transporte/") or b.startswith("transporte/")):
                 one_way.append((a, b))
     lines = [
         "# Conexiones del mundo",

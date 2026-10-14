@@ -1,0 +1,134 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/trigger/trigger.gd" id="trigger_script"]
+[ext_resource type="Script" path="res://src/events/viaje_event.gd" id="trigger_event"]
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_j0b2s"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_u463w"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_xpo70"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_e2hcw"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_icuf0"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_rdy8e"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/camarero.png" id="7_lycud"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/marinero.png" id="8_iejtn"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/jubiladoobras.png" id="9_eyfx3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/estudianteinge.png" id="10_vn6y4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/surfista.png" id="11_8ghwc"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="12_mnvg7"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="13_5xabw"]
+
+[sub_resource type="Resource" id="Resource_xg5jd"]
+script = ExtResource("3_xpo70")
+id = &"transporte/ferry_las_palmas_huelva"
+display_name = "Ferry Las Palmas · Huelva"
+outdoor = false
+zone_id = &"transporte"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="Transporte" type="Node2D" unique_id=497431123]
+script = ExtResource("1_j0b2s")
+data = SubResource("Resource_xg5jd")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1654055616]
+tile_map_data = PackedByteArray("AAAAAAAAAAABABkAAAABAAAAAAABABkAAAACAAAAAAABABkAAAADAAAAAAABABkAAAAEAAAAAAABABkAAAAFAAAAAAABABkAAAAGAAAAAAABABkAAAAHAAAAAAABABkAAAAIAAAAAAABABkAAAAJAAAAAAABABkAAAAKAAAAAAABABkAAAALAAAAAAABABkAAAAMAAAAAAABABkAAAANAAAAAAABABkAAAAOAAAAAAABABkAAAAPAAAAAAABABkAAAAAAAEAAAABABkAAAABAAEAAAABABkAAAACAAEAAAABABkAAAADAAEAAAABABkAAAAEAAEAAAABABkAAAAFAAEAAAABABkAAAAGAAEAAAABABkAAAAHAAEAAAABABkAAAAIAAEAAAABABkAAAAJAAEAAAABABkAAAAKAAEAAAABABkAAAALAAEAAAABABkAAAAMAAEAAAABABkAAAANAAEAAAABABkAAAAOAAEAAAABABkAAAAPAAEAAAABABkAAAAAAAIAAAABABkAAAABAAIAAAABABkAAAACAAIAAAABABkAAAADAAIAAAABABkAAAAEAAIAAAABABkAAAAFAAIAAAABABkAAAAGAAIAAAABABkAAAAHAAIAAAABABkAAAAIAAIAAAABABkAAAAJAAIAAAABABkAAAAKAAIAAAABABkAAAALAAIAAAABABkAAAAMAAIAAAABABkAAAANAAIAAAABABkAAAAOAAIAAAABABkAAAAPAAIAAAABABkAAAAAAAMAAAABABkAAAABAAMAAAABABkAAAACAAMAAAABABkAAAADAAMAAAABABkAAAAEAAMAAAABABkAAAAFAAMAAAABABkAAAAGAAMAAAABABkAAAAHAAMAAAABABkAAAAIAAMAAAABABkAAAAJAAMAAAABABkAAAAKAAMAAAABABkAAAALAAMAAAABABkAAAAMAAMAAAABABkAAAANAAMAAAABABkAAAAOAAMAAAABABkAAAAPAAMAAAABABkAAAAAAAQAAAABABkAAAABAAQAAAABABkAAAACAAQAAAABABkAAAADAAQAAAABABkAAAAEAAQAAAABABkAAAAFAAQAAAABABkAAAAGAAQAAAABABkAAAAHAAQAAAABABkAAAAIAAQAAAABABkAAAAJAAQAAAABABkAAAAKAAQAAAABABkAAAALAAQAAAABABkAAAAMAAQAAAABABkAAAANAAQAAAABABkAAAAOAAQAAAABABkAAAAPAAQAAAABABkAAAAAAAUAAAABABkAAAABAAUAAAABABkAAAACAAUAAAABABkAAAADAAUAAAABABkAAAAEAAUAAAABABkAAAAFAAUAAAABABkAAAAGAAUAAAABABkAAAAHAAUAAAABABkAAAAIAAUAAAABABkAAAAJAAUAAAABABkAAAAKAAUAAAABABkAAAALAAUAAAABABkAAAAMAAUAAAABABkAAAANAAUAAAABABkAAAAOAAUAAAABABkAAAAPAAUAAAABABkAAAAAAAYAAAABABkAAAABAAYAAAABABkAAAACAAYAAAABABkAAAADAAYAAAABABkAAAAEAAYAAAABABkAAAAFAAYAAAABABkAAAAGAAYAAAABABkAAAAHAAYAAAABABkAAAAIAAYAAAABABkAAAAJAAYAAAABABkAAAAKAAYAAAABABkAAAALAAYAAAABABkAAAAMAAYAAAABABkAAAANAAYAAAABABkAAAAOAAYAAAABABkAAAAPAAYAAAABABkAAAAAAAcAAAABABkAAAABAAcAAAABABkAAAACAAcAAAABABkAAAADAAcAAAABABkAAAAEAAcAAAABABkAAAAFAAcAAAABABkAAAAGAAcAAAABABkAAAAHAAcAAAABABkAAAAIAAcAAAABABkAAAAJAAcAAAABABkAAAAKAAcAAAABABkAAAALAAcAAAABABkAAAAMAAcAAAABABkAAAANAAcAAAABABkAAAAOAAcAAAABABkAAAAPAAcAAAABABkAAAAAAAgAAAABABkAAAABAAgAAAABABkAAAACAAgAAAABABkAAAADAAgAAAABABkAAAAEAAgAAAABABkAAAAFAAgAAAABABkAAAAGAAgAAAABABkAAAAHAAgAAAABABkAAAAIAAgAAAABABkAAAAJAAgAAAABABkAAAAKAAgAAAABABkAAAALAAgAAAABABkAAAAMAAgAAAABABkAAAANAAgAAAABABkAAAAOAAgAAAABABkAAAAPAAgAAAABABkAAAAAAAkAAAABABkAAAABAAkAAAABABkAAAACAAkAAAABABkAAAADAAkAAAABABkAAAAEAAkAAAABABkAAAAFAAkAAAABABkAAAAGAAkAAAABABkAAAAHAAkAAAABABkAAAAIAAkAAAABABkAAAAJAAkAAAABABkAAAAKAAkAAAABABkAAAALAAkAAAABABkAAAAMAAkAAAABABkAAAANAAkAAAABABkAAAAOAAkAAAABABkAAAAPAAkAAAABABkAAAAAAAoAAAABABkAAAABAAoAAAABABkAAAACAAoAAAABABkAAAADAAoAAAABABkAAAAEAAoAAAABABkAAAAFAAoAAAABABkAAAAGAAoAAAABABkAAAAHAAoAAAABABkAAAAIAAoAAAABABkAAAAJAAoAAAABABkAAAAKAAoAAAABABkAAAALAAoAAAABABkAAAAMAAoAAAABABkAAAANAAoAAAABABkAAAAOAAoAAAABABkAAAAPAAoAAAABABkAAAAAAAsAAAABABkAAAABAAsAAAABABkAAAACAAsAAAABABkAAAADAAsAAAABABkAAAAEAAsAAAABABkAAAAFAAsAAAABABkAAAAGAAsAAAABABkAAAAHAAsAAAABABkAAAAIAAsAAAABABkAAAAJAAsAAAABABkAAAAKAAsAAAABABkAAAALAAsAAAABABkAAAAMAAsAAAABABkAAAANAAsAAAABABkAAAAOAAsAAAABABkAAAAPAAsAAAABABkAAAA=")
+tile_set = ExtResource("4_e2hcw")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1284560517]
+tile_map_data = PackedByteArray("AAAAAAAAAQABAA0AAAAAAAEAAQABAA4AAAAAAAsAAQABAA4AAAABAAAAAQABAA0AAAABAAEAAQABAA4AAAABAAsAAQABAA4AAAACAAAAAQABAA0AAAACAAEAAQABAA4AAAACAAsAAQABAA4AAAADAAAAAQABAA0AAAADAAEAAQABAA4AAAADAAsAAQABAA4AAAAEAAAAAQABAA0AAAAEAAEAAQABAA4AAAAEAAsAAQABAA4AAAAFAAAAAQABAA0AAAAFAAEAAQABAA4AAAAFAAsAAQABAA4AAAAGAAAAAQABAA0AAAAGAAEAAQABAA4AAAAGAAsAAQABAA4AAAAHAAAAAQABAA0AAAAHAAEAAQABAA4AAAAHAAsAAQABAA4AAAAIAAAAAQABAA0AAAAIAAEAAQABAA4AAAAIAAsA//////////8JAAAAAQABAA0AAAAJAAEAAQABAA4AAAAJAAsAAQABAA4AAAAKAAAAAQABAA0AAAAKAAEAAQABAA4AAAAKAAsAAQABAA4AAAALAAAAAQABAA0AAAALAAEAAQABAA4AAAALAAsAAQABAA4AAAAMAAAAAQABAA0AAAAMAAEAAQABAA4AAAAMAAsAAQABAA4AAAANAAAAAQABAA0AAAANAAEAAQABAA4AAAANAAsAAQABAA4AAAAOAAAAAQABAA0AAAAOAAEAAQABAA4AAAAOAAsAAQABAA4AAAAPAAAAAQABAA0AAAAPAAEAAQABAA4AAAAPAAsAAQABAA4AAAAAAAIAAQABAA4AAEAPAAIAAQABAA4AAEAAAAMAAQABAA4AAEAPAAMAAQABAA4AAEAAAAQAAQABAA4AAEAPAAQAAQABAA4AAEAAAAUAAQABAA4AAEAPAAUAAQABAA4AAEAAAAYAAQABAA4AAEAPAAYAAQABAA4AAEAAAAcAAQABAA4AAEAPAAcAAQABAA4AAEAAAAgAAQABAA4AAEAPAAgAAQABAA4AAEAAAAkAAQABAA4AAEAPAAkAAQABAA4AAEAAAAoAAQABAA4AAEAPAAoAAQABAA4AAEABAAIAAwAAABEAAAACAAIAAwABABEAAAADAAIAAwACABEAAAABAAMAAwAAABIAAAACAAMAAwABABIAAAADAAMAAwACABIAAAABAAUAAgABAD4AAAACAAUAAgABAD4AAAADAAUAAgABAD4AAAAJAAMAAgADADsAAAAKAAMAAgAEADsAAAALAAMAAgAFADsAAAAJAAQAAgADADwAAAAKAAQAAgAEADwAAAALAAQAAgAFADwAAAAMAAMAAgADADsAAAANAAMAAgAEADsAAAAOAAMAAgAFADsAAAAMAAQAAgADADwAAAANAAQAAgAEADwAAAAOAAQAAgAFADwAAAAJAAcAAgADADsAAAAKAAcAAgAEADsAAAALAAcAAgAFADsAAAAJAAgAAgADADwAAAAKAAgAAgAEADwAAAALAAgAAgAFADwAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
+tile_set = ExtResource("4_e2hcw")
+
+[node name="Entities" type="Node2D" parent="." unique_id=62864291]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1386119926]
+y_sort_enabled = true
+tile_set = ExtResource("4_e2hcw")
+
+[node name="Camarero" type="Node2D" parent="Entities" unique_id=1927328535 instance=ExtResource("5_icuf0")]
+position = Vector2(144, 112)
+script = ExtResource("6_rdy8e")
+lines = PackedStringArray("¿Un café? Cuatro euros. Es que estamos en alta mar. Bueno, a la salida del puerto, pero cuenta.", "Bocadillo de tortilla, nueve euros. Sin tortilla, siete. Es pan con aceite, pero aquí lo llamamos «mediterráneo».")
+turn_to_player = true
+sprite_sheet = ExtResource("7_lycud")
+
+[node name="Sobrecargo" type="Node2D" parent="Entities" unique_id=139175092 instance=ExtResource("5_icuf0")]
+position = Vector2(336, 336)
+script = ExtResource("6_rdy8e")
+lines = PackedStringArray("Por la puerta de abajo se baja al puerto. Cuando lleguemos, claro: nadar no te dejo.", "Si te mareas, mira al horizonte. Si no hay horizonte, mira al bar.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_iejtn")
+initial_facing = 1
+
+[node name="Mus" type="Node2D" parent="Entities" unique_id=1415116538 instance=ExtResource("5_icuf0")]
+position = Vector2(400, 208)
+script = ExtResource("6_rdy8e")
+lines = PackedStringArray("¿Juegas al mus? Me falta pareja desde Las Palmas. La última se mareó en el primer órdago.")
+turn_to_player = true
+sprite_sheet = ExtResource("9_eyfx3")
+initial_facing = 1
+
+[node name="Estudiante" type="Node2D" parent="Entities" unique_id=285736092 instance=ExtResource("5_icuf0")]
+position = Vector2(112, 272)
+script = ExtResource("6_rdy8e")
+lines = PackedStringArray("Voy a estudiar a Sevilla. Llevo papas arrugadas para un mes y mojo para un año.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_vn6y4")
+initial_facing = 2
+
+[node name="Surfista" type="Node2D" parent="Entities" unique_id=561613369 instance=ExtResource("5_icuf0")]
+position = Vector2(432, 304)
+script = ExtResource("6_rdy8e")
+lines = PackedStringArray("Me voy a la península a surfear. Me han dicho que en Huelva no hay olas. Ya veremos.")
+turn_to_player = true
+sprite_sheet = ExtResource("11_8ghwc")
+initial_facing = 3
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1910671241]
+z_index = 10
+tile_set = ExtResource("4_e2hcw")
+
+[node name="Warps" type="Node2D" parent="." unique_id=1569252949]
+
+[node name="Desembarcar" type="Node2D" parent="Warps" unique_id=2134548798]
+position = Vector2(272, 368)
+script = ExtResource("12_mnvg7")
+target_map = &"huelva/exterior"
+target_spawn = &"from_ferry"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1461111439]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=170930253]
+position = Vector2(272, 336)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=2066451583]
+
+[node name="Rotulo" type="Label" parent="." unique_id=645887088]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_5xabw")
+theme_override_font_sizes/font_size = 16
+text = "Ferry Las Palmas: Huelva"
+horizontal_alignment = 1
+
+[node name="Viaje" type="Node2D" parent="Triggers"]
+position = Vector2(272, 336)
+script = ExtResource("trigger_script")
+event = ExtResource("trigger_event")
+event_params = {
+"hablante": "Megafonía",
+"llegada": ["Llegamos al puerto de Huelva. ¡Bienvenidos a la tierra de las gambas y de Colón!"],
+"salida": ["Bienvenidos a bordo del ferry a Huelva. Más de un día de travesía.", "Recuerden: el mojo picón no se considera equipaje de mano. Se considera arma."],
+"trayecto": ["Pasa un día entero en el Atlántico. Al segundo día, alguien ya ha montado una partida de mus en el bar."]
+}
+mode = 1

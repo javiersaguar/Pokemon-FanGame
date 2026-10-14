@@ -47,6 +47,8 @@ La región es **España entera**, con las ciudades en su sitio real. El jugador 
 | **Avión** | Las Palmas → Vigo (y luego vuelo libre) | Aeropuerto con control de seguridad (chiste con los líquidos). Más tarde, Vuelo normal |
 | **AVE / Cercanías** | Madrid ⇄ sur, Valladolid ⇄ Madrid, Madrid ⇄ Málaga | Viaje rápido entre estaciones ya visitadas. Siempre llega con retraso (Óscar Puente) |
 
+**Hecho (2026-10-14):** cada ferry y el avión tienen mapa propio (`maps/transporte/`, pintados por `maps/_pintura/pintar_transportes.gd`). La pasarela del puerto lleva al salón del barco; al entrar salta el viaje (`src/events/viaje_event.gd`: aviso de salida, trayecto con fundido y aviso de llegada) y la puerta de abajo desembarca en el destino. El avión sale de una terminal (`playa_del_ingles/aeropuerto`, `vigo/aeropuerto`) con facturación, el control de seguridad con el chiste de los líquidos (`src/events/control_seguridad_event.gd`, paso obligado para embarcar) y un aficionado que señala el Falcon por la ventana; se baja en la otra terminal por llegadas, sin volver a pasar el control. **Falta:** el billete como objeto clave (de momento no se pide) y el «vuelo libre» de después. Test: `tests/mundo/test_transportes.gd`.
+
 ### El Clan PSOE (propuesta de trama)
 
 Imita al Team Rocket: un dúo que aparece una y otra vez, una base por zona y el jefe al final.

@@ -9,7 +9,7 @@
 ## Estado (2026-10-09)
 
 - **Pintados** (Agente 1, tramo sur): `las_palmas/canteras` (64×48: la playa de **Las Canteras** con la Barra, La Isleta, el **Castillo de la Luz**, el Mercado del Puerto y el **puerto con el ferry** de Huelva), `las_palmas/vegueta_triana` (56×48: Triana con la calle Mayor, San Telmo, el Centro Pokémon y el estanco; Vegueta con la **Catedral de Santa Ana** y sus perros, la Casa de Colón y el mercado), la `ruta_15` y `playa_del_ingles/exterior` (64×56: el **aeropuerto** con el mostrador de los vuelos a Vigo, los hoteles, el Yumbo y los locales, el **escenario de Quevedo** en la playa (gimnasio 5), las **Dunas de Maspalomas** con la Charca y el **Faro**). Unidos en cadena: Canteras → Vegueta → Ruta 15 → Playa del Inglés.
-- **Pendiente:** el vuelo a Vigo (lo une el Agente 5: casilla libre (11, 6) entre la terminal y el mostrador); el interior del aeropuerto y del concierto.
+- **Hecho:** el vuelo a Vigo sale de la terminal de Playa del Inglés (`playa_del_ingles/aeropuerto`), con control de seguridad y cabina (`transporte/avion_gran_canaria_vigo`). El ferry de Huelva llega en `transporte/ferry_huelva_las_palmas`.
 
 ## Cómo se reparte en el juego
 

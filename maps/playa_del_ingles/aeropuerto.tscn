@@ -1,0 +1,134 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/trigger/trigger.gd" id="trigger_script"]
+[ext_resource type="Script" path="res://src/events/control_seguridad_event.gd" id="trigger_event"]
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_th52o"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_p2aau"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_mnls0"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_r46pq"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_cmlcm"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_3hf3g"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="7_uvrfg"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/influencerlinkedin_f.png" id="8_2ksxx"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_lass.png" id="9_qvfny"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_youngster.png" id="10_5dmcg"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_wjxhf"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_gk1vd"]
+
+[sub_resource type="Resource" id="Resource_hregw"]
+script = ExtResource("3_mnls0")
+id = &"playa_del_ingles/aeropuerto"
+display_name = "Aeropuerto de Gran Canaria"
+outdoor = false
+zone_id = &"playa_del_ingles"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="Transporte" type="Node2D" unique_id=1217750590]
+script = ExtResource("1_th52o")
+data = SubResource("Resource_hregw")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1442443203]
+tile_map_data = PackedByteArray("AAAAAAAAAAABADEAAAABAAAAAAABADEAAAACAAAAAAABADEAAAADAAAAAAABADEAAAAEAAAAAAABADEAAAAFAAAAAAABADEAAAAGAAAAAAABADEAAAAHAAAAAAABADEAAAAIAAAAAAABADEAAAAJAAAAAAABADEAAAAKAAAAAAABADEAAAALAAAAAAABADEAAAAMAAAAAAABADEAAAANAAAAAAABADEAAAAOAAAAAAABADEAAAAPAAAAAAABADEAAAAAAAEAAAABADEAAAABAAEAAAABADEAAAACAAEAAAABADEAAAADAAEAAAABADEAAAAEAAEAAAABADEAAAAFAAEAAAABADEAAAAGAAEAAAABADEAAAAHAAEAAAABADEAAAAIAAEAAAABADEAAAAJAAEAAAABADEAAAAKAAEAAAABADEAAAALAAEAAAABADEAAAAMAAEAAAABADEAAAANAAEAAAABADEAAAAOAAEAAAABADEAAAAPAAEAAAABADEAAAAAAAIAAAABADEAAAABAAIAAAABADEAAAACAAIAAAABADEAAAADAAIAAAABADEAAAAEAAIAAAABADEAAAAFAAIAAAABADEAAAAGAAIAAAABADEAAAAHAAIAAAABADEAAAAIAAIAAAABADEAAAAJAAIAAAABADEAAAAKAAIAAAABADEAAAALAAIAAAABADEAAAAMAAIAAAABADEAAAANAAIAAAABADEAAAAOAAIAAAABADEAAAAPAAIAAAABADEAAAAAAAMAAAABADEAAAABAAMAAAABADEAAAACAAMAAAABADEAAAADAAMAAAABADEAAAAEAAMAAAABADEAAAAFAAMAAAABADEAAAAGAAMAAAABADEAAAAHAAMAAAABADEAAAAIAAMAAAABADEAAAAJAAMAAAABADEAAAAKAAMAAAABADEAAAALAAMAAAABADEAAAAMAAMAAAABADEAAAANAAMAAAABADEAAAAOAAMAAAABADEAAAAPAAMAAAABADEAAAAAAAQAAAABADEAAAABAAQAAAABADEAAAACAAQAAAABADEAAAADAAQAAAABADEAAAAEAAQAAAABADEAAAAFAAQAAAABADEAAAAGAAQAAAABADEAAAAHAAQAAAABADEAAAAIAAQAAAABADEAAAAJAAQAAAABADEAAAAKAAQAAAABADEAAAALAAQAAAABADEAAAAMAAQAAAABADEAAAANAAQAAAABADEAAAAOAAQAAAABADEAAAAPAAQAAAABADEAAAAAAAUAAAABADEAAAABAAUAAAABADEAAAACAAUAAAABADEAAAADAAUAAAABADEAAAAEAAUAAAABADEAAAAFAAUAAAABADEAAAAGAAUAAAABADEAAAAHAAUAAAABADEAAAAIAAUAAAABADEAAAAJAAUAAAABADEAAAAKAAUAAAABADEAAAALAAUAAAABADEAAAAMAAUAAAABADEAAAANAAUAAAABADEAAAAOAAUAAAABADEAAAAPAAUAAAABADEAAAAAAAYAAAABADEAAAABAAYAAAABADEAAAACAAYAAAABADEAAAADAAYAAAABADEAAAAEAAYAAAABADEAAAAFAAYAAAABADEAAAAGAAYAAAABADEAAAAHAAYAAAABADEAAAAIAAYAAAABADEAAAAJAAYAAAABADEAAAAKAAYAAAABADEAAAALAAYAAAABADEAAAAMAAYAAAABADEAAAANAAYAAAABADEAAAAOAAYAAAABADEAAAAPAAYAAAABADEAAAAAAAcAAAABADEAAAABAAcAAAABADEAAAACAAcAAAABADEAAAADAAcAAAABADEAAAAEAAcAAAABADEAAAAFAAcAAAABADEAAAAGAAcAAAABADEAAAAHAAcAAAABADEAAAAIAAcAAAABADEAAAAJAAcAAAABADEAAAAKAAcAAAABADEAAAALAAcAAAABADEAAAAMAAcAAAABADEAAAANAAcAAAABADEAAAAOAAcAAAABADEAAAAPAAcAAAABADEAAAAAAAgAAAABADEAAAABAAgAAAABADEAAAACAAgAAAABADEAAAADAAgAAAABADEAAAAEAAgAAAABADEAAAAFAAgAAAABADEAAAAGAAgAAAABADEAAAAHAAgAAAABADEAAAAIAAgAAAABADEAAAAJAAgAAAABADEAAAAKAAgAAAABADEAAAALAAgAAAABADEAAAAMAAgAAAABADEAAAANAAgAAAABADEAAAAOAAgAAAABADEAAAAPAAgAAAABADEAAAAAAAkAAAABADEAAAABAAkAAAABADEAAAACAAkAAAABADEAAAADAAkAAAABADEAAAAEAAkAAAABADEAAAAFAAkAAAABADEAAAAGAAkAAAABADEAAAAHAAkAAAABADEAAAAIAAkAAAABADEAAAAJAAkAAAABADEAAAAKAAkAAAABADEAAAALAAkAAAABADEAAAAMAAkAAAABADEAAAANAAkAAAABADEAAAAOAAkAAAABADEAAAAPAAkAAAABADEAAAAAAAoAAAABADEAAAABAAoAAAABADEAAAACAAoAAAABADEAAAADAAoAAAABADEAAAAEAAoAAAABADEAAAAFAAoAAAABADEAAAAGAAoAAAABADEAAAAHAAoAAAABADEAAAAIAAoAAAABADEAAAAJAAoAAAABADEAAAAKAAoAAAABADEAAAALAAoAAAABADEAAAAMAAoAAAABADEAAAANAAoAAAABADEAAAAOAAoAAAABADEAAAAPAAoAAAABADEAAAAAAAsAAAABADEAAAABAAsAAAABADEAAAACAAsAAAABADEAAAADAAsAAAABADEAAAAEAAsAAAABADEAAAAFAAsAAAABADEAAAAGAAsAAAABADEAAAAHAAsAAAABADEAAAAIAAsAAAABADEAAAAJAAsAAAABADEAAAAKAAsAAAABADEAAAALAAsAAAABADEAAAAMAAsAAAABADEAAAANAAsAAAABADEAAAAOAAsAAAABADEAAAAPAAsAAAABADEAAAA=")
+tile_set = ExtResource("4_r46pq")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=756525745]
+tile_map_data = PackedByteArray("AAAAAAAAAQABAAMAAAAAAAEAAQABAAQAAAAAAAsAAQABAAQAAAABAAAAAQABAAMAAAABAAEAAQABAAQAAAABAAsAAQABAAQAAAACAAAAAQABAAMAAAACAAEAAQABAAQAAAACAAsAAQABAAQAAAADAAAAAQABAAMAAAADAAEAAQABAAQAAAADAAsAAQABAAQAAAAEAAAAAQABAAMAAAAEAAEA//////////8EAAsAAQABAAQAAAAFAAAAAQABAAMAAAAFAAEAAQABAAQAAAAFAAsAAQABAAQAAAAGAAAAAQABAAMAAAAGAAEAAQABAAQAAAAGAAsAAQABAAQAAAAHAAAAAQABAAMAAAAHAAEAAQABAAQAAAAHAAsAAQABAAQAAAAIAAAAAQABAAMAAAAIAAEAAQABAAQAAAAIAAsA//////////8JAAAAAQABAAMAAAAJAAEAAQABAAQAAAAJAAsAAQABAAQAAAAKAAAAAQABAAMAAAAKAAEAAQABAAQAAAAKAAsAAQABAAQAAAALAAAAAQABAAMAAAALAAEAAQABAAQAAAALAAsAAQABAAQAAAAMAAAAAQABAAMAAAAMAAEAAQABAAQAAAAMAAsAAQABAAQAAAANAAAAAQABAAMAAAANAAEAAQABAAQAAAANAAsAAQABAAQAAAAOAAAAAQABAAMAAAAOAAEAAQABAAQAAAAOAAsAAQABAAQAAAAPAAAAAQABAAMAAAAPAAEAAQABAAQAAAAPAAsAAQABAAQAAAAAAAIAAQABAAQAAEAPAAIAAQABAAQAAEAAAAMAAQABAAQAAEAPAAMAAQABAAQAAEAAAAQAAQABAAQAAEAPAAQAAQABAAQAAEAAAAUAAQABAAQAAEAPAAUAAQABAAQAAEAAAAYAAQABAAQAAEAPAAYAAQABAAQAAEAAAAcAAQABAAQAAEAPAAcAAQABAAQAAEAAAAgAAQABAAQAAEAPAAgAAQABAAQAAEAAAAkAAQABAAQAAEAPAAkAAQABAAQAAEAAAAoAAQABAAQAAEAPAAoAAQABAAQAAEAIAAIAAQABAAQAAEAIAAMAAQABAAQAAEAIAAQAAQABAAQAAEAIAAUAAQABAAQAAEAIAAYAAQABAAQAAEABAAYAAQABAAQAAAACAAYAAQABAAQAAAADAAYAAQABAAQAAAAFAAYAAQABAAQAAAAGAAYAAQABAAQAAAAHAAYAAQABAAQAAAALAAcAAwAAABEAAAAMAAcAAwABABEAAAANAAcAAwACABEAAAALAAgAAwAAABIAAAAMAAgAAwABABIAAAANAAgAAwACABIAAAABAAkAAgADADsAAAACAAkAAgAEADsAAAADAAkAAgAFADsAAAABAAoAAgADADwAAAACAAoAAgAEADwAAAADAAoAAgAFADwAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAAOAAIAAgAAACQAAAAOAAMAAgAAACUAAAA=")
+tile_set = ExtResource("4_r46pq")
+
+[node name="Entities" type="Node2D" parent="." unique_id=334508407]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1197587635]
+y_sort_enabled = true
+tile_set = ExtResource("4_r46pq")
+
+[node name="Guardia" type="Node2D" parent="Entities" unique_id=1563157860 instance=ExtResource("5_cmlcm")]
+position = Vector2(176, 240)
+script = ExtResource("6_3hf3g")
+display_name = "Guardia Civil"
+lines = PackedStringArray("Control de seguridad. Por el arco, de uno en uno.", "Los Pokémon de acero hacen pitar el arco. Los de agua, también: son líquidos.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_uvrfg")
+initial_facing = 1
+
+[node name="Embarque" type="Node2D" parent="Entities" unique_id=85224520 instance=ExtResource("5_cmlcm")]
+position = Vector2(176, 80)
+script = ExtResource("6_3hf3g")
+lines = PackedStringArray("Vuelo a Vigo, embarcando por esta puerta. Tarjeta de embarque y DNI... Vale, pase.", "Una pieza de equipaje de mano. Las Poké Balls no cuentan: van en el cinturón.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_2ksxx")
+initial_facing = 1
+
+[node name="Facturacion" type="Node2D" parent="Entities" unique_id=839787462 instance=ExtResource("5_cmlcm")]
+position = Vector2(400, 304)
+script = ExtResource("6_3hf3g")
+lines = PackedStringArray("Mostrador de facturación. ¿Maleta? Veintitrés kilos. ¿Veinticuatro? Son cincuenta euros.", "Si no factura, al control de la izquierda, y de ahí a la puerta de embarque.")
+turn_to_player = true
+sprite_sheet = ExtResource("9_qvfny")
+initial_facing = 3
+
+[node name="Spotter" type="Node2D" parent="Entities" unique_id=380871297 instance=ExtResource("5_cmlcm")]
+position = Vector2(80, 112)
+script = ExtResource("6_3hf3g")
+lines = PackedStringArray("¿Ves ese avión blanco aparcado en la pista? Es el Falcon del Líder Supremo.", "Lo he fotografiado en catorce aeropuertos este mes. Siempre dice que viaja por trabajo.")
+turn_to_player = true
+sprite_sheet = ExtResource("10_5dmcg")
+initial_facing = 3
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1979449465]
+z_index = 10
+tile_set = ExtResource("4_r46pq")
+
+[node name="Warps" type="Node2D" parent="." unique_id=273710951]
+
+[node name="Embarque" type="Node2D" parent="Warps" unique_id=958674494]
+position = Vector2(144, 48)
+script = ExtResource("11_wjxhf")
+target_map = &"transporte/avion_gran_canaria_vigo"
+arrival_facing = 4
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1461785550]
+position = Vector2(272, 368)
+script = ExtResource("11_wjxhf")
+target_map = &"playa_del_ingles/exterior"
+target_spawn = &"from_avion"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1957232340]
+
+[node name="from_llegadas" type="Marker2D" parent="Spawns" unique_id=1000600602]
+position = Vector2(368, 80)
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1313659058]
+position = Vector2(272, 336)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=107980690]
+
+[node name="Rotulo" type="Label" parent="." unique_id=2125904389]
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_gk1vd")
+theme_override_font_sizes/font_size = 16
+text = "Aeropuerto de Gran Canaria"
+horizontal_alignment = 1
+
+[node name="ControlSeguridad" type="Node2D" parent="Triggers"]
+position = Vector2(144, 208)
+script = ExtResource("trigger_script")
+event = ExtResource("trigger_event")
+event_params = {
+"flag": "control_seguridad_gran_canaria",
+"guardia": "Guardia Civil"
+}
+mode = 0

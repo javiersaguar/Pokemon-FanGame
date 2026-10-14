@@ -159,8 +159,7 @@ tile_set = ExtResource("4_tjl02")
 [node name="AvionVigo" type="Node2D" parent="Warps" unique_id=1139471291]
 position = Vector2(368, 208)
 script = ExtResource("14_gf5pn")
-target_map = &"vigo/exterior"
-target_spawn = &"from_avion"
+target_map = &"playa_del_ingles/aeropuerto"
 sound = &""
 
 [node name="Hospital" type="Node2D" parent="Warps" unique_id=264914682]

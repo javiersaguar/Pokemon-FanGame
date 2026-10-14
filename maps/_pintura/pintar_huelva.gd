@@ -96,7 +96,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.spawn("default", Vector2i(62, 21))
 	p.spawn("from_ruta_14", Vector2i(63, 21))
 	p.spawn("from_ferry", Vector2i(52, 39))
-	p.warp("FerryCanarias", Vector2i(53, 40), &"las_palmas/canteras", &"from_ferry", &"")
+	p.warp("FerryCanarias", Vector2i(53, 40), &"transporte/ferry_huelva_las_palmas", &"default", &"")
 	p.trainer("Juanma", &"huelva_marinero", Vector2i(52, 22), LEFT, 3)
 	p.trainer("Lucia", &"huelva_regatista", Vector2i(20, 32), RIGHT, 3)
 	p.npc("Choquero", "npc_fisherman", Vector2i(26, 31), DOWN, PackedStringArray([

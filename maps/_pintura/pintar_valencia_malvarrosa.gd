@@ -64,7 +64,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.object(&"torre_socorrista", Vector2i(48, 12))
 
 	# --- Pasarela del ferry a Ibiza ---
-	p.warp("FerryIbiza", Vector2i(16, 47), &"ibiza/exterior", &"from_ferry", &"")
+	p.warp("FerryIbiza", Vector2i(16, 47), &"transporte/ferry_valencia_ibiza", &"default", &"")
 
 	# --- Carteles ---
 	p.deco(Vector2i(37, 21), ExteriorTiles.SIGN)

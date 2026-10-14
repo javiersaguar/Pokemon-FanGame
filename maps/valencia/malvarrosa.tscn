@@ -152,8 +152,7 @@ tile_set = ExtResource("4_j5dg8")
 [node name="FerryIbiza" type="Node2D" parent="Warps" unique_id=1125773058]
 position = Vector2(528, 1520)
 script = ExtResource("14_sk0yv")
-target_map = &"ibiza/exterior"
-target_spawn = &"from_ferry"
+target_map = &"transporte/ferry_valencia_ibiza"
 sound = &""
 
 [node name="Hospital" type="Node2D" parent="Warps" unique_id=560972005]
