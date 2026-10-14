@@ -7,6 +7,8 @@ extends Character
 
 ## Nombre que muestra el cuadro de diálogo (vacío = sin nombre).
 @export var display_name: String = ""
+## Identidad gráfica propia (opcional); mantiene la hoja genérica como respaldo.
+@export var art_id: StringName = &""
 ## Frases al hablarle, en orden.
 @export_multiline var lines: PackedStringArray = []
 ## Desactívalo para estatuas, personajes dormidos o escenas de espaldas.
@@ -39,6 +41,10 @@ func _ready() -> void:
 	super()
 	if Engine.is_editor_hint():
 		return
+	if CharacterArt.resolve([art_id]) != &"":
+		sprite.set_script(CharacterArtSprite)
+		sprite.facing = facing
+		(sprite as CharacterArtSprite).set_art(art_id)
 	home_tile = tile_position()
 	_reset_wander_timer()
 

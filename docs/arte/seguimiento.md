@@ -479,3 +479,18 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | Penélope Cruz (`penelope_cruz`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
 | Javier Bardem (`javier_bardem`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
 | Abuela de Lamine (`abuela_lamine`) | Atlas: combate y 16 poses de mapa | [Comparativa](comparativas/personajes_entrega_13.md) | Provisional, pendiente de Javier |
+
+## Clases de gimnasios · Entrega 14
+
+| Clase | Recurso | Revisión | Estado |
+| --- | --- | --- | --- |
+| Concejal del PP (`concejal`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Culé (`cule`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Alcohólico (`alcoholico`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Porreta (`porreta`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Cocainómano (`cocainomano`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Flamenco de traje (`flamenco_traje`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Quesito en bikini (`quesito`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Etarra (`etarra`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Cayetano de pelo casco (`cayetano_casco`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+| Actor de reparto (`actor_reparto`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |

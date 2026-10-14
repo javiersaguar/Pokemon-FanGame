@@ -93,7 +93,7 @@ Los cuatro protagonistas y Unicoos ya están entregados en las tareas de inicio.
 | `amador_rivas` | Amador Rivas | integrado, provisional | [Referencia fotográfica](https://www.dailymotion.com/video/x2upqgt) |
 | `antonio_recio` | Antonio Recio | integrado, provisional | [Referencia fotográfica](https://www.telecinco.es/laqueseavecina/temporadas/temporada-09/t09xc05/antonio-vuelve-vendiendo-segunda-internet_18_2173530190.html) |
 
-Catálogo inicial y altas del 14 de octubre: 85 identidades; 84 con atlas completo. Javier está pendiente de referencia personal. La galería F9 → Galería → Personajes muestra las que ya tienen atlas completo. Las apariciones reales resuelven el arte por id de entrenador o de clase; las ubicaciones de B se conservan.
+Catálogo con las entregas de gimnasios: **103 identidades con nombre** (102 con arte de combate y mapa, incluida la abuela de Lamine) y **10 clases nuevas**; **112 entradas** en el registro de arte. Javier sigue pendiente de referencia personal. Messi usa dos hojas originales de Iberia como provisional, con cuatro poses quietas; el resto de altas de gimnasios tiene pasos. La galería F9 → Galerías → Personajes / combate y mapa muestra las entradas disponibles. Las apariciones reales resuelven el arte por id de entrenador o de clase; las ubicaciones de B se conservan.
 
 Revisión del 2026-10-14: doce diseños actualizados según fotos de Javier; comparativa [antes/después](comparativas/personajes_revision_2026-10-14.md). Peereira7 incorpora paletas y cola de castor. Sarah conserva su diseño y cabestrillo.
 
@@ -127,3 +127,18 @@ Altas del 2026-10-14: once entradas de la petición de Javier, doce identidades 
 | Penélope Cruz (`penelope_cruz`) | [Referencia 1](https://www.hola.com/belleza/20240426252727/penelope-cruz-cumpleanos-50-cambios-look-peinados/) | [Combate](comparativas/personaje_penelope_cruz_entrada.png) y [mapa](comparativas/personaje_penelope_cruz.png) | Provisional, pendiente de Javier |
 | Javier Bardem (`javier_bardem`) | [Referencia 1](https://elpais.com/diario/2008/06/19/cultura/1213826405_850215.html) | [Combate](comparativas/personaje_javier_bardem_entrada.png) y [mapa](comparativas/personaje_javier_bardem.png) | Provisional, pendiente de Javier |
 | Abuela de Lamine (`abuela_lamine`) | [Referencia 1](https://www.antena3.com/programas/espejo-publico/noticias/fatima-abuela-lamine-yamal-habla-amenazas-que-reciben-quieren-matarme-estoy-aqui_2024091866ead680fcf7b3000138ae67.html); [Referencia 2](https://www.skynewsarabia.com/varieties/1728489) | [Combate](comparativas/personaje_abuela_lamine_entrada.png) y [mapa](comparativas/personaje_abuela_lamine.png) | Provisional, pendiente de Javier |
+
+## Clases de gimnasios · Entrega 14
+
+| ID | Clase | Referencia | Vista | Estado |
+| --- | --- | --- | --- | --- |
+| `concejal` | Concejal del PP | Diseño de clase ficticia según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_concejal_entrada.png) y [mapa](comparativas/personaje_concejal.png) | Provisional |
+| `cule` | Culé | Diseño de clase ficticia según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_cule_entrada.png) y [mapa](comparativas/personaje_cule.png) | Provisional |
+| `alcoholico` | Alcohólico | Diseño de clase ficticia según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_alcoholico_entrada.png) y [mapa](comparativas/personaje_alcoholico.png) | Provisional |
+| `porreta` | Porreta | Diseño de clase ficticia según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_porreta_entrada.png) y [mapa](comparativas/personaje_porreta.png) | Provisional |
+| `cocainomano` | Cocainómano | Diseño de clase ficticia según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_cocainomano_entrada.png) y [mapa](comparativas/personaje_cocainomano.png) | Provisional |
+| `flamenco_traje` | Flamenco de traje | [Referencia](https://www.trajesalbertosegura.com/es/trajes-completos-3-piezas/22-traje-de-corto-gabardina-gris-marengo-contrastes.html) | [Combate](comparativas/personaje_flamenco_traje_entrada.png) y [mapa](comparativas/personaje_flamenco_traje.png) | Provisional |
+| `quesito` | Quesito en bikini | Diseño de clase ficticia adulta según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_quesito_entrada.png) y [mapa](comparativas/personaje_quesito.png) | Provisional |
+| `etarra` | Etarra | Diseño de clase ficticia según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_etarra_entrada.png) y [mapa](comparativas/personaje_etarra.png) | Provisional |
+| `cayetano_casco` | Cayetano de pelo casco | [Referencia](https://www.gallery-hair.com/gallerydetail.php?numero=1166&numerofoto=7836); [Referencia](https://blog.valquer.com/cortes-pelo-2024) | [Combate](comparativas/personaje_cayetano_casco_entrada.png) y [mapa](comparativas/personaje_cayetano_casco.png) | Provisional |
+| `actor_reparto` | Actor de reparto | Diseño de clase ficticia según petición de Javier del 2026-10-14. | [Combate](comparativas/personaje_actor_reparto_entrada.png) y [mapa](comparativas/personaje_actor_reparto.png) | Provisional |

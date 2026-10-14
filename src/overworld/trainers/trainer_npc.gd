@@ -39,6 +39,7 @@ func _ready() -> void:
 	var art := StringName(data.get("art_id", ""))
 	if art != &"":
 		sprite.set_script(CharacterArtSprite)
+		sprite.facing = facing
 		(sprite as CharacterArtSprite).set_art(art)
 	EventBus.player_stepped.connect(_on_player_stepped)
 

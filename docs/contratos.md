@@ -604,6 +604,8 @@ La entrada y escena de combate consumen `art_id`; la fotografía real existente 
 
 **Hojas separadas, Messi provisional (2026-10-14):** `battle_atlas` es opcional; cuando existe, `battle_rect` apunta a ese PNG y `walk_frames` sigue apuntando a `atlas`. Cada región se valida contra su propia hoja. `frame_mode: "static"` declara las cuatro direcciones quietas del recurso original de Iberia aprobado por Javier: las columnas repiten la pose de su fila para conservar el contrato de dieciséis fotogramas. La galería lo indica y desactiva el falso ciclo de pasos; no se presenta como animación nueva. Los dos PNG se conservan intactos, con transparencia original. `import_messi_iberia.gd` permite reproducir la importación desde la copia aportada.
 
+`NPC.art_id` es opcional: si existe en `CharacterArt`, usa sus 16 frames sin cambiar nombre, diálogo, casilla ni interacción; en caso contrario conserva `sprite_sheet`. Tanto NPC como TrainerNPC conservan `facing` al instalar el sprite de atlas. La abuela de Lamine usa `abuela_lamine` en Rocafonda. Las diez clases nuevas de gimnasios se resuelven por el ID de clase; la identidad del entrenador sigue teniendo prioridad.
+
 ## 7c. Integración Locke del mundo (Agente 1)
 
 `GameState.locke: WorldLocke` existe solo en RandomLocke. Conserva `rules: LockeRules` y `pending` (capturas sin mote). `GameState.to_dict()` sincroniza `randomlocke.snapshot` y `pending_captures`; al cargar restaura familias, encuentros, muertes y estados sin regenerar. Los campos anteriores `zones`, `deaths` y `status` siguen actualizados. SAVE_VERSION 2 migra v1 conservando ROM, zonas y contadores antiguos (`legacy_death_count`), sin fabricar lápidas ni permisos para encuentros ya gastados.

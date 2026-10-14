@@ -110,6 +110,7 @@ initial_facing = 1
 position = Vector2(592, 624)
 script = ExtResource("8_xa1hf")
 display_name = "Abuela de Lamine"
+art_id = &"abuela_lamine"
 lines = PackedStringArray("Mi nieto ya juega en el Barça y en la selección, pero para mí sigue siendo el niño que rompía los cristales con el balón.", "Se ha comprado esa casa tan grande, pero viene a comer aquí. Donde está la abuela, está la comida.", "¿Has comido? Siéntate, que hay arroz para todo el barrio.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_080f4")

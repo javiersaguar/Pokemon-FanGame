@@ -109,7 +109,7 @@ func _paint() -> Pintor:
 	p.npc("AbuelaLamine", "abuela", Vector2i(18, 19), DOWN, PackedStringArray([
 		"Mi nieto ya juega en el Barça y en la selección, pero para mí sigue siendo el niño que rompía los cristales con el balón.",
 		"Se ha comprado esa casa tan grande, pero viene a comer aquí. Donde está la abuela, está la comida.",
-		"¿Has comido? Siéntate, que hay arroz para todo el barrio."]), {"display_name": "Abuela de Lamine"})
+		"¿Has comido? Siéntate, que hay arroz para todo el barrio."]), {"display_name": "Abuela de Lamine", "art_id": &"abuela_lamine"})
 	p.npc("Vecino", "npc_old_man", Vector2i(8, 22), UP, PackedStringArray([
 		"Rocafonda es un barrio humilde. Cuando ese chaval marcó en la Eurocopa, aquí se oyó más que en el estadio.",
 		"La mansión apareció de un día para otro. Antes era un descampado. Ahora es un descampado con verja."]))

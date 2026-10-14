@@ -1,6 +1,6 @@
 # Personajes de gimnasios · Entrega 13
 
-Nueve identidades con retrato y dieciséis poses de mapa. Otegi lleva la ikurriña. Las ocho identidades de entrenador sustituyen su clase genérica mediante el registro de arte, sin alterar equipos ni colocaciones. La abuela de Lamine tiene arte visible en la galería; su arte se conectará al NPC que el mapa de Rocafonda ya incluye. No se inventa equipo ni diálogo. Todo queda provisional hasta revisión de Javier.
+Nueve identidades con retrato y dieciséis poses de mapa. Otegi lleva la ikurriña. Las ocho identidades de entrenador sustituyen su clase genérica mediante el registro de arte, sin alterar equipos ni colocaciones. La abuela de Lamine tiene arte visible en la galería; su arte está conectado al NPC que el mapa de Rocafonda ya incluye (entrega 14). No se inventa equipo ni diálogo. Todo queda provisional hasta revisión de Javier.
 
 | Personaje | Antes | Entrada de combate | Mapa y galería | Fuentes visuales |
 | --- | --- | --- | --- | --- |
