@@ -6457,7 +6457,7 @@
    "id": "10000000voltthunderbolt",
    "name": "Gigarrayo Fulminante",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -6465,7 +6465,7 @@
    "id": "absorb",
    "name": "Absorber",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -6473,7 +6473,7 @@
    "id": "accelerock",
    "name": "Roca Veloz",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -6481,7 +6481,7 @@
    "id": "acid",
    "name": "Ácido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -6489,7 +6489,7 @@
    "id": "acidarmor",
    "name": "Armadura Ácida",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -6497,7 +6497,7 @@
    "id": "aciddownpour",
    "name": "Diluvio Corrosivo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -6505,7 +6505,7 @@
    "id": "acidspray",
    "name": "Bomba Ácida",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -6513,7 +6513,7 @@
    "id": "acrobatics",
    "name": "Acróbata",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -6521,7 +6521,7 @@
    "id": "acupressure",
    "name": "Acupresión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6529,7 +6529,7 @@
    "id": "aerialace",
    "name": "Golpe Aéreo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -6537,7 +6537,7 @@
    "id": "aeroblast",
    "name": "Aerochorro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -6545,7 +6545,7 @@
    "id": "afteryou",
    "name": "Cede Paso",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6553,7 +6553,7 @@
    "id": "agility",
    "name": "Agilidad",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -6561,7 +6561,7 @@
    "id": "aircutter",
    "name": "Aire Afilado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -6569,7 +6569,7 @@
    "id": "airslash",
    "name": "Tajo Aéreo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -6577,7 +6577,7 @@
    "id": "alloutpummeling",
    "name": "Ráfaga Demoledora",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -6585,7 +6585,7 @@
    "id": "alluringvoice",
    "name": "Canto Encantador",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -6593,7 +6593,7 @@
    "id": "allyswitch",
    "name": "Cambio de Banda",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -6601,7 +6601,7 @@
    "id": "amnesia",
    "name": "Amnesia",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -6609,7 +6609,7 @@
    "id": "anchorshot",
    "name": "Anclaje",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -6617,7 +6617,7 @@
    "id": "ancientpower",
    "name": "Poder Pasado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -6625,7 +6625,7 @@
    "id": "appleacid",
    "name": "Ácido Málico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -6633,7 +6633,7 @@
    "id": "aquacutter",
    "name": "Tajo Acuático",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -6641,7 +6641,7 @@
    "id": "aquajet",
    "name": "Acua Jet",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -6649,7 +6649,7 @@
    "id": "aquaring",
    "name": "Acua Aro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -6657,7 +6657,7 @@
    "id": "aquastep",
    "name": "Danza Acuática",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -6665,7 +6665,7 @@
    "id": "aquatail",
    "name": "Acua Cola",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -6673,7 +6673,7 @@
    "id": "armorcannon",
    "name": "Cañón Armadura",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -6681,7 +6681,7 @@
    "id": "armthrust",
    "name": "Empujón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -6689,7 +6689,7 @@
    "id": "aromatherapy",
    "name": "Aromaterapia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -6705,7 +6705,7 @@
    "id": "assist",
    "name": "Ayuda",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6713,7 +6713,7 @@
    "id": "assurance",
    "name": "Buena Baza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -6721,7 +6721,7 @@
    "id": "astonish",
    "name": "Impresionar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -6729,7 +6729,7 @@
    "id": "astralbarrage",
    "name": "Orbes Espectro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -6737,7 +6737,7 @@
    "id": "attackorder",
    "name": "Al Ataque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -6745,7 +6745,7 @@
    "id": "attract",
    "name": "Atracción",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6753,7 +6753,7 @@
    "id": "aurasphere",
    "name": "Esfera Aural",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -6761,7 +6761,7 @@
    "id": "aurawheel",
    "name": "Rueda Aural",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -6769,7 +6769,7 @@
    "id": "aurorabeam",
    "name": "Rayo Aurora",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -6777,7 +6777,7 @@
    "id": "auroraveil",
    "name": "Velo Aurora",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -6785,7 +6785,7 @@
    "id": "autotomize",
    "name": "Aligerar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -6793,7 +6793,7 @@
    "id": "avalanche",
    "name": "Alud",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -6801,7 +6801,7 @@
    "id": "axekick",
    "name": "Patada Hacha",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -6809,7 +6809,7 @@
    "id": "babydolleyes",
    "name": "Ojitos Tiernos",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -6817,7 +6817,7 @@
    "id": "baddybad",
    "name": "Umbreozona",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -6825,7 +6825,7 @@
    "id": "banefulbunker",
    "name": "Búnker",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -6833,7 +6833,7 @@
    "id": "barbbarrage",
    "name": "Mil Púas Tóxicas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -6841,7 +6841,7 @@
    "id": "barrage",
    "name": "Bombardeo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6849,7 +6849,7 @@
    "id": "barrier",
    "name": "Barrera",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -6857,7 +6857,7 @@
    "id": "batonpass",
    "name": "Relevo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6865,7 +6865,7 @@
    "id": "beakblast",
    "name": "Pico Cañón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -6873,7 +6873,7 @@
    "id": "beatup",
    "name": "Paliza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -6881,7 +6881,7 @@
    "id": "behemothbash",
    "name": "Embate Supremo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -6889,7 +6889,7 @@
    "id": "behemothblade",
    "name": "Tajo Supremo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -6897,7 +6897,7 @@
    "id": "belch",
    "name": "Eructo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -6905,7 +6905,7 @@
    "id": "bellydrum",
    "name": "Tambor",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6913,7 +6913,7 @@
    "id": "bestow",
    "name": "Ofrenda",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6921,7 +6921,7 @@
    "id": "bide",
    "name": "Venganza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6929,7 +6929,7 @@
    "id": "bind",
    "name": "Atadura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -6937,7 +6937,7 @@
    "id": "bite",
    "name": "Mordisco",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -6945,7 +6945,7 @@
    "id": "bitterblade",
    "name": "Espada Lamento",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -6953,7 +6953,7 @@
    "id": "bittermalice",
    "name": "Rencor Reprimido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -6961,7 +6961,7 @@
    "id": "blackholeeclipse",
    "name": "Agujero Negro Aniquilador",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -6969,7 +6969,7 @@
    "id": "blastburn",
    "name": "Anillo Ígneo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -6977,7 +6977,7 @@
    "id": "blazekick",
    "name": "Patada Ígnea",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -6985,7 +6985,7 @@
    "id": "blazingtorque",
    "name": "Pirochoque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -6993,7 +6993,7 @@
    "id": "bleakwindstorm",
    "name": "Vendaval Gélido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -7001,7 +7001,7 @@
    "id": "blizzard",
    "name": "Ventisca",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -7009,7 +7009,7 @@
    "id": "block",
    "name": "Bloqueo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7017,7 +7017,7 @@
    "id": "bloodmoon",
    "name": "Luna Roja",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7025,7 +7025,7 @@
    "id": "bloomdoom",
    "name": "Megatón Floral",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -7033,7 +7033,7 @@
    "id": "blueflare",
    "name": "Llama Azul",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -7041,7 +7041,7 @@
    "id": "bodypress",
    "name": "Plancha Corporal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7049,7 +7049,7 @@
    "id": "bodyslam",
    "name": "Golpe Cuerpo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7057,7 +7057,7 @@
    "id": "boltbeak",
    "name": "Electropico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7065,7 +7065,7 @@
    "id": "boltstrike",
    "name": "Ataque Fulgor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7073,7 +7073,7 @@
    "id": "boneclub",
    "name": "Hueso Palo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -7081,7 +7081,7 @@
    "id": "bonemerang",
    "name": "Huesomerang",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -7089,7 +7089,7 @@
    "id": "bonerush",
    "name": "Ataque Óseo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -7097,7 +7097,7 @@
    "id": "boomburst",
    "name": "Estruendo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7105,7 +7105,7 @@
    "id": "bounce",
    "name": "Bote",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -7113,7 +7113,7 @@
    "id": "bouncybubble",
    "name": "Vapodrenaje",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7121,7 +7121,7 @@
    "id": "branchpoke",
    "name": "Punzada Rama",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -7129,7 +7129,7 @@
    "id": "bravebird",
    "name": "Pájaro Osado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -7137,7 +7137,7 @@
    "id": "breakingswipe",
    "name": "Vasto Impacto",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7145,7 +7145,7 @@
    "id": "breakneckblitz",
    "name": "Carrera Arrolladora",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7153,7 +7153,7 @@
    "id": "brickbreak",
    "name": "Demolición",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7161,7 +7161,7 @@
    "id": "brine",
    "name": "Salmuera",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7169,7 +7169,7 @@
    "id": "brutalswing",
    "name": "Giro Vil",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -7177,7 +7177,7 @@
    "id": "bubble",
    "name": "Burbuja",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7185,7 +7185,7 @@
    "id": "bubblebeam",
    "name": "Rayo Burbuja",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7193,7 +7193,7 @@
    "id": "bugbite",
    "name": "Picadura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -7201,7 +7201,7 @@
    "id": "bugbuzz",
    "name": "Zumbido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -7209,7 +7209,7 @@
    "id": "bulkup",
    "name": "Corpulencia",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7217,7 +7217,7 @@
    "id": "bulldoze",
    "name": "Terratemblor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -7225,7 +7225,7 @@
    "id": "bulletpunch",
    "name": "Puño Bala",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -7233,7 +7233,7 @@
    "id": "bulletseed",
    "name": "Semilladora",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -7241,7 +7241,7 @@
    "id": "burningbulwark",
    "name": "Llama Protectora",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -7249,7 +7249,7 @@
    "id": "burningjealousy",
    "name": "Envidia Ardiente",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -7257,7 +7257,7 @@
    "id": "burnup",
    "name": "Llama Final",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -7265,7 +7265,7 @@
    "id": "buzzybuzz",
    "name": "Joltioparálisis",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7273,7 +7273,7 @@
    "id": "calmmind",
    "name": "Paz Mental",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -7281,7 +7281,7 @@
    "id": "camouflage",
    "name": "Camuflaje",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7289,7 +7289,7 @@
    "id": "captivate",
    "name": "Seducción",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7297,7 +7297,7 @@
    "id": "catastropika",
    "name": "Pikavoltio Letal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7305,7 +7305,7 @@
    "id": "ceaselessedge",
    "name": "Tajo Metralla",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -7313,7 +7313,7 @@
    "id": "celebrate",
    "name": "Celebración",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7321,7 +7321,7 @@
    "id": "charge",
    "name": "Carga",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7329,7 +7329,7 @@
    "id": "chargebeam",
    "name": "Rayo Carga",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7337,7 +7337,7 @@
    "id": "charm",
    "name": "Encanto",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -7345,7 +7345,7 @@
    "id": "chatter",
    "name": "Cháchara",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -7353,7 +7353,7 @@
    "id": "chillingwater",
    "name": "Agua Fría",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7361,7 +7361,7 @@
    "id": "chillyreception",
    "name": "Fría Acogida",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -7369,7 +7369,7 @@
    "id": "chipaway",
    "name": "Guardia Baja",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7377,7 +7377,7 @@
    "id": "chloroblast",
    "name": "Clorofiláser",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -7385,7 +7385,7 @@
    "id": "circlethrow",
    "name": "Llave Giro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7393,7 +7393,7 @@
    "id": "clamp",
    "name": "Tenaza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7401,7 +7401,7 @@
    "id": "clangingscales",
    "name": "Fragor Escamas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7409,7 +7409,7 @@
    "id": "clangoroussoul",
    "name": "Estruendo Escama",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7417,7 +7417,7 @@
    "id": "clangoroussoulblaze",
    "name": "Estruendo Implacable",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7425,7 +7425,7 @@
    "id": "clearsmog",
    "name": "Niebla Clara",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -7433,7 +7433,7 @@
    "id": "closecombat",
    "name": "A Bocajarro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7441,7 +7441,7 @@
    "id": "coaching",
    "name": "Motivación",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7449,7 +7449,7 @@
    "id": "coil",
    "name": "Enrosque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -7457,7 +7457,7 @@
    "id": "collisioncourse",
    "name": "Nitrochoque",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7465,7 +7465,7 @@
    "id": "combattorque",
    "name": "Pugnachoque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7481,7 +7481,7 @@
    "id": "comeuppance",
    "name": "Resarcimiento",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -7489,7 +7489,7 @@
    "id": "confide",
    "name": "Confidencia",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7497,7 +7497,7 @@
    "id": "confuseray",
    "name": "Rayo Confuso",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -7505,7 +7505,7 @@
    "id": "confusion",
    "name": "Confusión",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -7513,7 +7513,7 @@
    "id": "constrict",
    "name": "Restricción",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7521,7 +7521,7 @@
    "id": "continentalcrush",
    "name": "Aplastamiento Gigalítico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -7529,7 +7529,7 @@
    "id": "conversion",
    "name": "Conversión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7537,7 +7537,7 @@
    "id": "conversion2",
    "name": "Conversión 2",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7545,7 +7545,7 @@
    "id": "copycat",
    "name": "Copión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7553,7 +7553,7 @@
    "id": "coreenforcer",
    "name": "Núcleo Castigo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7561,7 +7561,7 @@
    "id": "corkscrewcrash",
    "name": "Hélice Trepanadora",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -7569,7 +7569,7 @@
    "id": "corrosivegas",
    "name": "Gas Corrosivo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -7577,7 +7577,7 @@
    "id": "cosmicpower",
    "name": "Masa Cósmica",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -7585,7 +7585,7 @@
    "id": "cottonguard",
    "name": "Rizo Algodón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -7593,7 +7593,7 @@
    "id": "cottonspore",
    "name": "Esporagodón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -7601,7 +7601,7 @@
    "id": "counter",
    "name": "Contraataque",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7609,7 +7609,7 @@
    "id": "courtchange",
    "name": "Cambio de Cancha",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7617,7 +7617,7 @@
    "id": "covet",
    "name": "Antojo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7625,7 +7625,7 @@
    "id": "crabhammer",
    "name": "Martillazo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7633,7 +7633,7 @@
    "id": "craftyshield",
    "name": "Truco Defensa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -7641,7 +7641,7 @@
    "id": "crosschop",
    "name": "Tajo Cruzado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7649,7 +7649,7 @@
    "id": "crosspoison",
    "name": "Veneno X",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -7657,7 +7657,7 @@
    "id": "crunch",
    "name": "Triturar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -7665,7 +7665,7 @@
    "id": "crushclaw",
    "name": "Garra Brutal",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7673,7 +7673,7 @@
    "id": "crushgrip",
    "name": "Agarrón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7681,7 +7681,7 @@
    "id": "curse",
    "name": "Maldición",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -7697,7 +7697,7 @@
    "id": "darkestlariat",
    "name": "Lariat Oscuro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -7705,7 +7705,7 @@
    "id": "darkpulse",
    "name": "Pulso Umbrío",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -7713,7 +7713,7 @@
    "id": "darkvoid",
    "name": "Brecha Negra",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -7721,7 +7721,7 @@
    "id": "dazzlinggleam",
    "name": "Brillo Mágico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -7729,7 +7729,7 @@
    "id": "decorate",
    "name": "Decoración",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -7737,7 +7737,7 @@
    "id": "defendorder",
    "name": "A Defender",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -7753,7 +7753,7 @@
    "id": "defog",
    "name": "Despejar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -7761,7 +7761,7 @@
    "id": "destinybond",
    "name": "Mismo Destino",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -7769,7 +7769,7 @@
    "id": "detect",
    "name": "Detección",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7777,7 +7777,7 @@
    "id": "devastatingdrake",
    "name": "Dracoaliento Devastador",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7785,7 +7785,7 @@
    "id": "diamondstorm",
    "name": "Tormenta de Diamantes",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -7793,7 +7793,7 @@
    "id": "dig",
    "name": "Excavar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -7801,7 +7801,7 @@
    "id": "direclaw",
    "name": "Garra Nociva",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -7809,7 +7809,7 @@
    "id": "disable",
    "name": "Anulación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7817,7 +7817,7 @@
    "id": "disarmingvoice",
    "name": "Voz Cautivadora",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -7825,7 +7825,7 @@
    "id": "discharge",
    "name": "Chispazo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7833,7 +7833,7 @@
    "id": "dive",
    "name": "Buceo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -7841,7 +7841,7 @@
    "id": "dizzypunch",
    "name": "Puño Mareo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7849,7 +7849,7 @@
    "id": "doodle",
    "name": "Decalcomanía",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7857,7 +7857,7 @@
    "id": "doomdesire",
    "name": "Deseo Oculto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -7865,7 +7865,7 @@
    "id": "doubleedge",
    "name": "Doble Filo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7873,7 +7873,7 @@
    "id": "doublehit",
    "name": "Doble Golpe",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7881,7 +7881,7 @@
    "id": "doubleironbash",
    "name": "Ferropuño Doble",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -7889,7 +7889,7 @@
    "id": "doublekick",
    "name": "Doble Patada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -7897,7 +7897,7 @@
    "id": "doubleshock",
    "name": "Electropalmas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -7913,7 +7913,7 @@
    "id": "doubleteam",
    "name": "Doble Equipo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -7921,7 +7921,7 @@
    "id": "dracometeor",
    "name": "Cometa Draco",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7929,7 +7929,7 @@
    "id": "dragonascent",
    "name": "Ascenso Draco",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -7937,7 +7937,7 @@
    "id": "dragonbreath",
    "name": "Dragoaliento",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7945,7 +7945,7 @@
    "id": "dragoncheer",
    "name": "Bramido Dragón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7953,7 +7953,7 @@
    "id": "dragonclaw",
    "name": "Garra Dragón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7961,7 +7961,7 @@
    "id": "dragondance",
    "name": "Danza Dragón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7969,7 +7969,7 @@
    "id": "dragondarts",
    "name": "Dracoflechas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7977,7 +7977,7 @@
    "id": "dragonenergy",
    "name": "Dracoenergía",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7985,7 +7985,7 @@
    "id": "dragonhammer",
    "name": "Martillo Dragón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -7993,7 +7993,7 @@
    "id": "dragonpulse",
    "name": "Pulso Dragón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8001,7 +8001,7 @@
    "id": "dragonrage",
    "name": "Furia Dragón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8009,7 +8009,7 @@
    "id": "dragonrush",
    "name": "Carga Dragón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8017,7 +8017,7 @@
    "id": "dragontail",
    "name": "Cola Dragón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8025,7 +8025,7 @@
    "id": "drainingkiss",
    "name": "Beso Drenaje",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -8033,7 +8033,7 @@
    "id": "drainpunch",
    "name": "Puño Drenaje",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8041,7 +8041,7 @@
    "id": "dreameater",
    "name": "Comesueños",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8049,7 +8049,7 @@
    "id": "drillpeck",
    "name": "Pico Taladro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -8057,7 +8057,7 @@
    "id": "drillrun",
    "name": "Taladradora",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -8065,7 +8065,7 @@
    "id": "drumbeating",
    "name": "Batería Asalto",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -8073,7 +8073,7 @@
    "id": "dualchop",
    "name": "Golpe Bis",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8081,7 +8081,7 @@
    "id": "dualwingbeat",
    "name": "Ala Bis",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -8089,7 +8089,7 @@
    "id": "dynamaxcannon",
    "name": "Cañón Dinamax",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8097,7 +8097,7 @@
    "id": "dynamicpunch",
    "name": "Puño Dinámico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8105,7 +8105,7 @@
    "id": "earthpower",
    "name": "Tierra Viva",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -8121,7 +8121,7 @@
    "id": "echoedvoice",
    "name": "Eco Voz",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8129,7 +8129,7 @@
    "id": "eerieimpulse",
    "name": "Onda Anómala",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8137,7 +8137,7 @@
    "id": "eeriespell",
    "name": "Conjuro Funesto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8145,7 +8145,7 @@
    "id": "eggbomb",
    "name": "Bomba Huevo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8153,7 +8153,7 @@
    "id": "electricterrain",
    "name": "Campo Eléctrico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8161,7 +8161,7 @@
    "id": "electrify",
    "name": "Electrificación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8169,7 +8169,7 @@
    "id": "electroball",
    "name": "Bola Voltio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8177,7 +8177,7 @@
    "id": "electrodrift",
    "name": "Electroderrape",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8185,7 +8185,7 @@
    "id": "electroshot",
    "name": "Electrorrayo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8193,7 +8193,7 @@
    "id": "electroweb",
    "name": "Electrotela",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8201,7 +8201,7 @@
    "id": "embargo",
    "name": "Embargo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8217,7 +8217,7 @@
    "id": "encore",
    "name": "Otra Vez",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8225,7 +8225,7 @@
    "id": "endeavor",
    "name": "Esfuerzo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8233,7 +8233,7 @@
    "id": "endure",
    "name": "Aguante",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8241,7 +8241,7 @@
    "id": "energyball",
    "name": "Energibola",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -8249,7 +8249,7 @@
    "id": "entrainment",
    "name": "Danza Amiga",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8257,7 +8257,7 @@
    "id": "eruption",
    "name": "Estallido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8265,7 +8265,7 @@
    "id": "esperwing",
    "name": "Ala Aural",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8273,7 +8273,7 @@
    "id": "eternabeam",
    "name": "Rayo Infinito",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8281,7 +8281,7 @@
    "id": "expandingforce",
    "name": "Vasta Fuerza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8289,7 +8289,7 @@
    "id": "explosion",
    "name": "Explosión",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8297,7 +8297,7 @@
    "id": "extrasensory",
    "name": "Paranormal",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8305,7 +8305,7 @@
    "id": "extremeevoboost",
    "name": "Novena Potencia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8313,7 +8313,7 @@
    "id": "extremespeed",
    "name": "Velocidad Extrema",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8321,7 +8321,7 @@
    "id": "facade",
    "name": "Fachada",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8329,7 +8329,7 @@
    "id": "fairylock",
    "name": "Cerrojo Feérico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -8337,7 +8337,7 @@
    "id": "fairywind",
    "name": "Viento Feérico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -8345,7 +8345,7 @@
    "id": "fakeout",
    "name": "Sorpresa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8353,7 +8353,7 @@
    "id": "faketears",
    "name": "Llanto Falso",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8361,7 +8361,7 @@
    "id": "falsesurrender",
    "name": "Irreverencia",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8369,7 +8369,7 @@
    "id": "falseswipe",
    "name": "Falso Tortazo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8377,7 +8377,7 @@
    "id": "featherdance",
    "name": "Danza Pluma",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -8385,7 +8385,7 @@
    "id": "feint",
    "name": "Amago",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8393,7 +8393,7 @@
    "id": "feintattack",
    "name": "Finta",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8401,7 +8401,7 @@
    "id": "fellstinger",
    "name": "Aguijón Letal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -8409,7 +8409,7 @@
    "id": "ficklebeam",
    "name": "Láser Veleidoso",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8417,7 +8417,7 @@
    "id": "fierydance",
    "name": "Danza Llama",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8425,7 +8425,7 @@
    "id": "fierywrath",
    "name": "Furia Candente",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8433,7 +8433,7 @@
    "id": "filletaway",
    "name": "Deslome",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8441,7 +8441,7 @@
    "id": "finalgambit",
    "name": "Sacrificio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8449,7 +8449,7 @@
    "id": "fireblast",
    "name": "Llamarada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8457,7 +8457,7 @@
    "id": "firefang",
    "name": "Colmillo Ígneo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8465,7 +8465,7 @@
    "id": "firelash",
    "name": "Látigo Ígneo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8473,7 +8473,7 @@
    "id": "firepledge",
    "name": "Voto Fuego",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8489,7 +8489,7 @@
    "id": "firespin",
    "name": "Giro Fuego",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8497,7 +8497,7 @@
    "id": "firstimpression",
    "name": "Escaramuza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -8505,7 +8505,7 @@
    "id": "fishiousrend",
    "name": "Branquibocado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -8513,7 +8513,7 @@
    "id": "fissure",
    "name": "Fisura",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -8521,7 +8521,7 @@
    "id": "flail",
    "name": "Azote",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8529,7 +8529,7 @@
    "id": "flameburst",
    "name": "Pirotecnia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8537,7 +8537,7 @@
    "id": "flamecharge",
    "name": "Nitrocarga",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8553,7 +8553,7 @@
    "id": "flamewheel",
    "name": "Rueda Fuego",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8561,7 +8561,7 @@
    "id": "flareblitz",
    "name": "Envite Ígneo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8569,7 +8569,7 @@
    "id": "flash",
    "name": "Destello",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8577,7 +8577,7 @@
    "id": "flashcannon",
    "name": "Cañón Resplandor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -8585,7 +8585,7 @@
    "id": "flatter",
    "name": "Camelo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8593,7 +8593,7 @@
    "id": "fleurcannon",
    "name": "Cañón Floral",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -8601,7 +8601,7 @@
    "id": "fling",
    "name": "Lanzamiento",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8609,7 +8609,7 @@
    "id": "flipturn",
    "name": "Viraje",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -8617,7 +8617,7 @@
    "id": "floatyfall",
    "name": "Pikapicado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -8625,7 +8625,7 @@
    "id": "floralhealing",
    "name": "Cura Floral",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -8633,7 +8633,7 @@
    "id": "flowershield",
    "name": "Defensa Floral",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -8641,7 +8641,7 @@
    "id": "flowertrick",
    "name": "Truco Floral",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -8649,7 +8649,7 @@
    "id": "fly",
    "name": "Vuelo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -8657,7 +8657,7 @@
    "id": "flyingpress",
    "name": "Plancha Voladora",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8665,7 +8665,7 @@
    "id": "focusblast",
    "name": "Onda Certera",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8673,7 +8673,7 @@
    "id": "focusenergy",
    "name": "Foco Energía",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8681,7 +8681,7 @@
    "id": "focuspunch",
    "name": "Puño Certero",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8689,7 +8689,7 @@
    "id": "followme",
    "name": "Señuelo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8697,7 +8697,7 @@
    "id": "forcepalm",
    "name": "Palmeo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8705,7 +8705,7 @@
    "id": "foresight",
    "name": "Profecía",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8713,7 +8713,7 @@
    "id": "forestscurse",
    "name": "Condena Silvana",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -8721,7 +8721,7 @@
    "id": "foulplay",
    "name": "Juego Sucio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -8729,7 +8729,7 @@
    "id": "freezedry",
    "name": "Liofilización",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -8737,7 +8737,7 @@
    "id": "freezeshock",
    "name": "Rayo Gélido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -8745,7 +8745,7 @@
    "id": "freezingglare",
    "name": "Mirada Heladora",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8753,7 +8753,7 @@
    "id": "freezyfrost",
    "name": "Glaceoprisma",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -8761,7 +8761,7 @@
    "id": "frenzyplant",
    "name": "Planta Feroz",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -8769,7 +8769,7 @@
    "id": "frostbreath",
    "name": "Vaho Gélido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -8777,7 +8777,7 @@
    "id": "frustration",
    "name": "Frustración",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8785,7 +8785,7 @@
    "id": "furyattack",
    "name": "Ataque Furia",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8793,7 +8793,7 @@
    "id": "furycutter",
    "name": "Corte Furia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -8801,7 +8801,7 @@
    "id": "furyswipes",
    "name": "Golpes Furia",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8809,7 +8809,7 @@
    "id": "fusionbolt",
    "name": "Rayo Fusión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8817,7 +8817,7 @@
    "id": "fusionflare",
    "name": "Llama Fusión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8825,7 +8825,7 @@
    "id": "futuresight",
    "name": "Premonición",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8833,7 +8833,7 @@
    "id": "gastroacid",
    "name": "Bilis",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -8841,7 +8841,7 @@
    "id": "geargrind",
    "name": "Rueda Doble",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -8849,7 +8849,7 @@
    "id": "gearup",
    "name": "Piñón Auxiliar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -8857,7 +8857,7 @@
    "id": "genesissupernova",
    "name": "Supernova Original",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8865,7 +8865,7 @@
    "id": "geomancy",
    "name": "Geocontrol",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -8873,7 +8873,7 @@
    "id": "gigadrain",
    "name": "Gigadrenado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -8881,7 +8881,7 @@
    "id": "gigaimpact",
    "name": "Gigaimpacto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8889,7 +8889,7 @@
    "id": "gigatonhammer",
    "name": "Martillo Colosal",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -8897,7 +8897,7 @@
    "id": "gigavolthavoc",
    "name": "Gigavoltio Destructor",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -8905,7 +8905,7 @@
    "id": "glaciallance",
    "name": "Lanza Glacial",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -8913,7 +8913,7 @@
    "id": "glaciate",
    "name": "Mundo Gélido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -8921,7 +8921,7 @@
    "id": "glaiverush",
    "name": "Asalto Espadón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8929,7 +8929,7 @@
    "id": "glare",
    "name": "Deslumbrar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8937,7 +8937,7 @@
    "id": "glitzyglow",
    "name": "Espeaura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -8945,7 +8945,7 @@
    "id": "gmaxbefuddle",
    "name": "G-Max Befuddle",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -8953,7 +8953,7 @@
    "id": "gmaxcannonade",
    "name": "G-Max Cannonade",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -8961,7 +8961,7 @@
    "id": "gmaxcentiferno",
    "name": "G-Max Centiferno",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -8969,7 +8969,7 @@
    "id": "gmaxchistrike",
    "name": "G-Max Chi Strike",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -8977,7 +8977,7 @@
    "id": "gmaxcuddle",
    "name": "G-Max Cuddle",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -8985,7 +8985,7 @@
    "id": "gmaxdepletion",
    "name": "G-Max Depletion",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -8993,7 +8993,7 @@
    "id": "gmaxdrumsolo",
    "name": "G-Max Drum Solo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9001,7 +9001,7 @@
    "id": "gmaxfinale",
    "name": "G-Max Finale",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -9009,7 +9009,7 @@
    "id": "gmaxfireball",
    "name": "G-Max Fireball",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9017,7 +9017,7 @@
    "id": "gmaxfoamburst",
    "name": "G-Max Foam Burst",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9025,7 +9025,7 @@
    "id": "gmaxgoldrush",
    "name": "G-Max Gold Rush",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9033,7 +9033,7 @@
    "id": "gmaxgravitas",
    "name": "G-Max Gravitas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9041,7 +9041,7 @@
    "id": "gmaxhydrosnipe",
    "name": "G-Max Hydrosnipe",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9049,7 +9049,7 @@
    "id": "gmaxmalodor",
    "name": "G-Max Malodor",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -9057,7 +9057,7 @@
    "id": "gmaxmeltdown",
    "name": "G-Max Meltdown",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -9065,7 +9065,7 @@
    "id": "gmaxoneblow",
    "name": "G-Max One Blow",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -9073,7 +9073,7 @@
    "id": "gmaxrapidflow",
    "name": "G-Max Rapid Flow",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9081,7 +9081,7 @@
    "id": "gmaxreplenish",
    "name": "G-Max Replenish",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9089,7 +9089,7 @@
    "id": "gmaxresonance",
    "name": "G-Max Resonance",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9097,7 +9097,7 @@
    "id": "gmaxsandblast",
    "name": "G-Max Sandblast",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -9105,7 +9105,7 @@
    "id": "gmaxsmite",
    "name": "G-Max Smite",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -9113,7 +9113,7 @@
    "id": "gmaxsnooze",
    "name": "G-Max Snooze",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -9121,7 +9121,7 @@
    "id": "gmaxsteelsurge",
    "name": "G-Max Steelsurge",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -9129,7 +9129,7 @@
    "id": "gmaxstonesurge",
    "name": "G-Max Stonesurge",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9137,7 +9137,7 @@
    "id": "gmaxstunshock",
    "name": "G-Max Stun Shock",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -9145,7 +9145,7 @@
    "id": "gmaxsweetness",
    "name": "G-Max Sweetness",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9153,7 +9153,7 @@
    "id": "gmaxtartness",
    "name": "G-Max Tartness",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9161,7 +9161,7 @@
    "id": "gmaxterror",
    "name": "G-Max Terror",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -9169,7 +9169,7 @@
    "id": "gmaxvinelash",
    "name": "G-Max Vine Lash",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9177,7 +9177,7 @@
    "id": "gmaxvolcalith",
    "name": "G-Max Volcalith",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -9185,7 +9185,7 @@
    "id": "gmaxvoltcrash",
    "name": "G-Max Volt Crash",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -9193,7 +9193,7 @@
    "id": "gmaxwildfire",
    "name": "G-Max Wildfire",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9201,7 +9201,7 @@
    "id": "gmaxwindrage",
    "name": "G-Max Wind Rage",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -9209,7 +9209,7 @@
    "id": "grassknot",
    "name": "Hierba Lazo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9217,7 +9217,7 @@
    "id": "grasspledge",
    "name": "Voto Planta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9225,7 +9225,7 @@
    "id": "grasswhistle",
    "name": "Silbato",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9233,7 +9233,7 @@
    "id": "grassyglide",
    "name": "Fitoimpulso",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9241,7 +9241,7 @@
    "id": "grassyterrain",
    "name": "Campo de Hierba",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9249,7 +9249,7 @@
    "id": "gravapple",
    "name": "Fuerza G",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9257,7 +9257,7 @@
    "id": "gravity",
    "name": "Gravedad",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9273,7 +9273,7 @@
    "id": "growth",
    "name": "Desarrollo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9281,7 +9281,7 @@
    "id": "grudge",
    "name": "Rabia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -9289,7 +9289,7 @@
    "id": "guardianofalola",
    "name": "Cólera del Guardián",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -9297,7 +9297,7 @@
    "id": "guardsplit",
    "name": "Isoguardia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9305,7 +9305,7 @@
    "id": "guardswap",
    "name": "Cambiadefensa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9313,7 +9313,7 @@
    "id": "guillotine",
    "name": "Guillotina",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9321,7 +9321,7 @@
    "id": "gunkshot",
    "name": "Lanzamugre",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -9337,7 +9337,7 @@
    "id": "gyroball",
    "name": "Giro Bola",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -9345,7 +9345,7 @@
    "id": "hail",
    "name": "Granizo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9353,7 +9353,7 @@
    "id": "hammerarm",
    "name": "Machada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -9361,7 +9361,7 @@
    "id": "happyhour",
    "name": "Paga Extra",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9369,7 +9369,7 @@
    "id": "harden",
    "name": "Fortaleza",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9377,7 +9377,7 @@
    "id": "hardpress",
    "name": "Prensa Metálica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -9385,7 +9385,7 @@
    "id": "haze",
    "name": "Niebla",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9393,7 +9393,7 @@
    "id": "headbutt",
    "name": "Golpe Cabeza",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9401,7 +9401,7 @@
    "id": "headcharge",
    "name": "Ariete",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9409,7 +9409,7 @@
    "id": "headlongrush",
    "name": "Arremetida",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -9417,7 +9417,7 @@
    "id": "headsmash",
    "name": "Testarazo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -9425,7 +9425,7 @@
    "id": "healbell",
    "name": "Cascabel Cura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9433,7 +9433,7 @@
    "id": "healblock",
    "name": "Anticura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9441,7 +9441,7 @@
    "id": "healingwish",
    "name": "Deseo Cura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9449,7 +9449,7 @@
    "id": "healorder",
    "name": "Auxilio",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -9457,7 +9457,7 @@
    "id": "healpulse",
    "name": "Pulso Cura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9465,7 +9465,7 @@
    "id": "heartstamp",
    "name": "Arrumaco",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9473,7 +9473,7 @@
    "id": "heartswap",
    "name": "Cambiaalmas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9481,7 +9481,7 @@
    "id": "heatcrash",
    "name": "Golpe Calor",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9489,7 +9489,7 @@
    "id": "heatwave",
    "name": "Onda Ígnea",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9497,7 +9497,7 @@
    "id": "heavyslam",
    "name": "Cuerpo Pesado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -9505,7 +9505,7 @@
    "id": "helpinghand",
    "name": "Refuerzo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9513,7 +9513,7 @@
    "id": "hex",
    "name": "Infortunio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -9521,7 +9521,7 @@
    "id": "hiddenpower",
    "name": "Poder Oculto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9529,7 +9529,7 @@
    "id": "hiddenpowerbug",
    "name": "Poder Oculto (Bicho)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -9537,7 +9537,7 @@
    "id": "hiddenpowerdark",
    "name": "Poder Oculto (Siniestro)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -9545,7 +9545,7 @@
    "id": "hiddenpowerdragon",
    "name": "Poder Oculto (Dragón)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -9553,7 +9553,7 @@
    "id": "hiddenpowerelectric",
    "name": "Poder Oculto (Eléctrico)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -9561,7 +9561,7 @@
    "id": "hiddenpowerfighting",
    "name": "Poder Oculto (Lucha)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -9569,7 +9569,7 @@
    "id": "hiddenpowerfire",
    "name": "Poder Oculto (Fuego)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9577,7 +9577,7 @@
    "id": "hiddenpowerflying",
    "name": "Poder Oculto (Volador)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -9585,7 +9585,7 @@
    "id": "hiddenpowerghost",
    "name": "Poder Oculto (Fantasma)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -9593,7 +9593,7 @@
    "id": "hiddenpowergrass",
    "name": "Poder Oculto (Planta)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9601,7 +9601,7 @@
    "id": "hiddenpowerground",
    "name": "Poder Oculto (Tierra)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -9609,7 +9609,7 @@
    "id": "hiddenpowerice",
    "name": "Poder Oculto (Hielo)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9617,7 +9617,7 @@
    "id": "hiddenpowerpoison",
    "name": "Poder Oculto (Veneno)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -9625,7 +9625,7 @@
    "id": "hiddenpowerpsychic",
    "name": "Poder Oculto (Psíquico)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9633,7 +9633,7 @@
    "id": "hiddenpowerrock",
    "name": "Poder Oculto (Roca)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -9641,7 +9641,7 @@
    "id": "hiddenpowersteel",
    "name": "Poder Oculto (Acero)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -9649,7 +9649,7 @@
    "id": "hiddenpowerwater",
    "name": "Poder Oculto (Agua)",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9657,7 +9657,7 @@
    "id": "highhorsepower",
    "name": "Fuerza Equina",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -9665,7 +9665,7 @@
    "id": "highjumpkick",
    "name": "Patada Salto Alta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -9673,7 +9673,7 @@
    "id": "holdback",
    "name": "Clemencia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9681,7 +9681,7 @@
    "id": "holdhands",
    "name": "Manos Juntas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9689,7 +9689,7 @@
    "id": "honeclaws",
    "name": "Afilagarras",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -9697,7 +9697,7 @@
    "id": "hornattack",
    "name": "Cornada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9705,7 +9705,7 @@
    "id": "horndrill",
    "name": "Perforador",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9713,7 +9713,7 @@
    "id": "hornleech",
    "name": "Asta Drenaje",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9721,7 +9721,7 @@
    "id": "howl",
    "name": "Aullido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9729,7 +9729,7 @@
    "id": "hurricane",
    "name": "Vendaval",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -9737,7 +9737,7 @@
    "id": "hydrocannon",
    "name": "Hidrocañón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9753,7 +9753,7 @@
    "id": "hydrosteam",
    "name": "Hidrovapor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9761,7 +9761,7 @@
    "id": "hydrovortex",
    "name": "Hidrovórtice Abisal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -9769,7 +9769,7 @@
    "id": "hyperbeam",
    "name": "Hiperrayo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9777,7 +9777,7 @@
    "id": "hyperdrill",
    "name": "Hipertaladro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9785,7 +9785,7 @@
    "id": "hyperfang",
    "name": "Hipercolmillo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9793,7 +9793,7 @@
    "id": "hyperspacefury",
    "name": "Cerco Dimensión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -9801,7 +9801,7 @@
    "id": "hyperspacehole",
    "name": "Paso Dimensional",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9809,7 +9809,7 @@
    "id": "hypervoice",
    "name": "Vozarrón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -9817,7 +9817,7 @@
    "id": "hypnosis",
    "name": "Hipnosis",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9825,7 +9825,7 @@
    "id": "iceball",
    "name": "Bola Hielo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9841,7 +9841,7 @@
    "id": "iceburn",
    "name": "Llama Gélida",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9849,7 +9849,7 @@
    "id": "icefang",
    "name": "Colmillo Hielo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9857,7 +9857,7 @@
    "id": "icehammer",
    "name": "Martillo Hielo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9873,7 +9873,7 @@
    "id": "iceshard",
    "name": "Esquirla Helada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9881,7 +9881,7 @@
    "id": "icespinner",
    "name": "Pirueta Helada",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9889,7 +9889,7 @@
    "id": "iciclecrash",
    "name": "Chuzos",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9897,7 +9897,7 @@
    "id": "iciclespear",
    "name": "Carámbano",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9905,7 +9905,7 @@
    "id": "icywind",
    "name": "Viento Hielo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -9913,7 +9913,7 @@
    "id": "imprison",
    "name": "Sellar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9921,7 +9921,7 @@
    "id": "incinerate",
    "name": "Calcinación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9929,7 +9929,7 @@
    "id": "infernalparade",
    "name": "Marcha Espectral",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -9937,7 +9937,7 @@
    "id": "inferno",
    "name": "Infierno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9945,7 +9945,7 @@
    "id": "infernooverdrive",
    "name": "Hecatombe Pírica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -9953,7 +9953,7 @@
    "id": "infestation",
    "name": "Acoso",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -9961,7 +9961,7 @@
    "id": "ingrain",
    "name": "Arraigo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -9969,7 +9969,7 @@
    "id": "instruct",
    "name": "Mandato",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -9977,7 +9977,7 @@
    "id": "iondeluge",
    "name": "Cortina Plasma",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -9985,7 +9985,7 @@
    "id": "irondefense",
    "name": "Defensa Férrea",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -9993,7 +9993,7 @@
    "id": "ironhead",
    "name": "Cabeza de Hierro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10001,7 +10001,7 @@
    "id": "irontail",
    "name": "Cola Férrea",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10009,7 +10009,7 @@
    "id": "ivycudgel",
    "name": "Garrote Liana",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10017,7 +10017,7 @@
    "id": "jawlock",
    "name": "Presa Maxilar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10025,7 +10025,7 @@
    "id": "jetpunch",
    "name": "Puño Jet",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -10033,7 +10033,7 @@
    "id": "judgment",
    "name": "Sentencia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10041,7 +10041,7 @@
    "id": "jumpkick",
    "name": "Patada Salto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10049,7 +10049,7 @@
    "id": "junglehealing",
    "name": "Cura Selvática",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10065,7 +10065,7 @@
    "id": "kinesis",
    "name": "Kinético",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10073,7 +10073,7 @@
    "id": "kingsshield",
    "name": "Escudo Real",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10081,7 +10081,7 @@
    "id": "knockoff",
    "name": "Desarme",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10089,7 +10089,7 @@
    "id": "kowtowcleave",
    "name": "Genufendiente",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10097,7 +10097,7 @@
    "id": "landswrath",
    "name": "Fuerza Telúrica",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -10105,7 +10105,7 @@
    "id": "laserfocus",
    "name": "Aguzar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10113,7 +10113,7 @@
    "id": "lashout",
    "name": "Desahogo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10121,7 +10121,7 @@
    "id": "lastresort",
    "name": "Última Baza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10129,7 +10129,7 @@
    "id": "lastrespects",
    "name": "Homenaje Póstumo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -10137,7 +10137,7 @@
    "id": "lavaplume",
    "name": "Humareda",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -10145,7 +10145,7 @@
    "id": "leafage",
    "name": "Follaje",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10153,7 +10153,7 @@
    "id": "leafblade",
    "name": "Hoja Aguda",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10161,7 +10161,7 @@
    "id": "leafstorm",
    "name": "Lluevehojas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10169,7 +10169,7 @@
    "id": "leaftornado",
    "name": "Ciclón de Hojas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10177,7 +10177,7 @@
    "id": "leechlife",
    "name": "Chupavidas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -10185,7 +10185,7 @@
    "id": "leechseed",
    "name": "Drenadoras",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10193,7 +10193,7 @@
    "id": "leer",
    "name": "Malicioso",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10201,7 +10201,7 @@
    "id": "letssnuggleforever",
    "name": "Somanta Amistosa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10209,7 +10209,7 @@
    "id": "lick",
    "name": "Lengüetazo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -10217,7 +10217,7 @@
    "id": "lifedew",
    "name": "Gota Vital",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -10225,7 +10225,7 @@
    "id": "lightofruin",
    "name": "Luz Aniquiladora",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10233,7 +10233,7 @@
    "id": "lightscreen",
    "name": "Pantalla de Luz",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10241,7 +10241,7 @@
    "id": "lightthatburnsthesky",
    "name": "Fotodestrucción Apocalíptica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10249,7 +10249,7 @@
    "id": "liquidation",
    "name": "Hidroariete",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -10257,7 +10257,7 @@
    "id": "lockon",
    "name": "Fijar Blanco",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10265,7 +10265,7 @@
    "id": "lovelykiss",
    "name": "Beso Amoroso",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10273,7 +10273,7 @@
    "id": "lowkick",
    "name": "Patada Baja",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10281,7 +10281,7 @@
    "id": "lowsweep",
    "name": "Puntapié",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10289,7 +10289,7 @@
    "id": "luckychant",
    "name": "Conjuro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10297,7 +10297,7 @@
    "id": "luminacrash",
    "name": "Fotocolisión",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10305,7 +10305,7 @@
    "id": "lunarblessing",
    "name": "Plegaria Lunar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10313,7 +10313,7 @@
    "id": "lunardance",
    "name": "Danza Lunar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10321,7 +10321,7 @@
    "id": "lunge",
    "name": "Plancha",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -10329,7 +10329,7 @@
    "id": "lusterpurge",
    "name": "Resplandor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10337,7 +10337,7 @@
    "id": "machpunch",
    "name": "Ultrapuño",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10345,7 +10345,7 @@
    "id": "magicalleaf",
    "name": "Hoja Mágica",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10353,7 +10353,7 @@
    "id": "magicaltorque",
    "name": "Feerichoque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10361,7 +10361,7 @@
    "id": "magiccoat",
    "name": "Capa Mágica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10369,7 +10369,7 @@
    "id": "magicpowder",
    "name": "Polvo Mágico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10377,7 +10377,7 @@
    "id": "magicroom",
    "name": "Zona Mágica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10385,7 +10385,7 @@
    "id": "magmastorm",
    "name": "Lluvia Ígnea",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -10393,7 +10393,7 @@
    "id": "magnetbomb",
    "name": "Bomba Imán",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10401,7 +10401,7 @@
    "id": "magneticflux",
    "name": "Aura Magnética",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -10409,7 +10409,7 @@
    "id": "magnetrise",
    "name": "Levitón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -10417,7 +10417,7 @@
    "id": "magnitude",
    "name": "Magnitud",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -10425,7 +10425,7 @@
    "id": "makeitrain",
    "name": "Fiebre Dorada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10433,7 +10433,7 @@
    "id": "maliciousmoonsault",
    "name": "Hiperplancha Oscura",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10441,7 +10441,7 @@
    "id": "malignantchain",
    "name": "Cadena Virulenta",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -10449,7 +10449,7 @@
    "id": "matblock",
    "name": "Escudo Tatami",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10457,7 +10457,7 @@
    "id": "matchagotcha",
    "name": "Cañón Batidor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10465,7 +10465,7 @@
    "id": "maxairstream",
    "name": "Maxiciclón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -10473,7 +10473,7 @@
    "id": "maxdarkness",
    "name": "Maxisombra",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10481,7 +10481,7 @@
    "id": "maxflare",
    "name": "Maxignición",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -10489,7 +10489,7 @@
    "id": "maxflutterby",
    "name": "Maxinsecto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -10497,7 +10497,7 @@
    "id": "maxgeyser",
    "name": "Maxichorro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -10505,7 +10505,7 @@
    "id": "maxguard",
    "name": "Maxibarrera",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10513,7 +10513,7 @@
    "id": "maxhailstorm",
    "name": "Maxihelada",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -10521,7 +10521,7 @@
    "id": "maxknuckle",
    "name": "Maxipuño",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10529,7 +10529,7 @@
    "id": "maxlightning",
    "name": "Maxitormenta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -10537,7 +10537,7 @@
    "id": "maxmindstorm",
    "name": "Maxionda",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10545,7 +10545,7 @@
    "id": "maxooze",
    "name": "Maxiácido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -10553,7 +10553,7 @@
    "id": "maxovergrowth",
    "name": "Maxiflora",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10561,7 +10561,7 @@
    "id": "maxphantasm",
    "name": "Maxiespectro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -10569,7 +10569,7 @@
    "id": "maxquake",
    "name": "Maxitemblor",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -10577,7 +10577,7 @@
    "id": "maxrockfall",
    "name": "Maxilito",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -10585,7 +10585,7 @@
    "id": "maxstarfall",
    "name": "Maxiestela",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10593,7 +10593,7 @@
    "id": "maxsteelspike",
    "name": "Maximetal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10601,7 +10601,7 @@
    "id": "maxstrike",
    "name": "Maxiataque",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10609,7 +10609,7 @@
    "id": "maxwyrmwind",
    "name": "Maxidraco",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -10617,7 +10617,7 @@
    "id": "meanlook",
    "name": "Mal de Ojo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10625,7 +10625,7 @@
    "id": "meditate",
    "name": "Meditación",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10633,7 +10633,7 @@
    "id": "mefirst",
    "name": "Yo Primero",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10641,7 +10641,7 @@
    "id": "megadrain",
    "name": "Megaagotar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -10649,7 +10649,7 @@
    "id": "megahorn",
    "name": "Megacuerno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -10657,7 +10657,7 @@
    "id": "megakick",
    "name": "Megapatada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10673,7 +10673,7 @@
    "id": "memento",
    "name": "Legado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10681,7 +10681,7 @@
    "id": "menacingmoonrazemaelstrom",
    "name": "Deflagración Lunar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -10689,7 +10689,7 @@
    "id": "metalburst",
    "name": "Represión Metal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10697,7 +10697,7 @@
    "id": "metalclaw",
    "name": "Garra Metal",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10705,7 +10705,7 @@
    "id": "metalsound",
    "name": "Eco Metálico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10713,7 +10713,7 @@
    "id": "meteorassault",
    "name": "Asalto Estelar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -10721,7 +10721,7 @@
    "id": "meteorbeam",
    "name": "Rayo Meteórico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -10729,7 +10729,7 @@
    "id": "meteormash",
    "name": "Puño Meteoro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10737,7 +10737,7 @@
    "id": "metronome",
    "name": "Metrónomo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10745,7 +10745,7 @@
    "id": "mightycleave",
    "name": "Filo Potente",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -10753,7 +10753,7 @@
    "id": "milkdrink",
    "name": "Batido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10761,7 +10761,7 @@
    "id": "mimic",
    "name": "Mimético",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10769,7 +10769,7 @@
    "id": "mindblown",
    "name": "Cabeza Sorpresa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -10777,7 +10777,7 @@
    "id": "mindreader",
    "name": "Telépata",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10785,7 +10785,7 @@
    "id": "minimize",
    "name": "Reducción",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10793,7 +10793,7 @@
    "id": "miracleeye",
    "name": "Gran Ojo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10801,7 +10801,7 @@
    "id": "mirrorcoat",
    "name": "Manto Espejo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10809,7 +10809,7 @@
    "id": "mirrormove",
    "name": "Espejo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -10817,7 +10817,7 @@
    "id": "mirrorshot",
    "name": "Disparo Espejo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -10825,7 +10825,7 @@
    "id": "mist",
    "name": "Neblina",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -10833,7 +10833,7 @@
    "id": "mistball",
    "name": "Bola Neblina",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10841,7 +10841,7 @@
    "id": "mistyexplosion",
    "name": "Bruma Explosiva",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10849,7 +10849,7 @@
    "id": "mistyterrain",
    "name": "Campo de Niebla",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10857,7 +10857,7 @@
    "id": "moonblast",
    "name": "Fuerza Lunar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10865,7 +10865,7 @@
    "id": "moongeistbeam",
    "name": "Rayo Umbrío",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -10873,7 +10873,7 @@
    "id": "moonlight",
    "name": "Luz Lunar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -10881,7 +10881,7 @@
    "id": "morningsun",
    "name": "Sol Matinal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10889,7 +10889,7 @@
    "id": "mortalspin",
    "name": "Giro Mortífero",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -10897,7 +10897,7 @@
    "id": "mountaingale",
    "name": "Viento Carámbano",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -10905,7 +10905,7 @@
    "id": "mudbomb",
    "name": "Bomba Fango",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -10913,7 +10913,7 @@
    "id": "muddywater",
    "name": "Agua Lodosa",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -10921,7 +10921,7 @@
    "id": "mudshot",
    "name": "Disparo Lodo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -10929,7 +10929,7 @@
    "id": "mudslap",
    "name": "Bofetón Lodo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -10937,7 +10937,7 @@
    "id": "mudsport",
    "name": "Chapoteo Lodo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -10945,7 +10945,7 @@
    "id": "multiattack",
    "name": "Multiataque",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10953,7 +10953,7 @@
    "id": "mysticalfire",
    "name": "Llama Embrujada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -10961,7 +10961,7 @@
    "id": "mysticalpower",
    "name": "Poder Místico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -10969,7 +10969,7 @@
    "id": "nastyplot",
    "name": "Maquinación",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -10977,7 +10977,7 @@
    "id": "naturalgift",
    "name": "Don Natural",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10985,7 +10985,7 @@
    "id": "naturepower",
    "name": "Adaptación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -10993,7 +10993,7 @@
    "id": "naturesmadness",
    "name": "Furia Natural",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -11001,7 +11001,7 @@
    "id": "needlearm",
    "name": "Brazo Pincho",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -11009,7 +11009,7 @@
    "id": "neverendingnightmare",
    "name": "Presa Espectral",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -11017,7 +11017,7 @@
    "id": "nightdaze",
    "name": "Pulso Noche",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11025,7 +11025,7 @@
    "id": "nightmare",
    "name": "Pesadilla",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -11033,7 +11033,7 @@
    "id": "nightshade",
    "name": "Tinieblas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -11041,7 +11041,7 @@
    "id": "nightslash",
    "name": "Tajo Umbrío",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11049,7 +11049,7 @@
    "id": "nihillight",
    "name": "Nihil Light",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -11057,7 +11057,7 @@
    "id": "nobleroar",
    "name": "Rugido de Guerra",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11065,7 +11065,7 @@
    "id": "noretreat",
    "name": "Bastión Final",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11073,7 +11073,7 @@
    "id": "noxioustorque",
    "name": "Ponzochoque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -11081,7 +11081,7 @@
    "id": "nuzzle",
    "name": "Moflete Estático",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -11089,7 +11089,7 @@
    "id": "oblivionwing",
    "name": "Ala Mortífera",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -11097,7 +11097,7 @@
    "id": "obstruct",
    "name": "Obstrucción",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11105,7 +11105,7 @@
    "id": "oceanicoperetta",
    "name": "Sinfonía de la Diva Marina",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -11113,7 +11113,7 @@
    "id": "octazooka",
    "name": "Pulpocañón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -11121,7 +11121,7 @@
    "id": "octolock",
    "name": "Octopresa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11129,7 +11129,7 @@
    "id": "odorsleuth",
    "name": "Rastreo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11137,7 +11137,7 @@
    "id": "ominouswind",
    "name": "Viento Aciago",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -11145,7 +11145,7 @@
    "id": "orderup",
    "name": "Oído Cocina",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -11153,7 +11153,7 @@
    "id": "originpulse",
    "name": "Pulso Primigenio",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -11161,7 +11161,7 @@
    "id": "outrage",
    "name": "Enfado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -11169,7 +11169,7 @@
    "id": "overdrive",
    "name": "Amplificador",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -11177,7 +11177,7 @@
    "id": "overheat",
    "name": "Sofoco",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -11185,7 +11185,7 @@
    "id": "painsplit",
    "name": "Divide Dolor",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11193,7 +11193,7 @@
    "id": "paraboliccharge",
    "name": "Carga Parábola",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -11201,7 +11201,7 @@
    "id": "partingshot",
    "name": "Última Palabra",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11209,7 +11209,7 @@
    "id": "payback",
    "name": "Vendetta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11233,7 +11233,7 @@
    "id": "perishsong",
    "name": "Canto Mortal",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11241,7 +11241,7 @@
    "id": "petalblizzard",
    "name": "Tormenta Floral",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -11249,7 +11249,7 @@
    "id": "petaldance",
    "name": "Danza Pétalo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -11257,7 +11257,7 @@
    "id": "phantomforce",
    "name": "Golpe Fantasma",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -11265,7 +11265,7 @@
    "id": "photongeyser",
    "name": "Géiser Fotónico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11273,7 +11273,7 @@
    "id": "pikapapow",
    "name": "Pikatormenta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -11281,7 +11281,7 @@
    "id": "pinmissile",
    "name": "Pin Misil",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -11289,7 +11289,7 @@
    "id": "plasmafists",
    "name": "Puños Plasma",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -11305,7 +11305,7 @@
    "id": "playrough",
    "name": "Carantoña",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -11313,7 +11313,7 @@
    "id": "pluck",
    "name": "Picoteo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -11321,7 +11321,7 @@
    "id": "poisonfang",
    "name": "Colmillo Veneno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -11329,7 +11329,7 @@
    "id": "poisongas",
    "name": "Gas Venenoso",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -11337,7 +11337,7 @@
    "id": "poisonjab",
    "name": "Puya Nociva",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -11345,7 +11345,7 @@
    "id": "poisonpowder",
    "name": "Polvo Veneno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -11361,7 +11361,7 @@
    "id": "poisontail",
    "name": "Cola Veneno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -11369,7 +11369,7 @@
    "id": "pollenpuff",
    "name": "Bola de Polen",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -11377,7 +11377,7 @@
    "id": "poltergeist",
    "name": "Poltergeist",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -11385,7 +11385,7 @@
    "id": "populationbomb",
    "name": "Proliferación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11393,7 +11393,7 @@
    "id": "pounce",
    "name": "Brinco",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -11409,7 +11409,7 @@
    "id": "powder",
    "name": "Polvo Explosivo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -11417,7 +11417,7 @@
    "id": "powdersnow",
    "name": "Nieve Polvo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -11425,7 +11425,7 @@
    "id": "powergem",
    "name": "Joya de Luz",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -11433,7 +11433,7 @@
    "id": "powershift",
    "name": "Cambiapoder",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11441,7 +11441,7 @@
    "id": "powersplit",
    "name": "Isofuerza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11449,7 +11449,7 @@
    "id": "powerswap",
    "name": "Cambiafuerza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11457,7 +11457,7 @@
    "id": "powertrick",
    "name": "Truco Fuerza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11465,7 +11465,7 @@
    "id": "powertrip",
    "name": "Chulería",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11473,7 +11473,7 @@
    "id": "poweruppunch",
    "name": "Puño Incremento",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11481,7 +11481,7 @@
    "id": "powerwhip",
    "name": "Latigazo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -11489,7 +11489,7 @@
    "id": "precipiceblades",
    "name": "Filo del Abismo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -11497,7 +11497,7 @@
    "id": "present",
    "name": "Presente",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11505,7 +11505,7 @@
    "id": "prismaticlaser",
    "name": "Láser Prisma",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11521,7 +11521,7 @@
    "id": "psybeam",
    "name": "Psicorrayo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11529,7 +11529,7 @@
    "id": "psyblade",
    "name": "Psicohojas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11545,7 +11545,7 @@
    "id": "psychicfangs",
    "name": "Psicocolmillo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11553,7 +11553,7 @@
    "id": "psychicnoise",
    "name": "Psicorruido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11561,7 +11561,7 @@
    "id": "psychicterrain",
    "name": "Campo Psíquico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11569,7 +11569,7 @@
    "id": "psychoboost",
    "name": "Psicoataque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11577,7 +11577,7 @@
    "id": "psychocut",
    "name": "Psicocorte",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11585,7 +11585,7 @@
    "id": "psychoshift",
    "name": "Psicocambio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11593,7 +11593,7 @@
    "id": "psychup",
    "name": "Autosugestión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11601,7 +11601,7 @@
    "id": "psyshieldbash",
    "name": "Asalto Barrera",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11609,7 +11609,7 @@
    "id": "psyshock",
    "name": "Psicocarga",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11617,7 +11617,7 @@
    "id": "psystrike",
    "name": "Onda Mental",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11625,7 +11625,7 @@
    "id": "psywave",
    "name": "Psicoonda",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11633,7 +11633,7 @@
    "id": "pulverizingpancake",
    "name": "Arrojo Intempestivo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11641,7 +11641,7 @@
    "id": "punishment",
    "name": "Castigo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11649,7 +11649,7 @@
    "id": "purify",
    "name": "Purificación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -11657,7 +11657,7 @@
    "id": "pursuit",
    "name": "Persecución",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11665,7 +11665,7 @@
    "id": "pyroball",
    "name": "Balón Ígneo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -11673,7 +11673,7 @@
    "id": "quash",
    "name": "Último Lugar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -11689,7 +11689,7 @@
    "id": "quickguard",
    "name": "Anticipo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11697,7 +11697,7 @@
    "id": "quiverdance",
    "name": "Danza Aleteo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -11705,7 +11705,7 @@
    "id": "rage",
    "name": "Furia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11713,7 +11713,7 @@
    "id": "ragefist",
    "name": "Puño Furia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -11721,7 +11721,7 @@
    "id": "ragepowder",
    "name": "Polvo Ira",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -11729,7 +11729,7 @@
    "id": "ragingbull",
    "name": "Furia Taurina",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11737,7 +11737,7 @@
    "id": "ragingfury",
    "name": "Erupción de Ira",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -11745,7 +11745,7 @@
    "id": "raindance",
    "name": "Danza Lluvia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -11753,7 +11753,7 @@
    "id": "rapidspin",
    "name": "Giro Rápido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11761,7 +11761,7 @@
    "id": "razorleaf",
    "name": "Hoja Afilada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -11769,7 +11769,7 @@
    "id": "razorshell",
    "name": "Concha Filo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -11777,7 +11777,7 @@
    "id": "razorwind",
    "name": "Viento Cortante",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11793,7 +11793,7 @@
    "id": "recycle",
    "name": "Reciclaje",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11801,7 +11801,7 @@
    "id": "reflect",
    "name": "Reflejo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11809,7 +11809,7 @@
    "id": "reflecttype",
    "name": "Clonatipo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11817,7 +11817,7 @@
    "id": "refresh",
    "name": "Alivio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11825,7 +11825,7 @@
    "id": "relicsong",
    "name": "Canto Arcaico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11833,7 +11833,7 @@
    "id": "rest",
    "name": "Descanso",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11841,7 +11841,7 @@
    "id": "retaliate",
    "name": "Represalia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11849,7 +11849,7 @@
    "id": "return",
    "name": "Retribución",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11857,7 +11857,7 @@
    "id": "revelationdance",
    "name": "Danza Despertar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11865,7 +11865,7 @@
    "id": "revenge",
    "name": "Desquite",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11873,7 +11873,7 @@
    "id": "reversal",
    "name": "Inversión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11881,7 +11881,7 @@
    "id": "revivalblessing",
    "name": "Plegaria Vital",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11889,7 +11889,7 @@
    "id": "risingvoltage",
    "name": "Alto Voltaje",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -11897,7 +11897,7 @@
    "id": "roar",
    "name": "Rugido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11905,7 +11905,7 @@
    "id": "roaroftime",
    "name": "Distorsión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -11913,7 +11913,7 @@
    "id": "rockblast",
    "name": "Pedrada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -11921,7 +11921,7 @@
    "id": "rockclimb",
    "name": "Treparrocas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -11929,7 +11929,7 @@
    "id": "rockpolish",
    "name": "Pulimento",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -11937,7 +11937,7 @@
    "id": "rockslide",
    "name": "Avalancha",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -11945,7 +11945,7 @@
    "id": "rocksmash",
    "name": "Golpe Roca",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11953,7 +11953,7 @@
    "id": "rockthrow",
    "name": "Lanzarrocas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -11961,7 +11961,7 @@
    "id": "rocktomb",
    "name": "Tumba Rocas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -11969,7 +11969,7 @@
    "id": "rockwrecker",
    "name": "Romperrocas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -11977,7 +11977,7 @@
    "id": "roleplay",
    "name": "Imitación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -11985,7 +11985,7 @@
    "id": "rollingkick",
    "name": "Patada Giro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -11993,7 +11993,7 @@
    "id": "rollout",
    "name": "Rodar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12001,7 +12001,7 @@
    "id": "roost",
    "name": "Respiro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -12009,7 +12009,7 @@
    "id": "rototiller",
    "name": "Fertilizante",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12017,7 +12017,7 @@
    "id": "round",
    "name": "Canon",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12025,7 +12025,7 @@
    "id": "ruination",
    "name": "Calamidad",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -12033,7 +12033,7 @@
    "id": "sacredfire",
    "name": "Fuego Sagrado",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -12041,7 +12041,7 @@
    "id": "sacredsword",
    "name": "Espada Santa",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -12049,7 +12049,7 @@
    "id": "safeguard",
    "name": "Velo Sagrado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12057,7 +12057,7 @@
    "id": "saltcure",
    "name": "Salazón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12065,7 +12065,7 @@
    "id": "sandattack",
    "name": "Ataque Arena",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12073,7 +12073,7 @@
    "id": "sandsearstorm",
    "name": "Simún de Arena",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12081,7 +12081,7 @@
    "id": "sandstorm",
    "name": "Tormenta de Arena",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12089,7 +12089,7 @@
    "id": "sandtomb",
    "name": "Bucle Arena",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12097,7 +12097,7 @@
    "id": "sappyseed",
    "name": "Leafitobombas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12105,7 +12105,7 @@
    "id": "savagespinout",
    "name": "Guadaña Sedosa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12113,7 +12113,7 @@
    "id": "scald",
    "name": "Escaldar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -12121,7 +12121,7 @@
    "id": "scaleshot",
    "name": "Ráfaga Escamas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -12129,7 +12129,7 @@
    "id": "scaryface",
    "name": "Cara Susto",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12137,7 +12137,7 @@
    "id": "scorchingsands",
    "name": "Arenas Ardientes",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12153,7 +12153,7 @@
    "id": "screech",
    "name": "Chirrido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12161,7 +12161,7 @@
    "id": "searingshot",
    "name": "Bomba Ígnea",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -12169,7 +12169,7 @@
    "id": "searingsunrazesmash",
    "name": "Embestida Solar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12177,7 +12177,7 @@
    "id": "secretpower",
    "name": "Daño Secreto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12185,7 +12185,7 @@
    "id": "secretsword",
    "name": "Sable Místico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -12193,7 +12193,7 @@
    "id": "seedbomb",
    "name": "Bomba Germen",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12201,7 +12201,7 @@
    "id": "seedflare",
    "name": "Fulgor Semilla",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12209,7 +12209,7 @@
    "id": "seismictoss",
    "name": "Sísmico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -12217,7 +12217,7 @@
    "id": "selfdestruct",
    "name": "Autodestrucción",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12233,7 +12233,7 @@
    "id": "shadowbone",
    "name": "Hueso Sombrío",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12241,7 +12241,7 @@
    "id": "shadowclaw",
    "name": "Garra Umbría",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12249,7 +12249,7 @@
    "id": "shadowforce",
    "name": "Golpe Umbrío",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12257,7 +12257,7 @@
    "id": "shadowpunch",
    "name": "Puño Sombra",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12265,7 +12265,7 @@
    "id": "shadowsneak",
    "name": "Sombra Vil",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12273,7 +12273,7 @@
    "id": "sharpen",
    "name": "Afilar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12281,7 +12281,7 @@
    "id": "shatteredpsyche",
    "name": "Disruptor Psíquico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -12289,7 +12289,7 @@
    "id": "shedtail",
    "name": "Autotomía",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12297,7 +12297,7 @@
    "id": "sheercold",
    "name": "Frío Polar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -12305,7 +12305,7 @@
    "id": "shellsidearm",
    "name": "Moluscañón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -12313,7 +12313,7 @@
    "id": "shellsmash",
    "name": "Rompecoraza",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12321,7 +12321,7 @@
    "id": "shelltrap",
    "name": "Coraza Trampa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -12329,7 +12329,7 @@
    "id": "shelter",
    "name": "Retracción",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12337,7 +12337,7 @@
    "id": "shiftgear",
    "name": "Cambio de Marcha",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12345,7 +12345,7 @@
    "id": "shockwave",
    "name": "Onda Voltio",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -12353,7 +12353,7 @@
    "id": "shoreup",
    "name": "Recogearena",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12361,7 +12361,7 @@
    "id": "signalbeam",
    "name": "Rayo Señal",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12369,7 +12369,7 @@
    "id": "silktrap",
    "name": "Telatrampa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12377,7 +12377,7 @@
    "id": "silverwind",
    "name": "Viento Plata",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12385,7 +12385,7 @@
    "id": "simplebeam",
    "name": "Onda Simple",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12393,7 +12393,7 @@
    "id": "sing",
    "name": "Canto",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12401,7 +12401,7 @@
    "id": "sinisterarrowraid",
    "name": "Aluvión de Flechas Sombrías",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12409,7 +12409,7 @@
    "id": "sizzlyslide",
    "name": "Flarembestida",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -12417,7 +12417,7 @@
    "id": "sketch",
    "name": "Esquema",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12425,7 +12425,7 @@
    "id": "skillswap",
    "name": "Intercambio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -12433,7 +12433,7 @@
    "id": "skittersmack",
    "name": "Golpe Rastrero",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12441,7 +12441,7 @@
    "id": "skullbash",
    "name": "Cabezazo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12449,7 +12449,7 @@
    "id": "skyattack",
    "name": "Ataque Aéreo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -12457,7 +12457,7 @@
    "id": "skydrop",
    "name": "Caída Libre",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -12465,7 +12465,7 @@
    "id": "skyuppercut",
    "name": "Gancho Alto",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -12473,7 +12473,7 @@
    "id": "slackoff",
    "name": "Relajo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12481,7 +12481,7 @@
    "id": "slam",
    "name": "Atizar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12489,7 +12489,7 @@
    "id": "slash",
    "name": "Cuchillada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12497,7 +12497,7 @@
    "id": "sleeppowder",
    "name": "Somnífero",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12505,7 +12505,7 @@
    "id": "sleeptalk",
    "name": "Sonámbulo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12513,7 +12513,7 @@
    "id": "sludge",
    "name": "Residuos",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -12521,7 +12521,7 @@
    "id": "sludgebomb",
    "name": "Bomba Lodo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -12529,7 +12529,7 @@
    "id": "sludgewave",
    "name": "Onda Tóxica",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -12537,7 +12537,7 @@
    "id": "smackdown",
    "name": "Antiaéreo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12545,7 +12545,7 @@
    "id": "smartstrike",
    "name": "Cuerno Certero",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12553,7 +12553,7 @@
    "id": "smellingsalts",
    "name": "Estímulo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12561,7 +12561,7 @@
    "id": "smog",
    "name": "Polución",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -12569,7 +12569,7 @@
    "id": "smokescreen",
    "name": "Pantalla de Humo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12577,7 +12577,7 @@
    "id": "snaptrap",
    "name": "Cepo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12585,7 +12585,7 @@
    "id": "snarl",
    "name": "Alarido",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -12593,7 +12593,7 @@
    "id": "snatch",
    "name": "Robo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -12601,7 +12601,7 @@
    "id": "snipeshot",
    "name": "Disparo Certero",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -12609,7 +12609,7 @@
    "id": "snore",
    "name": "Ronquido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12617,7 +12617,7 @@
    "id": "snowscape",
    "name": "Paisaje Nevado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -12625,7 +12625,7 @@
    "id": "soak",
    "name": "Empapar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -12633,7 +12633,7 @@
    "id": "softboiled",
    "name": "Ovocuración",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12641,7 +12641,7 @@
    "id": "solarbeam",
    "name": "Rayo Solar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12649,7 +12649,7 @@
    "id": "solarblade",
    "name": "Cuchilla Solar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12657,7 +12657,7 @@
    "id": "sonicboom",
    "name": "Bomba Sónica",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12665,7 +12665,7 @@
    "id": "soulstealing7starstrike",
    "name": "Constelación Robaalmas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12673,7 +12673,7 @@
    "id": "spacialrend",
    "name": "Corte Vacío",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -12681,7 +12681,7 @@
    "id": "spark",
    "name": "Chispa",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -12689,7 +12689,7 @@
    "id": "sparklingaria",
    "name": "Aria Burbuja",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -12697,7 +12697,7 @@
    "id": "sparklyswirl",
    "name": "Sylveotornado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -12705,7 +12705,7 @@
    "id": "spectralthief",
    "name": "Robasombra",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12713,7 +12713,7 @@
    "id": "speedswap",
    "name": "Cambiavelocidad",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -12721,7 +12721,7 @@
    "id": "spicyextract",
    "name": "Extracto Picante",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12729,7 +12729,7 @@
    "id": "spiderweb",
    "name": "Telaraña",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12737,7 +12737,7 @@
    "id": "spikecannon",
    "name": "Clavo Cañón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12745,7 +12745,7 @@
    "id": "spikes",
    "name": "Púas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12753,7 +12753,7 @@
    "id": "spikyshield",
    "name": "Barrera Espinosa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12761,7 +12761,7 @@
    "id": "spinout",
    "name": "Quemarrueda",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12769,7 +12769,7 @@
    "id": "spiritbreak",
    "name": "Choque Anímico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -12777,7 +12777,7 @@
    "id": "spiritshackle",
    "name": "Puntada Sombría",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12785,7 +12785,7 @@
    "id": "spite",
    "name": "Rencor",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -12793,7 +12793,7 @@
    "id": "spitup",
    "name": "Escupir",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12809,7 +12809,7 @@
    "id": "splinteredstormshards",
    "name": "Tempestad Rocosa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12817,7 +12817,7 @@
    "id": "splishysplash",
    "name": "Salpikasurf",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -12825,7 +12825,7 @@
    "id": "spore",
    "name": "Espora",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -12833,7 +12833,7 @@
    "id": "spotlight",
    "name": "Foco",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12841,7 +12841,7 @@
    "id": "springtidestorm",
    "name": "Ciclón Primavera",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -12849,7 +12849,7 @@
    "id": "stealthrock",
    "name": "Trampa Rocas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12857,7 +12857,7 @@
    "id": "steameruption",
    "name": "Chorro de Vapor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -12865,7 +12865,7 @@
    "id": "steamroller",
    "name": "Rodillo de Púas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12873,7 +12873,7 @@
    "id": "steelbeam",
    "name": "Metaláser",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12881,7 +12881,7 @@
    "id": "steelroller",
    "name": "Allanador Férreo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12889,7 +12889,7 @@
    "id": "steelwing",
    "name": "Ala de Acero",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -12897,7 +12897,7 @@
    "id": "stickyweb",
    "name": "Red Viscosa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -12905,7 +12905,7 @@
    "id": "stockpile",
    "name": "Reserva",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12913,7 +12913,7 @@
    "id": "stokedsparksurfer",
    "name": "Surfeo Galvánico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -12921,7 +12921,7 @@
    "id": "stomp",
    "name": "Pisotón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12929,7 +12929,7 @@
    "id": "stompingtantrum",
    "name": "Pataleta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -12937,7 +12937,7 @@
    "id": "stoneaxe",
    "name": "Hachazo Pétreo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12945,7 +12945,7 @@
    "id": "stoneedge",
    "name": "Roca Afilada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -12953,7 +12953,7 @@
    "id": "storedpower",
    "name": "Poder Reserva",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -12961,7 +12961,7 @@
    "id": "stormthrow",
    "name": "Llave Corsé",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -12969,7 +12969,7 @@
    "id": "strangesteam",
    "name": "Cautivapor",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -12977,7 +12977,7 @@
    "id": "strength",
    "name": "Fuerza",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -12985,7 +12985,7 @@
    "id": "strengthsap",
    "name": "Absorbefuerza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -13001,7 +13001,7 @@
    "id": "struggle",
    "name": "Forcejeo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13009,7 +13009,7 @@
    "id": "strugglebug",
    "name": "Estoicismo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -13017,7 +13017,7 @@
    "id": "stuffcheeks",
    "name": "Atiborramiento",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13025,7 +13025,7 @@
    "id": "stunspore",
    "name": "Paralizador",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -13033,7 +13033,7 @@
    "id": "submission",
    "name": "Sumisión",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13041,7 +13041,7 @@
    "id": "substitute",
    "name": "Sustituto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13049,7 +13049,7 @@
    "id": "subzeroslammer",
    "name": "Crioaliento Despiadado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -13057,7 +13057,7 @@
    "id": "suckerpunch",
    "name": "Golpe Bajo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13065,7 +13065,7 @@
    "id": "sunnyday",
    "name": "Día Soleado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -13073,7 +13073,7 @@
    "id": "sunsteelstrike",
    "name": "Meteoimpacto",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -13081,7 +13081,7 @@
    "id": "supercellslam",
    "name": "Plancha Voltaica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13089,7 +13089,7 @@
    "id": "superfang",
    "name": "Superdiente",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13097,7 +13097,7 @@
    "id": "superpower",
    "name": "Fuerza Bruta",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13105,7 +13105,7 @@
    "id": "supersonic",
    "name": "Supersónico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13113,7 +13113,7 @@
    "id": "supersonicskystrike",
    "name": "Picado Supersónico",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -13129,7 +13129,7 @@
    "id": "surgingstrikes",
    "name": "Azote Torrencial",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13137,7 +13137,7 @@
    "id": "swagger",
    "name": "Fanfarronear",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13145,7 +13145,7 @@
    "id": "swallow",
    "name": "Tragar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13153,7 +13153,7 @@
    "id": "sweetkiss",
    "name": "Beso Dulce",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -13169,7 +13169,7 @@
    "id": "swift",
    "name": "Meteoros",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13177,7 +13177,7 @@
    "id": "switcheroo",
    "name": "Trapicheo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13193,7 +13193,7 @@
    "id": "synchronoise",
    "name": "Sincrorruido",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13201,7 +13201,7 @@
    "id": "synthesis",
    "name": "Fotosíntesis",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -13209,7 +13209,7 @@
    "id": "syrupbomb",
    "name": "Bomba Caramelo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -13217,7 +13217,7 @@
    "id": "tachyoncutter",
    "name": "Tajo Taquión",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "steel"
   },
   {
@@ -13233,7 +13233,7 @@
    "id": "tailglow",
    "name": "Luminicola",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -13241,7 +13241,7 @@
    "id": "tailslap",
    "name": "Plumerazo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13257,7 +13257,7 @@
    "id": "tailwind",
    "name": "Viento Afín",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -13265,7 +13265,7 @@
    "id": "takedown",
    "name": "Derribo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13273,7 +13273,7 @@
    "id": "takeheart",
    "name": "Bálsamo Osado",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13281,7 +13281,7 @@
    "id": "tarshot",
    "name": "Alquitranazo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -13289,7 +13289,7 @@
    "id": "taunt",
    "name": "Mofa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13297,7 +13297,7 @@
    "id": "tearfullook",
    "name": "Ojos Llorosos",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13305,7 +13305,7 @@
    "id": "teatime",
    "name": "Hora del Té",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13313,7 +13313,7 @@
    "id": "technoblast",
    "name": "Tecno Shock",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13321,7 +13321,7 @@
    "id": "tectonicrage",
    "name": "Barrena Telúrica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -13329,7 +13329,7 @@
    "id": "teeterdance",
    "name": "Danza Caos",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13337,7 +13337,7 @@
    "id": "telekinesis",
    "name": "Telequinesis",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13345,7 +13345,7 @@
    "id": "teleport",
    "name": "Teletransporte",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13353,7 +13353,7 @@
    "id": "temperflare",
    "name": "Cólera Ardiente",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -13361,7 +13361,7 @@
    "id": "terablast",
    "name": "Teraexplosión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13369,7 +13369,7 @@
    "id": "terastarstorm",
    "name": "Teraclúster",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13377,7 +13377,7 @@
    "id": "terrainpulse",
    "name": "Pulso de Campo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13385,7 +13385,7 @@
    "id": "thief",
    "name": "Ladrón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13393,7 +13393,7 @@
    "id": "thousandarrows",
    "name": "Mil Flechas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -13401,7 +13401,7 @@
    "id": "thousandwaves",
    "name": "Mil Temblores",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ground"
   },
   {
@@ -13409,7 +13409,7 @@
    "id": "thrash",
    "name": "Saña",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13417,7 +13417,7 @@
    "id": "throatchop",
    "name": "Golpe Mordaza",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13425,7 +13425,7 @@
    "id": "thunder",
    "name": "Trueno",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13441,7 +13441,7 @@
    "id": "thundercage",
    "name": "Electrojaula",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13449,7 +13449,7 @@
    "id": "thunderclap",
    "name": "Relámpago Súbito",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13457,7 +13457,7 @@
    "id": "thunderfang",
    "name": "Colmillo Rayo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13465,7 +13465,7 @@
    "id": "thunderouskick",
    "name": "Patada Relámpago",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13481,7 +13481,7 @@
    "id": "thundershock",
    "name": "Impactrueno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13489,7 +13489,7 @@
    "id": "thunderwave",
    "name": "Onda Trueno",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13497,7 +13497,7 @@
    "id": "tickle",
    "name": "Cosquillas",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13505,7 +13505,7 @@
    "id": "tidyup",
    "name": "Limpieza General",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13513,7 +13513,7 @@
    "id": "topsyturvy",
    "name": "Reversión",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13521,7 +13521,7 @@
    "id": "torchsong",
    "name": "Canto Ardiente",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -13529,7 +13529,7 @@
    "id": "torment",
    "name": "Tormento",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13537,7 +13537,7 @@
    "id": "toxic",
    "name": "Tóxico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -13545,7 +13545,7 @@
    "id": "toxicspikes",
    "name": "Púas Tóxicas",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -13553,7 +13553,7 @@
    "id": "toxicthread",
    "name": "Hilo Venenoso",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -13561,7 +13561,7 @@
    "id": "trailblaze",
    "name": "Abrecaminos",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -13569,7 +13569,7 @@
    "id": "transform",
    "name": "Transformación",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13577,7 +13577,7 @@
    "id": "triattack",
    "name": "Triataque",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13585,7 +13585,7 @@
    "id": "trick",
    "name": "Truco",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13593,7 +13593,7 @@
    "id": "trickortreat",
    "name": "Halloween",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ghost"
   },
   {
@@ -13601,7 +13601,7 @@
    "id": "trickroom",
    "name": "Espacio Raro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13609,7 +13609,7 @@
    "id": "triplearrows",
    "name": "Triple Flecha",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13617,7 +13617,7 @@
    "id": "tripleaxel",
    "name": "Triple Axel",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "ice"
   },
   {
@@ -13625,7 +13625,7 @@
    "id": "tripledive",
    "name": "Triple Inmersión",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13633,7 +13633,7 @@
    "id": "triplekick",
    "name": "Triple Patada",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13641,7 +13641,7 @@
    "id": "tropkick",
    "name": "Patada Tropical",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -13649,7 +13649,7 @@
    "id": "trumpcard",
    "name": "As Oculto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13657,7 +13657,7 @@
    "id": "twinbeam",
    "name": "Láser Doble",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13665,7 +13665,7 @@
    "id": "twineedle",
    "name": "Doble Ataque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -13673,7 +13673,7 @@
    "id": "twinkletackle",
    "name": "Arrumaco Sideral",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fairy"
   },
   {
@@ -13681,7 +13681,7 @@
    "id": "twister",
    "name": "Ciclón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dragon"
   },
   {
@@ -13689,7 +13689,7 @@
    "id": "upperhand",
    "name": "Palma Rauda",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13697,7 +13697,7 @@
    "id": "uproar",
    "name": "Alboroto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13705,7 +13705,7 @@
    "id": "uturn",
    "name": "Ida y Vuelta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -13713,7 +13713,7 @@
    "id": "vacuumwave",
    "name": "Onda Vacío",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13721,7 +13721,7 @@
    "id": "vcreate",
    "name": "V de Fuego",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -13729,7 +13729,7 @@
    "id": "veeveevolley",
    "name": "Eevimpacto",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13737,7 +13737,7 @@
    "id": "venomdrench",
    "name": "Trampa Venenosa",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -13745,7 +13745,7 @@
    "id": "venoshock",
    "name": "Carga Tóxica",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "poison"
   },
   {
@@ -13753,7 +13753,7 @@
    "id": "victorydance",
    "name": "Danza Triunfal",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13769,7 +13769,7 @@
    "id": "visegrip",
    "name": "Agarre",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13777,7 +13777,7 @@
    "id": "vitalthrow",
    "name": "Llave Vital",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13785,7 +13785,7 @@
    "id": "voltswitch",
    "name": "Voltiocambio",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13793,7 +13793,7 @@
    "id": "volttackle",
    "name": "Placaje Eléctrico",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13801,7 +13801,7 @@
    "id": "wakeupslap",
    "name": "Espabila",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fighting"
   },
   {
@@ -13809,7 +13809,7 @@
    "id": "waterfall",
    "name": "Cascada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13825,7 +13825,7 @@
    "id": "waterpledge",
    "name": "Voto Agua",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13833,7 +13833,7 @@
    "id": "waterpulse",
    "name": "Hidropulso",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13841,7 +13841,7 @@
    "id": "watershuriken",
    "name": "Shuriken de Agua",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13849,7 +13849,7 @@
    "id": "watersport",
    "name": "Hidrochorro",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13857,7 +13857,7 @@
    "id": "waterspout",
    "name": "Salpicar",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13865,7 +13865,7 @@
    "id": "wavecrash",
    "name": "Envite Acuático",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13873,7 +13873,7 @@
    "id": "weatherball",
    "name": "Meteorobola",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13881,7 +13881,7 @@
    "id": "whirlpool",
    "name": "Torbellino",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13889,7 +13889,7 @@
    "id": "whirlwind",
    "name": "Remolino",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13897,7 +13897,7 @@
    "id": "wickedblow",
    "name": "Golpe Oscuro",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13905,7 +13905,7 @@
    "id": "wickedtorque",
    "name": "Ominochoque",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "dark"
   },
   {
@@ -13913,7 +13913,7 @@
    "id": "wideguard",
    "name": "Vasta Guardia",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "rock"
   },
   {
@@ -13921,7 +13921,7 @@
    "id": "wildboltstorm",
    "name": "Electormenta",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13929,7 +13929,7 @@
    "id": "wildcharge",
    "name": "Voltio Cruel",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -13937,7 +13937,7 @@
    "id": "willowisp",
    "name": "Fuego Fatuo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "fire"
   },
   {
@@ -13945,7 +13945,7 @@
    "id": "wingattack",
    "name": "Ataque Ala",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "flying"
   },
   {
@@ -13953,7 +13953,7 @@
    "id": "wish",
    "name": "Deseo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13961,7 +13961,7 @@
    "id": "withdraw",
    "name": "Refugio",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "water"
   },
   {
@@ -13969,7 +13969,7 @@
    "id": "wonderroom",
    "name": "Zona Extraña",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -13977,7 +13977,7 @@
    "id": "woodhammer",
    "name": "Mazazo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -13985,7 +13985,7 @@
    "id": "workup",
    "name": "Avivar",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -13993,7 +13993,7 @@
    "id": "worryseed",
    "name": "Abatidoras",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "grass"
   },
   {
@@ -14001,7 +14001,7 @@
    "id": "wrap",
    "name": "Constricción",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -14009,7 +14009,7 @@
    "id": "wringout",
    "name": "Estrujón",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -14017,7 +14017,7 @@
    "id": "xscissor",
    "name": "Tijera X",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "bug"
   },
   {
@@ -14025,7 +14025,7 @@
    "id": "yawn",
    "name": "Bostezo",
    "needs_script": true,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "normal"
   },
   {
@@ -14033,7 +14033,7 @@
    "id": "zapcannon",
    "name": "Electrocañón",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -14041,7 +14041,7 @@
    "id": "zenheadbutt",
    "name": "Cabezazo Zen",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "psychic"
   },
   {
@@ -14049,7 +14049,7 @@
    "id": "zingzap",
    "name": "Electropunzada",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   },
   {
@@ -14057,7 +14057,7 @@
    "id": "zippyzap",
    "name": "Pikaturbo",
    "needs_script": false,
-   "specific_animation": false,
+   "specific_animation": true,
    "type": "electric"
   }
  ],
@@ -14067,6 +14067,6 @@
   "ability_effects_registered": 29,
   "moves": 951,
   "moves_needing_unregistered_script": 441,
-  "specific_move_animations": 38
+  "specific_move_animations": 951
  }
 }

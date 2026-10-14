@@ -149,6 +149,24 @@ func flash(duration: float) -> void:
 	await tween.finished
 
 
+## Reacción al ataque (data/battle_motion_moves.json): se tiñe del color del golpe y, si `shake`,
+## tiembla a los lados en píxeles pares. Vuelve a su color y a su sitio al acabar.
+func react(tint: Color, shake: bool, duration: float) -> void:
+	if duration <= 0.0:
+		return
+	var tween := create_tween().set_parallel()
+	if tint != Color.WHITE:
+		tween.tween_property(_sprite, ^"self_modulate", tint, duration * 0.4)
+		tween.chain().tween_property(_sprite, ^"self_modulate", Color.WHITE, duration * 0.6)
+	if shake:
+		var home := _home
+		tween.tween_method(func(t: float) -> void:
+			position = home + Vector2(2.0 if int(t * 10.0) % 2 == 0 else -2.0, 0.0), 0.0, 1.0, duration)
+	await tween.finished
+	_sprite.self_modulate = Color.WHITE
+	position = _home
+
+
 ## Se debilita: se hunde en la base (recortándose) y desaparece.
 func faint(duration: float) -> void:
 	if duration > 0.0:

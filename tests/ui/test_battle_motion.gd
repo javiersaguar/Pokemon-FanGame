@@ -89,7 +89,7 @@ func test_specific_mvp_sequences_cover_configured_moves_and_restore_user_positio
 	assert_eq(get_child_count(), count)
 	assert_true(await BattleMoveAnimation.play(self,user,target,{"move":&"ember"},true))
 	assert_eq(get_child_count(),count, "fast omite secuencia específica")
-	assert_false(await BattleMoveAnimation.play(self,user,target,{"move":&"judgment"},false), "fuera del MVP usa genérica")
+	assert_false(await BattleMoveAnimation.play(self,user,target,{"move":&"not_a_move"},false), "sin secuencia usa la genérica")
 
 func test_secuencias_por_fases_se_distinguen_y_no_dejan_efectos_ni_desplazan_pokemon() -> void:
 	var user := BattlePokemonSprite.new()
@@ -205,3 +205,64 @@ func test_movimientos_por_indice_conservan_escena_y_distinguen_golpes_sucesivos(
 	fx.progress = .5
 	assert_gt(fx.particles[0].position.x,left,"Los bofetones vienen de lados opuestos")
 	fx.queue_free()
+
+
+## Todos los movimientos tienen secuencia propia (tools/arte/animaciones_movimientos.py): recursos
+## originales registrados, recortes que caben en la hoja y duraciones dentro de la BIBLIA.
+func test_cada_movimiento_tiene_secuencia_propia_con_recursos_validos() -> void:
+	var moves: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/generated/moves.json"))
+	var manifest: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/battle_motion_assets.json"))
+	var registered := {}
+	for entry: Dictionary in manifest.files:
+		registered[str(entry.target).get_file().get_basename()] = true
+	var signatures := {}
+	for id: String in moves:
+		var spec := BattleMoveAnimation.sequence(StringName(id))
+		assert_false(spec.is_empty(), id + " sin secuencia")
+		if spec.is_empty(): continue
+		assert_lte(float(spec.duration), 1.2, id)
+		var signature := []
+		for phase: Dictionary in spec.get("phases", [spec]):
+			assert_true(registered.has(str(phase.asset)), "%s: %s no está en battle_motion_assets.json" % [id, phase.asset])
+			var texture: Texture2D = load(BattleFx.DIR + str(phase.asset) + ".png")
+			assert_not_null(texture, id)
+			var frame: Array = phase.get("frame", [])
+			if frame.size() == 2 and texture != null:
+				assert_eq(int(texture.get_width()) % int(frame[0]), 0, "%s: el recorte no divide la hoja" % id)
+				assert_eq(int(texture.get_height()) % int(frame[1]), 0, "%s: el recorte no divide la hoja" % id)
+			signature.append([phase.asset, phase.get("pattern", ""), phase.get("kind", "")])
+		if spec.has("backdrop_asset"):
+			var back: Texture2D = load(BattleFx.DIR + str(spec.backdrop_asset) + ".png")
+			assert_eq(int(back.get_height()), 384, id)
+		signatures[str(signature) + str(spec.get("backdrop", "")) + str(spec.get("backdrop_asset", ""))] = true
+	assert_gt(signatures.size(), 400, "Las secuencias se distinguen entre sí")
+
+
+func test_fondo_tinte_y_temblor_terminan_limpios() -> void:
+	var user := BattlePokemonSprite.new()
+	user.back = true
+	user.position = Vector2(110,280)
+	add_child_autofree(user)
+	user.set_pokemon({"species":&"charizard"})
+	var target := BattlePokemonSprite.new()
+	target.position = Vector2(360,180)
+	add_child_autofree(target)
+	target.set_pokemon({"species":&"gengar"})
+	var moves: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/battle_motion_moves.json"))
+	var picked := {}
+	for id: String in moves:
+		var spec: Dictionary = moves[id]
+		for key: String in ["backdrop", "backdrop_asset", "target_tint", "shake"]:
+			if spec.has(key) and not picked.has(key):
+				picked[key] = id
+	assert_eq(picked.size(), 4, "hay secuencias con fondo, imagen de fondo, tinte y temblor")
+	for key: String in picked:
+		var id := StringName(picked[key])
+		var count := get_child_count()
+		assert_true(await BattleMoveAnimation.play(self,user,target,{"move":id,"type":DataDB.move(id).type},false), key)
+		await wait_process_frames(2)
+		assert_eq(get_child_count(), count, "%s (%s) no deja nodos" % [id, key])
+		assert_eq(user.position, user.home())
+		assert_eq(target.position, target.home())
+		assert_eq(target.position, (target.position / 2.0).round() * 2.0, "píxeles pares")
+
