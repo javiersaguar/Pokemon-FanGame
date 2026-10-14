@@ -306,4 +306,7 @@ position = Vector2(816, 1200)
 [node name="from_sala_55_39" type="Marker2D" parent="Spawns" unique_id=1816063588]
 position = Vector2(1776, 1296)
 
+[node name="from_cafe_iruna" type="Marker2D" parent="Spawns" unique_id=1084813384]
+position = Vector2(1264, 976)
+
 [node name="Triggers" type="Node2D" parent="." unique_id=2077913530]

@@ -181,4 +181,10 @@ position = Vector2(816, 592)
 [node name="from_sala_32_10" type="Marker2D" parent="Spawns" unique_id=1509189519]
 position = Vector2(1040, 368)
 
+[node name="from_ruinas" type="Marker2D" parent="Spawns" unique_id=1668745654]
+position = Vector2(208, 624)
+
+[node name="from_ruinas_2" type="Marker2D" parent="Spawns" unique_id=544418043]
+position = Vector2(208, 976)
+
 [node name="Triggers" type="Node2D" parent="." unique_id=1532599738]

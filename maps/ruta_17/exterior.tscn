@@ -202,4 +202,7 @@ position = Vector2(368, 848)
 [node name="from_sala_47_37" type="Marker2D" parent="Spawns" unique_id=1881396653]
 position = Vector2(1520, 1232)
 
+[node name="from_horreo" type="Marker2D" parent="Spawns" unique_id=2130146472]
+position = Vector2(368, 848)
+
 [node name="Triggers" type="Node2D" parent="." unique_id=1851181747]
