@@ -1474,6 +1474,192 @@
         }
       ],
       "prices": {}
+    },
+    "mercadona_santander": {
+      "name": "Mercadona · Santander",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_santander": {
+      "name": "Estanco · Santander",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_bilbao": {
+      "name": "Mercadona · Bilbao",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_bilbao": {
+      "name": "Estanco · Bilbao",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "mercadona_pamplona": {
+      "name": "Mercadona · Pamplona",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "pokeball",
+            "potion",
+            "antidote",
+            "paralyzeheal",
+            "awakening",
+            "burnheal",
+            "iceheal",
+            "repel",
+            "escaperope"
+          ]
+        },
+        {
+          "badges": 1,
+          "items": [
+            "greatball",
+            "superpotion"
+          ]
+        },
+        {
+          "badges": 3,
+          "items": [
+            "hyperpotion",
+            "superrepel",
+            "revive"
+          ]
+        },
+        {
+          "badges": 5,
+          "items": [
+            "ultraball",
+            "fullheal",
+            "maxrepel"
+          ]
+        }
+      ],
+      "prices": {}
+    },
+    "estanco_pamplona": {
+      "name": "Estanco · Pamplona",
+      "stock": [
+        {
+          "badges": 0,
+          "items": [
+            "xattack",
+            "xdefense",
+            "xspatk",
+            "xspdef",
+            "xspeed",
+            "xaccuracy",
+            "direhit",
+            "guardspec"
+          ]
+        }
+      ],
+      "prices": {}
     }
   }
 }

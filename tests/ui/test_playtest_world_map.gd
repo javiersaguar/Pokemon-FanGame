@@ -58,7 +58,7 @@ func test_ciudad_con_un_clic_inicia_sesion_y_salas_estan_en_el_mapa() -> void:
   for other: String in map.buttons:
    if other == key: continue
    assert_false(point.get_rect().intersects(map.buttons[other].get_rect()),key+" / "+other+": puntos separados")
- assert_true(map.buttons.santander.disabled,"No viaja a mapas inexistentes")
+ assert_false(map.buttons.santander.disabled,"Santander ya está pintado (ya no queda ninguna ciudad sin mapa)")
  assert_false(map.buttons.bilbao.disabled,"Bilbao ya tiene las salas de San Mamés")
  assert_false(map.buttons.vigo.disabled,"Vigo ya está pintado")
  assert_false(map.buttons.valladolid.disabled,"Valladolid ya está pintado")

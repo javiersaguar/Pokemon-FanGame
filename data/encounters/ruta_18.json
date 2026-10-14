@@ -1,0 +1,104 @@
+{
+  "land_rate": 12,
+  "land": {
+    "day": [
+      {
+        "species": "mudbray",
+        "min": 40,
+        "max": 42,
+        "weight": 30
+      },
+      {
+        "species": "tauros",
+        "min": 40,
+        "max": 43,
+        "weight": 25
+      },
+      {
+        "species": "gligar",
+        "min": 40,
+        "max": 42,
+        "weight": 25
+      },
+      {
+        "species": "chatot",
+        "min": 40,
+        "max": 42,
+        "weight": 20
+      }
+    ],
+    "night": [
+      {
+        "species": "gligar",
+        "min": 40,
+        "max": 42,
+        "weight": 30
+      },
+      {
+        "species": "noctowl",
+        "min": 40,
+        "max": 43,
+        "weight": 30
+      },
+      {
+        "species": "mudbray",
+        "min": 40,
+        "max": 42,
+        "weight": 20
+      },
+      {
+        "species": "murkrow",
+        "min": 40,
+        "max": 42,
+        "weight": 20
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "azumarill",
+      "min": 40,
+      "max": 43,
+      "weight": 50
+    },
+    {
+      "species": "golduck",
+      "min": 40,
+      "max": 43,
+      "weight": 50
+    }
+  ],
+  "old_rod": [
+    {
+      "species": "magikarp",
+      "min": 15,
+      "max": 20,
+      "weight": 100
+    }
+  ],
+  "good_rod": [
+    {
+      "species": "goldeen",
+      "min": 32,
+      "max": 38,
+      "weight": 100
+    }
+  ],
+  "super_rod": [
+    {
+      "species": "seaking",
+      "min": 40,
+      "max": 43,
+      "weight": 100
+    }
+  ],
+  "rock_smash": [],
+  "headbutt": [
+    {
+      "species": "pineco",
+      "min": 40,
+      "max": 42,
+      "weight": 100
+    }
+  ]
+}

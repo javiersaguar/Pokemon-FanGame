@@ -4,6 +4,8 @@
 >
 > Plano real: [`../planos/pamplona.svg`](../planos/pamplona.svg) (casilla = 18 m).
 
+**Pintado (2026-10-14, provisional):** `pamplona/exterior` (64×56, `maps/_pintura/pintar_pamplona.gd`). Norte: Ruta 20; sur: Ruta 21. La ciudad sobre la muralla (meseta) con el Portal de Francia y la escalera del sur; Ayuntamiento, catedral, Plaza del Castillo con quiosco y Café Iruña, calle Estafeta hasta la plaza de toros y la Ciudadela. El evento del encierro sigue pendiente. Entrenadores en `data/trainers/pamplona.json`. [Captura](../../arte/comparativas/pamplona_mapa.png).
+
 ## Lugares reales y cómo se ven
 
 | Lugar | Qué es | En el juego | Arte |

@@ -1,0 +1,40 @@
+{
+  "ruta19_surfista": {
+    "class": "surfista",
+    "name": "Iker",
+    "intro_text": "En Somo las olas son buenas y el agua está fría. ¡Como tus Pokémon cuando acabe!",
+    "lose_text": "Me ha revolcado la ola.",
+    "win_text": "¡Tubo!",
+    "after_text": "En Cantabria se surfea con neopreno de cinco milímetros. En agosto también.",
+    "items": [],
+    "party": [
+      {
+        "species": "floatzel",
+        "level": 43
+      },
+      {
+        "species": "pelipper",
+        "level": 43
+      }
+    ]
+  },
+  "ruta19_pescador": {
+    "class": "pescador",
+    "name": "Chema",
+    "intro_text": "En Castro Urdiales pescamos bocarte. El que viene en lata se llama anchoa.",
+    "lose_text": "Se me ha escapado el bonito.",
+    "win_text": "¡Al puerto con la cesta llena!",
+    "after_text": "Las anchoas de Santoña se limpian a mano, una a una. Por eso no se regalan.",
+    "items": [],
+    "party": [
+      {
+        "species": "sharpedo",
+        "level": 43
+      },
+      {
+        "species": "lanturn",
+        "level": 44
+      }
+    ]
+  }
+}

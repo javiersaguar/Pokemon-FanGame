@@ -26,26 +26,26 @@ can_run = false
 fixed_camera = true
 followers_allowed = false
 
-[node name="Gimnasio" type="Node2D" unique_id=71362005]
+[node name="Gimnasio" type="Node2D" unique_id=1938467682]
 script = ExtResource("1_oy83c")
 data = SubResource("Resource_ki2iq")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1913446043]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1135127449]
 tile_map_data = PackedByteArray("AAAAAAAAAAABACkAAAABAAAAAAABACkAAAACAAAAAAABACkAAAADAAAAAAABACkAAAAEAAAAAAABACkAAAAFAAAAAAABACkAAAAGAAAAAAABACkAAAAHAAAAAAABACkAAAAIAAAAAAABACkAAAAJAAAAAAABACkAAAAKAAAAAAABACkAAAALAAAAAAABACkAAAAMAAAAAAABACkAAAANAAAAAAABACkAAAAOAAAAAAABACkAAAAPAAAAAAABACkAAAAAAAEAAAABACkAAAABAAEAAAABACkAAAACAAEAAAABACkAAAADAAEAAAABACkAAAAEAAEAAAABACkAAAAFAAEAAAABACkAAAAGAAEAAAABACkAAAAHAAEAAAABACkAAAAIAAEAAAABACkAAAAJAAEAAAABACkAAAAKAAEAAAABACkAAAALAAEAAAABACkAAAAMAAEAAAABACkAAAANAAEAAAABACkAAAAOAAEAAAABACkAAAAPAAEAAAABACkAAAAAAAIAAAABACkAAAABAAIAAAABACkAAAACAAIAAAABACkAAAADAAIAAAABACkAAAAEAAIAAAABACkAAAAFAAIAAAABACkAAAAGAAIAAAABACkAAAAHAAIAAAABACkAAAAIAAIAAAABACkAAAAJAAIAAAABACkAAAAKAAIAAAABACkAAAALAAIAAAABACkAAAAMAAIAAAABACkAAAANAAIAAAABACkAAAAOAAIAAAABACkAAAAPAAIAAAABACkAAAAAAAMAAAABACkAAAABAAMAAAABACkAAAACAAMAAAABACkAAAADAAMAAAABACkAAAAEAAMAAAABACkAAAAFAAMAAAABACkAAAAGAAMAAAABACkAAAAHAAMAAAABACkAAAAIAAMAAAABACkAAAAJAAMAAAABACkAAAAKAAMAAAABACkAAAALAAMAAAABACkAAAAMAAMAAAABACkAAAANAAMAAAABACkAAAAOAAMAAAABACkAAAAPAAMAAAABACkAAAAAAAQAAAABACkAAAABAAQAAAABACkAAAACAAQAAAABACkAAAADAAQAAAABACkAAAAEAAQAAAABACkAAAAFAAQAAAABACkAAAAGAAQAAAABACkAAAAHAAQAAAABACkAAAAIAAQAAAABACkAAAAJAAQAAAABACkAAAAKAAQAAAABACkAAAALAAQAAAABACkAAAAMAAQAAAABACkAAAANAAQAAAABACkAAAAOAAQAAAABACkAAAAPAAQAAAABACkAAAAAAAUAAAABACkAAAABAAUAAAABACkAAAACAAUAAAABACkAAAADAAUAAAABACkAAAAEAAUAAAABACkAAAAFAAUAAAABACkAAAAGAAUAAAABACkAAAAHAAUAAAABACkAAAAIAAUAAAABACkAAAAJAAUAAAABACkAAAAKAAUAAAABACkAAAALAAUAAAABACkAAAAMAAUAAAABACkAAAANAAUAAAABACkAAAAOAAUAAAABACkAAAAPAAUAAAABACkAAAAAAAYAAAABACkAAAABAAYAAAABACkAAAACAAYAAAABACkAAAADAAYAAAABACkAAAAEAAYAAAABACkAAAAFAAYAAAABACkAAAAGAAYAAAABACkAAAAHAAYAAAABACkAAAAIAAYAAAABACkAAAAJAAYAAAABACkAAAAKAAYAAAABACkAAAALAAYAAAABACkAAAAMAAYAAAABACkAAAANAAYAAAABACkAAAAOAAYAAAABACkAAAAPAAYAAAABACkAAAAAAAcAAAABACkAAAABAAcAAAABACkAAAACAAcAAAABACkAAAADAAcAAAABACkAAAAEAAcAAAABACkAAAAFAAcAAAABACkAAAAGAAcAAAABACkAAAAHAAcAAAABACkAAAAIAAcAAAABACkAAAAJAAcAAAABACkAAAAKAAcAAAABACkAAAALAAcAAAABACkAAAAMAAcAAAABACkAAAANAAcAAAABACkAAAAOAAcAAAABACkAAAAPAAcAAAABACkAAAAAAAgAAAABACkAAAABAAgAAAABACkAAAACAAgAAAABACkAAAADAAgAAAABACkAAAAEAAgAAAABACkAAAAFAAgAAAABACkAAAAGAAgAAAABACkAAAAHAAgAAAABACkAAAAIAAgAAAABACkAAAAJAAgAAAABACkAAAAKAAgAAAABACkAAAALAAgAAAABACkAAAAMAAgAAAABACkAAAANAAgAAAABACkAAAAOAAgAAAABACkAAAAPAAgAAAABACkAAAAAAAkAAAABACkAAAABAAkAAAABACkAAAACAAkAAAABACkAAAADAAkAAAABACkAAAAEAAkAAAABACkAAAAFAAkAAAABACkAAAAGAAkAAAABACkAAAAHAAkAAAABACkAAAAIAAkAAAABACkAAAAJAAkAAAABACkAAAAKAAkAAAABACkAAAALAAkAAAABACkAAAAMAAkAAAABACkAAAANAAkAAAABACkAAAAOAAkAAAABACkAAAAPAAkAAAABACkAAAAAAAoAAAABACkAAAABAAoAAAABACkAAAACAAoAAAABACkAAAADAAoAAAABACkAAAAEAAoAAAABACkAAAAFAAoAAAABACkAAAAGAAoAAAABACkAAAAHAAoAAAABACkAAAAIAAoAAAABACkAAAAJAAoAAAABACkAAAAKAAoAAAABACkAAAALAAoAAAABACkAAAAMAAoAAAABACkAAAANAAoAAAABACkAAAAOAAoAAAABACkAAAAPAAoAAAABACkAAAAAAAsAAAABACkAAAABAAsAAAABACkAAAACAAsAAAABACkAAAADAAsAAAABACkAAAAEAAsAAAABACkAAAAFAAsAAAABACkAAAAGAAsAAAABACkAAAAHAAsAAAABACkAAAAIAAsAAAABACkAAAAJAAsAAAABACkAAAAKAAsAAAABACkAAAALAAsAAAABACkAAAAMAAsAAAABACkAAAANAAsAAAABACkAAAAOAAsAAAABACkAAAAPAAsAAAABACkAAAA=")
 tile_set = ExtResource("4_pcj6r")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=307846947]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2116851382]
 tile_map_data = PackedByteArray("AAAAAAAAAQABAAgAAAAAAAEAAQABAAkAAAAAAAsAAQABAAkAAAABAAAAAQABAAgAAAABAAEAAQABAAkAAAABAAsAAQABAAkAAAACAAAAAQABAAgAAAACAAEAAQABAAkAAAACAAsAAQABAAkAAAADAAAAAQABAAgAAAADAAEAAQABAAkAAAADAAsAAQABAAkAAAAEAAAAAQABAAgAAAAEAAEAAQABAAkAAAAEAAsAAQABAAkAAAAFAAAAAQABAAgAAAAFAAEAAQABAAkAAAAFAAsAAQABAAkAAAAGAAAAAQABAAgAAAAGAAEAAQABAAkAAAAGAAsAAQABAAkAAAAHAAAAAQABAAgAAAAHAAEAAQABAAkAAAAHAAsAAQABAAkAAAAIAAAAAQABAAgAAAAIAAEA//////////8JAAAAAQABAAgAAAAJAAEAAQABAAkAAAAJAAsAAQABAAkAAAAKAAAAAQABAAgAAAAKAAEAAQABAAkAAAAKAAsAAQABAAkAAAALAAAAAQABAAgAAAALAAEAAQABAAkAAAALAAsAAQABAAkAAAAMAAAAAQABAAgAAAAMAAEAAQABAAkAAAAMAAsAAQABAAkAAAANAAAAAQABAAgAAAANAAEAAQABAAkAAAANAAsAAQABAAkAAAAOAAAAAQABAAgAAAAOAAEAAQABAAkAAAAOAAsAAQABAAkAAAAPAAAAAQABAAgAAAAPAAEAAQABAAkAAAAPAAsAAQABAAkAAAAAAAIAAQABAAkAAEAPAAIAAQABAAkAAEAAAAMAAQABAAkAAEAPAAMAAQABAAkAAEAAAAQAAQABAAkAAEAPAAQAAQABAAkAAEAAAAUAAQABAAkAAEAPAAUAAQABAAkAAEAAAAYAAQABAAkAAEAPAAYAAQABAAkAAEAAAAcAAQABAAkAAEAPAAcAAQABAAkAAEAAAAgAAQABAAkAAEAPAAgAAQABAAkAAEAAAAkAAQABAAkAAEAPAAkAAQABAAkAAEAAAAoAAQABAAkAAEAPAAoAAQABAAkAAEABAAcAAQABAAkAAAACAAcAAQABAAkAAAADAAcAAQABAAkAAAAEAAcAAQABAAkAAAAFAAcAAQABAAkAAAAGAAcAAQABAAkAAAAHAAcAAQABAAkAAAAIAAcAAQABAAkAAAAJAAcAAQABAAkAAAAKAAcAAQABAAkAAAALAAcAAQABAAkAAAAMAAcAAQABAAkAAAAOAAcAAQABAAkAAAABAAQAAQABAAkAAAADAAQAAQABAAkAAAAEAAQAAQABAAkAAAAFAAQAAQABAAkAAAAGAAQAAQABAAkAAAAHAAQAAQABAAkAAAAIAAQAAQABAAkAAAAJAAQAAQABAAkAAAAKAAQAAQABAAkAAAALAAQAAQABAAkAAAAMAAQAAQABAAkAAAANAAQAAQABAAkAAAAOAAQAAQABAAkAAAAKAAkAAgADADQAAAALAAkAAgAEADQAAAAMAAkAAgAFADQAAAAKAAoAAgADADUAAAALAAoAAgAEADUAAAAMAAoAAgAFADUAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
 tile_set = ExtResource("4_pcj6r")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1435360256]
+[node name="Entities" type="Node2D" parent="." unique_id=372174479]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=591101531]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1583301984]
 y_sort_enabled = true
 tile_set = ExtResource("4_pcj6r")
 
-[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=722248363 instance=ExtResource("5_a6l37")]
+[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=1849059202 instance=ExtResource("5_a6l37")]
 position = Vector2(144, 304)
 script = ExtResource("6_4uiil")
 trainer_id = &"gym6_etarra_1"
@@ -55,7 +55,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_riqlb")
 initial_facing = 2
 
-[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=561908467 instance=ExtResource("8_al23i")]
+[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=502631444 instance=ExtResource("8_al23i")]
 position = Vector2(432, 240)
 script = ExtResource("9_o0na7")
 lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Aitor. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
@@ -63,7 +63,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_a5eur")
 hidden_if_flag = &"trainer_defeated:gym6_etarra_1"
 
-[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=2026984925 instance=ExtResource("5_a6l37")]
+[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=1184135066 instance=ExtResource("5_a6l37")]
 position = Vector2(368, 176)
 script = ExtResource("6_4uiil")
 trainer_id = &"gym6_etarra_2"
@@ -73,7 +73,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_riqlb")
 initial_facing = 1
 
-[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=1038835415 instance=ExtResource("8_al23i")]
+[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=1634753431 instance=ExtResource("8_al23i")]
 position = Vector2(80, 144)
 script = ExtResource("9_o0na7")
 lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Gorka. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
@@ -81,7 +81,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_a5eur")
 hidden_if_flag = &"trainer_defeated:gym6_etarra_2"
 
-[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=34464003 instance=ExtResource("5_a6l37")]
+[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=562780622 instance=ExtResource("5_a6l37")]
 position = Vector2(176, 112)
 script = ExtResource("6_4uiil")
 trainer_id = &"gym6_etarra_3"
@@ -91,7 +91,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_riqlb")
 initial_facing = 2
 
-[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=310588060 instance=ExtResource("8_al23i")]
+[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=1119427909 instance=ExtResource("8_al23i")]
 position = Vector2(272, 80)
 script = ExtResource("9_o0na7")
 lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Iker. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
@@ -99,29 +99,36 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_a5eur")
 hidden_if_flag = &"trainer_defeated:gym6_etarra_3"
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=220727975]
+[node name="Above" type="TileMapLayer" parent="." unique_id=778227418]
 z_index = 10
 tile_set = ExtResource("4_pcj6r")
 
-[node name="Warps" type="Node2D" parent="." unique_id=563366336]
+[node name="Warps" type="Node2D" parent="." unique_id=1538886583]
 
-[node name="Siguiente" type="Node2D" parent="Warps" unique_id=638325331]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1470108334]
+position = Vector2(272, 368)
+script = ExtResource("11_2plsj")
+target_map = &"bilbao/exterior"
+target_spawn = &"from_san_mames"
+arrival_facing = 1
+
+[node name="Siguiente" type="Node2D" parent="Warps" unique_id=737349785]
 position = Vector2(272, 48)
 script = ExtResource("11_2plsj")
 target_map = &"bilbao/gimnasio_2"
 arrival_facing = 4
 
-[node name="Spawns" type="Node2D" parent="." unique_id=39385551]
+[node name="Spawns" type="Node2D" parent="." unique_id=722847836]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1774809045]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1961412805]
 position = Vector2(272, 336)
 
-[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=2055072792]
+[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=548874119]
 position = Vector2(272, 80)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1109097016]
+[node name="Triggers" type="Node2D" parent="." unique_id=1100103607]
 
-[node name="Rotulo" type="Label" parent="." unique_id=610577422]
+[node name="Rotulo" type="Label" parent="." unique_id=1261478071]
 offset_left = 8.0
 offset_top = 4.0
 offset_right = 504.0

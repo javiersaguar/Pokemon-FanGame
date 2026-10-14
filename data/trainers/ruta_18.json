@@ -1,0 +1,60 @@
+{
+  "ruta18_escanciador": {
+    "class": "camarero",
+    "name": "Nel",
+    "intro_text": "La sidra se escancia desde arriba, sin mirar el vaso. Como los combates: sin mirar.",
+    "lose_text": "Se me ha caído al suelo. Bueno, como siempre.",
+    "win_text": "¡Culín y pa dentro!",
+    "after_text": "Si el culín no rompe, no vale. Eso lo sabe todo asturiano desde que nace.",
+    "items": [],
+    "party": [
+      {
+        "species": "swalot",
+        "level": 42
+      },
+      {
+        "species": "sawsbuck",
+        "level": 42
+      }
+    ]
+  },
+  "ruta18_vaqueira": {
+    "class": "pastor",
+    "name": "Covadonga",
+    "gender": "female",
+    "intro_text": "Bajo las vacas de los Picos antes de que llegue la niebla. ¿Te apartas o combates?",
+    "lose_text": "Mis vacas se han ido solas a casa.",
+    "win_text": "¡Las vacas, al prado!",
+    "after_text": "El queso de Cabrales se cura en cueva. Huele fuerte, pero huele a casa.",
+    "items": [],
+    "party": [
+      {
+        "species": "tauros",
+        "level": 42
+      },
+      {
+        "species": "miltank",
+        "level": 42
+      }
+    ]
+  },
+  "ruta18_montanero": {
+    "class": "montanera",
+    "name": "Pelayo",
+    "intro_text": "He subido al Naranjo de Bulnes. Tú no vas a ser más difícil.",
+    "lose_text": "Me he despeñado. Figuradamente.",
+    "win_text": "¡Arriba, siempre arriba!",
+    "after_text": "Covadonga es donde empezó la Reconquista, según los libros. Según los de Cangas, empezó en el bar.",
+    "items": [],
+    "party": [
+      {
+        "species": "gligar",
+        "level": 42
+      },
+      {
+        "species": "golem",
+        "level": 43
+      }
+    ]
+  }
+}

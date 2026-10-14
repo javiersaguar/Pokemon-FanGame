@@ -26,26 +26,26 @@ can_run = false
 fixed_camera = true
 followers_allowed = false
 
-[node name="Gimnasio" type="Node2D" unique_id=471436216]
+[node name="Gimnasio" type="Node2D" unique_id=1798099700]
 script = ExtResource("1_f8i1a")
 data = SubResource("Resource_f5k5y")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=659306823]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=224841097]
 tile_map_data = PackedByteArray("AAAAAAAAAAABACkAAAABAAAAAAABACkAAAACAAAAAAABACkAAAADAAAAAAABACkAAAAEAAAAAAABACkAAAAFAAAAAAABACkAAAAGAAAAAAABACkAAAAHAAAAAAABACkAAAAIAAAAAAABACkAAAAJAAAAAAABACkAAAAKAAAAAAABACkAAAALAAAAAAABACkAAAAMAAAAAAABACkAAAANAAAAAAABACkAAAAOAAAAAAABACkAAAAPAAAAAAABACkAAAAAAAEAAAABACkAAAABAAEAAAABACkAAAACAAEAAAABACkAAAADAAEAAAABACkAAAAEAAEAAAABACkAAAAFAAEAAAABACkAAAAGAAEAAAABACkAAAAHAAEAAAABACkAAAAIAAEAAAABACkAAAAJAAEAAAABACkAAAAKAAEAAAABACkAAAALAAEAAAABACkAAAAMAAEAAAABACkAAAANAAEAAAABACkAAAAOAAEAAAABACkAAAAPAAEAAAABACkAAAAAAAIAAAABACkAAAABAAIAAAABACkAAAACAAIAAAABACkAAAADAAIAAAABACkAAAAEAAIAAAABACkAAAAFAAIAAAABACkAAAAGAAIAAAABACkAAAAHAAIAAAABACkAAAAIAAIAAAABACkAAAAJAAIAAAABACkAAAAKAAIAAAABACkAAAALAAIAAAABACkAAAAMAAIAAAABACkAAAANAAIAAAABACkAAAAOAAIAAAABACkAAAAPAAIAAAABACkAAAAAAAMAAAABACkAAAABAAMAAAABACkAAAACAAMAAAABACkAAAADAAMAAAABACkAAAAEAAMAAAABACkAAAAFAAMAAAABACkAAAAGAAMAAAABACkAAAAHAAMAAAABACkAAAAIAAMAAAABACkAAAAJAAMAAAABACkAAAAKAAMAAAABACkAAAALAAMAAAABACkAAAAMAAMAAAABACkAAAANAAMAAAABACkAAAAOAAMAAAABACkAAAAPAAMAAAABACkAAAAAAAQAAAABACkAAAABAAQAAAABACkAAAACAAQAAAABACkAAAADAAQAAAABACkAAAAEAAQAAAABACkAAAAFAAQAAAABACkAAAAGAAQAAAABACkAAAAHAAQAAAABACkAAAAIAAQAAAABACkAAAAJAAQAAAABACkAAAAKAAQAAAABACkAAAALAAQAAAABACkAAAAMAAQAAAABACkAAAANAAQAAAABACkAAAAOAAQAAAABACkAAAAPAAQAAAABACkAAAAAAAUAAAABACkAAAABAAUAAAABACkAAAACAAUAAAABACkAAAADAAUAAAABACkAAAAEAAUAAAABACkAAAAFAAUAAAABACkAAAAGAAUAAAABACkAAAAHAAUAAAABACkAAAAIAAUAAAABACkAAAAJAAUAAAABACkAAAAKAAUAAAABACkAAAALAAUAAAABACkAAAAMAAUAAAABACkAAAANAAUAAAABACkAAAAOAAUAAAABACkAAAAPAAUAAAABACkAAAAAAAYAAAABACkAAAABAAYAAAABACkAAAACAAYAAAABACkAAAADAAYAAAABACkAAAAEAAYAAAABACkAAAAFAAYAAAABACkAAAAGAAYAAAABACkAAAAHAAYAAAABACkAAAAIAAYAAAABACkAAAAJAAYAAAABACkAAAAKAAYAAAABACkAAAALAAYAAAABACkAAAAMAAYAAAABACkAAAANAAYAAAABACkAAAAOAAYAAAABACkAAAAPAAYAAAABACkAAAAAAAcAAAABACkAAAABAAcAAAABACkAAAACAAcAAAABACkAAAADAAcAAAABACkAAAAEAAcAAAABACkAAAAFAAcAAAABACkAAAAGAAcAAAABACkAAAAHAAcAAAABACkAAAAIAAcAAAABACkAAAAJAAcAAAABACkAAAAKAAcAAAABACkAAAALAAcAAAABACkAAAAMAAcAAAABACkAAAANAAcAAAABACkAAAAOAAcAAAABACkAAAAPAAcAAAABACkAAAAAAAgAAAABACkAAAABAAgAAAABACkAAAACAAgAAAABACkAAAADAAgAAAABACkAAAAEAAgAAAABACkAAAAFAAgAAAABACkAAAAGAAgAAAABACkAAAAHAAgAAAABACkAAAAIAAgAAAABACkAAAAJAAgAAAABACkAAAAKAAgAAAABACkAAAALAAgAAAABACkAAAAMAAgAAAABACkAAAANAAgAAAABACkAAAAOAAgAAAABACkAAAAPAAgAAAABACkAAAAAAAkAAAABACkAAAABAAkAAAABACkAAAACAAkAAAABACkAAAADAAkAAAABACkAAAAEAAkAAAABACkAAAAFAAkAAAABACkAAAAGAAkAAAABACkAAAAHAAkAAAABACkAAAAIAAkAAAABACkAAAAJAAkAAAABACkAAAAKAAkAAAABACkAAAALAAkAAAABACkAAAAMAAkAAAABACkAAAANAAkAAAABACkAAAAOAAkAAAABACkAAAAPAAkAAAABACkAAAAAAAoAAAABACkAAAABAAoAAAABACkAAAACAAoAAAABACkAAAADAAoAAAABACkAAAAEAAoAAAABACkAAAAFAAoAAAABACkAAAAGAAoAAAABACkAAAAHAAoAAAABACkAAAAIAAoAAAABACkAAAAJAAoAAAABACkAAAAKAAoAAAABACkAAAALAAoAAAABACkAAAAMAAoAAAABACkAAAANAAoAAAABACkAAAAOAAoAAAABACkAAAAPAAoAAAABACkAAAAAAAsAAAABACkAAAABAAsAAAABACkAAAACAAsAAAABACkAAAADAAsAAAABACkAAAAEAAsAAAABACkAAAAFAAsAAAABACkAAAAGAAsAAAABACkAAAAHAAsAAAABACkAAAAIAAsAAAABACkAAAAJAAsAAAABACkAAAAKAAsAAAABACkAAAALAAsAAAABACkAAAAMAAsAAAABACkAAAANAAsAAAABACkAAAAOAAsAAAABACkAAAAPAAsAAAABACkAAAA=")
 tile_set = ExtResource("4_lbm8n")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=152789791]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1962892250]
 tile_map_data = PackedByteArray("AAAAAAAAAQABAAgAAAAAAAEAAQABAAkAAAAAAAsAAQABAAkAAAABAAAAAQABAAgAAAABAAEAAQABAAkAAAABAAsAAQABAAkAAAACAAAAAQABAAgAAAACAAEAAQABAAkAAAACAAsAAQABAAkAAAADAAAAAQABAAgAAAADAAEAAQABAAkAAAADAAsAAQABAAkAAAAEAAAAAQABAAgAAAAEAAEAAQABAAkAAAAEAAsAAQABAAkAAAAFAAAAAQABAAgAAAAFAAEAAQABAAkAAAAFAAsAAQABAAkAAAAGAAAAAQABAAgAAAAGAAEAAQABAAkAAAAGAAsAAQABAAkAAAAHAAAAAQABAAgAAAAHAAEAAQABAAkAAAAHAAsAAQABAAkAAAAIAAAAAQABAAgAAAAIAAEA//////////8JAAAAAQABAAgAAAAJAAEAAQABAAkAAAAJAAsAAQABAAkAAAAKAAAAAQABAAgAAAAKAAEAAQABAAkAAAAKAAsAAQABAAkAAAALAAAAAQABAAgAAAALAAEAAQABAAkAAAALAAsAAQABAAkAAAAMAAAAAQABAAgAAAAMAAEAAQABAAkAAAAMAAsAAQABAAkAAAANAAAAAQABAAgAAAANAAEAAQABAAkAAAANAAsAAQABAAkAAAAOAAAAAQABAAgAAAAOAAEAAQABAAkAAAAOAAsAAQABAAkAAAAPAAAAAQABAAgAAAAPAAEAAQABAAkAAAAPAAsAAQABAAkAAAAAAAIAAQABAAkAAEAPAAIAAQABAAkAAEAAAAMAAQABAAkAAEAPAAMAAQABAAkAAEAAAAQAAQABAAkAAEAPAAQAAQABAAkAAEAAAAUAAQABAAkAAEAPAAUAAQABAAkAAEAAAAYAAQABAAkAAEAPAAYAAQABAAkAAEAAAAcAAQABAAkAAEAPAAcAAQABAAkAAEAAAAgAAQABAAkAAEAPAAgAAQABAAkAAEAAAAkAAQABAAkAAEAPAAkAAQABAAkAAEAAAAoAAQABAAkAAEAPAAoAAQABAAkAAEABAAcAAQABAAkAAAADAAcAAQABAAkAAAAEAAcAAQABAAkAAAAFAAcAAQABAAkAAAAGAAcAAQABAAkAAAAHAAcAAQABAAkAAAAIAAcAAQABAAkAAAAJAAcAAQABAAkAAAAKAAcAAQABAAkAAAALAAcAAQABAAkAAAAMAAcAAQABAAkAAAANAAcAAQABAAkAAAAOAAcAAQABAAkAAAABAAQAAQABAAkAAAACAAQAAQABAAkAAAADAAQAAQABAAkAAAAEAAQAAQABAAkAAAAFAAQAAQABAAkAAAAGAAQAAQABAAkAAAAHAAQAAQABAAkAAAAIAAQAAQABAAkAAAAJAAQAAQABAAkAAAAKAAQAAQABAAkAAAALAAQAAQABAAkAAAAMAAQAAQABAAkAAAAOAAQAAQABAAkAAAADAAkAAgADADQAAAAEAAkAAgAEADQAAAAFAAkAAgAFADQAAAADAAoAAgADADUAAAAEAAoAAgAEADUAAAAFAAoAAgAFADUAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
 tile_set = ExtResource("4_lbm8n")
 
-[node name="Entities" type="Node2D" parent="." unique_id=97601572]
+[node name="Entities" type="Node2D" parent="." unique_id=929017835]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2129285490]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1680465053]
 y_sort_enabled = true
 tile_set = ExtResource("4_lbm8n")
 
-[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=1555140354 instance=ExtResource("5_jk72e")]
+[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=1374659748 instance=ExtResource("5_jk72e")]
 position = Vector2(368, 304)
 script = ExtResource("6_lxc1a")
 trainer_id = &"gym6_etarra_4"
@@ -55,7 +55,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_nak5h")
 initial_facing = 1
 
-[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=298526013 instance=ExtResource("8_6d8ok")]
+[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=1535733112 instance=ExtResource("8_6d8ok")]
 position = Vector2(80, 240)
 script = ExtResource("9_wjjv0")
 lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Unai. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
@@ -63,7 +63,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_qrrgg")
 hidden_if_flag = &"trainer_defeated:gym6_etarra_4"
 
-[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=623244523 instance=ExtResource("5_jk72e")]
+[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=1398977485 instance=ExtResource("5_jk72e")]
 position = Vector2(144, 176)
 script = ExtResource("6_lxc1a")
 trainer_id = &"gym6_etarra_5"
@@ -73,7 +73,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_nak5h")
 initial_facing = 2
 
-[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=280895444 instance=ExtResource("8_6d8ok")]
+[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=1034737613 instance=ExtResource("8_6d8ok")]
 position = Vector2(432, 144)
 script = ExtResource("9_wjjv0")
 lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Asier. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
@@ -81,7 +81,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_qrrgg")
 hidden_if_flag = &"trainer_defeated:gym6_etarra_5"
 
-[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=1089194532 instance=ExtResource("5_jk72e")]
+[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=1874319953 instance=ExtResource("5_jk72e")]
 position = Vector2(368, 112)
 script = ExtResource("6_lxc1a")
 trainer_id = &"inaki_williams_gym"
@@ -91,7 +91,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_nak5h")
 initial_facing = 1
 
-[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=776333988 instance=ExtResource("8_6d8ok")]
+[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=2003760598 instance=ExtResource("8_6d8ok")]
 position = Vector2(272, 80)
 script = ExtResource("9_wjjv0")
 lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Iñaki Williams. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
@@ -99,36 +99,36 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_qrrgg")
 hidden_if_flag = &"trainer_defeated:inaki_williams_gym"
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1724200167]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1117131344]
 z_index = 10
 tile_set = ExtResource("4_lbm8n")
 
-[node name="Warps" type="Node2D" parent="." unique_id=1233736709]
+[node name="Warps" type="Node2D" parent="." unique_id=1045633138]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1521498180]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1999028225]
 position = Vector2(272, 368)
 script = ExtResource("11_vdgd1")
 target_map = &"bilbao/gimnasio_1"
 target_spawn = &"from_arriba"
 arrival_facing = 1
 
-[node name="Siguiente" type="Node2D" parent="Warps" unique_id=449070590]
+[node name="Siguiente" type="Node2D" parent="Warps" unique_id=710856437]
 position = Vector2(272, 48)
 script = ExtResource("11_vdgd1")
 target_map = &"bilbao/gimnasio_3"
 arrival_facing = 4
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1925675457]
+[node name="Spawns" type="Node2D" parent="." unique_id=404270090]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=487433355]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1141557918]
 position = Vector2(272, 336)
 
-[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=1996574057]
+[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=1197972507]
 position = Vector2(272, 80)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1193122109]
+[node name="Triggers" type="Node2D" parent="." unique_id=389340349]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1030241220]
+[node name="Rotulo" type="Label" parent="." unique_id=373414225]
 offset_left = 8.0
 offset_top = 4.0
 offset_right = 504.0

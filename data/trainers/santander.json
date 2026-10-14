@@ -1,0 +1,41 @@
+{
+  "santander_turista": {
+    "class": "turista",
+    "name": "Margaret",
+    "gender": "female",
+    "intro_text": "I came on the ferry from Portsmouth. ¡Ahora vas a ver lo que es la flema británica!",
+    "lose_text": "Oh dear.",
+    "win_text": "Jolly good!",
+    "after_text": "El ferry a Inglaterra sale de aquí. Yo vine a ver el Palacio de la Magdalena y me quedé por las rabas.",
+    "items": [],
+    "party": [
+      {
+        "species": "swanna",
+        "level": 43
+      },
+      {
+        "species": "lapras",
+        "level": 43
+      }
+    ]
+  },
+  "santander_raba": {
+    "class": "camarero",
+    "name": "Toño",
+    "intro_text": "¿Rabas o calamares? Aquí es lo mismo, pero se dice rabas.",
+    "lose_text": "Se me han quedado frías.",
+    "win_text": "¡Una de rabas para la mesa tres!",
+    "after_text": "En Puertochico se comen rabas mirando el barco. En el Sardinero, mirando el casino.",
+    "items": [],
+    "party": [
+      {
+        "species": "octillery",
+        "level": 43
+      },
+      {
+        "species": "dewgong",
+        "level": 44
+      }
+    ]
+  }
+}

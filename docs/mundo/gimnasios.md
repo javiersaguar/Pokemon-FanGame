@@ -21,7 +21,7 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_20
 | 3 | Akuarela (`valencia/malvarrosa`) | 9: Vicent, Ximo, Borja, Paco, Nando, Kevin, Rafa, Iván, Peter Lim |
 | 4 | el teatro del club de la comedia (`sevilla/rio`) | 9: Rocío, Curro, Antony, Macarena, Berto Romero, Manuel, Dani Rovira, Buenafuente, José Mota |
 | 5 | la escalera del escenario (`playa_del_ingles/exterior`, casilla (48, 23)) | 9: Yaiza, Nayra, La Pantera, Idaira, Tamara, Lucho RK, Guacimara, Dácil, Cruz Cafuné |
-| 6 | **sin entrada todavía**: Bilbao no tiene mapa exterior | 9: Aitor, Gorka, Iker, Unai, Asier, Iñaki Williams, Mikel, Nico Williams, Arnaldo Otegi |
+| 6 | San Mamés (`bilbao/exterior`) | 9: Aitor, Gorka, Iker, Unai, Asier, Iñaki Williams, Mikel, Nico Williams, Arnaldo Otegi |
 | 7 | el Ayuntamiento de la Plaza Mayor (`valladolid/exterior`) | 9: Borja, Jacobo, Pelayo, Beltrán, Tristán, Óscar Puente, Rodrigo, Álvaro, Ronaldo Nazário |
 | 8 | la carpa del rodaje (`malaga/exterior`, casilla (58, 60)) | 9: Paco, Curro, Mario Casas, Antonio, Ester Expósito, Manolo, Torrente, Penélope Cruz, Javier Bardem |
 

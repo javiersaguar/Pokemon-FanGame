@@ -68,9 +68,9 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 | Sevilla | ✅ | Centro, Río y Triana y Plaza de España ✅ provisionales ([Centro](../arte/comparativas/sevilla_centro_mapa.png), [Río](../arte/comparativas/sevilla_rio_mapa.png), [Plaza de España](../arte/comparativas/sevilla_maria_luisa_mapa.png)) | — | costalero, flamencas, guiri, domador de palomas, tuno; club de la comedia (gimnasio 4) con su cartel | — |
 | Las Palmas de Gran Canaria | ✅ | Las Canteras, Vegueta y Triana y Playa del Inglés ✅ provisionales ([Canteras](../arte/comparativas/las_palmas_canteras_mapa.png), [Vegueta](../arte/comparativas/las_palmas_vegueta_triana_mapa.png), [Playa del Inglés](../arte/comparativas/playa_del_ingles_mapa.png)) | — | surfistas, nadadoras, guagüero, turistas, fan de Quevedo; ferry de Huelva; escenario de Quevedo (gimnasio 5); aeropuerto | — |
 | Vigo | ✅ | ✅ provisional ([captura](../arte/comparativas/vigo_mapa.png)) | — | regatista y nadadora; llegada en avión (`from_avion`) | — |
-| Santander | ✅ | — | — | — | — |
-| Bilbao | ✅ | — | — | — | — |
-| Pamplona | ✅ | — | — | — | — |
+| Santander | ✅ | ✅ provisional ([captura](../arte/comparativas/santander_mapa.png)) | — | Sardinero, Casino, Botín, Puertochico y la Magdalena; turista inglesa y camarero de las rabas; Centro Pokémon, Mercadona y estanco | — |
+| Bilbao | ✅ | ✅ provisional ([captura](../arte/comparativas/bilbao_mapa.png)) | — | San Mamés (entrada al gimnasio 6), Guggenheim, ría con dos puentes, Casco Viejo y Artxanda; txikitero y remera; hospital, Mercadona y estanco | — |
+| Pamplona | ✅ | ✅ provisional ([captura](../arte/comparativas/pamplona_mapa.png)) | — | ciudad amurallada: Portal de Francia, Ayuntamiento, Plaza del Castillo, Estafeta, plaza de toros y Ciudadela; mozo y peregrino; Centro Pokémon, Mercadona y estanco | — |
 | Valladolid | ✅ | ✅ provisional ([captura](../arte/comparativas/valladolid_mapa.png)) | — | cuatro locales señalizados, aficionado y paseante; gimnasio 7 reservado | — |
 | Puertollano | ✅ | [Exterior provisional](../arte/comparativas/puertollano.md) | — | Paseo, Fuente Agria, Pozo Norte, cuatro locales, entrenadores y rutas 24/25 | — |
 | Huelva | ✅ | ✅ provisional ([captura](../arte/comparativas/huelva_mapa.png)) | — | marinero y regatista; ferry a Las Palmas | — |

@@ -1,0 +1,85 @@
+{
+  "land_rate": 8,
+  "land": {
+    "day": [
+      {
+        "species": "pidove",
+        "min": 42,
+        "max": 44,
+        "weight": 35
+      },
+      {
+        "species": "timburr",
+        "min": 42,
+        "max": 44,
+        "weight": 35
+      },
+      {
+        "species": "roggenrola",
+        "min": 42,
+        "max": 44,
+        "weight": 30
+      }
+    ],
+    "night": [
+      {
+        "species": "hoothoot",
+        "min": 42,
+        "max": 44,
+        "weight": 50
+      },
+      {
+        "species": "timburr",
+        "min": 42,
+        "max": 44,
+        "weight": 50
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "buizel",
+      "min": 42,
+      "max": 44,
+      "weight": 40
+    },
+    {
+      "species": "floatzel",
+      "min": 43,
+      "max": 45,
+      "weight": 30
+    },
+    {
+      "species": "basculin",
+      "min": 42,
+      "max": 44,
+      "weight": 30
+    }
+  ],
+  "old_rod": [
+    {
+      "species": "magikarp",
+      "min": 15,
+      "max": 20,
+      "weight": 100
+    }
+  ],
+  "good_rod": [
+    {
+      "species": "basculin",
+      "min": 32,
+      "max": 38,
+      "weight": 100
+    }
+  ],
+  "super_rod": [
+    {
+      "species": "floatzel",
+      "min": 42,
+      "max": 45,
+      "weight": 100
+    }
+  ],
+  "rock_smash": [],
+  "headbutt": []
+}

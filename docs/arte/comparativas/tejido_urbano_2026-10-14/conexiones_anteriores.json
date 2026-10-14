@@ -408,8 +408,8 @@
      464.0,
      1648.0
     ],
-    "target_map": "palma/exterior",
-    "target_spawn": "from_ferry"
+    "target_map": "transporte/ferry_barcelona_palma",
+    "target_spawn": "default"
    },
    "Hospital": {
     "position": [
@@ -1550,8 +1550,8 @@
      1712.0,
      1296.0
     ],
-    "target_map": "las_palmas/canteras",
-    "target_spawn": "from_ferry"
+    "target_map": "transporte/ferry_huelva_las_palmas",
+    "target_spawn": "default"
    },
    "Centro": {
     "position": [
@@ -1736,8 +1736,8 @@
      848.0,
      336.0
     ],
-    "target_map": "valencia/malvarrosa",
-    "target_spawn": "from_ferry"
+    "target_map": "transporte/ferry_ibiza_valencia",
+    "target_spawn": "default"
    },
    "Centro": {
     "position": [
@@ -2048,8 +2048,8 @@
      1488.0,
      1232.0
     ],
-    "target_map": "huelva/exterior",
-    "target_spawn": "from_ferry"
+    "target_map": "transporte/ferry_las_palmas_huelva",
+    "target_spawn": "default"
    },
    "Mercadona": {
     "position": [
@@ -4992,8 +4992,8 @@
      336.0,
      1456.0
     ],
-    "target_map": "barcelona/ciutat_vella",
-    "target_spawn": "from_ferry"
+    "target_map": "transporte/ferry_palma_barcelona",
+    "target_spawn": "default"
    },
    "Centro": {
     "position": [
@@ -5256,8 +5256,8 @@
      368.0,
      208.0
     ],
-    "target_map": "vigo/exterior",
-    "target_spawn": "from_avion"
+    "target_map": "playa_del_ingles/aeropuerto",
+    "target_spawn": "default"
    },
    "Hospital": {
     "position": [
@@ -9031,8 +9031,8 @@
      528.0,
      1520.0
     ],
-    "target_map": "ibiza/exterior",
-    "target_spawn": "from_ferry"
+    "target_map": "transporte/ferry_valencia_ibiza",
+    "target_spawn": "default"
    },
    "Hospital": {
     "position": [
@@ -9566,8 +9566,8 @@
      1616.0,
      1136.0
     ],
-    "target_map": "playa_del_ingles/exterior",
-    "target_spawn": "from_avion"
+    "target_map": "vigo/aeropuerto",
+    "target_spawn": "default"
    },
    "Centro": {
     "position": [

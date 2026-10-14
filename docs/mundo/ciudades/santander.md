@@ -4,6 +4,8 @@
 >
 > Plano real: [`../planos/santander.svg`](../planos/santander.svg) (casilla = 30 m).
 
+**Pintado (2026-10-14, provisional):** `santander/exterior` (64×48, `maps/_pintura/pintar_santander.gd`). Oeste: Ruta 18; este: Ruta 19. El Sardinero con el Gran Casino al norte; en el centro, la catedral, el Mercado de la Esperanza y la Plaza Porticada; el paseo de Pereda con el Centro Botín (pieza de edificio moderno provisional) y Puertochico; la Magdalena con el palacio y el mini zoo de las focas. Entrenadores en `data/trainers/santander.json`. Leire Díez no está colocada (lo decide Javier). [Captura](../../arte/comparativas/santander_mapa.png).
+
 ## Lugares reales y cómo se ven
 
 | Lugar | Qué es | En el juego | Arte |

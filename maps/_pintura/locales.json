@@ -437,5 +437,63 @@
       48,
       26
     ]
+  },
+  "santander": {
+    "name": "Santander",
+    "zone": "santander",
+    "heading_y": 18,
+    "centro": [
+      "santander/exterior",
+      8,
+      18
+    ],
+    "mercadona": [
+      "santander/exterior",
+      15,
+      18
+    ],
+    "estanco": [
+      "santander/exterior",
+      21,
+      18
+    ]
+  },
+  "bilbao": {
+    "name": "Bilbao",
+    "hospital": [
+      "bilbao/exterior",
+      24,
+      14
+    ],
+    "mercadona": [
+      "bilbao/exterior",
+      31,
+      14
+    ],
+    "estanco": [
+      "bilbao/exterior",
+      37,
+      14
+    ]
+  },
+  "pamplona": {
+    "name": "Pamplona",
+    "zone": "pamplona",
+    "heading_y": 18,
+    "centro": [
+      "pamplona/exterior",
+      4,
+      17
+    ],
+    "mercadona": [
+      "pamplona/exterior",
+      11,
+      17
+    ],
+    "estanco": [
+      "pamplona/exterior",
+      17,
+      17
+    ]
   }
 }

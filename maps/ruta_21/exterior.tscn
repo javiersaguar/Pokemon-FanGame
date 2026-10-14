@@ -20,10 +20,16 @@ edge = "south"
 target_map = &"ruta_22/exterior"
 span = Vector2i(22, 26)
 
+[sub_resource type="Resource" id="Resource_nd3fn"]
+script = ExtResource("2_nd3fn")
+edge = "north"
+target_map = &"pamplona/exterior"
+span = Vector2i(22, 26)
+
 [sub_resource type="Resource" id="Resource_gynoi"]
 script = ExtResource("3_8jbs1")
 id = &"ruta_21/exterior"
-connections = Array[ExtResource("2_nd3fn")]([SubResource("Resource_uw7qg")])
+connections = Array[ExtResource("2_nd3fn")]([SubResource("Resource_uw7qg"), SubResource("Resource_nd3fn")])
 display_name = "Ruta 21 · Viñedos de La Rioja"
 encounter_table = &"ruta_21"
 zone_id = &"ruta_21"

@@ -1,0 +1,70 @@
+{
+  "land_rate": 14,
+  "land": {
+    "day": [
+      {
+        "species": "wooloo",
+        "min": 43,
+        "max": 45,
+        "weight": 30
+      },
+      {
+        "species": "skwovet",
+        "min": 43,
+        "max": 45,
+        "weight": 25
+      },
+      {
+        "species": "teddiursa",
+        "min": 43,
+        "max": 45,
+        "weight": 25
+      },
+      {
+        "species": "timburr",
+        "min": 43,
+        "max": 45,
+        "weight": 20
+      }
+    ],
+    "night": [
+      {
+        "species": "ursaring",
+        "min": 44,
+        "max": 46,
+        "weight": 30
+      },
+      {
+        "species": "noctowl",
+        "min": 44,
+        "max": 46,
+        "weight": 30
+      },
+      {
+        "species": "greedent",
+        "min": 44,
+        "max": 46,
+        "weight": 20
+      },
+      {
+        "species": "teddiursa",
+        "min": 43,
+        "max": 45,
+        "weight": 20
+      }
+    ]
+  },
+  "water": [],
+  "old_rod": [],
+  "good_rod": [],
+  "super_rod": [],
+  "rock_smash": [],
+  "headbutt": [
+    {
+      "species": "skwovet",
+      "min": 43,
+      "max": 45,
+      "weight": 100
+    }
+  ]
+}

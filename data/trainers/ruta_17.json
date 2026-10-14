@@ -1,0 +1,64 @@
+{
+  "ruta17_peregrina": {
+    "class": "montanera",
+    "name": "Uxía",
+    "gender": "female",
+    "intro_text": "¡Voy a Santiago a pie! Me quedan doscientos kilómetros y un combate.",
+    "lose_text": "Se me ha caído la concha de la mochila.",
+    "win_text": "¡Ultreia! Sigo andando.",
+    "after_text": "El Camino no se hace por la credencial. Bueno, un poco sí.",
+    "items": [],
+    "party": [
+      {
+        "species": "gloom",
+        "level": 40
+      },
+      {
+        "species": "noctowl",
+        "level": 41
+      }
+    ]
+  },
+  "ruta17_marisquero": {
+    "class": "pescador",
+    "name": "Xurxo",
+    "intro_text": "En la ría saco percebes; aquí, combates. ¡Al agua!",
+    "lose_text": "Me he quedado sin marea.",
+    "win_text": "¡El mar da y el mar quita!",
+    "after_text": "El percebe se coge en las rocas con olas. Por eso es caro: el que lo coge se juega el tipo.",
+    "items": [],
+    "party": [
+      {
+        "species": "gastrodon",
+        "level": 40
+      },
+      {
+        "species": "ludicolo",
+        "level": 41
+      }
+    ]
+  },
+  "ruta17_gaiteiro": {
+    "class": "flautista",
+    "name": "Brais",
+    "intro_text": "La gaita no es escocesa: es gallega y llegó antes. ¡Escucha!",
+    "lose_text": "Se me ha desafinado el roncón.",
+    "win_text": "¡Muiñeira de la victoria!",
+    "after_text": "En las fiestas toco hasta las seis. Luego, la orquesta. Luego, el pulpo.",
+    "items": [],
+    "party": [
+      {
+        "species": "altaria",
+        "level": 41
+      },
+      {
+        "species": "noctowl",
+        "level": 41
+      },
+      {
+        "species": "politoed",
+        "level": 42
+      }
+    ]
+  }
+}

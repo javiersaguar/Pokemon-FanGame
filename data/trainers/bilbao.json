@@ -1,0 +1,41 @@
+{
+  "bilbao_txikitero": {
+    "class": "tertuliano",
+    "name": "Patxi",
+    "intro_text": "Ruta de txikitos por las Siete Calles: un vino en cada bar. Llevo seis. ¡Combate!",
+    "lose_text": "Me he perdido entre la cuarta y la quinta calle.",
+    "win_text": "¡Aupa! Otro txikito.",
+    "after_text": "Las Siete Calles eran tres al principio. Luego se fueron añadiendo, como los txikitos.",
+    "items": [],
+    "party": [
+      {
+        "species": "conkeldurr",
+        "level": 44
+      },
+      {
+        "species": "magmar",
+        "level": 44
+      }
+    ]
+  },
+  "bilbao_remera": {
+    "class": "nadador",
+    "name": "Ane",
+    "gender": "female",
+    "intro_text": "Remo en la trainera de Santurtzi. ¡Ciaboga y a por ti!",
+    "lose_text": "Hemos perdido la bandera.",
+    "win_text": "¡Arraun, arraun!",
+    "after_text": "La Bandera de La Concha se rema en San Sebastián. Aquí entrenamos en la ría, que es más fea pero está más cerca.",
+    "items": [],
+    "party": [
+      {
+        "species": "floatzel",
+        "level": 44
+      },
+      {
+        "species": "gyarados",
+        "level": 45
+      }
+    ]
+  }
+}

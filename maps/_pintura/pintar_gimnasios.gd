@@ -29,7 +29,7 @@ const UP := 3
 const ENTRADAS := {
 	"madrid": ["madrid/centro", "from_sala_39_31"], "barcelona": ["barcelona/les_corts", "from_sala_26_40"],
 	"valencia": ["valencia/malvarrosa", "from_sala_43_20"], "sevilla": ["sevilla/rio", "from_sala_9_31"],
-	"playa_del_ingles": ["playa_del_ingles/exterior", "from_gimnasio"], "bilbao": ["", ""],
+	"playa_del_ingles": ["playa_del_ingles/exterior", "from_gimnasio"], "bilbao": ["bilbao/exterior", "from_san_mames"],
 	"valladolid": ["valladolid/exterior", "from_sala_35_18"], "malaga": ["malaga/exterior", "from_gimnasio"],
 }
 

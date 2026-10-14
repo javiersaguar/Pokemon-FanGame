@@ -1592,24 +1592,57 @@
     22,
     18
    ]
-  }
- ],
- "pendientes": [
+  },
   {
    "id": "elxokas",
-   "lugar": "Ruta 17 (Galicia)",
-   "motivo": "Ruta 17 sin pintar"
+   "entrenador": "elxokas",
+   "mapa": "ruta_17/exterior",
+   "cerca": [
+    38.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Ruta 17, al pie de la muralla de Lugo",
+   "casilla": [
+    38,
+    20
+   ]
   },
   {
    "id": "amancio_ortega",
-   "lugar": "Ruta 17 (Arteixo)",
-   "motivo": "Ruta 17 sin pintar"
+   "entrenador": "amancio_ortega",
+   "mapa": "ruta_17/exterior",
+   "cerca": [
+    38.0,
+    37.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Ruta 17, a la puerta de la nave de Inditex en Arteixo",
+   "casilla": [
+    38,
+    37
+   ]
   },
   {
    "id": "melendi",
-   "lugar": "Ruta 18 (Asturias)",
-   "motivo": "Ruta 18 sin pintar"
-  },
+   "entrenador": "melendi",
+   "mapa": "ruta_18/exterior",
+   "cerca": [
+    22.0,
+    24.0
+   ],
+   "mira": "arriba",
+   "vista": 3.0,
+   "lugar": "Ruta 18, a la puerta de la sidrería",
+   "casilla": [
+    22,
+    24
+   ]
+  }
+ ],
+ "pendientes": [
   {
    "id": "pedro_sanchez",
    "lugar": "Palacio Real (Liga) y el Clan PSOE",

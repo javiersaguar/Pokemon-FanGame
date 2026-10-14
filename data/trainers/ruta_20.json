@@ -1,0 +1,63 @@
+{
+  "ruta20_aizkolari": {
+    "class": "crossfitero",
+    "name": "Joseba",
+    "intro_text": "Corto troncos con hacha en la plaza del pueblo. Tu equipo será más fácil.",
+    "lose_text": "Se me ha mellado el hacha.",
+    "win_text": "¡Aupa! ¡Otro tronco!",
+    "after_text": "En el deporte rural vasco no hay gimnasio: hay piedras, troncos y apuestas.",
+    "items": [],
+    "party": [
+      {
+        "species": "machoke",
+        "level": 44
+      },
+      {
+        "species": "conkeldurr",
+        "level": 45
+      }
+    ]
+  },
+  "ruta20_pastor": {
+    "class": "pastor",
+    "name": "Mikel",
+    "intro_text": "Mis ovejas latxas dan la leche del Idiazabal. Y tus Pokémon me van a dar la victoria.",
+    "lose_text": "Se me ha escapado el rebaño.",
+    "win_text": "¡Las latxas, al monte!",
+    "after_text": "El queso ahumado de verdad se hace en la borda. El del súper huele a humo de mentira.",
+    "items": [],
+    "party": [
+      {
+        "species": "dubwool",
+        "level": 44
+      },
+      {
+        "species": "flaaffy",
+        "level": 44
+      },
+      {
+        "species": "ampharos",
+        "level": 45
+      }
+    ]
+  },
+  "ruta20_harrijasotzaile": {
+    "class": "crossfitero",
+    "name": "Iñaki",
+    "intro_text": "Levanto piedras de doscientos kilos. Tu Poké Ball pesa menos.",
+    "lose_text": "Se me ha caído la piedra. En el pie.",
+    "win_text": "¡Arriba la piedra!",
+    "after_text": "La piedra cilíndrica es la más difícil. La cúbica, la más honrada.",
+    "items": [],
+    "party": [
+      {
+        "species": "gurdurr",
+        "level": 45
+      },
+      {
+        "species": "rhydon",
+        "level": 45
+      }
+    ]
+  }
+}

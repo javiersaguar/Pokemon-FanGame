@@ -39,6 +39,7 @@ func test_todos_los_mapas_instanciados_warps_y_menos_medio_segundo() -> void:
 		assert_eq(await SceneManager.change_map(id, spawn, Vector2i.DOWN, false), OK)
 		assert_lt(SceneManager.last_map_load_usec, 500000, String(id))
 		await wait_physics_frames(2)
+		await _finish_enter_event()
 		assert_eq(SceneManager.current_map.get_map_id(), id)
 		assert_false(GameState.input_locked)
 
@@ -100,3 +101,18 @@ func test_mapa_explicito_sin_spawn_usa_default_y_boot_normal_usa_intro() -> void
 	var config := MvpLocations.new_game_config()
 	expected = MapLoader.spawn_tile(SceneManager.current_map, StringName(config.spawn))
 	assert_eq(GameState.player_tile, expected)
+
+
+## Los mapas con evento al entrar (el viaje de los ferris y del avión) bloquean el control mientras
+## dura: se pasa el diálogo hasta que acaba y entonces el control tiene que volver.
+func _finish_enter_event() -> void:
+	for frame: int in 1200:
+		if not Cutscene.is_running():
+			return
+		if Dialogue.is_open:
+			for down: bool in [true, false]:
+				var event := InputEventAction.new()
+				event.action = &"accept"
+				event.pressed = down
+				Input.parse_input_event(event)
+		await wait_physics_frames(1)

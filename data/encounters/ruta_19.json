@@ -1,0 +1,128 @@
+{
+  "land_rate": 12,
+  "land": {
+    "day": [
+      {
+        "species": "wingull",
+        "min": 41,
+        "max": 43,
+        "weight": 30
+      },
+      {
+        "species": "pelipper",
+        "min": 42,
+        "max": 44,
+        "weight": 25
+      },
+      {
+        "species": "kricketune",
+        "min": 41,
+        "max": 43,
+        "weight": 25
+      },
+      {
+        "species": "mareep",
+        "min": 41,
+        "max": 43,
+        "weight": 20
+      }
+    ],
+    "night": [
+      {
+        "species": "hoothoot",
+        "min": 41,
+        "max": 43,
+        "weight": 30
+      },
+      {
+        "species": "pelipper",
+        "min": 42,
+        "max": 44,
+        "weight": 30
+      },
+      {
+        "species": "kricketune",
+        "min": 41,
+        "max": 43,
+        "weight": 20
+      },
+      {
+        "species": "noctowl",
+        "min": 42,
+        "max": 44,
+        "weight": 20
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "seel",
+      "min": 41,
+      "max": 44,
+      "weight": 40
+    },
+    {
+      "species": "tentacruel",
+      "min": 42,
+      "max": 44,
+      "weight": 35
+    },
+    {
+      "species": "pelipper",
+      "min": 42,
+      "max": 44,
+      "weight": 25
+    }
+  ],
+  "old_rod": [
+    {
+      "species": "magikarp",
+      "min": 15,
+      "max": 20,
+      "weight": 70
+    },
+    {
+      "species": "tentacool",
+      "min": 15,
+      "max": 20,
+      "weight": 30
+    }
+  ],
+  "good_rod": [
+    {
+      "species": "tentacool",
+      "min": 32,
+      "max": 38,
+      "weight": 60
+    },
+    {
+      "species": "horsea",
+      "min": 32,
+      "max": 38,
+      "weight": 40
+    }
+  ],
+  "super_rod": [
+    {
+      "species": "seadra",
+      "min": 41,
+      "max": 44,
+      "weight": 60
+    },
+    {
+      "species": "dewgong",
+      "min": 41,
+      "max": 44,
+      "weight": 40
+    }
+  ],
+  "rock_smash": [],
+  "headbutt": [
+    {
+      "species": "wingull",
+      "min": 41,
+      "max": 43,
+      "weight": 100
+    }
+  ]
+}

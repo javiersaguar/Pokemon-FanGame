@@ -6,6 +6,8 @@
 
 **PENDIENTE JAVIER: ¿quién es exactamente "la chica del *Aupa Athletic*"?** No he encontrado una persona clara con ese apodo. Lo que más se parece en las noticias es la reportera de DAZN a la que Unai Simón regaló una txapela del Athletic; también circula un vídeo íntimo llamado "Aupa Athletic" que se difundió sin consentimiento, y **ese no se usa**. Mientras Javier no lo aclare, la líder se diseña como **una aficionada del Athletic** genérica (bufanda rojiblanca, txapela y megáfono), sin parecerse a nadie.
 
+**Pintado (2026-10-14, provisional):** `bilbao/exterior` (72×56, `maps/_pintura/pintar_bilbao.gd`). Oeste: Ruta 19; sur: Ruta 20. San Mamés (`san_mames.px2`, dibujado sobre el Camp Nou con las gradas rojiblancas; la fachada de láminas sigue pendiente) lleva al gimnasio 6; Guggenheim (pieza de museo moderno provisional) con Puppy de flores, Torre Iberdrola, Teatro Arriaga, la ría con el Zubizuri y el puente del Arenal, Doña Casilda, el Casco Viejo (Ribera, catedral de Santiago, Plaza Nueva, Siete Calles) y Artxanda. Llueve. Entrenadores en `data/trainers/bilbao.json`. [Captura](../../arte/comparativas/bilbao_mapa.png).
+
 ## Lugares reales y cómo se ven
 
 | Lugar | Qué es | En el juego | Arte |

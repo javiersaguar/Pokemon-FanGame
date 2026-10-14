@@ -1,0 +1,40 @@
+{
+  "pamplona_mozo": {
+    "class": "tuno",
+    "name": "Fermín",
+    "intro_text": "¡Uno de enero, dos de febrero...! ¡Llevo el pañuelo rojo y no tengo miedo a nada!",
+    "lose_text": "Me ha pillado el toro. El tuyo.",
+    "win_text": "¡Pobre de mí!",
+    "after_text": "En San Fermín no se duerme. Bueno, se duerme en el parque, en el césped, con la ropa puesta.",
+    "items": [],
+    "party": [
+      {
+        "species": "tauros",
+        "level": 45
+      },
+      {
+        "species": "bouffalant",
+        "level": 46
+      }
+    ]
+  },
+  "pamplona_peregrino": {
+    "class": "montanera",
+    "name": "Hans",
+    "intro_text": "Ich mache den Camino. ¡Llevo setecientos kilómetros desde Roncesvalles! Bueno, setenta.",
+    "lose_text": "Me salen ampollas.",
+    "win_text": "¡Buen Camino!",
+    "after_text": "En Pamplona entran los peregrinos por el Portal de Francia. Por eso se llama así, no por los franceses.",
+    "items": [],
+    "party": [
+      {
+        "species": "rhyhorn",
+        "level": 45
+      },
+      {
+        "species": "lucario",
+        "level": 46
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "land_rate": 8,
+  "land": {
+    "day": [
+      {
+        "species": "wingull",
+        "min": 41,
+        "max": 43,
+        "weight": 40
+      },
+      {
+        "species": "furret",
+        "min": 41,
+        "max": 43,
+        "weight": 35
+      },
+      {
+        "species": "skwovet",
+        "min": 41,
+        "max": 43,
+        "weight": 25
+      }
+    ],
+    "night": [
+      {
+        "species": "hoothoot",
+        "min": 41,
+        "max": 43,
+        "weight": 50
+      },
+      {
+        "species": "furret",
+        "min": 41,
+        "max": 43,
+        "weight": 50
+      }
+    ]
+  },
+  "water": [
+    {
+      "species": "seel",
+      "min": 41,
+      "max": 44,
+      "weight": 50
+    },
+    {
+      "species": "tentacool",
+      "min": 41,
+      "max": 43,
+      "weight": 30
+    },
+    {
+      "species": "pelipper",
+      "min": 42,
+      "max": 44,
+      "weight": 20
+    }
+  ],
+  "old_rod": [
+    {
+      "species": "magikarp",
+      "min": 15,
+      "max": 20,
+      "weight": 100
+    }
+  ],
+  "good_rod": [
+    {
+      "species": "shellder",
+      "min": 32,
+      "max": 38,
+      "weight": 100
+    }
+  ],
+  "super_rod": [
+    {
+      "species": "dewgong",
+      "min": 41,
+      "max": 44,
+      "weight": 100
+    }
+  ],
+  "rock_smash": [],
+  "headbutt": []
+}

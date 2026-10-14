@@ -506,6 +506,18 @@ Main `47ca2f19` incorporado; Móstoles y las pasarelas C-5 se conservan. **Prime
 
 ## Agente 5 — Calidad y motor de combate (desde el 2026-10-07)
 
+### El norte y los viajes (2026-10-14)
+
+Encargo de Javier: rutas que interconecten todo el mapa, el avión a Canarias y los viajes en ferry.
+
+- **El mapa entero está unido:** `docs/mundo/conexiones.md` da **888 mapas en un solo grupo**, todos alcanzables desde San Miguel de Bernuy. Solo quedan tres puertas de ida sin vuelta, todas anteriores (el ático de Ayuso, el laboratorio y el Quirón).
+- **El norte, nuevo:** Ruta 17 (Galicia interior: Lugo, el Miño, Arteixo), Ruta 18 (Picos de Europa, sidrería, Sella), Santander, Ruta 19 (costa de Cantabria, Castro Urdiales), Bilbao, Ruta 20 (Sierra de Aralar) y Pamplona, unida con la Ruta 21. Pintores `maps/_pintura/pintar_ruta_17..20.gd`, `pintar_santander.gd`, `pintar_bilbao.gd`, `pintar_pamplona.gd`; capturas `docs/arte/comparativas/*_mapa.png`.
+- **Datos:** 17 entrenadores nuevos (`data/trainers/ruta_17..20.json`, `santander.json`, `bilbao.json`, `pamplona.json`) y siete tablas de encuentros con los niveles de `region.json`. Elxokas y Amancio Ortega (Ruta 17) y Melendi (Ruta 18), que estaban en «pendientes» de `personajes_en_el_mapa.json`, ya están colocados donde decía la propuesta.
+- **Locales e interiores:** Centro Pokémon, Mercadona y estanco en Santander y Pamplona; hospital, Mercadona y estanco en Bilbao (con sus tiendas en `data/shops.json`). 53 edificios nuevos con puerta e interior (`pintar_interiores_edificios.gd --solo-nuevas --rutas`).
+- **Gimnasio 6:** San Mamés (pieza nueva `san_mames.px2`, dibujada sobre el Camp Nou con las gradas rojiblancas y su rótulo) lleva a `bilbao/gimnasio_1`; las salas ya tienen salida a la calle.
+- **Viajes:** cada ferry y el avión tienen mapa propio (`maps/transporte/`); el viaje salta al entrar (`src/events/viaje_event.gd`) y se baja por la puerta en el destino. El avión sale de una terminal con control de seguridad obligatorio (`src/events/control_seguridad_event.gd`). `tests/mundo/test_transportes.gd`. Son los primeros mapas reales con evento al entrar, así que `test_map_robustness.gd` ahora deja terminar ese evento antes de comprobar que vuelve el control.
+- **Provisional / pendiente de Javier:** todo el arte (el Guggenheim y el Centro Botín usan piezas de edificio moderno de otra ciudad; los hórreos, el granero), los textos de carteles y entrenadores, el billete del ferry como objeto clave (no se pide) y el encierro de San Fermín.
+
 ### Los ocho gimnasios por dentro (2026-10-14)
 
 Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](DECISIONES_JAVIER_2026-10-14.md)): bastantes salas con puzle, obligatorio ganar a todos antes del líder.
@@ -514,7 +526,7 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](DECISIONES_JAVIER_2026-
 - **El puzle:** cada sala es un zigzag de tres tramos; el paso de un tramo al siguiente lo tapa un vigilante que solo se aparta al ganar al entrenador de ese tramo (`hidden_if_flag`). `tests/mundo/test_gimnasios_salas.gd` comprueba en las 32 salas que no se pasa sin ganar a todos y que sí se pasa después.
 - **72 entrenadores nuevos** en `data/trainers/gimnasios.json` (9 por gimnasio) con los personajes que pidió Javier, y 28 clases nuevas. Equipos del tipo del gimnasio y en la etapa que toca a su nivel; el RandomLocke genera sin reintentos.
 - **Gimnasio 1:** Ayuso ya no te lleva al ático desde el Quirón: allí da paso (`quiron_superado`) y el gimnasio es la Real Casa de Correos; al fondo, en su despacho, te sube a la terraza de Chamberí (`src/events/gym1_ayuso_event.gd`).
-- **Entradas:** Casa de Correos, Camp Nou, Akuarela, el teatro de Triana y el Ayuntamiento de Valladolid usan la puerta de su edificio; en Playa del Inglés se entra por la escalera del escenario (48, 23) y en Málaga por la carpa del rodaje (58, 60). **Bilbao no tiene entrada** porque no tiene mapa exterior: sus salas se ven desde el F9. Herramienta nueva: `maps/_tools/redirigir_puerta.gd`.
+- **Entradas:** Casa de Correos, Camp Nou, Akuarela, el teatro de Triana y el Ayuntamiento de Valladolid usan la puerta de su edificio; en Playa del Inglés se entra por la escalera del escenario (48, 23) y en Málaga por la carpa del rodaje (58, 60). Bilbao entra por San Mamés desde el 14 de octubre (ver arriba); antes no tenía mapa exterior: sus salas se ven desde el F9. Herramienta nueva: `maps/_tools/redirigir_puerta.gd`.
 - **Líderes:** ya no están en la calle; los pinta su sala. Los 24 entrenadores de gimnasio anteriores siguen en la calle como entrenadores normales.
 - **Lore, equipos y frases:** en [`docs/mundo/guion.md` §8](mundo/guion.md), generado desde los datos. Solo tres frases son de Javier; **el resto es propuesta y Javier lo va a corregir a mano**.
 - **Sin maquillar:** los sprites de los personajes nuevos no existen todavía; llevan uno provisional de otra clase (Messi sale con el del crossfitero) hasta que el agente de sprites los entregue con el mismo id. Las salas tienen suelo y pared distintos por gimnasio y poco mobiliario: el tema lo dan sobre todo los personajes y los rótulos. Los famosos de la lista sin gimnasio (Pablo Motos, Omar Montes…) y Rocafonda están sin hacer.
