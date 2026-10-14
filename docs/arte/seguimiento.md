@@ -441,3 +441,12 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | `characters/famosos_atlas/mente_fria.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
 | `characters/famosos_atlas/amador_rivas.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
 | `characters/famosos_atlas/antonio_recio.png` | Combate y 16 poses | A | integrado, provisional | Foto documentada | ⏳ | `personajes_entrega_11.md` |
+
+
+## Pueblos y ciudades · detalle urbano del 14 de octubre
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| 33 mapas urbanos: viviendas, paseos, mobiliario y vecinos | Mundo | A | integrado, provisional | Packs de exteriores existentes | ⏳ | 62 viviendas, 962 adornos/arbolado, 99 vecinos. Comparativa `tejido_urbano_2026-10-14.md` |
+| 89 casas antes incompletas, en ciudades, rutas y muestras | Mundo | A | integrado, provisional | Piezas completas del pack DPPt | ⏳ | La puerta queda en la misma casilla; colores de algunas casas cambiados. Capturas antes/después |
+| 62 interiores nuevos | Interiores | A | integrado, provisional | Método de interiores existente, Akizakura16 | ⏳ | Mobiliario, dos vecinos y entrada/regreso. Una captura por interior en la comparativa |

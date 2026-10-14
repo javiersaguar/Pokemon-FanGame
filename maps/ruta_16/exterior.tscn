@@ -52,7 +52,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1676089405]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAaABgABgAjAAAAAAAeACYABgAnAAAAAAAXAAwABAAGAAAAAAAgADAABAAGAAAAAAAWAC4ACQACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAaABgABgAjAAAAAAAeACYABgAOAAAAAAAXAAwABAAGAAAAAAAgADAABAAGAAAAAAAWAC4ACQACAAAAAAA=")
 tile_set = ExtResource("4_flcfg")
 
 [node name="CartelVigo" type="Node2D" parent="Entities" unique_id=424074225 instance=ExtResource("5_xdkbp")]

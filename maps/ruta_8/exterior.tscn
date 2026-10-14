@@ -51,7 +51,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1579337660]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAAwAQQAAAAAAAAA6AAwAQQAAAAAAAAAYAAQAQQAAAAAAAAAnAAQAQQAAAAAAAAAgAAoAQgAAAAAAAAAQACUABgAeAAAAAAAWACUABgAjAAAAAAAyACUABgAnAAAAAAA3ACUABgArAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAwAQQAAAAAAAAA6AAwAQQAAAAAAAAAYAAQAQQAAAAAAAAAnAAQAQQAAAAAAAAAgAAoAQgAAAAAAAAAQACUABgAeAAAAAAAWACUABgAjAAAAAAAyACUABgAOAAAAAAA3ACUABgAeAAAAAAA=")
 tile_set = ExtResource("4_2xkth")
 
 [node name="CartelRuta" type="Node2D" parent="Entities" unique_id=1319318555 instance=ExtResource("5_i71q4")]

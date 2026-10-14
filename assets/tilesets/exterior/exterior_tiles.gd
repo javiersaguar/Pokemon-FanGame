@@ -8,6 +8,15 @@ const TILESET := "res://assets/tilesets/exterior/exterior.tres"
 ## Objetos grandes (casas y árboles): lo escribe build_exterior.gd.
 const OBJECTS_JSON := "res://assets/tilesets/exterior/objetos.json"
 
+## Estos recortes de DPPt son módulos de tejado, no casas completas.
+## Conservamos sus ids para los pintores y usamos piezas completas del mismo pack.
+const COMPLETE_HOUSES := {
+	&"casa_naranja": &"casa_roja_chimenea",
+	&"casa_tejado_rojo": &"casa_roja_chimenea",
+	&"casa_madera": &"casa_azul_pequena",
+	&"casa_granero": &"casa_roja_chimenea",
+}
+
 ## Ids de las fuentes del TileSet.
 const SRC_GEN4 := 0       ## gen4.png: 02_public_gen4_tileset (ya a ×2)
 const SRC_AUTO := 1       ## autotiles.png: hierba alta y camino (02), compuestos
@@ -93,4 +102,6 @@ static func objects() -> Dictionary:
 			"door": Vector2i(int(o["door"][0]), int(o["door"][1])) if o.has("door") else Vector2i(-1, -1),
 			"file": str(o.get("file", "")),
 		}
+	for id: StringName in COMPLETE_HOUSES:
+		out[id] = out[COMPLETE_HOUSES[id]].duplicate(true)
 	return out

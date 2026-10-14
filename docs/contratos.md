@@ -350,6 +350,10 @@ Todos los TileSets del juego tienen estas capas. El de exteriores es `assets/til
 - **Objetos grandes** (fuentes `casas` y `arboles`; lista en `objetos.json`): una sola casilla grande que se pone en `Entities/Objects` en su casilla **de abajo a la izquierda**. Solo chocan en su base (`footprint`); la puerta de las casas se puede pisar (para el Warp).
 - **Bordillos** (`ledge_<dirección>`): chocan, pero el jugador los salta 2 casillas en esa dirección si la de llegada está libre.
 
+**Casas completas (2026-10-14):** los pintores consumen `ExteriorTiles.objects()`, que resuelve los ids históricos `casa_naranja`, `casa_tejado_rojo`, `casa_madera` y `casa_granero` a piezas completas del pack DPPt. Los recortes originales son módulos parciales. `maps/_tools/completar_casas.gd` migra las escenas manteniendo la casilla de la puerta: `ancla_nueva = puerta_actual - desplazamiento_puerta_nueva`. No cambia warps ni apariciones. El montador del TileSet admite varios ids para la misma pieza sin duplicar la casilla del atlas.
+
+**Detalle urbano incremental:** `maps/_tools/detallar_ciudades.gd -- <mapas...>` edita las escenas existentes; reserva las puertas, apariciones, bordes y posiciones de los personajes colocados, calcula paseos sobre casillas transitables y añade viviendas, mobiliario y vecinos ambientales. La metadata de escena `detalle_urbano` evita repetir la ampliación. Los edificios nuevos se enlazan con `pintar_interiores_edificios.gd -- --solo-nuevas`, conservando los interiores anteriores. Comparativas y lista de entradas nuevas en `docs/arte/comparativas/tejido_urbano_2026-10-14.md`.
+
 ### Entidades del mapa
 
 Van dentro de `Entities`. Jerarquía de clases (todas `@tool`: **las clases hijas también deben ser `@tool`** y llamar a `super()` en `_ready()`, y su lógica de juego debe ir protegida con `if Engine.is_editor_hint(): return`):

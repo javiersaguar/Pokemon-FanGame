@@ -195,6 +195,8 @@ static func _objects(ts: TileSet, src_id: int, file: String, objects: Dictionary
 			continue
 		var coords: Vector2i = o["coords"]
 		var size: Vector2i = o["size"]
+		if s.has_tile(coords):
+			continue
 		s.create_tile(coords, size)
 		var tile := s.get_tile_data(coords, 0)
 		tile.texture_origin = Vector2i(T / 2 - size.x * T / 2, size.y * T / 2 - T / 2)

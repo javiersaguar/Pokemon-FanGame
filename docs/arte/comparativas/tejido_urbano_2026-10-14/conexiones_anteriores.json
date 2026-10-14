@@ -1,0 +1,10060 @@
+{
+ "alicante/exterior": {
+  "warps": {
+   "Centro": {
+    "position": [
+     912.0,
+     1360.0
+    ],
+    "target_map": "alicante/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     144.0,
+     1008.0
+    ],
+    "target_map": "alicante/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     400.0,
+     1040.0
+    ],
+    "target_map": "alicante/estanco",
+    "target_spawn": "default"
+   },
+   "Sala58_12": {
+    "position": [
+     1872.0,
+     400.0
+    ],
+    "target_map": "alicante/sala_calle_58_12",
+    "target_spawn": "default"
+   },
+   "Sala28_33": {
+    "position": [
+     912.0,
+     1072.0
+    ],
+    "target_map": "alicante/sala_calle_28_33",
+    "target_spawn": "default"
+   },
+   "Sala20_43": {
+    "position": [
+     656.0,
+     1392.0
+    ],
+    "target_map": "alicante/sala_calle_20_43",
+    "target_spawn": "default"
+   },
+   "Sala4_9": {
+    "position": [
+     144.0,
+     304.0
+    ],
+    "target_map": "alicante/sala_calle_4_9",
+    "target_spawn": "default"
+   },
+   "Sala12_9": {
+    "position": [
+     400.0,
+     304.0
+    ],
+    "target_map": "alicante/sala_calle_12_9",
+    "target_spawn": "default"
+   },
+   "Sala22_9": {
+    "position": [
+     720.0,
+     304.0
+    ],
+    "target_map": "alicante/sala_calle_22_9",
+    "target_spawn": "default"
+   },
+   "Sala31_8": {
+    "position": [
+     1008.0,
+     272.0
+    ],
+    "target_map": "alicante/sala_calle_31_8",
+    "target_spawn": "default"
+   },
+   "Sala42_8": {
+    "position": [
+     1360.0,
+     272.0
+    ],
+    "target_map": "alicante/sala_calle_42_8",
+    "target_spawn": "default"
+   },
+   "Sala6_19": {
+    "position": [
+     208.0,
+     624.0
+    ],
+    "target_map": "alicante/sala_calle_6_19",
+    "target_spawn": "default"
+   },
+   "Sala24_20": {
+    "position": [
+     784.0,
+     656.0
+    ],
+    "target_map": "alicante/sala_calle_24_20",
+    "target_spawn": "default"
+   },
+   "Sala29_20": {
+    "position": [
+     944.0,
+     656.0
+    ],
+    "target_map": "alicante/sala_calle_29_20",
+    "target_spawn": "default"
+   },
+   "Sala19_32": {
+    "position": [
+     624.0,
+     1040.0
+    ],
+    "target_map": "alicante/sala_calle_19_32",
+    "target_spawn": "default"
+   },
+   "Sala44_32": {
+    "position": [
+     1424.0,
+     1040.0
+    ],
+    "target_map": "alicante/sala_calle_44_32",
+    "target_spawn": "default"
+   },
+   "Sala7_43": {
+    "position": [
+     240.0,
+     1392.0
+    ],
+    "target_map": "alicante/sala_calle_7_43",
+    "target_spawn": "default"
+   },
+   "Sala42_42": {
+    "position": [
+     1360.0,
+     1360.0
+    ],
+    "target_map": "alicante/sala_calle_42_42",
+    "target_spawn": "default"
+   },
+   "Sala51_43": {
+    "position": [
+     1648.0,
+     1392.0
+    ],
+    "target_map": "alicante/sala_calle_51_43",
+    "target_spawn": "default"
+   },
+   "Sala50_26": {
+    "position": [
+     1616.0,
+     848.0
+    ],
+    "target_map": "alicante/sala_calle_50_26",
+    "target_spawn": "default"
+   },
+   "Sala55_26": {
+    "position": [
+     1776.0,
+     848.0
+    ],
+    "target_map": "alicante/sala_calle_55_26",
+    "target_spawn": "default"
+   },
+   "Sala50_31": {
+    "position": [
+     1616.0,
+     1008.0
+    ],
+    "target_map": "alicante/sala_calle_50_31",
+    "target_spawn": "default"
+   },
+   "Sala55_31": {
+    "position": [
+     1776.0,
+     1008.0
+    ],
+    "target_map": "alicante/sala_calle_55_31",
+    "target_spawn": "default"
+   },
+   "Sala42_19": {
+    "position": [
+     1360.0,
+     624.0
+    ],
+    "target_map": "alicante/sala_calle_42_19",
+    "target_spawn": "default"
+   },
+   "Sala56_42": {
+    "position": [
+     1808.0,
+     1360.0
+    ],
+    "target_map": "alicante/sala_calle_56_42",
+    "target_spawn": "default"
+   },
+   "Sala32_12": {
+    "position": [
+     1040.0,
+     400.0
+    ],
+    "target_map": "alicante/sala_calle_32_12",
+    "target_spawn": "default"
+   },
+   "Sala68_36": {
+    "position": [
+     2192.0,
+     1168.0
+    ],
+    "target_map": "alicante/sala_calle_68_36",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1200.0,
+     48.0
+    ]
+   },
+   "from_ruta_10": {
+    "position": [
+     1200.0,
+     16.0
+    ]
+   },
+   "from_ruta_11": {
+    "position": [
+     16.0,
+     1136.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     912.0,
+     1392.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     144.0,
+     1040.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     400.0,
+     1072.0
+    ]
+   },
+   "from_sala_58_12": {
+    "position": [
+     1872.0,
+     432.0
+    ]
+   },
+   "from_sala_28_33": {
+    "position": [
+     912.0,
+     1104.0
+    ]
+   },
+   "from_sala_20_43": {
+    "position": [
+     656.0,
+     1424.0
+    ]
+   },
+   "from_sala_4_9": {
+    "position": [
+     144.0,
+     336.0
+    ]
+   },
+   "from_sala_12_9": {
+    "position": [
+     400.0,
+     336.0
+    ]
+   },
+   "from_sala_22_9": {
+    "position": [
+     720.0,
+     336.0
+    ]
+   },
+   "from_sala_31_8": {
+    "position": [
+     1008.0,
+     304.0
+    ]
+   },
+   "from_sala_42_8": {
+    "position": [
+     1360.0,
+     304.0
+    ]
+   },
+   "from_sala_6_19": {
+    "position": [
+     208.0,
+     656.0
+    ]
+   },
+   "from_sala_24_20": {
+    "position": [
+     784.0,
+     688.0
+    ]
+   },
+   "from_sala_29_20": {
+    "position": [
+     944.0,
+     688.0
+    ]
+   },
+   "from_sala_19_32": {
+    "position": [
+     624.0,
+     1072.0
+    ]
+   },
+   "from_sala_44_32": {
+    "position": [
+     1424.0,
+     1072.0
+    ]
+   },
+   "from_sala_7_43": {
+    "position": [
+     240.0,
+     1424.0
+    ]
+   },
+   "from_sala_42_42": {
+    "position": [
+     1360.0,
+     1392.0
+    ]
+   },
+   "from_sala_51_43": {
+    "position": [
+     1648.0,
+     1424.0
+    ]
+   },
+   "from_sala_50_26": {
+    "position": [
+     1616.0,
+     880.0
+    ]
+   },
+   "from_sala_55_26": {
+    "position": [
+     1776.0,
+     880.0
+    ]
+   },
+   "from_sala_50_31": {
+    "position": [
+     1616.0,
+     1040.0
+    ]
+   },
+   "from_sala_55_31": {
+    "position": [
+     1776.0,
+     1040.0
+    ]
+   },
+   "from_sala_42_19": {
+    "position": [
+     1360.0,
+     656.0
+    ]
+   },
+   "from_sala_56_42": {
+    "position": [
+     1808.0,
+     1392.0
+    ]
+   },
+   "from_sala_32_12": {
+    "position": [
+     1040.0,
+     432.0
+    ]
+   },
+   "from_sala_68_36": {
+    "position": [
+     2192.0,
+     1200.0
+    ]
+   }
+  }
+ },
+ "barcelona/ciutat_vella": {
+  "warps": {
+   "FerryPalma": {
+    "position": [
+     464.0,
+     1648.0
+    ],
+    "target_map": "palma/exterior",
+    "target_spawn": "from_ferry"
+   },
+   "Hospital": {
+    "position": [
+     1584.0,
+     1584.0
+    ],
+    "target_map": "barcelona/barceloneta/hospital",
+    "target_spawn": "default"
+   },
+   "Sala5_13": {
+    "position": [
+     176.0,
+     432.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_5_13",
+    "target_spawn": "default"
+   },
+   "Sala12_13": {
+    "position": [
+     400.0,
+     432.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_12_13",
+    "target_spawn": "default"
+   },
+   "Sala22_13": {
+    "position": [
+     720.0,
+     432.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_22_13",
+    "target_spawn": "default"
+   },
+   "Sala5_27": {
+    "position": [
+     176.0,
+     880.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_5_27",
+    "target_spawn": "default"
+   },
+   "Sala13_26": {
+    "position": [
+     432.0,
+     848.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_13_26",
+    "target_spawn": "default"
+   },
+   "Sala22_27": {
+    "position": [
+     720.0,
+     880.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_22_27",
+    "target_spawn": "default"
+   },
+   "Sala5_40": {
+    "position": [
+     176.0,
+     1296.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_5_40",
+    "target_spawn": "default"
+   },
+   "Sala25_40": {
+    "position": [
+     816.0,
+     1296.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_25_40",
+    "target_spawn": "default"
+   },
+   "Sala6_49": {
+    "position": [
+     208.0,
+     1584.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_6_49",
+    "target_spawn": "default"
+   },
+   "Sala44_22": {
+    "position": [
+     1424.0,
+     720.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_44_22",
+    "target_spawn": "default"
+   },
+   "Sala47_6": {
+    "position": [
+     1520.0,
+     208.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_47_6",
+    "target_spawn": "default"
+   },
+   "Sala57_27": {
+    "position": [
+     1840.0,
+     880.0
+    ],
+    "target_map": "barcelona/sala_ciutat_vella_57_27",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1008.0,
+     48.0
+    ]
+   },
+   "from_eixample": {
+    "position": [
+     1008.0,
+     16.0
+    ]
+   },
+   "from_ferry": {
+    "position": [
+     464.0,
+     1616.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     1584.0,
+     1616.0
+    ]
+   },
+   "from_sala_5_13": {
+    "position": [
+     176.0,
+     464.0
+    ]
+   },
+   "from_sala_12_13": {
+    "position": [
+     400.0,
+     464.0
+    ]
+   },
+   "from_sala_22_13": {
+    "position": [
+     720.0,
+     464.0
+    ]
+   },
+   "from_sala_5_27": {
+    "position": [
+     176.0,
+     912.0
+    ]
+   },
+   "from_sala_13_26": {
+    "position": [
+     432.0,
+     880.0
+    ]
+   },
+   "from_sala_22_27": {
+    "position": [
+     720.0,
+     912.0
+    ]
+   },
+   "from_sala_5_40": {
+    "position": [
+     176.0,
+     1328.0
+    ]
+   },
+   "from_sala_25_40": {
+    "position": [
+     816.0,
+     1328.0
+    ]
+   },
+   "from_sala_6_49": {
+    "position": [
+     208.0,
+     1616.0
+    ]
+   },
+   "from_sala_44_22": {
+    "position": [
+     1424.0,
+     752.0
+    ]
+   },
+   "from_sala_47_6": {
+    "position": [
+     1520.0,
+     240.0
+    ]
+   },
+   "from_sala_57_27": {
+    "position": [
+     1840.0,
+     912.0
+    ]
+   }
+  }
+ },
+ "barcelona/eixample": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     272.0,
+     1648.0
+    ],
+    "target_map": "barcelona/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     176.0,
+     976.0
+    ],
+    "target_map": "barcelona/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     816.0,
+     624.0
+    ],
+    "target_map": "barcelona/estanco",
+    "target_spawn": "default"
+   },
+   "Sala5_19": {
+    "position": [
+     176.0,
+     624.0
+    ],
+    "target_map": "barcelona/sala_eixample_5_19",
+    "target_spawn": "default"
+   },
+   "Sala17_19": {
+    "position": [
+     560.0,
+     624.0
+    ],
+    "target_map": "barcelona/sala_eixample_17_19",
+    "target_spawn": "default"
+   },
+   "Sala37_19": {
+    "position": [
+     1200.0,
+     624.0
+    ],
+    "target_map": "barcelona/sala_eixample_37_19",
+    "target_spawn": "default"
+   },
+   "Sala52_18": {
+    "position": [
+     1680.0,
+     592.0
+    ],
+    "target_map": "barcelona/sala_eixample_52_18",
+    "target_spawn": "default"
+   },
+   "Sala59_19": {
+    "position": [
+     1904.0,
+     624.0
+    ],
+    "target_map": "barcelona/sala_eixample_59_19",
+    "target_spawn": "default"
+   },
+   "Sala68_19": {
+    "position": [
+     2192.0,
+     624.0
+    ],
+    "target_map": "barcelona/sala_eixample_68_19",
+    "target_spawn": "default"
+   },
+   "Sala17_31": {
+    "position": [
+     560.0,
+     1008.0
+    ],
+    "target_map": "barcelona/sala_eixample_17_31",
+    "target_spawn": "default"
+   },
+   "Sala25_31": {
+    "position": [
+     816.0,
+     1008.0
+    ],
+    "target_map": "barcelona/sala_eixample_25_31",
+    "target_spawn": "default"
+   },
+   "Sala37_31": {
+    "position": [
+     1200.0,
+     1008.0
+    ],
+    "target_map": "barcelona/sala_eixample_37_31",
+    "target_spawn": "default"
+   },
+   "Sala5_41": {
+    "position": [
+     176.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_eixample_5_41",
+    "target_spawn": "default"
+   },
+   "Sala17_41": {
+    "position": [
+     560.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_eixample_17_41",
+    "target_spawn": "default"
+   },
+   "Sala25_41": {
+    "position": [
+     816.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_eixample_25_41",
+    "target_spawn": "default"
+   },
+   "Sala37_41": {
+    "position": [
+     1200.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_eixample_37_41",
+    "target_spawn": "default"
+   },
+   "Sala55_41": {
+    "position": [
+     1776.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_eixample_55_41",
+    "target_spawn": "default"
+   },
+   "Sala61_51": {
+    "position": [
+     1968.0,
+     1648.0
+    ],
+    "target_map": "barcelona/sala_eixample_61_51",
+    "target_spawn": "default"
+   },
+   "Sala12_19": {
+    "position": [
+     400.0,
+     624.0
+    ],
+    "target_map": "barcelona/sala_eixample_12_19",
+    "target_spawn": "default"
+   },
+   "Sala45_18": {
+    "position": [
+     1456.0,
+     592.0
+    ],
+    "target_map": "barcelona/sala_eixample_45_18",
+    "target_spawn": "default"
+   },
+   "Sala10_31": {
+    "position": [
+     336.0,
+     1008.0
+    ],
+    "target_map": "barcelona/sala_eixample_10_31",
+    "target_spawn": "default"
+   },
+   "Sala44_31": {
+    "position": [
+     1424.0,
+     1008.0
+    ],
+    "target_map": "barcelona/sala_eixample_44_31",
+    "target_spawn": "default"
+   },
+   "Sala12_41": {
+    "position": [
+     400.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_eixample_12_41",
+    "target_spawn": "default"
+   },
+   "Sala44_41": {
+    "position": [
+     1424.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_eixample_44_41",
+    "target_spawn": "default"
+   },
+   "Sala5_5": {
+    "position": [
+     176.0,
+     176.0
+    ],
+    "target_map": "barcelona/sala_eixample_5_5",
+    "target_spawn": "default"
+   },
+   "Sala17_5": {
+    "position": [
+     560.0,
+     176.0
+    ],
+    "target_map": "barcelona/sala_eixample_17_5",
+    "target_spawn": "default"
+   },
+   "Sala39_5": {
+    "position": [
+     1264.0,
+     176.0
+    ],
+    "target_map": "barcelona/sala_eixample_39_5",
+    "target_spawn": "default"
+   },
+   "Sala51_5": {
+    "position": [
+     1648.0,
+     176.0
+    ],
+    "target_map": "barcelona/sala_eixample_51_5",
+    "target_spawn": "default"
+   },
+   "Sala63_5": {
+    "position": [
+     2032.0,
+     176.0
+    ],
+    "target_map": "barcelona/sala_eixample_63_5",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     240.0
+    ]
+   },
+   "from_les_corts": {
+    "position": [
+     16.0,
+     240.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     272.0,
+     1680.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     176.0,
+     1008.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     816.0,
+     656.0
+    ]
+   },
+   "from_sala_5_19": {
+    "position": [
+     176.0,
+     656.0
+    ]
+   },
+   "from_sala_17_19": {
+    "position": [
+     560.0,
+     656.0
+    ]
+   },
+   "from_sala_37_19": {
+    "position": [
+     1200.0,
+     656.0
+    ]
+   },
+   "from_sala_52_18": {
+    "position": [
+     1680.0,
+     624.0
+    ]
+   },
+   "from_sala_59_19": {
+    "position": [
+     1904.0,
+     656.0
+    ]
+   },
+   "from_sala_68_19": {
+    "position": [
+     2192.0,
+     656.0
+    ]
+   },
+   "from_sala_17_31": {
+    "position": [
+     560.0,
+     1040.0
+    ]
+   },
+   "from_sala_25_31": {
+    "position": [
+     816.0,
+     1040.0
+    ]
+   },
+   "from_sala_37_31": {
+    "position": [
+     1200.0,
+     1040.0
+    ]
+   },
+   "from_sala_5_41": {
+    "position": [
+     176.0,
+     1360.0
+    ]
+   },
+   "from_sala_17_41": {
+    "position": [
+     560.0,
+     1360.0
+    ]
+   },
+   "from_sala_25_41": {
+    "position": [
+     816.0,
+     1360.0
+    ]
+   },
+   "from_sala_37_41": {
+    "position": [
+     1200.0,
+     1360.0
+    ]
+   },
+   "from_sala_55_41": {
+    "position": [
+     1776.0,
+     1360.0
+    ]
+   },
+   "from_sala_61_51": {
+    "position": [
+     1968.0,
+     1680.0
+    ]
+   },
+   "from_sala_12_19": {
+    "position": [
+     400.0,
+     656.0
+    ]
+   },
+   "from_sala_45_18": {
+    "position": [
+     1456.0,
+     624.0
+    ]
+   },
+   "from_sala_10_31": {
+    "position": [
+     336.0,
+     1040.0
+    ]
+   },
+   "from_sala_44_31": {
+    "position": [
+     1424.0,
+     1040.0
+    ]
+   },
+   "from_sala_12_41": {
+    "position": [
+     400.0,
+     1360.0
+    ]
+   },
+   "from_sala_44_41": {
+    "position": [
+     1424.0,
+     1360.0
+    ]
+   },
+   "from_sala_5_5": {
+    "position": [
+     176.0,
+     208.0
+    ]
+   },
+   "from_sala_17_5": {
+    "position": [
+     560.0,
+     208.0
+    ]
+   },
+   "from_sala_39_5": {
+    "position": [
+     1264.0,
+     208.0
+    ]
+   },
+   "from_sala_51_5": {
+    "position": [
+     1648.0,
+     208.0
+    ]
+   },
+   "from_sala_63_5": {
+    "position": [
+     2032.0,
+     208.0
+    ]
+   }
+  }
+ },
+ "barcelona/les_corts": {
+  "warps": {
+   "Mercadona": {
+    "position": [
+     1744.0,
+     400.0
+    ],
+    "target_map": "barcelona/les_corts/mercadona",
+    "target_spawn": "default"
+   },
+   "Sala4_13": {
+    "position": [
+     144.0,
+     432.0
+    ],
+    "target_map": "barcelona/sala_les_corts_4_13",
+    "target_spawn": "default"
+   },
+   "Sala13_12": {
+    "position": [
+     432.0,
+     400.0
+    ],
+    "target_map": "barcelona/sala_les_corts_13_12",
+    "target_spawn": "default"
+   },
+   "Sala21_12": {
+    "position": [
+     688.0,
+     400.0
+    ],
+    "target_map": "barcelona/sala_les_corts_21_12",
+    "target_spawn": "default"
+   },
+   "Sala30_12": {
+    "position": [
+     976.0,
+     400.0
+    ],
+    "target_map": "barcelona/sala_les_corts_30_12",
+    "target_spawn": "default"
+   },
+   "Sala38_13": {
+    "position": [
+     1232.0,
+     432.0
+    ],
+    "target_map": "barcelona/sala_les_corts_38_13",
+    "target_spawn": "default"
+   },
+   "Sala46_13": {
+    "position": [
+     1488.0,
+     432.0
+    ],
+    "target_map": "barcelona/sala_les_corts_46_13",
+    "target_spawn": "default"
+   },
+   "Sala60_13": {
+    "position": [
+     1936.0,
+     432.0
+    ],
+    "target_map": "barcelona/sala_les_corts_60_13",
+    "target_spawn": "default"
+   },
+   "Sala26_40": {
+    "position": [
+     848.0,
+     1296.0
+    ],
+    "target_map": "barcelona/gimnasio_1",
+    "target_spawn": "default"
+   },
+   "Sala47_29": {
+    "position": [
+     1520.0,
+     944.0
+    ],
+    "target_map": "barcelona/sala_les_corts_47_29",
+    "target_spawn": "default"
+   },
+   "Sala55_30": {
+    "position": [
+     1776.0,
+     976.0
+    ],
+    "target_map": "barcelona/sala_les_corts_55_30",
+    "target_spawn": "default"
+   },
+   "Sala49_41": {
+    "position": [
+     1584.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_les_corts_49_41",
+    "target_spawn": "default"
+   },
+   "Sala57_41": {
+    "position": [
+     1840.0,
+     1328.0
+    ],
+    "target_map": "barcelona/sala_les_corts_57_41",
+    "target_spawn": "default"
+   },
+   "Sala4_46": {
+    "position": [
+     144.0,
+     1488.0
+    ],
+    "target_map": "barcelona/sala_les_corts_4_46",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     496.0
+    ]
+   },
+   "from_ruta_8": {
+    "position": [
+     16.0,
+     496.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1744.0,
+     432.0
+    ]
+   },
+   "from_sala_4_13": {
+    "position": [
+     144.0,
+     464.0
+    ]
+   },
+   "from_sala_13_12": {
+    "position": [
+     432.0,
+     432.0
+    ]
+   },
+   "from_sala_21_12": {
+    "position": [
+     688.0,
+     432.0
+    ]
+   },
+   "from_sala_30_12": {
+    "position": [
+     976.0,
+     432.0
+    ]
+   },
+   "from_sala_38_13": {
+    "position": [
+     1232.0,
+     464.0
+    ]
+   },
+   "from_sala_46_13": {
+    "position": [
+     1488.0,
+     464.0
+    ]
+   },
+   "from_sala_60_13": {
+    "position": [
+     1936.0,
+     464.0
+    ]
+   },
+   "from_sala_26_40": {
+    "position": [
+     848.0,
+     1328.0
+    ]
+   },
+   "from_sala_47_29": {
+    "position": [
+     1520.0,
+     976.0
+    ]
+   },
+   "from_sala_55_30": {
+    "position": [
+     1776.0,
+     1008.0
+    ]
+   },
+   "from_sala_49_41": {
+    "position": [
+     1584.0,
+     1360.0
+    ]
+   },
+   "from_sala_57_41": {
+    "position": [
+     1840.0,
+     1360.0
+    ]
+   },
+   "from_sala_4_46": {
+    "position": [
+     144.0,
+     1520.0
+    ]
+   }
+  }
+ },
+ "getafe/exterior": {
+  "warps": {
+   "CasaVecina": {
+    "position": [
+     1520.0,
+     752.0
+    ],
+    "target_map": "getafe/casa_vecina",
+    "target_spawn": "default"
+   },
+   "Centro": {
+    "position": [
+     208.0,
+     1136.0
+    ],
+    "target_map": "getafe/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     560.0,
+     1136.0
+    ],
+    "target_map": "getafe/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     912.0,
+     1168.0
+    ],
+    "target_map": "getafe/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     496.0,
+     240.0
+    ],
+    "target_map": "getafe/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     144.0,
+     656.0
+    ],
+    "target_map": "getafe/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala5_9": {
+    "position": [
+     176.0,
+     304.0
+    ],
+    "target_map": "getafe/sala_calle_5_9",
+    "target_spawn": "default"
+   },
+   "Sala27_21": {
+    "position": [
+     880.0,
+     688.0
+    ],
+    "target_map": "getafe/sala_calle_27_21",
+    "target_spawn": "default"
+   },
+   "Sala16_20": {
+    "position": [
+     528.0,
+     656.0
+    ],
+    "target_map": "getafe/sala_calle_16_20",
+    "target_spawn": "default"
+   },
+   "Sala37_36": {
+    "position": [
+     1200.0,
+     1168.0
+    ],
+    "target_map": "getafe/sala_calle_37_36",
+    "target_spawn": "default"
+   },
+   "Sala4_46": {
+    "position": [
+     144.0,
+     1488.0
+    ],
+    "target_map": "getafe/sala_calle_4_46",
+    "target_spawn": "default"
+   },
+   "Sala21_46": {
+    "position": [
+     688.0,
+     1488.0
+    ],
+    "target_map": "getafe/sala_calle_21_46",
+    "target_spawn": "default"
+   },
+   "Sala31_47": {
+    "position": [
+     1008.0,
+     1520.0
+    ],
+    "target_map": "getafe/sala_calle_31_47",
+    "target_spawn": "default"
+   },
+   "Sala19_58": {
+    "position": [
+     624.0,
+     1872.0
+    ],
+    "target_map": "getafe/sala_calle_19_58",
+    "target_spawn": "default"
+   },
+   "Sala4_58": {
+    "position": [
+     144.0,
+     1872.0
+    ],
+    "target_map": "getafe/sala_calle_4_58",
+    "target_spawn": "default"
+   },
+   "Sala55_23": {
+    "position": [
+     1776.0,
+     752.0
+    ],
+    "target_map": "getafe/sala_calle_55_23",
+    "target_spawn": "default"
+   },
+   "Sala30_58": {
+    "position": [
+     976.0,
+     1872.0
+    ],
+    "target_map": "getafe/sala_calle_30_58",
+    "target_spawn": "default"
+   },
+   "Sala25_27": {
+    "position": [
+     816.0,
+     880.0
+    ],
+    "target_map": "getafe/sala_calle_25_27",
+    "target_spawn": "default"
+   },
+   "Sala54_44": {
+    "position": [
+     1744.0,
+     1424.0
+    ],
+    "target_map": "getafe/sala_calle_54_44",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     880.0
+    ]
+   },
+   "from_leganes": {
+    "position": [
+     16.0,
+     880.0
+    ]
+   },
+   "from_ruta_24": {
+    "position": [
+     1520.0,
+     2032.0
+    ]
+   },
+   "from_casa_vecina": {
+    "position": [
+     1520.0,
+     784.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     208.0,
+     1168.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     560.0,
+     1168.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     912.0,
+     1200.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     496.0,
+     272.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     144.0,
+     688.0
+    ]
+   },
+   "from_sala_5_9": {
+    "position": [
+     176.0,
+     336.0
+    ]
+   },
+   "from_sala_27_21": {
+    "position": [
+     880.0,
+     720.0
+    ]
+   },
+   "from_sala_16_20": {
+    "position": [
+     528.0,
+     688.0
+    ]
+   },
+   "from_sala_37_36": {
+    "position": [
+     1200.0,
+     1200.0
+    ]
+   },
+   "from_sala_4_46": {
+    "position": [
+     144.0,
+     1520.0
+    ]
+   },
+   "from_sala_21_46": {
+    "position": [
+     688.0,
+     1520.0
+    ]
+   },
+   "from_sala_31_47": {
+    "position": [
+     1008.0,
+     1552.0
+    ]
+   },
+   "from_sala_19_58": {
+    "position": [
+     624.0,
+     1904.0
+    ]
+   },
+   "from_sala_4_58": {
+    "position": [
+     144.0,
+     1904.0
+    ]
+   },
+   "from_sala_55_23": {
+    "position": [
+     1776.0,
+     784.0
+    ]
+   },
+   "from_sala_30_58": {
+    "position": [
+     976.0,
+     1904.0
+    ]
+   },
+   "from_sala_25_27": {
+    "position": [
+     816.0,
+     912.0
+    ]
+   },
+   "from_sala_54_44": {
+    "position": [
+     1744.0,
+     1456.0
+    ]
+   }
+  }
+ },
+ "huelva/exterior": {
+  "warps": {
+   "FerryCanarias": {
+    "position": [
+     1712.0,
+     1296.0
+    ],
+    "target_map": "las_palmas/canteras",
+    "target_spawn": "from_ferry"
+   },
+   "Centro": {
+    "position": [
+     592.0,
+     816.0
+    ],
+    "target_map": "huelva/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     848.0,
+     816.0
+    ],
+    "target_map": "huelva/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1072.0,
+     848.0
+    ],
+    "target_map": "huelva/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     1200.0,
+     272.0
+    ],
+    "target_map": "huelva/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1392.0,
+     272.0
+    ],
+    "target_map": "huelva/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala20_12": {
+    "position": [
+     656.0,
+     400.0
+    ],
+    "target_map": "huelva/sala_calle_20_12",
+    "target_spawn": "default"
+   },
+   "Sala31_12": {
+    "position": [
+     1008.0,
+     400.0
+    ],
+    "target_map": "huelva/sala_calle_31_12",
+    "target_spawn": "default"
+   },
+   "Sala49_8": {
+    "position": [
+     1584.0,
+     272.0
+    ],
+    "target_map": "huelva/sala_calle_49_8",
+    "target_spawn": "default"
+   },
+   "Sala55_8": {
+    "position": [
+     1776.0,
+     272.0
+    ],
+    "target_map": "huelva/sala_calle_55_8",
+    "target_spawn": "default"
+   },
+   "Sala39_27": {
+    "position": [
+     1264.0,
+     880.0
+    ],
+    "target_map": "huelva/sala_calle_39_27",
+    "target_spawn": "default"
+   },
+   "Sala46_31": {
+    "position": [
+     1488.0,
+     1008.0
+    ],
+    "target_map": "huelva/sala_calle_46_31",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     2000.0,
+     688.0
+    ]
+   },
+   "from_ruta_14": {
+    "position": [
+     2032.0,
+     688.0
+    ]
+   },
+   "from_ferry": {
+    "position": [
+     1680.0,
+     1264.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     592.0,
+     848.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     848.0,
+     848.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1072.0,
+     880.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     1200.0,
+     304.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1392.0,
+     304.0
+    ]
+   },
+   "from_sala_20_12": {
+    "position": [
+     656.0,
+     432.0
+    ]
+   },
+   "from_sala_31_12": {
+    "position": [
+     1008.0,
+     432.0
+    ]
+   },
+   "from_sala_49_8": {
+    "position": [
+     1584.0,
+     304.0
+    ]
+   },
+   "from_sala_55_8": {
+    "position": [
+     1776.0,
+     304.0
+    ]
+   },
+   "from_sala_39_27": {
+    "position": [
+     1264.0,
+     912.0
+    ]
+   },
+   "from_sala_46_31": {
+    "position": [
+     1488.0,
+     1040.0
+    ]
+   }
+  }
+ },
+ "ibiza/exterior": {
+  "warps": {
+   "FerryValencia": {
+    "position": [
+     848.0,
+     336.0
+    ],
+    "target_map": "valencia/malvarrosa",
+    "target_spawn": "from_ferry"
+   },
+   "Centro": {
+    "position": [
+     464.0,
+     496.0
+    ],
+    "target_map": "ibiza/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     464.0,
+     784.0
+    ],
+    "target_map": "ibiza/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     912.0,
+     528.0
+    ],
+    "target_map": "ibiza/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     112.0,
+     496.0
+    ],
+    "target_map": "ibiza/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     272.0,
+     496.0
+    ],
+    "target_map": "ibiza/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala21_15": {
+    "position": [
+     688.0,
+     496.0
+    ],
+    "target_map": "ibiza/sala_calle_21_15",
+    "target_spawn": "default"
+   },
+   "Sala32_15": {
+    "position": [
+     1040.0,
+     496.0
+    ],
+    "target_map": "ibiza/sala_calle_32_15",
+    "target_spawn": "default"
+   },
+   "Sala37_15": {
+    "position": [
+     1200.0,
+     496.0
+    ],
+    "target_map": "ibiza/sala_calle_37_15",
+    "target_spawn": "default"
+   },
+   "Sala3_25": {
+    "position": [
+     112.0,
+     816.0
+    ],
+    "target_map": "ibiza/sala_calle_3_25",
+    "target_spawn": "default"
+   },
+   "Sala8_25": {
+    "position": [
+     272.0,
+     816.0
+    ],
+    "target_map": "ibiza/sala_calle_8_25",
+    "target_spawn": "default"
+   },
+   "Sala19_25": {
+    "position": [
+     624.0,
+     816.0
+    ],
+    "target_map": "ibiza/sala_calle_19_25",
+    "target_spawn": "default"
+   },
+   "Sala37_25": {
+    "position": [
+     1200.0,
+     816.0
+    ],
+    "target_map": "ibiza/sala_calle_37_25",
+    "target_spawn": "default"
+   },
+   "Sala6_38": {
+    "position": [
+     208.0,
+     1232.0
+    ],
+    "target_map": "ibiza/sala_calle_6_38",
+    "target_spawn": "default"
+   },
+   "Sala11_38": {
+    "position": [
+     368.0,
+     1232.0
+    ],
+    "target_map": "ibiza/sala_calle_11_38",
+    "target_spawn": "default"
+   },
+   "Sala27_38": {
+    "position": [
+     880.0,
+     1232.0
+    ],
+    "target_map": "ibiza/sala_calle_27_38",
+    "target_spawn": "default"
+   },
+   "Sala6_46": {
+    "position": [
+     208.0,
+     1488.0
+    ],
+    "target_map": "ibiza/sala_calle_6_46",
+    "target_spawn": "default"
+   },
+   "Sala19_47": {
+    "position": [
+     624.0,
+     1520.0
+    ],
+    "target_map": "ibiza/sala_calle_19_47",
+    "target_spawn": "default"
+   },
+   "Sala27_46": {
+    "position": [
+     880.0,
+     1488.0
+    ],
+    "target_map": "ibiza/sala_calle_27_46",
+    "target_spawn": "default"
+   },
+   "Sala48_33": {
+    "position": [
+     1552.0,
+     1072.0
+    ],
+    "target_map": "ibiza/sala_calle_48_33",
+    "target_spawn": "default"
+   },
+   "Sala61_39": {
+    "position": [
+     1968.0,
+     1264.0
+    ],
+    "target_map": "ibiza/sala_calle_61_39",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "from_ferry": {
+    "position": [
+     848.0,
+     368.0
+    ]
+   },
+   "default": {
+    "position": [
+     976.0,
+     368.0
+    ]
+   },
+   "from_mar": {
+    "position": [
+     976.0,
+     336.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     464.0,
+     528.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     464.0,
+     816.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     912.0,
+     560.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     112.0,
+     528.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     272.0,
+     528.0
+    ]
+   },
+   "from_sala_21_15": {
+    "position": [
+     688.0,
+     528.0
+    ]
+   },
+   "from_sala_32_15": {
+    "position": [
+     1040.0,
+     528.0
+    ]
+   },
+   "from_sala_37_15": {
+    "position": [
+     1200.0,
+     528.0
+    ]
+   },
+   "from_sala_3_25": {
+    "position": [
+     112.0,
+     848.0
+    ]
+   },
+   "from_sala_8_25": {
+    "position": [
+     272.0,
+     848.0
+    ]
+   },
+   "from_sala_19_25": {
+    "position": [
+     624.0,
+     848.0
+    ]
+   },
+   "from_sala_37_25": {
+    "position": [
+     1200.0,
+     848.0
+    ]
+   },
+   "from_sala_6_38": {
+    "position": [
+     208.0,
+     1264.0
+    ]
+   },
+   "from_sala_11_38": {
+    "position": [
+     368.0,
+     1264.0
+    ]
+   },
+   "from_sala_27_38": {
+    "position": [
+     880.0,
+     1264.0
+    ]
+   },
+   "from_sala_6_46": {
+    "position": [
+     208.0,
+     1520.0
+    ]
+   },
+   "from_sala_19_47": {
+    "position": [
+     624.0,
+     1552.0
+    ]
+   },
+   "from_sala_27_46": {
+    "position": [
+     880.0,
+     1520.0
+    ]
+   },
+   "from_sala_48_33": {
+    "position": [
+     1552.0,
+     1104.0
+    ]
+   },
+   "from_sala_61_39": {
+    "position": [
+     1968.0,
+     1296.0
+    ]
+   }
+  }
+ },
+ "las_palmas/canteras": {
+  "warps": {
+   "FerryHuelva": {
+    "position": [
+     1488.0,
+     1232.0
+    ],
+    "target_map": "huelva/exterior",
+    "target_spawn": "from_ferry"
+   },
+   "Mercadona": {
+    "position": [
+     1040.0,
+     624.0
+    ],
+    "target_map": "las_palmas/mercadona",
+    "target_spawn": "default"
+   },
+   "Sala43_15": {
+    "position": [
+     1392.0,
+     496.0
+    ],
+    "target_map": "las_palmas/sala_canteras_43_15",
+    "target_spawn": "default"
+   },
+   "Sala26_19": {
+    "position": [
+     848.0,
+     624.0
+    ],
+    "target_map": "las_palmas/sala_canteras_26_19",
+    "target_spawn": "default"
+   },
+   "Sala39_21": {
+    "position": [
+     1264.0,
+     688.0
+    ],
+    "target_map": "las_palmas/sala_canteras_39_21",
+    "target_spawn": "default"
+   },
+   "Sala25_32": {
+    "position": [
+     816.0,
+     1040.0
+    ],
+    "target_map": "las_palmas/sala_canteras_25_32",
+    "target_spawn": "default"
+   },
+   "Sala33_32": {
+    "position": [
+     1072.0,
+     1040.0
+    ],
+    "target_map": "las_palmas/sala_canteras_33_32",
+    "target_spawn": "default"
+   },
+   "Sala41_31": {
+    "position": [
+     1328.0,
+     1008.0
+    ],
+    "target_map": "las_palmas/sala_canteras_41_31",
+    "target_spawn": "default"
+   },
+   "Sala24_46": {
+    "position": [
+     784.0,
+     1488.0
+    ],
+    "target_map": "las_palmas/sala_canteras_24_46",
+    "target_spawn": "default"
+   },
+   "Sala41_46": {
+    "position": [
+     1328.0,
+     1488.0
+    ],
+    "target_map": "las_palmas/sala_canteras_41_46",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1488.0,
+     1168.0
+    ]
+   },
+   "from_ferry": {
+    "position": [
+     1488.0,
+     1168.0
+    ]
+   },
+   "from_vegueta": {
+    "position": [
+     1008.0,
+     1520.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1040.0,
+     656.0
+    ]
+   },
+   "from_sala_43_15": {
+    "position": [
+     1392.0,
+     528.0
+    ]
+   },
+   "from_sala_26_19": {
+    "position": [
+     848.0,
+     656.0
+    ]
+   },
+   "from_sala_39_21": {
+    "position": [
+     1264.0,
+     720.0
+    ]
+   },
+   "from_sala_25_32": {
+    "position": [
+     816.0,
+     1072.0
+    ]
+   },
+   "from_sala_33_32": {
+    "position": [
+     1072.0,
+     1072.0
+    ]
+   },
+   "from_sala_41_31": {
+    "position": [
+     1328.0,
+     1040.0
+    ]
+   },
+   "from_sala_24_46": {
+    "position": [
+     784.0,
+     1520.0
+    ]
+   },
+   "from_sala_41_46": {
+    "position": [
+     1328.0,
+     1520.0
+    ]
+   }
+  }
+ },
+ "las_palmas/vegueta_triana": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     144.0,
+     656.0
+    ],
+    "target_map": "las_palmas/hospital",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     400.0,
+     656.0
+    ],
+    "target_map": "las_palmas/estanco",
+    "target_spawn": "default"
+   },
+   "Sala4_8": {
+    "position": [
+     144.0,
+     272.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_4_8",
+    "target_spawn": "default"
+   },
+   "Sala11_8": {
+    "position": [
+     368.0,
+     272.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_11_8",
+    "target_spawn": "default"
+   },
+   "Sala18_8": {
+    "position": [
+     592.0,
+     272.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_18_8",
+    "target_spawn": "default"
+   },
+   "Sala25_8": {
+    "position": [
+     816.0,
+     272.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_25_8",
+    "target_spawn": "default"
+   },
+   "Sala19_19": {
+    "position": [
+     624.0,
+     624.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_19_19",
+    "target_spawn": "default"
+   },
+   "Sala24_19": {
+    "position": [
+     784.0,
+     624.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_24_19",
+    "target_spawn": "default"
+   },
+   "Sala21_38": {
+    "position": [
+     688.0,
+     1232.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_21_38",
+    "target_spawn": "default"
+   },
+   "Sala31_37": {
+    "position": [
+     1008.0,
+     1200.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_31_37",
+    "target_spawn": "default"
+   },
+   "Sala36_37": {
+    "position": [
+     1168.0,
+     1200.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_36_37",
+    "target_spawn": "default"
+   },
+   "Sala42_37": {
+    "position": [
+     1360.0,
+     1200.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_42_37",
+    "target_spawn": "default"
+   },
+   "Sala3_35": {
+    "position": [
+     112.0,
+     1136.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_3_35",
+    "target_spawn": "default"
+   },
+   "Sala8_35": {
+    "position": [
+     272.0,
+     1136.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_8_35",
+    "target_spawn": "default"
+   },
+   "Sala3_46": {
+    "position": [
+     112.0,
+     1488.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_3_46",
+    "target_spawn": "default"
+   },
+   "Sala37_46": {
+    "position": [
+     1200.0,
+     1488.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_37_46",
+    "target_spawn": "default"
+   },
+   "Sala42_46": {
+    "position": [
+     1360.0,
+     1488.0
+    ],
+    "target_map": "las_palmas/sala_vegueta_triana_42_46",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     784.0,
+     48.0
+    ]
+   },
+   "from_canteras": {
+    "position": [
+     784.0,
+     16.0
+    ]
+   },
+   "from_ruta_15": {
+    "position": [
+     848.0,
+     1520.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     144.0,
+     688.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     400.0,
+     688.0
+    ]
+   },
+   "from_sala_4_8": {
+    "position": [
+     144.0,
+     304.0
+    ]
+   },
+   "from_sala_11_8": {
+    "position": [
+     368.0,
+     304.0
+    ]
+   },
+   "from_sala_18_8": {
+    "position": [
+     592.0,
+     304.0
+    ]
+   },
+   "from_sala_25_8": {
+    "position": [
+     816.0,
+     304.0
+    ]
+   },
+   "from_sala_19_19": {
+    "position": [
+     624.0,
+     656.0
+    ]
+   },
+   "from_sala_24_19": {
+    "position": [
+     784.0,
+     656.0
+    ]
+   },
+   "from_sala_21_38": {
+    "position": [
+     688.0,
+     1264.0
+    ]
+   },
+   "from_sala_31_37": {
+    "position": [
+     1008.0,
+     1232.0
+    ]
+   },
+   "from_sala_36_37": {
+    "position": [
+     1168.0,
+     1232.0
+    ]
+   },
+   "from_sala_42_37": {
+    "position": [
+     1360.0,
+     1232.0
+    ]
+   },
+   "from_sala_3_35": {
+    "position": [
+     112.0,
+     1168.0
+    ]
+   },
+   "from_sala_8_35": {
+    "position": [
+     272.0,
+     1168.0
+    ]
+   },
+   "from_sala_3_46": {
+    "position": [
+     112.0,
+     1520.0
+    ]
+   },
+   "from_sala_37_46": {
+    "position": [
+     1200.0,
+     1520.0
+    ]
+   },
+   "from_sala_42_46": {
+    "position": [
+     1360.0,
+     1520.0
+    ]
+   }
+  }
+ },
+ "leganes/exterior": {
+  "warps": {
+   "CercaniasAtocha": {
+    "position": [
+     304.0,
+     400.0
+    ],
+    "target_map": "madrid/retiro",
+    "target_spawn": "from_cercanias"
+   },
+   "Centro": {
+    "position": [
+     176.0,
+     752.0
+    ],
+    "target_map": "leganes/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1200.0,
+     720.0
+    ],
+    "target_map": "leganes/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1520.0,
+     752.0
+    ],
+    "target_map": "leganes/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     560.0,
+     336.0
+    ],
+    "target_map": "leganes/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     880.0,
+     304.0
+    ],
+    "target_map": "leganes/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala5_13": {
+    "position": [
+     176.0,
+     432.0
+    ],
+    "target_map": "leganes/sala_calle_5_13",
+    "target_spawn": "default"
+   },
+   "Sala20_21": {
+    "position": [
+     656.0,
+     688.0
+    ],
+    "target_map": "leganes/sala_calle_20_21",
+    "target_spawn": "default"
+   },
+   "Sala29_20": {
+    "position": [
+     944.0,
+     656.0
+    ],
+    "target_map": "leganes/sala_calle_29_20",
+    "target_spawn": "default"
+   },
+   "Sala56_23": {
+    "position": [
+     1808.0,
+     752.0
+    ],
+    "target_map": "leganes/sala_calle_56_23",
+    "target_spawn": "default"
+   },
+   "Sala5_36": {
+    "position": [
+     176.0,
+     1168.0
+    ],
+    "target_map": "leganes/sala_calle_5_36",
+    "target_spawn": "default"
+   },
+   "Sala19_35": {
+    "position": [
+     624.0,
+     1136.0
+    ],
+    "target_map": "leganes/sala_calle_19_35",
+    "target_spawn": "default"
+   },
+   "Sala37_35": {
+    "position": [
+     1200.0,
+     1136.0
+    ],
+    "target_map": "leganes/sala_calle_37_35",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     2032.0,
+     880.0
+    ]
+   },
+   "from_getafe": {
+    "position": [
+     2032.0,
+     880.0
+    ]
+   },
+   "from_mostoles": {
+    "position": [
+     16.0,
+     880.0
+    ]
+   },
+   "from_cercanias": {
+    "position": [
+     304.0,
+     464.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     176.0,
+     784.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1200.0,
+     752.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1520.0,
+     784.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     560.0,
+     368.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     880.0,
+     336.0
+    ]
+   },
+   "from_sala_5_13": {
+    "position": [
+     176.0,
+     464.0
+    ]
+   },
+   "from_sala_20_21": {
+    "position": [
+     656.0,
+     720.0
+    ]
+   },
+   "from_sala_29_20": {
+    "position": [
+     944.0,
+     688.0
+    ]
+   },
+   "from_sala_56_23": {
+    "position": [
+     1808.0,
+     784.0
+    ]
+   },
+   "from_sala_5_36": {
+    "position": [
+     176.0,
+     1200.0
+    ]
+   },
+   "from_sala_19_35": {
+    "position": [
+     624.0,
+     1168.0
+    ]
+   },
+   "from_sala_37_35": {
+    "position": [
+     1200.0,
+     1168.0
+    ]
+   }
+  }
+ },
+ "madrid/centro": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     1360.0,
+     1552.0
+    ],
+    "target_map": "madrid/sol/hospital",
+    "target_spawn": "default"
+   },
+   "Sala5_5": {
+    "position": [
+     176.0,
+     176.0
+    ],
+    "target_map": "madrid/sala_centro_5_5",
+    "target_spawn": "default"
+   },
+   "Sala14_5": {
+    "position": [
+     464.0,
+     176.0
+    ],
+    "target_map": "madrid/sala_centro_14_5",
+    "target_spawn": "default"
+   },
+   "Sala25_13": {
+    "position": [
+     816.0,
+     432.0
+    ],
+    "target_map": "madrid/sala_centro_25_13",
+    "target_spawn": "default"
+   },
+   "Sala31_13": {
+    "position": [
+     1008.0,
+     432.0
+    ],
+    "target_map": "madrid/sala_centro_31_13",
+    "target_spawn": "default"
+   },
+   "Sala41_7": {
+    "position": [
+     1328.0,
+     240.0
+    ],
+    "target_map": "madrid/sala_centro_41_7",
+    "target_spawn": "default"
+   },
+   "Sala40_16": {
+    "position": [
+     1296.0,
+     528.0
+    ],
+    "target_map": "madrid/sala_centro_40_16",
+    "target_spawn": "default"
+   },
+   "Sala46_17": {
+    "position": [
+     1488.0,
+     560.0
+    ],
+    "target_map": "madrid/sala_centro_46_17",
+    "target_spawn": "default"
+   },
+   "Sala53_17": {
+    "position": [
+     1712.0,
+     560.0
+    ],
+    "target_map": "madrid/sala_centro_53_17",
+    "target_spawn": "default"
+   },
+   "Sala62_21": {
+    "position": [
+     2000.0,
+     688.0
+    ],
+    "target_map": "madrid/sala_centro_62_21",
+    "target_spawn": "default"
+   },
+   "Sala68_21": {
+    "position": [
+     2192.0,
+     688.0
+    ],
+    "target_map": "madrid/sala_centro_68_21",
+    "target_spawn": "default"
+   },
+   "Sala4_19": {
+    "position": [
+     144.0,
+     624.0
+    ],
+    "target_map": "madrid/sala_centro_4_19",
+    "target_spawn": "default"
+   },
+   "Sala11_19": {
+    "position": [
+     368.0,
+     624.0
+    ],
+    "target_map": "madrid/sala_centro_11_19",
+    "target_spawn": "default"
+   },
+   "Sala5_27": {
+    "position": [
+     176.0,
+     880.0
+    ],
+    "target_map": "madrid/sala_centro_5_27",
+    "target_spawn": "default"
+   },
+   "Sala14_27": {
+    "position": [
+     464.0,
+     880.0
+    ],
+    "target_map": "madrid/sala_centro_14_27",
+    "target_spawn": "default"
+   },
+   "Sala22_27": {
+    "position": [
+     720.0,
+     880.0
+    ],
+    "target_map": "madrid/sala_centro_22_27",
+    "target_spawn": "default"
+   },
+   "Sala39_31": {
+    "position": [
+     1264.0,
+     1008.0
+    ],
+    "target_map": "madrid/gimnasio_1",
+    "target_spawn": "default"
+   },
+   "Sala20_42": {
+    "position": [
+     656.0,
+     1360.0
+    ],
+    "target_map": "madrid/sala_centro_20_42",
+    "target_spawn": "default"
+   },
+   "Sala4_48": {
+    "position": [
+     144.0,
+     1552.0
+    ],
+    "target_map": "madrid/sala_centro_4_48",
+    "target_spawn": "default"
+   },
+   "Sala54_31": {
+    "position": [
+     1744.0,
+     1008.0
+    ],
+    "target_map": "madrid/sala_centro_54_31",
+    "target_spawn": "default"
+   },
+   "Sala63_31": {
+    "position": [
+     2032.0,
+     1008.0
+    ],
+    "target_map": "madrid/sala_centro_63_31",
+    "target_spawn": "default"
+   },
+   "Sala67_31": {
+    "position": [
+     2160.0,
+     1008.0
+    ],
+    "target_map": "madrid/sala_centro_67_31",
+    "target_spawn": "default"
+   },
+   "Sala53_42": {
+    "position": [
+     1712.0,
+     1360.0
+    ],
+    "target_map": "madrid/sala_centro_53_42",
+    "target_spawn": "default"
+   },
+   "Sala60_41": {
+    "position": [
+     1936.0,
+     1328.0
+    ],
+    "target_map": "madrid/sala_centro_60_41",
+    "target_spawn": "default"
+   },
+   "Sala68_41": {
+    "position": [
+     2192.0,
+     1328.0
+    ],
+    "target_map": "madrid/sala_centro_68_41",
+    "target_spawn": "default"
+   },
+   "Sala53_52": {
+    "position": [
+     1712.0,
+     1680.0
+    ],
+    "target_map": "madrid/sala_centro_53_52",
+    "target_spawn": "default"
+   },
+   "Sala62_52": {
+    "position": [
+     2000.0,
+     1680.0
+    ],
+    "target_map": "madrid/sala_centro_62_52",
+    "target_spawn": "default"
+   },
+   "Sala18_4": {
+    "position": [
+     592.0,
+     144.0
+    ],
+    "target_map": "madrid/sala_centro_18_4",
+    "target_spawn": "default"
+   },
+   "Sala33_6": {
+    "position": [
+     1072.0,
+     208.0
+    ],
+    "target_map": "madrid/sala_centro_33_6",
+    "target_spawn": "default"
+   },
+   "Sala49_10": {
+    "position": [
+     1584.0,
+     336.0
+    ],
+    "target_map": "madrid/sala_centro_49_10",
+    "target_spawn": "default"
+   },
+   "Sala53_8": {
+    "position": [
+     1712.0,
+     272.0
+    ],
+    "target_map": "madrid/sala_centro_53_8",
+    "target_spawn": "default"
+   },
+   "Sala68_13": {
+    "position": [
+     2192.0,
+     432.0
+    ],
+    "target_map": "madrid/sala_centro_68_13",
+    "target_spawn": "default"
+   },
+   "Sala49_26": {
+    "position": [
+     1584.0,
+     848.0
+    ],
+    "target_map": "madrid/sala_centro_49_26",
+    "target_spawn": "default"
+   },
+   "Sala35_50": {
+    "position": [
+     1136.0,
+     1616.0
+    ],
+    "target_map": "madrid/sala_centro_35_50",
+    "target_spawn": "default"
+   },
+   "Sala3_39": {
+    "position": [
+     112.0,
+     1264.0
+    ],
+    "target_map": "madrid/sala_centro_3_39",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     240.0
+    ]
+   },
+   "from_moncloa": {
+    "position": [
+     16.0,
+     240.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     1360.0,
+     1584.0
+    ]
+   },
+   "from_sala_5_5": {
+    "position": [
+     176.0,
+     208.0
+    ]
+   },
+   "from_sala_14_5": {
+    "position": [
+     464.0,
+     208.0
+    ]
+   },
+   "from_sala_25_13": {
+    "position": [
+     816.0,
+     464.0
+    ]
+   },
+   "from_sala_31_13": {
+    "position": [
+     1008.0,
+     464.0
+    ]
+   },
+   "from_sala_41_7": {
+    "position": [
+     1328.0,
+     272.0
+    ]
+   },
+   "from_sala_40_16": {
+    "position": [
+     1296.0,
+     560.0
+    ]
+   },
+   "from_sala_46_17": {
+    "position": [
+     1488.0,
+     592.0
+    ]
+   },
+   "from_sala_53_17": {
+    "position": [
+     1712.0,
+     592.0
+    ]
+   },
+   "from_sala_62_21": {
+    "position": [
+     2000.0,
+     720.0
+    ]
+   },
+   "from_sala_68_21": {
+    "position": [
+     2192.0,
+     720.0
+    ]
+   },
+   "from_sala_4_19": {
+    "position": [
+     144.0,
+     656.0
+    ]
+   },
+   "from_sala_11_19": {
+    "position": [
+     368.0,
+     656.0
+    ]
+   },
+   "from_sala_5_27": {
+    "position": [
+     176.0,
+     912.0
+    ]
+   },
+   "from_sala_14_27": {
+    "position": [
+     464.0,
+     912.0
+    ]
+   },
+   "from_sala_22_27": {
+    "position": [
+     720.0,
+     912.0
+    ]
+   },
+   "from_sala_39_31": {
+    "position": [
+     1264.0,
+     1040.0
+    ]
+   },
+   "from_sala_20_42": {
+    "position": [
+     656.0,
+     1392.0
+    ]
+   },
+   "from_sala_4_48": {
+    "position": [
+     144.0,
+     1584.0
+    ]
+   },
+   "from_sala_54_31": {
+    "position": [
+     1744.0,
+     1040.0
+    ]
+   },
+   "from_sala_63_31": {
+    "position": [
+     2032.0,
+     1040.0
+    ]
+   },
+   "from_sala_67_31": {
+    "position": [
+     2160.0,
+     1040.0
+    ]
+   },
+   "from_sala_53_42": {
+    "position": [
+     1712.0,
+     1392.0
+    ]
+   },
+   "from_sala_60_41": {
+    "position": [
+     1936.0,
+     1360.0
+    ]
+   },
+   "from_sala_68_41": {
+    "position": [
+     2192.0,
+     1360.0
+    ]
+   },
+   "from_sala_53_52": {
+    "position": [
+     1712.0,
+     1712.0
+    ]
+   },
+   "from_sala_62_52": {
+    "position": [
+     2000.0,
+     1712.0
+    ]
+   },
+   "from_sala_18_4": {
+    "position": [
+     592.0,
+     176.0
+    ]
+   },
+   "from_sala_33_6": {
+    "position": [
+     1072.0,
+     240.0
+    ]
+   },
+   "from_sala_49_10": {
+    "position": [
+     1584.0,
+     368.0
+    ]
+   },
+   "from_sala_53_8": {
+    "position": [
+     1712.0,
+     304.0
+    ]
+   },
+   "from_sala_68_13": {
+    "position": [
+     2192.0,
+     464.0
+    ]
+   },
+   "from_sala_49_26": {
+    "position": [
+     1584.0,
+     880.0
+    ]
+   },
+   "from_sala_35_50": {
+    "position": [
+     1136.0,
+     1648.0
+    ]
+   },
+   "from_sala_3_39": {
+    "position": [
+     112.0,
+     1296.0
+    ]
+   }
+  }
+ },
+ "madrid/chamberi": {
+  "warps": {
+   "Mercadona": {
+    "position": [
+     336.0,
+     528.0
+    ],
+    "target_map": "madrid/chamberi/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     144.0,
+     912.0
+    ],
+    "target_map": "madrid/chamberi/estanco",
+    "target_spawn": "default"
+   },
+   "Sala3_7": {
+    "position": [
+     112.0,
+     240.0
+    ],
+    "target_map": "madrid/sala_chamberi_3_7",
+    "target_spawn": "default"
+   },
+   "Sala10_7": {
+    "position": [
+     336.0,
+     240.0
+    ],
+    "target_map": "madrid/sala_chamberi_10_7",
+    "target_spawn": "default"
+   },
+   "Sala18_6": {
+    "position": [
+     592.0,
+     208.0
+    ],
+    "target_map": "madrid/sala_chamberi_18_6",
+    "target_spawn": "default"
+   },
+   "Sala39_7": {
+    "position": [
+     1264.0,
+     240.0
+    ],
+    "target_map": "madrid/sala_chamberi_39_7",
+    "target_spawn": "default"
+   },
+   "Sala29_6": {
+    "position": [
+     944.0,
+     208.0
+    ],
+    "target_map": "madrid/sala_chamberi_29_6",
+    "target_spawn": "default"
+   },
+   "Sala3_18": {
+    "position": [
+     112.0,
+     592.0
+    ],
+    "target_map": "madrid/sala_chamberi_3_18",
+    "target_spawn": "default"
+   },
+   "Sala39_20": {
+    "position": [
+     1264.0,
+     656.0
+    ],
+    "target_map": "madrid/sala_chamberi_39_20",
+    "target_spawn": "default"
+   },
+   "Sala16_28": {
+    "position": [
+     528.0,
+     912.0
+    ],
+    "target_map": "madrid/sala_chamberi_16_28",
+    "target_spawn": "default"
+   },
+   "Sala31_32": {
+    "position": [
+     1008.0,
+     1040.0
+    ],
+    "target_map": "madrid/sala_chamberi_31_32",
+    "target_spawn": "default"
+   },
+   "Sala39_33": {
+    "position": [
+     1264.0,
+     1072.0
+    ],
+    "target_map": "madrid/sala_chamberi_39_33",
+    "target_spawn": "default"
+   },
+   "Sala46_33": {
+    "position": [
+     1488.0,
+     1072.0
+    ],
+    "target_map": "madrid/sala_chamberi_46_33",
+    "target_spawn": "default"
+   },
+   "Sala4_41": {
+    "position": [
+     144.0,
+     1328.0
+    ],
+    "target_map": "madrid/sala_chamberi_4_41",
+    "target_spawn": "default"
+   },
+   "Sala38_42": {
+    "position": [
+     1232.0,
+     1360.0
+    ],
+    "target_map": "madrid/sala_chamberi_38_42",
+    "target_spawn": "default"
+   },
+   "Sala24_40": {
+    "position": [
+     784.0,
+     1296.0
+    ],
+    "target_map": "madrid/sala_chamberi_24_40",
+    "target_spawn": "default"
+   },
+   "Sala17_19": {
+    "position": [
+     560.0,
+     624.0
+    ],
+    "target_map": "madrid/sala_chamberi_17_19",
+    "target_spawn": "default"
+   },
+   "Sala29_22": {
+    "position": [
+     944.0,
+     720.0
+    ],
+    "target_map": "madrid/sala_chamberi_29_22",
+    "target_spawn": "default"
+   },
+   "Sala3_35": {
+    "position": [
+     112.0,
+     1136.0
+    ],
+    "target_map": "madrid/sala_chamberi_3_35",
+    "target_spawn": "default"
+   },
+   "Sala44_12": {
+    "position": [
+     1424.0,
+     400.0
+    ],
+    "target_map": "madrid/sala_chamberi_44_12",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     304.0
+    ]
+   },
+   "from_moncloa": {
+    "position": [
+     16.0,
+     304.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     336.0,
+     560.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     144.0,
+     944.0
+    ]
+   },
+   "from_sala_3_7": {
+    "position": [
+     112.0,
+     272.0
+    ]
+   },
+   "from_sala_10_7": {
+    "position": [
+     336.0,
+     272.0
+    ]
+   },
+   "from_sala_18_6": {
+    "position": [
+     592.0,
+     240.0
+    ]
+   },
+   "from_sala_39_7": {
+    "position": [
+     1264.0,
+     272.0
+    ]
+   },
+   "from_sala_29_6": {
+    "position": [
+     944.0,
+     240.0
+    ]
+   },
+   "from_sala_3_18": {
+    "position": [
+     112.0,
+     624.0
+    ]
+   },
+   "from_sala_39_20": {
+    "position": [
+     1264.0,
+     688.0
+    ]
+   },
+   "from_sala_16_28": {
+    "position": [
+     528.0,
+     944.0
+    ]
+   },
+   "from_sala_31_32": {
+    "position": [
+     1008.0,
+     1072.0
+    ]
+   },
+   "from_sala_39_33": {
+    "position": [
+     1264.0,
+     1104.0
+    ]
+   },
+   "from_sala_46_33": {
+    "position": [
+     1488.0,
+     1104.0
+    ]
+   },
+   "from_sala_4_41": {
+    "position": [
+     144.0,
+     1360.0
+    ]
+   },
+   "from_sala_38_42": {
+    "position": [
+     1232.0,
+     1392.0
+    ]
+   },
+   "from_sala_24_40": {
+    "position": [
+     784.0,
+     1328.0
+    ]
+   },
+   "from_sala_17_19": {
+    "position": [
+     560.0,
+     656.0
+    ]
+   },
+   "from_sala_29_22": {
+    "position": [
+     944.0,
+     752.0
+    ]
+   },
+   "from_sala_3_35": {
+    "position": [
+     112.0,
+     1168.0
+    ]
+   },
+   "from_sala_44_12": {
+    "position": [
+     1424.0,
+     432.0
+    ]
+   }
+  }
+ },
+ "madrid/moncloa": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     1296.0,
+     944.0
+    ],
+    "target_map": "madrid/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1680.0,
+     912.0
+    ],
+    "target_map": "madrid/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1712.0,
+     1264.0
+    ],
+    "target_map": "madrid/estanco",
+    "target_spawn": "default"
+   },
+   "Sala7_41": {
+    "position": [
+     240.0,
+     1328.0
+    ],
+    "target_map": "madrid/sala_moncloa_7_41",
+    "target_spawn": "default"
+   },
+   "Sala23_37": {
+    "position": [
+     752.0,
+     1200.0
+    ],
+    "target_map": "madrid/sala_moncloa_23_37",
+    "target_spawn": "default"
+   },
+   "Sala23_49": {
+    "position": [
+     752.0,
+     1584.0
+    ],
+    "target_map": "madrid/sala_moncloa_23_49",
+    "target_spawn": "default"
+   },
+   "Sala40_16": {
+    "position": [
+     1296.0,
+     528.0
+    ],
+    "target_map": "madrid/laboratorio",
+    "target_spawn": "default"
+   },
+   "Sala47_17": {
+    "position": [
+     1520.0,
+     560.0
+    ],
+    "target_map": "madrid/sala_moncloa_47_17",
+    "target_spawn": "default"
+   },
+   "Sala56_17": {
+    "position": [
+     1808.0,
+     560.0
+    ],
+    "target_map": "madrid/sala_moncloa_56_17",
+    "target_spawn": "default"
+   },
+   "Sala58_29": {
+    "position": [
+     1872.0,
+     944.0
+    ],
+    "target_map": "madrid/quiron",
+    "target_spawn": "default"
+   },
+   "Sala39_39": {
+    "position": [
+     1264.0,
+     1264.0
+    ],
+    "target_map": "madrid/sala_moncloa_39_39",
+    "target_spawn": "default"
+   },
+   "Sala59_39": {
+    "position": [
+     1904.0,
+     1264.0
+    ],
+    "target_map": "madrid/sala_moncloa_59_39",
+    "target_spawn": "default"
+   },
+   "Sala34_38": {
+    "position": [
+     1104.0,
+     1232.0
+    ],
+    "target_map": "madrid/sala_moncloa_34_38",
+    "target_spawn": "default"
+   },
+   "Sala32_49": {
+    "position": [
+     1040.0,
+     1584.0
+    ],
+    "target_map": "madrid/sala_moncloa_32_49",
+    "target_spawn": "default"
+   },
+   "Sala38_49": {
+    "position": [
+     1232.0,
+     1584.0
+    ],
+    "target_map": "madrid/sala_moncloa_38_49",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     80.0,
+     496.0
+    ]
+   },
+   "from_route_4": {
+    "position": [
+     16.0,
+     496.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     1296.0,
+     976.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1680.0,
+     944.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1712.0,
+     1296.0
+    ]
+   },
+   "from_sala_7_41": {
+    "position": [
+     240.0,
+     1360.0
+    ]
+   },
+   "from_sala_23_37": {
+    "position": [
+     752.0,
+     1232.0
+    ]
+   },
+   "from_sala_23_49": {
+    "position": [
+     752.0,
+     1616.0
+    ]
+   },
+   "from_sala_40_16": {
+    "position": [
+     1296.0,
+     560.0
+    ]
+   },
+   "from_sala_47_17": {
+    "position": [
+     1520.0,
+     592.0
+    ]
+   },
+   "from_sala_56_17": {
+    "position": [
+     1808.0,
+     592.0
+    ]
+   },
+   "from_sala_58_29": {
+    "position": [
+     1872.0,
+     976.0
+    ]
+   },
+   "from_sala_39_39": {
+    "position": [
+     1264.0,
+     1296.0
+    ]
+   },
+   "from_sala_59_39": {
+    "position": [
+     1904.0,
+     1296.0
+    ]
+   },
+   "from_sala_34_38": {
+    "position": [
+     1104.0,
+     1264.0
+    ]
+   },
+   "from_sala_32_49": {
+    "position": [
+     1040.0,
+     1616.0
+    ]
+   },
+   "from_sala_38_49": {
+    "position": [
+     1232.0,
+     1616.0
+    ]
+   }
+  }
+ },
+ "madrid/retiro": {
+  "warps": {
+   "CercaniasLeganes": {
+    "position": [
+     944.0,
+     1904.0
+    ],
+    "target_map": "leganes/exterior",
+    "target_spawn": "from_cercanias"
+   },
+   "CercaniasMostoles": {
+    "position": [
+     1008.0,
+     1904.0
+    ],
+    "target_map": "mostoles/exterior",
+    "target_spawn": "from_cercanias"
+   },
+   "Mercadona": {
+    "position": [
+     1168.0,
+     1872.0
+    ],
+    "target_map": "madrid/atocha/mercadona",
+    "target_spawn": "default"
+   },
+   "Sala28_13": {
+    "position": [
+     912.0,
+     432.0
+    ],
+    "target_map": "madrid/sala_retiro_28_13",
+    "target_spawn": "default"
+   },
+   "Sala55_47": {
+    "position": [
+     1776.0,
+     1520.0
+    ],
+    "target_map": "madrid/sala_retiro_55_47",
+    "target_spawn": "default"
+   },
+   "Sala4_29": {
+    "position": [
+     144.0,
+     944.0
+    ],
+    "target_map": "madrid/sala_retiro_4_29",
+    "target_spawn": "default"
+   },
+   "Sala23_44": {
+    "position": [
+     752.0,
+     1424.0
+    ],
+    "target_map": "madrid/sala_retiro_23_44",
+    "target_spawn": "default"
+   },
+   "Sala20_58": {
+    "position": [
+     656.0,
+     1872.0
+    ],
+    "target_map": "madrid/sala_retiro_20_58",
+    "target_spawn": "default"
+   },
+   "Sala3_13": {
+    "position": [
+     112.0,
+     432.0
+    ],
+    "target_map": "madrid/sala_retiro_3_13",
+    "target_spawn": "default"
+   },
+   "Sala39_13": {
+    "position": [
+     1264.0,
+     432.0
+    ],
+    "target_map": "madrid/sala_retiro_39_13",
+    "target_spawn": "default"
+   },
+   "Sala23_31": {
+    "position": [
+     752.0,
+     1008.0
+    ],
+    "target_map": "madrid/sala_retiro_23_31",
+    "target_spawn": "default"
+   },
+   "Sala36_37": {
+    "position": [
+     1168.0,
+     1200.0
+    ],
+    "target_map": "madrid/sala_retiro_36_37",
+    "target_spawn": "default"
+   },
+   "Sala3_47": {
+    "position": [
+     112.0,
+     1520.0
+    ],
+    "target_map": "madrid/sala_retiro_3_47",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     496.0
+    ]
+   },
+   "from_gran_via": {
+    "position": [
+     16.0,
+     496.0
+    ]
+   },
+   "from_sol": {
+    "position": [
+     16.0,
+     1008.0
+    ]
+   },
+   "from_cercanias": {
+    "position": [
+     976.0,
+     1872.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1168.0,
+     1904.0
+    ]
+   },
+   "from_sala_28_13": {
+    "position": [
+     912.0,
+     464.0
+    ]
+   },
+   "from_sala_55_47": {
+    "position": [
+     1776.0,
+     1552.0
+    ]
+   },
+   "from_sala_4_29": {
+    "position": [
+     144.0,
+     976.0
+    ]
+   },
+   "from_sala_23_44": {
+    "position": [
+     752.0,
+     1456.0
+    ]
+   },
+   "from_sala_20_58": {
+    "position": [
+     656.0,
+     1904.0
+    ]
+   },
+   "from_sala_3_13": {
+    "position": [
+     112.0,
+     464.0
+    ]
+   },
+   "from_sala_39_13": {
+    "position": [
+     1264.0,
+     464.0
+    ]
+   },
+   "from_sala_23_31": {
+    "position": [
+     752.0,
+     1040.0
+    ]
+   },
+   "from_sala_36_37": {
+    "position": [
+     1168.0,
+     1232.0
+    ]
+   },
+   "from_sala_3_47": {
+    "position": [
+     112.0,
+     1552.0
+    ]
+   }
+  }
+ },
+ "madrid_rio/exterior": {
+  "warps": {},
+  "spawns": {
+   "default": {
+    "position": [
+     656.0,
+     1232.0
+    ]
+   },
+   "from_orcasitas": {
+    "position": [
+     656.0,
+     1264.0
+    ]
+   },
+   "from_retiro": {
+    "position": [
+     528.0,
+     16.0
+    ]
+   }
+  }
+ },
+ "malaga/exterior": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     944.0,
+     688.0
+    ],
+    "target_map": "malaga/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1552.0,
+     656.0
+    ],
+    "target_map": "malaga/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1776.0,
+     688.0
+    ],
+    "target_map": "malaga/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     784.0,
+     336.0
+    ],
+    "target_map": "malaga/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1552.0,
+     336.0
+    ],
+    "target_map": "malaga/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala50_42": {
+    "position": [
+     1616.0,
+     1360.0
+    ],
+    "target_map": "malaga/sala_calle_50_42",
+    "target_spawn": "default"
+   },
+   "Sala48_35": {
+    "position": [
+     1552.0,
+     1136.0
+    ],
+    "target_map": "malaga/sala_calle_48_35",
+    "target_spawn": "default"
+   },
+   "Sala58_10": {
+    "position": [
+     1872.0,
+     336.0
+    ],
+    "target_map": "malaga/sala_calle_58_10",
+    "target_spawn": "default"
+   },
+   "Sala23_39": {
+    "position": [
+     752.0,
+     1264.0
+    ],
+    "target_map": "malaga/sala_calle_23_39",
+    "target_spawn": "default"
+   },
+   "Sala29_39": {
+    "position": [
+     944.0,
+     1264.0
+    ],
+    "target_map": "malaga/sala_calle_29_39",
+    "target_spawn": "default"
+   },
+   "Sala35_39": {
+    "position": [
+     1136.0,
+     1264.0
+    ],
+    "target_map": "malaga/sala_calle_35_39",
+    "target_spawn": "default"
+   },
+   "Sala25_54": {
+    "position": [
+     816.0,
+     1744.0
+    ],
+    "target_map": "malaga/sala_calle_25_54",
+    "target_spawn": "default"
+   },
+   "Sala5_57": {
+    "position": [
+     176.0,
+     1840.0
+    ],
+    "target_map": "malaga/sala_calle_5_57",
+    "target_spawn": "default"
+   },
+   "Sala76_16": {
+    "position": [
+     2448.0,
+     528.0
+    ],
+    "target_map": "malaga/sala_calle_76_16",
+    "target_spawn": "default"
+   },
+   "Sala60_35": {
+    "position": [
+     1936.0,
+     1136.0
+    ],
+    "target_map": "malaga/sala_calle_60_35",
+    "target_spawn": "default"
+   },
+   "Sala67_70": {
+    "position": [
+     2160.0,
+     2256.0
+    ],
+    "target_map": "malaga/sala_calle_67_70",
+    "target_spawn": "default"
+   },
+   "Sala83_64": {
+    "position": [
+     2672.0,
+     2064.0
+    ],
+    "target_map": "malaga/sala_calle_83_64",
+    "target_spawn": "default"
+   },
+   "Sala77_65": {
+    "position": [
+     2480.0,
+     2096.0
+    ],
+    "target_map": "malaga/sala_calle_77_65",
+    "target_spawn": "default"
+   },
+   "Gimnasio": {
+    "position": [
+     1872.0,
+     1936.0
+    ],
+    "target_map": "malaga/gimnasio_1",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1328.0,
+     48.0
+    ]
+   },
+   "from_ruta_26": {
+    "position": [
+     1328.0,
+     16.0
+    ]
+   },
+   "from_ave": {
+    "position": [
+     208.0,
+     1872.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     944.0,
+     720.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1552.0,
+     688.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1776.0,
+     720.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     784.0,
+     368.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1552.0,
+     368.0
+    ]
+   },
+   "from_sala_50_42": {
+    "position": [
+     1616.0,
+     1392.0
+    ]
+   },
+   "from_sala_48_35": {
+    "position": [
+     1552.0,
+     1168.0
+    ]
+   },
+   "from_sala_58_10": {
+    "position": [
+     1872.0,
+     368.0
+    ]
+   },
+   "from_sala_23_39": {
+    "position": [
+     752.0,
+     1296.0
+    ]
+   },
+   "from_sala_29_39": {
+    "position": [
+     944.0,
+     1296.0
+    ]
+   },
+   "from_sala_35_39": {
+    "position": [
+     1136.0,
+     1296.0
+    ]
+   },
+   "from_sala_25_54": {
+    "position": [
+     816.0,
+     1776.0
+    ]
+   },
+   "from_sala_5_57": {
+    "position": [
+     176.0,
+     1872.0
+    ]
+   },
+   "from_sala_76_16": {
+    "position": [
+     2448.0,
+     560.0
+    ]
+   },
+   "from_sala_60_35": {
+    "position": [
+     1936.0,
+     1168.0
+    ]
+   },
+   "from_sala_67_70": {
+    "position": [
+     2160.0,
+     2288.0
+    ]
+   },
+   "from_sala_83_64": {
+    "position": [
+     2672.0,
+     2096.0
+    ]
+   },
+   "from_sala_77_65": {
+    "position": [
+     2480.0,
+     2128.0
+    ]
+   },
+   "from_gimnasio": {
+    "position": [
+     1872.0,
+     1968.0
+    ]
+   }
+  }
+ },
+ "mostoles/exterior": {
+  "warps": {
+   "CercaniasAtocha": {
+    "position": [
+     880.0,
+     368.0
+    ],
+    "target_map": "madrid/retiro",
+    "target_spawn": "from_cercanias"
+   },
+   "Centro": {
+    "position": [
+     752.0,
+     1168.0
+    ],
+    "target_map": "mostoles/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1136.0,
+     1168.0
+    ],
+    "target_map": "mostoles/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1488.0,
+     1200.0
+    ],
+    "target_map": "mostoles/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     1264.0,
+     336.0
+    ],
+    "target_map": "mostoles/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1744.0,
+     336.0
+    ],
+    "target_map": "mostoles/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala23_11": {
+    "position": [
+     752.0,
+     368.0
+    ],
+    "target_map": "mostoles/sala_calle_23_11",
+    "target_spawn": "default"
+   },
+   "Sala20_20": {
+    "position": [
+     656.0,
+     656.0
+    ],
+    "target_map": "mostoles/sala_calle_20_20",
+    "target_spawn": "default"
+   },
+   "Sala30_20": {
+    "position": [
+     976.0,
+     656.0
+    ],
+    "target_map": "mostoles/sala_calle_30_20",
+    "target_spawn": "default"
+   },
+   "Sala39_19": {
+    "position": [
+     1264.0,
+     624.0
+    ],
+    "target_map": "mostoles/sala_calle_39_19",
+    "target_spawn": "default"
+   },
+   "Sala5_23": {
+    "position": [
+     176.0,
+     752.0
+    ],
+    "target_map": "mostoles/sala_calle_5_23",
+    "target_spawn": "default"
+   },
+   "Sala24_29": {
+    "position": [
+     784.0,
+     944.0
+    ],
+    "target_map": "mostoles/sala_calle_24_29",
+    "target_spawn": "default"
+   },
+   "Sala39_28": {
+    "position": [
+     1264.0,
+     912.0
+    ],
+    "target_map": "mostoles/sala_calle_39_28",
+    "target_spawn": "default"
+   },
+   "Sala55_28": {
+    "position": [
+     1776.0,
+     912.0
+    ],
+    "target_map": "mostoles/sala_calle_55_28",
+    "target_spawn": "default"
+   },
+   "Sala56_37": {
+    "position": [
+     1808.0,
+     1200.0
+    ],
+    "target_map": "mostoles/sala_calle_56_37",
+    "target_spawn": "default"
+   },
+   "Sala41_49": {
+    "position": [
+     1328.0,
+     1584.0
+    ],
+    "target_map": "mostoles/sala_calle_41_49",
+    "target_spawn": "default"
+   },
+   "Sala25_48": {
+    "position": [
+     816.0,
+     1552.0
+    ],
+    "target_map": "mostoles/sala_calle_25_48",
+    "target_spawn": "default"
+   },
+   "Sala53_48": {
+    "position": [
+     1712.0,
+     1552.0
+    ],
+    "target_map": "mostoles/sala_calle_53_48",
+    "target_spawn": "default"
+   },
+   "Sala5_10": {
+    "position": [
+     176.0,
+     336.0
+    ],
+    "target_map": "mostoles/sala_calle_5_10",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     2032.0,
+     880.0
+    ]
+   },
+   "from_leganes": {
+    "position": [
+     2032.0,
+     880.0
+    ]
+   },
+   "from_cercanias": {
+    "position": [
+     784.0,
+     400.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     752.0,
+     1200.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1136.0,
+     1200.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1488.0,
+     1232.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     1264.0,
+     368.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1744.0,
+     368.0
+    ]
+   },
+   "from_sala_23_11": {
+    "position": [
+     752.0,
+     400.0
+    ]
+   },
+   "from_sala_20_20": {
+    "position": [
+     656.0,
+     688.0
+    ]
+   },
+   "from_sala_30_20": {
+    "position": [
+     976.0,
+     688.0
+    ]
+   },
+   "from_sala_39_19": {
+    "position": [
+     1264.0,
+     656.0
+    ]
+   },
+   "from_sala_5_23": {
+    "position": [
+     176.0,
+     784.0
+    ]
+   },
+   "from_sala_24_29": {
+    "position": [
+     784.0,
+     976.0
+    ]
+   },
+   "from_sala_39_28": {
+    "position": [
+     1264.0,
+     944.0
+    ]
+   },
+   "from_sala_55_28": {
+    "position": [
+     1776.0,
+     944.0
+    ]
+   },
+   "from_sala_56_37": {
+    "position": [
+     1808.0,
+     1232.0
+    ]
+   },
+   "from_sala_41_49": {
+    "position": [
+     1328.0,
+     1616.0
+    ]
+   },
+   "from_sala_25_48": {
+    "position": [
+     816.0,
+     1584.0
+    ]
+   },
+   "from_sala_53_48": {
+    "position": [
+     1712.0,
+     1584.0
+    ]
+   },
+   "from_sala_5_10": {
+    "position": [
+     176.0,
+     368.0
+    ]
+   }
+  }
+ },
+ "muestras/pueblo": {
+  "warps": {},
+  "spawns": {
+   "default": {
+    "position": [
+     528.0,
+     496.0
+    ]
+   }
+  }
+ },
+ "murcia/exterior": {
+  "warps": {
+   "Centro": {
+    "position": [
+     1616.0,
+     368.0
+    ],
+    "target_map": "murcia/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     592.0,
+     816.0
+    ],
+    "target_map": "murcia/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1648.0,
+     848.0
+    ],
+    "target_map": "murcia/estanco",
+    "target_spawn": "default"
+   },
+   "Sala40_30": {
+    "position": [
+     1296.0,
+     976.0
+    ],
+    "target_map": "murcia/sala_calle_40_30",
+    "target_spawn": "default"
+   },
+   "Sala4_12": {
+    "position": [
+     144.0,
+     400.0
+    ],
+    "target_map": "murcia/sala_calle_4_12",
+    "target_spawn": "default"
+   },
+   "Sala11_12": {
+    "position": [
+     368.0,
+     400.0
+    ],
+    "target_map": "murcia/sala_calle_11_12",
+    "target_spawn": "default"
+   },
+   "Sala23_11": {
+    "position": [
+     752.0,
+     368.0
+    ],
+    "target_map": "murcia/sala_calle_23_11",
+    "target_spawn": "default"
+   },
+   "Sala41_11": {
+    "position": [
+     1328.0,
+     368.0
+    ],
+    "target_map": "murcia/sala_calle_41_11",
+    "target_spawn": "default"
+   },
+   "Sala58_12": {
+    "position": [
+     1872.0,
+     400.0
+    ],
+    "target_map": "murcia/sala_calle_58_12",
+    "target_spawn": "default"
+   },
+   "Sala65_11": {
+    "position": [
+     2096.0,
+     368.0
+    ],
+    "target_map": "murcia/sala_calle_65_11",
+    "target_spawn": "default"
+   },
+   "Sala5_26": {
+    "position": [
+     176.0,
+     848.0
+    ],
+    "target_map": "murcia/sala_calle_5_26",
+    "target_spawn": "default"
+   },
+   "Sala12_25": {
+    "position": [
+     400.0,
+     816.0
+    ],
+    "target_map": "murcia/sala_calle_12_25",
+    "target_spawn": "default"
+   },
+   "Sala25_25": {
+    "position": [
+     816.0,
+     816.0
+    ],
+    "target_map": "murcia/sala_calle_25_25",
+    "target_spawn": "default"
+   },
+   "Sala58_26": {
+    "position": [
+     1872.0,
+     848.0
+    ],
+    "target_map": "murcia/sala_calle_58_26",
+    "target_spawn": "default"
+   },
+   "Sala63_25": {
+    "position": [
+     2032.0,
+     816.0
+    ],
+    "target_map": "murcia/sala_calle_63_25",
+    "target_spawn": "default"
+   },
+   "Sala25_35": {
+    "position": [
+     816.0,
+     1136.0
+    ],
+    "target_map": "murcia/sala_calle_25_35",
+    "target_spawn": "default"
+   },
+   "Sala48_35": {
+    "position": [
+     1552.0,
+     1136.0
+    ],
+    "target_map": "murcia/sala_calle_48_35",
+    "target_spawn": "default"
+   },
+   "Sala59_34": {
+    "position": [
+     1904.0,
+     1104.0
+    ],
+    "target_map": "murcia/sala_calle_59_34",
+    "target_spawn": "default"
+   },
+   "Sala65_34": {
+    "position": [
+     2096.0,
+     1104.0
+    ],
+    "target_map": "murcia/sala_calle_65_34",
+    "target_spawn": "default"
+   },
+   "Sala13_53": {
+    "position": [
+     432.0,
+     1712.0
+    ],
+    "target_map": "murcia/sala_calle_13_53",
+    "target_spawn": "default"
+   },
+   "Sala20_54": {
+    "position": [
+     656.0,
+     1744.0
+    ],
+    "target_map": "murcia/sala_calle_20_54",
+    "target_spawn": "default"
+   },
+   "Sala28_54": {
+    "position": [
+     912.0,
+     1744.0
+    ],
+    "target_map": "murcia/sala_calle_28_54",
+    "target_spawn": "default"
+   },
+   "Sala59_53": {
+    "position": [
+     1904.0,
+     1712.0
+    ],
+    "target_map": "murcia/sala_calle_59_53",
+    "target_spawn": "default"
+   },
+   "Sala65_53": {
+    "position": [
+     2096.0,
+     1712.0
+    ],
+    "target_map": "murcia/sala_calle_65_53",
+    "target_spawn": "default"
+   },
+   "Sala32_25": {
+    "position": [
+     1040.0,
+     816.0
+    ],
+    "target_map": "murcia/sala_calle_32_25",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     2256.0,
+     496.0
+    ]
+   },
+   "from_ruta_11": {
+    "position": [
+     2288.0,
+     496.0
+    ]
+   },
+   "from_ruta_12": {
+    "position": [
+     16.0,
+     1008.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     1616.0,
+     400.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     592.0,
+     848.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1648.0,
+     880.0
+    ]
+   },
+   "from_sala_40_30": {
+    "position": [
+     1296.0,
+     1008.0
+    ]
+   },
+   "from_sala_4_12": {
+    "position": [
+     144.0,
+     432.0
+    ]
+   },
+   "from_sala_11_12": {
+    "position": [
+     368.0,
+     432.0
+    ]
+   },
+   "from_sala_23_11": {
+    "position": [
+     752.0,
+     400.0
+    ]
+   },
+   "from_sala_41_11": {
+    "position": [
+     1328.0,
+     400.0
+    ]
+   },
+   "from_sala_58_12": {
+    "position": [
+     1872.0,
+     432.0
+    ]
+   },
+   "from_sala_65_11": {
+    "position": [
+     2096.0,
+     400.0
+    ]
+   },
+   "from_sala_5_26": {
+    "position": [
+     176.0,
+     880.0
+    ]
+   },
+   "from_sala_12_25": {
+    "position": [
+     400.0,
+     848.0
+    ]
+   },
+   "from_sala_25_25": {
+    "position": [
+     816.0,
+     848.0
+    ]
+   },
+   "from_sala_58_26": {
+    "position": [
+     1872.0,
+     880.0
+    ]
+   },
+   "from_sala_63_25": {
+    "position": [
+     2032.0,
+     848.0
+    ]
+   },
+   "from_sala_25_35": {
+    "position": [
+     816.0,
+     1168.0
+    ]
+   },
+   "from_sala_48_35": {
+    "position": [
+     1552.0,
+     1168.0
+    ]
+   },
+   "from_sala_59_34": {
+    "position": [
+     1904.0,
+     1136.0
+    ]
+   },
+   "from_sala_65_34": {
+    "position": [
+     2096.0,
+     1136.0
+    ]
+   },
+   "from_sala_13_53": {
+    "position": [
+     432.0,
+     1744.0
+    ]
+   },
+   "from_sala_20_54": {
+    "position": [
+     656.0,
+     1776.0
+    ]
+   },
+   "from_sala_28_54": {
+    "position": [
+     912.0,
+     1776.0
+    ]
+   },
+   "from_sala_59_53": {
+    "position": [
+     1904.0,
+     1744.0
+    ]
+   },
+   "from_sala_65_53": {
+    "position": [
+     2096.0,
+     1744.0
+    ]
+   },
+   "from_sala_32_25": {
+    "position": [
+     1040.0,
+     848.0
+    ]
+   }
+  }
+ },
+ "orcasitas/exterior": {
+  "warps": {
+   "CasaJugador": {
+    "position": [
+     176.0,
+     400.0
+    ],
+    "target_map": "orcasitas/casa_jugador",
+    "target_spawn": "default"
+   },
+   "CasaRival": {
+    "position": [
+     432.0,
+     368.0
+    ],
+    "target_map": "orcasitas/casa_rival",
+    "target_spawn": "default"
+   },
+   "Sala28_12": {
+    "position": [
+     912.0,
+     400.0
+    ],
+    "target_map": "orcasitas/sala_calle_28_12",
+    "target_spawn": "default"
+   },
+   "Sala36_9": {
+    "position": [
+     1168.0,
+     304.0
+    ],
+    "target_map": "orcasitas/sala_calle_36_9",
+    "target_spawn": "default"
+   },
+   "Sala5_32": {
+    "position": [
+     176.0,
+     1040.0
+    ],
+    "target_map": "orcasitas/sala_calle_5_32",
+    "target_spawn": "default"
+   },
+   "Sala29_20": {
+    "position": [
+     944.0,
+     656.0
+    ],
+    "target_map": "orcasitas/sala_calle_29_20",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "from_casa_jugador": {
+    "position": [
+     176.0,
+     432.0
+    ]
+   },
+   "from_casa_rival": {
+    "position": [
+     432.0,
+     400.0
+    ]
+   },
+   "default": {
+    "position": [
+     176.0,
+     464.0
+    ]
+   },
+   "from_madrid_rio": {
+    "position": [
+     656.0,
+     16.0
+    ]
+   },
+   "from_sala_28_12": {
+    "position": [
+     912.0,
+     432.0
+    ]
+   },
+   "from_sala_36_9": {
+    "position": [
+     1168.0,
+     336.0
+    ]
+   },
+   "from_sala_5_32": {
+    "position": [
+     176.0,
+     1072.0
+    ]
+   },
+   "from_sala_29_20": {
+    "position": [
+     944.0,
+     688.0
+    ]
+   }
+  }
+ },
+ "palma/exterior": {
+  "warps": {
+   "FerryBarcelona": {
+    "position": [
+     336.0,
+     1456.0
+    ],
+    "target_map": "barcelona/ciutat_vella",
+    "target_spawn": "from_ferry"
+   },
+   "Centro": {
+    "position": [
+     1744.0,
+     400.0
+    ],
+    "target_map": "palma/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1968.0,
+     400.0
+    ],
+    "target_map": "palma/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     752.0,
+     432.0
+    ],
+    "target_map": "palma/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     1072.0,
+     400.0
+    ],
+    "target_map": "palma/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1264.0,
+     400.0
+    ],
+    "target_map": "palma/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala7_14": {
+    "position": [
+     240.0,
+     464.0
+    ],
+    "target_map": "palma/sala_calle_7_14",
+    "target_spawn": "default"
+   },
+   "Sala42_41": {
+    "position": [
+     1360.0,
+     1328.0
+    ],
+    "target_map": "palma/sala_calle_42_41",
+    "target_spawn": "default"
+   },
+   "Sala32_40": {
+    "position": [
+     1040.0,
+     1296.0
+    ],
+    "target_map": "palma/sala_calle_32_40",
+    "target_spawn": "default"
+   },
+   "Sala67_13": {
+    "position": [
+     2160.0,
+     432.0
+    ],
+    "target_map": "palma/sala_calle_67_13",
+    "target_spawn": "default"
+   },
+   "Sala44_12": {
+    "position": [
+     1424.0,
+     400.0
+    ],
+    "target_map": "palma/sala_calle_44_12",
+    "target_spawn": "default"
+   },
+   "Sala21_27": {
+    "position": [
+     688.0,
+     880.0
+    ],
+    "target_map": "palma/sala_calle_21_27",
+    "target_spawn": "default"
+   },
+   "Sala45_26": {
+    "position": [
+     1456.0,
+     848.0
+    ],
+    "target_map": "palma/sala_calle_45_26",
+    "target_spawn": "default"
+   },
+   "Sala54_30": {
+    "position": [
+     1744.0,
+     976.0
+    ],
+    "target_map": "palma/sala_calle_54_30",
+    "target_spawn": "default"
+   },
+   "Sala61_30": {
+    "position": [
+     1968.0,
+     976.0
+    ],
+    "target_map": "palma/sala_calle_61_30",
+    "target_spawn": "default"
+   },
+   "Sala67_29": {
+    "position": [
+     2160.0,
+     944.0
+    ],
+    "target_map": "palma/sala_calle_67_29",
+    "target_spawn": "default"
+   },
+   "Sala59_43": {
+    "position": [
+     1904.0,
+     1392.0
+    ],
+    "target_map": "palma/sala_calle_59_43",
+    "target_spawn": "default"
+   },
+   "Sala66_43": {
+    "position": [
+     2128.0,
+     1392.0
+    ],
+    "target_map": "palma/sala_calle_66_43",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     336.0,
+     1392.0
+    ]
+   },
+   "from_ferry": {
+    "position": [
+     336.0,
+     1424.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     1744.0,
+     432.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1968.0,
+     432.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     752.0,
+     464.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     1072.0,
+     432.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1264.0,
+     432.0
+    ]
+   },
+   "from_sala_7_14": {
+    "position": [
+     240.0,
+     496.0
+    ]
+   },
+   "from_sala_42_41": {
+    "position": [
+     1360.0,
+     1360.0
+    ]
+   },
+   "from_sala_32_40": {
+    "position": [
+     1040.0,
+     1328.0
+    ]
+   },
+   "from_sala_67_13": {
+    "position": [
+     2160.0,
+     464.0
+    ]
+   },
+   "from_sala_44_12": {
+    "position": [
+     1424.0,
+     432.0
+    ]
+   },
+   "from_sala_21_27": {
+    "position": [
+     688.0,
+     912.0
+    ]
+   },
+   "from_sala_45_26": {
+    "position": [
+     1456.0,
+     880.0
+    ]
+   },
+   "from_sala_54_30": {
+    "position": [
+     1744.0,
+     1008.0
+    ]
+   },
+   "from_sala_61_30": {
+    "position": [
+     1968.0,
+     1008.0
+    ]
+   },
+   "from_sala_67_29": {
+    "position": [
+     2160.0,
+     976.0
+    ]
+   },
+   "from_sala_59_43": {
+    "position": [
+     1904.0,
+     1424.0
+    ]
+   },
+   "from_sala_66_43": {
+    "position": [
+     2128.0,
+     1424.0
+    ]
+   }
+  }
+ },
+ "playa_del_ingles/exterior": {
+  "warps": {
+   "AvionVigo": {
+    "position": [
+     368.0,
+     208.0
+    ],
+    "target_map": "vigo/exterior",
+    "target_spawn": "from_avion"
+   },
+   "Hospital": {
+    "position": [
+     720.0,
+     240.0
+    ],
+    "target_map": "playa_del_ingles/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     944.0,
+     176.0
+    ],
+    "target_map": "playa_del_ingles/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1168.0,
+     208.0
+    ],
+    "target_map": "playa_del_ingles/estanco",
+    "target_spawn": "default"
+   },
+   "Sala41_7": {
+    "position": [
+     1328.0,
+     240.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_41_7",
+    "target_spawn": "default"
+   },
+   "Sala5_20": {
+    "position": [
+     176.0,
+     656.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_5_20",
+    "target_spawn": "default"
+   },
+   "Sala16_18": {
+    "position": [
+     528.0,
+     592.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_16_18",
+    "target_spawn": "default"
+   },
+   "Sala24_21": {
+    "position": [
+     784.0,
+     688.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_24_21",
+    "target_spawn": "default"
+   },
+   "Sala33_20": {
+    "position": [
+     1072.0,
+     656.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_33_20",
+    "target_spawn": "default"
+   },
+   "Sala39_21": {
+    "position": [
+     1264.0,
+     688.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_39_21",
+    "target_spawn": "default"
+   },
+   "Sala53_11": {
+    "position": [
+     1712.0,
+     368.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_53_11",
+    "target_spawn": "default"
+   },
+   "Sala7_54": {
+    "position": [
+     240.0,
+     1744.0
+    ],
+    "target_map": "playa_del_ingles/sala_calle_7_54",
+    "target_spawn": "default"
+   },
+   "Gimnasio": {
+    "position": [
+     1552.0,
+     752.0
+    ],
+    "target_map": "playa_del_ingles/gimnasio_1",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     432.0,
+     48.0
+    ]
+   },
+   "from_ruta_15": {
+    "position": [
+     432.0,
+     16.0
+    ]
+   },
+   "from_avion": {
+    "position": [
+     368.0,
+     240.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     720.0,
+     272.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     944.0,
+     208.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1168.0,
+     240.0
+    ]
+   },
+   "from_sala_41_7": {
+    "position": [
+     1328.0,
+     272.0
+    ]
+   },
+   "from_sala_5_20": {
+    "position": [
+     176.0,
+     688.0
+    ]
+   },
+   "from_sala_16_18": {
+    "position": [
+     528.0,
+     624.0
+    ]
+   },
+   "from_sala_24_21": {
+    "position": [
+     784.0,
+     720.0
+    ]
+   },
+   "from_sala_33_20": {
+    "position": [
+     1072.0,
+     688.0
+    ]
+   },
+   "from_sala_39_21": {
+    "position": [
+     1264.0,
+     720.0
+    ]
+   },
+   "from_sala_53_11": {
+    "position": [
+     1712.0,
+     400.0
+    ]
+   },
+   "from_sala_7_54": {
+    "position": [
+     240.0,
+     1776.0
+    ]
+   },
+   "from_gimnasio": {
+    "position": [
+     1552.0,
+     784.0
+    ]
+   }
+  }
+ },
+ "pozuelo/exterior": {
+  "warps": {
+   "CasaJugador": {
+    "position": [
+     240.0,
+     432.0
+    ],
+    "target_map": "pozuelo/casa_jugador",
+    "target_spawn": "default"
+   },
+   "CasaRival": {
+    "position": [
+     432.0,
+     368.0
+    ],
+    "target_map": "pozuelo/casa_rival",
+    "target_spawn": "default"
+   },
+   "Sala21_11": {
+    "position": [
+     688.0,
+     368.0
+    ],
+    "target_map": "pozuelo/sala_calle_21_11",
+    "target_spawn": "default"
+   },
+   "Sala37_12": {
+    "position": [
+     1200.0,
+     400.0
+    ],
+    "target_map": "pozuelo/sala_calle_37_12",
+    "target_spawn": "default"
+   },
+   "Sala7_30": {
+    "position": [
+     240.0,
+     976.0
+    ],
+    "target_map": "pozuelo/sala_calle_7_30",
+    "target_spawn": "default"
+   },
+   "Sala13_29": {
+    "position": [
+     432.0,
+     944.0
+    ],
+    "target_map": "pozuelo/sala_calle_13_29",
+    "target_spawn": "default"
+   },
+   "Sala22_29": {
+    "position": [
+     720.0,
+     944.0
+    ],
+    "target_map": "pozuelo/sala_calle_22_29",
+    "target_spawn": "default"
+   },
+   "Sala31_29": {
+    "position": [
+     1008.0,
+     944.0
+    ],
+    "target_map": "pozuelo/sala_calle_31_29",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "from_casa_jugador": {
+    "position": [
+     240.0,
+     464.0
+    ]
+   },
+   "from_casa_rival": {
+    "position": [
+     432.0,
+     400.0
+    ]
+   },
+   "default": {
+    "position": [
+     176.0,
+     496.0
+    ]
+   },
+   "from_casa_de_campo": {
+    "position": [
+     1392.0,
+     560.0
+    ]
+   },
+   "from_sala_21_11": {
+    "position": [
+     688.0,
+     400.0
+    ]
+   },
+   "from_sala_37_12": {
+    "position": [
+     1200.0,
+     432.0
+    ]
+   },
+   "from_sala_7_30": {
+    "position": [
+     240.0,
+     1008.0
+    ]
+   },
+   "from_sala_13_29": {
+    "position": [
+     432.0,
+     976.0
+    ]
+   },
+   "from_sala_22_29": {
+    "position": [
+     720.0,
+     976.0
+    ]
+   },
+   "from_sala_31_29": {
+    "position": [
+     1008.0,
+     976.0
+    ]
+   }
+  }
+ },
+ "pueblo_inicial/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     784.0,
+     464.0
+    ],
+    "target_map": "pueblo_inicial/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     912.0,
+     464.0
+    ],
+    "target_map": "pueblo_inicial/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala19_14": {
+    "position": [
+     624.0,
+     464.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_19_14",
+    "target_spawn": "default"
+   },
+   "Sala36_14": {
+    "position": [
+     1168.0,
+     464.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_36_14",
+    "target_spawn": "default"
+   },
+   "Sala30_21": {
+    "position": [
+     976.0,
+     688.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_30_21",
+    "target_spawn": "default"
+   },
+   "Sala38_21": {
+    "position": [
+     1232.0,
+     688.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_38_21",
+    "target_spawn": "default"
+   },
+   "Sala12_28": {
+    "position": [
+     400.0,
+     912.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_12_28",
+    "target_spawn": "default"
+   },
+   "Sala25_29": {
+    "position": [
+     816.0,
+     944.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_25_29",
+    "target_spawn": "default"
+   },
+   "Sala31_29": {
+    "position": [
+     1008.0,
+     944.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_31_29",
+    "target_spawn": "default"
+   },
+   "Sala36_29": {
+    "position": [
+     1168.0,
+     944.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_36_29",
+    "target_spawn": "default"
+   },
+   "Sala25_39": {
+    "position": [
+     816.0,
+     1264.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_25_39",
+    "target_spawn": "default"
+   },
+   "Sala30_39": {
+    "position": [
+     976.0,
+     1264.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_30_39",
+    "target_spawn": "default"
+   },
+   "Sala36_39": {
+    "position": [
+     1168.0,
+     1264.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_36_39",
+    "target_spawn": "default"
+   },
+   "Sala13_46": {
+    "position": [
+     432.0,
+     1488.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_13_46",
+    "target_spawn": "default"
+   },
+   "Sala26_48": {
+    "position": [
+     848.0,
+     1552.0
+    ],
+    "target_map": "pueblo_inicial/sala_calle_26_48",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "from_ruta_23": {
+    "position": [
+     16.0,
+     1040.0
+    ]
+   },
+   "default": {
+    "position": [
+     688.0,
+     656.0
+    ]
+   },
+   "from_home": {
+    "position": [
+     400.0,
+     944.0
+    ]
+   },
+   "from_rival_home": {
+    "position": [
+     816.0,
+     976.0
+    ]
+   },
+   "from_lab": {
+    "position": [
+     432.0,
+     1520.0
+    ]
+   },
+   "from_route": {
+    "position": [
+     688.0,
+     1552.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     784.0,
+     496.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     912.0,
+     496.0
+    ]
+   },
+   "from_sala_19_14": {
+    "position": [
+     624.0,
+     496.0
+    ]
+   },
+   "from_sala_36_14": {
+    "position": [
+     1168.0,
+     496.0
+    ]
+   },
+   "from_sala_30_21": {
+    "position": [
+     976.0,
+     720.0
+    ]
+   },
+   "from_sala_38_21": {
+    "position": [
+     1232.0,
+     720.0
+    ]
+   },
+   "from_sala_12_28": {
+    "position": [
+     400.0,
+     944.0
+    ]
+   },
+   "from_sala_25_29": {
+    "position": [
+     816.0,
+     976.0
+    ]
+   },
+   "from_sala_31_29": {
+    "position": [
+     1008.0,
+     976.0
+    ]
+   },
+   "from_sala_36_29": {
+    "position": [
+     1168.0,
+     976.0
+    ]
+   },
+   "from_sala_25_39": {
+    "position": [
+     816.0,
+     1296.0
+    ]
+   },
+   "from_sala_30_39": {
+    "position": [
+     976.0,
+     1296.0
+    ]
+   },
+   "from_sala_36_39": {
+    "position": [
+     1168.0,
+     1296.0
+    ]
+   },
+   "from_sala_13_46": {
+    "position": [
+     432.0,
+     1520.0
+    ]
+   },
+   "from_sala_26_48": {
+    "position": [
+     848.0,
+     1584.0
+    ]
+   }
+  }
+ },
+ "puertollano/exterior": {
+  "warps": {
+   "Centro": {
+    "position": [
+     208.0,
+     1648.0
+    ],
+    "target_map": "puertollano/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     688.0,
+     1648.0
+    ],
+    "target_map": "puertollano/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1392.0,
+     1648.0
+    ],
+    "target_map": "puertollano/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     176.0,
+     304.0
+    ],
+    "target_map": "puertollano/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     560.0,
+     368.0
+    ],
+    "target_map": "puertollano/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala30_12": {
+    "position": [
+     976.0,
+     400.0
+    ],
+    "target_map": "puertollano/sala_calle_30_12",
+    "target_spawn": "default"
+   },
+   "Sala44_35": {
+    "position": [
+     1424.0,
+     1136.0
+    ],
+    "target_map": "puertollano/sala_calle_44_35",
+    "target_spawn": "default"
+   },
+   "Sala6_23": {
+    "position": [
+     208.0,
+     752.0
+    ],
+    "target_map": "puertollano/sala_calle_6_23",
+    "target_spawn": "default"
+   },
+   "Sala19_24": {
+    "position": [
+     624.0,
+     784.0
+    ],
+    "target_map": "puertollano/sala_calle_19_24",
+    "target_spawn": "default"
+   },
+   "Sala7_61": {
+    "position": [
+     240.0,
+     1968.0
+    ],
+    "target_map": "puertollano/sala_calle_7_61",
+    "target_spawn": "default"
+   },
+   "Sala21_60": {
+    "position": [
+     688.0,
+     1936.0
+    ],
+    "target_map": "puertollano/sala_calle_21_60",
+    "target_spawn": "default"
+   },
+   "Sala6_36": {
+    "position": [
+     208.0,
+     1168.0
+    ],
+    "target_map": "puertollano/sala_calle_6_36",
+    "target_spawn": "default"
+   },
+   "Sala16_43": {
+    "position": [
+     528.0,
+     1392.0
+    ],
+    "target_map": "puertollano/sala_calle_16_43",
+    "target_spawn": "default"
+   },
+   "Sala22_42": {
+    "position": [
+     720.0,
+     1360.0
+    ],
+    "target_map": "puertollano/sala_calle_22_42",
+    "target_spawn": "default"
+   },
+   "Sala65_51": {
+    "position": [
+     2096.0,
+     1648.0
+    ],
+    "target_map": "puertollano/sala_calle_65_51",
+    "target_spawn": "default"
+   },
+   "Sala62_33": {
+    "position": [
+     2000.0,
+     1072.0
+    ],
+    "target_map": "puertollano/sala_calle_62_33",
+    "target_spawn": "default"
+   },
+   "Sala51_60": {
+    "position": [
+     1648.0,
+     1936.0
+    ],
+    "target_map": "puertollano/sala_calle_51_60",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1136.0,
+     48.0
+    ]
+   },
+   "from_ruta_24": {
+    "position": [
+     1136.0,
+     16.0
+    ]
+   },
+   "from_ruta_25": {
+    "position": [
+     1136.0,
+     2032.0
+    ]
+   },
+   "from_ave": {
+    "position": [
+     240.0,
+     1200.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     208.0,
+     1680.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     688.0,
+     1680.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1392.0,
+     1680.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     176.0,
+     336.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     560.0,
+     400.0
+    ]
+   },
+   "from_sala_30_12": {
+    "position": [
+     976.0,
+     432.0
+    ]
+   },
+   "from_sala_44_35": {
+    "position": [
+     1424.0,
+     1168.0
+    ]
+   },
+   "from_sala_6_23": {
+    "position": [
+     208.0,
+     784.0
+    ]
+   },
+   "from_sala_19_24": {
+    "position": [
+     624.0,
+     816.0
+    ]
+   },
+   "from_sala_7_61": {
+    "position": [
+     240.0,
+     2000.0
+    ]
+   },
+   "from_sala_21_60": {
+    "position": [
+     688.0,
+     1968.0
+    ]
+   },
+   "from_sala_6_36": {
+    "position": [
+     208.0,
+     1200.0
+    ]
+   },
+   "from_sala_16_43": {
+    "position": [
+     528.0,
+     1424.0
+    ]
+   },
+   "from_sala_22_42": {
+    "position": [
+     720.0,
+     1392.0
+    ]
+   },
+   "from_sala_65_51": {
+    "position": [
+     2096.0,
+     1680.0
+    ]
+   },
+   "from_sala_62_33": {
+    "position": [
+     2000.0,
+     1104.0
+    ]
+   },
+   "from_sala_51_60": {
+    "position": [
+     1648.0,
+     1968.0
+    ]
+   }
+  }
+ },
+ "ruta_10/exterior": {
+  "warps": {
+   "Sala31_8": {
+    "position": [
+     1008.0,
+     272.0
+    ],
+    "target_map": "ruta_10/sala_calle_31_8",
+    "target_spawn": "default"
+   },
+   "Sala35_8": {
+    "position": [
+     1136.0,
+     272.0
+    ],
+    "target_map": "ruta_10/sala_calle_35_8",
+    "target_spawn": "default"
+   },
+   "Sala31_13": {
+    "position": [
+     1008.0,
+     432.0
+    ],
+    "target_map": "ruta_10/sala_calle_31_13",
+    "target_spawn": "default"
+   },
+   "Sala10_23": {
+    "position": [
+     336.0,
+     752.0
+    ],
+    "target_map": "ruta_10/sala_calle_10_23",
+    "target_spawn": "default"
+   },
+   "Sala16_20": {
+    "position": [
+     528.0,
+     656.0
+    ],
+    "target_map": "ruta_10/sala_calle_16_20",
+    "target_spawn": "default"
+   },
+   "Sala18_24": {
+    "position": [
+     592.0,
+     784.0
+    ],
+    "target_map": "ruta_10/sala_calle_18_24",
+    "target_spawn": "default"
+   },
+   "Sala6_40": {
+    "position": [
+     208.0,
+     1296.0
+    ],
+    "target_map": "ruta_10/sala_calle_6_40",
+    "target_spawn": "default"
+   },
+   "Sala10_40": {
+    "position": [
+     336.0,
+     1296.0
+    ],
+    "target_map": "ruta_10/sala_calle_10_40",
+    "target_spawn": "default"
+   },
+   "Sala20_40": {
+    "position": [
+     656.0,
+     1296.0
+    ],
+    "target_map": "ruta_10/sala_calle_20_40",
+    "target_spawn": "default"
+   },
+   "Sala15_40": {
+    "position": [
+     496.0,
+     1296.0
+    ],
+    "target_map": "ruta_10/sala_calle_15_40",
+    "target_spawn": "default"
+   },
+   "Sala9_50": {
+    "position": [
+     304.0,
+     1616.0
+    ],
+    "target_map": "ruta_10/sala_calle_9_50",
+    "target_spawn": "default"
+   },
+   "Sala16_50": {
+    "position": [
+     528.0,
+     1616.0
+    ],
+    "target_map": "ruta_10/sala_calle_16_50",
+    "target_spawn": "default"
+   },
+   "Sala22_50": {
+    "position": [
+     720.0,
+     1616.0
+    ],
+    "target_map": "ruta_10/sala_calle_22_50",
+    "target_spawn": "default"
+   },
+   "Sala32_51": {
+    "position": [
+     1040.0,
+     1648.0
+    ],
+    "target_map": "ruta_10/sala_calle_32_51",
+    "target_spawn": "default"
+   },
+   "Sala41_27": {
+    "position": [
+     1328.0,
+     880.0
+    ],
+    "target_map": "ruta_10/sala_calle_41_27",
+    "target_spawn": "default"
+   },
+   "Sala7_60": {
+    "position": [
+     240.0,
+     1936.0
+    ],
+    "target_map": "ruta_10/sala_calle_7_60",
+    "target_spawn": "default"
+   },
+   "Sala11_59": {
+    "position": [
+     368.0,
+     1904.0
+    ],
+    "target_map": "ruta_10/sala_calle_11_59",
+    "target_spawn": "default"
+   },
+   "Sala17_59": {
+    "position": [
+     560.0,
+     1904.0
+    ],
+    "target_map": "ruta_10/sala_calle_17_59",
+    "target_spawn": "default"
+   },
+   "Sala23_60": {
+    "position": [
+     752.0,
+     1936.0
+    ],
+    "target_map": "ruta_10/sala_calle_23_60",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     848.0,
+     48.0
+    ]
+   },
+   "from_ruta_9": {
+    "position": [
+     848.0,
+     16.0
+    ]
+   },
+   "from_alicante": {
+    "position": [
+     848.0,
+     2032.0
+    ]
+   },
+   "from_sala_31_8": {
+    "position": [
+     1008.0,
+     304.0
+    ]
+   },
+   "from_sala_35_8": {
+    "position": [
+     1136.0,
+     304.0
+    ]
+   },
+   "from_sala_31_13": {
+    "position": [
+     1008.0,
+     464.0
+    ]
+   },
+   "from_sala_10_23": {
+    "position": [
+     336.0,
+     784.0
+    ]
+   },
+   "from_sala_16_20": {
+    "position": [
+     528.0,
+     688.0
+    ]
+   },
+   "from_sala_18_24": {
+    "position": [
+     592.0,
+     816.0
+    ]
+   },
+   "from_sala_6_40": {
+    "position": [
+     208.0,
+     1328.0
+    ]
+   },
+   "from_sala_10_40": {
+    "position": [
+     336.0,
+     1328.0
+    ]
+   },
+   "from_sala_20_40": {
+    "position": [
+     656.0,
+     1328.0
+    ]
+   },
+   "from_sala_15_40": {
+    "position": [
+     496.0,
+     1328.0
+    ]
+   },
+   "from_sala_9_50": {
+    "position": [
+     304.0,
+     1648.0
+    ]
+   },
+   "from_sala_16_50": {
+    "position": [
+     528.0,
+     1648.0
+    ]
+   },
+   "from_sala_22_50": {
+    "position": [
+     720.0,
+     1648.0
+    ]
+   },
+   "from_sala_32_51": {
+    "position": [
+     1040.0,
+     1680.0
+    ]
+   },
+   "from_sala_41_27": {
+    "position": [
+     1328.0,
+     912.0
+    ]
+   },
+   "from_sala_7_60": {
+    "position": [
+     240.0,
+     1968.0
+    ]
+   },
+   "from_sala_11_59": {
+    "position": [
+     368.0,
+     1936.0
+    ]
+   },
+   "from_sala_17_59": {
+    "position": [
+     560.0,
+     1936.0
+    ]
+   },
+   "from_sala_23_60": {
+    "position": [
+     752.0,
+     1968.0
+    ]
+   }
+  }
+ },
+ "ruta_11/exterior": {
+  "warps": {
+   "Sala35_28": {
+    "position": [
+     1136.0,
+     912.0
+    ],
+    "target_map": "ruta_11/sala_calle_35_28",
+    "target_spawn": "default"
+   },
+   "Sala44_27": {
+    "position": [
+     1424.0,
+     880.0
+    ],
+    "target_map": "ruta_11/sala_calle_44_27",
+    "target_spawn": "default"
+   },
+   "Sala11_27": {
+    "position": [
+     368.0,
+     880.0
+    ],
+    "target_map": "ruta_11/sala_calle_11_27",
+    "target_spawn": "default"
+   },
+   "Sala17_27": {
+    "position": [
+     560.0,
+     880.0
+    ],
+    "target_map": "ruta_11/sala_calle_17_27",
+    "target_spawn": "default"
+   },
+   "Sala23_27": {
+    "position": [
+     752.0,
+     880.0
+    ],
+    "target_map": "ruta_11/sala_calle_23_27",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     2384.0,
+     560.0
+    ]
+   },
+   "from_alicante": {
+    "position": [
+     2416.0,
+     560.0
+    ]
+   },
+   "from_murcia": {
+    "position": [
+     16.0,
+     560.0
+    ]
+   },
+   "from_sala_35_28": {
+    "position": [
+     1136.0,
+     944.0
+    ]
+   },
+   "from_sala_44_27": {
+    "position": [
+     1424.0,
+     912.0
+    ]
+   },
+   "from_sala_11_27": {
+    "position": [
+     368.0,
+     912.0
+    ]
+   },
+   "from_sala_17_27": {
+    "position": [
+     560.0,
+     912.0
+    ]
+   },
+   "from_sala_23_27": {
+    "position": [
+     752.0,
+     912.0
+    ]
+   }
+  }
+ },
+ "ruta_12/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     304.0,
+     656.0
+    ],
+    "target_map": "ruta_12/casa_1",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     2256.0,
+     880.0
+    ]
+   },
+   "from_murcia": {
+    "position": [
+     2288.0,
+     880.0
+    ]
+   },
+   "from_ruta_13": {
+    "position": [
+     16.0,
+     816.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     304.0,
+     688.0
+    ]
+   }
+  }
+ },
+ "ruta_13/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     848.0,
+     912.0
+    ],
+    "target_map": "ruta_13/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1520.0,
+     400.0
+    ],
+    "target_map": "ruta_13/casa_2",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     2384.0,
+     816.0
+    ]
+   },
+   "from_ruta_12": {
+    "position": [
+     2416.0,
+     816.0
+    ]
+   },
+   "from_sevilla": {
+    "position": [
+     16.0,
+     624.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     848.0,
+     944.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1520.0,
+     432.0
+    ]
+   }
+  }
+ },
+ "ruta_16/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     880.0,
+     752.0
+    ],
+    "target_map": "ruta_16/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1008.0,
+     1200.0
+    ],
+    "target_map": "ruta_16/casa_2",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     592.0,
+     912.0
+    ]
+   },
+   "from_vigo": {
+    "position": [
+     848.0,
+     1616.0
+    ]
+   },
+   "from_ruta_17": {
+    "position": [
+     592.0,
+     48.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     880.0,
+     784.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1008.0,
+     1232.0
+    ]
+   }
+  }
+ },
+ "ruta_2/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     240.0,
+     592.0
+    ],
+    "target_map": "ruta_2/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     336.0,
+     1616.0
+    ],
+    "target_map": "ruta_2/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala27_51": {
+    "position": [
+     880.0,
+     1648.0
+    ],
+    "target_map": "ruta_2/sala_calle_27_51",
+    "target_spawn": "default"
+   },
+   "Sala9_61": {
+    "position": [
+     304.0,
+     1968.0
+    ],
+    "target_map": "ruta_2/sala_calle_9_61",
+    "target_spawn": "default"
+   },
+   "Sala14_61": {
+    "position": [
+     464.0,
+     1968.0
+    ],
+    "target_map": "ruta_2/sala_calle_14_61",
+    "target_spawn": "default"
+   },
+   "Sala27_61": {
+    "position": [
+     880.0,
+     1968.0
+    ],
+    "target_map": "ruta_2/sala_calle_27_61",
+    "target_spawn": "default"
+   },
+   "Sala2_51": {
+    "position": [
+     80.0,
+     1648.0
+    ],
+    "target_map": "ruta_2/sala_calle_2_51",
+    "target_spawn": "default"
+   },
+   "Sala2_61": {
+    "position": [
+     80.0,
+     1968.0
+    ],
+    "target_map": "ruta_2/sala_calle_2_61",
+    "target_spawn": "default"
+   },
+   "Sala33_61": {
+    "position": [
+     1072.0,
+     1968.0
+    ],
+    "target_map": "ruta_2/sala_calle_33_61",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     688.0,
+     48.0
+    ]
+   },
+   "from_route_1": {
+    "position": [
+     688.0,
+     16.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     240.0,
+     624.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     336.0,
+     1648.0
+    ]
+   },
+   "from_sala_27_51": {
+    "position": [
+     880.0,
+     1680.0
+    ]
+   },
+   "from_sala_9_61": {
+    "position": [
+     304.0,
+     2000.0
+    ]
+   },
+   "from_sala_14_61": {
+    "position": [
+     464.0,
+     2000.0
+    ]
+   },
+   "from_sala_27_61": {
+    "position": [
+     880.0,
+     2000.0
+    ]
+   },
+   "from_sala_2_51": {
+    "position": [
+     80.0,
+     1680.0
+    ]
+   },
+   "from_sala_2_61": {
+    "position": [
+     80.0,
+     2000.0
+    ]
+   },
+   "from_sala_33_61": {
+    "position": [
+     1072.0,
+     2000.0
+    ]
+   }
+  }
+ },
+ "ruta_21/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     336.0,
+     528.0
+    ],
+    "target_map": "ruta_21/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1072.0,
+     528.0
+    ],
+    "target_map": "ruta_21/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala10_38": {
+    "position": [
+     336.0,
+     1232.0
+    ],
+    "target_map": "ruta_21/sala_calle_10_38",
+    "target_spawn": "default"
+   },
+   "Sala33_38": {
+    "position": [
+     1072.0,
+     1232.0
+    ],
+    "target_map": "ruta_21/sala_calle_33_38",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     784.0,
+     48.0
+    ]
+   },
+   "from_pamplona": {
+    "position": [
+     784.0,
+     16.0
+    ]
+   },
+   "from_ruta_22": {
+    "position": [
+     784.0,
+     2032.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     336.0,
+     560.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1072.0,
+     560.0
+    ]
+   },
+   "from_sala_10_38": {
+    "position": [
+     336.0,
+     1264.0
+    ]
+   },
+   "from_sala_33_38": {
+    "position": [
+     1072.0,
+     1264.0
+    ]
+   }
+  }
+ },
+ "ruta_22/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     528.0,
+     816.0
+    ],
+    "target_map": "ruta_22/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     80.0,
+     496.0
+    ],
+    "target_map": "ruta_22/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala8_26": {
+    "position": [
+     272.0,
+     848.0
+    ],
+    "target_map": "ruta_22/sala_calle_8_26",
+    "target_spawn": "default"
+   },
+   "Sala16_15": {
+    "position": [
+     528.0,
+     496.0
+    ],
+    "target_map": "ruta_22/sala_calle_16_15",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     784.0,
+     48.0
+    ]
+   },
+   "from_ruta_21": {
+    "position": [
+     784.0,
+     16.0
+    ]
+   },
+   "from_valladolid": {
+    "position": [
+     784.0,
+     2032.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     528.0,
+     848.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     80.0,
+     528.0
+    ]
+   },
+   "from_sala_8_26": {
+    "position": [
+     272.0,
+     880.0
+    ]
+   },
+   "from_sala_16_15": {
+    "position": [
+     528.0,
+     528.0
+    ]
+   }
+  }
+ },
+ "ruta_23/exterior": {
+  "warps": {
+   "Mercadona": {
+    "position": [
+     976.0,
+     496.0
+    ],
+    "target_map": "ruta_23/cuellar/mercadona",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     208.0,
+     880.0
+    ],
+    "target_map": "ruta_23/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     688.0,
+     880.0
+    ],
+    "target_map": "ruta_23/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala12_11": {
+    "position": [
+     400.0,
+     368.0
+    ],
+    "target_map": "ruta_23/sala_calle_12_11",
+    "target_spawn": "default"
+   },
+   "Sala22_11": {
+    "position": [
+     720.0,
+     368.0
+    ],
+    "target_map": "ruta_23/sala_calle_22_11",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     656.0
+    ]
+   },
+   "from_valladolid": {
+    "position": [
+     16.0,
+     656.0
+    ]
+   },
+   "from_san_miguel": {
+    "position": [
+     2032.0,
+     656.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     976.0,
+     528.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     208.0,
+     912.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     688.0,
+     912.0
+    ]
+   },
+   "from_sala_12_11": {
+    "position": [
+     400.0,
+     400.0
+    ]
+   },
+   "from_sala_22_11": {
+    "position": [
+     720.0,
+     400.0
+    ]
+   }
+  }
+ },
+ "ruta_24/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     144.0,
+     1872.0
+    ],
+    "target_map": "ruta_24/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1136.0,
+     496.0
+    ],
+    "target_map": "ruta_24/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala3_10": {
+    "position": [
+     112.0,
+     336.0
+    ],
+    "target_map": "ruta_24/sala_calle_3_10",
+    "target_spawn": "default"
+   },
+   "Sala7_10": {
+    "position": [
+     240.0,
+     336.0
+    ],
+    "target_map": "ruta_24/sala_calle_7_10",
+    "target_spawn": "default"
+   },
+   "Sala11_10": {
+    "position": [
+     368.0,
+     336.0
+    ],
+    "target_map": "ruta_24/sala_calle_11_10",
+    "target_spawn": "default"
+   },
+   "Sala15_10": {
+    "position": [
+     496.0,
+     336.0
+    ],
+    "target_map": "ruta_24/sala_calle_15_10",
+    "target_spawn": "default"
+   },
+   "Sala19_10": {
+    "position": [
+     624.0,
+     336.0
+    ],
+    "target_map": "ruta_24/sala_calle_19_10",
+    "target_spawn": "default"
+   },
+   "Sala33_30": {
+    "position": [
+     1072.0,
+     976.0
+    ],
+    "target_map": "ruta_24/sala_calle_33_30",
+    "target_spawn": "default"
+   },
+   "Sala37_30": {
+    "position": [
+     1200.0,
+     976.0
+    ],
+    "target_map": "ruta_24/sala_calle_37_30",
+    "target_spawn": "default"
+   },
+   "Sala41_30": {
+    "position": [
+     1328.0,
+     976.0
+    ],
+    "target_map": "ruta_24/sala_calle_41_30",
+    "target_spawn": "default"
+   },
+   "Sala4_28": {
+    "position": [
+     144.0,
+     912.0
+    ],
+    "target_map": "ruta_24/sala_calle_4_28",
+    "target_spawn": "default"
+   },
+   "Sala35_40": {
+    "position": [
+     1136.0,
+     1296.0
+    ],
+    "target_map": "ruta_24/sala_calle_35_40",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     816.0,
+     48.0
+    ]
+   },
+   "from_getafe": {
+    "position": [
+     816.0,
+     16.0
+    ]
+   },
+   "from_puertollano": {
+    "position": [
+     816.0,
+     2032.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     144.0,
+     1904.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1136.0,
+     528.0
+    ]
+   },
+   "from_sala_3_10": {
+    "position": [
+     112.0,
+     368.0
+    ]
+   },
+   "from_sala_7_10": {
+    "position": [
+     240.0,
+     368.0
+    ]
+   },
+   "from_sala_11_10": {
+    "position": [
+     368.0,
+     368.0
+    ]
+   },
+   "from_sala_15_10": {
+    "position": [
+     496.0,
+     368.0
+    ]
+   },
+   "from_sala_19_10": {
+    "position": [
+     624.0,
+     368.0
+    ]
+   },
+   "from_sala_33_30": {
+    "position": [
+     1072.0,
+     1008.0
+    ]
+   },
+   "from_sala_37_30": {
+    "position": [
+     1200.0,
+     1008.0
+    ]
+   },
+   "from_sala_41_30": {
+    "position": [
+     1328.0,
+     1008.0
+    ]
+   },
+   "from_sala_4_28": {
+    "position": [
+     144.0,
+     944.0
+    ]
+   },
+   "from_sala_35_40": {
+    "position": [
+     1136.0,
+     1328.0
+    ]
+   }
+  }
+ },
+ "ruta_25/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     560.0,
+     624.0
+    ],
+    "target_map": "ruta_25/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     144.0,
+     1744.0
+    ],
+    "target_map": "ruta_25/casa_2",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     816.0,
+     48.0
+    ]
+   },
+   "from_puertollano": {
+    "position": [
+     816.0,
+     16.0
+    ]
+   },
+   "from_ruta_26": {
+    "position": [
+     816.0,
+     2032.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     560.0,
+     656.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     144.0,
+     1776.0
+    ]
+   }
+  }
+ },
+ "ruta_26/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     1136.0,
+     304.0
+    ],
+    "target_map": "ruta_26/casa_1",
+    "target_spawn": "default"
+   },
+   "Sala9_9": {
+    "position": [
+     304.0,
+     304.0
+    ],
+    "target_map": "ruta_26/sala_calle_9_9",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     816.0,
+     48.0
+    ]
+   },
+   "from_ruta_25": {
+    "position": [
+     816.0,
+     16.0
+    ]
+   },
+   "from_malaga": {
+    "position": [
+     816.0,
+     2032.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     1136.0,
+     336.0
+    ]
+   },
+   "from_sala_9_9": {
+    "position": [
+     304.0,
+     336.0
+    ]
+   }
+  }
+ },
+ "ruta_3/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     816.0,
+     304.0
+    ],
+    "target_map": "ruta_3/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     976.0,
+     304.0
+    ],
+    "target_map": "ruta_3/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala6_66": {
+    "position": [
+     208.0,
+     2128.0
+    ],
+    "target_map": "ruta_3/sala_calle_6_66",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     688.0,
+     80.0
+    ]
+   },
+   "from_route_2": {
+    "position": [
+     688.0,
+     16.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     816.0,
+     336.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     976.0,
+     336.0
+    ]
+   },
+   "from_sala_6_66": {
+    "position": [
+     208.0,
+     2160.0
+    ]
+   }
+  }
+ },
+ "ruta_4/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     784.0,
+     688.0
+    ],
+    "target_map": "ruta_4/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     944.0,
+     464.0
+    ],
+    "target_map": "ruta_4/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala9_24": {
+    "position": [
+     304.0,
+     784.0
+    ],
+    "target_map": "ruta_4/sala_calle_9_24",
+    "target_spawn": "default"
+   },
+   "Sala34_14": {
+    "position": [
+     1104.0,
+     464.0
+    ],
+    "target_map": "ruta_4/sala_calle_34_14",
+    "target_spawn": "default"
+   },
+   "Sala29_27": {
+    "position": [
+     944.0,
+     880.0
+    ],
+    "target_map": "ruta_4/sala_calle_29_27",
+    "target_spawn": "default"
+   },
+   "Sala38_28": {
+    "position": [
+     1232.0,
+     912.0
+    ],
+    "target_map": "ruta_4/sala_calle_38_28",
+    "target_spawn": "default"
+   },
+   "Sala45_28": {
+    "position": [
+     1456.0,
+     912.0
+    ],
+    "target_map": "ruta_4/sala_calle_45_28",
+    "target_spawn": "default"
+   },
+   "Sala30_38": {
+    "position": [
+     976.0,
+     1232.0
+    ],
+    "target_map": "ruta_4/sala_calle_30_38",
+    "target_spawn": "default"
+   },
+   "Sala38_39": {
+    "position": [
+     1232.0,
+     1264.0
+    ],
+    "target_map": "ruta_4/sala_calle_38_39",
+    "target_spawn": "default"
+   },
+   "Sala44_39": {
+    "position": [
+     1424.0,
+     1264.0
+    ],
+    "target_map": "ruta_4/sala_calle_44_39",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     688.0,
+     48.0
+    ]
+   },
+   "from_route_3": {
+    "position": [
+     688.0,
+     16.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     784.0,
+     720.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     944.0,
+     496.0
+    ]
+   },
+   "from_sala_9_24": {
+    "position": [
+     304.0,
+     816.0
+    ]
+   },
+   "from_sala_34_14": {
+    "position": [
+     1104.0,
+     496.0
+    ]
+   },
+   "from_sala_29_27": {
+    "position": [
+     944.0,
+     912.0
+    ]
+   },
+   "from_sala_38_28": {
+    "position": [
+     1232.0,
+     944.0
+    ]
+   },
+   "from_sala_45_28": {
+    "position": [
+     1456.0,
+     944.0
+    ]
+   },
+   "from_sala_30_38": {
+    "position": [
+     976.0,
+     1264.0
+    ]
+   },
+   "from_sala_38_39": {
+    "position": [
+     1232.0,
+     1296.0
+    ]
+   },
+   "from_sala_44_39": {
+    "position": [
+     1424.0,
+     1296.0
+    ]
+   }
+  }
+ },
+ "ruta_5/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     976.0,
+     784.0
+    ],
+    "target_map": "ruta_5/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     656.0,
+     368.0
+    ],
+    "target_map": "ruta_5/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala31_12": {
+    "position": [
+     1008.0,
+     400.0
+    ],
+    "target_map": "ruta_5/sala_calle_31_12",
+    "target_spawn": "default"
+   },
+   "Sala56_12": {
+    "position": [
+     1808.0,
+     400.0
+    ],
+    "target_map": "ruta_5/sala_calle_56_12",
+    "target_spawn": "default"
+   },
+   "Sala65_11": {
+    "position": [
+     2096.0,
+     368.0
+    ],
+    "target_map": "ruta_5/sala_calle_65_11",
+    "target_spawn": "default"
+   },
+   "Sala47_11": {
+    "position": [
+     1520.0,
+     368.0
+    ],
+    "target_map": "ruta_5/sala_calle_47_11",
+    "target_spawn": "default"
+   },
+   "Sala58_27": {
+    "position": [
+     1872.0,
+     880.0
+    ],
+    "target_map": "ruta_5/sala_calle_58_27",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     496.0
+    ]
+   },
+   "from_madrid": {
+    "position": [
+     16.0,
+     496.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     976.0,
+     816.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     656.0,
+     400.0
+    ]
+   },
+   "from_sala_31_12": {
+    "position": [
+     1008.0,
+     432.0
+    ]
+   },
+   "from_sala_56_12": {
+    "position": [
+     1808.0,
+     432.0
+    ]
+   },
+   "from_sala_65_11": {
+    "position": [
+     2096.0,
+     400.0
+    ]
+   },
+   "from_sala_47_11": {
+    "position": [
+     1520.0,
+     400.0
+    ]
+   },
+   "from_sala_58_27": {
+    "position": [
+     1872.0,
+     912.0
+    ]
+   }
+  }
+ },
+ "ruta_6/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     784.0,
+     336.0
+    ],
+    "target_map": "ruta_6/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     336.0,
+     336.0
+    ],
+    "target_map": "ruta_6/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala32_16": {
+    "position": [
+     1040.0,
+     528.0
+    ],
+    "target_map": "ruta_6/sala_calle_32_16",
+    "target_spawn": "default"
+   },
+   "Sala42_16": {
+    "position": [
+     1360.0,
+     528.0
+    ],
+    "target_map": "ruta_6/sala_calle_42_16",
+    "target_spawn": "default"
+   },
+   "Sala47_16": {
+    "position": [
+     1520.0,
+     528.0
+    ],
+    "target_map": "ruta_6/sala_calle_47_16",
+    "target_spawn": "default"
+   },
+   "Sala61_16": {
+    "position": [
+     1968.0,
+     528.0
+    ],
+    "target_map": "ruta_6/sala_calle_61_16",
+    "target_spawn": "default"
+   },
+   "Sala65_15": {
+    "position": [
+     2096.0,
+     496.0
+    ],
+    "target_map": "ruta_6/sala_calle_65_15",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     624.0
+    ]
+   },
+   "from_ruta_5": {
+    "position": [
+     16.0,
+     624.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     784.0,
+     368.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     336.0,
+     368.0
+    ]
+   },
+   "from_sala_32_16": {
+    "position": [
+     1040.0,
+     560.0
+    ]
+   },
+   "from_sala_42_16": {
+    "position": [
+     1360.0,
+     560.0
+    ]
+   },
+   "from_sala_47_16": {
+    "position": [
+     1520.0,
+     560.0
+    ]
+   },
+   "from_sala_61_16": {
+    "position": [
+     1968.0,
+     560.0
+    ]
+   },
+   "from_sala_65_15": {
+    "position": [
+     2096.0,
+     528.0
+    ]
+   }
+  }
+ },
+ "ruta_8/exterior": {
+  "warps": {
+   "Casa1": {
+    "position": [
+     560.0,
+     1168.0
+    ],
+    "target_map": "ruta_8/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     752.0,
+     1168.0
+    ],
+    "target_map": "ruta_8/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala36_10": {
+    "position": [
+     1168.0,
+     336.0
+    ],
+    "target_map": "ruta_8/sala_calle_36_10",
+    "target_spawn": "default"
+   },
+   "Sala51_36": {
+    "position": [
+     1648.0,
+     1168.0
+    ],
+    "target_map": "ruta_8/sala_calle_51_36",
+    "target_spawn": "default"
+   },
+   "Sala56_36": {
+    "position": [
+     1808.0,
+     1168.0
+    ],
+    "target_map": "ruta_8/sala_calle_56_36",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     496.0
+    ]
+   },
+   "from_ruta_7": {
+    "position": [
+     16.0,
+     496.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     560.0,
+     1200.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     752.0,
+     1200.0
+    ]
+   },
+   "from_sala_36_10": {
+    "position": [
+     1168.0,
+     368.0
+    ]
+   },
+   "from_sala_51_36": {
+    "position": [
+     1648.0,
+     1200.0
+    ]
+   },
+   "from_sala_56_36": {
+    "position": [
+     1808.0,
+     1200.0
+    ]
+   }
+  }
+ },
+ "sevilla/centro": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     240.0,
+     880.0
+    ],
+    "target_map": "sevilla/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     688.0,
+     624.0
+    ],
+    "target_map": "sevilla/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1776.0,
+     1360.0
+    ],
+    "target_map": "sevilla/estanco",
+    "target_spawn": "default"
+   },
+   "Sala3_8": {
+    "position": [
+     112.0,
+     272.0
+    ],
+    "target_map": "sevilla/sala_centro_3_8",
+    "target_spawn": "default"
+   },
+   "Sala10_7": {
+    "position": [
+     336.0,
+     240.0
+    ],
+    "target_map": "sevilla/sala_centro_10_7",
+    "target_spawn": "default"
+   },
+   "Sala43_8": {
+    "position": [
+     1392.0,
+     272.0
+    ],
+    "target_map": "sevilla/sala_centro_43_8",
+    "target_spawn": "default"
+   },
+   "Sala53_6": {
+    "position": [
+     1712.0,
+     208.0
+    ],
+    "target_map": "sevilla/sala_centro_53_6",
+    "target_spawn": "default"
+   },
+   "Sala21_6": {
+    "position": [
+     688.0,
+     208.0
+    ],
+    "target_map": "sevilla/sala_centro_21_6",
+    "target_spawn": "default"
+   },
+   "Sala59_11": {
+    "position": [
+     1904.0,
+     368.0
+    ],
+    "target_map": "sevilla/sala_centro_59_11",
+    "target_spawn": "default"
+   },
+   "Sala38_19": {
+    "position": [
+     1232.0,
+     624.0
+    ],
+    "target_map": "sevilla/sala_centro_38_19",
+    "target_spawn": "default"
+   },
+   "Sala44_19": {
+    "position": [
+     1424.0,
+     624.0
+    ],
+    "target_map": "sevilla/sala_centro_44_19",
+    "target_spawn": "default"
+   },
+   "Sala50_20": {
+    "position": [
+     1616.0,
+     656.0
+    ],
+    "target_map": "sevilla/sala_centro_50_20",
+    "target_spawn": "default"
+   },
+   "Sala56_19": {
+    "position": [
+     1808.0,
+     624.0
+    ],
+    "target_map": "sevilla/sala_centro_56_19",
+    "target_spawn": "default"
+   },
+   "Sala3_40": {
+    "position": [
+     112.0,
+     1296.0
+    ],
+    "target_map": "sevilla/sala_centro_3_40",
+    "target_spawn": "default"
+   },
+   "Sala10_41": {
+    "position": [
+     336.0,
+     1328.0
+    ],
+    "target_map": "sevilla/sala_centro_10_41",
+    "target_spawn": "default"
+   },
+   "Sala3_53": {
+    "position": [
+     112.0,
+     1712.0
+    ],
+    "target_map": "sevilla/sala_centro_3_53",
+    "target_spawn": "default"
+   },
+   "Sala10_53": {
+    "position": [
+     336.0,
+     1712.0
+    ],
+    "target_map": "sevilla/sala_centro_10_53",
+    "target_spawn": "default"
+   },
+   "Sala33_47": {
+    "position": [
+     1072.0,
+     1520.0
+    ],
+    "target_map": "sevilla/sala_centro_33_47",
+    "target_spawn": "default"
+   },
+   "Sala28_21": {
+    "position": [
+     912.0,
+     688.0
+    ],
+    "target_map": "sevilla/sala_centro_28_21",
+    "target_spawn": "default"
+   },
+   "Sala22_40": {
+    "position": [
+     720.0,
+     1296.0
+    ],
+    "target_map": "sevilla/sala_centro_22_40",
+    "target_spawn": "default"
+   },
+   "Sala24_51": {
+    "position": [
+     784.0,
+     1648.0
+    ],
+    "target_map": "sevilla/sala_centro_24_51",
+    "target_spawn": "default"
+   },
+   "Sala37_33": {
+    "position": [
+     1200.0,
+     1072.0
+    ],
+    "target_map": "sevilla/sala_centro_37_33",
+    "target_spawn": "default"
+   },
+   "Sala42_33": {
+    "position": [
+     1360.0,
+     1072.0
+    ],
+    "target_map": "sevilla/sala_centro_42_33",
+    "target_spawn": "default"
+   },
+   "Sala47_33": {
+    "position": [
+     1520.0,
+     1072.0
+    ],
+    "target_map": "sevilla/sala_centro_47_33",
+    "target_spawn": "default"
+   },
+   "Sala37_39": {
+    "position": [
+     1200.0,
+     1264.0
+    ],
+    "target_map": "sevilla/sala_centro_37_39",
+    "target_spawn": "default"
+   },
+   "Sala43_39": {
+    "position": [
+     1392.0,
+     1264.0
+    ],
+    "target_map": "sevilla/sala_centro_43_39",
+    "target_spawn": "default"
+   },
+   "Sala49_39": {
+    "position": [
+     1584.0,
+     1264.0
+    ],
+    "target_map": "sevilla/sala_centro_49_39",
+    "target_spawn": "default"
+   },
+   "Sala54_36": {
+    "position": [
+     1744.0,
+     1168.0
+    ],
+    "target_map": "sevilla/sala_centro_54_36",
+    "target_spawn": "default"
+   },
+   "Sala59_33": {
+    "position": [
+     1904.0,
+     1072.0
+    ],
+    "target_map": "sevilla/sala_centro_59_33",
+    "target_spawn": "default"
+   },
+   "Sala59_42": {
+    "position": [
+     1904.0,
+     1360.0
+    ],
+    "target_map": "sevilla/sala_centro_59_42",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1936.0,
+     624.0
+    ]
+   },
+   "from_ruta_13": {
+    "position": [
+     2032.0,
+     624.0
+    ]
+   },
+   "from_rio": {
+    "position": [
+     16.0,
+     816.0
+    ]
+   },
+   "from_maria_luisa": {
+    "position": [
+     1200.0,
+     1776.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     240.0,
+     912.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     688.0,
+     656.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1776.0,
+     1392.0
+    ]
+   },
+   "from_sala_3_8": {
+    "position": [
+     112.0,
+     304.0
+    ]
+   },
+   "from_sala_10_7": {
+    "position": [
+     336.0,
+     272.0
+    ]
+   },
+   "from_sala_43_8": {
+    "position": [
+     1392.0,
+     304.0
+    ]
+   },
+   "from_sala_53_6": {
+    "position": [
+     1712.0,
+     240.0
+    ]
+   },
+   "from_sala_21_6": {
+    "position": [
+     688.0,
+     240.0
+    ]
+   },
+   "from_sala_59_11": {
+    "position": [
+     1904.0,
+     400.0
+    ]
+   },
+   "from_sala_38_19": {
+    "position": [
+     1232.0,
+     656.0
+    ]
+   },
+   "from_sala_44_19": {
+    "position": [
+     1424.0,
+     656.0
+    ]
+   },
+   "from_sala_50_20": {
+    "position": [
+     1616.0,
+     688.0
+    ]
+   },
+   "from_sala_56_19": {
+    "position": [
+     1808.0,
+     656.0
+    ]
+   },
+   "from_sala_3_40": {
+    "position": [
+     112.0,
+     1328.0
+    ]
+   },
+   "from_sala_10_41": {
+    "position": [
+     336.0,
+     1360.0
+    ]
+   },
+   "from_sala_3_53": {
+    "position": [
+     112.0,
+     1744.0
+    ]
+   },
+   "from_sala_10_53": {
+    "position": [
+     336.0,
+     1744.0
+    ]
+   },
+   "from_sala_33_47": {
+    "position": [
+     1072.0,
+     1552.0
+    ]
+   },
+   "from_sala_28_21": {
+    "position": [
+     912.0,
+     720.0
+    ]
+   },
+   "from_sala_22_40": {
+    "position": [
+     720.0,
+     1328.0
+    ]
+   },
+   "from_sala_24_51": {
+    "position": [
+     784.0,
+     1680.0
+    ]
+   },
+   "from_sala_37_33": {
+    "position": [
+     1200.0,
+     1104.0
+    ]
+   },
+   "from_sala_42_33": {
+    "position": [
+     1360.0,
+     1104.0
+    ]
+   },
+   "from_sala_47_33": {
+    "position": [
+     1520.0,
+     1104.0
+    ]
+   },
+   "from_sala_37_39": {
+    "position": [
+     1200.0,
+     1296.0
+    ]
+   },
+   "from_sala_43_39": {
+    "position": [
+     1392.0,
+     1296.0
+    ]
+   },
+   "from_sala_49_39": {
+    "position": [
+     1584.0,
+     1296.0
+    ]
+   },
+   "from_sala_54_36": {
+    "position": [
+     1744.0,
+     1200.0
+    ]
+   },
+   "from_sala_59_33": {
+    "position": [
+     1904.0,
+     1104.0
+    ]
+   },
+   "from_sala_59_42": {
+    "position": [
+     1904.0,
+     1392.0
+    ]
+   }
+  }
+ },
+ "sevilla/maria_luisa": {
+  "warps": {},
+  "spawns": {
+   "default": {
+    "position": [
+     880.0,
+     48.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     880.0,
+     16.0
+    ]
+   }
+  }
+ },
+ "sevilla/rio": {
+  "warps": {
+   "Sala44_14": {
+    "position": [
+     1424.0,
+     464.0
+    ],
+    "target_map": "sevilla/sala_rio_44_14",
+    "target_spawn": "default"
+   },
+   "Sala37_45": {
+    "position": [
+     1200.0,
+     1456.0
+    ],
+    "target_map": "sevilla/sala_rio_37_45",
+    "target_spawn": "default"
+   },
+   "Sala51_12": {
+    "position": [
+     1648.0,
+     400.0
+    ],
+    "target_map": "sevilla/sala_rio_51_12",
+    "target_spawn": "default"
+   },
+   "Sala46_34": {
+    "position": [
+     1488.0,
+     1104.0
+    ],
+    "target_map": "sevilla/sala_rio_46_34",
+    "target_spawn": "default"
+   },
+   "Sala52_46": {
+    "position": [
+     1680.0,
+     1488.0
+    ],
+    "target_map": "sevilla/sala_rio_52_46",
+    "target_spawn": "default"
+   },
+   "Sala45_54": {
+    "position": [
+     1456.0,
+     1744.0
+    ],
+    "target_map": "sevilla/sala_rio_45_54",
+    "target_spawn": "default"
+   },
+   "Sala50_23": {
+    "position": [
+     1616.0,
+     752.0
+    ],
+    "target_map": "sevilla/sala_rio_50_23",
+    "target_spawn": "default"
+   },
+   "Sala40_23": {
+    "position": [
+     1296.0,
+     752.0
+    ],
+    "target_map": "sevilla/sala_rio_40_23",
+    "target_spawn": "default"
+   },
+   "Sala45_23": {
+    "position": [
+     1456.0,
+     752.0
+    ],
+    "target_map": "sevilla/sala_rio_45_23",
+    "target_spawn": "default"
+   },
+   "Sala39_5": {
+    "position": [
+     1264.0,
+     176.0
+    ],
+    "target_map": "sevilla/sala_rio_39_5",
+    "target_spawn": "default"
+   },
+   "Sala45_6": {
+    "position": [
+     1456.0,
+     208.0
+    ],
+    "target_map": "sevilla/sala_rio_45_6",
+    "target_spawn": "default"
+   },
+   "Sala9_31": {
+    "position": [
+     304.0,
+     1008.0
+    ],
+    "target_map": "sevilla/gimnasio_1",
+    "target_spawn": "default"
+   },
+   "Sala15_15": {
+    "position": [
+     496.0,
+     496.0
+    ],
+    "target_map": "sevilla/sala_rio_15_15",
+    "target_spawn": "default"
+   },
+   "Sala5_16": {
+    "position": [
+     176.0,
+     528.0
+    ],
+    "target_map": "sevilla/sala_rio_5_16",
+    "target_spawn": "default"
+   },
+   "Sala3_6": {
+    "position": [
+     112.0,
+     208.0
+    ],
+    "target_map": "sevilla/sala_rio_3_6",
+    "target_spawn": "default"
+   },
+   "Sala8_6": {
+    "position": [
+     272.0,
+     208.0
+    ],
+    "target_map": "sevilla/sala_rio_8_6",
+    "target_spawn": "default"
+   },
+   "Sala13_6": {
+    "position": [
+     432.0,
+     208.0
+    ],
+    "target_map": "sevilla/sala_rio_13_6",
+    "target_spawn": "default"
+   },
+   "Sala18_6": {
+    "position": [
+     592.0,
+     208.0
+    ],
+    "target_map": "sevilla/sala_rio_18_6",
+    "target_spawn": "default"
+   },
+   "Sala3_44": {
+    "position": [
+     112.0,
+     1424.0
+    ],
+    "target_map": "sevilla/sala_rio_3_44",
+    "target_spawn": "default"
+   },
+   "Sala8_44": {
+    "position": [
+     272.0,
+     1424.0
+    ],
+    "target_map": "sevilla/sala_rio_8_44",
+    "target_spawn": "default"
+   },
+   "Sala13_44": {
+    "position": [
+     432.0,
+     1424.0
+    ],
+    "target_map": "sevilla/sala_rio_13_44",
+    "target_spawn": "default"
+   },
+   "Sala18_44": {
+    "position": [
+     592.0,
+     1424.0
+    ],
+    "target_map": "sevilla/sala_rio_18_44",
+    "target_spawn": "default"
+   },
+   "Sala3_52": {
+    "position": [
+     112.0,
+     1680.0
+    ],
+    "target_map": "sevilla/sala_rio_3_52",
+    "target_spawn": "default"
+   },
+   "Sala13_52": {
+    "position": [
+     432.0,
+     1680.0
+    ],
+    "target_map": "sevilla/sala_rio_13_52",
+    "target_spawn": "default"
+   },
+   "Sala17_37": {
+    "position": [
+     560.0,
+     1200.0
+    ],
+    "target_map": "sevilla/sala_rio_17_37",
+    "target_spawn": "default"
+   },
+   "Sala8_52": {
+    "position": [
+     272.0,
+     1680.0
+    ],
+    "target_map": "sevilla/sala_rio_8_52",
+    "target_spawn": "default"
+   },
+   "Sala18_52": {
+    "position": [
+     592.0,
+     1680.0
+    ],
+    "target_map": "sevilla/sala_rio_18_52",
+    "target_spawn": "default"
+   },
+   "Sala3_37": {
+    "position": [
+     112.0,
+     1200.0
+    ],
+    "target_map": "sevilla/sala_rio_3_37",
+    "target_spawn": "default"
+   },
+   "Sala18_22": {
+    "position": [
+     592.0,
+     720.0
+    ],
+    "target_map": "sevilla/sala_rio_18_22",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1744.0,
+     816.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     1776.0,
+     816.0
+    ]
+   },
+   "from_ruta_14": {
+    "position": [
+     16.0,
+     816.0
+    ]
+   },
+   "from_sala_44_14": {
+    "position": [
+     1424.0,
+     496.0
+    ]
+   },
+   "from_sala_37_45": {
+    "position": [
+     1200.0,
+     1488.0
+    ]
+   },
+   "from_sala_51_12": {
+    "position": [
+     1648.0,
+     432.0
+    ]
+   },
+   "from_sala_46_34": {
+    "position": [
+     1488.0,
+     1136.0
+    ]
+   },
+   "from_sala_52_46": {
+    "position": [
+     1680.0,
+     1520.0
+    ]
+   },
+   "from_sala_45_54": {
+    "position": [
+     1456.0,
+     1776.0
+    ]
+   },
+   "from_sala_50_23": {
+    "position": [
+     1616.0,
+     784.0
+    ]
+   },
+   "from_sala_40_23": {
+    "position": [
+     1296.0,
+     784.0
+    ]
+   },
+   "from_sala_45_23": {
+    "position": [
+     1456.0,
+     784.0
+    ]
+   },
+   "from_sala_39_5": {
+    "position": [
+     1264.0,
+     208.0
+    ]
+   },
+   "from_sala_45_6": {
+    "position": [
+     1456.0,
+     240.0
+    ]
+   },
+   "from_sala_9_31": {
+    "position": [
+     304.0,
+     1040.0
+    ]
+   },
+   "from_sala_15_15": {
+    "position": [
+     496.0,
+     528.0
+    ]
+   },
+   "from_sala_5_16": {
+    "position": [
+     176.0,
+     560.0
+    ]
+   },
+   "from_sala_3_6": {
+    "position": [
+     112.0,
+     240.0
+    ]
+   },
+   "from_sala_8_6": {
+    "position": [
+     272.0,
+     240.0
+    ]
+   },
+   "from_sala_13_6": {
+    "position": [
+     432.0,
+     240.0
+    ]
+   },
+   "from_sala_18_6": {
+    "position": [
+     592.0,
+     240.0
+    ]
+   },
+   "from_sala_3_44": {
+    "position": [
+     112.0,
+     1456.0
+    ]
+   },
+   "from_sala_8_44": {
+    "position": [
+     272.0,
+     1456.0
+    ]
+   },
+   "from_sala_13_44": {
+    "position": [
+     432.0,
+     1456.0
+    ]
+   },
+   "from_sala_18_44": {
+    "position": [
+     592.0,
+     1456.0
+    ]
+   },
+   "from_sala_3_52": {
+    "position": [
+     112.0,
+     1712.0
+    ]
+   },
+   "from_sala_13_52": {
+    "position": [
+     432.0,
+     1712.0
+    ]
+   },
+   "from_sala_17_37": {
+    "position": [
+     560.0,
+     1232.0
+    ]
+   },
+   "from_sala_8_52": {
+    "position": [
+     272.0,
+     1712.0
+    ]
+   },
+   "from_sala_18_52": {
+    "position": [
+     592.0,
+     1712.0
+    ]
+   },
+   "from_sala_3_37": {
+    "position": [
+     112.0,
+     1232.0
+    ]
+   },
+   "from_sala_18_22": {
+    "position": [
+     592.0,
+     752.0
+    ]
+   }
+  }
+ },
+ "valencia/ciutat_vella": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     1616.0,
+     784.0
+    ],
+    "target_map": "valencia/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1616.0,
+     1200.0
+    ],
+    "target_map": "valencia/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     1904.0,
+     784.0
+    ],
+    "target_map": "valencia/estanco",
+    "target_spawn": "default"
+   },
+   "Sala31_27": {
+    "position": [
+     1008.0,
+     880.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_31_27",
+    "target_spawn": "default"
+   },
+   "Sala9_24": {
+    "position": [
+     304.0,
+     784.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_9_24",
+    "target_spawn": "default"
+   },
+   "Sala9_38": {
+    "position": [
+     304.0,
+     1232.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_9_38",
+    "target_spawn": "default"
+   },
+   "Sala4_10": {
+    "position": [
+     144.0,
+     336.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_4_10",
+    "target_spawn": "default"
+   },
+   "Sala10_9": {
+    "position": [
+     336.0,
+     304.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_10_9",
+    "target_spawn": "default"
+   },
+   "Sala15_9": {
+    "position": [
+     496.0,
+     304.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_15_9",
+    "target_spawn": "default"
+   },
+   "Sala49_8": {
+    "position": [
+     1584.0,
+     272.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_49_8",
+    "target_spawn": "default"
+   },
+   "Sala58_10": {
+    "position": [
+     1872.0,
+     336.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_58_10",
+    "target_spawn": "default"
+   },
+   "Sala22_37": {
+    "position": [
+     720.0,
+     1200.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_22_37",
+    "target_spawn": "default"
+   },
+   "Sala58_38": {
+    "position": [
+     1872.0,
+     1232.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_58_38",
+    "target_spawn": "default"
+   },
+   "Sala27_52": {
+    "position": [
+     880.0,
+     1680.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_27_52",
+    "target_spawn": "default"
+   },
+   "Sala4_53": {
+    "position": [
+     144.0,
+     1712.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_4_53",
+    "target_spawn": "default"
+   },
+   "Sala12_53": {
+    "position": [
+     400.0,
+     1712.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_12_53",
+    "target_spawn": "default"
+   },
+   "Sala47_51": {
+    "position": [
+     1520.0,
+     1648.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_47_51",
+    "target_spawn": "default"
+   },
+   "Sala57_53": {
+    "position": [
+     1840.0,
+     1712.0
+    ],
+    "target_map": "valencia/sala_ciutat_vella_57_53",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1040.0,
+     400.0
+    ]
+   },
+   "from_turia": {
+    "position": [
+     1040.0,
+     16.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     1616.0,
+     816.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1616.0,
+     1232.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     1904.0,
+     816.0
+    ]
+   },
+   "from_sala_31_27": {
+    "position": [
+     1008.0,
+     912.0
+    ]
+   },
+   "from_sala_9_24": {
+    "position": [
+     304.0,
+     816.0
+    ]
+   },
+   "from_sala_9_38": {
+    "position": [
+     304.0,
+     1264.0
+    ]
+   },
+   "from_sala_4_10": {
+    "position": [
+     144.0,
+     368.0
+    ]
+   },
+   "from_sala_10_9": {
+    "position": [
+     336.0,
+     336.0
+    ]
+   },
+   "from_sala_15_9": {
+    "position": [
+     496.0,
+     336.0
+    ]
+   },
+   "from_sala_49_8": {
+    "position": [
+     1584.0,
+     304.0
+    ]
+   },
+   "from_sala_58_10": {
+    "position": [
+     1872.0,
+     368.0
+    ]
+   },
+   "from_sala_22_37": {
+    "position": [
+     720.0,
+     1232.0
+    ]
+   },
+   "from_sala_58_38": {
+    "position": [
+     1872.0,
+     1264.0
+    ]
+   },
+   "from_sala_27_52": {
+    "position": [
+     880.0,
+     1712.0
+    ]
+   },
+   "from_sala_4_53": {
+    "position": [
+     144.0,
+     1744.0
+    ]
+   },
+   "from_sala_12_53": {
+    "position": [
+     400.0,
+     1744.0
+    ]
+   },
+   "from_sala_47_51": {
+    "position": [
+     1520.0,
+     1680.0
+    ]
+   },
+   "from_sala_57_53": {
+    "position": [
+     1840.0,
+     1744.0
+    ]
+   }
+  }
+ },
+ "valencia/malvarrosa": {
+  "warps": {
+   "FerryIbiza": {
+    "position": [
+     528.0,
+     1520.0
+    ],
+    "target_map": "ibiza/exterior",
+    "target_spawn": "from_ferry"
+   },
+   "Hospital": {
+    "position": [
+     688.0,
+     336.0
+    ],
+    "target_map": "valencia/malvarrosa/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     944.0,
+     272.0
+    ],
+    "target_map": "valencia/malvarrosa/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     496.0,
+     720.0
+    ],
+    "target_map": "valencia/malvarrosa/estanco",
+    "target_spawn": "default"
+   },
+   "Sala43_20": {
+    "position": [
+     1392.0,
+     656.0
+    ],
+    "target_map": "valencia/gimnasio_1",
+    "target_spawn": "default"
+   },
+   "Sala3_8": {
+    "position": [
+     112.0,
+     272.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_3_8",
+    "target_spawn": "default"
+   },
+   "Sala8_8": {
+    "position": [
+     272.0,
+     272.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_8_8",
+    "target_spawn": "default"
+   },
+   "Sala13_8": {
+    "position": [
+     432.0,
+     272.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_13_8",
+    "target_spawn": "default"
+   },
+   "Sala3_21": {
+    "position": [
+     112.0,
+     688.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_3_21",
+    "target_spawn": "default"
+   },
+   "Sala8_21": {
+    "position": [
+     272.0,
+     688.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_8_21",
+    "target_spawn": "default"
+   },
+   "Sala21_22": {
+    "position": [
+     688.0,
+     720.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_21_22",
+    "target_spawn": "default"
+   },
+   "Sala27_22": {
+    "position": [
+     880.0,
+     720.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_27_22",
+    "target_spawn": "default"
+   },
+   "Sala5_35": {
+    "position": [
+     176.0,
+     1136.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_5_35",
+    "target_spawn": "default"
+   },
+   "Sala14_35": {
+    "position": [
+     464.0,
+     1136.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_14_35",
+    "target_spawn": "default"
+   },
+   "Sala22_35": {
+    "position": [
+     720.0,
+     1136.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_22_35",
+    "target_spawn": "default"
+   },
+   "Sala30_35": {
+    "position": [
+     976.0,
+     1136.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_30_35",
+    "target_spawn": "default"
+   },
+   "Sala49_11": {
+    "position": [
+     1584.0,
+     368.0
+    ],
+    "target_map": "valencia/sala_malvarrosa_49_11",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     528.0,
+     1456.0
+    ]
+   },
+   "from_ferry": {
+    "position": [
+     528.0,
+     1488.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     688.0,
+     368.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     944.0,
+     304.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     496.0,
+     752.0
+    ]
+   },
+   "from_sala_43_20": {
+    "position": [
+     1392.0,
+     688.0
+    ]
+   },
+   "from_sala_3_8": {
+    "position": [
+     112.0,
+     304.0
+    ]
+   },
+   "from_sala_8_8": {
+    "position": [
+     272.0,
+     304.0
+    ]
+   },
+   "from_sala_13_8": {
+    "position": [
+     432.0,
+     304.0
+    ]
+   },
+   "from_sala_3_21": {
+    "position": [
+     112.0,
+     720.0
+    ]
+   },
+   "from_sala_8_21": {
+    "position": [
+     272.0,
+     720.0
+    ]
+   },
+   "from_sala_21_22": {
+    "position": [
+     688.0,
+     752.0
+    ]
+   },
+   "from_sala_27_22": {
+    "position": [
+     880.0,
+     752.0
+    ]
+   },
+   "from_sala_5_35": {
+    "position": [
+     176.0,
+     1168.0
+    ]
+   },
+   "from_sala_14_35": {
+    "position": [
+     464.0,
+     1168.0
+    ]
+   },
+   "from_sala_22_35": {
+    "position": [
+     720.0,
+     1168.0
+    ]
+   },
+   "from_sala_30_35": {
+    "position": [
+     976.0,
+     1168.0
+    ]
+   },
+   "from_sala_49_11": {
+    "position": [
+     1584.0,
+     400.0
+    ]
+   }
+  }
+ },
+ "valencia/turia": {
+  "warps": {},
+  "spawns": {
+   "default": {
+    "position": [
+     784.0,
+     1104.0
+    ]
+   },
+   "from_ciutat_vella": {
+    "position": [
+     784.0,
+     1136.0
+    ]
+   },
+   "from_ruta_9": {
+    "position": [
+     1904.0,
+     1136.0
+    ]
+   }
+  }
+ },
+ "valladolid/exterior": {
+  "warps": {
+   "Hospital": {
+    "position": [
+     656.0,
+     848.0
+    ],
+    "target_map": "valladolid/hospital",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1840.0,
+     816.0
+    ],
+    "target_map": "valladolid/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     2064.0,
+     848.0
+    ],
+    "target_map": "valladolid/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     1232.0,
+     240.0
+    ],
+    "target_map": "valladolid/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     1744.0,
+     1200.0
+    ],
+    "target_map": "valladolid/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala35_18": {
+    "position": [
+     1136.0,
+     592.0
+    ],
+    "target_map": "valladolid/gimnasio_1",
+    "target_spawn": "default"
+   },
+   "Sala64_38": {
+    "position": [
+     2064.0,
+     1232.0
+    ],
+    "target_map": "valladolid/sala_calle_64_38",
+    "target_spawn": "default"
+   },
+   "Sala23_15": {
+    "position": [
+     752.0,
+     496.0
+    ],
+    "target_map": "valladolid/sala_calle_23_15",
+    "target_spawn": "default"
+   },
+   "Sala59_16": {
+    "position": [
+     1904.0,
+     528.0
+    ],
+    "target_map": "valladolid/sala_calle_59_16",
+    "target_spawn": "default"
+   },
+   "Sala66_14": {
+    "position": [
+     2128.0,
+     464.0
+    ],
+    "target_map": "valladolid/sala_calle_66_14",
+    "target_spawn": "default"
+   },
+   "Sala65_50": {
+    "position": [
+     2096.0,
+     1616.0
+    ],
+    "target_map": "valladolid/sala_calle_65_50",
+    "target_spawn": "default"
+   },
+   "Sala52_59": {
+    "position": [
+     1680.0,
+     1904.0
+    ],
+    "target_map": "valladolid/sala_calle_52_59",
+    "target_spawn": "default"
+   },
+   "Sala3_18": {
+    "position": [
+     112.0,
+     592.0
+    ],
+    "target_map": "valladolid/sala_calle_3_18",
+    "target_spawn": "default"
+   },
+   "Sala47_9": {
+    "position": [
+     1520.0,
+     304.0
+    ],
+    "target_map": "valladolid/sala_calle_47_9",
+    "target_spawn": "default"
+   },
+   "Sala50_26": {
+    "position": [
+     1616.0,
+     848.0
+    ],
+    "target_map": "valladolid/sala_calle_50_26",
+    "target_spawn": "default"
+   },
+   "Sala20_51": {
+    "position": [
+     656.0,
+     1648.0
+    ],
+    "target_map": "valladolid/sala_calle_20_51",
+    "target_spawn": "default"
+   },
+   "Sala56_48": {
+    "position": [
+     1808.0,
+     1552.0
+    ],
+    "target_map": "valladolid/sala_calle_56_48",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     1552.0,
+     48.0
+    ]
+   },
+   "from_ruta_22": {
+    "position": [
+     1552.0,
+     16.0
+    ]
+   },
+   "from_ruta_23": {
+    "position": [
+     2288.0,
+     1008.0
+    ]
+   },
+   "from_hospital": {
+    "position": [
+     656.0,
+     880.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1840.0,
+     848.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     2064.0,
+     880.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     1232.0,
+     272.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     1744.0,
+     1232.0
+    ]
+   },
+   "from_sala_35_18": {
+    "position": [
+     1136.0,
+     624.0
+    ]
+   },
+   "from_sala_64_38": {
+    "position": [
+     2064.0,
+     1264.0
+    ]
+   },
+   "from_sala_23_15": {
+    "position": [
+     752.0,
+     528.0
+    ]
+   },
+   "from_sala_59_16": {
+    "position": [
+     1904.0,
+     560.0
+    ]
+   },
+   "from_sala_66_14": {
+    "position": [
+     2128.0,
+     496.0
+    ]
+   },
+   "from_sala_65_50": {
+    "position": [
+     2096.0,
+     1648.0
+    ]
+   },
+   "from_sala_52_59": {
+    "position": [
+     1680.0,
+     1936.0
+    ]
+   },
+   "from_sala_3_18": {
+    "position": [
+     112.0,
+     624.0
+    ]
+   },
+   "from_sala_47_9": {
+    "position": [
+     1520.0,
+     336.0
+    ]
+   },
+   "from_sala_50_26": {
+    "position": [
+     1616.0,
+     880.0
+    ]
+   },
+   "from_sala_20_51": {
+    "position": [
+     656.0,
+     1680.0
+    ]
+   },
+   "from_sala_56_48": {
+    "position": [
+     1808.0,
+     1584.0
+    ]
+   }
+  }
+ },
+ "vigo/exterior": {
+  "warps": {
+   "AvionGranCanaria": {
+    "position": [
+     1616.0,
+     1136.0
+    ],
+    "target_map": "playa_del_ingles/exterior",
+    "target_spawn": "from_avion"
+   },
+   "Centro": {
+    "position": [
+     144.0,
+     560.0
+    ],
+    "target_map": "vigo/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     528.0,
+     560.0
+    ],
+    "target_map": "vigo/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     816.0,
+     592.0
+    ],
+    "target_map": "vigo/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     112.0,
+     944.0
+    ],
+    "target_map": "vigo/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     368.0,
+     944.0
+    ],
+    "target_map": "vigo/casa_2",
+    "target_spawn": "default"
+   },
+   "Casa3": {
+    "position": [
+     1584.0,
+     752.0
+    ],
+    "target_map": "vigo/casa_3",
+    "target_spawn": "default"
+   },
+   "Casa4": {
+    "position": [
+     1200.0,
+     880.0
+    ],
+    "target_map": "vigo/casa_4",
+    "target_spawn": "default"
+   },
+   "Sala33_18": {
+    "position": [
+     1072.0,
+     592.0
+    ],
+    "target_map": "vigo/sala_calle_33_18",
+    "target_spawn": "default"
+   },
+   "Sala42_18": {
+    "position": [
+     1360.0,
+     592.0
+    ],
+    "target_map": "vigo/sala_calle_42_18",
+    "target_spawn": "default"
+   },
+   "Sala17_29": {
+    "position": [
+     560.0,
+     944.0
+    ],
+    "target_map": "vigo/sala_calle_17_29",
+    "target_spawn": "default"
+   },
+   "Sala42_32": {
+    "position": [
+     1360.0,
+     1040.0
+    ],
+    "target_map": "vigo/sala_calle_42_32",
+    "target_spawn": "default"
+   },
+   "Sala49_31": {
+    "position": [
+     1584.0,
+     1008.0
+    ],
+    "target_map": "vigo/sala_calle_49_31",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     848.0,
+     784.0
+    ]
+   },
+   "from_avion": {
+    "position": [
+     1616.0,
+     1104.0
+    ]
+   },
+   "from_ruta_16": {
+    "position": [
+     848.0,
+     48.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     144.0,
+     592.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     528.0,
+     592.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     816.0,
+     624.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     112.0,
+     976.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     368.0,
+     976.0
+    ]
+   },
+   "from_casa_3": {
+    "position": [
+     1584.0,
+     784.0
+    ]
+   },
+   "from_casa_4": {
+    "position": [
+     1200.0,
+     912.0
+    ]
+   },
+   "from_sala_33_18": {
+    "position": [
+     1072.0,
+     624.0
+    ]
+   },
+   "from_sala_42_18": {
+    "position": [
+     1360.0,
+     624.0
+    ]
+   },
+   "from_sala_17_29": {
+    "position": [
+     560.0,
+     976.0
+    ]
+   },
+   "from_sala_42_32": {
+    "position": [
+     1360.0,
+     1072.0
+    ]
+   },
+   "from_sala_49_31": {
+    "position": [
+     1584.0,
+     1040.0
+    ]
+   }
+  }
+ },
+ "zaragoza/exterior": {
+  "warps": {
+   "Centro": {
+    "position": [
+     144.0,
+     880.0
+    ],
+    "target_map": "zaragoza/centro",
+    "target_spawn": "default"
+   },
+   "Mercadona": {
+    "position": [
+     1872.0,
+     944.0
+    ],
+    "target_map": "zaragoza/mercadona",
+    "target_spawn": "default"
+   },
+   "Estanco": {
+    "position": [
+     784.0,
+     1424.0
+    ],
+    "target_map": "zaragoza/estanco",
+    "target_spawn": "default"
+   },
+   "Casa1": {
+    "position": [
+     560.0,
+     1392.0
+    ],
+    "target_map": "zaragoza/casa_1",
+    "target_spawn": "default"
+   },
+   "Casa2": {
+    "position": [
+     912.0,
+     1392.0
+    ],
+    "target_map": "zaragoza/casa_2",
+    "target_spawn": "default"
+   },
+   "Sala24_29": {
+    "position": [
+     784.0,
+     944.0
+    ],
+    "target_map": "zaragoza/sala_calle_24_29",
+    "target_spawn": "default"
+   },
+   "Sala38_29": {
+    "position": [
+     1232.0,
+     944.0
+    ],
+    "target_map": "zaragoza/sala_calle_38_29",
+    "target_spawn": "default"
+   },
+   "Sala49_31": {
+    "position": [
+     1584.0,
+     1008.0
+    ],
+    "target_map": "zaragoza/sala_calle_49_31",
+    "target_spawn": "default"
+   },
+   "Sala65_30": {
+    "position": [
+     2096.0,
+     976.0
+    ],
+    "target_map": "zaragoza/sala_calle_65_30",
+    "target_spawn": "default"
+   },
+   "Sala33_43": {
+    "position": [
+     1072.0,
+     1392.0
+    ],
+    "target_map": "zaragoza/sala_calle_33_43",
+    "target_spawn": "default"
+   },
+   "Sala38_43": {
+    "position": [
+     1232.0,
+     1392.0
+    ],
+    "target_map": "zaragoza/sala_calle_38_43",
+    "target_spawn": "default"
+   },
+   "Sala17_53": {
+    "position": [
+     560.0,
+     1712.0
+    ],
+    "target_map": "zaragoza/sala_calle_17_53",
+    "target_spawn": "default"
+   },
+   "Sala23_53": {
+    "position": [
+     752.0,
+     1712.0
+    ],
+    "target_map": "zaragoza/sala_calle_23_53",
+    "target_spawn": "default"
+   },
+   "Sala28_53": {
+    "position": [
+     912.0,
+     1712.0
+    ],
+    "target_map": "zaragoza/sala_calle_28_53",
+    "target_spawn": "default"
+   },
+   "Sala33_53": {
+    "position": [
+     1072.0,
+     1712.0
+    ],
+    "target_map": "zaragoza/sala_calle_33_53",
+    "target_spawn": "default"
+   },
+   "Sala38_53": {
+    "position": [
+     1232.0,
+     1712.0
+    ],
+    "target_map": "zaragoza/sala_calle_38_53",
+    "target_spawn": "default"
+   },
+   "Sala4_46": {
+    "position": [
+     144.0,
+     1488.0
+    ],
+    "target_map": "zaragoza/sala_calle_4_46",
+    "target_spawn": "default"
+   },
+   "Sala4_56": {
+    "position": [
+     144.0,
+     1808.0
+    ],
+    "target_map": "zaragoza/sala_calle_4_56",
+    "target_spawn": "default"
+   },
+   "Sala62_46": {
+    "position": [
+     2000.0,
+     1488.0
+    ],
+    "target_map": "zaragoza/sala_calle_62_46",
+    "target_spawn": "default"
+   },
+   "Sala65_56": {
+    "position": [
+     2096.0,
+     1808.0
+    ],
+    "target_map": "zaragoza/sala_calle_65_56",
+    "target_spawn": "default"
+   }
+  },
+  "spawns": {
+   "default": {
+    "position": [
+     48.0,
+     496.0
+    ]
+   },
+   "from_ruta_6": {
+    "position": [
+     16.0,
+     496.0
+    ]
+   },
+   "from_centro": {
+    "position": [
+     144.0,
+     912.0
+    ]
+   },
+   "from_mercadona": {
+    "position": [
+     1872.0,
+     976.0
+    ]
+   },
+   "from_estanco": {
+    "position": [
+     784.0,
+     1456.0
+    ]
+   },
+   "from_casa_1": {
+    "position": [
+     560.0,
+     1424.0
+    ]
+   },
+   "from_casa_2": {
+    "position": [
+     912.0,
+     1424.0
+    ]
+   },
+   "from_sala_24_29": {
+    "position": [
+     784.0,
+     976.0
+    ]
+   },
+   "from_sala_38_29": {
+    "position": [
+     1232.0,
+     976.0
+    ]
+   },
+   "from_sala_49_31": {
+    "position": [
+     1584.0,
+     1040.0
+    ]
+   },
+   "from_sala_65_30": {
+    "position": [
+     2096.0,
+     1008.0
+    ]
+   },
+   "from_sala_33_43": {
+    "position": [
+     1072.0,
+     1424.0
+    ]
+   },
+   "from_sala_38_43": {
+    "position": [
+     1232.0,
+     1424.0
+    ]
+   },
+   "from_sala_17_53": {
+    "position": [
+     560.0,
+     1744.0
+    ]
+   },
+   "from_sala_23_53": {
+    "position": [
+     752.0,
+     1744.0
+    ]
+   },
+   "from_sala_28_53": {
+    "position": [
+     912.0,
+     1744.0
+    ]
+   },
+   "from_sala_33_53": {
+    "position": [
+     1072.0,
+     1744.0
+    ]
+   },
+   "from_sala_38_53": {
+    "position": [
+     1232.0,
+     1744.0
+    ]
+   },
+   "from_sala_4_46": {
+    "position": [
+     144.0,
+     1520.0
+    ]
+   },
+   "from_sala_4_56": {
+    "position": [
+     144.0,
+     1840.0
+    ]
+   },
+   "from_sala_62_46": {
+    "position": [
+     2000.0,
+     1520.0
+    ]
+   },
+   "from_sala_65_56": {
+    "position": [
+     2096.0,
+     1840.0
+    ]
+   }
+  }
+ }
+}
