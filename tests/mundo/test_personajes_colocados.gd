@@ -157,6 +157,37 @@ func test_javier_sustituye_al_vecino_de_san_miguel_con_siete_medallas() -> void:
 	GameState.badges.clear()
 
 
+func test_la_liga_tiene_una_sala_por_miembro_y_el_ujier_se_aparta_al_ganar() -> void:
+	GameState.badges.clear()
+	var empty := MapLoader.prepare(&"madrid/liga_iniesta")
+	assert_null((empty["map"] as MapRoot).get_entities().get_node_or_null(^"Personaje_iniesta"), "sin ocho medallas no recibe")
+	(empty["map"] as MapRoot).free()
+	GameState.badges.assign([&"a", &"b", &"c", &"d", &"e", &"f", &"g", &"h"])
+	for member: String in ["iniesta", "nadal", "gasol", "alonso"]:
+		var prepared := MapLoader.prepare(StringName("madrid/liga_" + member))
+		assert_eq(prepared["error"], OK, member)
+		var map: MapRoot = prepared["map"]
+		var trainer := map.get_entities().get_node_or_null(NodePath("Personaje_" + member)) as TrainerNPC
+		assert_not_null(trainer, "%s espera en su sala" % member)
+		var usher := map.get_entities().get_node_or_null(NodePath("Personaje_ujier_liga_" + member)) as MapEntity
+		assert_not_null(usher, "el ujier de %s" % member)
+		if usher:
+			assert_eq(Grid.to_tile(usher.position), Vector2i(8, 0), "tapa el paso a la sala siguiente")
+			assert_not_null(map.warp_at(Vector2i(8, 0)))
+			assert_true(usher.is_present())
+			GameState.set_flag(StringName("trainer_defeated:" + member))
+			assert_false(usher.is_present(), "se aparta en cuanto ganas a %s" % member)
+			GameState.clear_flag(StringName("trainer_defeated:" + member))
+		map.free()
+	var last := MapLoader.prepare(&"madrid/liga_sanchez")
+	var leader := (last["map"] as MapRoot).get_entities().get_node_or_null(^"Personaje_pedro_sanchez") as TrainerNPC
+	assert_not_null(leader, "el Líder Supremo, al final")
+	if leader:
+		assert_eq(str(leader.get_meta(&"personaje", {}).get("al_ganar", {}).get("flag", "")), "liga_superada")
+	(last["map"] as MapRoot).free()
+	GameState.badges.clear()
+
+
 func test_ningun_entrenador_repite_id_entre_archivos() -> void:
 	var seen := {}
 	for file: String in DirAccess.get_files_at("res://data/trainers"):

@@ -2230,35 +2230,184 @@
     10,
     4
    ]
-  }
- ],
- "pendientes": [
-  {
-   "id": "pedro_sanchez",
-   "lugar": "Liga del Palacio Real: el Líder Supremo, al final (decisión de Javier)",
-   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
   },
   {
    "id": "iniesta",
-   "lugar": "Liga del Palacio Real (decisión de Javier)",
-   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
+   "entrenador": "iniesta",
+   "mapa": "madrid/liga_iniesta",
+   "cerca": [
+    8.0,
+    5.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "requiere": {
+    "medallas": 8.0
+   },
+   "lugar": "Liga del Palacio Real, primera sala del Alto Mando (decisión de Javier: la Liga, en el Palacio Real)",
+   "casilla": [
+    8,
+    5
+   ]
   },
   {
    "id": "nadal",
-   "lugar": "Liga del Palacio Real (decisión de Javier)",
-   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
+   "entrenador": "nadal",
+   "mapa": "madrid/liga_nadal",
+   "cerca": [
+    8.0,
+    5.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "requiere": {
+    "medallas": 8.0
+   },
+   "lugar": "Liga del Palacio Real, segunda sala del Alto Mando",
+   "casilla": [
+    8,
+    5
+   ]
   },
   {
    "id": "gasol",
-   "lugar": "Liga del Palacio Real (decisión de Javier)",
-   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
+   "entrenador": "gasol",
+   "mapa": "madrid/liga_gasol",
+   "cerca": [
+    8.0,
+    5.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "requiere": {
+    "medallas": 8.0
+   },
+   "lugar": "Liga del Palacio Real, tercera sala del Alto Mando",
+   "casilla": [
+    8,
+    5
+   ]
   },
   {
    "id": "alonso",
-   "lugar": "Liga del Palacio Real (decisión de Javier)",
-   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
+   "entrenador": "alonso",
+   "mapa": "madrid/liga_alonso",
+   "cerca": [
+    8.0,
+    5.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "requiere": {
+    "medallas": 8.0
+   },
+   "lugar": "Liga del Palacio Real, cuarta sala del Alto Mando",
+   "casilla": [
+    8,
+    5
+   ]
+  },
+  {
+   "id": "pedro_sanchez",
+   "entrenador": "pedro_sanchez",
+   "mapa": "madrid/liga_sanchez",
+   "cerca": [
+    8.0,
+    5.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "requiere": {
+    "medallas": 8.0
+   },
+   "al_ganar": {
+    "flag": "liga_superada",
+    "texto": "¡Has ganado la Liga Pokémon! El rey Felipe VI te espera en la Plaza de la Armería, delante del Palacio."
+   },
+   "lugar": "Liga del Palacio Real, el Salón de Columnas: el Líder Supremo, al final (decisión de Javier)",
+   "casilla": [
+    8,
+    5
+   ]
+  },
+  {
+   "id": "ujier_liga_iniesta",
+   "mapa": "madrid/liga_iniesta",
+   "casilla": [
+    8.0,
+    0.0
+   ],
+   "fija": true,
+   "bloquea_pasarela": true,
+   "mira": "abajo",
+   "sprite": "npc_man",
+   "nombre": "Ujier",
+   "oculto_si": "trainer_defeated:iniesta",
+   "frases": [
+    "Para pasar a la siguiente sala, primero hay que ganar a Iniesta.",
+    "Y sin las ocho medallas, el Alto Mando no recibe a nadie."
+   ],
+   "lugar": "Liga del Palacio Real: tapa el paso de la sala de Iniesta hasta que le ganas"
+  },
+  {
+   "id": "ujier_liga_nadal",
+   "mapa": "madrid/liga_nadal",
+   "casilla": [
+    8.0,
+    0.0
+   ],
+   "fija": true,
+   "bloquea_pasarela": true,
+   "mira": "abajo",
+   "sprite": "npc_man",
+   "nombre": "Ujier",
+   "oculto_si": "trainer_defeated:nadal",
+   "frases": [
+    "Para pasar a la siguiente sala, primero hay que ganar a Nadal.",
+    "Y sin las ocho medallas, el Alto Mando no recibe a nadie."
+   ],
+   "lugar": "Liga del Palacio Real: tapa el paso de la sala de Nadal hasta que le ganas"
+  },
+  {
+   "id": "ujier_liga_gasol",
+   "mapa": "madrid/liga_gasol",
+   "casilla": [
+    8.0,
+    0.0
+   ],
+   "fija": true,
+   "bloquea_pasarela": true,
+   "mira": "abajo",
+   "sprite": "npc_man",
+   "nombre": "Ujier",
+   "oculto_si": "trainer_defeated:gasol",
+   "frases": [
+    "Para pasar a la siguiente sala, primero hay que ganar a Gasol.",
+    "Y sin las ocho medallas, el Alto Mando no recibe a nadie."
+   ],
+   "lugar": "Liga del Palacio Real: tapa el paso de la sala de Gasol hasta que le ganas"
+  },
+  {
+   "id": "ujier_liga_alonso",
+   "mapa": "madrid/liga_alonso",
+   "casilla": [
+    8.0,
+    0.0
+   ],
+   "fija": true,
+   "bloquea_pasarela": true,
+   "mira": "abajo",
+   "sprite": "npc_man",
+   "nombre": "Ujier",
+   "oculto_si": "trainer_defeated:alonso",
+   "frases": [
+    "Para pasar a la siguiente sala, primero hay que ganar a Alonso.",
+    "Y sin las ocho medallas, el Alto Mando no recibe a nadie."
+   ],
+   "lugar": "Liga del Palacio Real: tapa el paso de la sala de Alonso hasta que le ganas"
   }
  ],
+ "pendientes": [],
  "por_evento": [
   {
    "id": "rival_lab_1",

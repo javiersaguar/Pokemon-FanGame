@@ -265,6 +265,19 @@ PLACEMENTS = {
     "koldo_soto": {"mapa": "soto_del_real/carcel", "cerca": [10, 4], "mira": "abajo", "vista": 3,
                    "requiere": {"medallas": 6, "flag": "detenido:abalos_albufera"}, "hasta": {"flag": "detenido:koldo_soto"},
                    "lugar": "La cárcel de Soto del Real, con Ábalos (decisión de Javier)"},
+    # La Liga del Palacio Real (maps/_pintura/pintar_liga.gd): una sala por miembro, con ocho medallas.
+    "iniesta": {"mapa": "madrid/liga_iniesta", "cerca": [8, 5], "mira": "abajo", "vista": 0, "requiere": {"medallas": 8},
+                "lugar": "Liga del Palacio Real, primera sala del Alto Mando (decisión de Javier: la Liga, en el Palacio Real)"},
+    "nadal": {"mapa": "madrid/liga_nadal", "cerca": [8, 5], "mira": "abajo", "vista": 0, "requiere": {"medallas": 8},
+              "lugar": "Liga del Palacio Real, segunda sala del Alto Mando"},
+    "gasol": {"mapa": "madrid/liga_gasol", "cerca": [8, 5], "mira": "abajo", "vista": 0, "requiere": {"medallas": 8},
+              "lugar": "Liga del Palacio Real, tercera sala del Alto Mando"},
+    "alonso": {"mapa": "madrid/liga_alonso", "cerca": [8, 5], "mira": "abajo", "vista": 0, "requiere": {"medallas": 8},
+               "lugar": "Liga del Palacio Real, cuarta sala del Alto Mando"},
+    "pedro_sanchez": {"mapa": "madrid/liga_sanchez", "cerca": [8, 5], "mira": "abajo", "vista": 0, "requiere": {"medallas": 8},
+                      "al_ganar": {"flag": "liga_superada",
+                                   "texto": "¡Has ganado la Liga Pokémon! El rey Felipe VI te espera en la Plaza de la Armería, delante del Palacio."},
+                      "lugar": "Liga del Palacio Real, el Salón de Columnas: el Líder Supremo, al final (decisión de Javier)"},
     # Recolocados: la familia de Lamine se muda con él a Rocafonda; los antiguos del gimnasio 6, a la calle de Bilbao.
     "hustlehard304": {"mapa": "rocafonda/exterior", "cerca": [28, 15], "mira": "abajo", "vista": 2, "serie": ["keyne", "hustlehard304", "lamine"],
                       "lugar": "Rocafonda, a la puerta de la mansión de su hijo Lamine"},
@@ -294,6 +307,19 @@ EXTRA_OPTIONS = {
     "abalos": {"detencion": {"texto": "¡Alto! ¡Policía Nacional! Quedan detenidos por lo de las mascarillas."},
                "hasta": {"flag": "detenido:abalos"}},
     "koldo": {"hasta": {"flag": "detenido:koldo"}},
+}
+
+# Personajes sin combate colocados por datos: los ujieres que tapan el paso de cada sala de la Liga hasta que ganas
+# al de la sala (se apartan al momento con "oculto_si"). Van fijos en el paso, encima de la pasarela.
+LIGA = [("iniesta", "Iniesta"), ("nadal", "Nadal"), ("gasol", "Gasol"), ("alonso", "Alonso")]
+NPCS = {
+    "ujier_liga_%s" % member: {
+        "mapa": "madrid/liga_%s" % member, "casilla": [8, 0], "fija": True, "bloquea_pasarela": True, "mira": "abajo",
+        "sprite": "npc_man", "nombre": "Ujier", "oculto_si": "trainer_defeated:%s" % member,
+        "frases": ["Para pasar a la siguiente sala, primero hay que ganar a %s." % name,
+                   "Y sin las ocho medallas, el Alto Mando no recibe a nadie."],
+        "lugar": "Liga del Palacio Real: tapa el paso de la sala de %s hasta que le ganas" % name}
+    for member, name in LIGA
 }
 
 # Pendientes con motivo hasta que exista su mapa (bloque 4).
@@ -345,6 +371,14 @@ def main() -> None:
             entry["casilla"] = placed[tid]["casilla"]
         if tid in placed:
             doc["colocados"][doc["colocados"].index(placed[tid])] = entry
+        else:
+            doc["colocados"].append(entry)
+    placed = {e["id"]: e for e in doc["colocados"]}
+    for nid, data in NPCS.items():
+        entry = {"id": nid}
+        entry.update(data)
+        if nid in placed:
+            doc["colocados"][doc["colocados"].index(placed[nid])] = entry
         else:
             doc["colocados"].append(entry)
     for entry in doc["colocados"]:
