@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_b2l2l"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_pqcxx"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_2vup3"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_yfdgi"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_k486n"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_5iutq"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_man.png" id="7_an0h4"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_6ey2v"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_b7d5t"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_xj61f"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_uec0d"]
+
+[sub_resource type="Resource" id="Resource_x2mon"]
+script = ExtResource("3_2vup3")
+id = &"valencia/sala_ciutat_vella_9_24_consulado"
+display_name = "Lonja de la Seda, sala del Consulado del Mar, Valencia"
+outdoor = false
+zone_id = &"valencia"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaCiutatVella924Consulado" type="Node2D" unique_id=106716153]
+script = ExtResource("1_b2l2l")
+data = SubResource("Resource_x2mon")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1571990711]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACwAAAABAAAAAAAAACwAAAACAAAAAAAAACwAAAADAAAAAAAAACwAAAAEAAAAAAAAACwAAAAFAAAAAAAAACwAAAAGAAAAAAAAACwAAAAHAAAAAAAAACwAAAAIAAAAAAAAACwAAAAJAAAAAAAAACwAAAAKAAAAAAAAACwAAAALAAAAAAAAACwAAAAMAAAAAAAAACwAAAANAAAAAAAAACwAAAAOAAAAAAAAACwAAAAAAAEAAAAAACwAAAABAAEAAAAAACwAAAACAAEAAAAAACwAAAADAAEAAAAAACwAAAAEAAEAAAAAACwAAAAFAAEAAAAAACwAAAAGAAEAAAAAACwAAAAHAAEAAAAAACwAAAAIAAEAAAAAACwAAAAJAAEAAAAAACwAAAAKAAEAAAAAACwAAAALAAEAAAAAACwAAAAMAAEAAAAAACwAAAANAAEAAAAAACwAAAAOAAEAAAAAACwAAAAAAAIAAAAAACwAAAABAAIAAAAAACwAAAACAAIAAAAAACwAAAADAAIAAAAAACwAAAAEAAIAAAAAACwAAAAFAAIAAAAAACwAAAAGAAIAAAAAACwAAAAHAAIAAAAAACwAAAAIAAIAAAAAACwAAAAJAAIAAAAAACwAAAAKAAIAAAAAACwAAAALAAIAAAAAACwAAAAMAAIAAAAAACwAAAANAAIAAAAAACwAAAAOAAIAAAAAACwAAAAAAAMAAAAAACwAAAABAAMAAAAAACwAAAACAAMAAAAAACwAAAADAAMAAAAAACwAAAAEAAMAAAAAACwAAAAFAAMAAAAAACwAAAAGAAMAAAAAACwAAAAHAAMAAAAAACwAAAAIAAMAAAAAACwAAAAJAAMAAAAAACwAAAAKAAMAAAAAACwAAAALAAMAAAAAACwAAAAMAAMAAAAAACwAAAANAAMAAAAAACwAAAAOAAMAAAAAACwAAAAAAAQAAAAAACwAAAABAAQAAAAAACwAAAACAAQAAAAAACwAAAADAAQAAAAAACwAAAAEAAQAAAAAACwAAAAFAAQAAAAAACwAAAAGAAQAAAAAACwAAAAHAAQAAAAAACwAAAAIAAQAAAAAACwAAAAJAAQAAAAAACwAAAAKAAQAAAAAACwAAAALAAQAAAAAACwAAAAMAAQAAAAAACwAAAANAAQAAAAAACwAAAAOAAQAAAAAACwAAAAAAAUAAAAAACwAAAABAAUAAAAAACwAAAACAAUAAAAAACwAAAADAAUAAAAAACwAAAAEAAUAAAAAACwAAAAFAAUAAAAAACwAAAAGAAUAAAAAACwAAAAHAAUAAAAAACwAAAAIAAUAAAAAACwAAAAJAAUAAAAAACwAAAAKAAUAAAAAACwAAAALAAUAAAAAACwAAAAMAAUAAAAAACwAAAANAAUAAAAAACwAAAAOAAUAAAAAACwAAAAAAAYAAAAAACwAAAABAAYAAAAAACwAAAACAAYAAAAAACwAAAADAAYAAAAAACwAAAAEAAYAAAAAACwAAAAFAAYAAAAAACwAAAAGAAYAAAAAACwAAAAHAAYAAAAAACwAAAAIAAYAAAAAACwAAAAJAAYAAAAAACwAAAAKAAYAAAAAACwAAAALAAYAAAAAACwAAAAMAAYAAAAAACwAAAANAAYAAAAAACwAAAAOAAYAAAAAACwAAAAAAAcAAAAAACwAAAABAAcAAAAAACwAAAACAAcAAAAAACwAAAADAAcAAAAAACwAAAAEAAcAAAAAACwAAAAFAAcAAAAAACwAAAAGAAcAAAAAACwAAAAHAAcAAAAAACwAAAAIAAcAAAAAACwAAAAJAAcAAAAAACwAAAAKAAcAAAAAACwAAAALAAcAAAAAACwAAAAMAAcAAAAAACwAAAANAAcAAAAAACwAAAAOAAcAAAAAACwAAAAAAAgAAAAAACwAAAABAAgAAAAAACwAAAACAAgAAAAAACwAAAADAAgAAAAAACwAAAAEAAgAAAAAACwAAAAFAAgAAAAAACwAAAAGAAgAAAAAACwAAAAHAAgAAAAAACwAAAAIAAgAAAAAACwAAAAJAAgAAAAAACwAAAAKAAgAAAAAACwAAAALAAgAAAAAACwAAAAMAAgAAAAAACwAAAANAAgAAAAAACwAAAAOAAgAAAAAACwAAAAAAAkAAAAAACwAAAABAAkAAAAAACwAAAACAAkAAAAAACwAAAADAAkAAAAAACwAAAAEAAkAAAAAACwAAAAFAAkAAAAAACwAAAAGAAkAAAAAACwAAAAHAAkAAAAAACwAAAAIAAkAAAAAACwAAAAJAAkAAAAAACwAAAAKAAkAAAAAACwAAAALAAkAAAAAACwAAAAMAAkAAAAAACwAAAANAAkAAAAAACwAAAAOAAkAAAAAACwAAAAAAAoAAAAAACwAAAABAAoAAAAAACwAAAACAAoAAAAAACwAAAADAAoAAAAAACwAAAAEAAoAAAAAACwAAAAFAAoAAAAAACwAAAAGAAoAAAAAACwAAAAHAAoAAAAAACwAAAAIAAoAAAAAACwAAAAJAAoAAAAAACwAAAAKAAoAAAAAACwAAAALAAoAAAAAABAAAAAMAAoAAAAAACwAAAANAAoAAAAAACwAAAAOAAoAAAAAACwAAAA=")
+tile_set = ExtResource("4_yfdgi")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1775781241]
+tile_map_data = PackedByteArray("AAABAAAAAQABAEkAAAABAAEAAQABAEoAAAACAAAAAQABAEkAAAACAAEAAQABAEoAAAADAAAAAQABAEkAAAADAAEAAQABAEoAAAAEAAAAAQABAEkAAAAEAAEAAQABAEoAAAAFAAAAAQABAEkAAAAFAAEAAQABAEoAAAAGAAAAAQABAEkAAAAGAAEAAQABAEoAAAAHAAAAAQABAEkAAAAHAAEAAQABAEoAAAAIAAAAAQABAEkAAAAIAAEAAQABAEoAAAAJAAAAAQABAEkAAAAJAAEAAQABAEoAAAAKAAAAAQABAEkAAAAKAAEAAQABAEoAAAALAAAAAQABAEkAAAALAAEAAQABAEoAAAAMAAAAAQABAEkAAAAMAAEAAQABAEoAAAANAAAAAQABAEkAAAANAAEAAQABAEoAAAAAAAAAAQACAEcAAAAOAAAAAQAAAEcAAAAAAAEAAQACAEcAAAAOAAEAAQAAAEcAAAAAAAIAAQACAEcAAAAOAAIAAQAAAEcAAAAAAAMAAQACAEcAAAAOAAMAAQAAAEcAAAAAAAQAAQACAEcAAAAOAAQAAQAAAEcAAAAAAAUAAQACAEcAAAAOAAUAAQAAAEcAAAAAAAYAAQACAEcAAAAOAAYAAQAAAEcAAAAAAAcAAQACAEcAAAAOAAcAAQAAAEcAAAAAAAgAAQACAEcAAAAOAAgAAQAAAEcAAAAAAAkAAQACAEcAAAAOAAkAAQAAAEcAAAABAAoAAQABAEYAAAACAAoAAQABAEYAAAADAAoAAQABAEYAAAAEAAoAAQABAEYAAAAFAAoAAQABAEYAAAAGAAoAAQABAEYAAAAHAAoAAQABAEYAAAAIAAoAAQABAEYAAAAJAAoAAQABAEYAAAAKAAoAAQACAEYAAAAMAAoAAQAAAEYAAAANAAoAAQABAEYAAAAAAAoAAQAFAEoAAAAOAAoAAQAGAEoAAAA=")
+tile_set = ExtResource("4_yfdgi")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1569698633]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1198893266]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAYAAgAGADsAAAADAAcAAgAGADwAAAAEAAYAAgADADQAAAAFAAYAAgAEADQAAAAEAAcAAgADADUAAAAFAAcAAgAEADUAAAAGAAYAAgAHADsAAAAGAAcAAgAHADwAAAAMAAgAAgADADMAAAANAAgAAgAEADMAAAANAAAAAgAAACQAAAANAAEAAgAAACUAAAANAAIAAgAAACYAAAA=")
+tile_set = ExtResource("4_yfdgi")
+
+[node name="ArchiveroDelConsulado" type="Node2D" parent="Entities" unique_id=1875688244 instance=ExtResource("5_k486n")]
+position = Vector2(400, 144)
+script = ExtResource("6_5iutq")
+display_name = "Archivero del Consulado"
+lines = PackedStringArray("Aquí se juzgaban los pleitos del comercio por mar. Un barco perdido, un cargamento de naranjas mojado y mil discusiones.", "El techo es de madera dorada y viene de otro edificio. En Valencia hasta los techos se mudan.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_an0h4")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1131255170 instance=ExtResource("8_6ey2v")]
+position = Vector2(336, 48)
+script = ExtResource("9_b7d5t")
+lines = PackedStringArray("El artesonado del techo, de madera tallada y dorada. Tiene cabezas pequeñas que miran a los visitantes con cara de cuentas pendientes.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=454621352]
+z_index = 10
+tile_map_data = PackedByteArray("AAADAAUAAgAGADoAAAAGAAUAAgAHADoAAAAMAAcAAgADADIAAAANAAcAAgAEADIAAAA=")
+tile_set = ExtResource("4_yfdgi")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1996726336]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=536364711]
+position = Vector2(368, 336)
+script = ExtResource("10_xj61f")
+target_map = &"valencia/sala_ciutat_vella_9_24"
+target_spawn = &"desde_sala_ciutat_vella_9_24_consulado"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1036492192]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=982439208]
+position = Vector2(368, 304)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=238195442]
+
+[node name="Rotulo" type="Label" parent="." unique_id=483425819]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 464.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_uec0d")
+theme_override_font_sizes/font_size = 16
+text = "LONJA DE LA SEDA, SALA DEL CONSULADO DEL MAR"
+horizontal_alignment = 1

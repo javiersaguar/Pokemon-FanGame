@@ -1,0 +1,1926 @@
+{
+ "_doc": "Interiores personalizados de valencia (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Valencia",
+ "interiores": {
+  "valencia/sala_ciutat_vella_10_9": {
+   "tipo": "casa",
+   "nombre": "Casa de la paellera del barrio del Carmen",
+   "pieza": "casa_dos_aguas",
+   "calle": ["valencia/ciutat_vella", [10, 9]],
+   "personas": [
+    {
+     "nombre": "Paellera",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "La paella lleva pollo, conejo, garrofó y bajoqueta. Si alguien le pone chorizo, se le retira el pasaporte.",
+      "Mi nieto quiere ponerle quinoa. Le he dicho que la quinoa se la eche a la paella de su novia."
+     ],
+     "nodo": "Paellera",
+     "en": [11, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto moderno",
+     "aspecto": "npc_youngster",
+     "papel": "mesa",
+     "frases": [
+      "He subido una foto de la paella de la abuela y me han escrito cuatrocientos valencianos para corregirla.",
+      "Mi abuela tiene más seguidores que yo desde que le grabé gritando a una paella de Madrid."
+     ],
+     "nodo": "NietoModerno",
+     "en": [8, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "cocina",
+     "frases": ["Una paella de un metro colgada en la pared. Tiene más historia que muchos edificios del barrio."],
+     "nodo": "Cartel",
+     "en": [9, 2]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [6, 3, 4, 3]]],
+   "muebles": [
+    ["alacena", 7, 0],
+    ["fogones", 8, 1],
+    ["fregadero", 10, 1],
+    ["cajon_oliva", 2, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal", 3, 3],
+    ["taburete_rojo", 2, 4],
+    ["taburete_rojo", 5, 4],
+    ["sillon_derecha", 7, 5],
+    ["mesa_cristal", 8, 6],
+    ["sillon_izquierda", 10, 5],
+    ["arbol_maceta", 1, 5],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_12_53": {
+   "tipo": "agencia",
+   "nombre": "Agencia de viajes a Gandía",
+   "pieza": "oficinas_azules",
+   "calle": ["valencia/ciutat_vella", [12, 53]],
+   "personas": [
+    {
+     "nombre": "Agente de viajes de Gandía",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "Tenemos paquetes para Gandía con hotel, discoteca y cama de hospital por si acaso.",
+      "El paquete «Gandía Shore» incluye apartamento compartido, tres fiestas y una semana sin recordar nada."
+     ],
+     "nodo": "AgenteDeViajesDeGandia",
+     "en": [5, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Estudiante de selectividad",
+     "aspecto": "npc_youngster",
+     "papel": "cliente",
+     "frases": [
+      "He aprobado la selectividad y mis padres me pagan una semana en Gandía. Me han pedido que vuelva vivo y con nota.",
+      "Mis amigos y yo hemos hecho un grupo que se llama «Lo que pasa en Gandía». Ya hay cuatrocientas fotos que no pueden salir."
+     ],
+     "nodo": "EstudianteDeSelectividad",
+     "en": [4, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "moqueta_azul",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 5, 0],
+    ["archivo_alto", 7, 0],
+    ["mostrador_tablas", 6, 4],
+    ["banqueta_roja", 7, 6],
+    ["mesa_cristal", 3, 5],
+    ["banqueta_azul", 3, 7],
+    ["tele", 1, 1],
+    ["arbol_maceta", 10, 6],
+    ["papelera", 10, 1]
+   ],
+   "encima": [["libro_abierto", 8, 4], ["taza", 4, 5], ["taza", 7, 4]],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_15_9": {
+   "tipo": "casa",
+   "nombre": "Casa del pirotécnico",
+   "pieza": "casa_azul_pequena",
+   "calle": ["valencia/ciutat_vella", [15, 9]],
+   "personas": [
+    {
+     "nombre": "Pirotécnico",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "Diseño mascletàs desde hace treinta años. Me quedé sordo en la primera y desde entonces trabajo tranquilo.",
+      "Una buena mascletà no se ve: se siente en el estómago. Si no te tiembla el bocadillo, no vale."
+     ],
+     "nodo": "Pirotecnico",
+     "en": [4, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": [
+      "En mi casa no se puede encender una vela. Mi padre la mira y calcula cuánto tarda en explotar.",
+      "En el cole hice un trabajo sobre la pólvora. Me pusieron un diez y un parte de seguridad."
+     ],
+     "nodo": "SuHija",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "tatami_verde",
+   "pared": "retro",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_azul", [5, 3, 3, 3]]],
+   "muebles": [
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["nevera_alta", 8, 0],
+    ["palmera_maceta", 10, 5],
+    ["tele", 1, 1],
+    ["cajon_oliva", 3, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_21_16": {
+   "tipo": "casa",
+   "nombre": "Casa del regante del Tribunal de las Aguas",
+   "pieza": "casa_gris",
+   "calle": ["valencia/ciutat_vella", [21, 16]],
+   "personas": [
+    {
+     "nombre": "Síndico de la acequia",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "Los jueves a mediodía nos sentamos en la puerta de la catedral a juzgar quién ha robado agua. Sin papeles y sin abogados.",
+      "El Tribunal de las Aguas tiene mil años. Es el único tribunal de España que resuelve en un día."
+     ],
+     "nodo": "SindicoDeLaAcequia",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su nieta",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": [
+      "Mi abuelo cree que todo se arregla con agua y palabra. Ojalá funcionara con el casero.",
+      "Me ha llevado a ver un juicio. Ha durado cinco minutos y ha acabado con un apretón de manos."
+     ],
+     "nodo": "SuNieta",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_verdes",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["tele", 8, 1],
+    ["planta", 10, 1],
+    ["mesa_cristal_larga", 2, 2],
+    ["taburete_marron", 2, 4],
+    ["taburete_marron", 4, 4],
+    ["sofa", 2, 6],
+    ["palmera_maceta", 12, 0],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_22_37": {
+   "tipo": "heladeria",
+   "nombre": "Horchatería de Santa Catalina",
+   "rotulo": "Horchatería",
+   "pieza": "puesto_mercado",
+   "calle": ["valencia/ciutat_vella", [22, 37]],
+   "personas": [
+    {
+     "nombre": "Horchatero",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "La horchata se hace con chufa de Alboraya. Si es de otro sitio, es leche de algo con mucha imaginación.",
+      "Los fartons se mojan en la horchata. Si se te deshace dentro, has mojado demasiado: es un aprendizaje."
+     ],
+     "nodo": "Horchatero",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista confundido",
+     "aspecto": "turistachanclas",
+     "papel": "cliente",
+     "frases": [
+      "He pedido una horchata pensando que era un helado de vainilla. Sabe a otra cosa. No sé a qué, pero me encanta.",
+      "Me han dicho que la chufa es un tubérculo. Ya sé más de botánica que en toda mi vida."
+     ],
+     "nodo": "TuristaConfundido",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_mostaza", 7, 1],
+    ["estanteria_baja_mostaza", 9, 1],
+    ["mostrador_cristal_i", 5, 4],
+    ["mostrador_cristal_m", 6, 4],
+    ["mostrador_cristal_m", 7, 4],
+    ["mostrador_cristal_m", 8, 4],
+    ["mostrador_cristal_d", 9, 4],
+    ["caja", 10, 7]
+   ],
+   "encima": [["taza", 6, 4]],
+   "carteles": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_27_52": {
+   "tipo": "oficina",
+   "nombre": "Oficina de la Ciudad de las Artes",
+   "pieza": "oficinas_verdes",
+   "calle": ["valencia/ciutat_vella", [27, 52]],
+   "personas": [
+    {
+     "nombre": "Técnica de proyectos",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Llevamos los presupuestos de los edificios blancos del Turia. Costaron el triple de lo previsto; para Valencia es un ahorro.",
+      "Al Ágora le pusieron un mosaico que se caía a trozos. Ahora es un edificio con el mosaico de nuevo y la cartera vacía."
+     ],
+     "nodo": "TecnicaDeProyectos",
+     "en": [7, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Contable",
+     "aspecto": "padretarjeta",
+     "papel": "libre",
+     "frases": [
+      "Mi trabajo es cuadrar las cuentas de unas obras de los años dos mil. Llevo quince años y aún no cuadran.",
+      "En esta oficina se dice «caloret» con mucho cuidado. Aquí hay cosas que mejor no recordar."
+     ],
+     "nodo": "Contable",
+     "en": [9, 5],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [11, 10],
+   "suelo": "moqueta_beige",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 10, 0],
+    ["archivador", 12, 1],
+    ["mostrador_tablas", 12, 4],
+    ["banqueta_azul", 13, 6],
+    ["maquina_billetes", 6, 1],
+    ["cajas", 1, 1],
+    ["mesa_cristal", 6, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [11, 9]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_31_27": {
+   "tipo": "catedral",
+   "nombre": "Catedral de Valencia",
+   "rotulo": "Catedral de Valencia",
+   "pieza": "micalet_catedral",
+   "calle": ["valencia/ciutat_vella", [31, 27]],
+   "personas": [
+    {
+     "nombre": "Canónigo del Santo Cáliz",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Aquí se guarda el Santo Grial. El de verdad, no el de las películas. Bueno, eso dice la tradición, y la tradición aquí tiene mucha fuerza.",
+      "Los jueves el Tribunal de las Aguas se sienta en la puerta. Mientras ellos reparten agua, yo reparto paciencia."
+     ],
+     "nodo": "CanonigoDelSantoCaliz",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Peregrina del Grial",
+     "aspecto": "turista_f",
+     "papel": "publico",
+     "frases": [
+      "He venido desde Ohio a ver el Grial. Pensaba que brillaría más, pero tiene mucha personalidad.",
+      "Mi marido quería beber de él. Le han dicho que no, que es patrimonio. Ha pedido una horchata para consolarse."
+     ],
+     "nodo": "PeregrinaDelGrial",
+     "en": [10, 9],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 12],
+   "puerta": [6, 11],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [6, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 5, 3],
+    ["estatua_aguila", 1, 0],
+    ["estatua_aguila", 9, 0],
+    ["arbol_maceta", 13, 0],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 10, 6],
+    ["banco_rojo", 3, 8],
+    ["banco_rojo", 7, 8],
+    ["banco_rojo", 10, 8],
+    ["palmera_maceta", 13, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 10], "desde_sala_ciutat_vella_31_27_campanas": [8, 2]},
+   "pasos": [
+    {
+     "nodo": "Campanas",
+     "en": [8, 1],
+     "destino": "valencia/sala_ciutat_vella_31_27_campanas",
+     "aparicion": "default",
+     "vuelta": "desde_sala_ciutat_vella_31_27_campanas",
+     "llegada": [8, 2]
+    }
+   ]
+  },
+  "valencia/sala_ciutat_vella_31_27_campanas": {
+   "tipo": "torre",
+   "padre": "valencia/sala_ciutat_vella_31_27",
+   "nombre": "Micalet, cuerpo de campanas",
+   "personas": [
+    {
+     "nombre": "Campanero",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "El Micalet tiene 207 escalones. Los subo cuatro veces al día y no he pisado un gimnasio en mi vida.",
+      "La campana grande se llama Miquel y pesa diez toneladas. Cuando suena, los turistas creen que ha empezado una mascletà."
+     ],
+     "nodo": "Campanero",
+     "en": [2, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "escalera",
+     "frases": [
+      "Una ventana desde la que se ve toda Valencia: la huerta, el puerto, la Ciudad de las Artes y tres grúas de un hotel."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 2]
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [4, 7],
+   "suelo": "piedra",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 1, 0], ["cajas", 4, 1], ["tele_pequena", 1, 6]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": [],
+   "salida": {
+    "destino": "valencia/sala_ciutat_vella_31_27",
+    "aparicion": "desde_sala_ciutat_vella_31_27_campanas"
+   }
+  },
+  "valencia/sala_ciutat_vella_35_36": {
+   "tipo": "casa",
+   "nombre": "Casa de la familia de la mascletà",
+   "pieza": "casa_gris",
+   "calle": ["valencia/ciutat_vella", [35, 36]],
+   "personas": [
+    {
+     "nombre": "Padre de familia valenciano",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "En marzo dormimos con tapones. Los petardos empiezan el día uno y paran cuando arde la última falla.",
+      "Mi hijo tiró un petardo en el patio a las siete de la mañana. Los vecinos aplaudieron: es tradición."
+     ],
+     "nodo": "PadreDeFamiliaValenciano",
+     "en": [11, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Madre de familia valenciana",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Los domingos hay paella, como Dios manda. Los lunes, arroz al horno con lo que sobra. Nunca sobra.",
+      "Aquí se discute de fútbol, de política y de si el arroz se remueve. El arroz no se remueve. Punto."
+     ],
+     "nodo": "MadreDeFamiliaValenciana",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "rombos_verdes",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [4, 3, 4, 3]]],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["tele", 10, 1],
+    ["vitrina_madera", 3, 1],
+    ["mesa_cristal", 9, 4],
+    ["banqueta_roja", 8, 5],
+    ["banqueta_roja", 11, 5],
+    ["arbol_maceta", 12, 0],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_41_25": {
+   "tipo": "cafeteria",
+   "nombre": "Bar del esmorzaret",
+   "pieza": "casa_roja_pequena",
+   "calle": ["valencia/ciutat_vella", [41, 25]],
+   "personas": [
+    {
+     "nombre": "Camarero del almuerzo",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "El esmorzaret es a las diez y media: bocadillo de medio metro, cacaos, olivas, cerveza y cremaet. Luego se vuelve a trabajar, en teoría.",
+      "El bocadillo de chivito con huevo es para valientes. El de blanco y negro, para los que ya no tienen nada que perder."
+     ],
+     "nodo": "CamareroDelAlmuerzo",
+     "en": [5, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Obrero almorzando",
+     "aspecto": "jubiladoobras",
+     "papel": "cliente",
+     "frases": [
+      "Llevo treinta años almorzando aquí. La obra de enfrente lleva veinte; el almuerzo es lo único que se termina.",
+      "El cremaet lleva ron, café y canela, y se prende fuego. Es lo más parecido a una falla que se puede beber."
+     ],
+     "nodo": "ObreroAlmorzando",
+     "en": [4, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "losa_crema",
+   "pared": "retro",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 2, 0],
+    ["encimera", 3, 1],
+    ["estanteria_alta_nogal", 6, 0],
+    ["mostrador_madera_i", 2, 4],
+    ["mostrador_madera_m", 3, 4],
+    ["mostrador_madera_m", 4, 4],
+    ["mostrador_madera_d", 5, 4],
+    ["taburete_amarillo", 3, 6],
+    ["taburete_amarillo", 5, 6],
+    ["mesa_cristal", 7, 4],
+    ["taburete_amarillo", 6, 5],
+    ["taburete_amarillo", 9, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_47_51": {
+   "tipo": "piso",
+   "nombre": "Piso del Ruzafa moderno",
+   "pieza": "bloque_verde_2",
+   "calle": ["valencia/ciutat_vella", [47, 51]],
+   "personas": [
+    {
+     "nombre": "Diseñador de Ruzafa",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "Ruzafa era un barrio de abuelas. Ahora es un barrio de cafeterías de especialidad con abuelas que no pueden pagar el café.",
+      "Mi estudio es un antiguo ultramarinos. Lo único que conservo del ultramarinos es el precio de los alquileres de antes en una foto."
+     ],
+     "nodo": "DisenadorDeRuzafa",
+     "en": [3, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Abuela de Ruzafa",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Abajo había una mercería. Ahora hay un local de brunch. El brunch es un desayuno que se toma tarde y se paga caro.",
+      "Los chicos jóvenes son muy majos. Me suben la compra y me preguntan si quiero vender el piso."
+     ],
+     "nodo": "AbuelaDeRuzafa",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "moqueta_beige",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["fregadero", 3, 1], ["fogones", 5, 1], ["tele_pequena", 7, 2], ["sofa", 4, 3], ["planta", 1, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_49_8": {
+   "tipo": "piso",
+   "nombre": "Piso del fallero mayor",
+   "pieza": "bloque_verde_2",
+   "calle": ["valencia/ciutat_vella", [49, 8]],
+   "personas": [
+    {
+     "nombre": "Fallero mayor",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Llevo todo el año preparando la falla. Cuatro meses de cartón piedra para que arda en cuatro minutos.",
+      "Este año el ninot es un casero con forma de cohete. Si gana el indulto, me lo llevo al salón."
+     ],
+     "nodo": "FalleroMayor",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Fallera",
+     "aspecto": "flamenca",
+     "papel": "libre",
+     "frases": [
+      "El traje de fallera cuesta como un coche. Me lo pongo cinco días al año y lo plancho trescientos.",
+      "En la ofrenda lloro siempre. Mi madre dice que es la emoción; yo creo que es el moño, que aprieta."
+     ],
+     "nodo": "Fallera",
+     "en": [4, 4],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "losa_crema",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["nevera", 6, 1],
+    ["consola", 1, 2],
+    ["tele", 2, 1],
+    ["mesa_cristal", 1, 5],
+    ["banqueta_azul", 3, 6],
+    ["ropero_madera", 7, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_4_10": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Caballeros",
+   "pieza": "bloque_pisos",
+   "calle": ["valencia/ciutat_vella", [4, 10]],
+   "personas": [
+    {
+     "nombre": "Portera del Carmen",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "El barrio del Carmen era tranquilo. Ahora hay bares, pisos turísticos y un señor que vende mojitos en la escalera.",
+      "La puerta se cierra con llave. La llave la tienen cuarenta turistas de una aplicación."
+     ],
+     "nodo": "PorteraDelCarmen",
+     "en": [4, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Grafitero",
+     "aspecto": "perroflauta",
+     "papel": "libre",
+     "frases": [
+      "Pinto murales en las paredes del Carmen. El Ayuntamiento los borra y luego los usa en sus folletos turísticos.",
+      "Mi último mural es un Pokémon comiendo horchata. Ya sale en una guía de viajes de Japón."
+     ],
+     "nodo": "Grafitero",
+     "en": [2, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [9, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["planta", 1, 1],
+    ["escalera_mano", 2, 0],
+    ["cajonera_gris", 5, 1],
+    ["cajon_gris", 7, 1],
+    ["banco_rojo", 4, 5],
+    ["palmera_maceta", 7, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_4_53": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Colón",
+   "pieza": "bloque_pisos",
+   "calle": ["valencia/ciutat_vella", [4, 53]],
+   "personas": [
+    {
+     "nombre": "Conserje de la calle Colón",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En este edificio hay un banco, una franquicia de ropa y una señora que no se va por nada del mundo.",
+      "La señora del ático ha visto pasar tres planes de reforma de la calle. Ha sobrevivido a todos."
+     ],
+     "nodo": "ConserjeDeLaCalleColon",
+     "en": [6, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Repartidora en bici",
+     "aspecto": "repartidorbici",
+     "papel": "libre",
+     "frases": [
+      "Valencia es plana, por eso se reparte bien en bici. Lo que no es plano es el sueldo, que baja.",
+      "Traigo una paella a domicilio para un piso turístico. La paella viaja más que los turistas."
+     ],
+     "nodo": "RepartidoraEnBici",
+     "en": [7, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [2, 4, 3, 2]]],
+   "muebles": [
+    ["escalera_mano", 1, 0],
+    ["archivador", 9, 1],
+    ["archivador", 10, 1],
+    ["taburete_verde", 1, 6],
+    ["taburete_verde", 2, 6],
+    ["arbol_maceta", 10, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_57_53": {
+   "tipo": "piso",
+   "nombre": "Piso del concejal de fiestas",
+   "pieza": "bloque_pisos",
+   "calle": ["valencia/ciutat_vella", [57, 53]],
+   "personas": [
+    {
+     "nombre": "Exconcejal de fiestas",
+     "aspecto": "tertuliano",
+     "papel": "tele",
+     "frases": [
+      "Fui concejal de fiestas doce años. Organicé mascletàs, desfiles y una paella para diez mil personas que salió en el Guinness.",
+      "Las cuentas de aquella paella todavía las está mirando un juzgado. La paella estaba muy buena."
+     ],
+     "nodo": "ExconcejalDeFiestas",
+     "en": [2, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi marido sigue diciendo que todo fue por amor a la ciudad. La ciudad pagó el amor a plazos.",
+      "Ahora organiza las fiestas de la comunidad de vecinos. Ya ha pedido presupuesto para fuegos artificiales."
+     ],
+     "nodo": "SuMujer",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_morados",
+   "pared": "salvia",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["fogones", 6, 1],
+    ["mesa_cristal", 6, 6],
+    ["taburete_rojo", 8, 7],
+    ["papelera", 1, 1],
+    ["tele", 3, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_58_10": {
+   "tipo": "piso",
+   "nombre": "Piso del jubilado de la Ruta del Bakalao",
+   "pieza": "bloque_pisos",
+   "calle": ["valencia/ciutat_vella", [58, 10]],
+   "personas": [
+    {
+     "nombre": "Expionero del bakalao",
+     "aspecto": "raver",
+     "papel": "tele",
+     "frases": [
+      "En los noventa iba de discoteca en discoteca de viernes a lunes. Ahora voy de la farmacia al ambulatorio, pero con la misma energía.",
+      "Mi hijo me dice que su música es electrónica. Le pongo un vinilo del 93 y llora."
+     ],
+     "nodo": "ExpioneroDelBakalao",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "raver_f",
+     "papel": "cocina",
+     "frases": [
+      "Nos conocimos en una discoteca de la carretera a las seis de la mañana. Treinta años después seguimos sin dormir: tenemos nietos.",
+      "Todavía guardo las gafas de sol de 1992. Me las pongo para tender la ropa."
+     ],
+     "nodo": "SuMujer",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [5, 7],
+   "suelo": "moqueta_beige",
+   "pared": "menta",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 4, 0], ["fogones", 5, 1], ["sofa", 2, 5], ["cajas", 8, 1], ["tele_pequena", 3, 2]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_58_38": {
+   "tipo": "piso",
+   "nombre": "Piso del aficionado del Valencia",
+   "pieza": "bloque_pisos",
+   "calle": ["valencia/ciutat_vella", [58, 38]],
+   "personas": [
+    {
+     "nombre": "Aficionado ché",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Soy del Valencia desde la cuna. Ahora mismo el club es de un señor de Singapur que no viene ni a los partidos.",
+      "El estadio nuevo lleva en obras desde 2007. Mi hijo nació, creció y se fue a Alemania; el estadio sigue igual."
+     ],
+     "nodo": "AficionadoChe",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su hijo",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Mi padre grita «Lim go home» hasta en sueños.",
+      "He hecho una pancarta para el próximo partido. Pone «Queremos un dueño que sepa dónde está Valencia»."
+     ],
+     "nodo": "SuHijo",
+     "en": [8, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [6, 8],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["fogones", 2, 1],
+    ["consola", 6, 2],
+    ["tele", 7, 1],
+    ["sillon_derecha", 3, 3],
+    ["mesa_cristal", 4, 4],
+    ["ropero_mostaza", 5, 0],
+    ["papelera", 8, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "valencia/sala_ciutat_vella_9_24": {
+   "tipo": "lonja",
+   "nombre": "Lonja de la Seda, salón columnario",
+   "rotulo": "Lonja de la Seda",
+   "pieza": "lonja_seda",
+   "calle": ["valencia/ciutat_vella", [9, 24]],
+   "personas": [
+    {
+     "nombre": "Guía de la Lonja",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "En este salón se compraba y se vendía seda. Las columnas retorcidas son palmeras de piedra: el primer jardín vertical.",
+      "En la puerta pone que el comerciante que no mienta irá al cielo. Es la frase más optimista de Valencia."
+     ],
+     "nodo": "GuiaDeLaLonja",
+     "en": [6, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Comerciante de época",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Represento a un mercader del siglo XV. Vendo seda imaginaria y cobro entradas reales.",
+      "Si alguien regatea, le recuerdo lo del cielo. Funciona más que el datáfono."
+     ],
+     "nodo": "ComercianteDeEpoca",
+     "en": [4, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una inscripción: «Ningún mercader que engañe, que use la usura o que no pague sus deudas entrará en la vida eterna». Hay mucho sitio libre en el cielo."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [6, 10],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_tablas_i", 7, 5],
+    ["mostrador_tablas_m", 8, 5],
+    ["mostrador_tablas_d", 9, 5],
+    ["mostrador_madera_i", 1, 5],
+    ["mostrador_madera_m", 2, 5],
+    ["mostrador_madera_d", 3, 5],
+    ["mostrador_azul_i", 9, 3],
+    ["mostrador_azul_m", 10, 3],
+    ["mostrador_azul_d", 11, 3],
+    ["cajas", 12, 1]
+   ],
+   "encima": [["plato", 3, 5], ["plato", 11, 3], ["plato_comida", 1, 5]],
+   "apariciones": {"default": [6, 9], "desde_sala_ciutat_vella_9_24_consulado": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Consulado",
+     "en": [2, 1],
+     "destino": "valencia/sala_ciutat_vella_9_24_consulado",
+     "aparicion": "default",
+     "vuelta": "desde_sala_ciutat_vella_9_24_consulado",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "valencia/sala_ciutat_vella_9_24_consulado": {
+   "tipo": "palacio",
+   "padre": "valencia/sala_ciutat_vella_9_24",
+   "nombre": "Lonja de la Seda, sala del Consulado del Mar",
+   "personas": [
+    {
+     "nombre": "Archivero del Consulado",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Aquí se juzgaban los pleitos del comercio por mar. Un barco perdido, un cargamento de naranjas mojado y mil discusiones.",
+      "El techo es de madera dorada y viene de otro edificio. En Valencia hasta los techos se mudan."
+     ],
+     "nodo": "ArchiveroDelConsulado",
+     "en": [12, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "El artesonado del techo, de madera tallada y dorada. Tiene cabezas pequeñas que miran a los visitantes con cara de cuentas pendientes."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [11, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["sillon_derecha", 3, 5],
+    ["mesa_cristal", 4, 6],
+    ["sillon_izquierda", 6, 5],
+    ["pedestal", 12, 7],
+    ["arbol_maceta", 13, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [11, 9]},
+   "pasos": [],
+   "salida": {
+    "destino": "valencia/sala_ciutat_vella_9_24",
+    "aparicion": "desde_sala_ciutat_vella_9_24_consulado"
+   }
+  },
+  "valencia/sala_ciutat_vella_9_38": {
+   "tipo": "mercado",
+   "nombre": "Mercado Central, la nave",
+   "rotulo": "Mercado Central",
+   "pieza": "mercado_central",
+   "calle": ["valencia/ciutat_vella", [9, 38]],
+   "personas": [
+    {
+     "nombre": "Vendedora de fruta",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Naranjas de la huerta, recién cogidas. Las de la Mercadona también son de la huerta, pero de otra huerta más lejos.",
+      "Aquí se viene a comprar y a hablar. Comprar se compra poco; hablar, muchísimo."
+     ],
+     "nodo": "VendedoraDeFruta",
+     "en": [8, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vendedor de embutido",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Este jamón tiene más curación que todos los centros de salud del barrio.",
+      "Si me pide que se lo corte fino, le corto fino. Si me pide que se lo corte barato, eso ya no."
+     ],
+     "nodo": "VendedorDeEmbutido",
+     "en": [3, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Señora con capazo",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Vengo cada mañana con mi capazo desde 1970. La cúpula de hierro me ha visto envejecer y yo a ella oxidarse.",
+      "Los turistas compran zumo y se van. Nosotras compramos para la semana y para criticar."
+     ],
+     "nodo": "SenoraConCapazo",
+     "en": [7, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [4, 10],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_madera_i", 2, 5],
+    ["mostrador_madera_m", 3, 5],
+    ["mostrador_madera_d", 4, 5],
+    ["mostrador_cristal_i", 6, 3],
+    ["mostrador_cristal_m", 7, 3],
+    ["mostrador_cristal_d", 8, 3],
+    ["mostrador_oliva_i", 7, 6],
+    ["mostrador_oliva_m", 8, 6],
+    ["mostrador_oliva_d", 9, 6],
+    ["caja", 12, 9],
+    ["papelera", 1, 8]
+   ],
+   "encima": [["plato_comida", 3, 5], ["plato", 9, 6]],
+   "carteles": [],
+   "apariciones": {"default": [4, 9], "desde_sala_ciutat_vella_9_38_pescaderia": [11, 2]},
+   "pasos": [
+    {
+     "nodo": "Pescaderia",
+     "en": [11, 1],
+     "destino": "valencia/sala_ciutat_vella_9_38_pescaderia",
+     "aparicion": "default",
+     "vuelta": "desde_sala_ciutat_vella_9_38_pescaderia",
+     "llegada": [11, 2]
+    }
+   ]
+  },
+  "valencia/sala_ciutat_vella_9_38_pescaderia": {
+   "tipo": "mercado",
+   "padre": "valencia/sala_ciutat_vella_9_38",
+   "nombre": "Mercado Central, la pescadería",
+   "personas": [
+    {
+     "nombre": "Pescadera de la lonja",
+     "aspecto": "npc_fisherman",
+     "papel": "dependiente",
+     "frases": [
+      "Galeras, sepia y gamba de Dénia. La gamba de Dénia vale más que el oro y brilla parecido.",
+      "¡Mira qué ojos tiene esta dorada! Más vivos que los del concejal cuando hay contratas."
+     ],
+     "nodo": "PescaderaDeLaLonja",
+     "en": [11, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cocinero de restaurante",
+     "aspecto": "camarero",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a por el pescado de la carta. La carta dice «del día»; el día depende de lo que haya aquí.",
+      "Si la pescadera me guiña un ojo, es que hay algo bueno. Si me guiña los dos, es que hay que llevárselo hoy."
+     ],
+     "nodo": "CocineroDeRestaurante",
+     "en": [12, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [3, 11],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_cristal_i", 6, 6],
+    ["mostrador_cristal_m", 7, 6],
+    ["mostrador_cristal_d", 8, 6],
+    ["mostrador_blanco_i", 10, 3],
+    ["mostrador_blanco_m", 11, 3],
+    ["mostrador_blanco_d", 12, 3],
+    ["mostrador_madera_i", 3, 3],
+    ["mostrador_madera_m", 4, 3],
+    ["mostrador_madera_d", 5, 3],
+    ["cajas", 12, 1],
+    ["papelera", 1, 9]
+   ],
+   "encima": [["plato_comida", 8, 6], ["plato_comida", 12, 3]],
+   "carteles": [],
+   "apariciones": {"default": [3, 10]},
+   "pasos": [],
+   "salida": {
+    "destino": "valencia/sala_ciutat_vella_9_38",
+    "aparicion": "desde_sala_ciutat_vella_9_38_pescaderia"
+   }
+  },
+  "valencia/sala_malvarrosa_13_8": {
+   "tipo": "casa",
+   "nombre": "Casa del monitor de vela",
+   "pieza": "casa_granero",
+   "calle": ["valencia/malvarrosa", [13, 8]],
+   "personas": [
+    {
+     "nombre": "Monitor de vela",
+     "aspecto": "regatista",
+     "papel": "libre",
+     "frases": [
+      "Doy clases de vela a niños y a ejecutivos. Los niños aprenden antes y se marean menos.",
+      "Cuando hay poniente no sale nadie. Yo salgo, porque si no tengo que quedarme en casa con mi suegra."
+     ],
+     "nodo": "MonitorDeVela",
+     "en": [11, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Alumno ejecutivo",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Me apunté a vela para desconectar. Me he caído al agua seis veces con el móvil del trabajo en el bolsillo.",
+      "Mi monitor dice que hay que leer el viento. Yo leo el correo, que también sopla fuerte."
+     ],
+     "nodo": "AlumnoEjecutivo",
+     "en": [7, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 6, 0],
+    ["fogones", 7, 1],
+    ["fregadero", 9, 1],
+    ["tele", 3, 1],
+    ["planta", 5, 1],
+    ["mesa_cristal", 7, 4],
+    ["taburete_verde", 6, 5],
+    ["taburete_verde", 9, 5],
+    ["palmera_maceta", 11, 5],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_14_35": {
+   "tipo": "oficina",
+   "nombre": "Oficina del puerto deportivo",
+   "pieza": "oficinas_azules",
+   "calle": ["valencia/malvarrosa", [14, 35]],
+   "personas": [
+    {
+     "nombre": "Encargada del puerto deportivo",
+     "aspecto": "marinero",
+     "papel": "mesa",
+     "frases": [
+      "Los amarres están todos alquilados. Hay barcos que no salen del puerto en años: son trasteros con mástil.",
+      "Aquí se celebró la Copa América. Nos quedó un puerto precioso y una deuda que también es preciosa."
+     ],
+     "nodo": "EncargadaDelPuertoDeportivo",
+     "en": [10, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Patrón de yate",
+     "aspecto": "regatista",
+     "papel": "libre",
+     "frases": [
+      "Este yate es de un empresario que lo usa dos días al año. Los otros trescientos sesenta y tres lo cuido yo.",
+      "Lo único que pesca el dueño son contratos. Al menos cuando sale, me invita a una paella."
+     ],
+     "nodo": "PatronDeYate",
+     "en": [1, 7],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [3, 10],
+   "suelo": "moqueta_beige",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 4, 0],
+    ["archivador_bajo", 5, 1],
+    ["taquilla_archivo", 7, 0],
+    ["mostrador_tablas", 2, 4],
+    ["banqueta_roja", 3, 6],
+    ["mostrador_tablas", 10, 6],
+    ["banqueta_azul", 11, 8],
+    ["arbol_maceta", 1, 0],
+    ["mesa_cristal", 8, 3]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_21_22": {
+   "tipo": "tienda",
+   "nombre": "Tienda de alquiler de bicis y paddle surf",
+   "pieza": "tienda_azul",
+   "calle": ["valencia/malvarrosa", [21, 22]],
+   "personas": [
+    {
+     "nombre": "Alquilador de tablas",
+     "aspecto": "surfista",
+     "papel": "dependiente",
+     "frases": [
+      "Alquilo tablas de paddle surf por horas. La mayoría se caen al agua en el primer minuto y pagan la hora entera.",
+      "Las bicis están para ir por el carril bici. Los turistas las usan para ir por el paseo, la arena y el mar."
+     ],
+     "nodo": "AlquiladorDeTablas",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista nórdica",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": [
+      "En Noruega tenemos fiordos, pero aquí tenéis sol, paella y bares hasta tarde. Me quedo.",
+      "He alquilado una tabla y me he ido remando hasta la escollera. Volver me ha costado dos horas y una vida."
+     ],
+     "nodo": "TuristaNordica",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "losa_crema",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_menta", 2, 0],
+    ["estanteria_alta_menta", 4, 0],
+    ["mostrador_blanco_i", 7, 4],
+    ["mostrador_blanco_m", 8, 4],
+    ["mostrador_blanco_d", 9, 4],
+    ["vitrina_blanca", 1, 4],
+    ["vitrina_blanca", 3, 4],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_22_35": {
+   "tipo": "piso",
+   "nombre": "Piso de las vecinas de toda la vida",
+   "pieza": "bloque_pisos",
+   "calle": ["valencia/malvarrosa", [22, 35]],
+   "personas": [
+    {
+     "nombre": "Vecina Amparo",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Amparo me llamo, como media Valencia. Si gritas «¡Amparo!» en la playa se giran cuarenta señoras.",
+      "Por las tardes sacamos las sillas a la calle a tomar la fresca. Es el único aire acondicionado que no sube la luz."
+     ],
+     "nodo": "VecinaAmparo",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecina Desamparados",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": [
+      "Me llamo Desamparados por la Virgen. Mis amigas me llaman Desi, que suena a cantante.",
+      "En mayo se baja a la Virgen en la plaza. Se lanza a la gente y la gente la pasa de mano en mano. Aquí la fe se hace en equipo."
+     ],
+     "nodo": "VecinaDesamparados",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "moqueta_beige",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [4, 3, 3, 3]]],
+   "muebles": [
+    ["nevera_alta", 2, 0],
+    ["fogones", 3, 1],
+    ["consola", 7, 2],
+    ["tele", 8, 1],
+    ["ropero_verde", 5, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_23_45": {
+   "tipo": "chiringuito",
+   "nombre": "Arrocería del paseo marítimo",
+   "pieza": "casa_roja_pequena",
+   "calle": ["valencia/malvarrosa", [23, 45]],
+   "personas": [
+    {
+     "nombre": "Arrocero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Arroz a banda, arroz negro, arroz del senyoret y paella. Paella valenciana, la de verdad, solo por encargo y con respeto.",
+      "Si un cliente pide sangría con la paella, se la pongo. Pero el cocinero sale a mirarle."
+     ],
+     "nodo": "Arrocero",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Comensal de domingo",
+     "aspecto": "padretarjeta",
+     "papel": "cliente",
+     "frases": [
+      "He reservado mesa para catorce en primera línea. Somos once, pero en la familia siempre aparece alguien.",
+      "La paella tarda veinte minutos. Es el tiempo justo para discutir de política y reconciliarse."
+     ],
+     "nodo": "ComensalDeDomingo",
+     "en": [5, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 3, 1],
+    ["encimera", 5, 1],
+    ["nevera_alta", 8, 0],
+    ["mostrador_cristal_i", 3, 4],
+    ["mostrador_cristal_m", 4, 4],
+    ["mostrador_cristal_m", 5, 4],
+    ["mostrador_cristal_m", 6, 4],
+    ["mostrador_cristal_m", 7, 4],
+    ["mostrador_cristal_d", 8, 4],
+    ["taburete_rojo", 6, 6],
+    ["taburete_rojo", 8, 6],
+    ["tele_pequena", 9, 2],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_27_22": {
+   "tipo": "portal",
+   "nombre": "Portal del edificio de la playa",
+   "pieza": "bloque_pisos",
+   "calle": ["valencia/malvarrosa", [27, 22]],
+   "personas": [
+    {
+     "nombre": "Portero playero",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En verano el portal se llena de arena. La barro por la mañana y por la tarde me la vuelven a traer en las chanclas.",
+      "La mitad de los pisos son de gente de Madrid que viene en agosto. Los reconozco porque llegan con prisa."
+     ],
+     "nodo": "PorteroPlayero",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Veraneante madrileño",
+     "aspecto": "cunado",
+     "papel": "libre",
+     "frases": [
+      "Tengo apartamento aquí desde 1990. En Madrid le digo a todo el mundo que «tengo casa en la playa», como un marqués.",
+      "Me paso el verano en la terraza quejándome de los turistas. Yo no soy turista: soy veraneante, que es distinto."
+     ],
+     "nodo": "VeraneanteMadrileno",
+     "en": [5, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 2, 0],
+    ["planta", 5, 1],
+    ["cajonera_gris", 6, 1],
+    ["cajon_gris", 8, 1],
+    ["mostrador_verde_i", 7, 4],
+    ["mostrador_verde_m", 8, 4],
+    ["mostrador_verde_d", 9, 4],
+    ["planta", 10, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_27_44": {
+   "tipo": "casa",
+   "nombre": "Casa de la cantante de rumba",
+   "pieza": "casa_gris",
+   "calle": ["valencia/malvarrosa", [27, 44]],
+   "personas": [
+    {
+     "nombre": "Cantante de rumba",
+     "aspecto": "flamenca",
+     "papel": "libre",
+     "frases": [
+      "Canto rumba en las bodas y en los bautizos. En los divorcios también, pero cobro más.",
+      "Mi mayor éxito es una rumba sobre el precio del aceite de oliva. Lloran hasta los camareros."
+     ],
+     "nodo": "CantanteDeRumba",
+     "en": [1, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Guitarrista",
+     "aspecto": "tuno",
+     "papel": "mesa",
+     "frases": [
+      "Toco la guitarra con dos dedos desde un accidente con un petardo en Fallas. Dicen que suena más auténtico.",
+      "En las bodas nos pagan en metálico y en tarta. La tarta llega antes."
+     ],
+     "nodo": "Guitarrista",
+     "en": [3, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "melocoton",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [4, 3, 3, 3]]],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["fregadero", 3, 1],
+    ["nevera", 5, 1],
+    ["cajon_oliva", 6, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal", 3, 4],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 5, 5],
+    ["palmera_maceta", 8, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_30_35": {
+   "tipo": "oficina",
+   "nombre": "Oficina del club de fútbol playa",
+   "pieza": "oficinas_azules",
+   "calle": ["valencia/malvarrosa", [30, 35]],
+   "personas": [
+    {
+     "nombre": "Entrenador de fútbol playa",
+     "aspecto": "crossfitero",
+     "papel": "mesa",
+     "frases": [
+      "Jugamos descalzos en la arena. A los cinco minutos todos parecen croquetas.",
+      "Este año hemos quedado terceros en la liga de playa. Éramos tres equipos, pero la medalla es la medalla."
+     ],
+     "nodo": "EntrenadorDeFutbolPlaya",
+     "en": [9, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Jugadora del equipo",
+     "aspecto": "nadador_f",
+     "papel": "libre",
+     "frases": [
+      "Entrenamos a las siete de la tarde, cuando el sol ya no derrite. A esa hora la arena todavía quema como una plancha.",
+      "Mi sueño es jugar en el Mundial de fútbol playa. De momento juego en el torneo de las fiestas del barrio."
+     ],
+     "nodo": "JugadoraDelEquipo",
+     "en": [13, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [9, 10],
+   "suelo": "rombos_lila",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 11, 0],
+    ["archivo_alto", 13, 0],
+    ["mostrador_azul", 5, 4],
+    ["banqueta_roja", 6, 6],
+    ["mesa_cristal", 10, 5],
+    ["banqueta_azul", 10, 7],
+    ["mostrador_azul", 3, 7],
+    ["banqueta_azul", 4, 9],
+    ["maquina_billetes", 1, 1],
+    ["palmera_maceta", 1, 7],
+    ["cajas", 12, 8]
+   ],
+   "encima": [["libro_abierto", 4, 7]],
+   "carteles": [],
+   "apariciones": {"default": [9, 9]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_3_21": {
+   "tipo": "casa",
+   "nombre": "Casa de la paella de los domingos",
+   "pieza": "casa_granero",
+   "calle": ["valencia/malvarrosa", [3, 21]],
+   "personas": [
+    {
+     "nombre": "Tío Vicent",
+     "aspecto": "npc_old_man",
+     "papel": "cocina",
+     "frases": [
+      "La paella del domingo la hago yo desde 1979. Mi hermano dice que la hace mejor. Mi hermano está equivocado desde 1979.",
+      "La leña tiene que ser de naranjo. Si es de otra cosa, el arroz lo nota y te lo echa en cara."
+     ],
+     "nodo": "TioVicent",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Sobrina que pone la mesa",
+     "aspecto": "npc_lass",
+     "papel": "mesa",
+     "frases": [
+      "Somos veintiocho a comer. La paella mide un metro y medio y aun así hay discusión por el socarrat.",
+      "Yo traigo el postre: un pastel de la Mercadona. Cada año fingimos que lo he hecho yo."
+     ],
+     "nodo": "SobrinaQuePoneLaMesa",
+     "en": [9, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["estanteria_baja_madera", 9, 1],
+    ["estante_madera", 11, 1],
+    ["mesa_cristal", 9, 5],
+    ["taburete_rojo", 8, 6],
+    ["taburete_rojo", 11, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_3_44": {
+   "tipo": "casa",
+   "nombre": "Casa del huertano de Alboraya",
+   "pieza": "casa_gris",
+   "calle": ["valencia/malvarrosa", [3, 44]],
+   "personas": [
+    {
+     "nombre": "Huertano de la chufa",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "Cultivo chufa en Alboraya desde que tengo uso de razón. Sin chufa no hay horchata, y sin horchata no hay verano.",
+      "Me han ofrecido un dineral por mis campos para hacer pisos. Les he dicho que la horchata de ladrillo no la quiere nadie."
+     ],
+     "nodo": "HuertanoDeLaChufa",
+     "en": [10, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Lavo la chufa tres veces y la dejo secar al sol en el terrado. El sol lo pone gratis la Virgen.",
+      "Si un turista me pregunta si la horchata lleva leche, le doy un vaso y lo dejo pensando."
+     ],
+     "nodo": "SuMujer",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [8, 9],
+   "suelo": "tatami_verde",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_azul", [4, 5, 3, 3]]],
+   "muebles": [
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["nevera_alta", 10, 0],
+    ["cajon_oliva", 1, 1],
+    ["tele", 2, 1],
+    ["mesa_cristal_larga", 2, 3],
+    ["taburete_marron", 2, 5],
+    ["taburete_marron", 4, 5],
+    ["sofa", 7, 5],
+    ["planta", 1, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_3_8": {
+   "tipo": "casa",
+   "nombre": "Casa de pescadores del Cabanyal",
+   "pieza": "casa_dos_aguas",
+   "calle": ["valencia/malvarrosa", [3, 8]],
+   "personas": [
+    {
+     "nombre": "Abuela del Cabanyal",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Esta casa tiene la fachada de azulejos que puso mi abuelo. Quisieron tirarla para hacer una avenida. Aquí sigue y aquí sigo.",
+      "Los turistas fotografían los azulejos. Yo les cobro un euro y les cuento cómo los defendimos."
+     ],
+     "nodo": "AbuelaDelCabanyal",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Vecino pescador",
+     "aspecto": "npc_fisherman",
+     "papel": "libre",
+     "frases": [
+      "Antes salíamos a pescar al amanecer. Ahora salimos a pasear a los perros de los pisos turísticos.",
+      "El mar sigue igual. Lo que ha cambiado es todo lo demás."
+     ],
+     "nodo": "VecinoPescador",
+     "en": [3, 5],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "retro",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["tele", 8, 1],
+    ["planta", 10, 1],
+    ["estanteria_alta_nogal", 1, 0],
+    ["mesa_cristal", 9, 6],
+    ["silla_derecha", 8, 6],
+    ["silla_izquierda", 11, 6],
+    ["palmera_maceta", 12, 6],
+    ["caja", 12, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_49_11": {
+   "tipo": "socorrismo",
+   "nombre": "Socorrismo de la Malvarrosa",
+   "pieza": "torre_socorrista",
+   "calle": ["valencia/malvarrosa", [49, 11]],
+   "personas": [
+    {
+     "nombre": "Socorrista de la Malvarrosa",
+     "aspecto": "surfista",
+     "papel": "libre",
+     "frases": [
+      "Hoy he sacado del agua a un abuelo, a un perro y a un señor que intentaba llegar nadando a Ibiza.",
+      "En agosto el agua está tan caliente que hacen caldo los bañistas. La medusa más grande es la del calor."
+     ],
+     "nodo": "SocorristaDeLaMalvarrosa",
+     "en": [1, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Bañista de Albacete",
+     "aspecto": "nadador",
+     "papel": "libre",
+     "frases": [
+      "Venimos de Albacete a la playa todos los fines de semana. En Albacete tenemos de todo menos mar, y lo echamos de menos cada día.",
+      "Hemos plantado la sombrilla a las siete de la mañana. A las siete y cinco ya había otra pegada."
+     ],
+     "nodo": "BanistaDeAlbacete",
+     "en": [3, 3],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [9, 7],
+   "puerta": [5, 6],
+   "suelo": "azulejo_menta",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["cajas", 2, 1], ["tele_pequena", 5, 2], ["papelera", 1, 4]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 5]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_5_35": {
+   "tipo": "piso",
+   "nombre": "Piso de los surfistas",
+   "pieza": "bloque_verde_2",
+   "calle": ["valencia/malvarrosa", [5, 35]],
+   "personas": [
+    {
+     "nombre": "Surfista eterno",
+     "aspecto": "surfista",
+     "papel": "libre",
+     "frases": [
+      "En Valencia casi nunca hay olas. Por eso soy surfista: me paso el año esperando y el día que hay olas no voy porque trabajo.",
+      "Tengo seis tablas y ningún sofá. Me siento en la tabla más gorda."
+     ],
+     "nodo": "SurfistaEterno",
+     "en": [8, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Compañera de piso",
+     "aspecto": "nadador_f",
+     "papel": "mesa",
+     "frases": [
+      "Entreno natación en el mar todas las mañanas. Él me mira desde la orilla esperando la ola que nunca llega.",
+      "El piso huele a neopreno y a crema solar. Mi madre dice que huele a «no tengo pareja»."
+     ],
+     "nodo": "CompaneraDePiso",
+     "en": [1, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [4, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "topo",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["mesa_cristal", 1, 3],
+    ["taburete_amarillo", 3, 4],
+    ["ropero_mostaza", 8, 0],
+    ["cajas", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_8_21": {
+   "tipo": "casa",
+   "nombre": "Casa del concursante de la tele",
+   "pieza": "casa_dos_aguas",
+   "calle": ["valencia/malvarrosa", [8, 21]],
+   "personas": [
+    {
+     "nombre": "Exconcursante de la tele",
+     "aspecto": "tronista",
+     "papel": "tele",
+     "frases": [
+      "Salí en un programa de convivencia en Gandía. Me reconocen por la calle y me piden que repita mi frase. Mi frase era un grito.",
+      "Ahora hago bolos en discotecas de pueblo. Me pagan por estar tres horas sin camiseta y hacerme fotos."
+     ],
+     "nodo": "ExconcursanteDeLaTele",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su madre",
+     "aspecto": "mom",
+     "papel": "cocina",
+     "frases": [
+      "Mi hijo es famoso. No sé muy bien por qué, pero en el pueblo me invitan a todos los cafés.",
+      "Le digo que estudie algo, que la fama se acaba. Me dice que estudia el algoritmo."
+     ],
+     "nodo": "SuMadre",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "lima",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_beige", [5, 3, 3, 3]]],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["fregadero", 3, 1],
+    ["nevera", 5, 1],
+    ["cajon_oliva", 8, 1],
+    ["tele", 9, 1],
+    ["sillon_derecha", 6, 4],
+    ["mesa_cristal", 7, 5],
+    ["sillon_izquierda", 9, 4],
+    ["arbol_maceta", 10, 6],
+    ["caja", 1, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "valencia/sala_malvarrosa_8_8": {
+   "tipo": "casa",
+   "nombre": "Casa de la escritora del paseo",
+   "pieza": "casa_azul_pequena",
+   "calle": ["valencia/malvarrosa", [8, 8]],
+   "personas": [
+    {
+     "nombre": "Escritora jubilada",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Escribo novelas que pasan en la playa de la Malvarrosa. Por eso vivo aquí: para documentarme tomando el sol.",
+      "Blasco Ibáñez tenía una casa en esta playa. Yo tengo un piso y un balcón, que es lo que da la literatura ahora."
+     ],
+     "nodo": "EscritoraJubilada",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su editor",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Le pido que acabe la novela antes de verano. Ella dice que en verano no se escribe: se observa.",
+      "Llevamos tres veranos observando. La novela va por el capítulo dos."
+     ],
+     "nodo": "SuEditor",
+     "en": [2, 6],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [3, 3, 4, 3]]],
+   "muebles": [
+    ["tele", 7, 1],
+    ["cajon_gris", 1, 1],
+    ["cama_rosa", 2, 1],
+    ["planta", 11, 1],
+    ["mesa_cristal", 3, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  }
+ }
+}

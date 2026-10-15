@@ -141,6 +141,7 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-interiores`. Encargo: un
 - **Ibiza:** 34 salas. Las 14 casas ibicencas con recibidor y dormitorio (encargo del 14 de octubre), la catedral, el club (pista y barra), la caseta de socorrismo, una casa payesa y la farmacia de guardia.
 - **Madrid:** 88 salas (81 con puerta a la calle y 7 salas de dentro): bares, tiendas, Doña Manolita, grandes almacenes, Mercado de San Miguel, teatros y cines de la Gran Vía, academia, oficina de empleo, banco, portales y pisos con sus vecinos, Ferraz 70, Templo de Debod (pronaos y naos), Andén 0, Banco de España, Cibeles (patio y mirador), Congreso (antesala y hemiciclo), Prado (vestíbulo y salas de Velázquez y Goya), Palacio de Cristal, Senado, Teatro Real (foyer y patio de butacas), escalera del Palacio Real (la Liga sigue sin sala) y Almudena (nave y cripta). Fuera: el andén del AVE de Atocha (`sala_retiro_20_58`).
 - **Barcelona:** 63 salas (58 con puerta y 5 de dentro): Boqueria, catedral y su claustro de las ocas, Liceu, chiringuito y socorrismo de la Barceloneta, bazar de souvenirs, pisos y portales del Eixample, granja de chocolate, botiga a granel, startup del 22@, La Pedrera (patio y vivienda), Casa Batlló (entresuelo, planta noble y azotea del dragón), Sagrada Familia (naves y cripta), grandes almacenes, bodega de vermut, oficinas del club, La Masia, peñas y botigas de Les Corts. Fuera: el portal `sala_eixample_10_31` y el piso de Rufián (Agente 2).
+- **Valencia:** 36 salas (33 con puerta y 3 de dentro): falleros, paellera, pirotécnico, Tribunal de las Aguas, Lonja de la Seda (salón y Consulado del Mar), catedral y campanas del Micalet, horchatería, esmorzaret, Mercado Central (nave y pescadería), casas del Cabanyal, socorrismo, arrocería y pisos de la Malvarrosa. El Jardín del Turia no tiene puertas a interiores.
 
 **Trabajo anterior sin terminar (rediseño de la casa ibicenca):** guardado en la rama local `wip/agente1-ibiza` (commit `8987b894`, sin subir y sin integrar). La fachada `casa_ibicenca.png` (1254×1254) no sale de los packs ni es un `.px2` hecho a mano: es una imagen generada automáticamente (lo prohíben DIRECTRICES §7 y BIBLIA §9) y se veía reescalada a 4×4 casillas (escala no entera). Su test no compilaba. Del trabajo solo se integra la recolocación de partidas guardadas; las salas se rehacen con el sistema nuevo.
 
@@ -148,7 +149,7 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-interiores`. Encargo: un
 
 **Fuera de este encargo:** gimnasios y Quirón (Agente 3), `barcelona/sala_eixample_10_31` y el piso de Rufián (Agente 2), trenes, ferris y aviones (Agente 4). Los andenes del AVE y las terminales del aeropuerto se personalizarán conservando sus pasos, revisores y controles en su sitio.
 
-**Pendiente:** Valencia, Sevilla y el resto de ciudades, pueblos y rutas; locales de servicio con rótulo y gente de su ciudad; capturas y fila en `docs/arte/seguimiento.md` por ciudad.
+**Pendiente:** Sevilla y el resto de ciudades, pueblos y rutas; locales de servicio con rótulo y gente de su ciudad; capturas y fila en `docs/arte/seguimiento.md` por ciudad.
 
 ### Sesión del 14 de octubre · Inicio y sistemas (Agente A)
 

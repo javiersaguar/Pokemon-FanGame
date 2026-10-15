@@ -1,0 +1,96 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_pudg6"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_vp8eq"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_iwoud"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_wxrgu"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_7etfx"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_0mrw1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="7_uri2r"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_0ba3d"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_qrpoi"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_cmaou"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_45xck"]
+
+[sub_resource type="Resource" id="Resource_3tqwd"]
+script = ExtResource("3_iwoud")
+id = &"valencia/sala_ciutat_vella_31_27_campanas"
+display_name = "Micalet, cuerpo de campanas, Valencia"
+outdoor = false
+zone_id = &"valencia"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaCiutatVella3127Campanas" type="Node2D" unique_id=1164322214]
+script = ExtResource("1_pudg6")
+data = SubResource("Resource_3tqwd")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1669553788]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADwAAAABAAAAAAAAADwAAAACAAAAAAAAADwAAAADAAAAAAAAADwAAAAEAAAAAAAAADwAAAAFAAAAAAAAADwAAAAGAAAAAAAAADwAAAAHAAAAAAAAADwAAAAAAAEAAAAAADwAAAABAAEAAAAAADwAAAACAAEAAAAAADwAAAADAAEAAAAAADwAAAAEAAEAAAAAADwAAAAFAAEAAAAAADwAAAAGAAEAAAAAADwAAAAHAAEAAAAAADwAAAAAAAIAAAAAADwAAAABAAIAAAAAADwAAAACAAIAAAAAADwAAAADAAIAAAAAADwAAAAEAAIAAAAAADwAAAAFAAIAAAAAADwAAAAGAAIAAAAAADwAAAAHAAIAAAAAADwAAAAAAAMAAAAAADwAAAABAAMAAAAAADwAAAACAAMAAAAAADwAAAADAAMAAAAAADwAAAAEAAMAAAAAADwAAAAFAAMAAAAAADwAAAAGAAMAAAAAADwAAAAHAAMAAAAAADwAAAAAAAQAAAAAADwAAAABAAQAAAAAADwAAAACAAQAAAAAADwAAAADAAQAAAAAADwAAAAEAAQAAAAAADwAAAAFAAQAAAAAADwAAAAGAAQAAAAAADwAAAAHAAQAAAAAADwAAAAAAAUAAAAAADwAAAABAAUAAAAAADwAAAACAAUAAAAAADwAAAADAAUAAAAAADwAAAAEAAUAAAAAADwAAAAFAAUAAAAAADwAAAAGAAUAAAAAADwAAAAHAAUAAAAAADwAAAAAAAYAAAAAADwAAAABAAYAAAAAADwAAAACAAYAAAAAADwAAAADAAYAAAAAADwAAAAEAAYAAAAAADwAAAAFAAYAAAAAADwAAAAGAAYAAAAAADwAAAAHAAYAAAAAADwAAAAAAAcAAAAAADwAAAABAAcAAAAAADwAAAACAAcAAAAAADwAAAADAAcAAAAAADwAAAAEAAcAAAAAAAQAAAAFAAcAAAAAADwAAAAGAAcAAAAAADwAAAAHAAcAAAAAADwAAAA=")
+tile_set = ExtResource("4_wxrgu")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1834505539]
+tile_map_data = PackedByteArray("AAABAAAAAQABABwAAAABAAEAAQABAB0AAAACAAAAAQABABwAAAACAAEAAQABAB0AAAADAAAAAQABABwAAAADAAEAAQABAB0AAAAEAAAAAQABABwAAAAEAAEAAQABAB0AAAAFAAAAAQABABwAAAAFAAEAAQABAB0AAAAGAAAAAQABABwAAAAGAAEAAQABAB0AAAAAAAAAAQACABoAAAAHAAAAAQAAABoAAAAAAAEAAQACABoAAAAHAAEAAQAAABoAAAAAAAIAAQACABoAAAAHAAIAAQAAABoAAAAAAAMAAQACABoAAAAHAAMAAQAAABoAAAAAAAQAAQACABoAAAAHAAQAAQAAABoAAAAAAAUAAQACABoAAAAHAAUAAQAAABoAAAAAAAYAAQACABoAAAAHAAYAAQAAABoAAAABAAcAAQABABkAAAACAAcAAQABABkAAAADAAcAAQACABkAAAAFAAcAAQAAABkAAAAGAAcAAQABABkAAAAAAAcAAQAFAB0AAAAHAAcAAQAGAB0AAAA=")
+tile_set = ExtResource("4_wxrgu")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1267321886]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2081071722]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAAAAAgAAADQAAAACAAAAAgABADQAAAADAAAAAgACADQAAAABAAEAAgAAADUAAAACAAEAAgABADUAAAADAAEAAgACADUAAAABAAIAAgAAADYAAAACAAIAAgABADYAAAADAAIAAgACADYAAAAEAAEAAgAFACUAAAAFAAEAAgAGACUAAAAGAAEAAgAHACUAAAAEAAIAAgAFACYAAAAFAAIAAgAGACYAAAAGAAIAAgAHACYAAAABAAYAAgADAD4AAAA=")
+tile_set = ExtResource("4_wxrgu")
+
+[node name="Campanero" type="Node2D" parent="Entities" unique_id=760386666 instance=ExtResource("5_7etfx")]
+position = Vector2(80, 112)
+script = ExtResource("6_0mrw1")
+display_name = "Campanero"
+lines = PackedStringArray("El Micalet tiene 207 escalones. Los subo cuatro veces al día y no he pisado un gimnasio en mi vida.", "La campana grande se llama Miquel y pesa diez toneladas. Cuando suena, los turistas creen que ha empezado una mascletà.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_uri2r")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1656793748 instance=ExtResource("8_0ba3d")]
+position = Vector2(48, 80)
+script = ExtResource("9_qrpoi")
+lines = PackedStringArray("Una ventana desde la que se ve toda Valencia: la huerta, el puerto, la Ciudad de las Artes y tres grúas de un hotel.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1494964686]
+z_index = 10
+tile_set = ExtResource("4_wxrgu")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1568811532]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1779470687]
+position = Vector2(144, 240)
+script = ExtResource("10_cmaou")
+target_map = &"valencia/sala_ciutat_vella_31_27"
+target_spawn = &"desde_sala_ciutat_vella_31_27_campanas"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=701161566]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=190451212]
+position = Vector2(144, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=696639200]
+
+[node name="Rotulo" type="Label" parent="." unique_id=519476206]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 240.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_45xck")
+theme_override_font_sizes/font_size = 16
+text = "MICALET, CUERPO DE CAMPANAS"
+horizontal_alignment = 1

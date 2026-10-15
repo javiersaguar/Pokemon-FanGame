@@ -50,3 +50,19 @@ Antes (sala genérica de 16×12) y después (sala propia desde `data/interiores/
 | Sagrada Familia, la cripta | (no existía) | ![](interiores_2026-10-15/barcelona__sala_eixample_55_41_cripta_despues.png) |
 | La Masia | ![](interiores_2026-10-15/barcelona__sala_les_corts_47_29_antes.png) | ![](interiores_2026-10-15/barcelona__sala_les_corts_47_29_despues.png) |
 | Bar de la penya culé | ![](interiores_2026-10-15/barcelona__sala_les_corts_21_23_antes.png) | ![](interiores_2026-10-15/barcelona__sala_les_corts_21_23_despues.png) |
+
+## Valencia
+
+| Sala | Antes | Después |
+|---|---|---|
+| Lonja de la Seda | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_9_24_antes.png) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_9_24_despues.png) |
+| Consulado del Mar | (no existía) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_9_24_consulado_despues.png) |
+| Catedral de Valencia | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_31_27_antes.png) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_31_27_despues.png) |
+| Micalet, cuerpo de campanas | (no existía) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_31_27_campanas_despues.png) |
+| Mercado Central, la nave | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_9_38_antes.png) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_9_38_despues.png) |
+| Mercado Central, la pescadería | (no existía) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_9_38_pescaderia_despues.png) |
+| Horchatería de Santa Catalina | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_22_37_antes.png) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_22_37_despues.png) |
+| Bar del esmorzaret | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_41_25_antes.png) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_41_25_despues.png) |
+| Casa de la paellera | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_10_9_antes.png) | ![](interiores_2026-10-15/valencia__sala_ciutat_vella_10_9_despues.png) |
+| Socorrismo de la Malvarrosa | ![](interiores_2026-10-15/valencia__sala_malvarrosa_49_11_antes.png) | ![](interiores_2026-10-15/valencia__sala_malvarrosa_49_11_despues.png) |
+| Arrocería del paseo marítimo | ![](interiores_2026-10-15/valencia__sala_malvarrosa_23_45_antes.png) | ![](interiores_2026-10-15/valencia__sala_malvarrosa_23_45_despues.png) |
