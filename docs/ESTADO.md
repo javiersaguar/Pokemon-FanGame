@@ -422,7 +422,9 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 
 **Hecho · bloque 6 (Bilbao):** Grada de Animación, Vestuario, Túnel y Césped de San Mamés, con stewards de vigilantes; en el banquillo espera Arnaldo Otegi antes de Aupa Athletic. Seis piezas a mano (fuentes 62–67): placa roja, taquillas y butacas rojiblancas (mismos dibujos que los del Camp Nou, con otra paleta), escudo, césped a franjas (se pisa) y portería. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5.
 
-**En curso:** bloque 7, Valladolid.
+**Hecho · bloque 7 (Valladolid):** Soportales, Salón de Plenos, Palco del Zorrilla y Balcón del Ayuntamiento, con conserjes de vigilantes. Cinco piezas a mano (fuentes 68–72): placa morada, columna de soportal, lámpara de araña, barandilla dorada y estufa de butano; reutiliza escaños, atril, bandera, retrato del Rey y butacas de teatro. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5.
+
+**En curso:** bloque 8, Málaga.
 
 ### Sesión de mundo centro y final (2026-10-09)
 

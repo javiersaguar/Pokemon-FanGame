@@ -80,6 +80,11 @@ Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras fila
 | 65 | `escudo_athletic` | 2×2 | escudo del club, simplificado |
 | 66 | `cesped` | 2×1 (se pisa, se repite) | césped segado a franjas |
 | 67 | `porteria` | 3×2 | portería con su red |
+| 68 | `rotulo_valladolid` | 3×1 | placa morada (Valladolid) |
+| 69 | `columna` | 1×2 | columna de piedra de soportal |
+| 70 | `lampara_arana` | 2×1 (por encima) | lámpara de araña dorada |
+| 71 | `barandilla_dorada` | 3×1 (fila) | barandilla dorada de palco |
+| 72 | `estufa` | 1×1 | estufa de butano |
 
 ## Pintor: `maps/_pintura/pintar_gimnasios.gd`
 

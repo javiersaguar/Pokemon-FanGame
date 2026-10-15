@@ -94,3 +94,17 @@ Las capturas no ejecutan `MapLoader.prepare`, así que no salen los personajes c
 - **Vestuario:** taquillas rojiblancas contra la pared y en isla, bancos, camilla, pizarra táctica, escudo, cajas y fuente de agua.
 - **Túnel:** ladrillo oscuro, vallas de seguridad, plantas y vitrinas con copas.
 - **Césped:** el campo segado a franjas con la portería; el banquillo hace de tabique. Otegi espera en el banquillo antes de Aupa Athletic.
+
+## 7 · Valladolid — Plaza Mayor
+
+| Sala | Antes | Después |
+|---|---|---|
+| Soportales | ![](gimnasios/antes/valladolid_gimnasio_1.png) | ![](gimnasios/despues/valladolid_gimnasio_1.png) |
+| Salón de Plenos | ![](gimnasios/antes/valladolid_gimnasio_2.png) | ![](gimnasios/despues/valladolid_gimnasio_2.png) |
+| Palco del Zorrilla | ![](gimnasios/antes/valladolid_gimnasio_3.png) | ![](gimnasios/despues/valladolid_gimnasio_3.png) |
+| Balcón del Ayuntamiento | ![](gimnasios/antes/valladolid_gimnasio_lider.png) | ![](gimnasios/despues/valladolid_gimnasio_lider.png) |
+
+- **Soportales:** fachada granate, dos columnatas de piedra que hacen de tabique, escaparates, mesas y plantas.
+- **Salón de Plenos:** escaños (los mismos del pleno de Madrid), estrado con alfombra, atril, mesa de la presidencia, banderas, retrato y lámparas de araña.
+- **Palco del Zorrilla:** barandilla dorada del palco, butacas de teatro, sofás y lámpara de araña.
+- **Balcón del Ayuntamiento:** ventanales, banderas, mesa, alfombra, sofás, lámpara de araña y una estufa de butano, que en Valladolid hace frío. Latasa espera en el centro.

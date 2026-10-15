@@ -4689,15 +4689,159 @@
         "entrenadores": [
           {
             "id": "gym7_cayetano_1",
-            "nombre": "Borja"
+            "nombre": "Borja",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym7_cayetano_2",
-            "nombre": "Jacobo"
+            "nombre": "Jacobo",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "gym7_cayetano_3",
-            "nombre": "Pelayo"
+            "nombre": "Pelayo",
+            "mira": "derecha",
+            "vista": 2
+          }
+        ],
+        "rotulo": "SOPORTALES",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            52
+          ],
+          "pared": [
+            5,
+            9
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLL...............",
+          ".............vv.vv...",
+          "..Q..........vv.vv...",
+          "..Q..................",
+          ".....................",
+          ".KKKKKKKKKKKKKKKKKK..",
+          ".KKKKKKKKKKKKKKKKKK..",
+          ".....................",
+          "....NNN......NNN.....",
+          ".....................",
+          "..KKKKKKKKKKKKKKKKKK.",
+          "..KKKKKKKKKKKKKKKKKK.",
+          ".....................",
+          "...................Q.",
+          "...................Q.",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          "................n....",
+          ".......3.............",
+          ".....................",
+          "...................h.",
+          "..................H..",
+          ".........2...........",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          "......1..............",
+          "..............o......",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Por los soportales se pasa despacio, que hay que saludar a todo el mundo.",
+              "Borja no deja pasar sin presentarse. Gánale y te presenta él."
+            ],
+            "despues": [
+              "Pasa. Y abrígate, que en Valladolid hace frío hasta en agosto."
+            ]
+          },
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Aquí se habla el mejor castellano de España. Sin acento ninguno.",
+              "Jacobo te examina de pronunciación. Gánale."
+            ],
+            "despues": [
+              "Aprobado: has dicho «Valladolid» sin la zeta del final. Pasa."
+            ]
+          },
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al salón de plenos se sube con traje y con abrigo.",
+              "Pelayo te presta el abrigo si le ganas."
+            ],
+            "despues": [
+              "Abrigo prestado. Devuélvelo en marzo."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Lotero",
+            "sprite": "npc_old_man",
+            "mira": "abajo",
+            "frases": [
+              "¡Lotería de Navidad! Este número tocó en Valladolid en 1987. Desde entonces, nada.",
+              "Si te toca, me invitas a lechazo. Si no, también."
+            ]
+          },
+          {
+            "nombre": "Turista",
+            "sprite": "turista",
+            "mira": "izquierda",
+            "frases": [
+              "Me dijeron que aquí se habla el mejor español. Llevo tres días y solo he oído «¿qué pasa, chaval?».",
+              "He pedido un café y me han puesto un lechazo. No me quejo."
+            ]
           }
         ]
       },
@@ -4706,15 +4850,187 @@
         "entrenadores": [
           {
             "id": "gym7_cayetano_4",
-            "nombre": "Beltrán"
+            "nombre": "Beltrán",
+            "mira": "arriba",
+            "vista": 2
           },
           {
             "id": "gym7_cayetano_5",
-            "nombre": "Tristán"
+            "nombre": "Tristán",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "oscar_puente_gym",
-            "nombre": "Óscar Puente"
+            "nombre": "Óscar Puente",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "SALÓN DE PLENOS",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 6,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            4
+          ],
+          "pared": [
+            5,
+            8
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "################S####",
+          "#...................#",
+          "#...kkkkkkkkkkkk....#",
+          "#...kkkkkkkkkkkk....#",
+          "#...kkkkkkkkkkkk....#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLLL..RR..........",
+          ".bb...B..RR..B....bb.",
+          ".bb...B......B....bb.",
+          ".bb..V..NNNNNN....bb.",
+          ".....V...............",
+          ".....................",
+          "..eeeeeeeeeeeeeeeeee.",
+          "..eeeeeeeeeeeeeeeeee.",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".eeeeeeeeeeeeeeeeee..",
+          ".eeeeeeeeeeeeeeeeee..",
+          ".....................",
+          ".P.eeeeee...eeeeeeP..",
+          ".P.eeeeee...eeeeeeP..",
+          ".P................P..",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "......AA.....AA......",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........3.....iI...",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".h...................",
+          "..H..................",
+          "....n.....2..........",
+          ".....................",
+          ".....................",
+          "...................g.",
+          "..................G..",
+          "..........o..........",
+          ".....................",
+          "...........1.........",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Se abre la sesión. Silencio en la tribuna.",
+              "Beltrán tiene el turno de palabra y no lo suelta. Gánale."
+            ],
+            "despues": [
+              "Turno concedido. Breve, por favor."
+            ]
+          },
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "La moción de esta tarde es sobre el lechazo. Es la única que se aprueba siempre.",
+              "Tristán vota en contra de todo. Gánale."
+            ],
+            "despues": [
+              "Aprobada por unanimidad. Pasa."
+            ]
+          },
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "El exalcalde preside el pleno. Dice que ahora es ministro de trenes y que llega tarde por culpa de los trenes.",
+              "Óscar Puente no deja pasar. Gánale."
+            ],
+            "despues": [
+              "Pasa. El tren al Zorrilla sale con retraso, como todos."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Secretario",
+            "sprite": "npc_man",
+            "mira": "derecha",
+            "frases": [
+              "Levanto acta de todo. Hasta de los bostezos.",
+              "Esas lámparas son del siglo diecinueve. Como la calefacción."
+            ]
+          },
+          {
+            "nombre": "Ujier",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "frases": [
+              "En los plenos de invierno se vota con guantes.",
+              "Si ve a un concejal dormido, no lo despierte: está reflexionando el voto."
+            ]
           }
         ]
       },
@@ -4723,21 +5039,445 @@
         "entrenadores": [
           {
             "id": "gym7_cayetano_6",
-            "nombre": "Rodrigo"
+            "nombre": "Rodrigo",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym7_cayetano_7",
-            "nombre": "Álvaro"
+            "nombre": "Álvaro",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "ronaldo_nazario",
-            "nombre": "Ronaldo Nazário"
+            "nombre": "Ronaldo Nazário",
+            "mira": "izquierda",
+            "vista": 2
+          }
+        ],
+        "rotulo": "TEATRO ZORRILLA",
+        "rotulo_casilla": [
+          14,
+          1
+        ],
+        "rotulo_ancho": 6,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            4
+          ],
+          "pared": [
+            5,
+            15
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "####S################",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          "..............LLLLLL.",
+          ".....................",
+          "........sss.....sss..",
+          "........sss.....sss..",
+          ".....................",
+          ".....................",
+          ".DDDDDDDDDDDDDDDDDD..",
+          ".....................",
+          ".....................",
+          "...uuuuuuuuuuuuuu....",
+          ".....................",
+          "..uuuuuuuuuuuuuuuuuu.",
+          ".....................",
+          "...uuuuu.....uuuuu...",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".........AA..........",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "....iI...............",
+          "...................n.",
+          ".............3.......",
+          ".....................",
+          "...................h.",
+          "..................H..",
+          ".................2...",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G...1..............",
+          ".....................",
+          "..........o..........",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Palco del Zorrilla. Aquí se viene a ver teatro y a que te vea el alcalde.",
+              "Rodrigo tiene la butaca de la primera fila. Gánale."
+            ],
+            "despues": [
+              "Pasa. La función empieza a las ocho. O a las ocho y diez."
+            ]
+          },
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Estas butacas son de los abonados de toda la vida.",
+              "Álvaro es abonado desde la cuna. Gánale."
+            ],
+            "despues": [
+              "Pasa, que ya empieza el segundo acto."
+            ]
+          },
+          {
+            "nombre": "Conserje",
+            "sprite": "opositor",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "El balcón del ayuntamiento está ahí arriba. Antes, el dueño del Pucela.",
+              "Ronaldo dice que si le ganas te ficha. Por poco dinero."
+            ],
+            "despues": [
+              "Fichado. Pero solo para la cantera. Pasa."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Actriz",
+            "sprite": "npc_lass",
+            "mira": "izquierda",
+            "frases": [
+              "Hoy hacemos Don Juan Tenorio. Lo hacemos todos los años, aunque no sea noviembre.",
+              "Zorrilla era de aquí. Por eso el teatro lleva su nombre y no el mío."
+            ]
+          },
+          {
+            "nombre": "Acomodadora",
+            "sprite": "npc_woman",
+            "mira": "arriba",
+            "frases": [
+              "Su butaca es la del medio. La del medio de verdad: aquí todo es castellano y recto.",
+              "En el descanso hay pastas de convento. Las hacen las monjas de la calle de al lado."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "PLAZA MAYOR · BALCÓN DEL AYUNTAMIENTO",
-    "lider_previos": []
+    "estilo": {
+      "suelo": [
+        4,
+        0,
+        32
+      ],
+      "pared": [
+        5,
+        17
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        0,
+        28,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "f0b030",
+      "rotulo_sombra": "381634"
+    },
+    "leyenda": {
+      "t": {
+        "suelo": [
+          0,
+          0,
+          4
+        ]
+      },
+      "a": {
+        "suelo": [
+          4,
+          0,
+          44
+        ]
+      },
+      "k": {
+        "nueve": [
+          6,
+          3,
+          16
+        ]
+      },
+      "L": {
+        "propia": "rotulo_valladolid",
+        "fila": true
+      },
+      "K": {
+        "propia": "columna",
+        "arriba": 1
+      },
+      "e": {
+        "propia": "escanos",
+        "fila": true
+      },
+      "V": {
+        "propia": "atril"
+      },
+      "B": {
+        "propia": "bandera_espana"
+      },
+      "R": {
+        "propia": "retrato_rey"
+      },
+      "u": {
+        "propia": "butacas_teatro"
+      },
+      "D": {
+        "propia": "barandilla_dorada",
+        "fila": true
+      },
+      "A": {
+        "propia": "lampara_arana"
+      },
+      "F": {
+        "propia": "estufa"
+      },
+      "X": {
+        "propia": "titulo_enmarcado"
+      },
+      "P": {
+        "pieza": [
+          2,
+          2,
+          36,
+          1,
+          3
+        ],
+        "arriba": 2
+      },
+      "Q": {
+        "pieza": [
+          2,
+          1,
+          37,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "O": {
+        "nueve": [
+          8,
+          0,
+          12
+        ]
+      },
+      "N": {
+        "fila": [
+          8,
+          0,
+          16
+        ]
+      },
+      "s": {
+        "pieza": [
+          2,
+          3,
+          59,
+          3,
+          2
+        ]
+      },
+      "b": {
+        "pieza": [
+          2,
+          5,
+          6,
+          2,
+          3
+        ]
+      },
+      "v": {
+        "pieza": [
+          2,
+          3,
+          52,
+          2,
+          2
+        ]
+      },
+      "W": {
+        "pieza": [
+          5,
+          2,
+          91,
+          2,
+          1
+        ]
+      }
+    },
+    "sala_lider": {
+      "titulo": "PLAZA MAYOR · BALCÓN DEL AYUNTAMIENTO",
+      "rotulo": "ALCALDÍA",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 5,
+      "estilo": {
+        "suelo": [
+          4,
+          0,
+          32
+        ],
+        "pared": [
+          5,
+          17
+        ]
+      },
+      "plano": [
+        "###################",
+        "###################",
+        "###################",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#.....kkkkkkk.....#",
+        "#.....kkkkkkk.....#",
+        "#.....kkkkkkk.....#",
+        "#.....kkkkkkk.....#",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#........E........#",
+        "###################"
+      ],
+      "muebles": [
+        "...................",
+        ".LLLLL..WW..WW..WW.",
+        ".bb...B....B....bb.",
+        ".bb...B....B.F..bb.",
+        ".bb.....OOOOO...bb.",
+        "........OOOOO......",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..sss.........sss..",
+        "..sss.........sss..",
+        ".Q...............Q.",
+        ".Q...............Q.",
+        "..................."
+      ],
+      "encima": [
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "........AA.........",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..................."
+      ],
+      "personas": [
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        ".........@.........",
+        "...................",
+        "....n..............",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..................."
+      ],
+      "entrenadores": [],
+      "npcs": [
+        {
+          "nombre": "Concejal",
+          "sprite": "npc_man",
+          "mira": "derecha",
+          "frases": [
+            "Latasa saluda desde este balcón cuando el Pucela sube a Primera. Últimamente saluda mucho, y también se despide mucho.",
+            "Si le ganas, te deja salir al balcón. Abrígate: fuera hay dos grados."
+          ]
+        }
+      ]
+    }
   },
   "malaga": {
     "lider": "banderas",

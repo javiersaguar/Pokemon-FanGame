@@ -14,7 +14,7 @@
 
 Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_2026-10-14.md)): **manda sobre los entrenadores que proponen las fichas de abajo.** Cada gimnasio son **cuatro mapas** (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider`), pintados por `maps/_pintura/pintar_gimnasios.gd` a partir de `maps/_pintura/gimnasios_salas.json`. Cada sala tiene tres tramos con un entrenador y un vigilante que tapa el paso hasta que le ganas (luego se aparta a un lado); así es obligatorio ganar a todos antes del líder. Quién hay en cada sala, con su lore, equipo y frases: [`guion.md` §8](guion.md).
 
-**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona**, **Valencia**, **Sevilla**, **Las Palmas** (sin la fachada) y **Bilbao**. Los demás siguen con el zigzag antiguo hasta que les toque.
+**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona**, **Valencia**, **Sevilla**, **Las Palmas** (sin la fachada), **Bilbao** y **Valladolid**. Los demás siguen con el zigzag antiguo hasta que les toque.
 
 | # | Se entra por | Entrenadores antes del líder |
 |---|---|---|
@@ -97,6 +97,8 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_20
 - **Premio:** la MT de Onda Certera (ya en el juego); y una txapela (objeto clave decorativo).
 
 ## 7 · Valladolid — Latasa (Hielo) · Medalla Pucela
+
+- **Por dentro (2026-10-15):** se entra por el ayuntamiento de la Plaza Mayor → **Soportales** (columnatas de piedra, escaparates y mesas: Borja, Jacobo y Pelayo) → **Salón de Plenos** (escaños, estrado, atril, banderas y lámparas de araña: Beltrán, Tristán y Óscar Puente) → **Palco del Zorrilla** (barandilla dorada y butacas de teatro: Rodrigo, Álvaro y Ronaldo Nazário) → **Balcón del Ayuntamiento** (ventanales, banderas, lámpara de araña y una estufa de butano). Latasa da la Medalla Pucela. Los vigilantes son conserjes.
 
 - **El interior:** la propia Plaza Mayor, de noche y helada (el gimnasio es al aire libre). **Reto:** el suelo de la plaza es hielo: patinas hasta chocar con una farola, un banco o un entrenador. Las tres estatuas te dicen qué columna de soportales lleva a Latasa.
 - **Entrenadores:** Álvaro (esquiador: Glalie y Piloswine), Sergio (opositor eterno: Cetitan y Arctibax) y Elena (montañera: Abomasnow y Avalugg).
