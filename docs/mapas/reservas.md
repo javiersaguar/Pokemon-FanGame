@@ -9,5 +9,3 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 | ruta_16/exterior, ruta_5/exterior, ruta_6/exterior, ruta_7/exterior, ruta_8/exterior | Agente 5 | 2026-10-15 | detalle de exterior al nivel de Añil (bosque, relieve, agua, adornos, objetos y entrenadores); sin repintar, se conservan puertas y conexiones |
 | Los 32 mapas de gimnasio (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider` de madrid, barcelona, valencia, sevilla, playa_del_ingles, bilbao, valladolid y malaga) | Agente 3 | 2026-10-15 | decoración temática, puzle y líder de cada gimnasio (`pintar_gimnasios.gd`) |
 | madrid/quiron y madrid/atico_ayuso | Agente 3 | 2026-10-15 | recorrido completo del gimnasio 1: Quirón → Casa de Correos → despacho → ático |
-| calle_victoria/* (nuevos), madrid/centro y madrid/palacio_real | Agente 4 | 2026-10-15 | Calle de la Victoria: el túnel largo bajo Sol y sus dos bocas (una pieza de boca de metro y su puerta en cada exterior, sin repintar) |
-| playa_del_ingles/exterior y vigo/exterior | Agente 4 | 2026-10-15 | el Falcon aparcado junto a los aeropuertos (una pieza nueva y un cartel, sin repintar ni tapar pasarelas) |
