@@ -468,6 +468,12 @@ Main `47ca2f19` incorporado; Móstoles y las pasarelas C-5 se conservan. **Prime
 
 ## Agente 4 — Arte del mundo y de los entrenadores
 
+### Agente 4 · Acceso, F9 y viajes (sesión del 2026-10-15)
+
+Worktree `pokemon-panchito-agente4`, rama `feat/agente4-acceso`. Área: acceso al mapa completo, menú F9 y mapa regional, Surf y viajes. Propiedad: `data/region.json`, `docs/mundo/mapa_region.svg`, `src/ui/playtest/`, `src/ui/region_map/`, `maps/_pintura/pintar_transportes.gd` y los mapas de transporte, eventos de viaje y de San Fermín, bordes entre mapas (`maps/_tools/conectar_borde.gd`), `docs/mundo/conexiones.md`, `docs/mundo/region.md` y los tests `test_map_robustness`, `test_urban_access`, `test_transportes` y `test_playtest_world_map`. No toco la intro, los menús de partida ni el generador del RandomLocke.
+
+**En curso:** bloque 1, el grafo del mundo desde los pueblos iniciales (Pozuelo y Orcasitas) y las salas huérfanas.
+
 **He leído** (2026-10-05) `docs/DIRECTRICES.md` (§0, §1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `docs/arte/recursos_terceros.md`, las 4 referencias de Añil, las comparativas, las respuestas 9 y 17 de Javier y mi lista de «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-arte`; autoría de Javier Saguar y `core.hooksPath .githooks` activos.
 
 **En qué estoy:** tareas 1–6 hechas y la 8 casi entera (faltan los protagonistas, que elige Javier). Presentados a Javier, en revisión: pueblo (19), ruta (20), Vendedor (21), rival y profesor (22), protagonistas (23), fondo de combate de hierba/bosque (24) y las clases (25 y 26). La tarea 7 (mapas reales del MVP) espera a que Javier apruebe el pueblo; el resto de fondos de combate, a que dé por bueno el camino del de hierba (24).
