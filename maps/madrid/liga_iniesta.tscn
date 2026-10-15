@@ -63,6 +63,7 @@ tile_set = ExtResource("4_xqujx")
 position = Vector2(272, 368)
 script = ExtResource("7_vtgjx")
 target_map = &"madrid/sala_palacio_real_23_30"
+target_spawn = &"desde_liga"
 arrival_facing = 1
 
 [node name="Siguiente" type="Node2D" parent="Warps" unique_id=772623253]

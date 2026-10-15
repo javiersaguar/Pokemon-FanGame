@@ -95,7 +95,7 @@ func _paint(room: Array, previous: String, first: bool, next: String, index: int
 	# Puerta de abajo: a la sala anterior (la primera, al interior del Palacio).
 	var door := Vector2i(8, ROOM.y - 1)
 	p.decor.erase_cell(door)
-	p.warp("Salida", door, StringName(previous), &"default" if first else &"desde_siguiente")
+	p.warp("Salida", door, StringName(previous), &"desde_liga" if first else &"desde_siguiente")
 	p.root.get_node(^"Warps/Salida").arrival_facing = Warp.Facing.DOWN
 	p.spawn("default", door + Vector2i.UP)
 	# Paso de arriba: a la sala siguiente.

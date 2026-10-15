@@ -3760,8 +3760,8 @@
     ["pedestal", 13, 1]
    ],
    "encima": [],
-   "apariciones": {"default": [11, 9]},
-   "pasos": []
+   "apariciones": {"default": [11, 9], "desde_liga": [11, 2]},
+   "pasos": [{"nodo": "Liga", "en": [11, 0], "destino": "madrid/liga_iniesta", "aparicion": "default"}]
   },
   "madrid/sala_palacio_real_23_54": {
    "tipo": "catedral",

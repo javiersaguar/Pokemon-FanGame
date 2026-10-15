@@ -196,3 +196,37 @@ func test_ningun_entrenador_repite_id_entre_archivos() -> void:
 		for id: String in JsonFile.read_dict("res://data/trainers/" + file):
 			assert_false(seen.has(id), "%s está en %s y en %s" % [id, seen.get(id, ""), file])
 			seen[id] = file
+
+
+func test_entrada_a_la_liga_exige_ocho_medallas_y_vuelve_al_palacio() -> void:
+	var saved_badges := GameState.badges.duplicate()
+	for count: int in [0, 7, 8]:
+		GameState.badges.clear()
+		for i: int in count:
+			GameState.badges.append(StringName("prueba_liga_%d" % i))
+		var prepared := MapLoader.prepare(&"madrid/sala_palacio_real_23_30")
+		assert_eq(prepared.error, OK)
+		var palace: MapRoot = prepared.map
+		var entrance := palace.get_node(^"Warps/Liga") as Warp
+		assert_eq(entrance.target_map, &"madrid/liga_iniesta")
+		var guard := palace.get_entities().get_node_or_null(^"Personaje_control_liga") as Node2D
+		assert_eq(guard != null, count < 8, "el control bloquea con %d medallas" % count)
+		if guard != null:
+			assert_eq(Grid.to_tile(guard.position), Grid.to_tile(entrance.position), "no se puede rodear al ujier")
+		var first := MapLoader.prepare(entrance.target_map)
+		assert_eq(first.error, OK)
+		var room: MapRoot = first.map
+		var arrival: Variant = MapLoader.spawn_tile(room, entrance.target_spawn)
+		assert_not_null(arrival)
+		if arrival != null:
+			assert_null(room.warp_at(arrival), "la llegada no devuelve al Palacio inmediatamente")
+		var exit := room.get_node(^"Warps/Salida") as Warp
+		assert_eq(exit.target_map, palace.get_map_id())
+		assert_eq(exit.target_spawn, &"desde_liga", "se regresa junto a la entrada de la Liga")
+		var back: Variant = MapLoader.spawn_tile(palace, exit.target_spawn)
+		assert_not_null(back)
+		if back != null:
+			assert_null(palace.warp_at(back), "el regreso no reentra en la Liga")
+		room.free()
+		palace.free()
+	GameState.badges.assign(saved_badges)

@@ -2,7 +2,7 @@
 
 > Lo genera `tests/mundo/test_cobertura_personajes.gd` (no se edita a mano). Para cada entrenador de `data/trainers/*.json`: sprite del mapa, retrato de combate y dónde sale. Las explicaciones de lo que falta están en `data/personajes_en_el_mapa.json` (`pendientes`, `por_evento`, `sprites_prestados` y `arte_sin_uso`). Los sitios de los famosos son **propuesta**: los decide Javier.
 
-**Resumen:** 350 entrenadores · 350 con sprite de mapa propio · 350 con retrato de combate propio · 345 colocados · 5 pendientes con motivo · 1 personajes sin combate.
+**Resumen:** 361 entrenadores · 361 con sprite de mapa propio · 361 con retrato de combate propio · 361 colocados · 0 pendientes con motivo · 1 personajes sin combate.
 
 - **atlas `id`**: el diseño propio del personaje (`data/character_art.json`): retrato de combate y dieciséis poses de mapa. Si la clase del entrenador es la del personaje, el atlas sale por la clase.
 - **hoja / retrato de la clase**: las piezas del pack 11 o el sprite del pack de su clase, con el nombre de la clase (los entrenadores genéricos de una misma clase comparten diseño, como en los juegos).
@@ -16,12 +16,12 @@
 | Dúo del Clan Ábalos | `abalos` | atlas `abalos` | atlas `abalos` | madrid/moncloa (27, 40) | Ferraz, la sede del Clan PSOE |
 | Dúo del Clan Ábalos | `abalos_albufera` | atlas `abalos` | atlas `abalos` | ruta_9/exterior (16, 27) | La Albufera (El Palmar), de «vacaciones»: segundo encuentro, con tres medallas (decisión de Javier) |
 | Dúo del Clan Ábalos | `abalos_soto` | atlas `abalos` | atlas `abalos` | soto_del_real/carcel (7, 4) | La cárcel de Soto del Real, más adelante: con seis medallas y después de la Albufera (decisión de Javier) |
-| Alto Mando Alonso | `alonso` | atlas `alonso` | atlas `alonso` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
+| Alto Mando Alonso | `alonso` | atlas `alonso` | atlas `alonso` | madrid/liga_alonso (8, 5) | Liga del Palacio Real, cuarta sala del Alto Mando |
 | Líder Aupa Athletic | `aupa_athletic` | atlas `aupa_athletic` | atlas `aupa_athletic` | sala: bilbao/gimnasio_lider, pintado: bilbao/gimnasio_lider |  |
 | Líder Ayuso | `ayuso` | atlas `ayuso` | atlas `ayuso` | madrid/atico_ayuso (8, 6), sala: madrid/gimnasio_lider | Líder del gimnasio 1: la terraza de su ático en Chamberí (se llega desde el hospital Quirón) |
 | Líder Banderas | `banderas` | atlas `banderas` | atlas `banderas` | sala: malaga/gimnasio_lider, pintado: malaga/gimnasio_lider |  |
-| Alto Mando Gasol | `gasol` | atlas `gasol` | atlas `gasol` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
-| Alto Mando Iniesta | `iniesta` | atlas `iniesta` | atlas `iniesta` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
+| Alto Mando Gasol | `gasol` | atlas `gasol` | atlas `gasol` | madrid/liga_gasol (8, 5) | Liga del Palacio Real, tercera sala del Alto Mando |
+| Alto Mando Iniesta | `iniesta` | atlas `iniesta` | atlas `iniesta` | madrid/liga_iniesta (8, 5) | Liga del Palacio Real, primera sala del Alto Mando (decisión de Javier: la Liga, en el Palacio Real) |
 | Líder Joaquín | `joaquin` | atlas `joaquin` | atlas `joaquin` | sala: sevilla/gimnasio_lider, pintado: sevilla/gimnasio_lider |  |
 | Dúo del Clan Koldo | `koldo` | atlas `koldo` | atlas `koldo` | madrid/moncloa (29, 39) | Ferraz, con Ábalos y sus cajas |
 | Dúo del Clan Koldo | `koldo_albufera` | atlas `koldo` | atlas `koldo` | ruta_9/exterior (16, 28) | La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier) |
@@ -30,8 +30,8 @@
 | Líder Laporta | `laporta` | atlas `laporta` | atlas `laporta` | sala: barcelona/gimnasio_lider, pintado: barcelona/gimnasio_lider |  |
 | Líder Latasa | `latasa` | atlas `latasa` | atlas `latasa` | sala: valladolid/gimnasio_lider, pintado: valladolid/gimnasio_lider |  |
 | Fontanera del Clan Leire | `leire_diez` | atlas `leire_diez` | atlas `leire_diez` | madrid/retiro (13, 58) | Atocha, bajando a las cloacas |
-| Alto Mando Nadal | `nadal` | atlas `nadal` | atlas `nadal` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
-| Líder Supremo Pedro Sánchez | `pedro_sanchez` | atlas `pedro_sanchez` | atlas `pedro_sanchez` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
+| Alto Mando Nadal | `nadal` | atlas `nadal` | atlas `nadal` | madrid/liga_nadal (8, 5) | Liga del Palacio Real, segunda sala del Alto Mando |
+| Líder Supremo Pedro Sánchez | `pedro_sanchez` | atlas `pedro_sanchez` | atlas `pedro_sanchez` | madrid/liga_sanchez (8, 5) | Liga del Palacio Real, el Salón de Columnas: el Líder Supremo, al final (decisión de Javier) |
 | Líder Quevedo | `quevedo` | atlas `quevedo` | atlas `quevedo` | sala: playa_del_ingles/gimnasio_lider, pintado: playa_del_ingles/gimnasio_lider |  |
 | Recluta del Clan Recluta | `recluta_clan` | hoja de la clase | retrato de la clase | madrid/moncloa (17, 15) | A las puertas de Moncloa |
 
@@ -261,6 +261,15 @@
 | Nadador Ane | `bilbao_remera` | hoja de la clase | retrato de la clase | pintado: bilbao/exterior |  |
 | Tertuliano de bar Patxi | `bilbao_txikitero` | hoja de la clase | retrato de la clase | pintado: bilbao/exterior |  |
 
+## `calle_victoria.json`
+
+| Entrenador | Id | Mapa | Combate | Dónde | Nota |
+|---|---|---|---|---|---|
+| Mantero Moussa | `victoria_mantero` | hoja de la clase | retrato de la clase | pintado: calle_victoria/tunel |  |
+| Perroflauta Iker | `victoria_perroflauta` | hoja de la clase | retrato de la clase | pintado: calle_victoria/tunel |  |
+| Raver Nerea | `victoria_raver` | hoja de la clase | retrato de la clase | pintado: calle_victoria/tunel |  |
+| Revisor del Cercanías Óscar | `victoria_revisor` | hoja de la clase | retrato de la clase | pintado: calle_victoria/tunel |  |
+
 ## `casa_de_campo.json`
 
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
@@ -462,6 +471,8 @@
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
 | Nadador Iria | `ruta16_nadadora` | hoja de la clase | retrato de la clase | pintado: ruta_16/exterior |  |
+| Ornitóloga Antía | `ruta16_ornitologa` | hoja de la clase | retrato de la clase | pintado: ruta_16/exterior |  |
+| Pescador Xoán | `ruta16_percebeiro` | hoja de la clase | retrato de la clase | pintado: ruta_16/exterior |  |
 | Regatista Roi | `ruta16_regatista` | hoja de la clase | retrato de la clase | pintado: ruta_16/exterior |  |
 
 ## `ruta_17.json`
@@ -563,20 +574,24 @@
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
 | Estudiante de Ingeniería en exámenes Álex | `ruta5_estudiante` | hoja de la clase | retrato de la clase | pintado: ruta_5/exterior |  |
+| Crossfitero Rubén | `ruta5_mozo` | hoja de la clase | retrato de la clase | pintado: ruta_5/exterior |  |
 | Opositor eterno Nuria | `ruta5_opositora` | hoja de la clase | retrato de la clase | pintado: ruta_5/exterior |  |
 | Repartidor en bici Wilmer | `ruta5_repartidor` | hoja de la clase | retrato de la clase | pintado: ruta_5/exterior |  |
+| Tuno Ignacio | `ruta5_tuno` | hoja de la clase | retrato de la clase | pintado: ruta_5/exterior |  |
 
 ## `ruta_6.json`
 
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
 | Jubilado mirando obras Anselmo | `ruta6_jubilado` | hoja de la clase | retrato de la clase | pintado: ruta_6/exterior |  |
+| Ornitóloga Paloma | `ruta6_ornitologa` | hoja de la clase | retrato de la clase | pintado: ruta_6/exterior |  |
 | Pastor Cirilo | `ruta6_pastor` | hoja de la clase | retrato de la clase | pintado: ruta_6/exterior |  |
 
 ## `ruta_7.json`
 
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
+| Pastor Joaquín | `ruta7_pastor` | hoja de la clase | retrato de la clase | pintado: ruta_7/exterior |  |
 | Raver Kike | `ruta7_raver` | hoja de la clase | retrato de la clase | pintado: ruta_7/exterior |  |
 | Raver Vane | `ruta7_raver_f` | hoja de la clase | retrato de la clase | pintado: ruta_7/exterior |  |
 
@@ -584,6 +599,7 @@
 
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
+| Montañera Montse | `ruta8_escaladora` | hoja de la clase | retrato de la clase | pintado: ruta_8/exterior |  |
 | Flautista Oriol | `ruta8_flautista` | hoja de la clase | retrato de la clase | pintado: ruta_8/exterior |  |
 | Montañera Laia | `ruta8_laia` | hoja de la clase | retrato de la clase | pintado: ruta_8/exterior |  |
 

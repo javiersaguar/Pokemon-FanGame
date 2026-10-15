@@ -2405,6 +2405,29 @@
     "Y sin las ocho medallas, el Alto Mando no recibe a nadie."
    ],
    "lugar": "Liga del Palacio Real: tapa el paso de la sala de Alonso hasta que le ganas"
+  },
+  {
+   "id": "control_liga",
+   "nombre": "Ujier de la Liga",
+   "mapa": "madrid/sala_palacio_real_23_30",
+   "sprite": "npc_man",
+   "cerca": [
+    11,
+    0
+   ],
+   "casilla": [
+    11,
+    0
+   ],
+   "mira": "abajo",
+   "bloquea_pasarela": true,
+   "hasta": {
+    "medallas": 8
+   },
+   "frases": [
+    "La Liga recibe a quienes traen las ocho medallas. Cuando las tengas, podrás subir."
+   ],
+   "lugar": "Palacio Real: control de entrada a la Liga; se retira con las ocho medallas."
   }
  ],
  "pendientes": [],

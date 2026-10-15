@@ -1,0 +1,253 @@
+{
+	"godot": "4.7.2-stable (official)",
+	"maps": [
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "madrid/retiro",
+					"walkable_edge_tiles": 14
+				},
+				{
+					"edge": "east",
+					"target": "ruta_6/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 7,
+			"edge_paths": [
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 2,
+					"reachable": true,
+					"to": "ruta_6/exterior"
+				},
+				{
+					"from": "ruta_6/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 2,
+					"reachable": true,
+					"to": "madrid/retiro"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					38,
+					7
+				],
+				"side": 8
+			},
+			"linked_doors": 7,
+			"map": "ruta_5/exterior",
+			"scene_sha256": "8176ceea957a27dc670007f13847d1b7f865b545c2e5b6d640f9ebf19a14053d",
+			"size": [
+				72,
+				32
+			],
+			"walkable": 1332,
+			"walkable_encounter_tiles": 286,
+			"walkable_percent": 57.8
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_5/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "zaragoza/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 7,
+			"edge_paths": [
+				{
+					"from": "ruta_5/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 4,
+					"reachable": true,
+					"to": "zaragoza/exterior"
+				},
+				{
+					"from": "zaragoza/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 4,
+					"reachable": true,
+					"to": "ruta_5/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					64,
+					16
+				],
+				"side": 8
+			},
+			"linked_doors": 7,
+			"map": "ruta_6/exterior",
+			"scene_sha256": "df43955ccf2248e458d0f62e541e864ad7fc59427845699d82551a5c7b204f8f",
+			"size": [
+				72,
+				34
+			],
+			"walkable": 1761,
+			"walkable_encounter_tiles": 400,
+			"walkable_percent": 71.9
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "zaragoza/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "ruta_8/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 0,
+			"edge_paths": [
+				{
+					"from": "zaragoza/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 3,
+					"reachable": true,
+					"to": "ruta_8/exterior"
+				},
+				{
+					"from": "ruta_8/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 3,
+					"reachable": true,
+					"to": "zaragoza/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					4,
+					10
+				],
+				"side": 9
+			},
+			"linked_doors": 0,
+			"map": "ruta_7/exterior",
+			"scene_sha256": "938d74e0c8e88e538d82a0b526ffb07f0b0a642555653ed026f52994a08a29e6",
+			"size": [
+				72,
+				34
+			],
+			"walkable": 1966,
+			"walkable_encounter_tiles": 386,
+			"walkable_percent": 80.3
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_7/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "barcelona/les_corts",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 5,
+			"edge_paths": [
+				{
+					"from": "ruta_7/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 2,
+					"reachable": true,
+					"to": "barcelona/les_corts"
+				},
+				{
+					"from": "barcelona/les_corts",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 2,
+					"reachable": true,
+					"to": "ruta_7/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					9,
+					13
+				],
+				"side": 7
+			},
+			"linked_doors": 5,
+			"map": "ruta_8/exterior",
+			"scene_sha256": "d4b68ab3f79a73e1f0a0bc02c50f7962f5acc95b23b6e90a707efa7eff7c0ea2",
+			"size": [
+				72,
+				40
+			],
+			"walkable": 1642,
+			"walkable_encounter_tiles": 412,
+			"walkable_percent": 57.0
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "vigo/exterior",
+					"walkable_edge_tiles": 6
+				},
+				{
+					"edge": "north",
+					"target": "ruta_17/exterior",
+					"walkable_edge_tiles": 6
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 2,
+			"edge_paths": [
+				{
+					"from": "vigo/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 3,
+					"reachable": true,
+					"to": "ruta_17/exterior"
+				},
+				{
+					"from": "ruta_17/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 3,
+					"reachable": true,
+					"to": "vigo/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					17,
+					22
+				],
+				"side": 7
+			},
+			"linked_doors": 2,
+			"map": "ruta_16/exterior",
+			"scene_sha256": "99a47398b8d38d585add4aa065aeea439bb913c19917b5adb068f1c23fee935d",
+			"size": [
+				36,
+				52
+			],
+			"walkable": 979,
+			"walkable_encounter_tiles": 213,
+			"walkable_percent": 52.3
+		}
+	],
+	"mask": 11,
+	"metodo": "Física a pie con MapLoader y estado inicial (incluye colocaciones y restricciones dinámicas disponibles). Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; las casillas de Warp se excluyen para no abandonar el mapa.",
+	"revision": "a5e2f34590bd66d449f8245f7b8ca62f54787127"
+}

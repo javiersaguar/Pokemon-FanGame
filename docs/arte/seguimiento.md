@@ -538,3 +538,10 @@ Exteriores rehechos sin repintarlos con `maps/_tools/vestir_exterior.gd` y una r
 | Ruta 6 · Medinaceli y Calatayud | [antes](comparativas/ruta_6_antes.png) | [después](comparativas/ruta_6_despues.png) | [paso](comparativas/ruta_6_512.png) | 4 (antes 0) | Calle empedrada, fuente y banco en Medinaceli, pinar de Soria, muela con escalera, descampado de hierba en Calatayud, campos arados, chopos y camino del Jalón; 1 entrenadora, 1 vecino y 3 objetos | Provisional, pendiente de Javier |
 | Ruta 7 · Los Monegros | [antes](comparativas/ruta_7_antes.png) | [después](comparativas/ruta_7_despues.png) | [paso](comparativas/ruta_7_512.png) | 3 (antes 0) | Laguna de Sariñena con juncos, cerros y mesas de yeso (con escalera los visitables), matorral obligado entre dos mesas, roquedo y madera seca, público, luces y barra del festival; 1 entrenador, 3 vecinos y 3 objetos | Provisional, pendiente de Javier |
 | Ruta 8 · Montserrat | [antes](comparativas/ruta_8_antes.png) | [después](comparativas/ruta_8_despues.png) | [paso](comparativas/ruta_8_512.png) | 2 (antes 0) | Pinar y roquedo en las laderas, meseta con hierba alta, explanada con cipreses, flores y bancos, collado de hierba al este del macizo, bordillos, viñas del Bages, frutales; 1 entrenadora, 1 vecina y 3 objetos | Provisional, pendiente de Javier |
+
+## Recuperación del cierre del 15 de octubre
+
+| Recurso | Área | Responsable | Estado | Procedencia | Aprobación Javier | Comparativa |
+|---|---|---|---|---|---|---|
+| 59 interiores de Sevilla | Mapa | Agente 1, cierre de sesión | recuperados, provisionales | Akizakura16 | ⏳ | [Antes/después](comparativas/interiores_2026-10-15.md#sevilla--cierre-del-trabajo-interrumpido) |
+| Entrada del Palacio y cinco salas de Liga | Mapa | Agente 2, cierre de sesión | conexión cerrada, provisional | Tileset de interiores | ⏳ | [Comparativa](comparativas/cierre_2026-10-15.md) |

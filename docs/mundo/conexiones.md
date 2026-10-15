@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **942 mapas** en total. Se llega a **942** desde Pozuelo de Alarcón (`pozuelo/exterior`: 942) y Orcasitas (`orcasitas/exterior`: 942).
+- **952 mapas** en total. Se llega a **952** desde Pozuelo de Alarcón (`pozuelo/exterior`: 952) y Orcasitas (`orcasitas/exterior`: 952).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -403,6 +403,11 @@ Ninguna: todos los destinos existen.
 | `madrid/gimnasio_lider` | Real Casa De Correos · Despacho De La Presidenta | — | Salida → `madrid/gimnasio_3`, evento gym1_ayuso_event → `madrid/atico_ayuso` |
 | `madrid/hospital` | Hospital · Madrid | — | Salida → `madrid/moncloa` |
 | `madrid/laboratorio` | Laboratorio del profesor Unicoos | — | Salida → `madrid/moncloa` |
+| `madrid/liga_alonso` | Liga Pokémon · Sala de Alonso | — | Salida → `madrid/liga_gasol`, Siguiente → `madrid/liga_sanchez` |
+| `madrid/liga_gasol` | Liga Pokémon · Sala de Gasol | — | Salida → `madrid/liga_nadal`, Siguiente → `madrid/liga_alonso` |
+| `madrid/liga_iniesta` | Liga Pokémon · Sala de Iniesta | — | Salida → `madrid/sala_palacio_real_23_30`, Siguiente → `madrid/liga_nadal` |
+| `madrid/liga_nadal` | Liga Pokémon · Sala de Nadal | — | Salida → `madrid/liga_iniesta`, Siguiente → `madrid/liga_gasol` |
+| `madrid/liga_sanchez` | Liga Pokémon · Salón de Columnas | — | Salida → `madrid/liga_alonso` |
 | `madrid/mercadona` | Mercadona · Madrid | — | Salida → `madrid/moncloa` |
 | `madrid/moncloa` | Madrid · Moncloa | east → `madrid/chamberi`, south → `casa_de_campo/exterior`, east → `madrid/centro`, west → `ruta_4/exterior` | Hospital → `madrid/hospital`, Mercadona → `madrid/mercadona`, Estanco → `madrid/estanco`, Sala7_41 → `madrid/sala_moncloa_7_41`, Sala23_37 → `madrid/sala_moncloa_23_37`, Sala23_49 → `madrid/sala_moncloa_23_49`, Sala40_16 → `madrid/laboratorio`, Sala47_17 → `madrid/sala_moncloa_47_17`, Sala56_17 → `madrid/sala_moncloa_56_17`, Sala58_29 → `madrid/quiron`, Sala39_39 → `madrid/sala_moncloa_39_39`, Sala59_39 → `madrid/sala_moncloa_59_39`, Sala34_38 → `madrid/sala_moncloa_34_38`, Sala32_49 → `madrid/sala_moncloa_32_49`, Sala38_49 → `madrid/sala_moncloa_38_49`, Sala29_32 → `madrid/sala_moncloa_29_32` |
 | `madrid/palacio_real` | Madrid · Palacio Real | east → `madrid/centro` | Sala23_30 → `madrid/sala_palacio_real_23_30`, Sala23_54 → `madrid/sala_palacio_real_23_54`, Sala59_25 → `madrid/sala_palacio_real_59_25`, Sala46_11 → `madrid/sala_palacio_real_46_11`, Sala54_11 → `madrid/sala_palacio_real_54_11`, BocaVictoria → `calle_victoria/tunel` |
@@ -476,7 +481,7 @@ Ninguna: todos los destinos existen.
 | `madrid/sala_moncloa_59_39` | Piso de los residentes de Medicina, Madrid | — | Salida → `madrid/moncloa` |
 | `madrid/sala_moncloa_7_41` | Templo de Debod, pronaos, Madrid | — | Salida → `madrid/moncloa`, Naos → `madrid/sala_moncloa_7_41_naos` |
 | `madrid/sala_moncloa_7_41_naos` | Templo de Debod, naos, Madrid | — | Salida → `madrid/sala_moncloa_7_41` |
-| `madrid/sala_palacio_real_23_30` | Palacio Real, escalera de honor, Madrid | — | Salida → `madrid/palacio_real` |
+| `madrid/sala_palacio_real_23_30` | Palacio Real, escalera de honor, Madrid | — | Salida → `madrid/palacio_real`, Liga → `madrid/liga_iniesta` |
 | `madrid/sala_palacio_real_23_54` | Catedral de la Almudena, Madrid | — | Salida → `madrid/palacio_real`, Cripta → `madrid/sala_palacio_real_23_54_cripta` |
 | `madrid/sala_palacio_real_23_54_cripta` | Cripta de la Almudena, Madrid | — | Salida → `madrid/sala_palacio_real_23_54` |
 | `madrid/sala_palacio_real_46_11` | Portal de la calle de Bailén, Madrid | — | Salida → `madrid/palacio_real` |
@@ -890,63 +895,65 @@ Ninguna: todos los destinos existen.
 | `sevilla/maria_luisa` | Sevilla · Plaza de España | north → `sevilla/centro` | — |
 | `sevilla/mercadona` | Mercadona · Sevilla | — | Salida → `sevilla/centro` |
 | `sevilla/rio` | Sevilla · Río y Triana | east → `sevilla/centro`, west → `ruta_14/exterior` | Sala44_14 → `sevilla/sala_rio_44_14`, Sala37_45 → `sevilla/sala_rio_37_45`, Sala51_12 → `sevilla/sala_rio_51_12`, Sala46_34 → `sevilla/sala_rio_46_34`, Sala52_46 → `sevilla/sala_rio_52_46`, Sala45_54 → `sevilla/sala_rio_45_54`, Sala50_23 → `sevilla/sala_rio_50_23`, Sala40_23 → `sevilla/sala_rio_40_23`, Sala45_23 → `sevilla/sala_rio_45_23`, Sala39_5 → `sevilla/sala_rio_39_5`, Sala45_6 → `sevilla/sala_rio_45_6`, Sala9_31 → `sevilla/gimnasio_1`, Sala15_15 → `sevilla/sala_rio_15_15`, Sala5_16 → `sevilla/sala_rio_5_16`, Sala3_6 → `sevilla/sala_rio_3_6`, Sala8_6 → `sevilla/sala_rio_8_6`, Sala13_6 → `sevilla/sala_rio_13_6`, Sala18_6 → `sevilla/sala_rio_18_6`, Sala3_44 → `sevilla/sala_rio_3_44`, Sala8_44 → `sevilla/sala_rio_8_44`, Sala13_44 → `sevilla/sala_rio_13_44`, Sala18_44 → `sevilla/sala_rio_18_44`, Sala3_52 → `sevilla/sala_rio_3_52`, Sala13_52 → `sevilla/sala_rio_13_52`, Sala17_37 → `sevilla/sala_rio_17_37`, Sala8_52 → `sevilla/sala_rio_8_52`, Sala18_52 → `sevilla/sala_rio_18_52`, Sala3_37 → `sevilla/sala_rio_3_37`, Sala18_22 → `sevilla/sala_rio_18_22` |
-| `sevilla/sala_centro_10_41` | Casa rosa · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_10_53` | Casa de tejado azul · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_10_7` | Casa de teja · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_21_6` | Casa rosa · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_22_40` | Catedral Sevilla · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_24_51` | Puerta Leon · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_27_6` | Casa gris · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_28_21` | Tienda naranja · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_33_47` | Oficinas · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_37_33` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_37_39` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_38_19` | Casa de la chimenea · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_3_40` | Casa de teja · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_3_53` | Portal · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_3_8` | Portal · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_42_33` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_43_39` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_43_8` | Oficinas · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_44_19` | Granero · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_45_49` | Casa roja pequeña · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_47_33` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_49_39` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_50_20` | Portal · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_53_6` | Portal verde · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_54_36` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_56_19` | Casa de madera · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_59_11` | Edificio Cupula · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_59_33` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_59_42` | Casa ibicenca · Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_rio_13_44` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_13_52` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_13_6` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_15_15` | Puesto · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_17_37` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_18_22` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_18_44` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_18_52` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_18_6` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_37_45` | Torre · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_39_5` | Casa de la chimenea · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_3_37` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_3_44` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_3_52` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_3_6` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_40_23` | Granero · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_44_14` | Maestranza · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_45_23` | Casa de madera · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_45_54` | Teatro Real · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_45_6` | Casa de teja · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_46_34` | Oficinas · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_50_23` | Casa de dos aguas · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_51_12` | Casa de teja · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_52_46` | Portal · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_5_16` | Floristería · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_8_44` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_8_52` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
-| `sevilla/sala_rio_8_6` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_centro_10_41` | Casa de la abuela rociera, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_10_53` | Casa del guía turístico, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_10_7` | Casa de vecinos con patio, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_21_6` | Casa de la costurera de trajes de flamenca, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_22_40` | Catedral de Sevilla, Sevilla | — | Salida → `sevilla/centro`, Naranjos → `sevilla/sala_centro_22_40_naranjos` |
+| `sevilla/sala_centro_22_40_naranjos` | Patio de los Naranjos, Sevilla | — | Salida → `sevilla/sala_centro_22_40` |
+| `sevilla/sala_centro_24_51` | Real Alcázar, apeadero, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_27_6` | Casa del capataz de costaleros, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_28_21` | Bar de tapas de la Alfalfa, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_33_47` | Archivo General de Indias, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_37_33` | Pensión del Barrio de Santa Cruz, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_37_39` | Apartamento turístico de Santa Cruz, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_38_19` | Casa del aficionado del Betis, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_3_40` | Casa del aceitunero jubilado, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_3_53` | Portal de la avenida de la Constitución, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_3_8` | Portal de la Alameda de Hércules, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_42_33` | Casa de la señora de los geranios, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_43_39` | Casa de la beata de Santa Cruz, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_43_8` | Casa hermandad, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_44_19` | Casa del aficionado del Sevilla, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_45_49` | Quiosco de pipas de la Puerta de Jerez, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_47_33` | Azulejos y cerámica de Santa Cruz, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_49_39` | Confitería de yemas y polvorones, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_50_20` | Piso de Erasmus en la Alfalfa, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_53_6` | Piso con ventilador de la Macarena, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_54_36` | Casa del guitarrista, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_56_19` | Abanicos de la calle Sierpes, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_59_11` | Estación de autobuses de Plaza de Armas, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_59_33` | Tablao flamenco de Santa Cruz, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_59_42` | Taberna de los caracoles, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_rio_13_44` | Casa del vendedor de altramuces, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_13_52` | Trajes de flamenca de Triana, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_13_6` | Freiduría de pescaíto de Triana, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_15_15` | Puesto del mercado de Triana, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_17_37` | Academia de baile flamenco, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_18_22` | Terraza de la calle Betis, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_18_44` | Peluquería de la Feria, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_18_52` | Casa de los recién llegados de Madrid, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_18_6` | Casa del barquero del Guadalquivir, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_37_45` | Torre del Oro, museo naval, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_39_5` | Casa de la ceramista de Triana, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_3_37` | Corral de vecinos de Triana, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_3_44` | Casa del remero del Guadalquivir, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_3_52` | Casa del técnico de aires acondicionados, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_3_6` | Casa del alfarero, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_40_23` | Casa del cofrade de la Esperanza de Triana, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_44_14` | Real Maestranza, museo y tendido, Sevilla | — | Salida → `sevilla/rio`, Callejon → `sevilla/sala_rio_44_14_callejon` |
+| `sevilla/sala_rio_44_14_callejon` | Real Maestranza, el callejón, Sevilla | — | Salida → `sevilla/sala_rio_44_14` |
+| `sevilla/sala_rio_45_23` | Casa de la flamenca joven, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_45_54` | Teatro de la Maestranza, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_45_6` | Casa del torero retirado, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_46_34` | Oficina olvidada de la Expo 92, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_50_23` | Casa del guardia civil jubilado, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_51_12` | Casa del mozo de espadas, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_52_46` | Portal del barrio del Arenal, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_5_16` | Floristería de la calle Pureza, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_8_44` | Peña bética de Triana, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_8_52` | Casa de la saetera, Sevilla | — | Salida → `sevilla/rio` |
+| `sevilla/sala_rio_8_6` | Casa de la cantaora, Sevilla | — | Salida → `sevilla/rio` |
 | `soto_del_real/carcel` | Centro Penitenciario Madrid V · Soto del Real | — | Salida → `soto_del_real/exterior` |
 | `soto_del_real/exterior` | Soto del Real · Cárcel | south → `madrid/bernabeu` | Carcel → `soto_del_real/carcel` |
 | `transporte/ave_madrid_malaga` | AVE Madrid · Málaga | — | Bajar → `malaga/sala_calle_5_57` |
@@ -975,39 +982,42 @@ Ninguna: todos los destinos existen.
 | `valencia/malvarrosa/hospital` | Hospital · Malvarrosa | — | Salida → `valencia/malvarrosa` |
 | `valencia/malvarrosa/mercadona` | Mercadona · Malvarrosa | — | Salida → `valencia/malvarrosa` |
 | `valencia/mercadona` | Mercadona · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_10_9` | Casa de dos aguas · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_12_53` | Oficinas · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_15_9` | Casa de madera · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_21_16` | Casa gris · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_22_37` | Puesto · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_27_52` | Oficinas · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_31_27` | Micalet Catedral · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_35_36` | Casa gris · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_41_25` | Casa roja pequeña · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_47_51` | Portal verde · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_49_8` | Portal verde · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_4_10` | Portal · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_4_53` | Portal · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_57_53` | Portal · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_58_10` | Portal · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_58_38` | Portal · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_9_24` | Lonja Seda · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_ciutat_vella_9_38` | Mercado Central · Valencia | — | Salida → `valencia/ciutat_vella` |
-| `valencia/sala_malvarrosa_13_8` | Casa de la chimenea · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_14_35` | Oficinas · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_21_22` | Tienda azul · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_22_35` | Portal · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_23_45` | Casa roja pequeña · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_27_22` | Portal · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_27_44` | Casa gris · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_30_35` | Oficinas · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_3_21` | Granero · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_3_44` | Casa gris · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_3_8` | Casa de dos aguas · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_49_11` | Torre de socorro · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_5_35` | Portal verde · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_8_21` | Casa de dos aguas · Valencia | — | Salida → `valencia/malvarrosa` |
-| `valencia/sala_malvarrosa_8_8` | Casa de madera · Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_ciutat_vella_10_9` | Casa de la paellera del barrio del Carmen, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_12_53` | Agencia de viajes a Gandía, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_15_9` | Casa del pirotécnico, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_21_16` | Casa del regante del Tribunal de las Aguas, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_22_37` | Horchatería de Santa Catalina, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_27_52` | Oficina de la Ciudad de las Artes, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_31_27` | Catedral de Valencia, Valencia | — | Salida → `valencia/ciutat_vella`, Campanas → `valencia/sala_ciutat_vella_31_27_campanas` |
+| `valencia/sala_ciutat_vella_31_27_campanas` | Micalet, cuerpo de campanas, Valencia | — | Salida → `valencia/sala_ciutat_vella_31_27` |
+| `valencia/sala_ciutat_vella_35_36` | Casa de la familia de la mascletà, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_41_25` | Bar del esmorzaret, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_47_51` | Piso del Ruzafa moderno, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_49_8` | Piso del fallero mayor, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_4_10` | Portal de la calle Caballeros, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_4_53` | Portal de la calle Colón, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_57_53` | Piso del concejal de fiestas, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_58_10` | Piso del jubilado de la Ruta del Bakalao, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_58_38` | Piso del aficionado del Valencia, Valencia | — | Salida → `valencia/ciutat_vella` |
+| `valencia/sala_ciutat_vella_9_24` | Lonja de la Seda, salón columnario, Valencia | — | Salida → `valencia/ciutat_vella`, Consulado → `valencia/sala_ciutat_vella_9_24_consulado` |
+| `valencia/sala_ciutat_vella_9_24_consulado` | Lonja de la Seda, sala del Consulado del Mar, Valencia | — | Salida → `valencia/sala_ciutat_vella_9_24` |
+| `valencia/sala_ciutat_vella_9_38` | Mercado Central, la nave, Valencia | — | Salida → `valencia/ciutat_vella`, Pescaderia → `valencia/sala_ciutat_vella_9_38_pescaderia` |
+| `valencia/sala_ciutat_vella_9_38_pescaderia` | Mercado Central, la pescadería, Valencia | — | Salida → `valencia/sala_ciutat_vella_9_38` |
+| `valencia/sala_malvarrosa_13_8` | Casa del monitor de vela, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_14_35` | Oficina del puerto deportivo, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_21_22` | Tienda de alquiler de bicis y paddle surf, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_22_35` | Piso de las vecinas de toda la vida, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_23_45` | Arrocería del paseo marítimo, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_27_22` | Portal del edificio de la playa, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_27_44` | Casa de la cantante de rumba, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_30_35` | Oficina del club de fútbol playa, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_3_21` | Casa de la paella de los domingos, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_3_44` | Casa del huertano de Alboraya, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_3_8` | Casa de pescadores del Cabanyal, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_49_11` | Socorrismo de la Malvarrosa, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_5_35` | Piso de los surfistas, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_8_21` | Casa del concursante de la tele, Valencia | — | Salida → `valencia/malvarrosa` |
+| `valencia/sala_malvarrosa_8_8` | Casa de la escritora del paseo, Valencia | — | Salida → `valencia/malvarrosa` |
 | `valencia/turia` | Valencia · Jardín del Turia | south → `valencia/ciutat_vella`, east → `valencia/malvarrosa`, south → `ruta_9/exterior` | — |
 | `valladolid/casa_1` | Casa roja · Valladolid | — | Salida → `valladolid/exterior` |
 | `valladolid/casa_2` | Casa de madera · Valladolid | — | Salida → `valladolid/exterior` |
