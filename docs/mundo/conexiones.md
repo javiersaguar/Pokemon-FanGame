@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **912 mapas** en total. Se llega a **912** desde Pozuelo de Alarcón (`pozuelo/exterior`: 912) y Orcasitas (`orcasitas/exterior`: 912).
+- **914 mapas** en total. Se llega a **914** desde Pozuelo de Alarcón (`pozuelo/exterior`: 914) y Orcasitas (`orcasitas/exterior`: 914).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -109,6 +109,8 @@ Camino desde Pozuelo de Alarcón la primera vez (sin el AVE, que solo lleva a de
 | AVE Madrid–Valladolid · AVE Valladolid · Madrid | `transporte/ave_valladolid_madrid` | tras visitar el destino (AVE) | — | — |
 | AVE Madrid–Málaga · AVE Madrid · Málaga | `transporte/ave_madrid_malaga` | tras visitar el destino (AVE) | — | — |
 | AVE Madrid–Málaga · AVE Málaga · Madrid | `transporte/ave_malaga_madrid` | tras visitar el destino (AVE) | — | — |
+| AVE Madrid–San Miguel de Bernuy · AVE Madrid · San Miguel de Bernuy | `transporte/ave_madrid_san_miguel` | tras visitar el destino (AVE) | — | — |
+| AVE Madrid–San Miguel de Bernuy · AVE San Miguel de Bernuy · Madrid | `transporte/ave_san_miguel_madrid` | tras visitar el destino (AVE) | — | — |
 
 ## Cortes por medallas
 
@@ -457,7 +459,7 @@ Ninguna: todos los destinos existen.
 | `madrid/sala_palacio_real_46_11` | Portal · Madrid | — | Salida → `madrid/palacio_real` |
 | `madrid/sala_palacio_real_54_11` | Oficinas · Madrid | — | Salida → `madrid/palacio_real` |
 | `madrid/sala_palacio_real_59_25` | Teatro Real · Madrid | — | Salida → `madrid/palacio_real` |
-| `madrid/sala_retiro_20_58` | Estación de Atocha | — | Anden1 → `transporte/ave_madrid_valladolid`, Anden2 → `transporte/ave_madrid_malaga`, Salida → `madrid/retiro` |
+| `madrid/sala_retiro_20_58` | Estación de Atocha | — | Anden1 → `transporte/ave_madrid_valladolid`, Anden2 → `transporte/ave_madrid_malaga`, Anden3 → `transporte/ave_madrid_san_miguel`, Salida → `madrid/retiro` |
 | `madrid/sala_retiro_23_31` | Oficinas · Madrid | — | Salida → `madrid/retiro` |
 | `madrid/sala_retiro_23_44` | Museo Prado · Madrid | — | Salida → `madrid/retiro` |
 | `madrid/sala_retiro_28_13` | Palacio Cibeles · Madrid | — | Salida → `madrid/retiro` |
@@ -627,7 +629,7 @@ Ninguna: todos los destinos existen.
 | `pueblo_inicial/sala_calle_25_29` | Casa azul pequeña · Pueblo | — | Salida → `pueblo_inicial/exterior` |
 | `pueblo_inicial/sala_calle_25_39` | Casa de madera · Pueblo | — | Salida → `pueblo_inicial/exterior` |
 | `pueblo_inicial/sala_calle_26_48` | Ermita Virgen Del Rio · Pueblo | — | Salida → `pueblo_inicial/exterior` |
-| `pueblo_inicial/sala_calle_30_21` | Edificio Cupula · Pueblo | — | Salida → `pueblo_inicial/exterior` |
+| `pueblo_inicial/sala_calle_30_21` | Apeadero de San Miguel de Bernuy | — | Anden1 → `transporte/ave_san_miguel_madrid`, Salida → `pueblo_inicial/exterior` |
 | `pueblo_inicial/sala_calle_30_39` | Casa de dos aguas · Pueblo | — | Salida → `pueblo_inicial/exterior` |
 | `pueblo_inicial/sala_calle_31_29` | Casa de dos aguas · Pueblo | — | Salida → `pueblo_inicial/exterior` |
 | `pueblo_inicial/sala_calle_36_14` | Casa de la chimenea · Pueblo | — | Salida → `pueblo_inicial/exterior` |
@@ -920,8 +922,10 @@ Ninguna: todos los destinos existen.
 | `soto_del_real/carcel` | Centro Penitenciario Madrid V · Soto del Real | — | Salida → `soto_del_real/exterior` |
 | `soto_del_real/exterior` | Soto del Real · Cárcel | south → `madrid/bernabeu` | Carcel → `soto_del_real/carcel` |
 | `transporte/ave_madrid_malaga` | AVE Madrid · Málaga | — | Bajar → `malaga/sala_calle_5_57` |
+| `transporte/ave_madrid_san_miguel` | AVE Madrid · San Miguel de Bernuy | — | Bajar → `pueblo_inicial/sala_calle_30_21` |
 | `transporte/ave_madrid_valladolid` | AVE Madrid · Valladolid | — | Bajar → `valladolid/sala_calle_52_59` |
 | `transporte/ave_malaga_madrid` | AVE Málaga · Madrid | — | Bajar → `madrid/sala_retiro_20_58` |
+| `transporte/ave_san_miguel_madrid` | AVE San Miguel de Bernuy · Madrid | — | Bajar → `madrid/sala_retiro_20_58` |
 | `transporte/ave_valladolid_madrid` | AVE Valladolid · Madrid | — | Bajar → `madrid/sala_retiro_20_58` |
 | `transporte/avion_gran_canaria_vigo` | Vuelo Gran Canaria · Vigo | — | Bajar → `vigo/aeropuerto` |
 | `transporte/avion_vigo_gran_canaria` | Vuelo Vigo · Gran Canaria | — | Bajar → `playa_del_ingles/aeropuerto` |

@@ -17,6 +17,11 @@ const INTERIOR := "res://assets/tilesets/interior/interior.tres"
 const FONT := "res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf"
 const TRIP_EVENT := "res://src/events/viaje_event.gd"
 const SECURITY_EVENT := "res://src/events/control_seguridad_event.gd"
+const FREE_FLIGHT_EVENT := "res://src/events/vuelo_libre_event.gd"
+## Billete del ferry: el objeto clave oficial «Ticket Barco»; vale para todos los ferris. Si no lo tienes,
+## el sobrecargo te lo vende al embarcar. PENDIENTE JAVIER: quién lo da y cuánto cuesta.
+const FERRY_TICKET := "ssticket"
+const FERRY_PRICE := 300
 const SIZE := Vector2i(16, 12)
 const FLOORS: Array[Vector2i] = [
 	Vector2i(1, 1), Vector2i(2, 5), Vector2i(1, 9), Vector2i(2, 13), Vector2i(1, 17), Vector2i(2, 21),
@@ -95,6 +100,16 @@ var FERRIES: Array = [
 	]],
 ]
 
+## Puerto del que sale cada ferry: si no compras el billete, el sobrecargo te devuelve a tierra.
+const FERRY_ORIGIN := {
+	"transporte/ferry_barcelona_palma": ["barcelona/ciutat_vella", "from_ferry"],
+	"transporte/ferry_palma_barcelona": ["palma/exterior", "from_ferry"],
+	"transporte/ferry_valencia_ibiza": ["valencia/malvarrosa", "from_ferry"],
+	"transporte/ferry_ibiza_valencia": ["ibiza/exterior", "from_ferry"],
+	"transporte/ferry_huelva_las_palmas": ["huelva/exterior", "from_ferry"],
+	"transporte/ferry_las_palmas_huelva": ["las_palmas/canteras", "from_ferry"],
+}
+
 ## Vuelos: [mapa, título, terminal de llegada, salida, trayecto, llegada, pasajeros].
 var FLIGHTS: Array = [
 	["transporte/avion_gran_canaria_vigo", "Vuelo Gran Canaria · Vigo", "vigo/aeropuerto", [
@@ -116,12 +131,13 @@ var FLIGHTS: Array = [
 	]],
 ]
 
-## Terminales: [mapa, título, calle, aparición en la calle, vuelo que sale de aquí, flag del control].
+## Terminales: [mapa, título, calle, aparición en la calle, vuelo que sale de aquí, flag del control,
+## destino del vuelo, lugar de data/region.json donde está la terminal (para el vuelo libre)].
 var AIRPORTS: Array = [
 	["playa_del_ingles/aeropuerto", "Aeropuerto de Gran Canaria", "playa_del_ingles/exterior", "from_avion",
-		"transporte/avion_gran_canaria_vigo", "control_seguridad_gran_canaria", "Vigo"],
+		"transporte/avion_gran_canaria_vigo", "control_seguridad_gran_canaria", "Vigo", "playa_del_ingles"],
 	["vigo/aeropuerto", "Aeropuerto de Peinador · Vigo", "vigo/exterior", "from_avion",
-		"transporte/avion_vigo_gran_canaria", "control_seguridad_vigo", "Gran Canaria"],
+		"transporte/avion_vigo_gran_canaria", "control_seguridad_vigo", "Gran Canaria", "vigo"],
 ]
 
 
@@ -162,6 +178,24 @@ var TRAINS: Array = [
 		["Torero", "npc_man", Vector2i(2, 9), RIGHT, ["Voy a Las Ventas. Si el tren llega a tiempo, toreo. Si no, me quedo de espectador."]],
 		["Abuela", "abuela", Vector2i(13, 9), LEFT, ["Le llevo a mi nieto boquerones en vinagre. En el táper. Sí, huele. Que se aguante el vagón."]],
 	]],
+	# AVE de San Miguel de Bernuy (docs/mundo/region.md, tramo 24: «San Miguel → Madrid (vuelo o AVE)»).
+	["transporte/ave_madrid_san_miguel", "AVE Madrid · San Miguel de Bernuy", "pueblo_inicial/sala_calle_30_21", [
+		"Renfe les da la bienvenida a bordo del AVE con destino San Miguel de Bernuy. Sí, ese San Miguel.",
+		"El apeadero se inauguró la semana pasada. Dicen que lo pidió un tal Javier, que tiene muchas medallas."],
+		["El tren cruza el túnel de Guadarrama, para en Segovia-Guiomar y sigue por la Tierra de Pinares. Huele a resina y a cochinillo."],
+		["Llegamos a San Miguel de Bernuy con veinte minutos de retraso. Se han cruzado unas ovejas.",
+		"Población: pocos. Buitres: muchos. Gracias por elegir Renfe."], [
+		["Segoviana", "npc_old_woman", Vector2i(2, 9), RIGHT, ["Vuelvo al pueblo para las fiestas. En Madrid no hay quien duerma, y en San Miguel no hay quien no duerma."]],
+		["Ciclista", "npc_youngster", Vector2i(13, 9), LEFT, ["Voy a bajar las Hoces del Duratón en bici. Las de verdad se suben, pero bueno."]],
+	]],
+	["transporte/ave_san_miguel_madrid", "AVE San Miguel de Bernuy · Madrid", "madrid/sala_retiro_20_58", [
+		"Renfe les da la bienvenida a bordo del AVE con destino Madrid Puerta de Atocha.",
+		"Les recordamos que el cochinillo no viaja en el portaequipajes. Ni el de verdad ni el de peluche."],
+		["La meseta pasa por la ventana. Después, el túnel. Después, el atasco de la M-30, pero visto desde arriba."],
+		["Llegamos a Madrid Puerta de Atocha con media hora de retraso. El ministro dice que en su época era peor."], [
+		["Pastor", "pastor", Vector2i(2, 9), RIGHT, ["Llevo queso a Madrid. Allí lo venden a precio de jamón; aquí, a precio de queso."]],
+		["Estudiante", "estudianteinge", Vector2i(13, 9), LEFT, ["Fin de semana en el pueblo y vuelta a la residencia. Con tres tuppers y una bota de vino."]],
+	]],
 ]
 
 ## Estaciones: [mapa (el interior que ya tenía el edificio), título, calle, aparición en la calle,
@@ -169,7 +203,10 @@ var TRAINS: Array = [
 var STATIONS: Array = [
 	["madrid/sala_retiro_20_58", "Estación de Atocha", "madrid/retiro", "from_sala_20_58", [
 		["transporte/ave_madrid_valladolid", "valladolid/exterior", "Valladolid"],
-		["transporte/ave_madrid_malaga", "malaga/exterior", "Málaga"]]],
+		["transporte/ave_madrid_malaga", "malaga/exterior", "Málaga"],
+		["transporte/ave_madrid_san_miguel", "pueblo_inicial/exterior", "San Miguel de Bernuy"]]],
+	["pueblo_inicial/sala_calle_30_21", "Apeadero de San Miguel de Bernuy", "pueblo_inicial/exterior", "from_sala_30_21", [
+		["transporte/ave_san_miguel_madrid", "madrid/retiro", "Madrid"]]],
 	["valladolid/sala_calle_52_59", "Estación Campo Grande · Valladolid", "valladolid/exterior", "from_sala_52_59", [
 		["transporte/ave_valladolid_madrid", "madrid/retiro", "Madrid"]]],
 	["malaga/sala_calle_5_57", "Estación María Zambrano · Málaga", "malaga/exterior", "from_sala_5_57", [
@@ -296,7 +333,8 @@ func _ferry(f: Array) -> void:
 	_door(p, "Desembarcar", Vector2i(8, 11), f[2], f[3], Warp.Facing.DOWN)
 	p.spawn("default", Vector2i(8, 10))
 	_save_with_trigger(p, map_id, "Viaje", Vector2i(8, 10), TRIP_EVENT,
-		{"hablante": "Megafonía", "salida": f[4], "trayecto": f[5], "llegada": f[6]}, 1)
+		{"hablante": "Megafonía", "salida": f[4], "trayecto": f[5], "llegada": f[6],
+		"billete": FERRY_TICKET, "precio": FERRY_PRICE, "vuelta": FERRY_ORIGIN.get(map_id, [])}, 1)
 
 
 ## Cabina del avión: dos filas de asientos a cada lado del pasillo, la azafata y la puerta delante.
@@ -313,7 +351,8 @@ func _flight(f: Array) -> void:
 	_door(p, "Bajar", Vector2i(8, 1), f[2], "from_llegadas", Warp.Facing.DOWN)
 	p.spawn("default", Vector2i(8, 10))
 	_save_with_trigger(p, map_id, "Viaje", Vector2i(8, 10), TRIP_EVENT,
-		{"hablante": "Comandante", "salida": f[3], "trayecto": f[4], "llegada": f[5], "turbulencias": true}, 1)
+		{"hablante": "Comandante", "salida": f[3], "trayecto": f[4], "llegada": f[5], "turbulencias": true,
+		"marca": "vuelo_libre"}, 1)
 
 
 ## Terminal: a la izquierda, salidas (control de seguridad y puerta de embarque); a la derecha, llegadas
@@ -347,8 +386,25 @@ func _airport(a: Array) -> void:
 	p.spawn("from_llegadas", Vector2i(11, 2))
 	_door(p, "Salida", Vector2i(8, 11), a[2], a[3], Warp.Facing.DOWN)
 	p.spawn("default", Vector2i(8, 10))
+	# Vuelo libre: después del primer vuelo, a cualquier ciudad ya visitada (src/events/vuelo_libre_event.gd).
+	p.npc("VuelosNacionales", "npc_lass", Vector2i(13, 3), DOWN, PackedStringArray(), {"display_name": "Vuelos nacionales"})
 	_save_with_trigger(p, map_id, "ControlSeguridad", Vector2i(4, 6), SECURITY_EVENT,
 		{"flag": a[5], "guardia": "Guardia Civil"}, 0)
+	_add_npc_event(map_id, "VuelosNacionales", FREE_FLIGHT_EVENT, {"ciudad": a[7], "hablante": "Vuelos nacionales"})
+
+
+## El evento de un NPC se escribe en el .tscn ya guardado (fuera del juego los eventos no compilan).
+func _add_npc_event(map_id: String, npc_name: String, event_path: String, params: Dictionary) -> void:
+	var path := "res://maps/%s.tscn" % map_id
+	var text := FileAccess.get_file_as_string(path)
+	var head := "[ext_resource type=\"Script\" path=\"%s\" id=\"npc_event\"]\n" % event_path
+	text = text.insert(text.find("[ext_resource"), head)
+	var node := text.find("[node name=\"%s\"" % npc_name)
+	var line_end := text.find("\n", node) + 1
+	text = text.insert(line_end, "event = ExtResource(\"npc_event\")\nevent_params = %s\n" % var_to_str(params))
+	var file := FileAccess.open(path, FileAccess.WRITE)
+	file.store_string(text)
+	file.close()
 
 
 ## Vagón del AVE: asientos a los dos lados del pasillo, la cafetería al fondo y la puerta delante.
@@ -380,10 +436,11 @@ func _station(st: Array) -> void:
 	p.npc("Taquilla", "npc_lass", Vector2i(12, 9), UP, PackedStringArray([
 		"Venta de billetes. ¿Ida y vuelta? La vuelta no se la garantizo, pero se la cobro.",
 		"Los andenes, arriba. El panel dice «en hora». El panel es optimista."]), {"display_name": "Renfe"})
-	p.sign_text("Panel", Vector2i(8, 2), PackedStringArray([
-		"PANEL DE SALIDAS.", "Todos los trenes: «retraso estimado: indeterminado». La hora la pone el ministro."]))
 	var platforms: Array = st[4]
-	var doors: Array = [Vector2i(4, 1), Vector2i(12, 1)]
+	# Uno o dos andenes: puertas en las columnas 4 y 12; tres: 3, 8 y 13 (el panel se aparta del de en medio).
+	var doors: Array = [Vector2i(4, 1), Vector2i(12, 1)] if platforms.size() <= 2 else [Vector2i(3, 1), Vector2i(8, 1), Vector2i(13, 1)]
+	p.sign_text("Panel", Vector2i(8, 2) if platforms.size() <= 2 else Vector2i(10, 2), PackedStringArray([
+		"PANEL DE SALIDAS.", "Todos los trenes: «retraso estimado: indeterminado». La hora la pone el ministro."]))
 	for i: int in platforms.size():
 		var pl: Array = platforms[i]
 		var door: Vector2i = doors[i]

@@ -29,33 +29,33 @@ can_run = false
 fixed_camera = true
 followers_allowed = false
 
-[node name="Transporte" type="Node2D" unique_id=1620126840]
+[node name="Transporte" type="Node2D" unique_id=1473629617]
 script = ExtResource("1_kla8y")
 data = SubResource("Resource_n1845")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=2067757249]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1564092227]
 tile_map_data = PackedByteArray("AAAAAAAAAAABABkAAAABAAAAAAABABkAAAACAAAAAAABABkAAAADAAAAAAABABkAAAAEAAAAAAABABkAAAAFAAAAAAABABkAAAAGAAAAAAABABkAAAAHAAAAAAABABkAAAAIAAAAAAABABkAAAAJAAAAAAABABkAAAAKAAAAAAABABkAAAALAAAAAAABABkAAAAMAAAAAAABABkAAAANAAAAAAABABkAAAAOAAAAAAABABkAAAAPAAAAAAABABkAAAAAAAEAAAABABkAAAABAAEAAAABABkAAAACAAEAAAABABkAAAADAAEAAAABABkAAAAEAAEAAAABABkAAAAFAAEAAAABABkAAAAGAAEAAAABABkAAAAHAAEAAAABABkAAAAIAAEAAAABABkAAAAJAAEAAAABABkAAAAKAAEAAAABABkAAAALAAEAAAABABkAAAAMAAEAAAABABkAAAANAAEAAAABABkAAAAOAAEAAAABABkAAAAPAAEAAAABABkAAAAAAAIAAAABABkAAAABAAIAAAABABkAAAACAAIAAAABABkAAAADAAIAAAABABkAAAAEAAIAAAABABkAAAAFAAIAAAABABkAAAAGAAIAAAABABkAAAAHAAIAAAABABkAAAAIAAIAAAABABkAAAAJAAIAAAABABkAAAAKAAIAAAABABkAAAALAAIAAAABABkAAAAMAAIAAAABABkAAAANAAIAAAABABkAAAAOAAIAAAABABkAAAAPAAIAAAABABkAAAAAAAMAAAABABkAAAABAAMAAAABABkAAAACAAMAAAABABkAAAADAAMAAAABABkAAAAEAAMAAAABABkAAAAFAAMAAAABABkAAAAGAAMAAAABABkAAAAHAAMAAAABABkAAAAIAAMAAAABABkAAAAJAAMAAAABABkAAAAKAAMAAAABABkAAAALAAMAAAABABkAAAAMAAMAAAABABkAAAANAAMAAAABABkAAAAOAAMAAAABABkAAAAPAAMAAAABABkAAAAAAAQAAAABABkAAAABAAQAAAABABkAAAACAAQAAAABABkAAAADAAQAAAABABkAAAAEAAQAAAABABkAAAAFAAQAAAABABkAAAAGAAQAAAABABkAAAAHAAQAAAABABkAAAAIAAQAAAABABkAAAAJAAQAAAABABkAAAAKAAQAAAABABkAAAALAAQAAAABABkAAAAMAAQAAAABABkAAAANAAQAAAABABkAAAAOAAQAAAABABkAAAAPAAQAAAABABkAAAAAAAUAAAABABkAAAABAAUAAAABABkAAAACAAUAAAABABkAAAADAAUAAAABABkAAAAEAAUAAAABABkAAAAFAAUAAAABABkAAAAGAAUAAAABABkAAAAHAAUAAAABABkAAAAIAAUAAAABABkAAAAJAAUAAAABABkAAAAKAAUAAAABABkAAAALAAUAAAABABkAAAAMAAUAAAABABkAAAANAAUAAAABABkAAAAOAAUAAAABABkAAAAPAAUAAAABABkAAAAAAAYAAAABABkAAAABAAYAAAABABkAAAACAAYAAAABABkAAAADAAYAAAABABkAAAAEAAYAAAABABkAAAAFAAYAAAABABkAAAAGAAYAAAABABkAAAAHAAYAAAABABkAAAAIAAYAAAABABkAAAAJAAYAAAABABkAAAAKAAYAAAABABkAAAALAAYAAAABABkAAAAMAAYAAAABABkAAAANAAYAAAABABkAAAAOAAYAAAABABkAAAAPAAYAAAABABkAAAAAAAcAAAABABkAAAABAAcAAAABABkAAAACAAcAAAABABkAAAADAAcAAAABABkAAAAEAAcAAAABABkAAAAFAAcAAAABABkAAAAGAAcAAAABABkAAAAHAAcAAAABABkAAAAIAAcAAAABABkAAAAJAAcAAAABABkAAAAKAAcAAAABABkAAAALAAcAAAABABkAAAAMAAcAAAABABkAAAANAAcAAAABABkAAAAOAAcAAAABABkAAAAPAAcAAAABABkAAAAAAAgAAAABABkAAAABAAgAAAABABkAAAACAAgAAAABABkAAAADAAgAAAABABkAAAAEAAgAAAABABkAAAAFAAgAAAABABkAAAAGAAgAAAABABkAAAAHAAgAAAABABkAAAAIAAgAAAABABkAAAAJAAgAAAABABkAAAAKAAgAAAABABkAAAALAAgAAAABABkAAAAMAAgAAAABABkAAAANAAgAAAABABkAAAAOAAgAAAABABkAAAAPAAgAAAABABkAAAAAAAkAAAABABkAAAABAAkAAAABABkAAAACAAkAAAABABkAAAADAAkAAAABABkAAAAEAAkAAAABABkAAAAFAAkAAAABABkAAAAGAAkAAAABABkAAAAHAAkAAAABABkAAAAIAAkAAAABABkAAAAJAAkAAAABABkAAAAKAAkAAAABABkAAAALAAkAAAABABkAAAAMAAkAAAABABkAAAANAAkAAAABABkAAAAOAAkAAAABABkAAAAPAAkAAAABABkAAAAAAAoAAAABABkAAAABAAoAAAABABkAAAACAAoAAAABABkAAAADAAoAAAABABkAAAAEAAoAAAABABkAAAAFAAoAAAABABkAAAAGAAoAAAABABkAAAAHAAoAAAABABkAAAAIAAoAAAABABkAAAAJAAoAAAABABkAAAAKAAoAAAABABkAAAALAAoAAAABABkAAAAMAAoAAAABABkAAAANAAoAAAABABkAAAAOAAoAAAABABkAAAAPAAoAAAABABkAAAAAAAsAAAABABkAAAABAAsAAAABABkAAAACAAsAAAABABkAAAADAAsAAAABABkAAAAEAAsAAAABABkAAAAFAAsAAAABABkAAAAGAAsAAAABABkAAAAHAAsAAAABABkAAAAIAAsAAAABABkAAAAJAAsAAAABABkAAAAKAAsAAAABABkAAAALAAsAAAABABkAAAAMAAsAAAABABkAAAANAAsAAAABABkAAAAOAAsAAAABABkAAAAPAAsAAAABABkAAAA=")
 tile_set = ExtResource("4_lxb40")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=2066352139]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1787790216]
 tile_map_data = PackedByteArray("AAAAAAAAAQABAA0AAAAAAAEAAQABAA4AAAAAAAsAAQABAA4AAAABAAAAAQABAA0AAAABAAEAAQABAA4AAAABAAsAAQABAA4AAAACAAAAAQABAA0AAAACAAEAAQABAA4AAAACAAsAAQABAA4AAAADAAAAAQABAA0AAAADAAEAAQABAA4AAAADAAsAAQABAA4AAAAEAAAAAQABAA0AAAAEAAEAAQABAA4AAAAEAAsAAQABAA4AAAAFAAAAAQABAA0AAAAFAAEAAQABAA4AAAAFAAsAAQABAA4AAAAGAAAAAQABAA0AAAAGAAEAAQABAA4AAAAGAAsAAQABAA4AAAAHAAAAAQABAA0AAAAHAAEAAQABAA4AAAAHAAsAAQABAA4AAAAIAAAAAQABAA0AAAAIAAEAAQABAA4AAAAIAAsA//////////8JAAAAAQABAA0AAAAJAAEAAQABAA4AAAAJAAsAAQABAA4AAAAKAAAAAQABAA0AAAAKAAEAAQABAA4AAAAKAAsAAQABAA4AAAALAAAAAQABAA0AAAALAAEAAQABAA4AAAALAAsAAQABAA4AAAAMAAAAAQABAA0AAAAMAAEAAQABAA4AAAAMAAsAAQABAA4AAAANAAAAAQABAA0AAAANAAEAAQABAA4AAAANAAsAAQABAA4AAAAOAAAAAQABAA0AAAAOAAEAAQABAA4AAAAOAAsAAQABAA4AAAAPAAAAAQABAA0AAAAPAAEAAQABAA4AAAAPAAsAAQABAA4AAAAAAAIAAQABAA4AAEAPAAIAAQABAA4AAEAAAAMAAQABAA4AAEAPAAMAAQABAA4AAEAAAAQAAQABAA4AAEAPAAQAAQABAA4AAEAAAAUAAQABAA4AAEAPAAUAAQABAA4AAEAAAAYAAQABAA4AAEAPAAYAAQABAA4AAEAAAAcAAQABAA4AAEAPAAcAAQABAA4AAEAAAAgAAQABAA4AAEAPAAgAAQABAA4AAEAAAAkAAQABAA4AAEAPAAkAAQABAA4AAEAAAAoAAQABAA4AAEAPAAoAAQABAA4AAEABAAIAAwAAABEAAAACAAIAAwABABEAAAADAAIAAwACABEAAAABAAMAAwAAABIAAAACAAMAAwABABIAAAADAAMAAwACABIAAAABAAUAAgABAD4AAAACAAUAAgABAD4AAAADAAUAAgABAD4AAAAJAAMAAgADADsAAAAKAAMAAgAEADsAAAALAAMAAgAFADsAAAAJAAQAAgADADwAAAAKAAQAAgAEADwAAAALAAQAAgAFADwAAAAMAAMAAgADADsAAAANAAMAAgAEADsAAAAOAAMAAgAFADsAAAAMAAQAAgADADwAAAANAAQAAgAEADwAAAAOAAQAAgAFADwAAAAJAAcAAgADADsAAAAKAAcAAgAEADsAAAALAAcAAgAFADsAAAAJAAgAAgADADwAAAAKAAgAAgAEADwAAAALAAgAAgAFADwAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
 tile_set = ExtResource("4_lxb40")
 
-[node name="Entities" type="Node2D" parent="." unique_id=129859249]
+[node name="Entities" type="Node2D" parent="." unique_id=513616124]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1822051376]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1191680293]
 y_sort_enabled = true
 tile_set = ExtResource("4_lxb40")
 
-[node name="Camarero" type="Node2D" parent="Entities" unique_id=946476622 instance=ExtResource("5_0i843")]
+[node name="Camarero" type="Node2D" parent="Entities" unique_id=1078556811 instance=ExtResource("5_0i843")]
 position = Vector2(144, 112)
 script = ExtResource("6_g7qe3")
 lines = PackedStringArray("¿Un café? Cuatro euros. Es que estamos en alta mar. Bueno, a la salida del puerto, pero cuenta.", "Bocadillo de tortilla, nueve euros. Sin tortilla, siete. Es pan con aceite, pero aquí lo llamamos «mediterráneo».")
 turn_to_player = true
 sprite_sheet = ExtResource("7_kxkwq")
 
-[node name="Sobrecargo" type="Node2D" parent="Entities" unique_id=1224983109 instance=ExtResource("5_0i843")]
+[node name="Sobrecargo" type="Node2D" parent="Entities" unique_id=1725023905 instance=ExtResource("5_0i843")]
 position = Vector2(336, 336)
 script = ExtResource("6_g7qe3")
 lines = PackedStringArray("Por la puerta de abajo se baja al puerto. Cuando lleguemos, claro: nadar no te dejo.", "Si te mareas, mira al horizonte. Si no hay horizonte, mira al bar.")
@@ -63,7 +63,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_qoskj")
 initial_facing = 1
 
-[node name="Resaca" type="Node2D" parent="Entities" unique_id=160399195 instance=ExtResource("5_0i843")]
+[node name="Resaca" type="Node2D" parent="Entities" unique_id=1205760733 instance=ExtResource("5_0i843")]
 position = Vector2(400, 208)
 script = ExtResource("6_g7qe3")
 lines = PackedStringArray("No me hables. No me hables muy alto. No me hables.")
@@ -71,7 +71,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("9_m1h5i")
 initial_facing = 1
 
-[node name="Fallera" type="Node2D" parent="Entities" unique_id=1253751548 instance=ExtResource("5_0i843")]
+[node name="Fallera" type="Node2D" parent="Entities" unique_id=1659090954 instance=ExtResource("5_0i843")]
 position = Vector2(112, 272)
 script = ExtResource("6_g7qe3")
 lines = PackedStringArray("Vuelvo a Valencia para las Fallas. Bueno, faltan once meses, pero el traje no se plancha solo.")
@@ -79,7 +79,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_ivue4")
 initial_facing = 2
 
-[node name="Camionero" type="Node2D" parent="Entities" unique_id=319996973 instance=ExtResource("5_0i843")]
+[node name="Camionero" type="Node2D" parent="Entities" unique_id=1437047806 instance=ExtResource("5_0i843")]
 position = Vector2(432, 304)
 script = ExtResource("6_g7qe3")
 lines = PackedStringArray("Llevo un camión de naranjas a Ibiza y vuelvo vacío. Allí las naranjas las cobran a seis euros. En zumo, a doce.")
@@ -87,27 +87,27 @@ turn_to_player = true
 sprite_sheet = ExtResource("11_nuwd1")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1225060273]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1424124433]
 z_index = 10
 tile_set = ExtResource("4_lxb40")
 
-[node name="Warps" type="Node2D" parent="." unique_id=1957348100]
+[node name="Warps" type="Node2D" parent="." unique_id=857691039]
 
-[node name="Desembarcar" type="Node2D" parent="Warps" unique_id=1513823063]
+[node name="Desembarcar" type="Node2D" parent="Warps" unique_id=846502128]
 position = Vector2(272, 368)
 script = ExtResource("12_j6tk2")
 target_map = &"valencia/malvarrosa"
 target_spawn = &"from_ferry"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1096530182]
+[node name="Spawns" type="Node2D" parent="." unique_id=1684775367]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=298400528]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1627375210]
 position = Vector2(272, 336)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=140621927]
+[node name="Triggers" type="Node2D" parent="." unique_id=1904548969]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1252093970]
+[node name="Rotulo" type="Label" parent="." unique_id=643291152]
 offset_left = 8.0
 offset_top = 4.0
 offset_right = 504.0
@@ -126,9 +126,12 @@ position = Vector2(272, 336)
 script = ExtResource("trigger_script")
 event = ExtResource("trigger_event")
 event_params = {
+"billete": "ssticket",
 "hablante": "Megafonía",
 "llegada": ["Llegamos al puerto de Valencia. Se ve la Malvarrosa a la izquierda. ¡Bienvenidos a la tierra de la paella!"],
+"precio": 300,
 "salida": ["Bienvenidos a bordo del ferry a Valencia. Cinco horas de travesía.", "Los pasajeros que todavía no hayan dormido desde el jueves pueden usar los sofás. Con cuidado."],
-"trayecto": ["Medio barco duerme. El otro medio pregunta por qué le duele la cabeza."]
+"trayecto": ["Medio barco duerme. El otro medio pregunta por qué le duele la cabeza."],
+"vuelta": ["ibiza/exterior", "from_ferry"]
 }
 mode = 1

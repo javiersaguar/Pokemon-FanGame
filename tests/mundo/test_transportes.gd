@@ -26,6 +26,18 @@ const TRAINS: Array = [
 	["madrid/sala_retiro_20_58", "Anden2", "transporte/ave_madrid_malaga", "malaga/sala_calle_5_57", "malaga/exterior", "from_sala_5_57", "malaga/exterior"],
 	["valladolid/sala_calle_52_59", "Anden1", "transporte/ave_valladolid_madrid", "madrid/sala_retiro_20_58", "madrid/retiro", "from_sala_20_58", "madrid/retiro"],
 	["malaga/sala_calle_5_57", "Anden1", "transporte/ave_malaga_madrid", "madrid/sala_retiro_20_58", "madrid/retiro", "from_sala_20_58", "madrid/retiro"],
+	["madrid/sala_retiro_20_58", "Anden3", "transporte/ave_madrid_san_miguel", "pueblo_inicial/sala_calle_30_21", "pueblo_inicial/exterior", "from_sala_30_21", "pueblo_inicial/exterior"],
+	["pueblo_inicial/sala_calle_30_21", "Anden1", "transporte/ave_san_miguel_madrid", "madrid/sala_retiro_20_58", "madrid/retiro", "from_sala_20_58", "madrid/retiro"],
+]
+const FREE_FLIGHT_EVENT := "res://src/events/vuelo_libre_event.gd"
+## [ferry, puerto de salida (su pasarela lleva al ferry), aparición a la que te devuelve el sobrecargo].
+const FERRY_PORTS: Array = [
+	["transporte/ferry_barcelona_palma", "barcelona/ciutat_vella", "from_ferry"],
+	["transporte/ferry_palma_barcelona", "palma/exterior", "from_ferry"],
+	["transporte/ferry_valencia_ibiza", "valencia/malvarrosa", "from_ferry"],
+	["transporte/ferry_ibiza_valencia", "ibiza/exterior", "from_ferry"],
+	["transporte/ferry_huelva_las_palmas", "huelva/exterior", "from_ferry"],
+	["transporte/ferry_las_palmas_huelva", "las_palmas/canteras", "from_ferry"],
 ]
 
 var _map: Node2D
@@ -217,3 +229,115 @@ func test_los_eventos_terminan() -> void:
 	Dialogue._box.text_speed = old_speed
 	GameState.reset()
 	MapLoader.clear()
+
+
+## El sobrecargo de cada ferry pide el billete (objeto clave) y, si no lo compras, te devuelve a su puerto.
+func test_cada_ferry_pide_el_billete_y_devuelve_a_su_puerto() -> void:
+	for f: Array in FERRY_PORTS:
+		var map := _scene(f[0])
+		var trigger := map.get_node("Triggers/Viaje") as Trigger
+		var params: Dictionary = trigger.event_params
+		assert_eq(str(params.get("billete", "")), "ssticket", "%s pide el Ticket Barco" % f[0])
+		assert_true(DataDB.has_item(&"ssticket") and DataDB.item(&"ssticket").pocket == &"key", "Es un objeto clave")
+		assert_gt(int(params.get("precio", 0)), 0, f[0])
+		assert_eq(params.get("vuelta", []), [f[1], f[2]], "%s devuelve a %s" % [f[0], f[1]])
+		map.free()
+		var port := _scene(f[1])
+		var gangway := false
+		for warp: Node in port.get_node("Warps").get_children():
+			gangway = gangway or String(warp.get(&"target_map")) == f[0]
+		assert_true(gangway, "%s tiene la pasarela de %s" % [f[1], f[0]])
+		assert_not_null(port.get_node_or_null("Spawns/" + f[2]), "%s/%s" % [f[1], f[2]])
+		port.free()
+
+
+func _main_scene() -> Node:
+	var main: Node = load("res://src/main/main.tscn").instantiate()
+	main.set_script(null)
+	add_child(main)
+	SceneManager.register_main(main)
+	return main
+
+
+func _leave(main: Node) -> void:
+	SceneManager._leave_game()
+	main.queue_free()
+	await wait_physics_frames(2)
+	SceneManager.world = null
+	SceneManager.ui_layer = null
+	SceneManager.battle_layer = null
+	SceneManager.transition_layer = null
+	SceneManager._fade = null
+	GameState.reset()
+	MapLoader.clear()
+
+
+## Pulsa A en cada diálogo o lista hasta que acaba el evento (o pasan `frames`).
+func _accept_until_done(frames: int = 900) -> void:
+	for frame: int in frames:
+		await wait_physics_frames(1)
+		if Dialogue.is_open or SceneManager.is_menu_open():
+			_press()
+		if frame > 10 and not Cutscene.is_running() and not SceneManager.is_busy() and not Dialogue.is_open:
+			return
+
+
+func test_sin_billete_ni_dinero_se_vuelve_al_puerto_y_con_dinero_se_compra() -> void:
+	var old_speed: int = Dialogue._box.text_speed
+	Dialogue._box.text_speed = 0
+	GameState.reset()
+	var main := _main_scene()
+	assert_eq(await SceneManager.start_new_game(&"barcelona/ciutat_vella", &"from_ferry", {"intro": false}), OK)
+	await _accept_until_done(60)
+	GameState.money = 0
+	SceneManager.change_map(&"transporte/ferry_barcelona_palma", &"default")
+	await _accept_until_done()
+	assert_eq(GameState.map_id, &"barcelona/ciutat_vella", "Sin dinero para el billete, el sobrecargo te baja a tierra")
+	assert_eq(GameState.bag.count(&"ssticket"), 0)
+	GameState.money = 1000
+	SceneManager.change_map(&"transporte/ferry_barcelona_palma", &"default")
+	await _accept_until_done()
+	assert_eq(GameState.map_id, &"transporte/ferry_barcelona_palma", "Con el billete comprado se viaja")
+	assert_eq(GameState.bag.count(&"ssticket"), 1, "El Ticket Barco queda en la mochila")
+	assert_eq(GameState.money, 700, "Cuesta 300")
+	SceneManager.change_map(&"transporte/ferry_palma_barcelona", &"default")
+	await _accept_until_done()
+	assert_eq(GameState.map_id, &"transporte/ferry_palma_barcelona", "El mismo billete vale para los demás ferris")
+	assert_eq(GameState.money, 700, "No se vuelve a cobrar")
+	Dialogue._box.text_speed = old_speed
+	await _leave(main)
+
+
+func test_el_primer_vuelo_abre_el_vuelo_libre_a_ciudades_visitadas() -> void:
+	for map_id: String in ["playa_del_ingles/aeropuerto", "vigo/aeropuerto"]:
+		var map := _scene(map_id)
+		var desk := map.get_node_or_null("Entities/VuelosNacionales")
+		assert_not_null(desk, "%s tiene mostrador de vuelos nacionales" % map_id)
+		if desk != null:
+			assert_eq((desk.get(&"event") as Script).resource_path, FREE_FLIGHT_EVENT)
+			assert_has(["playa_del_ingles", "vigo"], str(desk.get(&"event_params").get("ciudad", "")))
+		map.free()
+	for map_id: String in ["transporte/avion_gran_canaria_vigo", "transporte/avion_vigo_gran_canaria"]:
+		var plane := _scene(map_id)
+		assert_eq(str((plane.get_node("Triggers/Viaje") as Trigger).event_params.get("marca", "")), "vuelo_libre", map_id)
+		plane.free()
+	var old_speed: int = Dialogue._box.text_speed
+	Dialogue._box.text_speed = 0
+	GameState.reset()
+	var main := _main_scene()
+	assert_eq(await SceneManager.start_new_game(&"vigo/aeropuerto", &"default", {"intro": false}), OK)
+	await _accept_until_done(60)
+	var params := {"ciudad": "vigo", "hablante": "Vuelos nacionales"}
+	Cutscene.play(load(FREE_FLIGHT_EVENT), null, params)
+	await _accept_until_done()
+	assert_eq(GameState.map_id, &"vigo/aeropuerto", "Antes del primer vuelo no hay vuelo libre")
+	# El viaje del avión deja la marca al aterrizar.
+	Cutscene.play(load(TRIP_EVENT), null, {"hablante": "Comandante", "salida": ["Despegamos."], "llegada": ["Aterrizamos."], "marca": "vuelo_libre"})
+	await _accept_until_done()
+	assert_true(GameState.flag(&"vuelo_libre"))
+	GameState.set_flag(&"visited_map:valencia/ciutat_vella")
+	Cutscene.play(load(FREE_FLIGHT_EVENT), null, params)
+	await _accept_until_done()
+	assert_eq(GameState.map_id, &"valencia/ciutat_vella", "Vuela a la única ciudad visitada")
+	Dialogue._box.text_speed = old_speed
+	await _leave(main)

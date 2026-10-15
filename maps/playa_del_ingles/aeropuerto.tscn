@@ -1,5 +1,6 @@
 [gd_scene format=4]
 
+[ext_resource type="Script" path="res://src/events/vuelo_libre_event.gd" id="npc_event"]
 [ext_resource type="Script" path="res://src/overworld/trigger/trigger.gd" id="trigger_script"]
 [ext_resource type="Script" path="res://src/events/control_seguridad_event.gd" id="trigger_event"]
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_th52o"]
@@ -28,26 +29,26 @@ can_run = false
 fixed_camera = true
 followers_allowed = false
 
-[node name="Transporte" type="Node2D" unique_id=1217750590]
+[node name="Transporte" type="Node2D" unique_id=1020583435]
 script = ExtResource("1_th52o")
 data = SubResource("Resource_hregw")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1442443203]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=358756161]
 tile_map_data = PackedByteArray("AAAAAAAAAAABADEAAAABAAAAAAABADEAAAACAAAAAAABADEAAAADAAAAAAABADEAAAAEAAAAAAABADEAAAAFAAAAAAABADEAAAAGAAAAAAABADEAAAAHAAAAAAABADEAAAAIAAAAAAABADEAAAAJAAAAAAABADEAAAAKAAAAAAABADEAAAALAAAAAAABADEAAAAMAAAAAAABADEAAAANAAAAAAABADEAAAAOAAAAAAABADEAAAAPAAAAAAABADEAAAAAAAEAAAABADEAAAABAAEAAAABADEAAAACAAEAAAABADEAAAADAAEAAAABADEAAAAEAAEAAAABADEAAAAFAAEAAAABADEAAAAGAAEAAAABADEAAAAHAAEAAAABADEAAAAIAAEAAAABADEAAAAJAAEAAAABADEAAAAKAAEAAAABADEAAAALAAEAAAABADEAAAAMAAEAAAABADEAAAANAAEAAAABADEAAAAOAAEAAAABADEAAAAPAAEAAAABADEAAAAAAAIAAAABADEAAAABAAIAAAABADEAAAACAAIAAAABADEAAAADAAIAAAABADEAAAAEAAIAAAABADEAAAAFAAIAAAABADEAAAAGAAIAAAABADEAAAAHAAIAAAABADEAAAAIAAIAAAABADEAAAAJAAIAAAABADEAAAAKAAIAAAABADEAAAALAAIAAAABADEAAAAMAAIAAAABADEAAAANAAIAAAABADEAAAAOAAIAAAABADEAAAAPAAIAAAABADEAAAAAAAMAAAABADEAAAABAAMAAAABADEAAAACAAMAAAABADEAAAADAAMAAAABADEAAAAEAAMAAAABADEAAAAFAAMAAAABADEAAAAGAAMAAAABADEAAAAHAAMAAAABADEAAAAIAAMAAAABADEAAAAJAAMAAAABADEAAAAKAAMAAAABADEAAAALAAMAAAABADEAAAAMAAMAAAABADEAAAANAAMAAAABADEAAAAOAAMAAAABADEAAAAPAAMAAAABADEAAAAAAAQAAAABADEAAAABAAQAAAABADEAAAACAAQAAAABADEAAAADAAQAAAABADEAAAAEAAQAAAABADEAAAAFAAQAAAABADEAAAAGAAQAAAABADEAAAAHAAQAAAABADEAAAAIAAQAAAABADEAAAAJAAQAAAABADEAAAAKAAQAAAABADEAAAALAAQAAAABADEAAAAMAAQAAAABADEAAAANAAQAAAABADEAAAAOAAQAAAABADEAAAAPAAQAAAABADEAAAAAAAUAAAABADEAAAABAAUAAAABADEAAAACAAUAAAABADEAAAADAAUAAAABADEAAAAEAAUAAAABADEAAAAFAAUAAAABADEAAAAGAAUAAAABADEAAAAHAAUAAAABADEAAAAIAAUAAAABADEAAAAJAAUAAAABADEAAAAKAAUAAAABADEAAAALAAUAAAABADEAAAAMAAUAAAABADEAAAANAAUAAAABADEAAAAOAAUAAAABADEAAAAPAAUAAAABADEAAAAAAAYAAAABADEAAAABAAYAAAABADEAAAACAAYAAAABADEAAAADAAYAAAABADEAAAAEAAYAAAABADEAAAAFAAYAAAABADEAAAAGAAYAAAABADEAAAAHAAYAAAABADEAAAAIAAYAAAABADEAAAAJAAYAAAABADEAAAAKAAYAAAABADEAAAALAAYAAAABADEAAAAMAAYAAAABADEAAAANAAYAAAABADEAAAAOAAYAAAABADEAAAAPAAYAAAABADEAAAAAAAcAAAABADEAAAABAAcAAAABADEAAAACAAcAAAABADEAAAADAAcAAAABADEAAAAEAAcAAAABADEAAAAFAAcAAAABADEAAAAGAAcAAAABADEAAAAHAAcAAAABADEAAAAIAAcAAAABADEAAAAJAAcAAAABADEAAAAKAAcAAAABADEAAAALAAcAAAABADEAAAAMAAcAAAABADEAAAANAAcAAAABADEAAAAOAAcAAAABADEAAAAPAAcAAAABADEAAAAAAAgAAAABADEAAAABAAgAAAABADEAAAACAAgAAAABADEAAAADAAgAAAABADEAAAAEAAgAAAABADEAAAAFAAgAAAABADEAAAAGAAgAAAABADEAAAAHAAgAAAABADEAAAAIAAgAAAABADEAAAAJAAgAAAABADEAAAAKAAgAAAABADEAAAALAAgAAAABADEAAAAMAAgAAAABADEAAAANAAgAAAABADEAAAAOAAgAAAABADEAAAAPAAgAAAABADEAAAAAAAkAAAABADEAAAABAAkAAAABADEAAAACAAkAAAABADEAAAADAAkAAAABADEAAAAEAAkAAAABADEAAAAFAAkAAAABADEAAAAGAAkAAAABADEAAAAHAAkAAAABADEAAAAIAAkAAAABADEAAAAJAAkAAAABADEAAAAKAAkAAAABADEAAAALAAkAAAABADEAAAAMAAkAAAABADEAAAANAAkAAAABADEAAAAOAAkAAAABADEAAAAPAAkAAAABADEAAAAAAAoAAAABADEAAAABAAoAAAABADEAAAACAAoAAAABADEAAAADAAoAAAABADEAAAAEAAoAAAABADEAAAAFAAoAAAABADEAAAAGAAoAAAABADEAAAAHAAoAAAABADEAAAAIAAoAAAABADEAAAAJAAoAAAABADEAAAAKAAoAAAABADEAAAALAAoAAAABADEAAAAMAAoAAAABADEAAAANAAoAAAABADEAAAAOAAoAAAABADEAAAAPAAoAAAABADEAAAAAAAsAAAABADEAAAABAAsAAAABADEAAAACAAsAAAABADEAAAADAAsAAAABADEAAAAEAAsAAAABADEAAAAFAAsAAAABADEAAAAGAAsAAAABADEAAAAHAAsAAAABADEAAAAIAAsAAAABADEAAAAJAAsAAAABADEAAAAKAAsAAAABADEAAAALAAsAAAABADEAAAAMAAsAAAABADEAAAANAAsAAAABADEAAAAOAAsAAAABADEAAAAPAAsAAAABADEAAAA=")
 tile_set = ExtResource("4_r46pq")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=756525745]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1966206600]
 tile_map_data = PackedByteArray("AAAAAAAAAQABAAMAAAAAAAEAAQABAAQAAAAAAAsAAQABAAQAAAABAAAAAQABAAMAAAABAAEAAQABAAQAAAABAAsAAQABAAQAAAACAAAAAQABAAMAAAACAAEAAQABAAQAAAACAAsAAQABAAQAAAADAAAAAQABAAMAAAADAAEAAQABAAQAAAADAAsAAQABAAQAAAAEAAAAAQABAAMAAAAEAAEA//////////8EAAsAAQABAAQAAAAFAAAAAQABAAMAAAAFAAEAAQABAAQAAAAFAAsAAQABAAQAAAAGAAAAAQABAAMAAAAGAAEAAQABAAQAAAAGAAsAAQABAAQAAAAHAAAAAQABAAMAAAAHAAEAAQABAAQAAAAHAAsAAQABAAQAAAAIAAAAAQABAAMAAAAIAAEAAQABAAQAAAAIAAsA//////////8JAAAAAQABAAMAAAAJAAEAAQABAAQAAAAJAAsAAQABAAQAAAAKAAAAAQABAAMAAAAKAAEAAQABAAQAAAAKAAsAAQABAAQAAAALAAAAAQABAAMAAAALAAEAAQABAAQAAAALAAsAAQABAAQAAAAMAAAAAQABAAMAAAAMAAEAAQABAAQAAAAMAAsAAQABAAQAAAANAAAAAQABAAMAAAANAAEAAQABAAQAAAANAAsAAQABAAQAAAAOAAAAAQABAAMAAAAOAAEAAQABAAQAAAAOAAsAAQABAAQAAAAPAAAAAQABAAMAAAAPAAEAAQABAAQAAAAPAAsAAQABAAQAAAAAAAIAAQABAAQAAEAPAAIAAQABAAQAAEAAAAMAAQABAAQAAEAPAAMAAQABAAQAAEAAAAQAAQABAAQAAEAPAAQAAQABAAQAAEAAAAUAAQABAAQAAEAPAAUAAQABAAQAAEAAAAYAAQABAAQAAEAPAAYAAQABAAQAAEAAAAcAAQABAAQAAEAPAAcAAQABAAQAAEAAAAgAAQABAAQAAEAPAAgAAQABAAQAAEAAAAkAAQABAAQAAEAPAAkAAQABAAQAAEAAAAoAAQABAAQAAEAPAAoAAQABAAQAAEAIAAIAAQABAAQAAEAIAAMAAQABAAQAAEAIAAQAAQABAAQAAEAIAAUAAQABAAQAAEAIAAYAAQABAAQAAEABAAYAAQABAAQAAAACAAYAAQABAAQAAAADAAYAAQABAAQAAAAFAAYAAQABAAQAAAAGAAYAAQABAAQAAAAHAAYAAQABAAQAAAALAAcAAwAAABEAAAAMAAcAAwABABEAAAANAAcAAwACABEAAAALAAgAAwAAABIAAAAMAAgAAwABABIAAAANAAgAAwACABIAAAABAAkAAgADADsAAAACAAkAAgAEADsAAAADAAkAAgAFADsAAAABAAoAAgADADwAAAACAAoAAgAEADwAAAADAAoAAgAFADwAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAAOAAIAAgAAACQAAAAOAAMAAgAAACUAAAA=")
 tile_set = ExtResource("4_r46pq")
 
-[node name="Entities" type="Node2D" parent="." unique_id=334508407]
+[node name="Entities" type="Node2D" parent="." unique_id=912095210]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1197587635]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=496625454]
 y_sort_enabled = true
 tile_set = ExtResource("4_r46pq")
 
-[node name="Guardia" type="Node2D" parent="Entities" unique_id=1563157860 instance=ExtResource("5_cmlcm")]
+[node name="Guardia" type="Node2D" parent="Entities" unique_id=2137973236 instance=ExtResource("5_cmlcm")]
 position = Vector2(176, 240)
 script = ExtResource("6_3hf3g")
 display_name = "Guardia Civil"
@@ -56,7 +57,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_uvrfg")
 initial_facing = 1
 
-[node name="Embarque" type="Node2D" parent="Entities" unique_id=85224520 instance=ExtResource("5_cmlcm")]
+[node name="Embarque" type="Node2D" parent="Entities" unique_id=1294354979 instance=ExtResource("5_cmlcm")]
 position = Vector2(176, 80)
 script = ExtResource("6_3hf3g")
 lines = PackedStringArray("Vuelo a Vigo, embarcando por esta puerta. Tarjeta de embarque y DNI... Vale, pase.", "Una pieza de equipaje de mano. Las Poké Balls no cuentan: van en el cinturón.")
@@ -64,7 +65,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_2ksxx")
 initial_facing = 1
 
-[node name="Facturacion" type="Node2D" parent="Entities" unique_id=839787462 instance=ExtResource("5_cmlcm")]
+[node name="Facturacion" type="Node2D" parent="Entities" unique_id=328094112 instance=ExtResource("5_cmlcm")]
 position = Vector2(400, 304)
 script = ExtResource("6_3hf3g")
 lines = PackedStringArray("Mostrador de facturación. ¿Maleta? Veintitrés kilos. ¿Veinticuatro? Son cincuenta euros.", "Si no factura, al control de la izquierda, y de ahí a la puerta de embarque.")
@@ -72,7 +73,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("9_qvfny")
 initial_facing = 3
 
-[node name="Spotter" type="Node2D" parent="Entities" unique_id=380871297 instance=ExtResource("5_cmlcm")]
+[node name="Spotter" type="Node2D" parent="Entities" unique_id=989052494 instance=ExtResource("5_cmlcm")]
 position = Vector2(80, 112)
 script = ExtResource("6_3hf3g")
 lines = PackedStringArray("¿Ves ese avión blanco aparcado en la pista? Es el Falcon del Líder Supremo.", "Lo he fotografiado en catorce aeropuertos este mes. Siempre dice que viaja por trabajo.")
@@ -80,36 +81,49 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_5dmcg")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1979449465]
+[node name="VuelosNacionales" type="Node2D" parent="Entities" unique_id=1513733566 instance=ExtResource("5_cmlcm")]
+event = ExtResource("npc_event")
+event_params = {
+"ciudad": "playa_del_ingles",
+"hablante": "Vuelos nacionales"
+}
+position = Vector2(432, 112)
+script = ExtResource("6_3hf3g")
+display_name = "Vuelos nacionales"
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("9_qvfny")
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=393067462]
 z_index = 10
 tile_set = ExtResource("4_r46pq")
 
-[node name="Warps" type="Node2D" parent="." unique_id=273710951]
+[node name="Warps" type="Node2D" parent="." unique_id=421364785]
 
-[node name="Embarque" type="Node2D" parent="Warps" unique_id=958674494]
+[node name="Embarque" type="Node2D" parent="Warps" unique_id=1159326251]
 position = Vector2(144, 48)
 script = ExtResource("11_wjxhf")
 target_map = &"transporte/avion_gran_canaria_vigo"
 arrival_facing = 4
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1461785550]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=202740991]
 position = Vector2(272, 368)
 script = ExtResource("11_wjxhf")
 target_map = &"playa_del_ingles/exterior"
 target_spawn = &"from_avion"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1957232340]
+[node name="Spawns" type="Node2D" parent="." unique_id=1915271482]
 
-[node name="from_llegadas" type="Marker2D" parent="Spawns" unique_id=1000600602]
+[node name="from_llegadas" type="Marker2D" parent="Spawns" unique_id=291342182]
 position = Vector2(368, 80)
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1313659058]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=556769795]
 position = Vector2(272, 336)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=107980690]
+[node name="Triggers" type="Node2D" parent="." unique_id=822976285]
 
-[node name="Rotulo" type="Label" parent="." unique_id=2125904389]
+[node name="Rotulo" type="Label" parent="." unique_id=218979002]
 offset_left = 8.0
 offset_top = 4.0
 offset_right = 504.0
