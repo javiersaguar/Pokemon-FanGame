@@ -230,6 +230,7 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Mapa interactivo F9 | Plano documental y controles de depuración | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_mapa_f9.md) |
 | Mapa F9 con toda la región (A4, 2026-10-15) | Plano `mapa_region.svg` regenerado, puntos de todas las ciudades, pueblos, barrios, rutas y transportes, recuadro de Madrid, búsqueda y filtro | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a4_mapa_region.md) |
 | Mapa regional del juego (A4, 2026-10-15) | Menú de pausa: plano `mapa_region.svg` (base aprobada) con cursor, ficha del lugar y vuelo | PROVISIONAL, pendiente Javier (arte definitivo) | [Comparativa](comparativas/a4_mapa_region.md) |
+| Calle de la Victoria (A4, 2026-10-15) | Túnel del Metro y cloacas con el tileset de interiores existente; bocas de metro (pieza `boca_metro`) en Sol y en el Palacio Real | PROVISIONAL, pendiente Javier (pack definitivo) | [Comparativa](comparativas/a4_calle_victoria.md) |
 | 28 interiores adicionales / 13 exteriores | Akizakura16 y personajes existentes, puertas/rótulos | PROVISIONAL, pendiente Javier | [Trece comparativas](../mundo/auditoria_locales.md) |
 
 | Repaso Getafe/Ruta 24 y casa visitable | Recursos originales y mobiliario/interacciones | PROVISIONAL, pendiente Javier | [Antes/después](comparativas/a3_densidad_getafe_ruta24.md) |
