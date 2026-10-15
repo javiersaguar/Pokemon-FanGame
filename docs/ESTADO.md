@@ -570,7 +570,11 @@ Worktree `pokemon-panchito-agente4`, rama `feat/agente4-acceso`. Área: acceso a
 
 **Petición al Agente 1 (interiores):** las estaciones del AVE (`madrid/sala_retiro_20_58`, `valladolid/sala_calle_52_59`, `malaga/sala_calle_5_57` y el apeadero nuevo `pueblo_inicial/sala_calle_30_21`) son mapas de transporte que pinta `maps/_pintura/pintar_transportes.gd`. Dejadlas fuera de la personalización desde `data/interiores/`: si se repintan, se pierden los andenes y sus revisores (y falla `test_transportes`). Están reservadas a mi nombre en `docs/mapas/reservas.md`.
 
-**Siguiente:** Surf y viajes.
+**Capturas:** [F9 y mapa regional](arte/comparativas/a4_mapa_region.md) (`tools/mundo/capturar_mapa_region.gd`, con ventana), con su fila en `docs/arte/seguimiento.md`.
+
+**Límite, sin maquillar:** el plano del mapa regional se lee de `docs/mundo/mapa_region.svg` y `docs/` lleva `.gdignore`: en una exportación no estaría y el mapa regional saldría sin fondo (los puntos sí). Hace falta el arte definitivo en `assets/` (PENDIENTE JAVIER). Godot no pinta los textos del SVG: los nombres los ponen las pantallas.
+
+**Estado:** todo integrado en `main`; reservas liberadas. Sin tareas abiertas de mi área salvo lo PENDIENTE JAVIER y el Falcon (falta su arte).
 
 **He leído** (2026-10-05) `docs/DIRECTRICES.md` (§0, §1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `docs/arte/recursos_terceros.md`, las 4 referencias de Añil, las comparativas, las respuestas 9 y 17 de Javier y mi lista de «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-arte`; autoría de Javier Saguar y `core.hooksPath .githooks` activos.
 
