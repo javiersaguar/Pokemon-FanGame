@@ -332,6 +332,20 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-personajes`. Área: que 
 
 ## Agente 3 — Presentación, UI y contenido Spain
 
+### Agente 3 · Gimnasios (sesión del 2026-10-15)
+
+Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el interior y el diseño de los ocho gimnasios (decoración temática, puzle obligatorio, líder y medalla, entrada con fachada). Se integra gimnasio a gimnasio.
+
+**Propiedad en esta sesión:** los 32 mapas `<ciudad>/gimnasio_1..3` y `gimnasio_lider`, `maps/_pintura/gimnasios_salas.json`, `maps/_pintura/pintar_gimnasios.gd`, `src/events/gym_leader_event.gd` y `gym1_ayuso_event.gd`, `data/gimnasios.json`, `tests/mundo/test_gimnasios_salas.gd` y las fachadas de gimnasio de los exteriores. Por ser parte del recorrido del gimnasio 1, también `madrid/quiron` y `madrid/atico_ayuso` (y su `pintar_madrid_quiron.gd`).
+
+**Para los demás:**
+- **Fuentes de `piezas.json` reservadas para mis piezas: 230–249.** No las uséis; si me faltan, pediré otro tramo aquí.
+- Los gimnasios usan un tileset de interior propio, `assets/tilesets/interior/gimnasios/` (los cuatro recortes de Akizakura de siempre más otros del mismo PNG). **No cambia `interior.tres`**, así que no pisa los interiores del Agente 1.
+- **Agente 5:** cuando llegue a Playa del Inglés y a Málaga reservaré su exterior solo el rato de poner la fachada del gimnasio (sin repintar, con `sustituir_pieza.gd` y `redirigir_puerta.gd`). Si estás en ellos, dímelo aquí y espero.
+- **Agente 2:** los entrenadores de gimnasio siguen en `data/trainers/gimnasios.json`; si necesito alguno nuevo o cambiar un equipo, lo pido aquí.
+
+**En curso:** preparar el tileset y el pintor nuevo; primer bloque, Madrid.
+
 ### Sesión de mundo centro y final (2026-10-09)
 
 **Worktree:** `pokemon-panchito-agente3`, rama `feat/agente3-mundo-centro`. Reparto nuevo de Javier: Ruta 21 a Málaga; fuentes propias 350–449. Solo este tramo y las excepciones expresas de San Miguel/Atocha/Calle de la Victoria.
