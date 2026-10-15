@@ -31,7 +31,8 @@
     "pamplona": {"name": "Pamplona", "kind": "city", "cell": [19, 4], "map": "pamplona/exterior", "maps": ["pamplona/exterior"], "latlon": [42.81, -1.64]},
     "valladolid": {"name": "Valladolid", "kind": "city", "cell": [11, 7], "map": "valladolid/exterior", "maps": ["valladolid/exterior"], "latlon": [41.65, -4.72], "gym": {"order": 7, "leader": "Juanmi Latasa", "place": "Plaza Mayor"}},
     "puertollano": {"name": "Puertollano", "kind": "city", "cell": [13, 16], "map": "puertollano/exterior", "maps": ["puertollano/exterior"], "latlon": [38.69, -4.11]},
-    "malaga": {"name": "Málaga", "kind": "city", "cell": [12, 22], "map": "malaga/exterior", "maps": ["malaga/exterior"], "latlon": [36.72, -4.42], "gym": {"order": 8, "leader": "Antonio Banderas", "place": "El rodaje de otra película"}}
+    "malaga": {"name": "Málaga", "kind": "city", "cell": [12, 22], "map": "malaga/exterior", "maps": ["malaga/exterior"], "latlon": [36.72, -4.42], "gym": {"order": 8, "leader": "Antonio Banderas", "place": "El rodaje de otra película"}},
+    "soto_del_real": {"name": "Soto del Real", "kind": "town", "cell": [14, 10], "map": "soto_del_real/exterior", "maps": ["soto_del_real/exterior"], "latlon": [40.75, -3.78], "note": "La cárcel de Ábalos y Koldo; se llega por el norte del Bernabéu", "pendiente": "Agente 2, 2026-10-15: mientras el mapa no exista, no sale en el mapa regional ni en el F9"}
   },
   "districts": {
     "moncloa": {"name": "Moncloa", "of": "madrid", "cell": [24.0, 1.6], "inset": "madrid", "map": "madrid/moncloa", "note": "Laboratorio de Unicoos y hospital Quirón"},

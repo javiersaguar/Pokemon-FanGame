@@ -78,11 +78,13 @@ func _refresh() -> void:
 	_you.visible = here >= 0
 	_show()
 
-## Todos los puntos de data/region.json: ciudades y pueblos, barrios y rutas con mapa.
+## Todos los puntos de data/region.json: ciudades y pueblos, barrios y rutas con mapa. Lo que aún no tiene
+## mapa (reservado por otro agente, "pendiente") no sale hasta que exista.
 static func region_places(region: Dictionary) -> Array[Dictionary]:
 	var out: Array[Dictionary] = []
 	for id: String in region.get("locations", {}):
 		var location: Dictionary = region.locations[id]
+		if not SceneManager.map_exists(StringName(str(location.get("map", "")))): continue
 		out.append({"id": id, "name": str(location.name), "kind": str(location.kind), "cell": location.cell,
 			"maps": location.get("maps", [location.get("map", "")]), "gym": location.get("gym", {}), "note": str(location.get("note", "")),
 			"start": id in region.get("start", [])})

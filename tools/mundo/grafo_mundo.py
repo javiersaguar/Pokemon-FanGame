@@ -296,8 +296,8 @@ def main() -> None:
         for mp in v.get("maps", []):
             entries.append(("%s · %s" % (v["name"], maps.get(mp, {}).get("name", mp)), mp))
     for label, mp in entries:
-        if not mp:
-            lines.append("| %s | — | pendiente | — | sin mapa todavía |" % label)
+        if not mp or mp not in maps:
+            lines.append("| %s | %s | pendiente | — | sin mapa todavía |" % (label, "`%s`" % mp if mp else "—"))
             continue
         if mp not in first:
             how = "tras visitar el destino (AVE)" if mp in prev_all else "**no**"

@@ -139,7 +139,9 @@ func test_cada_lugar_de_la_region_tiene_punto_y_cada_mapa_un_punto_que_lo_lleva(
    var place: Dictionary = region[section][id]
    if not place.has("map") and place.get("maps",[]).is_empty(): continue
    assert_has(map.places,id,"%s tiene punto" % id)
-   var exists: bool = str(place.get("map","")) != "" or not place.get("maps",[]).is_empty()
+   var exists := false
+   for mid: Variant in place.get("maps",[]) + [place.get("map","")]:
+    exists = exists or (str(mid) != "" and SceneManager.map_exists(StringName(str(mid))))
    assert_eq(map._enabled(id),exists,"%s: activo solo si su mapa existe" % id)
  assert_false(map._enabled("calle_victoria"),"La Calle de la Victoria sigue pendiente")
  assert_false(map.groups.has("otros"),"Ningún mapa se queda sin punto")

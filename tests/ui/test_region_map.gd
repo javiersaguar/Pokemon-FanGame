@@ -23,6 +23,9 @@ func test_salen_todas_las_ciudades_pueblos_barrios_y_rutas() -> void:
 	var ids := screen.places.map(func(p: Dictionary) -> String: return p.id)
 	for section: String in ["locations", "districts"]:
 		for id: String in region[section]:
+			if region[section][id].has("pendiente") and not SceneManager.map_exists(StringName(str(region[section][id].map))):
+				assert_does_not_have(ids, id, "%s aún no tiene mapa" % id)
+				continue
 			assert_has(ids, id, "%s en el mapa regional" % id)
 	for id: String in region.routes:
 		if str(region.routes[id].get("map", "")) != "":
@@ -71,7 +74,8 @@ func test_destinos_de_vuelo_son_los_lugares_de_la_region() -> void:
 	GameState.reset()
 	var region := JsonFile.read_dict("res://data/region.json")
 	var list: Array = GameState.world_config.field.flight_destinations
-	assert_eq(list.size(), region.locations.size(), "Un destino por ciudad y pueblo")
+	var places: Array = region.locations.keys().filter(func(id: String) -> bool: return not region.locations[id].has("pendiente"))
+	assert_eq(list.size(), places.size(), "Un destino por ciudad y pueblo")
 	for destination: Dictionary in list:
 		assert_true(region.locations.has(str(destination.id)), str(destination.id))
 		assert_eq(str(destination.map), str(region.locations[destination.id].map))

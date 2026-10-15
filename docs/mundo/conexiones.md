@@ -54,6 +54,7 @@ Camino desde Pozuelo de Alarcón la primera vez (sin el AVE, que solo lleva a de
 | Valladolid | `valladolid/exterior` | sí, 50 pasos | 3 | ferry, Surf, avión |
 | Puertollano | `puertollano/exterior` | sí, 8 pasos | 1 | Cercanías C-5, corte: C-5 averiado hasta 1 medalla |
 | Málaga | `malaga/exterior` | sí, 11 pasos | 1 | Cercanías C-5, corte: C-5 averiado hasta 1 medalla |
+| Soto del Real | `soto_del_real/exterior` | pendiente | — | sin mapa todavía |
 | Moncloa | `madrid/moncloa` | sí, 2 pasos | 0 | andando |
 | Chamberí | `madrid/chamberi` | sí, 3 pasos | 0 | andando |
 | Bernabéu | `madrid/bernabeu` | sí, 4 pasos | 0 | andando |
