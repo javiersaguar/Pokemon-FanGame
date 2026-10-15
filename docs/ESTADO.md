@@ -425,7 +425,9 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 
 **Hecho · bloque 7 (Valladolid):** Soportales, Salón de Plenos, Palco del Zorrilla y Balcón del Ayuntamiento, con conserjes de vigilantes. Cinco piezas a mano (fuentes 68–72): placa morada, columna de soportal, lámpara de araña, barandilla dorada y estufa de butano; reutiliza escaños, atril, bandera, retrato del Rey y butacas de teatro. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5.
 
-**En curso:** bloque 8, Málaga.
+**Hecho · bloque 8 (Málaga, sin la fachada):** Catering, Camerinos, Maquillaje y Plató del rodaje del puerto, con ayudantes de dirección de vigilantes; Javier Bardem espera antes de Banderas. Cinco piezas a mano (fuentes 73–77): placa negra y dorada, cámara de cine, silla de director, claqueta y termo de café. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5.
+
+**En curso:** fachadas de Playa del Inglés y Málaga, suite completa y cierre.
 
 ### Sesión de mundo centro y final (2026-10-09)
 

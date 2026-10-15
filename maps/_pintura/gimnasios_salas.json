@@ -5491,15 +5491,168 @@
         "entrenadores": [
           {
             "id": "gym8_actor_1",
-            "nombre": "Paco"
+            "nombre": "Paco",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym8_actor_2",
-            "nombre": "Curro"
+            "nombre": "Curro",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "mario_casas_gym",
-            "nombre": "Mario Casas"
+            "nombre": "Mario Casas",
+            "mira": "derecha",
+            "vista": 2
+          }
+        ],
+        "rotulo": "CATERING",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLL...............",
+          ".....................",
+          "...mm..mm.....mm...Q.",
+          "...mm..mm.....mm...Q.",
+          ".....................",
+          ".....................",
+          ".CCCCCCCCCCCCCCCCCC..",
+          ".CCCCCCCCCCCCCCCCCC..",
+          ".....................",
+          "....T.T......T.T.....",
+          ".....................",
+          "..NNNNNNNNNNNNNNNNNN.",
+          ".....................",
+          "...mm..........mm..P.",
+          "...mm..........mm..P.",
+          "...................P.",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "...f...u......u......",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....f.......f........",
+          ".....................",
+          ".....................",
+          ".....................",
+          "......u.......u......",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          ".....................",
+          "........3............",
+          ".....................",
+          ".........n...........",
+          "...................h.",
+          "..................H..",
+          ".........2...........",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          ".......1.............",
+          "............o........",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "¡Silencio, se rueda! Bueno, aún no: estamos en el catering.",
+              "Paco es figurante y no se aparta de la mesa de los bocadillos. Gánale."
+            ],
+            "despues": [
+              "Pasa. Y coge un pitufo de lomo, que están recién hechos."
+            ]
+          },
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Por aquí se va a camerinos. Solo actores con frase.",
+              "Curro tiene una frase: «¿Otro café?». Gánale."
+            ],
+            "despues": [
+              "Pasa. Tu frase es «gracias». No la digas todavía."
+            ]
+          },
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Mario Casas está esperando su escena. Lleva tres horas esperando y una camiseta menos.",
+              "Gánale y le llamamos a rodar."
+            ],
+            "despues": [
+              "Ya le han llamado. Pasa."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Cocinera",
+            "sprite": "npc_woman",
+            "mira": "abajo",
+            "frases": [
+              "Hoy hay espetos, gazpachuelo y pitufos. Los actores comen gratis; los técnicos también, que si no, no ruedan.",
+              "El café es de puchero. El de máquina lo pidió una estrella de Hollywood y aún se está recuperando."
+            ]
+          },
+          {
+            "nombre": "Figurante",
+            "sprite": "npc_man",
+            "mira": "izquierda",
+            "frases": [
+              "Soy figurante. Hoy hago de «hombre que pasa». Ayer hacía de «hombre que pasa por el otro lado».",
+              "Si sales en el plano, cobras el doble. Yo llevo tres semanas saliendo de espaldas."
+            ]
           }
         ]
       },
@@ -5508,11 +5661,160 @@
         "entrenadores": [
           {
             "id": "gym8_actor_3",
-            "nombre": "Antonio"
+            "nombre": "Antonio",
+            "mira": "izquierda",
+            "vista": 2
           },
           {
             "id": "ester_exposito_gym",
-            "nombre": "Ester Expósito"
+            "nombre": "Ester Expósito",
+            "mira": "derecha",
+            "vista": 2
+          }
+        ],
+        "rotulo": "CAMERINOS",
+        "rotulo_casilla": [
+          15,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            4,
+            0,
+            16
+          ],
+          "pared": [
+            5,
+            5
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          "..MM.MM......MMLLLLL.",
+          "..MM.MM......MM......",
+          "..DDDD.......DDDD....",
+          "..DDDD.......DDDD....",
+          "..T..T.......T..T....",
+          ".....................",
+          ".....................",
+          ".VVVVVVVVVVVVVVVVVV..",
+          ".VVVVVVVVVVVVVVVVVV..",
+          ".....................",
+          "..sss..Y.....BB......",
+          "..sss........BB......",
+          ".....................",
+          ".Q...................",
+          ".Q...................",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "...c.................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........hH.........",
+          ".....................",
+          "......n..............",
+          "........2............",
+          ".....................",
+          ".....................",
+          "...................g.",
+          "..................G..",
+          ".....................",
+          ".....................",
+          ".....o......1........",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Camerinos. Llama antes de entrar, que hay estrellas.",
+              "Antonio está repasando el guion. Gánale."
+            ],
+            "despues": [
+              "Pasa. El guion tiene cuatro páginas y dos son fotos."
+            ]
+          },
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Ester Expósito no recibe visitas antes del rodaje.",
+              "Bueno, si le ganas, sí."
+            ],
+            "despues": [
+              "Te recibe en maquillaje. Pasa."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Peluquera",
+            "sprite": "npc_woman",
+            "mira": "izquierda",
+            "frases": [
+              "Este flequillo me ha llevado dos horas. Y ahora quieren que lleve sombrero.",
+              "En el rodaje de Banderas se gasta más laca que en la Feria de Agosto."
+            ]
+          },
+          {
+            "nombre": "Vestuarista",
+            "sprite": "npc_old_woman",
+            "mira": "derecha",
+            "frases": [
+              "Estos trajes son para la escena de la feria. Los demás, para la escena de que no hay presupuesto.",
+              "El antifaz del Zorro lo planchamos todos los días. Es de 1998 y sigue como nuevo."
+            ]
           }
         ]
       },
@@ -5521,25 +5823,465 @@
         "entrenadores": [
           {
             "id": "gym8_actor_4",
-            "nombre": "Manolo"
+            "nombre": "Manolo",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "torrente",
-            "nombre": "Torrente"
+            "nombre": "Torrente",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "penelope_cruz",
-            "nombre": "Penélope Cruz"
+            "nombre": "Penélope Cruz",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "MAQUILLAJE",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            4,
+            0,
+            52
+          ],
+          "pared": [
+            5,
+            1
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "################S####",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLL.MM.MM.........",
+          ".......MM.MM.........",
+          "..F..................",
+          "..F..................",
+          ".....................",
+          ".....................",
+          ".DDDDDDDDDDDDDDDDBB..",
+          ".DDDDDDDDDDDDDDDDBB..",
+          "...T..T..T..T..T.....",
+          ".....................",
+          "..RRRRRRRRRRRRRRRRRR.",
+          "..RRRRRRRRRRRRRRRRRR.",
+          ".....................",
+          "...VV..........sss...",
+          "...VV..........sss...",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....c.....f.........",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "................iI...",
+          ".....................",
+          ".....o......3........",
+          ".....................",
+          ".....................",
+          "...................h.",
+          "..................H..",
+          "..........2..........",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          "........1............",
+          "............n........",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Maquillaje y peluquería. Aquí entras feo y sales en el cartel.",
+              "Manolo es el maquillador jefe. Gánale."
+            ],
+            "despues": [
+              "Pasa. Te ha puesto colorete sin que te des cuenta."
+            ]
+          },
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Por aquí no pasa nadie, que está Torrente.",
+              "Dice que es el brazo tonto de la ley. Gánale y pasa."
+            ],
+            "despues": [
+              "Se ha ido al bar de enfrente. Pasa."
+            ]
+          },
+          {
+            "nombre": "Ayudante de dirección",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al plató solo se pasa con permiso de la estrella.",
+              "Penélope Cruz te da paso si le ganas. Y si no, también, que es muy maja."
+            ],
+            "despues": [
+              "¡Pasa al plató! Antonio te está esperando."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Asistente",
+            "sprite": "npc_man",
+            "mira": "izquierda",
+            "frases": [
+              "Torrente pidió un camerino con nevera. Le hemos dado una nevera con camerino.",
+              "La claqueta es la de la primera película que se rodó en el puerto. Aún suena igual."
+            ]
+          },
+          {
+            "nombre": "Maquilladora",
+            "sprite": "npc_lass",
+            "mira": "abajo",
+            "frases": [
+              "Un poco de polvos y no brillas con los focos. Bueno, brillas menos.",
+              "A Penélope la maquillo en diez minutos. A Torrente, en tres horas, y no se nota."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "RODAJE EN EL PUERTO · PLATÓ",
-    "lider_previos": [
-      {
-        "id": "javier_bardem",
-        "nombre": "Javier Bardem"
+    "estilo": {
+      "suelo": [
+        4,
+        0,
+        20
+      ],
+      "pared": [
+        1,
+        15
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        3,
+        22,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "f0b030",
+      "rotulo_sombra": "141414"
+    },
+    "leyenda": {
+      "w": {
+        "suelo": [
+          0,
+          0,
+          8
+        ]
+      },
+      "L": {
+        "propia": "rotulo_malaga",
+        "fila": true
+      },
+      "K": {
+        "propia": "camara_cine",
+        "arriba": 1
+      },
+      "Y": {
+        "propia": "silla_director"
+      },
+      "c": {
+        "propia": "claqueta"
+      },
+      "f": {
+        "propia": "cafetera"
+      },
+      "F": {
+        "propia": "foco",
+        "arriba": 1
+      },
+      "B": {
+        "propia": "cajas_atrezo"
+      },
+      "M": {
+        "propia": "espejo_camerino"
+      },
+      "V": {
+        "propia": "burro_vestidos"
+      },
+      "u": {
+        "propia": "cubata"
+      },
+      "m": {
+        "pieza": [
+          8,
+          0,
+          5,
+          2,
+          2
+        ]
+      },
+      "D": {
+        "pieza": [
+          8,
+          0,
+          19,
+          4,
+          2
+        ]
+      },
+      "T": {
+        "pieza": [
+          2,
+          1,
+          61,
+          1,
+          1
+        ]
+      },
+      "s": {
+        "pieza": [
+          2,
+          3,
+          59,
+          3,
+          2
+        ]
+      },
+      "N": {
+        "fila": [
+          8,
+          0,
+          16
+        ]
+      },
+      "P": {
+        "pieza": [
+          2,
+          2,
+          36,
+          1,
+          3
+        ],
+        "arriba": 2
+      },
+      "Q": {
+        "pieza": [
+          2,
+          1,
+          37,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "R": {
+        "fila": [
+          6,
+          0,
+          52
+        ],
+        "arriba": 1
+      },
+      "C": {
+        "fila": [
+          3,
+          5,
+          11
+        ],
+        "arriba": 1
       }
-    ]
+    },
+    "sala_lider": {
+      "titulo": "RODAJE EN EL PUERTO · PLATÓ",
+      "rotulo": "PLATÓ",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 4,
+      "estilo": {
+        "suelo": [
+          4,
+          0,
+          20
+        ],
+        "pared": [
+          5,
+          13
+        ]
+      },
+      "plano": [
+        "#####################",
+        "#####################",
+        "#####################",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#.........E.........#",
+        "#####################"
+      ],
+      "muebles": [
+        ".....................",
+        ".LLLLL...............",
+        ".....................",
+        "..F..sss.....mm...F..",
+        "..F..sss.....mm...F..",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".RRRRRRRRRRRRRRRRRR..",
+        ".RRRRRRRRRRRRRRRRRR..",
+        "......K.......K......",
+        "......K...Y...K......",
+        "..BB.................",
+        "..BB.................",
+        ".....................",
+        "....................."
+      ],
+      "encima": [
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".............u.......",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "....................."
+      ],
+      "personas": [
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "..........@..........",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "...................g.",
+        "..................G..",
+        ".....................",
+        "........1.......n....",
+        ".....................",
+        ".....................",
+        "....................."
+      ],
+      "entrenadores": [
+        {
+          "id": "javier_bardem",
+          "nombre": "Javier Bardem",
+          "mira": "derecha",
+          "vista": 2
+        }
+      ],
+      "vigilantes": [
+        {
+          "nombre": "Ayudante de dirección",
+          "sprite": "npc_youngster",
+          "mira": "abajo",
+          "mira_aparte": "derecha",
+          "frases": [
+            "Plató cerrado. Se está rodando la escena final.",
+            "Javier Bardem tiene que dar el visto bueno. Gánale y te dejamos entrar en el plano."
+          ],
+          "despues": [
+            "Visto bueno. Entras en el plano. Mira a cámara."
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "nombre": "Director",
+          "sprite": "npc_old_man",
+          "mira": "izquierda",
+          "frases": [
+            "¡Acción! ¡Corten! ¡Otra vez! Así llevamos desde las siete.",
+            "Si le ganas a Banderas, sales en los créditos. Al final del todo, pero sales."
+          ]
+        }
+      ]
+    }
   }
 }

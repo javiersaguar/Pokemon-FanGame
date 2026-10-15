@@ -14,7 +14,7 @@
 
 Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_2026-10-14.md)): **manda sobre los entrenadores que proponen las fichas de abajo.** Cada gimnasio son **cuatro mapas** (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider`), pintados por `maps/_pintura/pintar_gimnasios.gd` a partir de `maps/_pintura/gimnasios_salas.json`. Cada sala tiene tres tramos con un entrenador y un vigilante que tapa el paso hasta que le ganas (luego se aparta a un lado); así es obligatorio ganar a todos antes del líder. Quién hay en cada sala, con su lore, equipo y frases: [`guion.md` §8](guion.md).
 
-**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona**, **Valencia**, **Sevilla**, **Las Palmas** (sin la fachada), **Bilbao** y **Valladolid**. Los demás siguen con el zigzag antiguo hasta que les toque.
+**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona**, **Valencia**, **Sevilla**, **Las Palmas** (sin la fachada), **Bilbao**, **Valladolid** y **Málaga** (sin la fachada): los ocho.
 
 | # | Se entra por | Entrenadores antes del líder |
 |---|---|---|
@@ -106,6 +106,8 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_20
 - **Premio:** la MT de Rayo Hielo (ya en el juego); y un lechazo para el camino (cura como una Hiperpoción).
 
 ## 8 · Málaga — Banderas (Siniestro) · Medalla Zorro
+
+- **Por dentro (2026-10-15):** se entra por el rodaje del puerto → **Catering** (barra, mesas con mantel y café: Paco, Curro y Mario Casas) → **Camerinos** (espejos con bombillas y burros de vestuario: Antonio y Ester Expósito) → **Maquillaje** (tocadores en fila, claqueta y cordón: Manolo, Torrente y Penélope Cruz) → **Plató** (el decorado de la hacienda, focos, cámaras y la silla del director; Javier Bardem espera antes). Banderas da la Medalla Zorro. Los vigilantes son ayudantes de dirección. **Pendiente:** la fachada del exterior.
 
 - **El interior:** el plató del rodaje: decorados de cartón, focos, la claqueta y el camerino. **Reto:** escenas: cada sala es un decorado distinto (el Oeste, la Semana Santa, un palacio) y hay que entrar por la puerta que dice el guion (que cambia cada vez que un extra se equivoca). Mario Casas está en el rodaje y combate si le hablas.
 - **Entrenadores:** Brian (turista extra: Mightyena y Liepard), Marta (productora: Honchkrow y Krookodile) y Antonio (catering: Weavile y Bisharp).

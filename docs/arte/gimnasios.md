@@ -85,6 +85,11 @@ Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras fila
 | 70 | `lampara_arana` | 2×1 (por encima) | lámpara de araña dorada |
 | 71 | `barandilla_dorada` | 3×1 (fila) | barandilla dorada de palco |
 | 72 | `estufa` | 1×1 | estufa de butano |
+| 73 | `rotulo_malaga` | 3×1 | placa negra y dorada (Málaga) |
+| 74 | `camara_cine` | 1×2 | cámara de cine en trípode |
+| 75 | `silla_director` | 1×1 | silla de director |
+| 76 | `claqueta` | 1×1 (encima) | claqueta de rodaje |
+| 77 | `cafetera` | 1×1 (encima) | termo de café con vasos |
 
 ## Pintor: `maps/_pintura/pintar_gimnasios.gd`
 

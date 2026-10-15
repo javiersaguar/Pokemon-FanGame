@@ -108,3 +108,18 @@ Las capturas no ejecutan `MapLoader.prepare`, así que no salen los personajes c
 - **Salón de Plenos:** escaños (los mismos del pleno de Madrid), estrado con alfombra, atril, mesa de la presidencia, banderas, retrato y lámparas de araña.
 - **Palco del Zorrilla:** barandilla dorada del palco, butacas de teatro, sofás y lámpara de araña.
 - **Balcón del Ayuntamiento:** ventanales, banderas, mesa, alfombra, sofás, lámpara de araña y una estufa de butano, que en Valladolid hace frío. Latasa espera en el centro.
+
+## 8 · Málaga — rodaje en el puerto
+
+| Sala | Antes | Después |
+|---|---|---|
+| Catering | ![](gimnasios/antes/malaga_gimnasio_1.png) | ![](gimnasios/despues/malaga_gimnasio_1.png) |
+| Camerinos | ![](gimnasios/antes/malaga_gimnasio_2.png) | ![](gimnasios/despues/malaga_gimnasio_2.png) |
+| Maquillaje | ![](gimnasios/antes/malaga_gimnasio_3.png) | ![](gimnasios/despues/malaga_gimnasio_3.png) |
+| Plató | ![](gimnasios/antes/malaga_gimnasio_lider.png) | ![](gimnasios/despues/malaga_gimnasio_lider.png) |
+
+- **Catering:** la barra del catering hace de tabique, mesas con mantel, termos de café, cubatas, taburetes y la mesa larga.
+- **Camerinos:** espejos con bombillas, tocadores, una fila de burros de vestuario de tabique, sofá, silla de director y cajas.
+- **Maquillaje:** tocadores en fila con espejos, claqueta y café, cordón rojo, burros y sofá.
+- **Plató:** el decorado de la hacienda (suelo de barro y pared naranja), focos, sofá y mesa del decorado; detrás del cordón, las cámaras en trípode, la silla del director y las cajas. Javier Bardem espera antes de Banderas.
+- **Fachada:** pendiente (ver el estado de la sesión).
