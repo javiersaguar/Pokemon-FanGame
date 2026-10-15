@@ -37,6 +37,7 @@ func _initialize() -> void:
 	print("%s: %s" % [args[3],error_string(error)])
 	viewport.free()
 	loader.clear()
+	loader = null
 	manager._leave_game()
 	main.queue_free()
 	await process_frame

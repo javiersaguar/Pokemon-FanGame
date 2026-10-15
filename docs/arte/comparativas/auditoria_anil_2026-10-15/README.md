@@ -2,7 +2,7 @@
 
 [Guía, conclusiones y tareas de los cinco agentes](../../../mundo/guia_composicion_anil_2026-10-15.md). [13 referencias originales de Javier](../../referencias/javier_2026-10-15/README.md). [Métricas reproducibles de 36 escenas y sus SHA-256](metricas.json).
 
-Las capturas siguientes son del motor, **512×384 nativos**, 32 px por casilla y sin reescalar el PNG. Base publicada `343a0332`; se muestra el estado previo a las nuevas correcciones. No se presentan como una mejora ya hecha. El color negro en las capturas de los bordes señala suelo fuera del rectángulo del mapa.
+Las capturas siguientes son del motor, **512×384 nativos**, 32 px por casilla y sin reescalar el PNG. Base publicada `623f9ba1`; se muestra el estado previo a las nuevas correcciones de composición. Se usa `MapLoader` con estado inicial, incluidas sus colocaciones y restricciones dinámicas; no se simulan medallas posteriores. No se presentan como una mejora ya hecha. El color negro en las capturas de los bordes señala suelo fuera del rectángulo del mapa.
 
 | Captura de Spain | Centro en casillas | Referencia de composición | Qué se debe resolver |
 |---|---|---|---|
@@ -57,3 +57,15 @@ El trabajo de fachada ya iniciado se conserva: volúmenes blancos escalonados, t
 | ![Casa anterior](edificio_casa_ibicenca_antes.png) | ![Propuesta de fachada](edificio_casa_ibicenca.png) |
 
 Se conserva el PNG original sin dibujar ni retocar sus píxeles por código. La geometría de colocación y el umbral deben coincidir con el Warp real; el responsable del interior conserva los cambios existentes antes de continuar.
+
+Nota del recorrido local: las casillas que disparan un Warp se excluyen del grafo de caminos. Entrar por una puerta no cuenta como un rodeo dentro del mismo mapa. El total de suelo libre se mide físicamente e incluye las puertas, por lo que no es el tamaño de ese grafo.
+
+## Validación y límites de la entrega
+
+- 13 originales comprobados por bytes, dimensiones y SHA-256; enlaces locales revisados.
+- Suite completa: **566/567**, 57.856/57.857 aserciones, 808,192 s. El único fallo es `test_se_genera_rapido`: 8.300 ms frente al límite existente de 3.000. Ya está registrado sobre main limpio en la sección de A2 de ESTADO. No se cambia ese requisito.
+- Después de integrar las colocaciones recientes: composición 3/3 (6 aserciones), cobertura 6/6 (809), arte de personajes 9/9 (4.469).
+- Arte: **11.430 PNG, 0 errores y 0 avisos**; datos: **0 errores, 2 avisos anteriores**.
+- Las utilidades de diagnóstico preparan los mapas mediante MapLoader, generan JSON/PNG y devuelven 0. Al finalizar el proceso informan de 147 recursos retenidos; la limpieza de ese cierre sigue pendiente. No se confunde esta limitación de las utilidades con el fallo de rendimiento de la suite.
+
+Las fachadas, interiores y mapas de los demás responsables siguen su curso; esta entrega publica referencias y diagnóstico, no certifica que sus correcciones ya estén realizadas.

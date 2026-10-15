@@ -6,7 +6,7 @@ Las pautas numéricas siguientes son **criterios de trabajo propuestos para apli
 
 ## Estado comprobado y alcance
 
-Base publicada examinada: `343a0332` (sin incluir trabajo sin commit de otros worktrees). Auditoría física reproducible de **36 exteriores: las 26 rutas numeradas, las dos rutas iniciales y ocho mapas de pueblos/ciudades**. [JSON completo con SHA-256 de cada escena](../arte/comparativas/auditoria_anil_2026-10-15/metricas.json). [Capturas nuevas nativas de 512×384](../arte/comparativas/auditoria_anil_2026-10-15/README.md). Se revisan también las comparativas de tejido urbano publicadas el 14 de octubre; las capturas del encargo son solo referencia, nunca se presentan como resultado de Spain.
+Base publicada examinada: `623f9ba1` (sin incluir trabajo sin commit de otros worktrees). Auditoría física reproducible de **36 exteriores: las 26 rutas numeradas, las dos rutas iniciales y ocho mapas de pueblos/ciudades**. [JSON completo con SHA-256 de cada escena](../arte/comparativas/auditoria_anil_2026-10-15/metricas.json). [Capturas nuevas nativas de 512×384](../arte/comparativas/auditoria_anil_2026-10-15/README.md). Se revisan también las comparativas de tejido urbano publicadas el 14 de octubre; las capturas del encargo son solo referencia, nunca se presentan como resultado de Spain.
 
 **Resultado principal: 25 de las 26 rutas numeradas permiten ir entre sus conexiones sin pisar ninguna casilla de encuentro. La excepción es Ruta 3: su mínimo es 26 casillas.** Se probaron las parejas de bordes en ambos sentidos, caminando con física real, sin Surf, saltos, eventos ni abandonar el mapa. Tener rectángulos de hierba grandes no garantiza un paso por ella: el jugador puede rodearlos por el lateral.
 
@@ -36,8 +36,8 @@ Los 36 exteriores contienen **293 puertas de catálogo y las 293 tienen Warp**. 
 | `ruta_26/exterior` | 95,1 % libre; la caliza no contiene el trayecto | Hacer del Torcal una secuencia de pasos entre formaciones, conservar el dolmen y su acceso; no dispersar piedras como única solución |
 | `pozuelo/exterior` | Pequeño y ya más legible, pero parcelas y espacios verdes aún permiten cruzar casi por cualquier sitio | Alinear calles y entradas, patios y jardines cerrados. Mantener llegada segura, casa del jugador y camino al laboratorio |
 | `ibiza/exterior` | Gran suelo adoquinado; muralla, costa, servicios y casas no forman una red de calles clara | Calle del puerto → servicios → subida a Dalt Vila/catedral, barrios contenidos y playa separada; preservar ferris, Surf, puertas y reserva de casas |
-| `malaga/exterior` | Cuadrado libre de 18×18 y 71,5 % libre en el exterior de 96×80 | Definir centro histórico, ribera y paseo litoral como sectores conectados; enmarcar catedral, gimnasio y accesos a Torcal/transportes |
-| `valencia/ciutat_vella` | 78,3 % libre | Alinear Lonja, mercado y catedral con calles y plazas reconocibles; patios, manzanas y frentes construidos para orientar |
+| `malaga/exterior` | Cuadrado libre de 18×18 y 71,4 % libre en el exterior de 96×80 | Definir centro histórico, ribera y paseo litoral como sectores conectados; enmarcar catedral, gimnasio y accesos a Torcal/transportes |
+| `valencia/ciutat_vella` | 78,2 % libre | Alinear Lonja, mercado y catedral con calles y plazas reconocibles; patios, manzanas y frentes construidos para orientar |
 
 El porcentaje mide **espacio físicamente transitable, no «cantidad de arte»**. El cuadrado libre no demuestra por sí solo un defecto: puede ser una plaza legítima si tiene borde, función y destinos. Sirven para localizar zonas que revisar visualmente, no para exigir llenar cada casilla.
 
@@ -100,26 +100,28 @@ La auditoría no mueve mapas, no añade encuentros ni certifica calidad visual. 
 
 ## Métricas de la base publicada
 
+Preparación con `MapLoader` y `GameState.reset()`, que incluye las colocaciones y restricciones dinámicas del estado inicial. No se simulan medallas ni desbloqueos posteriores. Mapas y datos de `623f9ba1`; revisión de instrumentación registrada en el JSON: `033f70a8`.
+
 | Mapa | Casillas | Libre a pie | Casillas de encuentro transitables | Cuadrado libre máximo | Mínimo de hierba entre bordes |
 |---|---|---|---|---|---|
 | `ruta_1/exterior` | 36×64 | 59.7 % | 338 | 6×6 | 0 |
 | `ruta_2/exterior` | 36×72 | 66.4 % | 173 | 10×10 | 0 |
 | `ruta_3/exterior` | 36×80 | 60.6 % | 777 | 10×10 | 26 |
-| `ruta_4/exterior` | 52×46 | 65.0 % | 170 | 9×9 | 0 |
+| `ruta_4/exterior` | 52×46 | 64.9 % | 170 | 9×9 | 0 |
 | `ruta_5/exterior` | 72×32 | 69.7 % | 220 | 8×8 | 0 |
 | `ruta_6/exterior` | 72×34 | 84.1 % | 280 | 12×12 | 0 |
 | `ruta_7/exterior` | 72×34 | 91.3 % | 268 | 12×12 | 0 |
-| `ruta_8/exterior` | 72×40 | 72.8 % | 292 | 11×11 | 0 |
+| `ruta_8/exterior` | 72×40 | 72.7 % | 292 | 11×11 | 0 |
 | `ruta_9/exterior` | 48×76 | 57.1 % | 287 | 9×9 | 0 |
 | `ruta_10/exterior` | 60×64 | 52.9 % | 280 | 13×13 | 0 |
 | `ruta_11/exterior` | 76×34 | 87.7 % | 525 | 9×9 | 0 |
-| `ruta_12/exterior` | 72×40 | 63.7 % | 681 | 11×11 | 0 |
+| `ruta_12/exterior` | 72×40 | 63.5 % | 681 | 11×11 | 0 |
 | `ruta_13/exterior` | 76×46 | 58.2 % | 112 | 13×13 | 0 |
 | `ruta_14/exterior` | 72×40 | 56.5 % | 206 | 10×10 | 0 |
 | `ruta_15/exterior` | 36×72 | 67.9 % | 274 | 11×11 | 0 |
-| `ruta_16/exterior` | 36×52 | 71.9 % | 305 | 10×10 | 0 |
-| `ruta_17/exterior` | 64×40 | 68.4 % | 303 | 10×10 | 0 |
-| `ruta_18/exterior` | 72×40 | 45.6 % | 352 | 10×10 | 0 |
+| `ruta_16/exterior` | 36×52 | 71.8 % | 305 | 10×10 | 0 |
+| `ruta_17/exterior` | 64×40 | 68.3 % | 303 | 10×10 | 0 |
+| `ruta_18/exterior` | 72×40 | 45.5 % | 352 | 10×10 | 0 |
 | `ruta_19/exterior` | 56×36 | 56.9 % | 256 | 10×10 | 0 |
 | `ruta_20/exterior` | 48×56 | 56.9 % | 329 | 8×8 | 0 |
 | `ruta_21/exterior` | 48×64 | 91.3 % | 140 | 18×18 | 0 |
@@ -129,12 +131,14 @@ La auditoría no mueve mapas, no añade encuentros ni certifica calidad visual. 
 | `ruta_25/exterior` | 48×64 | 85.0 % | 129 | 15×15 | 0 |
 | `ruta_26/exterior` | 48×64 | 95.1 % | 135 | 14×14 | 0 |
 | `casa_de_campo/exterior` | 40×36 | 58.8 % | 148 | 10×10 | 0 |
-| `madrid_rio/exterior` | 36×40 | 58.5 % | 152 | 6×6 | 0 |
-| `pozuelo/exterior` | 44×36 | 58.7 % | 0 | 8×8 | No aplica |
+| `madrid_rio/exterior` | 36×40 | 58.4 % | 152 | 6×6 | 0 |
+| `pozuelo/exterior` | 44×36 | 58.6 % | 0 | 8×8 | No aplica |
 | `orcasitas/exterior` | 44×36 | 67.2 % | 0 | 10×10 | No aplica |
 | `ibiza/exterior` | 64×56 | 56.3 % | 176 | 8×8 | No aplica |
-| `malaga/exterior` | 96×80 | 71.5 % | 111 | 18×18 | No aplica |
-| `madrid/centro` | 72×56 | 65.1 % | 0 | 10×10 | 0 |
-| `valencia/ciutat_vella` | 64×56 | 78.3 % | 0 | 10×10 | No aplica |
+| `malaga/exterior` | 96×80 | 71.4 % | 111 | 18×18 | No aplica |
+| `madrid/centro` | 72×56 | 64.8 % | 0 | 10×10 | 0 |
+| `valencia/ciutat_vella` | 64×56 | 78.2 % | 0 | 10×10 | No aplica |
 | `santander/exterior` | 64×48 | 55.6 % | 60 | 8×8 | 0 |
 | `bilbao/exterior` | 72×56 | 59.5 % | 224 | 8×8 | 0 |
+
+Nota del recorrido local: las casillas que disparan un Warp se excluyen del grafo de caminos. Entrar por una puerta no cuenta como un rodeo dentro del mismo mapa. El total de suelo libre se mide físicamente e incluye las puertas, por lo que no es el tamaño de ese grafo.

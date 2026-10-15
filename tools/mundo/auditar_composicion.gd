@@ -1,6 +1,6 @@
 extends SceneTree
 ## Diagnóstico de composición: física real a pie y coste mínimo de casillas de encuentro.
-## No modifica mapas ni decide la aprobación del arte. Sin Surf, saltos, puertas ni cambios de mapa.
+## No modifica mapas ni decide la aprobación del arte. Sin Surf, saltos ni cambios de mapa; las casillas de Warp se excluyen del grafo.
 ## godot --headless --path . -s res://tools/mundo/auditar_composicion.gd -- <salida.json> <mapa>...
 const DIRS := [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT]
 const MASK := 1 | 2 | 8
@@ -43,7 +43,7 @@ func _initialize() -> void:
 		await physics_frame
 	var revision := []
 	OS.execute("git",["rev-parse","HEAD"],revision)
-	var output := {"revision":String(revision[0]).strip_edges() if not revision.is_empty() else "desconocida","godot":Engine.get_version_info().string,"mask":MASK,"metodo":"Física a pie con MapLoader y estado inicial (incluye colocaciones y restricciones dinámicas disponibles). Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; sin abandonar el mapa.","maps":rows}
+	var output := {"revision":String(revision[0]).strip_edges() if not revision.is_empty() else "desconocida","godot":Engine.get_version_info().string,"mask":MASK,"metodo":"Física a pie con MapLoader y estado inicial (incluye colocaciones y restricciones dinámicas disponibles). Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; las casillas de Warp se excluyen para no abandonar el mapa.","maps":rows}
 	var f := FileAccess.open(args[0],FileAccess.WRITE)
 	if f == null:
 		push_error("No se puede escribir %s" % args[0])
@@ -52,6 +52,7 @@ func _initialize() -> void:
 	f.store_string(JSON.stringify(output,"\t")+"\n")
 	f.close()
 	loader.clear()
+	loader = null
 	manager._leave_game()
 	main.queue_free()
 	await process_frame
@@ -120,9 +121,14 @@ func _audit(map: Variant,id: String) -> Dictionary:
 			if connection.matches(exit_tile,bounds):
 				tiles.append(t)
 		edges.append({"edge":connection.edge,"target":String(connection.target_map),"tiles":tiles})
+	# Pisar una puerta cambia de mapa; no sirve como rodeo local de la hierba.
+	var path_free := free.duplicate()
+	for t: Vector2i in free:
+		if map.warp_at(t) != null:
+			path_free.erase(t)
 	var paths := []
 	for i: int in edges.size():
-		var costs := minimum_encounters(free,grass,edges[i].tiles)
+		var costs := minimum_encounters(path_free,grass,edges[i].tiles)
 		for j: int in edges.size():
 			if i == j:
 				continue

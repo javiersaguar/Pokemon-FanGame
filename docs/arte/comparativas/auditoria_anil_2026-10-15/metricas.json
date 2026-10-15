@@ -158,7 +158,7 @@
 				36,
 				80
 			],
-			"walkable": 1745,
+			"walkable": 1744,
 			"walkable_encounter_tiles": 777,
 			"walkable_percent": 60.6
 		},
@@ -207,9 +207,9 @@
 				52,
 				46
 			],
-			"walkable": 1555,
+			"walkable": 1553,
 			"walkable_encounter_tiles": 170,
-			"walkable_percent": 65.0
+			"walkable_percent": 64.9
 		},
 		{
 			"connections": [
@@ -305,7 +305,7 @@
 				72,
 				34
 			],
-			"walkable": 2059,
+			"walkable": 2058,
 			"walkable_encounter_tiles": 280,
 			"walkable_percent": 84.1
 		},
@@ -354,7 +354,7 @@
 				72,
 				34
 			],
-			"walkable": 2236,
+			"walkable": 2235,
 			"walkable_encounter_tiles": 268,
 			"walkable_percent": 91.3
 		},
@@ -403,9 +403,9 @@
 				72,
 				40
 			],
-			"walkable": 2096,
+			"walkable": 2094,
 			"walkable_encounter_tiles": 292,
-			"walkable_percent": 72.8
+			"walkable_percent": 72.7
 		},
 		{
 			"connections": [
@@ -550,7 +550,7 @@
 				76,
 				34
 			],
-			"walkable": 2267,
+			"walkable": 2266,
 			"walkable_encounter_tiles": 525,
 			"walkable_percent": 87.7
 		},
@@ -599,9 +599,9 @@
 				72,
 				40
 			],
-			"walkable": 1834,
+			"walkable": 1830,
 			"walkable_encounter_tiles": 681,
-			"walkable_percent": 63.7
+			"walkable_percent": 63.5
 		},
 		{
 			"connections": [
@@ -795,9 +795,9 @@
 				36,
 				52
 			],
-			"walkable": 1346,
+			"walkable": 1345,
 			"walkable_encounter_tiles": 305,
-			"walkable_percent": 71.9
+			"walkable_percent": 71.8
 		},
 		{
 			"connections": [
@@ -844,9 +844,9 @@
 				64,
 				40
 			],
-			"walkable": 1751,
+			"walkable": 1748,
 			"walkable_encounter_tiles": 303,
-			"walkable_percent": 68.4
+			"walkable_percent": 68.3
 		},
 		{
 			"connections": [
@@ -893,9 +893,9 @@
 				72,
 				40
 			],
-			"walkable": 1313,
+			"walkable": 1311,
 			"walkable_encounter_tiles": 352,
-			"walkable_percent": 45.6
+			"walkable_percent": 45.5
 		},
 		{
 			"connections": [
@@ -1397,9 +1397,9 @@
 				36,
 				40
 			],
-			"walkable": 842,
+			"walkable": 841,
 			"walkable_encounter_tiles": 152,
-			"walkable_percent": 58.5
+			"walkable_percent": 58.4
 		},
 		{
 			"connections": [
@@ -1426,9 +1426,9 @@
 				44,
 				36
 			],
-			"walkable": 930,
+			"walkable": 929,
 			"walkable_encounter_tiles": 0,
-			"walkable_percent": 58.7
+			"walkable_percent": 58.6
 		},
 		{
 			"connections": [
@@ -1455,7 +1455,7 @@
 				44,
 				36
 			],
-			"walkable": 1065,
+			"walkable": 1064,
 			"walkable_encounter_tiles": 0,
 			"walkable_percent": 67.2
 		},
@@ -1513,9 +1513,9 @@
 				96,
 				80
 			],
-			"walkable": 5492,
+			"walkable": 5483,
 			"walkable_encounter_tiles": 111,
-			"walkable_percent": 71.5
+			"walkable_percent": 71.4
 		},
 		{
 			"connections": [
@@ -1642,9 +1642,9 @@
 				72,
 				56
 			],
-			"walkable": 2624,
+			"walkable": 2613,
 			"walkable_encounter_tiles": 0,
-			"walkable_percent": 65.1
+			"walkable_percent": 64.8
 		},
 		{
 			"connections": [
@@ -1671,9 +1671,9 @@
 				64,
 				56
 			],
-			"walkable": 2805,
+			"walkable": 2803,
 			"walkable_encounter_tiles": 0,
-			"walkable_percent": 78.3
+			"walkable_percent": 78.2
 		},
 		{
 			"connections": [
@@ -1771,8 +1771,8 @@
 			],
 			"largest_open_square": {
 				"at": [
-					15,
-					21
+					64,
+					34
 				],
 				"side": 8
 			},
@@ -1783,12 +1783,12 @@
 				72,
 				56
 			],
-			"walkable": 2401,
+			"walkable": 2398,
 			"walkable_encounter_tiles": 224,
 			"walkable_percent": 59.5
 		}
 	],
 	"mask": 11,
-	"metodo": "Física a pie en escena original. Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; sin abandonar el mapa.",
-	"revision": "343a0332481b56672686e16aa274a6cff98e26ea"
+	"metodo": "Física a pie con MapLoader y estado inicial (incluye colocaciones y restricciones dinámicas disponibles). Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; las casillas de Warp se excluyen para no abandonar el mapa.",
+	"revision": "033f70a8dd9635205be729a9bb0882bc4c8df16d"
 }
