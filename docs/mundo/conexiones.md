@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **937 mapas** en total. Se llega a **937** desde Pozuelo de Alarcón (`pozuelo/exterior`: 937) y Orcasitas (`orcasitas/exterior`: 937).
+- **942 mapas** en total. Se llega a **942** desde Pozuelo de Alarcón (`pozuelo/exterior`: 942) y Orcasitas (`orcasitas/exterior`: 942).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -175,65 +175,70 @@ Ninguna: todos los destinos existen.
 | `barcelona/les_corts` | Barcelona · Les Corts | west → `ruta_8/exterior`, east → `barcelona/eixample` | Mercadona → `barcelona/les_corts/mercadona`, Sala4_13 → `barcelona/sala_les_corts_4_13`, Sala13_12 → `barcelona/sala_les_corts_13_12`, Sala21_12 → `barcelona/sala_les_corts_21_12`, Sala30_12 → `barcelona/sala_les_corts_30_12`, Sala38_13 → `barcelona/sala_les_corts_38_13`, Sala46_13 → `barcelona/sala_les_corts_46_13`, Sala60_13 → `barcelona/sala_les_corts_60_13`, Sala26_40 → `barcelona/gimnasio_1`, Sala47_29 → `barcelona/sala_les_corts_47_29`, Sala55_30 → `barcelona/sala_les_corts_55_30`, Sala49_41 → `barcelona/sala_les_corts_49_41`, Sala57_41 → `barcelona/sala_les_corts_57_41`, Sala4_46 → `barcelona/sala_les_corts_4_46`, Sala53_6 → `barcelona/sala_les_corts_53_6`, Sala21_23 → `barcelona/sala_les_corts_21_23`, Sala53_22 → `barcelona/sala_les_corts_53_22` |
 | `barcelona/les_corts/mercadona` | Mercadona · Les Corts | — | Salida → `barcelona/les_corts` |
 | `barcelona/mercadona` | Mercadona · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_ciutat_vella_12_13` | Oficinas · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_13_26` | Portal verde · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_13_36` | Casa gris · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_22_13` | Boqueria · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_22_27` | Teatro · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_25_40` | Tienda morada · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_44_22` | Catedral Barcelona · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_47_6` | Portal verde · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_49_41` | Casa roja pequeña · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_57_27` | Torre de socorro · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_5_13` | Portal · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_5_27` | Portal · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_5_40` | Portal · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_6_49` | Oficinas · Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_12_13` | Agencia de pisos turísticos de la Rambla, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_13_26` | Piso del Gótico, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_13_36` | Casa del pescador de la Barceloneta, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_22_13` | Mercado de la Boqueria, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_22_27` | Gran Teatre del Liceu, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_25_40` | Bazar de imanes de Gaudí, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_44_22` | Catedral de Barcelona, Barcelona | — | Salida → `barcelona/ciutat_vella`, Claustro → `barcelona/sala_ciutat_vella_44_22_claustro` |
+| `barcelona/sala_ciutat_vella_44_22_claustro` | Claustro de las ocas, Barcelona | — | Salida → `barcelona/sala_ciutat_vella_44_22` |
+| `barcelona/sala_ciutat_vella_47_6` | Piso del Born, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_49_41` | Chiringuito de la Barceloneta, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_57_27` | Socorrismo de la Barceloneta, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_5_13` | Portal del Raval, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_5_27` | Piso de la abuela del Raval, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_5_40` | Portal de la Barceloneta, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_6_49` | Oficina del puerto, Barcelona | — | Salida → `barcelona/ciutat_vella` |
 | `barcelona/sala_eixample_10_31` | Portal · Barcelona | — | Salida → `barcelona/eixample`, PisoRufian → `barcelona/casa_rufian` |
-| `barcelona/sala_eixample_12_19` | Tienda azul · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_12_41` | Tienda morada · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_15_50` | Casa gris · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_17_19` | Oficinas · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_17_31` | Portal · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_17_41` | Oficinas · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_17_5` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_25_31` | Casa Batlló · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_25_41` | Floristería · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_25_6` | Casa gris · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_33_53` | Casa roja pequeña · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_33_7` | Casa roja pequeña · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_37_19` | La Pedrera · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_37_31` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_37_41` | Portal · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_39_5` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_44_31` | Oficinas · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_44_41` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_45_18` | Tienda verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_51_5` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_52_18` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_55_41` | Sagrada Familia · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_59_19` | Portal · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_5_19` | Portal · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_5_41` | Portal · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_5_5` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_61_51` | Grandes almacenes · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_63_5` | Portal verde · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_eixample_68_19` | Oficinas · Barcelona | — | Salida → `barcelona/eixample` |
-| `barcelona/sala_les_corts_13_12` | Oficinas · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_21_12` | Oficinas · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_21_23` | Casa roja pequeña · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_30_12` | Portal verde · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_38_13` | Oficinas · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_46_13` | Portal · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_47_29` | Granero · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_49_41` | Tienda morada · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_4_13` | Portal · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_4_46` | Portal · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_53_22` | Casa gris · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_53_6` | Casa gris · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_55_30` | Tienda azul · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_57_41` | Portal verde · Barcelona | — | Salida → `barcelona/les_corts` |
-| `barcelona/sala_les_corts_60_13` | Portal · Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_eixample_12_19` | Tienda de diseño del Passeig de Gràcia, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_12_41` | Tienda de vinilos de Sant Antoni, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_15_50` | Casa de la familia de Badalona, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_17_19` | Startup del distrito 22@, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_17_31` | Piso de los recién casados, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_17_41` | Agencia de publicidad, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_17_5` | Portal de la calle Mallorca, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_25_31` | Casa Batlló, entresuelo, Barcelona | — | Salida → `barcelona/eixample`, Azotea → `barcelona/sala_eixample_25_31_azotea`, Principal → `barcelona/sala_eixample_25_31_principal` |
+| `barcelona/sala_eixample_25_31_azotea` | Casa Batlló, azotea del dragón, Barcelona | — | Salida → `barcelona/sala_eixample_25_31` |
+| `barcelona/sala_eixample_25_31_principal` | Casa Batlló, planta noble, Barcelona | — | Salida → `barcelona/sala_eixample_25_31` |
+| `barcelona/sala_eixample_25_41` | Floristeria de les Rambles, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_25_6` | Casa del matrimonio de Gràcia, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_33_53` | Bodega de vermut, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_33_7` | Granja de chocolate con melindros, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_37_19` | La Pedrera, patio de luces, Barcelona | — | Salida → `barcelona/eixample`, Vivienda → `barcelona/sala_eixample_37_19_vivienda` |
+| `barcelona/sala_eixample_37_19_vivienda` | La Pedrera, vivienda de época, Barcelona | — | Salida → `barcelona/sala_eixample_37_19` |
+| `barcelona/sala_eixample_37_31` | Piso de la profesora de catalán, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_37_41` | Piso de la familia del Barça, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_39_5` | Piso de los programadores, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_44_31` | Escuela de idiomas de la Diagonal, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_44_41` | Piso compartido de Erasmus, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_45_18` | Botiga ecológica a granel, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_51_5` | Piso de la familia de Sant Jordi, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_52_18` | Piso del casteller retirado, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_55_41` | Sagrada Familia, las naves, Barcelona | — | Salida → `barcelona/eixample`, Cripta → `barcelona/sala_eixample_55_41_cripta` |
+| `barcelona/sala_eixample_55_41_cripta` | Sagrada Familia, la cripta, Barcelona | — | Salida → `barcelona/sala_eixample_55_41` |
+| `barcelona/sala_eixample_59_19` | Piso del aficionado del Espanyol, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_5_19` | Portal de la calle Consell de Cent, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_5_41` | Portal de la calle Provença, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_5_5` | Piso modernista con humedades, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_61_51` | Grandes almacenes de Plaça Catalunya, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_63_5` | Portal de la calle Aragó, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_68_19` | Delegación de la Generalitat, Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_les_corts_13_12` | Oficina de atención al socio, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_21_12` | Departamento de fichajes, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_21_23` | Bar de la penya culé, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_30_12` | Piso de los canteranos, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_38_13` | Facultad de Economía de la Diagonal, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_46_13` | Piso del fisioterapeuta del club, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_47_29` | La Masia, residencia de canteranos, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_49_41` | Tienda de bufandas y banderas, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_4_13` | Portal de la Travessera, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_4_46` | Piso de la influencer de moda, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_53_22` | Casa de la masovera, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_53_6` | Casa del abonado número cien, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_55_30` | Botiga oficial del Barça, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_57_41` | Piso del jubilado del Camp Nou, Barcelona | — | Salida → `barcelona/les_corts` |
+| `barcelona/sala_les_corts_60_13` | Portal de la Diagonal, Barcelona | — | Salida → `barcelona/les_corts` |
 | `bilbao/estanco` | Estanco · Bilbao | — | Salida → `bilbao/exterior` |
 | `bilbao/exterior` | Bilbao | west → `ruta_19/exterior`, south → `ruta_20/exterior` | SanMames → `bilbao/gimnasio_1`, Hospital → `bilbao/hospital`, Mercadona → `bilbao/mercadona`, Estanco → `bilbao/estanco`, Sala46_14 → `bilbao/sala_calle_46_14`, Sala50_14 → `bilbao/sala_calle_50_14`, Sala29_25 → `bilbao/sala_calle_29_25`, Sala38_26 → `bilbao/sala_calle_38_26`, Sala53_27 → `bilbao/sala_calle_53_27`, Sala57_41 → `bilbao/sala_calle_57_41`, Sala44_41 → `bilbao/sala_calle_44_41`, Sala61_49 → `bilbao/sala_calle_61_49`, Sala64_48 → `bilbao/sala_calle_64_48`, Sala69_48 → `bilbao/sala_calle_69_48`, Sala57_18 → `bilbao/sala_calle_57_18`, Sala65_23 → `bilbao/sala_calle_65_23`, Sala34_42 → `bilbao/sala_calle_34_42`, Sala35_7 → `bilbao/sala_calle_35_7`, Guggenheim → `bilbao/guggenheim` |
 | `bilbao/gimnasio_1` | San Mamés · Grada De Animación | — | Salida → `bilbao/exterior`, Siguiente → `bilbao/gimnasio_2` |
