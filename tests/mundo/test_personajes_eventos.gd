@@ -195,3 +195,16 @@ func test_si_pierdes_la_serie_se_para_y_luego_sigue_por_donde_iba() -> void:
 	folagor.interact(_player)
 	await _finish_cutscene()
 	assert_eq(FakeEvent.fought, [&"sekiam", &"folagor"] as Array[StringName], "el ya ganado no repite")
+
+
+func test_ganar_al_lider_supremo_supera_la_liga() -> void:
+	var options := {"al_ganar": {"flag": "liga_superada", "texto": "¡Has ganado la Liga Pokémon!"}}
+	var leader := _trainer(&"pedro_sanchez", Vector2i(4, 4), options)
+	_player.place_at(Vector2i(4, 5), Vector2i.UP)
+	await wait_physics_frames(2)
+	assert_false(CharacterPlacements.is_available({"requiere": {"flag": "liga_superada"}}), "el rey aún no sale")
+	leader.interact(_player)
+	await _finish_cutscene()
+	assert_eq(FakeEvent.fought, [&"pedro_sanchez"] as Array[StringName])
+	assert_true(GameState.flag(&"liga_superada"))
+	assert_true(CharacterPlacements.is_available({"requiere": {"flag": "liga_superada"}}), "Felipe VI ya espera en la Plaza de la Armería")

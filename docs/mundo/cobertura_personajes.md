@@ -16,12 +16,12 @@
 | Dúo del Clan Ábalos | `abalos` | atlas `abalos` | atlas `abalos` | madrid/moncloa (27, 40) | Ferraz, la sede del Clan PSOE |
 | Dúo del Clan Ábalos | `abalos_albufera` | atlas `abalos` | atlas `abalos` | ruta_9/exterior (16, 27) | La Albufera (El Palmar), de «vacaciones»: segundo encuentro, con tres medallas (decisión de Javier) |
 | Dúo del Clan Ábalos | `abalos_soto` | atlas `abalos` | atlas `abalos` | soto_del_real/carcel (7, 4) | La cárcel de Soto del Real, más adelante: con seis medallas y después de la Albufera (decisión de Javier) |
-| Alto Mando Alonso | `alonso` | atlas `alonso` | atlas `alonso` | — | Pendiente: Interior de la Liga sin hacer |
+| Alto Mando Alonso | `alonso` | atlas `alonso` | atlas `alonso` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
 | Líder Aupa Athletic | `aupa_athletic` | atlas `aupa_athletic` | atlas `aupa_athletic` | sala: bilbao/gimnasio_lider, pintado: bilbao/gimnasio_lider |  |
 | Líder Ayuso | `ayuso` | atlas `ayuso` | atlas `ayuso` | madrid/atico_ayuso (8, 6), sala: madrid/gimnasio_lider | Líder del gimnasio 1: la terraza de su ático en Chamberí (se llega desde el hospital Quirón) |
 | Líder Banderas | `banderas` | atlas `banderas` | atlas `banderas` | sala: malaga/gimnasio_lider, pintado: malaga/gimnasio_lider |  |
-| Alto Mando Gasol | `gasol` | atlas `gasol` | atlas `gasol` | — | Pendiente: Interior de la Liga sin hacer |
-| Alto Mando Iniesta | `iniesta` | atlas `iniesta` | atlas `iniesta` | — | Pendiente: Interior de la Liga sin hacer |
+| Alto Mando Gasol | `gasol` | atlas `gasol` | atlas `gasol` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
+| Alto Mando Iniesta | `iniesta` | atlas `iniesta` | atlas `iniesta` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
 | Líder Joaquín | `joaquin` | atlas `joaquin` | atlas `joaquin` | sala: sevilla/gimnasio_lider, pintado: sevilla/gimnasio_lider |  |
 | Dúo del Clan Koldo | `koldo` | atlas `koldo` | atlas `koldo` | madrid/moncloa (29, 39) | Ferraz, con Ábalos y sus cajas |
 | Dúo del Clan Koldo | `koldo_albufera` | atlas `koldo` | atlas `koldo` | ruta_9/exterior (16, 28) | La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier) |
@@ -30,8 +30,8 @@
 | Líder Laporta | `laporta` | atlas `laporta` | atlas `laporta` | sala: barcelona/gimnasio_lider, pintado: barcelona/gimnasio_lider |  |
 | Líder Latasa | `latasa` | atlas `latasa` | atlas `latasa` | sala: valladolid/gimnasio_lider, pintado: valladolid/gimnasio_lider |  |
 | Fontanera del Clan Leire | `leire_diez` | atlas `leire_diez` | atlas `leire_diez` | madrid/retiro (13, 58) | Atocha, bajando a las cloacas |
-| Alto Mando Nadal | `nadal` | atlas `nadal` | atlas `nadal` | — | Pendiente: Interior de la Liga sin hacer |
-| Líder Supremo Pedro Sánchez | `pedro_sanchez` | atlas `pedro_sanchez` | atlas `pedro_sanchez` | — | Pendiente: Historia: va con la Liga y el Clan |
+| Alto Mando Nadal | `nadal` | atlas `nadal` | atlas `nadal` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
+| Líder Supremo Pedro Sánchez | `pedro_sanchez` | atlas `pedro_sanchez` | atlas `pedro_sanchez` | — | Pendiente: Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía |
 | Líder Quevedo | `quevedo` | atlas `quevedo` | atlas `quevedo` | sala: playa_del_ingles/gimnasio_lider, pintado: playa_del_ingles/gimnasio_lider |  |
 | Recluta del Clan Recluta | `recluta_clan` | hoja de la clase | retrato de la clase | madrid/moncloa (17, 15) | A las puertas de Moncloa |
 

@@ -263,9 +263,10 @@ func test_cada_entrenador_tiene_sprite_de_mapa_y_retrato_propios() -> void:
 
 func test_cada_entrenador_esta_colocado_o_explicado() -> void:
 	var pending := _explained("pendientes")
+	assert_false(_rows.is_empty(), "no hay entrenadores")
 	for row: Dictionary in _rows:
-		if row["places"].is_empty():
-			assert_true(pending.has(row["id"]) and not pending[row["id"]].is_empty(), "%s (%s) no sale en ningún sitio y no está en «pendientes» con su motivo" % [row["id"], row["file"]])
+		var explained: bool = pending.has(row["id"]) and not pending[row["id"]].is_empty()
+		assert_true(not row["places"].is_empty() or explained, "%s (%s) no sale en ningún sitio y no está en «pendientes» con su motivo" % [row["id"], row["file"]])
 
 
 func test_las_explicaciones_no_sobran() -> void:

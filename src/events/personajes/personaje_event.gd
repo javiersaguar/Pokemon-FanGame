@@ -7,6 +7,8 @@ extends "res://src/overworld/trainers/trainer_challenge_event.gd"
 ##   (las joyas de Zapatero). Regla R.2: el objeto viene por id de los datos.
 ## - "detencion": {"texto": "..."} o true: al ganarle llegan coches de policía y se lo llevan (Ábalos y Koldo).
 ##   Activa "detenido:<id>" (la colocación lleva "hasta": {"flag": "detenido:<id>"} para no volver a salir).
+## - "al_ganar": {"flag": "...", "texto": "..."}: al ganarle activa ese flag y lo anuncia (Pedro Sánchez:
+##   "liga_superada", y el rey Felipe VI sale en la Plaza de la Armería).
 
 const META := &"personaje"
 const POLICE_SHEET := "res://assets/sprites/characters/policia.png"
@@ -44,9 +46,24 @@ func run() -> void:
 		if reward is Dictionary:
 			await give_reward(t, reward)
 	for t: TrainerNPC in group:
+		var won: Variant = options_of(t).get("al_ganar")
+		if won is Dictionary:
+			await announce_win(won)
+	for t: TrainerNPC in group:
 		if options_of(t).has("detencion"):
 			await arrest(group, options_of(t)["detencion"])
 			break
+
+
+## Activa el flag de "al_ganar" y lo anuncia.
+func announce_win(details: Dictionary) -> void:
+	var flag := StringName(str(details.get("flag", "")))
+	if flag != &"":
+		GameState.set_flag(flag)
+	var text := str(details.get("texto", ""))
+	if text != "":
+		AudioManager.play_me(&"level_up")
+		await Dialogue.say(text)
 
 
 ## Los entrenadores de la serie que siguen en el mapa y sin derrotar, en su orden.

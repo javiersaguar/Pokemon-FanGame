@@ -2235,28 +2235,28 @@
  "pendientes": [
   {
    "id": "pedro_sanchez",
-   "lugar": "Palacio Real (Liga) y el Clan PSOE",
-   "motivo": "Historia: va con la Liga y el Clan"
+   "lugar": "Liga del Palacio Real: el Líder Supremo, al final (decisión de Javier)",
+   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
   },
   {
    "id": "iniesta",
-   "lugar": "Liga, Palacio Real",
-   "motivo": "Interior de la Liga sin hacer"
+   "lugar": "Liga del Palacio Real (decisión de Javier)",
+   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
   },
   {
    "id": "nadal",
-   "lugar": "Liga, Palacio Real",
-   "motivo": "Interior de la Liga sin hacer"
+   "lugar": "Liga del Palacio Real (decisión de Javier)",
+   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
   },
   {
    "id": "gasol",
-   "lugar": "Liga, Palacio Real",
-   "motivo": "Interior de la Liga sin hacer"
+   "lugar": "Liga del Palacio Real (decisión de Javier)",
+   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
   },
   {
    "id": "alonso",
-   "lugar": "Liga, Palacio Real",
-   "motivo": "Interior de la Liga sin hacer"
+   "lugar": "Liga del Palacio Real (decisión de Javier)",
+   "motivo": "Sus salas ya están pintadas (rama feat/agente2-liga, maps/_pintura/pintar_liga.gd: una sala por miembro, con ujier y ocho medallas), pero falta el paso desde el interior del Palacio Real (madrid/sala_palacio_real_23_30), que tiene reservado el Agente 1 (petición 89). Sin ese paso las salas quedan aisladas y tests/mundo/test_acceso_mundo.gd falla, así que no se suben todavía"
   }
  ],
  "por_evento": [

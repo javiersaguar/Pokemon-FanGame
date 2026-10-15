@@ -9,9 +9,10 @@ const DATA := "res://data/personajes_en_el_mapa.json"
 const TRAINER_SCENE := "res://src/overworld/trainers/trainer_npc.tscn"
 const NPC_SCENE := "res://src/overworld/npc/npc.tscn"
 const LEADER_EVENT := "res://src/events/gym_leader_event.gd"
-## Combates seguidos ("serie"), premio al ganar ("premio") y detención ("detencion"): ver el evento.
+## Combates seguidos ("serie"), premio al ganar ("premio"), detención ("detencion") y flag al ganar
+## ("al_ganar"): ver el evento.
 const PERSONAJE_EVENT := "res://src/events/personajes/personaje_event.gd"
-const EVENT_OPTIONS: Array[String] = ["serie", "premio", "detencion"]
+const EVENT_OPTIONS: Array[String] = ["serie", "premio", "detencion", "al_ganar"]
 const FACING := {"abajo": 0, "izquierda": 1, "derecha": 2, "arriba": 3}
 
 static var _by_map: Dictionary = {}
@@ -57,7 +58,7 @@ static func has_event_options(entry: Dictionary) -> bool:
 	return false
 
 
-## Las opciones del evento de personaje de una entrada ("serie", "premio", "detencion").
+## Las opciones del evento de personaje de una entrada ("serie", "premio", "detencion", "al_ganar").
 static func event_options(entry: Dictionary) -> Dictionary:
 	var out := {}
 	for key: String in EVENT_OPTIONS:
@@ -108,4 +109,10 @@ static func apply(map: MapRoot) -> void:
 		else:
 			node.set(&"sprite_sheet", load("res://assets/sprites/characters/%s.png" % str(entry["sprite"])))
 			node.set(&"lines", PackedStringArray(entry.get("frases", [])))
+			if entry.has("nombre"):
+				node.set(&"display_name", str(entry["nombre"]))
+		# "oculto_si": se aparta en cuanto se activa ese flag, sin recargar el mapa (el ujier de cada sala de la
+		# Liga deja paso al ganar al miembro del Alto Mando).
+		if entry.has("oculto_si"):
+			node.set(&"hidden_if_flag", StringName(str(entry["oculto_si"])))
 		entities.add_child(node)
