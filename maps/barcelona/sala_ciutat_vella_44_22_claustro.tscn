@@ -1,0 +1,97 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_6r6ff"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_c3q2h"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_ej2f6"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_md420"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_qj6co"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_a7qun"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/guarda_parque.png" id="7_pxb81"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_chkhl"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_hmaay"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_fcoyo"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_173id"]
+
+[sub_resource type="Resource" id="Resource_xtm0v"]
+script = ExtResource("3_ej2f6")
+id = &"barcelona/sala_ciutat_vella_44_22_claustro"
+display_name = "Claustro de las ocas, Barcelona"
+outdoor = false
+zone_id = &"barcelona"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaCiutatVella4422Claustro" type="Node2D" unique_id=214028567]
+script = ExtResource("1_6r6ff")
+data = SubResource("Resource_xtm0v")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1406301743]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADgAAAABAAAAAAAAADgAAAACAAAAAAAAADgAAAADAAAAAAAAADgAAAAEAAAAAAAAADgAAAAFAAAAAAAAADgAAAAGAAAAAAAAADgAAAAHAAAAAAAAADgAAAAIAAAAAAAAADgAAAAJAAAAAAAAADgAAAAKAAAAAAAAADgAAAALAAAAAAAAADgAAAAMAAAAAAAAADgAAAANAAAAAAAAADgAAAAAAAEAAAAAADgAAAABAAEAAAAAADgAAAACAAEAAAAAADgAAAADAAEAAAAAADgAAAAEAAEAAAAAADgAAAAFAAEAAAAAADgAAAAGAAEAAAAAADgAAAAHAAEAAAAAADgAAAAIAAEAAAAAADgAAAAJAAEAAAAAADgAAAAKAAEAAAAAADgAAAALAAEAAAAAADgAAAAMAAEAAAAAADgAAAANAAEAAAAAADgAAAAAAAIAAAAAADgAAAABAAIAAAAAADgAAAACAAIAAAAAADgAAAADAAIAAAAAADgAAAAEAAIAAAAAADgAAAAFAAIAAAAAADgAAAAGAAIAAAAAADgAAAAHAAIAAAAAADgAAAAIAAIAAAAAADgAAAAJAAIAAAAAADgAAAAKAAIAAAAAADgAAAALAAIAAAAAADgAAAAMAAIAAAAAADgAAAANAAIAAAAAADgAAAAAAAMAAAAAADgAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAIAAMAAAAAADgAAAAJAAMAAAAAADgAAAAKAAMAAAAAADgAAAALAAMAAAAAADgAAAAMAAMAAAAAADgAAAANAAMAAAAAADgAAAAAAAQAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAADgAAAAFAAQAAAAAADgAAAAGAAQAAAAAADgAAAAHAAQAAAAAADgAAAAIAAQAAAAAADgAAAAJAAQAAAAAADgAAAAKAAQAAAAAADgAAAALAAQAAAAAADgAAAAMAAQAAAAAADgAAAANAAQAAAAAADgAAAAAAAUAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAADgAAAAFAAUAAAAAADgAAAAGAAUAAAAAADgAAAAHAAUAAAAAADgAAAAIAAUAAAAAADgAAAAJAAUAAAAAADgAAAAKAAUAAAAAADgAAAALAAUAAAAAADgAAAAMAAUAAAAAADgAAAANAAUAAAAAADgAAAAAAAYAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAADgAAAAFAAYAAAAAADgAAAAGAAYAAAAAADgAAAAHAAYAAAAAADgAAAAIAAYAAAAAADgAAAAJAAYAAAAAADgAAAAKAAYAAAAAADgAAAALAAYAAAAAADgAAAAMAAYAAAAAADgAAAANAAYAAAAAADgAAAAAAAcAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAADgAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAAIAAcAAAAAADgAAAAJAAcAAAAAADgAAAAKAAcAAAAAADgAAAALAAcAAAAAADgAAAAMAAcAAAAAADgAAAANAAcAAAAAADgAAAAAAAgAAAAAADgAAAABAAgAAAAAADgAAAACAAgAAAAAADgAAAADAAgAAAAAADgAAAAEAAgAAAAAADgAAAAFAAgAAAAAADgAAAAGAAgAAAAAADgAAAAHAAgAAAAAADgAAAAIAAgAAAAAADgAAAAJAAgAAAAAADgAAAAKAAgAAAAAADgAAAALAAgAAAAAADgAAAAMAAgAAAAAADgAAAANAAgAAAAAADgAAAAAAAkAAAAAADgAAAABAAkAAAAAADgAAAACAAkAAAAAADgAAAADAAkAAAAAADgAAAAEAAkAAAAAADgAAAAFAAkAAAAAADgAAAAGAAkAAAAAADgAAAAHAAkAAAAAADgAAAAIAAkAAAAAADgAAAAJAAkAAAAAAAQAAAAKAAkAAAAAADgAAAALAAkAAAAAADgAAAAMAAkAAAAAADgAAAANAAkAAAAAADgAAAA=")
+tile_set = ExtResource("4_md420")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1074635896]
+tile_map_data = PackedByteArray("AAABAAAAAQABACEAAAABAAEAAQABACIAAAACAAAAAQABACEAAAACAAEAAQABACIAAAADAAAAAQABACEAAAADAAEAAQABACIAAAAEAAAAAQABACEAAAAEAAEAAQABACIAAAAFAAAAAQABACEAAAAFAAEAAQABACIAAAAGAAAAAQABACEAAAAGAAEAAQABACIAAAAHAAAAAQABACEAAAAHAAEAAQABACIAAAAIAAAAAQABACEAAAAIAAEAAQABACIAAAAJAAAAAQABACEAAAAJAAEAAQABACIAAAAKAAAAAQABACEAAAAKAAEAAQABACIAAAALAAAAAQABACEAAAALAAEAAQABACIAAAAMAAAAAQABACEAAAAMAAEAAQABACIAAAAAAAAAAQACAB8AAAANAAAAAQAAAB8AAAAAAAEAAQACAB8AAAANAAEAAQAAAB8AAAAAAAIAAQACAB8AAAANAAIAAQAAAB8AAAAAAAMAAQACAB8AAAANAAMAAQAAAB8AAAAAAAQAAQACAB8AAAANAAQAAQAAAB8AAAAAAAUAAQACAB8AAAANAAUAAQAAAB8AAAAAAAYAAQACAB8AAAANAAYAAQAAAB8AAAAAAAcAAQACAB8AAAANAAcAAQAAAB8AAAAAAAgAAQACAB8AAAANAAgAAQAAAB8AAAABAAkAAQABAB4AAAACAAkAAQABAB4AAAADAAkAAQABAB4AAAAEAAkAAQABAB4AAAAFAAkAAQABAB4AAAAGAAkAAQABAB4AAAAHAAkAAQABAB4AAAAIAAkAAQACAB4AAAAKAAkAAQAAAB4AAAALAAkAAQABAB4AAAAMAAkAAQABAB4AAAAAAAkAAQAFACIAAAANAAkAAQAGACIAAAA=")
+tile_set = ExtResource("4_md420")
+
+[node name="Entities" type="Node2D" parent="." unique_id=334111125]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1158850947]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAIAAEAAgAFACUAAAAJAAEAAgAGACUAAAAKAAEAAgAHACUAAAAIAAIAAgAFACYAAAAJAAIAAgAGACYAAAAKAAIAAgAHACYAAAALAAEAAgADADIAAAAMAAEAAgAEADIAAAALAAIAAgADADMAAAAMAAIAAgAEADMAAAABAAQAAgAEACYAAAADAAUAAgAEACYAAAAMAAgAAgAEACYAAAA=")
+tile_set = ExtResource("4_md420")
+
+[node name="CuidadorDeLasOcas" type="Node2D" parent="Entities" unique_id=1536274952 instance=ExtResource("5_qj6co")]
+position = Vector2(400, 240)
+script = ExtResource("6_a7qun")
+display_name = "Cuidador de las ocas"
+lines = PackedStringArray("Son trece ocas blancas. Muerden más que un Pokémon de tipo Siniestro y graznan cuando entra un carterista.", "Las ocas vigilaban el claustro en la Edad Media. Hoy vigilan que nadie se lleve la fuente de recuerdo.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_pxb81")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1598619446 instance=ExtResource("8_chkhl")]
+position = Vector2(368, 80)
+script = ExtResource("9_hmaay")
+lines = PackedStringArray("La fuente del claustro. En Corpus ponen encima un huevo que baila con el chorro de agua: «l\'ou com balla».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1662813757]
+z_index = 10
+tile_set = ExtResource("4_md420")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=857434935]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1987672765]
+position = Vector2(304, 304)
+script = ExtResource("10_fcoyo")
+target_map = &"barcelona/sala_ciutat_vella_44_22"
+target_spawn = &"desde_sala_ciutat_vella_44_22_claustro"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1695360175]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=613271549]
+position = Vector2(304, 272)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=2030223554]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1849626957]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_173id")
+theme_override_font_sizes/font_size = 16
+text = "CLAUSTRO DE LAS OCAS"
+horizontal_alignment = 1

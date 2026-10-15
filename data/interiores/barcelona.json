@@ -1,0 +1,3258 @@
+{
+ "_doc": "Interiores personalizados de barcelona (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Barcelona",
+ "interiores": {
+  "barcelona/sala_ciutat_vella_12_13": {
+   "tipo": "inmobiliaria",
+   "nombre": "Agencia de pisos turísticos de la Rambla",
+   "pieza": "oficinas_azules",
+   "calle": ["barcelona/ciutat_vella", [12, 13]],
+   "personas": [
+    {
+     "nombre": "Gestor de pisos turísticos",
+     "aspecto": "padretarjeta",
+     "papel": "dependiente",
+     "frases": [
+      "Gestionamos trescientos pisos sin licencia. Bueno, con licencia de existir.",
+      "El Ayuntamiento nos multa y nosotros subimos el precio de la noche. Es un ecosistema."
+     ],
+     "nodo": "GestorDePisosTuristicos",
+     "en": [9, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Propietario holandés",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": [
+      "Compré tres pisos en el Gótico para jubilarme. Me jubilo en Ámsterdam y los pisos se jubilan solos.",
+      "Los vecinos me ponen carteles de «Tourist go home». Yo vuelvo a casa, pero cobrando."
+     ],
+     "nodo": "PropietarioHolandes",
+     "en": [7, 7],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [15, 10],
+   "puerta": [3, 9],
+   "suelo": "losa_gris",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 4, 0],
+    ["archivador_bajo", 5, 1],
+    ["taquilla_archivo", 7, 0],
+    ["mostrador_madera", 11, 3],
+    ["banqueta_azul", 12, 5],
+    ["mesa_cristal", 8, 6],
+    ["banqueta_azul", 8, 8],
+    ["mostrador_madera", 3, 4],
+    ["banqueta_azul", 4, 6],
+    ["palmera_maceta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_13_26": {
+   "tipo": "piso",
+   "nombre": "Piso del Gótico",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/ciutat_vella", [13, 26]],
+   "personas": [
+    {
+     "nombre": "Pintora de la plaza",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Pinto caricaturas en la plaza de Sant Felip Neri. A los turistas les hago la nariz más pequeña y la propina más grande.",
+      "Este piso me lo alquila un fondo de Luxemburgo. Nunca he visto al fondo; solo sus correos."
+     ],
+     "nodo": "PintoraDeLaPlaza",
+     "en": [9, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su compañero de piso",
+     "aspecto": "flautista",
+     "papel": "mesa",
+     "frases": [
+      "Toco el violín en el metro de Liceu. Me sé el Canon de Pachelbel tan bien que ya lo odio.",
+      "Si me escuchas tocar en el andén, échame algo. Aunque sea un T-casual caducado."
+     ],
+     "nodo": "SuCompaneroDePiso",
+     "en": [7, 3],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [6, 7],
+   "suelo": "losa_crema",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [2, 3, 3, 3]]],
+   "muebles": [["fogones", 3, 1], ["nevera", 5, 1], ["papelera", 1, 1], ["mesa_cristal", 8, 2]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_13_36": {
+   "tipo": "casa",
+   "nombre": "Casa del pescador de la Barceloneta",
+   "pieza": "casa_gris",
+   "calle": ["barcelona/ciutat_vella", [13, 36]],
+   "personas": [
+    {
+     "nombre": "Pescador jubilado",
+     "aspecto": "npc_fisherman",
+     "papel": "tele",
+     "frases": [
+      "La Barceloneta era un barrio de pescadores. Ahora es un barrio de pescados: los turistas que se fríen al sol.",
+      "Mi barca la vendí. Ahora es un bar flotante que se llama «Authentic Fisherman»."
+     ],
+     "nodo": "PescadorJubilado",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Hago arroz negro con tinta de calamar. El vecino de arriba lo pide por la ventana con una cesta.",
+      "Nuestro piso tiene treinta metros. Los de fuera lo llaman «quart de casa». Nosotros, casa."
+     ],
+     "nodo": "SuMujer",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["nevera_alta", 8, 0],
+    ["tele", 1, 1],
+    ["estante_mostaza", 3, 1],
+    ["palmera_maceta", 1, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_22_13": {
+   "tipo": "mercado",
+   "nombre": "Mercado de la Boqueria",
+   "pieza": "boqueria",
+   "calle": ["barcelona/ciutat_vella", [22, 13]],
+   "personas": [
+    {
+     "nombre": "Vendedora de zumos",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "Zumo de mango, de pitaya y de fruta del dragón. Ningún barcelonés compra aquí, pero todos hacen la foto.",
+      "El vaso de zumo cuesta cinco euros. La pajita de papel se deshace gratis."
+     ],
+     "nodo": "VendedoraDeZumos",
+     "en": [4, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Pescadero",
+     "aspecto": "npc_fisherman",
+     "papel": "dependiente",
+     "frases": [
+      "Antes vendía merluza a las señoras del barrio. Ahora vendo cucuruchos de calamares a gente en chanclas.",
+      "Si me preguntan si el pescado es fresco, digo que más fresco que el que pregunta."
+     ],
+     "nodo": "Pescadero",
+     "en": [6, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuela del barrio",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a comprar como hace cincuenta años. Tardo una hora en cruzar entre los turistas, pero no me rindo.",
+      "Me han hecho una foto escogiendo tomates. Dicen que soy «auténtica». Lo que soy es vieja."
+     ],
+     "nodo": "AbuelaDelBarrio",
+     "en": [9, 9],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [3, 11],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_cristal_i", 3, 7],
+    ["mostrador_cristal_m", 4, 7],
+    ["mostrador_cristal_d", 5, 7],
+    ["mostrador_azul_i", 7, 7],
+    ["mostrador_azul_m", 8, 7],
+    ["mostrador_azul_d", 9, 7],
+    ["mostrador_oliva_i", 5, 3],
+    ["mostrador_oliva_m", 6, 3],
+    ["mostrador_oliva_d", 7, 3],
+    ["caja", 14, 10],
+    ["cajas", 12, 1]
+   ],
+   "encima": [["plato_comida", 4, 7], ["plato", 7, 3], ["plato_comida", 5, 7]],
+   "carteles": [],
+   "apariciones": {"default": [3, 10]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_22_27": {
+   "tipo": "teatro",
+   "nombre": "Gran Teatre del Liceu",
+   "pieza": "teatro",
+   "calle": ["barcelona/ciutat_vella", [22, 27]],
+   "personas": [
+    {
+     "nombre": "Tenor del Liceu",
+     "aspecto": "npc_man",
+     "papel": "artista",
+     "frases": [
+      "El Liceu se quemó dos veces y lo reconstruyeron. Yo me quemé una vez cantando Wagner y aquí sigo.",
+      "En el entreacto bajo a la Rambla a por un bocadillo. Con el traje de Otelo nadie me cobra."
+     ],
+     "nodo": "TenorDelLiceu",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Señora del palco",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": [
+      "Mi familia tiene palco desde 1890. Venimos a ver la ópera y, sobre todo, a ver quién no ha venido.",
+      "Las joyas que llevo son de mi bisabuela. La ópera la elige mi marido, que duerme en el segundo acto."
+     ],
+     "nodo": "SenoraDelPalco",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [8, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["losa_crema", [2, 2, 10, 2]]],
+   "muebles": [
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_25_40": {
+   "tipo": "souvenirs",
+   "nombre": "Bazar de imanes de Gaudí",
+   "pieza": "tienda_morada",
+   "calle": ["barcelona/ciutat_vella", [25, 40]],
+   "personas": [
+    {
+     "nombre": "Dueño del bazar",
+     "aspecto": "clerk",
+     "papel": "dependiente",
+     "frases": [
+      "Imanes de Gaudí, sombreros mexicanos y camisetas del Madrid. El turista no distingue y yo no pregunto.",
+      "La figurita del caganer es la que más vendo. Este año tengo al de un presidente y al de un ministro."
+     ],
+     "nodo": "DuenoDelBazar",
+     "en": [10, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Carterista retirado",
+     "aspecto": "carterista",
+     "papel": "cliente",
+     "frases": ["Trabajé veinte años en la Rambla. Ahora doy cursos para turistas: «Cómo no ser yo»."],
+     "nodo": "CarteristaRetirado",
+     "en": [10, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": [
+      "Una estantería de caganers: futbolistas, cantantes, políticos y un Pokémon. Todos en la misma postura."
+     ],
+     "nodo": "Cartel",
+     "en": [9, 2]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_oliva", 8, 0],
+    ["estanteria_alta_oliva", 10, 0],
+    ["mostrador_blanco_i", 8, 4],
+    ["mostrador_blanco_m", 9, 4],
+    ["mostrador_blanco_d", 10, 4],
+    ["estanteria_baja_oliva", 2, 3],
+    ["estanteria_baja_oliva", 4, 3],
+    ["cajonera_azul", 1, 1],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_44_22": {
+   "tipo": "catedral",
+   "nombre": "Catedral de Barcelona",
+   "pieza": "catedral_barcelona",
+   "calle": ["barcelona/ciutat_vella", [44, 22]],
+   "personas": [
+    {
+     "nombre": "Mossèn",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La catedral está dedicada a Santa Eulàlia. Por el claustro andan trece ocas, una por cada año que tenía la santa.",
+      "Los domingos se bailan sardanas en la plaza. Dentro solo se baila con la lista de turnos de confesión."
+     ],
+     "nodo": "Mossen",
+     "en": [11, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista con mapa",
+     "aspecto": "turista_f",
+     "papel": "publico",
+     "frases": [
+      "¿Esta es la Sagrada Familia? No, me dicen que no. ¿Y por qué tiene también andamios?",
+      "He visto ya nueve iglesias hoy. Ahora no sé si rezar o sentarme."
+     ],
+     "nodo": "TuristaConMapa",
+     "en": [7, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "Una placa: «Capilla del Santísimo». Delante, un cepillo para la voluntad con un datáfono al lado."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 2]
+    }
+   ],
+   "tamano": [14, 12],
+   "puerta": [10, 11],
+   "suelo": "rombos_oscuros",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [10, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 9, 3],
+    ["estatua_gargola", 6, 0],
+    ["arbol_maceta", 1, 0],
+    ["palmera_maceta", 12, 0],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 7, 8],
+    ["banco_rojo", 4, 8],
+    ["palmera_maceta", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 10], "desde_sala_ciutat_vella_44_22_claustro": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Claustro",
+     "en": [4, 1],
+     "destino": "barcelona/sala_ciutat_vella_44_22_claustro",
+     "aparicion": "default",
+     "vuelta": "desde_sala_ciutat_vella_44_22_claustro",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "barcelona/sala_ciutat_vella_44_22_claustro": {
+   "tipo": "cripta",
+   "padre": "barcelona/sala_ciutat_vella_44_22",
+   "nombre": "Claustro de las ocas",
+   "personas": [
+    {
+     "nombre": "Cuidador de las ocas",
+     "aspecto": "guarda_parque",
+     "papel": "libre",
+     "frases": [
+      "Son trece ocas blancas. Muerden más que un Pokémon de tipo Siniestro y graznan cuando entra un carterista.",
+      "Las ocas vigilaban el claustro en la Edad Media. Hoy vigilan que nadie se lleve la fuente de recuerdo."
+     ],
+     "nodo": "CuidadorDeLasOcas",
+     "en": [12, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "La fuente del claustro. En Corpus ponen encima un huevo que baila con el chorro de agua: «l'ou com balla»."
+     ],
+     "nodo": "Cartel",
+     "en": [11, 2]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "chapa",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["cajas", 8, 1], ["pedestal", 11, 1], ["caja", 1, 4], ["caja", 3, 5], ["caja", 12, 8]],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": [],
+   "salida": {
+    "destino": "barcelona/sala_ciutat_vella_44_22",
+    "aparicion": "desde_sala_ciutat_vella_44_22_claustro"
+   }
+  },
+  "barcelona/sala_ciutat_vella_47_6": {
+   "tipo": "piso",
+   "nombre": "Piso del Born",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/ciutat_vella", [47, 6]],
+   "personas": [
+    {
+     "nombre": "Vecina del Born",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "En mi escalera había doce vecinos. Ahora hay once pisos turísticos y yo, que soy la atracción.",
+      "Los turistas me preguntan si soy un museo. Les cobro dos euros y les cuento cómo era el barrio."
+     ],
+     "nodo": "VecinaDelBorn",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto de la vecina",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Me empadroné aquí para heredar el contrato de renta antigua. Es el único tesoro de la familia.",
+      "Mis amigos viven en Sabadell. Yo vivo en el Born con mi abuela. Ellos me envidian; yo envidio su ascensor."
+     ],
+     "nodo": "NietoDeLaVecina",
+     "en": [1, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["nevera", 5, 1],
+    ["consola", 6, 2],
+    ["tele", 7, 1],
+    ["sillon_derecha", 4, 3],
+    ["mesa_cristal", 5, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_49_41": {
+   "tipo": "chiringuito",
+   "nombre": "Chiringuito de la Barceloneta",
+   "pieza": "casa_roja_pequena",
+   "calle": ["barcelona/ciutat_vella", [49, 41]],
+   "personas": [
+    {
+     "nombre": "Camarero del chiringuito",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "La sangría de la casa lleva vino, fruta y un secreto: es de bolsa.",
+      "Las bravas son caseras. Bueno, la casa es la del congelador."
+     ],
+     "nodo": "CamareroDelChiringuito",
+     "en": [11, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Guiri quemado",
+     "aspecto": "turistachanclas",
+     "papel": "cliente",
+     "frases": [
+      "He estado cinco horas al sol sin crema. Ahora soy del color de la sangría.",
+      "Me he gastado sesenta euros en una paella. Estaba buena, creo. Tenía guisantes."
+     ],
+     "nodo": "GuiriQuemado",
+     "en": [11, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "rombos_morados",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 6, 0],
+    ["encimera", 7, 1],
+    ["alacena", 10, 0],
+    ["mostrador_madera_i", 7, 3],
+    ["mostrador_madera_m", 8, 3],
+    ["mostrador_madera_m", 9, 3],
+    ["mostrador_madera_m", 10, 3],
+    ["mostrador_madera_d", 11, 3],
+    ["taburete_marron", 8, 5],
+    ["taburete_marron", 10, 5],
+    ["mesa_cristal", 5, 4],
+    ["taburete_marron", 4, 5],
+    ["taburete_marron", 7, 5],
+    ["tele", 1, 1]
+   ],
+   "encima": [["taza", 7, 3], ["plato_comida", 8, 3]],
+   "carteles": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_57_27": {
+   "tipo": "socorrismo",
+   "nombre": "Socorrismo de la Barceloneta",
+   "pieza": "torre_socorrista",
+   "calle": ["barcelona/ciutat_vella", [57, 27]],
+   "personas": [
+    {
+     "nombre": "Socorrista de la Barceloneta",
+     "aspecto": "nadador_f",
+     "papel": "libre",
+     "frases": [
+      "Hoy he rescatado a dos bañistas, un patinete eléctrico y un mojito de cuatro litros.",
+      "La bandera verde significa que puedes nadar. La roja, que hay medusas. La de pirata, que el chiringuito cobra la tumbona."
+     ],
+     "nodo": "SocorristaDeLaBarceloneta",
+     "en": [5, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vendedor de latas",
+     "aspecto": "mantero",
+     "papel": "libre",
+     "frases": [
+      "¡Cerveza, agua, mojito! Un euro, dos euros. Si viene la Guardia Urbana, cero euros y correr.",
+      "Llevo la nevera en la cabeza desde las diez. Tengo el cuello más fuerte que un Machamp."
+     ],
+     "nodo": "VendedorDeLatas",
+     "en": [1, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [8, 7],
+   "puerta": [3, 6],
+   "suelo": "chapa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["cajas", 1, 1], ["tele_pequena", 4, 2]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_5_13": {
+   "tipo": "portal",
+   "nombre": "Portal del Raval",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/ciutat_vella", [5, 13]],
+   "personas": [
+    {
+     "nombre": "Portero del Raval",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En este portal se hablan veinte idiomas. Yo los entiendo todos cuando alguien no paga la comunidad.",
+      "Aquí vivió un poeta, un boxeador y un influencer. El que más debe es el influencer."
+     ],
+     "nodo": "PorteroDelRaval",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecina con carrito",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Vengo del mercado de Sant Antoni. He comprado tomates, pan y un libro viejo que olía a mi abuelo.",
+      "Sin ascensor y con el carrito. Cada día subo cinco pisos y bajo dos años de vida."
+     ],
+     "nodo": "VecinaConCarrito",
+     "en": [9, 5],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 8, 0],
+    ["mostrador_turquesa_i", 2, 3],
+    ["mostrador_turquesa_m", 3, 3],
+    ["mostrador_turquesa_d", 4, 3],
+    ["palmera_maceta", 1, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_5_27": {
+   "tipo": "piso",
+   "nombre": "Piso de la abuela del Raval",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/ciutat_vella", [5, 27]],
+   "personas": [
+    {
+     "nombre": "Àvia Montserrat",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Hago escudella de domingo para toda la familia. La familia viene por la escudella, no por mí. Lo tengo asumido.",
+      "Cuando yo era joven, el Raval se llamaba Barrio Chino. Ahora es «zona trendy». Los bares siguen siendo los mismos."
+     ],
+     "nodo": "AviaMontserrat",
+     "en": [5, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Nieta independentista",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Tengo la estelada en el balcón desde 2017. Ya está descolorida, pero la independencia también va despacio.",
+      "Mi abuela vota a otro partido. En las comidas de Navidad no se habla de política: se grita."
+     ],
+     "nodo": "NietaIndependentista",
+     "en": [2, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [5, 8],
+   "suelo": "moqueta_beige",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["tele_pequena", 7, 2],
+    ["sillon_derecha", 6, 3],
+    ["mesa_cristal", 7, 4],
+    ["caja", 8, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_5_40": {
+   "tipo": "portal",
+   "nombre": "Portal de la Barceloneta",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/ciutat_vella", [5, 40]],
+   "personas": [
+    {
+     "nombre": "Presidenta de la escalera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "En esta escalera hemos puesto un cartel: «Aquí vive gente». Los turistas le hacen fotos al cartel.",
+      "Las maletas de ruedas suenan a las cinco de la mañana. Ya sé distinguir un vuelo a Berlín de uno a Roma."
+     ],
+     "nodo": "PresidentaDeLaEscalera",
+     "en": [1, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Repartidor en patinete",
+     "aspecto": "patinetero",
+     "papel": "libre",
+     "frases": [
+      "Traigo una paella para el cuarto. Es de microondas, pero la caja dice «tradicional».",
+      "Por el paseo marítimo no se puede ir en patinete. Por eso voy por la arena, como un camello."
+     ],
+     "nodo": "RepartidorEnPatinete",
+     "en": [1, 6],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [6, 5, 3, 2]]],
+   "muebles": [
+    ["escalera_mano", 4, 0],
+    ["planta", 7, 1],
+    ["cajonera_azul", 8, 1],
+    ["mostrador_naranja_i", 1, 4],
+    ["mostrador_naranja_m", 2, 4],
+    ["mostrador_naranja_d", 3, 4],
+    ["planta", 10, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_6_49": {
+   "tipo": "oficina",
+   "nombre": "Oficina del puerto",
+   "pieza": "oficinas_azules",
+   "calle": ["barcelona/ciutat_vella", [6, 49]],
+   "personas": [
+    {
+     "nombre": "Capitana del puerto",
+     "aspecto": "marinero",
+     "papel": "mesa",
+     "frases": [
+      "Hoy atracan tres cruceros. Bajarán quince mil personas a comprar el mismo imán en la misma tienda.",
+      "El ferry a Palma sale a su hora. Lo que no sale a su hora es la gente de la cola del control."
+     ],
+     "nodo": "CapitanaDelPuerto",
+     "en": [7, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Estibador",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "Descargo contenedores de Asia con camisetas de «I love Barcelona». Todo vuelve a su sitio.",
+      "Mi abuelo cargaba sacos a la espalda. Yo cargo con la hipoteca, que pesa más."
+     ],
+     "nodo": "Estibador",
+     "en": [4, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [5, 10],
+   "suelo": "moqueta_beige",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 1, 0],
+    ["archivador_bajo", 2, 1],
+    ["taquilla_archivo", 4, 0],
+    ["mostrador_madera", 12, 5],
+    ["banqueta_azul", 13, 7],
+    ["mesa_cristal", 7, 5],
+    ["banqueta_azul", 7, 7],
+    ["mostrador_madera", 3, 6],
+    ["banqueta_azul", 4, 8],
+    ["planta", 1, 8]
+   ],
+   "encima": [["libro_abierto", 7, 5], ["libro_abierto", 5, 6]],
+   "carteles": [],
+   "apariciones": {"default": [5, 9]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_12_19": {
+   "tipo": "tienda",
+   "nombre": "Tienda de diseño del Passeig de Gràcia",
+   "pieza": "tienda_azul",
+   "calle": ["barcelona/eixample", [12, 19]],
+   "personas": [
+    {
+     "nombre": "Dependiente de diseño",
+     "aspecto": "influencerlinkedin",
+     "papel": "dependiente",
+     "frases": [
+      "Esta silla no es para sentarse: es para pensar en sentarse. Cuesta 2.400.",
+      "La lámpara es minimalista. No da luz; da conversación."
+     ],
+     "nodo": "DependienteDeDiseno",
+     "en": [2, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta indecisa",
+     "aspecto": "npc_lass",
+     "papel": "cliente",
+     "frases": [
+      "Quería un jarrón y me han vendido «un diálogo entre el vacío y la cerámica».",
+      "En casa no me cabe nada de esto, pero la bolsa de la tienda queda divina en el metro."
+     ],
+     "nodo": "ClientaIndecisa",
+     "en": [9, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_oliva", 7, 0],
+    ["estanteria_alta_oliva", 9, 0],
+    ["mostrador_oliva_i", 1, 4],
+    ["mostrador_oliva_m", 2, 4],
+    ["mostrador_oliva_d", 3, 4],
+    ["cajonera_azul", 5, 1],
+    ["cajas", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_12_41": {
+   "tipo": "tienda",
+   "nombre": "Tienda de vinilos de Sant Antoni",
+   "pieza": "tienda_morada",
+   "calle": ["barcelona/eixample", [12, 41]],
+   "personas": [
+    {
+     "nombre": "Vendedor de vinilos",
+     "aspecto": "perroflauta",
+     "papel": "dependiente",
+     "frases": [
+      "Vendo vinilos porque suenan cálidos. También porque son caros y los compra gente que no tiene tocadiscos.",
+      "Este disco de rumba catalana está firmado por Peret. O por alguien que se llamaba Peret."
+     ],
+     "nodo": "VendedorDeVinilos",
+     "en": [1, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Coleccionista",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": [
+      "Tengo seis mil discos. Mi mujer me ha dado un ultimátum: o los discos o ella. Echaré de menos a mi mujer.",
+      "Busco la primera edición de un grupo que solo sacó un disco. Lo compraron cien personas; yo tengo tres."
+     ],
+     "nodo": "Coleccionista",
+     "en": [2, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "parquet",
+   "pared": "menta",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_oliva", 7, 0],
+    ["estanteria_alta_oliva", 9, 0],
+    ["mostrador_naranja_i", 1, 3],
+    ["mostrador_naranja_m", 2, 3],
+    ["mostrador_naranja_d", 3, 3],
+    ["estanteria_baja_oliva", 6, 3],
+    ["estanteria_baja_oliva", 8, 3],
+    ["cajonera_azul", 5, 1],
+    ["planta", 10, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_15_50": {
+   "tipo": "casa",
+   "nombre": "Casa de la familia de Badalona",
+   "pieza": "casa_gris",
+   "calle": ["barcelona/eixample", [15, 50]],
+   "personas": [
+    {
+     "nombre": "Padre trabajador",
+     "aspecto": "jubiladoobras",
+     "papel": "tele",
+     "frases": [
+      "Trabajo en el puerto y vivo en el centro porque heredé el piso. Es lo único que he heredado: el piso y la espalda.",
+      "Mis compañeros viven a una hora de tren. Yo a diez minutos andando y treinta buscando aparcamiento."
+     ],
+     "nodo": "PadreTrabajador",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija adolescente",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Mis padres quieren que estudie. Yo quiero ser tiktoker. Hemos llegado a un acuerdo: tiktoker que estudia.",
+      "Mi abuela me habla en catalán, mi madre en castellano y yo contesto en emojis."
+     ],
+     "nodo": "HijaAdolescente",
+     "en": [1, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "moqueta_beige",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 4, 0],
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["tele", 2, 1],
+    ["sillon_derecha", 5, 5],
+    ["mesa_cristal", 6, 6],
+    ["sillon_izquierda", 8, 5],
+    ["arbol_maceta", 9, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_17_19": {
+   "tipo": "startup",
+   "nombre": "Startup del distrito 22@",
+   "pieza": "oficinas_azules",
+   "calle": ["barcelona/eixample", [17, 19]],
+   "personas": [
+    {
+     "nombre": "CEO de la startup",
+     "aspecto": "influencerlinkedin",
+     "papel": "mesa",
+     "frases": [
+      "Somos una aplicación que conecta a gente que busca piso con gente que no tiene piso. Ya tenemos un millón de usuarios.",
+      "Nuestro modelo de negocio es sencillo: perder dinero hasta que nos compre una empresa grande."
+     ],
+     "nodo": "CEODeLaStartup",
+     "en": [9, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Desarrolladora",
+     "aspecto": "estudianteinge_f",
+     "papel": "libre",
+     "frases": [
+      "El CEO dice que somos una familia. En las familias también se trabaja gratis los domingos.",
+      "Tenemos fruta gratis los lunes. El resto de la semana nos alimentamos de esperanza en la ronda de inversión."
+     ],
+     "nodo": "Desarrolladora",
+     "en": [4, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [15, 10],
+   "puerta": [6, 9],
+   "suelo": "losa_crema",
+   "pared": "menta",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 6, 0],
+    ["archivador", 8, 1],
+    ["mostrador_tablas", 2, 2],
+    ["banqueta_roja", 3, 4],
+    ["mostrador_tablas", 2, 6],
+    ["banqueta_azul", 3, 8],
+    ["mostrador_tablas", 10, 4],
+    ["banqueta_azul", 11, 6],
+    ["palmera_maceta", 13, 6],
+    ["papelera", 1, 1],
+    ["mesa_cristal", 10, 7],
+    ["taburete_rojo", 12, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_17_31": {
+   "tipo": "piso",
+   "nombre": "Piso de los recién casados",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/eixample", [17, 31]],
+   "personas": [
+    {
+     "nombre": "Recién casada",
+     "aspecto": "invitada_boda",
+     "papel": "libre",
+     "frases": [
+      "Nos casamos en Montserrat y lo celebramos en una masía. Ahora vivimos en cuarenta metros y debemos la masía.",
+      "El piso nos lo dejan mis suegros. Con mis suegros dentro, eso sí."
+     ],
+     "nodo": "RecienCasada",
+     "en": [5, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Suegra",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Yo no me meto en nada. Solo cocino, limpio, opino y cambio los muebles de sitio cuando no están.",
+      "Los niños tienen que venir pronto. Ya he comprado la cuna, el carrito y el colegio."
+     ],
+     "nodo": "Suegra",
+     "en": [7, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["fogones", 5, 1],
+    ["mesa_cristal", 1, 3],
+    ["taburete_marron", 3, 4],
+    ["ropero_oliva", 8, 0],
+    ["cajas", 8, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_17_41": {
+   "tipo": "oficina",
+   "nombre": "Agencia de publicidad",
+   "pieza": "oficinas_azules",
+   "calle": ["barcelona/eixample", [17, 41]],
+   "personas": [
+    {
+     "nombre": "Creativo publicitario",
+     "aspecto": "influencerlinkedin",
+     "papel": "mesa",
+     "frases": [
+      "Estamos haciendo un anuncio de cava para Navidad. Tiene que salir una familia feliz, un perro y nada de política.",
+      "El cliente quiere algo «disruptivo pero de toda la vida». Le vamos a hacer lo mismo que el año pasado con otra música."
+     ],
+     "nodo": "CreativoPublicitario",
+     "en": [10, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Becario de redes",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Llevo las redes de una marca de agua mineral. Hoy he subido un meme y lo han visto cuarenta personas, treinta de la empresa.",
+      "Mi trabajo es que la gente se ría con una marca. Mi sueldo es la parte que de verdad tiene gracia."
+     ],
+     "nodo": "BecarioDeRedes",
+     "en": [6, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [6, 9],
+   "suelo": "moqueta_azul",
+   "pared": "crema",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 2, 0],
+    ["archivo_alto", 4, 0],
+    ["mostrador_verde", 4, 5],
+    ["banqueta_roja", 5, 7],
+    ["mesa_cristal", 11, 4],
+    ["banqueta_azul", 11, 6],
+    ["papelera", 12, 7]
+   ],
+   "encima": [["taza", 12, 4], ["taza", 4, 5]],
+   "carteles": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_17_5": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Mallorca",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/eixample", [17, 5]],
+   "personas": [
+    {
+     "nombre": "Conserje modernista",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "El ascensor de este portal es de hierro forjado y tiene más historia que muchos países.",
+      "Lo arreglan una vez al año. El técnico viene con un libro de instrucciones de 1910."
+     ],
+     "nodo": "ConserjeModernista",
+     "en": [6, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecina del principal",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "En el Eixample los pisos se llaman «principal», «entresuelo» y «primero». Yo vivo en el principal y pago como en un palacio.",
+      "La manzana tiene un patio interior lleno de árboles. Los vecinos lo miramos desde la ventana: es privado."
+     ],
+     "nodo": "VecinaDelPrincipal",
+     "en": [2, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [5, 3, 3, 3]]],
+   "muebles": [
+    ["planta", 1, 1],
+    ["escalera_mano", 2, 0],
+    ["cajonera_gris", 5, 1],
+    ["cajon_gris", 7, 1],
+    ["mostrador_azul_i", 6, 3],
+    ["mostrador_azul_m", 7, 3],
+    ["mostrador_azul_d", 8, 3],
+    ["palmera_maceta", 8, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_25_31": {
+   "tipo": "museo",
+   "nombre": "Casa Batlló, entresuelo",
+   "rotulo": "Casa Batlló",
+   "pieza": "casa_batllo",
+   "calle": ["barcelona/eixample", [25, 31]],
+   "personas": [
+    {
+     "nombre": "Taquillera de la Casa Batlló",
+     "aspecto": "clerk",
+     "papel": "dependiente",
+     "frases": [
+      "La entrada normal son treinta y cinco euros. La de «experiencia inmersiva» son cincuenta: es lo mismo con gafas.",
+      "La fachada son huesos y escamas. Los vecinos la llaman «la casa de los huesos». Los turistas, «la de Instagram»."
+     ],
+     "nodo": "TaquilleraDeLaCasaBatllo",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Niño fascinado",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "El tejado es un dragón y la torre es la espada de Sant Jordi que lo mata. Esto es mejor que cualquier videojuego.",
+      "Le he preguntado a mi padre si podemos vivir aquí. Me ha dicho que con suerte en la acera de enfrente."
+     ],
+     "nodo": "NinoFascinado",
+     "en": [1, 2],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [10, 10],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [7, 3, 4, 2]]],
+   "muebles": [
+    ["vitrina_madera", 6, 1],
+    ["estatua_gargola", 8, 0],
+    ["vitrina_madera", 10, 1],
+    ["isla_verde", 8, 3],
+    ["banco_rojo", 2, 9],
+    ["arbol_maceta", 1, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {
+    "default": [10, 9],
+    "desde_sala_eixample_25_31_azotea": [5, 2],
+    "desde_sala_eixample_25_31_principal": [2, 2]
+   },
+   "pasos": [
+    {
+     "nodo": "Azotea",
+     "en": [5, 1],
+     "destino": "barcelona/sala_eixample_25_31_azotea",
+     "aparicion": "default",
+     "vuelta": "desde_sala_eixample_25_31_azotea",
+     "llegada": [5, 2]
+    },
+    {
+     "nodo": "Principal",
+     "en": [2, 1],
+     "destino": "barcelona/sala_eixample_25_31_principal",
+     "aparicion": "default",
+     "vuelta": "desde_sala_eixample_25_31_principal",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "barcelona/sala_eixample_25_31_azotea": {
+   "tipo": "torre",
+   "padre": "barcelona/sala_eixample_25_31",
+   "nombre": "Casa Batlló, azotea del dragón",
+   "personas": [
+    {
+     "nombre": "Fotógrafa de bodas",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Hago fotos de bodas en la azotea del dragón. Los novios salen preciosos y el dragón sale mejor.",
+      "Cada escama del tejado es de un color. Gaudí no conocía el término «paleta corporativa»."
+     ],
+     "nodo": "FotografaDeBodas",
+     "en": [2, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "escalera",
+     "frases": [
+      "El lomo del dragón, de tejas verdes y azules. A un lado, la torre con la cruz: la lanza de Sant Jordi."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 2]
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "chapa",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 3, 0], ["cajas", 6, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": [],
+   "salida": {"destino": "barcelona/sala_eixample_25_31", "aparicion": "desde_sala_eixample_25_31_azotea"}
+  },
+  "barcelona/sala_eixample_25_31_principal": {
+   "tipo": "palacio",
+   "padre": "barcelona/sala_eixample_25_31",
+   "nombre": "Casa Batlló, planta noble",
+   "personas": [
+    {
+     "nombre": "Restaurador",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Restauro las vidrieras azules pieza a pieza. Cuando acabo con la última, la primera ya necesita otra vez.",
+      "El señor Batlló quería una casa normal. Le tocó Gaudí. Mira cómo acabó."
+     ],
+     "nodo": "Restaurador",
+     "en": [4, 8],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "El techo del salón es un remolino de yeso, como si el mar hubiera entrado por la ventana y se hubiera quedado."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [5, 11],
+   "suelo": "hidraulica_rosa",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [4, 3, 10, 6]]],
+   "muebles": [
+    ["mesa_cristal_larga", 8, 5],
+    ["silla_derecha", 7, 5],
+    ["silla_izquierda", 11, 5],
+    ["pedestal", 1, 8],
+    ["arbol_maceta", 14, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 10]},
+   "pasos": [],
+   "salida": {"destino": "barcelona/sala_eixample_25_31", "aparicion": "desde_sala_eixample_25_31_principal"}
+  },
+  "barcelona/sala_eixample_25_41": {
+   "tipo": "floristeria",
+   "nombre": "Floristeria de les Rambles",
+   "pieza": "tienda_flores",
+   "calle": ["barcelona/eixample", [25, 41]],
+   "personas": [
+    {
+     "nombre": "Florista de toda la vida",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Los puestos de flores de la Rambla eran de las floristas. Ahora venden zumos, imanes y fotos con un pirata.",
+      "En Sant Jordi vendo cuatro mil rosas en un día. El resto del año vendo cactus a gente que se siente sola."
+     ],
+     "nodo": "FloristaDeTodaLaVida",
+     "en": [1, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Novio de Sant Jordi",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": [
+      "Necesito una rosa para hoy y otra para mi suegra, que si no se ofende.",
+      "La rosa con espiga de trigo cuesta el doble. La espiga es la parte que trae suerte, dicen."
+     ],
+     "nodo": "NovioDeSantJordi",
+     "en": [8, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "losa_crema",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["arbol_maceta", 7, 0],
+    ["palmera_maceta", 8, 0],
+    ["arbol_maceta", 9, 0],
+    ["mostrador_azul_i", 1, 4],
+    ["mostrador_azul_m", 2, 4],
+    ["mostrador_azul_d", 3, 4],
+    ["planta", 4, 3],
+    ["planta", 5, 3],
+    ["planta", 6, 3],
+    ["palmera_maceta", 1, 0],
+    ["planta", 10, 1],
+    ["cajas", 1, 6]
+   ],
+   "encima": [["jarron_flores", 3, 4]],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_25_6": {
+   "tipo": "casa",
+   "nombre": "Casa del matrimonio de Gràcia",
+   "pieza": "casa_gris",
+   "calle": ["barcelona/eixample", [25, 6]],
+   "personas": [
+    {
+     "nombre": "Senyor Jordi",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "La pela és la pela. Por eso tengo la calefacción a dieciséis grados y la manta a cuarenta.",
+      "Mi hijo se ha ido a vivir a Badalona. Dice que allí hay más espacio y menos cola para el pan."
+     ],
+     "nodo": "SenyorJordi",
+     "en": [6, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Senyora Rosa",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "En las fiestas de Gràcia decoramos la calle con botellas de plástico. Este año hemos hecho un dragón.",
+      "Ganamos el premio a la mejor calle. Nos dieron un diploma y una multa por ruido."
+     ],
+     "nodo": "SenyoraRosa",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [6, 4, 3, 3]]],
+   "muebles": [
+    ["alacena", 7, 0],
+    ["fogones", 8, 1],
+    ["fregadero", 10, 1],
+    ["tele", 5, 1],
+    ["palmera_maceta", 11, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_33_53": {
+   "tipo": "bar",
+   "nombre": "Bodega de vermut",
+   "pieza": "casa_roja_pequena",
+   "calle": ["barcelona/eixample", [33, 53]],
+   "personas": [
+    {
+     "nombre": "Bodeguero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "El vermut se toma los domingos antes de comer. Si lo toma un lunes, no pasa nada, pero no se lo diga a nadie.",
+      "Las anchoas son de L'Escala, las aceitunas de Lleida y el cliente de Madrid. Todo muy de aquí."
+     ],
+     "nodo": "Bodeguero",
+     "en": [5, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Parroquiana",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Vermut, unas patatas y una conversación sobre lo mal que está todo. Es mi rutina de salud.",
+      "Cuando cierre esta bodega pondrán una tienda de gofres. Es lo que pasa en todos los barrios."
+     ],
+     "nodo": "Parroquiana",
+     "en": [9, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_oscuros",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["encimera", 5, 1],
+    ["estanteria_alta_nogal", 8, 0],
+    ["mostrador_azul_i", 5, 4],
+    ["mostrador_azul_m", 6, 4],
+    ["mostrador_azul_m", 7, 4],
+    ["mostrador_azul_m", 8, 4],
+    ["mostrador_azul_d", 9, 4],
+    ["taburete_marron", 6, 6],
+    ["taburete_marron", 8, 6],
+    ["mesa_cristal", 2, 6],
+    ["taburete_marron", 1, 7],
+    ["taburete_marron", 4, 7],
+    ["cajas", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_33_7": {
+   "tipo": "cafeteria",
+   "nombre": "Granja de chocolate con melindros",
+   "pieza": "casa_roja_pequena",
+   "calle": ["barcelona/eixample", [33, 7]],
+   "personas": [
+    {
+     "nombre": "Camarera de la granja",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Una granja no es una granja: es una chocolatería. Aquí no hay vacas, solo suizos y melindros.",
+      "El chocolate es tan espeso que la cuchara se queda de pie. Si se cae, invitamos."
+     ],
+     "nodo": "CamareraDeLaGranja",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuelo goloso",
+     "aspecto": "npc_old_man",
+     "papel": "cliente",
+     "frases": [
+      "Vengo todas las tardes a merendar desde 1965. Mi médico dice que no; mi médico no ha probado los melindros.",
+      "En invierno aquí se está mejor que en casa. Y la calefacción la pagan ellos."
+     ],
+     "nodo": "AbueloGoloso",
+     "en": [4, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "losa_crema",
+   "pared": "marino",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["encimera", 4, 1],
+    ["alacena", 7, 0],
+    ["mostrador_madera_i", 2, 4],
+    ["mostrador_madera_m", 3, 4],
+    ["mostrador_madera_m", 4, 4],
+    ["mostrador_madera_m", 5, 4],
+    ["mostrador_madera_d", 6, 4],
+    ["banqueta_roja", 3, 6],
+    ["banqueta_roja", 5, 6],
+    ["mesa_cristal", 8, 4],
+    ["banqueta_roja", 10, 4],
+    ["tele", 9, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_37_19": {
+   "tipo": "museo",
+   "nombre": "La Pedrera, patio de luces",
+   "rotulo": "La Pedrera",
+   "pieza": "la_pedrera",
+   "calle": ["barcelona/eixample", [37, 19]],
+   "personas": [
+    {
+     "nombre": "Guía de La Pedrera",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Gaudí no puso ni una pared recta. Los fontaneros todavía lloran cuando tienen que entrar.",
+      "En la azotea hay chimeneas con forma de soldado. Dicen que inspiraron una película de galaxias; Gaudí no cobró derechos."
+     ],
+     "nodo": "GuiaDeLaPedrera",
+     "en": [6, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Turista con audioguía",
+     "aspecto": "turista",
+     "papel": "libre",
+     "frases": [
+      "La audioguía habla en catorce idiomas. Ninguno explica por qué la entrada cuesta treinta euros.",
+      "Me he mareado mirando el techo. Me dicen que es normal, que así lo quería Gaudí."
+     ],
+     "nodo": "TuristaConAudioguia",
+     "en": [8, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Una maqueta de la casa hecha con cadenas colgadas: Gaudí calculaba los arcos boca abajo. Los presupuestos, también."
+     ],
+     "nodo": "Cartel",
+     "en": [12, 2]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "losa_gris",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 7, 1],
+    ["estatua_gargola", 9, 0],
+    ["vitrina_madera", 11, 1],
+    ["vitrina_blanca", 5, 6],
+    ["vitrina_blanca", 8, 6],
+    ["estatua_gargola", 2, 3],
+    ["vitrina_madera_estrecha", 1, 5],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8], "desde_sala_eixample_37_19_vivienda": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Vivienda",
+     "en": [6, 1],
+     "destino": "barcelona/sala_eixample_37_19_vivienda",
+     "aparicion": "default",
+     "vuelta": "desde_sala_eixample_37_19_vivienda",
+     "llegada": [6, 2]
+    }
+   ]
+  },
+  "barcelona/sala_eixample_37_19_vivienda": {
+   "tipo": "piso",
+   "padre": "barcelona/sala_eixample_37_19",
+   "nombre": "La Pedrera, vivienda de época",
+   "personas": [
+    {
+     "nombre": "Actriz de época",
+     "aspecto": "npc_kimono_girl",
+     "papel": "cocina",
+     "frases": [
+      "Represento a una señora de 1912 en el piso museo. Hago como que cocino en una cocina que nunca se ha encendido.",
+      "Los turistas me preguntan cuánto paga de alquiler. Les digo que en 1912 era barato. No me creen."
+     ],
+     "nodo": "ActrizDeEpoca",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "cama",
+     "frases": ["Una cama de matrimonio de 1912 con un cartel: «No sentarse». Debajo, un orinal también de 1912."],
+     "nodo": "Cartel",
+     "en": [8, 3]
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "moqueta_beige",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 3, 5, 3]]],
+   "muebles": [
+    ["encimera", 1, 1],
+    ["nevera", 4, 1],
+    ["tele_pequena", 5, 2],
+    ["sillon_derecha", 3, 4],
+    ["mesa_cristal", 4, 5],
+    ["planta", 8, 5],
+    ["cama_colcha_azul", 6, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": [],
+   "salida": {"destino": "barcelona/sala_eixample_37_19", "aparicion": "desde_sala_eixample_37_19_vivienda"}
+  },
+  "barcelona/sala_eixample_37_31": {
+   "tipo": "piso",
+   "nombre": "Piso de la profesora de catalán",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/eixample", [37, 31]],
+   "personas": [
+    {
+     "nombre": "Profesora de catalán",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Doy clases a alemanes, chinos y madrileños. Los madrileños son los que más se sorprenden de que funcione.",
+      "La palabra más difícil para mis alumnos es «setze jutges d'un jutjat mengen fetge d'un penjat»."
+     ],
+     "nodo": "ProfesoraDeCatalan",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Alumno madrileño",
+     "aspecto": "cunado",
+     "papel": "libre",
+     "frases": [
+      "Llevo seis meses aprendiendo catalán. Ya sé pedir un café y que me contesten en castellano.",
+      "En Madrid me llaman «el catalán» y aquí «el madrileño». Soy apátrida del aperitivo."
+     ],
+     "nodo": "AlumnoMadrileno",
+     "en": [6, 2],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["sillon_derecha", 7, 3], ["mesa_cristal", 8, 4], ["planta", 1, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_37_41": {
+   "tipo": "piso",
+   "nombre": "Piso de la familia del Barça",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/eixample", [37, 41]],
+   "personas": [
+    {
+     "nombre": "Padre culé",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Somos socios desde mi abuelo. En casa el escudo está en la pared, en las tazas y en el certificado de bautismo.",
+      "Este año el club tiene deudas, palancas y un estadio en obras. Es el más de lo mismo de toda la vida."
+     ],
+     "nodo": "PadreCule",
+     "en": [5, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Madre culé",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Cuando pierde el Barça no se habla en la cena. Cuando gana, tampoco: se canta.",
+      "Mi hijo quería ser del Madrid para llevar la contraria. Lo castigamos sin ver la final."
+     ],
+     "nodo": "MadreCule",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "menta",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 6, 0], ["fogones", 7, 1], ["tele_pequena", 5, 2], ["ropero_verde", 2, 0]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_39_5": {
+   "tipo": "piso",
+   "nombre": "Piso de los programadores",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/eixample", [39, 5]],
+   "personas": [
+    {
+     "nombre": "Programador nómada",
+     "aspecto": "estudianteinge",
+     "papel": "tele",
+     "frases": [
+      "Trabajo en remoto para una empresa de California. Cobro en dólares y pago el alquiler en lágrimas.",
+      "Mi casero me sube el alquiler cada vez que me ve con un portátil nuevo."
+     ],
+     "nodo": "ProgramadorNomada",
+     "en": [8, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Diseñadora de interfaces",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "Diseño botones. Este mes he diseñado un botón tan bonito que nadie se atreve a pulsarlo.",
+      "Vine de Lisboa porque allí ya no se podía vivir. Aquí tampoco, pero hay más bares."
+     ],
+     "nodo": "DisenadoraDeInterfaces",
+     "en": [2, 6],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [5, 4, 3, 2]]],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["fogones", 5, 1],
+    ["sofa", 7, 5],
+    ["tele_pequena", 9, 2],
+    ["mesa_cristal", 3, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_44_31": {
+   "tipo": "academia",
+   "nombre": "Escuela de idiomas de la Diagonal",
+   "pieza": "oficinas_azules",
+   "calle": ["barcelona/eixample", [44, 31]],
+   "personas": [
+    {
+     "nombre": "Profesor de inglés",
+     "aspecto": "profesor",
+     "papel": "dependiente",
+     "frases": [
+      "Repeat after me: «The rent is too high». Muy bien. Es la frase que más usarán aquí.",
+      "Tengo alumnos que llevan diez años en el nivel intermedio. Es el nivel más cómodo de la vida."
+     ],
+     "nodo": "ProfesorDeIngles",
+     "en": [12, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Alumna de inglés",
+     "aspecto": "estudianteinge_f",
+     "papel": "publico",
+     "frases": [
+      "Estudio inglés para irme a Londres a trabajar de camarera. Aquí ya soy camarera, pero en castellano.",
+      "Mi nivel es «B1 de verano»: entiendo todo en la playa y nada en una reunión."
+     ],
+     "nodo": "AlumnaDeIngles",
+     "en": [2, 7],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [4, 10],
+   "suelo": "tatami_verde",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_turquesa", 7, 2],
+    ["estanteria_baja_menta", 10, 1],
+    ["mesa_cristal", 2, 4],
+    ["banqueta_azul", 2, 6],
+    ["mesa_cristal", 5, 4],
+    ["banqueta_azul", 5, 6],
+    ["mesa_cristal", 8, 4],
+    ["banqueta_azul", 8, 6],
+    ["papelera", 12, 8],
+    ["cajas", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_44_41": {
+   "tipo": "piso",
+   "nombre": "Piso compartido de Erasmus",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/eixample", [44, 41]],
+   "personas": [
+    {
+     "nombre": "Erasmus francés",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Vine por un semestre y ya llevo tres años. La universidad me ha mandado un correo preguntando si sigo vivo.",
+      "En París no puedo vivir y aquí tampoco, pero aquí hay playa para no poder vivir al sol."
+     ],
+     "nodo": "ErasmusFrances",
+     "en": [5, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Erasmus italiana",
+     "aspecto": "npc_lass",
+     "papel": "mesa",
+     "frases": [
+      "La pizza de aquí es un crimen. La como todos los días para tener de qué quejarme.",
+      "Mi casero es de Argentina, la vecina de Pakistán y el del bar de Sevilla. Barcelona es muy catalana."
+     ],
+     "nodo": "ErasmusItaliana",
+     "en": [4, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "menta",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["sillon_derecha", 1, 2], ["mesa_cristal", 2, 3], ["cajas", 5, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_45_18": {
+   "tipo": "tienda",
+   "nombre": "Botiga ecológica a granel",
+   "pieza": "tienda_verde_2",
+   "calle": ["barcelona/eixample", [45, 18]],
+   "personas": [
+    {
+     "nombre": "Dependienta ecológica",
+     "aspecto": "hippie",
+     "papel": "dependiente",
+     "frases": [
+      "Aquí todo se vende a granel. Traiga su tarro, su bolsa de tela y su conciencia limpia.",
+      "Las lentejas son ecológicas, de proximidad y cuestan como el caviar. Es el precio del planeta."
+     ],
+     "nodo": "DependientaEcologica",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente con tarros",
+     "aspecto": "perroflauta",
+     "papel": "cliente",
+     "frases": [
+      "He venido con once tarros. En el metro sonaba como un xilófono.",
+      "Compro quinoa porque me la recomendó un influencer. Todavía no sé cocinarla, pero la tengo."
+     ],
+     "nodo": "ClienteConTarros",
+     "en": [8, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "parquet",
+   "pared": "menta",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_madera", 2, 1],
+    ["vitrina_blanca", 4, 1],
+    ["estanteria_baja_madera", 6, 1],
+    ["mostrador_verde_i", 7, 3],
+    ["mostrador_verde_m", 8, 3],
+    ["mostrador_verde_d", 9, 3],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_51_5": {
+   "tipo": "piso",
+   "nombre": "Piso de la familia de Sant Jordi",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/eixample", [51, 5]],
+   "personas": [
+    {
+     "nombre": "Librero de Sant Jordi",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "El 23 de abril vendo más libros que en todo el año. El 24 vuelvo a vender postales.",
+      "En Sant Jordi se regala una rosa y un libro. Mucha gente se queda con la rosa y regala el libro."
+     ],
+     "nodo": "LibreroDeSantJordi",
+     "en": [4, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hija que hace castells",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": [
+      "Soy la enxaneta de mi colla: subo a lo más alto del castell y levanto la mano. Mi madre no mira.",
+      "Abajo hay cien personas aguantando. Arriba estoy yo, que peso lo que una mochila del cole."
+     ],
+     "nodo": "HijaQueHaceCastells",
+     "en": [4, 4],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [5, 8],
+   "suelo": "tatami_verde",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [5, 3, 3, 3]]],
+   "muebles": [["encimera", 2, 1], ["nevera", 5, 1], ["papelera", 8, 6]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_52_18": {
+   "tipo": "piso",
+   "nombre": "Piso del casteller retirado",
+   "pieza": "bloque_verde",
+   "calle": ["barcelona/eixample", [52, 18]],
+   "personas": [
+    {
+     "nombre": "Casteller retirado",
+     "aspecto": "jubiladoobras",
+     "papel": "tele",
+     "frases": [
+      "Fui segundo de un castell de nueve pisos. Ahora subo las escaleras de casa y me canso en el tercero.",
+      "En los castells el que está abajo aguanta a todos. En la vida pasa igual, pero sin aplausos."
+     ],
+     "nodo": "CastellerRetirado",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su nuera",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Mi suegro cuenta lo del castell de nueve en cada comida. Cada año el castell tiene un piso más.",
+      "Le hemos hecho un álbum de fotos. Él dice que en las fotos no se nota lo alto que estaba."
+     ],
+     "nodo": "SuNuera",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [4, 7],
+   "suelo": "parquet",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["nevera", 4, 1],
+    ["consola", 5, 2],
+    ["tele", 6, 1],
+    ["mesa_cristal", 5, 3],
+    ["taburete_verde", 7, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_55_41": {
+   "tipo": "basilica",
+   "nombre": "Sagrada Familia, las naves",
+   "rotulo": "Sagrada Familia",
+   "pieza": "sagrada_familia",
+   "calle": ["barcelona/eixample", [55, 41]],
+   "personas": [
+    {
+     "nombre": "Obrero de la Sagrada Familia",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "Mi bisabuelo trabajó en esta obra, y mi abuelo, y mi padre. Mi hijo dice que él la terminará. Lo dudo.",
+      "Me preguntan cuándo se acaba. Les digo que el año que viene. Lo dice la empresa desde 1882."
+     ],
+     "nodo": "ObreroDeLaSagradaFamilia",
+     "en": [2, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Monja guía",
+     "aspecto": "npc_woman",
+     "papel": "cura",
+     "frases": [
+      "Las columnas son árboles y la luz es el bosque. Gaudí decía que su cliente, Dios, no tenía prisa.",
+      "El que no tiene prisa es Dios. Los de la cola para entrar, sí."
+     ],
+     "nodo": "MonjaGuia",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista emocionada",
+     "aspecto": "turista_f",
+     "papel": "publico",
+     "frases": [
+      "He llorado al entrar. Bueno, también he llorado al pagar la entrada.",
+      "La luz de las vidrieras es de colores. Me he hecho cuatrocientas fotos y en todas salgo azul."
+     ],
+     "nodo": "TuristaEmocionada",
+     "en": [4, 7],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 12],
+   "puerta": [7, 11],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [7, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 6, 3],
+    ["estatua_aguila", 10, 0],
+    ["arbol_maceta", 1, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 4, 8],
+    ["banco_rojo", 8, 8],
+    ["arbol_maceta", 1, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 10], "desde_sala_eixample_55_41_cripta": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Cripta",
+     "en": [4, 1],
+     "destino": "barcelona/sala_eixample_55_41_cripta",
+     "aparicion": "default",
+     "vuelta": "desde_sala_eixample_55_41_cripta",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "barcelona/sala_eixample_55_41_cripta": {
+   "tipo": "cripta",
+   "padre": "barcelona/sala_eixample_55_41",
+   "nombre": "Sagrada Familia, la cripta",
+   "personas": [
+    {
+     "nombre": "Sacristán de la cripta",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Aquí abajo está enterrado Gaudí. Lo atropelló un tranvía y lo confundieron con un mendigo. Barcelona no mira a la gente.",
+      "La cripta es la única parte que se terminó en vida del arquitecto. Lo de arriba es fe y grúas."
+     ],
+     "nodo": "SacristanDeLaCripta",
+     "en": [5, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": ["La tumba de Antoni Gaudí. Alguien ha dejado una flor y un casco de obra."],
+     "nodo": "Cartel",
+     "en": [5, 4]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "chapa",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["cajas", 7, 1], ["pedestal", 10, 1], ["pedestal", 5, 3], ["caja", 12, 2]],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": [],
+   "salida": {"destino": "barcelona/sala_eixample_55_41", "aparicion": "desde_sala_eixample_55_41_cripta"}
+  },
+  "barcelona/sala_eixample_59_19": {
+   "tipo": "piso",
+   "nombre": "Piso del aficionado del Espanyol",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/eixample", [59, 19]],
+   "personas": [
+    {
+     "nombre": "Perico",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Soy del Espanyol. En esta ciudad eso es como ser vegano en una calçotada.",
+      "Mi vecino es del Barça y me pone el himno a todo volumen. Yo le pongo el nuestro, que tiene más estrofas."
+     ],
+     "nodo": "Perico",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su hijo",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Mi padre dice que sufrir con el Espanyol forja el carácter. Yo tengo un carácter forjadísimo.",
+      "En el cole somos dos del Espanyol. El otro es el profe de gimnasia."
+     ],
+     "nodo": "SuHijo",
+     "en": [7, 5],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "rombos_lila",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["nevera", 5, 1],
+    ["consola", 6, 2],
+    ["tele", 7, 1],
+    ["ropero_madera", 1, 0],
+    ["cajas", 1, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_5_19": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Consell de Cent",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/eixample", [5, 19]],
+   "personas": [
+    {
+     "nombre": "Portero de la superilla",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Desde que pusieron la superilla, en la puerta hay bancos, árboles y niños. Yo antes tenía un semáforo.",
+      "Ahora los vecinos bajan a hablar a la calle. Hablan del precio de los pisos, que ha subido por la superilla."
+     ],
+     "nodo": "PorteroDeLaSuperilla",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Niña con patines",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": [
+      "Antes aquí había coches. Ahora hay patines, pelotas y señores mirando el móvil en los bancos.",
+      "Mi madre dice que la calle es nuestra. El casero dice que la calle también se paga."
+     ],
+     "nodo": "NinaConPatines",
+     "en": [7, 6],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "piedra",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [3, 4, 3, 2]]],
+   "muebles": [["escalera_mano", 4, 0], ["archivador_bajo", 1, 1], ["banco_rojo", 7, 4], ["planta", 9, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_5_41": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Provença",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/eixample", [5, 41]],
+   "personas": [
+    {
+     "nombre": "Portero filósofo",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "Llevo cuarenta años en esta portería. He visto pasar a cuatro generaciones y a seis empresas de ascensores.",
+      "La vida es como el Eixample: todo cuadriculado, pero con las esquinas cortadas."
+     ],
+     "nodo": "PorteroFilosofo",
+     "en": [4, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecina del sexto",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Bajo a por el correo y solo hay cartas del banco y publicidad de pizzas. El amor ya no llega por carta.",
+      "Mi terraza da a la Sagrada Familia. La veo crecer como a un hijo que nunca termina la carrera."
+     ],
+     "nodo": "VecinaDelSexto",
+     "en": [6, 5],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [2, 3, 5, 3]]],
+   "muebles": [
+    ["planta", 5, 1],
+    ["escalera_mano", 6, 0],
+    ["cajonera_gris", 2, 1],
+    ["cajon_gris", 4, 1],
+    ["palmera_maceta", 10, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_5_5": {
+   "tipo": "piso",
+   "nombre": "Piso modernista con humedades",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/eixample", [5, 5]],
+   "personas": [
+    {
+     "nombre": "Arquitecta joven",
+     "aspecto": "estudianteinge_f",
+     "papel": "mesa",
+     "frases": [
+      "Este piso tiene techos de cuatro metros y molduras de 1900. También tiene humedades de 1900.",
+      "Trabajo en un estudio de arquitectura diseñando pisos que yo no podré comprar nunca."
+     ],
+     "nodo": "ArquitectaJoven",
+     "en": [6, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su gato",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": [
+      "Miau. Bueno, no: soy la sobrina. El gato se esconde cada vez que entra alguien con mochila.",
+      "Mi tía dice que el gato es el único de la casa con contrato indefinido."
+     ],
+     "nodo": "SuGato",
+     "en": [3, 2],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["tele", 7, 1], ["papelera", 1, 5], ["mesa_cristal", 7, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_61_51": {
+   "tipo": "grandes_almacenes",
+   "nombre": "Grandes almacenes de Plaça Catalunya",
+   "pieza": "grandes_almacenes",
+   "calle": ["barcelona/eixample", [61, 51]],
+   "personas": [
+    {
+     "nombre": "Dependiente de la planta de regalos",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En la última planta está la cafetería con vistas a toda la plaza. Las palomas también la usan.",
+      "Le envolvemos el regalo gratis. El lazo de colores lo cobramos aparte."
+     ],
+     "nodo": "DependienteDeLaPlantaDeRegalos",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Señora que solo mira",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a mirar, no a comprar. Llevo cuarenta años mirando y aún no he terminado.",
+      "Aquí dentro se está fresca en agosto. Es mi playa con aire acondicionado."
+     ],
+     "nodo": "SenoraQueSoloMira",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "losa_crema",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_menta", 4, 0],
+    ["estanteria_alta_menta", 6, 0],
+    ["mostrador_blanco_i", 6, 3],
+    ["mostrador_blanco_m", 7, 3],
+    ["mostrador_blanco_d", 8, 3],
+    ["cajas", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_63_5": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Aragó",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/eixample", [63, 5]],
+   "personas": [
+    {
+     "nombre": "Portera de Aragó",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Por esta calle pasan cuarenta mil coches al día. Yo los cuento para no oírlos.",
+      "La superilla de la calle de al lado es preciosa. Los coches que no pasan por allí pasan por aquí."
+     ],
+     "nodo": "PorteraDeArago",
+     "en": [4, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Ciclista indignado",
+     "aspecto": "patinetero",
+     "papel": "libre",
+     "frases": [
+      "Me han quitado la bici del portal otra vez. La encontré en Wallapop con foto de mi propio portal.",
+      "La he vuelto a comprar. Es la tercera vez que me compro la misma bici."
+     ],
+     "nodo": "CiclistaIndignado",
+     "en": [8, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [4, 4, 4, 3]]],
+   "muebles": [["escalera_mano", 7, 0], ["cajonera_gris", 4, 1], ["cajon_gris", 6, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_eixample_68_19": {
+   "tipo": "institucion",
+   "nombre": "Delegación de la Generalitat",
+   "pieza": "oficinas_azules",
+   "calle": ["barcelona/eixample", [68, 19]],
+   "personas": [
+    {
+     "nombre": "Funcionario de la Generalitat",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Aquí tramitamos ayudas, licencias y la sensación de que todo se decide en otra parte.",
+      "El formulario está en catalán, castellano, aranés e inglés. Lo difícil no es el idioma: es el número de páginas."
+     ],
+     "nodo": "FuncionarioDeLaGeneralitat",
+     "en": [5, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Señora con instancia",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": [
+      "Llevo un año esperando la ayuda de la caldera. Ya ha pasado el invierno y el siguiente.",
+      "Me han dicho que vuelva cuando haya presupuestos. Llevo tres años volviendo."
+     ],
+     "nodo": "SenoraConInstancia",
+     "en": [5, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [4, 10],
+   "suelo": "moqueta_azul",
+   "pared": "crema",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 5, 0],
+    ["mostrador_blanco", 8, 2],
+    ["estatua_aguila", 11, 0],
+    ["banco_rojo", 5, 4],
+    ["banco_rojo", 8, 4],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 8, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_13_12": {
+   "tipo": "oficina",
+   "nombre": "Oficina de atención al socio",
+   "pieza": "oficinas_verdes",
+   "calle": ["barcelona/les_corts", [13, 12]],
+   "personas": [
+    {
+     "nombre": "Empleada de atención al socio",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Atendemos quejas sobre el precio de los abonos, el estadio provisional y las palancas económicas. Sobre todo las palancas.",
+      "La lista de espera para ser abonado es larga. Algunos esperan desde el año de los seis títulos."
+     ],
+     "nodo": "EmpleadaDeAtencionAlSocio",
+     "en": [7, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Socio enfadado",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a preguntar en qué palanca va mi abono. Me han dicho que en la palanca de la paciencia.",
+      "Yo voto en las elecciones del club desde 1978. He votado a todos los presidentes y me he arrepentido de todos."
+     ],
+     "nodo": "SocioEnfadado",
+     "en": [8, 5],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 6, 0],
+    ["archivador", 8, 1],
+    ["mostrador_azul", 5, 5],
+    ["banqueta_roja", 6, 7],
+    ["mesa_cristal", 8, 6],
+    ["banqueta_azul", 8, 8],
+    ["planta", 10, 1],
+    ["cajas", 1, 7]
+   ],
+   "encima": [["libro_abierto", 5, 5]],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_21_12": {
+   "tipo": "oficina",
+   "nombre": "Departamento de fichajes",
+   "pieza": "oficinas_verdes",
+   "calle": ["barcelona/les_corts", [21, 12]],
+   "personas": [
+    {
+     "nombre": "Director deportivo",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Fichamos a un delantero que no podemos inscribir. Le hemos dado una camiseta y una silla en la grada.",
+      "El fair play financiero nos obliga a vender antes de comprar. Hemos vendido hasta las sillas de esta oficina."
+     ],
+     "nodo": "DirectorDeportivo",
+     "en": [4, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Ojeador",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "He visto a un chaval de Rocafonda que regatea como los ángeles. Dicen que ya es nuestro. Yo llegué tarde, como siempre.",
+      "Mi trabajo es encontrar al nuevo Messi. Ya he encontrado a doce nuevos Messis; ninguno era Messi."
+     ],
+     "nodo": "Ojeador",
+     "en": [11, 7],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [3, 10],
+   "suelo": "moqueta_azul",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 5, 0],
+    ["archivador_bajo", 6, 1],
+    ["taquilla_archivo", 8, 0],
+    ["mostrador_verde", 7, 3],
+    ["banqueta_roja", 8, 5],
+    ["mostrador_verde", 4, 4],
+    ["banqueta_azul", 5, 6],
+    ["tele", 9, 1],
+    ["palmera_maceta", 1, 0],
+    ["mesa_cristal", 5, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_21_23": {
+   "tipo": "bar",
+   "nombre": "Bar de la penya culé",
+   "pieza": "casa_roja_pequena",
+   "calle": ["barcelona/les_corts", [21, 23]],
+   "personas": [
+    {
+     "nombre": "Dueño de la penya",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "En esta penya hemos visto todos los títulos y todas las remontadas en contra. Las segundas se recuerdan más.",
+      "Si viene con la camiseta del Madrid, le servimos igual. Pero sin hielo y sin cariño."
+     ],
+     "nodo": "DuenoDeLaPenya",
+     "en": [1, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aficionado nervioso",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": [
+      "Hoy hay Clásico. Llevo desde el lunes sin dormir y desde el martes sin hablar con mi cuñado, que es del Madrid.",
+      "Si ganamos, invito a todos. Si perdemos, invito también, pero a llorar."
+     ],
+     "nodo": "AficionadoNervioso",
+     "en": [3, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "En la pared, una foto enmarcada de Messi levantando una copa. Debajo, a rotulador: «Torna, si us plau»."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["fogones", 6, 1],
+    ["encimera", 8, 1],
+    ["mostrador_blanco_i", 1, 4],
+    ["mostrador_blanco_m", 2, 4],
+    ["mostrador_blanco_m", 3, 4],
+    ["mostrador_blanco_m", 4, 4],
+    ["mostrador_blanco_m", 5, 4],
+    ["mostrador_blanco_d", 6, 4],
+    ["banqueta_azul", 2, 6],
+    ["banqueta_azul", 4, 6],
+    ["banqueta_azul", 6, 6],
+    ["tele_pequena", 4, 2],
+    ["cajas", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_30_12": {
+   "tipo": "piso",
+   "nombre": "Piso de los canteranos",
+   "pieza": "bloque_verde",
+   "calle": ["barcelona/les_corts", [30, 12]],
+   "personas": [
+    {
+     "nombre": "Canterano",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Tengo diecisiete años y ya me han comparado con siete leyendas. Todavía no he jugado un partido entero.",
+      "Mi representante cobra más que yo. Mi madre cobra más que mi representante por aguantarlo."
+     ],
+     "nodo": "Canterano",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Madre del canterano",
+     "aspecto": "mom",
+     "papel": "cocina",
+     "frases": [
+      "Me he mudado de Lleida para cocinarle. El club le pone nutricionista, pero el nutricionista no hace macarrones.",
+      "Cuando le dicen que es el nuevo crack, le recuerdo que tiene que hacer los deberes de historia."
+     ],
+     "nodo": "MadreDelCanterano",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "parquet",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["fregadero", 3, 1], ["fogones", 5, 1], ["tele_pequena", 7, 2], ["sofa", 2, 3], ["caja", 7, 6]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_38_13": {
+   "tipo": "universidad",
+   "nombre": "Facultad de Economía de la Diagonal",
+   "pieza": "oficinas_azules",
+   "calle": ["barcelona/les_corts", [38, 13]],
+   "personas": [
+    {
+     "nombre": "Catedrático de Economía",
+     "aspecto": "profesor",
+     "papel": "dependiente",
+     "frases": [
+      "Hoy explicamos la oferta y la demanda con el ejemplo del alquiler. Varios alumnos han llorado.",
+      "La teoría dice que si sube el precio baja la demanda. La teoría no ha buscado piso en Barcelona."
+     ],
+     "nodo": "CatedraticoDeEconomia",
+     "en": [10, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Alumna de primero",
+     "aspecto": "estudianteinge_f",
+     "papel": "publico",
+     "frases": [
+      "Estudio Economía para entender por qué no tengo dinero. Ya voy por la mitad del temario y sigo sin dinero.",
+      "El profesor dice que la mano invisible regula el mercado. A mí la mano invisible me ha quitado la beca."
+     ],
+     "nodo": "AlumnaDePrimero",
+     "en": [9, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [5, 9],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_oliva", 2, 0],
+    ["mostrador_verde", 4, 2],
+    ["mesa_cristal", 9, 3],
+    ["taburete_marron", 9, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_46_13": {
+   "tipo": "piso",
+   "nombre": "Piso del fisioterapeuta del club",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/les_corts", [46, 13]],
+   "personas": [
+    {
+     "nombre": "Fisioterapeuta",
+     "aspecto": "enfermero",
+     "papel": "mesa",
+     "frases": [
+      "Trato a los jugadores del primer equipo. Tienen más lesiones que minutos jugados.",
+      "Un delantero se lesionó celebrando un gol. Otro, poniéndose las botas. El tercero, leyendo su contrato."
+     ],
+     "nodo": "Fisioterapeuta",
+     "en": [2, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su pareja",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": [
+      "Él dice que no puede contar nada de los jugadores. Luego en casa me lo cuenta todo con un muñeco de trapo.",
+      "Yo soy del Espanyol. En esta casa hay más tensión que en un derbi."
+     ],
+     "nodo": "SuPareja",
+     "en": [7, 2],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "melocoton",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["tele_pequena", 8, 2],
+    ["sillon_derecha", 1, 4],
+    ["mesa_cristal", 2, 5],
+    ["ropero_verde", 10, 0],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_47_29": {
+   "tipo": "hostal",
+   "nombre": "La Masia, residencia de canteranos",
+   "rotulo": "La Masia",
+   "pieza": "casa_granero",
+   "calle": ["barcelona/les_corts", [47, 29]],
+   "personas": [
+    {
+     "nombre": "Educador de La Masia",
+     "aspecto": "profesor",
+     "papel": "dependiente",
+     "frases": [
+      "Aquí vivieron Xavi, Iniesta y Messi. También vivieron cien chavales que hoy trabajan de otra cosa; de esos no se hacen documentales.",
+      "A las diez se apagan las luces. A las diez y cinco se encienden las pantallas de los móviles."
+     ],
+     "nodo": "EducadorDeLaMasia",
+     "en": [2, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Canterano de doce años",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Me fichó el club con ocho años. Mi madre dice que primero los estudios. El club dice que primero el rondo.",
+      "Mi ídolo es un chaval de Rocafonda que regatea a tres a la vez. Dicen que vive en una mansión."
+     ],
+     "nodo": "CanteranoDeDoceAnos",
+     "en": [4, 7],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [10, 10],
+   "suelo": "losa_crema",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [2, 5, 4, 2]]],
+   "muebles": [
+    ["estanteria_baja_mostaza", 4, 1],
+    ["recepcion", 6, 2],
+    ["sillon_derecha", 1, 4],
+    ["mesa_cristal", 2, 5],
+    ["sillon_izquierda", 4, 4],
+    ["escalera_mano", 1, 0],
+    ["palmera_maceta", 13, 0],
+    ["palmera_maceta", 13, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [10, 9]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_49_41": {
+   "tipo": "tienda",
+   "nombre": "Tienda de bufandas y banderas",
+   "pieza": "tienda_morada",
+   "calle": ["barcelona/les_corts", [49, 41]],
+   "personas": [
+    {
+     "nombre": "Vendedor de bufandas",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Vendo bufandas del Barça, del Espanyol y del rival que venga ese día. El negocio no tiene colores.",
+      "En los partidos de Champions vendo mil bufandas. En agosto, ninguna: la gente no se pone bufanda a cuarenta grados."
+     ],
+     "nodo": "VendedorDeBufandas",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aficionada inglesa",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": [
+      "He venido a ver un partido y me han dicho que el estadio está en Montjuïc. ¿Montjuïc es un barrio o un deporte?",
+      "Me llevo una bandera para colgarla en Mánchester. Mi vecino es del United y no se lo espera."
+     ],
+     "nodo": "AficionadaInglesa",
+     "en": [1, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_nogal", 5, 0],
+    ["estanteria_alta_nogal", 7, 0],
+    ["mostrador_oliva_i", 1, 4],
+    ["mostrador_oliva_m", 2, 4],
+    ["mostrador_oliva_d", 3, 4],
+    ["isla_oliva", 8, 3]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_4_13": {
+   "tipo": "portal",
+   "nombre": "Portal de la Travessera",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/les_corts", [4, 13]],
+   "personas": [
+    {
+     "nombre": "Portera culé",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Los días de partido cierro el portal a las siete. Si no, se cuelan cuarenta aficionados a mear en el patio.",
+      "Por esta puerta han pasado jugadores, entrenadores y un presidente con maletín. No pregunté."
+     ],
+     "nodo": "PorteraCule",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecino del partido",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Los domingos de partido no se puede aparcar en todo el barrio. Yo tengo el coche aparcado desde 2019 por si acaso.",
+      "Desde mi balcón se oye el estadio. Sé si hemos marcado antes que los de la tele."
+     ],
+     "nodo": "VecinoDelPartido",
+     "en": [6, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [7, 7],
+   "suelo": "rombos_oscuros",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [2, 4, 4, 2]]],
+   "muebles": [
+    ["escalera_mano", 3, 0],
+    ["cajonera_azul", 7, 1],
+    ["mostrador_tablas_i", 2, 3],
+    ["mostrador_tablas_m", 3, 3],
+    ["mostrador_tablas_d", 4, 3],
+    ["palmera_maceta", 1, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_4_46": {
+   "tipo": "piso",
+   "nombre": "Piso de la influencer de moda",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/les_corts", [4, 46]],
+   "personas": [
+    {
+     "nombre": "Influencer de moda",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "libre",
+     "frases": [
+      "Me pongo un vestido, me hago una foto y lo devuelvo. Mi armario es un espejismo.",
+      "Las marcas me mandan ropa a cambio de «visibilidad». Con la visibilidad no se paga la luz."
+     ],
+     "nodo": "InfluencerDeModa",
+     "en": [4, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su novio fotógrafo",
+     "aspecto": "npc_youngster",
+     "papel": "mesa",
+     "frases": [
+      "Soy su novio y su fotógrafo. En las fotos de pareja siempre salgo cortado: es mi papel.",
+      "Hacemos fotos en la Diagonal a las siete de la mañana para que no salga gente. Sale la gente que va a trabajar."
+     ],
+     "nodo": "SuNovioFotografo",
+     "en": [4, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [6, 8],
+   "suelo": "rombos_morados",
+   "pared": "salvia",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [5, 3, 3, 2]]],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["tele", 1, 1],
+    ["sillon_derecha", 1, 3],
+    ["mesa_cristal", 2, 4],
+    ["ropero_mostaza", 4, 0],
+    ["papelera", 8, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_53_22": {
+   "tipo": "casa",
+   "nombre": "Casa de la masovera",
+   "pieza": "casa_gris",
+   "calle": ["barcelona/les_corts", [53, 22]],
+   "personas": [
+    {
+     "nombre": "Masovera",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Antes esto eran huertos. Mi familia cultivaba coles donde ahora hay un parking de autocares.",
+      "Los domingos hago calçots en la terraza. Los vecinos protestan por el humo y luego suben con pan."
+     ],
+     "nodo": "Masovera",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto agricultor urbano",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "Cultivo tomates en el balcón. Tres tomates al año. Me salen a doscientos euros el kilo.",
+      "Mi abuela tenía una hectárea. Yo tengo un macetero y un grupo de WhatsApp de huertos urbanos."
+     ],
+     "nodo": "NietoAgricultorUrbano",
+     "en": [7, 7],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "salvia",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["nevera_alta", 6, 0],
+    ["tele", 8, 1],
+    ["mesa_cristal_larga", 2, 4],
+    ["banqueta_roja", 2, 6],
+    ["banqueta_roja", 4, 6],
+    ["sillon_derecha", 7, 3],
+    ["mesa_cristal", 8, 4],
+    ["sillon_izquierda", 10, 3],
+    ["planta", 10, 1],
+    ["papelera", 10, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_53_6": {
+   "tipo": "casa",
+   "nombre": "Casa del abonado número cien",
+   "pieza": "casa_gris",
+   "calle": ["barcelona/les_corts", [53, 6]],
+   "personas": [
+    {
+     "nombre": "Abonado veterano",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Tengo el carné de socio número cien. Antes de mí, noventa y nueve personas ya sufrían por este club.",
+      "He visto a Cruyff, a Maradona, a Ronaldinho y a Messi. Ahora veo el estadio en obras y un camión de grava."
+     ],
+     "nodo": "AbonadoVeterano",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su nieto",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "El abuelo dice que con Cruyff se jugaba mejor. Yo no vi a Cruyff, pero he visto los vídeos en el móvil.",
+      "Mi sueño es jugar en el Barça. El de mi abuelo es que no lo vendan antes."
+     ],
+     "nodo": "SuNieto",
+     "en": [4, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "lima",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [5, 4, 4, 2]]],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["nevera", 9, 1],
+    ["tele", 1, 1],
+    ["mesa_cristal", 7, 4],
+    ["silla_derecha", 6, 4],
+    ["silla_izquierda", 9, 4],
+    ["palmera_maceta", 1, 5],
+    ["papelera", 9, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_55_30": {
+   "tipo": "tienda",
+   "nombre": "Botiga oficial del Barça",
+   "pieza": "tienda_azul",
+   "calle": ["barcelona/les_corts", [55, 30]],
+   "personas": [
+    {
+     "nombre": "Dependienta de la botiga",
+     "aspecto": "clerk",
+     "papel": "dependiente",
+     "frases": [
+      "La camiseta nueva tiene una raya azulgrana más ancha que la del año pasado. Por eso cuesta veinte euros más.",
+      "Si quiere el nombre de un jugador, le recomiendo uno de la cantera. Los fichajes no sabemos cuánto duran."
+     ],
+     "nodo": "DependientaDeLaBotiga",
+     "en": [11, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista coreano",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": [
+      "He comprado once camisetas para mi familia. En Seúl todos somos del Barça desde que vimos un vídeo.",
+      "¿Se puede visitar el campo? Me dicen que está en obras. Hago la foto a la grúa y listo."
+     ],
+     "nodo": "TuristaCoreano",
+     "en": [11, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_madera", 1, 1],
+    ["vitrina_blanca", 3, 1],
+    ["estanteria_baja_madera", 5, 1],
+    ["mostrador_turquesa_i", 9, 4],
+    ["mostrador_turquesa_m", 10, 4],
+    ["mostrador_turquesa_d", 11, 4],
+    ["estanteria_baja_madera", 5, 4],
+    ["estanteria_baja_madera", 7, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_57_41": {
+   "tipo": "piso",
+   "nombre": "Piso del jubilado del Camp Nou",
+   "pieza": "bloque_verde_2",
+   "calle": ["barcelona/les_corts", [57, 41]],
+   "personas": [
+    {
+     "nombre": "Acomodador jubilado",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Fui acomodador del estadio cuarenta años. Conozco cada asiento, cada grieta y cada abonado que se cuela.",
+      "Ahora está en obras y lo echo de menos. Voy cada mañana a mirar la grúa como quien visita a un enfermo."
+     ],
+     "nodo": "AcomodadorJubilado",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Cuarenta años de partidos los domingos. Ahora que está jubilado, sigue yendo al estadio en obras. Por costumbre.",
+      "Le he dicho que me lleve a cenar. Me ha llevado al bar de la penya a ver un partido de juveniles."
+     ],
+     "nodo": "SuMujer",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [6, 8],
+   "suelo": "parquet",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal", 1, 6],
+    ["taburete_verde", 3, 7],
+    ["ropero_mostaza", 1, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "barcelona/sala_les_corts_60_13": {
+   "tipo": "portal",
+   "nombre": "Portal de la Diagonal",
+   "pieza": "bloque_pisos",
+   "calle": ["barcelona/les_corts", [60, 13]],
+   "personas": [
+    {
+     "nombre": "Conserje de lujo",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En este edificio vive un exjugador, un tenista y una señora que fue reina de las fiestas de 1974.",
+      "El exjugador me firma autógrafos para mis sobrinos. Mis sobrinos no saben quién es, pero los venden por internet."
+     ],
+     "nodo": "ConserjeDeLujo",
+     "en": [7, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Señora de la Diagonal",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Yo voy en taxi hasta la panadería. Está a cien metros, pero llevo bolso de piel.",
+      "En la Diagonal vive gente de bien. Lo dice mi tarjeta de crédito, que es de color negro."
+     ],
+     "nodo": "SenoraDeLaDiagonal",
+     "en": [5, 4],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 3, 0], ["cajonera_azul", 7, 1], ["sillon_derecha", 2, 3], ["planta", 10, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  }
+ }
+}

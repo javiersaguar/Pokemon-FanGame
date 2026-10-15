@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_t86n8"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_njqf5"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_xijf1"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_diilk"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_r2bxp"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_1ogb3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_kimono_girl.png" id="7_c0n7m"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_fm5wg"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_yc8fl"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_48qd2"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_0ywr1"]
+
+[sub_resource type="Resource" id="Resource_3xmos"]
+script = ExtResource("3_xijf1")
+id = &"barcelona/sala_eixample_37_19_vivienda"
+display_name = "La Pedrera, vivienda de época, Barcelona"
+outdoor = false
+zone_id = &"barcelona"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaEixample3719Vivienda" type="Node2D" unique_id=636707268]
+script = ExtResource("1_t86n8")
+data = SubResource("Resource_3xmos")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1500372854]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAABAAAAADAAMAAAAAABAAAAAEAAMAAAAAABAAAAAFAAMAAAAAABAAAAAGAAMAAAAAABAAAAAHAAMAAAAAAAAAAAAIAAMAAAAAAAAAAAAJAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAABAAAAADAAQAAAAAABAAAAAEAAQAAAAAABAAAAAFAAQAAAAAABAAAAAGAAQAAAAAABAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAABAAAAADAAUAAAAAABAAAAAEAAUAAAAAABAAAAAFAAUAAAAAABAAAAAGAAUAAAAAABAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAABAAAAAHAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAA=")
+tile_set = ExtResource("4_diilk")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2061902546]
+tile_map_data = PackedByteArray("AAABAAAAAQABAAMAAAABAAEAAQABAAQAAAACAAAAAQABAAMAAAACAAEAAQABAAQAAAADAAAAAQABAAMAAAADAAEAAQABAAQAAAAEAAAAAQABAAMAAAAEAAEAAQABAAQAAAAFAAAAAQABAAMAAAAFAAEAAQABAAQAAAAGAAAAAQABAAMAAAAGAAEAAQABAAQAAAAHAAAAAQABAAMAAAAHAAEAAQABAAQAAAAIAAAAAQABAAMAAAAIAAEAAQABAAQAAAAAAAAAAQACAAEAAAAJAAAAAQAAAAEAAAAAAAEAAQACAAEAAAAJAAEAAQAAAAEAAAAAAAIAAQACAAEAAAAJAAIAAQAAAAEAAAAAAAMAAQACAAEAAAAJAAMAAQAAAAEAAAAAAAQAAQACAAEAAAAJAAQAAQAAAAEAAAAAAAUAAQACAAEAAAAJAAUAAQAAAAEAAAAAAAYAAQACAAEAAAAJAAYAAQAAAAEAAAABAAcAAQABAAAAAAACAAcAAQABAAAAAAADAAcAAQABAAAAAAAEAAcAAQABAAAAAAAFAAcAAQACAAAAAAAHAAcAAQAAAAAAAAAIAAcAAQABAAAAAAAAAAcAAQAFAAQAAAAJAAcAAQAGAAQAAAA=")
+tile_set = ExtResource("4_diilk")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1453788630]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=240384341]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAAEAAgAEACIAAAACAAEAAgAFACIAAAADAAEAAgAGACIAAAABAAIAAgAEACMAAAACAAIAAgAFACMAAAADAAIAAgAGACMAAAAEAAEAAgAHACIAAAAEAAIAAgAHACMAAAAFAAIAAgADAD4AAAADAAUAAgAGADsAAAADAAYAAgAGADwAAAAEAAUAAgADADQAAAAFAAUAAgAEADQAAAAEAAYAAgADADUAAAAFAAYAAgAEADUAAAAIAAYAAgABACYAAAAGAAEAAgADACoAAAAHAAEAAgAEACoAAAAIAAEAAgAFACoAAAAGAAIAAgADACsAAAAHAAIAAgAEACsAAAAIAAIAAgAFACsAAAAGAAMAAgADACwAAAAHAAMAAgAEACwAAAAIAAMAAgAFACwAAAA=")
+tile_set = ExtResource("4_diilk")
+
+[node name="ActrizDeEpoca" type="Node2D" parent="Entities" unique_id=1486830180 instance=ExtResource("5_r2bxp")]
+position = Vector2(112, 112)
+script = ExtResource("6_1ogb3")
+display_name = "Actriz de época"
+lines = PackedStringArray("Represento a una señora de 1912 en el piso museo. Hago como que cocino en una cocina que nunca se ha encendido.", "Los turistas me preguntan cuánto paga de alquiler. Les digo que en 1912 era barato. No me creen.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_c0n7m")
+initial_facing = 3
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=637213532 instance=ExtResource("8_fm5wg")]
+position = Vector2(272, 112)
+script = ExtResource("9_yc8fl")
+lines = PackedStringArray("Una cama de matrimonio de 1912 con un cartel: «No sentarse». Debajo, un orinal también de 1912.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=173434998]
+z_index = 10
+tile_map_data = PackedByteArray("AAADAAQAAgAGADoAAAAIAAUAAgABACUAAAA=")
+tile_set = ExtResource("4_diilk")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=402743550]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=220677734]
+position = Vector2(208, 240)
+script = ExtResource("10_48qd2")
+target_map = &"barcelona/sala_eixample_37_19"
+target_spawn = &"desde_sala_eixample_37_19_vivienda"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=998267908]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=29766931]
+position = Vector2(208, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=2048499615]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1185142103]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 304.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_0ywr1")
+theme_override_font_sizes/font_size = 16
+text = "LA PEDRERA, VIVIENDA DE ÉPOCA"
+horizontal_alignment = 1

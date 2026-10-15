@@ -33,3 +33,20 @@ Antes (sala genérica de 16×12) y después (sala propia desde `data/interiores/
 | Catedral de la Almudena | ![](interiores_2026-10-15/madrid__sala_palacio_real_23_54_antes.png) | ![](interiores_2026-10-15/madrid__sala_palacio_real_23_54_despues.png) |
 | Andén 0 de Chamberí | ![](interiores_2026-10-15/madrid__sala_chamberi_24_40_antes.png) | ![](interiores_2026-10-15/madrid__sala_chamberi_24_40_despues.png) |
 | Tienda oficial del Real Madrid | ![](interiores_2026-10-15/madrid__sala_bernabeu_34_26_antes.png) | ![](interiores_2026-10-15/madrid__sala_bernabeu_34_26_despues.png) |
+
+## Barcelona
+
+| Sala | Antes | Después |
+|---|---|---|
+| Mercado de la Boqueria | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_22_13_antes.png) | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_22_13_despues.png) |
+| Catedral de Barcelona | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_44_22_antes.png) | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_44_22_despues.png) |
+| Claustro de las ocas | (no existía) | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_44_22_claustro_despues.png) |
+| Gran Teatre del Liceu | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_22_27_antes.png) | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_22_27_despues.png) |
+| Chiringuito de la Barceloneta | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_49_41_antes.png) | ![](interiores_2026-10-15/barcelona__sala_ciutat_vella_49_41_despues.png) |
+| Casa Batlló, entresuelo | ![](interiores_2026-10-15/barcelona__sala_eixample_25_31_antes.png) | ![](interiores_2026-10-15/barcelona__sala_eixample_25_31_despues.png) |
+| Casa Batlló, azotea del dragón | (no existía) | ![](interiores_2026-10-15/barcelona__sala_eixample_25_31_azotea_despues.png) |
+| La Pedrera, patio de luces | ![](interiores_2026-10-15/barcelona__sala_eixample_37_19_antes.png) | ![](interiores_2026-10-15/barcelona__sala_eixample_37_19_despues.png) |
+| Sagrada Familia, las naves | ![](interiores_2026-10-15/barcelona__sala_eixample_55_41_antes.png) | ![](interiores_2026-10-15/barcelona__sala_eixample_55_41_despues.png) |
+| Sagrada Familia, la cripta | (no existía) | ![](interiores_2026-10-15/barcelona__sala_eixample_55_41_cripta_despues.png) |
+| La Masia | ![](interiores_2026-10-15/barcelona__sala_les_corts_47_29_antes.png) | ![](interiores_2026-10-15/barcelona__sala_les_corts_47_29_despues.png) |
+| Bar de la penya culé | ![](interiores_2026-10-15/barcelona__sala_les_corts_21_23_antes.png) | ![](interiores_2026-10-15/barcelona__sala_les_corts_21_23_despues.png) |

@@ -25,6 +25,8 @@ FUERA = {
     # Transporte (Agente 4): andenes del AVE y terminales con control de seguridad.
     'madrid/sala_retiro_20_58', 'malaga/sala_calle_5_57', 'valladolid/sala_calle_52_59',
     'playa_del_ingles/aeropuerto', 'vigo/aeropuerto',
+    # Piso de Rufián y su portal (Agente 2, personajes decididos por Javier).
+    'barcelona/sala_eixample_10_31', 'barcelona/casa_rufian', 'barcelona/habitacion_rufian',
 }
 TIPOS = [
     ('casa_ibicenca', 'vivienda'), ('casa_', 'vivienda'), ('cabana', 'rural'), ('barraca', 'barraca'), ('horreo', 'horreo'),

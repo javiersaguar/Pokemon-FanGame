@@ -1,0 +1,97 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_tveva"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_ibpnp"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_juwl1"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_fsj52"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_65se0"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_63xaf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_lass.png" id="7_jx5y3"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_2s37d"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_nvmwf"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_34gax"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_3cqmy"]
+
+[sub_resource type="Resource" id="Resource_dciyu"]
+script = ExtResource("3_juwl1")
+id = &"barcelona/sala_eixample_25_31_azotea"
+display_name = "Casa Batlló, azotea del dragón, Barcelona"
+outdoor = false
+zone_id = &"barcelona"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaEixample2531Azotea" type="Node2D" unique_id=152637219]
+script = ExtResource("1_tveva")
+data = SubResource("Resource_dciyu")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=802011415]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADgAAAABAAAAAAAAADgAAAACAAAAAAAAADgAAAADAAAAAAAAADgAAAAEAAAAAAAAADgAAAAFAAAAAAAAADgAAAAGAAAAAAAAADgAAAAHAAAAAAAAADgAAAAIAAAAAAAAADgAAAAJAAAAAAAAADgAAAAAAAEAAAAAADgAAAABAAEAAAAAADgAAAACAAEAAAAAADgAAAADAAEAAAAAADgAAAAEAAEAAAAAADgAAAAFAAEAAAAAADgAAAAGAAEAAAAAADgAAAAHAAEAAAAAADgAAAAIAAEAAAAAADgAAAAJAAEAAAAAADgAAAAAAAIAAAAAADgAAAABAAIAAAAAADgAAAACAAIAAAAAADgAAAADAAIAAAAAADgAAAAEAAIAAAAAADgAAAAFAAIAAAAAADgAAAAGAAIAAAAAADgAAAAHAAIAAAAAADgAAAAIAAIAAAAAADgAAAAJAAIAAAAAADgAAAAAAAMAAAAAADgAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAIAAMAAAAAADgAAAAJAAMAAAAAADgAAAAAAAQAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAADgAAAAFAAQAAAAAADgAAAAGAAQAAAAAADgAAAAHAAQAAAAAADgAAAAIAAQAAAAAADgAAAAJAAQAAAAAADgAAAAAAAUAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAADgAAAAFAAUAAAAAADgAAAAGAAUAAAAAADgAAAAHAAUAAAAAADgAAAAIAAUAAAAAADgAAAAJAAUAAAAAADgAAAAAAAYAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAADgAAAAFAAYAAAAAADgAAAAGAAYAAAAAADgAAAAHAAYAAAAAADgAAAAIAAYAAAAAADgAAAAJAAYAAAAAADgAAAAAAAcAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAAAQAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAAIAAcAAAAAADgAAAAJAAcAAAAAADgAAAA=")
+tile_set = ExtResource("4_fsj52")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1333962811]
+tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAAAAAAAQACABAAAAAJAAAAAQAAABAAAAAAAAEAAQACABAAAAAJAAEAAQAAABAAAAAAAAIAAQACABAAAAAJAAIAAQAAABAAAAAAAAMAAQACABAAAAAJAAMAAQAAABAAAAAAAAQAAQACABAAAAAJAAQAAQAAABAAAAAAAAUAAQACABAAAAAJAAUAAQAAABAAAAAAAAYAAQACABAAAAAJAAYAAQAAABAAAAABAAcAAQABAA8AAAACAAcAAQACAA8AAAAEAAcAAQAAAA8AAAAFAAcAAQABAA8AAAAGAAcAAQABAA8AAAAHAAcAAQABAA8AAAAIAAcAAQABAA8AAAAAAAcAAQAFABMAAAAJAAcAAQAGABMAAAA=")
+tile_set = ExtResource("4_fsj52")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1637321243]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1745029030]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAAAAgAAADQAAAAEAAAAAgABADQAAAAFAAAAAgACADQAAAADAAEAAgAAADUAAAAEAAEAAgABADUAAAAFAAEAAgACADUAAAADAAIAAgAAADYAAAAEAAIAAgABADYAAAAFAAIAAgACADYAAAAGAAEAAgAFACUAAAAHAAEAAgAGACUAAAAIAAEAAgAHACUAAAAGAAIAAgAFACYAAAAHAAIAAgAGACYAAAAIAAIAAgAHACYAAAA=")
+tile_set = ExtResource("4_fsj52")
+
+[node name="FotografaDeBodas" type="Node2D" parent="Entities" unique_id=498170661 instance=ExtResource("5_65se0")]
+position = Vector2(80, 176)
+script = ExtResource("6_63xaf")
+display_name = "Fotógrafa de bodas"
+lines = PackedStringArray("Hago fotos de bodas en la azotea del dragón. Los novios salen preciosos y el dragón sale mejor.", "Cada escama del tejado es de un color. Gaudí no conocía el término «paleta corporativa».")
+turn_to_player = true
+sprite_sheet = ExtResource("7_jx5y3")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1553443106 instance=ExtResource("8_2s37d")]
+position = Vector2(144, 80)
+script = ExtResource("9_nvmwf")
+lines = PackedStringArray("El lomo del dragón, de tejas verdes y azules. A un lado, la torre con la cruz: la lanza de Sant Jordi.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1428108800]
+z_index = 10
+tile_set = ExtResource("4_fsj52")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1758115467]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1474447074]
+position = Vector2(112, 240)
+script = ExtResource("10_34gax")
+target_map = &"barcelona/sala_eixample_25_31"
+target_spawn = &"desde_sala_eixample_25_31_azotea"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1753879230]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1506811906]
+position = Vector2(112, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1930942368]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1914857618]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 304.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_3cqmy")
+theme_override_font_sizes/font_size = 16
+text = "CASA BATLLÓ, AZOTEA DEL DRAGÓN"
+horizontal_alignment = 1
