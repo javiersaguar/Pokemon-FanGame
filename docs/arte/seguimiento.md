@@ -517,3 +517,4 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
 |---|---|---|---|---|---|---|
 | Interiores de Ibiza (34 salas, `data/interiores/ibiza.json`) | Mapa | Agente 1 | integrado, provisional | Tileset de interiores (Akizakura16), catálogo `data/interiores/_piezas.json` | ⏳ | Casas ibicencas con recibidor y dormitorio, catedral, club con barra, socorrismo, casa payesa y farmacia. [Comparativa](comparativas/interiores_2026-10-15.md) |
+| Interiores de Madrid (88 salas, `data/interiores/madrid.json`) | Mapa | Agente 1 | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | Gran Vía, Sol, Moncloa, Chamberí, Retiro, Palacio y Bernabéu; salas nuevas en Debod, Cibeles, Congreso, Prado, Teatro Real y Almudena. [Comparativa](comparativas/interiores_2026-10-15.md) |

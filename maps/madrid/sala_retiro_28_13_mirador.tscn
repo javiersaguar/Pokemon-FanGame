@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_0ex0n"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_e32cd"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_r5lmd"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_1gqvy"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_w4ce3"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_ak3tj"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_youngster.png" id="7_l5sbj"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_4kj0s"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_fcemj"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_w0x3s"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_28t51"]
+
+[sub_resource type="Resource" id="Resource_ttwyj"]
+script = ExtResource("3_r5lmd")
+id = &"madrid/sala_retiro_28_13_mirador"
+display_name = "Mirador de Cibeles, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaRetiro2813Mirador" type="Node2D" unique_id=431878386]
+script = ExtResource("1_0ex0n")
+data = SubResource("Resource_ttwyj")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1672105949]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADwAAAABAAAAAAAAADwAAAACAAAAAAAAADwAAAADAAAAAAAAADwAAAAEAAAAAAAAADwAAAAFAAAAAAAAADwAAAAGAAAAAAAAADwAAAAHAAAAAAAAADwAAAAAAAEAAAAAADwAAAABAAEAAAAAADwAAAACAAEAAAAAADwAAAADAAEAAAAAADwAAAAEAAEAAAAAADwAAAAFAAEAAAAAADwAAAAGAAEAAAAAADwAAAAHAAEAAAAAADwAAAAAAAIAAAAAADwAAAABAAIAAAAAADwAAAACAAIAAAAAADwAAAADAAIAAAAAADwAAAAEAAIAAAAAADwAAAAFAAIAAAAAADwAAAAGAAIAAAAAADwAAAAHAAIAAAAAADwAAAAAAAMAAAAAADwAAAABAAMAAAAAADwAAAACAAMAAAAAADwAAAADAAMAAAAAADwAAAAEAAMAAAAAADwAAAAFAAMAAAAAADwAAAAGAAMAAAAAADwAAAAHAAMAAAAAADwAAAAAAAQAAAAAADwAAAABAAQAAAAAADwAAAACAAQAAAAAADwAAAADAAQAAAAAADwAAAAEAAQAAAAAADwAAAAFAAQAAAAAADwAAAAGAAQAAAAAADwAAAAHAAQAAAAAADwAAAAAAAUAAAAAADwAAAABAAUAAAAAADwAAAACAAUAAAAAADwAAAADAAUAAAAAADwAAAAEAAUAAAAAADwAAAAFAAUAAAAAADwAAAAGAAUAAAAAADwAAAAHAAUAAAAAADwAAAAAAAYAAAAAADwAAAABAAYAAAAAADwAAAACAAYAAAAAADwAAAADAAYAAAAAADwAAAAEAAYAAAAAADwAAAAFAAYAAAAAADwAAAAGAAYAAAAAADwAAAAHAAYAAAAAADwAAAAAAAcAAAAAADwAAAABAAcAAAAAADwAAAACAAcAAAAAADwAAAADAAcAAAAAADwAAAAEAAcAAAAAADwAAAAFAAcAAAAAADwAAAAGAAcAAAAAADwAAAAHAAcAAAAAADwAAAAAAAgAAAAAADwAAAABAAgAAAAAADwAAAACAAgAAAAAADwAAAADAAgAAAAAADwAAAAEAAgAAAAAABAAAAAFAAgAAAAAADwAAAAGAAgAAAAAADwAAAAHAAgAAAAAADwAAAA=")
+tile_set = ExtResource("4_1gqvy")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=286442441]
+tile_map_data = PackedByteArray("AAABAAAAAQABAAMAAAABAAEAAQABAAQAAAACAAAAAQABAAMAAAACAAEAAQABAAQAAAADAAAAAQABAAMAAAADAAEAAQABAAQAAAAEAAAAAQABAAMAAAAEAAEAAQABAAQAAAAFAAAAAQABAAMAAAAFAAEAAQABAAQAAAAGAAAAAQABAAMAAAAGAAEAAQABAAQAAAAAAAAAAQACAAEAAAAHAAAAAQAAAAEAAAAAAAEAAQACAAEAAAAHAAEAAQAAAAEAAAAAAAIAAQACAAEAAAAHAAIAAQAAAAEAAAAAAAMAAQACAAEAAAAHAAMAAQAAAAEAAAAAAAQAAQACAAEAAAAHAAQAAQAAAAEAAAAAAAUAAQACAAEAAAAHAAUAAQAAAAEAAAAAAAYAAQACAAEAAAAHAAYAAQAAAAEAAAAAAAcAAQACAAEAAAAHAAcAAQAAAAEAAAABAAgAAQABAAAAAAACAAgAAQABAAAAAAADAAgAAQACAAAAAAAFAAgAAQAAAAAAAAAGAAgAAQABAAAAAAAAAAgAAQAFAAQAAAAHAAgAAQAGAAQAAAA=")
+tile_set = ExtResource("4_1gqvy")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1647584245]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2004486228]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAEAAAAAgAAADQAAAAFAAAAAgABADQAAAAGAAAAAgACADQAAAAEAAEAAgAAADUAAAAFAAEAAgABADUAAAAGAAEAAgACADUAAAAEAAIAAgAAADYAAAAFAAIAAgABADYAAAAGAAIAAgACADYAAAABAAcAAgADABcAAAAGAAcAAgADAD4AAAA=")
+tile_set = ExtResource("4_1gqvy")
+
+[node name="FotografoDelMirador" type="Node2D" parent="Entities" unique_id=922431580 instance=ExtResource("5_w4ce3")]
+position = Vector2(48, 176)
+script = ExtResource("6_ak3tj")
+display_name = "Fotógrafo del mirador"
+lines = PackedStringArray("Desde aquí se ve la diosa Cibeles, la Gran Vía y tres grúas. Las grúas salen en todas las fotos de Madrid.", "Cuando gana el Madrid, la Cibeles se llena. Cuando pierde, se llena el bar de enfrente.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_l5sbj")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=791990489 instance=ExtResource("8_4kj0s")]
+position = Vector2(208, 80)
+script = ExtResource("9_fcemj")
+lines = PackedStringArray("Una placa: «Mirador. Prohibido tirar cosas a la diosa. Ella ya tiene bastante con los leones».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=926766917]
+z_index = 10
+tile_map_data = PackedByteArray("AAABAAYAAgADABYAAAA=")
+tile_set = ExtResource("4_1gqvy")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=979316711]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1675599159]
+position = Vector2(144, 272)
+script = ExtResource("10_w0x3s")
+target_map = &"madrid/sala_retiro_28_13"
+target_spawn = &"desde_sala_retiro_28_13_mirador"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1415521993]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=2077855510]
+position = Vector2(144, 240)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1679704469]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1331697761]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 240.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_28t51")
+theme_override_font_sizes/font_size = 16
+text = "MIRADOR DE CIBELES"
+horizontal_alignment = 1

@@ -1,0 +1,107 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_4n28r"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_uk48o"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_qir0j"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_22tqx"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_o7pj3"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_32kgs"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/estudianteinge.png" id="7_h63dw"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/cunado.png" id="8_aupu7"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_66oj1"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_r0vea"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_6k20i"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_0611q"]
+
+[sub_resource type="Resource" id="Resource_ygdrl"]
+script = ExtResource("3_qir0j")
+id = &"madrid/sala_retiro_23_44_goya"
+display_name = "Museo del Prado, sala de Goya, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaRetiro2344Goya" type="Node2D" unique_id=627793444]
+script = ExtResource("1_4n28r")
+data = SubResource("Resource_ygdrl")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=330606500]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADwAAAABAAAAAAAAADwAAAACAAAAAAAAADwAAAADAAAAAAAAADwAAAAEAAAAAAAAADwAAAAFAAAAAAAAADwAAAAGAAAAAAAAADwAAAAHAAAAAAAAADwAAAAIAAAAAAAAADwAAAAJAAAAAAAAADwAAAAKAAAAAAAAADwAAAALAAAAAAAAADwAAAAMAAAAAAAAADwAAAANAAAAAAAAADwAAAAAAAEAAAAAADwAAAABAAEAAAAAADwAAAACAAEAAAAAADwAAAADAAEAAAAAADwAAAAEAAEAAAAAADwAAAAFAAEAAAAAADwAAAAGAAEAAAAAADwAAAAHAAEAAAAAADwAAAAIAAEAAAAAADwAAAAJAAEAAAAAADwAAAAKAAEAAAAAADwAAAALAAEAAAAAADwAAAAMAAEAAAAAADwAAAANAAEAAAAAADwAAAAAAAIAAAAAADwAAAABAAIAAAAAADwAAAACAAIAAAAAADwAAAADAAIAAAAAADwAAAAEAAIAAAAAADwAAAAFAAIAAAAAADwAAAAGAAIAAAAAADwAAAAHAAIAAAAAADwAAAAIAAIAAAAAADwAAAAJAAIAAAAAADwAAAAKAAIAAAAAADwAAAALAAIAAAAAADwAAAAMAAIAAAAAADwAAAANAAIAAAAAADwAAAAAAAMAAAAAADwAAAABAAMAAAAAADwAAAACAAMAAAAAAAQAAAADAAMAAAAAAAQAAAAEAAMAAAAAAAQAAAAFAAMAAAAAAAQAAAAGAAMAAAAAADwAAAAHAAMAAAAAADwAAAAIAAMAAAAAADwAAAAJAAMAAAAAADwAAAAKAAMAAAAAADwAAAALAAMAAAAAADwAAAAMAAMAAAAAADwAAAANAAMAAAAAADwAAAAAAAQAAAAAADwAAAABAAQAAAAAADwAAAACAAQAAAAAAAQAAAADAAQAAAAAAAQAAAAEAAQAAAAAAAQAAAAFAAQAAAAAAAQAAAAGAAQAAAAAADwAAAAHAAQAAAAAADwAAAAIAAQAAAAAADwAAAAJAAQAAAAAADwAAAAKAAQAAAAAADwAAAALAAQAAAAAADwAAAAMAAQAAAAAADwAAAANAAQAAAAAADwAAAAAAAUAAAAAADwAAAABAAUAAAAAADwAAAACAAUAAAAAADwAAAADAAUAAAAAADwAAAAEAAUAAAAAADwAAAAFAAUAAAAAADwAAAAGAAUAAAAAADwAAAAHAAUAAAAAADwAAAAIAAUAAAAAADwAAAAJAAUAAAAAADwAAAAKAAUAAAAAADwAAAALAAUAAAAAADwAAAAMAAUAAAAAADwAAAANAAUAAAAAADwAAAAAAAYAAAAAADwAAAABAAYAAAAAADwAAAACAAYAAAAAADwAAAADAAYAAAAAADwAAAAEAAYAAAAAADwAAAAFAAYAAAAAADwAAAAGAAYAAAAAADwAAAAHAAYAAAAAADwAAAAIAAYAAAAAADwAAAAJAAYAAAAAADwAAAAKAAYAAAAAADwAAAALAAYAAAAAADwAAAAMAAYAAAAAADwAAAANAAYAAAAAADwAAAAAAAcAAAAAADwAAAABAAcAAAAAADwAAAACAAcAAAAAADwAAAADAAcAAAAAADwAAAAEAAcAAAAAADwAAAAFAAcAAAAAADwAAAAGAAcAAAAAADwAAAAHAAcAAAAAADwAAAAIAAcAAAAAADwAAAAJAAcAAAAAADwAAAAKAAcAAAAAADwAAAALAAcAAAAAADwAAAAMAAcAAAAAADwAAAANAAcAAAAAADwAAAAAAAgAAAAAADwAAAABAAgAAAAAADwAAAACAAgAAAAAADwAAAADAAgAAAAAADwAAAAEAAgAAAAAADwAAAAFAAgAAAAAADwAAAAGAAgAAAAAADwAAAAHAAgAAAAAADwAAAAIAAgAAAAAADwAAAAJAAgAAAAAADwAAAAKAAgAAAAAADwAAAALAAgAAAAAADwAAAAMAAgAAAAAADwAAAANAAgAAAAAADwAAAAAAAkAAAAAADwAAAABAAkAAAAAADwAAAACAAkAAAAAADwAAAADAAkAAAAAAAwAAAAEAAkAAAAAADwAAAAFAAkAAAAAADwAAAAGAAkAAAAAADwAAAAHAAkAAAAAADwAAAAIAAkAAAAAADwAAAAJAAkAAAAAADwAAAAKAAkAAAAAADwAAAALAAkAAAAAADwAAAAMAAkAAAAAADwAAAANAAkAAAAAADwAAAA=")
+tile_set = ExtResource("4_22tqx")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1541025397]
+tile_map_data = PackedByteArray("AAABAAAAAQABAE4AAAABAAEAAQABAE8AAAACAAAAAQABAE4AAAACAAEAAQABAE8AAAADAAAAAQABAE4AAAADAAEAAQABAE8AAAAEAAAAAQABAE4AAAAEAAEAAQABAE8AAAAFAAAAAQABAE4AAAAFAAEAAQABAE8AAAAGAAAAAQABAE4AAAAGAAEAAQABAE8AAAAHAAAAAQABAE4AAAAHAAEAAQABAE8AAAAIAAAAAQABAE4AAAAIAAEAAQABAE8AAAAJAAAAAQABAE4AAAAJAAEAAQABAE8AAAAKAAAAAQABAE4AAAAKAAEAAQABAE8AAAALAAAAAQABAE4AAAALAAEAAQABAE8AAAAMAAAAAQABAE4AAAAMAAEAAQABAE8AAAAAAAAAAQACAEwAAAANAAAAAQAAAEwAAAAAAAEAAQACAEwAAAANAAEAAQAAAEwAAAAAAAIAAQACAEwAAAANAAIAAQAAAEwAAAAAAAMAAQACAEwAAAANAAMAAQAAAEwAAAAAAAQAAQACAEwAAAANAAQAAQAAAEwAAAAAAAUAAQACAEwAAAANAAUAAQAAAEwAAAAAAAYAAQACAEwAAAANAAYAAQAAAEwAAAAAAAcAAQACAEwAAAANAAcAAQAAAEwAAAAAAAgAAQACAEwAAAANAAgAAQAAAEwAAAABAAkAAQABAEsAAAACAAkAAQACAEsAAAAEAAkAAQAAAEsAAAAFAAkAAQABAEsAAAAGAAkAAQABAEsAAAAHAAkAAQABAEsAAAAIAAkAAQABAEsAAAAJAAkAAQABAEsAAAAKAAkAAQABAEsAAAALAAkAAQABAEsAAAAMAAkAAQABAEsAAAAAAAkAAQAFAE8AAAANAAkAAQAGAE8AAAA=")
+tile_set = ExtResource("4_22tqx")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1398734317]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1928334275]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAHAAUAAgAFAB0AAAAIAAUAAgAGAB0AAAAKAAUAAgAFAB0AAAALAAUAAgAGAB0AAAACAAYAAgAHADkAAAABAAEAAgADADIAAAACAAEAAgAEADIAAAABAAIAAgADADMAAAACAAIAAgAEADMAAAA=")
+tile_set = ExtResource("4_22tqx")
+
+[node name="EstudianteDeBellasArtes" type="Node2D" parent="Entities" unique_id=866463386 instance=ExtResource("5_o7pj3")]
+position = Vector2(48, 144)
+script = ExtResource("6_32kgs")
+display_name = "Estudiante de Bellas Artes"
+lines = PackedStringArray("Copio las Pinturas Negras para mi trabajo de fin de grado. Me ha quedado tan negro como mi futuro laboral.", "Goya pintó a Saturno devorando a su hijo. Mi casero pinta parecido cuando sube el alquiler.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_h63dw")
+initial_facing = 1
+
+[node name="SenorQueSeHaPerdido" type="Node2D" parent="Entities" unique_id=723602364 instance=ExtResource("5_o7pj3")]
+position = Vector2(304, 176)
+script = ExtResource("6_32kgs")
+display_name = "Señor que se ha perdido"
+lines = PackedStringArray("Yo buscaba la cafetería y me he encontrado al Perro semihundido. Me identifico mucho con él.", "¿Esta sala es la de los fusilamientos? Pues vaya plan para un domingo.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_aupu7")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1821918647 instance=ExtResource("9_66oj1")]
+position = Vector2(400, 48)
+script = ExtResource("10_r0vea")
+lines = PackedStringArray("El 3 de mayo en Madrid, de Goya (1814). Una camisa blanca, un farol y la peor mañana de la historia de la ciudad.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1175209411]
+z_index = 10
+tile_map_data = PackedByteArray("AAAHAAQAAgAFABwAAAAIAAQAAgAGABwAAAAKAAQAAgAFABwAAAALAAQAAgAGABwAAAACAAMAAgAHADYAAAACAAQAAgAHADcAAAACAAUAAgAHADgAAAA=")
+tile_set = ExtResource("4_22tqx")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1884538356]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=918055034]
+position = Vector2(112, 304)
+script = ExtResource("11_6k20i")
+target_map = &"madrid/sala_retiro_23_44"
+target_spawn = &"desde_sala_retiro_23_44_goya"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=851549506]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1917219927]
+position = Vector2(112, 272)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=287475511]
+
+[node name="Rotulo" type="Label" parent="." unique_id=2088395518]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_0611q")
+theme_override_font_sizes/font_size = 16
+text = "MUSEO DEL PRADO, SALA DE GOYA"
+horizontal_alignment = 1

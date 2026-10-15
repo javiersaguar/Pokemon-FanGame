@@ -139,6 +139,7 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-interiores`. Encargo: un
 - Mostradores de dos casillas de fondo: se habla por encima con quien está detrás (`player.gd`).
 - Test nuevo `tests/mundo/test_interiores_unicos.gd`: firmas únicas, entrada y salida en los dos sentidos sin bucles, se llega a cada persona y cartel, frases sin repetir, escena al día y partida guardada recolocada.
 - **Ibiza:** 34 salas. Las 14 casas ibicencas con recibidor y dormitorio (encargo del 14 de octubre), la catedral, el club (pista y barra), la caseta de socorrismo, una casa payesa y la farmacia de guardia.
+- **Madrid:** 88 salas (81 con puerta a la calle y 7 salas de dentro): bares, tiendas, Doña Manolita, grandes almacenes, Mercado de San Miguel, teatros y cines de la Gran Vía, academia, oficina de empleo, banco, portales y pisos con sus vecinos, Ferraz 70, Templo de Debod (pronaos y naos), Andén 0, Banco de España, Cibeles (patio y mirador), Congreso (antesala y hemiciclo), Prado (vestíbulo y salas de Velázquez y Goya), Palacio de Cristal, Senado, Teatro Real (foyer y patio de butacas), escalera del Palacio Real (la Liga sigue sin sala) y Almudena (nave y cripta). Fuera: el andén del AVE de Atocha (`sala_retiro_20_58`).
 
 **Trabajo anterior sin terminar (rediseño de la casa ibicenca):** guardado en la rama local `wip/agente1-ibiza` (commit `8987b894`, sin subir y sin integrar). La fachada `casa_ibicenca.png` (1254×1254) no sale de los packs ni es un `.px2` hecho a mano: es una imagen generada automáticamente (lo prohíben DIRECTRICES §7 y BIBLIA §9) y se veía reescalada a 4×4 casillas (escala no entera). Su test no compilaba. Del trabajo solo se integra la recolocación de partidas guardadas; las salas se rehacen con el sistema nuevo.
 
@@ -146,7 +147,7 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-interiores`. Encargo: un
 
 **Fuera de este encargo:** gimnasios y Quirón (Agente 3), `barcelona/sala_eixample_10_31` y el piso de Rufián (Agente 2), trenes, ferris y aviones (Agente 4). Los andenes del AVE y las terminales del aeropuerto se personalizarán conservando sus pasos, revisores y controles en su sitio.
 
-**Pendiente:** Madrid, Barcelona, Valencia, Sevilla y el resto de ciudades, pueblos y rutas; locales de servicio con rótulo y gente de su ciudad; capturas y fila en `docs/arte/seguimiento.md` por ciudad.
+**Pendiente:** Barcelona, Valencia, Sevilla y el resto de ciudades, pueblos y rutas; locales de servicio con rótulo y gente de su ciudad; capturas y fila en `docs/arte/seguimiento.md` por ciudad.
 
 ### Sesión del 14 de octubre · Inicio y sistemas (Agente A)
 

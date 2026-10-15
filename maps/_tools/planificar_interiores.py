@@ -13,6 +13,7 @@ Uso:
   python3 maps/_tools/planificar_interiores.py <ciudad> [<ciudad> ...] [--rehacer] [--inventario <json>]
     --rehacer     vuelve a calcular la distribución aunque ya exista
     --inventario  JSON de maps/_tools/inventario_interiores.gd (pasos y apariciones que hay que conservar)
+    --solo <id>   vuelve a calcular solo esa sala
   python3 maps/_tools/planificar_interiores.py --firmas   comprueba las firmas de todos los ficheros
 """
 
@@ -502,6 +503,7 @@ class Sala:
         self.cubierto = {}     # parte de arriba de muebles en el suelo (capa Above, se pasa por detrás)
         self.pared_ocupada = {}  # casillas de pared tapadas por un mueble
         self.reservado = set()   # pasillo, apariciones, pasos
+        self.para_gente = set()  # sitio de un vendedor: sin muebles, pero sí para una persona
         self.filas_desde = None
         self.muebles = []
         self.encima = []
@@ -553,13 +555,11 @@ class Sala:
                     continue
                 if c[1] > self.H - 2:
                     return None
+                if c in self.solido or c in self.reservado or c in self.cubierto or c in self.para_gente:
+                    return None
                 if dy >= h - base or contra_muro:
-                    if c in self.solido or c in self.reservado or c in self.cubierto:
-                        return None
                     sol.append(c)
                 else:
-                    if c in self.solido or c in self.reservado or c in self.cubierto:
-                        return None
                     cub.append(c)
         return sol, cub, pared
 
@@ -941,12 +941,14 @@ class Planificador:
                     ok = False
                     break
                 puestos += 1
-            if ok and s.libre((x + 1, y - 1)) and all(s.suelo((x + i, y + 2)) for i in range(3)):
+            # Cada puesto con su hueco: sin otro mostrador pegado a los lados.
+            pegado = any(_es_mostrador(s, (xx, yy)) for xx in (x - 1, x + 3) for yy in (y, y + 1))
+            if ok and not pegado and s.libre((x + 1, y - 1)) and all(s.suelo((x + i, y + 2)) for i in range(3)):
                 s.anclas.setdefault('tras_mostrador', []).append(((x + 1, y - 1), 'abajo'))
                 for i in range(3):
                     s.anclas.setdefault('cliente', []).append(((x + i, y + 2), 'arriba'))
                 # El sitio del vendedor no se ocupa con otro puesto.
-                s.reservado.add((x + 1, y - 1))
+                s.para_gente.add((x + 1, y - 1))
                 hechos += 1
             else:
                 s.quitar_ultimos(puestos)
@@ -1134,7 +1136,7 @@ REQUISITOS = {
     'pc': ('arriba', ([['ordenador']],)),
 }
 PIDE_PAPEL = {'cama': 'cama', 'tele': 'tele', 'cocina': 'cocina', 'mesa': 'mesa', 'estanteria': 'estanteria',
-              'vitrina': 'vitrina', 'dependiente': 'mostrador', 'tras_mostrador': 'mostrador'}
+              'vitrina': 'vitrina', 'tras_mostrador': 'mostrador'}
 
 
 def requisitos(e):
@@ -1190,7 +1192,7 @@ def colocar_persona(s, rng, papel, ocupadas):
         anclas = list(s.anclas.get(clave, []))
         rng.shuffle(anclas)
         for c, mira in anclas:
-            if s.libre(c) and c not in ocupadas and not _junto_al_pasillo(s, c):
+            if (s.libre(c) or c in s.para_gente) and c not in ocupadas and not _junto_al_pasillo(s, c):
                 return c, mira
     return None, None
 
@@ -1300,6 +1302,7 @@ def todas_las_firmas(excepto=None):
 
 def main(argv):
     rehacer = '--rehacer' in argv
+    solo = argv[argv.index('--solo') + 1] if '--solo' in argv else None
     inv = {}
     if '--inventario' in argv:
         inv = cargar_inventario(argv[argv.index('--inventario') + 1])
@@ -1309,7 +1312,7 @@ def main(argv):
             print('FIRMA REPETIDA:', ', '.join(v))
         print('%d firmas repetidas' % len(rep))
         return 1 if rep else 0
-    ciudades = [a for a in argv if not a.startswith('--') and not (len(argv) > argv.index(a) > 0 and argv[argv.index(a) - 1] == '--inventario')]
+    ciudades = [a for i, a in enumerate(argv) if not a.startswith('--') and not (i > 0 and argv[i - 1] in ('--inventario', '--solo'))]
     errores = 0
     for ciudad in ciudades:
         ruta = os.path.join(DATOS, ciudad + '.json')
@@ -1324,7 +1327,9 @@ def main(argv):
         orden = sorted(ints, key=lambda m: (1 if ints[m].get('padre') else 0, m))
         for mid in orden:
             e = ints[mid]
-            if 'muebles' in e and not rehacer:
+            if solo and mid != solo:
+                continue
+            if 'muebles' in e and not rehacer and not solo:
                 continue
             e = dict(e)
             if hijos.get(mid):

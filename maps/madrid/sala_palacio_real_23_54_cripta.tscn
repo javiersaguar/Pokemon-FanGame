@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_2d716"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_d87de"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_m4as7"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_c4e50"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_cw4my"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_5ko4u"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="7_yjwkt"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_xd6u4"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_vahl3"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_c8e6u"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_5256f"]
+
+[sub_resource type="Resource" id="Resource_hi415"]
+script = ExtResource("3_m4as7")
+id = &"madrid/sala_palacio_real_23_54_cripta"
+display_name = "Cripta de la Almudena, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaPalacioReal2354Cripta" type="Node2D" unique_id=39258846]
+script = ExtResource("1_2d716")
+data = SubResource("Resource_hi415")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=691324202]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADQAAAABAAAAAAAAADQAAAACAAAAAAAAADQAAAADAAAAAAAAADQAAAAEAAAAAAAAADQAAAAFAAAAAAAAADQAAAAGAAAAAAAAADQAAAAHAAAAAAAAADQAAAAIAAAAAAAAADQAAAAJAAAAAAAAADQAAAAKAAAAAAAAADQAAAALAAAAAAAAADQAAAAAAAEAAAAAADQAAAABAAEAAAAAADQAAAACAAEAAAAAADQAAAADAAEAAAAAADQAAAAEAAEAAAAAADQAAAAFAAEAAAAAADQAAAAGAAEAAAAAADQAAAAHAAEAAAAAADQAAAAIAAEAAAAAADQAAAAJAAEAAAAAADQAAAAKAAEAAAAAADQAAAALAAEAAAAAADQAAAAAAAIAAAAAADQAAAABAAIAAAAAADQAAAACAAIAAAAAADQAAAADAAIAAAAAADQAAAAEAAIAAAAAADQAAAAFAAIAAAAAADQAAAAGAAIAAAAAADQAAAAHAAIAAAAAADQAAAAIAAIAAAAAADQAAAAJAAIAAAAAADQAAAAKAAIAAAAAADQAAAALAAIAAAAAADQAAAAAAAMAAAAAADQAAAABAAMAAAAAADQAAAACAAMAAAAAADQAAAADAAMAAAAAADQAAAAEAAMAAAAAADQAAAAFAAMAAAAAADQAAAAGAAMAAAAAADQAAAAHAAMAAAAAADQAAAAIAAMAAAAAADQAAAAJAAMAAAAAADQAAAAKAAMAAAAAADQAAAALAAMAAAAAADQAAAAAAAQAAAAAADQAAAABAAQAAAAAADQAAAACAAQAAAAAADQAAAADAAQAAAAAADQAAAAEAAQAAAAAADQAAAAFAAQAAAAAADQAAAAGAAQAAAAAADQAAAAHAAQAAAAAADQAAAAIAAQAAAAAADQAAAAJAAQAAAAAADQAAAAKAAQAAAAAADQAAAALAAQAAAAAADQAAAAAAAUAAAAAADQAAAABAAUAAAAAADQAAAACAAUAAAAAADQAAAADAAUAAAAAADQAAAAEAAUAAAAAADQAAAAFAAUAAAAAADQAAAAGAAUAAAAAADQAAAAHAAUAAAAAADQAAAAIAAUAAAAAADQAAAAJAAUAAAAAADQAAAAKAAUAAAAAADQAAAALAAUAAAAAADQAAAAAAAYAAAAAADQAAAABAAYAAAAAADQAAAACAAYAAAAAADQAAAADAAYAAAAAADQAAAAEAAYAAAAAADQAAAAFAAYAAAAAADQAAAAGAAYAAAAAADQAAAAHAAYAAAAAADQAAAAIAAYAAAAAADQAAAAJAAYAAAAAADQAAAAKAAYAAAAAADQAAAALAAYAAAAAADQAAAAAAAcAAAAAADQAAAABAAcAAAAAADQAAAACAAcAAAAAADQAAAADAAcAAAAAADQAAAAEAAcAAAAAADQAAAAFAAcAAAAAADQAAAAGAAcAAAAAADQAAAAHAAcAAAAAADQAAAAIAAcAAAAAADQAAAAJAAcAAAAAADQAAAAKAAcAAAAAADQAAAALAAcAAAAAADQAAAAAAAgAAAAAADQAAAABAAgAAAAAADQAAAACAAgAAAAAADQAAAADAAgAAAAAADQAAAAEAAgAAAAAADQAAAAFAAgAAAAAADQAAAAGAAgAAAAAADQAAAAHAAgAAAAAADQAAAAIAAgAAAAAADQAAAAJAAgAAAAAADQAAAAKAAgAAAAAADQAAAALAAgAAAAAADQAAAAAAAkAAAAAADQAAAABAAkAAAAAADQAAAACAAkAAAAAADQAAAADAAkAAAAAADQAAAAEAAkAAAAAAAgAAAAFAAkAAAAAADQAAAAGAAkAAAAAADQAAAAHAAkAAAAAADQAAAAIAAkAAAAAADQAAAAJAAkAAAAAADQAAAAKAAkAAAAAADQAAAALAAkAAAAAADQAAAA=")
+tile_set = ExtResource("4_c4e50")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=279155060]
+tile_map_data = PackedByteArray("AAABAAAAAQABABwAAAABAAEAAQABAB0AAAACAAAAAQABABwAAAACAAEAAQABAB0AAAADAAAAAQABABwAAAADAAEAAQABAB0AAAAEAAAAAQABABwAAAAEAAEAAQABAB0AAAAFAAAAAQABABwAAAAFAAEAAQABAB0AAAAGAAAAAQABABwAAAAGAAEAAQABAB0AAAAHAAAAAQABABwAAAAHAAEAAQABAB0AAAAIAAAAAQABABwAAAAIAAEAAQABAB0AAAAJAAAAAQABABwAAAAJAAEAAQABAB0AAAAKAAAAAQABABwAAAAKAAEAAQABAB0AAAAAAAAAAQACABoAAAALAAAAAQAAABoAAAAAAAEAAQACABoAAAALAAEAAQAAABoAAAAAAAIAAQACABoAAAALAAIAAQAAABoAAAAAAAMAAQACABoAAAALAAMAAQAAABoAAAAAAAQAAQACABoAAAALAAQAAQAAABoAAAAAAAUAAQACABoAAAALAAUAAQAAABoAAAAAAAYAAQACABoAAAALAAYAAQAAABoAAAAAAAcAAQACABoAAAALAAcAAQAAABoAAAAAAAgAAQACABoAAAALAAgAAQAAABoAAAABAAkAAQABABkAAAACAAkAAQABABkAAAADAAkAAQACABkAAAAFAAkAAQAAABkAAAAGAAkAAQABABkAAAAHAAkAAQABABkAAAAIAAkAAQABABkAAAAJAAkAAQABABkAAAAKAAkAAQABABkAAAAAAAkAAQAFAB0AAAALAAkAAQAGAB0AAAA=")
+tile_set = ExtResource("4_c4e50")
+
+[node name="Entities" type="Node2D" parent="." unique_id=986289669]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1807617856]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAEAAAAAgAAADEAAAAFAAAAAgABADEAAAAGAAAAAgACADEAAAAEAAEAAgAAADIAAAAFAAEAAgABADIAAAAGAAEAAgACADIAAAAEAAIAAgAAADMAAAAFAAIAAgABADMAAAAGAAIAAgACADMAAAACAAYAAgAFACYAAAADAAYAAgAGACYAAAAEAAYAAgAHACYAAAAKAAgAAgAEACYAAAABAAgAAgAFACYAAAACAAgAAgAGACYAAAADAAgAAgAHACYAAAA=")
+tile_set = ExtResource("4_c4e50")
+
+[node name="Sacristana" type="Node2D" parent="Entities" unique_id=1754204282 instance=ExtResource("5_cw4my")]
+position = Vector2(272, 176)
+script = ExtResource("6_5ko4u")
+display_name = "Sacristana"
+lines = PackedStringArray("La cripta es más antigua que la catedral de arriba. Primero se hizo el sótano, como en los chalés de Pozuelo.", "Aquí abajo hace fresco todo el año. En agosto viene gente a rezar y a no pagar el aire acondicionado.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_yjwkt")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=576689315 instance=ExtResource("8_xd6u4")]
+position = Vector2(208, 80)
+script = ExtResource("9_vahl3")
+lines = PackedStringArray("Una imagen de la Virgen de la Almudena. Según la leyenda, estuvo escondida en la muralla siglos. Sin pagar alquiler.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=718038410]
+z_index = 10
+tile_map_data = PackedByteArray("AAACAAUAAgAFACUAAAADAAUAAgAGACUAAAAEAAUAAgAHACUAAAABAAcAAgAFACUAAAACAAcAAgAGACUAAAADAAcAAgAHACUAAAA=")
+tile_set = ExtResource("4_c4e50")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=71552265]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1057713954]
+position = Vector2(144, 304)
+script = ExtResource("10_c8e6u")
+target_map = &"madrid/sala_palacio_real_23_54"
+target_spawn = &"desde_sala_palacio_real_23_54_cripta"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1056481459]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=367797641]
+position = Vector2(144, 272)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=840932016]
+
+[node name="Rotulo" type="Label" parent="." unique_id=891879456]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_5256f")
+theme_override_font_sizes/font_size = 16
+text = "CRIPTA DE LA ALMUDENA"
+horizontal_alignment = 1

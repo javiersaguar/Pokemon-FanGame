@@ -1,0 +1,108 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_xnm3c"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_maenq"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_fm11i"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_j66ly"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_4mf4o"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_ky8do"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_kimono_girl.png" id="7_26pfk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="8_pwio6"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_si4q3"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_44pvf"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_wf2wk"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_db6be"]
+
+[sub_resource type="Resource" id="Resource_i55b8"]
+script = ExtResource("3_fm11i")
+id = &"madrid/sala_retiro_23_44_velazquez"
+display_name = "Museo del Prado, sala de Velázquez, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaRetiro2344Velazquez" type="Node2D" unique_id=1858137769]
+script = ExtResource("1_xnm3c")
+data = SubResource("Resource_i55b8")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=445640575]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAQAAAABAAAAAAAAAAQAAAACAAAAAAAAAAQAAAADAAAAAAAAAAQAAAAEAAAAAAAAAAQAAAAFAAAAAAAAAAQAAAAGAAAAAAAAAAQAAAAHAAAAAAAAAAQAAAAIAAAAAAAAAAQAAAAJAAAAAAAAAAQAAAAKAAAAAAAAAAQAAAALAAAAAAAAAAQAAAAMAAAAAAAAAAQAAAANAAAAAAAAAAQAAAAAAAEAAAAAAAQAAAABAAEAAAAAAAQAAAACAAEAAAAAAAQAAAADAAEAAAAAAAQAAAAEAAEAAAAAAAQAAAAFAAEAAAAAAAQAAAAGAAEAAAAAAAQAAAAHAAEAAAAAAAQAAAAIAAEAAAAAAAQAAAAJAAEAAAAAAAQAAAAKAAEAAAAAAAQAAAALAAEAAAAAAAQAAAAMAAEAAAAAAAQAAAANAAEAAAAAAAQAAAAAAAIAAAAAAAQAAAABAAIAAAAAAAQAAAACAAIAAAAAAAQAAAADAAIAAAAAAAQAAAAEAAIAAAAAAAQAAAAFAAIAAAAAAAQAAAAGAAIAAAAAAAQAAAAHAAIAAAAAAAQAAAAIAAIAAAAAAAQAAAAJAAIAAAAAAAQAAAAKAAIAAAAAAAQAAAALAAIAAAAAAAQAAAAMAAIAAAAAAAQAAAANAAIAAAAAAAQAAAAAAAMAAAAAAAQAAAABAAMAAAAAAAQAAAACAAMAAAAAAAQAAAADAAMAAAAAAAQAAAAEAAMAAAAAAAQAAAAFAAMAAAAAAAQAAAAGAAMAAAAAAAQAAAAHAAMAAAAAAAQAAAAIAAMAAAAAAAQAAAAJAAMAAAAAAAQAAAAKAAMAAAAAAAQAAAALAAMAAAAAAAQAAAAMAAMAAAAAAAQAAAANAAMAAAAAAAQAAAAAAAQAAAAAAAQAAAABAAQAAAAAAAQAAAACAAQAAAAAAAQAAAADAAQAAAAAAAQAAAAEAAQAAAAAAAQAAAAFAAQAAAAAAAQAAAAGAAQAAAAAAAQAAAAHAAQAAAAAAAQAAAAIAAQAAAAAAAQAAAAJAAQAAAAAAAQAAAAKAAQAAAAAAAQAAAALAAQAAAAAAAQAAAAMAAQAAAAAAAQAAAANAAQAAAAAAAQAAAAAAAUAAAAAAAQAAAABAAUAAAAAAAQAAAACAAUAAAAAAAQAAAADAAUAAAAAAAQAAAAEAAUAAAAAAAQAAAAFAAUAAAAAAAQAAAAGAAUAAAAAAAQAAAAHAAUAAAAAAAQAAAAIAAUAAAAAAAQAAAAJAAUAAAAAAAQAAAAKAAUAAAAAAAQAAAALAAUAAAAAAAQAAAAMAAUAAAAAAAQAAAANAAUAAAAAAAQAAAAAAAYAAAAAAAQAAAABAAYAAAAAAAQAAAACAAYAAAAAAAQAAAADAAYAAAAAAAQAAAAEAAYAAAAAAAQAAAAFAAYAAAAAAAQAAAAGAAYAAAAAAAQAAAAHAAYAAAAAAAQAAAAIAAYAAAAAAAQAAAAJAAYAAAAAAAQAAAAKAAYAAAAAAAQAAAALAAYAAAAAAAQAAAAMAAYAAAAAAAQAAAANAAYAAAAAAAQAAAAAAAcAAAAAAAQAAAABAAcAAAAAAAQAAAACAAcAAAAAAAQAAAADAAcAAAAAAAQAAAAEAAcAAAAAAAQAAAAFAAcAAAAAAAQAAAAGAAcAAAAAAAQAAAAHAAcAAAAAAAQAAAAIAAcAAAAAAAQAAAAJAAcAAAAAAAQAAAAKAAcAAAAAAAQAAAALAAcAAAAAAAQAAAAMAAcAAAAAAAQAAAANAAcAAAAAAAQAAAAAAAgAAAAAAAQAAAABAAgAAAAAAAQAAAACAAgAAAAAAAQAAAADAAgAAAAAAAQAAAAEAAgAAAAAAAQAAAAFAAgAAAAAAAQAAAAGAAgAAAAAAAQAAAAHAAgAAAAAAAQAAAAIAAgAAAAAAAQAAAAJAAgAAAAAAAQAAAAKAAgAAAAAAAQAAAALAAgAAAAAAAQAAAAMAAgAAAAAAAQAAAANAAgAAAAAAAQAAAAAAAkAAAAAAAQAAAABAAkAAAAAAAQAAAACAAkAAAAAAAQAAAADAAkAAAAAAAQAAAAEAAkAAAAAAAQAAAAFAAkAAAAAAAQAAAAGAAkAAAAAAAQAAAAHAAkAAAAAAAQAAAAIAAkAAAAAAAQAAAAJAAkAAAAAAAQAAAAKAAkAAAAAAAQAAAALAAkAAAAAAAQAAAAMAAkAAAAAAAQAAAANAAkAAAAAAAQAAAAAAAoAAAAAAAQAAAABAAoAAAAAAAQAAAACAAoAAAAAAAQAAAADAAoAAAAAAAQAAAAEAAoAAAAAAAQAAAAFAAoAAAAAAAQAAAAGAAoAAAAAAAgAAAAHAAoAAAAAAAQAAAAIAAoAAAAAAAQAAAAJAAoAAAAAAAQAAAAKAAoAAAAAAAQAAAALAAoAAAAAAAQAAAAMAAoAAAAAAAQAAAANAAoAAAAAAAQAAAA=")
+tile_set = ExtResource("4_j66ly")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=662529840]
+tile_map_data = PackedByteArray("AAABAAAAAQABAAMAAAABAAEAAQABAAQAAAACAAAAAQABAAMAAAACAAEAAQABAAQAAAADAAAAAQABAAMAAAADAAEAAQABAAQAAAAEAAAAAQABAAMAAAAEAAEAAQABAAQAAAAFAAAAAQABAAMAAAAFAAEAAQABAAQAAAAGAAAAAQABAAMAAAAGAAEAAQABAAQAAAAHAAAAAQABAAMAAAAHAAEAAQABAAQAAAAIAAAAAQABAAMAAAAIAAEAAQABAAQAAAAJAAAAAQABAAMAAAAJAAEAAQABAAQAAAAKAAAAAQABAAMAAAAKAAEAAQABAAQAAAALAAAAAQABAAMAAAALAAEAAQABAAQAAAAMAAAAAQABAAMAAAAMAAEAAQABAAQAAAAAAAAAAQACAAEAAAANAAAAAQAAAAEAAAAAAAEAAQACAAEAAAANAAEAAQAAAAEAAAAAAAIAAQACAAEAAAANAAIAAQAAAAEAAAAAAAMAAQACAAEAAAANAAMAAQAAAAEAAAAAAAQAAQACAAEAAAANAAQAAQAAAAEAAAAAAAUAAQACAAEAAAANAAUAAQAAAAEAAAAAAAYAAQACAAEAAAANAAYAAQAAAAEAAAAAAAcAAQACAAEAAAANAAcAAQAAAAEAAAAAAAgAAQACAAEAAAANAAgAAQAAAAEAAAAAAAkAAQACAAEAAAANAAkAAQAAAAEAAAABAAoAAQABAAAAAAACAAoAAQABAAAAAAADAAoAAQABAAAAAAAEAAoAAQABAAAAAAAFAAoAAQACAAAAAAAHAAoAAQAAAAAAAAAIAAoAAQABAAAAAAAJAAoAAQABAAAAAAAKAAoAAQABAAAAAAALAAoAAQABAAAAAAAMAAoAAQABAAAAAAAAAAoAAQAFAAQAAAANAAoAAQAGAAQAAAA=")
+tile_set = ExtResource("4_j66ly")
+
+[node name="Entities" type="Node2D" parent="." unique_id=376416643]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1437642829]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAYAAwAAABMAAAAEAAYAAwABABMAAAAFAAYAAwACABMAAAADAAcAAwAAABQAAAAEAAcAAwABABQAAAAFAAcAAwACABQAAAADAAgAAwAAABUAAAAEAAgAAwABABUAAAAFAAgAAwACABUAAAADAAkAAwAAABYAAAAEAAkAAwABABYAAAAFAAkAAwACABYAAAABAAcAAgAHADkAAAALAAQAAgAFADMAAAAMAAQAAgAGADMAAAA=")
+tile_set = ExtResource("4_j66ly")
+
+[node name="ImitadorDeLasMeninas" type="Node2D" parent="Entities" unique_id=2049944519 instance=ExtResource("5_4mf4o")]
+position = Vector2(48, 112)
+script = ExtResource("6_ky8do")
+display_name = "Imitador de Las Meninas"
+lines = PackedStringArray("Me pongo delante del cuadro vestida de infanta y la gente me deja monedas. Velázquez me mira mal desde el lienzo.", "¿Sabes que en el cuadro sale el propio Velázquez pintando? Fue el primer selfi de la historia.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_26pfk")
+initial_facing = 2
+
+[node name="VigilanteDeSala" type="Node2D" parent="Entities" unique_id=1972218209 instance=ExtResource("5_4mf4o")]
+position = Vector2(400, 240)
+script = ExtResource("6_ky8do")
+display_name = "Vigilante de sala"
+lines = PackedStringArray("Por favor, no se acerque tanto al cuadro. Ese perro lleva ahí desde 1656 y no muerde.", "Llevo veinte años mirando Las Meninas. Ahora las veo hasta en la sopa del comedor de personal.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_pwio6")
+initial_facing = 2
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1664890406 instance=ExtResource("9_si4q3")]
+position = Vector2(112, 48)
+script = ExtResource("10_44pvf")
+lines = PackedStringArray("Las Meninas, de Velázquez (1656). La infanta Margarita, sus damas, un perro tranquilo y el pintor mirándote como si debieras dinero.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=664383905]
+z_index = 10
+tile_map_data = PackedByteArray("AAABAAQAAgAHADYAAAABAAUAAgAHADcAAAABAAYAAgAHADgAAAALAAIAAgAFADEAAAAMAAIAAgAGADEAAAALAAMAAgAFADIAAAAMAAMAAgAGADIAAAA=")
+tile_set = ExtResource("4_j66ly")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1285686781]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=638834812]
+position = Vector2(208, 336)
+script = ExtResource("11_wf2wk")
+target_map = &"madrid/sala_retiro_23_44"
+target_spawn = &"desde_sala_retiro_23_44_velazquez"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=309142061]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=791952880]
+position = Vector2(208, 304)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=943131282]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1475996080]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_db6be")
+theme_override_font_sizes/font_size = 16
+text = "MUSEO DEL PRADO, SALA DE VELÁZQUEZ"
+horizontal_alignment = 1

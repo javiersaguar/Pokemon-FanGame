@@ -1,0 +1,4849 @@
+{
+ "_doc": "Interiores personalizados de madrid (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Madrid",
+ "interiores": {
+  "madrid/sala_bernabeu_12_8": {
+   "tipo": "oficina",
+   "nombre": "Oficinas del club blanco",
+   "pieza": "oficinas_verdes",
+   "calle": ["madrid/bernabeu", [12, 8]],
+   "personas": [
+    {
+     "nombre": "Directivo del club",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Este año fichamos a otro galáctico. No sabemos para qué posición, pero vende camisetas.",
+      "El estadio tiene techo, césped retráctil y conciertos. Lo del fútbol lo hacemos cuando hay hueco."
+     ],
+     "nodo": "DirectivoDelClub",
+     "en": [10, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Secretaria de presidencia",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "El presidente no recibe sin cita. Bueno, recibe a constructoras sin cita.",
+      "Si viene por una entrada, la lista de espera es de once años. Si viene por un palco, pase."
+     ],
+     "nodo": "SecretariaDePresidencia",
+     "en": [7, 3],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [7, 9],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 10, 0],
+    ["archivador", 12, 1],
+    ["mostrador_verde", 8, 5],
+    ["banqueta_azul", 9, 7],
+    ["mesa_cristal", 8, 2],
+    ["banqueta_azul", 8, 4],
+    ["tele", 2, 1]
+   ],
+   "encima": [["taza", 8, 5], ["libro_abierto", 9, 5]],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "madrid/sala_bernabeu_34_26": {
+   "tipo": "tienda",
+   "nombre": "Tienda oficial del Real Madrid",
+   "pieza": "tienda_azul",
+   "calle": ["madrid/bernabeu", [34, 26]],
+   "personas": [
+    {
+     "nombre": "Dependiente de la tienda oficial",
+     "aspecto": "clerk",
+     "papel": "dependiente",
+     "frases": [
+      "La camiseta nueva cuesta 150 euros. Es igual que la del año pasado, pero con otro tono de blanco.",
+      "Si quiere el nombre de un jugador detrás, son 20 euros más. Si el jugador se va en enero, no devolvemos."
+     ],
+     "nodo": "DependienteDeLaTiendaOficial",
+     "en": [10, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Niño con la camiseta",
+     "aspecto": "npc_boy",
+     "papel": "cliente",
+     "frases": [
+      "De mayor quiero ser futbolista del Madrid. O del Barça, si pagan más. Mi padre dice que eso no se dice aquí.",
+      "He ahorrado todo el año para la camiseta. Me falta poco: solo ciento treinta y ocho euros."
+     ],
+     "nodo": "NinoConLaCamiseta",
+     "en": [8, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "losa_gris",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 2, 1],
+    ["estanteria_alta_nogal", 4, 0],
+    ["mostrador_cristal_i", 8, 3],
+    ["mostrador_cristal_m", 9, 3],
+    ["mostrador_cristal_d", 10, 3],
+    ["vitrina_blanca", 1, 3],
+    ["vitrina_blanca", 3, 3],
+    ["papelera", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "madrid/sala_bernabeu_34_9": {
+   "tipo": "oficina",
+   "nombre": "Torre de oficinas de la Castellana",
+   "pieza": "edificio_cristal",
+   "calle": ["madrid/bernabeu", [34, 9]],
+   "personas": [
+    {
+     "nombre": "Consultor",
+     "aspecto": "influencerlinkedin",
+     "papel": "mesa",
+     "frases": [
+      "Ayudo a las empresas a ser más eficientes. Les cobro tanto que tienen que despedir a gente para pagarme.",
+      "Hoy tengo once reuniones para decidir cuándo hacemos la reunión importante."
+     ],
+     "nodo": "Consultor",
+     "en": [7, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Limpiadora de la torre",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Limpio el piso treinta y dos a las seis de la mañana. Es cuando mejor se ve Madrid: sin consultores.",
+      "Cobro en un mes lo que ellos facturan en una hora. Pero yo me voy a casa a las dos."
+     ],
+     "nodo": "LimpiadoraDeLaTorre",
+     "en": [3, 2],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 4, 0],
+    ["archivo_alto", 6, 0],
+    ["mostrador_cristal", 7, 4],
+    ["banqueta_azul", 8, 6],
+    ["mostrador_cristal", 1, 4],
+    ["banqueta_azul", 2, 6],
+    ["papelera", 10, 1],
+    ["mesa_cristal", 5, 3]
+   ],
+   "encima": [["libro_abierto", 9, 4]],
+   "carteles": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "madrid/sala_bernabeu_4_26": {
+   "tipo": "piso",
+   "nombre": "Piso del vecino del estadio",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/bernabeu", [4, 26]],
+   "personas": [
+    {
+     "nombre": "Vecino del estadio",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Desde que el estadio hace conciertos no duermo. Me sé los repertorios de todos los artistas del año.",
+      "He denunciado el ruido catorce veces. Me han regalado una entrada para el siguiente concierto."
+     ],
+     "nodo": "VecinoDelEstadio",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su hija",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Mi padre se queja del ruido, pero el día del concierto de su grupo favorito abrió la ventana y lloró.",
+      "Desde el balcón se ve el césped cuando lo esconden. Es como ver un truco de magia caro."
+     ],
+     "nodo": "SuHija",
+     "en": [5, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_verdes",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [5, 3, 4, 3]]],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["nevera", 5, 1],
+    ["tele_pequena", 7, 2],
+    ["mesa_cristal", 3, 3],
+    ["banqueta_azul", 5, 4],
+    ["cama_celeste", 8, 1],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_bernabeu_4_9": {
+   "tipo": "bar",
+   "nombre": "Peña madridista La Décima",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/bernabeu", [4, 9]],
+   "personas": [
+    {
+     "nombre": "Presidente de la peña",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": [
+      "En esta peña se ven todos los partidos. Si ganamos, invita la casa. Si perdemos, la culpa es del árbitro y también invita la casa.",
+      "Tenemos más copas de Europa en la pared que sillas en el bar."
+     ],
+     "nodo": "PresidenteDeLaPena",
+     "en": [7, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Camarera de la peña",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Los días de Clásico se sirven quinientas cañas y doscientos ansiolíticos.",
+      "No hablo de política ni de fútbol en el trabajo. Aquí dentro eso es imposible, así que no hablo."
+     ],
+     "nodo": "CamareraDeLaPena",
+     "en": [8, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 1, 1],
+    ["encimera", 3, 1],
+    ["nevera_alta", 6, 0],
+    ["mostrador_azul_i", 5, 4],
+    ["mostrador_azul_m", 6, 4],
+    ["mostrador_azul_m", 7, 4],
+    ["mostrador_azul_d", 8, 4],
+    ["taburete_marron", 6, 6],
+    ["taburete_marron", 8, 6],
+    ["mesa_cristal", 4, 6],
+    ["taburete_marron", 3, 6],
+    ["tele_pequena", 9, 2]
+   ],
+   "encima": [["plato", 6, 4], ["taza", 5, 6], ["taza", 5, 4]],
+   "carteles": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "madrid/sala_centro_11_19": {
+   "tipo": "agencia",
+   "nombre": "Agencia de viajes Vuela Barato",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/centro", [11, 19]],
+   "personas": [
+    {
+     "nombre": "Agente de viajes",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "El vuelo a Roma cuesta nueve euros. La maleta, cuarenta. Respirar en cabina, a consultar.",
+      "Le recomiendo un viaje a Benidorm. Es como Nueva York, pero con jubilados y crema solar."
+     ],
+     "nodo": "AgenteDeViajes",
+     "en": [2, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Pareja de recién casados",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": [
+      "Queríamos luna de miel en Bali, pero con el presupuesto nos sale Alcobendas.",
+      "Nos han dicho que Alcobendas de noche tiene su encanto. Estamos en ello."
+     ],
+     "nodo": "ParejaDeRecienCasados",
+     "en": [5, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [15, 10],
+   "puerta": [11, 9],
+   "suelo": "moqueta_azul",
+   "pared": "crema",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 5, 0],
+    ["archivador_bajo", 6, 1],
+    ["taquilla_archivo", 8, 0],
+    ["mostrador_blanco", 10, 3],
+    ["banqueta_roja", 11, 5],
+    ["mesa_cristal", 3, 2],
+    ["banqueta_azul", 3, 4],
+    ["mostrador_blanco", 4, 4],
+    ["banqueta_azul", 5, 6],
+    ["ordenador", 10, 0],
+    ["palmera_maceta", 13, 0],
+    ["papelera", 13, 7]
+   ],
+   "encima": [["taza", 4, 4]],
+   "carteles": [],
+   "apariciones": {"default": [11, 8]},
+   "pasos": []
+  },
+  "madrid/sala_centro_14_27": {
+   "tipo": "bar",
+   "nombre": "Bar de bocadillos de calamares",
+   "pieza": "tienda_morada",
+   "calle": ["madrid/centro", [14, 27]],
+   "personas": [
+    {
+     "nombre": "Camarero castizo",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "¿Un bocata de calamares? Marchando. Aquí no preguntamos de dónde son los calamares: de Madrid, como todo el mundo.",
+      "Mire, en este bar el cliente siempre tiene razón. Pero no tiene servilletas."
+     ],
+     "nodo": "CamareroCastizo",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Parroquiano",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": [
+      "Yo vengo aquí desde antes de que existiera el euro. Y desde antes de que existiera el bocadillo vegano.",
+      "La caña aquí está bien tirada. En otros sitios te la tiran directamente a la cara."
+     ],
+     "nodo": "Parroquiano",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "mostrador",
+     "frases": [
+      "Una servilleta en la barra con una frase escrita a boli: «Aquí se vino a ser feliz, no a mirar el móvil»."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 5]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 2, 0],
+    ["encimera", 3, 1],
+    ["estanteria_alta_nogal", 6, 0],
+    ["mostrador_azul_i", 4, 4],
+    ["mostrador_azul_m", 5, 4],
+    ["mostrador_azul_m", 6, 4],
+    ["mostrador_azul_m", 7, 4],
+    ["mostrador_azul_m", 8, 4],
+    ["mostrador_azul_d", 9, 4],
+    ["banqueta_roja", 7, 6],
+    ["banqueta_roja", 9, 6],
+    ["mesa_cristal", 2, 6],
+    ["silla_derecha", 1, 6],
+    ["silla_izquierda", 4, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [["plato", 5, 4]],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_14_5": {
+   "tipo": "souvenirs",
+   "nombre": "Souvenirs Olé Madrid",
+   "pieza": "tienda_azul",
+   "calle": ["madrid/centro", [14, 5]],
+   "personas": [
+    {
+     "nombre": "Dependiente de souvenirs",
+     "aspecto": "clerk",
+     "papel": "dependiente",
+     "frases": [
+      "Tenemos toros de peluche, flamencas que bailan y camisetas de «I love Madrid» hechas muy lejos de Madrid.",
+      "El imán con el Oso y el Madroño es nuestro superventas. El oso está harto de posar."
+     ],
+     "nodo": "DependienteDeSouvenirs",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista japonés",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": [
+      "He comprado una paellera para mi casa de Osaka. Me han dicho que en Madrid la paella es típica. ¿No?",
+      "¿Esto es un sombrero cordobés o una lámpara? Da igual, me lo llevo."
+     ],
+     "nodo": "TuristaJapones",
+     "en": [2, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": [
+      "Una estantería de figuritas: toros, flamencas, un Don Quijote y, al fondo, un Pikachu con montera."
+     ],
+     "nodo": "Cartel",
+     "en": [8, 6]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_madera", 3, 1],
+    ["vitrina_blanca", 5, 1],
+    ["estanteria_baja_madera", 7, 1],
+    ["mostrador_verde_i", 2, 4],
+    ["mostrador_verde_m", 3, 4],
+    ["mostrador_verde_d", 4, 4],
+    ["estanteria_baja_madera", 6, 5],
+    ["estanteria_baja_madera", 8, 5],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_18_4": {
+   "tipo": "kiosco",
+   "nombre": "Quiosco de prensa de Callao",
+   "pieza": "puesto_mercado",
+   "calle": ["madrid/centro", [18, 4]],
+   "personas": [
+    {
+     "nombre": "Quiosquero",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "Vendo periódicos, cromos y mecheros. Los periódicos son lo que menos sale: la gente ya se enfada gratis en el móvil.",
+      "Antes la portada era la noticia. Ahora la noticia es que alguien ha comprado un periódico."
+     ],
+     "nodo": "Quiosquero",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Coleccionista de cromos",
+     "aspecto": "npc_boy",
+     "papel": "cliente",
+     "frases": [
+      "Me falta el cromo del Mbappé dictador. Dicen que solo sale uno por cada mil sobres.",
+      "Lo tengo repe de Óscar Puente. Lo cambio por cualquier cosa, incluso por un sobre vacío."
+     ],
+     "nodo": "ColeccionistaDeCromos",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "mostrador",
+     "frases": [
+      "Titulares colgados: «El alquiler medio de Madrid ya supera al sueldo medio. Los expertos recomiendan no vivir»."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 5]
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [4, 7],
+   "suelo": "piedra",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_verde_i", 5, 4],
+    ["mostrador_verde_m", 6, 4],
+    ["mostrador_verde_d", 7, 4],
+    ["estanteria_baja_oliva", 3, 1],
+    ["caja", 5, 2]
+   ],
+   "encima": [["plato", 5, 4]],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_20_42": {
+   "tipo": "institucion",
+   "nombre": "Casa de la Panadería, oficina de turismo",
+   "rotulo": "Casa de la Panadería",
+   "pieza": "casa_panaderia",
+   "calle": ["madrid/centro", [20, 42]],
+   "personas": [
+    {
+     "nombre": "Informadora turística",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "Aquí se vendía el pan de la villa. Ahora vendemos planos de Madrid y paciencia a turistas perdidos.",
+      "La pregunta más repetida es: «¿Dónde está la Puerta del Sol?». La respuesta: a la vuelta de la esquina, como siempre."
+     ],
+     "nodo": "InformadoraTuristica",
+     "en": [2, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Guía de grupo",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Sigan el paraguas amarillo. Si pierden el paraguas, sigan a cualquier señor que hable muy alto.",
+      "Les cuento que en esta plaza se hacían corridas, ejecuciones y mercados. Ahora se hacen fotos con un señor disfrazado de Spiderman."
+     ],
+     "nodo": "GuiaDeGrupo",
+     "en": [5, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un cuadro de las pinturas de la fachada: figuras mitológicas que se ríen de los precios de las terrazas de la plaza."
+     ],
+     "nodo": "Cartel",
+     "en": [12, 1]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [4, 10],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 2, 0],
+    ["mostrador_verde", 5, 2],
+    ["estatua_aguila", 8, 0],
+    ["banco_rojo", 5, 4],
+    ["banco_rojo", 8, 4],
+    ["banco_rojo", 11, 4],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 11, 6],
+    ["palmera_maceta", 14, 7],
+    ["pedestal", 13, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "madrid/sala_centro_22_27": {
+   "tipo": "grandes_almacenes",
+   "nombre": "El Corte Inglés de Preciados",
+   "rotulo": "Grandes almacenes de Preciados",
+   "pieza": "grandes_almacenes",
+   "calle": ["madrid/centro", [22, 27]],
+   "personas": [
+    {
+     "nombre": "Dependienta de perfumería",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "¿Le pruebo el perfume nuevo? Huele a madera, a ámbar y a tarjeta de crédito.",
+      "En Navidad se llena tanto que hemos tenido que poner un semáforo en las escaleras mecánicas."
+     ],
+     "nodo": "DependientaDePerfumeria",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Señora de Serrano",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a devolver un jersey. Lo compré en 1987, pero tengo el ticket.",
+      "Aquí te atienden de usted. En otros sitios te atiende un robot que se llama Kevin."
+     ],
+     "nodo": "SenoraDeSerrano",
+     "en": [8, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Niño perdido",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "He perdido a mis padres en la sección de electrodomésticos. Aquí se está bien: hay teles.",
+      "Si me buscan, diles que estoy en juguetes. Si no me buscan, diles que estoy en juguetes también."
+     ],
+     "nodo": "NinoPerdido",
+     "en": [4, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "moqueta_azul",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_mostaza", 1, 0],
+    ["estanteria_alta_mostaza", 3, 0],
+    ["mostrador_turquesa_i", 7, 3],
+    ["mostrador_turquesa_m", 8, 3],
+    ["mostrador_turquesa_d", 9, 3],
+    ["vitrina_blanca", 1, 4],
+    ["vitrina_blanca", 3, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_25_13": {
+   "tipo": "cine",
+   "nombre": "Cine Capitol",
+   "pieza": "edificio_carrion",
+   "calle": ["madrid/centro", [25, 13]],
+   "personas": [
+    {
+     "nombre": "Taquillera",
+     "aspecto": "npc_lass",
+     "papel": "artista",
+     "frases": [
+      "Hoy echamos la nueva de superhéroes: tres horas, cuatro finales y una escena después de los créditos que anuncia otra.",
+      "Las palomitas cuestan como la entrada. La entrada cuesta como una cena. La cena, ni se sabe."
+     ],
+     "nodo": "Taquillera",
+     "en": [11, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cinéfilo",
+     "aspecto": "npc_man",
+     "papel": "publico",
+     "frases": [
+      "Vengo a ver películas en versión original para que la gente que habla en la sala me moleste en dos idiomas.",
+      "En la Gran Vía había cuarenta cines. Ahora hay tiendas que venden lo mismo que en todas las Gran Vías del mundo."
+     ],
+     "nodo": "Cinefilo",
+     "en": [4, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [5, 10],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["losa_crema", [2, 2, 11, 2]]],
+   "muebles": [
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 9]},
+   "pasos": []
+  },
+  "madrid/sala_centro_31_13": {
+   "tipo": "teatro",
+   "nombre": "Teatro de La Revuelta",
+   "rotulo": "Teatro de La Revuelta",
+   "pieza": "teatro",
+   "calle": ["madrid/centro", [31, 13]],
+   "personas": [
+    {
+     "nombre": "Regidora",
+     "aspecto": "npc_woman",
+     "papel": "artista",
+     "frases": [
+      "Aquí se graba el programa de la noche. El presentador llega tarde, el invitado más tarde y el público ya está aplaudiendo.",
+      "¿Tienes entrada? No. ¿Y ganas? Pues siéntate atrás, que hacemos bulto."
+     ],
+     "nodo": "Regidora",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Fan del programa",
+     "aspecto": "npc_youngster",
+     "papel": "publico",
+     "frases": [
+      "Vengo todas las semanas a ver si me preguntan cuánto dinero llevo encima. Siempre llevo tres euros y un abono.",
+      "Mi sueño es salir en la tele y que mi madre me vea. Mi madre ve otro canal."
+     ],
+     "nodo": "FanDelPrograma",
+     "en": [5, 8],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [7, 11],
+   "suelo": "alfombra_roja",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["parquet", [2, 2, 12, 2]]],
+   "muebles": [
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 13, 5],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7],
+    ["taburete_rojo", 13, 7],
+    ["arbol_maceta", 14, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 10]},
+   "pasos": []
+  },
+  "madrid/sala_centro_33_6": {
+   "tipo": "electronica",
+   "nombre": "Tienda de móviles de Preciados",
+   "pieza": "tienda_azul",
+   "calle": ["madrid/centro", [33, 6]],
+   "personas": [
+    {
+     "nombre": "Vendedor de móviles",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Este móvil tiene seis cámaras. Para hacerle fotos al alquiler desde todos los ángulos.",
+      "Le regalo la funda si se compromete a 36 meses de permanencia. Sus hijos heredarán la permanencia."
+     ],
+     "nodo": "VendedorDeMoviles",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuela con el móvil",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Mi nieto me ha puesto un grupo de WhatsApp de la familia y ya llevo tres disgustos.",
+      "Yo solo quiero un teléfono con botones. Me han ofrecido uno plegable, como mi espalda."
+     ],
+     "nodo": "AbuelaConElMovil",
+     "en": [4, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_oliva", 2, 1],
+    ["vitrina_blanca", 4, 1],
+    ["estanteria_baja_oliva", 6, 1],
+    ["mostrador_azul_i", 2, 4],
+    ["mostrador_azul_m", 3, 4],
+    ["mostrador_azul_d", 4, 4],
+    ["estanteria_baja_oliva", 6, 5],
+    ["estanteria_baja_oliva", 8, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_35_50": {
+   "tipo": "piso",
+   "nombre": "Piso del tertuliano",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/centro", [35, 50]],
+   "personas": [
+    {
+     "nombre": "Tertuliano",
+     "aspecto": "tertuliano",
+     "papel": "tele",
+     "frases": [
+      "Por la mañana hablo de economía, a mediodía de virología y por la noche de fútbol. De todo sé lo mismo.",
+      "El secreto de la tertulia es levantar la voz justo cuando el otro tiene razón."
+     ],
+     "nodo": "Tertuliano",
+     "en": [3, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "En casa no habla. Dice que se reserva para la radio.",
+      "Le he dejado una nota en la nevera: «Opina tú de la compra». Lleva dos días sin abrirla."
+     ],
+     "nodo": "SuMujer",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "tele",
+     "frases": [
+      "En la tele, su propia tertulia grabada. Él la mira tomando notas de lo que tendría que haber gritado."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 2]
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [4, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_azul", [4, 3, 3, 3]]],
+   "muebles": [["encimera", 6, 1], ["nevera", 9, 1], ["tele", 4, 1], ["planta", 9, 5]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_3_39": {
+   "tipo": "oficina",
+   "nombre": "Oficina de empleo de Sol",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/centro", [3, 39]],
+   "personas": [
+    {
+     "nombre": "Funcionario de la oficina de empleo",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "¿Tiene cita previa? Para pedir cita previa necesita cita previa. Siéntese, que la máquina le dará número.",
+      "Tenemos una oferta: entrenador Pokémon, jornada completa, sin sueldo, con riesgo de morder."
+     ],
+     "nodo": "FuncionarioDeLaOficinaDeEmpleo",
+     "en": [11, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Parado con máster",
+     "aspecto": "estudianteinge",
+     "papel": "publico",
+     "frases": [
+      "Tengo dos carreras, un máster y tres idiomas. Me han ofrecido unas prácticas para aprender a hacer fotocopias.",
+      "El orientador me ha dicho que me reinvente. Ya me he reinventado cuatro veces y sigo igual de parado."
+     ],
+     "nodo": "ParadoConMaster",
+     "en": [5, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "maquina",
+     "frases": [
+      "La máquina de turnos dice: «Su número es el 847. Atendiendo al 12». Debajo, alguien ha dejado una almohada."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 2]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 8, 0],
+    ["archivo_alto", 10, 0],
+    ["mostrador_tablas", 5, 4],
+    ["banqueta_roja", 6, 6],
+    ["mostrador_tablas", 1, 4],
+    ["banqueta_azul", 2, 6],
+    ["papelera", 1, 1],
+    ["mesa_cristal", 10, 6],
+    ["maquina_billetes", 5, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_40_16": {
+   "tipo": "oficina",
+   "nombre": "Centralita del edificio Telefónica",
+   "pieza": "oficinas_verdes",
+   "calle": ["madrid/centro", [40, 16]],
+   "personas": [
+    {
+     "nombre": "Teleoperadora",
+     "aspecto": "npc_lass",
+     "papel": "mesa",
+     "frases": [
+      "Le llamo para ofrecerle una tarifa mejor que la que le vendí la semana pasada.",
+      "Si cuelga, le llamo desde otro número. Si vuelve a colgar, le llamo desde Bilbao."
+     ],
+     "nodo": "Teleoperadora",
+     "en": [4, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Supervisor",
+     "aspecto": "padretarjeta",
+     "papel": "libre",
+     "frases": [
+      "Hoy el objetivo es cien llamadas por persona. El récord lo tiene uno que llamó a su madre noventa y nueve veces.",
+      "Aquí trabajamos con clientes que no quieren nada. Somos un equipo muy motivado."
+     ],
+     "nodo": "Supervisor",
+     "en": [7, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "losa_gris",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 1, 0],
+    ["archivador_bajo", 2, 1],
+    ["taquilla_archivo", 4, 0],
+    ["mostrador_celeste", 4, 5],
+    ["banqueta_azul", 5, 7],
+    ["mesa_cristal", 2, 3],
+    ["banqueta_azul", 2, 5],
+    ["palmera_maceta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "madrid/sala_centro_41_7": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Montera",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/centro", [41, 7]],
+   "personas": [
+    {
+     "nombre": "Portera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Llevo treinta años en esta portería. Sé quién entra, quién sale y quién debe tres meses de comunidad.",
+      "El del tercero tiene un piso turístico. Por la escalera pasan cien maletas al día; yo ya distingo el ruido de cada marca."
+     ],
+     "nodo": "Portera",
+     "en": [8, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Repartidor",
+     "aspecto": "repartidorbici",
+     "papel": "libre",
+     "frases": [
+      "Traigo un pedido para el sexto. Sin ascensor. Con propina de cero euros y cinco estrellas.",
+      "Me han dicho que suba «rapidito». Señora, esto es una bici, no un Pokémon de tipo Volador."
+     ],
+     "nodo": "Repartidor",
+     "en": [7, 4],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_gris",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [3, 3, 3, 3]]],
+   "muebles": [
+    ["escalera_mano", 6, 0],
+    ["planta", 9, 1],
+    ["archivador_bajo", 1, 1],
+    ["sillon_derecha", 1, 4],
+    ["palmera_maceta", 10, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_46_17": {
+   "tipo": "teatro",
+   "nombre": "Teatro del musical",
+   "pieza": "teatro",
+   "calle": ["madrid/centro", [46, 17]],
+   "personas": [
+    {
+     "nombre": "Actriz del coro",
+     "aspecto": "npc_kimono_girl",
+     "papel": "artista",
+     "frases": [
+      "Llevo nueve años haciendo de leona número cuatro. Mi familia viene cada Navidad y siempre me confunden con la tres.",
+      "El protagonista canta con un micro pegado a la cara. Yo canto con la ilusión pegada al alquiler."
+     ],
+     "nodo": "ActrizDelCoro",
+     "en": [10, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Padre con entradas",
+     "aspecto": "padretarjeta",
+     "papel": "publico",
+     "frases": [
+      "Cuatro entradas para el musical: 480 euros. Mi hijo quería ir al parque.",
+      "Al menos ha llorado en la escena de la muerte. Bueno, he llorado yo al ver el ticket."
+     ],
+     "nodo": "PadreConEntradas",
+     "en": [6, 8],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [4, 10],
+   "suelo": "moqueta_beige",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["parquet", [2, 2, 11, 2]]],
+   "muebles": [
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "madrid/sala_centro_49_10": {
+   "tipo": "tienda",
+   "nombre": "Doña Manolita, administración de lotería",
+   "rotulo": "Doña Manolita",
+   "pieza": "tienda_morada",
+   "calle": ["madrid/centro", [49, 10]],
+   "personas": [
+    {
+     "nombre": "Lotera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "La cola de diciembre empieza en agosto. El que la guarda cobra por hora, como un aparcacoches.",
+      "Aquí ha tocado el Gordo once veces. A mí, ninguna: los loteros solo vemos pasar la suerte."
+     ],
+     "nodo": "Lotera",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Señor de la cola",
+     "aspecto": "jubiladoobras",
+     "papel": "cliente",
+     "frases": [
+      "Llevo cuatro horas en la cola. Si me toca, me compro un piso. Bueno, un trastero. Bueno, un décimo para el año que viene.",
+      "No me toca nunca, pero vengo por el ambiente. Aquí hablas con gente que tampoco tiene esperanza."
+     ],
+     "nodo": "SenorDeLaCola",
+     "en": [4, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "mostrador",
+     "frases": ["Un cartel en el mostrador: «Se venden décimos y esperanza. La esperanza no se reintegra»."],
+     "nodo": "Cartel",
+     "en": [3, 5]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 5, 1],
+    ["estanteria_alta_nogal", 7, 0],
+    ["mostrador_azul_i", 2, 4],
+    ["mostrador_azul_m", 3, 4],
+    ["mostrador_azul_d", 4, 4],
+    ["estanteria_baja_nogal", 6, 5],
+    ["estanteria_baja_nogal", 8, 5],
+    ["cajonera_azul", 1, 1],
+    ["planta", 11, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_49_26": {
+   "tipo": "hostal",
+   "nombre": "Hostal Puerta del Sol",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/centro", [49, 26]],
+   "personas": [
+    {
+     "nombre": "Recepcionista del hostal",
+     "aspecto": "clerk",
+     "papel": "dependiente",
+     "frases": [
+      "Habitación con vistas al reloj de Sol: 210 euros. Sin vistas: 190. Con vistas en Nochevieja: llame a su banco.",
+      "El desayuno está incluido: un café y la contemplación de una magdalena."
+     ],
+     "nodo": "RecepcionistaDelHostal",
+     "en": [2, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mochilero australiano",
+     "aspecto": "turista",
+     "papel": "libre",
+     "frases": [
+      "I love Madrid. Bueno, love las tapas. El precio de las tapas, no tanto.",
+      "Me dijeron que aquí se cena a las diez. Llevo tres días cenando dos veces por si acaso."
+     ],
+     "nodo": "MochileroAustraliano",
+     "en": [8, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [3, 3, 4, 2]]],
+   "muebles": [
+    ["estanteria_baja_mostaza", 4, 1],
+    ["recepcion", 6, 2],
+    ["sofa", 1, 5],
+    ["escalera_mano", 1, 0],
+    ["palmera_maceta", 10, 5],
+    ["planta", 10, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_4_19": {
+   "tipo": "piso",
+   "nombre": "Piso de la abuela de Malasaña",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/centro", [4, 19]],
+   "personas": [
+    {
+     "nombre": "Abuela de Malasaña",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Este barrio antes se llamaba Maravillas. Luego vinieron los modernos y ahora se llama «zona de ocio».",
+      "Abajo han abierto un local de tostadas a nueve euros. Yo hago tostadas a cero euros y nadie hace cola."
+     ],
+     "nodo": "AbuelaDeMalasana",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto vegano",
+     "aspecto": "perroflauta",
+     "papel": "mesa",
+     "frases": [
+      "Vengo a comer los domingos. La abuela me pone cocido «sin carne»: o sea, garbanzos con mucha fe.",
+      "Le he explicado el veganismo tres veces. Ella dice que vale, y me pone chorizo aparte."
+     ],
+     "nodo": "NietoVegano",
+     "en": [6, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_crema",
+   "pared": "salvia",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["sillon_derecha", 5, 4],
+    ["mesa_cristal", 6, 5],
+    ["ropero_menta", 2, 0],
+    ["cajas", 1, 5],
+    ["tele_pequena", 1, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_4_48": {
+   "tipo": "mercado",
+   "nombre": "Mercado de San Miguel",
+   "pieza": "mercado_san_miguel",
+   "calle": ["madrid/centro", [4, 48]],
+   "personas": [
+    {
+     "nombre": "Vendedor de ostras",
+     "aspecto": "npc_fisherman",
+     "papel": "dependiente",
+     "frases": [
+      "Una ostra: seis euros. Con limón: siete. Con la sonrisa del vendedor: no está a la venta.",
+      "Aquí se paga precio de turista. Los de Madrid también, pero lo llaman «experiencia gastronómica»."
+     ],
+     "nodo": "VendedorDeOstras",
+     "en": [8, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Vendedora de croquetas",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Croquetas de jamón, de bacalao, de boletus y de algo que me pidió un influencer: de gin-tonic.",
+      "Mi abuela las hacía con las sobras. Ahora las sobras cuestan tres euros la unidad."
+     ],
+     "nodo": "VendedoraDeCroquetas",
+     "en": [3, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Turista hambriento",
+     "aspecto": "turistachanclas",
+     "papel": "cliente",
+     "frases": [
+      "He gastado ochenta euros en pinchos y sigo con hambre. Es un mercado o un museo de comida.",
+      "Un señor me ha dicho que el mejor bocadillo de calamares no está aquí. Se lo he agradecido llorando."
+     ],
+     "nodo": "TuristaHambriento",
+     "en": [7, 7],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [11, 10],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_turquesa_i", 7, 5],
+    ["mostrador_turquesa_m", 8, 5],
+    ["mostrador_turquesa_d", 9, 5],
+    ["mostrador_celeste_i", 2, 3],
+    ["mostrador_celeste_m", 3, 3],
+    ["mostrador_celeste_d", 4, 3],
+    ["mostrador_cristal_i", 9, 3],
+    ["mostrador_cristal_m", 10, 3],
+    ["mostrador_cristal_d", 11, 3],
+    ["caja", 13, 9]
+   ],
+   "encima": [["plato_comida", 7, 5], ["plato_comida", 8, 5], ["plato_comida", 10, 3]],
+   "carteles": [],
+   "apariciones": {"default": [11, 9]},
+   "pasos": []
+  },
+  "madrid/sala_centro_53_17": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle del Carmen",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/centro", [53, 17]],
+   "personas": [
+    {
+     "nombre": "Portero de noche",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En este portal vive una señora de noventa años con contrato de renta antigua. Los fondos la llaman «la última jefa».",
+      "Ya le han ofrecido de todo por irse. Ella pide que le devuelvan el barrio de antes."
+     ],
+     "nodo": "PorteroDeNoche",
+     "en": [5, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "La última vecina",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Me quedé sola en el edificio. Todos los demás pisos son de maletas.",
+      "Por las mañanas saludo a los turistas. Por las tardes les cobro por hacerse una foto con una madrileña auténtica."
+     ],
+     "nodo": "LaUltimaVecina",
+     "en": [7, 5],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [9, 9],
+   "puerta": [4, 8],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_beige", [2, 5, 4, 2]]],
+   "muebles": [
+    ["escalera_mano", 4, 0],
+    ["planta", 7, 1],
+    ["archivador", 1, 1],
+    ["archivador", 2, 1],
+    ["planta", 7, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_53_42": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle de las Huertas",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/centro", [53, 42]],
+   "personas": [
+    {
+     "nombre": "Presidenta de la comunidad",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "En la última reunión de vecinos votamos poner ascensor. Ganó el «no» por un voto: el del que vive en el bajo.",
+      "La derrama es de 8.000 euros. Para pintar el portal del mismo color que ya tenía."
+     ],
+     "nodo": "PresidentaDeLaComunidad",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Poeta del bajo",
+     "aspecto": "tuno",
+     "papel": "dependiente",
+     "frases": [
+      "Vivo en el barrio de las Letras porque aquí vivieron Cervantes y Lope. Ellos también llegaban justos a fin de mes.",
+      "Escribo versos en las servilletas de los bares. Ya he escrito un libro entero y me han cobrado todas las servilletas."
+     ],
+     "nodo": "PoetaDelBajo",
+     "en": [3, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [9, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_crema",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [2, 4, 3, 3]]],
+   "muebles": [
+    ["planta", 2, 1],
+    ["escalera_mano", 3, 0],
+    ["mostrador_celeste_i", 2, 4],
+    ["mostrador_celeste_m", 3, 4],
+    ["mostrador_celeste_d", 4, 4],
+    ["banco_rojo", 5, 7],
+    ["planta", 7, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_53_52": {
+   "tipo": "teatro",
+   "nombre": "Sala de microteatro",
+   "pieza": "teatro",
+   "calle": ["madrid/centro", [53, 52]],
+   "personas": [
+    {
+     "nombre": "Actor de microteatro",
+     "aspecto": "npc_youngster",
+     "papel": "artista",
+     "frases": [
+      "Hacemos obras de quince minutos para quince personas. A veces el público es mi madre quince veces.",
+      "Mi personaje es un okupa que se enamora de su casero. Es un drama, pero la gente se ríe en el precio del alquiler."
+     ],
+     "nodo": "ActorDeMicroteatro",
+     "en": [3, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Espectadora en primera fila",
+     "aspecto": "npc_lass",
+     "papel": "publico",
+     "frases": [
+      "Aquí la primera fila está tan cerca que el actor me ha pisado dos veces y me ha pedido perdón en verso.",
+      "He venido a una cita. Él se ha dormido a los cinco minutos. Ha sido la parte más intensa de la obra."
+     ],
+     "nodo": "EspectadoraEnPrimeraFila",
+     "en": [2, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [5, 11],
+   "suelo": "moqueta_beige",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["parquet", [2, 2, 12, 2]]],
+   "muebles": [
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 13, 5],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7],
+    ["taburete_rojo", 13, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 10]},
+   "pasos": []
+  },
+  "madrid/sala_centro_53_8": {
+   "tipo": "academia",
+   "nombre": "Academia de oposiciones El Aprobado",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/centro", [53, 8]],
+   "personas": [
+    {
+     "nombre": "Preparador",
+     "aspecto": "profesor",
+     "papel": "dependiente",
+     "frases": [
+      "Garantizamos el aprobado o le devolvemos la ilusión. El dinero, no.",
+      "El temario de este año tiene doscientos temas. Tranquilos: en el examen siempre cae el doscientos uno."
+     ],
+     "nodo": "Preparador",
+     "en": [2, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Opositor de cuarto año",
+     "aspecto": "opositor",
+     "papel": "publico",
+     "frases": [
+      "Oposito a notarías desde 2019. Ya me sé el Código Civil y la cara de todos los camareros de Sol.",
+      "Mi madre le dice a todo el mundo que estoy «sacando la plaza». La plaza es la de Callao, que la cruzo todos los días."
+     ],
+     "nodo": "OpositorDeCuartoAno",
+     "en": [3, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Opositora a bombera",
+     "aspecto": "opositor_f",
+     "papel": "publico",
+     "frases": [
+      "Entreno la prueba física por las mañanas y por las tardes me quemo con el temario.",
+      "Hay doce plazas y cuatro mil aspirantes. Nos llevamos todos muy bien, hasta el examen."
+     ],
+     "nodo": "OpositoraABombera",
+     "en": [6, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "En la pizarra: «Tema 14. La Constitución. Artículo 47: todos los españoles tienen derecho a una vivienda digna». Alguien ha escrito al lado: «JAJAJA»."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [8, 9],
+   "suelo": "tatami_verde",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_madera", 5, 0],
+    ["mostrador_oliva", 6, 2],
+    ["armario_madera", 9, 0],
+    ["mesa_cristal", 3, 3],
+    ["taburete_marron", 3, 5],
+    ["papelera", 1, 1],
+    ["cajas", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "madrid/sala_centro_54_31": {
+   "tipo": "piso",
+   "nombre": "Piso de estudiantes Erasmus",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/centro", [54, 31]],
+   "personas": [
+    {
+     "nombre": "Erasmus italiano",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Vine a estudiar Derecho, pero de momento estudio la noche madrileña. Tengo matrícula de honor.",
+      "Mi madre cree que he aprendido español. He aprendido a decir «tío», «movida» y «¿otra ronda?»."
+     ],
+     "nodo": "ErasmusItaliano",
+     "en": [6, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Erasmus alemana",
+     "aspecto": "estudianteinge_f",
+     "papel": "mesa",
+     "frases": [
+      "En Berlín cenamos a las seis. Aquí a las seis se desayuna la resaca.",
+      "Pago 900 por compartir cuarto. En mi ciudad eso es un castillo con foso."
+     ],
+     "nodo": "ErasmusAlemana",
+     "en": [5, 2],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_morados",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["nevera", 3, 1],
+    ["consola", 6, 2],
+    ["tele", 7, 1],
+    ["mesa_cristal", 5, 3],
+    ["banqueta_roja", 7, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_5_27": {
+   "tipo": "piso",
+   "nombre": "Piso de los influencers",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/centro", [5, 27]],
+   "personas": [
+    {
+     "nombre": "Influencer de cocina",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "cocina",
+     "frases": [
+      "Grabo recetas fáciles para gente sin tiempo. Las grabo en seis horas.",
+      "Hoy toca tortilla. Con cebolla da más visualizaciones; sin cebolla, más insultos."
+     ],
+     "nodo": "InfluencerDeCocina",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Influencer de gimnasio",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Me grabo levantando pesas y luego me grabo comiendo pollo. Y así pago el alquiler.",
+      "Mi patrocinador es una marca de batidos. Saben a tiza con vainilla, pero tienen código de descuento."
+     ],
+     "nodo": "InfluencerDeGimnasio",
+     "en": [4, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "rombos_verdes",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["fregadero", 1, 1], ["fogones", 3, 1], ["sofa", 2, 5], ["papelera", 7, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_5_5": {
+   "tipo": "piso",
+   "nombre": "Piso compartido de la Gran Vía",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/centro", [5, 5]],
+   "personas": [
+    {
+     "nombre": "Inquilino número siete",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Somos ocho en un piso de dos habitaciones. Yo duermo en el pasillo, que es la zona premium porque pasa el aire.",
+      "El anuncio decía «ideal para gente joven y dinámica». Dinámica porque hay que moverse para que no te pisen."
+     ],
+     "nodo": "InquilinoNumeroSiete",
+     "en": [1, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Teletrabajadora",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "Teletrabajo desde la cocina. En las reuniones se me ve la nevera y el jefe cree que es una pared de diseño.",
+      "Pago 750 por el cuarto. Tiene ventana, pero da a otra ventana con un señor que también teletrabaja."
+     ],
+     "nodo": "Teletrabajadora",
+     "en": [9, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 7, 1],
+    ["nevera", 9, 1],
+    ["tele", 5, 1],
+    ["ropero_mostaza", 2, 0],
+    ["papelera", 1, 1],
+    ["mesa_cristal", 7, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_60_41": {
+   "tipo": "banco",
+   "nombre": "Sucursal bancaria de la calle Mayor",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/centro", [60, 41]],
+   "personas": [
+    {
+     "nombre": "Directora de la sucursal",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Le ofrezco una hipoteca a cuarenta años. Si se jubila antes, la paga su hijo.",
+      "La comisión de mantenimiento es por mantenerle a usted como cliente. Es una forma de cariño."
+     ],
+     "nodo": "DirectoraDeLaSucursal",
+     "en": [10, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Jubilado con libreta",
+     "aspecto": "npc_old_man",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a actualizar la libreta. Me dicen que use la aplicación. La aplicación no me da los buenos días.",
+      "Antes en el banco te regalaban una sartén. Ahora te cobran por mirar la sartén."
+     ],
+     "nodo": "JubiladoConLibreta",
+     "en": [10, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "maquina",
+     "frases": ["El cajero automático muestra: «Operación no disponible. Pruebe en otro cajero. O en otro país»."],
+     "nodo": "Cartel",
+     "en": [2, 4]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [2, 3, 4, 2]]],
+   "muebles": [
+    ["mostrador_naranja_i", 6, 4],
+    ["mostrador_naranja_m", 7, 4],
+    ["mostrador_naranja_m", 8, 4],
+    ["mostrador_naranja_m", 9, 4],
+    ["mostrador_naranja_d", 10, 4],
+    ["armario_archivo", 7, 0],
+    ["taquilla_archivo", 8, 0],
+    ["sofa", 7, 6],
+    ["maquina_billetes", 1, 3],
+    ["maquina_billetes", 1, 5],
+    ["palmera_maceta", 10, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "madrid/sala_centro_62_21": {
+   "tipo": "oficina",
+   "nombre": "Edificio Metrópolis, aseguradora",
+   "rotulo": "Edificio Metrópolis",
+   "pieza": "edificio_metropolis",
+   "calle": ["madrid/centro", [62, 21]],
+   "personas": [
+    {
+     "nombre": "Agente de seguros",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Le hago un seguro de hogar que cubre incendios, inundaciones y caídas de meteoritos. Lo de las goteras lleva franquicia.",
+      "La estatua de la cúpula también está asegurada. Contra rayos, palomas y alcaldes con ideas."
+     ],
+     "nodo": "AgenteDeSeguros",
+     "en": [6, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Cliente con reclamación",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": [
+      "Se me inundó la casa y dicen que el agua entró por la puerta «en un ángulo no cubierto».",
+      "Llevo tres meses reclamando. Ya conozco a todo el personal; en Navidad me invitan a la cena."
+     ],
+     "nodo": "ClienteConReclamacion",
+     "en": [4, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "archivo",
+     "frases": ["Carpetas: «Siniestros», «Siniestros totales» y «Siniestros que no vamos a pagar»."],
+     "nodo": "Cartel",
+     "en": [12, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [8, 10],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 11, 0],
+    ["archivador", 13, 1],
+    ["mostrador_cristal", 12, 4],
+    ["banqueta_roja", 13, 6],
+    ["mostrador_cristal", 1, 3],
+    ["banqueta_azul", 2, 5],
+    ["mostrador_cristal", 6, 6],
+    ["banqueta_azul", 7, 8],
+    ["cajas", 1, 1],
+    ["mesa_cristal", 5, 3],
+    ["banqueta_roja", 7, 4]
+   ],
+   "encima": [["libro_abierto", 14, 4], ["libro_abierto", 6, 6]],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "madrid/sala_centro_62_52": {
+   "tipo": "floristeria",
+   "nombre": "Floristería de la calle Atocha",
+   "pieza": "tienda_flores",
+   "calle": ["madrid/centro", [62, 52]],
+   "personas": [
+    {
+     "nombre": "Florista",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Rosas para enamorados, claveles para la verbena y cactus para los que discuten con el casero.",
+      "El día de la madre se me acaban las flores a las diez. A las once ya vendo plantas de plástico con mucha ternura."
+     ],
+     "nodo": "Florista",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Novio olvidadizo",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": [
+      "Hoy es nuestro aniversario. Lo sé porque me lo ha recordado el banco al cobrarme la cena del año pasado.",
+      "¿Qué flor dice «perdón, se me olvidó»? La florista me ha dado un ramo enorme y una tarjeta en blanco."
+     ],
+     "nodo": "NovioOlvidadizo",
+     "en": [8, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "rombos_verdes",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["palmera_maceta", 7, 0],
+    ["planta", 8, 1],
+    ["palmera_maceta", 9, 0],
+    ["mostrador_cristal_i", 7, 4],
+    ["mostrador_cristal_m", 8, 4],
+    ["mostrador_cristal_d", 9, 4],
+    ["planta", 3, 4],
+    ["planta", 4, 4],
+    ["planta", 5, 4],
+    ["palmera_maceta", 10, 0],
+    ["planta", 10, 6],
+    ["cajas", 1, 6]
+   ],
+   "encima": [["jarron_flores", 7, 4], ["jarron_flores", 8, 4]],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_63_31": {
+   "tipo": "ropa",
+   "nombre": "Abanicos y mantones Casa Lola",
+   "pieza": "tienda_morada",
+   "calle": ["madrid/centro", [63, 31]],
+   "personas": [
+    {
+     "nombre": "Lola",
+     "aspecto": "flamenca",
+     "papel": "dependiente",
+     "frases": [
+      "Abanicos pintados a mano. A mano de una máquina, pero con mucho arte.",
+      "El mantón de Manila no es de Manila. Lo bordan en Sevilla y lo vendemos en Madrid: eso es España."
+     ],
+     "nodo": "Lola",
+     "en": [6, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista con abanico",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": [
+      "¿Cómo se abre esto con estilo? Llevo diez minutos y parezco una paloma enfadada.",
+      "Me lo llevo para el verano de Londres. Allí lo usaré dos días, el resto lo tendré de adorno."
+     ],
+     "nodo": "TuristaConAbanico",
+     "en": [8, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [6, 8],
+   "suelo": "rombos_verdes",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_verde", 4, 1],
+    ["vitrina_blanca", 6, 1],
+    ["estanteria_baja_verde", 8, 1],
+    ["mostrador_tablas_i", 6, 4],
+    ["mostrador_tablas_m", 7, 4],
+    ["mostrador_tablas_d", 8, 4],
+    ["armario_verde", 3, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "madrid/sala_centro_67_31": {
+   "tipo": "teatro",
+   "nombre": "Teatro Español",
+   "pieza": "teatro",
+   "calle": ["madrid/centro", [67, 31]],
+   "personas": [
+    {
+     "nombre": "Actor clásico",
+     "aspecto": "npc_old_man",
+     "papel": "artista",
+     "frases": [
+      "«Ser o no ser...» No, perdón, eso es de otro. Aquí hacemos Calderón: «la vida es sueño» y el sueldo, también.",
+      "Llevo cuarenta años en las tablas. Las tablas siguen, yo crujo más."
+     ],
+     "nodo": "ActorClasico",
+     "en": [6, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Profesora con alumnos",
+     "aspecto": "npc_woman",
+     "papel": "publico",
+     "frases": [
+      "He traído a treinta alumnos a ver teatro del Siglo de Oro. Veintinueve están mirando el móvil.",
+      "El que no mira el móvil está dormido. Ese es el que más ha entendido la obra."
+     ],
+     "nodo": "ProfesoraConAlumnos",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [3, 10],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["losa_crema", [2, 2, 11, 2]]],
+   "muebles": [
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7],
+    ["palmera_maceta", 13, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "madrid/sala_centro_68_13": {
+   "tipo": "piso",
+   "nombre": "Piso turístico de la Gran Vía",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/centro", [68, 13]],
+   "personas": [
+    {
+     "nombre": "Despedida de soltero",
+     "aspecto": "raver",
+     "papel": "libre",
+     "frases": [
+      "Somos doce de Valencia en un piso para cuatro. El anuncio decía «capacidad flexible».",
+      "La señora de abajo ha subido seis veces. Ya la hemos invitado a la despedida."
+     ],
+     "nodo": "DespedidaDeSoltero",
+     "en": [5, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Anfitrión de la plataforma",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "No soy casero: soy «superanfitrión». La diferencia es que yo no conozco a los vecinos.",
+      "Tengo once pisos como este. Los gestiono desde Lisboa, que allí todavía se puede vivir."
+     ],
+     "nodo": "AnfitrionDeLaPlataforma",
+     "en": [6, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Normas de la casa: «Prohibidas las fiestas. Prohibido el ruido. Prohibido cocinar. Prohibido quejarse en la reseña»."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 1]
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["sofa", 6, 5], ["cama_celeste", 1, 1]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_centro_68_21": {
+   "tipo": "gestoria",
+   "nombre": "Gestoría Hacienda Somos Todos",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/centro", [68, 21]],
+   "personas": [
+    {
+     "nombre": "Gestor",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Le hago la declaración de la renta en diez minutos. Lo que no le garantizo es que le salga a devolver.",
+      "Si es autónomo, siéntese. Si es autónomo con tarifa plana, siéntese y respire."
+     ],
+     "nodo": "Gestor",
+     "en": [10, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Autónoma",
+     "aspecto": "estudianteinge_f",
+     "papel": "cliente",
+     "frases": [
+      "Pago la cuota de autónomos aunque no facture. Es como un gimnasio, pero sin músculos.",
+      "El IVA del trimestre me ha dejado más pálida que la pared de esta gestoría."
+     ],
+     "nodo": "Autonoma",
+     "en": [8, 3],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "moqueta_azul",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 9, 0],
+    ["archivador_bajo", 10, 1],
+    ["taquilla_archivo", 12, 0],
+    ["mostrador_verde", 2, 4],
+    ["banqueta_roja", 3, 6],
+    ["mesa_cristal", 9, 3],
+    ["banqueta_azul", 9, 5],
+    ["maquina_billetes", 1, 1],
+    ["papelera", 12, 7]
+   ],
+   "encima": [["taza", 9, 3], ["libro_abierto", 3, 4]],
+   "carteles": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "madrid/sala_centro_68_41": {
+   "tipo": "piso",
+   "nombre": "Piso del jubilado de Lavapiés",
+   "pieza": "bloque_verde",
+   "calle": ["madrid/centro", [68, 41]],
+   "personas": [
+    {
+     "nombre": "Don Paco",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Llegué a Lavapiés en 1961 con una maleta de cartón. Ahora la maleta de cartón vale 200 euros en una tienda vintage.",
+      "En el barrio se hablan cuarenta idiomas. Yo me entiendo con todos con tres palabras: «¿qué tal?», «hombre» y «claro»."
+     ],
+     "nodo": "DonPaco",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Vecino de Senegal",
+     "aspecto": "mantero",
+     "papel": "libre",
+     "frases": [
+      "Don Paco me enseñó a jugar al mus. Yo le enseñé a cocinar thieboudienne. Él me gana al mus; yo cocino mejor.",
+      "El casero nos quiere subir el alquiler a los dos. Por fin algo que nos trata igual."
+     ],
+     "nodo": "VecinoDeSenegal",
+     "en": [5, 5],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_morados",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_naranja", [4, 3, 5, 3]]],
+   "muebles": [["fogones", 2, 1], ["nevera", 4, 1], ["tele_pequena", 9, 2], ["ropero_oliva", 6, 0]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_10_7": {
+   "tipo": "inmobiliaria",
+   "nombre": "Inmobiliaria Zulo Premium",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/chamberi", [10, 7]],
+   "personas": [
+    {
+     "nombre": "Agente inmobiliario",
+     "aspecto": "padretarjeta",
+     "papel": "dependiente",
+     "frases": [
+      "Tenemos un estudio de 15 metros por 1.200 al mes. Muy luminoso: tiene un tragaluz que da a otro tragaluz.",
+      "No lo llame zulo: es un «loft compacto con alma». Sin cocina, pero con alma."
+     ],
+     "nodo": "AgenteInmobiliario",
+     "en": [9, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Pareja buscando piso",
+     "aspecto": "npc_lass",
+     "papel": "cliente",
+     "frases": [
+      "Llevamos un año buscando. Hemos visto cuarenta pisos y un trastero que alquilaban como «dúplex sin escalera».",
+      "Nos pidieron seis nóminas, un aval de los padres y una carta de recomendación del alcalde."
+     ],
+     "nodo": "ParejaBuscandoPiso",
+     "en": [11, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un escaparate de fichas: «Ático para reformar: 890.000». «Piso para reformar: 640.000». «Hueco para reformar: 220.000»."
+     ],
+     "nodo": "Cartel",
+     "en": [9, 1]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "moqueta_azul",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 4, 0],
+    ["archivador_bajo", 5, 1],
+    ["taquilla_archivo", 7, 0],
+    ["mostrador_cristal", 4, 4],
+    ["banqueta_roja", 5, 6],
+    ["mesa_cristal", 10, 4],
+    ["banqueta_azul", 10, 6],
+    ["palmera_maceta", 1, 5],
+    ["cajas", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_16_28": {
+   "tipo": "puesto",
+   "nombre": "Puesto de fruta del mercado de Chamberí",
+   "pieza": "puesto_mercado",
+   "calle": ["madrid/chamberi", [16, 28]],
+   "personas": [
+    {
+     "nombre": "Frutero",
+     "aspecto": "huertano",
+     "papel": "dependiente",
+     "frases": [
+      "Las cerezas a 14 el kilo. Son del Jerte, recogidas a mano por gente que no se las puede comprar.",
+      "¿Le pongo un aguacate? Viene de muy lejos, como los pisos que se pueden pagar en Madrid."
+     ],
+     "nodo": "Frutero",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta de toda la vida",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Tócame este tomate. ¿A que no sabe a nada? Antes los tomates sabían a tomate y los políticos a política.",
+      "Me llevo medio kilo de cada. A mi edad ya no se compra para la semana: se compra para el día."
+     ],
+     "nodo": "ClientaDeTodaLaVida",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [9, 7],
+   "puerta": [5, 6],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 4, 0], ["cajas", 5, 1], ["papelera", 1, 4]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 5]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_17_19": {
+   "tipo": "piso",
+   "nombre": "Piso del pijo de Chamberí",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/chamberi", [17, 19]],
+   "personas": [
+    {
+     "nombre": "Borja",
+     "aspecto": "cayetano_entrenador",
+     "papel": "tele",
+     "frases": [
+      "Vivo aquí solo, en ciento cincuenta metros. Bueno, solo con la asistenta, el perro y el patinete eléctrico.",
+      "Mi padre me ha montado una empresa para que aprenda lo que cuesta ganarse la vida. Cuesta poco, la verdad."
+     ],
+     "nodo": "Borja",
+     "en": [8, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Asistenta",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "El niño tiene treinta años y no sabe encender el horno. Pero sabe pedir sushi en tres idiomas.",
+      "Yo cobro en negro y el señor me dice que la economía va de maravilla."
+     ],
+     "nodo": "Asistenta",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [5, 7],
+   "suelo": "tatami_verde",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["mesa_cristal", 1, 5],
+    ["taburete_amarillo", 3, 6],
+    ["planta", 9, 5],
+    ["tele_pequena", 7, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_18_6": {
+   "tipo": "piso",
+   "nombre": "Piso de la pareja que no se habla",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/chamberi", [18, 6]],
+   "personas": [
+    {
+     "nombre": "Él",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "No nos hablamos desde el martes. Discutimos si la tortilla lleva cebolla y ya no hubo vuelta atrás.",
+      "Seguimos viviendo juntos porque nadie puede pagar un piso solo. El amor se acabó; el contrato de alquiler, no."
+     ],
+     "nodo": "El",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Ella",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Dile a ese señor que deje de usar mi sartén. Sí, el señor de la tele: mi marido.",
+      "Hemos puesto cinta en el suelo para dividir el salón. Su mitad tiene la tele; la mía, la calefacción."
+     ],
+     "nodo": "Ella",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "tatami_verde",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [2, 4, 4, 2]]],
+   "muebles": [
+    ["encimera", 3, 1],
+    ["nevera", 6, 1],
+    ["tele", 1, 1],
+    ["sillon_derecha", 1, 4],
+    ["mesa_cristal", 2, 5],
+    ["ropero_nogal", 7, 0],
+    ["planta", 7, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_24_40": {
+   "tipo": "estacion",
+   "nombre": "Andén 0, la estación fantasma de Chamberí",
+   "rotulo": "Andén 0",
+   "pieza": "boca_metro",
+   "calle": ["madrid/chamberi", [24, 40]],
+   "personas": [
+    {
+     "nombre": "Guía del Andén 0",
+     "aspecto": "revisorcercanias",
+     "papel": "dependiente",
+     "frases": [
+      "Esta estación se cerró en 1966. Los trenes pasan sin parar, como los sueldos por la cuenta.",
+      "De noche se ven Pokémon fantasma en los azulejos. Son los únicos viajeros que no se quejan del aire acondicionado."
+     ],
+     "nodo": "GuiaDelAnden0",
+     "en": [10, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aficionado a los trenes",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Me sé de memoria los horarios de 1919. Los de ahora no, porque cambian cada vez que se avería algo.",
+      "Los anuncios de los azulejos son de antes de la guerra. Uno anuncia un jarabe para todo. Ojalá existiera."
+     ],
+     "nodo": "AficionadoALosTrenes",
+     "en": [2, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "maquina",
+     "frases": [
+      "Una taquilla antigua con un cartel de 1930: «Billete sencillo, 15 céntimos». Alguien ha escrito debajo: «Ahora, un riñón»."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 2]
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [7, 9],
+   "suelo": "rombos_oscuros",
+   "pared": "azulejo_azul",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["maquina_billetes", 5, 1],
+    ["tele", 7, 1],
+    ["maquina_billetes", 9, 1],
+    ["mostrador_tablas_i", 9, 5],
+    ["mostrador_tablas_m", 10, 5],
+    ["mostrador_tablas_d", 11, 5],
+    ["banco_rojo", 5, 4],
+    ["papelera", 1, 7],
+    ["tele_pequena", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_29_22": {
+   "tipo": "portal",
+   "nombre": "Portal de la finca de Olavide",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/chamberi", [29, 22]],
+   "personas": [
+    {
+     "nombre": "Portero de la finca",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Esta finca es de 1905. Tiene ascensor de madera, escalera de mármol y un fondo de inversión en el tercero.",
+      "En la plaza de Olavide se toma el vermú a las doce. Yo lo tomo a las doce y diez, cuando cierro la portería."
+     ],
+     "nodo": "PorteroDeLaFinca",
+     "en": [1, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vecina con perro",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Mi perro se llama Olavide. Lo saco tres veces al día a su plaza; él cree que es suya.",
+      "El perro tiene más seguidores que yo. Hace publicidad de pienso y gana más que mi jefe."
+     ],
+     "nodo": "VecinaConPerro",
+     "en": [3, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 4, 0],
+    ["planta", 7, 1],
+    ["cajonera_azul", 1, 1],
+    ["taburete_verde", 1, 3],
+    ["taburete_verde", 2, 3],
+    ["arbol_maceta", 8, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_29_6": {
+   "tipo": "clinica",
+   "nombre": "Clínica dental de la glorieta de Bilbao",
+   "pieza": "edificio_cupula",
+   "calle": ["madrid/chamberi", [29, 6]],
+   "personas": [
+    {
+     "nombre": "Dentista",
+     "aspecto": "nurse",
+     "papel": "dependiente",
+     "frases": [
+      "Tiene usted una caries, dos empastes viejos y un presupuesto de 3.400 euros. Respire.",
+      "Le puedo financiar la ortodoncia en 48 meses. Cuando acabe de pagar, sus dientes ya serán de otro siglo."
+     ],
+     "nodo": "Dentista",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Paciente nervioso",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": [
+      "Me da más miedo el dentista que un Gyarados. Al Gyarados por lo menos lo puedes capturar.",
+      "He venido por una revisión y me están ofreciendo blanqueamiento, carillas y un seguro de vida."
+     ],
+     "nodo": "PacienteNervioso",
+     "en": [3, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_menta", 4, 1],
+    ["vitrina_blanca", 6, 1],
+    ["estanteria_baja_menta", 8, 1],
+    ["mostrador_verde_i", 3, 4],
+    ["mostrador_verde_m", 4, 4],
+    ["mostrador_verde_d", 5, 4],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_31_32": {
+   "tipo": "portal",
+   "nombre": "Portal de la finca señorial del ático",
+   "rotulo": "Finca señorial",
+   "pieza": "atico_jardin",
+   "calle": ["madrid/chamberi", [31, 32]],
+   "personas": [
+    {
+     "nombre": "Portero de librea",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "En el ático vive una señora muy importante. Si viene a verla, necesita cita, medallas y paciencia.",
+      "Aquí todo el mundo es libre de subir. Por la escalera de servicio, eso sí."
+     ],
+     "nodo": "PorteroDeLibrea",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecina del primero",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Desde que vive aquí la del ático, en la puerta hay escoltas, periodistas y un señor que vende lotería.",
+      "Le pregunté si se podía poner una terraza como la suya. La comunidad me dijo que la libertad tiene metros."
+     ],
+     "nodo": "VecinaDelPrimero",
+     "en": [8, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 2, 0],
+    ["planta", 5, 1],
+    ["archivador_bajo", 7, 1],
+    ["mostrador_turquesa_i", 1, 3],
+    ["mostrador_turquesa_m", 2, 3],
+    ["mostrador_turquesa_d", 3, 3],
+    ["banqueta_roja", 2, 5],
+    ["banqueta_roja", 3, 5],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_38_42": {
+   "tipo": "piso",
+   "nombre": "Piso de la familia numerosa",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/chamberi", [38, 42]],
+   "personas": [
+    {
+     "nombre": "Madre de siete",
+     "aspecto": "mom",
+     "papel": "cocina",
+     "frases": [
+      "Siete hijos, un perro y un piso de tres habitaciones. Aquí se duerme por turnos, como en el ejército.",
+      "Con el carné de familia numerosa me hacen descuento en el autobús. Pero tengo que pagar siete autobuses."
+     ],
+     "nodo": "MadreDeSiete",
+     "en": [7, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hijo mediano",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Soy el cuarto de siete. Nadie se acuerda de mi cumpleaños, pero siempre me toca bajar la basura.",
+      "Heredo la ropa de mi hermano, que la heredó de mi primo, que la compró en 2008."
+     ],
+     "nodo": "HijoMediano",
+     "en": [1, 3],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [4, 7],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [2, 3, 3, 3]]],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["fogones", 5, 1],
+    ["tele", 2, 1],
+    ["ropero_mostaza", 1, 0],
+    ["papelera", 7, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_39_20": {
+   "tipo": "oficina",
+   "nombre": "Notaría de Chamberí",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/chamberi", [39, 20]],
+   "personas": [
+    {
+     "nombre": "Notario",
+     "aspecto": "npc_old_man",
+     "papel": "mesa",
+     "frases": [
+      "Doy fe de que usted ha entrado. Y de que le voy a cobrar por haberlo visto.",
+      "Firmo hipotecas toda la mañana. Por la tarde firmo herencias de los que firmaron hipotecas."
+     ],
+     "nodo": "Notario",
+     "en": [6, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Comprador primerizo",
+     "aspecto": "npc_youngster",
+     "papel": "cliente",
+     "frases": [
+      "Hoy firmo mi primera casa. Tengo 39 años y una hipoteca que acabaré de pagar a los 79.",
+      "El notario lee la escritura tan rápido que he firmado y todavía no sé si he comprado un piso o un barco."
+     ],
+     "nodo": "CompradorPrimerizo",
+     "en": [9, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "moqueta_azul",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 1, 0],
+    ["archivo_alto", 3, 0],
+    ["mostrador_azul", 4, 4],
+    ["banqueta_roja", 5, 6],
+    ["mesa_cristal", 7, 2],
+    ["banqueta_azul", 7, 4],
+    ["maquina_billetes", 9, 1],
+    ["papelera", 10, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_39_33": {
+   "tipo": "piso",
+   "nombre": "Piso del concejal jubilado",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/chamberi", [39, 33]],
+   "personas": [
+    {
+     "nombre": "Concejal jubilado",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Fui concejal de Urbanismo doce años. No pregunte de dónde salió el piso; salió de mucho trabajo y de un primo.",
+      "Inauguré cuarenta rotondas. Ninguna llevaba a ninguna parte, pero quedaban preciosas."
+     ],
+     "nodo": "ConcejalJubilado",
+     "en": [1, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi marido dice que dejó la política limpio. Lo único que se dejó limpio fue la caja fuerte.",
+      "Los domingos vienen los nietos a escuchar sus batallas. Las mejores son las que no se pueden contar."
+     ],
+     "nodo": "SuMujer",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["nevera", 3, 1],
+    ["tele", 6, 1],
+    ["sillon_derecha", 5, 2],
+    ["mesa_cristal", 6, 3],
+    ["cajas", 5, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_39_7": {
+   "tipo": "piso",
+   "nombre": "Piso del youtuber que volvió de Andorra",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/chamberi", [39, 7]],
+   "personas": [
+    {
+     "nombre": "Youtuber arrepentido",
+     "aspecto": "influencerlinkedin",
+     "papel": "tele",
+     "frases": [
+      "Me fui a Andorra a pagar menos impuestos y me aburrí tanto que he vuelto a pagar más para tener bares.",
+      "En Andorra hacía directos desde la montaña. Me escuchaban las vacas y tres asesores fiscales."
+     ],
+     "nodo": "YoutuberArrepentido",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su editor de vídeo",
+     "aspecto": "npc_youngster",
+     "papel": "mesa",
+     "frases": [
+      "Edito sus vídeos de ocho a ocho. Él los sube y dice que es «trabajo creativo».",
+      "El próximo vídeo se llama «Volví de Andorra (no clickbait)». Es clickbait."
+     ],
+     "nodo": "SuEditorDeVideo",
+     "en": [6, 4],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [2, 3, 4, 3]]],
+   "muebles": [["fogones", 1, 1], ["nevera", 3, 1], ["tele", 7, 1], ["papelera", 1, 5], ["mesa_cristal", 5, 2]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_3_18": {
+   "tipo": "piso",
+   "nombre": "Piso de la señora de los gatos",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/chamberi", [3, 18]],
+   "personas": [
+    {
+     "nombre": "Doña Remedios",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Tengo once gatos y un Meowth que se coló por la ventana. El Meowth paga su parte: trae monedas.",
+      "Los gatos son madrileños de verdad: duermen de día y salen de noche."
+     ],
+     "nodo": "DonaRemedios",
+     "en": [8, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Sobrino de la herencia",
+     "aspecto": "cunado",
+     "papel": "mesa",
+     "frases": [
+      "Vengo a ver a mi tía todos los domingos. No por el piso, ¿eh? Bueno, un poco por el piso.",
+      "Me ha dicho que se lo deja a los gatos. He empezado a ser amable con los gatos."
+     ],
+     "nodo": "SobrinoDeLaHerencia",
+     "en": [3, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [5, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [6, 3, 3, 3]]],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["nevera", 7, 1],
+    ["tele", 9, 1],
+    ["sillon_derecha", 2, 4],
+    ["mesa_cristal", 3, 5],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_3_35": {
+   "tipo": "oficina",
+   "nombre": "Asesoría fiscal para creadores de contenido",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/chamberi", [3, 35]],
+   "personas": [
+    {
+     "nombre": "Asesor fiscal",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Le monto una sociedad en Irlanda, una en Andorra y otra en el trastero de su abuela. Todo legal. Casi todo.",
+      "Si Hacienda pregunta, usted es «creador de experiencias». Hacienda también tiene humor, pero cobra igual."
+     ],
+     "nodo": "AsesorFiscal",
+     "en": [9, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Streamer con dudas",
+     "aspecto": "npc_youngster",
+     "papel": "cliente",
+     "frases": [
+      "He ganado dinero jugando a videojuegos. Mi madre todavía cree que eso no es un trabajo, y Hacienda cree que sí.",
+      "Me han dicho que los gastos del gaming son deducibles. He deducido la silla, el ratón y la pizza."
+     ],
+     "nodo": "StreamerConDudas",
+     "en": [11, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [7, 9],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 4, 0],
+    ["archivador_bajo", 5, 1],
+    ["taquilla_archivo", 7, 0],
+    ["mostrador_turquesa", 9, 3],
+    ["banqueta_roja", 10, 5],
+    ["mesa_cristal", 9, 6],
+    ["banqueta_azul", 9, 8],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [["taza", 10, 6]],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_3_7": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Fuencarral",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/chamberi", [3, 7]],
+   "personas": [
+    {
+     "nombre": "Conserje del edificio",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En este edificio hay seis pisos turísticos, dos oficinas y un vecino de verdad. Lo protejo como a un Pokémon legendario.",
+      "Los turistas me preguntan dónde está la playa. Les digo que en el Retiro hay un estanque, que se apañen."
+     ],
+     "nodo": "ConserjeDelEdificio",
+     "en": [9, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vecino de verdad",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Soy el único vecino empadronado del bloque. En las elecciones voto yo solo por toda la escalera.",
+      "Me han ofrecido medio millón por mi piso. Les he dicho que me lo pienso cuando bajen el pan."
+     ],
+     "nodo": "VecinoDeVerdad",
+     "en": [1, 5],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [6, 3, 4, 2]]],
+   "muebles": [["planta", 2, 1], ["escalera_mano", 3, 0]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_44_12": {
+   "tipo": "startup",
+   "nombre": "Coworking de startups",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/chamberi", [44, 12]],
+   "personas": [
+    {
+     "nombre": "Fundador de startup",
+     "aspecto": "influencerlinkedin",
+     "papel": "mesa",
+     "frases": [
+      "Somos el Uber de los churros. Todavía no vendemos churros, pero tenemos una aplicación preciosa.",
+      "Hemos levantado dos millones. Gastados en sofás de colores y en un futbolín para pensar."
+     ],
+     "nodo": "FundadorDeStartup",
+     "en": [10, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Becaria",
+     "aspecto": "estudianteinge_f",
+     "papel": "libre",
+     "frases": [
+      "Cobro en «equity». Si la empresa vale algo algún día, podré pagarme un café.",
+      "Aquí no hay horarios: trabajamos siempre. Es la flexibilidad de la que hablaba la oferta."
+     ],
+     "nodo": "Becaria",
+     "en": [3, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "En la pared, en letras de neón: «FAIL FAST». Debajo, el calendario de pagos del alquiler del coworking."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "moqueta_beige",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 8, 0],
+    ["archivador", 10, 1],
+    ["mostrador_verde", 5, 5],
+    ["banqueta_azul", 6, 7],
+    ["tele", 5, 1],
+    ["palmera_maceta", 12, 0],
+    ["mesa_cristal", 11, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_46_33": {
+   "tipo": "libreria",
+   "nombre": "Librería de viejo de Chamberí",
+   "pieza": "tienda_azul",
+   "calle": ["madrid/chamberi", [46, 33]],
+   "personas": [
+    {
+     "nombre": "Librero",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "Vendo libros usados. Algunos tienen dedicatorias de gente que regaló el libro sin leerlo.",
+      "El más vendido de la semana es un diccionario. Lo compran para apoyar el portátil."
+     ],
+     "nodo": "Librero",
+     "en": [2, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Lectora de poesía",
+     "aspecto": "npc_lass",
+     "papel": "cliente",
+     "frases": [
+      "Busco un libro de poemas de amor para un chico que lee poco. Me han recomendado uno de recetas.",
+      "Aquí huele a papel viejo. Es el único olor de Madrid que no cuesta una suscripción."
+     ],
+     "nodo": "LectoraDePoesia",
+     "en": [2, 7],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_madera", 2, 0],
+    ["estanteria_alta_madera", 4, 0],
+    ["estanteria_alta_madera", 6, 2],
+    ["estanteria_alta_madera", 8, 2],
+    ["mesa_cristal_larga", 6, 5],
+    ["taburete_marron", 6, 7],
+    ["taburete_marron", 8, 7],
+    ["mostrador_madera_i", 2, 5],
+    ["mostrador_madera_m", 3, 5],
+    ["mostrador_madera_d", 4, 5],
+    ["planta", 10, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "madrid/sala_chamberi_4_41": {
+   "tipo": "piso",
+   "nombre": "Piso de la opositora a jueza",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/chamberi", [4, 41]],
+   "personas": [
+    {
+     "nombre": "Opositora a judicatura",
+     "aspecto": "opositor_f",
+     "papel": "mesa",
+     "frases": [
+      "Estudio diez horas al día y canto los temas en voz alta delante de un reloj. El reloj ya se los sabe.",
+      "Cuando apruebe, juzgaré con imparcialidad. Menos a los del piso de arriba, que hacen obras los sábados."
+     ],
+     "nodo": "OpositoraAJudicatura",
+     "en": [4, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su preparador",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Le tomo los temas los martes. Si se equivoca en una coma, le pongo cara de Tribunal Supremo.",
+      "La oposición es una carrera de fondo. Lo malo es que a los cinco años te cambian el fondo."
+     ],
+     "nodo": "SuPreparador",
+     "en": [2, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "salvia",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["consola", 5, 2],
+    ["tele", 6, 1],
+    ["mesa_cristal", 5, 3],
+    ["banqueta_azul", 7, 4],
+    ["planta", 8, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_23_37": {
+   "tipo": "sede",
+   "nombre": "Calle de Ferraz, 70: recepción",
+   "rotulo": "Ferraz, 70",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/moncloa", [23, 37]],
+   "personas": [
+    {
+     "nombre": "Recepcionista del Clan",
+     "aspecto": "recluta_clan_f",
+     "papel": "dependiente",
+     "frases": [
+      "Bienvenido a la sede. La planta de arriba está «en obras». Llevan en obras desde que se fue el último que preguntó por las facturas.",
+      "Si viene a afiliarse, rellene este formulario. Si viene a preguntar por Koldo, este no es el sitio."
+     ],
+     "nodo": "RecepcionistaDelClan",
+     "en": [13, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Militante veterano",
+     "aspecto": "recluta_clan",
+     "papel": "libre",
+     "frases": [
+      "Yo estuve en el congreso del 79. Y en el del 82. Y en todos los que había bocadillos.",
+      "Aquí la línea del partido la marca el jefe. Hoy va hacia la izquierda; mañana, hacia donde haga falta."
+     ],
+     "nodo": "MilitanteVeterano",
+     "en": [7, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "archivo",
+     "frases": [
+      "Un archivador con candado. En la etiqueta pone «Gastos de representación». Debajo, a boli: «NO ABRIR NUNCA»."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [10, 10],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 6, 0],
+    ["archivador", 8, 1],
+    ["mostrador_madera", 1, 2],
+    ["banqueta_azul", 2, 4],
+    ["palmera_maceta", 14, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 9]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_23_49": {
+   "tipo": "piso",
+   "nombre": "Piso del funcionario de Moncloa",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/moncloa", [23, 49]],
+   "personas": [
+    {
+     "nombre": "Funcionario de carrera",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Trabajo en un ministerio que cambia de nombre cada legislatura. Mi mesa sigue en el mismo sitio.",
+      "Este año he tenido cuatro ministros. Ninguno ha sabido dónde estaba la máquina del café."
+     ],
+     "nodo": "FuncionarioDeCarrera",
+     "en": [7, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Su suegra",
+     "aspecto": "npc_old_woman",
+     "papel": "mesa",
+     "frases": [
+      "Mi yerno es funcionario: trabajo para toda la vida. Eso sí, la vida le pasa en una silla giratoria.",
+      "Le digo que se presente a ministro. Él dice que no, que eso es temporal."
+     ],
+     "nodo": "SuSuegra",
+     "en": [5, 7],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_verdes",
+   "pared": "menta",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [2, 5, 4, 2]]],
+   "muebles": [
+    ["nevera_alta", 2, 0],
+    ["fogones", 3, 1],
+    ["tele", 5, 1],
+    ["mesa_cristal", 5, 5],
+    ["taburete_marron", 7, 6],
+    ["ropero_oliva", 8, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_29_32": {
+   "tipo": "casa",
+   "nombre": "Casa del jardinero del Parque del Oeste",
+   "pieza": "casa_gris",
+   "calle": ["madrid/moncloa", [29, 32]],
+   "personas": [
+    {
+     "nombre": "Jardinero",
+     "aspecto": "guarda_parque",
+     "papel": "libre",
+     "frases": [
+      "Cuido la rosaleda desde hace veinte años. Las rosas no me pagan, pero tampoco me suben el alquiler.",
+      "Por las noches salen Pokémon de tipo Planta a beber de los aspersores. Yo les dejo; son los únicos que no pisan el césped."
+     ],
+     "nodo": "Jardinero",
+     "en": [8, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": [
+      "Mi padre habla con los árboles. Dice que el olmo del fondo es el más listo del barrio.",
+      "Yo quiero ser bióloga. O influencer de plantas, que dicen que da más."
+     ],
+     "nodo": "SuHija",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [7, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "lima",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["fogones", 5, 1],
+    ["planta", 8, 1],
+    ["tele", 9, 1],
+    ["mesa_cristal_larga", 4, 3],
+    ["banqueta_azul", 4, 5],
+    ["banqueta_azul", 6, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_32_49": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle Princesa",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/moncloa", [32, 49]],
+   "personas": [
+    {
+     "nombre": "Portero sindicalista",
+     "aspecto": "jubiladoobras",
+     "papel": "dependiente",
+     "frases": [
+      "Este portero hace huelga los jueves. Hoy es jueves, pero le atiendo por solidaridad con usted.",
+      "Los vecinos del quinto me dan aguinaldo en Navidad. Los del sexto me dan conversación, que pesa menos."
+     ],
+     "nodo": "PorteroSindicalista",
+     "en": [5, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecino con bicicleta",
+     "aspecto": "patinetero",
+     "papel": "libre",
+     "frases": [
+      "Subo la bici al cuarto porque en el portal me la robaron tres veces. La cuarta me robaron el portal.",
+      "Voy al trabajo en bici por el carril bici. Los coches también van por el carril bici."
+     ],
+     "nodo": "VecinoConBicicleta",
+     "en": [2, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [9, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 4, 0],
+    ["cajonera_gris", 1, 1],
+    ["cajon_gris", 3, 1],
+    ["mostrador_madera_i", 4, 4],
+    ["mostrador_madera_m", 5, 4],
+    ["mostrador_madera_d", 6, 4],
+    ["banqueta_azul", 1, 5],
+    ["banqueta_azul", 2, 5],
+    ["arbol_maceta", 7, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_34_38": {
+   "tipo": "puesto",
+   "nombre": "Churros y porras de Argüelles",
+   "pieza": "puesto_mercado",
+   "calle": ["madrid/moncloa", [34, 38]],
+   "personas": [
+    {
+     "nombre": "Churrera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Churros a las siete de la mañana para los que salen de fiesta y para los que entran a trabajar. Mismo churro, distinta cara.",
+      "La porra es el churro gordo. Como el sueldo de un concejal: más grande y más aceitoso."
+     ],
+     "nodo": "Churrera",
+     "en": [7, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Estudiante trasnochado",
+     "aspecto": "raver_f",
+     "papel": "cliente",
+     "frases": [
+      "Tengo examen a las nueve y vengo directa de la discoteca. Los churros son mi desayuno y mi estrategia.",
+      "Si suspendo, diré que fue por el aceite. Si apruebo, diré que fue por el aceite también."
+     ],
+     "nodo": "EstudianteTrasnochado",
+     "en": [5, 2],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [9, 7],
+   "puerta": [4, 6],
+   "suelo": "chapa",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["estanteria_baja_verde", 1, 1], ["caja", 3, 2]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 5]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_38_49": {
+   "tipo": "cine",
+   "nombre": "Cines Princesa",
+   "pieza": "teatro",
+   "calle": ["madrid/moncloa", [38, 49]],
+   "personas": [
+    {
+     "nombre": "Acomodador",
+     "aspecto": "npc_old_man",
+     "papel": "artista",
+     "frases": [
+      "Llevo la linterna para acompañar al público. Ahora todos llevan el móvil encendido y me hacen la competencia.",
+      "Hoy ponemos cine de autor polaco. Hay tres espectadores; uno es el director."
+     ],
+     "nodo": "Acomodador",
+     "en": [11, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Crítica de cine",
+     "aspecto": "npc_woman",
+     "papel": "publico",
+     "frases": [
+      "La película dura cuatro horas y en blanco y negro. Le pondré cinco estrellas para que nadie diga que no la entendí.",
+      "Lo mejor de la película es cuando se acaba. Pero eso no lo voy a escribir."
+     ],
+     "nodo": "CriticaDeCine",
+     "en": [5, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [8, 10],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["losa_crema", [2, 2, 10, 2]]],
+   "muebles": [
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_39_39": {
+   "tipo": "tienda",
+   "nombre": "Copistería Apuntes Moncloa",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/moncloa", [39, 39]],
+   "personas": [
+    {
+     "nombre": "Copistero",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Imprimo apuntes de todas las carreras. Los de Medicina pesan más que los de Derecho, pero los de Derecho duelen más.",
+      "En época de exámenes hay cola hasta la calle. En agosto, solo vengo yo a mirar la máquina."
+     ],
+     "nodo": "Copistero",
+     "en": [7, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Estudiante de Medicina",
+     "aspecto": "estudianteinge_f",
+     "papel": "cliente",
+     "frases": [
+      "Llevo seis años estudiando y ahora me toca el MIR. Después, la residencia. Después, el contrato basura. Después, Inglaterra.",
+      "Fotocopio el temario entero. Así, si no apruebo, al menos tengo una pared aislada."
+     ],
+     "nodo": "EstudianteDeMedicina",
+     "en": [3, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_crema",
+   "pared": "menta",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_nogal", 5, 0],
+    ["estanteria_alta_nogal", 7, 0],
+    ["mostrador_turquesa_i", 1, 3],
+    ["mostrador_turquesa_m", 2, 3],
+    ["mostrador_turquesa_d", 3, 3],
+    ["estanteria_baja_nogal", 5, 3],
+    ["estanteria_baja_nogal", 7, 3],
+    ["cajas", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_47_17": {
+   "tipo": "hostal",
+   "nombre": "Colegio mayor San Pancracio",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/moncloa", [47, 17]],
+   "personas": [
+    {
+     "nombre": "Directora del colegio mayor",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Aquí vivieron ministros, jueces y un señor que inventó el bocadillo de tortilla con mayonesa. Todos con novatadas.",
+      "Las novatadas están prohibidas desde 1990. Ahora se llaman «actividades de integración»."
+     ],
+     "nodo": "DirectoraDelColegioMayor",
+     "en": [5, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Colegial de primero",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Me han obligado a cantar el himno del colegio en calzoncillos. Dicen que es una tradición desde la Edad Media.",
+      "Mis padres pagan 1.500 al mes para que yo aprenda a hacer contactos. De momento conozco al de la cafetería."
+     ],
+     "nodo": "ColegialDePrimero",
+     "en": [2, 6],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [10, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 6, 3, 2]]],
+   "muebles": [["estanteria_baja_mostaza", 2, 1], ["recepcion", 4, 2], ["sofa", 10, 4], ["arbol_maceta", 1, 6]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [10, 8]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_56_17": {
+   "tipo": "grandes_almacenes",
+   "nombre": "Grandes almacenes de Princesa",
+   "pieza": "grandes_almacenes",
+   "calle": ["madrid/moncloa", [56, 17]],
+   "personas": [
+    {
+     "nombre": "Vendedor de trajes",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Este traje es el que llevan los ministros. Con él se puede mentir en el Congreso sin que se arrugue.",
+      "Le hago el bajo gratis. El dobladillo de la dignidad lo cobramos aparte."
+     ],
+     "nodo": "VendedorDeTrajes",
+     "en": [2, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Estudiante de Derecho",
+     "aspecto": "estudianteinge",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a comprarme mi primer traje para las prácticas. No me pagan, pero me exigen corbata.",
+      "La corbata cuesta lo que gano en un mes de prácticas. O sea: nada, porque no me pagan."
+     ],
+     "nodo": "EstudianteDeDerecho",
+     "en": [7, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_oliva", 2, 1],
+    ["vitrina_blanca", 4, 1],
+    ["estanteria_baja_oliva", 6, 1],
+    ["mostrador_cristal_i", 6, 3],
+    ["mostrador_cristal_m", 7, 3],
+    ["mostrador_cristal_d", 8, 3],
+    ["vitrina_blanca", 1, 4],
+    ["vitrina_blanca", 3, 4],
+    ["papelera", 8, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_59_39": {
+   "tipo": "piso",
+   "nombre": "Piso de los residentes de Medicina",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/moncloa", [59, 39]],
+   "personas": [
+    {
+     "nombre": "Residente de guardia",
+     "aspecto": "enfermero",
+     "papel": "cama",
+     "frases": [
+      "He hecho una guardia de 24 horas y ahora me toca dormir. O estudiar. O llorar en la ducha, que también relaja.",
+      "En el hospital me llaman «doctor». En el banco me llaman «riesgo»."
+     ],
+     "nodo": "ResidenteDeGuardia",
+     "en": [8, 4],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Compañera de piso",
+     "aspecto": "enfermero_f",
+     "papel": "cocina",
+     "frases": [
+      "Cocinamos los domingos para toda la semana. Lentejas en táper, numeradas como pacientes.",
+      "Si me das conversación más de un minuto te diagnostico algo. Es la deformación profesional."
+     ],
+     "nodo": "CompaneraDePiso",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "moqueta_beige",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["fogones", 1, 1], ["nevera", 3, 1], ["cama_colcha_rosa", 6, 1], ["cajon_rosa", 9, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "madrid/sala_moncloa_7_41": {
+   "tipo": "templo",
+   "nombre": "Templo de Debod, pronaos",
+   "rotulo": "Templo de Debod",
+   "pieza": "templo_debod",
+   "calle": ["madrid/moncloa", [7, 41]],
+   "personas": [
+    {
+     "nombre": "Guía del templo",
+     "aspecto": "arqueologo",
+     "papel": "libre",
+     "frases": [
+      "Este templo tiene más de dos mil años. Lo regaló Egipto en 1968 y Madrid lo puso al lado de un parque y lo dejó a la intemperie. Muy madrileño.",
+      "Al atardecer viene media ciudad a hacer la misma foto. El templo ya tiene dos mil años y doscientos mil selfis."
+     ],
+     "nodo": "GuiaDelTemplo",
+     "en": [10, 9],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Pareja del atardecer",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Hemos venido a ver el atardecer y nos hemos encontrado con mil personas viendo el atardecer.",
+      "Mi novio dice que el templo es de Egipto. Yo creo que es de Ikea, pero más antiguo."
+     ],
+     "nodo": "ParejaDelAtardecer",
+     "en": [11, 8],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "Un relieve con jeroglíficos. Debajo, alguien ha pegado una pegatina: «Amón también paga hipoteca»."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 4]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [7, 11],
+   "suelo": "piedra",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 5, 0],
+    ["vitrina_blanca", 8, 1],
+    ["pedestal", 6, 3],
+    ["pedestal", 9, 3],
+    ["vitrina_alta", 14, 6],
+    ["vitrina_blanca_estrecha", 14, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 10], "desde_sala_moncloa_7_41_naos": [3, 2]},
+   "pasos": [
+    {
+     "nodo": "Naos",
+     "en": [3, 1],
+     "destino": "madrid/sala_moncloa_7_41_naos",
+     "aparicion": "default",
+     "vuelta": "desde_sala_moncloa_7_41_naos",
+     "llegada": [3, 2]
+    }
+   ]
+  },
+  "madrid/sala_moncloa_7_41_naos": {
+   "tipo": "cripta",
+   "padre": "madrid/sala_moncloa_7_41",
+   "nombre": "Templo de Debod, naos",
+   "personas": [
+    {
+     "nombre": "Vigilante del templo",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "En la naos se guardaba la imagen del dios. Ahora se guarda un extintor y mi bocadillo.",
+      "Dicen que por la noche se oyen pasos de Pokémon de tipo Psíquico. Yo creo que son los del turno de limpieza."
+     ],
+     "nodo": "VigilanteDelTemplo",
+     "en": [10, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "Una piedra con una inscripción antigua. Traducida dice algo así como: «No se permite comer pipas en el santuario»."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 2]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "piedra",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["cajas", 1, 1], ["pedestal", 4, 1], ["pedestal", 1, 7], ["cajas", 8, 1]],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_moncloa_7_41", "aparicion": "desde_sala_moncloa_7_41_naos"}
+  },
+  "madrid/sala_palacio_real_23_30": {
+   "tipo": "palacio",
+   "nombre": "Palacio Real, escalera de honor",
+   "rotulo": "Palacio Real",
+   "pieza": "palacio_real",
+   "calle": ["madrid/palacio_real", [23, 30]],
+   "personas": [
+    {
+     "nombre": "Guardia Real",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Más arriba están los salones donde se celebrará la Liga. Sin ocho medallas no se pasa de esta escalera.",
+      "No puedo reírme estando de servicio. Usted cuente el chiste, que yo me lo guardo para el relevo."
+     ],
+     "nodo": "GuardiaReal",
+     "en": [7, 8],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Guía de Patrimonio",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "El palacio tiene 3.418 habitaciones. Más que pisos en alquiler a precio razonable en todo Madrid.",
+      "Los reyes no viven aquí: viven en otro palacio más pequeño. Este se usa para cenas, recepciones y combates de Liga."
+     ],
+     "nodo": "GuiaDePatrimonio",
+     "en": [3, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "Un león de piedra en la escalera. Tiene la pata sobre una bola del mundo y cara de pedir una propina."
+     ],
+     "nodo": "Cartel",
+     "en": [14, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [11, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [2, 4, 10, 5]]],
+   "muebles": [
+    ["mesa_cristal_larga", 6, 6],
+    ["silla_derecha", 5, 6],
+    ["silla_izquierda", 9, 6],
+    ["arbol_maceta", 1, 0],
+    ["pedestal", 13, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [11, 9]},
+   "pasos": []
+  },
+  "madrid/sala_palacio_real_23_54": {
+   "tipo": "catedral",
+   "nombre": "Catedral de la Almudena",
+   "pieza": "catedral_almudena",
+   "calle": ["madrid/palacio_real", [23, 54]],
+   "personas": [
+    {
+     "nombre": "Canónigo",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Esta catedral tardó ciento diez años en terminarse. Más o menos lo que tarda una obra del Ayuntamiento.",
+      "Aquí se casó el rey. Los invitados todavía están buscando aparcamiento."
+     ],
+     "nodo": "Canonigo",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Novia de prueba",
+     "aspecto": "invitada_boda",
+     "papel": "publico",
+     "frases": [
+      "Me caso aquí en primavera. Hemos reservado con seis años de antelación y el novio ya no está tan seguro.",
+      "El banquete cuesta como un piso. Mi madre dice que es una inversión en recuerdos."
+     ],
+     "nodo": "NoviaDePrueba",
+     "en": [4, 7],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 12],
+   "puerta": [7, 11],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [7, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 6, 3],
+    ["estatua_gargola", 3, 0],
+    ["estatua_gargola", 10, 0],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 12, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 4, 8],
+    ["banco_rojo", 8, 8],
+    ["arbol_maceta", 1, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 10], "desde_sala_palacio_real_23_54_cripta": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Cripta",
+     "en": [2, 1],
+     "destino": "madrid/sala_palacio_real_23_54_cripta",
+     "aparicion": "default",
+     "vuelta": "desde_sala_palacio_real_23_54_cripta",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "madrid/sala_palacio_real_23_54_cripta": {
+   "tipo": "cripta",
+   "padre": "madrid/sala_palacio_real_23_54",
+   "nombre": "Cripta de la Almudena",
+   "personas": [
+    {
+     "nombre": "Sacristana",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "La cripta es más antigua que la catedral de arriba. Primero se hizo el sótano, como en los chalés de Pozuelo.",
+      "Aquí abajo hace fresco todo el año. En agosto viene gente a rezar y a no pagar el aire acondicionado."
+     ],
+     "nodo": "Sacristana",
+     "en": [8, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "Una imagen de la Virgen de la Almudena. Según la leyenda, estuvo escondida en la muralla siglos. Sin pagar alquiler."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 2]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["estatua_aguila", 4, 0], ["cajas", 2, 5], ["caja", 10, 8], ["cajas", 1, 7]],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_palacio_real_23_54", "aparicion": "desde_sala_palacio_real_23_54_cripta"}
+  },
+  "madrid/sala_palacio_real_46_11": {
+   "tipo": "portal",
+   "nombre": "Portal de la calle de Bailén",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/palacio_real", [46, 11]],
+   "personas": [
+    {
+     "nombre": "Portera de Bailén",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Desde esta portería he visto pasar tres reyes, cinco presidentes y un millón de turistas con palo de selfi.",
+      "El rey no me saluda, pero el de la guardia sí. Él es el que importa: me avisa cuando hay desfile."
+     ],
+     "nodo": "PorteraDeBailen",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Repartidor de Glovo",
+     "aspecto": "repartidorbici",
+     "papel": "libre",
+     "frases": [
+      "Tengo un pedido para «Palacio Real, puerta 3». La puerta 3 no existe. Creo que es una broma de un guardia.",
+      "Llevo en la mochila sushi, cocido y una pizza. Todo mezclado, como Madrid."
+     ],
+     "nodo": "RepartidorDeGlovo",
+     "en": [10, 6],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 5, 0],
+    ["cajonera_azul", 9, 1],
+    ["mostrador_blanco_i", 2, 4],
+    ["mostrador_blanco_m", 3, 4],
+    ["mostrador_blanco_d", 4, 4],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "madrid/sala_palacio_real_54_11": {
+   "tipo": "institucion",
+   "nombre": "Senado",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/palacio_real", [54, 11]],
+   "personas": [
+    {
+     "nombre": "Senador veterano",
+     "aspecto": "npc_old_man",
+     "papel": "publico",
+     "frases": [
+      "El Senado es la cámara de segunda lectura. Leemos dos veces lo que el Congreso ya no leyó.",
+      "Aquí se trabaja con calma. Tanta, que algunos se jubilan en el escaño y nadie se da cuenta."
+     ],
+     "nodo": "SenadorVeterano",
+     "en": [3, 9],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Ujier del Senado",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Los senadores tienen tablet, coche oficial y una siesta institucional. Las tres cosas son muy importantes.",
+      "Si viene a ver un pleno, siéntese atrás. Si se duerme, nadie notará la diferencia."
+     ],
+     "nodo": "UjierDelSenado",
+     "en": [10, 9],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [12, 11],
+   "suelo": "parquet",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 4, 0],
+    ["mostrador_cristal", 7, 2],
+    ["estatua_aguila", 10, 0],
+    ["banco_rojo", 9, 4],
+    ["banco_rojo", 6, 4],
+    ["banco_rojo", 3, 4],
+    ["banco_rojo", 9, 6],
+    ["banco_rojo", 6, 6],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 9, 8],
+    ["banco_rojo", 6, 8],
+    ["banco_rojo", 3, 8],
+    ["arbol_maceta", 14, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [12, 10]},
+   "pasos": []
+  },
+  "madrid/sala_palacio_real_59_25": {
+   "tipo": "teatro",
+   "nombre": "Teatro Real, foyer",
+   "rotulo": "Teatro Real",
+   "pieza": "teatro_real",
+   "calle": ["madrid/palacio_real", [59, 25]],
+   "personas": [
+    {
+     "nombre": "Melómana",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Hoy hay ópera: «Carmen». Tres horas y media. La entrada me ha costado lo mismo que un viaje a Sevilla, donde pasa la obra.",
+      "En el entreacto se bebe champán y se critica a la soprano. Es la parte que más me gusta."
+     ],
+     "nodo": "Melomana",
+     "en": [1, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Acomodadora del Real",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "El patio de butacas está al fondo. Si llega tarde, espere al entreacto o al siglo siguiente.",
+      "Una vez un señor aplaudió antes de tiempo y le miró hasta el busto de Verdi."
+     ],
+     "nodo": "AcomodadoraDelReal",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [5, 10],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["tatami_verde", [2, 2, 10, 2]]],
+   "muebles": [
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 9], "desde_sala_palacio_real_59_25_butacas": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Butacas",
+     "en": [2, 1],
+     "destino": "madrid/sala_palacio_real_59_25_butacas",
+     "aparicion": "default",
+     "vuelta": "desde_sala_palacio_real_59_25_butacas",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "madrid/sala_palacio_real_59_25_butacas": {
+   "tipo": "teatro",
+   "padre": "madrid/sala_palacio_real_59_25",
+   "nombre": "Teatro Real, patio de butacas",
+   "personas": [
+    {
+     "nombre": "Soprano",
+     "aspecto": "flamenca",
+     "papel": "artista",
+     "frases": [
+      "Esta noche canto Carmen. Ensayo la habanera desde las ocho: los vecinos de la plaza de Oriente ya la tararean.",
+      "Si alguien tose en mi aria, lo miro hasta que se le cura la tos."
+     ],
+     "nodo": "Soprano",
+     "en": [6, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abonado de toda la vida",
+     "aspecto": "npc_old_man",
+     "papel": "publico",
+     "frases": [
+      "Tengo abono desde 1997. He visto cuarenta Carmen y en todas muere igual. Siempre lloro igual.",
+      "Duermo en el segundo acto, pero con mucha dignidad. Es una tradición de abonado."
+     ],
+     "nodo": "AbonadoDeTodaLaVida",
+     "en": [4, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [9, 10],
+   "suelo": "alfombra_roja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["losa_crema", [2, 2, 11, 2]]],
+   "muebles": [
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [9, 9]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_palacio_real_59_25", "aparicion": "desde_sala_palacio_real_59_25_butacas"}
+  },
+  "madrid/sala_retiro_23_31": {
+   "tipo": "oficina",
+   "nombre": "Ministerio de Asuntos Varios",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/retiro", [23, 31]],
+   "personas": [
+    {
+     "nombre": "Subsecretario",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Este ministerio se creó para coordinar los otros ministerios. Ahora hay otro para coordinarnos a nosotros.",
+      "Mañana presentamos un plan estratégico. El plan es presentar otro plan estratégico."
+     ],
+     "nodo": "Subsecretario",
+     "en": [5, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Funcionaria de ventanilla",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Ese formulario es el 3-B. Ese otro es el 3-B bis. El que usted trae es el 3-B ter, que ya no existe.",
+      "Vuelva usted mañana. Lo dijo Larra y aquí lo seguimos cumpliendo."
+     ],
+     "nodo": "FuncionariaDeVentanilla",
+     "en": [6, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "moqueta_beige",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 4, 0],
+    ["archivador_bajo", 5, 1],
+    ["taquilla_archivo", 7, 0],
+    ["mostrador_oliva", 6, 6],
+    ["banqueta_roja", 7, 8],
+    ["mesa_cristal", 4, 4],
+    ["banqueta_azul", 4, 6],
+    ["planta", 10, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "madrid/sala_retiro_23_44": {
+   "tipo": "museo",
+   "nombre": "Museo del Prado, vestíbulo",
+   "rotulo": "Museo del Prado",
+   "pieza": "museo_prado",
+   "calle": ["madrid/retiro", [23, 44]],
+   "personas": [
+    {
+     "nombre": "Taquillero del Prado",
+     "aspecto": "clerk",
+     "papel": "dependiente",
+     "frases": [
+      "De seis a ocho la entrada es gratis. A las seis menos un minuto empieza la cola más culta de Madrid.",
+      "Las salas de Velázquez y de Goya están al fondo. No se puede comer, ni tocar, ni hacer fotos con flash a Carlos IV."
+     ],
+     "nodo": "TaquilleroDelPrado",
+     "en": [10, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Grupo de jubilados",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Hemos venido de Cuenca en autobús a ver Las Meninas. El autobús sale en una hora; las veremos corriendo.",
+      "Mi marido dice que el Bosco pintaba cosas muy raras. Le he dicho que es por la ropa que llevaba la gente."
+     ],
+     "nodo": "GrupoDeJubilados",
+     "en": [10, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Una vitrina con reproducciones: una taza de Las Meninas, un imán de Goya y un paraguas con El Jardín de las Delicias."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 2]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [2, 3, 4, 3]]],
+   "muebles": [
+    ["pedestal", 4, 5],
+    ["pedestal", 7, 5],
+    ["estatua_gargola", 11, 4],
+    ["estatua_gargola", 1, 6],
+    ["palmera_maceta", 1, 0],
+    ["vitrina_blanca", 6, 1]
+   ],
+   "encima": [],
+   "apariciones": {
+    "default": [8, 8],
+    "desde_sala_retiro_23_44_goya": [5, 2],
+    "desde_sala_retiro_23_44_velazquez": [11, 2]
+   },
+   "pasos": [
+    {
+     "nodo": "Goya",
+     "en": [5, 1],
+     "destino": "madrid/sala_retiro_23_44_goya",
+     "aparicion": "default",
+     "vuelta": "desde_sala_retiro_23_44_goya",
+     "llegada": [5, 2]
+    },
+    {
+     "nodo": "Velazquez",
+     "en": [11, 1],
+     "destino": "madrid/sala_retiro_23_44_velazquez",
+     "aparicion": "default",
+     "vuelta": "desde_sala_retiro_23_44_velazquez",
+     "llegada": [11, 2]
+    }
+   ]
+  },
+  "madrid/sala_retiro_23_44_goya": {
+   "tipo": "museo",
+   "padre": "madrid/sala_retiro_23_44",
+   "nombre": "Museo del Prado, sala de Goya",
+   "personas": [
+    {
+     "nombre": "Estudiante de Bellas Artes",
+     "aspecto": "estudianteinge",
+     "papel": "libre",
+     "frases": [
+      "Copio las Pinturas Negras para mi trabajo de fin de grado. Me ha quedado tan negro como mi futuro laboral.",
+      "Goya pintó a Saturno devorando a su hijo. Mi casero pinta parecido cuando sube el alquiler."
+     ],
+     "nodo": "EstudianteDeBellasArtes",
+     "en": [1, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Señor que se ha perdido",
+     "aspecto": "cunado",
+     "papel": "libre",
+     "frases": [
+      "Yo buscaba la cafetería y me he encontrado al Perro semihundido. Me identifico mucho con él.",
+      "¿Esta sala es la de los fusilamientos? Pues vaya plan para un domingo."
+     ],
+     "nodo": "SenorQueSeHaPerdido",
+     "en": [9, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "El 3 de mayo en Madrid, de Goya (1814). Una camisa blanca, un farol y la peor mañana de la historia de la ciudad."
+     ],
+     "nodo": "Cartel",
+     "en": [12, 1]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "piedra",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [2, 3, 4, 2]]],
+   "muebles": [["vitrina_blanca", 7, 4], ["vitrina_blanca", 10, 4], ["vitrina_alta", 2, 3], ["pedestal", 1, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_retiro_23_44", "aparicion": "desde_sala_retiro_23_44_goya"}
+  },
+  "madrid/sala_retiro_23_44_velazquez": {
+   "tipo": "museo",
+   "padre": "madrid/sala_retiro_23_44",
+   "nombre": "Museo del Prado, sala de Velázquez",
+   "personas": [
+    {
+     "nombre": "Imitador de Las Meninas",
+     "aspecto": "npc_kimono_girl",
+     "papel": "libre",
+     "frases": [
+      "Me pongo delante del cuadro vestida de infanta y la gente me deja monedas. Velázquez me mira mal desde el lienzo.",
+      "¿Sabes que en el cuadro sale el propio Velázquez pintando? Fue el primer selfi de la historia."
+     ],
+     "nodo": "ImitadorDeLasMeninas",
+     "en": [1, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Vigilante de sala",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Por favor, no se acerque tanto al cuadro. Ese perro lleva ahí desde 1656 y no muerde.",
+      "Llevo veinte años mirando Las Meninas. Ahora las veo hasta en la sopa del comedor de personal."
+     ],
+     "nodo": "VigilanteDeSala",
+     "en": [12, 7],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Las Meninas, de Velázquez (1656). La infanta Margarita, sus damas, un perro tranquilo y el pintor mirándote como si debieras dinero."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [6, 10],
+   "suelo": "alfombra_roja",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["isla_oliva", 3, 6], ["vitrina_alta", 1, 4], ["estatua_gargola", 11, 2]],
+   "encima": [],
+   "apariciones": {"default": [6, 9]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_retiro_23_44", "aparicion": "desde_sala_retiro_23_44_velazquez"}
+  },
+  "madrid/sala_retiro_28_13": {
+   "tipo": "ayuntamiento",
+   "nombre": "Palacio de Cibeles, patio de operaciones",
+   "rotulo": "Palacio de Cibeles",
+   "pieza": "palacio_cibeles",
+   "calle": ["madrid/retiro", [28, 13]],
+   "personas": [
+    {
+     "nombre": "Funcionaria municipal",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Aquí se piden licencias de obra, de terraza y de paciencia. La de paciencia tarda más.",
+      "Si viene a quejarse de las obras de la calle, pida cita. Para pedir cita, hay obras."
+     ],
+     "nodo": "FuncionariaMunicipal",
+     "en": [2, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vecino con queja",
+     "aspecto": "jubiladoobras",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a decir que en mi calle llevan tres años de obras. Me han dado un folleto que dice «Madrid, cada día mejor».",
+      "Yo superviso todas las obras del distrito. No me pagan, pero tengo la mejor vista de cada zanja."
+     ],
+     "nodo": "VecinoConQueja",
+     "en": [1, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un panel: «Plan de movilidad 2030». Debajo, en letra pequeña: «Las obras del plan de movilidad 2020 siguen en curso»."
+     ],
+     "nodo": "Cartel",
+     "en": [12, 1]
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [8, 10],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 3, 0],
+    ["mostrador_blanco", 6, 2],
+    ["estatua_aguila", 9, 0],
+    ["banco_rojo", 5, 4],
+    ["banco_rojo", 2, 4],
+    ["banco_rojo", 9, 4],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 9, 6],
+    ["palmera_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9], "desde_sala_retiro_28_13_mirador": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Mirador",
+     "en": [2, 1],
+     "destino": "madrid/sala_retiro_28_13_mirador",
+     "aparicion": "default",
+     "vuelta": "desde_sala_retiro_28_13_mirador",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "madrid/sala_retiro_28_13_mirador": {
+   "tipo": "torre",
+   "padre": "madrid/sala_retiro_28_13",
+   "nombre": "Mirador de Cibeles",
+   "personas": [
+    {
+     "nombre": "Fotógrafo del mirador",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Desde aquí se ve la diosa Cibeles, la Gran Vía y tres grúas. Las grúas salen en todas las fotos de Madrid.",
+      "Cuando gana el Madrid, la Cibeles se llena. Cuando pierde, se llena el bar de enfrente."
+     ],
+     "nodo": "FotografoDelMirador",
+     "en": [1, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "escalera",
+     "frases": ["Una placa: «Mirador. Prohibido tirar cosas a la diosa. Ella ya tiene bastante con los leones»."],
+     "nodo": "Cartel",
+     "en": [6, 2]
+    }
+   ],
+   "tamano": [8, 9],
+   "puerta": [4, 8],
+   "suelo": "piedra",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 4, 0], ["cajon_gris", 1, 6], ["tele_pequena", 6, 7]],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_retiro_28_13", "aparicion": "desde_sala_retiro_28_13_mirador"}
+  },
+  "madrid/sala_retiro_36_37": {
+   "tipo": "piso",
+   "nombre": "Piso del vigilante del Retiro",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/retiro", [36, 37]],
+   "personas": [
+    {
+     "nombre": "Vigilante del Retiro",
+     "aspecto": "guarda_parque",
+     "papel": "tele",
+     "frases": [
+      "Cierro el parque por la noche. Siempre queda alguien dentro: una pareja, un perro o un tertuliano buscando su coche.",
+      "En el estanque las barcas se alquilan. Algunos domingos parece que se alquila el estanque entero."
+     ],
+     "nodo": "VigilanteDelRetiro",
+     "en": [7, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su hijo",
+     "aspecto": "patinetero",
+     "papel": "libre",
+     "frases": [
+      "Mi padre conoce todos los árboles del Retiro. Yo conozco todos los baches del carril bici.",
+      "Me ha prohibido ir en patinete por el parque. Voy en patinete por la casa."
+     ],
+     "nodo": "SuHijo",
+     "en": [8, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [5, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["encimera", 1, 1],
+    ["nevera", 4, 1],
+    ["tele_pequena", 8, 2],
+    ["sillon_derecha", 4, 3],
+    ["mesa_cristal", 5, 4],
+    ["caja", 8, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "madrid/sala_retiro_39_13": {
+   "tipo": "hotel",
+   "nombre": "Hotel de lujo del Paseo del Prado",
+   "pieza": "bloque_verde_2",
+   "calle": ["madrid/retiro", [39, 13]],
+   "personas": [
+    {
+     "nombre": "Conserje de hotel de lujo",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "La suite cuesta lo que un piso en Teruel. Al año. Por noche, quiero decir.",
+      "Aquí se alojan reyes, actores y un jeque que pidió que le trajeran el Retiro a la habitación."
+     ],
+     "nodo": "ConserjeDeHotelDeLujo",
+     "en": [6, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Millonaria aburrida",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "He venido a Madrid a ver el Prado. Lo he visto desde la ventana; con eso basta.",
+      "El servicio de habitaciones me ha traído un cocido a las tres de la mañana. Les he dado un diamante de propina."
+     ],
+     "nodo": "MillonariaAburrida",
+     "en": [4, 6],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_oscuros",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_oliva", 7, 1],
+    ["recepcion", 9, 2],
+    ["sofa", 9, 5],
+    ["escalera_mano", 3, 0],
+    ["palmera_maceta", 1, 0],
+    ["planta", 12, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "madrid/sala_retiro_3_13": {
+   "tipo": "banco",
+   "nombre": "Banco de España, vestíbulo",
+   "rotulo": "Banco de España",
+   "pieza": "oficinas_azules",
+   "calle": ["madrid/retiro", [3, 13]],
+   "personas": [
+    {
+     "nombre": "Economista del banco",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Debajo de este edificio está la cámara del oro. Bajamos a mirarlo una vez al año, para darle ánimos.",
+      "Mis previsiones dicen que la economía crecerá. Mis previsiones del año pasado decían lo mismo, y aquí estamos."
+     ],
+     "nodo": "EconomistaDelBanco",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Visitante del vestíbulo",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "He venido a cambiar pesetas. Me han dicho que ya no se puede, pero me han dejado ver la cola en la que se cambiaban.",
+      "Tengo cuarenta mil pesetas debajo del colchón. Me han dicho que ya valen lo mismo que el colchón."
+     ],
+     "nodo": "VisitanteDelVestibulo",
+     "en": [5, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [3, 9],
+   "suelo": "moqueta_azul",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_cristal_i", 3, 4],
+    ["mostrador_cristal_m", 4, 4],
+    ["mostrador_cristal_m", 5, 4],
+    ["mostrador_cristal_m", 6, 4],
+    ["mostrador_cristal_d", 7, 4],
+    ["armario_archivo", 1, 0],
+    ["taquilla_archivo", 2, 0],
+    ["banco_rojo", 8, 6],
+    ["palmera_maceta", 11, 0],
+    ["papelera", 11, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "madrid/sala_retiro_3_47": {
+   "tipo": "piso",
+   "nombre": "Piso del músico callejero",
+   "pieza": "bloque_pisos",
+   "calle": ["madrid/retiro", [3, 47]],
+   "personas": [
+    {
+     "nombre": "Músico del Retiro",
+     "aspecto": "flautista",
+     "papel": "libre",
+     "frases": [
+      "Toco el acordeón en el Retiro los domingos. Me sé tres canciones; las toco en distinto orden y parecen seis.",
+      "Un día un turista me echó un billete de cien. Era del Monopoly, pero me hizo ilusión igual."
+     ],
+     "nodo": "MusicoDelRetiro",
+     "en": [3, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Compañera de grupo",
+     "aspecto": "flautista_f",
+     "papel": "mesa",
+     "frases": [
+      "Tenemos un grupo de jazz-chotis. El público no sabe si bailar o abrigarse.",
+      "Ensayamos en el piso. Los vecinos han hecho una colecta para pagarnos un local."
+     ],
+     "nodo": "CompaneraDeGrupo",
+     "en": [1, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "rombos_morados",
+   "pared": "lima",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [4, 3, 4, 3]]],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["nevera", 8, 1],
+    ["tele_pequena", 3, 2],
+    ["sofa", 6, 3],
+    ["planta", 1, 1],
+    ["mesa_cristal", 1, 5],
+    ["banqueta_azul", 3, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "madrid/sala_retiro_4_29": {
+   "tipo": "congreso",
+   "nombre": "Congreso de los Diputados, antesala",
+   "rotulo": "Congreso de los Diputados",
+   "pieza": "congreso",
+   "calle": ["madrid/retiro", [4, 29]],
+   "personas": [
+    {
+     "nombre": "Ujier",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "En esta antesala se esperan los diputados antes de votar. Algunos votan sin saber qué; eso no es cosa mía.",
+      "Los leones de la puerta se llaman Daoíz y Velarde. Son los únicos de esta casa que no cambian de opinión."
+     ],
+     "nodo": "Ujier",
+     "en": [4, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Asesor parlamentario",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "Le escribo los discursos a un diputado. Él los lee como si fueran la lista de la compra.",
+      "Hoy hay pleno. Habrá insultos, aplausos y un señor que se quedará dormido en el escaño de siempre."
+     ],
+     "nodo": "AsesorParlamentario",
+     "en": [3, 7],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [6, 10],
+   "suelo": "parquet",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["banco_rojo", 3, 4],
+    ["banco_rojo", 7, 4],
+    ["banco_rojo", 10, 4],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 10, 6],
+    ["palmera_maceta", 1, 0],
+    ["pedestal", 1, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 9], "desde_sala_retiro_4_29_hemiciclo": [12, 2]},
+   "pasos": [
+    {
+     "nodo": "Hemiciclo",
+     "en": [12, 1],
+     "destino": "madrid/sala_retiro_4_29_hemiciclo",
+     "aparicion": "default",
+     "vuelta": "desde_sala_retiro_4_29_hemiciclo",
+     "llegada": [12, 2]
+    }
+   ]
+  },
+  "madrid/sala_retiro_4_29_hemiciclo": {
+   "tipo": "congreso",
+   "padre": "madrid/sala_retiro_4_29",
+   "nombre": "Congreso de los Diputados, hemiciclo",
+   "personas": [
+    {
+     "nombre": "Diputado de la última fila",
+     "aspecto": "npc_man",
+     "papel": "publico",
+     "frases": [
+      "Llevo tres legislaturas y nunca he hablado en la tribuna. Pero aplaudo como nadie: tengo las manos de acero.",
+      "Voto lo que me dice el jefe de grupo con el dedo. Una vez me equivoqué de dedo y casi cae el Gobierno."
+     ],
+     "nodo": "DiputadoDeLaUltimaFila",
+     "en": [10, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Taquígrafa",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Lo apunto todo, hasta los insultos. Los insultos son lo más rápido que se dice aquí.",
+      "En el Diario de Sesiones quedan para siempre. Algunos deberían leerse antes de hablar."
+     ],
+     "nodo": "Taquigrafa",
+     "en": [13, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "En la pared, unos agujeros tapados. La guía dice que es mejor no preguntar y que se le llama «historia»."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [9, 10],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 7, 0],
+    ["mostrador_cristal", 9, 2],
+    ["archivo_alto", 12, 0],
+    ["banco_rojo", 6, 4],
+    ["banco_rojo", 3, 4],
+    ["banco_rojo", 10, 4],
+    ["banco_rojo", 6, 6],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 10, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 9]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_retiro_4_29", "aparicion": "desde_sala_retiro_4_29_hemiciclo"}
+  },
+  "madrid/sala_retiro_55_47": {
+   "tipo": "museo",
+   "nombre": "Palacio de Cristal",
+   "pieza": "palacio_cristal",
+   "calle": ["madrid/retiro", [55, 47]],
+   "personas": [
+    {
+     "nombre": "Comisaria de arte",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Esta exposición se titula «Vacío». La sala está vacía. La gente hace fotos al vacío y se va contenta.",
+      "Es arte contemporáneo: lo importante no es la obra, sino el texto de la entrada, que es muy largo."
+     ],
+     "nodo": "ComisariaDeArte",
+     "en": [13, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Pato del estanque",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Me he colado persiguiendo a un pato. El pato se ha ido y yo me he quedado mirando una piedra que vale un millón.",
+      "Mi madre dice que aquí todo es de cristal y no se toca. Yo he tocado un poco el aire."
+     ],
+     "nodo": "PatoDelEstanque",
+     "en": [11, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": ["Una piedra sobre un pedestal. Cartela: «Sin título. Técnica mixta: piedra y concepto»."],
+     "nodo": "Cartel",
+     "en": [2, 7]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [12, 10],
+   "suelo": "losa_gris",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 9, 0],
+    ["vitrina_blanca", 12, 1],
+    ["isla_madera", 9, 5],
+    ["estatua_gargola", 1, 5],
+    ["vitrina_madera_estrecha", 14, 7],
+    ["arbol_maceta", 14, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [12, 9]},
+   "pasos": []
+  }
+ }
+}

@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_5iydy"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_x1pem"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_mux8i"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_bthd7"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_jmcmu"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_wtakk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="7_hanh8"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_auf1u"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_ulwa0"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_7jmts"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_evn26"]
+
+[sub_resource type="Resource" id="Resource_qs2sv"]
+script = ExtResource("3_mux8i")
+id = &"madrid/sala_moncloa_7_41_naos"
+display_name = "Templo de Debod, naos, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaMoncloa741Naos" type="Node2D" unique_id=928001960]
+script = ExtResource("1_5iydy")
+data = SubResource("Resource_qs2sv")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=2069132810]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADwAAAABAAAAAAAAADwAAAACAAAAAAAAADwAAAADAAAAAAAAADwAAAAEAAAAAAAAADwAAAAFAAAAAAAAADwAAAAGAAAAAAAAADwAAAAHAAAAAAAAADwAAAAIAAAAAAAAADwAAAAJAAAAAAAAADwAAAAKAAAAAAAAADwAAAALAAAAAAAAADwAAAAAAAEAAAAAADwAAAABAAEAAAAAADwAAAACAAEAAAAAADwAAAADAAEAAAAAADwAAAAEAAEAAAAAADwAAAAFAAEAAAAAADwAAAAGAAEAAAAAADwAAAAHAAEAAAAAADwAAAAIAAEAAAAAADwAAAAJAAEAAAAAADwAAAAKAAEAAAAAADwAAAALAAEAAAAAADwAAAAAAAIAAAAAADwAAAABAAIAAAAAADwAAAACAAIAAAAAADwAAAADAAIAAAAAADwAAAAEAAIAAAAAADwAAAAFAAIAAAAAADwAAAAGAAIAAAAAADwAAAAHAAIAAAAAADwAAAAIAAIAAAAAADwAAAAJAAIAAAAAADwAAAAKAAIAAAAAADwAAAALAAIAAAAAADwAAAAAAAMAAAAAADwAAAABAAMAAAAAADwAAAACAAMAAAAAADwAAAADAAMAAAAAADwAAAAEAAMAAAAAADwAAAAFAAMAAAAAADwAAAAGAAMAAAAAADwAAAAHAAMAAAAAADwAAAAIAAMAAAAAADwAAAAJAAMAAAAAADwAAAAKAAMAAAAAADwAAAALAAMAAAAAADwAAAAAAAQAAAAAADwAAAABAAQAAAAAADwAAAACAAQAAAAAADwAAAADAAQAAAAAADwAAAAEAAQAAAAAADwAAAAFAAQAAAAAADwAAAAGAAQAAAAAADwAAAAHAAQAAAAAADwAAAAIAAQAAAAAADwAAAAJAAQAAAAAADwAAAAKAAQAAAAAADwAAAALAAQAAAAAADwAAAAAAAUAAAAAADwAAAABAAUAAAAAADwAAAACAAUAAAAAADwAAAADAAUAAAAAADwAAAAEAAUAAAAAADwAAAAFAAUAAAAAADwAAAAGAAUAAAAAADwAAAAHAAUAAAAAADwAAAAIAAUAAAAAADwAAAAJAAUAAAAAADwAAAAKAAUAAAAAADwAAAALAAUAAAAAADwAAAAAAAYAAAAAADwAAAABAAYAAAAAADwAAAACAAYAAAAAADwAAAADAAYAAAAAADwAAAAEAAYAAAAAADwAAAAFAAYAAAAAADwAAAAGAAYAAAAAADwAAAAHAAYAAAAAADwAAAAIAAYAAAAAADwAAAAJAAYAAAAAADwAAAAKAAYAAAAAADwAAAALAAYAAAAAADwAAAAAAAcAAAAAADwAAAABAAcAAAAAADwAAAACAAcAAAAAADwAAAADAAcAAAAAADwAAAAEAAcAAAAAADwAAAAFAAcAAAAAADwAAAAGAAcAAAAAADwAAAAHAAcAAAAAADwAAAAIAAcAAAAAADwAAAAJAAcAAAAAADwAAAAKAAcAAAAAADwAAAALAAcAAAAAADwAAAAAAAgAAAAAADwAAAABAAgAAAAAADwAAAACAAgAAAAAADwAAAADAAgAAAAAADwAAAAEAAgAAAAAADwAAAAFAAgAAAAAADwAAAAGAAgAAAAAADwAAAAHAAgAAAAAADwAAAAIAAgAAAAAADwAAAAJAAgAAAAAADwAAAAKAAgAAAAAADwAAAALAAgAAAAAADwAAAAAAAkAAAAAADwAAAABAAkAAAAAADwAAAACAAkAAAAAADwAAAADAAkAAAAAADwAAAAEAAkAAAAAADwAAAAFAAkAAAAAADwAAAAGAAkAAAAAAAQAAAAHAAkAAAAAADwAAAAIAAkAAAAAADwAAAAJAAkAAAAAADwAAAAKAAkAAAAAADwAAAALAAkAAAAAADwAAAA=")
+tile_set = ExtResource("4_bthd7")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1357543317]
+tile_map_data = PackedByteArray("AAABAAAAAQABABwAAAABAAEAAQABAB0AAAACAAAAAQABABwAAAACAAEAAQABAB0AAAADAAAAAQABABwAAAADAAEAAQABAB0AAAAEAAAAAQABABwAAAAEAAEAAQABAB0AAAAFAAAAAQABABwAAAAFAAEAAQABAB0AAAAGAAAAAQABABwAAAAGAAEAAQABAB0AAAAHAAAAAQABABwAAAAHAAEAAQABAB0AAAAIAAAAAQABABwAAAAIAAEAAQABAB0AAAAJAAAAAQABABwAAAAJAAEAAQABAB0AAAAKAAAAAQABABwAAAAKAAEAAQABAB0AAAAAAAAAAQACABoAAAALAAAAAQAAABoAAAAAAAEAAQACABoAAAALAAEAAQAAABoAAAAAAAIAAQACABoAAAALAAIAAQAAABoAAAAAAAMAAQACABoAAAALAAMAAQAAABoAAAAAAAQAAQACABoAAAALAAQAAQAAABoAAAAAAAUAAQACABoAAAALAAUAAQAAABoAAAAAAAYAAQACABoAAAALAAYAAQAAABoAAAAAAAcAAQACABoAAAALAAcAAQAAABoAAAAAAAgAAQACABoAAAALAAgAAQAAABoAAAABAAkAAQABABkAAAACAAkAAQABABkAAAADAAkAAQABABkAAAAEAAkAAQABABkAAAAFAAkAAQACABkAAAAHAAkAAQAAABkAAAAIAAkAAQABABkAAAAJAAkAAQABABkAAAAKAAkAAQABABkAAAAAAAkAAQAFAB0AAAALAAkAAQAGAB0AAAA=")
+tile_set = ExtResource("4_bthd7")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1610310124]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=609718179]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAAEAAgAFACUAAAACAAEAAgAGACUAAAADAAEAAgAHACUAAAABAAIAAgAFACYAAAACAAIAAgAGACYAAAADAAIAAgAHACYAAAAEAAEAAgADADIAAAAFAAEAAgAEADIAAAAEAAIAAgADADMAAAAFAAIAAgAEADMAAAABAAgAAgADADMAAAACAAgAAgAEADMAAAAIAAEAAgAFACUAAAAJAAEAAgAGACUAAAAKAAEAAgAHACUAAAAIAAIAAgAFACYAAAAJAAIAAgAGACYAAAAKAAIAAgAHACYAAAA=")
+tile_set = ExtResource("4_bthd7")
+
+[node name="VigilanteDelTemplo" type="Node2D" parent="Entities" unique_id=852750609 instance=ExtResource("5_jmcmu")]
+position = Vector2(336, 112)
+script = ExtResource("6_wtakk")
+display_name = "Vigilante del templo"
+lines = PackedStringArray("En la naos se guardaba la imagen del dios. Ahora se guarda un extintor y mi bocadillo.", "Dicen que por la noche se oyen pasos de Pokémon de tipo Psíquico. Yo creo que son los del turno de limpieza.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_hanh8")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=657726422 instance=ExtResource("8_auf1u")]
+position = Vector2(176, 80)
+script = ExtResource("9_ulwa0")
+lines = PackedStringArray("Una piedra con una inscripción antigua. Traducida dice algo así como: «No se permite comer pipas en el santuario».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1943095644]
+z_index = 10
+tile_map_data = PackedByteArray("AAABAAcAAgADADIAAAACAAcAAgAEADIAAAA=")
+tile_set = ExtResource("4_bthd7")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=462316566]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=570872397]
+position = Vector2(208, 304)
+script = ExtResource("10_7jmts")
+target_map = &"madrid/sala_moncloa_7_41"
+target_spawn = &"desde_sala_moncloa_7_41_naos"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=2058550983]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1838706722]
+position = Vector2(208, 272)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=2024659298]
+
+[node name="Rotulo" type="Label" parent="." unique_id=114833990]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_evn26")
+theme_override_font_sizes/font_size = 16
+text = "TEMPLO DE DEBOD, NAOS"
+horizontal_alignment = 1
