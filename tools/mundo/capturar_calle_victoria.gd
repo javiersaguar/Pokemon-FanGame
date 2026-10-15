@@ -11,6 +11,11 @@ const SHOTS: Array = [
 	["a4_calle_victoria_cloacas", "calle_victoria/tunel", Vector2i(9, 27)],
 	["a4_calle_victoria_boca_palacio", "madrid/palacio_real", "from_calle_victoria"],
 ]
+## Con «-- falcon»: el Falcon aparcado junto a las dos terminales.
+const FALCON: Array = [
+	["a4_falcon_playa_del_ingles", "playa_del_ingles/exterior", Vector2i(8, 11)],
+	["a4_falcon_vigo", "vigo/exterior", Vector2i(52, 35)],
+]
 
 
 func _initialize() -> void:
@@ -30,7 +35,11 @@ func _run() -> void:
 	var menu: Node = debug._preferred_panel
 	await menu.session.begin(&"madrid/centro")
 	debug.close()
-	for shot: Array in SHOTS:
+	# De día (las 12) para que se vean los colores sin el tinte de la noche; se deja como estaba al final.
+	var clock := root.get_node("Clock")
+	var offset: int = clock.debug_hour_offset
+	clock.set_debug_hour_offset(offset + 12 - int(Time.get_datetime_dict_from_system()["hour"]))
+	for shot: Array in (FALCON if "falcon" in OS.get_cmdline_user_args() else SHOTS):
 		if shot[2] is Vector2i:
 			await manager.change_map_at(StringName(shot[1]), shot[2], Vector2i.UP, false)
 		else:
@@ -41,6 +50,7 @@ func _run() -> void:
 		var image := root.get_texture().get_image()
 		image.save_png("%s/%s.png" % [OUT, shot[0]])
 		print("captura: %s %s" % [shot[0], image.get_size()])
+	clock.set_debug_hour_offset(offset)
 	await menu.session.finish()
 	manager._leave_game()
 	main.queue_free()

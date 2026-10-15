@@ -1,6 +1,6 @@
 # Calle de la Victoria · 2026-10-15 (Agente 4)
 
-Capturas reales a 512×384 (`godot --path . -s res://tools/mundo/capturar_calle_victoria.gd`). Mapa `calle_victoria/tunel`, pintado por `maps/_pintura/pintar_calle_victoria.gd`. PROVISIONAL hasta que lo apruebe Javier.
+Capturas reales a 512×384, de día (`godot --path . -s res://tools/mundo/capturar_calle_victoria.gd`). Mapa `calle_victoria/tunel`, pintado por `maps/_pintura/pintar_calle_victoria.gd`. PROVISIONAL hasta que lo apruebe Javier.
 
 | Boca de Sol (`madrid/centro`) | Andén abandonado (llegada desde Sol) |
 |---|---|

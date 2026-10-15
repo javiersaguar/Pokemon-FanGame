@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **930 mapas** en total. Se llega a **930** desde Pozuelo de Alarcón (`pozuelo/exterior`: 930) y Orcasitas (`orcasitas/exterior`: 930).
+- **937 mapas** en total. Se llega a **937** desde Pozuelo de Alarcón (`pozuelo/exterior`: 937) y Orcasitas (`orcasitas/exterior`: 937).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -403,88 +403,95 @@ Ninguna: todos los destinos existen.
 | `madrid/palacio_real` | Madrid · Palacio Real | east → `madrid/centro` | Sala23_30 → `madrid/sala_palacio_real_23_30`, Sala23_54 → `madrid/sala_palacio_real_23_54`, Sala59_25 → `madrid/sala_palacio_real_59_25`, Sala46_11 → `madrid/sala_palacio_real_46_11`, Sala54_11 → `madrid/sala_palacio_real_54_11`, BocaVictoria → `calle_victoria/tunel` |
 | `madrid/quiron` | Hospital Quirón · Madrid | — | Salida → `madrid/moncloa` |
 | `madrid/retiro` | Madrid · Retiro y Prado | west → `madrid/centro`, west → `madrid/centro`, east → `ruta_5/exterior`, south → `madrid_rio/exterior` | CercaniasLeganes → `leganes/exterior`, CercaniasMostoles → `mostoles/exterior`, Mercadona → `madrid/atocha/mercadona`, Sala28_13 → `madrid/sala_retiro_28_13`, Sala55_47 → `madrid/sala_retiro_55_47`, Sala4_29 → `madrid/sala_retiro_4_29`, Sala23_44 → `madrid/sala_retiro_23_44`, Sala20_58 → `madrid/sala_retiro_20_58`, Sala3_13 → `madrid/sala_retiro_3_13`, Sala39_13 → `madrid/sala_retiro_39_13`, Sala23_31 → `madrid/sala_retiro_23_31`, Sala36_37 → `madrid/sala_retiro_36_37`, Sala3_47 → `madrid/sala_retiro_3_47` |
-| `madrid/sala_bernabeu_12_8` | Oficinas · Madrid | — | Salida → `madrid/bernabeu` |
-| `madrid/sala_bernabeu_34_26` | Tienda azul · Madrid | — | Salida → `madrid/bernabeu` |
-| `madrid/sala_bernabeu_34_9` | Edificio Cristal · Madrid | — | Salida → `madrid/bernabeu` |
-| `madrid/sala_bernabeu_4_26` | Portal · Madrid | — | Salida → `madrid/bernabeu` |
-| `madrid/sala_bernabeu_4_9` | Oficinas · Madrid | — | Salida → `madrid/bernabeu` |
-| `madrid/sala_centro_11_19` | Oficinas · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_14_27` | Tienda morada · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_14_5` | Tienda azul · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_18_4` | Puesto · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_20_42` | Panadería · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_22_27` | Grandes almacenes · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_25_13` | Edificio Carrion · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_31_13` | Teatro · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_33_6` | Tienda azul · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_35_50` | Portal · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_3_39` | Oficinas · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_40_16` | Oficinas · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_41_7` | Portal verde · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_46_17` | Teatro · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_49_10` | Tienda morada · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_49_26` | Portal verde · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_4_19` | Portal · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_4_48` | Mercado San Miguel · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_53_17` | Portal · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_53_42` | Portal · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_53_52` | Teatro · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_53_8` | Oficinas · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_54_31` | Portal verde · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_5_27` | Portal verde · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_5_5` | Portal verde · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_60_41` | Oficinas · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_62_21` | Edificio Metropolis · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_62_52` | Floristería · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_63_31` | Tienda morada · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_67_31` | Teatro · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_68_13` | Portal · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_68_21` | Oficinas · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_centro_68_41` | Portal verde · Madrid | — | Salida → `madrid/centro` |
-| `madrid/sala_chamberi_10_7` | Oficinas · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_16_28` | Puesto · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_17_19` | Portal verde · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_18_6` | Portal verde · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_24_40` | Metro · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_29_22` | Portal · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_29_6` | Edificio Cupula · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_31_32` | Ático · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_38_42` | Portal · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_39_20` | Oficinas · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_39_33` | Portal · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_39_7` | Portal · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_3_18` | Portal · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_3_35` | Oficinas · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_3_7` | Portal · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_44_12` | Oficinas · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_46_33` | Tienda azul · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_chamberi_4_41` | Portal verde · Madrid | — | Salida → `madrid/chamberi` |
-| `madrid/sala_moncloa_23_37` | Oficinas · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_23_49` | Portal · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_29_32` | Casa gris · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_32_49` | Portal verde · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_34_38` | Puesto · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_38_49` | Teatro · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_39_39` | Oficinas · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_47_17` | Portal · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_56_17` | Grandes almacenes · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_59_39` | Portal verde · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_moncloa_7_41` | Templo Debod · Madrid | — | Salida → `madrid/moncloa` |
-| `madrid/sala_palacio_real_23_30` | Palacio Real · Madrid | — | Salida → `madrid/palacio_real` |
-| `madrid/sala_palacio_real_23_54` | Catedral Almudena · Madrid | — | Salida → `madrid/palacio_real` |
-| `madrid/sala_palacio_real_46_11` | Portal · Madrid | — | Salida → `madrid/palacio_real` |
-| `madrid/sala_palacio_real_54_11` | Oficinas · Madrid | — | Salida → `madrid/palacio_real` |
-| `madrid/sala_palacio_real_59_25` | Teatro Real · Madrid | — | Salida → `madrid/palacio_real` |
+| `madrid/sala_bernabeu_12_8` | Oficinas del club blanco, Madrid | — | Salida → `madrid/bernabeu` |
+| `madrid/sala_bernabeu_34_26` | Tienda oficial del Real Madrid, Madrid | — | Salida → `madrid/bernabeu` |
+| `madrid/sala_bernabeu_34_9` | Torre de oficinas de la Castellana, Madrid | — | Salida → `madrid/bernabeu` |
+| `madrid/sala_bernabeu_4_26` | Piso del vecino del estadio, Madrid | — | Salida → `madrid/bernabeu` |
+| `madrid/sala_bernabeu_4_9` | Peña madridista La Décima, Madrid | — | Salida → `madrid/bernabeu` |
+| `madrid/sala_centro_11_19` | Agencia de viajes Vuela Barato, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_14_27` | Bar de bocadillos de calamares, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_14_5` | Souvenirs Olé Madrid, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_18_4` | Quiosco de prensa de Callao, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_20_42` | Casa de la Panadería, oficina de turismo, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_22_27` | El Corte Inglés de Preciados, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_25_13` | Cine Capitol, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_31_13` | Teatro de La Revuelta, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_33_6` | Tienda de móviles de Preciados, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_35_50` | Piso del tertuliano, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_3_39` | Oficina de empleo de Sol, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_40_16` | Centralita del edificio Telefónica, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_41_7` | Portal de la calle Montera, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_46_17` | Teatro del musical, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_49_10` | Doña Manolita, administración de lotería, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_49_26` | Hostal Puerta del Sol, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_4_19` | Piso de la abuela de Malasaña, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_4_48` | Mercado de San Miguel, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_53_17` | Portal de la calle del Carmen, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_53_42` | Portal de la calle de las Huertas, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_53_52` | Sala de microteatro, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_53_8` | Academia de oposiciones El Aprobado, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_54_31` | Piso de estudiantes Erasmus, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_5_27` | Piso de los influencers, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_5_5` | Piso compartido de la Gran Vía, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_60_41` | Sucursal bancaria de la calle Mayor, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_62_21` | Edificio Metrópolis, aseguradora, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_62_52` | Floristería de la calle Atocha, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_63_31` | Abanicos y mantones Casa Lola, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_67_31` | Teatro Español, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_68_13` | Piso turístico de la Gran Vía, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_68_21` | Gestoría Hacienda Somos Todos, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_centro_68_41` | Piso del jubilado de Lavapiés, Madrid | — | Salida → `madrid/centro` |
+| `madrid/sala_chamberi_10_7` | Inmobiliaria Zulo Premium, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_16_28` | Puesto de fruta del mercado de Chamberí, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_17_19` | Piso del pijo de Chamberí, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_18_6` | Piso de la pareja que no se habla, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_24_40` | Andén 0, la estación fantasma de Chamberí, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_29_22` | Portal de la finca de Olavide, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_29_6` | Clínica dental de la glorieta de Bilbao, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_31_32` | Portal de la finca señorial del ático, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_38_42` | Piso de la familia numerosa, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_39_20` | Notaría de Chamberí, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_39_33` | Piso del concejal jubilado, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_39_7` | Piso del youtuber que volvió de Andorra, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_3_18` | Piso de la señora de los gatos, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_3_35` | Asesoría fiscal para creadores de contenido, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_3_7` | Portal de la calle Fuencarral, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_44_12` | Coworking de startups, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_46_33` | Librería de viejo de Chamberí, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_chamberi_4_41` | Piso de la opositora a jueza, Madrid | — | Salida → `madrid/chamberi` |
+| `madrid/sala_moncloa_23_37` | Calle de Ferraz, 70: recepción, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_23_49` | Piso del funcionario de Moncloa, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_29_32` | Casa del jardinero del Parque del Oeste, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_32_49` | Portal de la calle Princesa, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_34_38` | Churros y porras de Argüelles, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_38_49` | Cines Princesa, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_39_39` | Copistería Apuntes Moncloa, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_47_17` | Colegio mayor San Pancracio, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_56_17` | Grandes almacenes de Princesa, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_59_39` | Piso de los residentes de Medicina, Madrid | — | Salida → `madrid/moncloa` |
+| `madrid/sala_moncloa_7_41` | Templo de Debod, pronaos, Madrid | — | Salida → `madrid/moncloa`, Naos → `madrid/sala_moncloa_7_41_naos` |
+| `madrid/sala_moncloa_7_41_naos` | Templo de Debod, naos, Madrid | — | Salida → `madrid/sala_moncloa_7_41` |
+| `madrid/sala_palacio_real_23_30` | Palacio Real, escalera de honor, Madrid | — | Salida → `madrid/palacio_real` |
+| `madrid/sala_palacio_real_23_54` | Catedral de la Almudena, Madrid | — | Salida → `madrid/palacio_real`, Cripta → `madrid/sala_palacio_real_23_54_cripta` |
+| `madrid/sala_palacio_real_23_54_cripta` | Cripta de la Almudena, Madrid | — | Salida → `madrid/sala_palacio_real_23_54` |
+| `madrid/sala_palacio_real_46_11` | Portal de la calle de Bailén, Madrid | — | Salida → `madrid/palacio_real` |
+| `madrid/sala_palacio_real_54_11` | Senado, Madrid | — | Salida → `madrid/palacio_real` |
+| `madrid/sala_palacio_real_59_25` | Teatro Real, foyer, Madrid | — | Salida → `madrid/palacio_real`, Butacas → `madrid/sala_palacio_real_59_25_butacas` |
+| `madrid/sala_palacio_real_59_25_butacas` | Teatro Real, patio de butacas, Madrid | — | Salida → `madrid/sala_palacio_real_59_25` |
 | `madrid/sala_retiro_20_58` | Estación de Atocha | — | Anden1 → `transporte/ave_madrid_valladolid`, Anden2 → `transporte/ave_madrid_malaga`, Anden3 → `transporte/ave_madrid_san_miguel`, Salida → `madrid/retiro` |
-| `madrid/sala_retiro_23_31` | Oficinas · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_23_44` | Museo Prado · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_28_13` | Palacio Cibeles · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_36_37` | Portal verde · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_39_13` | Portal verde · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_3_13` | Oficinas · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_3_47` | Portal · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_4_29` | Congreso · Madrid | — | Salida → `madrid/retiro` |
-| `madrid/sala_retiro_55_47` | Palacio Cristal · Madrid | — | Salida → `madrid/retiro` |
+| `madrid/sala_retiro_23_31` | Ministerio de Asuntos Varios, Madrid | — | Salida → `madrid/retiro` |
+| `madrid/sala_retiro_23_44` | Museo del Prado, vestíbulo, Madrid | — | Salida → `madrid/retiro`, Goya → `madrid/sala_retiro_23_44_goya`, Velazquez → `madrid/sala_retiro_23_44_velazquez` |
+| `madrid/sala_retiro_23_44_goya` | Museo del Prado, sala de Goya, Madrid | — | Salida → `madrid/sala_retiro_23_44` |
+| `madrid/sala_retiro_23_44_velazquez` | Museo del Prado, sala de Velázquez, Madrid | — | Salida → `madrid/sala_retiro_23_44` |
+| `madrid/sala_retiro_28_13` | Palacio de Cibeles, patio de operaciones, Madrid | — | Salida → `madrid/retiro`, Mirador → `madrid/sala_retiro_28_13_mirador` |
+| `madrid/sala_retiro_28_13_mirador` | Mirador de Cibeles, Madrid | — | Salida → `madrid/sala_retiro_28_13` |
+| `madrid/sala_retiro_36_37` | Piso del vigilante del Retiro, Madrid | — | Salida → `madrid/retiro` |
+| `madrid/sala_retiro_39_13` | Hotel de lujo del Paseo del Prado, Madrid | — | Salida → `madrid/retiro` |
+| `madrid/sala_retiro_3_13` | Banco de España, vestíbulo, Madrid | — | Salida → `madrid/retiro` |
+| `madrid/sala_retiro_3_47` | Piso del músico callejero, Madrid | — | Salida → `madrid/retiro` |
+| `madrid/sala_retiro_4_29` | Congreso de los Diputados, antesala, Madrid | — | Salida → `madrid/retiro`, Hemiciclo → `madrid/sala_retiro_4_29_hemiciclo` |
+| `madrid/sala_retiro_4_29_hemiciclo` | Congreso de los Diputados, hemiciclo, Madrid | — | Salida → `madrid/sala_retiro_4_29` |
+| `madrid/sala_retiro_55_47` | Palacio de Cristal, Madrid | — | Salida → `madrid/retiro` |
 | `madrid/sol/hospital` | Hospital · Sol | — | Salida → `madrid/centro` |
 | `madrid_rio/exterior` | Madrid Río | south → `orcasitas/exterior`, north → `madrid/retiro` | — |
 | `malaga/casa_1` | Casa de dos aguas · Málaga | — | Salida → `malaga/exterior` |
