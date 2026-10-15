@@ -8,6 +8,10 @@
 <rect x="24" y="504" width="144" height="96" fill="#bfe3f2" stroke="#555" stroke-width="1.5"/>
 <ellipse cx="84.0" cy="576.0" rx="26.4" ry="24.0" fill="#e9e2b8" stroke="#4d6b3c" stroke-width="1.5"/>
 <text x="28" y="516" font-size="11" fill="#333">Islas Canarias</text>
+<rect x="504" y="0" width="264" height="144" fill="#f3edcf" stroke="#555" stroke-width="1.5"/>
+<text x="508" y="12" font-size="11" fill="#333">Madrid y alrededores</text>
+<rect x="334.0" y="262.0" width="28" height="28" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="3 2"/>
+<line x1="362.0" y1="262.0" x2="504" y2="144" stroke="#555" stroke-width="1" stroke-dasharray="3 2"/>
 <line x1="0" y1="0" x2="0" y2="624" stroke="#ffffff" stroke-opacity="0.35"/>
 <line x1="24" y1="0" x2="24" y2="624" stroke="#ffffff" stroke-opacity="0.35"/>
 <line x1="48" y1="0" x2="48" y2="624" stroke="#ffffff" stroke-opacity="0.35"/>
@@ -68,6 +72,8 @@
 <line x1="0" y1="576" x2="768" y2="576" stroke="#ffffff" stroke-opacity="0.35"/>
 <line x1="0" y1="600" x2="768" y2="600" stroke="#ffffff" stroke-opacity="0.35"/>
 <line x1="0" y1="624" x2="768" y2="624" stroke="#ffffff" stroke-opacity="0.35"/>
+<polyline points="540.0,55.2 588.0,50.4" fill="none" stroke="#9b6b3f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="636.0,132.0 674.4,84.0" fill="none" stroke="#9b6b3f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="324.0,204.0 348.0,204.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="348.0,204.0 348.0,228.0 324.0,228.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="324.0,228.0 324.0,252.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -77,6 +83,7 @@
 <polyline points="396.0,252.0 420.0,228.0 444.0,204.0 468.0,204.0 492.0,180.0 516.0,180.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="516.0,180.0 540.0,180.0 564.0,180.0 588.0,180.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="588.0,180.0 612.0,180.0 636.0,180.0 660.0,180.0 660.0,204.0 684.0,204.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="684.0,204.0 708.0,180.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="684.0,204.0 684.0,252.0 708.0,300.0 708.0,324.0" fill="none" stroke="#2f6fb5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
 <polyline points="708.0,324.0 684.0,348.0 660.0,372.0 636.0,372.0" fill="none" stroke="#21a0b5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 4"/>
 <polyline points="636.0,372.0 588.0,372.0 564.0,348.0 540.0,348.0" fill="none" stroke="#2f6fb5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
@@ -88,7 +95,7 @@
 <polyline points="204.0,492.0 180.0,492.0 156.0,492.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="156.0,492.0 132.0,516.0 108.0,540.0 84.0,564.0" fill="none" stroke="#2f6fb5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 4"/>
 <polyline points="84.0,564.0 84.0,588.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="84.0,564.0 60.0,132.0" fill="none" stroke="#7a4fb0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 6"/>
+<polyline points="84.0,588.0 60.0,132.0" fill="none" stroke="#7a4fb0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 6"/>
 <polyline points="60.0,132.0 60.0,108.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="60.0,108.0 84.0,84.0 108.0,84.0 132.0,84.0 156.0,60.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="156.0,60.0 180.0,60.0 204.0,60.0 228.0,60.0 252.0,60.0 276.0,60.0 300.0,60.0 324.0,60.0 348.0,60.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -97,56 +104,86 @@
 <polyline points="468.0,108.0 444.0,132.0 420.0,132.0 396.0,132.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="396.0,132.0 372.0,132.0 348.0,132.0 324.0,156.0 300.0,156.0 276.0,180.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="276.0,180.0 300.0,180.0 300.0,204.0 324.0,204.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="348.0,276.0 300.0,228.0 276.0,180.0" fill="none" stroke="#c0392b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 3 2 3"/>
+<polyline points="348.0,276.0 372.0,396.0 300.0,540.0" fill="none" stroke="#c0392b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 3 2 3"/>
 <polyline points="348.0,300.0 348.0,324.0 348.0,348.0 324.0,372.0 324.0,396.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="324.0,396.0 348.0,420.0 348.0,444.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="348.0,444.0 324.0,492.0 300.0,516.0 300.0,540.0" fill="none" stroke="#9b6b3f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="532.0" y="47.2" width="16" height="16" rx="3" fill="#1f6fb5" stroke="#222" stroke-width="1.5"/>
+<text x="540.0" y="59.2" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">★</text>
+<text x="421.2" y="75.2" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Pozuelo de Alarcón</text>
+<rect x="628.0" y="124.0" width="16" height="16" rx="3" fill="#1f6fb5" stroke="#222" stroke-width="1.5"/>
+<text x="636.0" y="136.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">★</text>
+<text x="608.5" y="120.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Orcasitas</text>
 <rect x="316.0" y="196.0" width="16" height="16" rx="3" fill="#2e8b57" stroke="#222" stroke-width="1.5"/>
-<text x="334.0" y="222.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">San Miguel de Bernuy</text>
+<text x="263.0" y="224.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">San Miguel de Bernuy</text>
 <rect x="340.0" y="268.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="348.0" y="280.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">1</text>
 <text x="362.0" y="270.0" font-size="12" text-anchor="middle">👑</text>
-<text x="358.0" y="294.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Madrid</text>
+<text x="329.7" y="264.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Madrid</text>
 <rect x="340.0" y="292.0" width="16" height="16" rx="3" fill="#2e8b57" stroke="#222" stroke-width="1.5"/>
-<text x="358.0" y="318.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Getafe, Leganés y Móstoles</text>
+<text x="268.7" y="320.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Getafe, Leganés y Móstoles</text>
 <rect x="508.0" y="172.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="526.0" y="198.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Zaragoza</text>
+<text x="491.6" y="200.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Zaragoza</text>
 <rect x="676.0" y="196.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="684.0" y="208.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
-<text x="694.0" y="222.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Barcelona</text>
+<text x="656.5" y="224.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Barcelona</text>
 <rect x="700.0" y="316.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="718.0" y="342.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Palma de Mallorca</text>
+<text x="656.1" y="344.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Palma de Mallorca</text>
 <rect x="628.0" y="364.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="646.0" y="390.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Ibiza</text>
+<text x="620.8" y="392.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Ibiza</text>
 <rect x="532.0" y="340.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="540.0" y="352.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
-<text x="550.0" y="366.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Valencia</text>
+<text x="515.6" y="368.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Valencia</text>
 <rect x="532.0" y="412.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="550.0" y="438.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Alicante</text>
+<text x="515.6" y="440.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Alicante</text>
 <rect x="484.0" y="436.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="502.0" y="462.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Murcia</text>
+<text x="473.7" y="464.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Murcia</text>
 <rect x="196.0" y="484.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="204.0" y="496.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
-<text x="214.0" y="510.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Sevilla</text>
+<text x="182.7" y="512.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Sevilla</text>
+<rect x="148.0" y="484.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
+<text x="137.7" y="512.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Huelva</text>
 <rect x="76.0" y="556.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="84.0" y="568.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
-<text x="94.0" y="582.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Las Palmas de Gran Canaria</text>
+<text x="4.7" y="552.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Las Palmas de Gran Canaria</text>
+<rect x="76.0" y="580.0" width="16" height="16" rx="3" fill="#2e8b57" stroke="#222" stroke-width="1.5"/>
+<text x="35.2" y="608.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Playa del Inglés</text>
 <rect x="52.0" y="124.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="70.0" y="150.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Vigo</text>
+<text x="47.8" y="152.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Vigo</text>
 <rect x="340.0" y="52.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="358.0" y="78.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Santander</text>
+<text x="320.6" y="80.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Santander</text>
 <rect x="388.0" y="52.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="396.0" y="64.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">6</text>
-<text x="406.0" y="78.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Bilbao</text>
+<text x="377.7" y="80.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Bilbao</text>
 <rect x="460.0" y="100.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="478.0" y="126.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Pamplona</text>
+<text x="443.6" y="128.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Pamplona</text>
 <rect x="268.0" y="172.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="276.0" y="184.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">7</text>
-<text x="286.0" y="198.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Valladolid</text>
+<text x="245.5" y="200.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Valladolid</text>
 <rect x="316.0" y="388.0" width="16" height="16" rx="3" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
-<text x="334.0" y="414.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Puertollano</text>
+<text x="290.4" y="416.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Puertollano</text>
 <rect x="292.0" y="532.0" width="16" height="16" rx="3" fill="#d63031" stroke="#222" stroke-width="1.5"/>
 <text x="300.0" y="544.0" font-size="11" font-weight="bold" text-anchor="middle" fill="#fff">8</text>
-<text x="310.0" y="558.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Málaga</text>
+<text x="281.7" y="560.0" font-size="11" font-weight="bold" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Málaga</text>
+<circle cx="588.0" cy="50.4" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="568.6" y="67.4" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Moncloa</text>
+<circle cx="636.0" cy="45.6" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="613.8" y="62.6" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Chamberí</text>
+<circle cx="684.0" cy="40.8" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="691.0" y="44.8" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Bernabéu</text>
+<circle cx="600.0" cy="84.0" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="566.7" y="101.0" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Palacio Real</text>
+<circle cx="636.0" cy="84.0" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="643.0" y="101.0" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Sol y Gran Vía</text>
+<circle cx="674.4" cy="84.0" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="681.4" y="88.0" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Retiro y Atocha</text>
+<circle cx="540.0" cy="112.8" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="547.0" y="116.8" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Móstoles</text>
+<circle cx="571.2" cy="132.0" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="525.4" y="136.0" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Leganés</text>
+<circle cx="602.4" cy="136.8" r="5" fill="#f0b030" stroke="#222" stroke-width="1.2"/>
+<text x="585.8" y="153.8" font-size="10" fill="#111" stroke="#fff" stroke-width="3" paint-order="stroke">Getafe</text>
 <rect x="504" y="504" width="252" height="110" fill="#ffffff" fill-opacity="0.85" stroke="#555"/>
 <line x1="512" y1="520" x2="552" y2="520" stroke="#9b6b3f" stroke-width="4"/>
 <text x="558" y="524" font-size="11">Ruta</text>
@@ -157,12 +194,15 @@
 <line x1="512" y1="574" x2="552" y2="574" stroke="#7a4fb0" stroke-width="4" stroke-dasharray="10 6"/>
 <text x="558" y="578" font-size="11">Avión</text>
 <line x1="512" y1="592" x2="552" y2="592" stroke="#c0392b" stroke-width="4" stroke-dasharray="8 3 2 3"/>
-<text x="558" y="596" font-size="11">Tren</text>
-<rect x="634" y="514" width="12" height="12" fill="#d63031" stroke="#222"/>
-<text x="652" y="524" font-size="11">Gimnasio (orden)</text>
-<rect x="634" y="532" width="12" height="12" fill="#e67e22" stroke="#222"/>
-<text x="652" y="542" font-size="11">Ciudad</text>
-<rect x="634" y="550" width="12" height="12" fill="#2e8b57" stroke="#222"/>
-<text x="652" y="560" font-size="11">Pueblo</text>
-<text x="634" y="578" font-size="11">👑 Liga (Palacio Real)</text>
+<text x="558" y="596" font-size="11">Tren (AVE, C-5)</text>
+<rect x="644" y="514" width="12" height="12" fill="#d63031" stroke="#222"/>
+<text x="662" y="524" font-size="11">Gimnasio (orden)</text>
+<rect x="644" y="532" width="12" height="12" fill="#e67e22" stroke="#222"/>
+<text x="662" y="542" font-size="11">Ciudad</text>
+<rect x="644" y="550" width="12" height="12" fill="#2e8b57" stroke="#222"/>
+<text x="662" y="560" font-size="11">Pueblo</text>
+<rect x="644" y="568" width="12" height="12" fill="#1f6fb5" stroke="#222"/>
+<text x="662" y="578" font-size="11">★ Pueblo inicial</text>
+<circle cx="650" cy="592" r="5" fill="#f0b030" stroke="#222"/>
+<text x="662" y="596" font-size="11">Barrio · 👑 Liga</text>
 </svg>

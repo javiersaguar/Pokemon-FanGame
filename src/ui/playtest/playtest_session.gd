@@ -132,16 +132,44 @@ static func _fresh_foe(p: Pokemon) -> Pokemon:
 	copy.heal_full()
 	return copy
 
+## Catálogo del F9: {id, label, note, outdoor, exit, parent, category}. `parent` es el exterior al que se
+## sale (siguiendo la puerta de salida de salas, gimnasios y viajes) y `category`, el filtro del mapa:
+## exterior, interior, gimnasio, transporte o pruebas.
 static func maps() -> Array[Dictionary]:
 	var entries: Array[Dictionary] = []
+	var by_id := {}
 	for id: StringName in SceneManager.list_maps():
 		var result := MapLoader.prepare(id)
 		if result.error != OK: continue
 		var map: MapRoot = result.map
-		entries.append({"id":String(id), "label":map.get_display_name(),"note":String(id),"outdoor":map.data != null and map.data.outdoor})
+		var exit := ""
+		for warp: Warp in map.get_warps():
+			if exit == "" or String(warp.name) in ["Salida","Desembarcar","Bajar"]:
+				exit = String(warp.target_map)
+			if String(warp.name) in ["Salida","Desembarcar","Bajar"]: break
+		var entry := {"id":String(id), "label":map.get_display_name(),"note":String(id),
+			"outdoor":map.data != null and map.data.outdoor, "exit":exit}
+		entry.category = category(entry)
+		entries.append(entry)
+		by_id[entry.id] = entry
 		map.free()
+	for entry: Dictionary in entries:
+		var parent: String = entry.id
+		for step: int in 8:
+			var current: Dictionary = by_id.get(parent, {})
+			if current.is_empty() or (current.outdoor and not parent.begins_with("transporte/")): break
+			parent = str(current.get("exit", ""))
+		entry.parent = parent if by_id.has(parent) else entry.id
 	entries.sort_custom(func(a: Dictionary,b: Dictionary) -> bool: return str(a.label)+str(a.id) < str(b.label)+str(b.id))
 	return entries
+
+static func category(entry: Dictionary) -> String:
+	var id := str(entry.get("id",""))
+	var label := str(entry.get("label",""))
+	if id.begins_with("test/") or id.begins_with("muestras/"): return "pruebas"
+	if id.contains("/gimnasio_") or id in ["madrid/atico_ayuso","madrid/quiron"]: return "gimnasio"
+	if id.begins_with("transporte/") or id.ends_with("/aeropuerto") or label.begins_with("Estación"): return "transporte"
+	return "exterior" if bool(entry.get("outdoor",false)) else "interior"
 
 static func spawns(map_id: StringName) -> Array[StringName]:
 	var result := MapLoader.prepare(map_id)

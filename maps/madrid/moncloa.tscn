@@ -20,18 +20,6 @@
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="17_1g1te"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="17_iv8rr"]
 
-[sub_resource type="Resource" id="Resource_h2liq"]
-script = ExtResource("2_10682")
-edge = "west"
-target_map = &"ruta_4/exterior"
-offset = 16
-
-[sub_resource type="Resource" id="Resource_oyi6i"]
-script = ExtResource("2_10682")
-target_map = &"madrid/centro"
-offset = -38
-span = Vector2i(40, 52)
-
 [sub_resource type="Resource" id="Resource_trol3"]
 script = ExtResource("2_10682")
 target_map = &"madrid/chamberi"
@@ -45,10 +33,23 @@ target_map = &"casa_de_campo/exterior"
 offset = 26
 span = Vector2i(4, 10)
 
+[sub_resource type="Resource" id="Resource_twxih"]
+script = ExtResource("2_10682")
+target_map = &"madrid/centro"
+offset = -38
+span = Vector2i(38, 52)
+
+[sub_resource type="Resource" id="Resource_ppkc7"]
+script = ExtResource("2_10682")
+edge = "west"
+target_map = &"ruta_4/exterior"
+offset = 16
+span = Vector2i(14, 18)
+
 [sub_resource type="Resource" id="Resource_ohak7"]
 script = ExtResource("3_twxih")
 id = &"madrid/moncloa"
-connections = Array[ExtResource("2_10682")]([SubResource("Resource_h2liq"), SubResource("Resource_oyi6i"), SubResource("Resource_trol3"), SubResource("Resource_4yfms")])
+connections = Array[ExtResource("2_10682")]([SubResource("Resource_trol3"), SubResource("Resource_4yfms"), SubResource("Resource_twxih"), SubResource("Resource_ppkc7")])
 display_name = "Madrid · Moncloa"
 encounter_table = &"madrid"
 zone_id = &"madrid"

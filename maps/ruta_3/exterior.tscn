@@ -20,15 +20,16 @@ script = ExtResource("2_qfj87")
 edge = "north"
 target_map = &"ruta_2/exterior"
 
-[sub_resource type="Resource" id="Resource_vyc4l"]
+[sub_resource type="Resource" id="Resource_qfj87"]
 script = ExtResource("2_qfj87")
 edge = "south"
 target_map = &"ruta_4/exterior"
+span = Vector2i(12, 28)
 
 [sub_resource type="Resource" id="Resource_x33kd"]
 script = ExtResource("3_03uis")
 id = &"ruta_3/exterior"
-connections = Array[ExtResource("2_qfj87")]([SubResource("Resource_1lsu2"), SubResource("Resource_vyc4l")])
+connections = Array[ExtResource("2_qfj87")]([SubResource("Resource_1lsu2"), SubResource("Resource_qfj87")])
 display_name = "Ruta 3 · Puerto de Navacerrada"
 encounter_table = &"ruta_3"
 zone_id = &"ruta_3"

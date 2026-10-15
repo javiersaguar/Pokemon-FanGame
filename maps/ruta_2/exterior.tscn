@@ -17,20 +17,22 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="15_h3bhj"]
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="16_qgi7u"]
 
-[sub_resource type="Resource" id="Resource_wnlh4"]
+[sub_resource type="Resource" id="Resource_qgi7u"]
 script = ExtResource("2_qgi7u")
 edge = "north"
 target_map = &"ruta_1/exterior"
+span = Vector2i(12, 24)
 
-[sub_resource type="Resource" id="Resource_h1wvr"]
+[sub_resource type="Resource" id="Resource_ysjgr"]
 script = ExtResource("2_qgi7u")
 edge = "south"
 target_map = &"ruta_3/exterior"
+span = Vector2i(12, 34)
 
 [sub_resource type="Resource" id="Resource_1l5n2"]
 script = ExtResource("3_ysjgr")
 id = &"ruta_2/exterior"
-connections = Array[ExtResource("2_qgi7u")]([SubResource("Resource_wnlh4"), SubResource("Resource_h1wvr")])
+connections = Array[ExtResource("2_qgi7u")]([SubResource("Resource_qgi7u"), SubResource("Resource_ysjgr")])
 display_name = "Ruta 2 · Tierra de Pinares y Acueducto"
 encounter_table = &"ruta_2"
 zone_id = &"ruta_2"

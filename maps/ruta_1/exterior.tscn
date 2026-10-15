@@ -15,20 +15,22 @@
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_fisherman.png" id="13_flvw8"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/jubiladoobras.png" id="14_u32p8"]
 
-[sub_resource type="Resource" id="Resource_7u2g3"]
+[sub_resource type="Resource" id="Resource_pxcqd"]
 script = ExtResource("2_mu4ju")
 edge = "north"
 target_map = &"pueblo_inicial/exterior"
+span = Vector2i(10, 31)
 
-[sub_resource type="Resource" id="Resource_ctbmq"]
+[sub_resource type="Resource" id="Resource_mu4ju"]
 script = ExtResource("2_mu4ju")
 edge = "south"
 target_map = &"ruta_2/exterior"
+span = Vector2i(12, 24)
 
 [sub_resource type="Resource" id="Resource_ek3rc"]
 script = ExtResource("3_owug7")
 id = &"ruta_1/exterior"
-connections = Array[ExtResource("2_mu4ju")]([SubResource("Resource_7u2g3"), SubResource("Resource_ctbmq")])
+connections = Array[ExtResource("2_mu4ju")]([SubResource("Resource_pxcqd"), SubResource("Resource_mu4ju")])
 display_name = "Ruta 1 · Hoces del Duratón"
 encounter_table = &"ruta_1"
 zone_id = &"ruta_1"

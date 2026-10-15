@@ -20,15 +20,16 @@ script = ExtResource("2_sf8kx")
 edge = "north"
 target_map = &"ruta_3/exterior"
 
-[sub_resource type="Resource" id="Resource_8m0lf"]
+[sub_resource type="Resource" id="Resource_sf8kx"]
 script = ExtResource("2_sf8kx")
 target_map = &"madrid/moncloa"
 offset = -16
+span = Vector2i(30, 34)
 
 [sub_resource type="Resource" id="Resource_fiueg"]
 script = ExtResource("3_f1rmo")
 id = &"ruta_4/exterior"
-connections = Array[ExtResource("2_sf8kx")]([SubResource("Resource_14t0c"), SubResource("Resource_8m0lf")])
+connections = Array[ExtResource("2_sf8kx")]([SubResource("Resource_14t0c"), SubResource("Resource_sf8kx")])
 display_name = "Ruta 4 · El Escorial y Galapagar"
 encounter_table = &"ruta_4"
 zone_id = &"ruta_4"

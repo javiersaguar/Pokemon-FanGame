@@ -23,15 +23,16 @@ target_map = &"ruta_23/exterior"
 offset = -13
 span = Vector2i(31, 35)
 
-[sub_resource type="Resource" id="Resource_koxxx"]
+[sub_resource type="Resource" id="Resource_dp0r7"]
 script = ExtResource("2_66gui")
 edge = "south"
 target_map = &"ruta_1/exterior"
+span = Vector2i(10, 31)
 
 [sub_resource type="Resource" id="Resource_wy6ld"]
 script = ExtResource("3_dp0r7")
 id = &"pueblo_inicial/exterior"
-connections = Array[ExtResource("2_66gui")]([SubResource("Resource_ryrpw"), SubResource("Resource_koxxx")])
+connections = Array[ExtResource("2_66gui")]([SubResource("Resource_ryrpw"), SubResource("Resource_dp0r7")])
 display_name = "San Miguel de Bernuy"
 zone_id = &"pueblo_inicial"
 region_map_position = Vector2i(13, 8)

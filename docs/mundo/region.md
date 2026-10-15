@@ -2,17 +2,23 @@
 
 > Ciudades, gimnasios y su orden: **decisión de Javier**. Las rutas intermedias, los transportes, la curva de niveles y la trama del Clan PSOE son **propuestas** para que las apruebe o cambie.
 
-La región es **España entera**, con las ciudades en su sitio real. El jugador sale del pueblo de Javier (San Miguel de Bernuy, Segovia), baja a Madrid y recorre la península en el orden de los gimnasios. El orden de Javier obliga a volver a Madrid al final (Málaga es el 8.º gimnasio y la Liga está en Madrid), así que el recorrido es un **gran círculo** que pasa por el pueblo de vuelta y termina bajando por La Mancha.
+La región es **España entera**, con las ciudades en su sitio real. El jugador sale de **Pozuelo de Alarcón** (cayetano o cayetana) o de **Orcasitas** (cani o choni), llega a Madrid por su ruta inicial (Casa de Campo → Moncloa o Madrid Río → Atocha) y recorre la península en el orden de los gimnasios ([decisiones del 2026-10-13, §7](../DECISIONES_JAVIER_2026-10-13.md)). El orden de Javier obliga a volver a Madrid al final (Málaga es el 8.º gimnasio y la Liga está en Madrid), así que el recorrido es un **gran círculo** que pasa por San Miguel de Bernuy, el pueblo de Javier, a la vuelta (Ruta 23) y termina bajando por La Mancha.
 
 ![Esquema de la región](mapa_region.svg)
+
+**Acceso comprobado (2026-10-15):** los 908 mapas se alcanzan desde Pozuelo y desde Orcasitas, desde todos se puede volver y solo hay una unión de ida a propósito (la bajada de la terraza del ático de Ayuso). Detalle, cortes por medallas y camino a cada ciudad: [`conexiones.md`](conexiones.md) (`python3 tools/mundo/grafo_mundo.py`); test: `tests/mundo/test_acceso_mundo.gd`.
+
+**PENDIENTE JAVIER · Surf y el gimnasio 3:** con Surf en la 3.ª medalla (decisiones del 2026-10-13, §2), Valencia no se alcanza con dos medallas: el único camino de Barcelona a Valencia es el ferry a Palma, la Ruta marítima 1 con Surf hasta Ibiza y el ferry a Valencia; el otro camino pasa por las obras de la A-6 (7.ª medalla). Propuestas: dar Surf con la 2.ª medalla (y Golpe Roca con la 3.ª), poner un ferry Palma–Valencia o una barca de Palma a Ibiza hasta tener Surf. Mientras Javier decide, el juego no da Surf (su objeto clave sigue sin decidir).
+
+**Observación:** con la 1.ª medalla se abre el C-5 y se puede bajar por La Mancha hasta Málaga (gimnasio 8) sin más cortes. Si Javier quiere que el sur sea lo último, haría falta un corte en la Ruta 24 (PENDIENTE JAVIER).
 
 ## Recorrido de la aventura (propuesta)
 
 | Tramo | De → a | Por dónde (paisaje real) | Qué pasa |
 |-------|--------|---------------------------|----------|
-| 1 | **San Miguel de Bernuy** | — | Pueblo inicial. Casa del jugador, laboratorio, ribera del Duratón |
-| 2 | → Ruta 1 → Ruta 2 | Hoces del Duratón (buitres, ermita de San Frutos) y Tierra de Pinares, junto al **Acueducto de Segovia** | Primeras capturas y el rival |
-| 3 | → Ruta 3 → Ruta 4 → **Madrid** | Puerto de Navacerrada (Sierra de Guadarrama), Valle de Cuelgamuros (Franco), El Escorial, Galapagar (Pablo Iglesias e Irene Montero), entrada a Madrid por Moncloa | Primer encuentro con el **Clan PSOE** en la Moncloa |
+| 1 | **Pozuelo de Alarcón** u **Orcasitas** | — | Pueblo inicial según el personaje (decisiones del 2026-10-13, §2 y §7): casa del jugador y del rival |
+| 2 | → Casa de Campo → Moncloa, o → Madrid Río → Atocha | Rutas iniciales cortas (niveles 2–6); El Jincho en el Puente de Toledo | Laboratorio de Unicoos en Moncloa: el inicial aleatorio |
+| 3 | **Madrid** | — | Primer encuentro con el **Clan PSOE** en la Moncloa. La salida de Moncloa a la Ruta 4 está cortada por las obras de la A-6 hasta la 7.ª medalla |
 | 4 | Madrid (gimnasio 1, **Ayuso**) | — | Ferraz, la Gran Vía, el Bernabéu, el Retiro... |
 | 4b | Madrid ⇄ **Getafe, Leganés y Móstoles** | Cercanías C-5 (retrasos de Óscar Puente) | Zona opcional al principio; obligatoria al final para bajar al sur |
 | 5 | Madrid → Ruta 5 → Ruta 6 → **Zaragoza** | Corredor del Henares (Alcalá, Guadalajara) y la Ruta de Medinaceli y Calatayud | El Pilar y el Ebro |
@@ -34,6 +40,7 @@ La región es **España entera**, con las ciudades en su sitio real. El jugador 
 | 21 | Bilbao → Ruta 20 → **Pamplona** | Sierra de Aralar | San Fermín |
 | 22 | Pamplona → Ruta 21 → Ruta 22 → **Valladolid** (gimnasio 7, **Latasa**) | Viñedos de La Rioja y Burgos (Atapuerca) | Plaza Mayor |
 | 23 | Valladolid → Ruta 23 → **San Miguel de Bernuy** | Tierra de Pinares (Cuéllar) | **Vuelta a casa**: combate contra Javier |
+| 23b | San Miguel → Ruta 1 → Ruta 2 → Ruta 3 → Ruta 4 → Moncloa | Hoces del Duratón, Tierra de Pinares y el **Acueducto de Segovia**, Navacerrada y Cuelgamuros, El Escorial y Galapagar | Las rutas del antiguo principio, con niveles de después de la 7.ª medalla (48–55); las obras de la A-6 ya han terminado |
 | 24 | San Miguel → Madrid (vuelo o AVE) → Getafe → Ruta 24 → **Puertollano** | La Mancha (molinos de Consuegra) | Complejo industrial y minas |
 | 25 | Puertollano → Ruta 25 → Ruta 26 → **Málaga** (gimnasio 8, **Banderas**) | Despeñaperros (Sierra Morena) y la Ruta de Antequera (El Torcal) | |
 | 26 | Málaga → AVE → Madrid → **Calle de la Victoria** → **Palacio Real** | La calle de la Victoria existe (junto a Sol): es la *Calle Victoria* del juego | Alto Mando y Líder Supremo |
@@ -100,10 +107,16 @@ La chica del *Aupa Athletic* repite tipo Lucha con Labrador; si Javier lo prefie
 
 ## Coordenadas del mapa regional
 
-Rejilla de **32 × 26** casillas (el norte arriba), calculada desde la latitud y longitud reales: `x = (longitud + 9,5) × 2,4`, `y = (44 − latitud) × 3`. Canarias va en un recuadro abajo a la izquierda. Están en `data/region.json` para el mapa regional y el Vuelo.
+Rejilla de **32 × 26** casillas (el norte arriba), calculada desde la latitud y longitud reales: `x = (longitud + 9,5) × 2,4`, `y = (44 − latitud) × 3`. Dos recuadros con sus propias casillas: **Canarias**, abajo a la izquierda (casillas 1–6 × 21–24), y **Madrid y alrededores**, arriba a la derecha (casillas 21–31 × 0–5), con los pueblos iniciales, las rutas iniciales, los seis barrios de Madrid y Getafe, Leganés y Móstoles. Están en `data/region.json` (con el mapa de cada lugar en `map` y `maps`) para el mapa regional, el menú F9 y el Vuelo; el esquema `mapa_region.svg` se genera con `python3 tools/mundo/mapa_region_svg.py`.
 
 | Lugar | Tipo | x | y | Latitud, longitud reales |
 |-------|------|---|---|--------------------------|
+| Pozuelo de Alarcón | Pueblo inicial (recuadro de Madrid) | 22 | 1,8 | 40,43, −3,81 |
+| Orcasitas | Pueblo inicial (recuadro de Madrid) | 26 | 5 | 40,37, −3,71 |
+| Moncloa, Chamberí, Bernabéu, Palacio Real, Sol y Gran Vía, Retiro y Atocha | Barrios de Madrid (recuadro) | 24–28 | 1,2–3 | — |
+| Móstoles, Leganés y Getafe | Pueblos al sur de Madrid (recuadro) | 22–24,6 | 4,2–5,2 | — |
+| Huelva | Ciudad (puerto del ferry a Canarias) | 6 | 20 | 37,26, −6,95 |
+| Playa del Inglés | Pueblo (recuadro de Canarias; gimnasio 5 y aeropuerto) | 3 | 24 | 27,76, −15,57 |
 | San Miguel de Bernuy | Pueblo | 13 | 8 | 41,40, −3,93 |
 | Madrid | Ciudad (gimnasio 1, Liga) | 14 | 11 | 40,42, −3,70 |
 | Getafe, Leganés y Móstoles | Pueblos | 14 | 12 | 40,31, −3,75 |

@@ -78,7 +78,7 @@ Carpeta de trabajo para construir la región **ciudad a ciudad**. Aquí está to
 
 ## Conexiones
 
-Cómo se unen los mapas pintados (bordes y pasarelas), qué grupos quedan aislados del pueblo inicial y qué uniones faltan: [`conexiones.md`](conexiones.md), generado con `python3 tools/mundo/grafo_mundo.py`.
+Cómo se unen los mapas pintados (bordes, pasarelas y saltos de eventos), si se llega a todo desde los pueblos iniciales (Pozuelo y Orcasitas), los cortes por medallas, el camino a cada ciudad y qué uniones faltan: [`conexiones.md`](conexiones.md), generado con `python3 tools/mundo/grafo_mundo.py`. Lo mismo, como test: `tests/mundo/test_acceso_mundo.gd`.
 
 ## Tramo centro y final (Agente 3, 2026-10-09)
 

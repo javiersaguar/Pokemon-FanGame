@@ -110,7 +110,8 @@ func _filter(value: String) -> void:
 
 static func _search_text(value: String) -> String:
 	var normalized := value.to_lower().strip_edges()
-	for pair: Array in [["á","a"],["é","e"],["í","i"],["ó","o"],["ú","u"],["ü","u"],["ñ","n"],["\t"," "],["_"," "],["-"," "]]:
+	for pair: Array in [["á","a"],["é","e"],["í","i"],["ó","o"],["ú","u"],["ü","u"],["ñ","n"],["à","a"],["è","e"],["ï","i"],["ò","o"],["ç","c"],
+			["·"," "],["/"," "],["\t"," "],["_"," "],["-"," "]]:
 		normalized = normalized.replace(pair[0], pair[1])
 	return normalized
 
