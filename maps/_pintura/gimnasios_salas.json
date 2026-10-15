@@ -11,15 +11,168 @@
         "entrenadores": [
           {
             "id": "gym1_concejal_1",
-            "nombre": "Borja Mari"
+            "nombre": "Borja Mari",
+            "mira": "izquierda",
+            "vista": 2,
+            "aparece_con": "quiron_superado"
           },
           {
             "id": "gym1_concejal_2",
-            "nombre": "Pelayo"
+            "nombre": "Pelayo",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "almeida_gym",
-            "nombre": "Almeida"
+            "nombre": "Almeida",
+            "mira": "izquierda",
+            "vista": 2
+          }
+        ],
+        "rotulo": "REGISTRO GENERAL",
+        "rotulo_casilla": [
+          2,
+          1
+        ],
+        "rotulo_ancho": 7,
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#........rrr........#",
+          "#........rrr........#",
+          "#........rrr........#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          "..LLLLLLL......RR....",
+          ".BB.....F...f..RR.BB.",
+          ".BB.....F...f.....BB.",
+          ".BB...............BB.",
+          ".....................",
+          ".QQ..................",
+          ".QQ.MMMMMMMMMMMMMMMM.",
+          ".....................",
+          "..DDDD........DDDD...",
+          "..DDDD........DDDD...",
+          ".CCCCCCCCCCCCCCCCCC..",
+          ".CCCCCCCCCCCCCCCCCC..",
+          ".....................",
+          ".P...KKK.....KKK...Q.",
+          ".PT..KKK.....KKK...Q.",
+          ".PT..................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Ujier",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Esta ventanilla está cerrada.",
+              "Primero gane al concejal Borja Mari. Aquí se entra por orden, como en todas partes menos en la lista de espera."
+            ],
+            "despues": [
+              "Pase, pase. Y no se olvide del sello."
+            ]
+          },
+          {
+            "nombre": "Ujier",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al despacho del fondo no se pasa sin cita previa.",
+              "La cita previa se la da el concejal Pelayo, si le gana."
+            ],
+            "despues": [
+              "Cita concedida. Para dentro de seis meses, pero pase."
+            ]
+          },
+          {
+            "nombre": "Ujier",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Arriba está reunido el Grupo Popular. Primero tendrá que vérselas con el alcalde."
+            ],
+            "despues": [
+              "El alcalde dice que suba. Que él se va a inaugurar algo."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Funcionaria",
+            "sprite": "npc_woman",
+            "mira": "abajo",
+            "frases": [
+              "Para registrar un combate necesita el formulario 27-B, una foto de carné y la firma de su abuela.",
+              "Si no la tiene, lo puede pedir por internet. La página está caída desde 2019."
+            ]
+          },
+          {
+            "nombre": "Funcionario",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "frases": [
+              "Número 437. ¿Nadie? Número 438.",
+              "Usted no tiene número. Con lo bien que lo tenía todo el mundo."
+            ]
+          },
+          {
+            "nombre": "Ujier",
+            "sprite": "tertuliano",
+            "mira": "izquierda",
+            "nodo": "Ujier",
+            "se_va_con": "quiron_superado",
+            "frases": [
+              "La presidenta está de visita en el hospital Quirón. Sin su permiso aquí no combate nadie.",
+              "Vuelva cuando ella le haya dado paso. Y con cita previa, a ser posible."
+            ]
+          }
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".........Ii..........",
+          "................3....",
+          ".....................",
+          ".....................",
+          "...h.................",
+          "..H..................",
+          ".....................",
+          "..........2..........",
+          ".....n.......o.......",
+          "...................g.",
+          "..................G..",
+          "................1....",
+          ".....................",
+          "..x.........p........",
+          "....................."
+        ],
+        "carteles": [
+          {
+            "frases": [
+              "PIDA SU TURNO.",
+              "Turno actual: 437. Su turno: 1.204. Tiempo de espera estimado: una legislatura."
+            ],
+            "solo_desde_abajo": false
           }
         ]
       },
@@ -28,15 +181,165 @@
         "entrenadores": [
           {
             "id": "gym1_concejal_3",
-            "nombre": "Jacobo"
+            "nombre": "Jacobo",
+            "mira": "arriba",
+            "vista": 2
           },
           {
             "id": "gym1_concejal_4",
-            "nombre": "Gonzalo"
+            "nombre": "Gonzalo",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "rajoy_gym",
-            "nombre": "Rajoy"
+            "nombre": "Rajoy",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "SALÓN DE PLENOS",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 6,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            4
+          ],
+          "pared": [
+            5,
+            8
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "################S####",
+          "#...................#",
+          "#...uuuuuuuuuuuu....#",
+          "#...uuuuuuuuuuuu....#",
+          "#...uuuuuuuuuuuu....#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLLL..RR..........",
+          ".AA...F..RR..f....AA.",
+          ".AA...F......f....AA.",
+          ".AA..V..NNNNNN....AA.",
+          ".....V...............",
+          ".....................",
+          "..eeeeeeeeeeeeeeeeee.",
+          "..eeeeeeeeeeeeeeeeee.",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".eeeeeeeeeeeeeeeeee..",
+          ".eeeeeeeeeeeeeeeeee..",
+          ".....................",
+          ".P.eeeeee...eeeeee.P.",
+          ".P.eeeeee...eeeeee.P.",
+          ".P.................P.",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........3.....iI...",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".h...................",
+          "..H..................",
+          "....n.....2..........",
+          ".....................",
+          ".....................",
+          "...................g.",
+          "..................G..",
+          "..........o..........",
+          ".....................",
+          "...........1.........",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Ujier",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Silencio, que se vota.",
+              "Hasta que gane al concejal Jacobo no puede ocupar escaño. Ni siquiera el de atrás."
+            ],
+            "despues": [
+              "Votación aprobada por asentimiento. Pase al hemiciclo."
+            ]
+          },
+          {
+            "nombre": "Ujier",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "La presidencia del pleno está ocupada.",
+              "Primero el concejal Gonzalo. Él tiene el turno de réplica."
+            ],
+            "despues": [
+              "Se le concede la palabra. Dos minutos, ni uno más."
+            ]
+          },
+          {
+            "nombre": "Ujier",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Al archivo solo se sube con permiso del expresidente.",
+              "Está ahí, en la presidencia, leyendo el Marca. No le haga esperar, que anda muy rápido."
+            ],
+            "despues": [
+              "Don Mariano dice que es usted muy español y mucho español. Suba."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Periodista",
+            "sprite": "npc_lass",
+            "mira": "derecha",
+            "frases": [
+              "¡Una pregunta! ¿Qué opina del último sondeo? ¿Y del penúltimo?",
+              "Aquí las ruedas de prensa son sin preguntas. Por eso se las hago a los entrenadores."
+            ]
+          },
+          {
+            "nombre": "Asesor",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "frases": [
+              "Yo solo asesoro. Si sale bien, fue idea mía. Si sale mal, fue cosa del Gobierno.",
+              "El argumentario de hoy: «libertad», «Venezuela» y «tú más». Con eso se gana cualquier pleno."
+            ]
           }
         ]
       },
@@ -45,21 +348,489 @@
         "entrenadores": [
           {
             "id": "gym1_concejal_5",
-            "nombre": "Álvaro"
+            "nombre": "Álvaro",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym1_concejal_6",
-            "nombre": "Íñigo"
+            "nombre": "Íñigo",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "casado",
-            "nombre": "Pablo Casado"
+            "nombre": "Pablo Casado",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "ARCHIVO DE TÍTULOS",
+        "rotulo_casilla": [
+          13,
+          1
+        ],
+        "rotulo_ancho": 7,
+        "estilo": {
+          "suelo": [
+            4,
+            0,
+            32
+          ],
+          "pared": [
+            5,
+            11
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "###S#################",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".......XXXXXXLLLLLLL.",
+          ".....BBXXXXXX.....AA.",
+          ".....BB.......vv..AA.",
+          ".....BB....U..vv..AA.",
+          ".....................",
+          ".aaaaaaaaaaaaaaaaaa..",
+          ".aaaaaaaaaaaaaaaaaa..",
+          ".....................",
+          ".....................",
+          "..aaaaaaaaaaaaaaaaaa.",
+          "..aaaaaaaaaaaaaaaaaa.",
+          ".....................",
+          ".z.................z.",
+          ".ZZ..DDDD....DDDD.ZZ.",
+          ".ZZ..DDDD....DDDD.ZZ.",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..Ii.................",
+          "........3.....x......",
+          ".....................",
+          ".....................",
+          "...................h.",
+          ".........2........H..",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          "........1............",
+          ".....................",
+          "...........n.........",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Archivera",
+            "sprite": "npc_old_woman",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Archivo restringido. Solo personal con título.",
+              "¿No tiene? Gane al concejal Álvaro y le convalido la entrada."
+            ],
+            "despues": [
+              "Convalidado. Ni ha tenido que venir a clase."
+            ]
+          },
+          {
+            "nombre": "Archivera",
+            "sprite": "npc_old_woman",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Este pasillo es el de los másteres. No se toca.",
+              "Si gana al concejal Íñigo, le dejo mirar. Solo mirar."
+            ],
+            "despues": [
+              "Pase. Y si ve un trabajo de fin de máster, avíseme: aún no ha aparecido ninguno."
+            ]
+          },
+          {
+            "nombre": "Archivera",
+            "sprite": "npc_old_woman",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "El despacho de la presidenta está arriba.",
+              "Pero antes tiene que pasar el examen de don Pablo. Es el único examen que ha puesto él."
+            ],
+            "despues": [
+              "Aprobado. Con nota. Y sin haberse presentado, como manda la casa."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Becario",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "frases": [
+              "Me han puesto a ordenar los títulos por fecha de expedición. Hay uno que se expidió antes de la matrícula.",
+              "Yo hago prácticas sin cobrar. Dicen que así se aprende. Lo que se aprende es a no cobrar."
+            ]
+          }
+        ],
+        "carteles": [
+          {
+            "frases": [
+              "MÁSTER EN DERECHO PÚBLICO AUTONÓMICO.",
+              "Asignaturas cursadas: dos. Convalidadas: dieciocho. Trabajo final: en trámite."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "REAL CASA DE CORREOS · DESPACHO DE LA PRESIDENTA",
-    "lider_previos": []
+    "estilo": {
+      "suelo": [
+        0,
+        0,
+        28
+      ],
+      "pared": [
+        1,
+        14
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        0,
+        28,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "4c2a30",
+      "rotulo_sombra": "e0b46a"
+    },
+    "leyenda": {
+      "r": {
+        "suelo": [
+          0,
+          0,
+          4
+        ]
+      },
+      "u": {
+        "nueve": [
+          6,
+          3,
+          16
+        ]
+      },
+      "C": {
+        "fila": [
+          3,
+          5,
+          11
+        ],
+        "arriba": 1
+      },
+      "P": {
+        "pieza": [
+          2,
+          2,
+          36,
+          1,
+          3
+        ],
+        "arriba": 2
+      },
+      "Q": {
+        "pieza": [
+          2,
+          1,
+          37,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "B": {
+        "pieza": [
+          2,
+          5,
+          6,
+          2,
+          3
+        ]
+      },
+      "A": {
+        "pieza": [
+          2,
+          5,
+          18,
+          2,
+          3
+        ]
+      },
+      "a": {
+        "pieza": [
+          2,
+          1,
+          19,
+          2,
+          2
+        ]
+      },
+      "v": {
+        "pieza": [
+          2,
+          3,
+          52,
+          2,
+          2
+        ]
+      },
+      "T": {
+        "pieza": [
+          3,
+          3,
+          31,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "K": {
+        "pieza": [
+          2,
+          1,
+          61,
+          1,
+          1
+        ]
+      },
+      "k": {
+        "pieza": [
+          2,
+          0,
+          61,
+          1,
+          1
+        ]
+      },
+      "M": {
+        "fila": [
+          6,
+          0,
+          58
+        ]
+      },
+      "D": {
+        "pieza": [
+          8,
+          0,
+          19,
+          4,
+          2
+        ]
+      },
+      "N": {
+        "fila": [
+          8,
+          0,
+          16
+        ]
+      },
+      "O": {
+        "nueve": [
+          8,
+          0,
+          12
+        ]
+      },
+      "Z": {
+        "pieza": [
+          2,
+          6,
+          37,
+          2,
+          2
+        ]
+      },
+      "z": {
+        "pieza": [
+          2,
+          4,
+          38,
+          1,
+          1
+        ]
+      },
+      "W": {
+        "pieza": [
+          5,
+          2,
+          91,
+          2,
+          1
+        ]
+      },
+      "L": {
+        "propia": "rotulo_madrid",
+        "fila": true
+      },
+      "F": {
+        "propia": "bandera_espana"
+      },
+      "f": {
+        "propia": "bandera_madrid"
+      },
+      "R": {
+        "propia": "retrato_rey"
+      },
+      "Y": {
+        "propia": "retrato_ayuso"
+      },
+      "e": {
+        "propia": "escanos",
+        "fila": true
+      },
+      "V": {
+        "propia": "atril"
+      },
+      "X": {
+        "propia": "titulo_enmarcado"
+      },
+      "U": {
+        "propia": "trituradora"
+      },
+      "s": {
+        "pieza": [
+          2,
+          3,
+          59,
+          3,
+          2
+        ]
+      },
+      "c": {
+        "pieza": [
+          8,
+          4,
+          17,
+          2,
+          2
+        ]
+      }
+    },
+    "sala_lider": {
+      "titulo": "REAL CASA DE CORREOS · DESPACHO DE LA PRESIDENTA",
+      "rotulo": "PRESIDENCIA",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 5,
+      "estilo": {
+        "suelo": [
+          4,
+          0,
+          32
+        ],
+        "pared": [
+          5,
+          3
+        ]
+      },
+      "plano": [
+        "###################",
+        "###################",
+        "###################",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#.....uuuuuuu.....#",
+        "#.....uuuuuuu.....#",
+        "#.....uuuuuuu.....#",
+        "#.....uuuuuuu.....#",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#........E........#",
+        "###################"
+      ],
+      "muebles": [
+        "...................",
+        ".LLLLL...YY...WW...",
+        ".BB....F.YY.f...BB.",
+        ".BB....F....f...BB.",
+        ".BB.....OOOOO...BB.",
+        "........OOOOO......",
+        "...................",
+        "...................",
+        "...................",
+        "..sss.........sss..",
+        "..sss...cc....sss..",
+        ".P......cc.......P.",
+        ".P..vv.......vv..P.",
+        ".P..vv.......vv..P.",
+        "..................."
+      ],
+      "personas": [
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        ".........@.........",
+        "....n..............",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..................."
+      ],
+      "entrenadores": [],
+      "npcs": [
+        {
+          "nombre": "Jefe de gabinete",
+          "sprite": "npc_man",
+          "mira": "derecha",
+          "frases": [
+            "La presidenta le recibe ahora. Tiene cinco minutos: a las doce tiene caña con la prensa.",
+            "Si le pregunta por la sanidad, diga que es la mejor del mundo. Si le pregunta por el metro, también."
+          ]
+        }
+      ]
+    }
   },
   "barcelona": {
     "lider": "laporta",

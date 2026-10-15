@@ -3,7 +3,10 @@ extends SceneTree
 ## libres (la misma consulta de física que usan los personajes, Character.is_tile_free) y avisa de
 ## las puertas de los edificios, las pasarelas (Warp), los bordes con conexión, los carteles y los
 ## personajes a los que no se llega. Los bordillos cuentan como pared (no salta); el agua también, salvo con --surf.
-## Uso: godot --headless --path . -s res://maps/_tools/alcance.gd -- <id del mapa> [aparición] [--surf]
+## --ganados: como si ya hubieras ganado a todos los entrenadores del mapa (en los gimnasios, los vigilantes
+## tapan el paso hasta ganar a su entrenador: así se comprueba que la sala se puede terminar).
+## --flag=<flag>: la da por activa (se puede repetir; por ejemplo, --flag=quiron_superado).
+## Uso: godot --headless --path . -s res://maps/_tools/alcance.gd -- <id del mapa> [aparición] [--surf] [--ganados] [--flag=...]
 ## Ejemplo: -- madrid/moncloa default
 
 const BLOCKING_MASK := 1 | 2 | 8
@@ -19,11 +22,24 @@ func _initialize() -> void:
 		return
 	var map_id := StringName(args[0])
 	var surf := "--surf" in args
-	args = args.filter(func(a: String) -> bool: return a != "--surf")
+	var won := "--ganados" in args
+	var flags: Array = args.filter(func(a: String) -> bool: return a.begins_with("--flag=")).map(
+		func(a: String) -> String: return a.get_slice("=", 1))
+	args = args.filter(func(a: String) -> bool: return not a.begins_with("--"))
 	var spawn_name := StringName(args[1]) if args.size() > 1 else &"default"
 	var mask := BLOCKING_MASK & ~8 if surf else BLOCKING_MASK
 	var scene: PackedScene = load("res://maps/%s.tscn" % map_id)
 	var map: Node2D = scene.instantiate()
+	# Los flags se ponen antes de meter el mapa en el árbol, para que cada personaje sepa si está.
+	var state := root.get_node_or_null(^"GameState")
+	if state != null:
+		for flag: String in flags:
+			state.call(&"set_flag", StringName(flag))
+		if won:
+			for node: Node in map.get_node("Entities").get_children():
+				var trainer: Variant = node.get(&"trainer_id")
+				if trainer != null and String(trainer) != "":
+					state.call(&"set_flag", StringName("trainer_defeated:%s" % trainer))
 	root.add_child(map)
 	await physics_frame
 	await physics_frame

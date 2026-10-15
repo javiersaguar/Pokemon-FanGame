@@ -66,28 +66,53 @@ func _quiron() -> void:
 	print("madrid/quiron: %s" % error_string(p.save("res://maps/madrid/quiron.tscn")))
 
 
+## La terraza del ático de Chamberí (gimnasio 1): arriba, la fachada del ático, por cuya puerta se sale y se
+## baja a la calle; abajo y a los lados, la barandilla de la azotea. Ayuso la coloca data/personajes_en_el_mapa.json
+## en (8, 6), delante de su casa: esa casilla se deja libre.
 func _terrace() -> void:
 	var d := MapData.new()
 	d.id = &"madrid/atico_ayuso"
 	d.display_name = "Ático de Ayuso · Chamberí"
 	d.zone_id = &"madrid"
 	d.can_fly_from = false
-	var p := Pintor.new("AticoAyuso", Vector2i(18, 14), d, 2019)
+	var size := Vector2i(18, 16)
+	var p := Pintor.new("AticoAyuso", size, d, 2019)
 	p.fill_grass(0.0)
-	p.paving(Rect2i(0, 0, 18, 14))
+	p.paving(Rect2i(Vector2i.ZERO, size))
 	p.build_paving()
-	for x: int in [1, 13]:
-		p.object(&"jardinera", Vector2i(x, 2))
-		p.object(&"jardinera", Vector2i(x, 12))
-	p.object(&"sombrilla", Vector2i(2, 8))
-	p.object(&"sombrilla", Vector2i(11, 8))
-	for x: int in [1, 16]:
-		p.object(&"farola_roja", Vector2i(x, 6))
-	p.deco(Vector2i(8, 1), ExteriorTiles.SIGN)
-	p.sign_text("Vistas", Vector2i(8, 1), PackedStringArray(["Desde aquí se ve todo Madrid: el Palacio Real, las cuatro torres y una grúa en cada esquina.",
+	# El ático, con su jardín en la azotea, y la puerta por la que se sale a la terraza.
+	p.object(&"atico_jardin", Vector2i(9, 5))
+	var door := p.door_of(&"atico_jardin", Vector2i(9, 5))
+	# Barandilla de la azotea: abajo y a los dos lados.
+	for x: int in size.x:
+		p.object(&"verja", Vector2i(x, size.y - 1))
+	for y: int in range(1, size.y - 2, 2):
+		p.object(&"verja", Vector2i(0, y + 1))
+		p.object(&"verja", Vector2i(size.x - 1, y + 1))
+	# Jardín de la izquierda: abetos en maceta, jardineras y la fuente.
+	p.object(&"abeto_maceta", Vector2i(1, 3))
+	p.object(&"fuente_plaza", Vector2i(4, 4))
+	p.object(&"jardinera", Vector2i(1, 7))
+	# Terraza: mesas con sombrilla, bancos, farolas y jardineras junto a la barandilla.
+	p.object(&"sombrilla", Vector2i(2, 12))
+	p.object(&"sombrilla", Vector2i(11, 12))
+	p.object(&"banco", Vector2i(7, 11))
+	p.object(&"jardinera", Vector2i(13, 8))
+	p.object(&"farola_roja", Vector2i(1, 9))
+	p.object(&"farola_roja", Vector2i(16, 9))
+	# Las vistas se leen asomándose a la barandilla.
+	p.sign_text("Vistas", Vector2i(8, size.y - 2), PackedStringArray(["Desde aquí se ve todo Madrid: el Palacio Real, las cuatro torres y una grúa en cada esquina.",
 		"Y la Moncloa. Sobre todo la Moncloa."]))
-	p.spawn("default", Vector2i(8, 12))
-	p.warp("Bajar", Vector2i(8, 13), &"madrid/chamberi", &"default")
+	p.root.get_node("Entities/Vistas").set(&"only_from_below", false)
+	p.npc("Camarero", "camarero", Vector2i(9, 13), 0, PackedStringArray([
+		"¿Una caña? En esta terraza la caña es libre. Libre de impuestos, no de precio: son seis euros.",
+		"La presidenta dice que cuando le ganes te invita a la segunda. La primera la pagas tú."]), {"display_name": "Camarero"})
+	p.npc("Escolta", "npc_man", Vector2i(14, 6), 1, PackedStringArray([
+		"Yo no estoy. Si alguien pregunta, la presidenta está en un acto en Getafe.",
+		"Cuando acabéis, se baja por la puerta del ático. El ascensor es privado, pero hoy hago una excepción."]), {"display_name": "Escolta"})
+	p.spawn("default", door + Vector2i.DOWN)
+	p.warp("Bajar", door, &"madrid/chamberi", &"default")
+	p.root.get_node("Warps/Bajar").arrival_facing = Warp.Facing.DOWN
 	print("madrid/atico_ayuso: %s" % error_string(p.save("res://maps/madrid/atico_ayuso.tscn")))
 
 

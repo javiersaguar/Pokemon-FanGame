@@ -1,0 +1,40 @@
+# Escaños de un salón de plenos (gimnasio 1): pupitre corrido de madera con micrófonos y papeles, y detrás los
+# respaldos de cuero rojo, vistos desde atrás (miran a la presidencia). Tres casillas (izquierda, centro que
+# se repite y derecha) de dos filas. Dibujado a mano, 48x32 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   o = madera_2   L = madera_6   M = madera_5   D = madera_4   F = madera_3   f = madera_2
+@leyenda  k = ui_1   n = metal_3   w = ui_6   W = ui_5   h = ui_1@70
+@leyenda  c = teja_2   R = teja_5   r = teja_4   q = teja_3   m = metal_2
+@salida res://assets/tilesets/interior/gimnasios/propios/escanos.png
+---
+................................................
+................................................
+.ooooooooooooooooooooooooooooooooooooooooooooo..
+oLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLo.
+oLMMMkMMMwwwMMMMMMMMMkMMMwwwMMMMMMMMMkMMMwwwMDo.
+oLMMMnMMMwWwMMMMMMMMMnMMMwWwMMMMMMMMMnMMMwWwMDo.
+oLMMMnMMMMMMMMMMMMMMMnMMMMMMMMMMMMMMMnMMMMMMMDo.
+oDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDo.
+oooooooooooooooooooooooooooooooooooooooooooooooo
+oFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfo
+oFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfo
+oFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFfo
+offfffffffffffffffffffffffffffffffffffffffffffoo
+.hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+................................................
+................................................
+.cccccc..cccccc..cccccc..cccccc..cccccc..cccccc.
+cRRRRRqccRRRRRqccRRRRRqccRRRRRqccRRRRRqccRRRRRqc
+cRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqc
+cRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqc
+cRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqc
+cRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqccRrrrrqc
+cqqqqqqccqqqqqqccqqqqqqccqqqqqqccqqqqqqccqqqqqqc
+.cccccc..cccccc..cccccc..cccccc..cccccc..cccccc.
+.m....m..m....m..m....m..m....m..m....m..m....m.
+.m....m..m....m..m....m..m....m..m....m..m....m.
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+................................................
+................................................
+................................................
+................................................
+................................................

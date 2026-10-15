@@ -1,0 +1,55 @@
+# Gimnasios por dentro · tileset y pintor (2026-10-15, Agente 3)
+
+Encargo: que cada uno de los ocho gimnasios se vea como su tema (despachos y plenos en Madrid, gradas y vestuarios en Barcelona, discoteca en Valencia…), con el puzle de siempre: hay que ganar a todos los entrenadores de una sala para pasar a la siguiente y al líder. Todo el arte es **PROVISIONAL** hasta que lo apruebe Javier. Comparativas: [`comparativas/gimnasios_2026-10-15.md`](comparativas/gimnasios_2026-10-15.md).
+
+## Tileset: `assets/tilesets/interior/gimnasios/`
+
+`gimnasios.tres` lo monta `build_gimnasios.gd`. **No cambia `interior.tres`** (los interiores de casas y edificios siguen igual).
+
+| Fuente | Archivo | De dónde sale | Se pisa |
+|---|---|---|---|
+| 0–3 | `../suelos.png`, `../paredes.png`, `../muebles.png`, `../mostradores.png` | Los mismos recortes de `interior.tres` (mismas casillas) | suelos sí; el resto no (los mostradores, terreno `counter`) |
+| 4 | `suelos_2.png` | Akizakura16, filas 2048–4447 del PNG original: más suelos y emblemas | sí |
+| 5 | `paredes_2.png` | Akizakura16, filas 7008–10239: más paredes (telón, disco, hielo, ladrillo…) y adornos de pared (ventanas, vidriera, pizarras, cuadros, mapas) | no |
+| 6 | `alfombras.png` | Akizakura16, filas 10240–12287: alfombras, flechas, baldosas de teletransporte, puertas, escaleras mecánicas, pantallas; postes con cordón y mamparas (filas 48–63) | sí, salvo filas 48–63 |
+| 7 | `maquinas.png` | Akizakura16, filas 13440–14335: ordenadores, televisores, máquinas | no |
+| 8 | `mesas.png` | Akizakura16, filas 16384–17055: mesas de nueve trozos, manteles, escritorio | no |
+| 20… | `propios/<nombre>.png` | **Dibujadas a mano** en `assets/_fuentes/mundo/gim_<nombre>.px2` con la paleta maestra (las exporta `exportar_mundo.gd` a ×2). Número fijo en `propios.json` | choca lo que tiene dibujo, salvo `"pasable": true` |
+
+Mismo PNG público de Akizakura16 que ya usaba el juego (`docs/arte/interiores.md`, SHA-256 comprobado por el script). Recortes a escala original, sin reescalar ni dibujar.
+
+```sh
+godot --headless --path . -s res://assets/tilesets/interior/gimnasios/build_gimnasios.gd -- --png=<akizakura16.png>
+godot --headless --path . -s res://assets/_fuentes/mundo/exportar_mundo.gd
+godot --headless --path . --import
+godot --headless --path . -s res://assets/tilesets/interior/gimnasios/build_gimnasios.gd
+godot --headless --path . -s res://maps/_pintura/pintar_gimnasios.gd -- <ciudad>
+```
+
+Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras filas son el borde negro con su reborde (para los lados y el fondo de la sala) y las dos últimas, la cara de la pared con su zócalo. El pintor elige solo la pieza de cada casilla de pared.
+
+## Piezas dibujadas a mano
+
+| Fuente | Pieza | Tamaño | Para |
+|---|---|---|---|
+| 20 | `rotulo_madrid` | 3×1 (izquierda, centro que se repite, derecha) | placa dorada del rótulo de las salas de Madrid |
+| 21 | `bandera_espana` | 1×2 | bandera de España con mástil y peana |
+| 22 | `bandera_madrid` | 1×2 | bandera de la Comunidad de Madrid (siete estrellas) |
+| 23 | `retrato_rey` | 2×2 | retrato oficial en marco dorado |
+| 24 | `retrato_ayuso` | 2×2 | retrato de la presidenta, en su despacho |
+| 25 | `escanos` | 3×2 (fila) | pupitre corrido con micrófonos y respaldos rojos |
+| 26 | `atril` | 1×2 | atril con micrófono y escudo |
+| 27 | `titulo_enmarcado` | 1×1 | título con sello, para la pared del archivo |
+| 28 | `trituradora` | 1×1 | trituradora con la papelera llena |
+
+## Pintor: `maps/_pintura/pintar_gimnasios.gd`
+
+Cada sala de `maps/_pintura/gimnasios_salas.json` lleva tres rejillas del mismo tamaño:
+
+- **`plano`**: `#` pared, `.` suelo del gimnasio, `S` puerta de arriba a la sala siguiente (en la cara de la pared), `E` felpudo de la salida; otras letras, suelos o alfombras de la leyenda.
+- **`muebles`**: letras de la leyenda (una pieza de varias casillas se escribe en todas sus casillas; si el bloque es mayor, se repite). Tipos: `pieza`, `nueve` (recuadro estirado), `fila` (izquierda, centro y derecha), `columna`, `baldosa`, `objeto` (del tileset de exteriores) y `propia` (pieza dibujada a mano). `arriba: n` = sus n primeras filas se pintan por encima de los personajes y se pisan (la tapa de un mostrador, la copa de una planta).
+- **`personas`**: `1`–`9` entrenadores (en el orden de la lista), `g h i j` vigilantes y `G H I J` dónde se quedan al apartarse, `n`–`r` personajes que hablan, `x y z` carteles y `@` el líder.
+
+La sala del líder va en `sala_lider`. Cada vigilante tapa el paso hasta que ganas a su entrenador (`hidden_if_flag`); entonces aparece a un lado (`visible_if_flag`) con otra frase. `tests/mundo/test_gimnasios_salas.gd` lo comprueba paso a paso en las 32 salas.
+
+Para revisar una sala con `maps/_tools/alcance.gd` hay que dar por ganados sus entrenadores (`--ganados`; en Madrid, también `--flag=quiron_superado`): sin eso, los vigilantes tapan el paso a propósito.

@@ -364,7 +364,17 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 - **Agente 5:** cuando llegue a Playa del Inglés y a Málaga reservaré su exterior solo el rato de poner la fachada del gimnasio (sin repintar, con `sustituir_pieza.gd` y `redirigir_puerta.gd`). Si estás en ellos, dímelo aquí y espero.
 - **Agente 2:** los entrenadores de gimnasio siguen en `data/trainers/gimnasios.json`; si necesito alguno nuevo o cambiar un equipo, lo pido aquí.
 
-**En curso:** preparar el tileset y el pintor nuevo; primer bloque, Madrid.
+**Hecho · bloque 1 (tileset, pintor y Madrid):**
+- **Tileset de los gimnasios** (`assets/tilesets/interior/gimnasios/`, `build_gimnasios.gd`): las cuatro fuentes de `interior.tres` con las mismas casillas, cinco franjas más del mismo PNG de Akizakura16 (suelos, paredes y adornos de pared, alfombras/puertas/postes con cordón, máquinas y mesas) y las piezas dibujadas a mano desde la fuente 20 (`propios.json`). Detalle en [`docs/arte/gimnasios.md`](arte/gimnasios.md).
+- **Pintor nuevo** (`pintar_gimnasios.gd`): cada sala se pinta desde tres rejillas del JSON (plano, muebles y personas); paredes con su borde y su cara elegidos solos, piezas de varias casillas, tapas de mostrador que se pisan, rótulo en placa, vigilantes que se apartan a un lado al ganarles y gente que habla. Las salas sin plano siguen con el zigzag antiguo.
+- **Madrid:** Registro General, Salón de Plenos, Archivo de Títulos y Despacho de la Presidenta (21×18, 21×20, 21×18 y 19×15), y la terraza del ático rehecha (fachada del ático con su puerta para bajar a Chamberí, barandilla, jardineras, sombrillas, camarero y escolta; Ayuso sigue en (8, 6)). Nueve piezas a mano (fuentes 20–28): placa, banderas de España y de la Comunidad, retratos del Rey y de la presidenta, escaños, atril, título enmarcado y trituradora.
+- **Test** `test_gimnasios_salas.gd` ampliado: paso a paso (con k ganados se llega al entrenador k+1 y no a la meta), rótulo, salida a la sala anterior y puerta a la siguiente, y líder con su evento. 5/5.
+- **`maps/_tools/alcance.gd`:** opciones nuevas `--ganados` y `--flag=` (compatibles con lo anterior). En los gimnasios los vigilantes tapan el paso a propósito, así que se revisan con `--ganados` (Madrid, con `--flag=quiron_superado`): **0 problemas** en las cuatro salas, el ático y el Quirón.
+- Comparativa: [`comparativas/gimnasios_2026-10-15.md`](arte/comparativas/gimnasios_2026-10-15.md); capturas con `maps/_tools/captura_gimnasios.gd`.
+
+**Provisional:** todo el arte nuevo y los textos de vigilantes y personajes (humor de propuesta). No hay música de gimnasio: no existe ningún archivo de música de mapa en el juego (`assets/audio/bgm/` solo tiene combate y jingles); el pintor pone la `bgm` de `musica` si el archivo existe. **PENDIENTE JAVIER:** aprobar el arte y los textos; la música de los gimnasios (eligió los packs de música el 13 de octubre, pero aún no están en el repo).
+
+**En curso:** bloque 2, Barcelona.
 
 ### Sesión de mundo centro y final (2026-10-09)
 

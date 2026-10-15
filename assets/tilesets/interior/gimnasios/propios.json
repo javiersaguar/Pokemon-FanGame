@@ -1,0 +1,12 @@
+{
+  "_": "Piezas dibujadas a mano para los gimnasios (assets/_fuentes/mundo/gim_*.px2, exportadas por exportar_mundo.gd a propios/). El número de fuente es fijo (los mapas pintados lo guardan); una pieza nueva toma el siguiente libre. pasable = se pisa (suelos); terreno = terreno de las casillas que chocan (counter = se habla por encima, como en un mostrador).",
+  "rotulo_madrid": {"fuente": 20},
+  "bandera_espana": {"fuente": 21},
+  "bandera_madrid": {"fuente": 22},
+  "retrato_rey": {"fuente": 23},
+  "retrato_ayuso": {"fuente": 24},
+  "escanos": {"fuente": 25},
+  "atril": {"fuente": 26},
+  "titulo_enmarcado": {"fuente": 27},
+  "trituradora": {"fuente": 28}
+}
