@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **914 mapas** en total. Se llega a **914** desde Pozuelo de Alarcón (`pozuelo/exterior`: 914) y Orcasitas (`orcasitas/exterior`: 914).
+- **930 mapas** en total. Se llega a **930** desde Pozuelo de Alarcón (`pozuelo/exterior`: 930) y Orcasitas (`orcasitas/exterior`: 930).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -93,7 +93,7 @@ Camino desde Pozuelo de Alarcón la primera vez (sin el AVE, que solo lleva a de
 | Ruta 24 · La Mancha | `ruta_24/exterior` | sí, 7 pasos | 1 | Cercanías C-5, corte: C-5 averiado hasta 1 medalla |
 | Ruta 25 · Despeñaperros | `ruta_25/exterior` | sí, 9 pasos | 1 | Cercanías C-5, corte: C-5 averiado hasta 1 medalla |
 | Ruta 26 · El Torcal de Antequera | `ruta_26/exterior` | sí, 10 pasos | 1 | Cercanías C-5, corte: C-5 averiado hasta 1 medalla |
-| Calle de la Victoria | — | pendiente | — | sin mapa todavía |
+| Calle de la Victoria | `calle_victoria/tunel` | sí, 4 pasos | 0 | andando |
 | Ruta marítima 1 · Canal de Ibiza | `maritima_1/exterior` | sí, 15 pasos | 3 | ferry, Surf |
 | Ferry Barcelona–Palma · Ferry Barcelona · Palma | `transporte/ferry_barcelona_palma` | sí, 13 pasos | 0 | ferry |
 | Ferry Barcelona–Palma · Ferry Palma · Barcelona | `transporte/ferry_palma_barcelona` | sí, 15 pasos | 0 | ferry |
@@ -259,6 +259,7 @@ Ninguna: todos los destinos existen.
 | `bilbao/sala_calle_64_48` | Casa gris · Bilbao | — | Salida → `bilbao/exterior` |
 | `bilbao/sala_calle_65_23` | Casa roja pequeña · Bilbao | — | Salida → `bilbao/exterior` |
 | `bilbao/sala_calle_69_48` | Casa de tejado rojo · Bilbao | — | Salida → `bilbao/exterior` |
+| `calle_victoria/tunel` | Calle de la Victoria · Metro y cloacas | — | Sol → `madrid/centro`, Palacio → `madrid/palacio_real` |
 | `casa_de_campo/exterior` | Casa de Campo | west → `pozuelo/exterior`, north → `madrid/moncloa` | — |
 | `getafe/casa_1` | Casa roja · Getafe | — | Salida → `getafe/exterior` |
 | `getafe/casa_2` | Casa de dos aguas · Getafe | — | Salida → `getafe/exterior` |
@@ -295,29 +296,44 @@ Ninguna: todos los destinos existen.
 | `huelva/sala_calle_49_8` | Casa de la chimenea · Huelva | — | Salida → `huelva/exterior` |
 | `huelva/sala_calle_53_17` | Casa roja pequeña · Huelva | — | Salida → `huelva/exterior` |
 | `huelva/sala_calle_55_8` | Casa de la chimenea · Huelva | — | Salida → `huelva/exterior` |
-| `ibiza/casa_1` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/casa_2` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
+| `ibiza/casa_1` | Casa de Margalida, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/casa_1_dormitorio` |
+| `ibiza/casa_1_dormitorio` | Dormitorio de Toni, Ibiza | — | Salida → `ibiza/casa_1` |
+| `ibiza/casa_2` | Piso de temporada, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/casa_2_dormitorio` |
+| `ibiza/casa_2_dormitorio` | Cuarto por turnos, Ibiza | — | Salida → `ibiza/casa_2` |
 | `ibiza/centro` | Centro Pokémon · Ibiza | — | Salida → `ibiza/exterior` |
 | `ibiza/estanco` | Estanco · Ibiza | — | Salida → `ibiza/exterior` |
 | `ibiza/exterior` | Ibiza | north → `maritima_1/exterior` | FerryValencia → `transporte/ferry_ibiza_valencia`, Centro → `ibiza/centro`, Mercadona → `ibiza/mercadona`, Estanco → `ibiza/estanco`, Casa1 → `ibiza/casa_1`, Casa2 → `ibiza/casa_2`, Sala21_15 → `ibiza/sala_calle_21_15`, Sala32_15 → `ibiza/sala_calle_32_15`, Sala37_15 → `ibiza/sala_calle_37_15`, Sala3_25 → `ibiza/sala_calle_3_25`, Sala8_25 → `ibiza/sala_calle_8_25`, Sala19_25 → `ibiza/sala_calle_19_25`, Sala37_25 → `ibiza/sala_calle_37_25`, Sala6_38 → `ibiza/sala_calle_6_38`, Sala11_38 → `ibiza/sala_calle_11_38`, Sala27_38 → `ibiza/sala_calle_27_38`, Sala6_46 → `ibiza/sala_calle_6_46`, Sala19_47 → `ibiza/sala_calle_19_47`, Sala27_46 → `ibiza/sala_calle_27_46`, Sala48_33 → `ibiza/sala_calle_48_33`, Sala61_39 → `ibiza/sala_calle_61_39`, Sala45_22 → `ibiza/sala_calle_45_22`, Sala37_41 → `ibiza/sala_calle_37_41` |
 | `ibiza/mercadona` | Mercadona · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_11_38` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_19_25` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_19_47` | Catedral Ibiza · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_21_15` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_27_38` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_27_46` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_32_15` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_37_15` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_37_25` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_37_41` | Casa roja pequeña · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_3_25` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_45_22` | Casa gris · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_48_33` | Club Ibiza · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_61_39` | Torre de socorro · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_6_38` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_6_46` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
-| `ibiza/sala_calle_8_25` | Casa ibicenca · Ibiza | — | Salida → `ibiza/exterior` |
+| `ibiza/sala_calle_11_38` | Casa de la arqueóloga, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_11_38_dormitorio` |
+| `ibiza/sala_calle_11_38_dormitorio` | Dormitorio con ánforas, Ibiza | — | Salida → `ibiza/sala_calle_11_38` |
+| `ibiza/sala_calle_19_25` | Casa del DJ, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_19_25_dormitorio` |
+| `ibiza/sala_calle_19_25_dormitorio` | Estudio del DJ, Ibiza | — | Salida → `ibiza/sala_calle_19_25` |
+| `ibiza/sala_calle_19_47` | Catedral de Santa María de las Nieves, Ibiza | — | Salida → `ibiza/exterior` |
+| `ibiza/sala_calle_21_15` | Casa de Hans y Ute, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_21_15_dormitorio` |
+| `ibiza/sala_calle_21_15_dormitorio` | Dormitorio de invitados, Ibiza | — | Salida → `ibiza/sala_calle_21_15` |
+| `ibiza/sala_calle_27_38` | Casa de los Ribas, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_27_38_dormitorio` |
+| `ibiza/sala_calle_27_38_dormitorio` | Dormitorio del abuelo Ribas, Ibiza | — | Salida → `ibiza/sala_calle_27_38` |
+| `ibiza/sala_calle_27_46` | Casa del casero, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_27_46_dormitorio` |
+| `ibiza/sala_calle_27_46_dormitorio` | Dormitorio del casero, Ibiza | — | Salida → `ibiza/sala_calle_27_46` |
+| `ibiza/sala_calle_32_15` | Casa para fotos, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_32_15_dormitorio` |
+| `ibiza/sala_calle_32_15_dormitorio` | Dormitorio de atrezo, Ibiza | — | Salida → `ibiza/sala_calle_32_15` |
+| `ibiza/sala_calle_37_15` | Casa de Pep el pescador, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_37_15_dormitorio` |
+| `ibiza/sala_calle_37_15_dormitorio` | Dormitorio de Pep y Catalina, Ibiza | — | Salida → `ibiza/sala_calle_37_15` |
+| `ibiza/sala_calle_37_25` | Casa del relaciones públicas, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_37_25_dormitorio` |
+| `ibiza/sala_calle_37_25_dormitorio` | Cuarto de las pulseras, Ibiza | — | Salida → `ibiza/sala_calle_37_25` |
+| `ibiza/sala_calle_37_41` | Farmacia de guardia de Dalt Vila, Ibiza | — | Salida → `ibiza/exterior` |
+| `ibiza/sala_calle_3_25` | Casa de Lluna, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_3_25_dormitorio` |
+| `ibiza/sala_calle_3_25_dormitorio` | Cuarto de meditar, Ibiza | — | Salida → `ibiza/sala_calle_3_25` |
+| `ibiza/sala_calle_45_22` | Casa payesa de Can Marí, Ibiza | — | Salida → `ibiza/exterior` |
+| `ibiza/sala_calle_48_33` | Club Ibiza, la pista, Ibiza | — | Salida → `ibiza/exterior`, Barra → `ibiza/sala_calle_48_33_barra` |
+| `ibiza/sala_calle_48_33_barra` | Club Ibiza, la barra, Ibiza | — | Salida → `ibiza/sala_calle_48_33` |
+| `ibiza/sala_calle_61_39` | Caseta de socorrismo de Platja d'en Bossa, Ibiza | — | Salida → `ibiza/exterior` |
+| `ibiza/sala_calle_6_38` | Estudio del pintor, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_6_38_dormitorio` |
+| `ibiza/sala_calle_6_38_dormitorio` | Dormitorio del pintor, Ibiza | — | Salida → `ibiza/sala_calle_6_38` |
+| `ibiza/sala_calle_6_46` | Casa de huéspedes Can Toni, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_6_46_dormitorio` |
+| `ibiza/sala_calle_6_46_dormitorio` | Habitación número 2, Ibiza | — | Salida → `ibiza/sala_calle_6_46` |
+| `ibiza/sala_calle_8_25` | Casa de la opositora, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/sala_calle_8_25_dormitorio` |
+| `ibiza/sala_calle_8_25_dormitorio` | Cuarto de estudiar, Ibiza | — | Salida → `ibiza/sala_calle_8_25` |
 | `las_palmas/canteras` | Las Palmas · Las Canteras | south → `las_palmas/vegueta_triana` | FerryHuelva → `transporte/ferry_las_palmas_huelva`, Mercadona → `las_palmas/mercadona`, Sala43_15 → `las_palmas/sala_canteras_43_15`, Sala26_19 → `las_palmas/sala_canteras_26_19`, Sala39_21 → `las_palmas/sala_canteras_39_21`, Sala25_32 → `las_palmas/sala_canteras_25_32`, Sala33_32 → `las_palmas/sala_canteras_33_32`, Sala41_31 → `las_palmas/sala_canteras_41_31`, Sala24_46 → `las_palmas/sala_canteras_24_46`, Sala41_46 → `las_palmas/sala_canteras_41_46` |
 | `las_palmas/estanco` | Estanco · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
 | `las_palmas/hospital` | Hospital · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
@@ -371,7 +387,7 @@ Ninguna: todos los destinos existen.
 | `madrid/atico_ayuso` | Ático de Ayuso · Chamberí | — | Bajar → `madrid/chamberi` |
 | `madrid/atocha/mercadona` | Mercadona · Atocha | — | Salida → `madrid/retiro` |
 | `madrid/bernabeu` | Madrid · Bernabéu | south → `madrid/chamberi`, north → `soto_del_real/exterior` | Sala4_9 → `madrid/sala_bernabeu_4_9`, Sala34_9 → `madrid/sala_bernabeu_34_9`, Sala4_26 → `madrid/sala_bernabeu_4_26`, Sala34_26 → `madrid/sala_bernabeu_34_26`, Sala12_8 → `madrid/sala_bernabeu_12_8` |
-| `madrid/centro` | Madrid · Sol y Gran Vía | west → `madrid/palacio_real`, west → `madrid/moncloa`, west → `madrid/moncloa`, east → `madrid/retiro`, east → `madrid/retiro` | Hospital → `madrid/sol/hospital`, Sala5_5 → `madrid/sala_centro_5_5`, Sala14_5 → `madrid/sala_centro_14_5`, Sala25_13 → `madrid/sala_centro_25_13`, Sala31_13 → `madrid/sala_centro_31_13`, Sala41_7 → `madrid/sala_centro_41_7`, Sala40_16 → `madrid/sala_centro_40_16`, Sala46_17 → `madrid/sala_centro_46_17`, Sala53_17 → `madrid/sala_centro_53_17`, Sala62_21 → `madrid/sala_centro_62_21`, Sala68_21 → `madrid/sala_centro_68_21`, Sala4_19 → `madrid/sala_centro_4_19`, Sala11_19 → `madrid/sala_centro_11_19`, Sala5_27 → `madrid/sala_centro_5_27`, Sala14_27 → `madrid/sala_centro_14_27`, Sala22_27 → `madrid/sala_centro_22_27`, Sala39_31 → `madrid/gimnasio_1`, Sala20_42 → `madrid/sala_centro_20_42`, Sala4_48 → `madrid/sala_centro_4_48`, Sala54_31 → `madrid/sala_centro_54_31`, Sala63_31 → `madrid/sala_centro_63_31`, Sala67_31 → `madrid/sala_centro_67_31`, Sala53_42 → `madrid/sala_centro_53_42`, Sala60_41 → `madrid/sala_centro_60_41`, Sala68_41 → `madrid/sala_centro_68_41`, Sala53_52 → `madrid/sala_centro_53_52`, Sala62_52 → `madrid/sala_centro_62_52`, Sala18_4 → `madrid/sala_centro_18_4`, Sala33_6 → `madrid/sala_centro_33_6`, Sala49_10 → `madrid/sala_centro_49_10`, Sala53_8 → `madrid/sala_centro_53_8`, Sala68_13 → `madrid/sala_centro_68_13`, Sala49_26 → `madrid/sala_centro_49_26`, Sala35_50 → `madrid/sala_centro_35_50`, Sala3_39 → `madrid/sala_centro_3_39` |
+| `madrid/centro` | Madrid · Sol y Gran Vía | west → `madrid/palacio_real`, west → `madrid/moncloa`, west → `madrid/moncloa`, east → `madrid/retiro`, east → `madrid/retiro` | Hospital → `madrid/sol/hospital`, Sala5_5 → `madrid/sala_centro_5_5`, Sala14_5 → `madrid/sala_centro_14_5`, Sala25_13 → `madrid/sala_centro_25_13`, Sala31_13 → `madrid/sala_centro_31_13`, Sala41_7 → `madrid/sala_centro_41_7`, Sala40_16 → `madrid/sala_centro_40_16`, Sala46_17 → `madrid/sala_centro_46_17`, Sala53_17 → `madrid/sala_centro_53_17`, Sala62_21 → `madrid/sala_centro_62_21`, Sala68_21 → `madrid/sala_centro_68_21`, Sala4_19 → `madrid/sala_centro_4_19`, Sala11_19 → `madrid/sala_centro_11_19`, Sala5_27 → `madrid/sala_centro_5_27`, Sala14_27 → `madrid/sala_centro_14_27`, Sala22_27 → `madrid/sala_centro_22_27`, Sala39_31 → `madrid/gimnasio_1`, Sala20_42 → `madrid/sala_centro_20_42`, Sala4_48 → `madrid/sala_centro_4_48`, Sala54_31 → `madrid/sala_centro_54_31`, Sala63_31 → `madrid/sala_centro_63_31`, Sala67_31 → `madrid/sala_centro_67_31`, Sala53_42 → `madrid/sala_centro_53_42`, Sala60_41 → `madrid/sala_centro_60_41`, Sala68_41 → `madrid/sala_centro_68_41`, Sala53_52 → `madrid/sala_centro_53_52`, Sala62_52 → `madrid/sala_centro_62_52`, Sala18_4 → `madrid/sala_centro_18_4`, Sala33_6 → `madrid/sala_centro_33_6`, Sala49_10 → `madrid/sala_centro_49_10`, Sala53_8 → `madrid/sala_centro_53_8`, Sala68_13 → `madrid/sala_centro_68_13`, Sala49_26 → `madrid/sala_centro_49_26`, Sala35_50 → `madrid/sala_centro_35_50`, Sala3_39 → `madrid/sala_centro_3_39`, BocaVictoria → `calle_victoria/tunel` |
 | `madrid/chamberi` | Madrid · Chamberí | west → `madrid/moncloa`, north → `madrid/bernabeu` | Mercadona → `madrid/chamberi/mercadona`, Estanco → `madrid/chamberi/estanco`, Sala3_7 → `madrid/sala_chamberi_3_7`, Sala10_7 → `madrid/sala_chamberi_10_7`, Sala18_6 → `madrid/sala_chamberi_18_6`, Sala39_7 → `madrid/sala_chamberi_39_7`, Sala29_6 → `madrid/sala_chamberi_29_6`, Sala3_18 → `madrid/sala_chamberi_3_18`, Sala39_20 → `madrid/sala_chamberi_39_20`, Sala16_28 → `madrid/sala_chamberi_16_28`, Sala31_32 → `madrid/sala_chamberi_31_32`, Sala39_33 → `madrid/sala_chamberi_39_33`, Sala46_33 → `madrid/sala_chamberi_46_33`, Sala4_41 → `madrid/sala_chamberi_4_41`, Sala38_42 → `madrid/sala_chamberi_38_42`, Sala24_40 → `madrid/sala_chamberi_24_40`, Sala17_19 → `madrid/sala_chamberi_17_19`, Sala29_22 → `madrid/sala_chamberi_29_22`, Sala3_35 → `madrid/sala_chamberi_3_35`, Sala44_12 → `madrid/sala_chamberi_44_12` |
 | `madrid/chamberi/estanco` | Estanco · Chamberí | — | Salida → `madrid/chamberi` |
 | `madrid/chamberi/mercadona` | Mercadona · Chamberí | — | Salida → `madrid/chamberi` |
@@ -384,7 +400,7 @@ Ninguna: todos los destinos existen.
 | `madrid/laboratorio` | Laboratorio del profesor Unicoos | — | Salida → `madrid/moncloa` |
 | `madrid/mercadona` | Mercadona · Madrid | — | Salida → `madrid/moncloa` |
 | `madrid/moncloa` | Madrid · Moncloa | east → `madrid/chamberi`, south → `casa_de_campo/exterior`, east → `madrid/centro`, west → `ruta_4/exterior` | Hospital → `madrid/hospital`, Mercadona → `madrid/mercadona`, Estanco → `madrid/estanco`, Sala7_41 → `madrid/sala_moncloa_7_41`, Sala23_37 → `madrid/sala_moncloa_23_37`, Sala23_49 → `madrid/sala_moncloa_23_49`, Sala40_16 → `madrid/laboratorio`, Sala47_17 → `madrid/sala_moncloa_47_17`, Sala56_17 → `madrid/sala_moncloa_56_17`, Sala58_29 → `madrid/quiron`, Sala39_39 → `madrid/sala_moncloa_39_39`, Sala59_39 → `madrid/sala_moncloa_59_39`, Sala34_38 → `madrid/sala_moncloa_34_38`, Sala32_49 → `madrid/sala_moncloa_32_49`, Sala38_49 → `madrid/sala_moncloa_38_49`, Sala29_32 → `madrid/sala_moncloa_29_32` |
-| `madrid/palacio_real` | Madrid · Palacio Real | east → `madrid/centro` | Sala23_30 → `madrid/sala_palacio_real_23_30`, Sala23_54 → `madrid/sala_palacio_real_23_54`, Sala59_25 → `madrid/sala_palacio_real_59_25`, Sala46_11 → `madrid/sala_palacio_real_46_11`, Sala54_11 → `madrid/sala_palacio_real_54_11` |
+| `madrid/palacio_real` | Madrid · Palacio Real | east → `madrid/centro` | Sala23_30 → `madrid/sala_palacio_real_23_30`, Sala23_54 → `madrid/sala_palacio_real_23_54`, Sala59_25 → `madrid/sala_palacio_real_59_25`, Sala46_11 → `madrid/sala_palacio_real_46_11`, Sala54_11 → `madrid/sala_palacio_real_54_11`, BocaVictoria → `calle_victoria/tunel` |
 | `madrid/quiron` | Hospital Quirón · Madrid | — | Salida → `madrid/moncloa` |
 | `madrid/retiro` | Madrid · Retiro y Prado | west → `madrid/centro`, west → `madrid/centro`, east → `ruta_5/exterior`, south → `madrid_rio/exterior` | CercaniasLeganes → `leganes/exterior`, CercaniasMostoles → `mostoles/exterior`, Mercadona → `madrid/atocha/mercadona`, Sala28_13 → `madrid/sala_retiro_28_13`, Sala55_47 → `madrid/sala_retiro_55_47`, Sala4_29 → `madrid/sala_retiro_4_29`, Sala23_44 → `madrid/sala_retiro_23_44`, Sala20_58 → `madrid/sala_retiro_20_58`, Sala3_13 → `madrid/sala_retiro_3_13`, Sala39_13 → `madrid/sala_retiro_39_13`, Sala23_31 → `madrid/sala_retiro_23_31`, Sala36_37 → `madrid/sala_retiro_36_37`, Sala3_47 → `madrid/sala_retiro_3_47` |
 | `madrid/sala_bernabeu_12_8` | Oficinas · Madrid | — | Salida → `madrid/bernabeu` |

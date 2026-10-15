@@ -89,6 +89,6 @@
     "ruta_24": {"name": "Ruta 24 · La Mancha", "from": "sur_de_madrid", "to": "puertollano", "cells": [[14, 12], [14, 13], [14, 14], [13, 15], [13, 16]], "map": "ruta_24/exterior", "levels": [48, 51]},
     "ruta_25": {"name": "Ruta 25 · Despeñaperros", "from": "puertollano", "to": "ruta_26", "cells": [[13, 16], [14, 17], [14, 18]], "map": "ruta_25/exterior", "levels": [49, 52]},
     "ruta_26": {"name": "Ruta 26 · El Torcal de Antequera", "from": "ruta_25", "to": "malaga", "cells": [[14, 18], [13, 20], [12, 21], [12, 22]], "map": "ruta_26/exterior", "levels": [50, 53]},
-    "calle_victoria": {"name": "Calle de la Victoria", "from": "madrid", "to": "madrid", "cells": [[14, 11]], "map": "", "levels": [54, 58], "note": "La 'Calle Victoria' del juego: existe de verdad, junto a la Puerta del Sol. Sin mapa todavía (docs/mundo/calle_victoria.md)"}
+    "calle_victoria": {"name": "Calle de la Victoria", "from": "madrid", "to": "madrid", "cells": [[26.0, 3.6], [24.5, 3.6]], "inset": "madrid", "map": "calle_victoria/tunel", "levels": [54, 58], "note": "La 'Calle Victoria' del juego: corta arriba (junto a Sol) y larga bajo tierra (Metro y cloacas), de la boca de Sol a la del Palacio Real"}
   }
 }

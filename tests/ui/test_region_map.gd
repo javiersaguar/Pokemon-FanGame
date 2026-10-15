@@ -30,7 +30,7 @@ func test_salen_todas_las_ciudades_pueblos_barrios_y_rutas() -> void:
 	for id: String in region.routes:
 		if str(region.routes[id].get("map", "")) != "":
 			assert_has(ids, id, "%s en el mapa regional" % id)
-	assert_does_not_have(ids, "calle_victoria", "La Calle de la Victoria aún no tiene mapa")
+	assert_has(ids, "calle_victoria", "La Calle de la Victoria ya sale en el mapa regional")
 	for id: String in ["pozuelo", "orcasitas", "huelva", "playa_del_ingles", "rocafonda", "casa_de_campo", "madrid_rio", "bernabeu"]:
 		assert_has(ids, id)
 	for place: Dictionary in screen.places:

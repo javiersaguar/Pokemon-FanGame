@@ -227,7 +227,7 @@ func test_cada_ciudad_barrio_y_ruta_del_mapa_regional_existe_y_se_alcanza() -> v
 					continue
 				assert_true(SceneManager.map_exists(StringName(str(mid))), "%s/%s: existe %s" % [section, id, mid])
 				assert_true(seen.has(str(mid)), "%s/%s: se llega a %s" % [section, id, mid])
-	assert_eq(pending, ["calle_victoria"], "Solo falta el mapa de la Calle de la Victoria")
+	assert_eq(pending, [], "Todos los lugares de la región tienen mapa (también la Calle de la Victoria)")
 	# Todos los exteriores con bordes salen en el mapa regional.
 	var world := _load_world()
 	for id: String in world:
