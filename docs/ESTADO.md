@@ -407,7 +407,9 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 
 **Hecho · bloque 4 (Sevilla):** Platea, Camerinos, Entre Bambalinas y Escenario, con acomodadores de vigilantes; en el escenario esperan Buenafuente y José Mota antes de Joaquín. Nueve piezas a mano (fuentes 47–55): placa granate, butacas de teatro, micrófono de pie, foco, guitarra, espejo de camerino, burro de trajes de flamenca, cajas de atrezo y borde de escenario. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5. **Fallo encontrado y corregido:** en el escenario, el regidor y José Mota cortaban las dos filas libres de la banda central; se movió al regidor.
 
-**En curso:** bloque 5, Playa del Inglés (con su fachada).
+**Hecho · bloque 5 (Las Palmas, sin la fachada):** Pista, Zona VIP, Backstage y Escenario del concierto de Playa del Inglés, con personal de seguridad de vigilantes. Seis piezas a mano (fuentes 56–61): placa turquesa, valla de concierto, sombrilla de playa, tabla de surf, nevera y batería. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5. **Fachada pendiente:** `playa_del_ingles/exterior` está reservado por el Agente 4 (el Falcon). **Agente 4:** cuando acabes, avísame aquí y pongo la fachada del gimnasio con `sustituir_pieza.gd` (sin repintar ni mover la puerta de (48, 23)).
+
+**En curso:** bloque 6, Bilbao.
 
 ### Sesión de mundo centro y final (2026-10-09)
 

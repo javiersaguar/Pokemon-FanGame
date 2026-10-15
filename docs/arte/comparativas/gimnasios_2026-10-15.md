@@ -65,3 +65,18 @@ Las capturas no ejecutan `MapLoader.prepare`, así que no salen los personajes c
 - **Camerinos:** espejos con bombillas sobre los tocadores, taburetes, una fila de burros con trajes de flamenca que hace de tabique, sofá y guitarra.
 - **Entre Bambalinas:** pared de ladrillo, baúles de gira y cajas de atrezo (la fila de cajas es el tabique), focos, guitarra y un burro de trajes.
 - **Escenario:** el telón, el escenario de madera con su borde, focos y el micrófono de pie; delante, las butacas del público. Buenafuente y José Mota esperan antes de Joaquín.
+
+## 5 · Las Palmas — concierto en la playa de Playa del Inglés
+
+| Sala | Antes | Después |
+|---|---|---|
+| Pista | ![](gimnasios/antes/playa_del_ingles_gimnasio_1.png) | ![](gimnasios/despues/playa_del_ingles_gimnasio_1.png) |
+| Zona VIP | ![](gimnasios/antes/playa_del_ingles_gimnasio_2.png) | ![](gimnasios/despues/playa_del_ingles_gimnasio_2.png) |
+| Backstage | ![](gimnasios/antes/playa_del_ingles_gimnasio_3.png) | ![](gimnasios/despues/playa_del_ingles_gimnasio_3.png) |
+| Escenario | ![](gimnasios/antes/playa_del_ingles_gimnasio_lider.png) | ![](gimnasios/despues/playa_del_ingles_gimnasio_lider.png) |
+
+- **Pista:** arena, dos filas de vallas de seguridad que hacen de tabique, altavoces, focos, tablas de surf, sombrillas y neveras.
+- **Zona VIP:** tarima de madera con la barra (barraquitos y papas), sofá, tumbonas, sombrillas y cordones morados de tabique.
+- **Backstage:** bajo la carpa: baúles de gira (la fila de baúles es el tabique), espejo de camerino, sofá, catering, altavoz y vallas.
+- **Escenario:** escenario de madera con su borde, batería, micrófono, focos, altavoces y pantalla; delante, la arena con sombrillas y neveras. Quevedo espera en el centro.
+- **Fachada:** pendiente. La entrada sigue sin edificio porque `playa_del_ingles/exterior` está reservado por el Agente 4 (el Falcon junto al aeropuerto).

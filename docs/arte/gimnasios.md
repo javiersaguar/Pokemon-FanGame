@@ -68,6 +68,12 @@ Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras fila
 | 53 | `burro_vestidos` | 2×2 | burro con trajes de flamenca |
 | 54 | `cajas_atrezo` | 2×2 | baúles de gira y caja de madera |
 | 55 | `borde_escenario` | 3×1 (fila) | borde delantero del escenario |
+| 56 | `rotulo_playa` | 3×1 | placa turquesa (Playa del Inglés) |
+| 57 | `valla_concierto` | 1×2 (se repite) | valla de seguridad de concierto |
+| 58 | `sombrilla_playa` | 2×2 | sombrilla de playa de gajos |
+| 59 | `tabla_surf` | 1×2 | tabla de surf de pie |
+| 60 | `nevera` | 1×1 | nevera de playa |
+| 61 | `bateria` | 2×2 | batería de concierto |
 
 ## Pintor: `maps/_pintura/pintar_gimnasios.gd`
 

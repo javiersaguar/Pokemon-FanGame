@@ -3218,15 +3218,148 @@
         "entrenadores": [
           {
             "id": "gym5_quesito_1",
-            "nombre": "Yaiza"
+            "nombre": "Yaiza",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym5_quesito_2",
-            "nombre": "Nayra"
+            "nombre": "Nayra",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "la_pantera",
-            "nombre": "La Pantera"
+            "nombre": "La Pantera",
+            "mira": "izquierda",
+            "vista": 2
+          }
+        ],
+        "rotulo": "PISTA",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 4,
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLL................",
+          ".....................",
+          ".A..F.......F...A..A.",
+          ".A..F.......F...A..A.",
+          ".....................",
+          ".....................",
+          ".VVVVVVVVVVVVVVVVVV..",
+          ".VVVVVVVVVVVVVVVVVV..",
+          "...T.............T...",
+          "...T.............T...",
+          "..VVVVVVVVVVVVVVVVVV.",
+          "..VVVVVVVVVVVVVVVVVV.",
+          "...OO.......OO.....P.",
+          "...OO.N.....OO.N...P.",
+          "...................P.",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          ".....................",
+          "..............3......",
+          ".....................",
+          ".....................",
+          "...................h.",
+          "......n...2.......H..",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          ".......1.............",
+          "...............o.....",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Pulsera, por favor. Sin pulsera no se pasa a la pista.",
+              "¿No tienes? Gánale a Yaiza, que lleva dos días en la cola y tiene pulseras para regalar."
+            ],
+            "despues": [
+              "Pulsera puesta. Disfruta del concierto, mi niño."
+            ]
+          },
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "La primera fila está llena desde ayer por la tarde.",
+              "Nayra no se mueve ni para ir al baño. Gánale y te deja su hueco."
+            ],
+            "despues": [
+              "Hueco libre. Cuidado con la arena, que quema."
+            ]
+          },
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Por aquí se va a la zona VIP. Hay que tener pase.",
+              "La Pantera tiene los pases. Si le ganas, te da uno."
+            ],
+            "despues": [
+              "Pase VIP. Pásalo bien, chacho."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Fan",
+            "sprite": "fan_quevedo",
+            "mira": "derecha",
+            "frases": [
+              "¡Quédate! ¡Quédate! Llevo cantándolo desde el martes. No me acuerdo de otra parte.",
+              "Me he traído la nevera, la sombrilla y a mi abuela. Mi abuela se sabe la letra mejor que yo."
+            ]
+          },
+          {
+            "nombre": "Surfista",
+            "sprite": "surfista",
+            "mira": "izquierda",
+            "frases": [
+              "Hoy no hay olas: hay concierto. Para el caso, se baila igual.",
+              "El agua está a veintidós grados. En Bilbao a eso lo llaman verano."
+            ]
           }
         ]
       },
@@ -3235,15 +3368,168 @@
         "entrenadores": [
           {
             "id": "gym5_quesito_3",
-            "nombre": "Idaira"
+            "nombre": "Idaira",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym5_quesito_4",
-            "nombre": "Tamara"
+            "nombre": "Tamara",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "lucho_rk",
-            "nombre": "Lucho RK"
+            "nombre": "Lucho RK",
+            "mira": "izquierda",
+            "vista": 2
+          }
+        ],
+        "rotulo": "ZONA VIP",
+        "rotulo_casilla": [
+          15,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "plano": [
+          "#####################",
+          "#####################",
+          "####S################",
+          "#...........aaaaaaaa#",
+          "#...........aaaaaaaa#",
+          "#...........aaaaaaaa#",
+          "#...........aaaaaaaa#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          "...............LLLLL.",
+          ".....................",
+          ".......sss.........P.",
+          ".......sss...CCCCCCP.",
+          ".............CCCCCCP.",
+          ".....................",
+          "..UUUUUUUUUUUUUUUUUU.",
+          "..UUUUUUUUUUUUUUUUUU.",
+          "....t.t.t.t..OO......",
+          "....t.t.t.t..OO......",
+          ".UUUUUUUUUUUUUUUUUU..",
+          ".UUUUUUUUUUUUUUUUUU..",
+          ".....................",
+          "...t.t.......OON.....",
+          "...t.t.......OO......",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".............c...c...",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "....iI...............",
+          "...............n.....",
+          "......3..............",
+          ".....................",
+          ".....................",
+          ".h...................",
+          "..H.............2....",
+          ".....................",
+          ".....................",
+          "...................g.",
+          "..................G..",
+          "......1...o..........",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Zona VIP. Aquí se viene a ver y a que te vean.",
+              "Idaira está haciendo fotos. Gánale y te deja pasar sin salir en ninguna."
+            ],
+            "despues": [
+              "Pasa. Y sonríe, que te está grabando media playa."
+            ]
+          },
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Las tumbonas de la VIP están reservadas.",
+              "Tamara ha puesto la toalla en todas. Gánale."
+            ],
+            "despues": [
+              "Toallas fuera. Pasa."
+            ]
+          },
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "El backstage es solo para artistas y para el que trae las papas arrugadas.",
+              "Lucho RK está de guardia. Gánale."
+            ],
+            "despues": [
+              "Pasa, que el mojo se enfría."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Camarero",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "frases": [
+              "¿Un barraquito? Café, leche condensada, licor y canela. Aquí es la bebida oficial del VIP.",
+              "Las papas arrugadas van con mojo rojo o verde. Si pides los dos, eres de aquí."
+            ]
+          },
+          {
+            "nombre": "Promotora",
+            "sprite": "npc_lass",
+            "mira": "izquierda",
+            "frases": [
+              "¿Has visto a Quevedo? Yo tampoco. Dicen que llega en guagua.",
+              "Esta noche hay fiesta en las dunas. Bueno, hay fiesta todas las noches."
+            ]
           }
         ]
       },
@@ -3252,21 +3538,430 @@
         "entrenadores": [
           {
             "id": "gym5_quesito_5",
-            "nombre": "Guacimara"
+            "nombre": "Guacimara",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym5_quesito_6",
-            "nombre": "Dácil"
+            "nombre": "Dácil",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "cruz_cafune",
-            "nombre": "Cruz Cafuné"
+            "nombre": "Cruz Cafuné",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "BACKSTAGE",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            4,
+            0,
+            20
+          ],
+          "pared": [
+            5,
+            10
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "################S####",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLL.ZZ............",
+          ".......ZZ............",
+          "..sss.....mm.......F.",
+          "..sss.....mm.......F.",
+          ".....................",
+          ".....................",
+          "..BBBBBBBBBBBBBBBBBB.",
+          "..BBBBBBBBBBBBBBBBBB.",
+          ".......A......BB.....",
+          ".......A......BB.....",
+          ".VVVVVVVVVVVVVVVVVV..",
+          ".VVVVVVVVVVVVVVVVVV..",
+          ".....................",
+          "...T.N..........BB...",
+          "...T............BB...",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........c..........",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "................iI...",
+          ".....................",
+          ".............3.......",
+          ".....................",
+          ".....................",
+          ".h...................",
+          "..H.......2..........",
+          "....n................",
+          ".....................",
+          "...................g.",
+          "..................G..",
+          ".......1....o........",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Cables por todas partes. Mira dónde pisas.",
+              "Guacimara es la técnica de luces. Gánale y te enciende el camino."
+            ],
+            "despues": [
+              "Camino encendido. Ve por la izquierda."
+            ]
+          },
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Silencio, que Quevedo está calentando la voz.",
+              "Dácil controla quién sube. Gánale."
+            ],
+            "despues": [
+              "Sube. Pero no le pidas la sesión 52, que está harto."
+            ]
+          },
+          {
+            "nombre": "Seguridad",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al escenario solo sube el que haya ganado al de Tenerife.",
+              "Cruz Cafuné dice que la isla buena es la suya. Gánale y opina."
+            ],
+            "despues": [
+              "Has ganado. Ahora la isla buena es la de Quevedo. Sube."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Técnico de sonido",
+            "sprite": "npc_youngster",
+            "mira": "abajo",
+            "frases": [
+              "Probando, probando... Sí, se oye. Hasta en Tenerife se oye.",
+              "Si se va la luz, que no cunda el pánico: tenemos un generador y mucho reguetón."
+            ]
+          },
+          {
+            "nombre": "Mánager",
+            "sprite": "npc_man",
+            "mira": "izquierda",
+            "frases": [
+              "Quevedo no firma autógrafos antes del concierto. Después, tampoco.",
+              "Tenemos tres giras, dos discos y una isla entera esperando. Date prisa."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "CONCIERTO EN LA PLAYA · ESCENARIO",
-    "lider_previos": []
+    "estilo": {
+      "suelo": [
+        0,
+        0,
+        0
+      ],
+      "pared": [
+        5,
+        2
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        3,
+        22,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "f8f8f0",
+      "rotulo_sombra": "1c2450"
+    },
+    "leyenda": {
+      "w": {
+        "suelo": [
+          4,
+          0,
+          0
+        ]
+      },
+      "a": {
+        "suelo": [
+          4,
+          0,
+          16
+        ]
+      },
+      "L": {
+        "propia": "rotulo_playa",
+        "fila": true
+      },
+      "V": {
+        "propia": "valla_concierto",
+        "arriba": 1
+      },
+      "O": {
+        "propia": "sombrilla_playa",
+        "arriba": 1
+      },
+      "T": {
+        "propia": "tabla_surf"
+      },
+      "N": {
+        "propia": "nevera"
+      },
+      "K": {
+        "propia": "bateria"
+      },
+      "A": {
+        "propia": "altavoz"
+      },
+      "F": {
+        "propia": "foco",
+        "arriba": 1
+      },
+      "M": {
+        "propia": "micro_pie",
+        "arriba": 1
+      },
+      "B": {
+        "propia": "cajas_atrezo"
+      },
+      "e": {
+        "propia": "borde_escenario",
+        "fila": true
+      },
+      "t": {
+        "propia": "tumbona"
+      },
+      "c": {
+        "propia": "cubata"
+      },
+      "Z": {
+        "propia": "espejo_camerino"
+      },
+      "X": {
+        "pieza": [
+          6,
+          4,
+          48,
+          4,
+          3
+        ]
+      },
+      "P": {
+        "pieza": [
+          2,
+          2,
+          36,
+          1,
+          3
+        ],
+        "arriba": 2
+      },
+      "C": {
+        "fila": [
+          3,
+          5,
+          11
+        ],
+        "arriba": 1
+      },
+      "U": {
+        "fila": [
+          6,
+          4,
+          52
+        ],
+        "arriba": 1
+      },
+      "s": {
+        "pieza": [
+          2,
+          3,
+          59,
+          3,
+          2
+        ]
+      },
+      "m": {
+        "pieza": [
+          8,
+          0,
+          5,
+          2,
+          2
+        ]
+      }
+    },
+    "sala_lider": {
+      "titulo": "CONCIERTO EN LA PLAYA · ESCENARIO",
+      "rotulo": "ESCENARIO",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 5,
+      "estilo": {
+        "suelo": [
+          0,
+          0,
+          0
+        ],
+        "pared": [
+          1,
+          15
+        ]
+      },
+      "plano": [
+        "#####################",
+        "#####################",
+        "#####################",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#.........E.........#",
+        "#####################"
+      ],
+      "muebles": [
+        ".....................",
+        ".LLLLL.......XXXX....",
+        ".............XXXX....",
+        ".A.F.........XXXX..A.",
+        ".A.F.....KK......F.A.",
+        ".........KK..M...F...",
+        ".............M.......",
+        ".....................",
+        ".eeeeeeeeeeeeeeeeee..",
+        ".....................",
+        ".....................",
+        "..OO.........OO....P.",
+        "..OO.N.......OO.N..P.",
+        "...................P.",
+        ".....................",
+        ".....................",
+        "....................."
+      ],
+      "personas": [
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "..........@..........",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".......n.............",
+        ".....................",
+        ".....................",
+        "............o........",
+        ".....................",
+        ".....................",
+        "....................."
+      ],
+      "entrenadores": [],
+      "npcs": [
+        {
+          "nombre": "Mánager",
+          "sprite": "npc_man",
+          "mira": "derecha",
+          "frases": [
+            "Esta es la última canción. La que todo el mundo espera.",
+            "Si le ganas, te quedas tú con la medalla. Él se queda con la canción, que da más dinero."
+          ]
+        },
+        {
+          "nombre": "Fan",
+          "sprite": "fan_quevedo",
+          "mira": "arriba",
+          "frases": [
+            "¡Que salga ya! ¡Que salga ya! Bueno, ya ha salido. ¡Que cante ya!",
+            "He venido en guagua desde Las Palmas. Tres horas. Por una canción. Merece la pena."
+          ]
+        }
+      ]
+    }
   },
   "bilbao": {
     "lider": "aupa_athletic",

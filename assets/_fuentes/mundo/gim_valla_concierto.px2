@@ -1,0 +1,38 @@
+# Valla de seguridad de concierto: barandilla de metal con barrotes y patas, para separar al público
+# (gimnasio 5). Una casilla de ancho que se repite; la parte de arriba se pinta por encima de los personajes.
+# Dibujado a mano, 16x32 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   o = metal_1   L = metal_5   M = metal_4   D = metal_3   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/valla_concierto.png
+---
+................
+................
+................
+................
+................
+................
+................
+................
+oooooooooooooooo
+LLLLLLLLLLLLLLLL
+MMMMMMMMMMMMMMMM
+oooooooooooooooo
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+.LD..LD..LD..LD.
+oooooooooooooooo
+MMMMMMMMMMMMMMMM
+oooooooooooooooo
+.oMo........oMo.
+oMMMo......oMMMo
+zzzzz......zzzzz
+................
