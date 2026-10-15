@@ -179,6 +179,14 @@ func _build_world(box: VBoxContainer) -> void:
 			Clock.set_debug_hour_offset(0)
 			Clock.set_debug_hour_offset(int(entry[1])-Clock.hour()))
 	_button(hour,"Hora real",func() -> void: Clock.set_debug_hour_offset(0))
+	# San Fermín (del 6 al 14 de julio): en la sesión, la fecha pasa al 7 de julio o vuelve a la real.
+	_button(hour,"San Fermín",func() -> void:
+		if SanFerminEvent.fecha_de_prueba.is_empty():
+			SanFerminEvent.fecha_de_prueba = {"year": int(Time.get_datetime_dict_from_system().year), "month": 7, "day": 7}
+			status.text = "Fecha de pruebas: 7 de julio. Entra en Pamplona para ver el encierro."
+		else:
+			SanFerminEvent.fecha_de_prueba = {}
+			status.text = "Fecha real otra vez.")
 	var screens := _row(box)
 	_button(screens,"Mapa región",func() -> void: await _screen(&"region"))
 	_button(screens,"Tarjeta",func() -> void: await _screen(&"card"))

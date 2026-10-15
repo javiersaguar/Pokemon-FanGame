@@ -76,6 +76,7 @@ func finish() -> Error:
 	var error := await SceneManager.restore_test_snapshot(snapshot)
 	if error == OK:
 		_restore_field_actions()
+		SanFerminEvent.fecha_de_prueba = {}
 		Debug.noclip = bool(_debug_values.noclip)
 		Debug.encounters_disabled = bool(_debug_values.encounters)
 		Clock.set_debug_hour_offset(int(_debug_values.hour))

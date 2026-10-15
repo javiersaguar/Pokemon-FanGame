@@ -1,5 +1,7 @@
 [gd_scene format=4]
 
+[ext_resource type="Script" path="res://src/overworld/trigger/trigger.gd" id="sanfermin_trigger"]
+[ext_resource type="Script" path="res://src/events/san_fermin_event.gd" id="sanfermin_event"]
 [ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_y0sc8"]
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_8xq2q"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_v5bei"]
@@ -310,3 +312,9 @@ position = Vector2(1776, 1296)
 position = Vector2(1264, 976)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=2077913530]
+
+[node name="SanFermin" type="Node2D" parent="Triggers"]
+position = Vector2(1008, 400)
+script = ExtResource("sanfermin_trigger")
+event = ExtResource("sanfermin_event")
+mode = 1
