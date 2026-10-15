@@ -1,20 +1,25 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_855nb"]
-[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_urq6p"]
-[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_rm11s"]
-[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_lv6bl"]
-[ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="5_7qnve"]
-[ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="6_8pysj"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="7_qqwbn"]
-[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="8_nj3yb"]
-[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="9_hyt8l"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_man.png" id="10_2ku0t"]
-[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_b4d63"]
-[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_0tipt"]
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_8pysj"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_qqwbn"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_nj3yb"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/gimnasios/gimnasios.tres" id="4_hyt8l"]
+[ext_resource type="TileSet" path="res://assets/tilesets/exterior/exterior.tres" id="5_2ku0t"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="6_b4d63"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="7_0tipt"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/revisorcercanias.png" id="8_af2ms"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_icf3s"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_kfoye"]
+[ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="11_ofnuc"]
+[ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="12_brd6v"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="13_bvmit"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="14_ydah0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/jubiladoobras.png" id="15_ldqf1"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="16_m4gih"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="17_xqbgq"]
 
-[sub_resource type="Resource" id="Resource_af2ms"]
-script = ExtResource("3_rm11s")
+[sub_resource type="Resource" id="Resource_8i07o"]
+script = ExtResource("3_nj3yb")
 id = &"barcelona/gimnasio_2"
 display_name = "Spotify Camp Nou · Sala De Palancas"
 outdoor = false
@@ -23,121 +28,189 @@ battle_background = &"indoor"
 can_fly_from = false
 can_bike = false
 can_run = false
-fixed_camera = true
 followers_allowed = false
 
-[node name="Gimnasio" type="Node2D" unique_id=475538135]
-script = ExtResource("1_855nb")
-data = SubResource("Resource_af2ms")
+[node name="Gimnasio" type="Node2D" unique_id=815699667]
+script = ExtResource("1_8pysj")
+data = SubResource("Resource_8i07o")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=944990144]
-tile_map_data = PackedByteArray("AAAAAAAAAAABAAkAAAABAAAAAAABAAkAAAACAAAAAAABAAkAAAADAAAAAAABAAkAAAAEAAAAAAABAAkAAAAFAAAAAAABAAkAAAAGAAAAAAABAAkAAAAHAAAAAAABAAkAAAAIAAAAAAABAAkAAAAJAAAAAAABAAkAAAAKAAAAAAABAAkAAAALAAAAAAABAAkAAAAMAAAAAAABAAkAAAANAAAAAAABAAkAAAAOAAAAAAABAAkAAAAPAAAAAAABAAkAAAAAAAEAAAABAAkAAAABAAEAAAABAAkAAAACAAEAAAABAAkAAAADAAEAAAABAAkAAAAEAAEAAAABAAkAAAAFAAEAAAABAAkAAAAGAAEAAAABAAkAAAAHAAEAAAABAAkAAAAIAAEAAAABAAkAAAAJAAEAAAABAAkAAAAKAAEAAAABAAkAAAALAAEAAAABAAkAAAAMAAEAAAABAAkAAAANAAEAAAABAAkAAAAOAAEAAAABAAkAAAAPAAEAAAABAAkAAAAAAAIAAAABAAkAAAABAAIAAAABAAkAAAACAAIAAAABAAkAAAADAAIAAAABAAkAAAAEAAIAAAABAAkAAAAFAAIAAAABAAkAAAAGAAIAAAABAAkAAAAHAAIAAAABAAkAAAAIAAIAAAABAAkAAAAJAAIAAAABAAkAAAAKAAIAAAABAAkAAAALAAIAAAABAAkAAAAMAAIAAAABAAkAAAANAAIAAAABAAkAAAAOAAIAAAABAAkAAAAPAAIAAAABAAkAAAAAAAMAAAABAAkAAAABAAMAAAABAAkAAAACAAMAAAABAAkAAAADAAMAAAABAAkAAAAEAAMAAAABAAkAAAAFAAMAAAABAAkAAAAGAAMAAAABAAkAAAAHAAMAAAABAAkAAAAIAAMAAAABAAkAAAAJAAMAAAABAAkAAAAKAAMAAAABAAkAAAALAAMAAAABAAkAAAAMAAMAAAABAAkAAAANAAMAAAABAAkAAAAOAAMAAAABAAkAAAAPAAMAAAABAAkAAAAAAAQAAAABAAkAAAABAAQAAAABAAkAAAACAAQAAAABAAkAAAADAAQAAAABAAkAAAAEAAQAAAABAAkAAAAFAAQAAAABAAkAAAAGAAQAAAABAAkAAAAHAAQAAAABAAkAAAAIAAQAAAABAAkAAAAJAAQAAAABAAkAAAAKAAQAAAABAAkAAAALAAQAAAABAAkAAAAMAAQAAAABAAkAAAANAAQAAAABAAkAAAAOAAQAAAABAAkAAAAPAAQAAAABAAkAAAAAAAUAAAABAAkAAAABAAUAAAABAAkAAAACAAUAAAABAAkAAAADAAUAAAABAAkAAAAEAAUAAAABAAkAAAAFAAUAAAABAAkAAAAGAAUAAAABAAkAAAAHAAUAAAABAAkAAAAIAAUAAAABAAkAAAAJAAUAAAABAAkAAAAKAAUAAAABAAkAAAALAAUAAAABAAkAAAAMAAUAAAABAAkAAAANAAUAAAABAAkAAAAOAAUAAAABAAkAAAAPAAUAAAABAAkAAAAAAAYAAAABAAkAAAABAAYAAAABAAkAAAACAAYAAAABAAkAAAADAAYAAAABAAkAAAAEAAYAAAABAAkAAAAFAAYAAAABAAkAAAAGAAYAAAABAAkAAAAHAAYAAAABAAkAAAAIAAYAAAABAAkAAAAJAAYAAAABAAkAAAAKAAYAAAABAAkAAAALAAYAAAABAAkAAAAMAAYAAAABAAkAAAANAAYAAAABAAkAAAAOAAYAAAABAAkAAAAPAAYAAAABAAkAAAAAAAcAAAABAAkAAAABAAcAAAABAAkAAAACAAcAAAABAAkAAAADAAcAAAABAAkAAAAEAAcAAAABAAkAAAAFAAcAAAABAAkAAAAGAAcAAAABAAkAAAAHAAcAAAABAAkAAAAIAAcAAAABAAkAAAAJAAcAAAABAAkAAAAKAAcAAAABAAkAAAALAAcAAAABAAkAAAAMAAcAAAABAAkAAAANAAcAAAABAAkAAAAOAAcAAAABAAkAAAAPAAcAAAABAAkAAAAAAAgAAAABAAkAAAABAAgAAAABAAkAAAACAAgAAAABAAkAAAADAAgAAAABAAkAAAAEAAgAAAABAAkAAAAFAAgAAAABAAkAAAAGAAgAAAABAAkAAAAHAAgAAAABAAkAAAAIAAgAAAABAAkAAAAJAAgAAAABAAkAAAAKAAgAAAABAAkAAAALAAgAAAABAAkAAAAMAAgAAAABAAkAAAANAAgAAAABAAkAAAAOAAgAAAABAAkAAAAPAAgAAAABAAkAAAAAAAkAAAABAAkAAAABAAkAAAABAAkAAAACAAkAAAABAAkAAAADAAkAAAABAAkAAAAEAAkAAAABAAkAAAAFAAkAAAABAAkAAAAGAAkAAAABAAkAAAAHAAkAAAABAAkAAAAIAAkAAAABAAkAAAAJAAkAAAABAAkAAAAKAAkAAAABAAkAAAALAAkAAAABAAkAAAAMAAkAAAABAAkAAAANAAkAAAABAAkAAAAOAAkAAAABAAkAAAAPAAkAAAABAAkAAAAAAAoAAAABAAkAAAABAAoAAAABAAkAAAACAAoAAAABAAkAAAADAAoAAAABAAkAAAAEAAoAAAABAAkAAAAFAAoAAAABAAkAAAAGAAoAAAABAAkAAAAHAAoAAAABAAkAAAAIAAoAAAABAAkAAAAJAAoAAAABAAkAAAAKAAoAAAABAAkAAAALAAoAAAABAAkAAAAMAAoAAAABAAkAAAANAAoAAAABAAkAAAAOAAoAAAABAAkAAAAPAAoAAAABAAkAAAAAAAsAAAABAAkAAAABAAsAAAABAAkAAAACAAsAAAABAAkAAAADAAsAAAABAAkAAAAEAAsAAAABAAkAAAAFAAsAAAABAAkAAAAGAAsAAAABAAkAAAAHAAsAAAABAAkAAAAIAAsAAAABAAkAAAAJAAsAAAABAAkAAAAKAAsAAAABAAkAAAALAAsAAAABAAkAAAAMAAsAAAABAAkAAAANAAsAAAABAAkAAAAOAAsAAAABAAkAAAAPAAsAAAABAAkAAAA=")
-tile_set = ExtResource("4_lv6bl")
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1120558359]
+tile_map_data = PackedByteArray("AAABAAEABQACAD8AAAACAAEABQADAD8AAAADAAEABQABAD8AAAAEAAEABQACAD8AAAAFAAEABQADAD8AAAAGAAEABQABAD8AAAAHAAEABQACAD8AAAAIAAEABQADAD8AAAAJAAEABQABAD8AAAAKAAEABQACAD8AAAALAAEABQADAD8AAAAMAAEABQABAD8AAAANAAEABQACAD8AAAAOAAEABQADAD8AAAAPAAEABQABAD8AAAAQAAEABQACAD8AAAARAAEABQADAD8AAAASAAEABQABAD8AAAATAAEABQACAD8AAAABAAIABQACAEAAAAACAAIABQADAEAAAAADAAIABQABAEAAAAAEAAIAAAAAADgAAAAFAAIABQADAEAAAAAGAAIABQABAEAAAAAHAAIABQACAEAAAAAIAAIABQADAEAAAAAJAAIABQABAEAAAAAKAAIABQACAEAAAAALAAIABQADAEAAAAAMAAIABQABAEAAAAANAAIABQACAEAAAAAOAAIABQADAEAAAAAPAAIABQABAEAAAAAQAAIABQACAEAAAAARAAIABQADAEAAAAASAAIABQABAEAAAAATAAIABQACAEAAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAIAAMAAAAAADgAAAAJAAMAAAAAADgAAAAKAAMAAAAAADgAAAALAAMAAAAAADgAAAAMAAMAAAAAADgAAAANAAMAAAAAADgAAAAOAAMAAAAAADgAAAAPAAMAAAAAADgAAAAQAAMAAAAAADgAAAARAAMAAAAAADgAAAASAAMAAAAAADgAAAATAAMAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAADgAAAAFAAQAAAAAADgAAAAGAAQAAAAAADgAAAAHAAQAAAAAADgAAAAIAAQAAAAAADgAAAAJAAQAAAAAADgAAAAKAAQAAAAAADgAAAALAAQAAAAAADgAAAAMAAQAAAAAADgAAAANAAQAAAAAADgAAAAOAAQAAAAAADgAAAAPAAQAAAAAADgAAAAQAAQAAAAAADgAAAARAAQAAAAAADgAAAASAAQAAAAAADgAAAATAAQAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAADgAAAAFAAUAAAAAADgAAAAGAAUAAAAAADgAAAAHAAUAAAAAADgAAAAIAAUAAAAAADgAAAAJAAUAAAAAADgAAAAKAAUAAAAAADgAAAALAAUAAAAAADgAAAAMAAUAAAAAADgAAAANAAUAAAAAADgAAAAOAAUAAAAAADgAAAAPAAUAAAAAADgAAAAQAAUAAAAAADgAAAARAAUAAAAAADgAAAASAAUAAAAAADgAAAATAAUAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAADgAAAAFAAYAAAAAADgAAAAGAAYAAAAAADgAAAAHAAYAAAAAADgAAAAIAAYAAAAAADgAAAAJAAYAAAAAADgAAAAKAAYAAAAAADgAAAALAAYAAAAAADgAAAAMAAYAAAAAADgAAAANAAYAAAAAADgAAAAOAAYAAAAAADgAAAAPAAYAAAAAADgAAAAQAAYAAAAAADgAAAARAAYAAAAAADgAAAASAAYAAAAAADgAAAATAAYAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAADgAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAAIAAcAAAAAADgAAAAJAAcAAAAAADgAAAAKAAcAAAAAADgAAAALAAcAAAAAADgAAAAMAAcAAAAAADgAAAANAAcAAAAAADgAAAAOAAcAAAAAADgAAAAPAAcAAAAAADgAAAAQAAcAAAAAADgAAAARAAcAAAAAADgAAAASAAcAAAAAADgAAAATAAcAAAAAADgAAAABAAgAAAAAADgAAAACAAgAAAAAADgAAAADAAgAAAAAADgAAAAEAAgAAAAAADgAAAAFAAgAAAAAADgAAAAGAAgAAAAAADgAAAAHAAgAAAAAADgAAAAIAAgAAAAAADgAAAAJAAgAAAAAADgAAAAKAAgAAAAAADgAAAALAAgAAAAAADgAAAAMAAgAAAAAADgAAAANAAgAAAAAADgAAAAOAAgAAAAAADgAAAAPAAgAAAAAADgAAAAQAAgAAAAAADgAAAARAAgAAAAAADgAAAASAAgAAAAAADgAAAATAAgAAAAAADgAAAABAAkAAAAAADgAAAACAAkAAAAAADgAAAADAAkAAAAAADgAAAAEAAkAAAAAADgAAAAFAAkAAAAAADgAAAAGAAkAAAAAADgAAAAHAAkAAAAAADgAAAAIAAkAAAAAADgAAAAJAAkAAAAAADgAAAAKAAkAAAAAADgAAAALAAkAAAAAADgAAAAMAAkAAAAAADgAAAANAAkAAAAAADgAAAAOAAkAAAAAADgAAAAPAAkAAAAAADgAAAAQAAkAAAAAADgAAAARAAkAAAAAADgAAAASAAkAAAAAADgAAAATAAkAAAAAADgAAAABAAoAAAAAADgAAAACAAoAAAAAADgAAAADAAoAAAAAADgAAAAEAAoAAAAAADgAAAAFAAoAAAAAADgAAAAGAAoAAAAAADgAAAAHAAoAAAAAADgAAAAIAAoAAAAAADgAAAAJAAoAAAAAADgAAAAKAAoAAAAAADgAAAALAAoAAAAAADgAAAAMAAoAAAAAADgAAAANAAoAAAAAADgAAAAOAAoAAAAAADgAAAAPAAoAAAAAADgAAAAQAAoAAAAAADgAAAARAAoAAAAAADgAAAASAAoAAAAAADgAAAATAAoAAAAAADgAAAABAAsAAAAAADgAAAACAAsAAAAAADgAAAADAAsAAAAAADgAAAAEAAsAAAAAADgAAAAFAAsAAAAAADgAAAAGAAsAAAAAADgAAAAHAAsAAAAAADgAAAAIAAsAAAAAADgAAAAJAAsAAAAAADgAAAAKAAsAAAAAADgAAAALAAsAAAAAADgAAAAMAAsAAAAAADgAAAANAAsAAAAAADgAAAAOAAsAAAAAADgAAAAPAAsAAAAAADgAAAAQAAsAAAAAADgAAAARAAsAAAAAADgAAAASAAsAAAAAADgAAAATAAsAAAAAADgAAAABAAwAAAAAADgAAAACAAwAAAAAADgAAAADAAwAAAAAADgAAAAEAAwAAAAAADgAAAAFAAwAAAAAADgAAAAGAAwAAAAAADgAAAAHAAwAAAAAADgAAAAIAAwAAAAAADgAAAAJAAwAAAAAADgAAAAKAAwAAAAAADgAAAALAAwAAAAAADgAAAAMAAwAAAAAADgAAAANAAwAAAAAADgAAAAOAAwAAAAAADgAAAAPAAwAAAAAADgAAAAQAAwAAAAAADgAAAARAAwAAAAAADgAAAASAAwAAAAAADgAAAATAAwAAAAAADgAAAABAA0AAAAAADgAAAACAA0AAAAAADgAAAADAA0AAAAAADgAAAAEAA0AAAAAADgAAAAFAA0AAAAAADgAAAAGAA0AAAAAADgAAAAHAA0AAAAAADgAAAAIAA0AAAAAADgAAAAJAA0AAAAAADgAAAAKAA0AAAAAADgAAAALAA0AAAAAADgAAAAMAA0AAAAAADgAAAANAA0AAAAAADgAAAAOAA0AAAAAADgAAAAPAA0AAAAAADgAAAAQAA0AAAAAADgAAAARAA0AAAAAADgAAAASAA0AAAAAADgAAAATAA0AAAAAADgAAAABAA4AAAAAADgAAAACAA4AAAAAADgAAAADAA4AAAAAADgAAAAEAA4AAAAAADgAAAAFAA4AAAAAADgAAAAGAA4AAAAAADgAAAAHAA4AAAAAADgAAAAIAA4AAAAAADgAAAAJAA4AAAAAADgAAAAKAA4AAAAAADgAAAALAA4AAAAAADgAAAAMAA4AAAAAADgAAAANAA4AAAAAADgAAAAOAA4AAAAAADgAAAAPAA4AAAAAADgAAAAQAA4AAAAAADgAAAARAA4AAAAAADgAAAASAA4AAAAAADgAAAATAA4AAAAAADgAAAABAA8AAAAAADgAAAACAA8AAAAAADgAAAADAA8AAAAAADgAAAAEAA8AAAAAADgAAAAFAA8AAAAAADgAAAAGAA8AAAAAADgAAAAHAA8AAAAAADgAAAAIAA8AAAAAADgAAAAJAA8AAAAAADgAAAAKAA8AAAAAADgAAAALAA8AAAAAADgAAAAMAA8AAAAAADgAAAANAA8AAAAAADgAAAAOAA8AAAAAADgAAAAPAA8AAAAAADgAAAAQAA8AAAAAADgAAAARAA8AAAAAADgAAAASAA8AAAAAADgAAAATAA8AAAAAADgAAAABABAAAAAAADgAAAACABAAAAAAADgAAAADABAAAAAAADgAAAAEABAAAAAAADgAAAAFABAAAAAAADgAAAAGABAAAAAAADgAAAAHABAAAAAAADgAAAAIABAAAAAAADgAAAAJABAAAAAAADgAAAAKABAAAAAAADgAAAALABAAAAAAADgAAAAMABAAAAAAADgAAAANABAAAAAAADgAAAAOABAAAAAAADgAAAAPABAAAAAAADgAAAAQABAAAAAAADgAAAARABAAAAAAADgAAAASABAAAAAAADgAAAATABAAAAAAADgAAAAAAAAABQACAD4AAAABAAAABQABAD4AAAACAAAABQABAD4AAAADAAAABQABAD4AAAAEAAAABQABAD4AAAAFAAAABQABAD4AAAAGAAAABQABAD4AAAAHAAAABQABAD4AAAAIAAAABQABAD4AAAAJAAAABQABAD4AAAAKAAAABQABAD4AAAALAAAABQABAD4AAAAMAAAABQABAD4AAAANAAAABQABAD4AAAAOAAAABQABAD4AAAAPAAAABQABAD4AAAAQAAAABQABAD4AAAARAAAABQABAD4AAAASAAAABQABAD4AAAATAAAABQABAD4AAAAUAAAABQAAAD4AAAAAAAEABQACAD0AAAAUAAEABQAAAD0AAAAAAAIABQACAD0AAAAUAAIABQAAAD0AAAAAAAMABQACAD0AAAAUAAMABQAAAD0AAAAAAAQABQACAD0AAAAUAAQABQAAAD0AAAAAAAUABQACAD0AAAAUAAUABQAAAD0AAAAAAAYABQACAD0AAAAUAAYABQAAAD0AAAAAAAcABQACAD0AAAAUAAcABQAAAD0AAAAAAAgABQACAD0AAAAUAAgABQAAAD0AAAAAAAkABQACAD0AAAAUAAkABQAAAD0AAAAAAAoABQACAD0AAAAUAAoABQAAAD0AAAAAAAsABQACAD0AAAAUAAsABQAAAD0AAAAAAAwABQACAD0AAAAUAAwABQAAAD0AAAAAAA0ABQACAD0AAAAUAA0ABQAAAD0AAAAAAA4ABQACAD0AAAAUAA4ABQAAAD0AAAAAAA8ABQACAD0AAAAUAA8ABQAAAD0AAAAAABAABQACAD0AAAAUABAABQAAAD0AAAAAABEABQADAD0AAAABABEABQAEAD0AAAACABEABQAEAD0AAAADABEABQAEAD0AAAAEABEABQAEAD0AAAAFABEABQAEAD0AAAAGABEABQAEAD0AAAAHABEABQAEAD0AAAAIABEABQAEAD0AAAAJABEABQAEAD0AAAAKABEABQAEAD0AAAALABEABQAEAD0AAAAMABEABQAEAD0AAAANABEABQAEAD0AAAAOABEABQAEAD0AAAAPABEABQAEAD0AAAAQABEABQAEAD0AAAARABEABQAEAD0AAAASABEABQAEAD0AAAATABEABQAEAD0AAAAUABEABQAFAD0AAAA=")
+tile_set = ExtResource("4_hyt8l")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=267920812]
-tile_map_data = PackedByteArray("AAAAAAAAAQABADAAAAAAAAEAAQABADEAAAAAAAsAAQABADEAAAABAAAAAQABADAAAAABAAEAAQABADEAAAABAAsAAQABADEAAAACAAAAAQABADAAAAACAAEAAQABADEAAAACAAsAAQABADEAAAADAAAAAQABADAAAAADAAEAAQABADEAAAADAAsAAQABADEAAAAEAAAAAQABADAAAAAEAAEAAQABADEAAAAEAAsAAQABADEAAAAFAAAAAQABADAAAAAFAAEAAQABADEAAAAFAAsAAQABADEAAAAGAAAAAQABADAAAAAGAAEAAQABADEAAAAGAAsAAQABADEAAAAHAAAAAQABADAAAAAHAAEAAQABADEAAAAHAAsAAQABADEAAAAIAAAAAQABADAAAAAIAAEA//////////8JAAAAAQABADAAAAAJAAEAAQABADEAAAAJAAsAAQABADEAAAAKAAAAAQABADAAAAAKAAEAAQABADEAAAAKAAsAAQABADEAAAALAAAAAQABADAAAAALAAEAAQABADEAAAALAAsAAQABADEAAAAMAAAAAQABADAAAAAMAAEAAQABADEAAAAMAAsAAQABADEAAAANAAAAAQABADAAAAANAAEAAQABADEAAAANAAsAAQABADEAAAAOAAAAAQABADAAAAAOAAEAAQABADEAAAAOAAsAAQABADEAAAAPAAAAAQABADAAAAAPAAEAAQABADEAAAAPAAsAAQABADEAAAAAAAIAAQABADEAAEAPAAIAAQABADEAAEAAAAMAAQABADEAAEAPAAMAAQABADEAAEAAAAQAAQABADEAAEAPAAQAAQABADEAAEAAAAUAAQABADEAAEAPAAUAAQABADEAAEAAAAYAAQABADEAAEAPAAYAAQABADEAAEAAAAcAAQABADEAAEAPAAcAAQABADEAAEAAAAgAAQABADEAAEAPAAgAAQABADEAAEAAAAkAAQABADEAAEAPAAkAAQABADEAAEAAAAoAAQABADEAAEAPAAoAAQABADEAAEABAAcAAQABADEAAAADAAcAAQABADEAAAAEAAcAAQABADEAAAAFAAcAAQABADEAAAAGAAcAAQABADEAAAAHAAcAAQABADEAAAAIAAcAAQABADEAAAAJAAcAAQABADEAAAAKAAcAAQABADEAAAALAAcAAQABADEAAAAMAAcAAQABADEAAAANAAcAAQABADEAAAAOAAcAAQABADEAAAABAAQAAQABADEAAAACAAQAAQABADEAAAADAAQAAQABADEAAAAEAAQAAQABADEAAAAFAAQAAQABADEAAAAGAAQAAQABADEAAAAHAAQAAQABADEAAAAIAAQAAQABADEAAAAJAAQAAQABADEAAAAKAAQAAQABADEAAAALAAQAAQABADEAAAAMAAQAAQABADEAAAAOAAQAAQABADEAAAADAAkAAgADADQAAAAEAAkAAgAEADQAAAAFAAkAAgAFADQAAAADAAoAAgADADUAAAAEAAoAAgAEADUAAAAFAAoAAgAFADUAAAABAAkAAgAAACQAAAABAAoAAgAAACUAAAAOAAkAAgACACQAAAAOAAoAAgACACUAAAA=")
-tile_set = ExtResource("4_lv6bl")
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1188035723]
+tile_map_data = PackedByteArray("AAAMAAEABgAEADAAAAANAAEABgAFADAAAAAOAAEABgAGADAAAAAPAAEABgAHADAAAAAMAAIABgAEADEAAAANAAIABgAFADEAAAAOAAIABgAGADEAAAAPAAIABgAHADEAAAAMAAMABgAEADIAAAANAAMABgAFADIAAAAOAAMABgAGADIAAAAPAAMABgAHADIAAAAQAAEAHQAAAAAAAAARAAEAHQABAAAAAAASAAEAHQABAAAAAAATAAEAHQACAAAAAAAGAAIAIgAAAAAAAAAGAAMAIgAAAAEAAAAIAAIAIgAAAAAAAAAIAAMAIgAAAAEAAAAKAAIAIgAAAAAAAAAKAAMAIgAAAAEAAAACAAQAJQAAAAAAAAABAAcAIQAAAAEAAAACAAcAIQAAAAEAAAADAAcAIQAAAAEAAAAEAAcAIQABAAEAAAAFAAcAIQAAAAEAAAAGAAcAIQAAAAEAAAAHAAcAIQAAAAEAAAAIAAcAIQABAAEAAAAJAAcAIQAAAAEAAAAKAAcAIQAAAAEAAAALAAcAIQAAAAEAAAAMAAcAIQABAAEAAAANAAcAIQAAAAEAAAAOAAcAIQAAAAEAAAAPAAcAIQAAAAEAAAAQAAcAIQABAAEAAAARAAcAIQAAAAEAAAASAAcAIQAAAAEAAAACAAgAJgAAAAAAAAADAAgAJgABAAAAAAACAAkAJgAAAAEAAAADAAkAJgABAAEAAAACAAoAJgAAAAIAAAADAAoAJgABAAIAAAAPAAgAJgAAAAAAAAAQAAgAJgABAAAAAAAPAAkAJgAAAAEAAAAQAAkAJgABAAEAAAAPAAoAJgAAAAIAAAAQAAoAJgABAAIAAAAHAAkAJQAAAAAAAAALAAkAJQAAAAAAAAACAAwAIQAAAAEAAAADAAwAIQAAAAEAAAAEAAwAIQAAAAEAAAAFAAwAIQABAAEAAAAGAAwAIQAAAAEAAAAHAAwAIQAAAAEAAAAIAAwAIQAAAAEAAAAJAAwAIQABAAEAAAAKAAwAIQAAAAEAAAALAAwAIQAAAAEAAAAMAAwAIQAAAAEAAAANAAwAIQABAAEAAAAOAAwAIQAAAAEAAAAPAAwAIQAAAAEAAAAQAAwAIQAAAAEAAAARAAwAIQABAAEAAAASAAwAIQAAAAEAAAATAAwAIQAAAAEAAAADAA4AAgAGACUAAAAEAA4AAgAHACUAAAADAA8AAgAGACYAAAAEAA8AAgAHACYAAAARAA4AAgAGACUAAAASAA4AAgAHACUAAAARAA8AAgAGACYAAAASAA8AAgAHACYAAAAIAA8AJQAAAAAAAAAKAA8ABgAGAAAAAAAKABAABgAGAAEAAAADAAEABgADABYAAAAEAAEABgAEABYAAAAFAAEABgAFABYAAAADAAIABgADABcAAAAEAAIABgAEABcAAAAFAAIABgAFABcAAAA=")
+tile_set = ExtResource("4_hyt8l")
 
-[node name="Entities" type="Node2D" parent="." unique_id=220401304]
+[node name="Entities" type="Node2D" parent="." unique_id=843590236]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1494767046]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2026177753]
 y_sort_enabled = true
-tile_set = ExtResource("4_lv6bl")
+tile_set = ExtResource("5_2ku0t")
 
-[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=1805334816 instance=ExtResource("5_7qnve")]
-position = Vector2(368, 304)
-script = ExtResource("6_8pysj")
-trainer_id = &"gym2_cule_3"
-sight_range = 2
-lines = PackedStringArray()
+[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=2032491153 instance=ExtResource("6_b4d63")]
+position = Vector2(144, 112)
+script = ExtResource("7_0tipt")
+display_name = "Steward"
+lines = PackedStringArray("Arriba está el palco. Hoy lo ocupa un argentino que no paga entrada.", "Pruebe con Julián, que se ha escapado del Metropolitano y viene corriendo.")
 turn_to_player = true
-sprite_sheet = ExtResource("7_qqwbn")
-initial_facing = 1
+sprite_sheet = ExtResource("8_af2ms")
+hidden_if_flag = &"trainer_defeated:julian_alvarez"
 
-[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=300333050 instance=ExtResource("8_nj3yb")]
-position = Vector2(80, 240)
-script = ExtResource("9_hyt8l")
-lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Arnau. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+[node name="Vigilante3Aparte" type="Node2D" parent="Entities" unique_id=1269693843 instance=ExtResource("6_b4d63")]
+position = Vector2(176, 112)
+script = ExtResource("7_0tipt")
+display_name = "Steward"
+lines = PackedStringArray("Pase. Y si ve a alguien con la camiseta del Atleti, no diga nada.")
 turn_to_player = true
-sprite_sheet = ExtResource("10_2ku0t")
-hidden_if_flag = &"trainer_defeated:gym2_cule_3"
-
-[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=520446579 instance=ExtResource("5_7qnve")]
-position = Vector2(144, 176)
-script = ExtResource("6_8pysj")
-trainer_id = &"gym2_cule_4"
-sight_range = 2
-lines = PackedStringArray()
-turn_to_player = true
-sprite_sheet = ExtResource("7_qqwbn")
+sprite_sheet = ExtResource("8_af2ms")
 initial_facing = 2
+visible_if_flag = &"trainer_defeated:julian_alvarez"
 
-[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=1239443710 instance=ExtResource("8_nj3yb")]
-position = Vector2(432, 144)
-script = ExtResource("9_hyt8l")
-lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Oriol. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
-turn_to_player = true
-sprite_sheet = ExtResource("10_2ku0t")
-hidden_if_flag = &"trainer_defeated:gym2_cule_4"
+[node name="Cartel1" type="Node2D" parent="Entities" unique_id=2050308221 instance=ExtResource("9_icf3s")]
+position = Vector2(208, 112)
+script = ExtResource("10_kfoye")
+lines = PackedStringArray("PALANCA 1: 25 % DE LOS DERECHOS DE TELEVISIÓN.", "Estado: activada. Ingresos: ya gastados.")
+show_sprite = false
 
-[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=1926051678 instance=ExtResource("5_7qnve")]
-position = Vector2(368, 112)
-script = ExtResource("6_8pysj")
+[node name="Cartel2" type="Node2D" parent="Entities" unique_id=1484835318 instance=ExtResource("9_icf3s")]
+position = Vector2(272, 112)
+script = ExtResource("10_kfoye")
+lines = PackedStringArray("PALANCA 2: 49 % DE LA TIENDA OFICIAL.", "Estado: activada. Comprador: un fondo que no existía el lunes.")
+show_sprite = false
+
+[node name="Cartel3" type="Node2D" parent="Entities" unique_id=1800583341 instance=ExtResource("9_icf3s")]
+position = Vector2(336, 112)
+script = ExtResource("10_kfoye")
+lines = PackedStringArray("PALANCA 3: 100 % DE LA PACIENCIA DEL SOCIO.", "Estado: agotada.")
+show_sprite = false
+
+[node name="Entrenador3" type="Node2D" parent="Entities" unique_id=1160453367 instance=ExtResource("11_ofnuc")]
+position = Vector2(464, 144)
+script = ExtResource("12_brd6v")
 trainer_id = &"julian_alvarez"
 sight_range = 2
 lines = PackedStringArray()
 turn_to_player = true
-sprite_sheet = ExtResource("7_qqwbn")
+sprite_sheet = ExtResource("13_bvmit")
 initial_facing = 1
 
-[node name="Vigilante3" type="Node2D" parent="Entities" unique_id=1913015640 instance=ExtResource("8_nj3yb")]
-position = Vector2(272, 80)
-script = ExtResource("9_hyt8l")
-lines = PackedStringArray("Por aquí no se pasa todavía.", "Primero tienes que ganar a Julián Álvarez. Aquí se entra por orden, como en todas partes menos en la lista de espera.")
+[node name="Personaje1" type="Node2D" parent="Entities" unique_id=1286284153 instance=ExtResource("6_b4d63")]
+position = Vector2(560, 144)
+script = ExtResource("7_0tipt")
+display_name = "Comercial"
+lines = PackedStringArray("¿Quiere comprar una palanca? Tenemos el 10 % del césped, el 5 % de las porterías y el 50 % de la ilusión.", "Pago aplazado hasta 2050. Sin intereses. Bueno, con muchos intereses.")
 turn_to_player = true
-sprite_sheet = ExtResource("10_2ku0t")
-hidden_if_flag = &"trainer_defeated:julian_alvarez"
+sprite_sheet = ExtResource("14_ydah0")
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=560009736]
+[node name="Vigilante2" type="Node2D" parent="Entities" unique_id=210884219 instance=ExtResource("6_b4d63")]
+position = Vector2(624, 240)
+script = ExtResource("7_0tipt")
+display_name = "Steward"
+lines = PackedStringArray("Ahí dentro están las palancas. No se miran, no se tocan y no se pregunta por ellas.", "Oriol tiene la llave. Gánele.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_af2ms")
+hidden_if_flag = &"trainer_defeated:gym2_cule_4"
+
+[node name="Vigilante2Aparte" type="Node2D" parent="Entities" unique_id=641786372 instance=ExtResource("6_b4d63")]
+position = Vector2(592, 272)
+script = ExtResource("7_0tipt")
+display_name = "Steward"
+lines = PackedStringArray("Pase. Si ve una palanca suelta, no la active: vale doscientos millones.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_af2ms")
+initial_facing = 1
+visible_if_flag = &"trainer_defeated:gym2_cule_4"
+
+[node name="Entrenador2" type="Node2D" parent="Entities" unique_id=502478793 instance=ExtResource("11_ofnuc")]
+position = Vector2(304, 304)
+script = ExtResource("12_brd6v")
+trainer_id = &"gym2_cule_4"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("13_bvmit")
+
+[node name="Vigilante1" type="Node2D" parent="Entities" unique_id=1263673986 instance=ExtResource("6_b4d63")]
+position = Vector2(48, 400)
+script = ExtResource("7_0tipt")
+display_name = "Steward"
+lines = PackedStringArray("Obra en curso. Prohibido el paso a toda persona ajena a la obra.", "O sea, a todos: aquí no trabaja nadie. Gane a Arnau y abrimos un tramo de valla.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_af2ms")
+hidden_if_flag = &"trainer_defeated:gym2_cule_3"
+
+[node name="Vigilante1Aparte" type="Node2D" parent="Entities" unique_id=1828343620 instance=ExtResource("6_b4d63")]
+position = Vector2(80, 432)
+script = ExtResource("7_0tipt")
+display_name = "Steward"
+lines = PackedStringArray("Tramo abierto. Lo cerramos en 2027, si eso.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_af2ms")
+initial_facing = 2
+visible_if_flag = &"trainer_defeated:gym2_cule_3"
+
+[node name="Entrenador1" type="Node2D" parent="Entities" unique_id=2013399781 instance=ExtResource("11_ofnuc")]
+position = Vector2(208, 464)
+script = ExtResource("12_brd6v")
+trainer_id = &"gym2_cule_3"
+sight_range = 2
+lines = PackedStringArray()
+turn_to_player = true
+sprite_sheet = ExtResource("13_bvmit")
+initial_facing = 2
+
+[node name="Personaje2" type="Node2D" parent="Entities" unique_id=597984501 instance=ExtResource("6_b4d63")]
+position = Vector2(400, 464)
+script = ExtResource("7_0tipt")
+display_name = "Jubilado"
+lines = PackedStringArray("Llevo aquí desde el primer día de la obra. Así no: más hierro. Y más cemento.", "Esa grúa no se ha movido desde la Champions de 2015. Como el equipo.")
+turn_to_player = true
+sprite_sheet = ExtResource("15_ldqf1")
+initial_facing = 3
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1640014395]
 z_index = 10
-tile_set = ExtResource("4_lv6bl")
+tile_map_data = PackedByteArray("AAABAAYAIQAAAAAAAAACAAYAIQAAAAAAAAADAAYAIQAAAAAAAAAEAAYAIQABAAAAAAAFAAYAIQAAAAAAAAAGAAYAIQAAAAAAAAAHAAYAIQAAAAAAAAAIAAYAIQABAAAAAAAJAAYAIQAAAAAAAAAKAAYAIQAAAAAAAAALAAYAIQAAAAAAAAAMAAYAIQABAAAAAAANAAYAIQAAAAAAAAAOAAYAIQAAAAAAAAAPAAYAIQAAAAAAAAAQAAYAIQABAAAAAAARAAYAIQAAAAAAAAASAAYAIQAAAAAAAAACAAsAIQAAAAAAAAADAAsAIQAAAAAAAAAEAAsAIQAAAAAAAAAFAAsAIQABAAAAAAAGAAsAIQAAAAAAAAAHAAsAIQAAAAAAAAAIAAsAIQAAAAAAAAAJAAsAIQABAAAAAAAKAAsAIQAAAAAAAAALAAsAIQAAAAAAAAAMAAsAIQAAAAAAAAANAAsAIQABAAAAAAAOAAsAIQAAAAAAAAAPAAsAIQAAAAAAAAAQAAsAIQAAAAAAAAARAAsAIQABAAAAAAASAAsAIQAAAAAAAAATAAsAIQAAAAAAAAA=")
+tile_set = ExtResource("4_hyt8l")
+collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1162068586]
+[node name="Warps" type="Node2D" parent="." unique_id=1402453666]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=629641597]
-position = Vector2(272, 368)
-script = ExtResource("11_b4d63")
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1669213330]
+position = Vector2(336, 528)
+script = ExtResource("16_m4gih")
 target_map = &"barcelona/gimnasio_1"
 target_spawn = &"from_arriba"
 arrival_facing = 1
 
-[node name="Siguiente" type="Node2D" parent="Warps" unique_id=672116018]
-position = Vector2(272, 48)
-script = ExtResource("11_b4d63")
+[node name="Siguiente" type="Node2D" parent="Warps" unique_id=271666313]
+position = Vector2(144, 80)
+script = ExtResource("16_m4gih")
 target_map = &"barcelona/gimnasio_3"
 arrival_facing = 4
 
-[node name="Spawns" type="Node2D" parent="." unique_id=552231142]
+[node name="Spawns" type="Node2D" parent="." unique_id=636135510]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=370497261]
-position = Vector2(272, 336)
+[node name="default" type="Marker2D" parent="Spawns" unique_id=476065764]
+position = Vector2(336, 496)
 
-[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=328981811]
-position = Vector2(272, 80)
+[node name="from_arriba" type="Marker2D" parent="Spawns" unique_id=2028077582]
+position = Vector2(144, 112)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=381880631]
+[node name="Triggers" type="Node2D" parent="." unique_id=1760129335]
 
-[node name="Rotulo" type="Label" parent="." unique_id=2004494072]
-offset_left = 8.0
-offset_top = 4.0
-offset_right = 504.0
-offset_bottom = 28.0
-theme_override_colors/font_color = Color(1, 0.95686275, 0.84705883, 1)
-theme_override_colors/font_shadow_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
-theme_override_constants/shadow_offset_x = 1
-theme_override_constants/shadow_offset_y = 1
-theme_override_fonts/font = ExtResource("12_0tipt")
-theme_override_font_sizes/font_size = 16
-text = "SPOTIFY CAMP NOU: SALA DE PALANCAS"
+[node name="Rotulo" type="Label" parent="." unique_id=829536515]
+offset_left = 512.0
+offset_top = 39.0
+offset_right = 640.0
+offset_bottom = 59.0
+theme_override_colors/font_color = Color(0.972549, 0.972549, 0.9411765, 1)
+theme_override_colors/font_shadow_color = Color(0.15686275, 0.1882353, 0.41568628, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("17_xqbgq")
+theme_override_font_sizes/font_size = 20
+text = "PALANCAS"
 horizontal_alignment = 1

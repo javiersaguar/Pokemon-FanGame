@@ -41,6 +41,16 @@ Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras fila
 | 26 | `atril` | 1×2 | atril con micrófono y escudo |
 | 27 | `titulo_enmarcado` | 1×1 | título con sello, para la pared del archivo |
 | 28 | `trituradora` | 1×1 | trituradora con la papelera llena |
+| 29 | `rotulo_barcelona` | 3×1 | placa azul con borde granate (Barcelona) |
+| 30 | `taquillas` | 3×2 (fila) | taquillas azules en mueble granate |
+| 31 | `banco_vestuario` | 3×1 (fila) | banco corrido de listones |
+| 32 | `butacas_cule` | 1×1 (se repite) | dos butacas de grada, azul y granate |
+| 33 | `valla_obra` | 2×2 (dos paneles de 1×2) | valla de obra lisa y con cartel de peligro |
+| 34 | `palanca` | 1×2 | palanca con su caja de mandos |
+| 35 | `escudo_barca` | 2×2 | escudo del club, simplificado |
+| 36 | `copa` | 1×1 | copa dorada de asas grandes |
+| 37 | `cono` | 1×1 | cono de obra |
+| 38 | `andamio` | 2×3 | andamio con dos plataformas |
 
 ## Pintor: `maps/_pintura/pintar_gimnasios.gd`
 
@@ -48,6 +58,7 @@ Cada sala de `maps/_pintura/gimnasios_salas.json` lleva tres rejillas del mismo 
 
 - **`plano`**: `#` pared, `.` suelo del gimnasio, `S` puerta de arriba a la sala siguiente (en la cara de la pared), `E` felpudo de la salida; otras letras, suelos o alfombras de la leyenda.
 - **`muebles`**: letras de la leyenda (una pieza de varias casillas se escribe en todas sus casillas; si el bloque es mayor, se repite). Tipos: `pieza`, `nueve` (recuadro estirado), `fila` (izquierda, centro y derecha), `columna`, `baldosa`, `objeto` (del tileset de exteriores) y `propia` (pieza dibujada a mano). `arriba: n` = sus n primeras filas se pintan por encima de los personajes y se pisan (la tapa de un mostrador, la copa de una planta).
+- **`encima`** (opcional): lo que va sobre otro mueble (una copa en una vitrina o en una mesa), por encima y sin chocar.
 - **`personas`**: `1`–`9` entrenadores (en el orden de la lista), `g h i j` vigilantes y `G H I J` dónde se quedan al apartarse, `n`–`r` personajes que hablan, `x y z` carteles y `@` el líder.
 
 La sala del líder va en `sala_lider`. Cada vigilante tapa el paso hasta que ganas a su entrenador (`hidden_if_flag`); entonces aparece a un lado (`visible_if_flag`) con otra frase. `tests/mundo/test_gimnasios_salas.gd` lo comprueba paso a paso en las 32 salas.

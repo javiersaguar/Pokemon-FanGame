@@ -374,7 +374,9 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 
 **Provisional:** todo el arte nuevo y los textos de vigilantes y personajes (humor de propuesta). No hay música de gimnasio: no existe ningún archivo de música de mapa en el juego (`assets/audio/bgm/` solo tiene combate y jingles); el pintor pone la `bgm` de `musica` si el archivo existe. **PENDIENTE JAVIER:** aprobar el arte y los textos; la música de los gimnasios (eligió los packs de música el 13 de octubre, pero aún no están en el repo).
 
-**En curso:** bloque 2, Barcelona.
+**Hecho · bloque 2 (Barcelona):** Vestuario, Sala de Palancas, Palco y Despacho del President (21×18, 21×18, 21×18 y 19×15), con stewards de vigilantes. Diez piezas a mano (fuentes 29–38): placa azulgrana, taquillas, banco, butacas, valla de obra con cartel, palanca, escudo, copa, cono y andamio. El pintor admite una cuarta rejilla, `encima`, para lo que va sobre un mueble. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5. **Fallo encontrado y corregido:** en dos salas el vigilante apartado tapaba el único paso al hueco (unas cajas cerraban el otro lado); lo detectó el test paso a paso.
+
+**En curso:** bloque 3, Valencia.
 
 ### Sesión de mundo centro y final (2026-10-09)
 

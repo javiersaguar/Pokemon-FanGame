@@ -1,0 +1,22 @@
+# Butacas de grada vistas desde atrás, una azul y una granate (gimnasio 2). Una casilla que se repite para
+# hacer filas de grada sobre su escalón de hormigón. Dibujado a mano, 16x16 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   k = pizarra_1   b = pizarra_5   B = pizarra_4   d = pizarra_3
+@leyenda  q = teja_1   g = teja_5   G = teja_4   r = teja_3   m = metal_3   M = piedra_4   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/butacas_cule.png
+---
+................
+................
+.kkkkkk..qqqqqq.
+kbbbbbbkqggggggq
+kBBBBBBkqGGGGGGq
+kBBBBBBkqGGGGGGq
+kBBBBBBkqGGGGGGq
+kddddddkqrrrrrrq
+.kkkkkk..qqqqqq.
+..m..m....m..m..
+MMMMMMMMMMMMMMMM
+zzzzzzzzzzzzzzzz
+................
+................
+................
+................

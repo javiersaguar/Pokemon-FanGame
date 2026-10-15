@@ -844,15 +844,158 @@
         "entrenadores": [
           {
             "id": "gym2_cule_1",
-            "nombre": "Jordi"
+            "nombre": "Jordi",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym2_cule_2",
-            "nombre": "Pau"
+            "nombre": "Pau",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "pique_gym",
-            "nombre": "Piqué"
+            "nombre": "Piqué",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "VESTUARIO",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 6,
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLLL......YYUUUU..",
+          ".TTTTTT......YYUUUU..",
+          ".TTTTTT..............",
+          "................FF...",
+          "................FF...",
+          ".....................",
+          ".TTTTTTTTTTTTTTTTTT..",
+          ".TTTTTTTTTTTTTTTTTT..",
+          ".....................",
+          "....bbbbb...bbbbb....",
+          ".....................",
+          "..bbbbbbbbbbbbbbbbbb.",
+          ".....................",
+          "...ZZ..............D.",
+          "...ZZ..............D.",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          ".............3....n..",
+          ".....................",
+          ".....................",
+          ".....................",
+          "...................h.",
+          ".....o............H..",
+          "..........2..........",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          "......1..............",
+          "..............p......",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Zona de vestuarios. Solo jugadores, utilleros y gente con palanca.",
+              "Gane a Jordi y le dejo pasar. Es socio desde antes de nacer y no se calla."
+            ],
+            "despues": [
+              "Adelante. Y no toque las botas, que están vendidas."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Por aquí se va al túnel. La puerta está vendida: es de un fondo de inversión.",
+              "Si gana a Pau, la recompramos."
+            ],
+            "despues": [
+              "Puerta recomprada al 30 %. Pase de lado."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Para subir hace falta acreditación. Las vende Piqué.",
+              "Y no acepta tarjeta: solo relojes."
+            ],
+            "despues": [
+              "Ha pagado con un Casio. Aceptado."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Fisio",
+            "sprite": "nurse",
+            "mira": "izquierda",
+            "frases": [
+              "Este gemelo lleva tres temporadas lesionado. Pero cobra todas.",
+              "Si te duele algo, ponte hielo. Si no se te pasa, ficha por otro club."
+            ]
+          },
+          {
+            "nombre": "Utillero",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "frases": [
+              "Lavo cuarenta camisetas al día. Las mismas: no hay dinero para nuevas.",
+              "La camiseta de Messi la tengo guardada. Por si vuelve. Otra vez."
+            ]
+          },
+          {
+            "nombre": "Socio",
+            "arte": "cule",
+            "sprite": "npc_man",
+            "mira": "izquierda",
+            "frases": [
+              "Mi abono tiene más años que yo y menos partidos que el Espanyol.",
+              "Me han dicho que el estadio abre entero la temporada que viene. Me lo dicen desde 2023."
+            ]
           }
         ]
       },
@@ -861,15 +1004,181 @@
         "entrenadores": [
           {
             "id": "gym2_cule_3",
-            "nombre": "Arnau"
+            "nombre": "Arnau",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym2_cule_4",
-            "nombre": "Oriol"
+            "nombre": "Oriol",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "julian_alvarez",
-            "nombre": "Julián Álvarez"
+            "nombre": "Julián Álvarez",
+            "mira": "izquierda",
+            "vista": 2
+          }
+        ],
+        "rotulo": "PALANCAS",
+        "rotulo_casilla": [
+          16,
+          1
+        ],
+        "rotulo_ancho": 4,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            56
+          ],
+          "pared": [
+            5,
+            12
+          ],
+          "rotulo_color": "f8f8f0",
+          "rotulo_sombra": "28306a"
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "####S################",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          "............XXXXLLLL.",
+          "......K.K.K.XXXX.....",
+          "......K.K.K.XXXX.....",
+          "..C..................",
+          ".....................",
+          ".VVVWVVVWVVVWVVVWVV..",
+          ".VVVWVVVWVVVWVVVWVV..",
+          "..AA...........AA....",
+          "..AA...C...C...AA....",
+          "..AA...........AA....",
+          "..VVVWVVVWVVVWVVVWVV.",
+          "..VVVWVVVWVVVWVVVWVV.",
+          ".....................",
+          "...ZZ............ZZ..",
+          "...ZZ...C........ZZ..",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "....iIx.y.z..........",
+          "..............3..n...",
+          ".....................",
+          ".....................",
+          "...................h.",
+          "..................H..",
+          ".........2...........",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          "......1.....o........",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Obra en curso. Prohibido el paso a toda persona ajena a la obra.",
+              "O sea, a todos: aquí no trabaja nadie. Gane a Arnau y abrimos un tramo de valla."
+            ],
+            "despues": [
+              "Tramo abierto. Lo cerramos en 2027, si eso."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Ahí dentro están las palancas. No se miran, no se tocan y no se pregunta por ellas.",
+              "Oriol tiene la llave. Gánele."
+            ],
+            "despues": [
+              "Pase. Si ve una palanca suelta, no la active: vale doscientos millones."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Arriba está el palco. Hoy lo ocupa un argentino que no paga entrada.",
+              "Pruebe con Julián, que se ha escapado del Metropolitano y viene corriendo."
+            ],
+            "despues": [
+              "Pase. Y si ve a alguien con la camiseta del Atleti, no diga nada."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Comercial",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "frases": [
+              "¿Quiere comprar una palanca? Tenemos el 10 % del césped, el 5 % de las porterías y el 50 % de la ilusión.",
+              "Pago aplazado hasta 2050. Sin intereses. Bueno, con muchos intereses."
+            ]
+          },
+          {
+            "nombre": "Jubilado",
+            "sprite": "jubiladoobras",
+            "mira": "arriba",
+            "frases": [
+              "Llevo aquí desde el primer día de la obra. Así no: más hierro. Y más cemento.",
+              "Esa grúa no se ha movido desde la Champions de 2015. Como el equipo."
+            ]
+          }
+        ],
+        "carteles": [
+          {
+            "frases": [
+              "PALANCA 1: 25 % DE LOS DERECHOS DE TELEVISIÓN.",
+              "Estado: activada. Ingresos: ya gastados."
+            ]
+          },
+          {
+            "frases": [
+              "PALANCA 2: 49 % DE LA TIENDA OFICIAL.",
+              "Estado: activada. Comprador: un fondo que no existía el lunes."
+            ]
+          },
+          {
+            "frases": [
+              "PALANCA 3: 100 % DE LA PACIENCIA DEL SOCIO.",
+              "Estado: agotada."
+            ]
           }
         ]
       },
@@ -878,21 +1187,475 @@
         "entrenadores": [
           {
             "id": "gym2_cule_5",
-            "nombre": "Marc"
+            "nombre": "Marc",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym2_cule_6",
-            "nombre": "Roger"
+            "nombre": "Roger",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "messi",
-            "nombre": "Messi"
+            "nombre": "Messi",
+            "mira": "izquierda",
+            "vista": 2
+          }
+        ],
+        "rotulo": "PALCO",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 4,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            16
+          ],
+          "pared": [
+            1,
+            2
+          ],
+          "rotulo_color": "f8f8f0",
+          "rotulo_sombra": "28306a"
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLL................",
+          ".....................",
+          "..sss.mm.....mm..vv..",
+          "..sss.mm.....mm..vv..",
+          ".....................",
+          ".....................",
+          ".uuuuuuuuuuuuuuuuuu..",
+          ".....................",
+          ".....................",
+          "....uuuuuuuuuuuuu....",
+          ".....................",
+          "..uuuuuuuuuuuuuuuuuu.",
+          ".....................",
+          "...uuuuuu...uuuuuu...",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".................c...",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          "........n............",
+          "...o........3........",
+          ".....................",
+          "...................h.",
+          "..................H..",
+          ".................2...",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G...1..............",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Palco VIP. ¿Tiene invitación? ¿No? Pues como todo el mundo.",
+              "Marc reparte las invitaciones que le sobran. Gánele una."
+            ],
+            "despues": [
+              "Invitación aceptada. Los canapés, al fondo."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Esta fila es de los patrocinadores y de los que pagan las cuotas atrasadas.",
+              "Roger se las sabe todas. Gánele y se sienta."
+            ],
+            "despues": [
+              "Pase. Su cuota la ha pagado Roger."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "El president recibe en su despacho. Antes tendrá que pasar por el mejor de la historia.",
+              "Sí, ha vuelto. No, no cobra. Bueno, un poco."
+            ],
+            "despues": [
+              "El diez dice que pase. Que él se vuelve a ir llorando."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Camarera",
+            "sprite": "npc_lass",
+            "mira": "izquierda",
+            "frases": [
+              "¿Cava o cava? En el palco no se sirve champán: es una cuestión de principios.",
+              "Los canapés son de jamón ibérico de la Masia. Son pequeños, pero tienen mucho futuro."
+            ]
+          },
+          {
+            "nombre": "Socio VIP",
+            "sprite": "npc_old_man",
+            "mira": "arriba",
+            "frases": [
+              "Yo vengo al palco por el fútbol. Y por los canapés. Sobre todo por los canapés.",
+              "Desde aquí se ve todo el campo. Bueno, la mitad: la otra mitad es una grúa."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "SPOTIFY CAMP NOU · DESPACHO DEL PRESIDENT",
-    "lider_previos": []
+    "estilo": {
+      "suelo": [
+        4,
+        0,
+        36
+      ],
+      "pared": [
+        5,
+        2
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        3,
+        22,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "f8f8f0",
+      "rotulo_sombra": "28306a"
+    },
+    "leyenda": {
+      "k": {
+        "nueve": [
+          6,
+          3,
+          3
+        ]
+      },
+      "L": {
+        "propia": "rotulo_barcelona",
+        "fila": true
+      },
+      "T": {
+        "propia": "taquillas",
+        "fila": true
+      },
+      "b": {
+        "propia": "banco_vestuario",
+        "fila": true
+      },
+      "u": {
+        "propia": "butacas_cule"
+      },
+      "V": {
+        "propia": "valla_obra",
+        "parte": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "W": {
+        "propia": "valla_obra",
+        "parte": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "K": {
+        "propia": "palanca"
+      },
+      "Y": {
+        "propia": "escudo_barca"
+      },
+      "c": {
+        "propia": "copa"
+      },
+      "C": {
+        "propia": "cono"
+      },
+      "A": {
+        "propia": "andamio"
+      },
+      "F": {
+        "pieza": [
+          2,
+          0,
+          40,
+          2,
+          2
+        ]
+      },
+      "U": {
+        "pieza": [
+          5,
+          4,
+          95,
+          4,
+          2
+        ]
+      },
+      "P": {
+        "pieza": [
+          2,
+          2,
+          36,
+          1,
+          3
+        ],
+        "arriba": 2
+      },
+      "Z": {
+        "pieza": [
+          2,
+          6,
+          37,
+          2,
+          2
+        ]
+      },
+      "O": {
+        "nueve": [
+          8,
+          0,
+          12
+        ]
+      },
+      "s": {
+        "pieza": [
+          2,
+          3,
+          59,
+          3,
+          2
+        ]
+      },
+      "m": {
+        "pieza": [
+          8,
+          0,
+          5,
+          2,
+          2
+        ]
+      },
+      "v": {
+        "pieza": [
+          2,
+          3,
+          52,
+          2,
+          2
+        ]
+      },
+      "B": {
+        "pieza": [
+          2,
+          5,
+          6,
+          2,
+          3
+        ]
+      },
+      "X": {
+        "pieza": [
+          6,
+          4,
+          48,
+          4,
+          3
+        ]
+      },
+      "D": {
+        "pieza": [
+          3,
+          3,
+          31,
+          1,
+          2
+        ],
+        "arriba": 1
+      }
+    },
+    "sala_lider": {
+      "titulo": "SPOTIFY CAMP NOU · DESPACHO DEL PRESIDENT",
+      "rotulo": "PRESIDENCIA",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 5,
+      "estilo": {
+        "suelo": [
+          4,
+          0,
+          32
+        ],
+        "pared": [
+          5,
+          8
+        ]
+      },
+      "plano": [
+        "###################",
+        "###################",
+        "###################",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#.....kkkkkkk.....#",
+        "#.....kkkkkkk.....#",
+        "#.....kkkkkkk.....#",
+        "#.....kkkkkkk.....#",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#........E........#",
+        "###################"
+      ],
+      "muebles": [
+        "...................",
+        ".LLLLL...YY........",
+        ".BB......YY..vv.vv.",
+        ".BB..........vv.vv.",
+        ".BB.....OOOOO......",
+        "........OOOOO......",
+        "...................",
+        "...................",
+        "...................",
+        "..sss.........sss..",
+        "..sss....mm...sss..",
+        ".P.......mm......P.",
+        ".P...............P.",
+        ".P...............P.",
+        "..................."
+      ],
+      "encima": [
+        "...................",
+        "...................",
+        "...................",
+        ".............c..c..",
+        "........c..........",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..................."
+      ],
+      "personas": [
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        ".........@.........",
+        "....n..............",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..................."
+      ],
+      "entrenadores": [],
+      "npcs": [
+        {
+          "nombre": "Directivo",
+          "sprite": "npc_man",
+          "mira": "derecha",
+          "frases": [
+            "El president está de buen humor: hoy ha activado otra palanca.",
+            "Si le gana, le ofrecerá un contrato de diez años pagado en 2040. Firme sin leer, como todos."
+          ]
+        }
+      ]
+    }
   },
   "valencia": {
     "lider": "labrador",

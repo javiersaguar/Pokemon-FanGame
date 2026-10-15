@@ -1,0 +1,39 @@
+# Taquillas del vestuario del Camp Nou (gimnasio 2): puertas azules con rejillas, placa del dorsal y tirador, en
+# un mueble granate. Tres casillas (izquierda, centro que se repite y derecha) de dos filas; van contra la pared.
+# Dibujado a mano, 48x32 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   o = teja_1   F = teja_3   f = teja_2   T = teja_4   t = teja_3
+@leyenda  B = pizarra_3   L = pizarra_4   d = pizarra_2   k = pizarra_1   w = ui_6   h = metal_5   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/taquillas.png
+---
+................................................
+oooooooooooooooooooooooooooooooooooooooooooooooo
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+tttttttttttttttttttttttttttttttttttttttttttttttt
+oooooooooooooooooooooooooooooooooooooooooooooooo
+oLLLLLLLLLLLLLdfFLLLLLLLLLLLLLdfFLLLLLLLLLLLLLdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBkkkkkkkkkBBdfFLBkkkkkkkkkBBdfFLBkkkkkkkkkBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBkkkkkkkkkBBdfFLBkkkkkkkkkBBdfFLBkkkkkkkkkBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBkkkkkkkkkBBdfFLBkkkkkkkkkBBdfFLBkkkkkkkkkBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBwwwwBBBBdfFLBBBBwwwwBBBBdfFLBBBBwwwwBBBBdo
+oLBBBBwwwwBBBBdfFLBBBBwwwwBBBBdfFLBBBBwwwwBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBhBdfFLBBBBBBBBBBhBdfFLBBBBBBBBBBhBdo
+oLBBBBBBBBBBhBdfFLBBBBBBBBBBhBdfFLBBBBBBBBBBhBdo
+oLBBBBBBBBBBhBdfFLBBBBBBBBBBhBdfFLBBBBBBBBBBhBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdfFLBBBBBBBBBBBBdo
+oLdddddddddddddfFLdddddddddddddfFLdddddddddddddo
+oFFFFFFFFFFFFFffFFFFFFFFFFFFFFffFFFFFFFFFFFFFFfo
+oooooooooooooooooooooooooooooooooooooooooooooooo
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+................................................

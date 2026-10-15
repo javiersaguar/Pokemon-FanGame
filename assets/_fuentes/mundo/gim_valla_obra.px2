@@ -1,0 +1,39 @@
+# Valla de obra de malla galvanizada sobre bloques de hormigón (el Camp Nou en obras, gimnasio 2). Dos paneles:
+# liso a la izquierda y con el cartel amarillo de peligro a la derecha. Cada panel, 1x2 casillas.
+# Dibujado a mano, 32x32 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   o = metal_2   F = metal_5   f = metal_4   x = metal_3   c = piedra_5   C = piedra_4   k = piedra_2
+@leyenda  y = acento_amarillo   e = ui_1   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/valla_obra.png
+---
+................................
+................................
+................................
+................................
+oooooooooooooooooooooooooooooooo
+oFFFFFFFFFFFFFFooFFFFFFFFFFFFFFo
+oFx.x.x.x.x.x.fooFx.x.x.x.x.x.fo
+oF.x.x.x.x.x.xfooF.x.x.x.x.x.xfo
+oFx.x.x.x.x.x.fooFx.x.x.x.x.x.fo
+oF.x.x.x.x.x.xfooF.x.x.x.x.x.xfo
+oFx.x.x.x.x.x.fooFx.oooooooo.xfo
+oFfffffffffffffooFffoyyyyyyofffo
+oFx.x.x.x.x.x.fooFx.oyyeeyyo.xfo
+oF.x.x.x.x.x.xfooF.xoyyeeyyox.fo
+oFx.x.x.x.x.x.fooFx.oyyeeyyo.xfo
+oF.x.x.x.x.x.xfooF.xoyyeeyyox.fo
+oFx.x.x.x.x.x.fooFx.oyyyyyyo.xfo
+oF.x.x.x.x.x.xfooF.xoyyeeyyox.fo
+oFfffffffffffffooFffoyyyyyyofffo
+oFx.x.x.x.x.x.fooFx.oooooooo.xfo
+oF.x.x.x.x.x.xfooF.x.x.x.x.x.xfo
+oFx.x.x.x.x.x.fooFx.x.x.x.x.x.fo
+oF.x.x.x.x.x.xfooF.x.x.x.x.x.xfo
+oFx.x.x.x.x.x.fooFx.x.x.x.x.x.fo
+oFfffffffffffffooFfffffffffffffo
+oooooooooooooooooooooooooooooooo
+.kCCCk....kCCCk..kCCCk....kCCCk.
+.kcCCk....kcCCk..kcCCk....kcCCk.
+.kkkkk....kkkkk..kkkkk....kkkkk.
+.zzzzz....zzzzz..zzzzz....zzzzz.
+................................
+................................

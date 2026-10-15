@@ -12,6 +12,7 @@ extends SceneTree
 ##   borde si no), '.' = suelo del gimnasio, 'S' = puerta de arriba a la sala siguiente (va en la cara de la
 ##   pared), 'E' = felpudo de la salida; el resto de letras, suelos o alfombras de la leyenda.
 ## - "muebles": muebles y adornos de la leyenda. '.' o ' ' = nada.
+## - "encima" (opcional): lo que va sobre otro mueble (una copa en una mesa), por encima y sin chocar.
 ## - "personas": '1'–'9' entrenadores de la sala (por orden), 'g' 'h' 'i' 'j' vigilantes (y 'G' 'H' 'I' 'J',
 ##   dónde se quedan al apartarse), 'n'–'r' personajes que hablan, 'x' 'y' 'z' carteles y '@' el líder. Así un
 ##   personaje puede estar detrás de un mostrador (en la casilla de arriba del mueble, que se pisa).
@@ -101,7 +102,7 @@ func _room_v2(city: String, gym: Dictionary, room: Dictionary, index: int, total
 	var muebles: Array = room["muebles"]
 	var personas: Array = room.get("personas", muebles)
 	var size := Vector2i(str(plano[0]).length(), plano.size())
-	for grid: Array in [plano, muebles, personas]:
+	for grid: Array in [plano, muebles, personas, room.get("encima", plano)]:
 		if grid.size() != size.y:
 			return _fail(map_id, "el plano y los muebles no tienen las mismas filas")
 		for row: String in grid:
@@ -134,6 +135,9 @@ func _room_v2(city: String, gym: Dictionary, room: Dictionary, index: int, total
 	_structure(p, map_id, plano, style, legend)
 	_pieces(p, map_id, plano, legend, true)
 	_pieces(p, map_id, muebles, legend, false)
+	if room.has("encima"):
+		# Lo que va sobre una mesa o un mostrador (copas, pantallas): por encima, sin chocar.
+		_pieces(p, map_id, room["encima"], legend, false, true)
 	_people(p, map_id, city, gym, room, personas, index >= total)
 	_doors_v2(p, map_id, city, plano, style, index, total)
 	_title(p, room, style, size)
@@ -250,7 +254,7 @@ func _structure(p: Pintor, map_id: String, plano: Array, style: Dictionary, lege
 
 
 ## Piezas de la leyenda en una rejilla (las del plano son suelos o alfombras; las de los muebles, muebles).
-func _pieces(p: Pintor, map_id: String, grid: Array, legend: Dictionary, is_plan: bool) -> void:
+func _pieces(p: Pintor, map_id: String, grid: Array, legend: Dictionary, is_plan: bool, on_top := false) -> void:
 	var done := {}
 	for y: int in grid.size():
 		for x: int in str(grid[y]).length():
@@ -267,6 +271,9 @@ func _pieces(p: Pintor, map_id: String, grid: Array, legend: Dictionary, is_plan
 				done[at] = true
 				continue
 			var block := _block(grid, at, c, done)
+			if on_top:
+				spec = spec.duplicate()
+				spec["capa"] = "arriba"
 			_stamp(p, map_id, spec, block)
 
 

@@ -14,7 +14,7 @@
 
 Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_2026-10-14.md)): **manda sobre los entrenadores que proponen las fichas de abajo.** Cada gimnasio son **cuatro mapas** (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider`), pintados por `maps/_pintura/pintar_gimnasios.gd` a partir de `maps/_pintura/gimnasios_salas.json`. Cada sala tiene tres tramos con un entrenador y un vigilante que tapa el paso hasta que le ganas (luego se aparta a un lado); así es obligatorio ganar a todos antes del líder. Quién hay en cada sala, con su lore, equipo y frases: [`guion.md` §8](guion.md).
 
-**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hecho: **Madrid**. Los demás siguen con el zigzag antiguo hasta que les toque.
+**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid** y **Barcelona**. Los demás siguen con el zigzag antiguo hasta que les toque.
 
 | # | Se entra por | Entrenadores antes del líder |
 |---|---|---|
@@ -51,6 +51,8 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_20
 - **Premio:** la MT de Lanzallamas (ya en el juego); propuesta de broma: que las tiendas de Madrid vendan sin IVA (el precio sube igual).
 
 ## 2 · Barcelona — Laporta (Acero) · Medalla Palanca
+
+- **Por dentro (2026-10-15):** se entra por el Camp Nou de Les Corts → **Vestuario** (taquillas azulgranas, isla de taquillas, bancos, camilla del fisio, escudo y pizarra táctica: Jordi, Pau y Piqué) → **Sala de Palancas** (vallas de obra, andamios, conos, videomarcador y tres palancas con lo vendido; un jubilado mira la obra: Arnau, Oriol y Julián Álvarez) → **Palco** (ventanal al campo, filas de butacas azulgranas, catering y la copa: Marc, Roger y Messi) → **Despacho del President** (escudo, vitrinas con copas y un directivo). Laporta da la Medalla Palanca y la MT de Cabeza de Hierro. Los vigilantes son stewards del estadio.
 
 - **El interior:** el Spotify Camp Nou en obras: andamios, grúas y medio graderío. **Reto:** "las palancas": cada palanca que activas abre un tramo de pasarela y cierra otro (y en la pantalla del videomarcador se lee cuánto dinero se ha "vendido" del futuro). Si las activas todas, el estadio queda abierto… al 40 % de aforo.
 - **Entrenadores:** Jordi (tertuliano culé: Magnemite y Bronzor), Pau (carterista de la Rambla: Pawniard y Klink) y Montse (revisora de Rodalies: Tinkatink y Klefki).

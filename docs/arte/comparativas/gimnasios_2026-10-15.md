@@ -23,3 +23,17 @@ Las capturas no ejecutan `MapLoader.prepare`, así que no salen los personajes c
 - **Archivo de Títulos:** pasillos de archivadores, pared de títulos enmarcados, la vitrina del máster (cartel), trituradora y mesas de consulta.
 - **Despacho:** retrato de la presidenta, banderas, mesa, alfombra, sofás, vitrinas y el jefe de gabinete. Ayuso te sube a su ático.
 - **Ático:** la fachada del ático con su jardín (por su puerta se baja a Chamberí), barandilla de azotea, jardineras, mesas con sombrilla, la fuente, un camarero y un escolta. Ayuso espera en (8, 6), como dicen los datos.
+
+## 2 · Barcelona — Spotify Camp Nou
+
+| Sala | Antes | Después |
+|---|---|---|
+| Vestuario (Túnel de Vestuarios) | ![](gimnasios/antes/barcelona_gimnasio_1.png) | ![](gimnasios/despues/barcelona_gimnasio_1.png) |
+| Sala de Palancas | ![](gimnasios/antes/barcelona_gimnasio_2.png) | ![](gimnasios/despues/barcelona_gimnasio_2.png) |
+| Palco | ![](gimnasios/antes/barcelona_gimnasio_3.png) | ![](gimnasios/despues/barcelona_gimnasio_3.png) |
+| Despacho del President | ![](gimnasios/antes/barcelona_gimnasio_lider.png) | ![](gimnasios/despues/barcelona_gimnasio_lider.png) |
+
+- **Vestuario:** taquillas azulgranas contra la pared y una isla de taquillas que hace de tabique, bancos corridos, la camilla del fisio, el escudo y la pizarra táctica, cajas del utillero y la fuente de agua.
+- **Sala de Palancas:** el estadio en obras: vallas de malla con carteles de peligro, andamios, conos, el videomarcador y tres palancas con su cartel (lo que ya se ha vendido). Un jubilado mira la obra.
+- **Palco:** el ventanal al campo, filas de butacas azules y granates que hacen de tabique, sofás, mesas del catering y la vitrina con la copa.
+- **Despacho del President:** escudo, vitrinas con copas, mesa con su copa, alfombra, sofás y un directivo. Laporta espera en el centro.
