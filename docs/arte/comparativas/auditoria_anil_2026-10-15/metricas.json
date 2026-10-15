@@ -1,0 +1,1794 @@
+{
+	"godot": "4.7.2-stable (official)",
+	"maps": [
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "pueblo_inicial/exterior",
+					"walkable_edge_tiles": 23
+				},
+				{
+					"edge": "south",
+					"target": "ruta_2/exterior",
+					"walkable_edge_tiles": 15
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 0,
+			"edge_paths": [
+				{
+					"from": "pueblo_inicial/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_2/exterior"
+				},
+				{
+					"from": "ruta_2/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "pueblo_inicial/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					13,
+					4
+				],
+				"side": 6
+			},
+			"linked_doors": 0,
+			"map": "ruta_1/exterior",
+			"scene_sha256": "413803915c9d2f93535451c11d0a22822395a569b66f0c003a9030730a5bda36",
+			"size": [
+				36,
+				64
+			],
+			"walkable": 1375,
+			"walkable_encounter_tiles": 338,
+			"walkable_percent": 59.7
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "ruta_1/exterior",
+					"walkable_edge_tiles": 14
+				},
+				{
+					"edge": "south",
+					"target": "ruta_3/exterior",
+					"walkable_edge_tiles": 36
+				}
+			],
+			"cropped_buildings": [
+				{
+					"anchor": [
+						32,
+						62
+					],
+					"building": "casa_madera",
+					"visual_bounds": [
+						32,
+						57,
+						5,
+						6
+					]
+				}
+			],
+			"doors": 9,
+			"edge_paths": [
+				{
+					"from": "ruta_1/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_3/exterior"
+				},
+				{
+					"from": "ruta_3/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_1/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					4,
+					62
+				],
+				"side": 10
+			},
+			"linked_doors": 9,
+			"map": "ruta_2/exterior",
+			"scene_sha256": "4c9c02d46e171a243984abe99f10c9573c8e6b4e9a80771b719d94cc7881335d",
+			"size": [
+				36,
+				72
+			],
+			"walkable": 1720,
+			"walkable_encounter_tiles": 173,
+			"walkable_percent": 66.4
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "ruta_2/exterior",
+					"walkable_edge_tiles": 22
+				},
+				{
+					"edge": "south",
+					"target": "ruta_4/exterior",
+					"walkable_edge_tiles": 20
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 3,
+			"edge_paths": [
+				{
+					"from": "ruta_2/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 26,
+					"reachable": true,
+					"to": "ruta_4/exterior"
+				},
+				{
+					"from": "ruta_4/exterior",
+					"grass_avoidable": false,
+					"min_encounter_tiles": 26,
+					"reachable": true,
+					"to": "ruta_2/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					14,
+					65
+				],
+				"side": 10
+			},
+			"linked_doors": 3,
+			"map": "ruta_3/exterior",
+			"scene_sha256": "98a7c827f73c1b38a0a14e7a3edfa075a4b7084f4777e7335160c15efb3a2171",
+			"size": [
+				36,
+				80
+			],
+			"walkable": 1745,
+			"walkable_encounter_tiles": 777,
+			"walkable_percent": 60.6
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "ruta_3/exterior",
+					"walkable_edge_tiles": 16
+				},
+				{
+					"edge": "east",
+					"target": "madrid/moncloa",
+					"walkable_edge_tiles": 26
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 10,
+			"edge_paths": [
+				{
+					"from": "ruta_3/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/moncloa"
+				},
+				{
+					"from": "madrid/moncloa",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_3/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					14,
+					2
+				],
+				"side": 9
+			},
+			"linked_doors": 10,
+			"map": "ruta_4/exterior",
+			"scene_sha256": "7c9ad837f8bb6979ceb329a56b41c46aaffc56f112f7f480c8f970b292192415",
+			"size": [
+				52,
+				46
+			],
+			"walkable": 1555,
+			"walkable_encounter_tiles": 170,
+			"walkable_percent": 65.0
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "madrid/retiro",
+					"walkable_edge_tiles": 14
+				},
+				{
+					"edge": "east",
+					"target": "ruta_6/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 7,
+			"edge_paths": [
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_6/exterior"
+				},
+				{
+					"from": "ruta_6/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					0,
+					0
+				],
+				"side": 8
+			},
+			"linked_doors": 7,
+			"map": "ruta_5/exterior",
+			"scene_sha256": "cbf87d8e775303fed56e3ace68adff1b8fe5dc9b0097dbff46f5d7cbe4f54c5b",
+			"size": [
+				72,
+				32
+			],
+			"walkable": 1605,
+			"walkable_encounter_tiles": 220,
+			"walkable_percent": 69.7
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_5/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "zaragoza/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 7,
+			"edge_paths": [
+				{
+					"from": "ruta_5/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "zaragoza/exterior"
+				},
+				{
+					"from": "zaragoza/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_5/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					60,
+					17
+				],
+				"side": 12
+			},
+			"linked_doors": 7,
+			"map": "ruta_6/exterior",
+			"scene_sha256": "61e89be33f5457ffe1ff3d3b1fa244cec4c0223c9c980b7b6b8486eab8faa453",
+			"size": [
+				72,
+				34
+			],
+			"walkable": 2059,
+			"walkable_encounter_tiles": 280,
+			"walkable_percent": 84.1
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "zaragoza/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "ruta_8/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 0,
+			"edge_paths": [
+				{
+					"from": "zaragoza/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_8/exterior"
+				},
+				{
+					"from": "ruta_8/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "zaragoza/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					15,
+					10
+				],
+				"side": 12
+			},
+			"linked_doors": 0,
+			"map": "ruta_7/exterior",
+			"scene_sha256": "4fcd69ea12b7d8450ff6be304115cd1c4ebc5c447f2d286d45d9f445149293a8",
+			"size": [
+				72,
+				34
+			],
+			"walkable": 2236,
+			"walkable_encounter_tiles": 268,
+			"walkable_percent": 91.3
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_7/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "barcelona/les_corts",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 5,
+			"edge_paths": [
+				{
+					"from": "ruta_7/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "barcelona/les_corts"
+				},
+				{
+					"from": "barcelona/les_corts",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_7/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					12,
+					19
+				],
+				"side": 11
+			},
+			"linked_doors": 5,
+			"map": "ruta_8/exterior",
+			"scene_sha256": "e161413808f5cc6fd3d1a89bf83f4ea8517c155db8c7f136cb0339f64bd45a8b",
+			"size": [
+				72,
+				40
+			],
+			"walkable": 2096,
+			"walkable_encounter_tiles": 292,
+			"walkable_percent": 72.8
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "valencia/turia",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "south",
+					"target": "ruta_10/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 18,
+			"edge_paths": [
+				{
+					"from": "valencia/turia",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_10/exterior"
+				},
+				{
+					"from": "ruta_10/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "valencia/turia"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					24,
+					38
+				],
+				"side": 9
+			},
+			"linked_doors": 18,
+			"map": "ruta_9/exterior",
+			"scene_sha256": "d4836a332a8551e67503412b82300d5d2d20dd085a7d5dc8b6259348db0b37a4",
+			"size": [
+				48,
+				76
+			],
+			"walkable": 2083,
+			"walkable_encounter_tiles": 287,
+			"walkable_percent": 57.1
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "ruta_9/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "south",
+					"target": "alicante/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 19,
+			"edge_paths": [
+				{
+					"from": "ruta_9/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "alicante/exterior"
+				},
+				{
+					"from": "alicante/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_9/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					25,
+					27
+				],
+				"side": 13
+			},
+			"linked_doors": 19,
+			"map": "ruta_10/exterior",
+			"scene_sha256": "f394590a3806d3abbb6eafbfec7dc3a72f53d832053b84afc1f292dd6681ca30",
+			"size": [
+				60,
+				64
+			],
+			"walkable": 2030,
+			"walkable_encounter_tiles": 280,
+			"walkable_percent": 52.9
+		},
+		{
+			"connections": [
+				{
+					"edge": "east",
+					"target": "alicante/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "west",
+					"target": "murcia/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 5,
+			"edge_paths": [
+				{
+					"from": "alicante/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "murcia/exterior"
+				},
+				{
+					"from": "murcia/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "alicante/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					62,
+					12
+				],
+				"side": 9
+			},
+			"linked_doors": 5,
+			"map": "ruta_11/exterior",
+			"scene_sha256": "050719778b55786529f51821497de099f55adf90d32e4c62bceca4dab83b4179",
+			"size": [
+				76,
+				34
+			],
+			"walkable": 2267,
+			"walkable_encounter_tiles": 525,
+			"walkable_percent": 87.7
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_13/exterior",
+					"walkable_edge_tiles": 10
+				},
+				{
+					"edge": "east",
+					"target": "murcia/exterior",
+					"walkable_edge_tiles": 3
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 1,
+			"edge_paths": [
+				{
+					"from": "ruta_13/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "murcia/exterior"
+				},
+				{
+					"from": "murcia/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_13/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					45,
+					25
+				],
+				"side": 11
+			},
+			"linked_doors": 1,
+			"map": "ruta_12/exterior",
+			"scene_sha256": "2bd58b1f491d041b0f396b96e7290e96dd90ac3f0d4a16d1a8e766b789151325",
+			"size": [
+				72,
+				40
+			],
+			"walkable": 1834,
+			"walkable_encounter_tiles": 681,
+			"walkable_percent": 63.7
+		},
+		{
+			"connections": [
+				{
+					"edge": "east",
+					"target": "ruta_12/exterior",
+					"walkable_edge_tiles": 10
+				},
+				{
+					"edge": "west",
+					"target": "sevilla/centro",
+					"walkable_edge_tiles": 12
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 2,
+			"edge_paths": [
+				{
+					"from": "ruta_12/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "sevilla/centro"
+				},
+				{
+					"from": "sevilla/centro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_12/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					13,
+					2
+				],
+				"side": 13
+			},
+			"linked_doors": 2,
+			"map": "ruta_13/exterior",
+			"scene_sha256": "f8e2c6e2057fa5899f45c334aecdd7e79ae58742a77894c525b96c2f2f2e9504",
+			"size": [
+				76,
+				46
+			],
+			"walkable": 2034,
+			"walkable_encounter_tiles": 112,
+			"walkable_percent": 58.2
+		},
+		{
+			"connections": [
+				{
+					"edge": "east",
+					"target": "sevilla/rio",
+					"walkable_edge_tiles": 12
+				},
+				{
+					"edge": "west",
+					"target": "huelva/exterior",
+					"walkable_edge_tiles": 12
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 6,
+			"edge_paths": [
+				{
+					"from": "sevilla/rio",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "huelva/exterior"
+				},
+				{
+					"from": "huelva/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "sevilla/rio"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					8,
+					4
+				],
+				"side": 10
+			},
+			"linked_doors": 6,
+			"map": "ruta_14/exterior",
+			"scene_sha256": "a6e7516a74289291df68837f695126063bb635d3277463d0fca53c2b96727e21",
+			"size": [
+				72,
+				40
+			],
+			"walkable": 1626,
+			"walkable_encounter_tiles": 206,
+			"walkable_percent": 56.5
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "las_palmas/vegueta_triana",
+					"walkable_edge_tiles": 8
+				},
+				{
+					"edge": "south",
+					"target": "playa_del_ingles/exterior",
+					"walkable_edge_tiles": 12
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 2,
+			"edge_paths": [
+				{
+					"from": "las_palmas/vegueta_triana",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "playa_del_ingles/exterior"
+				},
+				{
+					"from": "playa_del_ingles/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "las_palmas/vegueta_triana"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					8,
+					61
+				],
+				"side": 11
+			},
+			"linked_doors": 2,
+			"map": "ruta_15/exterior",
+			"scene_sha256": "6ca6070b912ffd06caf0e4add575aadeaae6be42f38e3808f5878ab79276f15a",
+			"size": [
+				36,
+				72
+			],
+			"walkable": 1761,
+			"walkable_encounter_tiles": 274,
+			"walkable_percent": 67.9
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "vigo/exterior",
+					"walkable_edge_tiles": 6
+				},
+				{
+					"edge": "north",
+					"target": "ruta_17/exterior",
+					"walkable_edge_tiles": 6
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 2,
+			"edge_paths": [
+				{
+					"from": "vigo/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_17/exterior"
+				},
+				{
+					"from": "ruta_17/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "vigo/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					14,
+					13
+				],
+				"side": 10
+			},
+			"linked_doors": 2,
+			"map": "ruta_16/exterior",
+			"scene_sha256": "7601c9b938a73e15fe3e184ae632d094c5f0fd2cbb8332956e1b6d443414394b",
+			"size": [
+				36,
+				52
+			],
+			"walkable": 1346,
+			"walkable_encounter_tiles": 305,
+			"walkable_percent": 71.9
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "ruta_16/exterior",
+					"walkable_edge_tiles": 6
+				},
+				{
+					"edge": "east",
+					"target": "ruta_18/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 6,
+			"edge_paths": [
+				{
+					"from": "ruta_16/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_18/exterior"
+				},
+				{
+					"from": "ruta_18/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_16/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					14,
+					2
+				],
+				"side": 10
+			},
+			"linked_doors": 6,
+			"map": "ruta_17/exterior",
+			"scene_sha256": "0730cae8b19730d8cbf5f7ceb257af266d9ae55a42aa6684d49d8e52b0f62df8",
+			"size": [
+				64,
+				40
+			],
+			"walkable": 1751,
+			"walkable_encounter_tiles": 303,
+			"walkable_percent": 68.4
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_17/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "santander/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 4,
+			"edge_paths": [
+				{
+					"from": "ruta_17/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "santander/exterior"
+				},
+				{
+					"from": "santander/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_17/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					52,
+					18
+				],
+				"side": 10
+			},
+			"linked_doors": 4,
+			"map": "ruta_18/exterior",
+			"scene_sha256": "16b34ef0b79c8c511ecaf72129ee49623ad3cc78fb99e13480dfc8cf9fca1a0f",
+			"size": [
+				72,
+				40
+			],
+			"walkable": 1313,
+			"walkable_encounter_tiles": 352,
+			"walkable_percent": 45.6
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "santander/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "bilbao/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [
+				{
+					"anchor": [
+						30,
+						9
+					],
+					"building": "faro",
+					"visual_bounds": [
+						30,
+						-2,
+						8,
+						12
+					]
+				}
+			],
+			"doors": 4,
+			"edge_paths": [
+				{
+					"from": "santander/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "bilbao/exterior"
+				},
+				{
+					"from": "bilbao/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "santander/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					14,
+					11
+				],
+				"side": 10
+			},
+			"linked_doors": 4,
+			"map": "ruta_19/exterior",
+			"scene_sha256": "7c070153b2657dbd1e1048fdf7ef881084e3bf5acf365296cfafc0afc3422bac",
+			"size": [
+				56,
+				36
+			],
+			"walkable": 1148,
+			"walkable_encounter_tiles": 256,
+			"walkable_percent": 56.9
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "bilbao/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "south",
+					"target": "pamplona/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 2,
+			"edge_paths": [
+				{
+					"from": "bilbao/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "pamplona/exterior"
+				},
+				{
+					"from": "pamplona/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "bilbao/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					8,
+					12
+				],
+				"side": 8
+			},
+			"linked_doors": 2,
+			"map": "ruta_20/exterior",
+			"scene_sha256": "89df2295ca78cd1e439c2da61b3653f999a0b3f12acd67f69dd486499742a3e0",
+			"size": [
+				48,
+				56
+			],
+			"walkable": 1529,
+			"walkable_encounter_tiles": 329,
+			"walkable_percent": 56.9
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "ruta_22/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "north",
+					"target": "pamplona/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 4,
+			"edge_paths": [
+				{
+					"from": "ruta_22/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "pamplona/exterior"
+				},
+				{
+					"from": "pamplona/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_22/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					14,
+					21
+				],
+				"side": 18
+			},
+			"linked_doors": 4,
+			"map": "ruta_21/exterior",
+			"scene_sha256": "8a8c46079f655c8092d6c97db79276d6192f57bdc391d6232ad7d7d210c769ac",
+			"size": [
+				48,
+				64
+			],
+			"walkable": 2806,
+			"walkable_encounter_tiles": 140,
+			"walkable_percent": 91.3
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "ruta_21/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "south",
+					"target": "valladolid/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 4,
+			"edge_paths": [
+				{
+					"from": "ruta_21/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "valladolid/exterior"
+				},
+				{
+					"from": "valladolid/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_21/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					20,
+					39
+				],
+				"side": 15
+			},
+			"linked_doors": 4,
+			"map": "ruta_22/exterior",
+			"scene_sha256": "6ca3af1292e79f43e9d9e6c2ac9ef3b57752d6fc38303ddf29553693c7b5e2ee",
+			"size": [
+				48,
+				64
+			],
+			"walkable": 2327,
+			"walkable_encounter_tiles": 160,
+			"walkable_percent": 75.7
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "valladolid/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "pueblo_inicial/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 5,
+			"edge_paths": [
+				{
+					"from": "valladolid/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "pueblo_inicial/exterior"
+				},
+				{
+					"from": "pueblo_inicial/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "valladolid/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					10,
+					18
+				],
+				"side": 10
+			},
+			"linked_doors": 5,
+			"map": "ruta_23/exterior",
+			"scene_sha256": "d2cddc38e27df19e9aba870639ced2c387af6aaf4b1cb499f7bac2325ee61a94",
+			"size": [
+				64,
+				40
+			],
+			"walkable": 1253,
+			"walkable_encounter_tiles": 91,
+			"walkable_percent": 48.9
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "puertollano/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "north",
+					"target": "getafe/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 12,
+			"edge_paths": [
+				{
+					"from": "puertollano/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "getafe/exterior"
+				},
+				{
+					"from": "getafe/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "puertollano/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					32,
+					16
+				],
+				"side": 13
+			},
+			"linked_doors": 12,
+			"map": "ruta_24/exterior",
+			"scene_sha256": "393b6ddbab576142fbecf9d089206434d953f8f06647f39ae897f028221bb108",
+			"size": [
+				48,
+				64
+			],
+			"walkable": 2781,
+			"walkable_encounter_tiles": 135,
+			"walkable_percent": 90.5
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "ruta_26/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "north",
+					"target": "puertollano/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 2,
+			"edge_paths": [
+				{
+					"from": "ruta_26/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "puertollano/exterior"
+				},
+				{
+					"from": "puertollano/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_26/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					22,
+					10
+				],
+				"side": 15
+			},
+			"linked_doors": 2,
+			"map": "ruta_25/exterior",
+			"scene_sha256": "f63a5a0725ad787e2434690090dc42d2c3dc200dca46e509e3b95c0f0d92fe73",
+			"size": [
+				48,
+				64
+			],
+			"walkable": 2611,
+			"walkable_encounter_tiles": 129,
+			"walkable_percent": 85.0
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "malaga/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "north",
+					"target": "ruta_25/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 2,
+			"edge_paths": [
+				{
+					"from": "malaga/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_25/exterior"
+				},
+				{
+					"from": "ruta_25/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "malaga/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					20,
+					0
+				],
+				"side": 14
+			},
+			"linked_doors": 2,
+			"map": "ruta_26/exterior",
+			"scene_sha256": "2b08762a7847e9542fd236c07252fe095740eafac2c9a85ccd379aae0f0f32cf",
+			"size": [
+				48,
+				64
+			],
+			"walkable": 2921,
+			"walkable_encounter_tiles": 135,
+			"walkable_percent": 95.1
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "pozuelo/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "north",
+					"target": "madrid/moncloa",
+					"walkable_edge_tiles": 6
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 0,
+			"edge_paths": [
+				{
+					"from": "pozuelo/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/moncloa"
+				},
+				{
+					"from": "madrid/moncloa",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "pozuelo/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					16,
+					14
+				],
+				"side": 10
+			},
+			"linked_doors": 0,
+			"map": "casa_de_campo/exterior",
+			"scene_sha256": "1982e17fe67d042e88356690c3499c15f41e710cd261462ee6ebf89a3ec8f871",
+			"size": [
+				40,
+				36
+			],
+			"walkable": 846,
+			"walkable_encounter_tiles": 148,
+			"walkable_percent": 58.8
+		},
+		{
+			"connections": [
+				{
+					"edge": "south",
+					"target": "orcasitas/exterior",
+					"walkable_edge_tiles": 6
+				},
+				{
+					"edge": "north",
+					"target": "madrid/retiro",
+					"walkable_edge_tiles": 6
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 0,
+			"edge_paths": [
+				{
+					"from": "orcasitas/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				},
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "orcasitas/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					14,
+					0
+				],
+				"side": 6
+			},
+			"linked_doors": 0,
+			"map": "madrid_rio/exterior",
+			"scene_sha256": "00e23f5664f812e7ab737652e165c4f5f34efb621795d14a0b746496d4e0e8f1",
+			"size": [
+				36,
+				40
+			],
+			"walkable": 842,
+			"walkable_encounter_tiles": 152,
+			"walkable_percent": 58.5
+		},
+		{
+			"connections": [
+				{
+					"edge": "east",
+					"target": "casa_de_campo/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 9,
+			"edge_paths": [],
+			"largest_open_square": {
+				"at": [
+					32,
+					13
+				],
+				"side": 8
+			},
+			"linked_doors": 9,
+			"map": "pozuelo/exterior",
+			"scene_sha256": "1580033fab5e5458f5bbd88c2dacc3d16131413c0e27157457c9e05643c01be4",
+			"size": [
+				44,
+				36
+			],
+			"walkable": 930,
+			"walkable_encounter_tiles": 0,
+			"walkable_percent": 58.7
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "madrid_rio/exterior",
+					"walkable_edge_tiles": 6
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 6,
+			"edge_paths": [],
+			"largest_open_square": {
+				"at": [
+					32,
+					21
+				],
+				"side": 10
+			},
+			"linked_doors": 6,
+			"map": "orcasitas/exterior",
+			"scene_sha256": "cf013913a41050987fd527caa3aab41436fd6464d2f9ff17b94cc15dd4c7416a",
+			"size": [
+				44,
+				36
+			],
+			"walkable": 1065,
+			"walkable_encounter_tiles": 0,
+			"walkable_percent": 67.2
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "maritima_1/exterior",
+					"walkable_edge_tiles": 0
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 22,
+			"edge_paths": [],
+			"largest_open_square": {
+				"at": [
+					18,
+					32
+				],
+				"side": 8
+			},
+			"linked_doors": 22,
+			"map": "ibiza/exterior",
+			"scene_sha256": "04db393bf4e52d263808fb4bb95a6517ac688a685d1df77e74265960ce8e366f",
+			"size": [
+				64,
+				56
+			],
+			"walkable": 2017,
+			"walkable_encounter_tiles": 176,
+			"walkable_percent": 56.3
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "ruta_26/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 24,
+			"edge_paths": [],
+			"largest_open_square": {
+				"at": [
+					34,
+					51
+				],
+				"side": 18
+			},
+			"linked_doors": 24,
+			"map": "malaga/exterior",
+			"scene_sha256": "a4914154e8aff425bd63e07c258799a21ae231815b76f9b1b82faef2ea3782b7",
+			"size": [
+				96,
+				80
+			],
+			"walkable": 5492,
+			"walkable_encounter_tiles": 111,
+			"walkable_percent": 71.5
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "madrid/moncloa",
+					"walkable_edge_tiles": 24
+				},
+				{
+					"edge": "west",
+					"target": "madrid/palacio_real",
+					"walkable_edge_tiles": 10
+				},
+				{
+					"edge": "east",
+					"target": "madrid/retiro",
+					"walkable_edge_tiles": 8
+				},
+				{
+					"edge": "east",
+					"target": "madrid/retiro",
+					"walkable_edge_tiles": 6
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 35,
+			"edge_paths": [
+				{
+					"from": "madrid/moncloa",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/palacio_real"
+				},
+				{
+					"from": "madrid/moncloa",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				},
+				{
+					"from": "madrid/moncloa",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				},
+				{
+					"from": "madrid/palacio_real",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/moncloa"
+				},
+				{
+					"from": "madrid/palacio_real",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				},
+				{
+					"from": "madrid/palacio_real",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				},
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/moncloa"
+				},
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/palacio_real"
+				},
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				},
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/moncloa"
+				},
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/palacio_real"
+				},
+				{
+					"from": "madrid/retiro",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "madrid/retiro"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					56,
+					0
+				],
+				"side": 10
+			},
+			"linked_doors": 35,
+			"map": "madrid/centro",
+			"scene_sha256": "04b91c47ad431b82e6ca59391ef4365030709dfdb8b622db9a048a5f66881e1e",
+			"size": [
+				72,
+				56
+			],
+			"walkable": 2624,
+			"walkable_encounter_tiles": 0,
+			"walkable_percent": 65.1
+		},
+		{
+			"connections": [
+				{
+					"edge": "north",
+					"target": "valencia/turia",
+					"walkable_edge_tiles": 10
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 21,
+			"edge_paths": [],
+			"largest_open_square": {
+				"at": [
+					24,
+					0
+				],
+				"side": 10
+			},
+			"linked_doors": 21,
+			"map": "valencia/ciutat_vella",
+			"scene_sha256": "e0e816472b9f6e41a50e90ffda386cd82242c8acbf2f432e418a58ffb6e790fc",
+			"size": [
+				64,
+				56
+			],
+			"walkable": 2805,
+			"walkable_encounter_tiles": 0,
+			"walkable_percent": 78.3
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_18/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "east",
+					"target": "ruta_19/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [],
+			"doors": 16,
+			"edge_paths": [
+				{
+					"from": "ruta_18/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_19/exterior"
+				},
+				{
+					"from": "ruta_19/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_18/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					30,
+					3
+				],
+				"side": 8
+			},
+			"linked_doors": 16,
+			"map": "santander/exterior",
+			"scene_sha256": "e74ca47bafffaac305a9a0806a86195e248f960fac95af356d8962de8ecd799a",
+			"size": [
+				64,
+				48
+			],
+			"walkable": 1708,
+			"walkable_encounter_tiles": 60,
+			"walkable_percent": 55.6
+		},
+		{
+			"connections": [
+				{
+					"edge": "west",
+					"target": "ruta_19/exterior",
+					"walkable_edge_tiles": 4
+				},
+				{
+					"edge": "south",
+					"target": "ruta_20/exterior",
+					"walkable_edge_tiles": 4
+				}
+			],
+			"cropped_buildings": [
+				{
+					"anchor": [
+						68,
+						49
+					],
+					"building": "casa_tejado_rojo",
+					"visual_bounds": [
+						68,
+						43,
+						5,
+						7
+					]
+				}
+			],
+			"doors": 19,
+			"edge_paths": [
+				{
+					"from": "ruta_19/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_20/exterior"
+				},
+				{
+					"from": "ruta_20/exterior",
+					"grass_avoidable": true,
+					"min_encounter_tiles": 0,
+					"reachable": true,
+					"to": "ruta_19/exterior"
+				}
+			],
+			"largest_open_square": {
+				"at": [
+					15,
+					21
+				],
+				"side": 8
+			},
+			"linked_doors": 19,
+			"map": "bilbao/exterior",
+			"scene_sha256": "8deb3b7f6d13415dcb59ff33efcd62187acaec64011f3fd066364f242464a669",
+			"size": [
+				72,
+				56
+			],
+			"walkable": 2401,
+			"walkable_encounter_tiles": 224,
+			"walkable_percent": 59.5
+		}
+	],
+	"mask": 11,
+	"metodo": "Física a pie en escena original. Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; sin abandonar el mapa.",
+	"revision": "343a0332481b56672686e16aa274a6cff98e26ea"
+}

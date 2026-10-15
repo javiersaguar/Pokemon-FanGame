@@ -10,3 +10,7 @@ Capturas de **Pokémon Añil** que marcan el **nivel mínimo** de calidad de Pok
 | `anil_ruta.png` | Composición de una ruta: caminos, acantilados con escaleras, hierba alta, agua, árboles en bloque sin repetir patrones evidentes |
 
 **Uso:** solo como referencia interna para el equipo. Se toman el **nivel** y el **estilo**, no se copian los gráficos propios de Añil. Esta carpeta no se incluye en las exportaciones del juego.
+
+## Ampliación de Javier del 2026-10-15
+
+[13 referencias de composición de rutas y ciudades](javier_2026-10-15/README.md), conservadas en su resolución original y con SHA-256. Son la referencia para corregir límites, calles, recorridos y pasos por hierba. [Diagnóstico y reparto entre los cinco agentes](../../mundo/guia_composicion_anil_2026-10-15.md). Se conservan los monumentos y la identidad española; sus fachadas se rediseñan con entrada, salida e interior personalizado, proporcionado y con varias salas cuando corresponda.

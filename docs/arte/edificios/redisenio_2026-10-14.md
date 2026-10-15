@@ -84,3 +84,7 @@ El estado de main tiene 664 de 666 puertas conectadas y numerosos interiores gen
 | Intempo | 6×48 (24×192 m) | Portal y un piso. El resto es torre | Pendiente |
 | Colón (Barcelona) | 2×15 (8×60 m) | Solo el mirador, si se entra por la base | Pendiente |
 | Ferry | 24×8 (96×32 m) | Cubierta y salón. La puerta es la rampa | Pendiente |
+
+## Composición del entorno · ampliación del 2026-10-15
+
+Javier reitera que hay que **rediseñar las fachadas actuales** y darles entrada/salida e interior propio, mientras se perfeccionan rutas y ciudades con las [13 referencias nuevas de Añil](../referencias/javier_2026-10-15/README.md). El edificio debe integrarse en una calle o aproximación legible, con su volumen completo dentro del mapa, umbral alineado y espacio para el jugador/seguidor. Conservar el monumento y su lugar; no sustituirlo por una casa genérica. Coordinar cada pieza con quien lleva su interior y su exterior. [Guía y responsabilidades](../../mundo/guia_composicion_anil_2026-10-15.md).
