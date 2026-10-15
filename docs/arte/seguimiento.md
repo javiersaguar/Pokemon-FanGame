@@ -494,3 +494,14 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | Etarra (`etarra`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
 | Cayetano de pelo casco (`cayetano_casco`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
 | Actor de reparto (`actor_reparto`) | Retrato y 16 frames de mapa | [Entrega 14](comparativas/personajes_entrega_14.md) | Provisional, pendiente de Javier |
+
+## Personajes en su sitio · Agente 2 (2026-10-15)
+
+| Asset | Tipo | Comparativa | Estado |
+|---|---|---|---|
+| Coche de la Policía Nacional (`assets/_fuentes/mundo/coche_policia.px2` → `characters/coche_policia.png`) | Propio, dibujado a mano con la paleta (detención de Ábalos y Koldo) | [Personajes 2026-10-15](comparativas/personajes_2026-10-15.md) | Integrado, provisional, pendiente de Javier |
+| Policía (`characters/policia.png`) | Pack 05, PurpleZaffre, sin tocar | [Personajes 2026-10-15](comparativas/personajes_2026-10-15.md) | Integrado, pendiente de Javier |
+| Joyas de Zapatero (`items/joyas_zapatero.png`) | Real Brazal del Generation 9 Pack, sin tocar | [Personajes 2026-10-15](comparativas/personajes_2026-10-15.md) | Integrado, pendiente de Javier |
+| Hojas del pack 11 de 19 clases nuevas (`trainers/` y `characters/`: omar_montes, pablo_motos, zona_gemelos_carlos, zona_gemelos_dani, amador_rivas, antonio_recio, mente_fria, marc_cucurella, joan_pradells, david_bisbal, jc_reyes, puigdemont, rufian, zapatero, maduro, trump, paache, churumbel, javier) | Pack 11 montado con `build_trainers.gd`; en el juego sale el atlas del personaje, salvo Javier | [Personajes 2026-10-15](comparativas/personajes_2026-10-15.md) | Integrado, provisional; Javier: PENDIENTE JAVIER (su aspecto) |
+| Mapas nuevos: piso de Rufián (salón y habitación) y cárcel de Soto del Real (exterior y módulo) | Tiles de los packs; muebles y carteles provisionales | [Personajes 2026-10-15](comparativas/personajes_2026-10-15.md) | Integrado, provisional, pendiente de Javier |
+
