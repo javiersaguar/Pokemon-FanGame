@@ -1669,15 +1669,185 @@
         "entrenadores": [
           {
             "id": "gym3_alcoholico_1",
-            "nombre": "Vicent"
+            "nombre": "Vicent",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "gym3_porreta_1",
-            "nombre": "Ximo"
+            "nombre": "Ximo",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "gym3_cocainomano_1",
-            "nombre": "Borja"
+            "nombre": "Borja",
+            "mira": "derecha",
+            "vista": 2
+          }
+        ],
+        "rotulo": "PISTA",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 4,
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#..wwwwwwwwwwwwww...#",
+          "#..wwwwwwwwwwwwww...#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLL................",
+          ".............BBBB....",
+          ".V...........BBBB..V.",
+          ".V...........BBBB..V.",
+          "............CCCCCC...",
+          "............CCCCCC...",
+          ".RRRRRRRRRRRRRRRRRR..",
+          ".RRRRRRRRRRRRRRRRRR..",
+          ".....................",
+          ".....................",
+          "..AAAAAAAAAAAAAAAAAA.",
+          "..AAAAAAAAAAAAAAAAAA.",
+          "...................P.",
+          "....mmm.......mmm..P.",
+          "....k.k.......k.k..P.",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "............c...c....",
+          ".....................",
+          ".....................",
+          "......b......b.......",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....c.........c.....",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          ".x...................",
+          "........3.....n......",
+          ".....................",
+          ".....................",
+          "...................h.",
+          "..................H..",
+          ".........2...o.......",
+          ".....................",
+          ".g...................",
+          "..G.....1............",
+          ".....................",
+          ".................p...",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Esta zona es solo para los que consumen.",
+              "Vicent lleva consumiendo desde las Fallas. Gánale y consumes tú."
+            ],
+            "despues": [
+              "Vale, pasa. Pero la pulsera no te la quites."
+            ]
+          },
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "A la barra no se pasa sin pulsera.",
+              "La pulsera te la da Ximo... si se acuerda de dónde la ha puesto."
+            ],
+            "despues": [
+              "Pulsera verde. Pasa, que hoy no hay nadie con la roja."
+            ]
+          },
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al reservado solo entran los amigos del dueño.",
+              "Borja dice que es amigo del dueño. Y del portero. Y tuyo. Gánale."
+            ],
+            "despues": [
+              "Venga, pasa. Y dile a Borja que deje de hablar, que me duele la cabeza."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Camarero",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "frases": [
+              "¿Agua de Valencia? Lleva cava, zumo de naranja, vodka y ginebra. Agua, poca.",
+              "La primera la paga la casa. La casa eres tú."
+            ]
+          },
+          {
+            "nombre": "Turista",
+            "sprite": "turista",
+            "mira": "izquierda",
+            "frases": [
+              "Sorry, I don't speak Pokémon. ¡Sangría!",
+              "I come here every summer. I don't remember any of them."
+            ]
+          },
+          {
+            "nombre": "Novio",
+            "sprite": "npc_man",
+            "mira": "izquierda",
+            "frases": [
+              "¡Es mi despedida de soltero! Me caso mañana. O pasado. Depende de si encuentro el anillo.",
+              "Mis amigos me han disfrazado de Pikachu. Yo quería ir de Machamp, que tiene más brazos para los cubatas."
+            ]
+          }
+        ],
+        "carteles": [
+          {
+            "frases": [
+              "AKUARELA PLAYA. CÓDIGO DE VESTIMENTA:",
+              "Tirantes obligatorios. Camisa, solo desabrochada. Chanclas, solo si son de marca."
+            ]
           }
         ]
       },
@@ -1686,15 +1856,179 @@
         "entrenadores": [
           {
             "id": "gym3_alcoholico_2",
-            "nombre": "Paco"
+            "nombre": "Paco",
+            "mira": "izquierda",
+            "vista": 2
           },
           {
             "id": "gym3_porreta_2",
-            "nombre": "Nando"
+            "nombre": "Nando",
+            "mira": "izquierda",
+            "vista": 2
           },
           {
             "id": "gym3_cocainomano_2",
-            "nombre": "Kevin"
+            "nombre": "Kevin",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "RESERVADO",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            4
+          ],
+          "pared": [
+            5,
+            8
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "################S####",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLL...............",
+          ".....................",
+          "..sss..sss.........Q.",
+          "..sss..sss.........Q.",
+          "..mmm..mmm...........",
+          ".....................",
+          "..RRRRRRRRRRRRRRRRRR.",
+          "..RRRRRRRRRRRRRRRRRR.",
+          "......sss..sss.......",
+          "......sss..sss.......",
+          ".RRRRRRRRRRRRRRRRRR..",
+          ".RRRRRRRRRRRRRRRRRR..",
+          ".....................",
+          ".Q.sss.......sss.....",
+          ".Q.sss.......sss.....",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "...c....c............",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "................iI...",
+          "............3........",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".h...................",
+          "..H..................",
+          "....n..........2.....",
+          ".....................",
+          "...................g.",
+          "............1.....G..",
+          ".....................",
+          ".......o.............",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "El reservado está completo. Bueno, está Paco, que ocupa por tres.",
+              "Gana a Paco y te hago sitio."
+            ],
+            "despues": [
+              "Sitio hecho. Paco está debajo de la mesa: no lo pises."
+            ]
+          },
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Para la zona VIP hay que tener mesa. Y botella. Y cuarenta euros de entrada.",
+              "O ganar a Nando, que se ha quedado dormido en la mesa buena."
+            ],
+            "despues": [
+              "Pasa. La botella la paga Nando."
+            ]
+          },
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Kevin no deja pasar a nadie. Dice que es su networking.",
+              "Gánale y le cortamos el networking."
+            ],
+            "despues": [
+              "Networking cortado. Pasa, rápido, antes de que empiece otra vez."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Camarera",
+            "sprite": "npc_lass",
+            "mira": "derecha",
+            "frases": [
+              "La botella son doscientos euros. El hielo va aparte.",
+              "¿Agua? Tenemos, pero es de la cara: la traen de Mallorca."
+            ]
+          },
+          {
+            "nombre": "Relaciones públicas",
+            "sprite": "npc_youngster",
+            "mira": "arriba",
+            "frases": [
+              "¡Hoy es fiesta de la espuma! Bueno, se ha roto la máquina: hoy es fiesta de la humedad.",
+              "Si traes a diez amigos, entras gratis. Si traes a veinte, te contrato."
+            ]
           }
         ]
       },
@@ -1703,21 +2037,437 @@
         "entrenadores": [
           {
             "id": "gym3_porreta_3",
-            "nombre": "Rafa"
+            "nombre": "Rafa",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym3_cocainomano_3",
-            "nombre": "Iván"
+            "nombre": "Iván",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "peter_lim",
-            "nombre": "Peter Lim"
+            "nombre": "Peter Lim",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "ZONA VIP",
+        "rotulo_casilla": [
+          15,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            48
+          ],
+          "pared": [
+            5,
+            3
+          ],
+          "rotulo_color": "f8f8f0",
+          "rotulo_sombra": "64203e"
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "####S################",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          "...............LLLLL.",
+          ".....................",
+          ".P......sss....sss...",
+          ".P......sss....sss...",
+          ".P.........mmm.......",
+          ".....................",
+          ".WWWWWWWWWWWWWWWWWW..",
+          ".WWWWWWWWWWWWWWWWWW..",
+          ".WWWWWWWWWWWWWWWWWW..",
+          "...T.T.T.T...T.T.T...",
+          "...T.T.T.T...T.T.T...",
+          "..UUUUUUUUUUUUUUUUUU.",
+          "..UUUUUUUUUUUUUUUUUU.",
+          "...................P.",
+          "...................P.",
+          "...................P.",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "...........c.c.......",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "....iI...............",
+          ".....................",
+          "................3....",
+          ".....................",
+          ".....................",
+          ".....................",
+          "...................h.",
+          "............n.....H..",
+          "..........2..........",
+          ".....................",
+          ".g...................",
+          "..G...1..............",
+          "......o..............",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Zona VIP con piscina. Prohibido bañarse con Pokémon de tipo fuego.",
+              "Rafa ha montado aquí su campamento. Gánale y se va despacito."
+            ],
+            "despues": [
+              "Se ha ido. Despacito, pero se ha ido."
+            ]
+          },
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Las tumbonas están reservadas desde las siete de la mañana. Con toalla.",
+              "Iván las ha reservado todas. Gánale."
+            ],
+            "despues": [
+              "Toallas retiradas. Pasa."
+            ]
+          },
+          {
+            "nombre": "Portero",
+            "sprite": "tronista",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "La cabina es del DJ y del dueño del Valencia, que se ha perdido buscando Mestalla.",
+              "Si le ganas, a lo mejor la vende."
+            ],
+            "despues": [
+              "Ha vendido. A plazos y con cláusula. Pasa."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Socorrista",
+            "sprite": "surfista",
+            "mira": "arriba",
+            "frases": [
+              "Llevo todo el verano vigilando la piscina. Nadie se ha bañado: solo se hacen fotos.",
+              "Si alguien se ahoga, primero que suba la historia."
+            ]
+          },
+          {
+            "nombre": "Influencer",
+            "arte": "",
+            "sprite": "influencerlinkedin_f",
+            "mira": "derecha",
+            "frases": [
+              "Esta foto la subo con el filtro de «mañana de verano». Son las cuatro de la madrugada.",
+              "Me han invitado a la zona VIP a cambio de una historia. Llevo cuarenta."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "AKUARELA PLAYA · CABINA",
-    "lider_previos": []
+    "estilo": {
+      "suelo": [
+        0,
+        0,
+        16
+      ],
+      "pared": [
+        5,
+        14
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        3,
+        27,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "f8f8f0",
+      "rotulo_sombra": "64203e"
+    },
+    "leyenda": {
+      "w": {
+        "propia": "pista_luces"
+      },
+      "L": {
+        "propia": "rotulo_valencia",
+        "fila": true
+      },
+      "A": {
+        "propia": "altavoz",
+        "arriba": 1
+      },
+      "V": {
+        "propia": "altavoz"
+      },
+      "K": {
+        "propia": "mesa_dj"
+      },
+      "b": {
+        "propia": "bola_disco"
+      },
+      "c": {
+        "propia": "cubata"
+      },
+      "T": {
+        "propia": "tumbona"
+      },
+      "W": {
+        "propia": "piscina",
+        "nueve": true
+      },
+      "C": {
+        "fila": [
+          3,
+          5,
+          11
+        ],
+        "arriba": 1
+      },
+      "R": {
+        "fila": [
+          6,
+          0,
+          52
+        ],
+        "arriba": 1
+      },
+      "U": {
+        "fila": [
+          6,
+          4,
+          52
+        ],
+        "arriba": 1
+      },
+      "s": {
+        "pieza": [
+          2,
+          3,
+          59,
+          3,
+          2
+        ]
+      },
+      "m": {
+        "fila": [
+          8,
+          0,
+          4
+        ]
+      },
+      "P": {
+        "pieza": [
+          2,
+          2,
+          36,
+          1,
+          3
+        ],
+        "arriba": 2
+      },
+      "Q": {
+        "pieza": [
+          2,
+          1,
+          37,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "k": {
+        "pieza": [
+          2,
+          0,
+          61,
+          1,
+          1
+        ]
+      },
+      "B": {
+        "pieza": [
+          2,
+          5,
+          6,
+          2,
+          3
+        ]
+      },
+      "X": {
+        "pieza": [
+          6,
+          4,
+          48,
+          4,
+          3
+        ]
+      }
+    },
+    "sala_lider": {
+      "titulo": "AKUARELA PLAYA · CABINA",
+      "rotulo": "CABINA",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 5,
+      "estilo": {
+        "suelo": [
+          0,
+          0,
+          16
+        ],
+        "pared": [
+          1,
+          15
+        ]
+      },
+      "plano": [
+        "###################",
+        "###################",
+        "###################",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#.................#",
+        "#....wwwwwwwwww...#",
+        "#....wwwwwwwwww...#",
+        "#....wwwwwwwwww...#",
+        "#....wwwwwwwwww...#",
+        "#.................#",
+        "#.................#",
+        "#........E........#",
+        "###################"
+      ],
+      "muebles": [
+        "...................",
+        ".LLLLL.......XXXX..",
+        ".............XXXX..",
+        "........KKK..XXXX..",
+        ".V......KKK......V.",
+        ".V...............V.",
+        "...................",
+        "...................",
+        "...................",
+        ".V...............V.",
+        ".V...............V.",
+        "...................",
+        "..Q.............Q..",
+        "..Q.............Q..",
+        "..................."
+      ],
+      "encima": [
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "......b.....b......",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..................."
+      ],
+      "personas": [
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        ".........@.........",
+        "...................",
+        "....n..............",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "...................",
+        "..................."
+      ],
+      "entrenadores": [],
+      "npcs": [
+        {
+          "nombre": "Relaciones públicas",
+          "sprite": "raver_f",
+          "mira": "derecha",
+          "frases": [
+            "Labrador lleva tres sesiones de pesas hoy. Entre canción y canción, flexiones.",
+            "Si le ganas, te pone tu canción. Si pierdes, la suya, y dura dos horas."
+          ]
+        }
+      ]
+    }
   },
   "sevilla": {
     "lider": "joaquin",

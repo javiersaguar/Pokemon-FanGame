@@ -376,7 +376,9 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 
 **Hecho · bloque 2 (Barcelona):** Vestuario, Sala de Palancas, Palco y Despacho del President (21×18, 21×18, 21×18 y 19×15), con stewards de vigilantes. Diez piezas a mano (fuentes 29–38): placa azulgrana, taquillas, banco, butacas, valla de obra con cartel, palanca, escudo, copa, cono y andamio. El pintor admite una cuarta rejilla, `encima`, para lo que va sobre un mueble. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5. **Fallo encontrado y corregido:** en dos salas el vigilante apartado tapaba el único paso al hueco (unas cajas cerraban el otro lado); lo detectó el test paso a paso.
 
-**En curso:** bloque 3, Valencia.
+**Hecho · bloque 3 (Valencia):** Pista, Reservado, Zona VIP y Cabina, con porteros de discoteca de vigilantes. Ocho piezas a mano (fuentes 39–46): placa de neón, pista de baldosas de luz (se pisa), altavoz, bola de espejos, cubata, cabina del DJ, tumbona y piscina. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5.
+
+**En curso:** bloque 4, Sevilla.
 
 ### Sesión de mundo centro y final (2026-10-09)
 

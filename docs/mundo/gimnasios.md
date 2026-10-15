@@ -14,7 +14,7 @@
 
 Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_2026-10-14.md)): **manda sobre los entrenadores que proponen las fichas de abajo.** Cada gimnasio son **cuatro mapas** (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider`), pintados por `maps/_pintura/pintar_gimnasios.gd` a partir de `maps/_pintura/gimnasios_salas.json`. Cada sala tiene tres tramos con un entrenador y un vigilante que tapa el paso hasta que le ganas (luego se aparta a un lado); así es obligatorio ganar a todos antes del líder. Quién hay en cada sala, con su lore, equipo y frases: [`guion.md` §8](guion.md).
 
-**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid** y **Barcelona**. Los demás siguen con el zigzag antiguo hasta que les toque.
+**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona** y **Valencia**. Los demás siguen con el zigzag antiguo hasta que les toque.
 
 | # | Se entra por | Entrenadores antes del líder |
 |---|---|---|
@@ -60,6 +60,8 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_20
 - **Premio:** la MT de Cabeza de Hierro (ya en el juego); y Laporta te ofrece "un contrato a diez años, pagado en 2040".
 
 ## 3 · Valencia — Labrador (Lucha) · Medalla Tirantes
+
+- **Por dentro (2026-10-15):** se entra por Akuarela, en la Malvarrosa → **Pista** (baldosas de luz, bolas de espejos, muro de altavoces, cordones y la barra: Vicent, Ximo y Borja) → **Reservado** (sofás, mesas y cordones: Paco, Nando y Kevin) → **Zona VIP** (la piscina, tumbonas y cordón: Rafa, Iván y Peter Lim) → **Cabina** (cabina del DJ, pantallas y altavoces). Labrador da la Medalla Tirantes y la MT de Demolición. Los vigilantes son porteros de discoteca.
 
 - **El interior:** la pista de Akuarela Playa: focos, luces de colores y una piscina. **Reto:** el suelo de la pista se ilumina a ritmo; solo se puede pisar la baldosa encendida (un puzle de casillas que cambian con cada paso). Al fondo, el reservado VIP con Labrador haciendo flexiones.
 - **Entrenadores:** Vicent (crossfitero: Machop y Timburr), Rubén (tronista: Mankey y Makuhita) y Nerea (raver: Pawmo y Riolu).

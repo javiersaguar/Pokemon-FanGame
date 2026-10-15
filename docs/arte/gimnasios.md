@@ -51,6 +51,14 @@ Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras fila
 | 36 | `copa` | 1×1 | copa dorada de asas grandes |
 | 37 | `cono` | 1×1 | cono de obra |
 | 38 | `andamio` | 2×3 | andamio con dos plataformas |
+| 39 | `rotulo_valencia` | 3×1 | placa de neón rosa sobre morado (Valencia) |
+| 40 | `pista_luces` | 2×2 (se pisa, se repite) | cuatro baldosas de luz de la pista |
+| 41 | `altavoz` | 1×2 | altavoz de discoteca o de concierto |
+| 42 | `bola_disco` | 1×1 (por encima) | bola de espejos colgada |
+| 43 | `cubata` | 1×1 (encima) | cubata con pajita y limón |
+| 44 | `mesa_dj` | 3×2 | cabina del DJ con platos y mesa de mezclas |
+| 45 | `tumbona` | 1×2 | tumbona de rayas |
+| 46 | `piscina` | 3×3 (recuadro que se estira) | piscina con borde de piedra |
 
 ## Pintor: `maps/_pintura/pintar_gimnasios.gd`
 

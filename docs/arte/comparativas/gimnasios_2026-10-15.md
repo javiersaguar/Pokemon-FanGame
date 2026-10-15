@@ -37,3 +37,17 @@ Las capturas no ejecutan `MapLoader.prepare`, así que no salen los personajes c
 - **Sala de Palancas:** el estadio en obras: vallas de malla con carteles de peligro, andamios, conos, el videomarcador y tres palancas con su cartel (lo que ya se ha vendido). Un jubilado mira la obra.
 - **Palco:** el ventanal al campo, filas de butacas azules y granates que hacen de tabique, sofás, mesas del catering y la vitrina con la copa.
 - **Despacho del President:** escudo, vitrinas con copas, mesa con su copa, alfombra, sofás y un directivo. Laporta espera en el centro.
+
+## 3 · Valencia — Akuarela Playa
+
+| Sala | Antes | Después |
+|---|---|---|
+| Pista | ![](gimnasios/antes/valencia_gimnasio_1.png) | ![](gimnasios/despues/valencia_gimnasio_1.png) |
+| Reservado | ![](gimnasios/antes/valencia_gimnasio_2.png) | ![](gimnasios/despues/valencia_gimnasio_2.png) |
+| Zona VIP | ![](gimnasios/antes/valencia_gimnasio_3.png) | ![](gimnasios/despues/valencia_gimnasio_3.png) |
+| Cabina | ![](gimnasios/antes/valencia_gimnasio_lider.png) | ![](gimnasios/despues/valencia_gimnasio_lider.png) |
+
+- **Pista:** pista de baldosas de luz con bolas de espejos, un muro de altavoces que hace de tabique, postes con cordón rojo, la barra con su estante de botellas, el camarero y cubatas en barra y mesas. Un cartel con el código de vestimenta.
+- **Reservado:** sofás y mesas bajas con cubatas separados por cordones, la camarera y el relaciones públicas.
+- **Zona VIP:** la piscina hace de tabique; tumbonas, sofás, cordón morado, el socorrista y una influencer.
+- **Cabina:** la cabina del DJ con sus platos, pantallas de luces, altavoces y pista. Labrador espera delante.
