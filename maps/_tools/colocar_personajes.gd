@@ -35,6 +35,11 @@ func _place_in(map_id: String, entries: Array) -> int:
 		return entries.size()
 	# Sin tipar: en un script suelto MapRoot no compila (le faltan los autoloads), como en alcance.gd.
 	var map: Node2D = scene.instantiate()
+	# Los nodos que sustituye un personaje ("sustituye") le dejan su sitio: fuera antes de medir.
+	for entry: Dictionary in entries:
+		var replaced := map.get_node_or_null("Entities/" + str(entry.get("sustituye", "-")))
+		if replaced != null:
+			replaced.free()
 	root.add_child(map)
 	await physics_frame
 	await physics_frame

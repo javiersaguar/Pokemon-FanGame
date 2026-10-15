@@ -8,7 +8,8 @@ combate (frente) y de mapa (andar) — los nombres del pack no son regulares —
 añade o actualiza su entrada en assets/sprites/trainers/recetas.json. No dibuja
 nada: build_trainers.gd superpone las capas tal cual.
 
-Uso: python3 tools/mundo/recetas_famosos.py [--recursos=<ruta del pack>]
+Uso: python3 tools/mundo/recetas_famosos.py [--recursos=<ruta del pack>] [--solo=id1,id2]
+(con --solo solo se rehacen esas entradas; el resto de recetas.json no se toca)
 """
 import json
 import os
@@ -264,6 +265,46 @@ SPECS = {
                  "Guagüero de Gran Canaria (conductor de guagua): camisa azul, pantalón azul marino y gorra."),
     "fan_quevedo": ("f", "light", (3, "black"), ("sudadera", "black"), ("corto", "black"), ("glasses", None),
                     "Fan de Quevedo en el concierto de la playa: sudadera negra, pantalón corto y gafas de sol."),
+    # Personajes con atlas propio que aún no eran entrenadores (Agente 2, 2026-10-15). En el juego sale su
+    # atlas (data/character_art.json); esta hoja del pack 11 es la de su clase si el atlas no está.
+    "omar_montes": ("m", "medium", (4, "black"), ("tirantes", "black"), ("vaqueros", "black"), None,
+                    "Omar Montes, de Pan Bendito y exboxeador: camiseta de tirantes negra y vaqueros."),
+    "pablo_motos": ("m", "light", (2, "brown"), ("americana", "navy"), ("vaqueros", "navy"), None,
+                    "Pablo Motos, de El Hormiguero: americana azul marino y vaqueros."),
+    "zona_gemelos_carlos": ("m", "light", (1, "black"), ("sudadera", "black"), ("vaqueros", "black"), None,
+                            "Carlos, de Zona Gemelos (Getafe): sudadera negra."),
+    "zona_gemelos_dani": ("m", "light", (1, "black"), ("sudadera", "blue"), ("vaqueros", "black"), None,
+                          "Dani, de Zona Gemelos (Getafe): sudadera azul, para distinguirlo de su gemelo."),
+    "amador_rivas": ("m", "light", (4, "black"), ("camisa", "white"), ("vaqueros", "light blue"), None,
+                     "Amador Rivas, de La que se avecina: camisa blanca y vaqueros."),
+    "antonio_recio": ("m", "light", (4, "black"), ("chaleco", "grey"), ("vestir", "grey"), None,
+                      "Antonio Recio, mayorista de marisco: chaleco y pantalón grises."),
+    "mente_fria": ("m", "light", (4, "brown"), ("camisa", "light blue"), ("vestir", "black"), None,
+                   "Eduardo Gómez como Mente Fría, de La que se avecina: camisa azul clara."),
+    "marc_cucurella": ("m", "light", (3, "brown"), ("camiseta", "red"), ("corto", "blue"), None,
+                       "Marc Cucurella: melena y la camiseta roja de la selección."),
+    "joan_pradells": ("m", "light", (4, "black"), ("tirantes", "black"), ("corto", "black"), None,
+                      "Joan Pradells, culturista valenciano: camiseta de tirantes y pantalón corto."),
+    "david_bisbal": ("m", "light", (3, "brown"), ("camisa", "white"), ("vaqueros", "black"), None,
+                     "David Bisbal: rizos y camisa blanca."),
+    "jc_reyes": ("m", "medium", (4, "black"), ("sudadera", "green"), ("vaqueros", "black"), ("glasses", "blue"),
+                 "JC Reyes, de Palmete (Sevilla): sudadera verde de Los Green Lanters y gafas."),
+    "puigdemont": ("m", "light", (2, "black"), ("americana", "black"), ("vestir", "black"), ("glasses", "blue"),
+                   "Carles Puigdemont: flequillo, traje oscuro y gafas."),
+    "rufian": ("m", "light", (4, "black"), ("camisa", "white"), ("vaqueros", "navy"), None,
+               "Gabriel Rufián: camisa blanca (la estelada como capa la lleva su atlas)."),
+    "zapatero": ("m", "light", (2, "black"), ("americana", "navy"), ("vestir", "navy"), None,
+                 "José Luis Rodríguez Zapatero: traje azul marino (las joyas las lleva su atlas)."),
+    "maduro": ("m", "medium", (4, "black"), ("chaqueta", "red"), ("vaqueros", "navy"), None,
+               "Nicolás Maduro: chaqueta roja."),
+    "trump": ("m", "light", (2, "blonde"), ("americana", "navy"), ("vestir", "navy"), None,
+              "Donald Trump: tupé rubio y traje azul marino."),
+    "paache": ("m", "light", (1, "brown"), ("sudadera", "blue"), ("vaqueros", "black"), None,
+               "Paache, streamer gallego: sudadera azul."),
+    "churumbel": ("m", "medium", (4, "black"), ("camiseta", "white"), ("corto", "black"), ("youngster cap", "blue"),
+                  "El Churumbel de Málaga: camiseta blanca, pantalón corto y gorra."),
+    "javier": ("m", "light", (1, "brown"), ("camiseta", "blue"), ("vaqueros", "navy"), None,
+               "Javier Saguar, creador del juego. PROVISIONAL: PENDIENTE JAVIER (que diga cómo quiere salir)."),
 }
 
 
@@ -387,20 +428,28 @@ def _hat(pack: Pack, root: str, alias: str, color: str) -> str:
 
 def main() -> None:
     res = DEFAULT_RES
+    only = set()
     for a in sys.argv[1:]:
         if a.startswith("--recursos="):
             res = a.split("=", 1)[1]
+        elif a.startswith("--solo="):
+            only = {x for x in a.split("=", 1)[1].split(",") if x}
+    unknown = only - set(SPECS)
+    if unknown:
+        raise SystemExit("Sin receta en SPECS: %s" % ", ".join(sorted(unknown)))
     pack = Pack(os.path.join(res, PACK))
     with open(RECIPES, encoding="utf-8") as f:
         recipes = json.load(f)
     for pid, spec in SPECS.items():
+        if only and pid not in only:
+            continue
         entry = {"idea": spec[-1]}
         for view in ("frente", "mapa"):
             entry[view] = layers(pack, view, spec)
         recipes[pid] = entry
-    with open(RECIPES, "w", encoding="utf-8") as f:
+    with open(RECIPES, "w", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(recipes, ensure_ascii=False, indent="\t") + "\n")
-    print("%d recetas de personajes en %s" % (len(SPECS), os.path.relpath(RECIPES, ROOT)))
+    print("%d recetas de personajes en %s" % (len(only) if only else len(SPECS), os.path.relpath(RECIPES, ROOT)))
 
 
 if __name__ == "__main__":

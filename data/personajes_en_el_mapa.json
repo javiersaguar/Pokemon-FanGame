@@ -588,33 +588,33 @@
   {
    "id": "hustlehard304",
    "entrenador": "hustlehard304",
-   "mapa": "barcelona/les_corts",
+   "mapa": "rocafonda/exterior",
    "cerca": [
-    14.0,
-    45.0
+    28.0,
+    15.0
    ],
    "mira": "abajo",
-   "vista": 3.0,
-   "lugar": "Con Lamine",
+   "vista": 2.0,
+   "lugar": "Rocafonda, a la puerta de la mansión de su hijo Lamine",
    "casilla": [
-    14,
-    45
+    29,
+    15
    ]
   },
   {
    "id": "keyne",
    "entrenador": "keyne",
-   "mapa": "barcelona/les_corts",
+   "mapa": "rocafonda/exterior",
    "cerca": [
-    18.0,
-    45.0
+    34.0,
+    15.0
    ],
    "mira": "abajo",
-   "vista": 3.0,
-   "lugar": "Con Lamine",
+   "vista": 2.0,
+   "lugar": "Rocafonda, con su hermano Lamine",
    "casilla": [
-    18,
-    45
+    34,
+    15
    ]
   },
   {
@@ -1640,6 +1640,461 @@
     22,
     24
    ]
+  },
+  {
+   "id": "omar_montes",
+   "entrenador": "omar_montes",
+   "mapa": "madrid_rio/exterior",
+   "cerca": [
+    9.0,
+    16.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Madrid Río, junto al Matadero, camino de Carabanchel (Pan Bendito, su barrio). Propuesta",
+   "casilla": [
+    7,
+    15
+   ]
+  },
+  {
+   "id": "pablo_motos",
+   "entrenador": "pablo_motos",
+   "mapa": "madrid/centro",
+   "cerca": [
+    33.0,
+    25.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "lugar": "Gran Vía, enfrente de La Revuelta de Broncano: la guerra de audiencias. Propuesta",
+   "casilla": [
+    33,
+    25
+   ]
+  },
+  {
+   "id": "zona_gemelos_carlos",
+   "entrenador": "zona_gemelos_carlos",
+   "mapa": "getafe/exterior",
+   "cerca": [
+    36.0,
+    52.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "pareja": "zona_gemelos_dani",
+   "lugar": "Getafe, su ciudad, a la puerta de la nave donde graban La Casa de los Gemelos. Propuesta",
+   "casilla": [
+    36,
+    52
+   ]
+  },
+  {
+   "id": "zona_gemelos_dani",
+   "entrenador": "zona_gemelos_dani",
+   "mapa": "getafe/exterior",
+   "cerca": [
+    38.0,
+    52.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Getafe, con su gemelo Carlos. Propuesta",
+   "casilla": [
+    38,
+    51
+   ]
+  },
+  {
+   "id": "antonio_recio",
+   "entrenador": "antonio_recio",
+   "mapa": "mostoles/exterior",
+   "cerca": [
+    30.0,
+    46.0
+   ],
+   "mira": "abajo",
+   "vista": 2.0,
+   "lugar": "Móstoles, en una urbanización nueva: el Mirador de Montepinar de La que se avecina. Propuesta",
+   "casilla": [
+    30,
+    43
+   ]
+  },
+  {
+   "id": "amador_rivas",
+   "entrenador": "amador_rivas",
+   "mapa": "mostoles/exterior",
+   "cerca": [
+    34.0,
+    46.0
+   ],
+   "mira": "abajo",
+   "vista": 2.0,
+   "lugar": "Móstoles, de vecino en el Mirador de Montepinar. Propuesta",
+   "casilla": [
+    35,
+    46
+   ]
+  },
+  {
+   "id": "mente_fria",
+   "entrenador": "mente_fria",
+   "mapa": "mostoles/exterior",
+   "cerca": [
+    38.0,
+    46.0
+   ],
+   "mira": "abajo",
+   "vista": 2.0,
+   "lugar": "Móstoles, de vecino en el Mirador de Montepinar. Propuesta",
+   "casilla": [
+    38,
+    46
+   ]
+  },
+  {
+   "id": "marc_cucurella",
+   "entrenador": "marc_cucurella",
+   "mapa": "rocafonda/exterior",
+   "cerca": [
+    27.0,
+    30.0
+   ],
+   "mira": "abajo",
+   "vista": 2.0,
+   "lugar": "Rocafonda (Maresme), en el campo de los niños: es de Alella, al lado. Propuesta",
+   "casilla": [
+    27,
+    30
+   ]
+  },
+  {
+   "id": "joan_pradells",
+   "entrenador": "joan_pradells",
+   "mapa": "valencia/malvarrosa",
+   "cerca": [
+    46.0,
+    16.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Playa de la Malvarrosa, entrenando al aire libre: es culturista y valenciano. Propuesta",
+   "casilla": [
+    46,
+    13
+   ]
+  },
+  {
+   "id": "david_bisbal",
+   "entrenador": "david_bisbal",
+   "mapa": "ruta_12/exterior",
+   "cerca": [
+    64.0,
+    27.0
+   ],
+   "mira": "derecha",
+   "vista": 3.0,
+   "lugar": "Ruta 12, en la entrada desde Murcia: el camino de Almería, su tierra. Propuesta",
+   "casilla": [
+    64,
+    27
+   ]
+  },
+  {
+   "id": "jc_reyes",
+   "entrenador": "jc_reyes",
+   "mapa": "sevilla/centro",
+   "cerca": [
+    55.0,
+    30.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Sevilla, en el lado este del centro, camino de Palmete, su barrio. Propuesta",
+   "casilla": [
+    55,
+    30
+   ]
+  },
+  {
+   "id": "puigdemont",
+   "entrenador": "puigdemont",
+   "mapa": "barcelona/ciutat_vella",
+   "cerca": [
+    18.0,
+    49.0
+   ],
+   "mira": "izquierda",
+   "vista": 0.0,
+   "lugar": "Port Vell, junto a la terminal de ferris: listo para fugarse otra vez. Propuesta",
+   "casilla": [
+    18,
+    49
+   ]
+  },
+  {
+   "id": "zapatero",
+   "entrenador": "zapatero",
+   "mapa": "las_palmas/canteras",
+   "cerca": [
+    40.0,
+    38.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "pareja": "maduro",
+   "lugar": "Puerto de La Luz (Las Palmas), con Maduro: Venezuela es «la octava isla» de Canarias. Propuesta",
+   "casilla": [
+    40,
+    37
+   ]
+  },
+  {
+   "id": "maduro",
+   "entrenador": "maduro",
+   "mapa": "las_palmas/canteras",
+   "cerca": [
+    42.0,
+    38.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Puerto de La Luz (Las Palmas), con Zapatero. Propuesta",
+   "casilla": [
+    42,
+    38
+   ]
+  },
+  {
+   "id": "trump",
+   "entrenador": "trump",
+   "mapa": "playa_del_ingles/exterior",
+   "cerca": [
+    17.0,
+    9.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "requiere": {
+    "flag": "trainer_defeated:maduro"
+   },
+   "lugar": "Aeropuerto de Gran Canaria: llega a por Maduro (sale después de ganar a Zapatero y Maduro). Propuesta",
+   "casilla": [
+    17,
+    9
+   ]
+  },
+  {
+   "id": "paache",
+   "entrenador": "paache",
+   "mapa": "ruta_17/exterior",
+   "cerca": [
+    14.0,
+    28.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Ruta 17 (Galicia interior), junto al hórreo. Que esté en Galicia es decisión de Javier; el sitio exacto, propuesta",
+   "casilla": [
+    14,
+    27
+   ]
+  },
+  {
+   "id": "churumbel",
+   "entrenador": "churumbel",
+   "mapa": "malaga/exterior",
+   "cerca": [
+    30.0,
+    44.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Málaga, su ciudad, junto al mercado. Propuesta",
+   "casilla": [
+    29,
+    44
+   ]
+  },
+  {
+   "id": "javier",
+   "entrenador": "javier",
+   "mapa": "pueblo_inicial/exterior",
+   "cerca": [
+    37.0,
+    41.0
+   ],
+   "mira": "abajo",
+   "vista": 0.0,
+   "sustituye": "Javier",
+   "requiere": {
+    "medallas": 7.0
+   },
+   "lugar": "San Miguel de Bernuy, delante de su casa, al volver por la Ruta 23 con siete medallas (decisión de Javier). Sustituye al vecino «Javier» del mapa",
+   "casilla": [
+    38,
+    41
+   ]
+  },
+  {
+   "id": "vito_quiles_elche",
+   "entrenador": "vito_quiles_elche",
+   "mapa": "ruta_11/exterior",
+   "cerca": [
+    52.0,
+    17.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Palmeral de Elche, su ciudad: la revancha (decisión de Javier)",
+   "casilla": [
+    52,
+    17
+   ]
+  },
+  {
+   "id": "abascal_covadonga",
+   "entrenador": "abascal_covadonga",
+   "mapa": "ruta_18/exterior",
+   "cerca": [
+    36.0,
+    26.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Covadonga, delante de la basílica: su segunda aparición (dos apariciones: decisión de Javier; el sitio, propuesta)",
+   "casilla": [
+    35,
+    26
+   ]
+  },
+  {
+   "id": "abalos_albufera",
+   "entrenador": "abalos_albufera",
+   "mapa": "ruta_9/exterior",
+   "cerca": [
+    11.0,
+    27.0
+   ],
+   "mira": "derecha",
+   "vista": 3.0,
+   "pareja": "koldo_albufera",
+   "requiere": {
+    "medallas": 3.0
+   },
+   "lugar": "La Albufera (El Palmar), de «vacaciones»: segundo encuentro, con tres medallas (decisión de Javier)",
+   "casilla": [
+    16,
+    27
+   ]
+  },
+  {
+   "id": "koldo_albufera",
+   "entrenador": "koldo_albufera",
+   "mapa": "ruta_9/exterior",
+   "cerca": [
+    12.0,
+    29.0
+   ],
+   "mira": "derecha",
+   "vista": 3.0,
+   "requiere": {
+    "medallas": 3.0
+   },
+   "lugar": "La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier)",
+   "casilla": [
+    16,
+    28
+   ]
+  },
+  {
+   "id": "gym6_camarero",
+   "entrenador": "gym6_camarero",
+   "mapa": "bilbao/exterior",
+   "cerca": [
+    16.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6)",
+   "casilla": [
+    16,
+    20
+   ]
+  },
+  {
+   "id": "gym6_crossfitero",
+   "entrenador": "gym6_crossfitero",
+   "mapa": "bilbao/exterior",
+   "cerca": [
+    20.0,
+    23.0
+   ],
+   "mira": "izquierda",
+   "vista": 3.0,
+   "lugar": "Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6)",
+   "casilla": [
+    20,
+    23
+   ]
+  },
+  {
+   "id": "gym6_tertuliano",
+   "entrenador": "gym6_tertuliano",
+   "mapa": "bilbao/exterior",
+   "cerca": [
+    25.0,
+    20.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "lugar": "Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6)",
+   "casilla": [
+    25,
+    19
+   ]
+  },
+  {
+   "id": "nico_williams",
+   "entrenador": "nico_williams",
+   "mapa": "bilbao/exterior",
+   "cerca": [
+    12.0,
+    24.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "pareja": "inaki_williams",
+   "requiere": {
+    "medallas": 6.0
+   },
+   "lugar": "A la salida de San Mamés, con la medalla 6: la revancha de Copa (dentro combaten por separado). Propuesta",
+   "casilla": [
+    12,
+    21
+   ]
+  },
+  {
+   "id": "inaki_williams",
+   "entrenador": "inaki_williams",
+   "mapa": "bilbao/exterior",
+   "cerca": [
+    14.0,
+    24.0
+   ],
+   "mira": "abajo",
+   "vista": 3.0,
+   "requiere": {
+    "medallas": 6.0
+   },
+   "lugar": "A la salida de San Mamés, con su hermano Nico. Propuesta",
+   "casilla": [
+    15,
+    24
+   ]
   }
  ],
  "pendientes": [
@@ -1669,29 +2124,14 @@
    "motivo": "Interior de la Liga sin hacer"
   },
   {
-   "id": "gym6_camarero",
-   "lugar": "Bilbao, en la calle (antiguos entrenadores del gimnasio 6)",
-   "motivo": "Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15)"
+   "id": "rufian",
+   "lugar": "Su casa de Barcelona, con habitación propia (decisión de Javier)",
+   "motivo": "Falta el mapa de su casa: lo pinta el Agente 2 en el bloque 4 (2026-10-15)"
   },
   {
-   "id": "gym6_crossfitero",
-   "lugar": "Bilbao, en la calle (antiguos entrenadores del gimnasio 6)",
-   "motivo": "Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15)"
-  },
-  {
-   "id": "gym6_tertuliano",
-   "lugar": "Bilbao, en la calle (antiguos entrenadores del gimnasio 6)",
-   "motivo": "Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15)"
-  },
-  {
-   "id": "nico_williams",
-   "lugar": "San Mamés (Bilbao), combate doble",
-   "motivo": "Los Williams ya combaten por separado dentro del gimnasio 6 (decisiones del 2026-10-14); este doble se recoloca en el bloque 2 del Agente 2 (2026-10-15)"
-  },
-  {
-   "id": "inaki_williams",
-   "lugar": "San Mamés (Bilbao), combate doble",
-   "motivo": "Los Williams ya combaten por separado dentro del gimnasio 6 (decisiones del 2026-10-14); este doble se recoloca en el bloque 2 del Agente 2 (2026-10-15)"
+   "id": "vito_quiles_rufian",
+   "lugar": "La habitación de Rufián, en Barcelona (decisión de Javier)",
+   "motivo": "Falta el mapa de la casa de Rufián: lo pinta el Agente 2 en el bloque 4 (2026-10-15)"
   }
  ],
  "por_evento": [
@@ -1712,78 +2152,5 @@
   }
  ],
  "sprites_prestados": [],
- "arte_sin_uso": [
-  {
-   "id": "amador_rivas",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "antonio_recio",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "churumbel",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "david_bisbal",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "jc_reyes",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "joan_pradells",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "maduro",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "marc_cucurella",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "mente_fria",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "omar_montes",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "paache",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "pablo_motos",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "puigdemont",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "rufian",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "trump",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "zapatero",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "zona_gemelos_carlos",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  },
-  {
-   "id": "zona_gemelos_dani",
-   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
-  }
- ]
+ "arte_sin_uso": []
 }

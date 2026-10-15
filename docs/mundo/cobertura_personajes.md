@@ -2,7 +2,7 @@
 
 > Lo genera `tests/mundo/test_cobertura_personajes.gd` (no se edita a mano). Para cada entrenador de `data/trainers/*.json`: sprite del mapa, retrato de combate y dónde sale. Las explicaciones de lo que falta están en `data/personajes_en_el_mapa.json` (`pendientes`, `por_evento`, `sprites_prestados` y `arte_sin_uso`). Los sitios de los famosos son **propuesta**: los decide Javier.
 
-**Resumen:** 324 entrenadores · 324 con sprite de mapa propio · 324 con retrato de combate propio · 314 colocados · 10 pendientes con motivo · 19 personajes sin combate.
+**Resumen:** 348 entrenadores · 348 con sprite de mapa propio · 348 con retrato de combate propio · 341 colocados · 7 pendientes con motivo · 1 personajes sin combate.
 
 - **atlas `id`**: el diseño propio del personaje (`data/character_art.json`): retrato de combate y dieciséis poses de mapa. Si la clase del entrenador es la del personaje, el atlas sale por la clase.
 - **hoja / retrato de la clase**: las piezas del pack 11 o el sprite del pack de su clase, con el nombre de la clase (los entrenadores genéricos de una misma clase comparten diseño, como en los juegos).
@@ -14,6 +14,7 @@
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
 | Dúo del Clan Ábalos | `abalos` | atlas `abalos` | atlas `abalos` | madrid/moncloa (27, 40) | Ferraz, la sede del Clan PSOE |
+| Dúo del Clan Ábalos | `abalos_albufera` | atlas `abalos` | atlas `abalos` | ruta_9/exterior (16, 27) | La Albufera (El Palmar), de «vacaciones»: segundo encuentro, con tres medallas (decisión de Javier) |
 | Alto Mando Alonso | `alonso` | atlas `alonso` | atlas `alonso` | — | Pendiente: Interior de la Liga sin hacer |
 | Líder Aupa Athletic | `aupa_athletic` | atlas `aupa_athletic` | atlas `aupa_athletic` | sala: bilbao/gimnasio_lider, pintado: bilbao/gimnasio_lider |  |
 | Líder Ayuso | `ayuso` | atlas `ayuso` | atlas `ayuso` | madrid/atico_ayuso (8, 6), sala: madrid/gimnasio_lider | Líder del gimnasio 1: la terraza de su ático en Chamberí (se llega desde el hospital Quirón) |
@@ -22,6 +23,7 @@
 | Alto Mando Iniesta | `iniesta` | atlas `iniesta` | atlas `iniesta` | — | Pendiente: Interior de la Liga sin hacer |
 | Líder Joaquín | `joaquin` | atlas `joaquin` | atlas `joaquin` | sala: sevilla/gimnasio_lider, pintado: sevilla/gimnasio_lider |  |
 | Dúo del Clan Koldo | `koldo` | atlas `koldo` | atlas `koldo` | madrid/moncloa (29, 39) | Ferraz, con Ábalos y sus cajas |
+| Dúo del Clan Koldo | `koldo_albufera` | atlas `koldo` | atlas `koldo` | ruta_9/exterior (16, 28) | La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier) |
 | Líder Labrador | `labrador` | atlas `labrador` | atlas `labrador` | sala: valencia/gimnasio_lider, pintado: valencia/gimnasio_lider |  |
 | Líder Laporta | `laporta` | atlas `laporta` | atlas `laporta` | sala: barcelona/gimnasio_lider, pintado: barcelona/gimnasio_lider |  |
 | Líder Latasa | `latasa` | atlas `latasa` | atlas `latasa` | sala: valladolid/gimnasio_lider, pintado: valladolid/gimnasio_lider |  |
@@ -36,14 +38,19 @@
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
 | Político Abascal | `abascal` | atlas `abascal` | atlas `abascal` | madrid/retiro (4, 35) | Puerta del Congreso, a caballo |
+| Político Abascal | `abascal_covadonga` | atlas `abascal` | atlas `abascal` | ruta_18/exterior (35, 26) | Covadonga, delante de la basílica: su segunda aparición (dos apariciones: decisión de Javier; el sitio, propuesta) |
 | Cantante Aitana | `aitana` | atlas `aitana` | atlas `aitana` | barcelona/eixample (24, 52) | De gira (Palau Sant Jordi) |
 | Alcalde Almeida | `almeida` | atlas `almeida` | atlas `almeida` | madrid/retiro (30, 15) | Ayuntamiento de Cibeles |
+| Vecino Amador | `amador_rivas` | atlas `amador_rivas` | atlas `amador_rivas` | mostoles/exterior (35, 46) | Móstoles, de vecino en el Mirador de Montepinar. Propuesta |
 | Empresario Amancio | `amancio_ortega` | atlas `amancio_ortega` | atlas `amancio_ortega` | ruta_17/exterior (38, 37) | Ruta 17, a la puerta de la nave de Inditex en Arteixo |
+| Mayorista Antonio Recio | `antonio_recio` | atlas `antonio_recio` | atlas `antonio_recio` | mostoles/exterior (30, 43) | Móstoles, en una urbanización nueva: el Mirador de Montepinar de La que se avecina. Propuesta |
 | Princesa del pueblo Belén | `belen_esteban` | atlas `belen_esteban` | atlas `belen_esteban` | madrid/moncloa (24, 15) | Plató de televisión, con Jorge Javier |
 | Agitador Bertrand | `bertrand_ndongo` | atlas `bertrand_ndongo` | atlas `bertrand_ndongo` | madrid/retiro (10, 35) | Puerta del Congreso, con Vito Quiles |
 | Presentador Broncano | `broncano` | atlas `broncano` | atlas `broncano` | madrid/centro (26, 25) | Gran Vía, a la puerta del Teatro Príncipe (La Revuelta) |
 | Cocinero de las Campanadas Chicote | `chicote` | atlas `chicote` | atlas `chicote` | madrid/centro (43, 41) | Puerta del Sol, preparando las campanadas |
+| Tiktoker El Churumbel | `churumbel` | atlas `churumbel` | atlas `churumbel` | malaga/exterior (29, 44) | Málaga, su ciudad, junto al mercado. Propuesta |
 | Tertuliano Coto | `coto_matamoros` | atlas `coto_matamoros` | atlas `coto_matamoros` | malaga/exterior (88, 64) | El paseo marítimo |
+| Cantante Bisbal | `david_bisbal` | atlas `david_bisbal` | atlas `david_bisbal` | ruta_12/exterior (64, 27) | Ruta 12, en la entrada desde Murcia: el camino de Almería, su tierra. Propuesta |
 | Rapero El Jincho | `el_jincho` | atlas `el_jincho` | atlas `el_jincho` | pintado: madrid_rio/exterior |  |
 | Streamer Elxokas | `elxokas` | atlas `elxokas` | atlas `elxokas` | ruta_17/exterior (38, 20) | Ruta 17, al pie de la muralla de Lugo |
 | Cantante Enrique | `enrique_iglesias` | atlas `enrique_iglesias` | atlas `enrique_iglesias` | madrid/bernabeu (30, 20) | Concierto en el Bernabéu |
@@ -53,37 +60,54 @@
 | Youtuber Pokémon Folagor | `folagor` | atlas `folagor` | atlas `folagor` | getafe/exterior (30, 10) | La tienda de cartas de Getafe |
 | Fantasma Franco | `franco` | atlas `franco` | atlas `franco` | ruta_3/exterior (10, 67) | Valle de Cuelgamuros |
 | Entrenador Pep | `guardiola` | atlas `guardiola` | atlas `guardiola` | ruta_8/exterior (15, 33) | Santpedor, su pueblo |
-| Padre orgulloso HustleHard304 | `hustlehard304` | atlas `hustlehard304` | atlas `hustlehard304` | barcelona/les_corts (14, 45) | Con Lamine |
+| Padre orgulloso HustleHard304 | `hustlehard304` | atlas `hustlehard304` | atlas `hustlehard304` | rocafonda/exterior (29, 15) | Rocafonda, a la puerta de la mansión de su hijo Lamine |
 | Streamer Ibai | `ibai` | atlas `ibai` | atlas `ibai` | barcelona/les_corts (43, 32) | Kings League, junto a La Masia |
-| Delantero Iñaki Williams | `inaki_williams` | atlas `inaki_williams` | atlas `inaki_williams` | — | Pendiente: Los Williams ya combaten por separado dentro del gimnasio 6 (decisiones del 2026-10-14); este doble se recoloca en el bloque 2 del Agente 2 (2026-10-15) |
+| Delantero Iñaki Williams | `inaki_williams` | atlas `inaki_williams` | atlas `inaki_williams` | bilbao/exterior (15, 24) | A la salida de San Mamés, con su hermano Nico. Propuesta |
 | Exministra Irene | `irene_montero` | atlas `irene_montero` | atlas `irene_montero` | ruta_4/exterior (29, 33) | Su chalet de Galapagar |
+| Creador Javier Saguar | `javier` | hoja de la clase | retrato de la clase | pueblo_inicial/exterior (38, 41) | San Miguel de Bernuy, delante de su casa, al volver por la Ruta 23 con siete medallas (decisión de Javier). Sustituye al vecino «Javier» del mapa |
+| Rapero JC Reyes | `jc_reyes` | atlas `jc_reyes` | atlas `jc_reyes` | sevilla/centro (55, 30) | Sevilla, en el lado este del centro, camino de Palmete, su barrio. Propuesta |
 | Campeona del mundo Jenni | `jenni_hermoso` | atlas `jenni_hermoso` | atlas `jenni_hermoso` | ruta_12/exterior (15, 18) | La boda en el cortijo de Granada |
+| Culturista Joan Pradells | `joan_pradells` | atlas `joan_pradells` | atlas `joan_pradells` | valencia/malvarrosa (46, 13) | Playa de la Malvarrosa, entrenando al aire libre: es culturista y valenciano. Propuesta |
 | Presentador Jorge Javier | `jorge_javier` | atlas `jorge_javier` | atlas `jorge_javier` | madrid/moncloa (22, 15) | Plató de televisión |
 | Rey emérito Juan Carlos | `juan_carlos` | atlas `juan_carlos` | atlas `juan_carlos` | ruta_16/exterior (26, 26) | Las regatas de Sanxenxo |
 | Presidente de Mercadona Juan Roig | `juan_roig` | atlas `juan_roig` | atlas `juan_roig` | valencia/ciutat_vella (7, 40) | Junto al Mercado Central |
 | Cantante Julio | `julio_iglesias` | atlas `julio_iglesias` | atlas `julio_iglesias` | malaga/exterior (63, 68) | Su yate, en el Muelle Uno |
-| Hermano pequeño Keyne | `keyne` | atlas `keyne` | atlas `keyne` | barcelona/les_corts (18, 45) | Con Lamine |
+| Hermano pequeño Keyne | `keyne` | atlas `keyne` | atlas `keyne` | rocafonda/exterior (34, 15) | Rocafonda, con su hermano Lamine |
 | Crack Lamine | `lamine` | atlas `lamine` | atlas `lamine` | rocafonda/exterior (31, 13) | Rocafonda (Mataró), a la puerta de su mansión |
+| Presidente Maduro | `maduro` | atlas `maduro` | atlas `maduro` | las_palmas/canteras (42, 38) | Puerto de La Luz (Las Palmas), con Zapatero. Propuesta |
+| Lateral Cucurella | `marc_cucurella` | atlas `marc_cucurella` | atlas `marc_cucurella` | rocafonda/exterior (27, 30) | Rocafonda (Maresme), en el campo de los niños: es de Alella, al lado. Propuesta |
 | Actor Mario Casas | `mario_casas` | atlas `mario_casas` | atlas `mario_casas` | malaga/exterior (61, 62) | En el rodaje de Banderas |
 | Dictador Mbappé | `mbappe` | atlas `mbappe` | atlas `mbappe` | madrid/bernabeu (22, 18) | Delante del Santiago Bernabéu, en modo dictador (decisión de Javier, 2026-10-14) |
 | Cantante Melendi | `melendi` | atlas `melendi` | atlas `melendi` | ruta_18/exterior (22, 24) | Ruta 18, a la puerta de la sidrería |
-| Delantero Nico Williams | `nico_williams` | atlas `nico_williams` | atlas `nico_williams` | — | Pendiente: Los Williams ya combaten por separado dentro del gimnasio 6 (decisiones del 2026-10-14); este doble se recoloca en el bloque 2 del Agente 2 (2026-10-15) |
+| Vecino Mente Fría | `mente_fria` | atlas `mente_fria` | atlas `mente_fria` | mostoles/exterior (38, 46) | Móstoles, de vecino en el Mirador de Montepinar. Propuesta |
+| Delantero Nico Williams | `nico_williams` | atlas `nico_williams` | atlas `nico_williams` | bilbao/exterior (12, 21) | A la salida de San Mamés, con la medalla 6: la revancha de Copa (dentro combaten por separado). Propuesta |
+| Cantante Omar Montes | `omar_montes` | atlas `omar_montes` | atlas `omar_montes` | madrid_rio/exterior (7, 15) | Madrid Río, junto al Matadero, camino de Carabanchel (Pan Bendito, su barrio). Propuesta |
 | Ministro de Transportes Óscar Puente | `oscar_puente` | atlas `oscar_puente` | atlas `oscar_puente` | valladolid/exterior (46, 32) | Camino de la estación de Valladolid |
+| Streamer Paache | `paache` | atlas `paache` | atlas `paache` | ruta_17/exterior (14, 27) | Ruta 17 (Galicia interior), junto al hórreo. Que esté en Galicia es decisión de Javier; el sitio exacto, propuesta |
 | Exvicepresidente Pablo | `pablo_iglesias` | atlas `pablo_iglesias` | atlas `pablo_iglesias` | ruta_4/exterior (28, 35) | Su chalet de Galapagar |
+| Presentador Pablo Motos | `pablo_motos` | atlas `pablo_motos` | atlas `pablo_motos` | madrid/centro (33, 25) | Gran Vía, enfrente de La Revuelta de Broncano: la guerra de audiencias. Propuesta |
 | Presentadora de las Campanadas Pedroche | `pedroche` | atlas `pedroche` | atlas `pedroche` | madrid/centro (47, 42) | Puerta del Sol, con el vestido de las campanadas |
 | Streamer Pereira7 | `pereira7` | atlas `pereira7` | atlas `pereira7` | vigo/exterior (30, 30) | Una cafetería de Vigo |
 | Empresario Piqué | `pique` | atlas `pique` | atlas `pique` | barcelona/les_corts (47, 32) | Kings League, con Ibai |
 | Jugador de VGC PokeAlex | `pokealex` | atlas `pokealex` | atlas `pokealex` | getafe/exterior (36, 10) | La tienda de cartas, con Folagor |
+| Expresident Puigdemont | `puigdemont` | atlas `puigdemont` | atlas `puigdemont` | barcelona/ciutat_vella (18, 49) | Port Vell, junto a la terminal de ferris: listo para fugarse otra vez. Propuesta |
 | Motomami Rosalía | `rosalia` | atlas `rosalia` | atlas `rosalia` | ruta_8/exterior (54, 31) | Sant Esteve Sesrovires, su pueblo |
 | Invitado de la boda Rubiales | `rubiales` | atlas `rubiales` | atlas `rubiales` | ruta_12/exterior (14, 19) | La boda en el cortijo de Granada |
+| Diputado Rufián | `rufian` | atlas `rufian` | atlas `rufian` | — | Pendiente: Falta el mapa de su casa: lo pinta el Agente 2 en el bloque 4 (2026-10-15) |
 | Tertuliana Sarah | `sarah_santaolalla` | atlas `sarah_santaolalla` | atlas `sarah_santaolalla` | valladolid/exterior (26, 20) | Tertulia de radio, Valladolid |
 | Youtuber Pokémon Sekiam | `sekiam` | atlas `sekiam` | atlas `sekiam` | getafe/exterior (33, 10) | La tienda de cartas, con Folagor |
 | Defensa Sergio Ramos | `sergio_ramos` | atlas `sergio_ramos` | atlas `sergio_ramos` | sevilla/rio (44, 17) | Junto a la Maestranza |
 | Campeón de UFC Topuria | `topuria` | atlas `topuria` | atlas `topuria` | alicante/exterior (6, 22) | Alicante, a la puerta del club de artes marciales donde creció |
+| Presidente Trump | `trump` | atlas `trump` | atlas `trump` | playa_del_ingles/exterior (17, 9) | Aeropuerto de Gran Canaria: llega a por Maduro (sale después de ganar a Zapatero y Maduro). Propuesta |
 | Youtuber Vegeta | `vegeta` | atlas `vegeta` | atlas `vegeta` | zaragoza/exterior (49, 13) | Salida hacia la Puerta de los Pirineos (camino de Andorra) |
 | Futbolista Vinicius Jr. | `vinicius` | atlas `vinicius` | atlas `vinicius` | madrid/bernabeu (18, 18) | Delante del Santiago Bernabéu (decisión de Javier, 2026-10-14) |
 | Agitador Vito | `vito_quiles` | atlas `vito_quiles` | atlas `vito_quiles` | madrid/retiro (8, 35) | Puerta del Congreso, micrófono en mano |
+| Agitador Vito | `vito_quiles_elche` | atlas `vito_quiles` | atlas `vito_quiles` | ruta_11/exterior (52, 17) | Palmeral de Elche, su ciudad: la revancha (decisión de Javier) |
+| Agitador Vito | `vito_quiles_rufian` | atlas `vito_quiles` | atlas `vito_quiles` | — | Pendiente: Falta el mapa de la casa de Rufián: lo pinta el Agente 2 en el bloque 4 (2026-10-15) |
 | Youtuber Willyrex | `willyrex` | atlas `willyrex` | atlas `willyrex` | zaragoza/exterior (49, 14) | Con Vegeta, camino de Andorra |
+| Expresidente Zapatero | `zapatero` | atlas `zapatero` | atlas `zapatero` | las_palmas/canteras (40, 37) | Puerto de La Luz (Las Palmas), con Maduro: Venezuela es «la octava isla» de Canarias. Propuesta |
+| Gemelo Carlos | `zona_gemelos_carlos` | atlas `zona_gemelos_carlos` | atlas `zona_gemelos_carlos` | getafe/exterior (36, 52) | Getafe, su ciudad, a la puerta de la nave donde graban La Casa de los Gemelos. Propuesta |
+| Gemelo Dani | `zona_gemelos_dani` | atlas `zona_gemelos_dani` | atlas `zona_gemelos_dani` | getafe/exterior (38, 51) | Getafe, con su gemelo Carlos. Propuesta |
 
 ## `gimnasios.json`
 
@@ -142,15 +166,15 @@
 | Quesito Guacimara | `gym5_quesito_5` | atlas `quesito` | atlas `quesito` | sala: playa_del_ingles/gimnasio_3, pintado: playa_del_ingles/gimnasio_3 |  |
 | Quesito Dácil | `gym5_quesito_6` | atlas `quesito` | atlas `quesito` | sala: playa_del_ingles/gimnasio_3, pintado: playa_del_ingles/gimnasio_3 |  |
 | Surfista Yeray | `gym5_surfista` | hoja de la clase | retrato de la clase | playa_del_ingles/exterior (50, 29) | Entrenador del gimnasio 5 |
-| Camarero sin propina Josu | `gym6_camarero` | hoja de la clase | retrato de la clase | — | Pendiente: Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15) |
-| Crossfitero Aitor | `gym6_crossfitero` | hoja de la clase | retrato de la clase | — | Pendiente: Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15) |
+| Camarero sin propina Josu | `gym6_camarero` | hoja de la clase | retrato de la clase | bilbao/exterior (16, 20) | Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6) |
+| Crossfitero Aitor | `gym6_crossfitero` | hoja de la clase | retrato de la clase | bilbao/exterior (20, 23) | Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6) |
 | Etarra Aitor | `gym6_etarra_1` | atlas `etarra` | atlas `etarra` | sala: bilbao/gimnasio_1, pintado: bilbao/gimnasio_1 |  |
 | Etarra Gorka | `gym6_etarra_2` | atlas `etarra` | atlas `etarra` | sala: bilbao/gimnasio_1, pintado: bilbao/gimnasio_1 |  |
 | Etarra Iker | `gym6_etarra_3` | atlas `etarra` | atlas `etarra` | sala: bilbao/gimnasio_1, pintado: bilbao/gimnasio_1 |  |
 | Etarra Unai | `gym6_etarra_4` | atlas `etarra` | atlas `etarra` | sala: bilbao/gimnasio_2, pintado: bilbao/gimnasio_2 |  |
 | Etarra Asier | `gym6_etarra_5` | atlas `etarra` | atlas `etarra` | sala: bilbao/gimnasio_2, pintado: bilbao/gimnasio_2 |  |
 | Etarra Mikel | `gym6_etarra_6` | atlas `etarra` | atlas `etarra` | sala: bilbao/gimnasio_3, pintado: bilbao/gimnasio_3 |  |
-| Tertuliano de bar Iñaki | `gym6_tertuliano` | hoja de la clase | retrato de la clase | — | Pendiente: Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15) |
+| Tertuliano de bar Iñaki | `gym6_tertuliano` | hoja de la clase | retrato de la clase | bilbao/exterior (25, 19) | Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6) |
 | Cayetano Borja | `gym7_cayetano_1` | atlas `cayetano_casco` | atlas `cayetano_casco` | sala: valladolid/gimnasio_1, pintado: valladolid/gimnasio_1 |  |
 | Cayetano Jacobo | `gym7_cayetano_2` | atlas `cayetano_casco` | atlas `cayetano_casco` | sala: valladolid/gimnasio_1, pintado: valladolid/gimnasio_1 |  |
 | Cayetano Pelayo | `gym7_cayetano_3` | atlas `cayetano_casco` | atlas `cayetano_casco` | sala: valladolid/gimnasio_1, pintado: valladolid/gimnasio_1 |  |
@@ -625,22 +649,4 @@ Personajes del registro de arte que no son entrenadores (ni por id ni por clase)
 | Personaje | Id | Dónde | Nota |
 |---|---|---|---|
 | Abuela de Lamine | `abuela_lamine` | rocafonda/exterior |  |
-| Amador Rivas | `amador_rivas` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Antonio Recio | `antonio_recio` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| El Churumbel de Málaga | `churumbel` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| David Bisbal | `david_bisbal` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| JC Reyes | `jc_reyes` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Joan Pradells | `joan_pradells` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Nicolás Maduro | `maduro` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Marc Cucurella | `marc_cucurella` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Eduardo Gómez (Mente Fría) | `mente_fria` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Omar Montes | `omar_montes` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Paache | `paache` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Pablo Motos | `pablo_motos` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Carles Puigdemont | `puigdemont` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Gabriel Rufián | `rufian` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Donald Trump | `trump` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| José Luis Rodríguez Zapatero | `zapatero` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Zona Gemelos: Carlos | `zona_gemelos_carlos` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
-| Zona Gemelos: Dani | `zona_gemelos_dani` | — | Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta) |
 

@@ -47,7 +47,9 @@ static func node_name(entry: Dictionary) -> String:
 	return "Personaje_" + str(entry["id"])
 
 
-## Añade los personajes de su mapa a Entities (antes de entrar al árbol).
+## Añade los personajes de su mapa a Entities (antes de entrar al árbol). Con "sustituye", el personaje
+## ocupa el sitio de un nodo del mapa pintado (el vecino «Javier» de San Miguel, por ejemplo), que se quita
+## cuando el personaje sale.
 static func apply(map: MapRoot) -> void:
 	var entities := map.get_entities()
 	if entities == null:
@@ -56,6 +58,10 @@ static func apply(map: MapRoot) -> void:
 		var name := node_name(entry)
 		if entities.has_node(name) or not is_available(entry):
 			continue
+		var replaced: Node = entities.get_node_or_null(NodePath(str(entry["sustituye"]))) if entry.has("sustituye") else null
+		if replaced != null:
+			entities.remove_child(replaced)
+			replaced.free()
 		var is_trainer := entry.has("entrenador")
 		var node: Node2D = (load(TRAINER_SCENE if is_trainer else NPC_SCENE) as PackedScene).instantiate()
 		node.name = name

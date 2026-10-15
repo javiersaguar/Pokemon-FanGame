@@ -138,6 +138,25 @@ func test_el_gimnasio_1_pasa_por_el_quiron_y_la_terraza() -> void:
 	(moncloa["map"] as MapRoot).free()
 
 
+func test_javier_sustituye_al_vecino_de_san_miguel_con_siete_medallas() -> void:
+	GameState.badges.clear()
+	var before := MapLoader.prepare(&"pueblo_inicial/exterior")
+	var map: MapRoot = before["map"]
+	assert_not_null(map.get_entities().get_node_or_null(^"Javier"), "sin medallas sigue el vecino del mapa")
+	assert_null(map.get_entities().get_node_or_null(^"Personaje_javier"))
+	map.free()
+	GameState.badges.assign([&"a", &"b", &"c", &"d", &"e", &"f", &"g"])
+	var after := MapLoader.prepare(&"pueblo_inicial/exterior")
+	map = after["map"]
+	assert_null(map.get_entities().get_node_or_null(^"Javier"), "con siete medallas el vecino deja su sitio")
+	var trainer := map.get_entities().get_node_or_null(^"Personaje_javier") as TrainerNPC
+	assert_not_null(trainer, "Javier combate en San Miguel con siete medallas")
+	if trainer:
+		assert_eq(trainer.trainer_id, &"javier")
+	map.free()
+	GameState.badges.clear()
+
+
 func test_ningun_entrenador_repite_id_entre_archivos() -> void:
 	var seen := {}
 	for file: String in DirAccess.get_files_at("res://data/trainers"):

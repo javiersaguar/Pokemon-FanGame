@@ -484,5 +484,43 @@
         "level": 12
       }
     ]
+  },
+  "abalos_albufera": {
+    "class": "abalos",
+    "name": "Ábalos",
+    "intro_text": "Estoy de vacaciones en la Albufera. Pagadas por... bueno, pagadas.",
+    "lose_text": "Esto es una persecución. ¡Y en plena paella!",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "¿Jessica? Aquí no hay ninguna Jessica. Hay arroz.",
+    "items": [],
+    "party": [
+      {
+        "species": "mimikyu",
+        "level": 28
+      },
+      {
+        "species": "liepard",
+        "level": 29
+      }
+    ]
+  },
+  "koldo_albufera": {
+    "class": "koldo",
+    "name": "Koldo",
+    "intro_text": "Estas cajas son de arroz. Para la paella. Para muchas paellas.",
+    "lose_text": "Esto no estaba en el contrato. Ni en la paella.",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "Yo solo llevaba las cajas. Y el arroz. Y lo que hubiera debajo del arroz.",
+    "items": [],
+    "party": [
+      {
+        "species": "timburr",
+        "level": 28
+      },
+      {
+        "species": "gurdurr",
+        "level": 29
+      }
+    ]
   }
 }

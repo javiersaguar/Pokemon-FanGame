@@ -295,9 +295,10 @@ func test_las_explicaciones_no_sobran() -> void:
 
 func test_cada_personaje_del_registro_de_arte_sale_en_algun_sitio() -> void:
 	var unused := _explained("arte_sin_uso")
+	assert_false(CharacterArt.entries().is_empty(), "data/character_art.json vacío")
 	for row: Dictionary in _npc_rows:
-		if row["where"].is_empty():
-			assert_true(unused.has(row["id"]) and not unused[row["id"]].is_empty(), "%s (%s) tiene arte pero no es entrenador ni sale en ningún mapa" % [row["name"], row["id"]])
+		var explained: bool = unused.has(row["id"]) and not unused[row["id"]].is_empty()
+		assert_true(not row["where"].is_empty() or explained, "%s (%s) tiene arte pero no es entrenador ni sale en ningún mapa" % [row["name"], row["id"]])
 
 
 func test_las_salas_de_gimnasio_existen() -> void:

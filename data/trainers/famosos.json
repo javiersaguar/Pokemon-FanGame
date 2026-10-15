@@ -430,38 +430,38 @@
   "nico_williams": {
     "class": "nico_williams",
     "name": "Nico Williams",
-    "intro_text": "¡Dos hermanos, una banda!",
-    "lose_text": "Ya nos vengaremos en Copa.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Ya nos vengaremos en Copa.",
+    "intro_text": "¡Revancha! Dentro nos ganaste uno a uno. Fuera, los dos a la vez.",
+    "lose_text": "Vale, vale. Ya nos vengaremos en Copa.",
+    "win_text": "¡Eso es cantera!",
+    "after_text": "Dos hermanos, una banda. Y una camiseta rojiblanca cada uno.",
     "items": [],
     "party": [
       {
         "species": "cinderace",
-        "level": 42
+        "level": 45
       },
       {
         "species": "talonflame",
-        "level": 43
+        "level": 46
       }
     ]
   },
   "inaki_williams": {
     "class": "inaki_williams",
     "name": "Iñaki Williams",
-    "intro_text": "¡Hermano, a por él!",
-    "lose_text": "Ya nos vengaremos en Copa.",
-    "win_text": "Ja. Vuelve cuando sepas combatir.",
-    "after_text": "Ya nos vengaremos en Copa.",
+    "intro_text": "¡Dos hermanos, una banda!",
+    "lose_text": "Hoy no era nuestro día. El de Copa, sí.",
+    "win_text": "¡Aupa Athletic!",
+    "after_text": "Mi hermano corre más, pero yo llevo más partidos seguidos.",
     "items": [],
     "party": [
       {
         "species": "zeraora",
-        "level": 42
+        "level": 45
       },
       {
         "species": "lokix",
-        "level": 43
+        "level": 46
       }
     ]
   },
@@ -1077,6 +1077,507 @@
       {
         "species": "corvisquire",
         "level": 18
+      }
+    ]
+  },
+  "omar_montes": {
+    "class": "omar_montes",
+    "name": "Omar Montes",
+    "intro_text": "¡Alocao! Soy de Pan Bendito y antes de cantar boxeaba. Ponte en guardia.",
+    "lose_text": "Me has dado más fuerte que la vida. Me voy a cantar para olvidarlo.",
+    "win_text": "¡Ay, que me pongo alocao!",
+    "after_text": "Carabanchel es el barrio más bonito de Madrid. Lo digo en todas las teles.",
+    "items": [],
+    "party": [
+      {
+        "species": "tyrogue",
+        "level": 6
+      },
+      {
+        "species": "makuhita",
+        "level": 7
+      }
+    ]
+  },
+  "pablo_motos": {
+    "class": "pablo_motos",
+    "name": "Pablo Motos",
+    "intro_text": "¡Bienvenido a El Hormiguero! Trancas y Barrancas te han preparado una prueba: perder.",
+    "lose_text": "Esto no lo emitimos. Bueno, sí, que la audiencia es la audiencia.",
+    "win_text": "¡Hoy volvemos a ganar a La Revuelta!",
+    "after_text": "¿El de enfrente? Nosotros tenemos hormigas. Él tiene un sofá.",
+    "items": [],
+    "party": [
+      {
+        "species": "nincada",
+        "level": 13
+      },
+      {
+        "species": "trapinch",
+        "level": 14
+      },
+      {
+        "species": "durant",
+        "level": 15
+      }
+    ]
+  },
+  "zona_gemelos_carlos": {
+    "class": "zona_gemelos_carlos",
+    "name": "Carlos",
+    "intro_text": "¡Bienvenido a La Casa de los Gemelos! Aquí se emite todo, las veinticuatro horas.",
+    "lose_text": "Esta no la habíamos pronosticado.",
+    "win_text": "¡Pronóstico acertado, hermano!",
+    "after_text": "Somos dos chicos normales de barrio. De Getafe, para más señas.",
+    "items": [],
+    "party": [
+      {
+        "species": "plusle",
+        "level": 16
+      },
+      {
+        "species": "gimmighoul",
+        "level": 17
+      }
+    ]
+  },
+  "zona_gemelos_dani": {
+    "class": "zona_gemelos_dani",
+    "name": "Dani",
+    "intro_text": "Y hemos apostado a que pierdes. Cuota 1,01.",
+    "lose_text": "No siempre se gana, pero en diez años siempre acabamos sumando.",
+    "win_text": "Directo al canal. ¡Gracias por la audiencia!",
+    "after_text": "El programa del barrio para el barrio. Sin productores. Bueno, casi.",
+    "items": [],
+    "party": [
+      {
+        "species": "minun",
+        "level": 16
+      },
+      {
+        "species": "meowth",
+        "level": 17
+      }
+    ]
+  },
+  "antonio_recio": {
+    "class": "antonio_recio",
+    "name": "Antonio Recio",
+    "intro_text": "¡Mariscos Recio, el mar al mejor precio! Y que conste: soy mayorista, no limpio pescado.",
+    "lose_text": "¡Esto es un atropello! Voy a llamar a la policía. O a mi madre.",
+    "win_text": "¡Lo que yo decía! Aquí manda el mayorista.",
+    "after_text": "En Montepinar el presidente de la comunidad debería ser yo. Lo sabe todo el mundo.",
+    "items": [],
+    "party": [
+      {
+        "species": "krabby",
+        "level": 15
+      },
+      {
+        "species": "clauncher",
+        "level": 16
+      },
+      {
+        "species": "wiglett",
+        "level": 17
+      }
+    ]
+  },
+  "amador_rivas": {
+    "class": "amador_rivas",
+    "name": "Amador",
+    "intro_text": "¡Viva la Pepa! Hoy no trabajo, que es lunes. Pero combatir sí, eso sí.",
+    "lose_text": "Me has dejado más tirado que a mi Maite.",
+    "win_text": "¡Toma! ¡Esto es un pichón ganador!",
+    "after_text": "La vida es una fiesta. Lo malo es que siempre me toca recoger.",
+    "items": [],
+    "party": [
+      {
+        "species": "slakoth",
+        "level": 15
+      },
+      {
+        "species": "lechonk",
+        "level": 16
+      },
+      {
+        "species": "spinda",
+        "level": 17
+      }
+    ]
+  },
+  "mente_fria": {
+    "class": "mente_fria",
+    "name": "Mente Fría",
+    "intro_text": "Mente fría. Tú calienta, que yo pienso.",
+    "lose_text": "He perdido la calma. Y eso que me llaman Mente Fría.",
+    "win_text": "Te lo dije: cabeza fría y paciencia.",
+    "after_text": "En esta comunidad hace falta alguien con la mente fría. Y una piscina que funcione.",
+    "items": [],
+    "party": [
+      {
+        "species": "snorunt",
+        "level": 15
+      },
+      {
+        "species": "smoochum",
+        "level": 16
+      },
+      {
+        "species": "spheal",
+        "level": 17
+      }
+    ]
+  },
+  "marc_cucurella": {
+    "class": "marc_cucurella",
+    "name": "Cucurella",
+    "intro_text": "¡Cucurella, Cucurella! Me lo cantan en todos los estadios. Aquí, en el Maresme, también.",
+    "lose_text": "Me has hecho un caño. Y eso que soy lateral.",
+    "win_text": "Campeón de Europa. Y ahora, de este campo de tierra.",
+    "after_text": "Soy de Alella, aquí al lado. En este campo jugaba yo antes que Lamine. Bueno, más o menos.",
+    "items": [],
+    "party": [
+      {
+        "species": "wooloo",
+        "level": 20
+      },
+      {
+        "species": "falinks",
+        "level": 20
+      },
+      {
+        "species": "raboot",
+        "level": 21
+      }
+    ]
+  },
+  "joan_pradells": {
+    "class": "joan_pradells",
+    "name": "Joan Pradells",
+    "intro_text": "Hoy toca pierna. Y espalda. Y combate. Y pollo con arroz.",
+    "lose_text": "Me has dejado más seco que mi última definición.",
+    "win_text": "¡Menudo ejemplar, niño!",
+    "after_text": "Peso ciento treinta kilos y aun así toco el suelo con los dedos. Tú no tocas ni la medalla.",
+    "items": [],
+    "party": [
+      {
+        "species": "gurdurr",
+        "level": 25
+      },
+      {
+        "species": "hariyama",
+        "level": 26
+      },
+      {
+        "species": "bewear",
+        "level": 27
+      }
+    ]
+  },
+  "david_bisbal": {
+    "class": "david_bisbal",
+    "name": "Bisbal",
+    "intro_text": "¡Ave María! ¿Cuándo serás mía? Si me das un combate, te doy una canción.",
+    "lose_text": "Me has dejado sin voz. Y sin rizos.",
+    "win_text": "¡Bulería, bulería, tan dentro del alma mía!",
+    "after_text": "Soy de Almería. Por aquí se va a mi tierra: dale recuerdos al desierto de Tabernas.",
+    "items": [],
+    "party": [
+      {
+        "species": "kricketune",
+        "level": 31
+      },
+      {
+        "species": "chimecho",
+        "level": 31
+      },
+      {
+        "species": "flareon",
+        "level": 32
+      }
+    ]
+  },
+  "jc_reyes": {
+    "class": "jc_reyes",
+    "name": "JC Reyes",
+    "intro_text": "¡The Young Gypsy! Vengo de Palmete y he llenado La Cartuja. Tú no llenas ni la Pokédex.",
+    "lose_text": "Esto lo canto en el próximo disco, primo.",
+    "win_text": "Los Green Lanters no pierden.",
+    "after_text": "Solo el cinco por ciento de los artistas canta en directo. Yo también combato en directo.",
+    "items": [],
+    "party": [
+      {
+        "species": "krokorok",
+        "level": 31
+      },
+      {
+        "species": "liepard",
+        "level": 32
+      },
+      {
+        "species": "mabosstiff",
+        "level": 33
+      }
+    ]
+  },
+  "puigdemont": {
+    "class": "puigdemont",
+    "name": "Puigdemont",
+    "intro_text": "Vengo de Waterloo de incógnito. Si me ves, no me has visto.",
+    "lose_text": "Me vuelvo a Waterloo. En el maletero, que se viaja más tranquilo.",
+    "win_text": "¡Visca Catalunya! Y visca el maletero.",
+    "after_text": "Si me buscas, estaré en Bélgica. O detrás de un contenedor del puerto.",
+    "items": [],
+    "party": [
+      {
+        "species": "abra",
+        "level": 20
+      },
+      {
+        "species": "ninjask",
+        "level": 20
+      },
+      {
+        "species": "emolga",
+        "level": 21
+      }
+    ]
+  },
+  "rufian": {
+    "class": "rufian",
+    "name": "Rufián",
+    "intro_text": "Dije que me iba del Congreso en dieciocho meses. Lo dije en 2016. Mientras tanto, combate.",
+    "lose_text": "Esto lo tuiteo. Y lo retuiteo.",
+    "win_text": "Zasca.",
+    "after_text": "Mi habitación es mía. Si oyes ruido dentro, no preguntes.",
+    "items": [],
+    "party": [
+      {
+        "species": "chatot",
+        "level": 20
+      },
+      {
+        "species": "scraggy",
+        "level": 20
+      },
+      {
+        "species": "liepard",
+        "level": 21
+      }
+    ]
+  },
+  "zapatero": {
+    "class": "zapatero",
+    "name": "Zapatero",
+    "intro_text": "Talante y diálogo. Primero hablamos; luego te gano.",
+    "lose_text": "Toma estas joyas. Son de... bueno, no preguntes de dónde.",
+    "win_text": "La tierra no pertenece a nadie, salvo al viento. Y esta victoria, a mí.",
+    "after_text": "Las joyas se venden muy bien en cualquier tienda. Yo de ti no preguntaría el origen.",
+    "items": [],
+    "party": [
+      {
+        "species": "sableye",
+        "level": 36
+      },
+      {
+        "species": "gholdengo",
+        "level": 37
+      }
+    ]
+  },
+  "maduro": {
+    "class": "maduro",
+    "name": "Maduro",
+    "intro_text": "¡Un pajarito me ha dicho que vas a perder!",
+    "lose_text": "¡Esto es un golpe del imperio!",
+    "win_text": "¡El pajarito tenía razón!",
+    "after_text": "Canarias es la octava isla de Venezuela. O al revés, ya no me acuerdo.",
+    "items": [],
+    "party": [
+      {
+        "species": "chatot",
+        "level": 36
+      },
+      {
+        "species": "bombirdier",
+        "level": 37
+      }
+    ]
+  },
+  "trump": {
+    "class": "trump",
+    "name": "Trump",
+    "intro_text": "Tengo a Maduro en una Poké Ball. Ahora vengo a por las islas. Tremendous.",
+    "lose_text": "Fake news. This battle was rigged.",
+    "win_text": "We are winning so much!",
+    "after_text": "Me llevo a Maduro a Washington. A ti te pongo aranceles.",
+    "items": [],
+    "party": [
+      {
+        "species": "persian",
+        "level": 38
+      },
+      {
+        "species": "talonflame",
+        "level": 38
+      },
+      {
+        "species": "gyarados",
+        "level": 39
+      }
+    ]
+  },
+  "paache": {
+    "class": "paache",
+    "name": "Paache",
+    "intro_text": "¡Buenas, chat! Hoy toca virgenlocke: si me debilitas uno, lloro en directo.",
+    "lose_text": "Chat, eso no cuenta. ¿Reiniciamos?",
+    "win_text": "¡Gáñame si puedes, que estoy en directo!",
+    "after_text": "Desde Galicia con amor. Y con la Wii enchufada.",
+    "items": [],
+    "party": [
+      {
+        "species": "rotom",
+        "level": 39
+      },
+      {
+        "species": "pawmot",
+        "level": 39
+      },
+      {
+        "species": "golisopod",
+        "level": 40
+      }
+    ]
+  },
+  "churumbel": {
+    "class": "churumbel",
+    "name": "El Churumbel",
+    "intro_text": "¡Illo, que soy el Churumbel de Málaga! Esto lo subo a TikTok antes de que acabe.",
+    "lose_text": "Me has dejado más quieto que al portero de la discoteca.",
+    "win_text": "¡Toma ya, pisha!",
+    "after_text": "Málaga es la mejor ciudad del mundo. Lo digo en todos mis vídeos.",
+    "items": [],
+    "party": [
+      {
+        "species": "krookodile",
+        "level": 50
+      },
+      {
+        "species": "grimmsnarl",
+        "level": 50
+      },
+      {
+        "species": "tinkaton",
+        "level": 51
+      }
+    ]
+  },
+  "javier": {
+    "class": "javier",
+    "name": "Javier Saguar",
+    "intro_text": "¡Por fin has vuelto a San Miguel! Soy Javier Saguar, el que ha hecho este juego. Veamos si has aprendido algo.",
+    "lose_text": "Bien jugado. El juego lo he hecho yo, pero el combate lo has ganado tú.",
+    "win_text": "El creador siempre se guarda un as.",
+    "after_text": "Vuelve cuando quieras. San Miguel de Bernuy siempre tiene la puerta abierta. Y el bar, también.",
+    "items": [
+      "hyperpotion",
+      "hyperpotion"
+    ],
+    "party": [
+      {
+        "species": "gengar",
+        "level": 56
+      },
+      {
+        "species": "lucario",
+        "level": 56
+      },
+      {
+        "species": "gyarados",
+        "level": 56
+      },
+      {
+        "species": "togekiss",
+        "level": 57
+      },
+      {
+        "species": "garchomp",
+        "level": 57
+      },
+      {
+        "species": "charizard",
+        "level": 58
+      }
+    ]
+  },
+  "vito_quiles_elche": {
+    "class": "vito_quiles",
+    "name": "Vito",
+    "intro_text": "¿Otra vez tú? ¡Responde: ¿cuándo dimites?! Esta vez juego en casa.",
+    "lose_text": "¡En Elche no! ¡En mi ciudad no!",
+    "win_text": "¡Lo tengo grabado! ¡Lo subo ya!",
+    "after_text": "Soy de Elche. Aquí hasta las palmeras me hacen preguntas.",
+    "items": [],
+    "party": [
+      {
+        "species": "chatot",
+        "level": 30
+      },
+      {
+        "species": "honchkrow",
+        "level": 30
+      },
+      {
+        "species": "kilowattrel",
+        "level": 31
+      }
+    ]
+  },
+  "vito_quiles_rufian": {
+    "class": "vito_quiles",
+    "name": "Vito",
+    "intro_text": "¡Chist! Estoy esperando a Rufián para hacerle una pregunta. Desde su armario.",
+    "lose_text": "Esto no ha pasado. Ni el armario tampoco.",
+    "win_text": "¡Exclusiva! ¡La habitación de Rufián!",
+    "after_text": "Cuando entre Rufián, ni una palabra. Le voy a preguntar por los dieciocho meses.",
+    "items": [],
+    "party": [
+      {
+        "species": "chatot",
+        "level": 20
+      },
+      {
+        "species": "murkrow",
+        "level": 20
+      },
+      {
+        "species": "wattrel",
+        "level": 21
+      }
+    ]
+  },
+  "abascal_covadonga": {
+    "class": "abascal",
+    "name": "Abascal",
+    "intro_text": "Aquí empezó la Reconquista. Y aquí empieza tu derrota.",
+    "lose_text": "Volveré. Como don Pelayo. A caballo.",
+    "win_text": "¡Santiago y cierra combate!",
+    "after_text": "Covadonga es el kilómetro cero de España. Bueno, el otro kilómetro cero.",
+    "items": [],
+    "party": [
+      {
+        "species": "rapidash",
+        "level": 41
+      },
+      {
+        "species": "mudsdale",
+        "level": 41
+      },
+      {
+        "species": "tauros",
+        "level": 42
       }
     ]
   }

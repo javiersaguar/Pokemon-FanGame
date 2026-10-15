@@ -1534,5 +1534,195 @@
     "overworld_sprite": "res://assets/sprites/characters/cunado.png",
     "intro_bgm": "encounter_tough",
     "battle_bgm": "battle_trainer"
+  },
+  "omar_montes": {
+    "name": "Cantante",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/omar_montes.png",
+    "overworld_sprite": "res://assets/sprites/characters/omar_montes.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "pablo_motos": {
+    "name": "Presentador",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/pablo_motos.png",
+    "overworld_sprite": "res://assets/sprites/characters/pablo_motos.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "zona_gemelos_carlos": {
+    "name": "Gemelo",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/zona_gemelos_carlos.png",
+    "overworld_sprite": "res://assets/sprites/characters/zona_gemelos_carlos.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "zona_gemelos_dani": {
+    "name": "Gemelo",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/zona_gemelos_dani.png",
+    "overworld_sprite": "res://assets/sprites/characters/zona_gemelos_dani.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "amador_rivas": {
+    "name": "Vecino",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/amador_rivas.png",
+    "overworld_sprite": "res://assets/sprites/characters/amador_rivas.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "antonio_recio": {
+    "name": "Mayorista",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/antonio_recio.png",
+    "overworld_sprite": "res://assets/sprites/characters/antonio_recio.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "mente_fria": {
+    "name": "Vecino",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/mente_fria.png",
+    "overworld_sprite": "res://assets/sprites/characters/mente_fria.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "marc_cucurella": {
+    "name": "Lateral",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/marc_cucurella.png",
+    "overworld_sprite": "res://assets/sprites/characters/marc_cucurella.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "joan_pradells": {
+    "name": "Culturista",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/joan_pradells.png",
+    "overworld_sprite": "res://assets/sprites/characters/joan_pradells.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "david_bisbal": {
+    "name": "Cantante",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/david_bisbal.png",
+    "overworld_sprite": "res://assets/sprites/characters/david_bisbal.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "jc_reyes": {
+    "name": "Rapero",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/jc_reyes.png",
+    "overworld_sprite": "res://assets/sprites/characters/jc_reyes.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "puigdemont": {
+    "name": "Expresident",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/puigdemont.png",
+    "overworld_sprite": "res://assets/sprites/characters/puigdemont.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "rufian": {
+    "name": "Diputado",
+    "gender": "male",
+    "base_money": 80,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/rufian.png",
+    "overworld_sprite": "res://assets/sprites/characters/rufian.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "zapatero": {
+    "name": "Expresidente",
+    "gender": "male",
+    "base_money": 100,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/zapatero.png",
+    "overworld_sprite": "res://assets/sprites/characters/zapatero.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "maduro": {
+    "name": "Presidente",
+    "gender": "male",
+    "base_money": 100,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/maduro.png",
+    "overworld_sprite": "res://assets/sprites/characters/maduro.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_villain"
+  },
+  "trump": {
+    "name": "Presidente",
+    "gender": "male",
+    "base_money": 120,
+    "ai_level": 3,
+    "battle_sprite": "res://assets/sprites/trainers/trump.png",
+    "overworld_sprite": "res://assets/sprites/characters/trump.png",
+    "intro_bgm": "encounter_villain",
+    "battle_bgm": "battle_villain"
+  },
+  "paache": {
+    "name": "Streamer",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/paache.png",
+    "overworld_sprite": "res://assets/sprites/characters/paache.png",
+    "intro_bgm": "encounter_smart",
+    "battle_bgm": "battle_trainer"
+  },
+  "churumbel": {
+    "name": "Tiktoker",
+    "gender": "male",
+    "base_money": 60,
+    "ai_level": 2,
+    "battle_sprite": "res://assets/sprites/trainers/churumbel.png",
+    "overworld_sprite": "res://assets/sprites/characters/churumbel.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_trainer"
+  },
+  "javier": {
+    "name": "Creador",
+    "gender": "male",
+    "base_money": 200,
+    "ai_level": 4,
+    "battle_sprite": "res://assets/sprites/trainers/javier.png",
+    "overworld_sprite": "res://assets/sprites/characters/javier.png",
+    "intro_bgm": "encounter_tough",
+    "battle_bgm": "battle_rival"
   }
 }

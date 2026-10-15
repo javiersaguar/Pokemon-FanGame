@@ -102,6 +102,30 @@ Columnas de las fichas: **Aspecto** = piezas del pack 11 (pelo y ropa); **Equipo
 - **Sekiam**: no he encontrado información; ¿quién es y cómo es?
 - Si los famosos con nombre real llevan su nombre tal cual o un mote.
 
+## Colocación del 2026-10-15 (Agente 2, propuesta)
+
+Todos los personajes con diseño ya tienen combate y sitio. Equipos, frases y sitios son **propuesta** (PENDIENTE JAVIER). La lista completa, con el sprite de mapa y el retrato de cada entrenador, está en [`cobertura_personajes.md`](cobertura_personajes.md). Las especies van en la etapa de su nivel (`python3 tools/mundo/comprobar_equipos.py`).
+
+| Id | Personaje | Dónde (propuesta) | Equipo (nivel) |
+|----|-----------|-------------------|----------------|
+| `omar_montes` | Omar Montes | Madrid Río, junto al Matadero, camino de Carabanchel (Pan Bendito) | Tyrogue, Makuhita (7) |
+| `pablo_motos` | Pablo Motos | Gran Vía, enfrente de *La Revuelta* | Nincada, Trapinch, Durant (15) |
+| `zona_gemelos_carlos` y `zona_gemelos_dani` | Zona Gemelos | Getafe, su ciudad (doble) | Plusle y Gimmighoul · Minun y Meowth (17) |
+| `antonio_recio`, `amador_rivas` y `mente_fria` | *La que se avecina* | Móstoles, como vecinos del «Mirador de Montepinar» | Marisco · vagos · hielo (17) |
+| `marc_cucurella` | Marc Cucurella | Rocafonda, en el campo de los niños (es de Alella, en el Maresme) | Wooloo, Falinks, Raboot (21) |
+| `joan_pradells` | Joan Pradells | Playa de la Malvarrosa (culturista valenciano) | Gurdurr, Hariyama, Bewear (27) |
+| `david_bisbal` | David Bisbal | Ruta 12, en la entrada desde Murcia: el camino de Almería | Kricketune, Chimecho, Flareon (32) |
+| `jc_reyes` | JC Reyes | Sevilla, en el lado este del centro, camino de Palmete | Krokorok, Liepard, Mabosstiff (33) |
+| `puigdemont` | Carles Puigdemont | Port Vell (Barcelona), junto a los ferris, listo para fugarse | Abra, Ninjask, Emolga (21) |
+| `zapatero` y `maduro` | Zapatero y Maduro | Puerto de La Luz (Las Palmas), doble: Venezuela es «la octava isla» | Sableye, Gholdengo · Chatot, Bombirdier (37) |
+| `trump` | Donald Trump | Aeropuerto de Gran Canaria, cuando has ganado a Maduro | Persian, Talonflame, Gyarados (39) |
+| `paache` | Paache | Ruta 17, junto al hórreo (Galicia: decisión de Javier) | Rotom, Pawmot, Golisopod (40) |
+| `churumbel` | El Churumbel de Málaga | Málaga, junto al mercado | Krookodile, Grimmsnarl, Tinkaton (51) |
+| `rufian` | Gabriel Rufián | Su casa de Barcelona, con habitación (decisión de Javier; mapa nuevo) | Chatot, Scraggy, Liepard (21) |
+| `javier` | Javier Saguar | San Miguel de Bernuy con siete medallas (decisión de Javier); aspecto y equipo PENDIENTE JAVIER | Gengar, Lucario, Gyarados, Togekiss, Garchomp, Charizard (58) |
+
+**Segundas apariciones (decisiones de Javier del 13 de octubre):** Vito Quiles en el Palmeral de Elche (`vito_quiles_elche`, revancha) y en la habitación de Rufián (`vito_quiles_rufian`); Abascal en Covadonga (`abascal_covadonga`; el sitio es propuesta); Ábalos y Koldo en la Albufera con tres medallas (`abalos_albufera`, `koldo_albufera`). **Recolocados:** HustleHard304 y Keyne, con Lamine en Rocafonda (antes seguían en Les Corts); los tres antiguos entrenadores del gimnasio 6, en la calle de Bilbao; y el doble de Nico e Iñaki Williams, a la salida de San Mamés con la medalla 6, como revancha (dentro del gimnasio combaten por separado).
+
 ## Fuentes
 
 - Lamine Yamal, HustleHard304 y Keyne: [El Español](https://www.elespanol.com/corazon/famosos/20260720/keyne-hermano-pequeno-lamine-yamal-estrella-inesperada-mundial-talisman-seleccion/1003744328012_0.amp.html) · [beIN Sports](https://www.beinsports.com/en-us/soccer/la-liga/articles/lamine-yamal-s-father-sets-social-media-ablaze-with-a-cryptic-message-2025-10-09)
