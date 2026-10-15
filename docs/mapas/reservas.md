@@ -9,3 +9,5 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 | ruta_26/exterior, ruta_21/exterior, ruta_24/exterior, ruta_25/exterior, ruta_22/exterior | Agente 5 | 2026-10-15 | estructura y paso por hierba según la guía de composición, después detalle (bosque, relieve, agua, adornos, objetos y entrenadores); sin repintar, se conservan puertas y conexiones |
 | Los 32 mapas de gimnasio (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider` de madrid, barcelona, valencia, sevilla, playa_del_ingles, bilbao, valladolid y malaga) | Agente 3 | 2026-10-15 | decoración temática, puzle y líder de cada gimnasio (`pintar_gimnasios.gd`) |
 | madrid/quiron y madrid/atico_ayuso | Agente 3 | 2026-10-15 | recorrido completo del gimnasio 1: Quirón → Casa de Correos → despacho → ático |
+
+| `madrid/sala_palacio_real_23_30` y `madrid/liga_*` | Cierre de sesión | 2026-10-15 | rescatar las salas ya pintadas y cerrar la entrada y vuelta pendientes (petición 89) |
