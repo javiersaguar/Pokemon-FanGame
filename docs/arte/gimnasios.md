@@ -74,6 +74,12 @@ Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras fila
 | 59 | `tabla_surf` | 1×2 | tabla de surf de pie |
 | 60 | `nevera` | 1×1 | nevera de playa |
 | 61 | `bateria` | 2×2 | batería de concierto |
+| 62 | `rotulo_bilbao` | 3×1 | placa roja con canto blanco (Bilbao) |
+| 63 | `taquillas_athletic` | 3×2 (fila) | taquillas rojas en mueble blanco |
+| 64 | `butacas_athletic` | 1×1 (se repite) | butacas de grada roja y blanca |
+| 65 | `escudo_athletic` | 2×2 | escudo del club, simplificado |
+| 66 | `cesped` | 2×1 (se pisa, se repite) | césped segado a franjas |
+| 67 | `porteria` | 3×2 | portería con su red |
 
 ## Pintor: `maps/_pintura/pintar_gimnasios.gd`
 

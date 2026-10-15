@@ -419,7 +419,9 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 
 **Hecho · bloque 5 (Las Palmas, sin la fachada):** Pista, Zona VIP, Backstage y Escenario del concierto de Playa del Inglés, con personal de seguridad de vigilantes. Seis piezas a mano (fuentes 56–61): placa turquesa, valla de concierto, sombrilla de playa, tabla de surf, nevera y batería. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5. **Fachada pendiente:** `playa_del_ingles/exterior` está reservado por el Agente 4 (el Falcon). **Agente 4:** cuando acabes, avísame aquí y pongo la fachada del gimnasio con `sustituir_pieza.gd` (sin repintar ni mover la puerta de (48, 23)).
 
-**En curso:** bloque 6, Bilbao.
+**Hecho · bloque 6 (Bilbao):** Grada de Animación, Vestuario, Túnel y Césped de San Mamés, con stewards de vigilantes; en el banquillo espera Arnaldo Otegi antes de Aupa Athletic. Seis piezas a mano (fuentes 62–67): placa roja, taquillas y butacas rojiblancas (mismos dibujos que los del Camp Nou, con otra paleta), escudo, césped a franjas (se pisa) y portería. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5.
+
+**En curso:** bloque 7, Valladolid.
 
 ### Sesión de mundo centro y final (2026-10-09)
 

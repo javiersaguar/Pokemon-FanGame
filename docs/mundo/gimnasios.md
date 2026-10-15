@@ -14,7 +14,7 @@
 
 Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_2026-10-14.md)): **manda sobre los entrenadores que proponen las fichas de abajo.** Cada gimnasio son **cuatro mapas** (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider`), pintados por `maps/_pintura/pintar_gimnasios.gd` a partir de `maps/_pintura/gimnasios_salas.json`. Cada sala tiene tres tramos con un entrenador y un vigilante que tapa el paso hasta que le ganas (luego se aparta a un lado); así es obligatorio ganar a todos antes del líder. Quién hay en cada sala, con su lore, equipo y frases: [`guion.md` §8](guion.md).
 
-**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona**, **Valencia**, **Sevilla** y **Las Palmas** (sin la fachada). Los demás siguen con el zigzag antiguo hasta que les toque.
+**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona**, **Valencia**, **Sevilla**, **Las Palmas** (sin la fachada) y **Bilbao**. Los demás siguen con el zigzag antiguo hasta que les toque.
 
 | # | Se entra por | Entrenadores antes del líder |
 |---|---|---|
@@ -87,6 +87,8 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_20
 - **Premio:** la MT de Acua Cola (ya en el juego; Hidropulso no es MT en estos datos); y una entrada de pista para el siguiente concierto (agotada).
 
 ## 6 · Bilbao — La chica del *Aupa Athletic* (Lucha/Fuego) · Medalla Txapela
+
+- **Por dentro (2026-10-15):** se entra por San Mamés → **Grada de Animación** (filas de butacas rojiblancas y el escudo: Aitor, Gorka e Iker) → **Vestuario** (taquillas rojiblancas, bancos, camilla y pizarra: Unai, Asier e Iñaki Williams) → **Túnel** (ladrillo, vallas y las copas: Mikel y Nico Williams) → **Césped** (franjas, portería y el banquillo, donde espera Arnaldo Otegi). Aupa Athletic da la Medalla Txapela. Los vigilantes son stewards.
 
 - **Decidido por Javier (2026-10-12):** es la chica del vídeo viral del *Aupa Athletic*; su sprite lleva la melena larga castaña clara y la camiseta verde de la segunda equipación del Athletic. Bilbao aún no está pintado (Agente 2), así que espera en "pendientes".
 - **El interior:** San Mamés, con el césped y la grada. **Reto:** "herri kirolak" (deporte rural): mover piedras (Fuerza) para abrir paso, como un *harrijasotzaile*. Antes de la líder, Nico e Iñaki Williams desafían en combate doble.

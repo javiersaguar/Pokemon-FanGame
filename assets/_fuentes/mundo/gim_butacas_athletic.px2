@@ -1,0 +1,22 @@
+# Butacas de grada rojas y blancas vistas desde atrás (gimnasio 6). Mismo dibujo que las del Camp Nou.
+# Una casilla que se repite. Dibujado a mano, 16x16 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   k = teja_1   b = teja_5   B = teja_4   d = teja_3
+@leyenda  q = piedra_3   g = ui_6   G = ui_5   r = piedra_5   m = metal_3   M = piedra_4   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/butacas_athletic.png
+---
+................
+................
+.kkkkkk..qqqqqq.
+kbbbbbbkqggggggq
+kBBBBBBkqGGGGGGq
+kBBBBBBkqGGGGGGq
+kBBBBBBkqGGGGGGq
+kddddddkqrrrrrrq
+.kkkkkk..qqqqqq.
+..m..m....m..m..
+MMMMMMMMMMMMMMMM
+zzzzzzzzzzzzzzzz
+................
+................
+................
+................

@@ -1,0 +1,21 @@
+# Césped del campo segado a franjas, una clara y una oscura (gimnasio 6). Se pisa; se repite de dos en dos
+# casillas para hacer las franjas. Dibujado a mano, 32x16 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   a = hierba_5   A = hierba_6   b = hierba_4   B = hierba_3
+@salida res://assets/tilesets/interior/gimnasios/propios/cesped.png
+---
+aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb
+aaaAaaaaaaaAaaaabbbBbbbbbbbBbbbb
+aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb
+aaaaaaaAaaaaaaaabbbbbbbBbbbbbbbb
+aAaaaaaaaaaaaaAabBbbbbbbbbbbbbBb
+aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb
+aaaaaAaaaaAaaaaabbbbbBbbbbBbbbbb
+aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb
+aaAaaaaaaaaaaaaabbBbbbbbbbbbbbbb
+aaaaaaaaaAaaaaaabbbbbbbbbBbbbbbb
+aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb
+aaaaAaaaaaaaaAaabbbbBbbbbbbbbBbb
+aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb
+aaaaaaaAaaaaaaaabbbbbbbBbbbbbbbb
+aAaaaaaaaaaaaaaabBbbbbbbbbbbbbbb
+aaaaaaaaaaaAaaaabbbbbbbbbbbBbbbb

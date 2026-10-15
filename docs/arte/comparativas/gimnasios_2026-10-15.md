@@ -80,3 +80,17 @@ Las capturas no ejecutan `MapLoader.prepare`, así que no salen los personajes c
 - **Backstage:** bajo la carpa: baúles de gira (la fila de baúles es el tabique), espejo de camerino, sofá, catering, altavoz y vallas.
 - **Escenario:** escenario de madera con su borde, batería, micrófono, focos, altavoces y pantalla; delante, la arena con sombrillas y neveras. Quevedo espera en el centro.
 - **Fachada:** pendiente. La entrada sigue sin edificio porque `playa_del_ingles/exterior` está reservado por el Agente 4 (el Falcon junto al aeropuerto).
+
+## 6 · Bilbao — San Mamés
+
+| Sala | Antes | Después |
+|---|---|---|
+| Grada de Animación | ![](gimnasios/antes/bilbao_gimnasio_1.png) | ![](gimnasios/despues/bilbao_gimnasio_1.png) |
+| Vestuario | ![](gimnasios/antes/bilbao_gimnasio_2.png) | ![](gimnasios/despues/bilbao_gimnasio_2.png) |
+| Túnel | ![](gimnasios/antes/bilbao_gimnasio_3.png) | ![](gimnasios/despues/bilbao_gimnasio_3.png) |
+| Césped | ![](gimnasios/antes/bilbao_gimnasio_lider.png) | ![](gimnasios/despues/bilbao_gimnasio_lider.png) |
+
+- **Grada de Animación:** filas de butacas rojiblancas que hacen de tabique y el escudo en la pared.
+- **Vestuario:** taquillas rojiblancas contra la pared y en isla, bancos, camilla, pizarra táctica, escudo, cajas y fuente de agua.
+- **Túnel:** ladrillo oscuro, vallas de seguridad, plantas y vitrinas con copas.
+- **Césped:** el campo segado a franjas con la portería; el banquillo hace de tabique. Otegi espera en el banquillo antes de Aupa Athletic.

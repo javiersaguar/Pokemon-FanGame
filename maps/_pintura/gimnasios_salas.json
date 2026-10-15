@@ -3975,15 +3975,148 @@
         "entrenadores": [
           {
             "id": "gym6_etarra_1",
-            "nombre": "Aitor"
+            "nombre": "Aitor",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym6_etarra_2",
-            "nombre": "Gorka"
+            "nombre": "Gorka",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "gym6_etarra_3",
-            "nombre": "Iker"
+            "nombre": "Iker",
+            "mira": "derecha",
+            "vista": 2
+          }
+        ],
+        "rotulo": "GRADA",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 4,
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLL..........YY....",
+          "...............YY....",
+          ".....................",
+          "...uuuuu.....uuuuu...",
+          ".....................",
+          ".....................",
+          ".uuuuuuuuuuuuuuuuuu..",
+          ".....................",
+          ".....................",
+          "...uuuuuuuuuuuuuu....",
+          ".....................",
+          "..uuuuuuuuuuuuuuuuuu.",
+          ".....................",
+          "...uuuuu.....uuuuu...",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          ".....................",
+          "...............n.....",
+          "........3............",
+          "...................h.",
+          "..................H..",
+          ".................2...",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G...1..............",
+          ".....................",
+          "...............o.....",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Aupa. Aquí se anima de pie y se canta.",
+              "Aitor es el del bombo. Gánale y te deja pasar sin quedarte sordo."
+            ],
+            "despues": [
+              "Pasa. Y canta, que en San Mamés no se calla nadie."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Esta grada es de los de siempre, de abuelo a nieto.",
+              "Gorka tiene el abono de su aitona. Gánale."
+            ],
+            "despues": [
+              "Pasa, que ya eres de aquí."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al vestuario se baja por aquí, y solo con permiso.",
+              "Iker te lo da si le ganas. Si no, te da un pintxo."
+            ],
+            "despues": [
+              "Permiso concedido. El pintxo también."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Aficionado",
+            "sprite": "npc_old_man",
+            "mira": "abajo",
+            "frases": [
+              "Yo vi ganar la Copa en 2024. Lloré como un Psyduck.",
+              "Bilbao es el centro del universo. Lo dice todo el mundo. Bueno, todo Bilbao."
+            ]
+          },
+          {
+            "nombre": "Txiki",
+            "sprite": "npc_youngster",
+            "mira": "izquierda",
+            "frases": [
+              "Mi aita me ha traído desde Basauri. Llevo seis pintxos y es la primera parte.",
+              "De mayor quiero ser de la cantera. Ya soy de Bizkaia, así que voy bien."
+            ]
           }
         ]
       },
@@ -3992,15 +4125,159 @@
         "entrenadores": [
           {
             "id": "gym6_etarra_4",
-            "nombre": "Unai"
+            "nombre": "Unai",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym6_etarra_5",
-            "nombre": "Asier"
+            "nombre": "Asier",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "inaki_williams_gym",
-            "nombre": "Iñaki Williams"
+            "nombre": "Iñaki Williams",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "VESTUARIO",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 6,
+        "estilo": {
+          "suelo": [
+            4,
+            0,
+            36
+          ],
+          "pared": [
+            5,
+            2
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLLL......YYUUUU..",
+          ".TTTTTT......YYUUUU..",
+          ".TTTTTT..............",
+          "................FF...",
+          "................FF...",
+          ".....................",
+          ".TTTTTTTTTTTTTTTTTT..",
+          ".TTTTTTTTTTTTTTTTTT..",
+          ".....................",
+          "....bbbbb...bbbbb....",
+          ".....................",
+          "..bbbbbbbbbbbbbbbbbb.",
+          ".....................",
+          "...ZZ..............D.",
+          "...ZZ..............D.",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          ".............3....n..",
+          ".....................",
+          ".....................",
+          ".....................",
+          "...................h.",
+          ".....o............H..",
+          "..........2..........",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          "......1..............",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Vestuario de la cantera. Aquí todos son de Bizkaia o de muy cerca.",
+              "Unai es de Getxo. Gánale."
+            ],
+            "despues": [
+              "Pasa. Getxo ya ha perdido."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Las botas no se tocan: las han bendecido en San Antón.",
+              "Asier las vigila. Gánale."
+            ],
+            "despues": [
+              "Pasa. Y no pises el escudo."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al túnel solo pasan los titulares.",
+              "Iñaki Williams lleva cientos de partidos seguidos. Gánale y que descanse por fin."
+            ],
+            "despues": [
+              "Ha descansado. Ya era hora. Pasa."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Fisio",
+            "sprite": "nurse",
+            "mira": "izquierda",
+            "frases": [
+              "Aquí se cura todo con hielo, pomada y un caldo de la amama.",
+              "Si te duele la rodilla, al txoko. Si te duele el alma, también."
+            ]
+          },
+          {
+            "nombre": "Utillero",
+            "sprite": "npc_man",
+            "mira": "abajo",
+            "frases": [
+              "La gabarra está preparada desde 1984. Por si acaso.",
+              "Cada camiseta tiene su percha. La del portero, la más grande: es Iribar."
+            ]
           }
         ]
       },
@@ -4009,22 +4286,396 @@
         "entrenadores": [
           {
             "id": "gym6_etarra_6",
-            "nombre": "Mikel"
+            "nombre": "Mikel",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "nico_williams_gym",
-            "nombre": "Nico Williams"
+            "nombre": "Nico Williams",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "TÚNEL",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 4,
+        "estilo": {
+          "suelo": [
+            0,
+            0,
+            52
+          ],
+          "pared": [
+            5,
+            7
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLL..........YY....",
+          "...............YY....",
+          ".Q.................Q.",
+          ".Q.................Q.",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".VVVVVVVVVVVVVVVVVV..",
+          ".VVVVVVVVVVVVVVVVVV..",
+          ".....................",
+          ".....................",
+          "...vv...........vv...",
+          "...vv...........vv...",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "encima": [
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "...c............c....",
+          ".....................",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........hH.........",
+          ".....................",
+          ".............2.......",
+          ".....o...............",
+          ".....................",
+          ".....................",
+          "...................g.",
+          "..................G..",
+          ".....................",
+          ".....................",
+          "........1............",
+          ".............n.......",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "El túnel huele a linimento y a historia.",
+              "Mikel dice que por aquí pasaron Iribar y Zarra. Gánale y pasas tú."
+            ],
+            "despues": [
+              "Pasa, que ya se oye a la grada."
+            ]
+          },
+          {
+            "nombre": "Steward",
+            "sprite": "revisorcercanias",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Al césped se sale cuando lo dice el árbitro.",
+              "Nico Williams está calentando. Gánale."
+            ],
+            "despues": [
+              "Sal al césped. San Mamés te espera."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Delegado",
+            "sprite": "npc_man",
+            "mira": "izquierda",
+            "frases": [
+              "Por este túnel salen once leones. El duodécimo es la grada.",
+              "Esas copas son de la vitrina del museo. Las sacamos para que les dé el aire."
+            ]
+          },
+          {
+            "nombre": "Periodista",
+            "sprite": "npc_lass",
+            "mira": "derecha",
+            "frases": [
+              "¿Una declaración? Que se gana o se gana. Y luego, al txoko.",
+              "Llevo veinte años cubriendo al Athletic. Nunca he visto un fichaje de fuera. Ni lo veré."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "SAN MAMÉS · CÉSPED",
-    "lider_previos": [
-      {
-        "id": "otegi",
-        "nombre": "Arnaldo Otegi"
+    "estilo": {
+      "suelo": [
+        0,
+        0,
+        52
+      ],
+      "pared": [
+        1,
+        8
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        3,
+        22,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "f8f8f0",
+      "rotulo_sombra": "64203e"
+    },
+    "leyenda": {
+      "w": {
+        "propia": "cesped"
+      },
+      "L": {
+        "propia": "rotulo_bilbao",
+        "fila": true
+      },
+      "T": {
+        "propia": "taquillas_athletic",
+        "fila": true
+      },
+      "b": {
+        "propia": "banco_vestuario",
+        "fila": true
+      },
+      "u": {
+        "propia": "butacas_athletic"
+      },
+      "Y": {
+        "propia": "escudo_athletic"
+      },
+      "N": {
+        "propia": "porteria"
+      },
+      "c": {
+        "propia": "copa"
+      },
+      "V": {
+        "propia": "valla_concierto",
+        "arriba": 1
+      },
+      "F": {
+        "pieza": [
+          2,
+          0,
+          40,
+          2,
+          2
+        ]
+      },
+      "U": {
+        "pieza": [
+          5,
+          4,
+          95,
+          4,
+          2
+        ]
+      },
+      "Q": {
+        "pieza": [
+          2,
+          1,
+          37,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "Z": {
+        "pieza": [
+          2,
+          6,
+          37,
+          2,
+          2
+        ]
+      },
+      "D": {
+        "pieza": [
+          3,
+          3,
+          31,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "v": {
+        "pieza": [
+          2,
+          3,
+          52,
+          2,
+          2
+        ]
       }
-    ]
+    },
+    "sala_lider": {
+      "titulo": "SAN MAMÉS · CÉSPED",
+      "rotulo": "SAN MAMÉS",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 4,
+      "estilo": {
+        "suelo": [
+          0,
+          0,
+          52
+        ],
+        "pared": [
+          1,
+          8
+        ]
+      },
+      "plano": [
+        "#####################",
+        "#####################",
+        "#####################",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#wwwwwwwwwwwwwwwwww.#",
+        "#.........E.........#",
+        "#####################"
+      ],
+      "muebles": [
+        ".....................",
+        ".LLLL..........YY....",
+        "...............YY....",
+        ".........NNN.........",
+        ".........NNN.........",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "..bbbbbbbbbbbbbbbbbb.",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "....................."
+      ],
+      "personas": [
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "..........@..........",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".g...................",
+        "..G..................",
+        "........1............",
+        "...............n.....",
+        ".....................",
+        ".....................",
+        "....................."
+      ],
+      "entrenadores": [
+        {
+          "id": "otegi",
+          "nombre": "Arnaldo Otegi",
+          "mira": "derecha",
+          "vista": 2
+        }
+      ],
+      "vigilantes": [
+        {
+          "nombre": "Steward",
+          "sprite": "revisorcercanias",
+          "mira": "abajo",
+          "mira_aparte": "derecha",
+          "frases": [
+            "En el banquillo habla el que tiene la palabra.",
+            "Otegi quiere hablar primero. Gánale y se acaba la rueda de prensa."
+          ],
+          "despues": [
+            "Rueda de prensa terminada. Salta al campo."
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "nombre": "Árbitro",
+          "sprite": "npc_man",
+          "mira": "izquierda",
+          "frases": [
+            "Aquí no hay VAR. Hay grada, y la grada lo ve todo.",
+            "Si gana Aupa Athletic, se celebra con la gabarra. Si ganas tú, también: aquí se celebra todo."
+          ]
+        }
+      ]
+    }
   },
   "valladolid": {
     "lider": "latasa",
