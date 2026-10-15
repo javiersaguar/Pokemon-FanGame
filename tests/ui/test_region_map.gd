@@ -74,7 +74,7 @@ func test_destinos_de_vuelo_son_los_lugares_de_la_region() -> void:
 	GameState.reset()
 	var region := JsonFile.read_dict("res://data/region.json")
 	var list: Array = GameState.world_config.field.flight_destinations
-	var places: Array = region.locations.keys().filter(func(id: String) -> bool: return not region.locations[id].has("pendiente"))
+	var places: Array = region.locations.keys().filter(func(id: String) -> bool: return not region.locations[id].has("pendiente") and region.locations[id].get("vuelo", true))
 	assert_eq(list.size(), places.size(), "Un destino por ciudad y pueblo")
 	for destination: Dictionary in list:
 		assert_true(region.locations.has(str(destination.id)), str(destination.id))
