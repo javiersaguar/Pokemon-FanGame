@@ -1,0 +1,22 @@
+# Borde delantero de un escenario: canto de madera clara, tira dorada y frontal de tablones oscuros
+# (gimnasios 4, 5 y 8). Tres casillas (izquierda, centro que se repite y derecha). No se pisa.
+# Dibujado a mano, 48x16 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   k = madera_1   L = madera_6   M = madera_5   d = madera_3   D = madera_2   y = acento_amarillo   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/borde_escenario.png
+---
+LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+kyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyk
+kddddddddddddddddddddddddddddddddddddddddddddddk
+kDddddddDddddddddDddddddDddddddddDddddddDddddddk
+kDddddddDddddddddDddddddDddddddddDddddddDddddddk
+kDddddddDddddddddDddddddDddddddddDddddddDddddddk
+kDddddddDddddddddDddddddDddddddddDddddddDddddddk
+kDddddddDddddddddDddddddDddddddddDddddddDddddddk
+kDddddddDddddddddDddddddDddddddddDddddddDddddddk
+kDddddddDddddddddDddddddDddddddddDddddddDddddddk
+kDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDk
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+................................................

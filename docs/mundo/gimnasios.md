@@ -14,7 +14,7 @@
 
 Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_2026-10-14.md)): **manda sobre los entrenadores que proponen las fichas de abajo.** Cada gimnasio son **cuatro mapas** (`<ciudad>/gimnasio_1`, `_2`, `_3` y `gimnasio_lider`), pintados por `maps/_pintura/pintar_gimnasios.gd` a partir de `maps/_pintura/gimnasios_salas.json`. Cada sala tiene tres tramos con un entrenador y un vigilante que tapa el paso hasta que le ganas (luego se aparta a un lado); así es obligatorio ganar a todos antes del líder. Quién hay en cada sala, con su lore, equipo y frases: [`guion.md` §8](guion.md).
 
-**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona** y **Valencia**. Los demás siguen con el zigzag antiguo hasta que les toque.
+**Desde el 2026-10-15 (Agente 3)** cada sala se pinta a mano desde su plano (estructura, muebles y personas) con el tileset propio de los gimnasios: [`docs/arte/gimnasios.md`](../arte/gimnasios.md). Los tramos los separan muebles del tema (mostradores, escaños, archivadores…), no tabiques, y cada sala tiene su rótulo en la pared, vigilantes con frases propias y gente con la que hablar. Antes y después: [`comparativas/gimnasios_2026-10-15.md`](../arte/comparativas/gimnasios_2026-10-15.md). Hechos: **Madrid**, **Barcelona**, **Valencia** y **Sevilla**. Los demás siguen con el zigzag antiguo hasta que les toque.
 
 | # | Se entra por | Entrenadores antes del líder |
 |---|---|---|
@@ -69,6 +69,8 @@ Decisión de Javier ([`DECISIONES_JAVIER_2026-10-14.md`](../DECISIONES_JAVIER_20
 - **Premio:** la MT de Demolición (ya en el juego); y un bono de 10 sesiones de bronceado.
 
 ## 4 · Sevilla — Joaquín (Planta) · Medalla Arte
+
+- **Por dentro (2026-10-15):** se entra por el teatro de Triana → **Platea** (filas de butacas, mesas de cabaret y la barra: Rocío, Curro y Antony) → **Camerinos** (espejos con bombillas, tocadores y burros con trajes de flamenca: Macarena y Berto Romero) → **Entre Bambalinas** (ladrillo, baúles, cajas de atrezo y focos: Manuel y Dani Rovira) → **Escenario** (telón, escenario con su borde, focos y micro; en las butacas, Buenafuente y José Mota). Joaquín da la Medalla Arte y la MT de Gigadrenado. Los vigilantes son acomodadores.
 
 - **El interior:** un club de la comedia con escenario, mesas y un micrófono. **Reto:** antes de cada entrenador, un monologuista cuenta un chiste y te pregunta si te ha hecho gracia; si contestas "no", el público te abuchea y combates igual; si contestas "sí", te deja pasar por el atajo. Joaquín sale al escenario cuando llegas al final.
 - **Entrenadores:** Manolo (cuñado: Gloom y Steenee), Lola (flamenca: Sunflora y Dolliv) y Curro (costalero: Skiddo y Petilil).

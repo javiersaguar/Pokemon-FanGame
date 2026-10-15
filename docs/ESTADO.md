@@ -404,7 +404,9 @@ Worktree `pokemon-panchito-agente3`, rama `feat/agente3-gimnasios`. Encargo: el 
 
 **Hecho · bloque 3 (Valencia):** Pista, Reservado, Zona VIP y Cabina, con porteros de discoteca de vigilantes. Ocho piezas a mano (fuentes 39–46): placa de neón, pista de baldosas de luz (se pisa), altavoz, bola de espejos, cubata, cabina del DJ, tumbona y piscina. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5.
 
-**En curso:** bloque 4, Sevilla.
+**Hecho · bloque 4 (Sevilla):** Platea, Camerinos, Entre Bambalinas y Escenario, con acomodadores de vigilantes; en el escenario esperan Buenafuente y José Mota antes de Joaquín. Nueve piezas a mano (fuentes 47–55): placa granate, butacas de teatro, micrófono de pie, foco, guitarra, espejo de camerino, burro de trajes de flamenca, cajas de atrezo y borde de escenario. Alcance con `--ganados`: 0 problemas en las cuatro salas; test 5/5. **Fallo encontrado y corregido:** en el escenario, el regidor y José Mota cortaban las dos filas libres de la banda central; se movió al regidor.
+
+**En curso:** bloque 5, Playa del Inglés (con su fachada).
 
 ### Sesión de mundo centro y final (2026-10-09)
 

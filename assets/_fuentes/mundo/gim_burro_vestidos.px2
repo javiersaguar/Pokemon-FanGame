@@ -1,0 +1,38 @@
+# Burro de camerino con tres trajes de flamenca colgados: rojo con lunares blancos, verde con lunares blancos
+# y negro con lunares rojos (gimnasio 4). Dibujado a mano, 32x32 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   k = ui_1   m = metal_3   M = metal_4   R = teja_4   r = teja_3   w = ui_6
+@leyenda  G = hierba_4   g = hierba_3   B = ui_2   b = ui_1   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/burro_vestidos.png
+---
+................................
+................................
+..kkkkkkkkkkkkkkkkkkkkkkkkkkkk..
+..kMMMMMMMMMMMMMMMMMMMMMMMMMMk..
+..kkkkkkkkkkkkkkkkkkkkkkkkkkkk..
+..m.....k.......k.......k....m..
+..m....kkk.....kkk.....kkk...m..
+..m...kRRRk...kGGGk...kBBBk..m..
+..m...kRwRk...kGwGk...kBRBk..m..
+..m....kRk.....kGk.....kBk...m..
+..m....kRk.....kGk.....kBk...m..
+..m...kRwRk...kGwGk...kBRBk..m..
+..m...kRRRk...kGGGk...kBBBk..m..
+..m..kRwRRwk.kGwGGwk.kBRBBRk.m..
+..m..kRRRRRk.kGGGGGk.kBBBBBk.m..
+..m..kRwRRwk.kGwGGwk.kBRBBRk.m..
+..m..kRRRRRk.kGGGGGk.kBBBBBk.m..
+..m..krrrrrk.kgggggk.kbbbbbk.m..
+..m..kRwRwRk.kGwGwGk.kBRBRBk.m..
+..m..kRRRRRk.kGGGGGk.kBBBBBk.m..
+..m..krrrrrk.kgggggk.kbbbbbk.m..
+..m..kkkkkkk.kkkkkkk.kkkkkkk.m..
+..m..........................m..
+..m..........................m..
+..m..........................m..
+..m..........................m..
+..m..........................m..
+..m..........................m..
+.kMk........................kMk.
+.zzz........................zzz.
+................................
+................................

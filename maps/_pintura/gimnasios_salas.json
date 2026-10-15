@@ -2481,15 +2481,148 @@
         "entrenadores": [
           {
             "id": "gym4_flamenca_1",
-            "nombre": "Rocío"
+            "nombre": "Rocío",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "gym4_flamenco_1",
-            "nombre": "Curro"
+            "nombre": "Curro",
+            "mira": "abajo",
+            "vista": 2
           },
           {
             "id": "antony",
-            "nombre": "Antony"
+            "nombre": "Antony",
+            "mira": "derecha",
+            "vista": 2
+          }
+        ],
+        "rotulo": "PLATEA",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 4,
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#........ttt........#",
+          "#........ttt........#",
+          "#........ttt........#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLL................",
+          ".....................",
+          ".....................",
+          "...mm..mm....CCCCCC..",
+          "...mm..mm....CCCCCC..",
+          ".....................",
+          ".uuuuuuuuuuuuuuuuuu..",
+          ".....................",
+          ".....................",
+          "...uuuuuuuuuuuuuu....",
+          ".....................",
+          "..uuuuuuuuuuuuuuuuuu.",
+          ".....................",
+          "...uuuuu.....uuuuu.P.",
+          "...................P.",
+          "...................P.",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........iI.........",
+          "...............n.....",
+          ".....................",
+          "........3............",
+          "...................h.",
+          "..................H..",
+          "..........o......2...",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G...1..............",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Acomodador",
+            "sprite": "clerk",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Su entrada, por favor. ¿Fila? ¿Butaca? ¿Ganas de reír?",
+              "Hasta que no gane a Rocío no le acompaño a su sitio."
+            ],
+            "despues": [
+              "Fila siete, butaca doce. La del que se ríe más fuerte."
+            ]
+          },
+          {
+            "nombre": "Acomodador",
+            "sprite": "clerk",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Silencio, que empieza la función.",
+              "Curro tiene la butaca de pasillo y no se levanta. Gánele."
+            ],
+            "despues": [
+              "Pase. Y apague el móvil, que aquí se graba todo."
+            ]
+          },
+          {
+            "nombre": "Acomodador",
+            "sprite": "clerk",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Los camerinos son solo para artistas.",
+              "Antony dice que es artista porque da tres vueltas sobre el balón. Demuéstrele que no."
+            ],
+            "despues": [
+              "Adelante. Y no le cuente a nadie el chiste del Betis."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Camarero",
+            "sprite": "camarero",
+            "mira": "abajo",
+            "frases": [
+              "¿Un rebujito? Manzanilla con gaseosa. En Sevilla se toma hasta en el teatro.",
+              "La entrada incluye una consumición y tres chistes del Betis."
+            ]
+          },
+          {
+            "nombre": "Espectador",
+            "sprite": "npc_old_man",
+            "mira": "arriba",
+            "frases": [
+              "Vengo todos los jueves. Los chistes son los mismos, pero los cuenta otro.",
+              "Lo bueno de los monólogos es que no hace falta saber de fútbol. Lo malo es que aquí todos son del Betis."
+            ]
           }
         ]
       },
@@ -2498,11 +2631,140 @@
         "entrenadores": [
           {
             "id": "gym4_flamenca_2",
-            "nombre": "Macarena"
+            "nombre": "Macarena",
+            "mira": "izquierda",
+            "vista": 2
           },
           {
             "id": "berto_romero",
-            "nombre": "Berto Romero"
+            "nombre": "Berto Romero",
+            "mira": "derecha",
+            "vista": 2
+          }
+        ],
+        "rotulo": "CAMERINOS",
+        "rotulo_casilla": [
+          15,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            4,
+            0,
+            16
+          ],
+          "pared": [
+            5,
+            5
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "##########S##########",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          "..MM.MM......MMLLLLL.",
+          "..MM.MM......MM......",
+          "..DDDD.......DDDD....",
+          "..DDDD.......DDDD....",
+          "..T..T.......T..T....",
+          ".....................",
+          ".....................",
+          ".BBBBBBBBBBBBBBBBBB..",
+          ".BBBBBBBBBBBBBBBBBB..",
+          ".....................",
+          "..sss..K.....BB......",
+          "..sss..K.....BB......",
+          ".....................",
+          ".Q...................",
+          ".Q...................",
+          ".....................",
+          "....................."
+        ],
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "..........hH.........",
+          ".....................",
+          "......n..............",
+          "........2............",
+          ".....................",
+          ".....................",
+          "...................g.",
+          "..................G..",
+          ".....................",
+          ".....................",
+          ".....o......1........",
+          ".....................",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Acomodador",
+            "sprite": "clerk",
+            "mira": "abajo",
+            "mira_aparte": "izquierda",
+            "frases": [
+              "Aquí se cambian las artistas. Un respeto, por favor.",
+              "Macarena está terminando de ponerse los volantes. Gánele y le dejo pasar."
+            ],
+            "despues": [
+              "Ya puede pasar. Cuidado con las peinetas."
+            ]
+          },
+          {
+            "nombre": "Acomodador",
+            "sprite": "clerk",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Entre bambalinas solo pasa el que hace reír.",
+              "Berto Romero dice que él no, que él es el de al lado. Gánele igual."
+            ],
+            "despues": [
+              "Pase. Nadie sabe nada, pero usted ya sabe por dónde se va."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Maquilladora",
+            "sprite": "npc_woman",
+            "mira": "izquierda",
+            "frases": [
+              "Un poco de colorete y queda usted como un Sunflora.",
+              "A Joaquín lo maquillo en dos minutos: con esa sonrisa no hace falta más."
+            ]
+          },
+          {
+            "nombre": "Bailaora",
+            "sprite": "flamenca",
+            "mira": "derecha",
+            "frases": [
+              "El traje de gitana pesa siete kilos. Siete kilos de arte.",
+              "Mi abuela dice que los volantes se planchan solos con el calor de agosto."
+            ]
           }
         ]
       },
@@ -2511,26 +2773,438 @@
         "entrenadores": [
           {
             "id": "gym4_flamenco_2",
-            "nombre": "Manuel"
+            "nombre": "Manuel",
+            "mira": "derecha",
+            "vista": 2
           },
           {
             "id": "dani_rovira",
-            "nombre": "Dani Rovira"
+            "nombre": "Dani Rovira",
+            "mira": "abajo",
+            "vista": 2
+          }
+        ],
+        "rotulo": "BAMBALINAS",
+        "rotulo_casilla": [
+          1,
+          1
+        ],
+        "rotulo_ancho": 5,
+        "estilo": {
+          "suelo": [
+            4,
+            0,
+            0
+          ],
+          "pared": [
+            5,
+            7
+          ]
+        },
+        "plano": [
+          "#####################",
+          "#####################",
+          "################S####",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#...................#",
+          "#.........E.........#",
+          "#####################"
+        ],
+        "muebles": [
+          ".....................",
+          ".LLLLL...............",
+          ".....................",
+          "..F.F....K.........AA",
+          "..F.F....K.........AA",
+          ".....................",
+          ".....................",
+          ".....................",
+          "..AAAAAAAAAAAAAAAAAA.",
+          "..AAAAAAAAAAAAAAAAAA.",
+          ".....................",
+          "...BB....F.....AA....",
+          "...BB....F.....AA....",
+          ".....................",
+          "...................Z.",
+          "...................Z.",
+          ".....................",
+          "....................."
+        ],
+        "leyenda": {
+          "Z": {
+            "pieza": [
+              2,
+              1,
+              37,
+              1,
+              2
+            ],
+            "arriba": 1
+          }
+        },
+        "personas": [
+          ".....................",
+          ".....................",
+          ".....................",
+          "................hH...",
+          ".............2.......",
+          ".....................",
+          "...............o.....",
+          ".....................",
+          ".....................",
+          ".g...................",
+          "..G..................",
+          ".....................",
+          ".....................",
+          "........1............",
+          ".....n...............",
+          ".....................",
+          ".....................",
+          "....................."
+        ],
+        "vigilantes": [
+          {
+            "nombre": "Acomodador",
+            "sprite": "clerk",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "Cuidado con los cables, que esto lo montamos esta mañana y ya se ha caído dos veces.",
+              "Manuel tiene que firmarle el pase. Gánele."
+            ],
+            "despues": [
+              "Pase firmado. Con arte."
+            ]
+          },
+          {
+            "nombre": "Acomodador",
+            "sprite": "clerk",
+            "mira": "abajo",
+            "mira_aparte": "derecha",
+            "frases": [
+              "El escenario está a punto. Solo falta el telonero.",
+              "Dani Rovira es malagueño, hace de sevillano y está calentando. Gánele."
+            ],
+            "despues": [
+              "Telonero listo. Suba, que empieza Joaquín."
+            ]
+          }
+        ],
+        "npcs": [
+          {
+            "nombre": "Tramoyista",
+            "sprite": "npc_man",
+            "mira": "arriba",
+            "frases": [
+              "Yo subo y bajo el telón. Lo bajo sobre todo cuando el chiste no hace gracia.",
+              "Esta noche lo he bajado cuatro veces. Y solo llevamos una hora."
+            ]
+          },
+          {
+            "nombre": "Técnico de luces",
+            "sprite": "npc_youngster",
+            "mira": "izquierda",
+            "frases": [
+              "Si un chiste no funciona, apago la luz y parece que estaba planeado.",
+              "El foco de la izquierda es para Joaquín. El de la derecha, para su sonrisa."
+            ]
           }
         ]
       }
     ],
-    "lider_titulo": "EL CLUB DE LA COMEDIA · ESCENARIO",
-    "lider_previos": [
-      {
-        "id": "buenafuente",
-        "nombre": "Buenafuente"
+    "estilo": {
+      "suelo": [
+        4,
+        0,
+        24
+      ],
+      "pared": [
+        5,
+        15
+      ],
+      "cara": [
+        1,
+        2,
+        3
+      ],
+      "puerta": [
+        6,
+        0,
+        28,
+        3,
+        2
+      ],
+      "felpudo": [
+        6,
+        6,
+        0,
+        1,
+        2
+      ],
+      "rotulo_color": "f0b030",
+      "rotulo_sombra": "381634"
+    },
+    "leyenda": {
+      "w": {
+        "suelo": [
+          4,
+          0,
+          0
+        ]
       },
-      {
-        "id": "jose_mota",
-        "nombre": "José Mota"
+      "t": {
+        "suelo": [
+          0,
+          0,
+          4
+        ]
+      },
+      "L": {
+        "propia": "rotulo_sevilla",
+        "fila": true
+      },
+      "u": {
+        "propia": "butacas_teatro"
+      },
+      "V": {
+        "propia": "micro_pie",
+        "arriba": 1
+      },
+      "F": {
+        "propia": "foco",
+        "arriba": 1
+      },
+      "K": {
+        "propia": "guitarra"
+      },
+      "M": {
+        "propia": "espejo_camerino"
+      },
+      "B": {
+        "propia": "burro_vestidos"
+      },
+      "A": {
+        "propia": "cajas_atrezo"
+      },
+      "e": {
+        "propia": "borde_escenario",
+        "fila": true
+      },
+      "P": {
+        "pieza": [
+          2,
+          2,
+          36,
+          1,
+          3
+        ],
+        "arriba": 2
+      },
+      "Q": {
+        "pieza": [
+          2,
+          1,
+          37,
+          1,
+          2
+        ],
+        "arriba": 1
+      },
+      "m": {
+        "pieza": [
+          8,
+          0,
+          5,
+          2,
+          2
+        ]
+      },
+      "k": {
+        "pieza": [
+          2,
+          0,
+          61,
+          1,
+          1
+        ]
+      },
+      "T": {
+        "pieza": [
+          2,
+          1,
+          61,
+          1,
+          1
+        ]
+      },
+      "s": {
+        "pieza": [
+          2,
+          3,
+          59,
+          3,
+          2
+        ]
+      },
+      "C": {
+        "fila": [
+          3,
+          5,
+          11
+        ],
+        "arriba": 1
+      },
+      "D": {
+        "pieza": [
+          8,
+          0,
+          19,
+          4,
+          2
+        ]
       }
-    ]
+    },
+    "sala_lider": {
+      "titulo": "EL CLUB DE LA COMEDIA · ESCENARIO",
+      "rotulo": "ESCENARIO",
+      "rotulo_casilla": [
+        1,
+        1
+      ],
+      "rotulo_ancho": 5,
+      "estilo": {
+        "suelo": [
+          4,
+          0,
+          24
+        ],
+        "pared": [
+          5,
+          16
+        ]
+      },
+      "plano": [
+        "#####################",
+        "#####################",
+        "#####################",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#wwwwwwwwwwwwwwwwwww#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#...................#",
+        "#.........E.........#",
+        "#####################"
+      ],
+      "muebles": [
+        ".....................",
+        ".LLLLL...............",
+        ".....................",
+        "..F...............F..",
+        "..F.........V.....F..",
+        "............V........",
+        ".....................",
+        ".....................",
+        ".eeeeeeeeeeeeeeeeee..",
+        ".....................",
+        "...uuuuuuuuuuuuuu....",
+        ".....................",
+        "..uuuuuuuuuuuuuuuuuu.",
+        ".....................",
+        "...uuuuu.....uuuuu...",
+        ".....................",
+        "....................."
+      ],
+      "personas": [
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        ".....................",
+        "..........@..........",
+        ".....................",
+        ".....................",
+        "...................h.",
+        "..................H..",
+        ".....................",
+        "..............2......",
+        ".g...................",
+        "..G...1........n.....",
+        ".....................",
+        ".....................",
+        "....................."
+      ],
+      "entrenadores": [
+        {
+          "id": "buenafuente",
+          "nombre": "Buenafuente",
+          "mira": "derecha",
+          "vista": 2
+        },
+        {
+          "id": "jose_mota",
+          "nombre": "José Mota",
+          "mira": "arriba",
+          "vista": 2
+        }
+      ],
+      "vigilantes": [
+        {
+          "nombre": "Acomodador",
+          "sprite": "clerk",
+          "mira": "abajo",
+          "mira_aparte": "derecha",
+          "frases": [
+            "Primera fila reservada para el público VIP: Buenafuente y su programa.",
+            "Si le gana, se le hace sitio."
+          ],
+          "despues": [
+            "Sitio hecho. Ojo, que la siguiente fila es la de José Mota."
+          ]
+        },
+        {
+          "nombre": "Acomodador",
+          "sprite": "clerk",
+          "mira": "abajo",
+          "mira_aparte": "izquierda",
+          "frases": [
+            "Al escenario se sube cuando lo dice el regidor.",
+            "Y el regidor dice que antes, José Mota. Si hay que subir se sube, pero subir pa ná es tontería."
+          ],
+          "despues": [
+            "Ahora sí. Suba, que Joaquín ya tiene el chiste preparado."
+          ]
+        }
+      ],
+      "npcs": [
+        {
+          "nombre": "Regidor",
+          "sprite": "npc_old_man",
+          "mira": "izquierda",
+          "frases": [
+            "Joaquín sale cuando quiere. Yo solo le doy el micrófono y rezo.",
+            "Si le gana, le cuenta el chiste del Bulbasaur que entra en un bar. Dura cuarenta minutos."
+          ]
+        }
+      ]
+    }
   },
   "playa_del_ingles": {
     "lider": "quevedo",

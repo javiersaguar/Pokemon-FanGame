@@ -59,6 +59,15 @@ Las paredes de Akizakura van en bloques de 8×5 casillas: las tres primeras fila
 | 44 | `mesa_dj` | 3×2 | cabina del DJ con platos y mesa de mezclas |
 | 45 | `tumbona` | 1×2 | tumbona de rayas |
 | 46 | `piscina` | 3×3 (recuadro que se estira) | piscina con borde de piedra |
+| 47 | `rotulo_sevilla` | 3×1 | placa de terciopelo granate (Sevilla) |
+| 48 | `butacas_teatro` | 1×1 (se repite) | dos butacas de teatro rojas |
+| 49 | `micro_pie` | 1×2 | micrófono de pie de monologuista |
+| 50 | `foco` | 1×2 | foco de escenario en trípode |
+| 51 | `guitarra` | 1×2 | guitarra flamenca en su soporte |
+| 52 | `espejo_camerino` | 2×2 | espejo de camerino con bombillas |
+| 53 | `burro_vestidos` | 2×2 | burro con trajes de flamenca |
+| 54 | `cajas_atrezo` | 2×2 | baúles de gira y caja de madera |
+| 55 | `borde_escenario` | 3×1 (fila) | borde delantero del escenario |
 
 ## Pintor: `maps/_pintura/pintar_gimnasios.gd`
 

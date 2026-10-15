@@ -51,3 +51,17 @@ Las capturas no ejecutan `MapLoader.prepare`, así que no salen los personajes c
 - **Reservado:** sofás y mesas bajas con cubatas separados por cordones, la camarera y el relaciones públicas.
 - **Zona VIP:** la piscina hace de tabique; tumbonas, sofás, cordón morado, el socorrista y una influencer.
 - **Cabina:** la cabina del DJ con sus platos, pantallas de luces, altavoces y pista. Labrador espera delante.
+
+## 4 · Sevilla — El Club de la Comedia (Triana)
+
+| Sala | Antes | Después |
+|---|---|---|
+| Platea | ![](gimnasios/antes/sevilla_gimnasio_1.png) | ![](gimnasios/despues/sevilla_gimnasio_1.png) |
+| Camerinos | ![](gimnasios/antes/sevilla_gimnasio_2.png) | ![](gimnasios/despues/sevilla_gimnasio_2.png) |
+| Entre Bambalinas | ![](gimnasios/antes/sevilla_gimnasio_3.png) | ![](gimnasios/despues/sevilla_gimnasio_3.png) |
+| Escenario | ![](gimnasios/antes/sevilla_gimnasio_lider.png) | ![](gimnasios/despues/sevilla_gimnasio_lider.png) |
+
+- **Platea:** filas de butacas de terciopelo que hacen de tabique, mesas de cabaret, la barra con el camarero y el pasillo de alfombra roja.
+- **Camerinos:** espejos con bombillas sobre los tocadores, taburetes, una fila de burros con trajes de flamenca que hace de tabique, sofá y guitarra.
+- **Entre Bambalinas:** pared de ladrillo, baúles de gira y cajas de atrezo (la fila de cajas es el tabique), focos, guitarra y un burro de trajes.
+- **Escenario:** el telón, el escenario de madera con su borde, focos y el micrófono de pie; delante, las butacas del público. Buenafuente y José Mota esperan antes de Joaquín.

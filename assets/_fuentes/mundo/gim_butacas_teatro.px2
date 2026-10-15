@@ -1,0 +1,22 @@
+# Butacas de teatro de terciopelo rojo con remate dorado, vistas desde atrás, sobre su escalón de madera
+# (gimnasios 4 y 7). Una casilla con dos butacas que se repite para hacer filas.
+# Dibujado a mano, 16x16 del arte a x2. PROVISIONAL hasta que lo apruebe Javier.
+@leyenda  . = transparente   k = teja_1   y = acento_amarillo   R = teja_4   r = teja_3   d = teja_2   M = madera_3   m = madera_2   z = ui_1@70
+@salida res://assets/tilesets/interior/gimnasios/propios/butacas_teatro.png
+---
+................
+.kkkkkk..kkkkkk.
+kyyyyyykkyyyyyyk
+kRRRRRRkkRRRRRRk
+kRrrrrrkkRrrrrrk
+kRrrrrrkkRrrrrrk
+kRrrrrrkkRrrrrrk
+krrrrrrkkrrrrrrk
+kddddddkkddddddk
+.kkkkkk..kkkkkk.
+..k..k....k..k..
+MMMMMMMMMMMMMMMM
+mmmmmmmmmmmmmmmm
+zzzzzzzzzzzzzzzz
+................
+................
