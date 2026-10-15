@@ -1,5 +1,5 @@
 {
- "_doc": "Dónde está cada personaje (docs/mundo/gimnasios.md y docs/mundo/personajes.md). Lo decide Javier; esto es la propuesta. 'cerca' es el sitio que se busca; 'casilla' la calcula maps/_tools/colocar_personajes.gd (la libre y alcanzable más cercana). Los líderes esperan a la puerta de su gimnasio hasta que haya interiores. 'pareja' = combate doble.",
+ "_doc": "Dónde está cada personaje (docs/mundo/gimnasios.md y docs/mundo/personajes.md). Lo decide Javier; esto es la propuesta. 'cerca' es el sitio que se busca; 'casilla' la calcula maps/_tools/colocar_personajes.gd (la libre y alcanzable más cercana). Los líderes esperan a la puerta de su gimnasio hasta que haya interiores. 'pareja' = combate doble. Explicaciones que lee tests/mundo/test_cobertura_personajes.gd (informe en docs/mundo/cobertura_personajes.md): 'pendientes' = entrenadores sin sitio y por qué; 'por_evento' = entrenadores que lanza un evento (archivo donde está su id); 'sprites_prestados' = entrenadores con sprite de otra clase y por qué; 'arte_sin_uso' = personajes con arte que aún no salen.",
  "colocados": [
   {
    "id": "ayuso",
@@ -1667,6 +1667,123 @@
    "id": "alonso",
    "lugar": "Liga, Palacio Real",
    "motivo": "Interior de la Liga sin hacer"
+  },
+  {
+   "id": "gym6_camarero",
+   "lugar": "Bilbao, en la calle (antiguos entrenadores del gimnasio 6)",
+   "motivo": "Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15)"
+  },
+  {
+   "id": "gym6_crossfitero",
+   "lugar": "Bilbao, en la calle (antiguos entrenadores del gimnasio 6)",
+   "motivo": "Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15)"
+  },
+  {
+   "id": "gym6_tertuliano",
+   "lugar": "Bilbao, en la calle (antiguos entrenadores del gimnasio 6)",
+   "motivo": "Bilbao no tenía exterior cuando se colocaron los demás; se colocan en el bloque 2 del Agente 2 (2026-10-15)"
+  },
+  {
+   "id": "nico_williams",
+   "lugar": "San Mamés (Bilbao), combate doble",
+   "motivo": "Los Williams ya combaten por separado dentro del gimnasio 6 (decisiones del 2026-10-14); este doble se recoloca en el bloque 2 del Agente 2 (2026-10-15)"
+  },
+  {
+   "id": "inaki_williams",
+   "lugar": "San Mamés (Bilbao), combate doble",
+   "motivo": "Los Williams ya combaten por separado dentro del gimnasio 6 (decisiones del 2026-10-14); este doble se recoloca en el bloque 2 del Agente 2 (2026-10-15)"
+  }
+ ],
+ "por_evento": [
+  {
+   "id": "rival_lab_1",
+   "archivo": "res://data/world.json",
+   "motivo": "Combate del rival en el laboratorio de Unicoos: lo elige el evento de la historia según el inicial (mvp_story.rival_by_starter)"
+  },
+  {
+   "id": "rival_lab_2",
+   "archivo": "res://data/world.json",
+   "motivo": "Combate del rival en el laboratorio de Unicoos: lo elige el evento de la historia según el inicial (mvp_story.rival_by_starter)"
+  },
+  {
+   "id": "rival_lab_3",
+   "archivo": "res://data/world.json",
+   "motivo": "Combate del rival en el laboratorio de Unicoos: lo elige el evento de la historia según el inicial (mvp_story.rival_by_starter)"
+  }
+ ],
+ "sprites_prestados": [],
+ "arte_sin_uso": [
+  {
+   "id": "amador_rivas",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "antonio_recio",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "churumbel",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "david_bisbal",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "jc_reyes",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "joan_pradells",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "maduro",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "marc_cucurella",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "mente_fria",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "omar_montes",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "paache",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "pablo_motos",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "puigdemont",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "rufian",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "trump",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "zapatero",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "zona_gemelos_carlos",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
+  },
+  {
+   "id": "zona_gemelos_dani",
+   "motivo": "Sin entrenador ni sitio todavía: el bloque 2 del Agente 2 (2026-10-15) le da equipo y sitio (propuesta)"
   }
  ]
 }

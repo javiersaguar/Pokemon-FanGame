@@ -240,6 +240,20 @@ Worktree `pokemon-panchito-agente1`, rama `feat/agente1-mundo-sur`. Tramo: Ruta 
 
 ## Agente 2 — Datos y motor de combate
 
+### Agente 2 · Personajes (sesión del 2026-10-15)
+
+Worktree `pokemon-panchito-agente2`, rama `feat/agente2-personajes`. Área: que cada personaje esté en un sitio con sentido, con su sprite propio en el mapa y su imagen en la entrada al combate. Los personajes se colocan por datos (`data/personajes_en_el_mapa.json`); no edito mapas ajenos.
+
+**Hecho:**
+- **Bloque 1 · cobertura.** Test nuevo `tests/mundo/test_cobertura_personajes.gd`: para cada entrenador de `data/trainers/*.json` mira si tiene sprite de mapa propio, retrato de combate propio y sitio (colocación por datos, mapa pintado, sala de gimnasio o evento). Escribe el informe [`docs/mundo/cobertura_personajes.md`](mundo/cobertura_personajes.md) y falla si falta algo sin explicación. Las explicaciones van en `data/personajes_en_el_mapa.json`: `pendientes`, `por_evento`, `sprites_prestados` y `arte_sin_uso`. Estado de partida: **324 entrenadores, todos con sprite de mapa y retrato propios** (atlas del personaje o de su clase, o la hoja del pack con el nombre de su clase); **311 con sitio**; 18 personajes con arte sin entrenador ni sitio.
+- **Commit `4ebba1b6` (rama `feat/agente3-mundo-centro`): revisado y no integrado.** Lo hace `main` de otra forma desde las entregas de personajes 1 a 14: `data/character_art.json` + `CharacterArt` (atlas con retrato y dieciséis poses) en vez de `data/character_portraits.json`; `TrainerPortraits` (entrada y escena con las dos identidades de un doble) en vez de `BattleTrainerPortrait`; y la galería F9 «Personajes / combate y mapa» en vez de `PlaytestCharacterPreview`. Los seis diseños (Rajoy, Puigdemont, Almeida con el balonazo, Zapatero con joyas, Trump con Maduro y Rufián) ya están en `main` como atlas. Traerlo duplicaría dos catálogos, dos pintores de retratos y dos galerías, y sus pruebas no pasan sobre `main` (llaman a `_prepare_trainer_images`, que no existe). Lo útil queda recogido: la comprobación de que todos los entrenadores tienen imagen al entrar al combate está en el test de cobertura, y los combates en grupo de tres no hacen falta (Javier decidió combates seguidos, no triples).
+
+**Provisional:** todo sitio de un famoso es propuesta hasta que lo apruebe Javier.
+
+**Fallos tal cual:** ninguno en este bloque.
+
+**Pendiente (siguientes bloques):** colocar a los 18 personajes con arte sin entrenador, a los tres antiguos entrenadores del gimnasio 6 en Bilbao y el doble de los Williams; las segundas apariciones que decidió Javier (Vito Quiles en Elche y en la habitación de Rufián, Ábalos y Koldo en la Albufera y en Soto del Real con la policía, Abascal dos veces, Javier en San Miguel, las joyas de Zapatero) y la Liga.
+
 **He leído** (2026-10-04, órdenes nuevas de Javier) `docs/DIRECTRICES.md` §0, §7, §7.1 y §8, las 4 capturas de `docs/arte/referencias/` y `docs/arte/recursos_terceros.md`. Entendido: el listón es Añil; prohibido el arte generado por código; los packs de `/mnt/c/Users/Javier/Pokemon-Panchito-recursos/` no se tocan y se copia al repo **solo lo que se usa, sin reescalar** (frente 192 px, espalda 288 px, iconos 128×64 = 2 cuadros de 64, Pokémon que te siguen 256×256 = 4×4 cuadros de 64), con su crédito en `CREDITOS.md`; set oficial: `06_generation9_pack` (y `07_generation8_pack` solo si falta algo). **No descargo nada de internet.**
 
 **Repo compartido (WSL):** `/home/javier/proyectos/pokemon-panchito` (tiene el `.git` y el `main` local; de él salen los worktrees `pokemon-panchito-agente1`, `-agente2` y `-agente3`, en `/home/javier/proyectos/`). Mi worktree: `/home/javier/proyectos/pokemon-panchito-agente2`. **Desde 2026-10-04, quien mergea en el `main` local hace `git push origin main` en ese momento**: GitHub es la referencia común.
