@@ -522,5 +522,47 @@
         "level": 29
       }
     ]
+  },
+  "abalos_soto": {
+    "class": "abalos",
+    "name": "Ábalos",
+    "intro_text": "¿Otra vez tú? Aquí dentro también tenemos Pokémon. Y abogados.",
+    "lose_text": "Esto es una persecución. Hasta en la cárcel.",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "En el patio me llaman «el ministro». Del economato.",
+    "items": [],
+    "party": [
+      {
+        "species": "mimikyu",
+        "level": 46
+      },
+      {
+        "species": "honchkrow",
+        "level": 46
+      },
+      {
+        "species": "liepard",
+        "level": 47
+      }
+    ]
+  },
+  "koldo_soto": {
+    "class": "koldo",
+    "name": "Koldo",
+    "intro_text": "En el economato no venden mascarillas. Pero yo consigo lo que sea.",
+    "lose_text": "¿Me vas a quitar también las cajas del economato?",
+    "win_text": "Ja. Vuelve cuando sepas combatir.",
+    "after_text": "Yo aquí solo llevo las bandejas. Y las cuento. Por si acaso.",
+    "items": [],
+    "party": [
+      {
+        "species": "hariyama",
+        "level": 46
+      },
+      {
+        "species": "conkeldurr",
+        "level": 47
+      }
+    ]
   }
 }

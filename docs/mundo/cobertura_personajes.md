@@ -2,7 +2,7 @@
 
 > Lo genera `tests/mundo/test_cobertura_personajes.gd` (no se edita a mano). Para cada entrenador de `data/trainers/*.json`: sprite del mapa, retrato de combate y dónde sale. Las explicaciones de lo que falta están en `data/personajes_en_el_mapa.json` (`pendientes`, `por_evento`, `sprites_prestados` y `arte_sin_uso`). Los sitios de los famosos son **propuesta**: los decide Javier.
 
-**Resumen:** 348 entrenadores · 348 con sprite de mapa propio · 348 con retrato de combate propio · 341 colocados · 7 pendientes con motivo · 1 personajes sin combate.
+**Resumen:** 350 entrenadores · 350 con sprite de mapa propio · 350 con retrato de combate propio · 345 colocados · 5 pendientes con motivo · 1 personajes sin combate.
 
 - **atlas `id`**: el diseño propio del personaje (`data/character_art.json`): retrato de combate y dieciséis poses de mapa. Si la clase del entrenador es la del personaje, el atlas sale por la clase.
 - **hoja / retrato de la clase**: las piezas del pack 11 o el sprite del pack de su clase, con el nombre de la clase (los entrenadores genéricos de una misma clase comparten diseño, como en los juegos).
@@ -15,6 +15,7 @@
 |---|---|---|---|---|---|
 | Dúo del Clan Ábalos | `abalos` | atlas `abalos` | atlas `abalos` | madrid/moncloa (27, 40) | Ferraz, la sede del Clan PSOE |
 | Dúo del Clan Ábalos | `abalos_albufera` | atlas `abalos` | atlas `abalos` | ruta_9/exterior (16, 27) | La Albufera (El Palmar), de «vacaciones»: segundo encuentro, con tres medallas (decisión de Javier) |
+| Dúo del Clan Ábalos | `abalos_soto` | atlas `abalos` | atlas `abalos` | soto_del_real/carcel (7, 4) | La cárcel de Soto del Real, más adelante: con seis medallas y después de la Albufera (decisión de Javier) |
 | Alto Mando Alonso | `alonso` | atlas `alonso` | atlas `alonso` | — | Pendiente: Interior de la Liga sin hacer |
 | Líder Aupa Athletic | `aupa_athletic` | atlas `aupa_athletic` | atlas `aupa_athletic` | sala: bilbao/gimnasio_lider, pintado: bilbao/gimnasio_lider |  |
 | Líder Ayuso | `ayuso` | atlas `ayuso` | atlas `ayuso` | madrid/atico_ayuso (8, 6), sala: madrid/gimnasio_lider | Líder del gimnasio 1: la terraza de su ático en Chamberí (se llega desde el hospital Quirón) |
@@ -24,6 +25,7 @@
 | Líder Joaquín | `joaquin` | atlas `joaquin` | atlas `joaquin` | sala: sevilla/gimnasio_lider, pintado: sevilla/gimnasio_lider |  |
 | Dúo del Clan Koldo | `koldo` | atlas `koldo` | atlas `koldo` | madrid/moncloa (29, 39) | Ferraz, con Ábalos y sus cajas |
 | Dúo del Clan Koldo | `koldo_albufera` | atlas `koldo` | atlas `koldo` | ruta_9/exterior (16, 28) | La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier) |
+| Dúo del Clan Koldo | `koldo_soto` | atlas `koldo` | atlas `koldo` | soto_del_real/carcel (10, 4) | La cárcel de Soto del Real, con Ábalos (decisión de Javier) |
 | Líder Labrador | `labrador` | atlas `labrador` | atlas `labrador` | sala: valencia/gimnasio_lider, pintado: valencia/gimnasio_lider |  |
 | Líder Laporta | `laporta` | atlas `laporta` | atlas `laporta` | sala: barcelona/gimnasio_lider, pintado: barcelona/gimnasio_lider |  |
 | Líder Latasa | `latasa` | atlas `latasa` | atlas `latasa` | sala: valladolid/gimnasio_lider, pintado: valladolid/gimnasio_lider |  |
@@ -93,7 +95,7 @@
 | Expresident Puigdemont | `puigdemont` | atlas `puigdemont` | atlas `puigdemont` | barcelona/ciutat_vella (18, 49) | Port Vell, junto a la terminal de ferris: listo para fugarse otra vez. Propuesta |
 | Motomami Rosalía | `rosalia` | atlas `rosalia` | atlas `rosalia` | ruta_8/exterior (54, 31) | Sant Esteve Sesrovires, su pueblo |
 | Invitado de la boda Rubiales | `rubiales` | atlas `rubiales` | atlas `rubiales` | ruta_12/exterior (14, 19) | La boda en el cortijo de Granada |
-| Diputado Rufián | `rufian` | atlas `rufian` | atlas `rufian` | — | Pendiente: Falta el mapa de su casa: lo pinta el Agente 2 en el bloque 4 (2026-10-15) |
+| Diputado Rufián | `rufian` | atlas `rufian` | atlas `rufian` | barcelona/casa_rufian (5, 5) | Su piso del Eixample (Barcelona), con su habitación al fondo (decisión de Javier). Se sube por el portal 10_31 |
 | Tertuliana Sarah | `sarah_santaolalla` | atlas `sarah_santaolalla` | atlas `sarah_santaolalla` | valladolid/exterior (26, 20) | Tertulia de radio, Valladolid |
 | Youtuber Pokémon Sekiam | `sekiam` | atlas `sekiam` | atlas `sekiam` | getafe/exterior (33, 10) | La tienda de cartas, con Folagor |
 | Defensa Sergio Ramos | `sergio_ramos` | atlas `sergio_ramos` | atlas `sergio_ramos` | sevilla/rio (44, 17) | Junto a la Maestranza |
@@ -103,7 +105,7 @@
 | Futbolista Vinicius Jr. | `vinicius` | atlas `vinicius` | atlas `vinicius` | madrid/bernabeu (18, 18) | Delante del Santiago Bernabéu (decisión de Javier, 2026-10-14) |
 | Agitador Vito | `vito_quiles` | atlas `vito_quiles` | atlas `vito_quiles` | madrid/retiro (8, 35) | Puerta del Congreso, micrófono en mano |
 | Agitador Vito | `vito_quiles_elche` | atlas `vito_quiles` | atlas `vito_quiles` | ruta_11/exterior (52, 17) | Palmeral de Elche, su ciudad: la revancha (decisión de Javier) |
-| Agitador Vito | `vito_quiles_rufian` | atlas `vito_quiles` | atlas `vito_quiles` | — | Pendiente: Falta el mapa de la casa de Rufián: lo pinta el Agente 2 en el bloque 4 (2026-10-15) |
+| Agitador Vito | `vito_quiles_rufian` | atlas `vito_quiles` | atlas `vito_quiles` | barcelona/habitacion_rufian (11, 5) | La habitación de Rufián, escondido junto al armario (decisión de Javier) |
 | Youtuber Willyrex | `willyrex` | atlas `willyrex` | atlas `willyrex` | zaragoza/exterior (49, 14) | Con Vegeta, camino de Andorra |
 | Expresidente Zapatero | `zapatero` | atlas `zapatero` | atlas `zapatero` | las_palmas/canteras (40, 37) | Puerto de La Luz (Las Palmas), con Maduro: Venezuela es «la octava isla» de Canarias. Propuesta |
 | Gemelo Carlos | `zona_gemelos_carlos` | atlas `zona_gemelos_carlos` | atlas `zona_gemelos_carlos` | getafe/exterior (36, 52) | Getafe, su ciudad, a la puerta de la nave donde graban La Casa de los Gemelos. Propuesta |

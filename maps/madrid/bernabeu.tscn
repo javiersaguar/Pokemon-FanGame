@@ -17,10 +17,16 @@ edge = "south"
 target_map = &"madrid/chamberi"
 span = Vector2i(20, 26)
 
+[sub_resource type="Resource" id="Resource_86p5c"]
+script = ExtResource("2_86p5c")
+edge = "north"
+target_map = &"soto_del_real/exterior"
+span = Vector2i(16, 20)
+
 [sub_resource type="Resource" id="Resource_ejenl"]
 script = ExtResource("3_lvdgk")
 id = &"madrid/bernabeu"
-connections = Array[ExtResource("2_86p5c")]([SubResource("Resource_yk3ru")])
+connections = Array[ExtResource("2_86p5c")]([SubResource("Resource_yk3ru"), SubResource("Resource_86p5c")])
 display_name = "Madrid · Bernabéu"
 zone_id = &"madrid"
 region_map_position = Vector2i(14, 11)

@@ -187,6 +187,17 @@ TRAINERS = {
         "Esto no estaba en el contrato. Ni en la paella.",
         "Ja. Vuelve cuando sepas combatir.",
         "Yo solo llevaba las cajas. Y el arroz. Y lo que hubiera debajo del arroz."), []),
+    # Tercer encuentro: la cárcel de Soto del Real (decisión de Javier), con seis medallas y después de la Albufera.
+    "abalos_soto": ("liga", "abalos", "Ábalos", party(("mimikyu", 46), ("honchkrow", 46), ("liepard", 47)), lines(
+        "¿Otra vez tú? Aquí dentro también tenemos Pokémon. Y abogados.",
+        "Esto es una persecución. Hasta en la cárcel.",
+        "Ja. Vuelve cuando sepas combatir.",
+        "En el patio me llaman «el ministro». Del economato."), []),
+    "koldo_soto": ("liga", "koldo", "Koldo", party(("hariyama", 46), ("conkeldurr", 47)), lines(
+        "En el economato no venden mascarillas. Pero yo consigo lo que sea.",
+        "¿Me vas a quitar también las cajas del economato?",
+        "Ja. Vuelve cuando sepas combatir.",
+        "Yo aquí solo llevo las bandejas. Y las cuento. Por si acaso."), []),
 }
 
 # Colocaciones (propuesta): id -> datos de la entrada de personajes_en_el_mapa.json.
@@ -242,6 +253,18 @@ PLACEMENTS = {
     "koldo_albufera": {"mapa": "ruta_9/exterior", "cerca": [12, 29], "mira": "derecha", "vista": 3,
                        "requiere": {"medallas": 3}, "hasta": {"flag": "detenido:koldo_albufera"},
                        "lugar": "La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier)"},
+    # Mapas nuevos (maps/_pintura/pintar_personajes.gd): el piso de Rufián y la cárcel de Soto del Real.
+    "rufian": {"mapa": "barcelona/casa_rufian", "cerca": [5, 5], "mira": "abajo", "vista": 0,
+               "lugar": "Su piso del Eixample (Barcelona), con su habitación al fondo (decisión de Javier). Se sube por el portal 10_31"},
+    "vito_quiles_rufian": {"mapa": "barcelona/habitacion_rufian", "cerca": [11, 5], "mira": "abajo", "vista": 2,
+                           "lugar": "La habitación de Rufián, escondido junto al armario (decisión de Javier)"},
+    "abalos_soto": {"mapa": "soto_del_real/carcel", "cerca": [7, 4], "mira": "abajo", "vista": 3, "pareja": "koldo_soto",
+                    "requiere": {"medallas": 6, "flag": "detenido:abalos_albufera"}, "hasta": {"flag": "detenido:abalos_soto"},
+                    "detencion": {"texto": "¡Funcionarios! ¡Otra vez estos dos! Al módulo de aislamiento."},
+                    "lugar": "La cárcel de Soto del Real, más adelante: con seis medallas y después de la Albufera (decisión de Javier)"},
+    "koldo_soto": {"mapa": "soto_del_real/carcel", "cerca": [10, 4], "mira": "abajo", "vista": 3,
+                   "requiere": {"medallas": 6, "flag": "detenido:abalos_albufera"}, "hasta": {"flag": "detenido:koldo_soto"},
+                   "lugar": "La cárcel de Soto del Real, con Ábalos (decisión de Javier)"},
     # Recolocados: la familia de Lamine se muda con él a Rocafonda; los antiguos del gimnasio 6, a la calle de Bilbao.
     "hustlehard304": {"mapa": "rocafonda/exterior", "cerca": [28, 15], "mira": "abajo", "vista": 2, "serie": ["keyne", "hustlehard304", "lamine"],
                       "lugar": "Rocafonda, a la puerta de la mansión de su hijo Lamine"},
@@ -274,12 +297,7 @@ EXTRA_OPTIONS = {
 }
 
 # Pendientes con motivo hasta que exista su mapa (bloque 4).
-PENDING = {
-    "rufian": ("Su casa de Barcelona, con habitación propia (decisión de Javier)",
-               "Falta el mapa de su casa: lo pinta el Agente 2 en el bloque 4 (2026-10-15)"),
-    "vito_quiles_rufian": ("La habitación de Rufián, en Barcelona (decisión de Javier)",
-                           "Falta el mapa de la casa de Rufián: lo pinta el Agente 2 en el bloque 4 (2026-10-15)"),
-}
+PENDING = {}
 
 # Los Williams del doble: revancha después de la medalla 6.
 WILLIAMS = {

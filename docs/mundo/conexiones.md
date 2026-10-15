@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **908 mapas** en total. Se llega a **908** desde Pozuelo de Alarcón (`pozuelo/exterior`: 908) y Orcasitas (`orcasitas/exterior`: 908).
+- **912 mapas** en total. Se llega a **912** desde Pozuelo de Alarcón (`pozuelo/exterior`: 912) y Orcasitas (`orcasitas/exterior`: 912).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -54,7 +54,7 @@ Camino desde Pozuelo de Alarcón la primera vez (sin el AVE, que solo lleva a de
 | Valladolid | `valladolid/exterior` | sí, 50 pasos | 3 | ferry, Surf, avión |
 | Puertollano | `puertollano/exterior` | sí, 8 pasos | 1 | Cercanías C-5, corte: C-5 averiado hasta 1 medalla |
 | Málaga | `malaga/exterior` | sí, 11 pasos | 1 | Cercanías C-5, corte: C-5 averiado hasta 1 medalla |
-| Soto del Real | `soto_del_real/exterior` | pendiente | — | sin mapa todavía |
+| Soto del Real | `soto_del_real/exterior` | sí, 5 pasos | 0 | andando |
 | Moncloa | `madrid/moncloa` | sí, 2 pasos | 0 | andando |
 | Chamberí | `madrid/chamberi` | sí, 3 pasos | 0 | andando |
 | Bernabéu | `madrid/bernabeu` | sí, 4 pasos | 0 | andando |
@@ -160,6 +160,7 @@ Ninguna: todos los destinos existen.
 | `alicante/sala_calle_6_19` | Gimnasio · Alicante | — | Salida → `alicante/exterior` |
 | `alicante/sala_calle_7_43` | Portal verde · Alicante | — | Salida → `alicante/exterior` |
 | `barcelona/barceloneta/hospital` | Hospital · Barceloneta | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/casa_rufian` | Piso de Gabriel Rufián · Eixample | — | Salida → `barcelona/sala_eixample_10_31`, Habitacion → `barcelona/habitacion_rufian` |
 | `barcelona/ciutat_vella` | Barcelona · Ciutat Vella | north → `barcelona/eixample` | FerryPalma → `transporte/ferry_barcelona_palma`, Hospital → `barcelona/barceloneta/hospital`, Sala5_13 → `barcelona/sala_ciutat_vella_5_13`, Sala12_13 → `barcelona/sala_ciutat_vella_12_13`, Sala22_13 → `barcelona/sala_ciutat_vella_22_13`, Sala5_27 → `barcelona/sala_ciutat_vella_5_27`, Sala13_26 → `barcelona/sala_ciutat_vella_13_26`, Sala22_27 → `barcelona/sala_ciutat_vella_22_27`, Sala5_40 → `barcelona/sala_ciutat_vella_5_40`, Sala25_40 → `barcelona/sala_ciutat_vella_25_40`, Sala6_49 → `barcelona/sala_ciutat_vella_6_49`, Sala44_22 → `barcelona/sala_ciutat_vella_44_22`, Sala47_6 → `barcelona/sala_ciutat_vella_47_6`, Sala57_27 → `barcelona/sala_ciutat_vella_57_27`, Sala13_36 → `barcelona/sala_ciutat_vella_13_36`, Sala49_41 → `barcelona/sala_ciutat_vella_49_41` |
 | `barcelona/eixample` | Barcelona · Eixample | west → `barcelona/les_corts`, south → `barcelona/ciutat_vella`, east → `rocafonda/exterior` | Hospital → `barcelona/hospital`, Mercadona → `barcelona/mercadona`, Estanco → `barcelona/estanco`, Sala5_19 → `barcelona/sala_eixample_5_19`, Sala17_19 → `barcelona/sala_eixample_17_19`, Sala37_19 → `barcelona/sala_eixample_37_19`, Sala52_18 → `barcelona/sala_eixample_52_18`, Sala59_19 → `barcelona/sala_eixample_59_19`, Sala68_19 → `barcelona/sala_eixample_68_19`, Sala17_31 → `barcelona/sala_eixample_17_31`, Sala25_31 → `barcelona/sala_eixample_25_31`, Sala37_31 → `barcelona/sala_eixample_37_31`, Sala5_41 → `barcelona/sala_eixample_5_41`, Sala17_41 → `barcelona/sala_eixample_17_41`, Sala25_41 → `barcelona/sala_eixample_25_41`, Sala37_41 → `barcelona/sala_eixample_37_41`, Sala55_41 → `barcelona/sala_eixample_55_41`, Sala61_51 → `barcelona/sala_eixample_61_51`, Sala12_19 → `barcelona/sala_eixample_12_19`, Sala45_18 → `barcelona/sala_eixample_45_18`, Sala10_31 → `barcelona/sala_eixample_10_31`, Sala44_31 → `barcelona/sala_eixample_44_31`, Sala12_41 → `barcelona/sala_eixample_12_41`, Sala44_41 → `barcelona/sala_eixample_44_41`, Sala5_5 → `barcelona/sala_eixample_5_5`, Sala17_5 → `barcelona/sala_eixample_17_5`, Sala39_5 → `barcelona/sala_eixample_39_5`, Sala51_5 → `barcelona/sala_eixample_51_5`, Sala63_5 → `barcelona/sala_eixample_63_5`, Sala25_6 → `barcelona/sala_eixample_25_6`, Sala33_7 → `barcelona/sala_eixample_33_7`, Sala15_50 → `barcelona/sala_eixample_15_50`, Sala33_53 → `barcelona/sala_eixample_33_53` |
 | `barcelona/estanco` | Estanco · Barcelona | — | Salida → `barcelona/eixample` |
@@ -167,6 +168,7 @@ Ninguna: todos los destinos existen.
 | `barcelona/gimnasio_2` | Spotify Camp Nou · Sala De Palancas | — | Salida → `barcelona/gimnasio_1`, Siguiente → `barcelona/gimnasio_3` |
 | `barcelona/gimnasio_3` | Spotify Camp Nou · Palco | — | Salida → `barcelona/gimnasio_2`, Siguiente → `barcelona/gimnasio_lider` |
 | `barcelona/gimnasio_lider` | Spotify Camp Nou · Despacho Del President | — | Salida → `barcelona/gimnasio_3` |
+| `barcelona/habitacion_rufian` | Habitación de Gabriel Rufián | — | Salida → `barcelona/casa_rufian` |
 | `barcelona/hospital` | Hospital · Barcelona | — | Salida → `barcelona/eixample` |
 | `barcelona/les_corts` | Barcelona · Les Corts | west → `ruta_8/exterior`, east → `barcelona/eixample` | Mercadona → `barcelona/les_corts/mercadona`, Sala4_13 → `barcelona/sala_les_corts_4_13`, Sala13_12 → `barcelona/sala_les_corts_13_12`, Sala21_12 → `barcelona/sala_les_corts_21_12`, Sala30_12 → `barcelona/sala_les_corts_30_12`, Sala38_13 → `barcelona/sala_les_corts_38_13`, Sala46_13 → `barcelona/sala_les_corts_46_13`, Sala60_13 → `barcelona/sala_les_corts_60_13`, Sala26_40 → `barcelona/gimnasio_1`, Sala47_29 → `barcelona/sala_les_corts_47_29`, Sala55_30 → `barcelona/sala_les_corts_55_30`, Sala49_41 → `barcelona/sala_les_corts_49_41`, Sala57_41 → `barcelona/sala_les_corts_57_41`, Sala4_46 → `barcelona/sala_les_corts_4_46`, Sala53_6 → `barcelona/sala_les_corts_53_6`, Sala21_23 → `barcelona/sala_les_corts_21_23`, Sala53_22 → `barcelona/sala_les_corts_53_22` |
 | `barcelona/les_corts/mercadona` | Mercadona · Les Corts | — | Salida → `barcelona/les_corts` |
@@ -185,7 +187,7 @@ Ninguna: todos los destinos existen.
 | `barcelona/sala_ciutat_vella_5_27` | Portal · Barcelona | — | Salida → `barcelona/ciutat_vella` |
 | `barcelona/sala_ciutat_vella_5_40` | Portal · Barcelona | — | Salida → `barcelona/ciutat_vella` |
 | `barcelona/sala_ciutat_vella_6_49` | Oficinas · Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_eixample_10_31` | Portal · Barcelona | — | Salida → `barcelona/eixample` |
+| `barcelona/sala_eixample_10_31` | Portal · Barcelona | — | Salida → `barcelona/eixample`, PisoRufian → `barcelona/casa_rufian` |
 | `barcelona/sala_eixample_12_19` | Tienda azul · Barcelona | — | Salida → `barcelona/eixample` |
 | `barcelona/sala_eixample_12_41` | Tienda morada · Barcelona | — | Salida → `barcelona/eixample` |
 | `barcelona/sala_eixample_15_50` | Casa gris · Barcelona | — | Salida → `barcelona/eixample` |
@@ -366,7 +368,7 @@ Ninguna: todos los destinos existen.
 | `leganes/sala_calle_5_36` | Oficinas · Leganés | — | Salida → `leganes/exterior` |
 | `madrid/atico_ayuso` | Ático de Ayuso · Chamberí | — | Bajar → `madrid/chamberi` |
 | `madrid/atocha/mercadona` | Mercadona · Atocha | — | Salida → `madrid/retiro` |
-| `madrid/bernabeu` | Madrid · Bernabéu | south → `madrid/chamberi` | Sala4_9 → `madrid/sala_bernabeu_4_9`, Sala34_9 → `madrid/sala_bernabeu_34_9`, Sala4_26 → `madrid/sala_bernabeu_4_26`, Sala34_26 → `madrid/sala_bernabeu_34_26`, Sala12_8 → `madrid/sala_bernabeu_12_8` |
+| `madrid/bernabeu` | Madrid · Bernabéu | south → `madrid/chamberi`, north → `soto_del_real/exterior` | Sala4_9 → `madrid/sala_bernabeu_4_9`, Sala34_9 → `madrid/sala_bernabeu_34_9`, Sala4_26 → `madrid/sala_bernabeu_4_26`, Sala34_26 → `madrid/sala_bernabeu_34_26`, Sala12_8 → `madrid/sala_bernabeu_12_8` |
 | `madrid/centro` | Madrid · Sol y Gran Vía | west → `madrid/palacio_real`, west → `madrid/moncloa`, west → `madrid/moncloa`, east → `madrid/retiro`, east → `madrid/retiro` | Hospital → `madrid/sol/hospital`, Sala5_5 → `madrid/sala_centro_5_5`, Sala14_5 → `madrid/sala_centro_14_5`, Sala25_13 → `madrid/sala_centro_25_13`, Sala31_13 → `madrid/sala_centro_31_13`, Sala41_7 → `madrid/sala_centro_41_7`, Sala40_16 → `madrid/sala_centro_40_16`, Sala46_17 → `madrid/sala_centro_46_17`, Sala53_17 → `madrid/sala_centro_53_17`, Sala62_21 → `madrid/sala_centro_62_21`, Sala68_21 → `madrid/sala_centro_68_21`, Sala4_19 → `madrid/sala_centro_4_19`, Sala11_19 → `madrid/sala_centro_11_19`, Sala5_27 → `madrid/sala_centro_5_27`, Sala14_27 → `madrid/sala_centro_14_27`, Sala22_27 → `madrid/sala_centro_22_27`, Sala39_31 → `madrid/gimnasio_1`, Sala20_42 → `madrid/sala_centro_20_42`, Sala4_48 → `madrid/sala_centro_4_48`, Sala54_31 → `madrid/sala_centro_54_31`, Sala63_31 → `madrid/sala_centro_63_31`, Sala67_31 → `madrid/sala_centro_67_31`, Sala53_42 → `madrid/sala_centro_53_42`, Sala60_41 → `madrid/sala_centro_60_41`, Sala68_41 → `madrid/sala_centro_68_41`, Sala53_52 → `madrid/sala_centro_53_52`, Sala62_52 → `madrid/sala_centro_62_52`, Sala18_4 → `madrid/sala_centro_18_4`, Sala33_6 → `madrid/sala_centro_33_6`, Sala49_10 → `madrid/sala_centro_49_10`, Sala53_8 → `madrid/sala_centro_53_8`, Sala68_13 → `madrid/sala_centro_68_13`, Sala49_26 → `madrid/sala_centro_49_26`, Sala35_50 → `madrid/sala_centro_35_50`, Sala3_39 → `madrid/sala_centro_3_39` |
 | `madrid/chamberi` | Madrid · Chamberí | west → `madrid/moncloa`, north → `madrid/bernabeu` | Mercadona → `madrid/chamberi/mercadona`, Estanco → `madrid/chamberi/estanco`, Sala3_7 → `madrid/sala_chamberi_3_7`, Sala10_7 → `madrid/sala_chamberi_10_7`, Sala18_6 → `madrid/sala_chamberi_18_6`, Sala39_7 → `madrid/sala_chamberi_39_7`, Sala29_6 → `madrid/sala_chamberi_29_6`, Sala3_18 → `madrid/sala_chamberi_3_18`, Sala39_20 → `madrid/sala_chamberi_39_20`, Sala16_28 → `madrid/sala_chamberi_16_28`, Sala31_32 → `madrid/sala_chamberi_31_32`, Sala39_33 → `madrid/sala_chamberi_39_33`, Sala46_33 → `madrid/sala_chamberi_46_33`, Sala4_41 → `madrid/sala_chamberi_4_41`, Sala38_42 → `madrid/sala_chamberi_38_42`, Sala24_40 → `madrid/sala_chamberi_24_40`, Sala17_19 → `madrid/sala_chamberi_17_19`, Sala29_22 → `madrid/sala_chamberi_29_22`, Sala3_35 → `madrid/sala_chamberi_3_35`, Sala44_12 → `madrid/sala_chamberi_44_12` |
 | `madrid/chamberi/estanco` | Estanco · Chamberí | — | Salida → `madrid/chamberi` |
@@ -915,6 +917,8 @@ Ninguna: todos los destinos existen.
 | `sevilla/sala_rio_8_44` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
 | `sevilla/sala_rio_8_52` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
 | `sevilla/sala_rio_8_6` | Casa ibicenca · Sevilla | — | Salida → `sevilla/rio` |
+| `soto_del_real/carcel` | Centro Penitenciario Madrid V · Soto del Real | — | Salida → `soto_del_real/exterior` |
+| `soto_del_real/exterior` | Soto del Real · Cárcel | south → `madrid/bernabeu` | Carcel → `soto_del_real/carcel` |
 | `transporte/ave_madrid_malaga` | AVE Madrid · Málaga | — | Bajar → `malaga/sala_calle_5_57` |
 | `transporte/ave_madrid_valladolid` | AVE Madrid · Valladolid | — | Bajar → `valladolid/sala_calle_52_59` |
 | `transporte/ave_malaga_madrid` | AVE Málaga · Madrid | — | Bajar → `madrid/sala_retiro_20_58` |
