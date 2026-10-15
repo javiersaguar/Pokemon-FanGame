@@ -13,7 +13,14 @@ func _initialize() -> void:
 	root.add_child(main)
 	var manager := root.get_node("SceneManager")
 	manager.register_main(main)
-	var map: Node2D = load("res://maps/%s.tscn" % args[0]).instantiate()
+	root.get_node("GameState").reset()
+	var loader = load("res://src/util/map_loader.gd")
+	var prepared: Dictionary = loader.prepare(StringName(args[0]))
+	if prepared.error != OK:
+		push_error("No se puede preparar el mapa %s" % args[0])
+		quit(2)
+		return
+	var map: Node2D = prepared.map
 	var viewport := SubViewport.new()
 	viewport.size = Vector2i(512,384)
 	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
@@ -29,6 +36,7 @@ func _initialize() -> void:
 	var error := image.save_png(args[3])
 	print("%s: %s" % [args[3],error_string(error)])
 	viewport.free()
+	loader.clear()
 	manager._leave_game()
 	main.queue_free()
 	await process_frame

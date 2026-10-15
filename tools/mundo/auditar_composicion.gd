@@ -22,10 +22,17 @@ func _initialize() -> void:
 	root.add_child(main)
 	var manager := root.get_node("SceneManager")
 	manager.register_main(main)
+	var loader = load("res://src/util/map_loader.gd")
+	root.get_node("GameState").reset()
 	var rows := []
 	for i: int in range(1,args.size()):
 		var path := "res://maps/%s.tscn" % args[i]
-		var map = load(path).instantiate()
+		var prepared: Dictionary = loader.prepare(StringName(args[i]))
+		if prepared.error != OK:
+			push_error("No se puede preparar %s" % path)
+			quit(2)
+			return
+		var map = prepared.map
 		root.add_child(map)
 		await physics_frame
 		await physics_frame
@@ -36,7 +43,7 @@ func _initialize() -> void:
 		await physics_frame
 	var revision := []
 	OS.execute("git",["rev-parse","HEAD"],revision)
-	var output := {"revision":String(revision[0]).strip_edges() if not revision.is_empty() else "desconocida","godot":Engine.get_version_info().string,"mask":MASK,"metodo":"Física a pie en escena original. Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; sin abandonar el mapa.","maps":rows}
+	var output := {"revision":String(revision[0]).strip_edges() if not revision.is_empty() else "desconocida","godot":Engine.get_version_info().string,"mask":MASK,"metodo":"Física a pie con MapLoader y estado inicial (incluye colocaciones y restricciones dinámicas disponibles). Cada pareja de bordes se prueba en ambos sentidos. El coste cuenta casillas de encuentro, no combates. Sin Surf, saltos ni eventos; sin abandonar el mapa.","maps":rows}
 	var f := FileAccess.open(args[0],FileAccess.WRITE)
 	if f == null:
 		push_error("No se puede escribir %s" % args[0])
@@ -44,6 +51,7 @@ func _initialize() -> void:
 		return
 	f.store_string(JSON.stringify(output,"\t")+"\n")
 	f.close()
+	loader.clear()
 	manager._leave_game()
 	main.queue_free()
 	await process_frame
