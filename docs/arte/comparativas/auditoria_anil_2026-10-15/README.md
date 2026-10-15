@@ -47,3 +47,13 @@ No arreglarlo tapando la parte que falta: trasladar o ampliar el conjunto de edi
 ## Cómo registrar el después
 
 La siguiente entrega debe conservar estas imágenes de diagnóstico y añadir su propio antes/después de igual centro y escala, con el resultado del alcance y de la auditoría de hierba. La aprobación visual sigue siendo de Javier. Las referencias originales no se usan como gráficos del juego.
+
+## Primera fachada en rediseño: casa ibicenca
+
+El trabajo de fachada ya iniciado se conserva: volúmenes blancos escalonados, terraza, carpintería azul, vegetación y **una entrada principal legible**. Estas dos capturas del motor usan el mismo encuadre. La segunda muestra el prototipo de fachada del worktree de interiores; **aún no está integrado en la base auditada** ni aprobado por Javier. No equivale a la entrega completa de las 76 entradas: debe cerrarse junto con el recibidor/dormitorio, acceso, retorno, colisiones y compatibilidad de guardados.
+
+| Antes publicado | Prototipo en curso |
+|---|---|
+| ![Casa anterior](edificio_casa_ibicenca_antes.png) | ![Propuesta de fachada](edificio_casa_ibicenca.png) |
+
+Se conserva el PNG original sin dibujar ni retocar sus píxeles por código. La geometría de colocación y el umbral deben coincidir con el Warp real; el responsable del interior conserva los cambios existentes antes de continuar.
