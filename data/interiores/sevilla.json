@@ -1,0 +1,3175 @@
+{
+ "_doc": "Interiores personalizados de sevilla (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Sevilla",
+ "interiores": {
+  "sevilla/sala_centro_10_41": {
+   "tipo": "casa",
+   "nombre": "Casa de la abuela rociera",
+   "pieza": "casa_rosa",
+   "calle": ["sevilla/centro", [10, 41]],
+   "personas": [
+    {
+     "nombre": "Abuela rociera",
+     "aspecto": "rociero",
+     "papel": "tele",
+     "frases": [
+      "Llevo cincuenta años yendo al Rocío en carreta. Este año voy en coche, pero canto igual de alto.",
+      "En el Rocío no se duerme: se reza, se baila y se come. Dormir, en junio."
+     ],
+     "nodo": "AbuelaRociera",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto tamborilero",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Toco el tamboril y la flauta a la vez. En el cole dicen que es multitarea.",
+      "Este año me dejan saltar la reja con los almonteños. Mi madre ha prohibido que me lo pregunten."
+     ],
+     "nodo": "NietoTamborilero",
+     "en": [6, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "rombos_verdes",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [3, 3, 4, 2]]],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["nevera_alta", 5, 0],
+    ["cajon_oliva", 6, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal_larga", 2, 4],
+    ["silla_derecha", 1, 4],
+    ["silla_izquierda", 5, 4],
+    ["planta", 8, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_10_53": {
+   "tipo": "casa",
+   "nombre": "Casa del guía turístico",
+   "pieza": "casa_tejado_azul",
+   "calle": ["sevilla/centro", [10, 53]],
+   "personas": [
+    {
+     "nombre": "Guía turístico",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Hago la ruta de Sevilla en tres idiomas. En el cuarto idioma invento un poco y nadie se queja.",
+      "La pregunta que más me hacen es dónde se come barato. Respondo con la mirada: en casa de tu madre."
+     ],
+     "nodo": "GuiaTuristico",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su pareja",
+     "aspecto": "npc_lass",
+     "papel": "cocina",
+     "frases": [
+      "Él se sabe la historia de cada piedra de Sevilla y no se sabe dónde está el detergente.",
+      "Los domingos me lleva a sitios turísticos. Dice que es para practicar. Yo creo que es para no pagar la entrada."
+     ],
+     "nodo": "SuPareja",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["nevera_alta", 6, 0],
+    ["tele", 7, 1],
+    ["estante_madera", 9, 1],
+    ["mesa_cristal", 5, 4],
+    ["taburete_marron", 4, 5],
+    ["taburete_marron", 7, 5],
+    ["planta", 1, 1],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_10_7": {
+   "tipo": "casa",
+   "nombre": "Casa de vecinos con patio",
+   "pieza": "casa_teja",
+   "calle": ["sevilla/centro", [10, 7]],
+   "personas": [
+    {
+     "nombre": "Vecina del patio",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "En este patio vivimos ocho familias. Compartimos pozo, macetas y todos los chismes del barrio.",
+      "Las macetas de geranios las riego yo. Si una se seca, el patio entero sabe a quién echarle la culpa."
+     ],
+     "nodo": "VecinaDelPatio",
+     "en": [8, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vecino del bajo",
+     "aspecto": "npc_old_man",
+     "papel": "mesa",
+     "frases": [
+      "Aquí se canta, se discute y se hace la siesta. Lo de la siesta es sagrado: de tres a cinco no se respira.",
+      "Un fondo quiere comprar el patio para hacer «apartamentos con encanto». El encanto somos nosotros."
+     ],
+     "nodo": "VecinoDelBajo",
+     "en": [5, 6],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [2, 4, 4, 3]]],
+   "muebles": [
+    ["nevera", 8, 1],
+    ["fregadero", 9, 1],
+    ["fogones", 11, 1],
+    ["tele", 6, 1],
+    ["planta", 12, 7],
+    ["papelera", 1, 7],
+    ["mesa_cristal", 5, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_21_6": {
+   "tipo": "casa",
+   "nombre": "Casa de la costurera de trajes de flamenca",
+   "pieza": "casa_rosa",
+   "calle": ["sevilla/centro", [21, 6]],
+   "personas": [
+    {
+     "nombre": "Costurera",
+     "aspecto": "npc_old_woman",
+     "papel": "mesa",
+     "frases": [
+      "En marzo no duermo: tengo treinta trajes de flamenca por terminar y cada clienta ha engordado dos kilos desde la prueba.",
+      "Un traje de feria lleva cuatro metros de volantes y diez de paciencia."
+     ],
+     "nodo": "Costurera",
+     "en": [8, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta de la prueba",
+     "aspecto": "flamenca",
+     "papel": "libre",
+     "frases": [
+      "Este año voy de lunares verdes. El año pasado fui de lunares rojos. La diferencia la notamos solo las sevillanas.",
+      "Me caso en mayo y la feria es en abril. Primero la feria, que la boda se puede mover."
+     ],
+     "nodo": "ClientaDeLaPrueba",
+     "en": [11, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["tatami_verde", [6, 3, 3, 2]]],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["encimera", 6, 1],
+    ["cajon_oliva", 1, 1],
+    ["tele", 2, 1],
+    ["estanteria_baja_oliva", 9, 1],
+    ["estante_oliva", 11, 1],
+    ["mesa_cristal", 7, 5],
+    ["silla_derecha", 6, 5],
+    ["silla_izquierda", 9, 5],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_22_40": {
+   "tipo": "catedral",
+   "nombre": "Catedral de Sevilla",
+   "rotulo": "Catedral de Sevilla",
+   "pieza": "catedral_sevilla",
+   "calle": ["sevilla/centro", [22, 40]],
+   "personas": [
+    {
+     "nombre": "Sacristán mayor",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Es la catedral gótica más grande del mundo. Los que la construyeron querían que los tomaran por locos. Lo consiguieron.",
+      "Aquí dentro está la tumba de Colón, llevada a hombros por cuatro reyes. Ni muerto se estuvo quieto."
+     ],
+     "nodo": "SacristanMayor",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista con cuello torcido",
+     "aspecto": "turista_f",
+     "papel": "publico",
+     "frases": [
+      "Llevo una hora mirando el techo. Tengo el cuello como una Giralda.",
+      "La guía dice que para subir a la Giralda hay rampas en vez de escaleras. Lo inventaron para subir a caballo. Yo subo arrastrándome."
+     ],
+     "nodo": "TuristaConCuelloTorcido",
+     "en": [5, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "El sepulcro de Cristóbal Colón: cuatro heraldos de bronce lo llevan a hombros. Uno de ellos parece cansado."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 2]
+    }
+   ],
+   "tamano": [13, 11],
+   "puerta": [8, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_madera", 7, 3],
+    ["estatua_gargola", 4, 0],
+    ["arbol_maceta", 1, 0],
+    ["arbol_maceta", 11, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["palmera_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9], "desde_sala_centro_22_40_naranjos": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Naranjos",
+     "en": [6, 1],
+     "destino": "sevilla/sala_centro_22_40_naranjos",
+     "aparicion": "default",
+     "vuelta": "desde_sala_centro_22_40_naranjos",
+     "llegada": [6, 2]
+    }
+   ]
+  },
+  "sevilla/sala_centro_22_40_naranjos": {
+   "tipo": "cripta",
+   "padre": "sevilla/sala_centro_22_40",
+   "nombre": "Patio de los Naranjos",
+   "personas": [
+    {
+     "nombre": "Jardinero del patio",
+     "aspecto": "guarda_parque",
+     "papel": "libre",
+     "frases": [
+      "Estos naranjos dan naranjas amargas. Los turistas las prueban una vez y ya nunca más.",
+      "Las naranjas se mandan a Inglaterra para hacer mermelada. Es la única exportación que no se queja del calor."
+     ],
+     "nodo": "JardineroDelPatio",
+     "en": [8, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "Una fuente visigoda en el centro del patio. Antes era de la mezquita; después, de la catedral; ahora, de las palomas."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 2]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["estatua_aguila", 5, 0], ["caja", 5, 5], ["caja", 7, 6], ["caja", 1, 7]],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": [],
+   "salida": {"destino": "sevilla/sala_centro_22_40", "aparicion": "desde_sala_centro_22_40_naranjos"}
+  },
+  "sevilla/sala_centro_24_51": {
+   "tipo": "palacio",
+   "nombre": "Real Alcázar, apeadero",
+   "rotulo": "Real Alcázar",
+   "pieza": "puerta_leon",
+   "calle": ["sevilla/centro", [24, 51]],
+   "personas": [
+    {
+     "nombre": "Guía del Alcázar",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "El Alcázar sigue siendo palacio real: cuando viene el rey, duerme arriba. Cuando no, duermen los turistas en la cola.",
+      "Aquí se rodó una serie de dragones. Desde entonces vienen fans preguntando por el trono. El trono está en Madrid, les digo."
+     ],
+     "nodo": "GuiaDelAlcazar",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Fan de la serie",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "En la serie esto era otro reino. Me he traído una capa y una espada de plástico. Seguridad me ha quitado la espada.",
+      "He visto el estanque donde salía una princesa. Ahora sale una carpa naranja que me mira con desprecio."
+     ],
+     "nodo": "FanDeLaSerie",
+     "en": [9, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Azulejos con estrellas y lazos de colores. Si se miran mucho rato, parecen moverse. Si se miran más, se cobra otra entrada."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [8, 10],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 3, 10, 5]]],
+   "muebles": [
+    ["sillon_derecha", 10, 2],
+    ["mesa_cristal", 11, 3],
+    ["sillon_izquierda", 13, 2],
+    ["vitrina_alta", 14, 5],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_27_6": {
+   "tipo": "casa",
+   "nombre": "Casa del capataz de costaleros",
+   "pieza": "casa_gris",
+   "calle": ["sevilla/centro", [27, 6]],
+   "personas": [
+    {
+     "nombre": "Capataz",
+     "aspecto": "costalero",
+     "papel": "tele",
+     "frases": [
+      "¡A esta es! Así se levanta un paso. Lo digo en casa para levantar a mis hijos por la mañana.",
+      "Cuarenta costaleros debajo del paso y ninguno ve nada. Es como un gobierno, pero con más fe."
+     ],
+     "nodo": "Capataz",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "En Semana Santa no lo veo. Llega a las cinco de la mañana con el cuello como un Machoke.",
+      "Le hago torrijas para que recupere fuerzas. Las torrijas se las comen los nietos antes de que llegue."
+     ],
+     "nodo": "SuMujer",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 6, 0],
+    ["encimera", 7, 1],
+    ["fogones", 10, 1],
+    ["cajon_oliva", 2, 1],
+    ["tele", 3, 1],
+    ["sillon_derecha", 8, 3],
+    ["mesa_cristal", 9, 4],
+    ["sillon_izquierda", 11, 3],
+    ["planta", 12, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_28_21": {
+   "tipo": "bar",
+   "nombre": "Bar de tapas de la Alfalfa",
+   "pieza": "tienda_naranja",
+   "calle": ["sevilla/centro", [28, 21]],
+   "personas": [
+    {
+     "nombre": "Camarero sevillano",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "¡Una de espinacas con garbanzos, dos de pringá y un montadito de lomo al whisky! Lo apunto en la barra con tiza, como mi abuelo.",
+      "Aquí la cuenta no se hace con calculadora: se hace con la tiza y la memoria."
+     ],
+     "nodo": "CamareroSevillano",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Parroquiano de la barra",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": [
+      "Llevo aquí desde la una. Iba a tomarme una y ya llevo once tapas y dos opiniones sobre el Betis.",
+      "La Cruzcampo es la cerveza de Sevilla. Si me pones otra, te miro como a un turista."
+     ],
+     "nodo": "ParroquianoDeLaBarra",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "mostrador",
+     "frases": [
+      "La cuenta de una mesa escrita con tiza en la barra: «4 cañas, 3 tapas, 1 montadito, 2 cañas más, 1 discusión»."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 4]
+    }
+   ],
+   "tamano": [15, 10],
+   "puerta": [3, 9],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["mostrador_verde_i", 2, 3],
+    ["mostrador_verde_m", 3, 3],
+    ["mostrador_verde_m", 4, 3],
+    ["mostrador_verde_m", 5, 3],
+    ["mostrador_verde_m", 6, 3],
+    ["mostrador_verde_d", 7, 3],
+    ["banqueta_roja", 3, 5],
+    ["banqueta_roja", 5, 5],
+    ["banqueta_roja", 7, 5],
+    ["tele", 10, 1],
+    ["cajas", 11, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_33_47": {
+   "tipo": "museo",
+   "nombre": "Archivo General de Indias",
+   "pieza": "oficinas_azules",
+   "calle": ["sevilla/centro", [33, 47]],
+   "personas": [
+    {
+     "nombre": "Archivera",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Aquí se guardan ochenta millones de páginas sobre América. Hay facturas de Colón; algunas siguen sin pagar.",
+      "Hay investigadores que vienen veinte años a leer un solo legajo. Es la oposición más larga del mundo."
+     ],
+     "nodo": "Archivera",
+     "en": [10, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Investigador de Lima",
+     "aspecto": "peruana150",
+     "papel": "libre",
+     "frases": [
+      "Busco el contrato de un antepasado que vino a Sevilla en 1580. Por ahora he encontrado su multa por no pagar el barco.",
+      "En estos papeles está la mitad de la historia de mi país. La otra mitad está en la memoria de mis abuelos."
+     ],
+     "nodo": "InvestigadorDeLima",
+     "en": [5, 9],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Un mapa de 1527 con las costas de América. Al sur pone «tierra por descubrir». Al lado, a lápiz: «y por pagar»."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 5]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [6, 11],
+   "suelo": "alfombra_roja",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [8, 7, 3, 2]]],
+   "muebles": [
+    ["estatua_aguila", 2, 0],
+    ["vitrina_blanca", 5, 1],
+    ["vitrina_blanca", 5, 4],
+    ["vitrina_blanca", 8, 4],
+    ["banco_rojo", 11, 2],
+    ["vitrina_madera_estrecha", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 10]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_37_33": {
+   "tipo": "hostal",
+   "nombre": "Pensión del Barrio de Santa Cruz",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [37, 33]],
+   "personas": [
+    {
+     "nombre": "Dueña de la pensión",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Esta pensión es de mi abuela. Las habitaciones tienen nombre de Virgen: hoy le toca la de la Esperanza.",
+      "En Semana Santa la habitación con balcón a la procesión cuesta lo que un viaje a Japón."
+     ],
+     "nodo": "DuenaDeLaPension",
+     "en": [11, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Huésped de Valladolid",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "He venido a ver la Semana Santa de Sevilla para compararla con la de Valladolid. Aquí lloran más; allí, en silencio.",
+      "Me he perdido tres veces en Santa Cruz. Las calles son tan estrechas que te saludas con los de enfrente sin querer."
+     ],
+     "nodo": "HuespedDeValladolid",
+     "en": [2, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [7, 9],
+   "suelo": "moqueta_azul",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["recepcion", 5, 2],
+    ["sillon_derecha", 9, 6],
+    ["mesa_cristal", 10, 7],
+    ["sillon_izquierda", 12, 6],
+    ["escalera_mano", 10, 0],
+    ["arbol_maceta", 1, 6],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_37_39": {
+   "tipo": "piso",
+   "nombre": "Apartamento turístico de Santa Cruz",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [37, 39]],
+   "personas": [
+    {
+     "nombre": "Despedida de soltera de Madrid",
+     "aspecto": "raver_f",
+     "papel": "libre",
+     "frases": [
+      "Somos catorce y nos hemos vestido de flamencas para ir a la Giralda. La Giralda no nos ha dicho nada, pero los camareros sí.",
+      "La novia lleva una peineta con luces. Se ve desde la Torre del Oro."
+     ],
+     "nodo": "DespedidaDeSolteraDeMadrid",
+     "en": [1, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Limpiadora del apartamento",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Limpio cuatro apartamentos turísticos cada mañana. En uno he encontrado un sombrero cordobés, una sandalia y un novio dormido.",
+      "Cobro por apartamento, no por hora. Los de las despedidas cuentan doble."
+     ],
+     "nodo": "LimpiadoraDelApartamento",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "tatami_verde",
+   "pared": "topo",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [["encimera", 5, 1], ["nevera", 8, 1], ["papelera", 1, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_38_19": {
+   "tipo": "casa",
+   "nombre": "Casa del aficionado del Betis",
+   "pieza": "casa_granero",
+   "calle": ["sevilla/centro", [38, 19]],
+   "personas": [
+    {
+     "nombre": "Bético de toda la vida",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "¡Viva er Betis manque pierda! Lo de «manque pierda» lo practicamos mucho, por si acaso.",
+      "Mi vecino es del Sevilla. Nos queremos mucho los otros trescientos sesenta y cuatro días del año."
+     ],
+     "nodo": "BeticoDeTodaLaVida",
+     "en": [5, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Su nieto",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "El abuelo me hizo socio antes de inscribirme en el registro civil.",
+      "En mi cuarto hay una bufanda verde y blanca en cada pared. Mi madre dice que parece una huerta."
+     ],
+     "nodo": "SuNieto",
+     "en": [8, 5],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "retro",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [4, 5, 4, 2]]],
+   "muebles": [["cajon_oliva", 2, 1], ["tele", 3, 1], ["planta", 10, 6]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_3_40": {
+   "tipo": "casa",
+   "nombre": "Casa del aceitunero jubilado",
+   "pieza": "casa_teja",
+   "calle": ["sevilla/centro", [3, 40]],
+   "personas": [
+    {
+     "nombre": "Aceitunero jubilado",
+     "aspecto": "aceitunero",
+     "papel": "tele",
+     "frases": [
+      "Cuarenta años vareando olivos en Jaén. Ahora el aceite está tan caro que lo guardo en la caja fuerte.",
+      "El aceite de oliva es oro líquido. Antes lo decía de broma; ahora lo dice el banco."
+     ],
+     "nodo": "AceituneroJubilado",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Antes freía con aceite de oliva. Ahora frío con cariño y una cucharadita.",
+      "Las aceitunas aliñadas las preparo yo con tomillo y ajo. Las de bote, para los de fuera."
+     ],
+     "nodo": "SuMujer",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["tatami_verde", [6, 4, 4, 3]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["planta", 7, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal", 6, 5],
+    ["taburete_rojo", 5, 6],
+    ["taburete_rojo", 8, 6],
+    ["planta", 1, 7],
+    ["papelera", 10, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_3_53": {
+   "tipo": "portal",
+   "nombre": "Portal de la avenida de la Constitución",
+   "pieza": "bloque_pisos",
+   "calle": ["sevilla/centro", [3, 53]],
+   "personas": [
+    {
+     "nombre": "Portero de la Constitución",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Por esta avenida pasa el tranvía, los turistas y todas las procesiones. Yo cierro el portal y miro por la mirilla.",
+      "En Semana Santa los vecinos alquilan los balcones. Yo alquilo el escalón de la entrada: es lo que tengo."
+     ],
+     "nodo": "PorteroDeLaConstitucion",
+     "en": [2, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Vecina del balcón",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Mi balcón da a la carrera oficial. Lo tengo reservado para mi familia desde 1987. Mis cuñados aún esperan sitio.",
+      "Cuando pasa la Virgen se me pone la piel de gallina. Cuando pasa el recibo del IBI, también."
+     ],
+     "nodo": "VecinaDelBalcon",
+     "en": [2, 2],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["planta", 3, 1], ["escalera_mano", 4, 0], ["cajonera_azul", 8, 1], ["sillon_derecha", 10, 4]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_3_8": {
+   "tipo": "portal",
+   "nombre": "Portal de la Alameda de Hércules",
+   "pieza": "bloque_pisos",
+   "calle": ["sevilla/centro", [3, 8]],
+   "personas": [
+    {
+     "nombre": "Portera de la Alameda",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "La Alameda ha sido de todo: barrio de mala fama, de artistas y ahora de terrazas con precios de Madrid.",
+      "Por las noches hay más gente en la calle que en las casas. En Sevilla la casa es para dormir la siesta."
+     ],
+     "nodo": "PorteraDeLaAlameda",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Músico de la Alameda",
+     "aspecto": "tuno",
+     "papel": "libre",
+     "frases": [
+      "Toco en los bares de la Alameda por la voluntad. La voluntad de Sevilla son tres cañas y un montadito.",
+      "Mi grupo se llama Los Ventiladores. Cuando tocamos, la gente se refresca de la emoción."
+     ],
+     "nodo": "MusicoDeLaAlameda",
+     "en": [9, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["planta", 7, 1],
+    ["escalera_mano", 8, 0],
+    ["archivador_bajo", 3, 1],
+    ["mostrador_turquesa_i", 7, 4],
+    ["mostrador_turquesa_m", 8, 4],
+    ["mostrador_turquesa_d", 9, 4],
+    ["sillon_derecha", 2, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_42_33": {
+   "tipo": "casa",
+   "nombre": "Casa de la señora de los geranios",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [42, 33]],
+   "personas": [
+    {
+     "nombre": "Doña Macarena",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Tengo doscientas macetas en el patio. Las riego al amanecer, que es cuando Sevilla todavía no quema.",
+      "Los turistas se asoman a la reja a hacer fotos al patio. Les cobro con la mirada."
+     ],
+     "nodo": "DonaMacarena",
+     "en": [7, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su nieta",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": [
+      "Mi abuela habla con las plantas. Las plantas le hacen más caso que mi abuelo.",
+      "Este año el patio se presenta al concurso de patios. El jurado viene en mayo y mi abuela ya está nerviosa."
+     ],
+     "nodo": "SuNieta",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "parquet",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [4, 4, 4, 2]]],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal", 5, 3],
+    ["taburete_verde", 4, 4],
+    ["taburete_verde", 7, 4],
+    ["palmera_maceta", 1, 4],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_43_39": {
+   "tipo": "casa",
+   "nombre": "Casa de la beata de Santa Cruz",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [43, 39]],
+   "personas": [
+    {
+     "nombre": "Beata",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Voy a misa de ocho, de doce y de siete. Si hay alguna más, también.",
+      "En mi casa hay una estampa de cada Virgen de Sevilla. Son más de cien y todas me miran cuando digo palabrotas."
+     ],
+     "nodo": "Beata",
+     "en": [8, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Sobrino ateo",
+     "aspecto": "perroflauta",
+     "papel": "mesa",
+     "frases": [
+      "No creo en nada, pero en Semana Santa me emociono. Debe de ser el incienso.",
+      "Mi tía me reza todas las noches para que me corte el pelo. De momento gana el pelo."
+     ],
+     "nodo": "SobrinoAteo",
+     "en": [3, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "salvia",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["encimera", 3, 1],
+    ["mesa_cristal_larga", 3, 4],
+    ["silla_derecha", 2, 4],
+    ["silla_izquierda", 6, 4],
+    ["sillon_derecha", 6, 6],
+    ["mesa_cristal", 7, 7],
+    ["sillon_izquierda", 9, 6],
+    ["planta", 10, 1],
+    ["planta", 10, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_43_8": {
+   "tipo": "sede",
+   "nombre": "Casa hermandad",
+   "pieza": "oficinas_verdes",
+   "calle": ["sevilla/centro", [43, 8]],
+   "personas": [
+    {
+     "nombre": "Hermano mayor",
+     "aspecto": "npc_old_man",
+     "papel": "mesa",
+     "frases": [
+      "La lista de espera para salir de nazareno es de doce años. Hay hermanos que se apuntan al nacer.",
+      "Las papeletas de sitio se reparten en orden de antigüedad. Aquí la antigüedad es un grado, como en el ejército."
+     ],
+     "nodo": "HermanoMayor",
+     "en": [4, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Bordadora",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Bordo el manto de la Virgen en oro. Una puntada al día. Calculo terminarlo en 2041.",
+      "Si me tiembla el pulso, rezo. Si sigue temblando, me tomo un café."
+     ],
+     "nodo": "Bordadora",
+     "en": [3, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Una vitrina con una corona de plata, varas de mando y una foto antigua del paso saliendo con lluvia."
+     ],
+     "nodo": "Cartel",
+     "en": [11, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [8, 10],
+   "suelo": "moqueta_beige",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 6, 0],
+    ["archivo_alto", 8, 0],
+    ["mostrador_oliva", 5, 4],
+    ["banqueta_azul", 6, 6],
+    ["mostrador_oliva", 8, 5],
+    ["banqueta_azul", 9, 7],
+    ["cajas", 12, 8],
+    ["mesa_cristal", 3, 4],
+    ["vitrina_blanca", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_44_19": {
+   "tipo": "casa",
+   "nombre": "Casa del aficionado del Sevilla",
+   "pieza": "casa_granero",
+   "calle": ["sevilla/centro", [44, 19]],
+   "personas": [
+    {
+     "nombre": "Sevillista",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Somos el equipo de la Europa League. La tenemos tantas veces que la usamos de frutero.",
+      "El himno del Sevilla lo cantamos con lágrimas. El del Betis también, pero de la risa."
+     ],
+     "nodo": "Sevillista",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer bética",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Me casé con un sevillista. En los derbis duerme en el sofá; en la final de copa, en casa de su madre.",
+      "Nuestro hijo se ha hecho del Atleti para no elegir. Ahora sufrimos los tres."
+     ],
+     "nodo": "SuMujerBetica",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "tatami_verde",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["alfombra_roja", [4, 3, 4, 2]]],
+   "muebles": [["fogones", 4, 1], ["fregadero", 6, 1], ["nevera", 8, 1], ["tele", 2, 1], ["planta", 1, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_45_49": {
+   "tipo": "kiosco",
+   "nombre": "Quiosco de pipas de la Puerta de Jerez",
+   "pieza": "casa_roja_pequena",
+   "calle": ["sevilla/centro", [45, 49]],
+   "personas": [
+    {
+     "nombre": "Quiosquero de pipas",
+     "aspecto": "vendedorchupachups",
+     "papel": "dependiente",
+     "frases": [
+      "Pipas con sal, sin sal y de calabaza. Las de calabaza son para los que se creen de otra ciudad.",
+      "En los partidos vendo tres mil bolsas. El estadio queda alfombrado de cáscaras, como manda la tradición."
+     ],
+     "nodo": "QuiosqueroDePipas",
+     "en": [4, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Niño con chucherías",
+     "aspecto": "npc_boy",
+     "papel": "cliente",
+     "frases": [
+      "Tengo un euro y quiero gastarlo bien: veinte chuches de a cinco céntimos. La economía es esto.",
+      "El quiosquero me deja pagar mañana. Es el único banco que me da crédito."
+     ],
+     "nodo": "NinoConChucherias",
+     "en": [1, 3],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [9, 7],
+   "puerta": [3, 6],
+   "suelo": "losa_crema",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 1, 0], ["cajas", 2, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_47_33": {
+   "tipo": "souvenirs",
+   "nombre": "Azulejos y cerámica de Santa Cruz",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [47, 33]],
+   "personas": [
+    {
+     "nombre": "Ceramista",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Pinto azulejos a mano con el nombre de cada calle. El turista se lleva su calle y la cuelga en su piso de Berlín.",
+      "El azul cobalto se cuece a mil grados. Igual que Sevilla en julio, pero con más arte."
+     ],
+     "nodo": "Ceramista",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista coleccionista",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": [
+      "Me he comprado un azulejo con mi nombre. No había «Brittany», así que me han puesto «Brígida».",
+      "En casa voy a hacer una pared entera con azulejos de Sevilla. Mi marido dice que parecerá un baño."
+     ],
+     "nodo": "TuristaColeccionista",
+     "en": [2, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_madera", 3, 0],
+    ["estanteria_alta_madera", 5, 0],
+    ["mostrador_naranja_i", 2, 3],
+    ["mostrador_naranja_m", 3, 3],
+    ["mostrador_naranja_d", 4, 3],
+    ["cajas", 6, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_49_39": {
+   "tipo": "pasteleria",
+   "nombre": "Confitería de yemas y polvorones",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [49, 39]],
+   "personas": [
+    {
+     "nombre": "Confitera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Las yemas de San Leandro las hacen las monjas detrás de un torno. Yo las vendo delante, con un poco más de sonrisa.",
+      "Un polvorón se aprieta antes de abrirlo. Si no, se deshace, como los planes de dieta en diciembre."
+     ],
+     "nodo": "Confitera",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Goloso de la tercera edad",
+     "aspecto": "npc_old_man",
+     "papel": "cliente",
+     "frases": [
+      "El médico me ha prohibido el azúcar. Por eso vengo aquí: para mirar y oler, que no engorda.",
+      "Me llevo una caja de yemas para mi nieta. Llegará con media caja, como siempre."
+     ],
+     "nodo": "GolosoDeLaTerceraEdad",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_mostaza", 5, 0],
+    ["fogones", 7, 1],
+    ["mostrador_madera_i", 2, 3],
+    ["mostrador_madera_m", 3, 3],
+    ["mostrador_madera_m", 4, 3],
+    ["mostrador_madera_m", 5, 3],
+    ["mostrador_madera_m", 6, 3],
+    ["mostrador_madera_d", 7, 3],
+    ["vitrina_madera", 3, 1],
+    ["cajas", 8, 6],
+    ["cajas", 1, 6]
+   ],
+   "encima": [["taza", 5, 3], ["plato", 2, 3]],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_50_20": {
+   "tipo": "piso",
+   "nombre": "Piso de Erasmus en la Alfalfa",
+   "pieza": "bloque_pisos",
+   "calle": ["sevilla/centro", [50, 20]],
+   "personas": [
+    {
+     "nombre": "Erasmus polaco",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "En Polonia nieva en abril. Aquí en abril hay feria, rebujito y gente vestida de lunares. He cambiado de vida.",
+      "Ya sé decir «illo», «ozú» y «qué calor». Con eso me entiendo con todo el barrio."
+     ],
+     "nodo": "ErasmusPolaco",
+     "en": [6, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Erasmus portuguesa",
+     "aspecto": "estudianteinge_f",
+     "papel": "mesa",
+     "frases": [
+      "Estudio arquitectura y vivo en un piso sin ventanas. Es mi proyecto de fin de carrera: sobrevivir.",
+      "Las clases son por la mañana. Por la tarde, siesta. Por la noche, tapas. Estudiar, en algún hueco."
+     ],
+     "nodo": "ErasmusPortuguesa",
+     "en": [10, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "moqueta_beige",
+   "pared": "menta",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["fogones", 2, 1],
+    ["tele", 6, 1],
+    ["sillon_derecha", 7, 4],
+    ["mesa_cristal", 8, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_53_6": {
+   "tipo": "piso",
+   "nombre": "Piso con ventilador de la Macarena",
+   "pieza": "bloque_verde_2",
+   "calle": ["sevilla/centro", [53, 6]],
+   "personas": [
+    {
+     "nombre": "Vecino acalorado",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "En agosto estamos a cuarenta y cinco grados. El ventilador mueve el aire caliente de un lado a otro, como los políticos.",
+      "Duermo con los pies en un barreño de agua. Mi médico dice que es mejor que el aire acondicionado y más barato."
+     ],
+     "nodo": "VecinoAcalorado",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su hija",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "En Sevilla tenemos dos estaciones: el verano y la Semana Santa. La primavera dura una tarde.",
+      "Me voy a estudiar a Santander para pasar frío una vez en la vida."
+     ],
+     "nodo": "SuHija",
+     "en": [1, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [3, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["consola", 1, 2],
+    ["tele", 2, 1],
+    ["sillon_derecha", 5, 3],
+    ["mesa_cristal", 6, 4],
+    ["cajas", 6, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_54_36": {
+   "tipo": "casa",
+   "nombre": "Casa del guitarrista",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [54, 36]],
+   "personas": [
+    {
+     "nombre": "Guitarrista flamenco",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Toco la guitarra desde los cinco años. Mi padre tocaba, mi abuelo tocaba y mi hijo toca el reguetón.",
+      "Una buena guitarra se hace en Sevilla con madera de ciprés. Una mala se compra por internet."
+     ],
+     "nodo": "GuitarristaFlamenco",
+     "en": [3, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Su hijo reguetonero",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": [
+      "Mi padre dice que el reguetón no es música. Mi canción tiene más visitas que todos sus discos juntos.",
+      "He mezclado una bulería con un perreo. Lo he llamado «Bulerreo». Mi padre ha llorado, no sé si de emoción."
+     ],
+     "nodo": "SuHijoReguetonero",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "moqueta_beige",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["tele", 1, 1],
+    ["estanteria_baja_verde", 8, 1],
+    ["estante_verde", 10, 1],
+    ["mesa_cristal_larga", 3, 5],
+    ["silla_derecha", 2, 5],
+    ["silla_izquierda", 6, 5],
+    ["arbol_maceta", 10, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_56_19": {
+   "tipo": "tienda",
+   "nombre": "Abanicos de la calle Sierpes",
+   "pieza": "casa_azul_pequena",
+   "calle": ["sevilla/centro", [56, 19]],
+   "personas": [
+    {
+     "nombre": "Abaniquera",
+     "aspecto": "flamenca",
+     "papel": "dependiente",
+     "frases": [
+      "Un abanico no es un adorno: es el aire acondicionado de Sevilla desde el siglo XVIII.",
+      "Con el abanico se dice todo. Si lo cierras de golpe, el novio ya sabe que esa noche duerme solo."
+     ],
+     "nodo": "Abaniquera",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista sudando",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": [
+      "Llegué esta mañana y ya he comprado tres abanicos, un sombrero y un sitio a la sombra.",
+      "Me han dicho que en verano los sevillanos salen a la calle a las once de la noche. Yo salgo de la ducha a esa hora."
+     ],
+     "nodo": "TuristaSudando",
+     "en": [8, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [7, 7],
+   "suelo": "losa_gris",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 3, 1],
+    ["estanteria_alta_menta", 5, 0],
+    ["mostrador_verde_i", 7, 3],
+    ["mostrador_verde_m", 8, 3],
+    ["mostrador_verde_d", 9, 3],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_59_11": {
+   "tipo": "estacion",
+   "nombre": "Estación de autobuses de Plaza de Armas",
+   "pieza": "edificio_cupula",
+   "calle": ["sevilla/centro", [59, 11]],
+   "personas": [
+    {
+     "nombre": "Taquillero de autobuses",
+     "aspecto": "revisorcercanias",
+     "papel": "dependiente",
+     "frases": [
+      "El autobús a Córdoba sale por la Ruta 13. Lleva aire acondicionado, que en agosto es como llevar un milagro.",
+      "Los billetes se compran aquí o en la aplicación. La aplicación funciona cuando no hace falta."
+     ],
+     "nodo": "TaquilleroDeAutobuses",
+     "en": [13, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Viajera con maleta",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Voy a ver a mi hija a Córdoba. Le llevo un táper de espinacas con garbanzos y otro de opiniones.",
+      "Llevo media hora esperando. Aquí la puntualidad es como la nieve: se habla de ella, pero nadie la ha visto."
+     ],
+     "nodo": "ViajeraConMaleta",
+     "en": [7, 2],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [4, 10],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["maquina_billetes", 8, 1],
+    ["tele", 10, 1],
+    ["maquina_billetes", 12, 1],
+    ["mostrador_cristal_i", 11, 5],
+    ["mostrador_cristal_m", 12, 5],
+    ["mostrador_cristal_d", 13, 5],
+    ["banco_rojo", 4, 5],
+    ["banco_rojo", 1, 3],
+    ["planta", 1, 1],
+    ["papelera", 13, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_59_33": {
+   "tipo": "teatro",
+   "nombre": "Tablao flamenco de Santa Cruz",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [59, 33]],
+   "personas": [
+    {
+     "nombre": "Bailaora",
+     "aspecto": "flamenca",
+     "papel": "artista",
+     "frases": [
+      "Bailo seis pases al día para turistas. Al último ya lo bailo con el alma y con las rodillas en llamas.",
+      "El taconeo se aprende de pequeña. El vecino de abajo también lo aprendió, a su pesar."
+     ],
+     "nodo": "Bailaora",
+     "en": [3, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cantaor",
+     "aspecto": "tuno",
+     "papel": "artista",
+     "frases": [
+      "El cante jondo sale de dentro. Hoy me sale de dentro un dolor de garganta, pero cantamos igual.",
+      "Los turistas aplauden a destiempo. Hemos adaptado el compás para que coincida con su entusiasmo."
+     ],
+     "nodo": "Cantaor",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Espectador japonés",
+     "aspecto": "turista",
+     "papel": "publico",
+     "frases": [
+      "He llorado con la soleá sin entender ni una palabra. Es el arte más sincero que he visto.",
+      "En Tokio tengo una academia de flamenco. Aquí he venido a que me digan que no tengo duende. Me lo han dicho."
+     ],
+     "nodo": "EspectadorJapones",
+     "en": [13, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [5, 11],
+   "suelo": "moqueta_azul",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["tatami_verde", [2, 2, 12, 2]]],
+   "muebles": [
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 13, 5],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7],
+    ["taburete_rojo", 13, 7],
+    ["arbol_maceta", 14, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 10]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_59_42": {
+   "tipo": "taberna",
+   "nombre": "Taberna de los caracoles",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/centro", [59, 42]],
+   "personas": [
+    {
+     "nombre": "Tabernero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "En mayo se sirven caracoles en todas las barras de Sevilla. Si no te gustan, al menos bebe el caldo, que cura.",
+      "El caldo lleva hierbabuena, poleo y un secreto que no le digo ni a mi mujer."
+     ],
+     "nodo": "Tabernero",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Parroquiana de los caracoles",
+     "aspecto": "npc_woman",
+     "papel": "cliente",
+     "frases": [
+      "Me como dos platos de caracoles cada tarde de mayo. Mi médico dice que es demasiado; mi médico es de Burgos.",
+      "Un caracol se saca con un palillo y paciencia. La paciencia es lo que no se vende en esta ciudad."
+     ],
+     "nodo": "ParroquianaDeLosCaracoles",
+     "en": [2, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "losa_crema",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 6, 0],
+    ["encimera", 7, 1],
+    ["alacena", 10, 0],
+    ["mostrador_verde_i", 2, 4],
+    ["mostrador_verde_m", 3, 4],
+    ["mostrador_verde_m", 4, 4],
+    ["mostrador_verde_d", 5, 4],
+    ["taburete_amarillo", 3, 6],
+    ["taburete_amarillo", 5, 6],
+    ["mesa_cristal", 8, 3],
+    ["silla_derecha", 7, 3],
+    ["silla_izquierda", 10, 3],
+    ["mesa_cristal", 2, 2],
+    ["taburete_amarillo", 1, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_13_44": {
+   "tipo": "casa",
+   "nombre": "Casa del vendedor de altramuces",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [13, 44]],
+   "personas": [
+    {
+     "nombre": "Vendedor de altramuces",
+     "aspecto": "vendedorchupachups",
+     "papel": "libre",
+     "frases": [
+      "Vendo altramuces, garbanzos tostados y avellanas en la puerta del estadio. Sin mí, los partidos serían en silencio.",
+      "Los altramuces se pelan con los dientes. Es el único deporte que practican los aficionados durante el partido."
+     ],
+     "nodo": "VendedorDeAltramuces",
+     "en": [8, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Los altramuces los pongo en remojo una semana. La casa huele a río y a domingo.",
+      "Mi marido conoce a todos los jugadores del Betis desde la puerta de la grada. A los buenos les regala un cucurucho."
+     ],
+     "nodo": "SuMujer",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 5, 0],
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["tele", 2, 1],
+    ["planta", 4, 1],
+    ["sillon_derecha", 1, 3],
+    ["mesa_cristal", 2, 4],
+    ["sillon_izquierda", 4, 3],
+    ["palmera_maceta", 10, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_13_52": {
+   "tipo": "ropa",
+   "nombre": "Trajes de flamenca de Triana",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [13, 52]],
+   "personas": [
+    {
+     "nombre": "Diseñadora de trajes de flamenca",
+     "aspecto": "flamenca",
+     "papel": "dependiente",
+     "frases": [
+      "Este año se lleva el volante corto, la manga larga y el escote discreto. El año que viene, al revés.",
+      "Un traje de flamenca es como un coche: hay modelos, extras y una lista de espera."
+     ],
+     "nodo": "DisenadoraDeTrajesDeFlamenca",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Madre con niña",
+     "aspecto": "mom",
+     "papel": "cliente",
+     "frases": [
+      "Le compro a mi niña su primer traje de flamenca. Tiene tres años y ya tiene más volantes que yo.",
+      "El traje de la niña cuesta como el mío. La moda infantil en Sevilla no es infantil."
+     ],
+     "nodo": "MadreConNina",
+     "en": [8, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "losa_gris",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_mostaza", 1, 1],
+    ["vitrina_blanca", 3, 1],
+    ["estanteria_baja_mostaza", 5, 1],
+    ["mostrador_oliva_i", 7, 4],
+    ["mostrador_oliva_m", 8, 4],
+    ["mostrador_oliva_d", 9, 4],
+    ["isla_oliva", 2, 3]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_13_6": {
+   "tipo": "bar",
+   "nombre": "Freiduría de pescaíto de Triana",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [13, 6]],
+   "personas": [
+    {
+     "nombre": "Freidor",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Adobo, puntillitas, boquerones y cazón. El cartucho de papel absorbe el aceite y las penas.",
+      "El pescaíto se fríe con harina de garbanzo y mucho arte. Sin arte se queda en pescado."
+     ],
+     "nodo": "Freidor",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta de la freiduría",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a por un cartucho de adobo todos los viernes desde que me jubilé. Es mi pensión gastronómica.",
+      "Me lo como paseando por la orilla. Las gaviotas me siguen como si fuera famosa."
+     ],
+     "nodo": "ClientaDeLaFreiduria",
+     "en": [3, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 10],
+   "puerta": [5, 9],
+   "suelo": "parquet",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 2, 1],
+    ["encimera", 4, 1],
+    ["nevera_alta", 7, 0],
+    ["mostrador_tablas_i", 3, 4],
+    ["mostrador_tablas_m", 4, 4],
+    ["mostrador_tablas_m", 5, 4],
+    ["mostrador_tablas_m", 6, 4],
+    ["mostrador_tablas_m", 7, 4],
+    ["mostrador_tablas_d", 8, 4],
+    ["banqueta_azul", 4, 6],
+    ["banqueta_azul", 6, 6],
+    ["banqueta_azul", 8, 6],
+    ["mesa_cristal", 9, 6],
+    ["banqueta_azul", 8, 7],
+    ["banqueta_azul", 11, 7],
+    ["mesa_cristal", 11, 3],
+    ["banqueta_azul", 10, 3]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_15_15": {
+   "tipo": "puesto",
+   "nombre": "Puesto del mercado de Triana",
+   "pieza": "puesto_mercado",
+   "calle": ["sevilla/rio", [15, 15]],
+   "personas": [
+    {
+     "nombre": "Vendedora de aceitunas",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Aceitunas machacadas, gordales, manzanilla y de las que pican. Las que pican son para los guiris que se creen valientes.",
+      "El mercado está encima del castillo de la Inquisición. Las aceitunas no tienen la culpa de nada."
+     ],
+     "nodo": "VendedoraDeAceitunas",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cocinero del mercado",
+     "aspecto": "camarero",
+     "papel": "cliente",
+     "frases": [
+      "Compro aquí cada mañana para el bar. La vendedora me guarda las mejores porque fuimos novios en 1998.",
+      "Mi mujer no sabe lo de 1998. Si lo sabe, se acaban las aceitunas buenas."
+     ],
+     "nodo": "CocineroDelMercado",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_naranja_i", 5, 4],
+    ["mostrador_naranja_m", 6, 4],
+    ["mostrador_naranja_d", 7, 4],
+    ["nevera_alta", 4, 0],
+    ["cajas", 5, 1]
+   ],
+   "encima": [["plato", 5, 4], ["taza", 7, 4]],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_17_37": {
+   "tipo": "academia",
+   "nombre": "Academia de baile flamenco",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [17, 37]],
+   "personas": [
+    {
+     "nombre": "Maestra de baile",
+     "aspecto": "flamenca",
+     "papel": "dependiente",
+     "frases": [
+      "El baile empieza en los pies, sube por la cintura y acaba en la mirada. A mis alumnas japonesas les sale la mirada antes que los pies.",
+      "Las sevillanas tienen cuatro partes. Las alumnas aprenden la primera en un mes y la cuarta en cinco años."
+     ],
+     "nodo": "MaestraDeBaile",
+     "en": [10, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Alumna de Osaka",
+     "aspecto": "npc_kimono_girl",
+     "papel": "publico",
+     "frases": [
+      "Llevo seis años estudiando flamenco en Osaka. Aquí me han dicho que bailo con mucha técnica. No sé si es bueno.",
+      "En mi país el flamenco es muy famoso. Hay más academias que en Sevilla, pero con menos calor."
+     ],
+     "nodo": "AlumnaDeOsaka",
+     "en": [6, 7],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Alumno jubilado",
+     "aspecto": "npc_old_man",
+     "papel": "publico",
+     "frases": [
+      "Me apunté a flamenco a los setenta. Mi traumatólogo y yo nos vemos mucho.",
+      "Taconeo poco, pero con mucho sentimiento. Los vecinos de abajo lo notan igual."
+     ],
+     "nodo": "AlumnoJubilado",
+     "en": [3, 7],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 11],
+   "puerta": [8, 10],
+   "suelo": "parquet",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_oliva", 3, 0],
+    ["mostrador_turquesa", 5, 2],
+    ["mesa_cristal", 6, 4],
+    ["banqueta_roja", 6, 6],
+    ["mesa_cristal", 3, 4],
+    ["banqueta_roja", 3, 6],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_18_22": {
+   "tipo": "bar",
+   "nombre": "Terraza de la calle Betis",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [18, 22]],
+   "personas": [
+    {
+     "nombre": "Camarera de la calle Betis",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Desde aquí se ve el río, la Torre del Oro y el puente. El precio de las vistas va incluido en el rebujito.",
+      "El rebujito es manzanilla con gaseosa. Entra como agua y sale como sevillanas."
+     ],
+     "nodo": "CamareraDeLaCalleBetis",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Pareja del atardecer",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": [
+      "Hemos venido a ver el atardecer sobre el Guadalquivir. Llevamos dos horas y el atardecer no termina nunca.",
+      "En Sevilla el sol tarda en irse, como las visitas de la suegra."
+     ],
+     "nodo": "ParejaDelAtardecer",
+     "en": [11, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [15, 10],
+   "puerta": [5, 9],
+   "suelo": "rombos_oscuros",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 8, 1],
+    ["encimera", 10, 1],
+    ["nevera_alta", 13, 0],
+    ["mostrador_verde_i", 7, 3],
+    ["mostrador_verde_m", 8, 3],
+    ["mostrador_verde_m", 9, 3],
+    ["mostrador_verde_m", 10, 3],
+    ["mostrador_verde_m", 11, 3],
+    ["mostrador_verde_d", 12, 3],
+    ["taburete_amarillo", 8, 5],
+    ["taburete_amarillo", 10, 5],
+    ["taburete_amarillo", 12, 5],
+    ["tele_pequena", 5, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_18_44": {
+   "tipo": "peluqueria",
+   "nombre": "Peluquería de la Feria",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [18, 44]],
+   "personas": [
+    {
+     "nombre": "Peluquera de feria",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "En abril hago doscientos moños de flamenca. Gomina, horquillas y una oración para que aguanten hasta el lunes.",
+      "La flor del pelo va a un lado si estás soltera y al otro si estás casada. Algunas la ponen en medio para despistar."
+     ],
+     "nodo": "PeluqueraDeFeria",
+     "en": [8, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Clienta del moño",
+     "aspecto": "flamenca",
+     "papel": "cliente",
+     "frases": [
+      "Me han puesto cuarenta horquillas. Si paso por el arco de seguridad del aeropuerto, me detienen.",
+      "Este moño tiene que durar tres días de feria. Dormiré sentada, como los caballos."
+     ],
+     "nodo": "ClientaDelMono",
+     "en": [4, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "rombos_oscuros",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["banqueta_roja", 2, 5], ["banqueta_roja", 4, 5], ["banqueta_roja", 6, 5], ["papelera", 8, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_18_52": {
+   "tipo": "casa",
+   "nombre": "Casa de los recién llegados de Madrid",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [18, 52]],
+   "personas": [
+    {
+     "nombre": "Madrileño recién llegado",
+     "aspecto": "cunado",
+     "papel": "tele",
+     "frases": [
+      "Me he mudado a Sevilla por el teletrabajo. Aquí el alquiler es más barato y el calor, más caro.",
+      "Intento hablar como los de aquí y me miran raro. He dicho «illo» con acento de Lavapiés."
+     ],
+     "nodo": "MadrilenoRecienLlegado",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Vecina que lo adopta",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Le subo croquetas al madrileño para que no se muera de pena. Come como si no hubiera comido nunca.",
+      "Le he explicado que en agosto no se sale a la calle hasta las nueve. Ayer salió a las cinco y volvió sin sombra."
+     ],
+     "nodo": "VecinaQueLoAdopta",
+     "en": [3, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [6, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["fogones", 7, 1],
+    ["mesa_cristal", 7, 4],
+    ["silla_derecha", 6, 4],
+    ["silla_izquierda", 9, 4],
+    ["sofa", 2, 5],
+    ["palmera_maceta", 1, 0],
+    ["tele_pequena", 2, 2]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_18_6": {
+   "tipo": "casa",
+   "nombre": "Casa del barquero del Guadalquivir",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [18, 6]],
+   "personas": [
+    {
+     "nombre": "Barquero",
+     "aspecto": "marinero",
+     "papel": "libre",
+     "frases": [
+      "Llevo turistas en barco del puente de Triana a la Torre del Oro. El río es el mismo; los turistas cambian de nacionalidad cada hora.",
+      "Les cuento que el Guadalquivir es navegable hasta Sevilla. Lo que no es navegable es el sueldo."
+     ],
+     "nodo": "Barquero",
+     "en": [7, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi marido sabe más del río que de su propia casa. Ayer me preguntó dónde estaba la cocina.",
+      "Le pongo de comer en un táper y se lo come en el barco, con las gaviotas mirando."
+     ],
+     "nodo": "SuMujer",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["nevera", 7, 1],
+    ["vitrina_madera", 1, 1],
+    ["mesa_cristal_larga", 4, 3],
+    ["taburete_amarillo", 4, 5],
+    ["taburete_amarillo", 6, 5],
+    ["sofa", 1, 3],
+    ["arbol_maceta", 8, 4],
+    ["papelera", 8, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_37_45": {
+   "tipo": "torre",
+   "nombre": "Torre del Oro, museo naval",
+   "rotulo": "Torre del Oro",
+   "pieza": "torre_octogonal",
+   "calle": ["sevilla/rio", [37, 45]],
+   "personas": [
+    {
+     "nombre": "Marinero del museo",
+     "aspecto": "marinero",
+     "papel": "libre",
+     "frases": [
+      "La Torre del Oro se llama así por los azulejos dorados que tenía, no por el oro de América. El oro de América no se quedó aquí mucho tiempo.",
+      "Desde arriba se cerraba el río con una cadena para que no entraran barcos. Ahora entran cruceros y no hay cadena que valga."
+     ],
+     "nodo": "MarineroDelMuseo",
+     "en": [5, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Niño con catalejo",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Con el catalejo veo la Giralda, el puente y a mi madre llamándome desde la orilla.",
+      "De mayor quiero ser capitán de barco. O de autobús turístico, que también se mueve."
+     ],
+     "nodo": "NinoConCatalejo",
+     "en": [5, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "escalera",
+     "frases": [
+      "Una maqueta de un galeón con la bodega llena de cajas pintadas de amarillo: «oro». Debajo, una etiqueta: «réplica sin valor»."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 2]
+    }
+   ],
+   "tamano": [8, 9],
+   "puerta": [4, 8],
+   "suelo": "chapa",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 4, 0]],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_39_5": {
+   "tipo": "casa",
+   "nombre": "Casa de la ceramista de Triana",
+   "pieza": "casa_granero",
+   "calle": ["sevilla/rio", [39, 5]],
+   "personas": [
+    {
+     "nombre": "Ceramista de Triana",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "En Triana se hace cerámica desde los romanos. Los romanos no tenían horno eléctrico, pero tenían paciencia.",
+      "Este plato tiene un pájaro azul. Lo he pintado quinientas veces y cada pájaro tiene su carácter."
+     ],
+     "nodo": "CeramistaDeTriana",
+     "en": [11, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aprendiz de ceramista",
+     "aspecto": "npc_lass",
+     "papel": "mesa",
+     "frases": [
+      "Llevo un año aprendiendo y ya he roto cuarenta platos. La maestra dice que cada plato roto es una lección.",
+      "Mis lecciones las pago yo. Los platos rotos, también."
+     ],
+     "nodo": "AprendizDeCeramista",
+     "en": [3, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [6, 5, 3, 2]]],
+   "muebles": [
+    ["fregadero", 7, 1],
+    ["fogones", 9, 1],
+    ["nevera_alta", 11, 0],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["estanteria_alta_verde", 5, 0],
+    ["mesa_cristal", 3, 4],
+    ["silla_derecha", 2, 4],
+    ["silla_izquierda", 5, 4],
+    ["planta", 11, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_3_37": {
+   "tipo": "casa",
+   "nombre": "Corral de vecinos de Triana",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [3, 37]],
+   "personas": [
+    {
+     "nombre": "Vecina del corral",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "En el corral hay un pozo, una pila para lavar y doce vecinos que se saben la vida de los otros once.",
+      "Aquí se tiende la ropa en común. Si alguien pierde un calcetín, lo encuentra en el balcón del vecino."
+     ],
+     "nodo": "VecinaDelCorral",
+     "en": [7, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecino guitarrero",
+     "aspecto": "tuno",
+     "papel": "mesa",
+     "frases": [
+      "Por las noches salimos al patio a cantar. Los vecinos de los pisos nuevos llaman a la policía; los del corral, salen a cantar.",
+      "El corral tiene doscientos años. Las goteras tienen más o menos los mismos."
+     ],
+     "nodo": "VecinoGuitarrero",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "tatami_verde",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [5, 4, 4, 2]]],
+   "muebles": [
+    ["tele", 8, 1],
+    ["planta", 10, 1],
+    ["estanteria_baja_madera", 4, 1],
+    ["estante_madera", 6, 1],
+    ["mesa_cristal", 5, 3],
+    ["silla_derecha", 4, 3],
+    ["silla_izquierda", 7, 3],
+    ["sillon_derecha", 1, 5],
+    ["mesa_cristal", 2, 6],
+    ["sillon_izquierda", 4, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_3_44": {
+   "tipo": "casa",
+   "nombre": "Casa del remero del Guadalquivir",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [3, 44]],
+   "personas": [
+    {
+     "nombre": "Remero",
+     "aspecto": "piraguista",
+     "papel": "libre",
+     "frases": [
+      "Entreno en el río a las siete de la mañana. A esa hora el Guadalquivir es mío y de tres patos.",
+      "En verano entreno de noche. Remo con frontal y la gente desde el puente cree que soy un ovni."
+     ],
+     "nodo": "Remero",
+     "en": [1, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su compañera de equipo",
+     "aspecto": "nadador_f",
+     "papel": "mesa",
+     "frases": [
+      "Somos cuatro en el bote y cada una rema a su ritmo. El entrenador dice que eso no es un equipo, es un pleno municipal.",
+      "Este año vamos al campeonato de España. El autobús lo pagamos con una rifa de jamón."
+     ],
+     "nodo": "SuCompaneraDeEquipo",
+     "en": [4, 3],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "parquet",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [4, 3, 3, 2]]],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["fogones", 5, 1],
+    ["estanteria_alta_nogal", 7, 0],
+    ["sofa", 1, 3],
+    ["arbol_maceta", 8, 4],
+    ["mesa_cristal", 5, 3],
+    ["banqueta_azul", 7, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_3_52": {
+   "tipo": "casa",
+   "nombre": "Casa del técnico de aires acondicionados",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [3, 52]],
+   "personas": [
+    {
+     "nombre": "Técnico de aires acondicionados",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "En Sevilla soy más importante que un médico. En julio me llaman de madrugada como si fuera una urgencia.",
+      "El aparato de mi casa no funciona. En casa del herrero, ventilador de palo."
+     ],
+     "nodo": "TecnicoDeAiresAcondicionados",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": [
+      "Mi padre tiene la agenda llena hasta septiembre. Le dan propinas en jamón.",
+      "En el cole dicen que mi padre salva vidas. Es verdad, pero cobrando el desplazamiento."
+     ],
+     "nodo": "SuHija",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [3, 8],
+   "suelo": "tatami_verde",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [3, 3, 4, 2]]],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["fogones", 5, 1],
+    ["cajon_oliva", 9, 1],
+    ["tele", 10, 1],
+    ["sofa", 1, 3],
+    ["palmera_maceta", 1, 5],
+    ["caja", 11, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_3_6": {
+   "tipo": "casa",
+   "nombre": "Casa del alfarero",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [3, 6]],
+   "personas": [
+    {
+     "nombre": "Alfarero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Hago botijos como mi padre. Un botijo enfría el agua sin enchufe. Es la tecnología punta de Triana.",
+      "Los turistas compran botijos para decorar. No saben beber de ellos y se mojan la camisa."
+     ],
+     "nodo": "Alfarero",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Nieta del alfarero",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": [
+      "Mi abuelo me ha enseñado a hacer un cuenco. Me ha salido una cosa que él llama «arte moderno».",
+      "El barro se queda en las uñas una semana. En el cole creen que trabajo en una obra."
+     ],
+     "nodo": "NietaDelAlfarero",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "tatami_verde",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [3, 3, 3, 2]]],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["encimera", 5, 1],
+    ["tele", 8, 1],
+    ["vitrina_madera", 1, 1],
+    ["arbol_maceta", 9, 4]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_40_23": {
+   "tipo": "casa",
+   "nombre": "Casa del cofrade de la Esperanza de Triana",
+   "pieza": "casa_granero",
+   "calle": ["sevilla/rio", [40, 23]],
+   "personas": [
+    {
+     "nombre": "Cofrade trianero",
+     "aspecto": "costalero",
+     "papel": "tele",
+     "frases": [
+      "La Madrugá es la noche más larga del año. Salgo a las doce y vuelvo a casa con el sol y sin voz.",
+      "Triana es Triana. Sevilla está al otro lado del puente, que es como decir en otro país."
+     ],
+     "nodo": "CofradeTrianero",
+     "en": [10, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su madre",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi hijo sale de costalero desde los dieciocho. Yo le espero con un caldo y una tirita.",
+      "Le he puesto una estampa de la Esperanza en el costal. Por si la fe necesita ayuda con la espalda."
+     ],
+     "nodo": "SuMadre",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "rombos_lila",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 2, 1],
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["cajon_oliva", 8, 1],
+    ["tele", 9, 1],
+    ["mesa_cristal", 5, 3],
+    ["taburete_rojo", 4, 4],
+    ["taburete_rojo", 7, 4],
+    ["sillon_derecha", 6, 5],
+    ["mesa_cristal", 7, 6],
+    ["sillon_izquierda", 9, 5],
+    ["planta", 1, 7],
+    ["papelera", 10, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_44_14": {
+   "tipo": "museo",
+   "nombre": "Real Maestranza, museo y tendido",
+   "rotulo": "Real Maestranza",
+   "pieza": "maestranza",
+   "calle": ["sevilla/rio", [44, 14]],
+   "personas": [
+    {
+     "nombre": "Guía de la Maestranza",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "La plaza tiene forma ovalada porque se construyó en un terreno con las calles ya hechas. En Sevilla hasta la plaza se adapta.",
+      "En el museo hay capotes, carteles y un cuadro de un toro que parece que te va a pedir el autógrafo."
+     ],
+     "nodo": "GuiaDeLaMaestranza",
+     "en": [8, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Aficionado del tendido siete",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Llevo cincuenta ferias en el mismo asiento. El asiento ya tiene mi forma.",
+      "Si un torero lo hace mal, pitamos. Si lo hace bien, también, por si se confía."
+     ],
+     "nodo": "AficionadoDelTendidoSiete",
+     "en": [2, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": ["Un traje de luces bordado en oro, con una mancha de sangre de 1962 que nadie ha querido limpiar."],
+     "nodo": "Cartel",
+     "en": [8, 2]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [8, 10],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 8, 1],
+    ["estatua_gargola", 10, 0],
+    ["vitrina_madera", 12, 1],
+    ["pedestal", 8, 6],
+    ["pedestal", 11, 6],
+    ["estatua_gargola", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9], "desde_sala_rio_44_14_callejon": [5, 2]},
+   "pasos": [
+    {
+     "nodo": "Callejon",
+     "en": [5, 1],
+     "destino": "sevilla/sala_rio_44_14_callejon",
+     "aparicion": "default",
+     "vuelta": "desde_sala_rio_44_14_callejon",
+     "llegada": [5, 2]
+    }
+   ]
+  },
+  "sevilla/sala_rio_44_14_callejon": {
+   "tipo": "castillo",
+   "padre": "sevilla/sala_rio_44_14",
+   "nombre": "Real Maestranza, el callejón",
+   "personas": [
+    {
+     "nombre": "Monosabio",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "En el callejón se espera, se suda y se reza. Si el toro salta la barrera, se corre, que también es una forma de rezar.",
+      "Me llamo monosabio porque llevo una camisa roja. Lo de sabio es por los años, no por los estudios."
+     ],
+     "nodo": "Monosabio",
+     "en": [11, 7],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Burladeros de madera con marcas de cuernos. Cada una tiene una historia; la mayoría acaba en el hospital."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [4, 9],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["pedestal", 3, 1],
+    ["estatua_aguila", 5, 0],
+    ["pedestal", 8, 1],
+    ["banco_rojo", 9, 6],
+    ["vitrina_alta", 11, 2],
+    ["pedestal", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": [],
+   "salida": {"destino": "sevilla/sala_rio_44_14", "aparicion": "desde_sala_rio_44_14_callejon"}
+  },
+  "sevilla/sala_rio_45_23": {
+   "tipo": "casa",
+   "nombre": "Casa de la flamenca joven",
+   "pieza": "casa_azul_pequena",
+   "calle": ["sevilla/rio", [45, 23]],
+   "personas": [
+    {
+     "nombre": "Flamenca joven",
+     "aspecto": "flamenca",
+     "papel": "libre",
+     "frases": [
+      "En la feria bailo sevillanas desde las dos de la tarde hasta que se me rompe un volante.",
+      "Mi caseta es la de mi peña. Es pequeña, pero tiene el mejor rebujito y el peor equipo de sonido."
+     ],
+     "nodo": "FlamencaJoven",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su hermano pequeño",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": [
+      "En la feria me paso el día en la calle del Infierno. No es una calle mala: es la de las atracciones.",
+      "Mi hermana me ha prohibido ir a su caseta. Dice que le espanto a los pretendientes."
+     ],
+     "nodo": "SuHermanoPequeno",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [6, 9],
+   "suelo": "parquet",
+   "pared": "retro",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 8, 1],
+    ["encimera", 10, 1],
+    ["planta", 2, 1],
+    ["tele", 3, 1],
+    ["vitrina_madera", 5, 1],
+    ["mesa_cristal_larga", 4, 4],
+    ["taburete_amarillo", 4, 6],
+    ["taburete_amarillo", 6, 6],
+    ["sofa", 10, 6],
+    ["planta", 1, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_45_54": {
+   "tipo": "teatro",
+   "nombre": "Teatro de la Maestranza",
+   "pieza": "teatro_real",
+   "calle": ["sevilla/rio", [45, 54]],
+   "personas": [
+    {
+     "nombre": "Directora de escena",
+     "aspecto": "npc_woman",
+     "papel": "artista",
+     "frases": [
+      "Este año ponemos Carmen, que pasa en Sevilla. Los de Sevilla vienen a comprobar que la cigarrera se parece a su prima.",
+      "En Sevilla las óperas que pasan en Sevilla llenan siempre. Las de Viena, cuando hay aire acondicionado."
+     ],
+     "nodo": "DirectoraDeEscena",
+     "en": [9, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Melómano sevillano",
+     "aspecto": "npc_man",
+     "papel": "publico",
+     "frases": [
+      "Hay cuarenta óperas que pasan en Sevilla. Las he visto todas. En ninguna sale el calor.",
+      "El Barbero de Sevilla me lo sé de memoria. Mi barbero también, porque se lo canto mientras me afeita."
+     ],
+     "nodo": "MelomanoSevillano",
+     "en": [2, 8],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 11],
+   "puerta": [4, 10],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["parquet", [2, 2, 9, 2]]],
+   "muebles": [
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_45_6": {
+   "tipo": "casa",
+   "nombre": "Casa del torero retirado",
+   "pieza": "casa_teja",
+   "calle": ["sevilla/rio", [45, 6]],
+   "personas": [
+    {
+     "nombre": "Torero retirado",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Toreé en la Maestranza tres tardes. En la tercera me cogió un toro y me retiré a contarlo en los bares.",
+      "El traje de luces lo guardo en el armario. Pesa como una armadura y brilla como una discoteca."
+     ],
+     "nodo": "ToreroRetirado",
+     "en": [10, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su sobrina animalista",
+     "aspecto": "perroflauta",
+     "papel": "libre",
+     "frases": [
+      "Mi tío me cuenta sus faenas y yo le cuento por qué no deberían existir. Comemos juntos los domingos, en silencio.",
+      "Le he regalado un libro sobre derechos de los animales. Lo usa para calzar la mesa."
+     ],
+     "nodo": "SuSobrinaAnimalista",
+     "en": [4, 5],
+     "mira": "derecha"
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "tatami_verde",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [4, 3, 4, 3]]],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["encimera", 5, 1],
+    ["fogones", 8, 1],
+    ["tele", 10, 1],
+    ["planta", 12, 1],
+    ["estanteria_baja_oliva", 1, 1],
+    ["estante_oliva", 3, 1],
+    ["planta", 12, 7],
+    ["caja", 1, 8]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_46_34": {
+   "tipo": "oficina",
+   "nombre": "Oficina olvidada de la Expo 92",
+   "pieza": "oficinas_azules",
+   "calle": ["sevilla/rio", [46, 34]],
+   "personas": [
+    {
+     "nombre": "Último funcionario de la Expo",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Me contrataron para la Expo del 92 y nadie me ha dicho que ha terminado. Sigo cobrando y sellando pases.",
+      "Curro, la mascota, era un pájaro de colores. Ahora está en un almacén y yo le llevo noticias."
+     ],
+     "nodo": "UltimoFuncionarioDeLaExpo",
+     "en": [5, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Visitante perdida",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Buscaba la oficina del parque tecnológico y he encontrado esta sala con folletos de 1992.",
+      "El funcionario me ha ofrecido un pase de temporada para la Expo. Es el mejor regalo que me han hecho nunca."
+     ],
+     "nodo": "VisitantePerdida",
+     "en": [1, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "archivo",
+     "frases": [
+      "Un póster de Curro, la mascota de la Expo 92, saludando con un ala. Debajo, un calendario parado en octubre de 1992."
+     ],
+     "nodo": "Cartel",
+     "en": [8, 2]
+    }
+   ],
+   "tamano": [15, 10],
+   "puerta": [5, 9],
+   "suelo": "moqueta_beige",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 5, 0],
+    ["archivador_bajo", 6, 1],
+    ["taquilla_archivo", 8, 0],
+    ["mostrador_turquesa", 2, 2],
+    ["banqueta_roja", 3, 4],
+    ["mostrador_turquesa", 9, 6],
+    ["banqueta_azul", 10, 8],
+    ["tele", 11, 1],
+    ["planta", 13, 1],
+    ["papelera", 13, 7],
+    ["mesa_cristal", 6, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_50_23": {
+   "tipo": "casa",
+   "nombre": "Casa del guardia civil jubilado",
+   "pieza": "casa_dos_aguas",
+   "calle": ["sevilla/rio", [50, 23]],
+   "personas": [
+    {
+     "nombre": "Guardia civil jubilado",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Patrullé Doñana veinte años. Vi linces, flamencos y furtivos. Los furtivos eran los más difíciles de ver.",
+      "El tricornio lo tengo en la vitrina. Mi nieto se lo pone para jugar y le queda grande, como a todos."
+     ],
+     "nodo": "GuardiaCivilJubilado",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi marido sigue madrugando a las seis como si tuviera guardia. Ahora patrulla el mercado.",
+      "Le he dicho que se apunte a pintura. Ha pintado cuarenta cuadros del mismo cuartel."
+     ],
+     "nodo": "SuMujer",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "rombos_lila",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["fogones", 6, 1], ["encimera", 8, 1], ["cajon_oliva", 2, 1], ["tele", 3, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_51_12": {
+   "tipo": "casa",
+   "nombre": "Casa del mozo de espadas",
+   "pieza": "casa_teja",
+   "calle": ["sevilla/rio", [51, 12]],
+   "personas": [
+    {
+     "nombre": "Mozo de espadas",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Llevo treinta años vistiendo a toreros. Cerrar la taleguilla es más difícil que torear.",
+      "El torero entra en la plaza y se lleva la gloria. Yo me quedo en el callejón con su chaqueta y su miedo."
+     ],
+     "nodo": "MozoDeEspadas",
+     "en": [2, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Su hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": [
+      "Mi padre se sabe todos los secretos de los toreros. Si escribiera un libro, saldría en todos los programas.",
+      "Yo estudio Derecho. Mi padre dice que es otra forma de torear."
+     ],
+     "nodo": "SuHija",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [2, 4, 3, 3]]],
+   "muebles": [
+    ["tele", 4, 1],
+    ["estante_madera", 6, 1],
+    ["estanteria_baja_madera", 7, 1],
+    ["estante_madera", 9, 1],
+    ["mesa_cristal", 3, 3],
+    ["banqueta_roja", 2, 4],
+    ["banqueta_roja", 5, 4],
+    ["arbol_maceta", 1, 0],
+    ["caja", 9, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_52_46": {
+   "tipo": "portal",
+   "nombre": "Portal del barrio del Arenal",
+   "pieza": "bloque_pisos",
+   "calle": ["sevilla/rio", [52, 46]],
+   "personas": [
+    {
+     "nombre": "Portero del Arenal",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "En feria de abril este portal se llena de gente con traje corto y caballos. Una vez entró un caballo hasta el ascensor.",
+      "Los vecinos del Arenal viven al lado de la Maestranza. Saben cómo va la corrida por los olés."
+     ],
+     "nodo": "PorteroDelArenal",
+     "en": [2, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecina con mantilla",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "El Jueves Santo me pongo la mantilla de mi madre. Tiene ochenta años y aguanta mejor que yo.",
+      "Antes el Arenal era de marineros y de toreros. Ahora es de restaurantes con mantel de tela."
+     ],
+     "nodo": "VecinaConMantilla",
+     "en": [4, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [9, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [2, 3, 4, 2]]],
+   "muebles": [
+    ["escalera_mano", 2, 0],
+    ["planta", 5, 1],
+    ["archivador_bajo", 6, 1],
+    ["mostrador_oliva_i", 1, 3],
+    ["mostrador_oliva_m", 2, 3],
+    ["mostrador_oliva_d", 3, 3],
+    ["sillon_derecha", 6, 4],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_5_16": {
+   "tipo": "floristeria",
+   "nombre": "Floristería de la calle Pureza",
+   "pieza": "tienda_flores",
+   "calle": ["sevilla/rio", [5, 16]],
+   "personas": [
+    {
+     "nombre": "Florista de las cofradías",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "En Semana Santa pongo los claveles de los pasos. Mil quinientos claveles por paso, uno a uno.",
+      "Las cofradías discuten por el color de los claveles más que por la teología."
+     ],
+     "nodo": "FloristaDeLasCofradias",
+     "en": [2, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Cofrade con encargo",
+     "aspecto": "costalero",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a encargar el exorno floral. Lo queremos rojo, pero «un rojo de Triana», que es distinto.",
+      "Si los claveles no están a tiempo, la culpa es mía. En la hermandad no se perdona; se recuerda."
+     ],
+     "nodo": "CofradeConEncargo",
+     "en": [8, 5],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_verdes",
+   "pared": "menta",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["palmera_maceta", 2, 0],
+    ["planta", 3, 1],
+    ["palmera_maceta", 4, 0],
+    ["mostrador_verde_i", 7, 3],
+    ["mostrador_verde_m", 8, 3],
+    ["mostrador_verde_d", 9, 3],
+    ["arbol_maceta", 3, 3],
+    ["planta", 4, 3],
+    ["arbol_maceta", 5, 3],
+    ["palmera_maceta", 1, 4],
+    ["arbol_maceta", 1, 0],
+    ["cajas", 7, 1]
+   ],
+   "encima": [["jarron_flores", 9, 3], ["jarron_flores", 7, 3]],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_8_44": {
+   "tipo": "bar",
+   "nombre": "Peña bética de Triana",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [8, 44]],
+   "personas": [
+    {
+     "nombre": "Socio de la peña",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": [
+      "En esta peña se celebró la Copa del Rey con tanto cariño que todavía hay confeti en las lámparas.",
+      "Aquí no se insulta al Sevilla. Se le compadece, que hace más daño."
+     ],
+     "nodo": "SocioDeLaPena",
+     "en": [2, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Camarero de la peña",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Las cañas en la peña son verdes. No es la cerveza: es la luz, que la pintamos así.",
+      "El día del derbi abrimos a las nueve de la mañana y cerramos cuando se acaben los nervios."
+     ],
+     "nodo": "CamareroDeLaPena",
+     "en": [2, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "rombos_oscuros",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 2, 1],
+    ["encimera", 4, 1],
+    ["nevera_alta", 7, 0],
+    ["mostrador_blanco_i", 2, 4],
+    ["mostrador_blanco_m", 3, 4],
+    ["mostrador_blanco_m", 4, 4],
+    ["mostrador_blanco_m", 5, 4],
+    ["mostrador_blanco_m", 6, 4],
+    ["mostrador_blanco_d", 7, 4],
+    ["taburete_rojo", 3, 6],
+    ["taburete_rojo", 5, 6],
+    ["taburete_rojo", 7, 6],
+    ["tele_pequena", 1, 2],
+    ["planta", 10, 7]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_8_52": {
+   "tipo": "casa",
+   "nombre": "Casa de la saetera",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [8, 52]],
+   "personas": [
+    {
+     "nombre": "Saetera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Canto saetas desde el balcón cuando pasa la Virgen. El paso se para y toda la calle llora.",
+      "Ensayo la saeta todo el año en la cocina. Los vecinos ya lloran al oír la olla exprés."
+     ],
+     "nodo": "Saetera",
+     "en": [7, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Su nieto",
+     "aspecto": "npc_youngster",
+     "papel": "mesa",
+     "frases": [
+      "Mi abuela tiene un vídeo cantando una saeta con un millón de visitas. Es la más famosa de la familia.",
+      "Le he abierto una cuenta en redes. La gente le pide que cante saetas a sus gatos."
+     ],
+     "nodo": "SuNieto",
+     "en": [5, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["tatami_verde", [3, 4, 5, 3]]],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["estanteria_baja_mostaza", 1, 1],
+    ["estante_mostaza", 3, 1],
+    ["mesa_cristal_larga", 2, 4],
+    ["taburete_verde", 2, 6],
+    ["taburete_verde", 4, 6],
+    ["palmera_maceta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "sevilla/sala_rio_8_6": {
+   "tipo": "casa",
+   "nombre": "Casa de la cantaora",
+   "pieza": "casa_ibicenca",
+   "calle": ["sevilla/rio", [8, 6]],
+   "personas": [
+    {
+     "nombre": "Cantaora de Triana",
+     "aspecto": "flamenca",
+     "papel": "tele",
+     "frases": [
+      "Canto por soleares desde que nací. Mi madre dice que lloré por bulerías.",
+      "En la Velá de Santa Ana canto en la calle Betis. El río me hace los coros."
+     ],
+     "nodo": "CantaoraDeTriana",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su marido palmero",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Soy palmero profesional. Tengo las manos aseguradas, aunque nadie sabe en qué compañía.",
+      "Si no llevo el compás, mi mujer me mira y se me pasa. Treinta años casados y treinta años de compás."
+     ],
+     "nodo": "SuMaridoPalmero",
+     "en": [10, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [7, 7],
+   "suelo": "moqueta_beige",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["cajon_oliva", 7, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal", 4, 3],
+    ["silla_derecha", 3, 3],
+    ["silla_izquierda", 6, 3],
+    ["sofa", 8, 5],
+    ["planta", 1, 1],
+    ["planta", 10, 1]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  }
+ }
+}

@@ -1,0 +1,97 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_jr4if"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_kmldt"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_o00th"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_rvtkx"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_jf3ub"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_4etni"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/guarda_parque.png" id="7_mwabq"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_2p7ny"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_g2m3y"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_j1x07"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_tfhd3"]
+
+[sub_resource type="Resource" id="Resource_hrrq6"]
+script = ExtResource("3_o00th")
+id = &"sevilla/sala_centro_22_40_naranjos"
+display_name = "Patio de los Naranjos, Sevilla"
+outdoor = false
+zone_id = &"sevilla"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaCentro2240Naranjos" type="Node2D" unique_id=92875997]
+script = ExtResource("1_jr4if")
+data = SubResource("Resource_hrrq6")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=915675195]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADgAAAABAAAAAAAAADgAAAACAAAAAAAAADgAAAADAAAAAAAAADgAAAAEAAAAAAAAADgAAAAFAAAAAAAAADgAAAAGAAAAAAAAADgAAAAHAAAAAAAAADgAAAAIAAAAAAAAADgAAAAJAAAAAAAAADgAAAAKAAAAAAAAADgAAAALAAAAAAAAADgAAAAAAAEAAAAAADgAAAABAAEAAAAAADgAAAACAAEAAAAAADgAAAADAAEAAAAAADgAAAAEAAEAAAAAADgAAAAFAAEAAAAAADgAAAAGAAEAAAAAADgAAAAHAAEAAAAAADgAAAAIAAEAAAAAADgAAAAJAAEAAAAAADgAAAAKAAEAAAAAADgAAAALAAEAAAAAADgAAAAAAAIAAAAAADgAAAABAAIAAAAAADgAAAACAAIAAAAAADgAAAADAAIAAAAAADgAAAAEAAIAAAAAADgAAAAFAAIAAAAAADgAAAAGAAIAAAAAADgAAAAHAAIAAAAAADgAAAAIAAIAAAAAADgAAAAJAAIAAAAAADgAAAAKAAIAAAAAADgAAAALAAIAAAAAADgAAAAAAAMAAAAAADgAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAIAAMAAAAAADgAAAAJAAMAAAAAADgAAAAKAAMAAAAAADgAAAALAAMAAAAAADgAAAAAAAQAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAADgAAAAFAAQAAAAAADgAAAAGAAQAAAAAADgAAAAHAAQAAAAAADgAAAAIAAQAAAAAADgAAAAJAAQAAAAAADgAAAAKAAQAAAAAADgAAAALAAQAAAAAADgAAAAAAAUAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAADgAAAAFAAUAAAAAADgAAAAGAAUAAAAAADgAAAAHAAUAAAAAADgAAAAIAAUAAAAAADgAAAAJAAUAAAAAADgAAAAKAAUAAAAAADgAAAALAAUAAAAAADgAAAAAAAYAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAADgAAAAFAAYAAAAAADgAAAAGAAYAAAAAADgAAAAHAAYAAAAAADgAAAAIAAYAAAAAADgAAAAJAAYAAAAAADgAAAAKAAYAAAAAADgAAAALAAYAAAAAADgAAAAAAAcAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAADgAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAAIAAcAAAAAADgAAAAJAAcAAAAAADgAAAAKAAcAAAAAADgAAAALAAcAAAAAADgAAAAAAAgAAAAAADgAAAABAAgAAAAAADgAAAACAAgAAAAAADgAAAADAAgAAAAAADgAAAAEAAgAAAAAADgAAAAFAAgAAAAAAAwAAAAGAAgAAAAAADgAAAAHAAgAAAAAADgAAAAIAAgAAAAAADgAAAAJAAgAAAAAADgAAAAKAAgAAAAAADgAAAALAAgAAAAAADgAAAA=")
+tile_set = ExtResource("4_rvtkx")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1741554841]
+tile_map_data = PackedByteArray("AAABAAAAAQABABwAAAABAAEAAQABAB0AAAACAAAAAQABABwAAAACAAEAAQABAB0AAAADAAAAAQABABwAAAADAAEAAQABAB0AAAAEAAAAAQABABwAAAAEAAEAAQABAB0AAAAFAAAAAQABABwAAAAFAAEAAQABAB0AAAAGAAAAAQABABwAAAAGAAEAAQABAB0AAAAHAAAAAQABABwAAAAHAAEAAQABAB0AAAAIAAAAAQABABwAAAAIAAEAAQABAB0AAAAJAAAAAQABABwAAAAJAAEAAQABAB0AAAAKAAAAAQABABwAAAAKAAEAAQABAB0AAAAAAAAAAQACABoAAAALAAAAAQAAABoAAAAAAAEAAQACABoAAAALAAEAAQAAABoAAAAAAAIAAQACABoAAAALAAIAAQAAABoAAAAAAAMAAQACABoAAAALAAMAAQAAABoAAAAAAAQAAQACABoAAAALAAQAAQAAABoAAAAAAAUAAQACABoAAAALAAUAAQAAABoAAAAAAAYAAQACABoAAAALAAYAAQAAABoAAAAAAAcAAQACABoAAAALAAcAAQAAABoAAAABAAgAAQABABkAAAACAAgAAQABABkAAAADAAgAAQABABkAAAAEAAgAAQACABkAAAAGAAgAAQAAABkAAAAHAAgAAQABABkAAAAIAAgAAQABABkAAAAJAAgAAQABABkAAAAKAAgAAQABABkAAAAAAAgAAQAFAB0AAAALAAgAAQAGAB0AAAA=")
+tile_set = ExtResource("4_rvtkx")
+
+[node name="Entities" type="Node2D" parent="." unique_id=124921225]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1992593611]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAAAAgAAADEAAAAGAAAAAgABADEAAAAHAAAAAgACADEAAAAFAAEAAgAAADIAAAAGAAEAAgABADIAAAAHAAEAAgACADIAAAAFAAIAAgAAADMAAAAGAAIAAgABADMAAAAHAAIAAgACADMAAAAFAAUAAgAEACYAAAAHAAYAAgAEACYAAAABAAcAAgAEACYAAAA=")
+tile_set = ExtResource("4_rvtkx")
+
+[node name="JardineroDelPatio" type="Node2D" parent="Entities" unique_id=1770762965 instance=ExtResource("5_jf3ub")]
+position = Vector2(272, 112)
+script = ExtResource("6_4etni")
+display_name = "Jardinero del patio"
+lines = PackedStringArray("Estos naranjos dan naranjas amargas. Los turistas las prueban una vez y ya nunca más.", "Las naranjas se mandan a Inglaterra para hacer mermelada. Es la única exportación que no se queja del calor.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_mwabq")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=936851169 instance=ExtResource("8_2p7ny")]
+position = Vector2(176, 80)
+script = ExtResource("9_g2m3y")
+lines = PackedStringArray("Una fuente visigoda en el centro del patio. Antes era de la mezquita; después, de la catedral; ahora, de las palomas.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=861792479]
+z_index = 10
+tile_set = ExtResource("4_rvtkx")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1878468874]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=2118357922]
+position = Vector2(176, 272)
+script = ExtResource("10_j1x07")
+target_map = &"sevilla/sala_centro_22_40"
+target_spawn = &"desde_sala_centro_22_40_naranjos"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=2071118359]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1810331370]
+position = Vector2(176, 240)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=2106318454]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1913488545]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_tfhd3")
+theme_override_font_sizes/font_size = 16
+text = "PATIO DE LOS NARANJOS"
+horizontal_alignment = 1
