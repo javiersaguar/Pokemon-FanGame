@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Da clase, equipo, textos y sitio (propuesta) a los personajes que tenían arte pero no combate, y añade las
-segundas apariciones que decidió Javier (docs/DECISIONES_JAVIER_2026-10-13.md, §4). Escribe en
+"""Da clase, equipo, textos y sitio (propuesta) a los personajes que tenían arte pero no combate, añade las
+segundas apariciones que decidió Javier (docs/DECISIONES_JAVIER_2026-10-13.md, §4) y las opciones de evento
+de los personajes (combates seguidos, premio de Zapatero y detención de Ábalos y Koldo). Escribe en
 data/trainer_classes.json, data/trainers/famosos.json, data/trainers/liga.json y data/personajes_en_el_mapa.json.
 Es idempotente: si una entrada ya existe, la sustituye por la de aquí.
 
@@ -215,6 +216,8 @@ PLACEMENTS = {
     "puigdemont": {"mapa": "barcelona/ciutat_vella", "cerca": [18, 49], "mira": "izquierda", "vista": 0,
                    "lugar": "Port Vell, junto a la terminal de ferris: listo para fugarse otra vez. Propuesta"},
     "zapatero": {"mapa": "las_palmas/canteras", "cerca": [40, 38], "mira": "abajo", "vista": 3, "pareja": "maduro",
+                 "premio": {"objeto": "joyas_zapatero", "cantidad": 1,
+                            "texto": "Ten, para ti. Se venden muy bien en cualquier tienda. Yo no preguntaría de dónde salen."},
                  "lugar": "Puerto de La Luz (Las Palmas), con Maduro: Venezuela es «la octava isla» de Canarias. Propuesta"},
     "maduro": {"mapa": "las_palmas/canteras", "cerca": [42, 38], "mira": "abajo", "vista": 3,
                "lugar": "Puerto de La Luz (Las Palmas), con Zapatero. Propuesta"},
@@ -233,15 +236,16 @@ PLACEMENTS = {
     "abascal_covadonga": {"mapa": "ruta_18/exterior", "cerca": [36, 26], "mira": "abajo", "vista": 3,
                           "lugar": "Covadonga, delante de la basílica: su segunda aparición (dos apariciones: decisión de Javier; el sitio, propuesta)"},
     "abalos_albufera": {"mapa": "ruta_9/exterior", "cerca": [11, 27], "mira": "derecha", "vista": 3, "pareja": "koldo_albufera",
-                        "requiere": {"medallas": 3},
+                        "requiere": {"medallas": 3}, "hasta": {"flag": "detenido:abalos_albufera"},
+                        "detencion": {"texto": "¡Alto! ¡Policía Nacional! Se acabaron las vacaciones en la Albufera."},
                         "lugar": "La Albufera (El Palmar), de «vacaciones»: segundo encuentro, con tres medallas (decisión de Javier)"},
     "koldo_albufera": {"mapa": "ruta_9/exterior", "cerca": [12, 29], "mira": "derecha", "vista": 3,
-                       "requiere": {"medallas": 3},
+                       "requiere": {"medallas": 3}, "hasta": {"flag": "detenido:koldo_albufera"},
                        "lugar": "La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier)"},
     # Recolocados: la familia de Lamine se muda con él a Rocafonda; los antiguos del gimnasio 6, a la calle de Bilbao.
-    "hustlehard304": {"mapa": "rocafonda/exterior", "cerca": [28, 15], "mira": "abajo", "vista": 2,
+    "hustlehard304": {"mapa": "rocafonda/exterior", "cerca": [28, 15], "mira": "abajo", "vista": 2, "serie": ["keyne", "hustlehard304", "lamine"],
                       "lugar": "Rocafonda, a la puerta de la mansión de su hijo Lamine"},
-    "keyne": {"mapa": "rocafonda/exterior", "cerca": [34, 15], "mira": "abajo", "vista": 2,
+    "keyne": {"mapa": "rocafonda/exterior", "cerca": [34, 15], "mira": "abajo", "vista": 2, "serie": ["keyne", "hustlehard304", "lamine"],
               "lugar": "Rocafonda, con su hermano Lamine"},
     "gym6_camarero": {"mapa": "bilbao/exterior", "cerca": [16, 20], "mira": "abajo", "vista": 3,
                       "lugar": "Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6)"},
@@ -255,6 +259,18 @@ PLACEMENTS = {
     "inaki_williams": {"mapa": "bilbao/exterior", "cerca": [14, 24], "mira": "abajo", "vista": 3,
                        "requiere": {"medallas": 6},
                        "lugar": "A la salida de San Mamés, con su hermano Nico. Propuesta"},
+}
+
+# Opciones de evento (src/events/personajes/personaje_event.gd) que se suman a entradas que ya existían:
+# combates seguidos con curación (decisión de Javier del 2026-10-13) y la policía que se lleva a Ábalos y Koldo.
+EXTRA_OPTIONS = {
+    "lamine": {"serie": ["keyne", "hustlehard304", "lamine"]},
+    "pokealex": {"serie": ["pokealex", "sekiam", "folagor"]},
+    "sekiam": {"serie": ["pokealex", "sekiam", "folagor"]},
+    "folagor": {"serie": ["pokealex", "sekiam", "folagor"]},
+    "abalos": {"detencion": {"texto": "¡Alto! ¡Policía Nacional! Quedan detenidos por lo de las mascarillas."},
+               "hasta": {"flag": "detenido:abalos"}},
+    "koldo": {"hasta": {"flag": "detenido:koldo"}},
 }
 
 # Pendientes con motivo hasta que exista su mapa (bloque 4).
@@ -313,6 +329,8 @@ def main() -> None:
             doc["colocados"][doc["colocados"].index(placed[tid])] = entry
         else:
             doc["colocados"].append(entry)
+    for entry in doc["colocados"]:
+        entry.update(EXTRA_OPTIONS.get(entry["id"], {}))
     doc["pendientes"] = [e for e in doc["pendientes"] if e["id"] not in PLACEMENTS and e["id"] not in PENDING]
     for tid, (where, why) in PENDING.items():
         doc["pendientes"].append({"id": tid, "lugar": where, "motivo": why})

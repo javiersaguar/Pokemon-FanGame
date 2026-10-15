@@ -9,6 +9,9 @@ const DATA := "res://data/personajes_en_el_mapa.json"
 const TRAINER_SCENE := "res://src/overworld/trainers/trainer_npc.tscn"
 const NPC_SCENE := "res://src/overworld/npc/npc.tscn"
 const LEADER_EVENT := "res://src/events/gym_leader_event.gd"
+## Combates seguidos ("serie"), premio al ganar ("premio") y detención ("detencion"): ver el evento.
+const PERSONAJE_EVENT := "res://src/events/personajes/personaje_event.gd"
+const EVENT_OPTIONS: Array[String] = ["serie", "premio", "detencion"]
 const FACING := {"abajo": 0, "izquierda": 1, "derecha": 2, "arriba": 3}
 
 static var _by_map: Dictionary = {}
@@ -47,6 +50,22 @@ static func node_name(entry: Dictionary) -> String:
 	return "Personaje_" + str(entry["id"])
 
 
+static func has_event_options(entry: Dictionary) -> bool:
+	for key: String in EVENT_OPTIONS:
+		if entry.has(key):
+			return true
+	return false
+
+
+## Las opciones del evento de personaje de una entrada ("serie", "premio", "detencion").
+static func event_options(entry: Dictionary) -> Dictionary:
+	var out := {}
+	for key: String in EVENT_OPTIONS:
+		if entry.has(key):
+			out[key] = entry[key]
+	return out
+
+
 ## Añade los personajes de su mapa a Entities (antes de entrar al árbol). Con "sustituye", el personaje
 ## ocupa el sitio de un nodo del mapa pintado (el vecino «Javier» de San Miguel, por ejemplo), que se quita
 ## cuando el personaje sale.
@@ -54,7 +73,15 @@ static func apply(map: MapRoot) -> void:
 	var entities := map.get_entities()
 	if entities == null:
 		return
-	for entry: Dictionary in for_map(map.get_map_id()):
+	var entries := for_map(map.get_map_id())
+	# Las opciones de evento valen para la pareja entera: si una de las dos las tiene, las dos usan el evento.
+	var with_options := {}
+	for entry: Dictionary in entries:
+		if has_event_options(entry):
+			with_options[str(entry["id"])] = true
+			if entry.has("pareja"):
+				with_options[str(entry["pareja"])] = true
+	for entry: Dictionary in entries:
 		var name := node_name(entry)
 		if entities.has_node(name) or not is_available(entry):
 			continue
@@ -75,6 +102,9 @@ static func apply(map: MapRoot) -> void:
 				node.set(&"partner", NodePath("../Personaje_" + str(entry["pareja"])))
 			if bool(entry.get("lider", false)):
 				node.set(&"challenge_event", load(LEADER_EVENT))
+			elif with_options.has(str(entry["id"])):
+				node.set(&"challenge_event", load(PERSONAJE_EVENT))
+				node.set_meta(&"personaje", event_options(entry))
 		else:
 			node.set(&"sprite_sheet", load("res://assets/sprites/characters/%s.png" % str(entry["sprite"])))
 			node.set(&"lines", PackedStringArray(entry.get("frases", [])))

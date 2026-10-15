@@ -1,0 +1,13 @@
+{
+  "_doc": "Objetos propios de Pokémon Spain (DataDB los suma a los estándar; el RandomLocke no los reparte). Precio de venta: la mitad de 'price'.",
+  "joyas_zapatero": {
+    "_": "Decisión de Javier (2026-10-13, §4): al ganarle, Zapatero te da sus joyas y se pueden vender por muchas monedas. Precio: propuesta. Icono: Real Brazal del Generation 9 Pack.",
+    "name": "Joyas de Zapatero",
+    "name_plural": "Joyas de Zapatero",
+    "pocket": "items",
+    "category": "loot",
+    "price": 100000,
+    "fling_power": 30,
+    "description": "Cadenas, medallones, pulseras y anillos de oro que te dio Zapatero al perder. Valen una fortuna en cualquier tienda. Mejor no preguntar de dónde salen."
+  }
+}

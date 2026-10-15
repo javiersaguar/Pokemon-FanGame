@@ -583,6 +583,11 @@
    "casilla": [
     31,
     13
+   ],
+   "serie": [
+    "keyne",
+    "hustlehard304",
+    "lamine"
    ]
   },
   {
@@ -590,11 +595,16 @@
    "entrenador": "hustlehard304",
    "mapa": "rocafonda/exterior",
    "cerca": [
-    28.0,
-    15.0
+    28,
+    15
    ],
    "mira": "abajo",
-   "vista": 2.0,
+   "vista": 2,
+   "serie": [
+    "keyne",
+    "hustlehard304",
+    "lamine"
+   ],
    "lugar": "Rocafonda, a la puerta de la mansión de su hijo Lamine",
    "casilla": [
     29,
@@ -606,11 +616,16 @@
    "entrenador": "keyne",
    "mapa": "rocafonda/exterior",
    "cerca": [
-    34.0,
-    15.0
+    34,
+    15
    ],
    "mira": "abajo",
-   "vista": 2.0,
+   "vista": 2,
+   "serie": [
+    "keyne",
+    "hustlehard304",
+    "lamine"
+   ],
    "lugar": "Rocafonda, con su hermano Lamine",
    "casilla": [
     34,
@@ -856,6 +871,11 @@
    "casilla": [
     30,
     10
+   ],
+   "serie": [
+    "pokealex",
+    "sekiam",
+    "folagor"
    ]
   },
   {
@@ -872,6 +892,11 @@
    "casilla": [
     33,
     10
+   ],
+   "serie": [
+    "pokealex",
+    "sekiam",
+    "folagor"
    ]
   },
   {
@@ -888,6 +913,11 @@
    "casilla": [
     36,
     10
+   ],
+   "serie": [
+    "pokealex",
+    "sekiam",
+    "folagor"
    ]
   },
   {
@@ -1003,7 +1033,13 @@
    "casilla": [
     27,
     40
-   ]
+   ],
+   "detencion": {
+    "texto": "¡Alto! ¡Policía Nacional! Quedan detenidos por lo de las mascarillas."
+   },
+   "hasta": {
+    "flag": "detenido:abalos"
+   }
   },
   {
    "id": "koldo",
@@ -1019,7 +1055,10 @@
    "casilla": [
     29,
     39
-   ]
+   ],
+   "hasta": {
+    "flag": "detenido:koldo"
+   }
   },
   {
    "id": "recluta_clan",
@@ -1646,11 +1685,11 @@
    "entrenador": "omar_montes",
    "mapa": "madrid_rio/exterior",
    "cerca": [
-    9.0,
-    16.0
+    9,
+    16
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Madrid Río, junto al Matadero, camino de Carabanchel (Pan Bendito, su barrio). Propuesta",
    "casilla": [
     7,
@@ -1662,11 +1701,11 @@
    "entrenador": "pablo_motos",
    "mapa": "madrid/centro",
    "cerca": [
-    33.0,
-    25.0
+    33,
+    25
    ],
    "mira": "abajo",
-   "vista": 0.0,
+   "vista": 0,
    "lugar": "Gran Vía, enfrente de La Revuelta de Broncano: la guerra de audiencias. Propuesta",
    "casilla": [
     33,
@@ -1678,11 +1717,11 @@
    "entrenador": "zona_gemelos_carlos",
    "mapa": "getafe/exterior",
    "cerca": [
-    36.0,
-    52.0
+    36,
+    52
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "pareja": "zona_gemelos_dani",
    "lugar": "Getafe, su ciudad, a la puerta de la nave donde graban La Casa de los Gemelos. Propuesta",
    "casilla": [
@@ -1695,11 +1734,11 @@
    "entrenador": "zona_gemelos_dani",
    "mapa": "getafe/exterior",
    "cerca": [
-    38.0,
-    52.0
+    38,
+    52
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Getafe, con su gemelo Carlos. Propuesta",
    "casilla": [
     38,
@@ -1711,11 +1750,11 @@
    "entrenador": "antonio_recio",
    "mapa": "mostoles/exterior",
    "cerca": [
-    30.0,
-    46.0
+    30,
+    46
    ],
    "mira": "abajo",
-   "vista": 2.0,
+   "vista": 2,
    "lugar": "Móstoles, en una urbanización nueva: el Mirador de Montepinar de La que se avecina. Propuesta",
    "casilla": [
     30,
@@ -1727,11 +1766,11 @@
    "entrenador": "amador_rivas",
    "mapa": "mostoles/exterior",
    "cerca": [
-    34.0,
-    46.0
+    34,
+    46
    ],
    "mira": "abajo",
-   "vista": 2.0,
+   "vista": 2,
    "lugar": "Móstoles, de vecino en el Mirador de Montepinar. Propuesta",
    "casilla": [
     35,
@@ -1743,11 +1782,11 @@
    "entrenador": "mente_fria",
    "mapa": "mostoles/exterior",
    "cerca": [
-    38.0,
-    46.0
+    38,
+    46
    ],
    "mira": "abajo",
-   "vista": 2.0,
+   "vista": 2,
    "lugar": "Móstoles, de vecino en el Mirador de Montepinar. Propuesta",
    "casilla": [
     38,
@@ -1759,11 +1798,11 @@
    "entrenador": "marc_cucurella",
    "mapa": "rocafonda/exterior",
    "cerca": [
-    27.0,
-    30.0
+    27,
+    30
    ],
    "mira": "abajo",
-   "vista": 2.0,
+   "vista": 2,
    "lugar": "Rocafonda (Maresme), en el campo de los niños: es de Alella, al lado. Propuesta",
    "casilla": [
     27,
@@ -1775,11 +1814,11 @@
    "entrenador": "joan_pradells",
    "mapa": "valencia/malvarrosa",
    "cerca": [
-    46.0,
-    16.0
+    46,
+    16
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Playa de la Malvarrosa, entrenando al aire libre: es culturista y valenciano. Propuesta",
    "casilla": [
     46,
@@ -1791,11 +1830,11 @@
    "entrenador": "david_bisbal",
    "mapa": "ruta_12/exterior",
    "cerca": [
-    64.0,
-    27.0
+    64,
+    27
    ],
    "mira": "derecha",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Ruta 12, en la entrada desde Murcia: el camino de Almería, su tierra. Propuesta",
    "casilla": [
     64,
@@ -1807,11 +1846,11 @@
    "entrenador": "jc_reyes",
    "mapa": "sevilla/centro",
    "cerca": [
-    55.0,
-    30.0
+    55,
+    30
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Sevilla, en el lado este del centro, camino de Palmete, su barrio. Propuesta",
    "casilla": [
     55,
@@ -1823,11 +1862,11 @@
    "entrenador": "puigdemont",
    "mapa": "barcelona/ciutat_vella",
    "cerca": [
-    18.0,
-    49.0
+    18,
+    49
    ],
    "mira": "izquierda",
-   "vista": 0.0,
+   "vista": 0,
    "lugar": "Port Vell, junto a la terminal de ferris: listo para fugarse otra vez. Propuesta",
    "casilla": [
     18,
@@ -1839,12 +1878,17 @@
    "entrenador": "zapatero",
    "mapa": "las_palmas/canteras",
    "cerca": [
-    40.0,
-    38.0
+    40,
+    38
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "pareja": "maduro",
+   "premio": {
+    "objeto": "joyas_zapatero",
+    "cantidad": 1,
+    "texto": "Ten, para ti. Se venden muy bien en cualquier tienda. Yo no preguntaría de dónde salen."
+   },
    "lugar": "Puerto de La Luz (Las Palmas), con Maduro: Venezuela es «la octava isla» de Canarias. Propuesta",
    "casilla": [
     40,
@@ -1856,11 +1900,11 @@
    "entrenador": "maduro",
    "mapa": "las_palmas/canteras",
    "cerca": [
-    42.0,
-    38.0
+    42,
+    38
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Puerto de La Luz (Las Palmas), con Zapatero. Propuesta",
    "casilla": [
     42,
@@ -1872,11 +1916,11 @@
    "entrenador": "trump",
    "mapa": "playa_del_ingles/exterior",
    "cerca": [
-    17.0,
-    9.0
+    17,
+    9
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "requiere": {
     "flag": "trainer_defeated:maduro"
    },
@@ -1891,11 +1935,11 @@
    "entrenador": "paache",
    "mapa": "ruta_17/exterior",
    "cerca": [
-    14.0,
-    28.0
+    14,
+    28
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Ruta 17 (Galicia interior), junto al hórreo. Que esté en Galicia es decisión de Javier; el sitio exacto, propuesta",
    "casilla": [
     14,
@@ -1907,11 +1951,11 @@
    "entrenador": "churumbel",
    "mapa": "malaga/exterior",
    "cerca": [
-    30.0,
-    44.0
+    30,
+    44
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Málaga, su ciudad, junto al mercado. Propuesta",
    "casilla": [
     29,
@@ -1923,14 +1967,14 @@
    "entrenador": "javier",
    "mapa": "pueblo_inicial/exterior",
    "cerca": [
-    37.0,
-    41.0
+    37,
+    41
    ],
    "mira": "abajo",
-   "vista": 0.0,
+   "vista": 0,
    "sustituye": "Javier",
    "requiere": {
-    "medallas": 7.0
+    "medallas": 7
    },
    "lugar": "San Miguel de Bernuy, delante de su casa, al volver por la Ruta 23 con siete medallas (decisión de Javier). Sustituye al vecino «Javier» del mapa",
    "casilla": [
@@ -1943,11 +1987,11 @@
    "entrenador": "vito_quiles_elche",
    "mapa": "ruta_11/exterior",
    "cerca": [
-    52.0,
-    17.0
+    52,
+    17
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Palmeral de Elche, su ciudad: la revancha (decisión de Javier)",
    "casilla": [
     52,
@@ -1959,11 +2003,11 @@
    "entrenador": "abascal_covadonga",
    "mapa": "ruta_18/exterior",
    "cerca": [
-    36.0,
-    26.0
+    36,
+    26
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Covadonga, delante de la basílica: su segunda aparición (dos apariciones: decisión de Javier; el sitio, propuesta)",
    "casilla": [
     35,
@@ -1975,14 +2019,20 @@
    "entrenador": "abalos_albufera",
    "mapa": "ruta_9/exterior",
    "cerca": [
-    11.0,
-    27.0
+    11,
+    27
    ],
    "mira": "derecha",
-   "vista": 3.0,
+   "vista": 3,
    "pareja": "koldo_albufera",
    "requiere": {
-    "medallas": 3.0
+    "medallas": 3
+   },
+   "hasta": {
+    "flag": "detenido:abalos_albufera"
+   },
+   "detencion": {
+    "texto": "¡Alto! ¡Policía Nacional! Se acabaron las vacaciones en la Albufera."
    },
    "lugar": "La Albufera (El Palmar), de «vacaciones»: segundo encuentro, con tres medallas (decisión de Javier)",
    "casilla": [
@@ -1995,13 +2045,16 @@
    "entrenador": "koldo_albufera",
    "mapa": "ruta_9/exterior",
    "cerca": [
-    12.0,
-    29.0
+    12,
+    29
    ],
    "mira": "derecha",
-   "vista": 3.0,
+   "vista": 3,
    "requiere": {
-    "medallas": 3.0
+    "medallas": 3
+   },
+   "hasta": {
+    "flag": "detenido:koldo_albufera"
    },
    "lugar": "La Albufera (El Palmar), con Ábalos y sus cajas de «arroz» (decisión de Javier)",
    "casilla": [
@@ -2014,11 +2067,11 @@
    "entrenador": "gym6_camarero",
    "mapa": "bilbao/exterior",
    "cerca": [
-    16.0,
-    20.0
+    16,
+    20
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6)",
    "casilla": [
     16,
@@ -2030,11 +2083,11 @@
    "entrenador": "gym6_crossfitero",
    "mapa": "bilbao/exterior",
    "cerca": [
-    20.0,
-    23.0
+    20,
+    23
    ],
    "mira": "izquierda",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6)",
    "casilla": [
     20,
@@ -2046,11 +2099,11 @@
    "entrenador": "gym6_tertuliano",
    "mapa": "bilbao/exterior",
    "cerca": [
-    25.0,
-    20.0
+    25,
+    20
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "lugar": "Bilbao, camino de San Mamés (antiguo entrenador del gimnasio 6)",
    "casilla": [
     25,
@@ -2062,14 +2115,14 @@
    "entrenador": "nico_williams",
    "mapa": "bilbao/exterior",
    "cerca": [
-    12.0,
-    24.0
+    12,
+    24
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "pareja": "inaki_williams",
    "requiere": {
-    "medallas": 6.0
+    "medallas": 6
    },
    "lugar": "A la salida de San Mamés, con la medalla 6: la revancha de Copa (dentro combaten por separado). Propuesta",
    "casilla": [
@@ -2082,13 +2135,13 @@
    "entrenador": "inaki_williams",
    "mapa": "bilbao/exterior",
    "cerca": [
-    14.0,
-    24.0
+    14,
+    24
    ],
    "mira": "abajo",
-   "vista": 3.0,
+   "vista": 3,
    "requiere": {
-    "medallas": 6.0
+    "medallas": 6
    },
    "lugar": "A la salida de San Mamés, con su hermano Nico. Propuesta",
    "casilla": [
