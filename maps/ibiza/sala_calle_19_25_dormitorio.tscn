@@ -1,0 +1,97 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_aut8e"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_7c77q"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_v8agv"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_56bxh"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_hsjes"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_dbtx3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/mom.png" id="7_obakf"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_eny42"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_nvaak"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_hplsr"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_7yj7f"]
+
+[sub_resource type="Resource" id="Resource_aut8e"]
+script = ExtResource("3_v8agv")
+id = &"ibiza/sala_calle_19_25_dormitorio"
+display_name = "Estudio del DJ, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 9, 8)
+followers_allowed = false
+
+[node name="SalaCalle1925Dormitorio" type="Node2D" unique_id=259347055]
+script = ExtResource("1_aut8e")
+data = SubResource("Resource_aut8e")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1298050720]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAACQAAAAFAAMAAAAAACQAAAAGAAMAAAAAACQAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAACQAAAAFAAQAAAAAACQAAAAGAAQAAAAAACQAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAACQAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAAAAAcAAAAAACQAAAABAAcAAAAAACQAAAACAAcAAAAAACQAAAADAAcAAAAAABAAAAAEAAcAAAAAACQAAAAFAAcAAAAAACQAAAAGAAcAAAAAACQAAAAHAAcAAAAAACQAAAAIAAcAAAAAACQAAAA=")
+tile_set = ExtResource("4_56bxh")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=224793872]
+tile_map_data = PackedByteArray("AAABAAAAAQABAEkAAAABAAEAAQABAEoAAAACAAAAAQABAEkAAAACAAEAAQABAEoAAAADAAAAAQABAEkAAAADAAEAAQABAEoAAAAEAAAAAQABAEkAAAAEAAEAAQABAEoAAAAFAAAAAQABAEkAAAAFAAEAAQABAEoAAAAGAAAAAQABAEkAAAAGAAEAAQABAEoAAAAHAAAAAQABAEkAAAAHAAEAAQABAEoAAAAAAAAAAQACAEcAAAAIAAAAAQAAAEcAAAAAAAEAAQACAEcAAAAIAAEAAQAAAEcAAAAAAAIAAQACAEcAAAAIAAIAAQAAAEcAAAAAAAMAAQACAEcAAAAIAAMAAQAAAEcAAAAAAAQAAQACAEcAAAAIAAQAAQAAAEcAAAAAAAUAAQACAEcAAAAIAAUAAQAAAEcAAAAAAAYAAQACAEcAAAAIAAYAAQAAAEcAAAABAAcAAQABAEYAAAACAAcAAQACAEYAAAAEAAcAAQAAAEYAAAAFAAcAAQABAEYAAAAGAAcAAQABAEYAAAAHAAcAAQABAEYAAAAAAAcAAQAFAEoAAAAIAAcAAQAGAEoAAAA=")
+tile_set = ExtResource("4_56bxh")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1129213569]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=222235986]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAEAAgADACcAAAAGAAEAAgAEACcAAAAHAAEAAgAFACcAAAAFAAIAAgADACgAAAAGAAIAAgAEACgAAAAHAAIAAgAFACgAAAAFAAMAAgADACkAAAAGAAMAAgAEACkAAAAHAAMAAgAFACkAAAADAAEAAgABABYAAAAEAAEAAgACABYAAAADAAIAAgABABcAAAAEAAIAAgACABcAAAABAAIAAgADAD4AAAA=")
+tile_set = ExtResource("4_56bxh")
+
+[node name="VecinaDelDJ" type="Node2D" parent="Entities" unique_id=78076893 instance=ExtResource("5_hsjes")]
+position = Vector2(48, 144)
+script = ExtResource("6_dbtx3")
+display_name = "Vecina del DJ"
+lines = PackedStringArray("He venido a pedirle que baje el bajo. Lleva así desde 2011.", "La pared tiembla tanto que se me ha despegado el azulejo de la Virgen.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_obakf")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1405280282 instance=ExtResource("8_eny42")]
+position = Vector2(80, 48)
+script = ExtResource("9_nvaak")
+lines = PackedStringArray("Un disco de oro en la pared. De cerca es un CD de una gasolinera pintado con espray.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=466060746]
+z_index = 10
+tile_set = ExtResource("4_56bxh")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=586949571]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=2076123428]
+position = Vector2(112, 240)
+script = ExtResource("10_hplsr")
+target_map = &"ibiza/sala_calle_19_25"
+target_spawn = &"desde_sala_calle_19_25_dormitorio"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=545731979]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=2027056104]
+position = Vector2(112, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1429197219]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1341611738]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 272.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_7yj7f")
+theme_override_font_sizes/font_size = 16
+text = "ESTUDIO DEL DJ"
+horizontal_alignment = 1

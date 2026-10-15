@@ -1,0 +1,97 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_53pw2"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_d448m"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_o2llb"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_8ry4s"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_5cnjx"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_23hay"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_girl.png" id="7_l8iq2"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_c47m0"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_7u6gk"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_hmk30"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_2gvdb"]
+
+[sub_resource type="Resource" id="Resource_53pw2"]
+script = ExtResource("3_o2llb")
+id = &"ibiza/sala_calle_37_15_dormitorio"
+display_name = "Dormitorio de Pep y Catalina, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 9, 8)
+followers_allowed = false
+
+[node name="SalaCalle3715Dormitorio" type="Node2D" unique_id=1433280924]
+script = ExtResource("1_53pw2")
+data = SubResource("Resource_53pw2")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1169101937]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACAAAAABAAAAAAAAACAAAAACAAAAAAAAACAAAAADAAAAAAAAACAAAAAEAAAAAAAAACAAAAAFAAAAAAAAACAAAAAGAAAAAAAAACAAAAAHAAAAAAAAACAAAAAIAAAAAAAAACAAAAAAAAEAAAAAACAAAAABAAEAAAAAACAAAAACAAEAAAAAACAAAAADAAEAAAAAACAAAAAEAAEAAAAAACAAAAAFAAEAAAAAACAAAAAGAAEAAAAAACAAAAAHAAEAAAAAACAAAAAIAAEAAAAAACAAAAAAAAIAAAAAACAAAAABAAIAAAAAACAAAAACAAIAAAAAACAAAAADAAIAAAAAACAAAAAEAAIAAAAAACAAAAAFAAIAAAAAACAAAAAGAAIAAAAAACAAAAAHAAIAAAAAACAAAAAIAAIAAAAAACAAAAAAAAMAAAAAACAAAAABAAMAAAAAACAAAAACAAMAAAAAACAAAAADAAMAAAAAACAAAAAEAAMAAAAAACAAAAAFAAMAAAAAACAAAAAGAAMAAAAAACAAAAAHAAMAAAAAACAAAAAIAAMAAAAAACAAAAAAAAQAAAAAACAAAAABAAQAAAAAACAAAAACAAQAAAAAACAAAAADAAQAAAAAACAAAAAEAAQAAAAAACAAAAAFAAQAAAAAACAAAAAGAAQAAAAAACAAAAAHAAQAAAAAACAAAAAIAAQAAAAAACAAAAAAAAUAAAAAACAAAAABAAUAAAAAACAAAAACAAUAAAAAACAAAAADAAUAAAAAACAAAAAEAAUAAAAAACAAAAAFAAUAAAAAACAAAAAGAAUAAAAAACAAAAAHAAUAAAAAACAAAAAIAAUAAAAAACAAAAAAAAYAAAAAACAAAAABAAYAAAAAACAAAAACAAYAAAAAACAAAAADAAYAAAAAACAAAAAEAAYAAAAAACAAAAAFAAYAAAAAACAAAAAGAAYAAAAAACAAAAAHAAYAAAAAACAAAAAIAAYAAAAAACAAAAAAAAcAAAAAACAAAAABAAcAAAAAACAAAAACAAcAAAAAACAAAAADAAcAAAAAAAQAAAAEAAcAAAAAACAAAAAFAAcAAAAAACAAAAAGAAcAAAAAACAAAAAHAAcAAAAAACAAAAAIAAcAAAAAACAAAAA=")
+tile_set = ExtResource("4_8ry4s")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=217573060]
+tile_map_data = PackedByteArray("AAABAAAAAQABAEQAAAABAAEAAQABAEUAAAACAAAAAQABAEQAAAACAAEAAQABAEUAAAADAAAAAQABAEQAAAADAAEAAQABAEUAAAAEAAAAAQABAEQAAAAEAAEAAQABAEUAAAAFAAAAAQABAEQAAAAFAAEAAQABAEUAAAAGAAAAAQABAEQAAAAGAAEAAQABAEUAAAAHAAAAAQABAEQAAAAHAAEAAQABAEUAAAAAAAAAAQACAEIAAAAIAAAAAQAAAEIAAAAAAAEAAQACAEIAAAAIAAEAAQAAAEIAAAAAAAIAAQACAEIAAAAIAAIAAQAAAEIAAAAAAAMAAQACAEIAAAAIAAMAAQAAAEIAAAAAAAQAAQACAEIAAAAIAAQAAQAAAEIAAAAAAAUAAQACAEIAAAAIAAUAAQAAAEIAAAAAAAYAAQACAEIAAAAIAAYAAQAAAEIAAAABAAcAAQABAEEAAAACAAcAAQACAEEAAAAEAAcAAQAAAEEAAAAFAAcAAQABAEEAAAAGAAcAAQABAEEAAAAHAAcAAQABAEEAAAAAAAcAAQAFAEUAAAAIAAcAAQAGAEUAAAA=")
+tile_set = ExtResource("4_8ry4s")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1866700154]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1276798588]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAEAAgAAAC0AAAAEAAEAAgABAC0AAAAFAAEAAgACAC0AAAADAAIAAgAAAC4AAAAEAAIAAgABAC4AAAAFAAIAAgACAC4AAAADAAMAAgAAAC8AAAAEAAMAAgABAC8AAAAFAAMAAgACAC8AAAAGAAAAAgAHAA8AAAAGAAEAAgAHABAAAAAGAAIAAgAHABEAAAAHAAAAAgAHAA8AAAAHAAEAAgAHABAAAAAHAAIAAgAHABEAAAABAAYAAgAFAD4AAAA=")
+tile_set = ExtResource("4_8ry4s")
+
+[node name="NietaDePep" type="Node2D" parent="Entities" unique_id=447932454 instance=ExtResource("5_5cnjx")]
+position = Vector2(80, 112)
+script = ExtResource("6_23hay")
+display_name = "Nieta de Pep"
+lines = PackedStringArray("El abuelo dice que cuando él era joven la playa era gratis. Yo no me lo creo.", "Yo de mayor quiero ser ibicenca. Pero dice mi madre que ya no quedan sitios.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_l8iq2")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1463525210 instance=ExtResource("8_c47m0")]
+position = Vector2(240, 80)
+script = ExtResource("9_7u6gk")
+lines = PackedStringArray("Un armario que huele a sal y a naftalina. Dentro hay una red de pesca doblada como si fuera una manta.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=115922494]
+z_index = 10
+tile_set = ExtResource("4_8ry4s")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1809328304]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=73351756]
+position = Vector2(112, 240)
+script = ExtResource("10_hmk30")
+target_map = &"ibiza/sala_calle_37_15"
+target_spawn = &"desde_sala_calle_37_15_dormitorio"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=454520801]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1269223964]
+position = Vector2(112, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=40371546]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1968885494]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 272.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_2gvdb")
+theme_override_font_sizes/font_size = 16
+text = "DORMITORIO DE PEP Y CATALINA"
+horizontal_alignment = 1

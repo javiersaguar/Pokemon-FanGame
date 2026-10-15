@@ -1,0 +1,89 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_qitbs"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_0vye6"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_5pnhh"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_wp4lt"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_nlbyl"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_02ld0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/turista_f.png" id="7_ud51j"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="8_iwjom"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="9_sicy7"]
+
+[sub_resource type="Resource" id="Resource_qitbs"]
+script = ExtResource("3_5pnhh")
+id = &"ibiza/sala_calle_6_46_dormitorio"
+display_name = "Habitación número 2, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 10, 7)
+followers_allowed = false
+
+[node name="SalaCalle646Dormitorio" type="Node2D" unique_id=890621567]
+script = ExtResource("1_qitbs")
+data = SubResource("Resource_qitbs")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=923572048]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAJAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAJAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAJAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAABAAAAAFAAMAAAAAABAAAAAGAAMAAAAAABAAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAJAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAABAAAAAFAAQAAAAAABAAAAAGAAQAAAAAABAAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAJAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAJAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAABAAAAAEAAYAAAAAACQAAAAFAAYAAAAAACQAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAAJAAYAAAAAACQAAAA=")
+tile_set = ExtResource("4_wp4lt")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1089327301]
+tile_map_data = PackedByteArray("AAABAAAAAQABADoAAAABAAEAAQABADsAAAACAAAAAQABADoAAAACAAEAAQABADsAAAADAAAAAQABADoAAAADAAEAAQABADsAAAAEAAAAAQABADoAAAAEAAEAAQABADsAAAAFAAAAAQABADoAAAAFAAEAAQABADsAAAAGAAAAAQABADoAAAAGAAEAAQABADsAAAAHAAAAAQABADoAAAAHAAEAAQABADsAAAAIAAAAAQABADoAAAAIAAEAAQABADsAAAAAAAAAAQACADgAAAAJAAAAAQAAADgAAAAAAAEAAQACADgAAAAJAAEAAQAAADgAAAAAAAIAAQACADgAAAAJAAIAAQAAADgAAAAAAAMAAQACADgAAAAJAAMAAQAAADgAAAAAAAQAAQACADgAAAAJAAQAAQAAADgAAAAAAAUAAQACADgAAAAJAAUAAQAAADgAAAABAAYAAQABADcAAAACAAYAAQACADcAAAAEAAYAAQAAADcAAAAFAAYAAQABADcAAAAGAAYAAQABADcAAAAHAAYAAQABADcAAAAIAAYAAQABADcAAAAAAAYAAQAFADsAAAAJAAYAAQAGADsAAAA=")
+tile_set = ExtResource("4_wp4lt")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1398393002]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1925300965]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAAEAAgADACoAAAACAAEAAgAEACoAAAADAAEAAgAFACoAAAABAAIAAgADACsAAAACAAIAAgAEACsAAAADAAIAAgAFACsAAAABAAMAAgADACwAAAACAAMAAgAEACwAAAADAAMAAgAFACwAAAAHAAEAAgABABYAAAAIAAEAAgACABYAAAAHAAIAAgABABcAAAAIAAIAAgACABcAAAA=")
+tile_set = ExtResource("4_wp4lt")
+
+[node name="Mochilera" type="Node2D" parent="Entities" unique_id=1869176632 instance=ExtResource("5_nlbyl")]
+position = Vector2(48, 144)
+script = ExtResource("6_02ld0")
+display_name = "Mochilera"
+lines = PackedStringArray("He pagado 180 la noche por esta habitación. La foto de la web tenía vistas al mar; esta tiene vistas a la foto.", "Mañana me voy a Formentera. Dicen que allí todavía se puede dormir... en la playa.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_ud51j")
+initial_facing = 3
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1835602130]
+z_index = 10
+tile_set = ExtResource("4_wp4lt")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=2005936826]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=964460016]
+position = Vector2(112, 208)
+script = ExtResource("8_iwjom")
+target_map = &"ibiza/sala_calle_6_46"
+target_spawn = &"desde_sala_calle_6_46_dormitorio"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=2058324574]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1154647602]
+position = Vector2(112, 176)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1401692572]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1650356019]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 304.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("9_sicy7")
+theme_override_font_sizes/font_size = 16
+text = "HABITACIÓN NÚMERO 2"
+horizontal_alignment = 1

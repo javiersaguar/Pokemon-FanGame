@@ -1,0 +1,99 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_qq83a"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_0auj4"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_umrtw"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_yqfmf"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_6fnrx"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_y2q5j"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/nadador.png" id="7_nim4b"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_52qao"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_ka2f5"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_qp0cu"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_od61b"]
+
+[sub_resource type="Resource" id="Resource_qq83a"]
+script = ExtResource("3_umrtw")
+id = &"ibiza/casa_2_dormitorio"
+display_name = "Cuarto por turnos, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 9, 7)
+followers_allowed = false
+
+[node name="Casa2Dormitorio" type="Node2D" unique_id=365627653]
+script = ExtResource("1_qq83a")
+data = SubResource("Resource_qq83a")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1544134710]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAACQAAAAFAAMAAAAAACQAAAAGAAMAAAAAACQAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAACQAAAAFAAQAAAAAACQAAAAGAAQAAAAAACQAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAAAgAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAA=")
+tile_set = ExtResource("4_yqfmf")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1078025766]
+tile_map_data = PackedByteArray("AAABAAAAAQABACEAAAABAAEAAQABACIAAAACAAAAAQABACEAAAACAAEAAQABACIAAAADAAAAAQABACEAAAADAAEAAQABACIAAAAEAAAAAQABACEAAAAEAAEAAQABACIAAAAFAAAAAQABACEAAAAFAAEAAQABACIAAAAGAAAAAQABACEAAAAGAAEAAQABACIAAAAHAAAAAQABACEAAAAHAAEAAQABACIAAAAAAAAAAQACAB8AAAAIAAAAAQAAAB8AAAAAAAEAAQACAB8AAAAIAAEAAQAAAB8AAAAAAAIAAQACAB8AAAAIAAIAAQAAAB8AAAAAAAMAAQACAB8AAAAIAAMAAQAAAB8AAAAAAAQAAQACAB8AAAAIAAQAAQAAAB8AAAAAAAUAAQACAB8AAAAIAAUAAQAAAB8AAAABAAYAAQABAB4AAAACAAYAAQABAB4AAAADAAYAAQABAB4AAAAEAAYAAQACAB4AAAAGAAYAAQAAAB4AAAAHAAYAAQABAB4AAAAAAAYAAQAFACIAAAAIAAYAAQAGACIAAAA=")
+tile_set = ExtResource("4_yqfmf")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1299146492]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2086511249]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAEAAgAAACoAAAAEAAEAAgABACoAAAAFAAEAAgACACoAAAADAAIAAgAAACsAAAAEAAIAAgABACsAAAAFAAIAAgACACsAAAADAAMAAgAAACwAAAAEAAMAAgABACwAAAAFAAMAAgACACwAAAAGAAAAAgAHAAMAAAAGAAEAAgAHAAQAAAAGAAIAAgAHAAUAAAABAAUAAgABACYAAAA=")
+tile_set = ExtResource("4_yqfmf")
+
+[node name="SocorristaDelTurnoDeNoche" type="Node2D" parent="Entities" unique_id=622782254 instance=ExtResource("5_6fnrx")]
+position = Vector2(80, 112)
+script = ExtResource("6_y2q5j")
+display_name = "Socorrista del turno de noche"
+lines = PackedStringArray("Esta cama es mía de ocho a cuatro. Luego es de una chica de recepción y por la tarde de un portugués.", "Si notas la almohada caliente, no preguntes.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_nim4b")
+initial_facing = 2
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=60752255 instance=ExtResource("8_52qao")]
+position = Vector2(208, 80)
+script = ExtResource("9_ka2f5")
+lines = PackedStringArray("Un horario pegado al armario: «CAMA: Raúl 8-16, Inés 16-24, Duarte 0-8. Sábanas: nunca».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=161524671]
+z_index = 10
+tile_map_data = PackedByteArray("AAABAAQAAgABACUAAAA=")
+tile_set = ExtResource("4_yqfmf")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=927392448]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=659269344]
+position = Vector2(176, 208)
+script = ExtResource("10_qp0cu")
+target_map = &"ibiza/casa_2"
+target_spawn = &"desde_casa_2_dormitorio"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=5092196]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1399337884]
+position = Vector2(176, 176)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=939512417]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1204856768]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 272.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_od61b")
+theme_override_font_sizes/font_size = 16
+text = "CUARTO POR TURNOS"
+horizontal_alignment = 1

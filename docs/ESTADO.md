@@ -122,6 +122,32 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ## Agente 1 — Mundo y arquitectura
 
+### Agente 1 · Interiores personalizados (sesión del 2026-10-15)
+
+Worktree `pokemon-panchito-agente1`, rama `feat/agente1-interiores`. Encargo: un interior propio y con sentido para cada casa y edificio con puerta (sin gimnasios, Quirón ni ático). Reservas en `docs/mapas/reservas.md`.
+
+**Cómo funciona (para retomarlo):**
+1. `godot --headless --path . -s res://maps/_tools/inventario_interiores.gd -- /tmp/inv.json` → inventario de puertas, piezas de fachada e interiores.
+2. `python3 maps/_tools/esqueleto_interiores.py /tmp/inv.json <ciudad>` → crea `data/interiores/<ciudad>.json` con cada sala, su pieza y su puerta (y el anfitrión del regalo, si lo hay). Se rellenan a mano tipo, nombre, personas con sus frases y carteles.
+3. `python3 maps/_tools/planificar_interiores.py <ciudad>` → calcula tamaño, puerta, suelo, pared, alfombras, muebles con su casilla y el sitio de cada persona y cartel (recetas por tipo; comprueba que se llega a todo y que ninguna firma se repite). `--rehacer` lo recalcula. Una entrada con `"padre"` es una sala de dentro (dormitorio, barra): se abre un paso en la pared de arriba de la sala madre.
+4. `godot --headless --path . -s res://maps/_pintura/pintar_interiores_datos.gd -- <ciudad>` → pinta las escenas. Conserva la salida a la calle, la zona y el regalo del anfitrión (falla si los datos no lo conservan). Guarda el área anterior en `legacy_save_bounds`: una partida guardada dentro de una sala rehecha se recoloca en la entrada (`MapLoader.saved_position`).
+5. Capturas: `godot --path . -s res://maps/_tools/captura_interiores.gd -- <carpeta> <sufijo> <mapa>...`.
+
+**Hecho:**
+- Catálogo de piezas del tileset de interiores: `data/interiores/_piezas.json` (16 suelos, 16 paredes, muebles con su rectángulo exacto; camas, águila y escaleras ocupan tres columnas).
+- Pintor nuevo con marco de pared del pack (sin girar casillas), muebles altos contra la pared, la parte alta de los muebles del suelo en `Above` sin colisión, felpudo en la puerta.
+- Mostradores de dos casillas de fondo: se habla por encima con quien está detrás (`player.gd`).
+- Test nuevo `tests/mundo/test_interiores_unicos.gd`: firmas únicas, entrada y salida en los dos sentidos sin bucles, se llega a cada persona y cartel, frases sin repetir, escena al día y partida guardada recolocada.
+- **Ibiza:** 34 salas. Las 14 casas ibicencas con recibidor y dormitorio (encargo del 14 de octubre), la catedral, el club (pista y barra), la caseta de socorrismo, una casa payesa y la farmacia de guardia.
+
+**Trabajo anterior sin terminar (rediseño de la casa ibicenca):** guardado en la rama local `wip/agente1-ibiza` (commit `8987b894`, sin subir y sin integrar). La fachada `casa_ibicenca.png` (1254×1254) no sale de los packs ni es un `.px2` hecho a mano: es una imagen generada automáticamente (lo prohíben DIRECTRICES §7 y BIBLIA §9) y se veía reescalada a 4×4 casillas (escala no entera). Su test no compilaba. Del trabajo solo se integra la recolocación de partidas guardadas; las salas se rehacen con el sistema nuevo.
+
+**Provisional:** todo el arte de los interiores (piezas de Akizakura16) y todos los textos y nombres son propuesta, pendientes de Javier.
+
+**Fuera de este encargo:** gimnasios y Quirón (Agente 3), `barcelona/sala_eixample_10_31` y el piso de Rufián (Agente 2), trenes, ferris y aviones (Agente 4). Los andenes del AVE y las terminales del aeropuerto se personalizarán conservando sus pasos, revisores y controles en su sitio.
+
+**Pendiente:** Madrid, Barcelona, Valencia, Sevilla y el resto de ciudades, pueblos y rutas; locales de servicio con rótulo y gente de su ciudad; capturas y fila en `docs/arte/seguimiento.md` por ciudad.
+
 ### Sesión del 14 de octubre · Inicio y sistemas (Agente A)
 
 Rama `feat/agente1-inicio`, worktree `pokemon-panchito-agente1`. Lista de `SESION_2026-10-14.md` en curso, de arriba abajo. No se editan ciudades ni personajes colocados.

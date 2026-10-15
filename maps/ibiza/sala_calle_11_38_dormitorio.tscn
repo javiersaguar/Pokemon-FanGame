@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_3f8l5"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_wwl4c"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_t38ki"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_3okxo"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_wsggu"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_tjvw5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_girl.png" id="7_4tuo8"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_q4udp"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_tqprq"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_7vtoe"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_mteyt"]
+
+[sub_resource type="Resource" id="Resource_3f8l5"]
+script = ExtResource("3_t38ki")
+id = &"ibiza/sala_calle_11_38_dormitorio"
+display_name = "Dormitorio con ánforas, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 8, 8)
+followers_allowed = false
+
+[node name="SalaCalle1138Dormitorio" type="Node2D" unique_id=859708643]
+script = ExtResource("1_3f8l5")
+data = SubResource("Resource_3f8l5")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=758965669]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACAAAAABAAAAAAAAACAAAAACAAAAAAAAACAAAAADAAAAAAAAACAAAAAEAAAAAAAAACAAAAAFAAAAAAAAACAAAAAGAAAAAAAAACAAAAAHAAAAAAAAACAAAAAAAAEAAAAAACAAAAABAAEAAAAAACAAAAACAAEAAAAAACAAAAADAAEAAAAAACAAAAAEAAEAAAAAACAAAAAFAAEAAAAAACAAAAAGAAEAAAAAACAAAAAHAAEAAAAAACAAAAAAAAIAAAAAACAAAAABAAIAAAAAACAAAAACAAIAAAAAACAAAAADAAIAAAAAACAAAAAEAAIAAAAAACAAAAAFAAIAAAAAACAAAAAGAAIAAAAAACAAAAAHAAIAAAAAACAAAAAAAAMAAAAAACAAAAABAAMAAAAAACAAAAACAAMAAAAAABAAAAADAAMAAAAAABAAAAAEAAMAAAAAABAAAAAFAAMAAAAAABAAAAAGAAMAAAAAACAAAAAHAAMAAAAAACAAAAAAAAQAAAAAACAAAAABAAQAAAAAACAAAAACAAQAAAAAABAAAAADAAQAAAAAABAAAAAEAAQAAAAAABAAAAAFAAQAAAAAABAAAAAGAAQAAAAAACAAAAAHAAQAAAAAACAAAAAAAAUAAAAAACAAAAABAAUAAAAAACAAAAACAAUAAAAAABAAAAADAAUAAAAAABAAAAAEAAUAAAAAABAAAAAFAAUAAAAAABAAAAAGAAUAAAAAACAAAAAHAAUAAAAAACAAAAAAAAYAAAAAACAAAAABAAYAAAAAACAAAAACAAYAAAAAACAAAAADAAYAAAAAACAAAAAEAAYAAAAAACAAAAAFAAYAAAAAACAAAAAGAAYAAAAAACAAAAAHAAYAAAAAACAAAAAAAAcAAAAAACAAAAABAAcAAAAAACAAAAACAAcAAAAAACAAAAADAAcAAAAAAAQAAAAEAAcAAAAAACAAAAAFAAcAAAAAACAAAAAGAAcAAAAAACAAAAAHAAcAAAAAACAAAAA=")
+tile_set = ExtResource("4_3okxo")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1778752412]
+tile_map_data = PackedByteArray("AAABAAAAAQABACEAAAABAAEAAQABACIAAAACAAAAAQABACEAAAACAAEAAQABACIAAAADAAAAAQABACEAAAADAAEAAQABACIAAAAEAAAAAQABACEAAAAEAAEAAQABACIAAAAFAAAAAQABACEAAAAFAAEAAQABACIAAAAGAAAAAQABACEAAAAGAAEAAQABACIAAAAAAAAAAQACAB8AAAAHAAAAAQAAAB8AAAAAAAEAAQACAB8AAAAHAAEAAQAAAB8AAAAAAAIAAQACAB8AAAAHAAIAAQAAAB8AAAAAAAMAAQACAB8AAAAHAAMAAQAAAB8AAAAAAAQAAQACAB8AAAAHAAQAAQAAAB8AAAAAAAUAAQACAB8AAAAHAAUAAQAAAB8AAAAAAAYAAQACAB8AAAAHAAYAAQAAAB8AAAABAAcAAQABAB4AAAACAAcAAQACAB4AAAAEAAcAAQAAAB4AAAAFAAcAAQABAB4AAAAGAAcAAQABAB4AAAAAAAcAAQAFACIAAAAHAAcAAQAGACIAAAA=")
+tile_set = ExtResource("4_3okxo")
+
+[node name="Entities" type="Node2D" parent="." unique_id=2077041820]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1064493337]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAEAAgAAACoAAAADAAEAAgABACoAAAAEAAEAAgACACoAAAACAAIAAgAAACsAAAADAAIAAgABACsAAAAEAAIAAgACACsAAAACAAMAAgAAACwAAAADAAMAAgABACwAAAAEAAMAAgACACwAAAAFAAEAAgADAB8AAAAFAAIAAgADACAAAAAGAAAAAgAAAAwAAAAGAAEAAgAAAA0AAAAGAAIAAgAAAA4AAAA=")
+tile_set = ExtResource("4_3okxo")
+
+[node name="HijaDeLaArqueologa" type="Node2D" parent="Entities" unique_id=1424134694 instance=ExtResource("5_wsggu")]
+position = Vector2(80, 144)
+script = ExtResource("6_tjvw5")
+display_name = "Hija de la arqueóloga"
+lines = PackedStringArray("Mi madre guarda huesos fenicios en el armario. Dice que son de la colección. Yo no abro el armario.", "En el cole digo que mi madre trabaja en un cementerio de lujo. Y es verdad.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_4tuo8")
+initial_facing = 2
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=836990567 instance=ExtResource("8_q4udp")]
+position = Vector2(208, 80)
+script = ExtResource("9_tqprq")
+lines = PackedStringArray("En la puerta del armario: «Material catalogado. Por favor, no colgar la ropa de los fenicios».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=887060810]
+z_index = 10
+tile_set = ExtResource("4_3okxo")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1235036750]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1576165577]
+position = Vector2(112, 240)
+script = ExtResource("10_7vtoe")
+target_map = &"ibiza/sala_calle_11_38"
+target_spawn = &"desde_sala_calle_11_38_dormitorio"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1320350277]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=791080123]
+position = Vector2(112, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1931360749]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1744104686]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 240.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_mteyt")
+theme_override_font_sizes/font_size = 16
+text = "DORMITORIO CON ÁNFORAS"
+horizontal_alignment = 1

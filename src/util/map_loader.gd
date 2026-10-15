@@ -51,19 +51,44 @@ static func check_spawn(map_id: StringName, spawn: StringName) -> Error:
 	return OK if valid else ERR_INVALID_DATA
 
 static func check_position(state: Dictionary) -> Error:
+	return saved_position(state).error
+
+## Valida sin mutar la partida. Si la sala se rehízo (legacy_save_bounds = su área de antes),
+## una posición antigua que ya no es suelo libre se recoloca en su aparición por defecto.
+static func saved_position(state: Dictionary) -> Dictionary:
 	var position: Variant = state.get("position", {})
 	if not position is Dictionary:
-		return ERR_INVALID_DATA
+		return {"error": ERR_INVALID_DATA}
 	var tile: Variant = position.get("tile", [])
 	if not tile is Array or tile.size() != 2:
-		return ERR_INVALID_DATA
+		return {"error": ERR_INVALID_DATA}
 	for value: Variant in tile:
 		if not (value is int or value is float) or float(value) != floorf(float(value)):
-			return ERR_INVALID_DATA
+			return {"error": ERR_INVALID_DATA}
 	var result := prepare(StringName(position.get("map", "")))
 	if result.error != OK:
-		return result.error
+		return {"error": result.error}
 	var map: MapRoot = result.map
-	var valid := valid_tile(map, Vector2i(int(tile[0]), int(tile[1])))
+	var arrival := Vector2i(int(tile[0]), int(tile[1]))
+	var migrated := false
+	var valid := valid_tile(map, arrival)
+	var legacy := map.data.legacy_save_bounds
+	if legacy.has_area() and legacy.has_point(arrival) and (not valid or _blocked(map, arrival)):
+		var fallback: Variant = spawn_tile(map, MapRoot.DEFAULT_SPAWN)
+		if valid_tile(map, fallback):
+			arrival = fallback
+			valid = true
+			migrated = true
 	map.free()
-	return OK if valid else ERR_INVALID_DATA
+	return {"error": OK if valid else ERR_INVALID_DATA, "tile": arrival, "migrated": migrated}
+
+## Hay un mueble o una pared con colisión en la casilla (solo se mira en salas rehechas).
+static func _blocked(map: MapRoot, tile: Vector2i) -> bool:
+	for layer_name: StringName in [&"Decor", &"Entities/Objects"]:
+		var layer := map.get_layer(layer_name)
+		if layer == null or not layer.collision_enabled:
+			continue
+		var data := layer.get_cell_tile_data(tile)
+		if data != null and data.get_collision_polygons_count(0) > 0:
+			return true
+	return false

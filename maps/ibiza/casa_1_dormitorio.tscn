@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_scyg4"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_4go8f"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_0jt5l"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_krdpn"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_bkm8p"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_0b68b"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/raver.png" id="7_6yu5e"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_8tyhk"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_ml23h"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_ubrt5"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_i24i8"]
+
+[sub_resource type="Resource" id="Resource_scyg4"]
+script = ExtResource("3_0jt5l")
+id = &"ibiza/casa_1_dormitorio"
+display_name = "Dormitorio de Toni, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 9, 7)
+followers_allowed = false
+
+[node name="Casa1Dormitorio" type="Node2D" unique_id=73223870]
+script = ExtResource("1_scyg4")
+data = SubResource("Resource_scyg4")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=635672052]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAACQAAAAFAAMAAAAAACQAAAAGAAMAAAAAACQAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAACQAAAAFAAQAAAAAACQAAAAGAAQAAAAAACQAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAAAgAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAA=")
+tile_set = ExtResource("4_krdpn")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=196855790]
+tile_map_data = PackedByteArray("AAABAAAAAQABAEQAAAABAAEAAQABAEUAAAACAAAAAQABAEQAAAACAAEAAQABAEUAAAADAAAAAQABAEQAAAADAAEAAQABAEUAAAAEAAAAAQABAEQAAAAEAAEAAQABAEUAAAAFAAAAAQABAEQAAAAFAAEAAQABAEUAAAAGAAAAAQABAEQAAAAGAAEAAQABAEUAAAAHAAAAAQABAEQAAAAHAAEAAQABAEUAAAAAAAAAAQACAEIAAAAIAAAAAQAAAEIAAAAAAAEAAQACAEIAAAAIAAEAAQAAAEIAAAAAAAIAAQACAEIAAAAIAAIAAQAAAEIAAAAAAAMAAQACAEIAAAAIAAMAAQAAAEIAAAAAAAQAAQACAEIAAAAIAAQAAQAAAEIAAAAAAAUAAQACAEIAAAAIAAUAAQAAAEIAAAABAAYAAQABAEEAAAACAAYAAQABAEEAAAADAAYAAQABAEEAAAAEAAYAAQACAEEAAAAGAAYAAQAAAEEAAAAHAAYAAQABAEEAAAAAAAYAAQAFAEUAAAAIAAYAAQAGAEUAAAA=")
+tile_set = ExtResource("4_krdpn")
+
+[node name="Entities" type="Node2D" parent="." unique_id=995638612]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1270693562]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAAEAAgAAACoAAAACAAEAAgABACoAAAADAAEAAgACACoAAAABAAIAAgAAACsAAAACAAIAAgABACsAAAADAAIAAgACACsAAAABAAMAAgAAACwAAAACAAMAAgABACwAAAADAAMAAgACACwAAAAEAAEAAgADAB8AAAAEAAIAAgADACAAAAAFAAAAAgAAAAwAAAAFAAEAAgAAAA0AAAAFAAIAAgAAAA4AAAAGAAEAAgABABkAAAAHAAEAAgACABkAAAAGAAIAAgABABoAAAAHAAIAAgACABoAAAABAAUAAgAFAD4AAAA=")
+tile_set = ExtResource("4_krdpn")
+
+[node name="Toni" type="Node2D" parent="Entities" unique_id=983967986 instance=ExtResource("5_bkm8p")]
+position = Vector2(48, 144)
+script = ExtResource("6_0b68b")
+display_name = "Toni"
+lines = PackedStringArray("Son las seis de la tarde. Para un DJ eso es de madrugada.", "Mi abuela dice que pinche en las fiestas del pueblo. Abuela, en Sant Josep no pagan en criptomonedas.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_6yu5e")
+initial_facing = 3
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=2020556804 instance=ExtResource("8_8tyhk")]
+position = Vector2(112, 112)
+script = ExtResource("9_ml23h")
+lines = PackedStringArray("La cama tiene forma de Toni. Hace tres días que no se hace.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1543292027]
+z_index = 10
+tile_set = ExtResource("4_krdpn")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1290960711]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=653252434]
+position = Vector2(176, 208)
+script = ExtResource("10_ubrt5")
+target_map = &"ibiza/casa_1"
+target_spawn = &"desde_casa_1_dormitorio"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=2086564276]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1621924101]
+position = Vector2(176, 176)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1361357167]
+
+[node name="Rotulo" type="Label" parent="." unique_id=11060028]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 272.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_i24i8")
+theme_override_font_sizes/font_size = 16
+text = "DORMITORIO DE TONI"
+horizontal_alignment = 1

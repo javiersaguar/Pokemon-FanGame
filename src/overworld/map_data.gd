@@ -34,5 +34,7 @@ extends Resource
 @export var healing_spot: StringName
 ## Interiores pequeños: la cámara se queda fija en el centro del mapa.
 @export var fixed_camera := false
+## Área anterior al rediseño; permite recolocar partidas guardadas en una sala reducida.
+@export var legacy_save_bounds: Rect2i
 ## El Pokémon que te sigue sale en este mapa (no en interiores estrechos, cuevas...).
 @export var followers_allowed := true

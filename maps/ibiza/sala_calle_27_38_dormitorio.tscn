@@ -1,0 +1,89 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_eokt4"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_nyjiu"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_ajkbd"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_i6dag"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_ryoq6"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_n0e8t"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_youngster.png" id="7_17wmc"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="8_bc6gg"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="9_gkmlw"]
+
+[sub_resource type="Resource" id="Resource_eokt4"]
+script = ExtResource("3_ajkbd")
+id = &"ibiza/sala_calle_27_38_dormitorio"
+display_name = "Dormitorio del abuelo Ribas, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 8, 8)
+followers_allowed = false
+
+[node name="SalaCalle2738Dormitorio" type="Node2D" unique_id=1100588429]
+script = ExtResource("1_eokt4")
+data = SubResource("Resource_eokt4")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=17942089]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACAAAAABAAAAAAAAACAAAAACAAAAAAAAACAAAAADAAAAAAAAACAAAAAEAAAAAAAAACAAAAAFAAAAAAAAACAAAAAGAAAAAAAAACAAAAAHAAAAAAAAACAAAAAAAAEAAAAAACAAAAABAAEAAAAAACAAAAACAAEAAAAAACAAAAADAAEAAAAAACAAAAAEAAEAAAAAACAAAAAFAAEAAAAAACAAAAAGAAEAAAAAACAAAAAHAAEAAAAAACAAAAAAAAIAAAAAACAAAAABAAIAAAAAACAAAAACAAIAAAAAACAAAAADAAIAAAAAACAAAAAEAAIAAAAAACAAAAAFAAIAAAAAACAAAAAGAAIAAAAAACAAAAAHAAIAAAAAACAAAAAAAAMAAAAAACAAAAABAAMAAAAAACAAAAACAAMAAAAAABAAAAADAAMAAAAAABAAAAAEAAMAAAAAABAAAAAFAAMAAAAAABAAAAAGAAMAAAAAACAAAAAHAAMAAAAAACAAAAAAAAQAAAAAACAAAAABAAQAAAAAACAAAAACAAQAAAAAABAAAAADAAQAAAAAABAAAAAEAAQAAAAAABAAAAAFAAQAAAAAABAAAAAGAAQAAAAAACAAAAAHAAQAAAAAACAAAAAAAAUAAAAAACAAAAABAAUAAAAAACAAAAACAAUAAAAAABAAAAADAAUAAAAAABAAAAAEAAUAAAAAABAAAAAFAAUAAAAAABAAAAAGAAUAAAAAACAAAAAHAAUAAAAAACAAAAAAAAYAAAAAACAAAAABAAYAAAAAACAAAAACAAYAAAAAACAAAAADAAYAAAAAACAAAAAEAAYAAAAAACAAAAAFAAYAAAAAACAAAAAGAAYAAAAAACAAAAAHAAYAAAAAACAAAAAAAAcAAAAAACAAAAABAAcAAAAAACAAAAACAAcAAAAAACAAAAADAAcAAAAAACAAAAAEAAcAAAAAABAAAAAFAAcAAAAAACAAAAAGAAcAAAAAACAAAAAHAAcAAAAAACAAAAA=")
+tile_set = ExtResource("4_i6dag")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=907346468]
+tile_map_data = PackedByteArray("AAABAAAAAQABADAAAAABAAEAAQABADEAAAACAAAAAQABADAAAAACAAEAAQABADEAAAADAAAAAQABADAAAAADAAEAAQABADEAAAAEAAAAAQABADAAAAAEAAEAAQABADEAAAAFAAAAAQABADAAAAAFAAEAAQABADEAAAAGAAAAAQABADAAAAAGAAEAAQABADEAAAAAAAAAAQACAC4AAAAHAAAAAQAAAC4AAAAAAAEAAQACAC4AAAAHAAEAAQAAAC4AAAAAAAIAAQACAC4AAAAHAAIAAQAAAC4AAAAAAAMAAQACAC4AAAAHAAMAAQAAAC4AAAAAAAQAAQACAC4AAAAHAAQAAQAAAC4AAAAAAAUAAQACAC4AAAAHAAUAAQAAAC4AAAAAAAYAAQACAC4AAAAHAAYAAQAAAC4AAAABAAcAAQABAC0AAAACAAcAAQABAC0AAAADAAcAAQACAC0AAAAFAAcAAQAAAC0AAAAGAAcAAQABAC0AAAAAAAcAAQAFADEAAAAHAAcAAQAGADEAAAA=")
+tile_set = ExtResource("4_i6dag")
+
+[node name="Entities" type="Node2D" parent="." unique_id=689441138]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1401503327]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAAEAAgAAACoAAAACAAEAAgABACoAAAADAAEAAgACACoAAAABAAIAAgAAACsAAAACAAIAAgABACsAAAADAAIAAgACACsAAAABAAMAAgAAACwAAAACAAMAAgABACwAAAADAAMAAgACACwAAAAEAAEAAgADAB8AAAAEAAIAAgADACAAAAAFAAEAAgADAAcAAAAFAAIAAgADAAgAAAAGAAYAAgADAD4AAAA=")
+tile_set = ExtResource("4_i6dag")
+
+[node name="NietoRibas" type="Node2D" parent="Entities" unique_id=600469542 instance=ExtResource("5_ryoq6")]
+position = Vector2(48, 144)
+script = ExtResource("6_n0e8t")
+display_name = "Nieto Ribas"
+lines = PackedStringArray("Duermo en el cuarto del abuelo porque el mío lo alquilan en agosto.", "El abuelo ronca en ibicenco antiguo. Se le entiende todo.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_17wmc")
+initial_facing = 3
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=142132237]
+z_index = 10
+tile_set = ExtResource("4_i6dag")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=195668848]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=758271401]
+position = Vector2(144, 240)
+script = ExtResource("8_bc6gg")
+target_map = &"ibiza/sala_calle_27_38"
+target_spawn = &"desde_sala_calle_27_38_dormitorio"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=2032729766]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=810834168]
+position = Vector2(144, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1086456032]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1970910535]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 240.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("9_gkmlw")
+theme_override_font_sizes/font_size = 16
+text = "DORMITORIO DEL ABUELO RIBAS"
+horizontal_alignment = 1

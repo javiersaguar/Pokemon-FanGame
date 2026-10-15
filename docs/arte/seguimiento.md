@@ -510,3 +510,8 @@ Los PNG nuevos se conservan intactos; se muestran por regiones registradas y fil
 | Hojas del pack 11 de 19 clases nuevas (`trainers/` y `characters/`: omar_montes, pablo_motos, zona_gemelos_carlos, zona_gemelos_dani, amador_rivas, antonio_recio, mente_fria, marc_cucurella, joan_pradells, david_bisbal, jc_reyes, puigdemont, rufian, zapatero, maduro, trump, paache, churumbel, javier) | Pack 11 montado con `build_trainers.gd`; en el juego sale el atlas del personaje, salvo Javier | [Personajes 2026-10-15](comparativas/personajes_2026-10-15.md) | Integrado, provisional; Javier: PENDIENTE JAVIER (su aspecto) |
 | Mapas nuevos: piso de Rufián (salón y habitación) y cárcel de Soto del Real (exterior y módulo) | Tiles de los packs; muebles y carteles provisionales | [Personajes 2026-10-15](comparativas/personajes_2026-10-15.md) | Integrado, provisional, pendiente de Javier |
 
+## Interiores personalizados · 2026-10-15 (Agente 1)
+
+| Asset | Tipo | Responsable | Estado | Fuente | Javier | Notas |
+|---|---|---|---|---|---|---|
+| Interiores de Ibiza (34 salas, `data/interiores/ibiza.json`) | Mapa | Agente 1 | integrado, provisional | Tileset de interiores (Akizakura16), catálogo `data/interiores/_piezas.json` | ⏳ | Casas ibicencas con recibidor y dormitorio, catedral, club con barra, socorrismo, casa payesa y farmacia. [Comparativa](comparativas/interiores_2026-10-15.md) |

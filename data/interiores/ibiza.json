@@ -1,0 +1,1854 @@
+{
+ "_doc": "Interiores personalizados de Ibiza (propuesta provisional: textos, gente y distribución pendientes de Javier). Cada casa ibicenca tiene recibidor y dormitorio (encargo del 2026-10-14). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ibiza",
+ "interiores": {
+  "ibiza/casa_1": {
+   "tipo": "vivienda",
+   "nombre": "Casa de Margalida",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [3, 15]],
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Margalida",
+     "aspecto": "npc_old_woman",
+     "regalo": "ibiza_from_casa_1",
+     "en": [1, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Vecina de enfrente",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Margalida es la última del puerto que no ha vendido. Le ofrecen un millón cada martes.",
+      "Ella dice que no, que la casa la encaló su abuela. Y que el millón no da ni para el parking."
+     ],
+     "nodo": "VecinaDeEnfrente",
+     "en": [10, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "tele",
+     "frases": [
+      "En la tele: «Ibiza bate su récord de turistas. Los ibicencos baten su récord de vivir en Murcia»."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 2]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [9, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [5, 4, 4, 2]]],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal", 8, 3],
+    ["taburete_marron", 7, 4],
+    ["taburete_marron", 10, 4],
+    ["sillon_derecha", 2, 4],
+    ["mesa_cristal", 3, 5],
+    ["sillon_izquierda", 5, 4],
+    ["arbol_maceta", 11, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 7], "desde_casa_1_dormitorio": [5, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [5, 1],
+     "destino": "ibiza/casa_1_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_casa_1_dormitorio",
+     "llegada": [5, 2]
+    }
+   ]
+  },
+  "ibiza/casa_1_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/casa_1",
+   "nombre": "Dormitorio de Toni",
+   "personas": [
+    {
+     "nombre": "Toni",
+     "aspecto": "raver",
+     "papel": "cama",
+     "frases": [
+      "Son las seis de la tarde. Para un DJ eso es de madrugada.",
+      "Mi abuela dice que pinche en las fiestas del pueblo. Abuela, en Sant Josep no pagan en criptomonedas."
+     ],
+     "nodo": "Toni",
+     "en": [1, 4],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "cama",
+     "frases": ["La cama tiene forma de Toni. Hace tres días que no se hace."],
+     "nodo": "Cartel",
+     "en": [3, 3]
+    }
+   ],
+   "tamano": [9, 7],
+   "puerta": [5, 6],
+   "suelo": "rombos_verdes",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["cama_colcha_rosa", 1, 1],
+    ["cajon_rosa", 4, 1],
+    ["armario_verde", 5, 0],
+    ["cajonera_roja", 6, 1],
+    ["consola", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 5]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/casa_1", "aparicion": "desde_casa_1_dormitorio"}
+  },
+  "ibiza/casa_2": {
+   "tipo": "vivienda",
+   "nombre": "Piso de temporada",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [8, 15]],
+   "personas": [
+    {
+     "nombre": "Camarero de temporada",
+     "aspecto": "camarero",
+     "papel": "cocina",
+     "frases": [
+      "Aquí vivimos nueve camareros. El contrato dice «casa con encanto». El encanto es la humedad.",
+      "Pago 900 por el sofá. El de la bañera paga 600, pero se levanta antes."
+     ],
+     "nodo": "CamareroDeTemporada",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Ayudante de cocina",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Hago doce horas en un chiringuito y dos en la cola de la ducha.",
+      "En octubre me vuelvo a Jaén con lo ahorrado: un bronceado y una tos."
+     ],
+     "nodo": "AyudanteDeCocina",
+     "en": [10, 5],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["encimera", 7, 1],
+    ["cajon_oliva", 1, 1],
+    ["tele", 2, 1],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3],
+    ["palmera_maceta", 10, 0]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [8, 6], "desde_casa_2_dormitorio": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [4, 1],
+     "destino": "ibiza/casa_2_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_casa_2_dormitorio",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "ibiza/casa_2_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/casa_2",
+   "nombre": "Cuarto por turnos",
+   "personas": [
+    {
+     "nombre": "Socorrista del turno de noche",
+     "aspecto": "nadador",
+     "papel": "cama",
+     "frases": [
+      "Esta cama es mía de ocho a cuatro. Luego es de una chica de recepción y por la tarde de un portugués.",
+      "Si notas la almohada caliente, no preguntes."
+     ],
+     "nodo": "SocorristaDelTurnoDeNoche",
+     "en": [2, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "armario",
+     "frases": ["Un horario pegado al armario: «CAMA: Raúl 8-16, Inés 16-24, Duarte 0-8. Sábanas: nunca»."],
+     "nodo": "Cartel",
+     "en": [6, 2]
+    }
+   ],
+   "tamano": [9, 7],
+   "puerta": [5, 6],
+   "suelo": "rombos_verdes",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["cama_colcha_rosa", 3, 1], ["ropero_oliva", 6, 0], ["planta", 1, 4]],
+   "encima": [],
+   "apariciones": {"default": [5, 5]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/casa_2", "aparicion": "desde_casa_2_dormitorio"}
+  },
+  "ibiza/sala_calle_21_15": {
+   "tipo": "vivienda",
+   "nombre": "Casa de Hans y Ute",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [21, 15]],
+   "personas": [
+    {
+     "nombre": "Hans",
+     "aspecto": "turista",
+     "papel": "mesa",
+     "frases": [
+      "Wir haben gekauft... perdón: compramos esta casa en 1998 por lo que hoy cuesta un gin-tonic.",
+      "Ahora somos de aquí. Votamos al alcalde, nos quejamos del ruido y odiamos a los turistas."
+     ],
+     "nodo": "Hans",
+     "en": [9, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Ute",
+     "aspecto": "turista_f",
+     "papel": "libre",
+     "frases": [
+      "Me gusta Ibiza porque es auténtica. Por eso le he puesto a la casa piscina, jacuzzi y una pared de piedra de Alemania.",
+      "Los vecinos de antes se fueron a la península. Una pena, ¡con lo pintorescos que eran!"
+     ],
+     "nodo": "Ute",
+     "en": [11, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "tatami_verde",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["tele", 2, 1],
+    ["estante_oliva", 4, 1],
+    ["mesa_cristal", 8, 4],
+    ["silla_derecha", 7, 4],
+    ["silla_izquierda", 10, 4],
+    ["palmera_maceta", 1, 0],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7], "desde_sala_calle_21_15_dormitorio": [10, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [10, 1],
+     "destino": "ibiza/sala_calle_21_15_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_21_15_dormitorio",
+     "llegada": [10, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_21_15_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_21_15",
+   "nombre": "Dormitorio de invitados",
+   "personas": [
+    {
+     "nombre": "Sobrino de Hans",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Vengo cada verano a aprender español. Ya sé decir «una caña» y «¿cuánto cuesta el alquiler?».",
+      "Mi tío dice que la segunda frase no la diga en voz alta en el pueblo."
+     ],
+     "nodo": "SobrinoDeHans",
+     "en": [5, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una foto enmarcada: Hans y Ute delante de la casa recién comprada. Detrás, la familia que la vendía, llorando."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [2, 3, 5, 3]]],
+   "muebles": [["cama_azul", 1, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_21_15", "aparicion": "desde_sala_calle_21_15_dormitorio"}
+  },
+  "ibiza/sala_calle_32_15": {
+   "tipo": "vivienda",
+   "nombre": "Casa para fotos",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [32, 15]],
+   "personas": [
+    {
+     "nombre": "Influencer",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "libre",
+     "frases": [
+      "Esta casa se alquila por horas para hacer fotos. Nadie vive aquí: es más rentable fingir que se vive.",
+      "¿Me sacas una? De espaldas, mirando al mar, como si no supiera que me están haciendo una foto."
+     ],
+     "nodo": "Influencer",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Fotógrafo",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Llevo cuatrocientas fotos del mismo café. El café ya está frío y la luz ya no es «de hora dorada».",
+      "Cobro por foto aprobada. Este mes he cobrado tres."
+     ],
+     "nodo": "Fotografo",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "mesa",
+     "frases": ["Un desayuno de mentira: tostada de aguacate pegada al plato con cola. Prohibido comérsela."],
+     "nodo": "Cartel",
+     "en": [8, 5]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["encimera", 3, 1],
+    ["planta", 7, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal_larga", 7, 4],
+    ["taburete_amarillo", 7, 6],
+    ["taburete_amarillo", 9, 6],
+    ["arbol_maceta", 10, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7], "desde_sala_calle_32_15_dormitorio": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [6, 1],
+     "destino": "ibiza/sala_calle_32_15_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_32_15_dormitorio",
+     "llegada": [6, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_32_15_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_32_15",
+   "nombre": "Dormitorio de atrezo",
+   "personas": [
+    {
+     "nombre": "Ayudante de vestuario",
+     "aspecto": "npc_lass",
+     "papel": "cama",
+     "frases": [
+      "La cama no se toca: está planchada para una marca de colchones.",
+      "Si te sientas, cuenta como «contenido patrocinado» y te mandan la factura."
+     ],
+     "nodo": "AyudanteDeVestuario",
+     "en": [5, 4],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "cama",
+     "frases": ["Una etiqueta en la almohada: «Producto de muestra. Dormir aquí anula la garantía»."],
+     "nodo": "Cartel",
+     "en": [3, 3]
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [4, 7],
+   "suelo": "parquet",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [3, 3, 3, 3]]],
+   "muebles": [["cama_colcha_azul", 3, 1], ["cajon_rosa", 6, 1], ["papelera", 1, 5]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_32_15", "aparicion": "desde_sala_calle_32_15_dormitorio"}
+  },
+  "ibiza/sala_calle_37_15": {
+   "tipo": "vivienda",
+   "nombre": "Casa de Pep el pescador",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [37, 15]],
+   "personas": [
+    {
+     "nombre": "Pep",
+     "aspecto": "npc_fisherman",
+     "papel": "mesa",
+     "frases": [
+      "Cuarenta años saliendo a por gambas. Ahora salgo a por turistas: los llevo a Es Vedrà y cobro como si fueran gambas.",
+      "Antes se pescaba con red. Ahora con el datáfono."
+     ],
+     "nodo": "Pep",
+     "en": [7, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Catalina",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Pep cuenta que una vez vio un Wailmer cerca de Formentera. Yo creo que era un yate con mucho ruso dentro.",
+      "El arroz de matanzas no se lo hago a cualquiera. A ti tampoco, que vienes de fuera."
+     ],
+     "nodo": "Catalina",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["encimera", 5, 1],
+    ["tele", 9, 1],
+    ["planta", 11, 1],
+    ["mesa_cristal_larga", 6, 4],
+    ["silla_derecha", 5, 4],
+    ["silla_izquierda", 9, 4],
+    ["palmera_maceta", 1, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 7], "desde_sala_calle_37_15_dormitorio": [8, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [8, 1],
+     "destino": "ibiza/sala_calle_37_15_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_37_15_dormitorio",
+     "llegada": [8, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_37_15_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_37_15",
+   "nombre": "Dormitorio de Pep y Catalina",
+   "personas": [
+    {
+     "nombre": "Nieta de Pep",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": [
+      "El abuelo dice que cuando él era joven la playa era gratis. Yo no me lo creo.",
+      "Yo de mayor quiero ser ibicenca. Pero dice mi madre que ya no quedan sitios."
+     ],
+     "nodo": "NietaDePep",
+     "en": [2, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "armario",
+     "frases": [
+      "Un armario que huele a sal y a naftalina. Dentro hay una red de pesca doblada como si fuera una manta."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 2]
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["cama_celeste", 3, 1], ["ropero_mostaza", 6, 0], ["ropero_mostaza", 7, 0], ["consola", 1, 6]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_37_15", "aparicion": "desde_sala_calle_37_15_dormitorio"}
+  },
+  "ibiza/sala_calle_3_25": {
+   "tipo": "vivienda",
+   "nombre": "Casa de Lluna",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [3, 25]],
+   "personas": [
+    {
+     "nombre": "Lluna",
+     "aspecto": "hippie",
+     "papel": "libre",
+     "frases": [
+      "Llegué en el 72 con una guitarra y una flor. La guitarra la vendí; la flor me la fumé.",
+      "Ahora vendo pulseras en Las Dalias. Las hago con hilo de Taiwán y energía de la isla."
+     ],
+     "nodo": "Lluna",
+     "en": [12, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Kai",
+     "aspecto": "perroflauta",
+     "papel": "tele",
+     "frases": [
+      "Mi madre es Lluna. Me llamo Kai porque nací en la playa y era lo primero que se oía.",
+      "Estoy en contra del sistema. El sistema me paga el alquiler, eso sí."
+     ],
+     "nodo": "Kai",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": ["Piedras, incienso, cartas del tarot y un recibo de la luz sin pagar desde 2019."],
+     "nodo": "Cartel",
+     "en": [9, 2]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["tele", 1, 1],
+    ["mesa_cristal", 4, 3],
+    ["silla_derecha", 3, 3],
+    ["silla_izquierda", 6, 3],
+    ["sillon_derecha", 8, 6],
+    ["mesa_cristal", 9, 7],
+    ["sillon_izquierda", 11, 6],
+    ["palmera_maceta", 1, 6],
+    ["caja", 12, 8],
+    ["estanteria_alta_mostaza", 8, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8], "desde_sala_calle_3_25_dormitorio": [10, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [10, 1],
+     "destino": "ibiza/sala_calle_3_25_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_3_25_dormitorio",
+     "llegada": [10, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_3_25_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_3_25",
+   "nombre": "Cuarto de meditar",
+   "personas": [
+    {
+     "nombre": "Alumna de yoga",
+     "aspecto": "npc_kimono_girl",
+     "papel": "libre",
+     "frases": [
+      "Pago 80 la hora por respirar aquí dentro. En la calle es gratis, pero no tiene vibraciones.",
+      "Lluna dice que mi chakra está bloqueado. Para desbloquearlo hay que pagar otra sesión."
+     ],
+     "nodo": "AlumnaDeYoga",
+     "en": [4, 3],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["cama_celeste", 5, 1], ["ropero_mostaza", 1, 0]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_3_25", "aparicion": "desde_sala_calle_3_25_dormitorio"}
+  },
+  "ibiza/sala_calle_8_25": {
+   "tipo": "vivienda",
+   "nombre": "Casa de la opositora",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [8, 25]],
+   "personas": [
+    {
+     "nombre": "Nerea",
+     "aspecto": "opositor_f",
+     "papel": "mesa",
+     "frases": [
+      "Oposito a policía local de Ibiza. Si apruebo, me podré pagar el alquiler de esta casa. Si no, el de un balcón.",
+      "El temario tiene tres mil páginas. Ninguna explica cómo vivir aquí con un sueldo público."
+     ],
+     "nodo": "Nerea",
+     "en": [3, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Casera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "A la chica le cobro poco, 1.300. Es que me da pena: es funcionaria en prácticas de la esperanza.",
+      "En agosto la saco una semana y alquilo su cuarto a unos noruegos. Ella lo entiende: es temporada."
+     ],
+     "nodo": "Casera",
+     "en": [1, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "mesa",
+     "frases": ["Apuntes subrayados en cuatro colores. En el margen pone: «¿Y si me hago DJ?»."],
+     "nodo": "Cartel",
+     "en": [7, 6]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "moqueta_beige",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 6, 1],
+    ["fregadero", 7, 1],
+    ["fogones", 9, 1],
+    ["planta", 2, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal_larga", 6, 5],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 8, 7],
+    ["sillon_derecha", 1, 4],
+    ["mesa_cristal", 2, 5],
+    ["sillon_izquierda", 4, 4],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8], "desde_sala_calle_8_25_dormitorio": [5, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [5, 1],
+     "destino": "ibiza/sala_calle_8_25_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_8_25_dormitorio",
+     "llegada": [5, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_8_25_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_8_25",
+   "nombre": "Cuarto de estudiar",
+   "personas": [
+    {
+     "nombre": "Compañera de oposición",
+     "aspecto": "estudianteinge_f",
+     "papel": "cama",
+     "frases": [
+      "Llevamos cuatro años. Ya nos sabemos el temario y el nombre de todos los grillos del patio.",
+      "Hay seis plazas y nos presentamos dos mil. Las otras mil novecientas noventa y cuatro también viven en Ibiza: en una furgoneta."
+     ],
+     "nodo": "CompaneraDeOposicion",
+     "en": [2, 4],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [8, 7],
+   "puerta": [4, 6],
+   "suelo": "rombos_lila",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["cama_colcha_azul", 1, 1], ["ropero_nogal", 4, 0], ["planta", 6, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 5]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_8_25", "aparicion": "desde_sala_calle_8_25_dormitorio"}
+  },
+  "ibiza/sala_calle_19_25": {
+   "tipo": "vivienda",
+   "nombre": "Casa del DJ",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [19, 25]],
+   "personas": [
+    {
+     "nombre": "DJ Chimo",
+     "aspecto": "raver",
+     "papel": "tele",
+     "frases": [
+      "Pincho en el club los martes a las seis de la mañana. Me escuchan tres personas y el de la limpieza.",
+      "Mi gran éxito es un remix de la sintonía del telediario. Se llama «Inflación (extended mix)»."
+     ],
+     "nodo": "DJChimo",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Representante",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "Soy su representante. Le consigo bolos, fotos y deudas.",
+      "Este verano lo petamos: tenemos tres seguidores nuevos y uno no es su madre."
+     ],
+     "nodo": "Representante",
+     "en": [7, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "maquina",
+     "frases": ["Una mesa de mezclas con un botón que pone «DROP» en letras enormes. Es el único que funciona."],
+     "nodo": "Cartel",
+     "en": [5, 2]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "salvia",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [4, 4, 4, 2]]],
+   "muebles": [
+    ["nevera_alta", 7, 0],
+    ["encimera", 8, 1],
+    ["fogones", 11, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal_larga", 5, 5],
+    ["silla_derecha", 4, 5],
+    ["silla_izquierda", 8, 5],
+    ["sillon_derecha", 9, 4],
+    ["mesa_cristal", 10, 5],
+    ["sillon_izquierda", 12, 4],
+    ["arbol_maceta", 1, 6],
+    ["papelera", 12, 7],
+    ["consola", 5, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8], "desde_sala_calle_19_25_dormitorio": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [4, 1],
+     "destino": "ibiza/sala_calle_19_25_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_19_25_dormitorio",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_19_25_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_19_25",
+   "nombre": "Estudio del DJ",
+   "personas": [
+    {
+     "nombre": "Vecina del DJ",
+     "aspecto": "mom",
+     "papel": "libre",
+     "frases": [
+      "He venido a pedirle que baje el bajo. Lleva así desde 2011.",
+      "La pared tiembla tanto que se me ha despegado el azulejo de la Virgen."
+     ],
+     "nodo": "VecinaDelDJ",
+     "en": [1, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Un disco de oro en la pared. De cerca es un CD de una gasolinera pintado con espray."],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["cama_azul", 5, 1], ["cajonera_gris", 3, 1], ["tele_pequena", 1, 2]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_19_25", "aparicion": "desde_sala_calle_19_25_dormitorio"}
+  },
+  "ibiza/sala_calle_37_25": {
+   "tipo": "vivienda",
+   "nombre": "Casa del relaciones públicas",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [37, 25]],
+   "personas": [
+    {
+     "nombre": "Relaciones públicas",
+     "aspecto": "tronista",
+     "papel": "libre",
+     "frases": [
+      "¡Ey, tú! Entrada al club con consumición por 90. Sin consumición, 85. Sin entrada, 40, que es el aire acondicionado.",
+      "Llevo diez años diciendo «esta noche es la mejor fiesta de la isla». Algún día acertaré."
+     ],
+     "nodo": "RelacionesPublicas",
+     "en": [3, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Su madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi hijo trabaja de noche repartiendo pulseras. Yo a las vecinas les digo que es médico.",
+      "Aquí te pongo un plato de sofrit pagès. Este sí es gratis, que en esta casa aún mandamos nosotras."
+     ],
+     "nodo": "SuMadre",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "moqueta_beige",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [3, 3, 4, 3]]],
+   "muebles": [["fregadero", 3, 1], ["fogones", 5, 1], ["nevera_alta", 7, 0], ["papelera", 1, 5]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [6, 6], "desde_sala_calle_37_25_dormitorio": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [2, 1],
+     "destino": "ibiza/sala_calle_37_25_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_37_25_dormitorio",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_37_25_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_37_25",
+   "nombre": "Cuarto de las pulseras",
+   "personas": [
+    {
+     "nombre": "Hermana pequeña",
+     "aspecto": "npc_lass",
+     "papel": "cama",
+     "frases": [
+      "El cuarto está lleno de cajas de pulseras VIP. Yo duermo encima de las de color oro.",
+      "Si alguna noche no vuelve, las vendo yo. A mitad de precio: a 45 la pulsera."
+     ],
+     "nodo": "HermanaPequena",
+     "en": [3, 4],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "caja",
+     "frases": [
+      "Una caja llena de pulseras de tela que pone «VIP». Hay unas cinco mil. VIP significa otra cosa en Ibiza."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 2]
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [4, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [2, 3, 3, 3]]],
+   "muebles": [["cama_rosa", 3, 1], ["estante_mostaza", 2, 1], ["consola", 6, 2], ["caja", 1, 2]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_37_25", "aparicion": "desde_sala_calle_37_25_dormitorio"}
+  },
+  "ibiza/sala_calle_6_38": {
+   "tipo": "vivienda",
+   "nombre": "Estudio del pintor",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [6, 38]],
+   "personas": [
+    {
+     "nombre": "Pintor de Dalt Vila",
+     "aspecto": "npc_old_man",
+     "papel": "estanteria",
+     "frases": [
+      "Pinto la catedral desde 1965. Siempre la misma. La he vendido doscientas veces.",
+      "Los turistas me piden que pinte su yate delante. Yo lo pinto, pero pequeñito y hundiéndose."
+     ],
+     "nodo": "PintorDeDaltVila",
+     "en": [6, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Galerista",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Cada cuadro cuesta 3.000. Con marco, 4.000. Con certificado de que el pintor sufrió, 6.000.",
+      "El arte en Ibiza va muy bien. El artista, no tanto."
+     ],
+     "nodo": "Galerista",
+     "en": [6, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": [
+      "Lienzos apoyados en la estantería: la catedral al amanecer, al mediodía, al atardecer y con una grúa delante."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 2]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [8, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["tatami_verde", [2, 5, 4, 2]]],
+   "muebles": [
+    ["fogones", 7, 1],
+    ["encimera", 9, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal", 3, 5],
+    ["banqueta_azul", 2, 6],
+    ["banqueta_azul", 5, 6],
+    ["arbol_maceta", 11, 5],
+    ["caja", 1, 7],
+    ["estanteria_baja_oliva", 5, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7], "desde_sala_calle_6_38_dormitorio": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [4, 1],
+     "destino": "ibiza/sala_calle_6_38_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_6_38_dormitorio",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_6_38_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_6_38",
+   "nombre": "Dormitorio del pintor",
+   "personas": [
+    {
+     "nombre": "Modelo de los jueves",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Poso para él desde hace treinta años. En los cuadros sigo teniendo veinte.",
+      "Me paga en cuadros. Tengo la casa llena de catedrales."
+     ],
+     "nodo": "ModeloDeLosJueves",
+     "en": [4, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["cama_colcha_rosa", 1, 1],
+    ["cajon_rosa", 4, 1],
+    ["armario_menta", 5, 0],
+    ["cajonera_roja", 6, 1],
+    ["papelera", 7, 5]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_6_38", "aparicion": "desde_sala_calle_6_38_dormitorio"}
+  },
+  "ibiza/sala_calle_11_38": {
+   "tipo": "vivienda",
+   "nombre": "Casa de la arqueóloga",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [11, 38]],
+   "personas": [
+    {
+     "nombre": "Arqueóloga del Puig des Molins",
+     "aspecto": "arqueologo",
+     "papel": "estanteria",
+     "frases": [
+      "En el Puig des Molins hay tres mil tumbas fenicias. Y ni una sola licencia turística: por fin un barrio tranquilo.",
+      "Los fenicios ya venían aquí a vender cosas caras a los de fuera. Lo de Ibiza viene de lejos."
+     ],
+     "nodo": "ArqueologaDelPuigDesMolins",
+     "en": [6, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Becario",
+     "aspecto": "estudianteinge",
+     "papel": "mesa",
+     "frases": [
+      "Cobro en experiencia. Ya tengo experiencia en no cobrar.",
+      "Hemos encontrado una ánfora con restos de vino. La datación dice siglo V antes de Cristo. El precio, de discoteca."
+     ],
+     "nodo": "Becario",
+     "en": [9, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Una vitrina con cuentas de collar, un escarabajo de pasta vítrea y un cartel: «NO ES UNA PULSERA VIP»."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 2]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [9, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 7, 0],
+    ["fogones", 8, 1],
+    ["fregadero", 10, 1],
+    ["estanteria_baja_menta", 4, 1],
+    ["estante_menta", 6, 1],
+    ["mesa_cristal", 8, 4],
+    ["silla_derecha", 7, 4],
+    ["silla_izquierda", 10, 4],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3],
+    ["arbol_maceta", 1, 5],
+    ["papelera", 11, 6],
+    ["vitrina_madera", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 7], "desde_sala_calle_11_38_dormitorio": [3, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [3, 1],
+     "destino": "ibiza/sala_calle_11_38_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_11_38_dormitorio",
+     "llegada": [3, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_11_38_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_11_38",
+   "nombre": "Dormitorio con ánforas",
+   "personas": [
+    {
+     "nombre": "Hija de la arqueóloga",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": [
+      "Mi madre guarda huesos fenicios en el armario. Dice que son de la colección. Yo no abro el armario.",
+      "En el cole digo que mi madre trabaja en un cementerio de lujo. Y es verdad."
+     ],
+     "nodo": "HijaDeLaArqueologa",
+     "en": [2, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "armario",
+     "frases": ["En la puerta del armario: «Material catalogado. Por favor, no colgar la ropa de los fenicios»."],
+     "nodo": "Cartel",
+     "en": [6, 2]
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [2, 3, 4, 3]]],
+   "muebles": [["cama_colcha_rosa", 2, 1], ["cajon_rosa", 5, 1], ["armario_verde", 6, 0]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_11_38", "aparicion": "desde_sala_calle_11_38_dormitorio"}
+  },
+  "ibiza/sala_calle_27_38": {
+   "tipo": "vivienda",
+   "nombre": "Casa de los Ribas",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [27, 38]],
+   "personas": [
+    {
+     "nombre": "Abuelo Ribas",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Cuando yo era niño, aquí no había discotecas. Había una sola y era la iglesia los domingos.",
+      "Los de fuera vienen a ver la isla de verdad. La de verdad la tengo yo en una caja de fotos."
+     ],
+     "nodo": "AbueloRibas",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nuera",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi marido trabaja en el aeropuerto. Ve llegar a todo el mundo y no ve salir a nadie con casa.",
+      "Aquí comemos flaó de postre. Queso y hierbabuena: lo único de la isla que aún no cotiza en bolsa."
+     ],
+     "nodo": "Nuera",
+     "en": [12, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "tele",
+     "frases": [
+      "En la tele, un concurso: «¿Cuánto cuesta este estudio de 12 metros en Ibiza?». Nadie acierta por abajo."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 2]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [7, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [3, 5, 3, 3]]],
+   "muebles": [
+    ["alacena", 8, 0],
+    ["fogones", 9, 1],
+    ["fregadero", 11, 1],
+    ["tele", 2, 1],
+    ["planta", 4, 1],
+    ["vitrina_madera", 6, 1],
+    ["mesa_cristal", 3, 5],
+    ["silla_derecha", 2, 5],
+    ["silla_izquierda", 5, 5],
+    ["sofa", 9, 7],
+    ["planta", 12, 7],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8], "desde_sala_calle_27_38_dormitorio": [5, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [5, 1],
+     "destino": "ibiza/sala_calle_27_38_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_27_38_dormitorio",
+     "llegada": [5, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_27_38_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_27_38",
+   "nombre": "Dormitorio del abuelo Ribas",
+   "personas": [
+    {
+     "nombre": "Nieto Ribas",
+     "aspecto": "npc_youngster",
+     "papel": "cama",
+     "frases": [
+      "Duermo en el cuarto del abuelo porque el mío lo alquilan en agosto.",
+      "El abuelo ronca en ibicenco antiguo. Se le entiende todo."
+     ],
+     "nodo": "NietoRibas",
+     "en": [1, 4],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_lila",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 3, 4, 3]]],
+   "muebles": [["cama_colcha_rosa", 1, 1], ["cajon_rosa", 4, 1], ["estante_nogal", 5, 1], ["tele_pequena", 6, 6]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_27_38", "aparicion": "desde_sala_calle_27_38_dormitorio"}
+  },
+  "ibiza/sala_calle_6_46": {
+   "tipo": "vivienda",
+   "nombre": "Casa de huéspedes Can Toni",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [6, 46]],
+   "personas": [
+    {
+     "nombre": "Dueña de la casa de huéspedes",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Tengo cuatro habitaciones y doscientas reseñas. Todas dicen «encantadora» y «¿por qué no hay ascensor?».",
+      "Hay ascensor: mis piernas. Subo las maletas desde 1979."
+     ],
+     "nodo": "DuenaDeLaCasaDeHuespedes",
+     "en": [9, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Huésped de Bilbao",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Vine a la boda de un primo y me he quedado sin dinero para volver. Me ofrecen trabajo de camarero... y me cobran la cama.",
+      "En Bilbao esto no pasa. Allí te arruina el txoko, pero con cariño."
+     ],
+     "nodo": "HuespedDeBilbao",
+     "en": [7, 4],
+     "mira": "abajo"
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["nevera_alta", 5, 0],
+    ["mesa_cristal_larga", 7, 5],
+    ["silla_derecha", 6, 5],
+    ["silla_izquierda", 10, 5],
+    ["sillon_derecha", 1, 3],
+    ["mesa_cristal", 2, 4],
+    ["sillon_izquierda", 4, 3],
+    ["arbol_maceta", 10, 0],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [5, 7], "desde_sala_calle_6_46_dormitorio": [8, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [8, 1],
+     "destino": "ibiza/sala_calle_6_46_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_6_46_dormitorio",
+     "llegada": [8, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_6_46_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_6_46",
+   "nombre": "Habitación número 2",
+   "personas": [
+    {
+     "nombre": "Mochilera",
+     "aspecto": "turista_f",
+     "papel": "cama",
+     "frases": [
+      "He pagado 180 la noche por esta habitación. La foto de la web tenía vistas al mar; esta tiene vistas a la foto.",
+      "Mañana me voy a Formentera. Dicen que allí todavía se puede dormir... en la playa."
+     ],
+     "nodo": "Mochilera",
+     "en": [1, 4],
+     "mira": "arriba"
+    }
+   ],
+   "tamano": [10, 7],
+   "puerta": [3, 6],
+   "suelo": "rombos_verdes",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [4, 3, 3, 2]]],
+   "muebles": [["cama_colcha_azul", 1, 1], ["cajonera_gris", 7, 1]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_6_46", "aparicion": "desde_sala_calle_6_46_dormitorio"}
+  },
+  "ibiza/sala_calle_27_46": {
+   "tipo": "vivienda",
+   "nombre": "Casa del casero",
+   "pieza": "casa_ibicenca",
+   "calle": ["ibiza/exterior", [27, 46]],
+   "personas": [
+    {
+     "nombre": "Casero",
+     "aspecto": "padretarjeta",
+     "papel": "libre",
+     "frases": [
+      "En el 68 era hippie: amor libre y nada de propiedad. Ahora tengo catorce pisos y un abogado.",
+      "No soy especulador: soy un emprendedor de la vivienda. Alquilo literas en el balcón con desayuno incluido."
+     ],
+     "nodo": "Casero",
+     "en": [8, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abogado del casero",
+     "aspecto": "cunado",
+     "papel": "mesa",
+     "frases": [
+      "La ley de vivienda la leemos todas las mañanas. Para buscarle el agujero, claro.",
+      "Si me preguntas por la fianza, la respuesta es: ¿qué fianza?"
+     ],
+     "nodo": "AbogadoDelCasero",
+     "en": [9, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "archivo",
+     "frases": [
+      "Carpetas: «Contratos de temporada», «Contratos de temporadísima» y «Contratos de habitación-armario»."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 2]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "parquet",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [2, 4, 4, 2]]],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["fogones", 7, 1],
+    ["sofa", 2, 4],
+    ["palmera_maceta", 1, 5],
+    ["mesa_cristal", 9, 6],
+    ["archivo_alto", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7], "desde_sala_calle_27_46_dormitorio": [9, 2]},
+   "pasos": [
+    {
+     "nodo": "Dormitorio",
+     "en": [9, 1],
+     "destino": "ibiza/sala_calle_27_46_dormitorio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_27_46_dormitorio",
+     "llegada": [9, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_27_46_dormitorio": {
+   "tipo": "dormitorio",
+   "padre": "ibiza/sala_calle_27_46",
+   "nombre": "Dormitorio del casero",
+   "personas": [
+    {
+     "nombre": "Inquilina del armario",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Vivo en el armario empotrado de este cuarto. Tiene percha propia y wifi compartido.",
+      "El casero dice que es un estudio «de concepto abierto». Abierto es: no tiene puerta."
+     ],
+     "nodo": "InquilinaDelArmario",
+     "en": [6, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [4, 7],
+   "suelo": "parquet",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [2, 4, 4, 2]]],
+   "muebles": [["cajon_gris", 1, 1], ["cama_colcha_azul", 2, 1], ["consola", 1, 6]],
+   "encima": [],
+   "carteles": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_27_46", "aparicion": "desde_sala_calle_27_46_dormitorio"}
+  },
+  "ibiza/sala_calle_19_47": {
+   "tipo": "catedral",
+   "nombre": "Catedral de Santa María de las Nieves",
+   "rotulo": "Catedral de Ibiza",
+   "pieza": "catedral_ibiza",
+   "calle": ["ibiza/exterior", [19, 47]],
+   "personas": [
+    {
+     "nombre": "Párroco",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Esta catedral está dedicada a la Virgen de las Nieves. En Ibiza, en agosto. Que la fe mueve montañas, pero no el termómetro.",
+      "Los domingos tengo misa a las doce. A esa hora la mitad de la isla aún no se ha acostado."
+     ],
+     "nodo": "Parroco",
+     "en": [5, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista en chanclas",
+     "aspecto": "turistachanclas",
+     "papel": "publico",
+     "frases": [
+      "He subido toda la muralla en chanclas. Esto es más duro que la cola del club.",
+      "¿Aquí también hay que pagar entrada? Ah, que es la voluntad. ¿Y cuánto suele ser la voluntad?"
+     ],
+     "nodo": "TuristaEnChanclas",
+     "en": [3, 7],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Feligresa",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": [
+      "Rezo cada día para que mi nieto encuentre piso en la isla. Lo de los milagros va lento.",
+      "El cura dice que en el cielo hay sitio para todos. Espero que no lo compre un fondo."
+     ],
+     "nodo": "Feligresa",
+     "en": [3, 9],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estatua",
+     "frases": [
+      "Una imagen de la Virgen con un cartelito: «Se ruega no hacer fotos con flash ni con palo de selfi»."
+     ],
+     "nodo": "Cartel",
+     "en": [11, 2]
+    }
+   ],
+   "tamano": [14, 12],
+   "puerta": [6, 11],
+   "suelo": "rombos_oscuros",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [6, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 5, 3],
+    ["estatua_aguila", 1, 0],
+    ["estatua_aguila", 9, 0],
+    ["palmera_maceta", 12, 0],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 3, 8],
+    ["banco_rojo", 7, 8],
+    ["arbol_maceta", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 10]},
+   "pasos": []
+  },
+  "ibiza/sala_calle_48_33": {
+   "tipo": "club",
+   "nombre": "Club Ibiza, la pista",
+   "rotulo": "Club Ibiza",
+   "pieza": "club_ibiza",
+   "calle": ["ibiza/exterior", [48, 33]],
+   "personas": [
+    {
+     "nombre": "Bailarín incansable",
+     "aspecto": "raver",
+     "papel": "libre",
+     "frases": [
+      "Llevo bailando desde el jueves. ¿Qué día es hoy? No me lo digas, que me deprimo.",
+      "El DJ ha pinchado la misma canción seis horas. Es mi favorita. Bueno, ahora ya es la única que conozco."
+     ],
+     "nodo": "BailarinIncansable",
+     "en": [8, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Despedida de soltera",
+     "aspecto": "raver_f",
+     "papel": "libre",
+     "frases": [
+      "¡Somos dieciocho de Albacete! La novia está en el baño desde las dos y el novio no sabe que estamos aquí.",
+      "Hemos gastado en esta noche lo de la boda. Ahora habrá que hacer la boda en el chiringuito."
+     ],
+     "nodo": "DespedidaDeSoltera",
+     "en": [9, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Portero",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Con esas zapatillas no entras. Bueno, ya estás dentro. Pues con esas zapatillas no sales.",
+      "Aquí dentro todo el mundo es VIP. Fuera, en la cola, también. VIP es el que paga."
+     ],
+     "nodo": "Portero",
+     "en": [8, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "altavoz",
+     "frases": ["Un altavoz del tamaño de un piso de Ibiza. Con mejores vistas."],
+     "nodo": "Cartel",
+     "en": [13, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [8, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [2, 3, 10, 5]]],
+   "muebles": [
+    ["mostrador_cristal_i", 1, 4],
+    ["mostrador_cristal_m", 2, 4],
+    ["mostrador_cristal_m", 3, 4],
+    ["mostrador_cristal_d", 4, 4],
+    ["taburete_marron", 2, 6],
+    ["taburete_marron", 4, 6],
+    ["altavoz", 9, 2],
+    ["mostrador_cristal", 10, 2],
+    ["altavoz", 13, 2],
+    ["altavoz", 14, 2],
+    ["altavoz", 14, 9],
+    ["sillon_derecha", 14, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9], "desde_sala_calle_48_33_barra": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Barra",
+     "en": [4, 1],
+     "destino": "ibiza/sala_calle_48_33_barra",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_48_33_barra",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "ibiza/sala_calle_48_33_barra": {
+   "tipo": "bar",
+   "padre": "ibiza/sala_calle_48_33",
+   "nombre": "Club Ibiza, la barra",
+   "personas": [
+    {
+     "nombre": "Camarera",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "¿Agua? Son 18. Con gas, 22. Con hielo, te lo tengo que consultar con el gerente.",
+      "Las copas no son caras: son de autor. El autor es el dueño del club."
+     ],
+     "nodo": "Camarera",
+     "en": [5, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente arruinado",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": [
+      "He pedido un gin-tonic y me han hecho firmar una hipoteca.",
+      "Lo bueno es que con lo que pago aquí ya no me puedo permitir la resaca."
+     ],
+     "nodo": "ClienteArruinado",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "mostrador",
+     "frases": [
+      "La carta de la barra: «Botella de agua mineral: 18. Botella de champán: 1.800. Botella de oxígeno: consultar»."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 5]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "parquet",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["estanteria_alta_nogal", 7, 0],
+    ["mostrador_azul_i", 5, 4],
+    ["mostrador_azul_m", 6, 4],
+    ["mostrador_azul_m", 7, 4],
+    ["mostrador_azul_d", 8, 4],
+    ["banqueta_roja", 6, 6],
+    ["banqueta_roja", 8, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": [],
+   "salida": {"destino": "ibiza/sala_calle_48_33", "aparicion": "desde_sala_calle_48_33_barra"}
+  },
+  "ibiza/sala_calle_61_39": {
+   "tipo": "socorrismo",
+   "nombre": "Caseta de socorrismo de Platja d'en Bossa",
+   "rotulo": "Socorrismo",
+   "pieza": "torre_socorrista",
+   "calle": ["ibiza/exterior", [61, 39]],
+   "personas": [
+    {
+     "nombre": "Socorrista",
+     "aspecto": "surfista",
+     "papel": "libre",
+     "frases": [
+      "Este verano he rescatado a nueve bañistas, cuatro hinchables con forma de flamenco y un móvil con 300.000 seguidores.",
+      "Bandera amarilla: precaución. Bandera roja: peligro. Bandera de la discoteca: ya es tarde."
+     ],
+     "nodo": "Socorrista",
+     "en": [4, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Bañista con resaca",
+     "aspecto": "nadador",
+     "papel": "libre",
+     "frases": [
+      "Me he dormido en la arena y me he despertado en otra hamaca. Me están cobrando 40 euros por ella.",
+      "¿Hay agua? Bueno, mar ya veo. Me refiero a agua que se beba sin financiación."
+     ],
+     "nodo": "BanistaConResaca",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "cajonera",
+     "frases": [
+      "Un botiquín: tiritas, crema solar, sales de rehidratación y una tarjeta de un taxi que cobra 120 al aeropuerto."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 2]
+    }
+   ],
+   "tamano": [9, 7],
+   "puerta": [5, 6],
+   "suelo": "parquet",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["taquilla_azul", 2, 0], ["cajonera_gris", 3, 1]],
+   "encima": [],
+   "apariciones": {"default": [5, 5]},
+   "pasos": []
+  },
+  "ibiza/sala_calle_45_22": {
+   "tipo": "rural",
+   "nombre": "Casa payesa de Can Marí",
+   "pieza": "casa_gris",
+   "calle": ["ibiza/exterior", [45, 22]],
+   "personas": [
+    {
+     "nombre": "Payés",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "Mis cabras salen en más fotos que la actriz más famosa. Ninguna ha firmado los derechos.",
+      "Me ofrecen comprar el campo para hacer un hotel «rural boutique». Rural ya es; boutique será cuando yo me muera."
+     ],
+     "nodo": "Payes",
+     "en": [10, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Payesa",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Aquí hacemos sobrasada, higos secos y paciencia. La paciencia es lo que más se vende en agosto.",
+      "Un turista me preguntó si las almendras eran ecológicas. Le dije que eran de almendro."
+     ],
+     "nodo": "Payesa",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "caja",
+     "frases": ["Cajas de algarrobas y almendras. Una pone: «Para el mercado». Otra: «Para cuando suba la luz»."],
+     "nodo": "Cartel",
+     "en": [10, 2]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "parquet",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["encimera", 3, 1],
+    ["mesa_cristal", 4, 4],
+    ["taburete_marron", 3, 5],
+    ["taburete_marron", 6, 5],
+    ["caja", 10, 2],
+    ["arbol_maceta", 10, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "ibiza/sala_calle_37_41": {
+   "tipo": "farmacia",
+   "nombre": "Farmacia de guardia de Dalt Vila",
+   "rotulo": "Farmacia de guardia",
+   "pieza": "casa_roja_pequena",
+   "calle": ["ibiza/exterior", [37, 41]],
+   "personas": [
+    {
+     "nombre": "Farmacéutica",
+     "aspecto": "nurse",
+     "papel": "dependiente",
+     "frases": [
+      "A las ocho de la mañana viene la cola del club: ibuprofeno, suero y gafas de sol. Sobre todo gafas de sol.",
+      "No, no tengo nada para «borrar lo de anoche». Eso es en la otra farmacia, la de la memoria."
+     ],
+     "nodo": "Farmaceutica",
+     "en": [3, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente con gafas de sol",
+     "aspecto": "raver_f",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a por algo para el dolor de cabeza y para el dolor de cuenta corriente.",
+      "Me han dicho que hay Pokémon que curan con canciones. Que vengan, pero bajito."
+     ],
+     "nodo": "ClienteConGafasDeSol",
+     "en": [5, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": ["Un expositor de cremas solares de factor 50, 100 y «factor alquiler»."],
+     "nodo": "Cartel",
+     "en": [8, 2]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "losa_gris",
+   "pared": "azulejo_azul",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_menta", 1, 0],
+    ["estanteria_alta_menta", 3, 0],
+    ["mostrador_cristal_i", 3, 5],
+    ["mostrador_cristal_m", 4, 5],
+    ["mostrador_cristal_d", 5, 5],
+    ["vitrina_blanca_estrecha", 8, 1],
+    ["planta", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  }
+ }
+}

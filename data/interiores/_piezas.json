@@ -1,0 +1,1898 @@
+{
+ "_doc": "Catálogo de piezas del tileset de interiores (assets/tilesets/interior/interior.tres, Akizakura16). Lo usan maps/_tools/planificar_interiores.py y maps/_pintura/pintar_interiores_datos.gd. suelos: casilla lisa (fuente 0) de cada bloque. paredes: bloque k (filas 5k a 5k+4 de la fuente 1: marco en 5k..5k+2, cara del muro en 5k+3 y 5k+4). muebles: fuente, rect [x, y, ancho, alto] en la hoja y base (filas de abajo que pisan el suelo; las de encima, si la pieza no está contra el muro de arriba, van a la capa Above sin colisión). Las camas, el águila y las escaleras ocupan tres columnas: el dibujo está centrado en la del medio.",
+ "suelos": {
+  "moqueta_beige": [
+   0,
+   0
+  ],
+  "alfombra_roja": [
+   0,
+   4
+  ],
+  "alfombra_naranja": [
+   0,
+   8
+  ],
+  "tatami_verde": [
+   0,
+   12
+  ],
+  "moqueta_azul": [
+   0,
+   16
+  ],
+  "azulejo_menta": [
+   0,
+   20
+  ],
+  "parquet": [
+   0,
+   24
+  ],
+  "hidraulica_rosa": [
+   0,
+   28
+  ],
+  "rombos_lila": [
+   0,
+   32
+  ],
+  "rombos_verdes": [
+   0,
+   36
+  ],
+  "rombos_morados": [
+   0,
+   40
+  ],
+  "rombos_oscuros": [
+   0,
+   44
+  ],
+  "losa_crema": [
+   0,
+   48
+  ],
+  "losa_gris": [
+   0,
+   52
+  ],
+  "chapa": [
+   0,
+   56
+  ],
+  "piedra": [
+   0,
+   60
+  ]
+ },
+ "paredes": {
+  "crema": 0,
+  "rayas_verdes": 1,
+  "azulejo_azul": 2,
+  "beige_rayado": 3,
+  "salvia": 4,
+  "gris_cemento": 5,
+  "topo": 6,
+  "mostaza": 7,
+  "marino": 8,
+  "retro": 9,
+  "gris_raya_roja": 10,
+  "lima": 11,
+  "menta": 12,
+  "amarillo_cuadros": 13,
+  "melocoton": 14,
+  "madera_oscura": 15
+ },
+ "muebles": {
+  "armario_madera": {
+   "fuente": 2,
+   "rect": [
+    0,
+    0,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "estanteria_baja_madera": {
+   "fuente": 2,
+   "rect": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estante_madera": {
+   "fuente": 2,
+   "rect": [
+    3,
+    1,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estanteria_alta_madera": {
+   "fuente": 2,
+   "rect": [
+    5,
+    0,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "ropero_madera": {
+   "fuente": 2,
+   "rect": [
+    7,
+    0,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "armario_oliva": {
+   "fuente": 2,
+   "rect": [
+    0,
+    3,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "estanteria_baja_oliva": {
+   "fuente": 2,
+   "rect": [
+    1,
+    4,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estante_oliva": {
+   "fuente": 2,
+   "rect": [
+    3,
+    4,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estanteria_alta_oliva": {
+   "fuente": 2,
+   "rect": [
+    5,
+    3,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "ropero_oliva": {
+   "fuente": 2,
+   "rect": [
+    7,
+    3,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "armario_nogal": {
+   "fuente": 2,
+   "rect": [
+    0,
+    6,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "estanteria_baja_nogal": {
+   "fuente": 2,
+   "rect": [
+    1,
+    7,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estante_nogal": {
+   "fuente": 2,
+   "rect": [
+    3,
+    7,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estanteria_alta_nogal": {
+   "fuente": 2,
+   "rect": [
+    5,
+    6,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "ropero_nogal": {
+   "fuente": 2,
+   "rect": [
+    7,
+    6,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "armario_menta": {
+   "fuente": 2,
+   "rect": [
+    0,
+    9,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "estanteria_baja_menta": {
+   "fuente": 2,
+   "rect": [
+    1,
+    10,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estante_menta": {
+   "fuente": 2,
+   "rect": [
+    3,
+    10,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estanteria_alta_menta": {
+   "fuente": 2,
+   "rect": [
+    5,
+    9,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "ropero_menta": {
+   "fuente": 2,
+   "rect": [
+    7,
+    9,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "armario_verde": {
+   "fuente": 2,
+   "rect": [
+    0,
+    12,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "estanteria_baja_verde": {
+   "fuente": 2,
+   "rect": [
+    1,
+    13,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estante_verde": {
+   "fuente": 2,
+   "rect": [
+    3,
+    13,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estanteria_alta_verde": {
+   "fuente": 2,
+   "rect": [
+    5,
+    12,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "ropero_verde": {
+   "fuente": 2,
+   "rect": [
+    7,
+    12,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "armario_mostaza": {
+   "fuente": 2,
+   "rect": [
+    0,
+    15,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "estanteria_baja_mostaza": {
+   "fuente": 2,
+   "rect": [
+    1,
+    16,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estante_mostaza": {
+   "fuente": 2,
+   "rect": [
+    3,
+    16,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "estanteria_alta_mostaza": {
+   "fuente": 2,
+   "rect": [
+    5,
+    15,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "estanteria"
+  },
+  "ropero_mostaza": {
+   "fuente": 2,
+   "rect": [
+    7,
+    15,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "armario_archivo": {
+   "fuente": 2,
+   "rect": [
+    0,
+    18,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "archivo"
+  },
+  "archivador_bajo": {
+   "fuente": 2,
+   "rect": [
+    1,
+    19,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "archivo"
+  },
+  "archivador": {
+   "fuente": 2,
+   "rect": [
+    3,
+    19,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "archivo"
+  },
+  "archivo_alto": {
+   "fuente": 2,
+   "rect": [
+    5,
+    18,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "archivo"
+  },
+  "taquilla_archivo": {
+   "fuente": 2,
+   "rect": [
+    7,
+    18,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "archivo"
+  },
+  "taquilla_gris": {
+   "fuente": 2,
+   "rect": [
+    0,
+    21,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "taquilla"
+  },
+  "cajonera_gris": {
+   "fuente": 2,
+   "rect": [
+    1,
+    22,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "cajon_gris": {
+   "fuente": 2,
+   "rect": [
+    3,
+    22,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "cajon_azul": {
+   "fuente": 2,
+   "rect": [
+    4,
+    22,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "cajonera_azul": {
+   "fuente": 2,
+   "rect": [
+    5,
+    22,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "taquilla_azul": {
+   "fuente": 2,
+   "rect": [
+    7,
+    21,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "taquilla"
+  },
+  "armario_oscuro": {
+   "fuente": 2,
+   "rect": [
+    0,
+    24,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "cajonera_roja": {
+   "fuente": 2,
+   "rect": [
+    1,
+    25,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "cajon_rojo": {
+   "fuente": 2,
+   "rect": [
+    3,
+    25,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "alacena": {
+   "fuente": 2,
+   "rect": [
+    0,
+    27,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "vitrina_madera": {
+   "fuente": 2,
+   "rect": [
+    1,
+    28,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "vitrina"
+  },
+  "vitrina_madera_estrecha": {
+   "fuente": 2,
+   "rect": [
+    3,
+    28,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "vitrina"
+  },
+  "vitrina_blanca_estrecha": {
+   "fuente": 2,
+   "rect": [
+    4,
+    28,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "vitrina"
+  },
+  "vitrina_blanca": {
+   "fuente": 2,
+   "rect": [
+    5,
+    28,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "vitrina"
+  },
+  "nevera_alta": {
+   "fuente": 2,
+   "rect": [
+    7,
+    27,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "nevera"
+  },
+  "armario_rosa": {
+   "fuente": 2,
+   "rect": [
+    0,
+    30,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "aparador_rosa": {
+   "fuente": 2,
+   "rect": [
+    1,
+    31,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "aparador"
+  },
+  "cajon_rosa": {
+   "fuente": 2,
+   "rect": [
+    3,
+    31,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "cajon_oliva": {
+   "fuente": 2,
+   "rect": [
+    4,
+    31,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "cajonera"
+  },
+  "tele": {
+   "fuente": 2,
+   "rect": [
+    5,
+    31,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "tele"
+  },
+  "armario_oliva_alto": {
+   "fuente": 2,
+   "rect": [
+    7,
+    30,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "armario"
+  },
+  "fogones": {
+   "fuente": 2,
+   "rect": [
+    0,
+    34,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "cocina"
+  },
+  "fregadero": {
+   "fuente": 2,
+   "rect": [
+    2,
+    34,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "cocina"
+  },
+  "encimera": {
+   "fuente": 2,
+   "rect": [
+    4,
+    34,
+    3,
+    2
+   ],
+   "base": 1,
+   "tipo": "cocina"
+  },
+  "nevera": {
+   "fuente": 2,
+   "rect": [
+    7,
+    34,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "nevera"
+  },
+  "arbol_maceta": {
+   "fuente": 2,
+   "rect": [
+    0,
+    36,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "planta"
+  },
+  "planta": {
+   "fuente": 2,
+   "rect": [
+    1,
+    37,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "planta"
+  },
+  "palmera_maceta": {
+   "fuente": 2,
+   "rect": [
+    2,
+    36,
+    1,
+    3
+   ],
+   "base": 1,
+   "tipo": "planta"
+  },
+  "papelera": {
+   "fuente": 2,
+   "rect": [
+    3,
+    37,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "papelera"
+  },
+  "caja": {
+   "fuente": 2,
+   "rect": [
+    4,
+    38,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "caja"
+  },
+  "cajas": {
+   "fuente": 2,
+   "rect": [
+    5,
+    37,
+    3,
+    2
+   ],
+   "base": 1,
+   "tipo": "caja"
+  },
+  "cama_rosa": {
+   "fuente": 2,
+   "rect": [
+    0,
+    39,
+    3,
+    3
+   ],
+   "base": 3,
+   "tipo": "cama"
+  },
+  "cama_azul": {
+   "fuente": 2,
+   "rect": [
+    3,
+    39,
+    3,
+    3
+   ],
+   "base": 3,
+   "tipo": "cama"
+  },
+  "cama_colcha_rosa": {
+   "fuente": 2,
+   "rect": [
+    0,
+    42,
+    3,
+    3
+   ],
+   "base": 3,
+   "tipo": "cama"
+  },
+  "cama_colcha_azul": {
+   "fuente": 2,
+   "rect": [
+    3,
+    42,
+    3,
+    3
+   ],
+   "base": 3,
+   "tipo": "cama"
+  },
+  "cama_celeste": {
+   "fuente": 2,
+   "rect": [
+    0,
+    45,
+    3,
+    3
+   ],
+   "base": 3,
+   "tipo": "cama"
+  },
+  "estatua_aguila": {
+   "fuente": 2,
+   "rect": [
+    0,
+    49,
+    3,
+    3
+   ],
+   "base": 1,
+   "tipo": "estatua"
+  },
+  "pedestal": {
+   "fuente": 2,
+   "rect": [
+    3,
+    50,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "estatua"
+  },
+  "estatua_gargola": {
+   "fuente": 2,
+   "rect": [
+    5,
+    49,
+    2,
+    3
+   ],
+   "base": 1,
+   "tipo": "estatua"
+  },
+  "escalera_mano": {
+   "fuente": 2,
+   "rect": [
+    0,
+    52,
+    3,
+    3
+   ],
+   "base": 1,
+   "tipo": "escalera"
+  },
+  "escalera_bajada": {
+   "fuente": 2,
+   "rect": [
+    0,
+    56,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "escalera"
+  },
+  "mesa_cristal": {
+   "fuente": 2,
+   "rect": [
+    3,
+    52,
+    2,
+    2
+   ],
+   "base": 2,
+   "tipo": "mesa"
+  },
+  "mesa_cristal_larga": {
+   "fuente": 2,
+   "rect": [
+    5,
+    52,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mesa"
+  },
+  "vitrina_alta": {
+   "fuente": 2,
+   "rect": [
+    7,
+    54,
+    1,
+    4
+   ],
+   "base": 1,
+   "tipo": "vitrina"
+  },
+  "sillon_derecha": {
+   "fuente": 2,
+   "rect": [
+    6,
+    58,
+    1,
+    3
+   ],
+   "base": 2,
+   "tipo": "sillon"
+  },
+  "sillon_izquierda": {
+   "fuente": 2,
+   "rect": [
+    7,
+    58,
+    1,
+    3
+   ],
+   "base": 2,
+   "tipo": "sillon"
+  },
+  "sofa": {
+   "fuente": 2,
+   "rect": [
+    3,
+    59,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "sofa"
+  },
+  "taburete_rojo": {
+   "fuente": 2,
+   "rect": [
+    0,
+    61,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "taburete"
+  },
+  "taburete_marron": {
+   "fuente": 2,
+   "rect": [
+    1,
+    61,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "taburete"
+  },
+  "taburete_amarillo": {
+   "fuente": 2,
+   "rect": [
+    2,
+    61,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "taburete"
+  },
+  "taburete_verde": {
+   "fuente": 2,
+   "rect": [
+    3,
+    61,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "taburete"
+  },
+  "banqueta_roja": {
+   "fuente": 2,
+   "rect": [
+    0,
+    62,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "taburete"
+  },
+  "banqueta_azul": {
+   "fuente": 2,
+   "rect": [
+    1,
+    62,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "taburete"
+  },
+  "tele_pequena": {
+   "fuente": 2,
+   "rect": [
+    3,
+    62,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "tele"
+  },
+  "consola": {
+   "fuente": 2,
+   "rect": [
+    5,
+    62,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "maquina"
+  },
+  "silla_derecha": {
+   "fuente": 2,
+   "rect": [
+    6,
+    61,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "silla"
+  },
+  "silla_izquierda": {
+   "fuente": 2,
+   "rect": [
+    7,
+    61,
+    1,
+    2
+   ],
+   "base": 1,
+   "tipo": "silla"
+  },
+  "plato": {
+   "fuente": 2,
+   "rect": [
+    0,
+    63,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "menaje",
+   "encima": true
+  },
+  "plato_comida": {
+   "fuente": 2,
+   "rect": [
+    1,
+    63,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "menaje",
+   "encima": true
+  },
+  "taza": {
+   "fuente": 2,
+   "rect": [
+    5,
+    63,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "menaje",
+   "encima": true
+  },
+  "jarron_flores": {
+   "fuente": 2,
+   "rect": [
+    6,
+    63,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "menaje",
+   "encima": true
+  },
+  "libro_abierto": {
+   "fuente": 2,
+   "rect": [
+    7,
+    63,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "menaje",
+   "encima": true
+  },
+  "banco_rojo": {
+   "fuente": 3,
+   "rect": [
+    5,
+    0,
+    3,
+    1
+   ],
+   "base": 1,
+   "tipo": "banco"
+  },
+  "mostrador_turquesa": {
+   "fuente": 3,
+   "rect": [
+    0,
+    5,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_blanco": {
+   "fuente": 3,
+   "rect": [
+    5,
+    5,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_cristal": {
+   "fuente": 3,
+   "rect": [
+    0,
+    11,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_madera": {
+   "fuente": 3,
+   "rect": [
+    5,
+    11,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_azul": {
+   "fuente": 3,
+   "rect": [
+    0,
+    17,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_naranja": {
+   "fuente": 3,
+   "rect": [
+    5,
+    17,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_oliva": {
+   "fuente": 3,
+   "rect": [
+    0,
+    23,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_celeste": {
+   "fuente": 3,
+   "rect": [
+    5,
+    23,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_verde": {
+   "fuente": 3,
+   "rect": [
+    0,
+    29,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_tablas": {
+   "fuente": 3,
+   "rect": [
+    4,
+    29,
+    3,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "isla_turquesa": {
+   "fuente": 3,
+   "rect": [
+    0,
+    1,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_blanca": {
+   "fuente": 3,
+   "rect": [
+    4,
+    1,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_cristal": {
+   "fuente": 3,
+   "rect": [
+    0,
+    7,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_madera": {
+   "fuente": 3,
+   "rect": [
+    4,
+    7,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_azul": {
+   "fuente": 3,
+   "rect": [
+    0,
+    13,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_naranja": {
+   "fuente": 3,
+   "rect": [
+    4,
+    13,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_oliva": {
+   "fuente": 3,
+   "rect": [
+    0,
+    19,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_celeste": {
+   "fuente": 3,
+   "rect": [
+    4,
+    19,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_verde": {
+   "fuente": 3,
+   "rect": [
+    0,
+    25,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "isla_tablas": {
+   "fuente": 3,
+   "rect": [
+    4,
+    25,
+    3,
+    4
+   ],
+   "base": 4,
+   "tipo": "isla"
+  },
+  "poste_turquesa": {
+   "fuente": 3,
+   "rect": [
+    3,
+    2,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_blanco": {
+   "fuente": 3,
+   "rect": [
+    7,
+    2,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_cristal": {
+   "fuente": 3,
+   "rect": [
+    3,
+    8,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_madera": {
+   "fuente": 3,
+   "rect": [
+    7,
+    8,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_azul": {
+   "fuente": 3,
+   "rect": [
+    3,
+    14,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_naranja": {
+   "fuente": 3,
+   "rect": [
+    7,
+    14,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_oliva": {
+   "fuente": 3,
+   "rect": [
+    3,
+    20,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_celeste": {
+   "fuente": 3,
+   "rect": [
+    7,
+    20,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_verde": {
+   "fuente": 3,
+   "rect": [
+    3,
+    26,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "poste_tablas": {
+   "fuente": 3,
+   "rect": [
+    7,
+    26,
+    1,
+    3
+   ],
+   "base": 3,
+   "tipo": "poste"
+  },
+  "ordenador": {
+   "fuente": 3,
+   "rect": [
+    0,
+    31,
+    3,
+    3
+   ],
+   "base": 1,
+   "tipo": "pc"
+  },
+  "maquina_billetes": {
+   "fuente": 3,
+   "rect": [
+    3,
+    31,
+    2,
+    2
+   ],
+   "base": 1,
+   "tipo": "maquina"
+  },
+  "recepcion": {
+   "fuente": 3,
+   "rect": [
+    4,
+    33,
+    4,
+    2
+   ],
+   "base": 2,
+   "tipo": "recepcion"
+  },
+  "cojin_naranja": {
+   "fuente": 3,
+   "rect": [
+    3,
+    35,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "taburete"
+  },
+  "altavoz": {
+   "fuente": 3,
+   "rect": [
+    4,
+    35,
+    1,
+    1
+   ],
+   "base": 1,
+   "tipo": "maquina"
+  },
+  "pecera": {
+   "fuente": 3,
+   "rect": [
+    5,
+    35,
+    3,
+    1
+   ],
+   "base": 1,
+   "tipo": "maquina"
+  },
+  "mostrador_turquesa_i": {
+   "fuente": 3,
+   "rect": [
+    0,
+    5,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_turquesa_m": {
+   "fuente": 3,
+   "rect": [
+    1,
+    5,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_turquesa_d": {
+   "fuente": 3,
+   "rect": [
+    2,
+    5,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_blanco_i": {
+   "fuente": 3,
+   "rect": [
+    5,
+    5,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_blanco_m": {
+   "fuente": 3,
+   "rect": [
+    6,
+    5,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_blanco_d": {
+   "fuente": 3,
+   "rect": [
+    7,
+    5,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_cristal_i": {
+   "fuente": 3,
+   "rect": [
+    0,
+    11,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_cristal_m": {
+   "fuente": 3,
+   "rect": [
+    1,
+    11,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_cristal_d": {
+   "fuente": 3,
+   "rect": [
+    2,
+    11,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_madera_i": {
+   "fuente": 3,
+   "rect": [
+    5,
+    11,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_madera_m": {
+   "fuente": 3,
+   "rect": [
+    6,
+    11,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_madera_d": {
+   "fuente": 3,
+   "rect": [
+    7,
+    11,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_azul_i": {
+   "fuente": 3,
+   "rect": [
+    0,
+    17,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_azul_m": {
+   "fuente": 3,
+   "rect": [
+    1,
+    17,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_azul_d": {
+   "fuente": 3,
+   "rect": [
+    2,
+    17,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_naranja_i": {
+   "fuente": 3,
+   "rect": [
+    5,
+    17,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_naranja_m": {
+   "fuente": 3,
+   "rect": [
+    6,
+    17,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_naranja_d": {
+   "fuente": 3,
+   "rect": [
+    7,
+    17,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_oliva_i": {
+   "fuente": 3,
+   "rect": [
+    0,
+    23,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_oliva_m": {
+   "fuente": 3,
+   "rect": [
+    1,
+    23,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_oliva_d": {
+   "fuente": 3,
+   "rect": [
+    2,
+    23,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_celeste_i": {
+   "fuente": 3,
+   "rect": [
+    5,
+    23,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_celeste_m": {
+   "fuente": 3,
+   "rect": [
+    6,
+    23,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_celeste_d": {
+   "fuente": 3,
+   "rect": [
+    7,
+    23,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_verde_i": {
+   "fuente": 3,
+   "rect": [
+    0,
+    29,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_verde_m": {
+   "fuente": 3,
+   "rect": [
+    1,
+    29,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_verde_d": {
+   "fuente": 3,
+   "rect": [
+    2,
+    29,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_tablas_i": {
+   "fuente": 3,
+   "rect": [
+    4,
+    29,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_tablas_m": {
+   "fuente": 3,
+   "rect": [
+    5,
+    29,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  },
+  "mostrador_tablas_d": {
+   "fuente": 3,
+   "rect": [
+    6,
+    29,
+    1,
+    2
+   ],
+   "base": 2,
+   "tipo": "mostrador"
+  }
+ }
+}

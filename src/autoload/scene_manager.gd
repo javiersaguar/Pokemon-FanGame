@@ -169,7 +169,8 @@ func continue_game(slot: int) -> Error:
 	var saved := SaveManager.peek_state(slot)
 	if saved.is_empty():
 		return ERR_FILE_NOT_FOUND
-	var destination_error := MapLoader.check_position(saved)
+	var arrival := MapLoader.saved_position(saved)
+	var destination_error: Error = arrival.error
 	if destination_error != OK:
 		EventBus.map_load_failed.emit(StringName(saved.get("position", {}).get("map", "")), destination_error)
 		return destination_error
@@ -178,6 +179,7 @@ func continue_game(slot: int) -> Error:
 	var err := SaveManager.load_game(slot)
 	if err != OK:
 		return err
+	GameState.player_tile = arrival.tile
 	await fade_out()
 	_enter_game()
 	await change_map_at(GameState.map_id, GameState.player_tile, GameState.player_facing)
@@ -194,8 +196,10 @@ func restore_test_snapshot(snapshot: Dictionary) -> Error:
 	if is_busy():
 		return ERR_BUSY
 	var state: Dictionary = snapshot.get("state", {})
+	var arrival := {}
 	if bool(snapshot.get("in_game", false)):
-		var destination_error := MapLoader.check_position(state)
+		arrival = MapLoader.saved_position(state)
+		var destination_error: Error = arrival.error
 		if destination_error != OK:
 			return destination_error
 	await fade_out()
@@ -208,6 +212,7 @@ func restore_test_snapshot(snapshot: Dictionary) -> Error:
 	GameState.from_dict(state)
 	GameState.slot = int(snapshot.get("slot", 0))
 	if bool(snapshot.get("in_game", false)):
+		GameState.player_tile = arrival.tile
 		_enter_game()
 		var error := await change_map_at(GameState.map_id, GameState.player_tile, GameState.player_facing)
 		if error != OK:

@@ -236,9 +236,13 @@ func _interact() -> void:
 	var front := tile_position() + facing
 	var target := find_entity_at(front)
 	var map := get_map_root()
-	# Por encima de un mostrador se habla con quien está detrás.
-	if target == null and map and map.terrain_at(front) == "counter":
-		target = find_entity_at(front + facing)
+	# Por encima de un mostrador (de una o dos casillas de fondo) se habla con quien está detrás.
+	var across := front
+	for depth: int in 2:
+		if target != null or map == null or map.terrain_at(across) != "counter":
+			break
+		across += facing
+		target = find_entity_at(across)
 	if target == null:
 		if map and map.terrain_at(front) == "water" and FieldActions.transport() != &"surf" and FieldActions.available(&"surf", map):
 			if await Dialogue.ask_yes_no("¿Quieres hacer Surf?"):

@@ -1,0 +1,107 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_c61dl"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_20br6"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_2l66y"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_60uf6"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_nfy7h"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_pgcws"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/camarero.png" id="7_gxanm"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="8_w7umi"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_luy0p"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_aseuu"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_v7nnc"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_4udsf"]
+
+[sub_resource type="Resource" id="Resource_c61dl"]
+script = ExtResource("3_2l66y")
+id = &"ibiza/sala_calle_48_33_barra"
+display_name = "Club Ibiza, la barra, Ibiza"
+outdoor = false
+zone_id = &"ibiza"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 12, 9)
+followers_allowed = false
+
+[node name="SalaCalle4833Barra" type="Node2D" unique_id=483412468]
+script = ExtResource("1_c61dl")
+data = SubResource("Resource_c61dl")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=480337540]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAKAAAAAAAAABgAAAALAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAKAAEAAAAAABgAAAALAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAKAAIAAAAAABgAAAALAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAKAAMAAAAAABgAAAALAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAIAAQAAAAAABgAAAAJAAQAAAAAABgAAAAKAAQAAAAAABgAAAALAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAIAAUAAAAAABgAAAAJAAUAAAAAABgAAAAKAAUAAAAAABgAAAALAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAKAAYAAAAAABgAAAALAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABgAAAAEAAcAAAAAABgAAAAFAAcAAAAAABgAAAAGAAcAAAAAABgAAAAHAAcAAAAAABgAAAAIAAcAAAAAABgAAAAJAAcAAAAAABgAAAAKAAcAAAAAABgAAAALAAcAAAAAABgAAAAAAAgAAAAAABgAAAABAAgAAAAAABgAAAACAAgAAAAAABgAAAADAAgAAAAAABgAAAAEAAgAAAAAABgAAAAFAAgAAAAAABAAAAAGAAgAAAAAABgAAAAHAAgAAAAAABgAAAAIAAgAAAAAABgAAAAJAAgAAAAAABgAAAAKAAgAAAAAABgAAAALAAgAAAAAABgAAAA=")
+tile_set = ExtResource("4_60uf6")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=332485363]
+tile_map_data = PackedByteArray("AAABAAAAAQABACEAAAABAAEAAQABACIAAAACAAAAAQABACEAAAACAAEAAQABACIAAAADAAAAAQABACEAAAADAAEAAQABACIAAAAEAAAAAQABACEAAAAEAAEAAQABACIAAAAFAAAAAQABACEAAAAFAAEAAQABACIAAAAGAAAAAQABACEAAAAGAAEAAQABACIAAAAHAAAAAQABACEAAAAHAAEAAQABACIAAAAIAAAAAQABACEAAAAIAAEAAQABACIAAAAJAAAAAQABACEAAAAJAAEAAQABACIAAAAKAAAAAQABACEAAAAKAAEAAQABACIAAAAAAAAAAQACAB8AAAALAAAAAQAAAB8AAAAAAAEAAQACAB8AAAALAAEAAQAAAB8AAAAAAAIAAQACAB8AAAALAAIAAQAAAB8AAAAAAAMAAQACAB8AAAALAAMAAQAAAB8AAAAAAAQAAQACAB8AAAALAAQAAQAAAB8AAAAAAAUAAQACAB8AAAALAAUAAQAAAB8AAAAAAAYAAQACAB8AAAALAAYAAQAAAB8AAAAAAAcAAQACAB8AAAALAAcAAQAAAB8AAAABAAgAAQABAB4AAAACAAgAAQABAB4AAAADAAgAAQABAB4AAAAEAAgAAQACAB4AAAAGAAgAAQAAAB4AAAAHAAgAAQABAB4AAAAIAAgAAQABAB4AAAAJAAgAAQABAB4AAAAKAAgAAQABAB4AAAAAAAgAAQAFACIAAAALAAgAAQAGACIAAAA=")
+tile_set = ExtResource("4_60uf6")
+
+[node name="Entities" type="Node2D" parent="." unique_id=316707718]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=838023988]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAAAAgAHABsAAAADAAEAAgAHABwAAAADAAIAAgAHAB0AAAAEAAEAAgAEACIAAAAFAAEAAgAFACIAAAAGAAEAAgAGACIAAAAEAAIAAgAEACMAAAAFAAIAAgAFACMAAAAGAAIAAgAGACMAAAAHAAAAAgAFAAYAAAAIAAAAAgAGAAYAAAAHAAEAAgAFAAcAAAAIAAEAAgAGAAcAAAAHAAIAAgAFAAgAAAAIAAIAAgAGAAgAAAAFAAQAAwAAABEAAAAFAAUAAwAAABIAAAAGAAQAAwABABEAAAAGAAUAAwABABIAAAAHAAQAAwABABEAAAAHAAUAAwABABIAAAAIAAQAAwACABEAAAAIAAUAAwACABIAAAAGAAYAAgAAAD4AAAAIAAYAAgAAAD4AAAA=")
+tile_set = ExtResource("4_60uf6")
+
+[node name="Camarera" type="Node2D" parent="Entities" unique_id=2116841161 instance=ExtResource("5_nfy7h")]
+position = Vector2(176, 112)
+script = ExtResource("6_pgcws")
+display_name = "Camarera"
+lines = PackedStringArray("¿Agua? Son 18. Con gas, 22. Con hielo, te lo tengo que consultar con el gerente.", "Las copas no son caras: son de autor. El autor es el dueño del club.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_gxanm")
+
+[node name="ClienteArruinado" type="Node2D" parent="Entities" unique_id=1620151840 instance=ExtResource("5_nfy7h")]
+position = Vector2(240, 208)
+script = ExtResource("6_pgcws")
+display_name = "Cliente arruinado"
+lines = PackedStringArray("He pedido un gin-tonic y me han hecho firmar una hipoteca.", "Lo bueno es que con lo que pago aquí ya no me puedo permitir la resaca.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_w7umi")
+initial_facing = 3
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=894334372 instance=ExtResource("9_luy0p")]
+position = Vector2(176, 176)
+script = ExtResource("10_aseuu")
+lines = PackedStringArray("La carta de la barra: «Botella de agua mineral: 18. Botella de champán: 1.800. Botella de oxígeno: consultar».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1401914004]
+z_index = 10
+tile_set = ExtResource("4_60uf6")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=128581450]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1825913815]
+position = Vector2(176, 272)
+script = ExtResource("11_v7nnc")
+target_map = &"ibiza/sala_calle_48_33"
+target_spawn = &"desde_sala_calle_48_33_barra"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1331743327]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=649622873]
+position = Vector2(176, 240)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1293681853]
+
+[node name="Rotulo" type="Label" parent="." unique_id=669136953]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_4udsf")
+theme_override_font_sizes/font_size = 16
+text = "CLUB IBIZA, LA BARRA"
+horizontal_alignment = 1
