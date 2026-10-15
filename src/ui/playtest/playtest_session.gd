@@ -8,6 +8,11 @@ var snapshot: Dictionary = {}
 var foes: Array[Pokemon] = []
 var _preferences: Dictionary = {}
 var _debug_values: Dictionary = {}
+var _field_actions: Dictionary = {}
+## Herramientas de campo sin objeto decidido (data/world.json → field.actions, del sistema de medallas):
+## solo dentro de la sesión de pruebas se dan con la MO oficial que hace lo mismo, para poder probar
+## Surf, Corte, Fuerza... Al salir se restaura la configuración tal cual estaba.
+const SESSION_TOOLS := {"cut": &"hm01", "fly": &"hm02", "surf": &"hm03", "strength": &"hm04", "waterfall": &"hm05", "rock_smash": &"hm06"}
 
 func available() -> bool:
 	return OS.is_debug_build() and is_instance_valid(SceneManager.world) and is_instance_valid(SceneManager.ui_layer) and not working and not SceneManager.is_busy() and not Dialogue.is_open and not Cutscene.is_running() and not SceneManager.is_menu_open()
@@ -38,11 +43,17 @@ func begin(map_id: StringName = &"pueblo_inicial/exterior", spawn: StringName = 
 		for id: StringName in [&"potion",&"superpotion",&"hyperpotion",&"fullheal",&"revive",&"pokeball",&"ultraball",&"megabracelet",&"zring"]:
 			if DataDB.has_item(id): GameState.bag.add(id,30)
 		# Habilita el transporte ya implementado exclusivamente en esta copia.
-		for cfg: Dictionary in GameState.world_config.get("field",{}).get("actions",{}).values():
-			var item := StringName(str(cfg.get("item", "")))
+		var actions: Dictionary = GameState.world_config.get("field",{}).get("actions",{})
+		_field_actions = actions.duplicate(true)
+		for action: String in actions:
+			var cfg: Dictionary = actions[action]
+			if cfg.get("item") == null and SESSION_TOOLS.has(action) and DataDB.has_item(SESSION_TOOLS[action]):
+				cfg["item"] = String(SESSION_TOOLS[action])
+			var item := StringName(str(cfg.get("item", ""))) if cfg.get("item") != null else &""
 			if DataDB.has_item(item): GameState.bag.add(item)
 			var flag := StringName(cfg.get("required_flag", ""))
 			if flag != &"": GameState.set_flag(flag)
+		surf_if_on_water()
 		for id: StringName in DataDB.species_ids(): GameState.pokedex.mark_seen(id, true)
 		foes = [Pokemon.create(&"magikarp",50),Pokemon.create(&"gengar",50)]
 		Debug.encounters_disabled = true
@@ -64,6 +75,7 @@ func finish() -> Error:
 	Clock.set_debug_hour_offset(int(_debug_values.hour))
 	var error := await SceneManager.restore_test_snapshot(snapshot)
 	if error == OK:
+		_restore_field_actions()
 		Debug.noclip = bool(_debug_values.noclip)
 		Debug.encounters_disabled = bool(_debug_values.encounters)
 		Clock.set_debug_hour_offset(int(_debug_values.hour))
@@ -76,6 +88,20 @@ func finish() -> Error:
 	working = false
 	changed.emit()
 	return error
+
+func _restore_field_actions() -> void:
+	if _field_actions.is_empty(): return
+	var field: Dictionary = GameState.world_config.get("field", {})
+	field["actions"] = _field_actions.duplicate(true)
+	_field_actions.clear()
+
+## En la sesión, si se llega a una casilla de agua (la Ruta marítima 1 desde el F9), se sigue haciendo Surf.
+static func surf_if_on_water() -> void:
+	var map := SceneManager.current_map
+	var player := SceneManager.player
+	if map == null or player == null or not is_instance_valid(player): return
+	if map.terrain_at(player.tile_position()) in ["water", "waterfall"] and FieldActions.available(&"surf", map):
+		player.set_transport_mode(&"surf")
 
 ## Valida todo antes de reemplazar; no admite equipos vacíos en el jugador.
 func set_member(side: int, index: int, spec: Dictionary) -> Error:

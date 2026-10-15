@@ -201,3 +201,16 @@ func test_busqueda_sin_tildes_y_filtro_por_tipo() -> void:
  map.filter.item_selected.emit(3)
  assert_eq(map.zone_buttons.size(),34,"32 salas de gimnasio, el Quirón y el ático")
  for id: String in map.zone_buttons: assert_true(id.contains("gimnasio") or id in ["madrid/quiron","madrid/atico_ayuso"],id)
+func test_en_la_sesion_se_llega_al_canal_haciendo_surf_y_al_salir_se_restaura() -> void:
+ var before: Variant = GameState.world_config.field.actions.surf.get("item")
+ assert_eq(await menu.session.begin(&"maritima_1/exterior",&"from_palma"),OK)
+ assert_eq(GameState.map_id,&"maritima_1/exterior")
+ assert_true(FieldActions.available(&"surf",SceneManager.current_map),"En la sesión hay Surf (con la MO03)")
+ assert_eq(FieldActions.transport(),&"surf","Se llega al agua haciendo Surf, sin quedarse atascado")
+ menu.map_id = &"palma/exterior"
+ menu._refresh_spawns()
+ await menu._travel()
+ await wait_until(func() -> bool: return not SceneManager.is_busy(),4.0)
+ assert_eq(FieldActions.transport(),&"walk","En tierra se anda")
+ assert_eq(await menu.session.finish(),OK)
+ assert_eq(GameState.world_config.field.actions.surf.get("item"),before,"Al salir, las herramientas vuelven a su configuración")

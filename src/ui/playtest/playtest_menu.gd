@@ -183,7 +183,7 @@ func _build_world(box: VBoxContainer) -> void:
 	_button(screens,"Mapa región",func() -> void: await _screen(&"region"))
 	_button(screens,"Tarjeta",func() -> void: await _screen(&"card"))
 	_button(screens,"Opciones",func() -> void: await _screen(&"options"))
-	_label(box,"Camina, habla, compra y usa Surf o la bici de la sesión.")
+	_label(box,"Camina, habla, compra y usa Surf, Corte, Fuerza o la bici: en la sesión se dan con las MO oficiales.")
 	_label(box,"El arte de los mapas sigue pendiente de revisión de Javier.")
 
 func _open_world_map() -> void:
@@ -230,7 +230,9 @@ func _spawn() -> StringName:
 func _travel() -> void:
 	if not session.active or not session.available(): return
 	Debug.close()
-	_message(await SceneManager.change_map(map_id,_spawn()),"Destino listo. Continúa jugando; F9 permite cambiar de mapa.")
+	var error := await SceneManager.change_map(map_id,_spawn())
+	if error == OK: PlaytestSession.surf_if_on_water()
+	_message(error,"Destino listo. Continúa jugando; F9 permite cambiar de mapa.")
 
 func _heal() -> void:
 	if session.active:
