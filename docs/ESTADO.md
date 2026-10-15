@@ -516,6 +516,8 @@ Worktree `pokemon-panchito-agente4`, rama `feat/agente4-acceso`. Área: acceso a
 - `data/region.json`: todas las ciudades y pueblos con su mapa (`map` y `maps`), Pozuelo y Orcasitas (pueblos iniciales), Huelva, Playa del Inglés, Rocafonda, Casa de Campo, Madrid Río, los AVE y un **recuadro de Madrid y alrededores** con los seis barrios y Getafe, Leganés y Móstoles. `docs/mundo/mapa_region.svg` regenerado (`tools/mundo/mapa_region_svg.py`, nombres sin solaparse).
 - **F9 → Mundo → Mapa** (`src/ui/playtest/playtest_world_map.gd`): un punto por cada lugar de `region.json` (ciudades, pueblos, barrios, rutas, ferris, avión, AVE y salas de pruebas) y una vista ampliada de Madrid. Cada punto agrupa sus mapas por id y por la puerta de salida: el Quirón y el laboratorio salen en Moncloa; las salas del gimnasio 1, en Sol. Búsqueda sin tildes (también à, è, ï, ò, ç) y filtro por tipo (exteriores, interiores, gimnasios, transporte, pruebas). Gris solo si el mapa no existe (la Calle de la Victoria). Tests `test_playtest_world_map.gd`: 6, 8.087 aserciones.
 
+**Hecho · bloque 3, mapa regional del juego** (menú de pausa y F9 → Mapa región, `src/ui/region_map/region_map_screen.gd`): el plano de `mapa_region.svg` con **todas las ciudades y pueblos, los barrios de Madrid, el sur de Madrid y las rutas** de `region.json`; con las flechas se llega a todos los puntos (test), a la derecha sale su nombre, si es pueblo inicial, el gimnasio y si ya has estado o estás ahí. A vuela a un destino visitado si tienes Vuelo. **Destinos de vuelo** (`data/world.json` → `field.flight_destinations`, del Agente 1, que estaba vacío): uno por ciudad y pueblo de la región, con su mapa y `default`. La herramienta de Vuelo sigue sin objeto (es del sistema de herramientas por medalla). Test nuevo `tests/ui/test_region_map.gd` (5 tests); `test_pc_dex_card` sigue en verde con la misma interfaz (`destinations`, `choices`). Provisional: el arte definitivo del mapa regional (PENDIENTE JAVIER).
+
 **Fallos tal cual:** `test_map_robustness` pasa de 0,5 s al cargar algunos mapas grandes cuando hay otra suite en marcha (dos pasadas, mapas distintos cada vez: `barcelona/les_corts` 1,0 s, `madrid/moncloa` 0,97 s, `malaga/exterior` 0,89 s, `murcia/exterior` 0,60 s…). No son mapas que haya cambiado, salvo las conexiones de Moncloa y Sol. Se repite al cerrar.
 
 **PENDIENTE JAVIER:**
@@ -523,7 +525,7 @@ Worktree `pokemon-panchito-agente4`, rama `feat/agente4-acceso`. Área: acceso a
 - Con la 1.ª medalla se puede bajar por La Mancha hasta Málaga (gimnasio 8): no hay corte en la Ruta 24.
 - Desde la Ruta 4 se entra en Moncloa aunque no tengas 7 medallas (los obreros solo cortan la salida, como dice la decisión), y se aparece en la casilla de un obrero. Petición al Agente 1: que cruzar un borde choque si la casilla de llegada está ocupada.
 
-**Siguiente:** mapa regional del juego, Surf y viajes.
+**Siguiente:** Surf y viajes.
 
 **He leído** (2026-10-05) `docs/DIRECTRICES.md` (§0, §1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `docs/arte/recursos_terceros.md`, las 4 referencias de Añil, las comparativas, las respuestas 9 y 17 de Javier y mi lista de «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-arte`; autoría de Javier Saguar y `core.hooksPath .githooks` activos.
 

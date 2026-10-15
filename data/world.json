@@ -228,7 +228,31 @@
         "fishing": "res://assets/sprites/characters/player_female_fishing.png"
       }
     },
-    "flight_destinations": []
+    "flight_destinations": [
+      {"id": "pozuelo", "name": "Pozuelo de Alarcón", "map": "pozuelo/exterior", "spawn": "default"},
+      {"id": "orcasitas", "name": "Orcasitas", "map": "orcasitas/exterior", "spawn": "default"},
+      {"id": "san_miguel_de_bernuy", "name": "San Miguel de Bernuy", "map": "pueblo_inicial/exterior", "spawn": "default"},
+      {"id": "madrid", "name": "Madrid", "map": "madrid/centro", "spawn": "default"},
+      {"id": "sur_de_madrid", "name": "Getafe, Leganés y Móstoles", "map": "getafe/exterior", "spawn": "default"},
+      {"id": "zaragoza", "name": "Zaragoza", "map": "zaragoza/exterior", "spawn": "default"},
+      {"id": "barcelona", "name": "Barcelona", "map": "barcelona/eixample", "spawn": "default"},
+      {"id": "palma", "name": "Palma de Mallorca", "map": "palma/exterior", "spawn": "default"},
+      {"id": "ibiza", "name": "Ibiza", "map": "ibiza/exterior", "spawn": "default"},
+      {"id": "valencia", "name": "Valencia", "map": "valencia/ciutat_vella", "spawn": "default"},
+      {"id": "alicante", "name": "Alicante", "map": "alicante/exterior", "spawn": "default"},
+      {"id": "murcia", "name": "Murcia", "map": "murcia/exterior", "spawn": "default"},
+      {"id": "sevilla", "name": "Sevilla", "map": "sevilla/centro", "spawn": "default"},
+      {"id": "huelva", "name": "Huelva", "map": "huelva/exterior", "spawn": "default"},
+      {"id": "las_palmas", "name": "Las Palmas de Gran Canaria", "map": "las_palmas/vegueta_triana", "spawn": "default"},
+      {"id": "playa_del_ingles", "name": "Playa del Inglés", "map": "playa_del_ingles/exterior", "spawn": "default"},
+      {"id": "vigo", "name": "Vigo", "map": "vigo/exterior", "spawn": "default"},
+      {"id": "santander", "name": "Santander", "map": "santander/exterior", "spawn": "default"},
+      {"id": "bilbao", "name": "Bilbao", "map": "bilbao/exterior", "spawn": "default"},
+      {"id": "pamplona", "name": "Pamplona", "map": "pamplona/exterior", "spawn": "default"},
+      {"id": "valladolid", "name": "Valladolid", "map": "valladolid/exterior", "spawn": "default"},
+      {"id": "puertollano", "name": "Puertollano", "map": "puertollano/exterior", "spawn": "default"},
+      {"id": "malaga", "name": "Málaga", "map": "malaga/exterior", "spawn": "default"}
+    ]
   },
   "weather": {
     "presets": {
