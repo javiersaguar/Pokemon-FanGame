@@ -228,6 +228,8 @@ El repaso conserva las aprobaciones parciales anteriores; estas capturas no conv
 | Puertollano: Centro Pokémon, Mercadona y estanco | Interior Akizakura16, fachadas existentes y servicios reales | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/puertollano_locales.md) |
 
 | Mapa interactivo F9 | Plano documental y controles de depuración | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a3_mapa_f9.md) |
+| Mapa F9 con toda la región (A4, 2026-10-15) | Plano `mapa_region.svg` regenerado, puntos de todas las ciudades, pueblos, barrios, rutas y transportes, recuadro de Madrid, búsqueda y filtro | PROVISIONAL, pendiente Javier | [Comparativa](comparativas/a4_mapa_region.md) |
+| Mapa regional del juego (A4, 2026-10-15) | Menú de pausa: plano `mapa_region.svg` (base aprobada) con cursor, ficha del lugar y vuelo | PROVISIONAL, pendiente Javier (arte definitivo) | [Comparativa](comparativas/a4_mapa_region.md) |
 | 28 interiores adicionales / 13 exteriores | Akizakura16 y personajes existentes, puertas/rótulos | PROVISIONAL, pendiente Javier | [Trece comparativas](../mundo/auditoria_locales.md) |
 
 | Repaso Getafe/Ruta 24 y casa visitable | Recursos originales y mobiliario/interacciones | PROVISIONAL, pendiente Javier | [Antes/después](comparativas/a3_densidad_getafe_ruta24.md) |
