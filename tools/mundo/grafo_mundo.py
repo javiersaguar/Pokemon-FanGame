@@ -195,7 +195,7 @@ def cortes(maps: dict) -> list:
         for w, t, _ in v["warps"]:
             if w.startswith("Cercanias"):
                 g["links"].add((g["map"], t))
-        if all(cell[0] == 0 for cell in g["cells"]):
+        if all(cell[0] <= 1 for cell in g["cells"]):  # en la primera o segunda columna: cortan el borde oeste
             for e, t in v["edges"]:
                 if e == "west":
                     g["links"].add((g["map"], t))

@@ -135,7 +135,9 @@ func _gates() -> Array:
 		for e: Dictionary in world.get(map, {}).get("edges", []):
 			var along := at.y if e.edge in ["west", "east"] else at.x
 			var inside: bool = e.span == Vector2i.ZERO or (along >= e.span.x and along < e.span.y)
-			if inside and ((e.edge == "west" and at.x == 0) or (e.edge == "north" and at.y == 0)):
+			# Junto al borde: en la primera o la segunda columna (fila); los obreros de la A-6 están en la segunda
+			# para que al cruzar desde la Ruta 4 no se aparezca encima de uno.
+			if inside and ((e.edge == "west" and at.x <= 1) or (e.edge == "north" and at.y <= 1)):
 				groups[gid].links[_key(map, e.target)] = true
 	return groups.values()
 
@@ -383,3 +385,53 @@ func test_en_cada_exterior_se_pisan_bordes_y_pasarelas_y_se_cruza_a_casilla_libr
 					one_way.append("%s→%s" % [t, arrival])
 			assert_eq(blocked, [], "%s → %s: al cruzar se llega a una casilla libre" % [id, c.target_map])
 			assert_eq(one_way, [], "%s → %s: desde la llegada se vuelve por el mismo borde" % [id, c.target_map])
+
+
+## Casillas libres (con los personajes colocados según las medallas), alcance desde las apariciones y bordes.
+func _walkable(id: String, badges: int) -> Dictionary:
+	GameState.reset()
+	for i: int in badges:
+		GameState.badges.append(StringName("medalla_prueba_%d" % i))
+	var map: MapRoot = MapLoader.prepare(StringName(id)).map
+	add_child(map)
+	await wait_physics_frames(2)
+	var free := _free_tiles(map)
+	var starts: Array = []
+	for spawn: Node2D in map.get_node("Spawns").get_children():
+		starts.append(Grid.to_tile(spawn.position))
+	free["default"] = Grid.to_tile((map.get_node("Spawns/default") as Node2D).position)
+	free["reach"] = _flood(free.walk, starts)
+	free["conns"] = map.data.connections.duplicate()
+	map.free()
+	await wait_physics_frames(1)
+	return free
+
+
+## Obras de la A-6 (data/personajes_en_el_mapa.json, "hasta" 7 medallas): cortan Moncloa ⇄ Ruta 4 en los dos
+## sentidos y, al cruzar desde la Ruta 4, se llega a una casilla libre (no encima de un obrero).
+func test_obras_de_la_a6_cortan_el_paso_sin_dejarte_encima_de_un_obrero() -> void:
+	for badges: int in [0, 6, 7]:
+		var moncloa := await _walkable("madrid/moncloa", badges)
+		var ruta := await _walkable("ruta_4/exterior", badges)
+		var arrivals := 0
+		for c: MapConnection in ruta.conns:
+			if String(c.target_map) != "madrid/moncloa":
+				continue
+			for t: Vector2i in ruta.reach:
+				if not _on_edge(t, c.edge, ruta.bounds, c.span):
+					continue
+				var arrival := c.arrival(t + EDGE_DIR[c.edge], moncloa.bounds)
+				arrivals += 1
+				assert_true(moncloa.walk.has(arrival), "Con %d medallas, de la Ruta 4 se llega a %s, casilla libre" % [badges, arrival])
+				var inside := _flood(moncloa.walk, [arrival])
+				assert_eq(inside.has(moncloa.default), badges >= 7, "Con %d medallas, desde %s %s se pasa a Moncloa" % [badges, arrival, "sí" if badges >= 7 else "no"])
+		assert_gt(arrivals, 0, "La Ruta 4 llega al borde de Moncloa")
+		var exits := 0
+		for c: MapConnection in moncloa.conns:
+			if String(c.target_map) != "ruta_4/exterior":
+				continue
+			for t: Vector2i in _flood(moncloa.walk, [moncloa.default]):
+				if _on_edge(t, c.edge, moncloa.bounds, c.span):
+					exits += 1
+		assert_eq(exits > 0, badges >= 7, "Con %d medallas, de Moncloa %s se sale a la Ruta 4" % [badges, "sí" if badges >= 7 else "no"])
+	GameState.reset()
