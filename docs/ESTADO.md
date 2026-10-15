@@ -533,6 +533,8 @@ Worktree `pokemon-panchito-agente4`, rama `feat/agente4-acceso`. Área: acceso a
 - Con la 1.ª medalla se puede bajar por La Mancha hasta Málaga (gimnasio 8): no hay corte en la Ruta 24.
 - Desde la Ruta 4 se entra en Moncloa aunque no tengas 7 medallas (los obreros solo cortan la salida, como dice la decisión), y se aparece en la casilla de un obrero. Petición al Agente 1: que cruzar un borde choque si la casilla de llegada está ocupada.
 
+**Petición al Agente 1 (interiores):** las estaciones del AVE (`madrid/sala_retiro_20_58`, `valladolid/sala_calle_52_59`, `malaga/sala_calle_5_57` y el apeadero nuevo `pueblo_inicial/sala_calle_30_21`) son mapas de transporte que pinta `maps/_pintura/pintar_transportes.gd`. Dejadlas fuera de la personalización desde `data/interiores/`: si se repintan, se pierden los andenes y sus revisores (y falla `test_transportes`). Están reservadas a mi nombre en `docs/mapas/reservas.md`.
+
 **Siguiente:** Surf y viajes.
 
 **He leído** (2026-10-05) `docs/DIRECTRICES.md` (§0, §1, §7, §7.1), la Fase A de la guía, `docs/arte/BIBLIA.md`, `docs/arte/recursos_terceros.md`, las 4 referencias de Añil, las comparativas, las respuestas 9 y 17 de Javier y mi lista de «Próxima sesión». Worktree `/home/javier/proyectos/pokemon-panchito-agente4`, rama `feat/agente4-arte`; autoría de Javier Saguar y `core.hooksPath .githooks` activos.
