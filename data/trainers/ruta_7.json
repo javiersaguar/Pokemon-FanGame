@@ -37,5 +37,28 @@
         "level": 19
       }
     ]
+  },
+  "ruta7_pastor": {
+    "class": "pastor",
+    "name": "Joaquín",
+    "intro_text": "Llevo cuarenta años subiendo este cerro con las ovejas. ¡Y ahora me lo llenan de altavoces!",
+    "lose_text": "Me voy con el rebaño, que no se asusta con el bombo.",
+    "win_text": "¡En el desierto manda el que conoce las sendas!",
+    "after_text": "El festival dura un fin de semana. El yeso, para siempre. Y las ovejas, mientras quede pasto.",
+    "items": [],
+    "party": [
+      {
+        "species": "mareep",
+        "level": 18
+      },
+      {
+        "species": "sandile",
+        "level": 18
+      },
+      {
+        "species": "skiddo",
+        "level": 19
+      }
+    ]
   }
 }

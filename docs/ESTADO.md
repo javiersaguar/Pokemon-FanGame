@@ -679,6 +679,24 @@ Worktree `pokemon-panchito-agente4`, rama `feat/agente4-acceso`. Área: acceso a
 
 ## Agente 5 — Calidad y motor de combate (desde el 2026-10-07)
 
+### Agente 5 · Ciudades y rutas (sesión del 2026-10-15)
+
+Rama `feat/agente5-ciudades`. Encargo: todas las ciudades y rutas exteriores al nivel de Pokémon Añil, empezando por las más vacías. Capturas de antes de los 67 exteriores tomadas al empezar; la lista por orden de vacío: rutas 16, 5–8, 1–4, 13, 14, 12, 11, 9, 10, 15, 17–26, marítima 1, Casa de Campo y Madrid Río; después Bernabéu, Málaga, Rocafonda y el resto de ciudades.
+
+**Método (sin repintar):** `maps/_tools/vestir_exterior.gd -- <mapa>` carga la escena, aplica su receta (`maps/_pintura/vestir/<mapa>.gd`, con las operaciones de `maps/_pintura/vestidor.gd`: plano en texto, bosque, mesetas, bordillos, agua, caminos, hierba alta, flores, árboles, vallas, vecinos, entrenadores y objetos) y rellena la hierba vacía lejos de los caminos (bosque, arboleda, hileras o roquedo). Antes de guardar comprueba que se sigue llegando a todas las puertas, pasarelas, personajes, carteles, bordes y personajes colocados por datos, y a todo lo nuevo; si la receta lo pide (`hierba_obligada`), comprueba también que no se puede ir de una conexión a otra sin pisar hierba y enseña el rodeo si lo hay. Si algo falla, no guarda. Las puertas y los interiores no se tocan. `maps/_tools/mapa_ascii.gd -- <mapa>` vuelca el mapa en texto para planear.
+
+**Guía de Javier del 15 (aplicada):** estructura antes que detalle: límites continuos, pasos de 2 a 4 casillas y un paso de hierba que cierra todo el ancho en cada ruta terrestre.
+
+**Hecho (bloque 1):** rutas 16, 5, 6, 7 y 8. Hierba mínima entre conexiones: 3, 2, 4, 3 y 2 (todas estaban a 0). Alcance 0 problemas en las cinco; `colocar_personajes.gd` no mueve a nadie (solo reescribe números enteros como `28.0`; ese cambio de formato no se sube). 7 entrenadores nuevos (`ruta16_percebeiro`, `ruta16_ornitologa`, `ruta5_mozo`, `ruta5_tuno`, `ruta6_ornitologa`, `ruta7_pastor`, `ruta8_escaladora`), cada especie en su etapa; 15 objetos en el suelo (10 ocultos) en `data/item_placements.json`; parche dorado regenerado. Capturas (mapa completo y 512×384) y filas en [`seguimiento.md`](arte/seguimiento.md#ciudades-y-rutas-al-nivel-de-añil-agente-5-2026-10-15).
+
+**Provisional:** todo el arte y los textos de los vecinos, carteles y entrenadores nuevos.
+
+**Fallos tal cual:** ninguno en este bloque.
+
+**Pendiente:** el resto de rutas (prioridad de la guía: 26, 21, 24 y las demás muy abiertas), las piezas fuera de límites (`ruta_2` casa de madera, `bilbao` casa roja, `ruta_19` faro) y las manzanas de las ciudades.
+
+**PENDIENTE JAVIER:** revisar las capturas de antes y después; en la Ruta 5 el paso de hierba es un «desvío por obras» de la A-2 (cartel de broma): confirmar si vale.
+
 ### Piezas propias de los hitos prestados (2026-10-14)
 
 Sustituidas en el mapa, sin repintar (las demás puertas se quedan):

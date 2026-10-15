@@ -56,5 +56,43 @@
         "level": 16
       }
     ]
+  },
+  "ruta5_mozo": {
+    "class": "crossfitero",
+    "name": "Rubén",
+    "intro_text": "Cargo palés de ocho a ocho. ¡Un combate es mi descanso!",
+    "lose_text": "Me han tumbado como a un palé mal flejado.",
+    "win_text": "¡Eso es fuerza de polígono!",
+    "after_text": "Aquí todo llega en el día. Menos mi nómina, que llega cuando quiere.",
+    "items": [],
+    "party": [
+      {
+        "species": "machop",
+        "level": 15
+      },
+      {
+        "species": "timburr",
+        "level": 16
+      }
+    ]
+  },
+  "ruta5_tuno": {
+    "class": "tuno",
+    "name": "Ignacio",
+    "intro_text": "¡Clavelitos, clavelitos! Llevo doce años de Derecho en Alcalá y ninguna prisa.",
+    "lose_text": "Se me ha roto una cuerda de la bandurria.",
+    "win_text": "¡La tuna nunca pierde, solo se va de ronda!",
+    "after_text": "Cervantes estudió aquí. Bueno, eso dice la tuna. Nosotros también decimos que estudiamos.",
+    "items": [],
+    "party": [
+      {
+        "species": "jigglypuff",
+        "level": 16
+      },
+      {
+        "species": "kricketune",
+        "level": 16
+      }
+    ]
   }
 }

@@ -36,5 +36,25 @@
         "level": 20
       }
     ]
+  },
+  "ruta8_escaladora": {
+    "class": "montanera",
+    "name": "Montse",
+    "gender": "female",
+    "intro_text": "He subido por la pared de Sant Jeroni sin cuerda. ¡Por la escalera sube cualquiera!",
+    "lose_text": "Me he quedado colgada del magnesio.",
+    "win_text": "¡Montserrat se sube con las manos!",
+    "after_text": "La Moreneta lleva siglos aquí arriba. Yo solo bajo a por bocadillos.",
+    "items": [],
+    "party": [
+      {
+        "species": "roggenrola",
+        "level": 19
+      },
+      {
+        "species": "nosepass",
+        "level": 20
+      }
+    ]
   }
 }

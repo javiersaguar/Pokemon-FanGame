@@ -25,5 +25,33 @@
       {"species": "shellder", "level": 38},
       {"species": "floatzel", "level": 39}
     ]
+  },
+  "ruta16_percebeiro": {
+    "class": "pescador",
+    "name": "Xoán",
+    "intro_text": "Bajo a las rocas con la marea. El percebe se coge con miedo y con respeto. ¡Y tú, igual!",
+    "lose_text": "Me ha pillado la ola.",
+    "win_text": "¡Eso es el Atlántico, chaval!",
+    "after_text": "El percebe bueno está donde rompe la ola. Por eso cuesta lo que cuesta.",
+    "items": [],
+    "party": [
+      {"species": "lanturn", "level": 39},
+      {"species": "barbaracle", "level": 40}
+    ]
+  },
+  "ruta16_ornitologa": {
+    "class": "ornitologa",
+    "name": "Antía",
+    "gender": "female",
+    "intro_text": "Desde el monte se ve toda la ría. Y a ti, que no paras de pisar la hierba.",
+    "lose_text": "Se me han volado todos.",
+    "win_text": "¡Las gaviotas de aquí te quitan hasta la empanada!",
+    "after_text": "En las Cíes anidan miles de gaviotas. Alguna se viene a Sanxenxo de vacaciones.",
+    "items": [],
+    "party": [
+      {"species": "noctowl", "level": 40},
+      {"species": "pelipper", "level": 40},
+      {"species": "swanna", "level": 41}
+    ]
   }
 }

@@ -36,5 +36,25 @@
         "level": 18
       }
     ]
+  },
+  "ruta6_ornitologa": {
+    "class": "ornitologa",
+    "name": "Paloma",
+    "gender": "female",
+    "intro_text": "Desde esta muela se ven los buitres de las hoces. ¡Y tú te me has puesto delante!",
+    "lose_text": "Se me han empañado los prismáticos.",
+    "win_text": "¡Aquí arriba hay más buitres que vecinos!",
+    "after_text": "En el pueblo quedan cuatro vecinos. Los buitres, en cambio, no paran de llegar.",
+    "items": [],
+    "party": [
+      {
+        "species": "vullaby",
+        "level": 17
+      },
+      {
+        "species": "pidgeotto",
+        "level": 18
+      }
+    ]
   }
 }
