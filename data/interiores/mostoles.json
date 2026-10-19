@@ -1,0 +1,939 @@
+{
+ "_doc": "Interiores personalizados de mostoles (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Mostoles",
+ "interiores": {
+  "mostoles/casa_1": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["mostoles/exterior", [39, 10]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela del bando de 1808",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Abuela mostoleña",
+     "aspecto": "npc_old_man",
+     "regalo": "mostoles_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "El 2 de mayo de 1808, el alcalde de Móstoles le declaró la guerra a Napoleón. Un pueblo de mil vecinos contra un imperio.",
+      "Toma, para que no digas que en Móstoles no se es valiente y generoso a la vez."
+     ],
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["En el colegio nos hacen recitar el bando. «La patria está en peligro». Yo me lo sé entero."],
+     "nodo": "Nieto",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "retro",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [["fogones", 1, 1], ["encimera", 3, 1], ["tele", 6, 1], ["planta", 8, 1], ["arbol_maceta", 8, 4]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "mostoles/casa_2": {
+   "pieza": "casa_granero",
+   "calle": ["mostoles/exterior", [54, 10]],
+   "tipo": "casa",
+   "nombre": "Casa del mostoleño de los ochenta",
+   "personas": [
+    {
+     "nombre": "Padre",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Mis padres llegaron a Móstoles en 1975, cuando era un pueblo de siete mil personas. En diez años éramos ciento cincuenta mil.",
+      "Construían los bloques tan rápido que a veces te mudabas y la calle aún no tenía nombre."
+     ],
+     "nodo": "Padre",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "cocina",
+     "frases": ["Mi padre cuenta lo de los bloques en cada cena. Lo de la calle sin nombre, dos veces."],
+     "nodo": "Hija",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [6, 4, 4, 3]]],
+   "muebles": [
+    ["nevera", 3, 1],
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["tele", 8, 1],
+    ["estante_oliva", 10, 1],
+    ["vitrina_madera", 1, 1],
+    ["mesa_cristal_larga", 3, 3],
+    ["taburete_amarillo", 3, 5],
+    ["taburete_amarillo", 5, 5],
+    ["palmera_maceta", 10, 5],
+    ["papelera", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_11_6": {
+   "pieza": "casa_gris",
+   "calle": ["mostoles/exterior", [11, 6]],
+   "tipo": "casa",
+   "nombre": "Casa de la investigadora del campus",
+   "personas": [
+    {
+     "nombre": "Investigadora",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Investigo en la Universidad Rey Juan Carlos. Sí, esa universidad. Aquí la mayoría trabajamos mucho y sin máster regalado.",
+      "Cada vez que digo dónde trabajo, alguien me pregunta por un máster. Ya tengo la respuesta preparada."
+     ],
+     "nodo": "Investigadora",
+     "en": [3, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "npc_man",
+     "papel": "cocina",
+     "frases": ["Mi mujer hace ciencia. Yo hago la cena. Las dos cosas llevan su método."],
+     "nodo": "Marido",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "moqueta_beige",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [5, 5, 4, 3]]],
+   "muebles": [
+    ["nevera_alta", 7, 0],
+    ["encimera", 8, 1],
+    ["fogones", 11, 1],
+    ["cajon_oliva", 3, 1],
+    ["tele", 4, 1],
+    ["mesa_cristal_larga", 3, 3],
+    ["silla_derecha", 2, 3],
+    ["silla_izquierda", 6, 3],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_20_20": {
+   "pieza": "asuncion_mostoles",
+   "calle": ["mostoles/exterior", [20, 20]],
+   "tipo": "iglesia",
+   "nombre": "Iglesia de Nuestra Señora de la Asunción",
+   "personas": [
+    {
+     "nombre": "Párroco",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La Asunción es del siglo XVI. Ha visto pasar el bando de 1808, la expansión de los setenta y un parque de bloques a su alrededor.",
+      "El campanario lo ocupan las cigüeñas desde hace siglos. Pagan el alquiler en polluelos."
+     ],
+     "nodo": "Parroco",
+     "en": [6, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Feligresa",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": [
+      "Me casé aquí cuando Móstoles era un pueblo. Ahora es una ciudad y yo sigo viniendo al mismo banco."
+     ],
+     "nodo": "Feligresa",
+     "en": [6, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 11],
+   "puerta": [5, 10],
+   "suelo": "losa_gris",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [5, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_madera", 4, 3],
+    ["estatua_gargola", 1, 0],
+    ["estatua_gargola", 8, 0],
+    ["palmera_maceta", 10, 0],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 6, 6],
+    ["palmera_maceta", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 9]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_23_11": {
+   "pieza": "oficinas_azules",
+   "calle": ["mostoles/exterior", [23, 11]],
+   "tipo": "universidad",
+   "nombre": "Universidad Rey Juan Carlos, aulario de Móstoles",
+   "personas": [
+    {
+     "nombre": "Profesora de Informática",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "dependiente",
+     "frases": [
+      "En este campus se estudian ingenierías y ciencias. Los másteres se aprueban con exámenes, como debe ser.",
+      "La práctica de hoy es programar un videojuego. Un alumno ha hecho uno de Pokémon. Le he puesto un diez."
+     ],
+     "nodo": "ProfesoraDeInformatica",
+     "en": [9, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Estudiante",
+     "aspecto": "estudianteinge",
+     "papel": "publico",
+     "frases": ["Vengo en Cercanías desde Fuenlabrada. Es más difícil llegar a clase que aprobar."],
+     "nodo": "Estudiante",
+     "en": [2, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 11],
+   "puerta": [7, 10],
+   "suelo": "rombos_verdes",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_verde", 3, 0],
+    ["mostrador_turquesa", 5, 2],
+    ["mesa_cristal", 5, 4],
+    ["taburete_marron", 5, 6],
+    ["mesa_cristal", 2, 4],
+    ["taburete_marron", 2, 6],
+    ["mesa_cristal", 8, 4],
+    ["taburete_marron", 8, 6],
+    ["papelera", 1, 1],
+    ["cajas", 8, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_24_29": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["mostoles/exterior", [24, 29]],
+   "tipo": "casa",
+   "nombre": "Casa del mostoleño que sabe de historia",
+   "personas": [
+    {
+     "nombre": "Aficionado a la historia",
+     "aspecto": "tertuliano",
+     "papel": "libre",
+     "frases": [
+      "El alcalde que firmó el bando fue Andrés Torrejón. Lo escribió Juan Pérez Villamil. Y lo llevó a caballo un mensajero a toda España.",
+      "El bando llegó a Andalucía en tres días. El Cercanías a Atocha, a veces tarda más."
+     ],
+     "nodo": "AficionadoALaHistoria",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": ["Mi marido sabe de 1808 más que de 2024. De 2024 no le preguntes: no se acuerda."],
+     "nodo": "Mujer",
+     "en": [8, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 2, 1],
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["tele", 9, 1],
+    ["planta", 11, 1],
+    ["mesa_cristal_larga", 6, 4],
+    ["banqueta_roja", 6, 6],
+    ["banqueta_roja", 8, 6],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3],
+    ["planta", 1, 6],
+    ["caja", 11, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_25_48": {
+   "pieza": "casa_granero",
+   "calle": ["mostoles/exterior", [25, 48]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia del parque El Soto",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "El Soto es el parque grande de Móstoles: lago, patos y una montaña artificial. Los domingos es la playa del sur.",
+      "Mis hijos dan de comer pan a los patos. Los patos de El Soto están más gordos que los de Madrid Río."
+     ],
+     "nodo": "Madre",
+     "en": [1, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["En el lago de El Soto hay un Magikarp. Lo vi. Nadie me cree."],
+     "nodo": "Hijo",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["nevera_alta", 6, 0],
+    ["tele", 7, 1],
+    ["planta", 9, 1],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_30_20": {
+   "pieza": "ermita_virgen_del_rio",
+   "calle": ["mostoles/exterior", [30, 20]],
+   "tipo": "ermita",
+   "nombre": "Ermita de Nuestra Señora de los Santos",
+   "personas": [
+    {
+     "nombre": "Mayordoma",
+     "aspecto": "npc_old_woman",
+     "papel": "cura",
+     "frases": [
+      "La Virgen de los Santos es la patrona de Móstoles. En septiembre la sacamos en procesión y luego se va a las fiestas, a la feria.",
+      "En la ermita hay exvotos de los vecinos: trenzas, muletas y fotos. Cada cosa es una promesa cumplida."
+     ],
+     "nodo": "Mayordoma",
+     "en": [5, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Promesera",
+     "aspecto": "npc_woman",
+     "papel": "publico",
+     "frases": [
+      "Le traje una foto de mi hijo en la graduación. Prometí que si aprobaba, la traía. Aprobó raspado, pero aprobó."
+     ],
+     "nodo": "Promesera",
+     "en": [7, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 11],
+   "puerta": [6, 10],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [6, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_blanco", 5, 3],
+    ["pedestal", 2, 1],
+    ["pedestal", 9, 1],
+    ["arbol_maceta", 1, 0],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 7, 6],
+    ["arbol_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 9]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_32_48": {
+   "pieza": "casa_teja",
+   "calle": ["mostoles/exterior", [32, 48]],
+   "tipo": "bar",
+   "nombre": "Bar de las tapas de Móstoles",
+   "personas": [
+    {
+     "nombre": "Camarera",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Con cada caña, tapa: oreja, torreznos o croquetas caseras. En el sur la tapa es un derecho.",
+      "Los viernes por la tarde no cabe nadie. La mitad viene del trabajo y la otra mitad, de no ir."
+     ],
+     "nodo": "Camarera",
+     "en": [11, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": ["Yo podría haber sido alcalde de Móstoles. Le habría declarado la guerra a la M-40."],
+     "nodo": "Cliente",
+     "en": [8, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 10],
+   "puerta": [9, 9],
+   "suelo": "losa_crema",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 6, 0],
+    ["fogones", 7, 1],
+    ["encimera", 9, 1],
+    ["mostrador_naranja_i", 8, 4],
+    ["mostrador_naranja_m", 9, 4],
+    ["mostrador_naranja_m", 10, 4],
+    ["mostrador_naranja_d", 11, 4],
+    ["taburete_marron", 9, 6],
+    ["taburete_marron", 11, 6],
+    ["mesa_cristal", 2, 4],
+    ["taburete_marron", 1, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_39_19": {
+   "pieza": "casa_granero",
+   "calle": ["mostoles/exterior", [39, 19]],
+   "tipo": "casa",
+   "nombre": "Casa de la pintora del Pradillo",
+   "personas": [
+    {
+     "nombre": "Pintora",
+     "aspecto": "npc_lass",
+     "papel": "mesa",
+     "frases": [
+      "Pinto la plaza del Pradillo con su fuente de los Peces. Los peces de la fuente son lo más fotogénico de Móstoles.",
+      "Mis cuadros se venden en la feria de artesanía. Los compran los de Móstoles para que se vea lo bonito que es."
+     ],
+     "nodo": "Pintora",
+     "en": [5, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["Mi hija pinta la fuente cada año. Siempre la misma fuente. Siempre le queda distinta."],
+     "nodo": "Madre",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["encimera", 5, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal_larga", 5, 4],
+    ["silla_derecha", 4, 4],
+    ["silla_izquierda", 8, 4],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_39_28": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["mostoles/exterior", [39, 28]],
+   "tipo": "casa",
+   "nombre": "Casa del batería del grupo del barrio",
+   "personas": [
+    {
+     "nombre": "Batería",
+     "aspecto": "raver",
+     "papel": "libre",
+     "frases": [
+      "Tocamos rock en el local de ensayo del polígono. Somos el mejor grupo de Móstoles. Bueno, somos el único que ensaya.",
+      "En las fiestas nos dejaron tocar a las cinco de la tarde. Vinieron mis padres y dos amigos. Fue un éxito."
+     ],
+     "nodo": "Bateria",
+     "en": [5, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hermana",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["Mi hermano ensaya con la batería electrónica y cascos. Igual se oye el pie contra el suelo."],
+     "nodo": "Hermana",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "salvia",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 4, 0],
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["sillon_derecha", 6, 3],
+    ["mesa_cristal", 7, 4],
+    ["sillon_izquierda", 9, 3],
+    ["palmera_maceta", 9, 0],
+    ["tele", 1, 1],
+    ["cajon_oliva", 3, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_41_49": {
+   "pieza": "oficinas_azules",
+   "calle": ["mostoles/exterior", [41, 49]],
+   "tipo": "ayuntamiento",
+   "nombre": "Ayuntamiento de Móstoles",
+   "personas": [
+    {
+     "nombre": "Concejala",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Móstoles es la segunda ciudad más poblada de la Comunidad de Madrid. Doscientos mil vecinos y un alcalde que declaró la guerra a Napoleón.",
+      "Cada 2 de mayo representamos el bando en la plaza. Siempre gana Móstoles. Napoleón, ni se presenta."
+     ],
+     "nodo": "Concejala",
+     "en": [2, 9],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Ordenanza",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": ["La copia del bando está enmarcada en el salón de plenos. Pide permiso y te la enseño."],
+     "nodo": "Ordenanza",
+     "en": [4, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "«La Patria está en peligro, Madrid perece víctima de la perfidia francesa. Españoles, acudid a salvarla.» Bando de Móstoles, 2 de mayo de 1808."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [10, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 6, 0],
+    ["mostrador_cristal", 8, 2],
+    ["archivo_alto", 11, 0],
+    ["banco_rojo", 7, 4],
+    ["banco_rojo", 4, 4],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 4, 6],
+    ["palmera_maceta", 1, 7],
+    ["arbol_maceta", 1, 0],
+    ["mesa_cristal", 2, 7],
+    ["taburete_rojo", 4, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 9]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_47_15": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["mostoles/exterior", [47, 15]],
+   "tipo": "casa",
+   "nombre": "Casa del jubilado de la petanca",
+   "personas": [
+    {
+     "nombre": "Jubilado",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Juego a la petanca en el parque todas las mañanas. Somos ocho y llevamos veinte años discutiendo la misma jugada.",
+      "Mi bola es de 1985. Tiene más historia que muchos edificios de aquí."
+     ],
+     "nodo": "Jubilado",
+     "en": [7, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": ["Mi marido vuelve de la petanca a la hora de comer, con hambre y con razón."],
+     "nodo": "Mujer",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "parquet",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["tatami_verde", [2, 5, 4, 2]]],
+   "muebles": [
+    ["nevera", 5, 1],
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["planta", 2, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal_larga", 6, 4],
+    ["taburete_marron", 6, 6],
+    ["taburete_marron", 8, 6],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_53_48": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["mostoles/exterior", [53, 48]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia de Villafontana",
+   "personas": [
+    {
+     "nombre": "Padre",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Vivimos en Villafontana, la parte nueva. Calles con nombres de flores y aparcamiento si llegas antes de las ocho.",
+      "Trabajo en el polígono de Arroyomolinos. Es lo bueno del sur: está todo cerca menos Madrid."
+     ],
+     "nodo": "Padre",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["En esta casa se come cocido los jueves. No es Madrid, pero el cocido sí."],
+     "nodo": "Madre",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [3, 4, 4, 2]]],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal_larga", 3, 4],
+    ["silla_derecha", 2, 4],
+    ["silla_izquierda", 6, 4],
+    ["planta", 9, 6],
+    ["papelera", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_55_28": {
+   "pieza": "casa_pequena",
+   "calle": ["mostoles/exterior", [55, 28]],
+   "tipo": "casa",
+   "nombre": "Casa pequeña del vecino solitario",
+   "personas": [
+    {
+     "nombre": "Vecino",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Vivo solo con mi Pokémon. Es de tipo Planta: no habla, pero escucha.",
+      "Los vecinos me traen comida los domingos. Yo les cuido los gatos cuando se van al pueblo."
+     ],
+     "nodo": "Vecino",
+     "en": [5, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 1, 1],
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["tele", 8, 1],
+    ["estante_madera", 10, 1],
+    ["estanteria_alta_madera", 6, 0],
+    ["arbol_maceta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_56_37": {
+   "pieza": "tienda_azul",
+   "calle": ["mostoles/exterior", [56, 37]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Móstoles",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "En Móstoles hay más gimnasios que bares. Bueno, casi. Bueno, no.",
+      "El socio más fuerte es un repartidor que viene después de subir cien escaleras al día. No necesita el gimnasio; viene por el wifi."
+     ],
+     "nodo": "Monitor",
+     "en": [1, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Socia",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": ["Hago spinning a las siete. A las siete y cuarto ya estoy pensando en el desayuno."],
+     "nodo": "Socia",
+     "en": [7, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 10],
+   "puerta": [5, 9],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [3, 3, 7, 4]]],
+   "muebles": [["taquilla_azul", 4, 0], ["taquilla_azul", 5, 0], ["taquilla_gris", 6, 0], ["cajas", 9, 1]],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_5_10": {
+   "pieza": "oficinas_azules",
+   "calle": ["mostoles/exterior", [5, 10]],
+   "tipo": "biblioteca",
+   "nombre": "Biblioteca del campus de Móstoles",
+   "personas": [
+    {
+     "nombre": "Bibliotecaria",
+     "aspecto": "npc_woman",
+     "papel": "estanteria",
+     "frases": [
+      "En época de exámenes abrimos veinticuatro horas. Hay estudiantes que solo conocen el campus de noche.",
+      "Silencio, por favor. Aquí solo se oye pasar las páginas y algún bostezo."
+     ],
+     "nodo": "Bibliotecaria",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Estudiante dormido",
+     "aspecto": "estudianteinge_f",
+     "papel": "mesa",
+     "frases": ["Zzz… ¿Ya es el examen? Zzz…"],
+     "nodo": "EstudianteDormido",
+     "en": [12, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 11],
+   "puerta": [7, 10],
+   "suelo": "alfombra_roja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_madera", 7, 0],
+    ["estanteria_alta_madera", 9, 0],
+    ["estanteria_alta_madera", 11, 0],
+    ["estanteria_alta_madera", 2, 4],
+    ["estanteria_alta_madera", 4, 4],
+    ["mesa_cristal", 10, 3],
+    ["taburete_amarillo", 9, 4],
+    ["planta", 13, 1]
+   ],
+   "encima": [["libro_abierto", 11, 3], ["libro_abierto", 10, 3]],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_5_23": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["mostoles/exterior", [5, 23]],
+   "tipo": "museo",
+   "nombre": "Casa Museo Andrés Torrejón",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Aquí vivió Andrés Torrejón, el alcalde que firmó el bando contra los franceses. Una casa de labranza normal y corriente.",
+      "No era militar ni político: era un alcalde de pueblo que se hartó. Por eso es tan querido."
+     ],
+     "nodo": "Guia",
+     "en": [8, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vigilante",
+     "aspecto": "npc_man",
+     "papel": "vitrina",
+     "frases": [
+      "En la vitrina hay una reproducción del bando. El original está en el Ayuntamiento. El orgullo, en todo Móstoles."
+     ],
+     "nodo": "Vigilante",
+     "en": [12, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [16, 12],
+   "puerta": [6, 11],
+   "suelo": "piedra",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["isla_turquesa", 3, 6],
+    ["estatua_gargola", 13, 4],
+    ["vitrina_blanca_estrecha", 1, 7],
+    ["palmera_maceta", 14, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 10]},
+   "pasos": []
+  },
+  "mostoles/sala_calle_7_34": {
+   "pieza": "casa_gris",
+   "calle": ["mostoles/exterior", [7, 34]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela de los torreznos",
+   "personas": [
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Los torreznos crujen o no son torreznos. El secreto es freírlos dos veces y no decírselo a nadie.",
+      "Mi nieta es vegetariana. Le hago pimientos. Y un torrezno, por si cambia de idea."
+     ],
+     "nodo": "Abuela",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta vegetariana",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": ["Llevo cuatro años sin comer carne. Mi abuela lleva cuatro años intentándolo."],
+     "nodo": "NietaVegetariana",
+     "en": [2, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [4, 3, 4, 2]]],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["tele", 3, 1],
+    ["planta", 5, 1],
+    ["mesa_cristal_larga", 3, 3],
+    ["silla_derecha", 2, 3],
+    ["silla_izquierda", 6, 3],
+    ["palmera_maceta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  }
+ }
+}

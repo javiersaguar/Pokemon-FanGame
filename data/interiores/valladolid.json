@@ -1,0 +1,761 @@
+{
+ "_doc": "Interiores personalizados de valladolid (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Valladolid",
+ "interiores": {
+  "valladolid/casa_1": {
+   "pieza": "casa_roja",
+   "calle": ["valladolid/exterior", [38, 7]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia pucelana de la Plaza Mayor",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Abuela pucelana",
+     "aspecto": "npc_old_man",
+     "regalo": "valladolid_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "Aquí no se dice «vallisoletano», se dice «pucelano». Y no preguntes por qué, que nadie lo sabe seguro.",
+      "Toma, para el frío. En Valladolid hay nueve meses de invierno y tres de infierno."
+     ],
+     "en": [6, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": ["Mi abuela dice «ahivalaostia» cuando algo le sorprende. Es una sola palabra, de aquí."],
+     "nodo": "Nieto",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "parquet",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["cajon_oliva", 8, 1],
+    ["tele", 9, 1],
+    ["mesa_cristal_larga", 6, 5],
+    ["silla_derecha", 5, 5],
+    ["silla_izquierda", 9, 5],
+    ["papelera", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "valladolid/casa_2": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["valladolid/exterior", [54, 37]],
+   "tipo": "casa",
+   "nombre": "Casa del cofrade de Semana Santa",
+   "personas": [
+    {
+     "nombre": "Cofrade",
+     "aspecto": "costalero",
+     "papel": "libre",
+     "frases": [
+      "La Semana Santa de Valladolid es de silencio. Los pasos son tallas del Museo de Escultura que salen a la calle.",
+      "Gregorio Fernández talló Cristos que parecen respirar. Los sacamos a hombros en procesión, con cuidado de no despertarlos."
+     ],
+     "nodo": "Cofrade",
+     "en": [1, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": [
+      "El Sermón de las Siete Palabras se dice en la Plaza Mayor. Hace tanto frío que se oyen ocho: la octava es «brrr»."
+     ],
+     "nodo": "Hija",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [5, 7],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [2, 3, 5, 3]]],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["nevera_alta", 5, 0],
+    ["cajon_oliva", 7, 1],
+    ["tele", 8, 1],
+    ["palmera_maceta", 9, 4],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_20_51": {
+   "pieza": "oficinas_azules",
+   "calle": ["valladolid/exterior", [20, 51]],
+   "tipo": "institucion",
+   "nombre": "Academia de Caballería",
+   "personas": [
+    {
+     "nombre": "Cadete",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Aquí se forman los oficiales de Caballería desde el siglo XIX. Los caballos ahora son blindados, pero el nombre se queda.",
+      "Mi Rapidash no entra en el reglamento. Lo he consultado."
+     ],
+     "nodo": "Cadete",
+     "en": [2, 8],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Ordenanza",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": ["La estatua del jinete de la puerta lleva cien años sin desmontar. Más disciplina que nadie."],
+     "nodo": "Ordenanza",
+     "en": [4, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Academia de Caballería, 1852. Lema: «Por la Patria». Debajo, a lápiz: «y por el bocadillo de las once»."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [5, 10],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 1, 0],
+    ["mostrador_naranja", 3, 2],
+    ["archivo_alto", 6, 0],
+    ["banco_rojo", 2, 4],
+    ["banco_rojo", 6, 4],
+    ["banco_rojo", 9, 4],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 6, 6],
+    ["banco_rojo", 9, 6],
+    ["arbol_maceta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 9]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_23_15": {
+   "pieza": "san_pablo_valladolid",
+   "calle": ["valladolid/exterior", [23, 15]],
+   "tipo": "iglesia",
+   "nombre": "Iglesia de San Pablo",
+   "personas": [
+    {
+     "nombre": "Fraile dominico",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La fachada de San Pablo es un retablo de piedra gótico. Si la miras despacio, encuentras escudos, santos y algún bicho.",
+      "Aquí fue bautizado Felipe II, que nació en Valladolid. Valladolid fue capital de España cinco años. Lo recordamos a menudo."
+     ],
+     "nodo": "FraileDominico",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Visitante",
+     "aspecto": "npc_woman",
+     "papel": "publico",
+     "frases": ["He venido desde Medina del Campo a ver la fachada. Me he quedado con tortícolis."],
+     "nodo": "Visitante",
+     "en": [2, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 12],
+   "puerta": [8, 11],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 7, 3],
+    ["estatua_gargola", 4, 0],
+    ["estatua_gargola", 11, 0],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 13, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 9, 6],
+    ["banco_rojo", 5, 8],
+    ["banco_rojo", 2, 8],
+    ["banco_rojo", 9, 8],
+    ["palmera_maceta", 13, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 10], "desde_sala_calle_23_15_museo": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Museo",
+     "en": [2, 1],
+     "destino": "valladolid/sala_calle_23_15_museo",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_23_15_museo",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "valladolid/sala_calle_23_15_museo": {
+   "tipo": "museo",
+   "nombre": "Museo Nacional de Escultura",
+   "personas": [
+    {
+     "nombre": "Conservadora",
+     "aspecto": "npc_lass",
+     "papel": "vitrina",
+     "frases": [
+      "Tallas de Alonso Berruguete, Juan de Juni y Gregorio Fernández. Madera policromada que parece carne.",
+      "Las lágrimas de algunas vírgenes son de cristal. Sí, de cristal de verdad. Lloran mejor que yo."
+     ],
+     "nodo": "Conservadora",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Colegio de San Gregorio (1488–1496). El patio es tan bonito que los visitantes se olvidan de entrar a las salas."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 1]
+    }
+   ],
+   "padre": "valladolid/sala_calle_23_15",
+   "tamano": [14, 11],
+   "puerta": [9, 10],
+   "suelo": "alfombra_roja",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["pedestal", 3, 4],
+    ["pedestal", 6, 4],
+    ["vitrina_alta", 2, 2],
+    ["vitrina_madera_estrecha", 12, 3],
+    ["arbol_maceta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 9]},
+   "pasos": [],
+   "salida": {"destino": "valladolid/sala_calle_23_15", "aparicion": "desde_sala_calle_23_15_museo"}
+  },
+  "valladolid/sala_calle_3_18": {
+   "pieza": "casa_granero",
+   "calle": ["valladolid/exterior", [3, 18]],
+   "tipo": "casa",
+   "nombre": "Casa del lechazo asado",
+   "personas": [
+    {
+     "nombre": "Asador",
+     "aspecto": "camarero",
+     "papel": "cocina",
+     "frases": [
+      "Lechazo churro, horno de leña, agua y sal. Nada más. El que le pone romero está en Burgos.",
+      "Un cuarto de lechazo para dos personas. Si sois de Madrid, para una."
+     ],
+     "nodo": "Asador",
+     "en": [11, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Comensal",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": ["He venido en AVE desde Madrid solo para comer lechazo. Vuelvo en AVE para echar la siesta."],
+     "nodo": "Comensal",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "topo",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [3, 4, 4, 3]]],
+   "muebles": [
+    ["nevera_alta", 6, 0],
+    ["encimera", 7, 1],
+    ["fogones", 10, 1],
+    ["tele", 2, 1],
+    ["estante_mostaza", 4, 1],
+    ["mesa_cristal", 6, 3],
+    ["silla_derecha", 5, 3],
+    ["silla_izquierda", 8, 3],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_3_6": {
+   "pieza": "casa_gris",
+   "calle": ["valladolid/exterior", [3, 6]],
+   "tipo": "casa",
+   "nombre": "Casa de la escritora de la calle Santiago",
+   "personas": [
+    {
+     "nombre": "Escritora",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Delibes vivió aquí y escribió sobre el campo castellano, la caza y los niños que se van a la ciudad. Yo escribo sobre mi gato.",
+      "Zorrilla, el del Tenorio, también era de Valladolid. Aquí cada calle tiene un escritor y un bar."
+     ],
+     "nodo": "Escritora",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Gato",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["Soy su sobrino. Me paga para no hacer ruido mientras escribe. Es el mejor trabajo del mundo."],
+     "nodo": "Gato",
+     "en": [8, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [6, 4, 3, 3]]],
+   "muebles": [
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["nevera_alta", 10, 0],
+    ["mesa_cristal_larga", 3, 4],
+    ["silla_derecha", 2, 4],
+    ["silla_izquierda", 6, 4],
+    ["sofa", 1, 6],
+    ["arbol_maceta", 10, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_47_9": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["valladolid/exterior", [47, 9]],
+   "tipo": "casa",
+   "nombre": "Casa del bodeguero de la Ribera del Duero",
+   "personas": [
+    {
+     "nombre": "Bodeguero",
+     "aspecto": "vendimiador",
+     "papel": "libre",
+     "frases": [
+      "Ribera del Duero, Rueda, Toro y Cigales. Valladolid tiene más denominaciones de origen que algunos países.",
+      "El verdejo de Rueda se toma frío y el tinto de la Ribera, despacio. Lo contrario es pecado."
+     ],
+     "nodo": "Bodeguero",
+     "en": [10, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido lleva el vino en la sangre. Por eso le sale la nariz roja."],
+     "nodo": "Mujer",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [10, 9],
+   "suelo": "moqueta_beige",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["vitrina_madera", 8, 1],
+    ["mesa_cristal_larga", 5, 4],
+    ["taburete_amarillo", 5, 6],
+    ["taburete_amarillo", 7, 6],
+    ["planta", 12, 7],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 8]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_49_47": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["valladolid/exterior", [49, 47]],
+   "tipo": "pasteleria",
+   "nombre": "Confitería de las Delicias del Pasaje",
+   "personas": [
+    {
+     "nombre": "Confitera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Pastas de Tordesillas, almendrados y la tarta de la casa. Los domingos hay cola desde la misa de doce.",
+      "El Pasaje Gutiérrez es de 1886. Antes de los centros comerciales, la gente paseaba aquí a mirar escaparates."
+     ],
+     "nodo": "Confitera",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Niño",
+     "aspecto": "npc_boy",
+     "papel": "cliente",
+     "frases": ["Mi abuela me trae aquí cada domingo si me porto bien. Me porto bien los domingos."],
+     "nodo": "Nino",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["encimera", 4, 1],
+    ["alacena", 7, 0],
+    ["mostrador_verde_i", 4, 4],
+    ["mostrador_verde_m", 5, 4],
+    ["mostrador_verde_m", 6, 4],
+    ["mostrador_verde_m", 7, 4],
+    ["mostrador_verde_m", 8, 4],
+    ["mostrador_verde_d", 9, 4],
+    ["vitrina_blanca", 9, 1],
+    ["planta", 1, 6]
+   ],
+   "encima": [["plato", 8, 4], ["plato", 5, 4], ["taza", 7, 4]],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_50_26": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["valladolid/exterior", [50, 26]],
+   "tipo": "casa",
+   "nombre": "Casa del actor del Teatro Zorrilla",
+   "personas": [
+    {
+     "nombre": "Actor",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Hago el Tenorio en noviembre en el Teatro Zorrilla. «¿No es verdad, ángel de amor…?» Las señoras de primera fila se lo saben.",
+      "En la SEMINCI vienen directores de todo el mundo. Yo les sirvo el vino en el cóctel, por si me ven."
+     ],
+     "nodo": "Actor",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Compañera",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": ["Lleva veinte años haciendo de Don Juan. Ya tiene más edad de Comendador."],
+     "nodo": "Companera",
+     "en": [9, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [3, 3, 4, 3]]],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["fogones", 5, 1],
+    ["tele", 10, 1],
+    ["mesa_cristal_larga", 3, 6],
+    ["silla_derecha", 2, 6],
+    ["silla_izquierda", 6, 6],
+    ["palmera_maceta", 1, 6],
+    ["caja", 12, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_56_48": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["valladolid/exterior", [56, 48]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia del Campo Grande",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "En el Campo Grande hay pavos reales sueltos. Se te comen el bocadillo si te descuidas.",
+      "Los domingos paseamos por la Acera de Recoletos. Es lo que se hace en Valladolid: pasear, saludar y criticar."
+     ],
+     "nodo": "Madre",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["Un pavo real me robó un ganchito. Lo vi abrir la cola de lo contento que estaba."],
+     "nodo": "Hija",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [4, 7],
+   "suelo": "tatami_verde",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [3, 4, 3, 2]]],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["tele", 7, 1],
+    ["planta", 9, 1],
+    ["palmera_maceta", 9, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_59_16": {
+   "pieza": "catedral_valladolid",
+   "calle": ["valladolid/exterior", [59, 16]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Valladolid",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La trazó Juan de Herrera, el de El Escorial. Iba a ser enorme. Se acabó el dinero y se quedó en un cuarto.",
+      "Es la catedral inacabada más famosa de Castilla. La torre se cayó en 1841. La otra ni se empezó."
+     ],
+     "nodo": "Sacristan",
+     "en": [9, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista",
+     "papel": "publico",
+     "frases": ["It looks like El Escorial, but smaller. And unfinished. Like my thesis."],
+     "nodo": "Turista",
+     "en": [9, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 12],
+   "puerta": [8, 11],
+   "suelo": "rombos_oscuros",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 7, 3],
+    ["estatua_gargola", 4, 0],
+    ["estatua_gargola", 11, 0],
+    ["palmera_maceta", 1, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 9, 6],
+    ["banco_rojo", 5, 8],
+    ["banco_rojo", 2, 8],
+    ["banco_rojo", 9, 8],
+    ["palmera_maceta", 12, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 10]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_64_38": {
+   "pieza": "tienda_azul",
+   "calle": ["valladolid/exterior", [64, 38]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Valladolid",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "En invierno la gente viene por la calefacción. En enero tenemos más socios que el Real Valladolid.",
+      "Un socio entrena con un abrigo de plumas. Dice que es para quemar más. Es para no pasar frío al salir."
+     ],
+     "nodo": "Monitor",
+     "en": [8, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Socia",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": ["Me apunté para la San Silvestre. La corrí con bufanda y gorro."],
+     "nodo": "Socia",
+     "en": [6, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 10],
+   "puerta": [4, 9],
+   "suelo": "moqueta_azul",
+   "pared": "marino",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [2, 4, 7, 4]]],
+   "muebles": [
+    ["taquilla_gris", 7, 0],
+    ["taquilla_gris", 8, 0],
+    ["taquilla_azul", 9, 0],
+    ["taquilla_azul", 10, 0],
+    ["banqueta_azul", 1, 5],
+    ["banqueta_azul", 2, 5],
+    ["tele", 3, 1],
+    ["papelera", 11, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_65_50": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["valladolid/exterior", [65, 50]],
+   "tipo": "casa",
+   "nombre": "Casa del aficionado del Real Valladolid",
+   "personas": [
+    {
+     "nombre": "Aficionado blanquivioleta",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Llevo cuarenta años en Zorrilla. Hemos subido, bajado y vuelto a subir. Como el ascensor de mi edificio.",
+      "Lo de Ronaldo Nazário como presidente, mejor no lo comentamos. Bueno, sí: no vino casi nunca."
+     ],
+     "nodo": "AficionadoBlanquivioleta",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["Mi abuelo tiene una bufanda de cada temporada. Las de Segunda las guarda en otro cajón."],
+     "nodo": "Nieto",
+     "en": [8, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 1, 0],
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["tele", 7, 1],
+    ["planta", 9, 1],
+    ["mesa_cristal_larga", 3, 3],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 5, 5],
+    ["arbol_maceta", 10, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_66_14": {
+   "pieza": "bloque_pisos",
+   "calle": ["valladolid/exterior", [66, 14]],
+   "tipo": "portal",
+   "nombre": "Portal de la calle Santiago",
+   "personas": [
+    {
+     "nombre": "Portera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "La calle Santiago es la de las tiendas. En Navidad hay un belén enorme y una cola aún más grande.",
+      "En este portal hay calefacción central. Por eso se juntan aquí los vecinos a hablar en enero."
+     ],
+     "nodo": "Portera",
+     "en": [1, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [5, 4, 3, 2]]],
+   "muebles": [
+    ["planta", 2, 1],
+    ["escalera_mano", 3, 0],
+    ["mostrador_verde_i", 2, 4],
+    ["mostrador_verde_m", 3, 4],
+    ["mostrador_verde_d", 4, 4],
+    ["sillon_derecha", 9, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  }
+ }
+}

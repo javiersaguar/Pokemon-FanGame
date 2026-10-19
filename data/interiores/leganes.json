@@ -1,0 +1,745 @@
+{
+ "_doc": "Interiores personalizados de leganes (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Leganes",
+ "interiores": {
+  "leganes/casa_1": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["leganes/exterior", [17, 10]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela pepinera",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Abuela pepinera",
+     "aspecto": "npc_old_man",
+     "regalo": "leganes_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "A los de Leganés nos llaman pepineros porque aquí se cultivaban pepinos. Ya no queda ninguno, pero el mote sí.",
+      "Toma, que el Pepinero no se va de vacío. Es tradición de la casa."
+     ],
+     "en": [9, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["En el colegio me llaman pepinero. Yo les digo que el Leganés jugó en Primera. Se callan."],
+     "nodo": "Nieto",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "moqueta_beige",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [4, 4, 4, 3]]],
+   "muebles": [
+    ["alacena", 4, 0],
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["tele", 1, 1],
+    ["estante_verde", 3, 1],
+    ["mesa_cristal", 7, 4],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 9, 5],
+    ["sofa", 8, 6],
+    ["arbol_maceta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "leganes/casa_2": {
+   "pieza": "casa_roja",
+   "calle": ["leganes/exterior", [27, 9]],
+   "tipo": "casa",
+   "nombre": "Casa grande de la familia del Pepinero",
+   "personas": [
+    {
+     "nombre": "Padre",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Fui a Butarque cuando el Leganés estaba en Segunda B y voy ahora. Fiel como un perro y con la misma cara.",
+      "Subir a Primera fue lo mejor que le ha pasado a Leganés desde el Cercanías. Bueno, mejor que el Cercanías."
+     ],
+     "nodo": "Padre",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["En esta casa se celebra cada gol del Lega como un nacimiento."],
+     "nodo": "Madre",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "tatami_verde",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [7, 3, 4, 3]]],
+   "muebles": [
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["mesa_cristal", 7, 4],
+    ["silla_derecha", 6, 4],
+    ["silla_izquierda", 9, 4],
+    ["sillon_derecha", 2, 4],
+    ["mesa_cristal", 3, 5],
+    ["sillon_izquierda", 5, 4],
+    ["cama_colcha_azul", 7, 1],
+    ["cajon_rosa", 10, 1],
+    ["palmera_maceta", 12, 6],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "leganes/sala_calle_15_29": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["leganes/exterior", [15, 29]],
+   "tipo": "casa",
+   "nombre": "Casa del escultor de la calle",
+   "personas": [
+    {
+     "nombre": "Escultor",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Leganés tiene un museo de escultura al aire libre con más de cien obras. Algunas parecen arte; otras, un andamio. Todas son arte.",
+      "Mi obra está en una rotonda. La ven diez mil coches al día. Ninguno para."
+     ],
+     "nodo": "Escultor",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Mi marido esculpe hierro. El salón está lleno de hierros. Yo le digo que son esculturas para que no se ponga triste."
+     ],
+     "nodo": "Mujer",
+     "en": [9, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "moqueta_beige",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["nevera", 7, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal", 4, 4],
+    ["taburete_marron", 3, 5],
+    ["taburete_marron", 6, 5],
+    ["palmera_maceta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "leganes/sala_calle_19_35": {
+   "pieza": "casa_granero",
+   "calle": ["leganes/exterior", [19, 35]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia de Zarzaquemada",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Zarzaquemada es el barrio más grande de Leganés. Se hizo en los setenta para los que llegaban a trabajar a Madrid.",
+      "Aquí hay más bloques que árboles. Pero los vecinos nos conocemos todos, y eso no lo tiene Madrid."
+     ],
+     "nodo": "Madre",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": ["Tengo un amigo en cada bloque. Para cruzar el barrio tardo dos horas: hay que saludar."],
+     "nodo": "Hijo",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [7, 4, 3, 2]]],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["nevera_alta", 6, 0],
+    ["vitrina_madera", 7, 1],
+    ["mesa_cristal", 6, 4],
+    ["silla_derecha", 5, 4],
+    ["silla_izquierda", 8, 4],
+    ["palmera_maceta", 10, 6],
+    ["caja", 1, 8],
+    ["tele_pequena", 9, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "leganes/sala_calle_20_21": {
+   "pieza": "san_salvador_leganes",
+   "calle": ["leganes/exterior", [20, 21]],
+   "tipo": "iglesia",
+   "nombre": "Iglesia de San Salvador",
+   "personas": [
+    {
+     "nombre": "Párroco",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "San Salvador es del siglo XVIII y es la iglesia más antigua de Leganés. El retablo es de Churriguera, el del estilo recargado.",
+      "La torre es el punto más alto del centro. Las cigüeñas lo saben."
+     ],
+     "nodo": "Parroco",
+     "en": [9, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Feligrés",
+     "aspecto": "npc_old_man",
+     "papel": "publico",
+     "frases": ["Vengo a misa y luego al bar de la plaza. El orden es importante."],
+     "nodo": "Feligres",
+     "en": [5, 9],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 12],
+   "puerta": [8, 11],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 7, 3],
+    ["pedestal", 4, 1],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 10, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 5, 8],
+    ["banco_rojo", 2, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 10]},
+   "pasos": []
+  },
+  "leganes/sala_calle_26_36": {
+   "pieza": "casa_teja",
+   "calle": ["leganes/exterior", [26, 36]],
+   "tipo": "casa",
+   "nombre": "Casa del profesor de la Carlos III",
+   "personas": [
+    {
+     "nombre": "Profesor",
+     "aspecto": "tertuliano",
+     "papel": "mesa",
+     "frases": [
+      "La Universidad Carlos III tiene un campus en Leganés, el de las ingenierías. Los alumnos llegan en Cercanías con cara de examen.",
+      "Corrijo exámenes de Física. Algunos alumnos inventan leyes nuevas. Algunas, interesantes."
+     ],
+     "nodo": "Profesor",
+     "en": [7, 7],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["Mi padre me explica la gravedad cuando se me cae el yogur. No ayuda a limpiar."],
+     "nodo": "Hija",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [2, 5, 5, 3]]],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["encimera", 6, 1],
+    ["fogones", 9, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal", 7, 5],
+    ["silla_derecha", 6, 5],
+    ["silla_izquierda", 9, 5],
+    ["planta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "leganes/sala_calle_29_20": {
+   "pieza": "casa_granero",
+   "calle": ["leganes/exterior", [29, 20]],
+   "tipo": "bar",
+   "nombre": "Bar de la plaza de España de Leganés",
+   "personas": [
+    {
+     "nombre": "Camarero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Bocadillo de calamares, caña y tapa de patatas bravas. Lo mismo que en Madrid, pero te sobra para el Cercanías.",
+      "Aquí se ven todos los partidos del Lega. Cuando gana, invito a la ronda. Cuando pierde, también: hay que animar."
+     ],
+     "nodo": "Camarero",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": ["Yo arreglaba el Leganés en una semana. Lo que pasa es que no me llaman."],
+     "nodo": "Cliente",
+     "en": [2, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["fogones", 5, 1],
+    ["encimera", 7, 1],
+    ["mostrador_verde_i", 2, 3],
+    ["mostrador_verde_m", 3, 3],
+    ["mostrador_verde_m", 4, 3],
+    ["mostrador_verde_d", 5, 3],
+    ["taburete_verde", 3, 5],
+    ["taburete_verde", 5, 5],
+    ["mesa_cristal", 7, 7],
+    ["taburete_verde", 9, 7],
+    ["tele", 2, 1],
+    ["cajas", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "leganes/sala_calle_37_35": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["leganes/exterior", [37, 35]],
+   "tipo": "casa",
+   "nombre": "Casa de la ciclista del parque de Polvoranca",
+   "personas": [
+    {
+     "nombre": "Ciclista",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "El parque de Polvoranca tiene lagunas, garzas y caminos para la bici. Es el pulmón del sur de Madrid.",
+      "Polvoranca era un pueblo que desapareció en el siglo XIX. Solo quedan las ruinas de la iglesia, en medio del parque."
+     ],
+     "nodo": "Ciclista",
+     "en": [5, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi hija va en bici a todas partes. A la boda de su prima fue en bici. Con el vestido."],
+     "nodo": "Madre",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [6, 7],
+   "suelo": "parquet",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [2, 3, 5, 3]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["cajon_oliva", 7, 1],
+    ["tele", 8, 1],
+    ["sillon_derecha", 1, 3],
+    ["mesa_cristal", 2, 4],
+    ["sillon_izquierda", 4, 3],
+    ["arbol_maceta", 9, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "leganes/sala_calle_44_37": {
+   "pieza": "bloque_pisos",
+   "calle": ["leganes/exterior", [44, 37]],
+   "tipo": "portal",
+   "nombre": "Portal de la avenida de Fuenlabrada",
+   "personas": [
+    {
+     "nombre": "Portero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "En este portal hay ocho pisos y veintidós vecinos. En la junta de vecinos hay veintitrés opiniones.",
+      "El ascensor funciona. Se lo digo para que sepa que es noticia."
+     ],
+     "nodo": "Portero",
+     "en": [7, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [2, 4, 5, 3]]],
+   "muebles": [["escalera_mano", 7, 0], ["planta", 10, 1], ["archivador", 3, 1], ["archivador", 4, 1]],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "leganes/sala_calle_51_36": {
+   "pieza": "casa_gris",
+   "calle": ["leganes/exterior", [51, 36]],
+   "tipo": "casa",
+   "nombre": "Casa de la enfermera del Severo Ochoa",
+   "personas": [
+    {
+     "nombre": "Enfermera",
+     "aspecto": "enfermero_f",
+     "papel": "cama",
+     "frases": [
+      "Trabajo en el hospital Severo Ochoa. Hago noches. Cuando todos se van a dormir, yo me pongo el uniforme.",
+      "Lo más difícil del turno de noche no es el trabajo: es dormir de día con los niños del parque gritando."
+     ],
+     "nodo": "Enfermera",
+     "en": [10, 4],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "npc_man",
+     "papel": "cocina",
+     "frases": ["Le preparo la cena para el desayuno. Aquí en casa vivimos en otro huso horario."],
+     "nodo": "Marido",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [10, 9],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [2, 4, 5, 3]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["estanteria_alta_mostaza", 7, 0],
+    ["cama_colcha_rosa", 9, 1],
+    ["cajon_rosa", 12, 1],
+    ["arbol_maceta", 12, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 8]},
+   "pasos": []
+  },
+  "leganes/sala_calle_53_6": {
+   "pieza": "casa_gris",
+   "calle": ["leganes/exterior", [53, 6]],
+   "tipo": "casa",
+   "nombre": "Casa del vendedor de la feria de agosto",
+   "personas": [
+    {
+     "nombre": "Feriante",
+     "aspecto": "vendedorchupachups",
+     "papel": "libre",
+     "frases": [
+      "En agosto llega la feria de la Virgen de Butarque: tómbola, churros y la noria. Yo pongo el puesto de los algodones.",
+      "Tengo algodón de azúcar rosa y azul. El azul sabe igual que el rosa, pero se vende más. Misterios."
+     ],
+     "nodo": "Feriante",
+     "en": [9, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["En la feria me como todo el algodón que sobra. Por eso en agosto no ceno."],
+     "nodo": "Hija",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [6, 8],
+   "suelo": "moqueta_beige",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [4, 5, 3, 2]]],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["encimera", 7, 1],
+    ["tele", 2, 1],
+    ["planta", 4, 1],
+    ["sillon_derecha", 2, 4],
+    ["mesa_cristal", 3, 5],
+    ["sillon_izquierda", 5, 4],
+    ["planta", 1, 6],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "leganes/sala_calle_56_23": {
+   "pieza": "tienda_azul",
+   "calle": ["leganes/exterior", [56, 23]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Leganés",
+   "personas": [
+    {
+     "nombre": "Monitora",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": [
+      "Los estudiantes de la Carlos III vienen en época de exámenes a desestresarse. Luego se van más estresados.",
+      "Tenemos un socio que lleva diez años viniendo y nunca ha hecho piernas. Lo llamamos el Flamenco."
+     ],
+     "nodo": "Monitora",
+     "en": [7, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Socio",
+     "aspecto": "estudianteinge",
+     "papel": "libre",
+     "frases": ["Vengo a hacer bici estática y a repasar apuntes. Física en movimiento."],
+     "nodo": "Socio",
+     "en": [8, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 10],
+   "puerta": [8, 9],
+   "suelo": "moqueta_azul",
+   "pared": "gris_cemento",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["tatami_verde", [4, 3, 7, 4]]],
+   "muebles": [
+    ["taquilla_gris", 3, 0],
+    ["taquilla_gris", 4, 0],
+    ["taquilla_azul", 5, 0],
+    ["taquilla_azul", 6, 0],
+    ["banqueta_azul", 10, 7],
+    ["banqueta_azul", 11, 7],
+    ["cajas", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "leganes/sala_calle_59_37": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["leganes/exterior", [59, 37]],
+   "tipo": "casa",
+   "nombre": "Casa del jubilado de las cigüeñas",
+   "personas": [
+    {
+     "nombre": "Jubilado",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "En la torre de San Salvador hay un nido de cigüeñas. Llevo veinte años mirándolo con los prismáticos. Ellas también me miran.",
+      "Antes las cigüeñas se iban a África en invierno. Ahora se quedan: aquí hay vertederos y calefacción."
+     ],
+     "nodo": "Jubilado",
+     "en": [9, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": ["Mi marido sabe más de las cigüeñas que de los nietos. Las cigüeñas, al menos, vienen a verle."],
+     "nodo": "Mujer",
+     "en": [9, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [8, 9],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [5, 5, 5, 3]]],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["nevera_alta", 5, 0],
+    ["palmera_maceta", 1, 6],
+    ["planta", 10, 7],
+    ["tele_pequena", 10, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "leganes/sala_calle_5_13": {
+   "pieza": "oficinas_azules",
+   "calle": ["leganes/exterior", [5, 13]],
+   "tipo": "oficina",
+   "nombre": "Oficina de atención al viajero de la C-5",
+   "personas": [
+    {
+     "nombre": "Empleado de Cercanías",
+     "aspecto": "revisorcercanias",
+     "papel": "dependiente",
+     "frases": [
+      "La C-5 une Móstoles, Leganés, Atocha y Humanes. Cuando funciona, es la mejor línea de Madrid. Cuando funciona.",
+      "Las reclamaciones se escriben en este formulario. Las contestamos en orden. El orden es largo."
+     ],
+     "nodo": "EmpleadoDeCercanias",
+     "en": [4, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Viajero",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": ["Vengo a reclamar el retraso de ayer. Y el de anteayer. Y el de mañana, por adelantado."],
+     "nodo": "Viajero",
+     "en": [4, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 1, 0],
+    ["archivo_alto", 3, 0],
+    ["mostrador_tablas", 8, 4],
+    ["banqueta_azul", 9, 6],
+    ["mesa_cristal", 2, 5],
+    ["banqueta_azul", 2, 7],
+    ["maquina_billetes", 8, 1],
+    ["arbol_maceta", 10, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "leganes/sala_calle_5_36": {
+   "pieza": "oficinas_azules",
+   "calle": ["leganes/exterior", [5, 36]],
+   "tipo": "castillo",
+   "nombre": "Cuartel de las Reales Guardias Valonas",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Lo construyó Carlos III en el siglo XVIII para la Guardia Valona, soldados de Flandes al servicio del rey.",
+      "Hoy el cuartel es de uso universitario. Donde antes desfilaban los soldados, ahora corren los estudiantes a clase."
+     ],
+     "nodo": "Guia",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Recreador",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": ["Llevo el uniforme de un guardia valón. Es de lana. En julio lo llevo por amor a la historia."],
+     "nodo": "Recreador",
+     "en": [9, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Cuartel de las Reales Guardias Valonas (1775). Carlos III, el mejor alcalde de Madrid, también se acordó de Leganés."
+     ],
+     "nodo": "Cartel",
+     "en": [9, 1]
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [4, 9],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [4, 2, 1, 7]]],
+   "muebles": [
+    ["estatua_gargola", 1, 0],
+    ["escalera_mano", 3, 0],
+    ["estatua_gargola", 6, 0],
+    ["cajas", 2, 3],
+    ["vitrina_alta", 11, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  }
+ }
+}

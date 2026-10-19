@@ -1,0 +1,898 @@
+{
+ "_doc": "Interiores personalizados de getafe (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Getafe",
+ "interiores": {
+  "getafe/casa_1": {
+   "pieza": "casa_roja",
+   "calle": ["getafe/exterior", [15, 7]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela de la calle Madrid",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Abuela getafense",
+     "aspecto": "npc_old_man",
+     "regalo": "getafe_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "Getafe era un pueblo de huertas y de aviones. Ahora es una ciudad de bloques y de aviones.",
+      "Toma, para el Cercanías. Que la C-4 a veces llega y a veces se lo piensa."
+     ],
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["En el colegio dicen que Getafe es «el sur». Yo digo que es el centro, si miras desde Parla."],
+     "nodo": "Nieto",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 2, 0],
+    ["encimera", 3, 1],
+    ["fogones", 6, 1],
+    ["tele", 9, 1],
+    ["estante_verde", 11, 1],
+    ["sillon_derecha", 8, 5],
+    ["mesa_cristal", 9, 6],
+    ["sillon_izquierda", 11, 5],
+    ["planta", 12, 1],
+    ["caja", 12, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "getafe/casa_2": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["getafe/exterior", [4, 20]],
+   "tipo": "casa",
+   "nombre": "Casa del mecánico de aviones",
+   "personas": [
+    {
+     "nombre": "Mecánico aeronáutico",
+     "aspecto": "jubiladoobras",
+     "papel": "tele",
+     "frases": [
+      "Desde la base aérea de Getafe despegaron los primeros aviones militares de España, en 1911. Mi bisabuelo vio el primero.",
+      "Ahora trabajo en la factoría de aviones. Hago piezas de alas que vuelan por medio mundo. Yo no he subido a uno nunca."
+     ],
+     "nodo": "MecanicoAeronautico",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido sabe de alas de avión más que de alitas de pollo. Las alitas las hago yo."],
+     "nodo": "Mujer",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "rombos_lila",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["tatami_verde", [2, 4, 4, 2]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["mesa_cristal_larga", 4, 3],
+    ["taburete_verde", 4, 5],
+    ["taburete_verde", 6, 5],
+    ["caja", 1, 2],
+    ["tele", 7, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "getafe/casa_vecina": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["getafe/exterior", [47, 23]],
+   "tipo": "casa",
+   "nombre": "Casa de la vecina cotilla",
+   "personas": [
+    {
+     "nombre": "Vecina",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Yo no soy cotilla, soy informada. Sé quién entra, quién sale y quién no ha pagado la comunidad.",
+      "El del cuarto se ha comprado un patinete eléctrico. Ya verás qué pronto lo deja en el portal."
+     ],
+     "nodo": "Vecina",
+     "en": [9, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": ["Mi mujer sabe todo de todos. De mí, también. Por eso no salgo."],
+     "nodo": "Marido",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "tatami_verde",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 3, 1],
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["tele", 8, 1],
+    ["estante_nogal", 10, 1],
+    ["estanteria_alta_nogal", 1, 0],
+    ["arbol_maceta", 10, 4],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "getafe/sala_calle_16_20": {
+   "pieza": "casa_granero",
+   "calle": ["getafe/exterior", [16, 20]],
+   "tipo": "casa",
+   "nombre": "Casa del concejal de fiestas",
+   "personas": [
+    {
+     "nombre": "Concejal de fiestas",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Las fiestas de Getafe son en mayo, por la Virgen de los Ángeles. Bajamos a la Virgen del Cerro en romería.",
+      "Este año traemos a un grupo de los ochenta. Siempre traemos a un grupo de los ochenta."
+     ],
+     "nodo": "ConcejalDeFiestas",
+     "en": [4, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Mi padre organiza las fiestas. Yo organizo las de verdad, en los parques."],
+     "nodo": "Hija",
+     "en": [1, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "tatami_verde",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [4, 3, 4, 3]]],
+   "muebles": [
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["nevera_alta", 7, 0],
+    ["estanteria_alta_oliva", 1, 0],
+    ["planta", 8, 5],
+    ["papelera", 1, 5],
+    ["mesa_cristal", 5, 3],
+    ["taburete_amarillo", 7, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "getafe/sala_calle_19_58": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["getafe/exterior", [19, 58]],
+   "tipo": "casa",
+   "nombre": "Casa del aficionado del Getafe CF",
+   "personas": [
+    {
+     "nombre": "Aficionado azulón",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "El Getafe es el equipo azulón. En el Coliseum se ve el partido muy cerca: oyes lo que se dicen los jugadores. A veces, demasiado.",
+      "Jugamos en Europa una vez y fue la mejor semana de mi vida. Mi boda quedó tercera."
+     ],
+     "nodo": "AficionadoAzulon",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["En el cole todos son del Madrid o del Atleti. Yo soy del Getafe. Soy especial."],
+     "nodo": "Hijo",
+     "en": [5, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "tatami_verde",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["vitrina_madera", 1, 1],
+    ["sillon_derecha", 1, 4],
+    ["mesa_cristal", 2, 5],
+    ["sillon_izquierda", 4, 4],
+    ["planta", 9, 5],
+    ["tele_pequena", 9, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "getafe/sala_calle_21_46": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["getafe/exterior", [21, 46]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia del Sector III",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "El Sector III es un barrio de los noventa. Calles anchas, parques y un aparcamiento imposible a las nueve.",
+      "Trabajo en Madrid y vivo aquí. Paso dos horas al día en el Cercanías. Ya conozco a los del vagón por su nombre."
+     ],
+     "nodo": "Madre",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["El parque de mi barrio tiene un tobogán gigante. Es lo mejor de Getafe. Bueno, y el Getafe."],
+     "nodo": "Hija",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [3, 3, 3, 3]]],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["encimera", 5, 1],
+    ["fogones", 8, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal", 4, 4],
+    ["silla_derecha", 3, 4],
+    ["silla_izquierda", 6, 4],
+    ["palmera_maceta", 9, 5],
+    ["papelera", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "getafe/sala_calle_25_27": {
+   "pieza": "puesto_mercado",
+   "calle": ["getafe/exterior", [25, 27]],
+   "tipo": "puesto",
+   "nombre": "Puesto del mercadillo de Getafe",
+   "personas": [
+    {
+     "nombre": "Vendedor del mercadillo",
+     "aspecto": "mantero",
+     "papel": "dependiente",
+     "frases": [
+      "¡Tres bragas, cinco euros! ¡Los calcetines, a euro! ¡Aprovecha, que me lo quitan de las manos!",
+      "Llevo veinte años en el mercadillo de los domingos. Aquí se compra, se charla y se regatea. Sobre todo se regatea."
+     ],
+     "nodo": "VendedorDelMercadillo",
+     "en": [1, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 7],
+   "puerta": [5, 6],
+   "suelo": "hidraulica_rosa",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 2, 0], ["cajas", 3, 1]],
+   "encima": [],
+   "apariciones": {"default": [5, 5]},
+   "pasos": []
+  },
+  "getafe/sala_calle_27_21": {
+   "pieza": "magdalena_getafe",
+   "calle": ["getafe/exterior", [27, 21]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Santa María Magdalena",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Getafe tiene catedral desde 1991, cuando se creó la diócesis. Antes era la iglesia del pueblo; ahora es la catedral del sur.",
+      "Dentro hay retablos de Alonso Cano. En Getafe. Mucha gente no se lo cree hasta que entra."
+     ],
+     "nodo": "Sacristan",
+     "en": [9, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": [
+      "Vengo a misa de diez desde que era niña. Antes era iglesia; ahora es catedral; yo sigo siendo la misma."
+     ],
+     "nodo": "Abuela",
+     "en": [3, 9],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 12],
+   "puerta": [9, 11],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [9, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 8, 3],
+    ["pedestal", 5, 1],
+    ["pedestal", 12, 1],
+    ["arbol_maceta", 1, 0],
+    ["banco_rojo", 6, 6],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 10, 6],
+    ["banco_rojo", 6, 8],
+    ["banco_rojo", 3, 8],
+    ["banco_rojo", 10, 8],
+    ["arbol_maceta", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 10]},
+   "pasos": []
+  },
+  "getafe/sala_calle_30_58": {
+   "pieza": "casa_granero",
+   "calle": ["getafe/exterior", [30, 58]],
+   "tipo": "casa",
+   "nombre": "Casa del hortelano de la vega del Manzanares",
+   "personas": [
+    {
+     "nombre": "Hortelano",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "Getafe tenía huertas junto al Manzanares. Ahora quedan cuatro y una es la mía. Tomates, lechugas y paciencia.",
+      "Los domingos vendo verduras a los vecinos. Las del súper son más bonitas; las mías, más ricas."
+     ],
+     "nodo": "Hortelano",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_lass",
+     "papel": "cocina",
+     "frases": ["Mi abuelo me regala tomates con la tierra pegada. Dice que así saben a algo."],
+     "nodo": "Nieta",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [5, 7],
+   "suelo": "rombos_verdes",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["tatami_verde", [5, 3, 4, 2]]],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["estanteria_baja_mostaza", 2, 1],
+    ["estante_mostaza", 4, 1],
+    ["mesa_cristal_larga", 2, 3],
+    ["taburete_marron", 2, 5],
+    ["taburete_marron", 4, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "getafe/sala_calle_31_47": {
+   "pieza": "oficinas_azules",
+   "calle": ["getafe/exterior", [31, 47]],
+   "tipo": "universidad",
+   "nombre": "Universidad Carlos III, campus de Getafe",
+   "personas": [
+    {
+     "nombre": "Profesor de Derecho",
+     "aspecto": "tertuliano",
+     "papel": "dependiente",
+     "frases": [
+      "El campus está en un antiguo cuartel de artillería. Donde antes se aprendía a disparar, ahora se aprende a recurrir.",
+      "Mis alumnos se quejan de los exámenes. Yo me quejo de que no vienen a clase. Estamos empatados."
+     ],
+     "nodo": "ProfesorDeDerecho",
+     "en": [2, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Estudiante",
+     "aspecto": "estudianteinge_f",
+     "papel": "publico",
+     "frases": ["Estudio Economía. De momento he aprendido que el café de la máquina está carísimo."],
+     "nodo": "Estudiante",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["armario_nogal", 3, 0],
+    ["mostrador_blanco", 4, 2],
+    ["armario_nogal", 7, 0],
+    ["mesa_cristal", 7, 3],
+    ["taburete_rojo", 7, 5],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "getafe/sala_calle_37_36": {
+   "pieza": "tienda_azul",
+   "calle": ["getafe/exterior", [37, 36]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Getafe",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Abrimos veinticuatro horas. A las tres de la mañana viene el turno de noche de la fábrica de aviones.",
+      "El que más entrena es un abuelo de ochenta años. Dice que es para que no le alcance la vecina."
+     ],
+     "nodo": "Monitor",
+     "en": [12, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Socio",
+     "aspecto": "tronista",
+     "papel": "libre",
+     "frases": ["Entreno en Getafe porque en Madrid la cuota es el doble. Y el músculo es el mismo."],
+     "nodo": "Socio",
+     "en": [5, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [10, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [3, 4, 8, 4]]],
+   "muebles": [
+    ["taquilla_gris", 6, 0],
+    ["taquilla_gris", 7, 0],
+    ["taquilla_azul", 8, 0],
+    ["taquilla_azul", 9, 0],
+    ["banqueta_azul", 10, 2],
+    ["banqueta_azul", 11, 2],
+    ["cajas", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 8]},
+   "pasos": []
+  },
+  "getafe/sala_calle_4_46": {
+   "pieza": "casa_granero",
+   "calle": ["getafe/exterior", [4, 46]],
+   "tipo": "casa",
+   "nombre": "Casa del taxista del sur",
+   "personas": [
+    {
+     "nombre": "Taxista",
+     "aspecto": "cunado",
+     "papel": "tele",
+     "frases": [
+      "Llevo veinte años de taxista. Conozco todas las rotondas de Getafe. Son más que los semáforos de Madrid.",
+      "Los del aeropuerto me piden ir a Madrid «por el camino corto». No hay camino corto. Hay M-40."
+     ],
+     "nodo": "Taxista",
+     "en": [11, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi marido habla con todos los clientes. Llega a casa sin voz y con las historias de toda la ciudad."
+     ],
+     "nodo": "Mujer",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [5, 4, 5, 3]]],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["cajon_oliva", 9, 1],
+    ["tele", 10, 1],
+    ["estanteria_baja_oliva", 1, 1],
+    ["estante_oliva", 3, 1],
+    ["mesa_cristal_larga", 7, 4],
+    ["silla_derecha", 6, 4],
+    ["silla_izquierda", 10, 4],
+    ["planta", 11, 6],
+    ["papelera", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "getafe/sala_calle_4_58": {
+   "pieza": "casa_granero",
+   "calle": ["getafe/exterior", [4, 58]],
+   "tipo": "casa",
+   "nombre": "Casa de los primos del pueblo",
+   "personas": [
+    {
+     "nombre": "Primo",
+     "aspecto": "pueblerino",
+     "papel": "libre",
+     "frases": [
+      "Vinimos del pueblo en los sesenta, como medio Getafe. Mi padre de Jaén, mi madre de Extremadura y yo de aquí.",
+      "En agosto Getafe se vacía: todos se vuelven al pueblo. Los del pueblo vienen a Getafe a por aire acondicionado."
+     ],
+     "nodo": "Primo",
+     "en": [1, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Prima",
+     "aspecto": "npc_lass",
+     "papel": "cocina",
+     "frases": ["En esta casa se habla andaluz, extremeño y madrileño. A veces en la misma frase."],
+     "nodo": "Prima",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [6, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["mesa_cristal", 3, 4],
+    ["banqueta_roja", 2, 5],
+    ["banqueta_roja", 5, 5],
+    ["sofa", 7, 5],
+    ["arbol_maceta", 1, 4],
+    ["caja", 9, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "getafe/sala_calle_51_6": {
+   "pieza": "casa_gris",
+   "calle": ["getafe/exterior", [51, 6]],
+   "tipo": "casa",
+   "nombre": "Casa de la piloto jubilada",
+   "personas": [
+    {
+     "nombre": "Piloto jubilada",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": [
+      "Aprendí a volar en la base de Getafe cuando a las mujeres nos miraban raro. Ahora me miran raro por la edad.",
+      "Desde mi ventana veo despegar los aviones de pruebas. Los cuento como otros cuentan ovejas."
+     ],
+     "nodo": "PilotoJubilada",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["Mi abuela sabe pilotar. Mi padre no sabe aparcar."],
+     "nodo": "Nieto",
+     "en": [10, 7],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [7, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "salvia",
+   "felpudo": "tatami_verde",
+   "alfombras": [["tatami_verde", [8, 3, 4, 3]]],
+   "muebles": [
+    ["nevera_alta", 7, 0],
+    ["encimera", 8, 1],
+    ["fogones", 11, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal", 4, 6],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 6, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "getafe/sala_calle_54_44": {
+   "pieza": "ermita_virgen_del_rio",
+   "calle": ["getafe/exterior", [54, 44]],
+   "tipo": "ermita",
+   "nombre": "Ermita del Cerro de los Ángeles",
+   "personas": [
+    {
+     "nombre": "Ermitaño",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "El Cerro de los Ángeles es el centro geográfico de la península. Bueno, eso dicen. Hay tres pueblos que dicen lo mismo.",
+      "El monumento del Sagrado Corazón lo volaron en la guerra y lo reconstruyeron. Las ruinas del primero siguen ahí al lado."
+     ],
+     "nodo": "Ermitano",
+     "en": [5, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Romera",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": [
+      "En mayo bajamos a la Virgen en romería. Este año he bajado andando. El año que viene, ya veremos."
+     ],
+     "nodo": "Romera",
+     "en": [5, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Cerro de los Ángeles: «centro geográfico de España» (con permiso de Pinto y de Madrid)."],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "tamano": [13, 11],
+   "puerta": [4, 10],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [4, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_madera", 3, 3],
+    ["estatua_gargola", 7, 0],
+    ["arbol_maceta", 1, 0],
+    ["palmera_maceta", 11, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 8, 6],
+    ["palmera_maceta", 11, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "getafe/sala_calle_55_23": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["getafe/exterior", [55, 23]],
+   "tipo": "casa",
+   "nombre": "Casa del estudiante que comparte con su abuela",
+   "personas": [
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi nieto vive conmigo porque en Madrid no le alquila nadie. Me hace compañía y yo le hago lentejas.",
+      "Estudia por las noches. Yo le oigo teclear y me duermo como con la lluvia."
+     ],
+     "nodo": "Abuela",
+     "en": [1, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Nieto estudiante",
+     "aspecto": "estudianteinge",
+     "papel": "mesa",
+     "frases": ["Con lo que cuesta un piso en Madrid, vivir con mi abuela es un máster en ahorro."],
+     "nodo": "NietoEstudiante",
+     "en": [9, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "parquet",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [5, 6, 3, 2]]],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["nevera_alta", 6, 0],
+    ["tele", 9, 1],
+    ["vitrina_madera", 7, 1],
+    ["mesa_cristal_larga", 6, 3],
+    ["banqueta_roja", 6, 5],
+    ["banqueta_roja", 8, 5],
+    ["palmera_maceta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "getafe/sala_calle_59_7": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["getafe/exterior", [59, 7]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia de la base aérea",
+   "personas": [
+    {
+     "nombre": "Militar",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Estoy destinado en la base aérea. Cada vez que despega un avión de transporte, mi hijo sale a la ventana a saludar.",
+      "Getafe y la aviación van juntos desde 1911. Aquí todo el mundo tiene un abuelo que trabajó en los aviones."
+     ],
+     "nodo": "Militar",
+     "en": [2, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["De mayor quiero ser piloto. O Pokémon de tipo Volador, lo que salga."],
+     "nodo": "Hijo",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [5, 7],
+   "suelo": "moqueta_beige",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 5, 1],
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal", 5, 3],
+    ["taburete_verde", 4, 4],
+    ["taburete_verde", 7, 4],
+    ["planta", 1, 5],
+    ["papelera", 10, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "getafe/sala_calle_5_9": {
+   "pieza": "oficinas_azules",
+   "calle": ["getafe/exterior", [5, 9]],
+   "tipo": "oficina",
+   "nombre": "Oficina de la factoría aeronáutica",
+   "personas": [
+    {
+     "nombre": "Ingeniera aeronáutica",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "Aquí se diseñan partes de aviones que vuelan por todo el mundo. El ala que ves desde tu ventanilla pudo salir de Getafe.",
+      "Los planos ocupaban antes una habitación. Ahora caben en un portátil. El café, sigue ocupando la mitad del sueldo."
+     ],
+     "nodo": "IngenieraAeronautica",
+     "en": [6, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Becario",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": ["Mi trabajo es probar si los tornillos aguantan. Llevo tres meses. Los tornillos, aguantan."],
+     "nodo": "Becario",
+     "en": [13, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 10],
+   "puerta": [11, 9],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 1, 0],
+    ["archivador", 3, 1],
+    ["mostrador_blanco", 9, 2],
+    ["banqueta_azul", 10, 4],
+    ["mostrador_blanco", 2, 6],
+    ["banqueta_azul", 3, 8],
+    ["arbol_maceta", 13, 6],
+    ["mesa_cristal", 6, 3],
+    ["taburete_marron", 8, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [11, 8]},
+   "pasos": []
+  }
+ }
+}
