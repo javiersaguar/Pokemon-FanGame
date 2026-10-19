@@ -755,6 +755,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - **Ruta 11 · Palmeral de Elche:** receta `maps/_pintura/vestir/ruta_11.gd`. Paso obligado por hierba donde el camino del huerto cruza la carretera, tapias al norte y al sur de la balsa, huertos vallados y palmeras sueltas. Hierba mínima Alicante ⇄ Murcia: 2 (antes 0). Alcance desde `from_alicante` y `from_murcia`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 - **Ruta 15 · Costa de Gran Canaria:** receta `maps/_pintura/vestir/ruta_15.gd`. Paso obligado por hierba de la ladera a la playa, palmeras y roquedo volcánico. Hierba mínima Las Palmas ⇄ Playa del Inglés: 2 (antes 0). Alcance desde `from_vegueta` y `from_playa_del_ingles`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 - **Ruta 9 · La Albufera y la huerta:** receta `maps/_pintura/vestir/ruta_9.gd`. Paso obligado por hierba de la Albufera al Saler con cartel de obras del carril bici, juncos y barcas, pinada y arboleda. Hierba mínima Valencia ⇄ Ruta 10: 1 (antes 0; la fila 35 está protegida por carteles y vistas). Alcance desde `from_valencia` y `from_ruta_10`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
+- **Ruta 10 · Costa Blanca:** receta `maps/_pintura/vestir/ruta_10.gd`. Paso obligado por hierba al salir del paseo hacia Alicante, palmeras y pinos, flores. Hierba mínima Ruta 9 ⇄ Alicante: 1 (antes 0). Alcance desde `from_ruta_9` y `from_alicante`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 
 **Provisional:** arte, textos del guarda y colocación.
 
