@@ -439,6 +439,8 @@ Primero: casa de madera de Ruta 2, casa roja de Bilbao y faro de Ruta 19; son pi
 
 **Bloque 2 en curso:** Casa Consistorial de Valladolid con fachada propia: pabellones de esquina, pórtico triple, balcón y reloj. Lienzo, puerta, fuente y ancla iguales; huella anterior declarada en el catálogo para evitar que las campanas añadan colisión a la calle. Contrato de 140 piezas: 3/3, 735 aserciones; Valladolid, 19 puertas y 0 problemas de alcance. [Comparativa y referencias](arte/comparativas/edificios_reales.md#casa-consistorial-de-valladolid). Falta cerrar la suite del bloque. Todo provisional.
 
+San Mamés también redibujado: cinco bandas de lamas claras, cubierta con hueco del campo, vidrio y acceso. Mantiene 20×11 casillas, fuente 376, puerta (10,0), ancla e interior. Contrato 3/3 y Bilbao 19 puertas, 0 problemas. Capturas antes/después guardadas. Sigue provisional; a continuación, comprobación conjunta del bloque 2.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)

@@ -625,6 +625,8 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 
 | Casa Consistorial de Valladolid, fachada propia | redibujada y comprobada en el mapa; provisional | pendiente | [Fotos municipales y antes/después](comparativas/edificios_reales.md#casa-consistorial-de-valladolid) |
 
+| San Mamés, envolvente y cubierta | redibujado y comprobado en Bilbao; provisional | pendiente | [Referencias y antes/después](comparativas/edificios_reales.md#san-mamés) |
+
 ## Interiores personalizados · 20 de octubre de 2026
 
 | Recurso | Área | Responsable | Estado | Procedencia | Aprobación Javier | Comparativa |

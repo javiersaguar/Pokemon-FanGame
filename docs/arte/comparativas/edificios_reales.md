@@ -166,7 +166,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `catedral_murcia` | [10, 12]; [6, 0] | `murcia/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/catedral_murcia.png) |
 | `sardina_segura` | [3, 2]; [-1, -1] | `murcia/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/sardina_segura.png) |
 | `bernabeu` | [12, 6]; [-1, -1] | `madrid/bernabeu` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/bernabeu.png) |
-| `san_mames` | [20, 11]; [10, 0] | `bilbao/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/san_mames.png) |
+| `san_mames` | [20, 11]; [10, 0] | `bilbao/exterior` | Redibujado, provisional; envolvente de lamas, cubierta y entrada conservada | [pieza](edificios_reales/piezas_antes/san_mames.png) |
 | `guggenheim` | [12, 8]; [6, 0] | `bilbao/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/guggenheim.png) |
 | `centro_botin` | [10, 6]; [4, 0] | `santander/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/centro_botin.png) |
 | `horreo` | [3, 4]; [1, 0] | `ruta_17/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/horreo.png) |
@@ -193,3 +193,16 @@ La captura «antes» se renderiza en la misma escena con el PNG anterior conserv
 **Compatibilidad:** la primera exportación añadía dos casillas sólidas al cuerpo de campanas. `piezas.json` admite ahora una `huella` explícita (lista de casillas relativas al ancla), además de `base` y `ninguna`. Valladolid declara exactamente su huella anterior: el cambio de silueta del tejado no altera calles ni accesos. El constructor comprueba que la lista esté dentro del lienzo. El contrato inicial de las 140 piezas pasa sin modificar sus expectativas.
 
 Pruebas dirigidas: **3/3, 735 aserciones**. Alcance de Valladolid: **19 puertas, 0 problemas**. Arte provisional pendiente de Javier; el bloque sigue abierto hasta su comprobación conjunta.
+
+### San Mamés
+
+El rectángulo de franjas rojas y blancas se sustituye por una cubierta oscura con hueco del campo y una envolvente de cinco bandas de lamas claras. La planta baja queda retranqueada con paños de vidrio y un acceso enmarcado. El panel del escudo se simplifica a esta escala; no es una reproducción detallada del emblema. Se conserva el lienzo de **320×176 píxeles del arte (20×11 casillas)**, fuente **376**, puerta **(10,0)** y ancla **(1,14)**.
+
+Referencias: [fotografías y explicación del proyectista](https://www.idom.com/proyecto/san-mames-estructura-y-fachada/), [ficha técnica con sección de la envolvente](https://www.iasoglobal.com/downloads/fichas-at/estadios-y-recintos-deportivos/estadio%20san%20mames/at_ficha_estadio_san_mames_en.pdf), [arquitectura del estadio](https://sanmames.athletic-club.eus/san-mames/). No se copian fotos al repositorio. Las proporciones se adaptan al lienzo existente; no representan medidas reales.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | ![](edificios_reales/piezas_antes/san_mames.png) | ![](edificios_reales/piezas_despues/san_mames.png) |
+| Misma escena y escala | [mapa](edificios_reales/san_mames_mapa_antes.png) | [mapa](edificios_reales/san_mames_mapa_despues.png) |
+
+Huella de colisión anterior declarada de forma explícita. No se cambia el mapa, la puerta ni el interior. Contrato: **3/3, 735 aserciones**. Bilbao: **19 puertas, 0 problemas de alcance**. Persisten los avisos de recursos retenidos al salir de la herramienta de alcance (148 recursos); no son fallos del recorrido. Arte provisional pendiente de Javier.
