@@ -11,7 +11,11 @@ const BASES_DIR := "res://assets/sprites/ui/battle/bases/"
 ## Métodos de pesca (FieldEncounters): el combate es en el agua.
 const FISHING: Array[String] = ["oldrod", "goodrod", "superrod", "fishing"]
 
+const INTERIORS_DIR := "res://data/interiores/"
+
 static var _data: Dictionary = {}
+## Sala → tipo (casa, bar, museo...) de data/interiores/<ciudad>.json.
+static var _room_types: Dictionary = {}
 
 
 static func data() -> Dictionary:
@@ -73,12 +77,30 @@ static func for_map(map_id: String, outdoor: bool, display_name: String = "") ->
 		if outdoors.has(map_id):
 			return {"escena": StringName(outdoors[map_id]), "regla": "exterior"}
 	else:
+		var kind := room_type(map_id)
+		if kind != "" and d.get("tipos_interior", {}).has(kind):
+			return {"escena": StringName(d["tipos_interior"][kind]), "regla": "tipo:" + kind}
 		var text := " %s %s " % [_plain(display_name), _plain(room.replace("_", " "))]
 		for rule: Dictionary in d.get("interiores", []):
 			for key: String in rule["claves"]:
 				if text.contains(key):
 					return {"escena": StringName(rule["escena"]), "regla": "interior:" + key}
 	return {"escena": StringName(d.get("por_defecto", "hierba")), "regla": "defecto"}
+
+
+## Tipo de sala que le da data/interiores/<ciudad>.json ("" si no está personalizada).
+static func room_type(map_id: String) -> String:
+	if _room_types.is_empty():
+		_room_types["_"] = ""
+		for file: String in DirAccess.get_files_at(INTERIORS_DIR):
+			if not file.ends_with(".json") or file.begins_with("_"):
+				continue
+			var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(INTERIORS_DIR + file))
+			var rooms: Variant = parsed.get("interiores", {}) if parsed is Dictionary else {}
+			if rooms is Dictionary:
+				for key: String in rooms:
+					_room_types[key] = String(rooms[key].get("tipo", ""))
+	return String(_room_types.get(map_id, ""))
 
 
 ## Escena para un combate que empieza ahora en `map` (MapRoot o null). Surf y pesca van al agua;

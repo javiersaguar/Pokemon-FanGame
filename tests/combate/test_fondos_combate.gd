@@ -68,6 +68,19 @@ func test_los_exteriores_estan_asignados_uno_a_uno() -> void:
 		assert_true(maps.has(map_id), "el exterior %s existe" % map_id)
 
 
+func test_cada_tipo_de_sala_personalizada_tiene_fondo() -> void:
+	var types: Dictionary = BattleBackgrounds.data()["tipos_interior"]
+	for file: String in DirAccess.get_files_at(BattleBackgrounds.INTERIORS_DIR):
+		if not file.ends_with(".json") or file.begins_with("_"):
+			continue
+		var rooms: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(BattleBackgrounds.INTERIORS_DIR + file))["interiores"]
+		for map_id: String in rooms:
+			var kind := String(rooms[map_id].get("tipo", ""))
+			assert_true(types.has(kind), "%s: el tipo '%s' necesita su fondo en tipos_interior" % [map_id, kind])
+			if types.has(kind):
+				assert_true(BattleBackgrounds.has_scene(StringName(types[kind])), kind)
+
+
 func test_cada_escena_tiene_sus_archivos() -> void:
 	for id: StringName in BattleBackgrounds.scene_ids():
 		for path: String in BattleBackgrounds.files(id):
