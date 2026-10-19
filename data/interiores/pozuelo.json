@@ -1,0 +1,359 @@
+{
+ "_doc": "Interiores personalizados de pozuelo (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Pozuelo",
+ "interiores": {
+  "pozuelo/sala_calle_13_29": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["pozuelo/exterior", [13, 29]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la familia del pádel",
+   "personas": [
+    {
+     "nombre": "Padre cayetano",
+     "aspecto": "cayetano_entrenador",
+     "papel": "tele",
+     "frases": [
+      "Tenemos pista de pádel en el jardín. La usamos una vez al mes. El resto del mes la mira el jardinero.",
+      "Mi hijo estudia ADE en una privada. Lo de sacar buenas notas, lo estamos trabajando con un profesor particular."
+     ],
+     "nodo": "PadreCayetano",
+     "en": [10, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["La cocinera libra los martes. Los martes pedimos sushi. Es nuestra forma de cocinar."],
+     "nodo": "Madre",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [6, 9],
+   "suelo": "moqueta_beige",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [6, 5, 5, 3]]],
+   "muebles": [
+    ["nevera", 4, 1],
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["tele", 9, 1],
+    ["planta", 11, 1],
+    ["vitrina_madera", 1, 1],
+    ["mesa_cristal", 4, 4],
+    ["banqueta_azul", 3, 5],
+    ["banqueta_azul", 6, 5],
+    ["sofa", 10, 6],
+    ["palmera_maceta", 12, 0],
+    ["papelera", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "pozuelo/sala_calle_17_23": {
+   "pieza": "casa_rosa",
+   "calle": ["pozuelo/exterior", [17, 23]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la influencer de Somosaguas",
+   "personas": [
+    {
+     "nombre": "Influencer",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "libre",
+     "frases": [
+      "Hago vídeos de rutina de mañana. Me levanto a las siete, me grabo levantándome y me vuelvo a la cama.",
+      "Este bolso me lo han regalado para que lo enseñe. Lo enseño, lo devuelvo y me regalan otro."
+     ],
+     "nodo": "Influencer",
+     "en": [8, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Asistente",
+     "aspecto": "npc_lass",
+     "papel": "mesa",
+     "frases": ["Le llevo la agenda, los contratos y la luz del aro. Sobre todo la luz del aro."],
+     "nodo": "Asistente",
+     "en": [3, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [4, 3, 4, 2]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["cajon_oliva", 7, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal", 4, 3],
+    ["banqueta_azul", 3, 4],
+    ["banqueta_azul", 6, 4],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "pozuelo/sala_calle_21_11": {
+   "pieza": "casa_azul",
+   "calle": ["pozuelo/exterior", [21, 11]],
+   "tipo": "chalet",
+   "nombre": "Chalet del abogado del Real Madrid",
+   "personas": [
+    {
+     "nombre": "Abogado",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": [
+      "Tengo palco en el Bernabéu desde que tenía cinco años. Mi padre me lo regaló antes que la bici.",
+      "En Pozuelo hay más futbolistas que farmacias. Te los cruzas en el supermercado de lujo, con gafas de sol."
+     ],
+     "nodo": "Abogado",
+     "en": [4, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": ["Quiero ser futbolista. Mi padre dice que primero el máster y luego ya vemos."],
+     "nodo": "Hijo",
+     "en": [11, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [8, 8],
+   "suelo": "moqueta_beige",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["planta", 8, 1],
+    ["tele", 9, 1],
+    ["arbol_maceta", 1, 5],
+    ["caja", 1, 2],
+    ["mesa_cristal", 5, 4],
+    ["taburete_marron", 7, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "pozuelo/sala_calle_22_29": {
+   "pieza": "casa_granero",
+   "calle": ["pozuelo/exterior", [22, 29]],
+   "tipo": "chalet",
+   "nombre": "Chalet de los abuelos de toda la vida",
+   "personas": [
+    {
+     "nombre": "Abuelo",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Cuando compré esta casa, Pozuelo era un pueblo con estación de tren y tres bares. Ahora es el municipio con más renta de España.",
+      "Mis vecinos de antes vendieron la parcela por un dineral. Yo me quedé por cabezón. Ahora la parcela vale tres dinerales."
+     ],
+     "nodo": "Abuelo",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["Los nietos vienen los domingos a comer cocido. Llegan en coches que no sé ni pronunciar."],
+     "nodo": "Abuela",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [7, 7],
+   "suelo": "moqueta_beige",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["estanteria_alta_nogal", 7, 0],
+    ["mesa_cristal_larga", 6, 3],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 8, 5],
+    ["sofa", 2, 4],
+    ["arbol_maceta", 10, 4],
+    ["tele_pequena", 9, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "pozuelo/sala_calle_31_29": {
+   "pieza": "casa_granero",
+   "calle": ["pozuelo/exterior", [31, 29]],
+   "tipo": "chalet",
+   "nombre": "Chalet del empresario de las criptomonedas",
+   "personas": [
+    {
+     "nombre": "Empresario cripto",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "Lo compré todo en 2017 y lo vendí en 2018. Luego lo volví a comprar en 2021. Luego no me pregunte.",
+      "Este cuadro es un NFT. Bueno, es la foto impresa del NFT. El NFT de verdad está en internet, en algún sitio."
+     ],
+     "nodo": "EmpresarioCripto",
+     "en": [1, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mayordomo",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": ["El señor me paga en criptomonedas. Este mes cobro el doble. El mes pasado, la mitad."],
+     "nodo": "Mayordomo",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "retro",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["nevera_alta", 10, 0],
+    ["planta", 2, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal", 6, 4],
+    ["silla_derecha", 5, 4],
+    ["silla_izquierda", 8, 4],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "pozuelo/sala_calle_37_12": {
+   "pieza": "casa_granero",
+   "calle": ["pozuelo/exterior", [37, 12]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la familia numerosa",
+   "personas": [
+    {
+     "nombre": "Madre de siete",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Tenemos siete hijos, tres perros y un Furret. El autobús del colegio para en nuestra puerta solo para nosotros.",
+      "En esta casa se hacen tres lavadoras al día. Y dos lavavajillas. Y una misa los domingos."
+     ],
+     "nodo": "MadreDeSiete",
+     "en": [6, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo mayor",
+     "aspecto": "cayetano_entrenador",
+     "papel": "tele",
+     "frases": ["Soy el mayor de siete. Llevo la ropa de mi primo y luego se la paso a cinco hermanos."],
+     "nodo": "HijoMayor",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [3, 5, 4, 2]]],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["fogones", 7, 1],
+    ["tele", 10, 1],
+    ["planta", 12, 1],
+    ["vitrina_madera", 1, 1],
+    ["sillon_derecha", 1, 3],
+    ["mesa_cristal", 2, 4],
+    ["sillon_izquierda", 4, 3],
+    ["planta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "pozuelo/sala_calle_7_30": {
+   "pieza": "casa_rosa",
+   "calle": ["pozuelo/exterior", [7, 30]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la jugadora de golf",
+   "personas": [
+    {
+     "nombre": "Golfista",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Juego al golf en el club de Somosaguas los sábados. Los domingos, al pádel. Los lunes, descanso del descanso.",
+      "Mi handicap es de doce. Mi marido dice que es de veinte. Mi marido no juega."
+     ],
+     "nodo": "Golfista",
+     "en": [3, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": ["Yo no juego al golf. Voy al club por la paella del bar, que es buenísima."],
+     "nodo": "Marido",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "moqueta_beige",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["vitrina_madera", 7, 1],
+    ["mesa_cristal_larga", 5, 3],
+    ["banqueta_azul", 5, 5],
+    ["banqueta_azul", 7, 5],
+    ["palmera_maceta", 9, 0],
+    ["tele_pequena", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  }
+ }
+}

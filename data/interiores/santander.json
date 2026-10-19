@@ -1,0 +1,651 @@
+{
+ "_doc": "Interiores personalizados de santander (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Santander",
+ "interiores": {
+  "santander/sala_calle_21_5": {
+   "pieza": "casa_azul",
+   "calle": ["santander/exterior", [21, 5]],
+   "tipo": "casa",
+   "nombre": "Villa de veraneo del Sardinero",
+   "personas": [
+    {
+     "nombre": "Veraneante de Madrid",
+     "aspecto": "padretarjeta",
+     "papel": "tele",
+     "frases": [
+      "Mi familia veranea en el Sardinero desde que veraneaba el rey Alfonso XIII. El rey ya no viene; nosotros, sí.",
+      "En agosto aquí hace veintidós grados. En Madrid, cuarenta. Es la mejor inversión de mi abuelo."
+     ],
+     "nodo": "VeraneanteDeMadrid",
+     "en": [7, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Me he bañado en la Segunda playa del Sardinero. El agua me ha cortado la respiración. Literal."],
+     "nodo": "Hija",
+     "en": [4, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "tatami_verde",
+   "pared": "salvia",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["fogones", 5, 1],
+    ["tele", 8, 1],
+    ["sillon_derecha", 7, 5],
+    ["mesa_cristal", 8, 6],
+    ["sillon_izquierda", 10, 5],
+    ["planta", 1, 7],
+    ["caja", 10, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "santander/sala_calle_30_18": {
+   "pieza": "mercado_san_miguel",
+   "calle": ["santander/exterior", [30, 18]],
+   "tipo": "mercado",
+   "nombre": "Mercado de la Esperanza",
+   "personas": [
+    {
+     "nombre": "Pescadera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Bocarte de Santoña, rape del Cantábrico y almejas de la bahía. Aquí el pescado llega antes que los turistas.",
+      "El mercado es de hierro, del siglo XIX. Se salvó del incendio de 1941. Las merluzas, no tanto."
+     ],
+     "nodo": "Pescadera",
+     "en": [5, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": ["Quiero un rape para el guiso y que me lo limpie usted, que yo ya no veo la espina."],
+     "nodo": "Clienta",
+     "en": [10, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 11],
+   "puerta": [4, 10],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_naranja_i", 4, 6],
+    ["mostrador_naranja_m", 5, 6],
+    ["mostrador_naranja_d", 6, 6],
+    ["mostrador_tablas_i", 4, 3],
+    ["mostrador_tablas_m", 5, 3],
+    ["mostrador_tablas_d", 6, 3],
+    ["mostrador_turquesa_i", 8, 5],
+    ["mostrador_turquesa_m", 9, 5],
+    ["mostrador_turquesa_d", 10, 5],
+    ["caja", 1, 2],
+    ["papelera", 1, 8]
+   ],
+   "encima": [["plato", 8, 5]],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "santander/sala_calle_32_29": {
+   "pieza": "teatro",
+   "calle": ["santander/exterior", [32, 29]],
+   "tipo": "teatro",
+   "nombre": "Teatro de la Plaza Porticada",
+   "personas": [
+    {
+     "nombre": "Actor",
+     "aspecto": "npc_man",
+     "papel": "artista",
+     "frases": [
+      "En agosto se celebra el Festival Internacional de Santander. Antes, en la Plaza Porticada, al aire libre y con lluvia.",
+      "Esta noche hacemos zarzuela. Los de la primera fila cantan más alto que nosotros."
+     ],
+     "nodo": "Actor",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Espectadora",
+     "aspecto": "npc_woman",
+     "papel": "publico",
+     "frases": ["Vengo todos los veranos. Me sé el repertorio. Ellos no tanto, a veces."],
+     "nodo": "Espectadora",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 11],
+   "puerta": [7, 10],
+   "suelo": "moqueta_beige",
+   "pared": "marino",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["losa_crema", [2, 2, 9, 2]]],
+   "muebles": [
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "santander/sala_calle_39_18": {
+   "pieza": "bloque_pisos",
+   "calle": ["santander/exterior", [39, 18]],
+   "tipo": "portal",
+   "nombre": "Portal de la calle Burgos",
+   "personas": [
+    {
+     "nombre": "Portero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Cuando sopla el viento sur, Santander se vuelve loca. Los vecinos discuten, los perros ladran y yo cierro el portal.",
+      "El incendio de 1941 empezó por un viento sur. Desde entonces, en este portal se mira el cielo con respeto."
+     ],
+     "nodo": "Portero",
+     "en": [3, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 9],
+   "puerta": [5, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [3, 4, 4, 3]]],
+   "muebles": [
+    ["planta", 3, 1],
+    ["escalera_mano", 4, 0],
+    ["cajonera_azul", 1, 1],
+    ["sillon_derecha", 7, 3],
+    ["planta", 7, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "santander/sala_calle_41_29": {
+   "pieza": "tienda_azul",
+   "calle": ["santander/exterior", [41, 29]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Santander",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Aquí la gente entrena para remar en las traineras. La bahía es un gimnasio, pero aquí no llueve dentro.",
+      "En verano vienen los veraneantes a mantener la línea del Sardinero. En septiembre, desaparecen."
+     ],
+     "nodo": "Monitor",
+     "en": [4, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Socia",
+     "aspecto": "nadador_f",
+     "papel": "libre",
+     "frases": ["Nado en la bahía todo el año. En febrero me sirvo del gimnasio para descongelarme."],
+     "nodo": "Socia",
+     "en": [3, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [3, 4, 8, 4]]],
+   "muebles": [
+    ["taquilla_azul", 1, 0],
+    ["taquilla_azul", 2, 0],
+    ["taquilla_gris", 3, 0],
+    ["banqueta_azul", 2, 5],
+    ["banqueta_azul", 3, 5],
+    ["tele", 11, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "santander/sala_calle_45_6": {
+   "pieza": "torre_socorrista",
+   "calle": ["santander/exterior", [45, 6]],
+   "tipo": "socorrismo",
+   "nombre": "Caseta de socorrismo del Sardinero",
+   "personas": [
+    {
+     "nombre": "Socorrista",
+     "aspecto": "nadador",
+     "papel": "libre",
+     "frases": [
+      "El Sardinero tiene corrientes cuando sube la marea. Los surfistas lo saben; los madrileños, no.",
+      "Lo que más rescato son sombrillas que se lleva el nordeste. Vuelan mejor que un Pidgey."
+     ],
+     "nodo": "Socorrista",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [8, 7],
+   "puerta": [3, 6],
+   "suelo": "chapa",
+   "pared": "azulejo_azul",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["cajon_gris", 1, 1], ["nevera", 2, 1], ["caja", 6, 5], ["papelera", 1, 4]],
+   "encima": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "santander/sala_calle_4_18": {
+   "pieza": "catedral_santa_ana",
+   "calle": ["santander/exterior", [4, 18]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Nuestra Señora de la Asunción",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La catedral está encima de una iglesia más antigua, la del Cristo, del siglo XIII. Una iglesia dentro de otra, como una muñeca rusa.",
+      "En la cripta se ven restos romanos a través de un cristal en el suelo. Hay que pisar con fe."
+     ],
+     "nodo": "Sacristan",
+     "en": [9, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Visitante",
+     "aspecto": "npc_woman",
+     "papel": "publico",
+     "frases": ["El claustro gótico es lo único que sobrevivió del todo al incendio. Aquí se viene a respirar."],
+     "nodo": "Visitante",
+     "en": [5, 9],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 12],
+   "puerta": [8, 11],
+   "suelo": "piedra",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 7, 3],
+    ["estatua_aguila", 11, 0],
+    ["arbol_maceta", 1, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 9, 6],
+    ["banco_rojo", 5, 8],
+    ["banco_rojo", 2, 8],
+    ["banco_rojo", 9, 8],
+    ["arbol_maceta", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 10], "desde_sala_calle_4_18_cristo": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Cristo",
+     "en": [4, 1],
+     "destino": "santander/sala_calle_4_18_cristo",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_4_18_cristo",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "santander/sala_calle_4_18_cristo": {
+   "tipo": "cripta",
+   "nombre": "Iglesia del Cristo (cripta de la catedral)",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Aquí abajo hay restos de unas termas romanas. Los santanderinos ya se bañaban hace dos mil años.",
+      "Las reliquias de los mártires Emeterio y Celedonio, los patronos, llegaron por mar en una barca de piedra. Eso dice la leyenda."
+     ],
+     "nodo": "Guia",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Cristal del suelo: restos de la Portus Victoriae romana. No saltes encima."],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "padre": "santander/sala_calle_4_18",
+   "tamano": [13, 10],
+   "puerta": [5, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["cajas", 4, 1],
+    ["pedestal", 7, 1],
+    ["caja", 6, 7],
+    ["caja", 8, 8],
+    ["pedestal", 10, 7],
+    ["cajas", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": [],
+   "salida": {"destino": "santander/sala_calle_4_18", "aparicion": "desde_sala_calle_4_18_cristo"}
+  },
+  "santander/sala_calle_4_29": {
+   "pieza": "tienda_flores",
+   "calle": ["santander/exterior", [4, 29]],
+   "tipo": "floristeria",
+   "nombre": "Floristería de los Jardines de Pereda",
+   "personas": [
+    {
+     "nombre": "Florista",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "Las hortensias cántabras son azules por la tierra ácida. Si las plantas en Madrid, salen rosas y tristes.",
+      "Para la Virgen del Mar se hacen alfombras de flores. Aquí se nos va la primavera entera en eso."
+     ],
+     "nodo": "Florista",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": ["Quiero un ramo para disculparme. Grande. Muy grande."],
+     "nodo": "Cliente",
+     "en": [4, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "losa_crema",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["palmera_maceta", 3, 0],
+    ["planta", 4, 1],
+    ["palmera_maceta", 5, 0],
+    ["mostrador_oliva_i", 2, 3],
+    ["mostrador_oliva_m", 3, 3],
+    ["mostrador_oliva_d", 4, 3],
+    ["arbol_maceta", 6, 3],
+    ["planta", 7, 3],
+    ["arbol_maceta", 8, 3],
+    ["palmera_maceta", 9, 4],
+    ["planta", 9, 1],
+    ["planta", 1, 5]
+   ],
+   "encima": [["jarron_flores", 4, 3], ["jarron_flores", 2, 3]],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "santander/sala_calle_53_11": {
+   "pieza": "teatro_real",
+   "calle": ["santander/exterior", [53, 11]],
+   "tipo": "casino",
+   "nombre": "Gran Casino del Sardinero",
+   "personas": [
+    {
+     "nombre": "Crupier",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "El casino es de 1916, modernista y con vistas al mar. Antes venía la aristocracia. Ahora, despedidas de soltero.",
+      "Hagan juego, señores. Las Poké Balls no se aceptan como fichas."
+     ],
+     "nodo": "Crupier",
+     "en": [9, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Jugadora",
+     "aspecto": "npc_woman",
+     "papel": "cliente",
+     "frases": ["He apostado al rojo. Ha salido el negro. Siempre sale el negro."],
+     "nodo": "Jugadora",
+     "en": [4, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Gran Casino del Sardinero (1916). La banca siempre gana. La playa de enfrente, también."],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [8, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [2, 3, 8, 5]]],
+   "muebles": [
+    ["estatua_aguila", 5, 0],
+    ["vitrina_madera", 8, 1],
+    ["estatua_aguila", 10, 0],
+    ["estatua_gargola", 11, 5],
+    ["arbol_maceta", 1, 7],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "santander/sala_calle_58_29": {
+   "pieza": "casa_carbonell",
+   "calle": ["santander/exterior", [58, 29]],
+   "tipo": "palacio",
+   "nombre": "Palacio de la Magdalena",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "El palacio lo pagaron los santanderinos por suscripción popular para regalárselo a Alfonso XIII. Él veraneó aquí cada verano.",
+      "Ahora acoge los cursos de verano de la Universidad Menéndez Pelayo. Antes reyes; ahora, profesores en chanclas."
+     ],
+     "nodo": "Guia",
+     "en": [9, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Profesor de cursos de verano",
+     "aspecto": "tertuliano",
+     "papel": "mesa",
+     "frases": [
+      "Doy un curso sobre la España contemporánea. Con estas vistas, la España contemporánea parece maravillosa."
+     ],
+     "nodo": "ProfesorDeCursosDeVerano",
+     "en": [6, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Salón de los Reyes. Vistas a la bahía, a la isla de Mouro y a las focas del mini zoo."],
+     "nodo": "Cartel",
+     "en": [6, 1]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [12, 10],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [4, 4, 10, 5]]],
+   "muebles": [
+    ["arbol_maceta", 7, 0],
+    ["estatua_gargola", 8, 0],
+    ["estatua_gargola", 10, 0],
+    ["arbol_maceta", 12, 0],
+    ["mesa_cristal_larga", 4, 6],
+    ["silla_derecha", 3, 6],
+    ["silla_izquierda", 7, 6],
+    ["estatua_gargola", 13, 7],
+    ["palmera_maceta", 14, 0],
+    ["pedestal", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [12, 9]},
+   "pasos": []
+  },
+  "santander/sala_calle_5_11": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["santander/exterior", [5, 11]],
+   "tipo": "casa",
+   "nombre": "Casa del pejino de Puertochico",
+   "personas": [
+    {
+     "nombre": "Pejino",
+     "aspecto": "npc_fisherman",
+     "papel": "libre",
+     "frases": [
+      "Los pejinos somos los del barrio pescador. Los del centro dicen que olemos a pescado. Olemos a mar, que es distinto.",
+      "Las rabas se fríen con harina, un poco de sal y aceite muy caliente. El limón, aparte."
+     ],
+     "nodo": "Pejino",
+     "en": [9, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Sorropotún: bonito, patata y pan. Un guiso de barco que se come en tierra."],
+     "nodo": "Mujer",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["cajon_oliva", 8, 1],
+    ["tele", 9, 1],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3],
+    ["planta", 10, 5],
+    ["papelera", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  },
+  "santander/sala_calle_9_28": {
+   "pieza": "casa_gris",
+   "calle": ["santander/exterior", [9, 28]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia del Racing",
+   "personas": [
+    {
+     "nombre": "Aficionado racinguista",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "El Racing de Santander fue de los fundadores de la Liga en 1929. Ahora sufrimos en Segunda. Sufrir también es tradición.",
+      "En El Sardinero cantamos con lluvia y con viento sur. Con viento sur, más."
+     ],
+     "nodo": "AficionadoRacinguista",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": ["Mi padre se puso a llorar cuando ascendimos. Y cuando bajamos. Llora mucho mi padre."],
+     "nodo": "Hija",
+     "en": [5, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "parquet",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [2, 4, 5, 3]]],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["fogones", 7, 1],
+    ["tele", 9, 1],
+    ["estante_oliva", 11, 1],
+    ["planta", 1, 6],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  }
+ }
+}

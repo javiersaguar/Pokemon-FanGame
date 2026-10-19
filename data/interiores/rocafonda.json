@@ -1,0 +1,170 @@
+{
+ "_doc": "Interiores personalizados de rocafonda (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Rocafonda",
+ "interiores": {
+  "rocafonda/sala_calle_20_18": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["rocafonda/exterior", [20, 18]],
+   "tipo": "casa",
+   "nombre": "Casa de los vecinos del 304",
+   "personas": [
+    {
+     "nombre": "Vecina",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Rocafonda es un barrio de gente trabajadora, de aquí y de fuera. En la misma escalera se habla catalán, árabe y castellano.",
+      "Cuando el chaval marcó en la Eurocopa, salimos todos al balcón. Hasta el vecino que no habla con nadie."
+     ],
+     "nodo": "Vecina",
+     "en": [5, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": [
+      "Hago el 304 con los dedos cada vez que marco en el patio. Mi profesor dice que es el código postal, no un baile."
+     ],
+     "nodo": "Hijo",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "rombos_lila",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [["tatami_verde", [5, 3, 3, 2]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["mesa_cristal_larga", 2, 3],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 4, 5],
+    ["planta", 9, 6],
+    ["caja", 1, 2],
+    ["tele", 7, 1],
+    ["cajon_oliva", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "rocafonda/sala_calle_25_17": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["rocafonda/exterior", [25, 17]],
+   "tipo": "casa",
+   "nombre": "Casa del entrenador del campo del barrio",
+   "personas": [
+    {
+     "nombre": "Entrenador de base",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Entreno a los niños del barrio en el campo de tierra. Ahora todos quieren regatear como Lamine. Yo les pido que primero sepan pasar.",
+      "De cada cien niños que juegan aquí, uno llega al fútbol de verdad. Los otros noventa y nueve, a la amistad. También vale."
+     ],
+     "nodo": "EntrenadorDeBase",
+     "en": [5, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido llega del campo con las botas llenas de tierra. Las deja en la puerta como un trofeo."],
+     "nodo": "Mujer",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [4, 7],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["cajon_oliva", 7, 1],
+    ["tele", 8, 1],
+    ["sillon_derecha", 6, 3],
+    ["mesa_cristal", 7, 4],
+    ["sillon_izquierda", 9, 3],
+    ["planta", 1, 5],
+    ["caja", 9, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "rocafonda/sala_calle_32_10": {
+   "pieza": "casa_carbonell",
+   "calle": ["rocafonda/exterior", [32, 10]],
+   "tipo": "palacio",
+   "nombre": "Mansión de Rocafonda",
+   "personas": [
+    {
+     "nombre": "Mayordomo",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "El señor está fuera, entrenando. O en la puerta, combatiendo. No sabría decirle: aquí todo es muy rápido.",
+      "La casa tiene piscina, gimnasio y una sala de trofeos. La sala de trofeos se queda pequeña cada año."
+     ],
+     "nodo": "Mayordomo",
+     "en": [13, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cocinera",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Me han pedido que cocine como en casa de la abuela. Imposible: en casa de la abuela cocina la abuela."
+     ],
+     "nodo": "Cocinera",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Vitrina de trofeos: medallas, balones firmados y una camiseta con el 19. Al fondo, sitio vacío para lo que venga."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [6, 10],
+   "suelo": "alfombra_roja",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [3, 4, 10, 5]]],
+   "muebles": [
+    ["estatua_aguila", 6, 0],
+    ["vitrina_madera", 9, 1],
+    ["estatua_aguila", 11, 0],
+    ["mesa_cristal_larga", 9, 5],
+    ["silla_derecha", 8, 5],
+    ["silla_izquierda", 12, 5],
+    ["palmera_maceta", 14, 0],
+    ["pedestal", 1, 1],
+    ["fogones", 4, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 9]},
+   "pasos": []
+  }
+ }
+}

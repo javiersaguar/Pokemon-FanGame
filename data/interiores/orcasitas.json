@@ -1,0 +1,174 @@
+{
+ "_doc": "Interiores personalizados de orcasitas (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Orcasitas",
+ "interiores": {
+  "orcasitas/sala_calle_28_12": {
+   "pieza": "bloque_pisos",
+   "calle": ["orcasitas/exterior", [28, 12]],
+   "tipo": "piso",
+   "nombre": "Piso de la familia del bloque cinco",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Orcasitas lo levantaron los vecinos a base de manifestaciones. Antes eran chabolas; ahora son pisos con calefacción. Se luchó.",
+      "En este bloque nos conocemos todos. Si falta sal, se pide al del cuarto. Si falta paciencia, a la del segundo."
+     ],
+     "nodo": "Madre",
+     "en": [6, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": ["Mi madre me cuenta lo de las chabolas cada vez que me quejo del wifi. Me callo enseguida."],
+     "nodo": "Hija",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [3, 8],
+   "suelo": "moqueta_beige",
+   "pared": "menta",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["fogones", 6, 1],
+    ["consola", 1, 2],
+    ["tele", 2, 1],
+    ["sillon_derecha", 4, 5],
+    ["mesa_cristal", 5, 6],
+    ["caja", 8, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "orcasitas/sala_calle_29_20": {
+   "pieza": "tienda_morada",
+   "calle": ["orcasitas/exterior", [29, 20]],
+   "tipo": "tienda",
+   "nombre": "Bazar de la plaza de Orcasitas",
+   "personas": [
+    {
+     "nombre": "Dueño del bazar",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "Tenemos de todo: cargadores, pilas, chanclas, recambios de fregona y Poké Balls de las baratas. Abrimos hasta las once.",
+      "Si no lo tengo, te lo pido. Si no llega, te vendo otra cosa que se parezca."
+     ],
+     "nodo": "DuenoDelBazar",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": ["Vengo a por un cargador para el móvil que me regaló mi nieto. Es el cuarto este mes."],
+     "nodo": "Clienta",
+     "en": [7, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_verdes",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 1, 1],
+    ["estanteria_alta_mostaza", 3, 0],
+    ["mostrador_tablas_i", 6, 3],
+    ["mostrador_tablas_m", 7, 3],
+    ["mostrador_tablas_d", 8, 3],
+    ["vitrina_blanca", 2, 3],
+    ["vitrina_blanca", 4, 3],
+    ["planta", 8, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "orcasitas/sala_calle_36_9": {
+   "pieza": "bloque_verde_2",
+   "calle": ["orcasitas/exterior", [36, 9]],
+   "tipo": "piso",
+   "nombre": "Piso del rapero del barrio",
+   "personas": [
+    {
+     "nombre": "Rapero",
+     "aspecto": "raver",
+     "papel": "libre",
+     "frases": [
+      "Grabo mis temas en el cuarto con una manta en la pared. Sale mejor que en un estudio. Bueno, casi.",
+      "Mi próximo tema habla de Usera, del metro y de mi abuela. Mi abuela es mi mayor fan. Y la única."
+     ],
+     "nodo": "Rapero",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["No entiendo nada de lo que canta mi nieto, pero lo dice con mucho sentimiento."],
+     "nodo": "Abuela",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_morados",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [3, 3, 4, 3]]],
+   "muebles": [["nevera_alta", 5, 0], ["fogones", 6, 1], ["tele_pequena", 10, 2], ["papelera", 10, 5]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "orcasitas/sala_calle_5_32": {
+   "pieza": "bloque_pisos",
+   "calle": ["orcasitas/exterior", [5, 32]],
+   "tipo": "portal",
+   "nombre": "Portal de la Asociación de Vecinos",
+   "personas": [
+    {
+     "nombre": "Presidente de la asociación",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "La Asociación de Vecinos de Orcasitas consiguió el realojo de miles de familias en los setenta. Aquí la palabra «vecino» pesa.",
+      "Cada martes nos reunimos para pedir lo que falta: un ambulatorio, un parque, una parada de autobús. Siempre falta algo."
+     ],
+     "nodo": "PresidenteDeLaAsociacion",
+     "en": [4, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 3, 4, 3]]],
+   "muebles": [["escalera_mano", 8, 0], ["archivador_bajo", 2, 1], ["arbol_maceta", 1, 4]],
+   "encima": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  }
+ }
+}

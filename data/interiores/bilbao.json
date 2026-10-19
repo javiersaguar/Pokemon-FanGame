@@ -1,0 +1,705 @@
+{
+ "_doc": "Interiores personalizados de bilbao (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Bilbao",
+ "interiores": {
+  "bilbao/sala_calle_29_25": {
+   "pieza": "edificio_cristal",
+   "calle": ["bilbao/exterior", [29, 25]],
+   "tipo": "oficina",
+   "nombre": "Oficinas de la Torre Iberdrola",
+   "personas": [
+    {
+     "nombre": "Ingeniera eléctrica",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "Ciento sesenta y cinco metros, cuarenta y una plantas. Desde aquí arriba la ría parece un hilo y San Mamés, una tarta.",
+      "Vigilamos la red eléctrica de medio país. Cuando hay un apagón, aquí no se toma café."
+     ],
+     "nodo": "IngenieraElectrica",
+     "en": [5, 7],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Guardia de seguridad",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": ["Tarjeta de visitante, por favor. Sin tarjeta no se sube ni al primer piso."],
+     "nodo": "GuardiaDeSeguridad",
+     "en": [7, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [16, 11],
+   "puerta": [8, 10],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 2, 0],
+    ["archivador_bajo", 3, 1],
+    ["taquilla_archivo", 5, 0],
+    ["mostrador_tablas", 3, 4],
+    ["banqueta_azul", 4, 6],
+    ["mostrador_tablas", 12, 5],
+    ["banqueta_azul", 13, 7],
+    ["arbol_maceta", 1, 0],
+    ["papelera", 14, 1],
+    ["mesa_cristal", 6, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_34_42": {
+   "pieza": "casa_teja",
+   "calle": ["bilbao/exterior", [34, 42]],
+   "tipo": "taberna",
+   "nombre": "Taberna de pintxos de las Siete Calles",
+   "personas": [
+    {
+     "nombre": "Tabernera",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Gilda, tortilla, bacalao al pil pil y una de rabas. Coges el pintxo de la barra y al final cuentas los palillos.",
+      "El txikito es un vino pequeño. Se toma uno en cada bar. Por eso la cuadrilla tarda tres horas en recorrer una calle."
+     ],
+     "nodo": "Tabernera",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cuadrilla",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": ["Somos una cuadrilla de once. Pagamos a bote: todos ponemos lo mismo y el que bebe más, calla."],
+     "nodo": "Cuadrilla",
+     "en": [8, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["«La gilda: guindilla, anchoa y aceituna. Verde, salada y un poco picante. Como Rita Hayworth.»"],
+     "nodo": "Cartel",
+     "en": [9, 1]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [6, 9],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["mostrador_celeste_i", 6, 4],
+    ["mostrador_celeste_m", 7, 4],
+    ["mostrador_celeste_m", 8, 4],
+    ["mostrador_celeste_d", 9, 4],
+    ["taburete_marron", 7, 6],
+    ["taburete_marron", 9, 6],
+    ["mesa_cristal", 3, 6],
+    ["silla_derecha", 2, 6],
+    ["silla_izquierda", 5, 6],
+    ["mesa_cristal", 1, 3],
+    ["taburete_marron", 3, 3],
+    ["tele_pequena", 11, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_35_7": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["bilbao/exterior", [35, 7]],
+   "tipo": "casa",
+   "nombre": "Casa del remero de la trainera",
+   "personas": [
+    {
+     "nombre": "Remero",
+     "aspecto": "piraguista",
+     "papel": "libre",
+     "frases": [
+      "Entrenamos en la ría al amanecer. En verano remamos las regatas de traineras del Cantábrico. La Bandera de La Concha es lo más grande.",
+      "Una trainera tiene trece remeros y un patrón que grita. Yo, de momento, remo y escucho."
+     ],
+     "nodo": "Remero",
+     "en": [7, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi hijo come por tres. Bueno, por trece: rema por la tripulación entera."],
+     "nodo": "Madre",
+     "en": [2, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["nevera", 7, 1],
+    ["vitrina_madera", 8, 1],
+    ["arbol_maceta", 1, 0],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_38_26": {
+   "pieza": "bloque_verde",
+   "calle": ["bilbao/exterior", [38, 26]],
+   "tipo": "piso",
+   "nombre": "Piso de la familia de Abando",
+   "personas": [
+    {
+     "nombre": "Abuelo",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "He visto a Bilbao cambiar de ciudad gris de altos hornos a ciudad de museos. Los altos hornos daban trabajo; el museo, fotos.",
+      "Bilbao es el centro del mundo. Lo sabe todo el mundo, menos el mundo."
+     ],
+     "nodo": "Abuelo",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Mi aitite dice que nació en Bilbao porque quiso. Cualquier bilbaíno te lo dirá."],
+     "nodo": "Nieta",
+     "en": [3, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [5, 7],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["fogones", 4, 1], ["nevera", 6, 1], ["sofa", 6, 4], ["planta", 9, 1], ["tele", 7, 1]],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_44_41": {
+   "pieza": "catedral_burgos",
+   "calle": ["bilbao/exterior", [44, 41]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Santiago",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La catedral de Santiago es gótica y está en el Casco Viejo. Por aquí pasaban los peregrinos del Camino del Norte.",
+      "El claustro es pequeño y silencioso. Es el único sitio de las Siete Calles donde no se oye un txikito."
+     ],
+     "nodo": "Sacristan",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Peregrina",
+     "aspecto": "montanera",
+     "papel": "publico",
+     "frases": ["Hago el Camino del Norte. Desde Irún hasta aquí he subido más cuestas que en toda mi vida."],
+     "nodo": "Peregrina",
+     "en": [5, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 11],
+   "puerta": [8, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_blanco", 7, 3],
+    ["estatua_gargola", 4, 0],
+    ["arbol_maceta", 1, 0],
+    ["arbol_maceta", 11, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_46_14": {
+   "pieza": "tienda_azul",
+   "calle": ["bilbao/exterior", [46, 14]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Bilbao",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Aquí se entrena para el deporte rural: levantar piedras, cortar troncos y tirar de la soga. Tenemos troncos de verdad.",
+      "Cuando llueve, el gimnasio se llena. En Bilbao llueve. Llueve mucho."
+     ],
+     "nodo": "Monitor",
+     "en": [7, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Harrijasotzaile",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": ["Levanto una piedra de cien kilos. Mi aitite levantaba ciento cincuenta. Dice."],
+     "nodo": "Harrijasotzaile",
+     "en": [1, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "chapa",
+   "pared": "gris_raya_roja",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [4, 3, 8, 4]]],
+   "muebles": [
+    ["taquilla_gris", 9, 0],
+    ["taquilla_gris", 10, 0],
+    ["taquilla_azul", 11, 0],
+    ["taquilla_azul", 12, 0],
+    ["banco_rojo", 2, 7],
+    ["nevera_alta", 8, 0],
+    ["cajas", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_50_14": {
+   "pieza": "bloque_pisos",
+   "calle": ["bilbao/exterior", [50, 14]],
+   "tipo": "portal",
+   "nombre": "Portal de la Gran Vía de Bilbao",
+   "personas": [
+    {
+     "nombre": "Portera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "La Gran Vía de Bilbao es la calle de los bancos y de las tiendas. Aquí se pasea con paraguas aunque no llueva.",
+      "En este portal vive un concejal, un tenor y una señora que ha visto ganar ocho Copas al Athletic. La señora manda."
+     ],
+     "nodo": "Portera",
+     "en": [6, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [5, 7],
+   "suelo": "rombos_lila",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [2, 4, 4, 2]]],
+   "muebles": [
+    ["escalera_mano", 8, 0],
+    ["archivador", 5, 1],
+    ["archivador", 6, 1],
+    ["mostrador_oliva_i", 1, 3],
+    ["mostrador_oliva_m", 2, 3],
+    ["mostrador_oliva_d", 3, 3],
+    ["taburete_verde", 2, 5],
+    ["taburete_verde", 3, 5],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_53_27": {
+   "pieza": "teatro_real",
+   "calle": ["bilbao/exterior", [53, 27]],
+   "tipo": "teatro",
+   "nombre": "Teatro Arriaga",
+   "personas": [
+    {
+     "nombre": "Soprano",
+     "aspecto": "npc_lass",
+     "papel": "artista",
+     "frases": [
+      "El Arriaga lleva el nombre de Juan Crisóstomo Arriaga, el Mozart español. Murió con diecinueve años y ya había compuesto una sinfonía.",
+      "Esta noche cantamos ópera. En el entreacto, pintxos en el foyer. Aquí hasta la ópera tiene pintxos."
+     ],
+     "nodo": "Soprano",
+     "en": [6, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Espectador",
+     "aspecto": "tertuliano",
+     "papel": "publico",
+     "frases": [
+      "He visto la misma ópera seis veces. Me sigo emocionando en el mismo sitio y me sigo durmiendo en el mismo sitio."
+     ],
+     "nodo": "Espectador",
+     "en": [5, 8],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Teatro Arriaga (1890). Lo inundó la riada de 1983 hasta el patio de butacas. Se secó y siguió la función."
+     ],
+     "nodo": "Cartel",
+     "en": [8, 1]
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [7, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "marino",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["losa_crema", [2, 2, 10, 2]]],
+   "muebles": [
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["taburete_rojo", 11, 7],
+    ["arbol_maceta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_57_18": {
+   "pieza": "casa_gris",
+   "calle": ["bilbao/exterior", [57, 18]],
+   "tipo": "casa",
+   "nombre": "Casa del aficionado del Athletic",
+   "personas": [
+    {
+     "nombre": "Aficionado zurigorri",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "El Athletic solo juega con jugadores de aquí. Bueno, de aquí, de Navarra, de Iparralde y de cualquiera con una abuela de aquí.",
+      "En 2024 ganamos la Copa y sacamos la gabarra por la ría. Medio millón de personas en las orillas. Lloré como un niño."
+     ],
+     "nodo": "AficionadoZurigorri",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["En casa hay una foto de la gabarra en cada habitación. Hasta en el baño."],
+     "nodo": "Hijo",
+     "en": [5, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Foto enmarcada de la gabarra navegando por la ría con la Copa. Firmada por nadie, pero sagrada."],
+     "nodo": "Cartel",
+     "en": [8, 1]
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "salvia",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["fogones", 3, 1], ["encimera", 5, 1], ["tele", 1, 1], ["arbol_maceta", 1, 4]],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_57_41": {
+   "pieza": "mercado_central",
+   "calle": ["bilbao/exterior", [57, 41]],
+   "tipo": "mercado",
+   "nombre": "Mercado de la Ribera",
+   "personas": [
+    {
+     "nombre": "Pescatera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Es uno de los mercados cubiertos más grandes de Europa, a la orilla de la ría. Abajo pescado; arriba, carne y verdura; y en la planta baja, pintxos.",
+      "Bacalao para el pil pil. El pil pil se hace moviendo la cazuela hasta que la gelatina del bacalao liga el aceite. Mucho brazo."
+     ],
+     "nodo": "Pescatera",
+     "en": [12, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cocinero de sociedad",
+     "aspecto": "npc_old_man",
+     "papel": "cliente",
+     "frases": [
+      "Vengo a por chipirones para la sociedad gastronómica. Allí cocinamos los hombres. Las mujeres, a veces, nos dejan."
+     ],
+     "nodo": "CocineroDeSociedad",
+     "en": [4, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [16, 11],
+   "puerta": [11, 10],
+   "suelo": "hidraulica_rosa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_cristal_i", 2, 4],
+    ["mostrador_cristal_m", 3, 4],
+    ["mostrador_cristal_d", 4, 4],
+    ["mostrador_oliva_i", 11, 3],
+    ["mostrador_oliva_m", 12, 3],
+    ["mostrador_oliva_d", 13, 3],
+    ["mostrador_naranja_i", 9, 6],
+    ["mostrador_naranja_m", 10, 6],
+    ["mostrador_naranja_d", 11, 6]
+   ],
+   "encima": [["plato", 11, 3]],
+   "apariciones": {"default": [11, 9]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_61_49": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["bilbao/exterior", [61, 49]],
+   "tipo": "casa",
+   "nombre": "Sociedad gastronómica de las Siete Calles",
+   "personas": [
+    {
+     "nombre": "Socio cocinero",
+     "aspecto": "npc_old_man",
+     "papel": "cocina",
+     "frases": [
+      "En la sociedad cada uno cocina, come y apunta en un cuaderno lo que ha gastado. Se paga por honor. Nadie hace trampas. Casi nadie.",
+      "Hoy hago merluza en salsa verde. Mañana, alubias de Gernika. Pasado, la revancha del mus."
+     ],
+     "nodo": "SocioCocinero",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Socio de mus",
+     "aspecto": "tertuliano",
+     "papel": "mesa",
+     "frases": ["¡Órdago a la grande! Y si no lo quieres, paga la ronda."],
+     "nodo": "SocioDeMus",
+     "en": [5, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["tatami_verde", [3, 4, 4, 3]]],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["caja", 1, 7],
+    ["mesa_cristal", 3, 5],
+    ["taburete_marron", 5, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_64_48": {
+   "pieza": "casa_gris",
+   "calle": ["bilbao/exterior", [64, 48]],
+   "tipo": "casa",
+   "nombre": "Casa de la etxekoandre",
+   "personas": [
+    {
+     "nombre": "Etxekoandre",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Etxekoandre es la señora de la casa. En esta casa mando yo, y la casa está muy bien mandada.",
+      "Pastel vasco, goxua y canutillos. Si vienes a casa, no te vas sin merendar. Es norma."
+     ],
+     "nodo": "Etxekoandre",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Mi amama me da merienda dos veces: una al llegar y otra antes de irme. Por si acaso."],
+     "nodo": "Nieto",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "moqueta_beige",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_naranja", [3, 3, 4, 2]]],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["tele", 7, 1],
+    ["estante_verde", 9, 1],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_65_23": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["bilbao/exterior", [65, 23]],
+   "tipo": "casa",
+   "nombre": "Casa del trabajador del puerto de Santurtzi",
+   "personas": [
+    {
+     "nombre": "Estibador",
+     "aspecto": "marinero",
+     "papel": "libre",
+     "frases": [
+      "El puerto de Bilbao se fue a Santurtzi, junto al mar. Allí las sardinas se asan en la calle y se venden con la canción.",
+      "«Desde Santurce a Bilbao vengo por toda la orilla». Lo cantamos tanto que las sardinas ya se lo saben."
+     ],
+     "nodo": "Estibador",
+     "en": [2, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": ["Mi marido trabaja con contenedores de medio mundo. En casa, ni una caja en su sitio."],
+     "nodo": "Mujer",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["nevera_alta", 10, 0],
+    ["tele", 2, 1],
+    ["mesa_cristal", 8, 4],
+    ["silla_derecha", 7, 4],
+    ["silla_izquierda", 10, 4],
+    ["arbol_maceta", 1, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "bilbao/sala_calle_69_48": {
+   "pieza": "casa_granero",
+   "calle": ["bilbao/exterior", [69, 48]],
+   "tipo": "casa",
+   "nombre": "Caserío del baserritarra del monte Artxanda",
+   "personas": [
+    {
+     "nombre": "Baserritarra",
+     "aspecto": "pastor",
+     "papel": "libre",
+     "frases": [
+      "En el caserío tenemos vacas, huerta y una txapela para cada ocasión. La de los domingos es la más grande.",
+      "Bajo a Bilbao en el funicular de Artxanda a vender queso. Subo más ligero y con el monedero más pesado."
+     ],
+     "nodo": "Baserritarra",
+     "en": [5, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Amona",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["La cuajada se hace con leche de oveja y una piedra caliente. Así sabe a humo y a monte."],
+     "nodo": "Amona",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["tatami_verde", [9, 6, 3, 2]]],
+   "muebles": [
+    ["fogones", 7, 1],
+    ["fregadero", 9, 1],
+    ["nevera", 11, 1],
+    ["tele", 4, 1],
+    ["sofa", 2, 5],
+    ["planta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  }
+ }
+}
