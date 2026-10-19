@@ -393,6 +393,12 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-personajes`. Área: que 
 
 ---
 
+## Edificios reales · sesión del 2026-10-19
+
+Worktree `pokemon-panchito-agente3`, rama `feat/edificios-reales`. Redibujo individual de las fuentes `.px2` de edificios y monumentos, con referencias reales y comparativas. Se conservan lienzo, fuente del tileset y casilla de puerta. Único responsable de regenerar `exterior.tres` y `objetos.json` durante esta sesión. Las piezas nuevas que necesite el trabajo de rutas se piden en «Peticiones» antes de regenerar.
+
+Primero: casa de madera de Ruta 2, casa roja de Bilbao y faro de Ruta 19; son piezas de packs, por lo que su recurso original se conserva y se corrige la colocación. Después: fachadas de los ocho gimnasios y de la Liga. Todo provisional hasta aprobación de Javier.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)
