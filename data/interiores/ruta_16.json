@@ -1,0 +1,111 @@
+{
+ "_doc": "Interiores personalizados de ruta_16 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 16",
+ "interiores": {
+  "ruta_16/casa_1": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_16/exterior", [27, 23]],
+   "tipo": "casa",
+   "nombre": "Casa del bateeiro",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Bateeiro",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_16_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "La batea es una plataforma de madera con cuerdas colgando. En las cuerdas crece el mejillón solo, con la marea.",
+      "Toma, que en mi casa nadie se va sin algo de la ría. El mejillón no te lo doy, que pesa."
+     ],
+     "en": [1, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mejillones al vapor, en escabeche o a la vinagreta. Llevamos treinta años comiéndolos y no nos cansamos."
+     ],
+     "nodo": "Mujer",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["mesa_cristal", 8, 6],
+    ["taburete_amarillo", 7, 7],
+    ["taburete_amarillo", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "ruta_16/casa_2": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_16/exterior", [31, 37]],
+   "tipo": "casa",
+   "nombre": "Casa del vecino de Sanxenxo",
+   "personas": [
+    {
+     "nombre": "Vecino",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "En verano Sanxenxo pasa de diecisiete mil vecinos a cien mil. En las regatas viene alguien muy conocido en barco. No diré quién.",
+      "El albariño de las Rías Baixas se toma frío, con marisco y mirando al mar. Lo demás es beber vino."
+     ],
+     "nodo": "Vecino",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": [
+      "Vi pasar un barco enorme con señores de gorra. Mi abuelo dijo que me tapara los ojos de la emoción."
+     ],
+     "nodo": "Nieta",
+     "en": [3, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [8, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 7, 1],
+    ["fogones", 9, 1],
+    ["nevera_alta", 11, 0],
+    ["tele", 3, 1],
+    ["estante_menta", 5, 1],
+    ["mesa_cristal", 6, 4],
+    ["silla_derecha", 5, 4],
+    ["silla_izquierda", 8, 4],
+    ["sillon_derecha", 1, 5],
+    ["mesa_cristal", 2, 6],
+    ["sillon_izquierda", 4, 5],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  }
+ }
+}

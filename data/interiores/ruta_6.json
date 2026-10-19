@@ -1,0 +1,343 @@
+{
+ "_doc": "Interiores personalizados de ruta_6 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 6",
+ "interiores": {
+  "ruta_6/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_6/exterior", [24, 10]],
+   "tipo": "casa",
+   "nombre": "Casa del último vecino",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Último vecino",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_6_from_casa_1",
+     "papel": "tele",
+     "frases": [
+      "Somos tres en el pueblo en invierno: yo, mi perro y la señora de enfrente, que no me habla.",
+      "Toma, para que te acuerdes de que aquí vive alguien. El que pasa por aquí, se lleva algo."
+     ],
+     "en": [4, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Foto del pueblo en 1960: escuela, cuarenta niños y una banda de música. Hoy, tres vecinos y una antena."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "tatami_verde",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [4, 4, 5, 3]]],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["sofa", 1, 5],
+    ["palmera_maceta", 11, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "ruta_6/casa_2": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_6/exterior", [10, 10]],
+   "tipo": "casa",
+   "nombre": "Casa de la señora de enfrente",
+   "personas": [
+    {
+     "nombre": "Señora de enfrente",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "No le hablo al de enfrente desde 1987. Fue por una linde. La linde ya no la cultiva nadie, pero el enfado sigue.",
+      "Cuando viene el panadero, los martes, nos vemos en la plaza. Él compra una barra y yo dos, para que se fastidie."
+     ],
+     "nodo": "SenoraDeEnfrente",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "lima",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["encimera", 6, 1],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["mesa_cristal_larga", 6, 4],
+    ["banqueta_azul", 6, 6],
+    ["banqueta_azul", 8, 6],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3],
+    ["palmera_maceta", 9, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_6/sala_calle_32_16": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_6/exterior", [32, 16]],
+   "tipo": "casa",
+   "nombre": "Casa rural de Medinaceli",
+   "personas": [
+    {
+     "nombre": "Dueña de la casa rural",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Medinaceli tiene arco romano, plaza mayor y noches con más estrellas que habitantes. Por eso viene la gente de Madrid.",
+      "En noviembre se celebra el Toro Jubilo, con bolas de fuego en los cuernos. Nosotros lo contamos; no lo recomendamos."
+     ],
+     "nodo": "DuenaDeLaCasaRural",
+     "en": [6, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Huésped",
+     "aspecto": "influencerlinkedin",
+     "papel": "cliente",
+     "frases": ["He venido a desconectar. No hay cobertura. Llevo dos horas buscándola."],
+     "nodo": "Huesped",
+     "en": [1, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 1, 1],
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["tele", 7, 1],
+    ["vitrina_madera", 9, 1],
+    ["arbol_maceta", 11, 0],
+    ["caja", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "ruta_6/sala_calle_42_16": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_6/exterior", [42, 16]],
+   "tipo": "casa",
+   "nombre": "Casa de la maestra de la escuela cerrada",
+   "personas": [
+    {
+     "nombre": "Maestra jubilada",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Di clase en esta escuela hasta que quedaron dos niños. Luego cerraron. Los dos niños son ahora ingenieros en Alemania.",
+      "Guardo las pizarras en el desván. Algún día volverán los niños. O los nietos de los niños."
+     ],
+     "nodo": "MaestraJubilada",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["encimera", 6, 1],
+    ["cajon_oliva", 1, 1],
+    ["tele", 2, 1],
+    ["vitrina_madera", 9, 1],
+    ["mesa_cristal_larga", 7, 5],
+    ["silla_derecha", 6, 5],
+    ["silla_izquierda", 10, 5],
+    ["papelera", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "ruta_6/sala_calle_47_16": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_6/exterior", [47, 16]],
+   "tipo": "casa",
+   "nombre": "Casa del teletrabajador que repobló el pueblo",
+   "personas": [
+    {
+     "nombre": "Teletrabajador",
+     "aspecto": "estudianteinge",
+     "papel": "mesa",
+     "frases": [
+      "Me vine de Barcelona con mi portátil y mi perro. El pueblo ha pasado de tres a cuatro vecinos. Soy un veinticinco por ciento.",
+      "La fibra llegó en 2023. Antes de eso, mandaba los correos desde la loma de la ermita."
+     ],
+     "nodo": "Teletrabajador",
+     "en": [5, 8],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Pareja",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Aquí no hay atascos, ni ruido, ni supermercado. Las tres cosas son verdad a la vez."],
+     "nodo": "Pareja",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "moqueta_beige",
+   "pared": "salvia",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["tatami_verde", [5, 5, 4, 2]]],
+   "muebles": [
+    ["cajon_oliva", 5, 1],
+    ["tele", 6, 1],
+    ["cama_rosa", 1, 1],
+    ["cajon_rosa", 4, 1],
+    ["palmera_maceta", 1, 6],
+    ["papelera", 10, 7],
+    ["mesa_cristal", 6, 7],
+    ["taburete_rojo", 8, 8],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "ruta_6/sala_calle_61_16": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_6/exterior", [61, 16]],
+   "tipo": "taberna",
+   "nombre": "Mesón de Calatayud",
+   "personas": [
+    {
+     "nombre": "Mesonero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Garnacha de Calatayud y ternasco. Si me pides que te cante la jota de la Dolores, te cobro el doble.",
+      "La torre mudéjar de Santa María es Patrimonio de la Humanidad. Mi bodega, patrimonio de mi familia."
+     ],
+     "nodo": "Mesonero",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Viajero",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": ["Paré a por un café y llevo tres horas. Es el mejor sitio de la A-2."],
+     "nodo": "Viajero",
+     "en": [8, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 2, 1],
+    ["encimera", 4, 1],
+    ["nevera_alta", 7, 0],
+    ["mostrador_azul_i", 6, 4],
+    ["mostrador_azul_m", 7, 4],
+    ["mostrador_azul_m", 8, 4],
+    ["mostrador_azul_m", 9, 4],
+    ["mostrador_azul_d", 10, 4],
+    ["taburete_amarillo", 9, 6],
+    ["mesa_cristal", 3, 6],
+    ["taburete_amarillo", 2, 7],
+    ["taburete_amarillo", 5, 7],
+    ["cajas", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "ruta_6/sala_calle_65_15": {
+   "pieza": "casa_roja",
+   "calle": ["ruta_6/exterior", [65, 15]],
+   "tipo": "casa",
+   "nombre": "Casa del pastor de los páramos",
+   "personas": [
+    {
+     "nombre": "Pastor",
+     "aspecto": "pastor",
+     "papel": "libre",
+     "frases": [
+      "En los páramos de Soria hay más ovejas que personas. Las ovejas votan menos, pero comen más.",
+      "La trashumancia era bajar con el rebaño a Extremadura en otoño. Ahora bajan en camión. Las ovejas se marean."
+     ],
+     "nodo": "Pastor",
+     "en": [5, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": [
+      "Quiero ser pastor como mi padre. Mi madre dice que me lo piense. Mi padre dice que ya lo ha pensado él."
+     ],
+     "nodo": "Hijo",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [9, 8],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [3, 3, 3, 2]]],
+   "muebles": [
+    ["alacena", 5, 0],
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["cajon_oliva", 1, 1],
+    ["tele", 2, 1],
+    ["sofa", 8, 3],
+    ["arbol_maceta", 11, 5],
+    ["caja", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 7]},
+   "pasos": []
+  }
+ }
+}

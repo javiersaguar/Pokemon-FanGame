@@ -1,0 +1,115 @@
+{
+ "_doc": "Interiores personalizados de ruta_26 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 26",
+ "interiores": {
+  "ruta_26/casa_1": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_26/exterior", [35, 9]],
+   "tipo": "casa",
+   "nombre": "Casa del guarda del Torcal",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Guarda del paraje",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_26_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "Las rocas del Torcal eran el fondo del mar hace ciento cincuenta millones de años. Por eso hay fósiles de amonites por el suelo.",
+      "Toma, que hoy no se ha perdido nadie en el laberinto. Eso hay que celebrarlo."
+     ],
+     "en": [5, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Porra antequerana: como el salmorejo, pero más espesa. Con huevo, jamón y una cuchara que se tiene de pie."
+     ],
+     "nodo": "Mujer",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 6, 0],
+    ["fogones", 7, 1],
+    ["fregadero", 9, 1],
+    ["tele", 2, 1],
+    ["planta", 4, 1],
+    ["mesa_cristal", 6, 4],
+    ["taburete_amarillo", 5, 5],
+    ["taburete_amarillo", 8, 5],
+    ["planta", 10, 7],
+    ["papelera", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "ruta_26/sala_calle_9_9": {
+   "pieza": "dolmen_antequera",
+   "calle": ["ruta_26/exterior", [9, 9]],
+   "tipo": "dolmen",
+   "nombre": "Dolmen de Menga",
+   "personas": [
+    {
+     "nombre": "Arqueóloga",
+     "aspecto": "arqueologo",
+     "papel": "libre",
+     "frases": [
+      "El dolmen de Menga tiene más de cinco mil años. Las losas pesan hasta ciento ochenta toneladas. Sin grúas.",
+      "Está orientado hacia la Peña de los Enamorados, no hacia el sol. Los que lo hicieron miraban a la montaña."
+     ],
+     "nodo": "Arqueologa",
+     "en": [6, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Escolar",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["Me han dicho que aquí enterraban a la gente. He entrado andando muy despacio."],
+     "nodo": "Escolar",
+     "en": [4, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Dólmenes de Antequera, Patrimonio de la Humanidad (2016). Una cámara de piedra que ha visto pasar cincuenta siglos."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["pedestal", 4, 1],
+    ["estatua_gargola", 6, 0],
+    ["pedestal", 8, 1],
+    ["pedestal", 5, 4],
+    ["caja", 10, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  }
+ }
+}

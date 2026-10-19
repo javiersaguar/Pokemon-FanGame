@@ -1,0 +1,360 @@
+{
+ "_doc": "Interiores personalizados de ruta_5 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 5",
+ "interiores": {
+  "ruta_5/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_5/exterior", [30, 24]],
+   "tipo": "casa",
+   "nombre": "Casa del mozo de almacén",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Mozo de almacén",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_5_from_casa_1",
+     "papel": "tele",
+     "frases": [
+      "En el Corredor del Henares hay más naves que pueblos. Si has comprado algo por internet, ha pasado por mis manos.",
+      "Toma, que hoy sobraban cajas. Una sí, una no, como en la cinta."
+     ],
+     "en": [4, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido trabaja de noche moviendo paquetes. De día no encuentra ni las llaves."],
+     "nodo": "Mujer",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["mesa_cristal", 6, 3],
+    ["taburete_rojo", 5, 4],
+    ["taburete_rojo", 8, 4],
+    ["planta", 1, 5],
+    ["papelera", 9, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "ruta_5/casa_2": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_5/exterior", [20, 11]],
+   "tipo": "casa",
+   "nombre": "Casa del repartidor de la A-2",
+   "personas": [
+    {
+     "nombre": "Repartidor",
+     "aspecto": "repartidorbici",
+     "papel": "libre",
+     "frases": [
+      "Hago doscientas entregas al día. Si no estás en casa, el paquete se queda con la vecina. La vecina ya tiene un almacén.",
+      "La A-2 a las ocho es un aparcamiento con carriles."
+     ],
+     "nodo": "Repartidor",
+     "en": [10, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["Mi padre me trae cajas de cartón vacías. Con ellas he construido un castillo en el salón."],
+     "nodo": "Hija",
+     "en": [3, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["encimera", 8, 1],
+    ["tele", 4, 1],
+    ["mesa_cristal_larga", 7, 4],
+    ["taburete_verde", 7, 6],
+    ["taburete_verde", 9, 6],
+    ["sofa", 1, 7],
+    ["palmera_maceta", 10, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "ruta_5/sala_calle_31_12": {
+   "pieza": "universidad_alcala",
+   "calle": ["ruta_5/exterior", [31, 12]],
+   "tipo": "universidad",
+   "nombre": "Universidad de Alcalá, Colegio de San Ildefonso",
+   "personas": [
+    {
+     "nombre": "Profesora de Letras",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "La fundó el cardenal Cisneros en 1499. Aquí el rey entrega cada abril el Premio Cervantes, en el Paraninfo.",
+      "El patio trilingüe se llama así porque se enseñaba latín, griego y hebreo. Ahora, inglés y paciencia."
+     ],
+     "nodo": "ProfesoraDeLetras",
+     "en": [8, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Estudiante",
+     "aspecto": "estudianteinge_f",
+     "papel": "publico",
+     "frases": ["Estudio Filología. Leo el Quijote por tercera vez. Esta vez, voluntariamente."],
+     "nodo": "Estudiante",
+     "en": [3, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Fachada plateresca de San Ildefonso (1543). Patrimonio de la Humanidad. Y de los estudiantes que hacen fotos de la orla."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_verdes",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_mostaza", 6, 0],
+    ["mostrador_azul", 7, 2],
+    ["armario_mostaza", 10, 0],
+    ["mesa_cristal", 3, 3],
+    ["taburete_amarillo", 3, 5],
+    ["arbol_maceta", 10, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "ruta_5/sala_calle_47_11": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_5/exterior", [47, 11]],
+   "tipo": "casa",
+   "nombre": "Casa natal de Cervantes",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Miguel de Cervantes nació en Alcalá en 1547. En la puerta hay una estatua de don Quijote y Sancho sentados en un banco.",
+      "Todo el mundo se hace la foto con Sancho. Don Quijote se queda solo, mirando a lo lejos. Como en el libro."
+     ],
+     "nodo": "Guia",
+     "en": [6, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Lector",
+     "aspecto": "tertuliano",
+     "papel": "libre",
+     "frases": ["En un lugar de Alcalá, de cuyo nombre sí quiero acordarme… Así empiezo mis cartas."],
+     "nodo": "Lector",
+     "en": [1, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Cocina de una casa del siglo XVI: un fogón, un pozo y una mesa. Aquí comía la familia de Cervantes, más o menos."
+     ],
+     "nodo": "Cartel",
+     "en": [9, 1]
+    }
+   ],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["nevera_alta", 7, 0],
+    ["mesa_cristal_larga", 3, 3],
+    ["banqueta_azul", 3, 5],
+    ["banqueta_azul", 5, 5],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "ruta_5/sala_calle_56_12": {
+   "pieza": "palacio_infantado",
+   "calle": ["ruta_5/exterior", [56, 12]],
+   "tipo": "palacio",
+   "nombre": "Palacio del Infantado de Guadalajara",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "La fachada está llena de puntas de diamante, como un castillo de joyería. Es del siglo XV, de los Mendoza.",
+      "Lo bombardearon en la guerra y se quemaron los frescos. El patio de los leones aguantó. Los leones son duros."
+     ],
+     "nodo": "Guia",
+     "en": [8, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Vigilante",
+     "aspecto": "npc_man",
+     "papel": "vitrina",
+     "frases": ["Dentro está el museo de Guadalajara. Se viene por la fachada y se queda uno por el museo."],
+     "nodo": "Vigilante",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 11],
+   "puerta": [9, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [4, 4, 8, 5]]],
+   "muebles": [
+    ["estatua_aguila", 1, 0],
+    ["vitrina_madera", 4, 1],
+    ["estatua_aguila", 6, 0],
+    ["mesa_cristal_larga", 4, 4],
+    ["silla_derecha", 3, 4],
+    ["silla_izquierda", 7, 4],
+    ["arbol_maceta", 12, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 9]},
+   "pasos": []
+  },
+  "ruta_5/sala_calle_58_27": {
+   "pieza": "bloque_pisos",
+   "calle": ["ruta_5/exterior", [58, 27]],
+   "tipo": "portal",
+   "nombre": "Portal de Azuqueca de Henares",
+   "personas": [
+    {
+     "nombre": "Vecina",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Azuqueca era un pueblo y ahora es una ciudad dormitorio. Duermen aquí y trabajan en Madrid. Algunos duermen en el tren.",
+      "En este portal hay gente de veinte países. Las fiestas de la comunidad son las mejores de la provincia."
+     ],
+     "nodo": "Vecina",
+     "en": [6, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_beige", [3, 3, 5, 3]]],
+   "muebles": [
+    ["planta", 4, 1],
+    ["escalera_mano", 5, 0],
+    ["cajonera_azul", 2, 1],
+    ["mostrador_madera_i", 2, 4],
+    ["mostrador_madera_m", 3, 4],
+    ["mostrador_madera_d", 4, 4],
+    ["taburete_verde", 8, 7],
+    ["taburete_verde", 9, 7],
+    ["arbol_maceta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_5/sala_calle_65_11": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_5/exterior", [65, 11]],
+   "tipo": "casa",
+   "nombre": "Casa de las cigüeñas de Alcalá",
+   "personas": [
+    {
+     "nombre": "Ornitóloga",
+     "aspecto": "ornitologa",
+     "papel": "libre",
+     "frases": [
+      "Alcalá tiene más de cien nidos de cigüeña en los tejados. Es la ciudad de las cigüeñas. Ellas no pagan IBI.",
+      "En febrero ya están aquí. Antes venían en primavera; ahora se adelantan, como las rebajas."
+     ],
+     "nodo": "Ornitologa",
+     "en": [7, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Una cigüeña me ha mirado mal desde la torre. Creo que es la de los bebés y me ha reconocido."],
+     "nodo": "Hijo",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "parquet",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["tele", 3, 1],
+    ["vitrina_madera", 1, 1],
+    ["mesa_cristal_larga", 4, 4],
+    ["silla_derecha", 3, 4],
+    ["silla_izquierda", 7, 4],
+    ["arbol_maceta", 10, 5],
+    ["papelera", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  }
+ }
+}
