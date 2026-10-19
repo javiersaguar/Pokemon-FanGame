@@ -713,6 +713,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 
 **Hecho:**
 - **Ruta 26 · El Torcal:** borrador del 15 validado y aplicado (`maps/_pintura/vestir/ruta_26.gd`). Para que pasara: entrada de dos casillas al claro del este desde la explanada del dolmen (estaba cerrado y el entrenador y la Ultra Ball quedaban fuera de alcance) y siete bloques recortados una casilla para no tapar celdas protegidas. Entrenador nuevo `ruta26_guarda` (clase `guarda_parque`, Crustle 51 y Golem 52, dentro de la curva 50–53; no hay clase de geólogo y no se crea), tres objetos en `data/item_placements.json` (Ultra Ball en el mirador, Hiperpoción y Maxirrepelente ocultos) y parche dorado rehecho. Hierba mínima entre Ruta 25 y Málaga: 4 en los dos sentidos (antes 0). Alcance desde `from_ruta_25` y `from_malaga`: 0 problemas. [Capturas](arte/seguimiento.md#ciudades-y-rutas-al-nivel-de-añil-agente-5-2026-10-15).
+- **Ruta 21 · Viñedos de La Rioja:** receta nueva `maps/_pintura/vestir/ruta_21.gd` (plano generado desde el volcado del mapa). Bosque continuo en los bordes, cepas (`cepa_rioja`) junto a las bodegas, cerro con escalera y mirador, terrazas con bordillo, camino que serpentea, paso obligado por hierba al salir del pueblo y viñedos vallados. Hierba mínima Pamplona ⇄ Ruta 22: 4 (antes 0). Alcance desde `from_pamplona` y `from_ruta_22`: 0 problemas. Tres objetos nuevos (lista regenerada con `build_item_placements.gd`) y parche dorado rehecho.
 
 **Provisional:** arte, textos del guarda y colocación.
 
