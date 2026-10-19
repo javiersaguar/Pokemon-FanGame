@@ -48,7 +48,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `templo_debod` | [6, 4]; [2, 0] | `madrid/moncloa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/templo_debod.png) |
 | `puerta_debod` | [3, 4]; [-1, -1] | `madrid/moncloa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/puerta_debod.png) |
 | `faro_moncloa` | [3, 12]; [-1, -1] | `madrid/moncloa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/faro_moncloa.png) |
-| `casa_correos` | [12, 9]; [5, 0] | `madrid/centro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/casa_correos.png) |
+| `casa_correos` | [12, 9]; [5, 0] | `madrid/centro` | Redibujado, provisional; referencias reales, tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/casa_correos.png) |
 | `oso_madrono` | [2, 3]; [-1, -1] | `madrid/centro` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/oso_madrono.png) |
 | `soportales` | [4, 6]; [-1, -1] | `barcelona/ciutat_vella`, `bilbao/exterior`, `getafe/exterior`, `leganes/exterior`, `madrid/centro`, `malaga/exterior`, `palma/exterior`, `pamplona/exterior`, `ruta_5/exterior`, `santander/exterior`, `valencia/ciutat_vella`, `valladolid/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/soportales.png) |
 | `soportales_arco` | [4, 6]; [-1, -1] | `bilbao/exterior`, `madrid/centro`, `valladolid/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/soportales_arco.png) |
@@ -209,3 +209,18 @@ Huella de colisión anterior declarada de forma explícita. No se cambia el mapa
 
 
 **Comprobación conjunta del bloque 2, primera pasada:** **612/614 pruebas**, **81.688/81.697 aserciones**, **816,937 s**. Fallan dos pruebas de `test_city_services.gd`: en `getafe/casa_vecina` no se abre el PC desde (8,5) ni se sale desde (8,11); en `getafe/casa_1` no se recoge el regalo desde (12,7). Los edificios redibujados pasan su contrato. El agente de interiores ha guardado una corrección de ambas casas en su rama (`686f0efe`); falta que llegue a main y repetir la suite. No se modifican sus mapas desde edificios. Arte: **11.494 PNG, 0 errores/avisos**. Datos: **0 errores, 2 avisos anteriores**. Grafo: **958 mapas, todos alcanzables y con vuelta**. No se da el bloque por integrado.
+
+### Real Casa de Correos
+
+La fachada anterior mezclaba ladrillo muy marcado y un reloj desproporcionado. Se redibujan los recuadros rojizos entre marcos de piedra clara, las dos plantas, el balcón sobre el portal, la cornisa, la profundidad del tejado y el templete del reloj. Se conserva el acceso en la casilla existente; el eje de la fachada se adapta a esa restricción. Los dos patios de la vista aérea histórica no se representan como salas ni accesos nuevos en este dibujo exterior.
+
+Lienzo **12×9 casillas**, fuente **31**, puerta **[5, 0]**. Huella de colisión anterior declarada en el catálogo; no se cambia la escena exterior ni la identidad del interior.
+
+Referencias consultadas el 20 de octubre de 2026: [fotografías de Turismo de Madrid](https://www.esmadrid.com/informacion-turistica/real-casa-correos), [planta de dos patios y vistas aéreas históricas de la Comunidad](https://www.comunidad.madrid/real-casa-correos). Las fotografías solo se enlazan. Las fuentes quedan también en la cabecera del `.px2`.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | ![](edificios_reales/piezas_antes/casa_correos.png) | ![](edificios_reales/piezas_despues/casa_correos.png) |
+| Misma escena y escala | [mapa](edificios_reales/casa_correos_mapa_antes.png) | [mapa](edificios_reales/casa_correos_mapa_despues.png) |
+
+Contrato dirigido: **3/3, 735 aserciones**. Alcance de `madrid/centro`: **0 problemas**. Los avisos anteriores de recursos retenidos al salir de la herramienta siguen presentes. Arte provisional; falta la comprobación conjunta con la corrección de Getafe integrada.

@@ -627,6 +627,8 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 
 | San Mamés, envolvente y cubierta | redibujado y comprobado en Bilbao; provisional | pendiente | [Referencias y antes/después](comparativas/edificios_reales.md#san-mamés) |
 
+| Real Casa de Correos · redibujo real | fuente manual y comparativa en el mapa; provisional | pendiente | [Antes/después](comparativas/edificios_reales.md) |
+
 ## Interiores personalizados · 20 de octubre de 2026
 
 | Recurso | Área | Responsable | Estado | Procedencia | Aprobación Javier | Comparativa |

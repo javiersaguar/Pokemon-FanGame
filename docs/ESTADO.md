@@ -444,6 +444,8 @@ San Mamés también redibujado: cinco bandas de lamas claras, cubierta con hueco
 
 **Comprobación conjunta del bloque 2, primera pasada:** **612/614 pruebas**, **81.688/81.697 aserciones**, **816,937 s**. Fallan dos pruebas de `test_city_services.gd`: en `getafe/casa_vecina` no se abre el PC desde (8,5) ni se sale desde (8,11); en `getafe/casa_1` no se recoge el regalo desde (12,7). Los edificios redibujados pasan su contrato. El agente de interiores ha guardado una corrección de ambas casas en su rama (`686f0efe`); falta que llegue a main y repetir la suite. No se modifican sus mapas desde edificios. Arte: **11.494 PNG, 0 errores/avisos**. Datos: **0 errores, 2 avisos anteriores**. Grafo: **958 mapas, todos alcanzables y con vuelta**. No se da el bloque por integrado.
 
+**Fachada preparada: Real Casa de Correos.** La fachada anterior mezclaba ladrillo muy marcado y un reloj desproporcionado. Se redibujan los recuadros rojizos entre marcos de piedra clara, las dos plantas, el balcón sobre el portal, la cornisa, la profundidad del tejado y el templete del reloj. Se conserva el acceso en la casilla existente; el eje de la fachada se adapta a esa restricción. Los dos patios de la vista aérea histórica no se representan como salas ni accesos nuevos en este dibujo exterior. Contrato 3/3 (735 aserciones), alcance 0 problemas. Comparativas individual y en mapa guardadas. Provisional; la integración espera la suite conjunta.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)
