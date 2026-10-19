@@ -1,0 +1,1309 @@
+{
+ "_doc": "Interiores personalizados de las_palmas (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Las Palmas",
+ "interiores": {
+  "las_palmas/sala_canteras_24_46": {
+   "pieza": "oficinas_azules",
+   "calle": ["las_palmas/canteras", [24, 46]],
+   "tipo": "oficina",
+   "nombre": "Oficina de la naviera del puerto de La Luz",
+   "personas": [
+    {
+     "nombre": "Empleada de la naviera",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "El ferry a Huelva tarda más de un día. El avión, dos horas. Los camiones y los que tienen miedo a volar van en ferry.",
+      "El puerto de La Luz es el más grande de Canarias. Aquí paran los barcos que cruzan del Mediterráneo a América."
+     ],
+     "nodo": "EmpleadaDeLaNaviera",
+     "en": [4, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Camionero",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": ["Llevo plátanos a la península y vuelvo con lo que me carguen. A veces, con muebles de Ikea."],
+     "nodo": "Camionero",
+     "en": [6, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "losa_crema",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 2, 0],
+    ["archivador", 4, 1],
+    ["mostrador_oliva", 8, 5],
+    ["banqueta_azul", 9, 7],
+    ["mostrador_oliva", 5, 4],
+    ["banqueta_azul", 6, 6],
+    ["tele", 7, 1],
+    ["arbol_maceta", 12, 0],
+    ["papelera", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_25_32": {
+   "pieza": "edificio_cristal",
+   "calle": ["las_palmas/canteras", [25, 32]],
+   "tipo": "hotel",
+   "nombre": "Hotel frente a Las Canteras",
+   "personas": [
+    {
+     "nombre": "Recepcionista",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Todas las habitaciones dan a la playa. Bueno, todas menos las que dan al patio. Esas dan al patio.",
+      "Aquí el turista viene en invierno. En verano vienen los de la península a huir del calor. Es al revés que en todos sitios."
+     ],
+     "nodo": "Recepcionista",
+     "en": [7, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Nómada digital",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "Trabajo para una empresa de Ámsterdam desde la terraza. Mi jefe cree que tengo una lámpara de sol en la oficina."
+     ],
+     "nodo": "NomadaDigital",
+     "en": [4, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 10],
+   "puerta": [4, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [6, 5, 4, 2]]],
+   "muebles": [
+    ["recepcion", 6, 2],
+    ["sofa", 8, 5],
+    ["pecera", 2, 2],
+    ["palmera_maceta", 11, 6],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_26_19": {
+   "pieza": "puesto_mercado",
+   "calle": ["las_palmas/canteras", [26, 19]],
+   "tipo": "kiosco",
+   "nombre": "Kiosco de la Isleta",
+   "personas": [
+    {
+     "nombre": "Kiosquera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Barraquito, mi niño: café, leche condensada, licor, leche, espuma y canela. En capas. No lo remuevas hasta que te lo diga.",
+      "En la Isleta se habla rápido y alto. No estamos enfadados, estamos hablando."
+     ],
+     "nodo": "Kiosquera",
+     "en": [4, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_tablas_i", 2, 4],
+    ["mostrador_tablas_m", 3, 4],
+    ["mostrador_tablas_d", 4, 4],
+    ["nevera_alta", 4, 0],
+    ["cajas", 5, 1]
+   ],
+   "encima": [["plato_comida", 2, 4], ["plato_comida", 3, 4]],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_33_32": {
+   "pieza": "bloque_pisos",
+   "calle": ["las_palmas/canteras", [33, 32]],
+   "tipo": "piso",
+   "nombre": "Piso del surfista de La Cícer",
+   "personas": [
+    {
+     "nombre": "Surfista",
+     "aspecto": "surfista",
+     "papel": "libre",
+     "frases": [
+      "La Cícer es la punta sur de Las Canteras: ahí rompe la ola. La Barra protege el resto de la playa como una piscina.",
+      "Me levanto, miro el parte de olas, y si no hay olas, vuelvo a la cama. Es mi rutina laboral."
+     ],
+     "nodo": "Surfista",
+     "en": [3, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Compañera",
+     "aspecto": "nadador_f",
+     "papel": "tele",
+     "frases": [
+      "Él surfea y yo nado hasta la Barra. A la vuelta nos tomamos unas papas arrugadas. Es nuestra vida."
+     ],
+     "nodo": "Companera",
+     "en": [4, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [4, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["encimera", 5, 1],
+    ["nevera", 8, 1],
+    ["consola", 1, 2],
+    ["tele", 2, 1],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_39_21": {
+   "pieza": "tienda_naranja",
+   "calle": ["las_palmas/canteras", [39, 21]],
+   "tipo": "tienda",
+   "nombre": "Tienda de surf de Las Canteras",
+   "personas": [
+    {
+     "nombre": "Dependiente surfero",
+     "aspecto": "surfista",
+     "papel": "dependiente",
+     "frases": [
+      "Neopreno de tres milímetros, que aquí el agua está a dieciocho grados. El que viene en bañador sale morado.",
+      "Alquilamos tablas por horas. La mayoría de las horas se pasan en el suelo, cayéndose."
+     ],
+     "nodo": "DependienteSurfero",
+     "en": [3, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": ["Quiero aprender a surfear en una tarde. Me han dicho que no. Lo voy a intentar igual."],
+     "nodo": "Cliente",
+     "en": [2, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 8, 1],
+    ["estanteria_alta_menta", 10, 0],
+    ["mostrador_blanco_i", 2, 3],
+    ["mostrador_blanco_m", 3, 3],
+    ["mostrador_blanco_d", 4, 3],
+    ["estanteria_baja_menta", 7, 5],
+    ["estanteria_baja_menta", 9, 5],
+    ["cajas", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_41_31": {
+   "pieza": "bloque_verde",
+   "calle": ["las_palmas/canteras", [41, 31]],
+   "tipo": "piso",
+   "nombre": "Piso de la familia canaria del Puerto",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Papas arrugadas con mojo rojo y mojo verde. El rojo pica; el verde, menos. Los de fuera se equivocan siempre.",
+      "En Canarias decimos «guagua» al autobús y «mi niño» a todo el mundo, también al guagüero."
+     ],
+     "nodo": "Madre",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": ["En la península me dicen que hablo como los cubanos. Los cubanos dicen que hablan como nosotros."],
+     "nodo": "Hijo",
+     "en": [2, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "moqueta_beige",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal", 2, 4],
+    ["taburete_amarillo", 4, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_41_46": {
+   "pieza": "bloque_pisos",
+   "calle": ["las_palmas/canteras", [41, 46]],
+   "tipo": "portal",
+   "nombre": "Portal del barrio de Guanarteme",
+   "personas": [
+    {
+     "nombre": "Portero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Guanarteme era barrio de tomateros y de pescadores. Ahora son pisos. Los tomates se fueron al sur.",
+      "Desde la azotea se ve el Teide en Tenerife, si está despejado. Los de aquí lo miramos con desconfianza."
+     ],
+     "nodo": "Portero",
+     "en": [4, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 9],
+   "puerta": [5, 8],
+   "suelo": "piedra",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [2, 4, 3, 3]]],
+   "muebles": [
+    ["planta", 4, 1],
+    ["escalera_mano", 5, 0],
+    ["cajonera_gris", 1, 1],
+    ["cajon_gris", 3, 1],
+    ["mostrador_cristal_i", 4, 4],
+    ["mostrador_cristal_m", 5, 4],
+    ["mostrador_cristal_d", 6, 4],
+    ["arbol_maceta", 7, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_43_15": {
+   "pieza": "castillo_luz",
+   "calle": ["las_palmas/canteras", [43, 15]],
+   "tipo": "castillo",
+   "nombre": "Castillo de la Luz",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Es la fortaleza más antigua de la ciudad, del siglo XV. Defendía el puerto de los piratas holandeses e ingleses.",
+      "Ahora es la fundación de Martín Chirino, el escultor de las espirales de hierro. Antes cañones; ahora, arte."
+     ],
+     "nodo": "Guia",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vigilante",
+     "aspecto": "npc_man",
+     "papel": "vitrina",
+     "frases": ["Las espirales de Chirino representan el viento. Aquí el viento se representa solo, pero bueno."],
+     "nodo": "Vigilante",
+     "en": [8, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Castillo de la Luz (siglo XV). Lo atacó el pirata Van der Does en 1599. Se fue sin el castillo y con muchos agujeros."
+     ],
+     "nodo": "Cartel",
+     "en": [12, 1]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [4, 10],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 2, 0], ["cajas", 5, 1], ["cajas", 10, 5], ["vitrina_madera", 9, 1]],
+   "encima": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_11_8": {
+   "pieza": "casa_tejado_azul",
+   "calle": ["las_palmas/vegueta_triana", [11, 8]],
+   "tipo": "tienda",
+   "nombre": "Tienda de timples de la calle Mayor de Triana",
+   "personas": [
+    {
+     "nombre": "Luthier",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "El timple es una guitarra pequeña de cinco cuerdas con la espalda abombada. Suena como si el sol tocara.",
+      "Un timple bueno tarda un mes en hacerse. Uno malo, en Internet, dos días. Se nota."
+     ],
+     "nodo": "Luthier",
+     "en": [4, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Músico",
+     "aspecto": "tuno",
+     "papel": "cliente",
+     "frases": ["Toco isas y folías. Los turistas me piden «Despacito». Lo toco con timple y se callan del susto."],
+     "nodo": "Musico",
+     "en": [3, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [7, 7],
+   "suelo": "rombos_verdes",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 7, 1],
+    ["estanteria_alta_madera", 9, 0],
+    ["mostrador_madera_i", 2, 3],
+    ["mostrador_madera_m", 3, 3],
+    ["mostrador_madera_d", 4, 3],
+    ["cajonera_azul", 5, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_18_30": {
+   "pieza": "casa_teja",
+   "calle": ["las_palmas/vegueta_triana", [18, 30]],
+   "tipo": "casa",
+   "nombre": "Casa canaria de balcón de madera",
+   "personas": [
+    {
+     "nombre": "Abuela canaria",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Los balcones de tea, de madera de pino canario, duran siglos. Esta casa tiene cuatrocientos años y el balcón también.",
+      "El patio con la palmera y el aljibe es el corazón de la casa. Aquí se refresca uno sin aire acondicionado."
+     ],
+     "nodo": "AbuelaCanaria",
+     "en": [2, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": ["Mi abuela tiene un loro que dice «ay, mi niño». Lo aprendió de ella."],
+     "nodo": "Nieta",
+     "en": [2, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "moqueta_beige",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 6, 1],
+    ["fregadero", 7, 1],
+    ["fogones", 9, 1],
+    ["tele", 3, 1],
+    ["estante_mostaza", 5, 1],
+    ["mesa_cristal_larga", 7, 5],
+    ["banqueta_azul", 7, 7],
+    ["banqueta_azul", 9, 7],
+    ["planta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_18_8": {
+   "pieza": "edificio_cupula",
+   "calle": ["las_palmas/vegueta_triana", [18, 8]],
+   "tipo": "palacio",
+   "nombre": "Gabinete Literario",
+   "personas": [
+    {
+     "nombre": "Socio del Gabinete",
+     "aspecto": "tertuliano",
+     "papel": "tele",
+     "frases": [
+      "El Gabinete Literario es de 1844. Aquí se reunían los intelectuales de la isla a hablar de libros. Ahora, de fútbol.",
+      "El salón dorado tiene espejos, lámparas y un techo que da miedo limpiar."
+     ],
+     "nodo": "SocioDelGabinete",
+     "en": [12, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Bibliotecaria",
+     "aspecto": "npc_woman",
+     "papel": "estanteria",
+     "frases": [
+      "Galdós era de Las Palmas. Lo leemos aquí todos los años, aunque él se marchara a Madrid y no volviera."
+     ],
+     "nodo": "Bibliotecaria",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [16, 12],
+   "puerta": [12, 11],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [4, 4, 10, 6]]],
+   "muebles": [
+    ["estatua_aguila", 1, 0],
+    ["vitrina_madera", 4, 1],
+    ["estatua_aguila", 6, 0],
+    ["sillon_derecha", 7, 7],
+    ["mesa_cristal", 8, 8],
+    ["sillon_izquierda", 10, 7],
+    ["vitrina_alta", 1, 7],
+    ["arbol_maceta", 14, 8],
+    ["pedestal", 13, 1],
+    ["tele_pequena", 12, 2],
+    ["estanteria_alta_menta", 9, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [12, 10]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_19_19": {
+   "pieza": "casa_tejado_azul_2",
+   "calle": ["las_palmas/vegueta_triana", [19, 19]],
+   "tipo": "casa",
+   "nombre": "Casa del guagüero de Triana",
+   "personas": [
+    {
+     "nombre": "Guagüero",
+     "aspecto": "guaguero",
+     "papel": "tele",
+     "frases": [
+      "Llevo la guagua de la línea 1, de Teatro al Puerto. Me conozco a todos los pasajeros y a todos sus nietos.",
+      "En Carnaval la guagua va llena de piratas, de reinas y de un señor vestido de plátano."
+     ],
+     "nodo": "Guaguero",
+     "en": [2, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido conduce con más paciencia que yo cocino. Y yo cocino con mucha."],
+     "nodo": "Mujer",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["tele", 2, 1],
+    ["estante_menta", 4, 1],
+    ["sofa", 1, 3],
+    ["planta", 1, 6],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_21_38": {
+   "pieza": "catedral_santa_ana",
+   "calle": ["las_palmas/vegueta_triana", [21, 38]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Santa Ana",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Se empezó en 1497 y se terminó en el siglo XX. Gótica por dentro y neoclásica por fuera. Una catedral con dos caras.",
+      "Desde la torre se ve toda Vegueta, el puerto y, al fondo, el mar. Se sube en ascensor, por suerte."
+     ],
+     "nodo": "Sacristan",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista_f",
+     "papel": "publico",
+     "frases": ["Las columnas parecen palmeras de piedra. Ahora entiendo el nombre de la ciudad."],
+     "nodo": "Turista",
+     "en": [8, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 12],
+   "puerta": [7, 11],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [7, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 6, 3],
+    ["pedestal", 3, 1],
+    ["pedestal", 10, 1],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 12, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 4, 8],
+    ["banco_rojo", 8, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 10], "desde_sala_vegueta_triana_21_38_torre": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Torre",
+     "en": [2, 1],
+     "destino": "las_palmas/sala_vegueta_triana_21_38_torre",
+     "aparicion": "default",
+     "vuelta": "desde_sala_vegueta_triana_21_38_torre",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "las_palmas/sala_vegueta_triana_21_38_torre": {
+   "tipo": "torre",
+   "nombre": "Torre de la catedral de Santa Ana",
+   "personas": [
+    {
+     "nombre": "Fotógrafo",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "Desde aquí se ven los perros de bronce de la plaza de Santa Ana. Canarias viene de «canis»: tierra de perros."
+     ],
+     "nodo": "Fotografo",
+     "en": [6, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Mirador de la torre: Vegueta, el barrio fundacional de 1478, a tus pies."],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "padre": "las_palmas/sala_vegueta_triana_21_38",
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "chapa",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 1, 0], ["cajas", 4, 1], ["cajon_gris", 8, 1], ["papelera", 8, 5]],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": [],
+   "salida": {
+    "destino": "las_palmas/sala_vegueta_triana_21_38",
+    "aparicion": "desde_sala_vegueta_triana_21_38_torre"
+   }
+  },
+  "las_palmas/sala_vegueta_triana_24_19": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["las_palmas/vegueta_triana", [24, 19]],
+   "tipo": "casa",
+   "nombre": "Casa de la murguera del Carnaval",
+   "personas": [
+    {
+     "nombre": "Murguera",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "El Carnaval de Las Palmas es de los más grandes del mundo. La Gala Drag es lo más visto de toda Canarias.",
+      "En mi murga cantamos críticas al cabildo con letras de canciones de verano. El cabildo se ríe. A veces."
+     ],
+     "nodo": "Murguera",
+     "en": [5, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Costurera",
+     "aspecto": "npc_old_woman",
+     "papel": "mesa",
+     "frases": ["Llevo cosiendo lentejuelas desde noviembre. En febrero me salen lentejuelas hasta en los sueños."],
+     "nodo": "Costurera",
+     "en": [8, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "parquet",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [2, 4, 4, 3]]],
+   "muebles": [
+    ["nevera", 5, 1],
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["tele", 1, 1],
+    ["sillon_derecha", 6, 5],
+    ["mesa_cristal", 7, 6],
+    ["sillon_izquierda", 9, 5],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_25_8": {
+   "pieza": "casa_teja",
+   "calle": ["las_palmas/vegueta_triana", [25, 8]],
+   "tipo": "cafeteria",
+   "nombre": "Cafetería de la calle Mayor de Triana",
+   "personas": [
+    {
+     "nombre": "Camarero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Un barraquito, un leche y leche y un cortado. Aquí cada café tiene nombre propio.",
+      "La calle Mayor de Triana es peatonal y comercial desde hace un siglo. Los edificios modernistas miran a los que compran."
+     ],
+     "nodo": "Camarero",
+     "en": [5, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Señora",
+     "aspecto": "npc_woman",
+     "papel": "cliente",
+     "frases": ["Vengo a tomar el café a las once, como mi madre. Ella venía con sombrero. Yo, con el móvil."],
+     "nodo": "Senora",
+     "en": [2, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_morados",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["encimera", 6, 1],
+    ["estanteria_alta_nogal", 9, 0],
+    ["mostrador_cristal_i", 2, 4],
+    ["mostrador_cristal_m", 3, 4],
+    ["mostrador_cristal_m", 4, 4],
+    ["mostrador_cristal_m", 5, 4],
+    ["mostrador_cristal_d", 6, 4],
+    ["taburete_marron", 3, 6],
+    ["taburete_marron", 5, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_31_27": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["las_palmas/vegueta_triana", [31, 27]],
+   "tipo": "casa",
+   "nombre": "Casa del platanero",
+   "personas": [
+    {
+     "nombre": "Platanero",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "El plátano de Canarias es más pequeño y tiene motitas. La banana es más grande y no sabe a nada. Apúntalo.",
+      "Las plataneras necesitan agua y viento suave. El agua escasea; el viento, nunca."
+     ],
+     "nodo": "Platanero",
+     "en": [8, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": [
+      "En casa comemos plátano frito con las papas, con el arroz y con todo. Somos plataneros profesionales."
+     ],
+     "nodo": "Hija",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "moqueta_beige",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [4, 5, 3, 3]]],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["nevera", 9, 1],
+    ["tele", 2, 1],
+    ["planta", 4, 1],
+    ["mesa_cristal_larga", 7, 4],
+    ["silla_derecha", 6, 4],
+    ["silla_izquierda", 10, 4],
+    ["sofa", 2, 7],
+    ["arbol_maceta", 12, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_31_37": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["las_palmas/vegueta_triana", [31, 37]],
+   "tipo": "museo",
+   "nombre": "Casa de Colón",
+   "personas": [
+    {
+     "nombre": "Guía del museo",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Colón paró en Gran Canaria en su primer viaje para arreglar el timón de la Pinta. Dicen que se alojó en esta casa.",
+      "El patio tiene un pozo donde la tradición dice que Colón bebió agua. La tradición tiene mucha sed."
+     ],
+     "nodo": "GuiaDelMuseo",
+     "en": [5, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vigilante",
+     "aspecto": "npc_man",
+     "papel": "vitrina",
+     "frases": ["Hay una réplica del camarote de Colón. Es más pequeño que mi cuarto de baño."],
+     "nodo": "Vigilante",
+     "en": [11, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": ["Cartas náuticas del siglo XV. El mundo era más pequeño y mucho más vacío en los mapas."],
+     "nodo": "Cartel",
+     "en": [12, 5]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [3, 10],
+   "suelo": "parquet",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [3, 4, 4, 2]]],
+   "muebles": [
+    ["pedestal", 4, 5],
+    ["pedestal", 7, 5],
+    ["vitrina_alta", 12, 2],
+    ["estatua_gargola", 1, 7],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_36_37": {
+   "pieza": "casa_granero",
+   "calle": ["las_palmas/vegueta_triana", [36, 37]],
+   "tipo": "casa",
+   "nombre": "Casa de la quesera de Flor de Guía",
+   "personas": [
+    {
+     "nombre": "Quesera",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "El queso de flor se cuaja con la flor del cardo, no con cuajo animal. Es suave y amarga un poco al final, como la vida.",
+      "Mi cabra se llama Rosario y tiene más carácter que mi marido."
+     ],
+     "nodo": "Quesera",
+     "en": [5, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "pastor",
+     "papel": "libre",
+     "frases": ["Confirmo lo de la cabra."],
+     "nodo": "Marido",
+     "en": [4, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["vitrina_madera", 8, 1],
+    ["arbol_maceta", 1, 0],
+    ["papelera", 9, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_37_46": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["las_palmas/vegueta_triana", [37, 46]],
+   "tipo": "casa",
+   "nombre": "Casa del luchador canario",
+   "personas": [
+    {
+     "nombre": "Luchador canario",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "En la lucha canaria se gana tirando al rival al suelo dentro del terrero. Sin golpes. Con agarre, fuerza y maña.",
+      "Antes de cada agarrada nos damos la mano. Después de tirarte al suelo, te ayudo a levantarte."
+     ],
+     "nodo": "LuchadorCanario",
+     "en": [7, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Mi hijo come gofio por la mañana, al mediodía y por la noche. Para eso no hace falta dieta: hace falta gofio."
+     ],
+     "nodo": "Madre",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "rombos_lila",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [7, 4, 3, 3]]],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["encimera", 3, 1],
+    ["tele", 6, 1],
+    ["estante_nogal", 8, 1],
+    ["mesa_cristal", 2, 5],
+    ["silla_derecha", 1, 5],
+    ["silla_izquierda", 4, 5],
+    ["sofa", 8, 4],
+    ["planta", 10, 6],
+    ["caja", 10, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_39_22": {
+   "pieza": "casa_gris",
+   "calle": ["las_palmas/vegueta_triana", [39, 22]],
+   "tipo": "casa",
+   "nombre": "Casa del poeta de Vegueta",
+   "personas": [
+    {
+     "nombre": "Poeta",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Escribo sobre el mar, la calima y el alisio. La calima es el polvo del Sáhara: te deja el coche marrón y el poema gris.",
+      "Mis versos los leen mis tres amigos y mi madre. Mi madre, dos veces."
+     ],
+     "nodo": "Poeta",
+     "en": [7, 5],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Gata",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": ["Soy su sobrina. Me paga diez euros por oírle leer. Es mi primer trabajo."],
+     "nodo": "Gata",
+     "en": [9, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "rombos_lila",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 5, 3, 2]]],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["fogones", 7, 1],
+    ["estanteria_alta_madera", 1, 0],
+    ["mesa_cristal", 6, 3],
+    ["silla_derecha", 5, 3],
+    ["silla_izquierda", 8, 3],
+    ["palmera_maceta", 10, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_3_35": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["las_palmas/vegueta_triana", [3, 35]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela de los mojos",
+   "personas": [
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "El mojo picón lleva pimienta palmera, ajo, comino, aceite y vinagre. Se machaca en mortero, nunca en batidora.",
+      "Mis nietos me piden el mojo en táper cuando se van a la península. Lo pasan por el aeropuerto como si fuera oro."
+     ],
+     "nodo": "Abuela",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto estudiante",
+     "aspecto": "estudianteinge",
+     "papel": "tele",
+     "frases": ["En Madrid me confiscaron un bote de mojo en el control de seguridad. Lloré."],
+     "nodo": "NietoEstudiante",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 5, 0],
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["tele", 1, 1],
+    ["estante_madera", 3, 1],
+    ["mesa_cristal", 6, 3],
+    ["taburete_verde", 5, 4],
+    ["taburete_verde", 8, 4],
+    ["sillon_derecha", 6, 5],
+    ["mesa_cristal", 7, 6],
+    ["sillon_izquierda", 9, 5],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_3_46": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["las_palmas/vegueta_triana", [3, 46]],
+   "tipo": "casa",
+   "nombre": "Casa del pescador de San Cristóbal",
+   "personas": [
+    {
+     "nombre": "Pescador",
+     "aspecto": "npc_fisherman",
+     "papel": "libre",
+     "frases": [
+      "En San Cristóbal salimos al amanecer. La vieja es el pescado más rico de Canarias; tiene cara de enfadada, pero está buenísima.",
+      "El sancocho se hace con cherne salado, papas, batata y mojo. Es la comida de los domingos."
+     ],
+     "nodo": "Pescador",
+     "en": [11, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["Mi padre dice que una vez pescó un Lapras. Mi madre dice que era una piedra."],
+     "nodo": "Hija",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [6, 9],
+   "suelo": "tatami_verde",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [2, 4, 4, 2]]],
+   "muebles": [
+    ["nevera_alta", 7, 0],
+    ["encimera", 8, 1],
+    ["fogones", 11, 1],
+    ["cajon_oliva", 4, 1],
+    ["tele", 5, 1],
+    ["mesa_cristal", 8, 6],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 10, 7],
+    ["planta", 1, 1],
+    ["papelera", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_42_37": {
+   "pieza": "puesto_mercado",
+   "calle": ["las_palmas/vegueta_triana", [42, 37]],
+   "tipo": "puesto",
+   "nombre": "Puesto del Mercado de Vegueta",
+   "personas": [
+    {
+     "nombre": "Frutera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "El Mercado de Vegueta es de 1863. Aquí se compra papa antigua, mangos, papayas y la fruta que no ves en la península.",
+      "Papa bonita, papa negra, papa de ojo de perdiz. Aquí las papas tienen apellido."
+     ],
+     "nodo": "Frutera",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "chapa",
+   "pared": "retro",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_celeste_i", 5, 4],
+    ["mostrador_celeste_m", 6, 4],
+    ["mostrador_celeste_d", 7, 4],
+    ["estanteria_baja_madera", 3, 1],
+    ["caja", 5, 2]
+   ],
+   "encima": [["taza", 7, 4]],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_42_46": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["las_palmas/vegueta_triana", [42, 46]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia del ron miel",
+   "personas": [
+    {
+     "nombre": "Abuelo",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "El ron miel se toma al final de la comida, de chupito. Si te lo ofrece un canario, no se rechaza.",
+      "En Arucas hay una destilería de ron de 1884. Mi abuelo trabajó allí y volvía a casa oliendo a caramelo."
+     ],
+     "nodo": "Abuelo",
+     "en": [11, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Mi abuelo dice que el ron miel cura el resfriado. Mi abuela dice que lo provoca."],
+     "nodo": "Nieta",
+     "en": [5, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [6, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["encimera", 7, 1],
+    ["tele", 10, 1],
+    ["estante_mostaza", 12, 1],
+    ["estanteria_alta_mostaza", 2, 0],
+    ["sofa", 1, 5],
+    ["arbol_maceta", 12, 6],
+    ["papelera", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_4_8": {
+   "pieza": "casa_teja",
+   "calle": ["las_palmas/vegueta_triana", [4, 8]],
+   "tipo": "casa",
+   "nombre": "Casa de la diseñadora de Triana",
+   "personas": [
+    {
+     "nombre": "Diseñadora",
+     "aspecto": "npc_lass",
+     "papel": "mesa",
+     "frases": [
+      "Diseño trajes de baño con motivos canarios: dragos, plátanos y lagartos de Gran Canaria. Se venden en Berlín.",
+      "La Pasarela de Moda Baño de Gran Canaria es en octubre. Aquí desfilar en bañador en octubre es normal."
+     ],
+     "nodo": "Disenadora",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["Mi hija diseña bañadores y yo le hago la comida. Es un negocio familiar."],
+     "nodo": "Madre",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_verdes",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["estanteria_alta_menta", 1, 0],
+    ["mesa_cristal", 6, 4],
+    ["banqueta_roja", 5, 5],
+    ["banqueta_roja", 8, 5],
+    ["palmera_maceta", 9, 0],
+    ["caja", 9, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "las_palmas/sala_vegueta_triana_8_35": {
+   "pieza": "casa_granero",
+   "calle": ["las_palmas/vegueta_triana", [8, 35]],
+   "tipo": "bodega",
+   "nombre": "Bodega de vino del Monte Lentiscal",
+   "personas": [
+    {
+     "nombre": "Bodeguero",
+     "aspecto": "vendimiador",
+     "papel": "dependiente",
+     "frases": [
+      "Vino del Monte, de los volcanes de Bandama. La uva crece en ceniza volcánica y sabe a tierra quemada.",
+      "La filoxera no llegó a Canarias. Aquí hay vides que en la península ya no existen."
+     ],
+     "nodo": "Bodeguero",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": ["Me tomo un vino del Monte y un queso de flor. Esto es Gran Canaria en dos bocados."],
+     "nodo": "Cliente",
+     "en": [9, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "piedra",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["cajas", 2, 1], ["cajas", 5, 1], ["cajas", 5, 6], ["caja", 3, 6], ["caja", 4, 6], ["cajas", 8, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  }
+ }
+}

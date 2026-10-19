@@ -1,0 +1,378 @@
+{
+ "_doc": "Interiores personalizados de playa_del_ingles (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Playa Del Ingles",
+ "interiores": {
+  "playa_del_ingles/sala_calle_16_18": {
+   "pieza": "edificio_cristal",
+   "calle": ["playa_del_ingles/exterior", [16, 18]],
+   "tipo": "hotel",
+   "nombre": "Hotel de cristal junto al aeropuerto",
+   "personas": [
+    {
+     "nombre": "Recepcionista",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "Tenemos todo incluido: desayuno, comida, cena, pulsera y toalla de playa. La paciencia no está incluida.",
+      "Los alemanes reservan la tumbona con la toalla a las seis. Los ingleses, a las siete. Los españoles no reservan: se tumban en la arena."
+     ],
+     "nodo": "Recepcionista",
+     "en": [4, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Huésped alemán",
+     "aspecto": "turistachanclas",
+     "papel": "cliente",
+     "frases": ["Dieses Hotel ist sehr gut. Bueno, el buffet de tortilla a las doce es lo mejor de mi vida."],
+     "nodo": "HuespedAleman",
+     "en": [3, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 11],
+   "puerta": [9, 10],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [7, 6, 3, 2]]],
+   "muebles": [
+    ["estanteria_baja_mostaza", 2, 1],
+    ["recepcion", 4, 2],
+    ["sillon_derecha", 2, 4],
+    ["mesa_cristal", 3, 5],
+    ["sillon_izquierda", 5, 4],
+    ["pecera", 8, 2],
+    ["palmera_maceta", 13, 0],
+    ["palmera_maceta", 13, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 9]},
+   "pasos": []
+  },
+  "playa_del_ingles/sala_calle_24_21": {
+   "pieza": "bloque_pisos",
+   "calle": ["playa_del_ingles/exterior", [24, 21]],
+   "tipo": "piso",
+   "nombre": "Apartamento de la temporada de invierno",
+   "personas": [
+    {
+     "nombre": "Jubilado noruego",
+     "aspecto": "turista",
+     "papel": "tele",
+     "frases": [
+      "Vengo de octubre a abril desde hace veinte años. En Noruega ahora es de noche a las tres. Aquí tomo el sol a las tres.",
+      "Juego a la petanca con otros noruegos. Ya somos un pueblo."
+     ],
+     "nodo": "JubiladoNoruego",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "turista_f",
+     "papel": "cocina",
+     "frases": [
+      "Cocino salmón noruego que traigo en la maleta. Los canarios me miran raro. Yo a ellos, cuando comen gofio."
+     ],
+     "nodo": "Mujer",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "moqueta_beige",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["encimera", 3, 1], ["nevera", 6, 1], ["sofa", 6, 4], ["cajas", 8, 1], ["tele", 1, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "playa_del_ingles/sala_calle_33_20": {
+   "pieza": "bloque_verde",
+   "calle": ["playa_del_ingles/exterior", [33, 20]],
+   "tipo": "piso",
+   "nombre": "Apartamento de la promotora del concierto",
+   "personas": [
+    {
+     "nombre": "Promotora",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "El concierto de la playa es el mayor del año en el sur. Viene Quevedo y el pueblo entero se queda sin hoteles.",
+      "Hemos vendido diez mil entradas. Nueve mil quinientas las han comprado los de Las Palmas, que bajan en guagua."
+     ],
+     "nodo": "Promotora",
+     "en": [3, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Técnico de sonido",
+     "aspecto": "raver",
+     "papel": "libre",
+     "frases": ["Probando, probando. Sí. Esta casa tiene mejor acústica que el escenario."],
+     "nodo": "TecnicoDeSonido",
+     "en": [7, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_crema",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [3, 3, 3, 3]]],
+   "muebles": [
+    ["nevera_alta", 2, 0],
+    ["fogones", 3, 1],
+    ["tele_pequena", 1, 2],
+    ["sofa", 1, 5],
+    ["cajas", 5, 5],
+    ["mesa_cristal", 1, 3],
+    ["taburete_marron", 3, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "playa_del_ingles/sala_calle_39_21": {
+   "pieza": "oficinas_azules",
+   "calle": ["playa_del_ingles/exterior", [39, 21]],
+   "tipo": "oficina",
+   "nombre": "Oficina del ayuntamiento de San Bartolomé de Tirajana",
+   "personas": [
+    {
+     "nombre": "Funcionaria",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Playa del Inglés no está en Las Palmas: está en San Bartolomé de Tirajana, a cincuenta kilómetros. Los turistas no lo saben.",
+      "Se llama así porque en los años sesenta aquí solo veraneaba un inglés. Ahora veranean todos."
+     ],
+     "nodo": "Funcionaria",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Concejal de turismo",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": ["Cuatro millones de turistas al año. Mi trabajo es que vuelvan. El sol hace la mitad del trabajo."],
+     "nodo": "ConcejalDeTurismo",
+     "en": [6, 7],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 10],
+   "puerta": [9, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 5, 0],
+    ["archivador", 7, 1],
+    ["mostrador_madera", 3, 4],
+    ["banqueta_roja", 4, 6],
+    ["mostrador_madera", 9, 5],
+    ["banqueta_azul", 10, 7],
+    ["mostrador_madera", 1, 2],
+    ["banqueta_azul", 2, 4],
+    ["planta", 1, 7],
+    ["mesa_cristal", 7, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "playa_del_ingles/sala_calle_41_7": {
+   "pieza": "tienda_naranja",
+   "calle": ["playa_del_ingles/exterior", [41, 7]],
+   "tipo": "souvenirs",
+   "nombre": "Tienda de recuerdos del aeropuerto",
+   "personas": [
+    {
+     "nombre": "Dependienta",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "Imanes de dromedarios, botellas de ron miel y camisetas de «I love Gran Canaria». Lo último que compras antes de volar.",
+      "El mojo en sobre no pasa el control. El de bote, tampoco. El que pasa es el de la abuela, escondido."
+     ],
+     "nodo": "Dependienta",
+     "en": [6, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista con prisa",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": ["Mi vuelo sale en veinte minutos. Deme el imán más rápido que tenga."],
+     "nodo": "TuristaConPrisa",
+     "en": [7, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_oliva", 3, 0],
+    ["estanteria_alta_oliva", 5, 0],
+    ["mostrador_madera_i", 6, 4],
+    ["mostrador_madera_m", 7, 4],
+    ["mostrador_madera_d", 8, 4],
+    ["vitrina_blanca", 1, 3],
+    ["vitrina_blanca", 3, 3],
+    ["armario_oliva", 7, 0],
+    ["planta", 9, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "playa_del_ingles/sala_calle_53_11": {
+   "pieza": "torre_socorrista",
+   "calle": ["playa_del_ingles/exterior", [53, 11]],
+   "tipo": "socorrismo",
+   "nombre": "Caseta de socorrismo de Playa del Inglés",
+   "personas": [
+    {
+     "nombre": "Socorrista",
+     "aspecto": "nadador",
+     "papel": "libre",
+     "frases": [
+      "Aquí la playa tiene kilómetros de arena. Lo peligroso no es el mar: es perderse buscando la toalla.",
+      "Hoy he rescatado a un turista que se fue andando a las dunas sin agua. Volvió del color del Sahara."
+     ],
+     "nodo": "Socorrista",
+     "en": [2, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 7],
+   "puerta": [3, 6],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["cajon_gris", 4, 1], ["nevera", 5, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "playa_del_ingles/sala_calle_5_20": {
+   "pieza": "grandes_almacenes",
+   "calle": ["playa_del_ingles/exterior", [5, 20]],
+   "tipo": "grandes_almacenes",
+   "nombre": "Centro comercial Yumbo",
+   "personas": [
+    {
+     "nombre": "Encargado",
+     "aspecto": "npc_man",
+     "papel": "dependiente",
+     "frases": [
+      "El Yumbo es el centro de la noche del sur. De día es un centro comercial; de noche, una fiesta con escaleras mecánicas.",
+      "En mayo celebramos el Maspalomas Pride, uno de los más grandes de Europa. Se llena hasta el aparcamiento."
+     ],
+     "nodo": "Encargado",
+     "en": [1, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista de fiesta",
+     "aspecto": "tronista",
+     "papel": "cliente",
+     "frases": ["He venido a por crema solar y me han invitado a tres fiestas. Esto no me pasa en Mánchester."],
+     "nodo": "TuristaDeFiesta",
+     "en": [3, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "menta",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 5, 1],
+    ["vitrina_blanca", 7, 1],
+    ["estanteria_baja_nogal", 9, 1],
+    ["mostrador_naranja_i", 1, 4],
+    ["mostrador_naranja_m", 2, 4],
+    ["mostrador_naranja_d", 3, 4],
+    ["estanteria_baja_nogal", 4, 3],
+    ["estanteria_baja_nogal", 6, 3],
+    ["papelera", 11, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "playa_del_ingles/sala_calle_7_54": {
+   "pieza": "faro",
+   "calle": ["playa_del_ingles/exterior", [7, 54]],
+   "tipo": "faro",
+   "nombre": "Faro de Maspalomas",
+   "personas": [
+    {
+     "nombre": "Farero jubilado",
+     "aspecto": "marinero",
+     "papel": "libre",
+     "frases": [
+      "El faro de Maspalomas es de 1890. Tiene cincuenta y seis metros y alumbra a los barcos que bajan hacia África.",
+      "Abajo está la Charca de Maspalomas, con aves que paran camino del sur. Ellas también vienen de vacaciones."
+     ],
+     "nodo": "FareroJubilado",
+     "en": [3, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "vitrina",
+     "frases": [
+      "Las dunas se mueven unos metros cada año con el viento. Las fotos de hace cincuenta años parecen de otro sitio."
+     ],
+     "nodo": "Guia",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Faro de Maspalomas (1890), de Juan de León y Castillo. Lo encendieron con aceite de oliva. Hoy, con electricidad y turistas."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "piedra",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 5, 0], ["caja", 1, 2], ["vitrina_blanca", 3, 1]],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  }
+ }
+}

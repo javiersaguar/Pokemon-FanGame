@@ -1,0 +1,619 @@
+{
+ "_doc": "Interiores personalizados de vigo (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Vigo",
+ "interiores": {
+  "vigo/casa_1": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["vigo/exterior", [3, 29]],
+   "tipo": "casa",
+   "nombre": "Casa de la mariscadora de Bouzas",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Mariscadora",
+     "aspecto": "npc_old_man",
+     "regalo": "vigo_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "Marisco a pie en la ría con marea baja: almeja, berberecho y navaja. Con el rastro y la espalda doblada.",
+      "Toma, mi niño, que en Galicia nadie sale de casa sin comer. Y si sales, vuelves."
+     ],
+     "en": [5, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Mi abuela sabe cuándo baja la marea sin mirar el móvil. Lo nota en las rodillas."],
+     "nodo": "Nieto",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["cajon_oliva", 8, 1],
+    ["tele", 9, 1],
+    ["mesa_cristal", 6, 3],
+    ["taburete_verde", 5, 4],
+    ["taburete_verde", 8, 4],
+    ["palmera_maceta", 1, 0],
+    ["papelera", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "vigo/casa_2": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["vigo/exterior", [11, 29]],
+   "tipo": "casa",
+   "nombre": "Casa del trabajador de los astilleros",
+   "personas": [
+    {
+     "nombre": "Soldador",
+     "aspecto": "jubiladoobras",
+     "papel": "tele",
+     "frases": [
+      "En los astilleros de Vigo se hacen barcos para medio mundo. Pesqueros, ferris y algún barco de investigación.",
+      "Mi abuelo hacía barcos de madera, mi padre de hierro y yo de acero. Mi hijo los dibuja en el ordenador."
+     ],
+     "nodo": "Soldador",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Empanada de zamburiñas. La masa la hago yo; las zamburiñas las pesca mi cuñado."],
+     "nodo": "Mujer",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [7, 3, 5, 3]]],
+   "muebles": [
+    ["alacena", 5, 0],
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["tele", 2, 1],
+    ["estante_nogal", 4, 1],
+    ["estanteria_baja_nogal", 10, 1],
+    ["estante_nogal", 12, 1],
+    ["mesa_cristal", 4, 5],
+    ["silla_derecha", 3, 5],
+    ["silla_izquierda", 6, 5],
+    ["sillon_derecha", 8, 3],
+    ["mesa_cristal", 9, 4],
+    ["sillon_izquierda", 11, 3],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "vigo/casa_3": {
+   "pieza": "casa_granero",
+   "calle": ["vigo/exterior", [49, 23]],
+   "tipo": "taller",
+   "nombre": "Taller del conservero",
+   "personas": [
+    {
+     "nombre": "Conservero",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Vigo es la capital de la conserva. Mejillones en escabeche, berberechos y sardinillas. La lata es tecnología gallega.",
+      "Una buena lata de berberechos cuesta más que un menú del día. Y la abres con una mano."
+     ],
+     "nodo": "Conservero",
+     "en": [4, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aprendiz",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": ["Mi trabajo es poner las etiquetas bonitas. Las latas feas no las compra nadie."],
+     "nodo": "Aprendiz",
+     "en": [7, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": ["Latas de conserva en escabeche, en aceite y al natural. Ordenadas por año. Como el vino."],
+     "nodo": "Cartel",
+     "en": [2, 2]
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [3, 9],
+   "suelo": "chapa",
+   "pared": "gris_raya_roja",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["cajonera_gris", 4, 1],
+    ["cajonera_azul", 6, 1],
+    ["escalera_mano", 8, 0],
+    ["mesa_cristal_larga", 4, 5],
+    ["caja", 4, 7],
+    ["caja", 5, 7],
+    ["caja", 6, 7],
+    ["papelera", 11, 1],
+    ["estanteria_alta_nogal", 2, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "vigo/casa_4": {
+   "pieza": "casa_granero",
+   "calle": ["vigo/exterior", [37, 27]],
+   "tipo": "casa",
+   "nombre": "Casa del vecino de Teis",
+   "personas": [
+    {
+     "nombre": "Vecino",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Vigo tiene cuestas que son paredes. Para subir a casa necesito dos bocadillos y un rosario.",
+      "El ascensor de la Gran Vía es de 2023. Antes subíamos como cabras. Ahora subimos como cabras con ascensor."
+     ],
+     "nodo": "Vecino",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": ["Mi padre se queja de las cuestas, pero tiene las piernas como un ciclista."],
+     "nodo": "Hija",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [5, 7],
+   "suelo": "tatami_verde",
+   "pared": "topo",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_azul", [2, 3, 4, 3]]],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["encimera", 5, 1],
+    ["tele", 8, 1],
+    ["planta", 10, 1],
+    ["mesa_cristal_larga", 6, 3],
+    ["taburete_amarillo", 6, 5],
+    ["taburete_amarillo", 8, 5],
+    ["sillon_derecha", 1, 4],
+    ["mesa_cristal", 2, 5],
+    ["sillon_izquierda", 4, 4],
+    ["palmera_maceta", 10, 4],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "vigo/sala_calle_11_7": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["vigo/exterior", [11, 7]],
+   "tipo": "casa",
+   "nombre": "Casa de la pulpeira",
+   "personas": [
+    {
+     "nombre": "Pulpeira",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Al pulpo se le «asusta» tres veces en el agua hirviendo antes de cocerlo. Para que no se encoja.",
+      "Pulpo á feira: en plato de madera, con sal gorda, pimentón y aceite. Con palillos, que el tenedor es de turistas."
+     ],
+     "nodo": "Pulpeira",
+     "en": [5, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": ["Llevo cuarenta años comiendo pulpo. No me he cansado. El pulpo, a lo mejor sí."],
+     "nodo": "Marido",
+     "en": [3, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "rombos_lila",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [3, 3, 5, 3]]],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["nevera", 9, 1],
+    ["tele", 1, 1],
+    ["mesa_cristal", 4, 5],
+    ["silla_derecha", 3, 5],
+    ["silla_izquierda", 6, 5],
+    ["sofa", 6, 3],
+    ["palmera_maceta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "vigo/sala_calle_16_8": {
+   "pieza": "casa_teja",
+   "calle": ["vigo/exterior", [16, 8]],
+   "tipo": "casa",
+   "nombre": "Casa de la gaiteira",
+   "personas": [
+    {
+     "nombre": "Gaiteira",
+     "aspecto": "flautista_f",
+     "papel": "libre",
+     "frases": [
+      "Toco la gaita en la banda del barrio. En las fiestas tocamos hasta que la gente se cansa. La gente no se cansa.",
+      "La gaita gallega tiene un solo roncón. La escocesa tres. Nosotros con uno hacemos más ruido."
+     ],
+     "nodo": "Gaiteira",
+     "en": [8, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vecino",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": ["Vivo en el piso de abajo. Me sé todas las muiñeiras de memoria, quiera o no."],
+     "nodo": "Vecino",
+     "en": [10, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "rombos_lila",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [5, 3, 3, 3]]],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["arbol_maceta", 10, 0],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "vigo/sala_calle_17_29": {
+   "pieza": "casa_granero",
+   "calle": ["vigo/exterior", [17, 29]],
+   "tipo": "taberna",
+   "nombre": "Ostrería de la calle de A Pedra",
+   "personas": [
+    {
+     "nombre": "Ostrera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Las ostreras de A Pedra abren las ostras en la calle desde hace un siglo. Con limón y un albariño, y se acabó la discusión.",
+      "Una docena de ostras para la mesa del fondo. No preguntes de dónde son: son de la ría, y ya está."
+     ],
+     "nodo": "Ostrera",
+     "en": [6, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": ["Me tomo seis ostras cada domingo. Es mi misa."],
+     "nodo": "Cliente",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 10],
+   "puerta": [7, 9],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 8, 0],
+    ["fogones", 9, 1],
+    ["encimera", 11, 1],
+    ["mostrador_naranja_i", 4, 4],
+    ["mostrador_naranja_m", 5, 4],
+    ["mostrador_naranja_m", 6, 4],
+    ["mostrador_naranja_d", 7, 4],
+    ["taburete_verde", 5, 6],
+    ["taburete_verde", 7, 6],
+    ["mesa_cristal", 10, 4],
+    ["silla_derecha", 9, 4],
+    ["silla_izquierda", 12, 4],
+    ["tele_pequena", 7, 2],
+    ["cajas", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "vigo/sala_calle_33_18": {
+   "pieza": "tienda_azul",
+   "calle": ["vigo/exterior", [33, 18]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Vigo",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Aquí la gente entrena para subir las cuestas de Vigo. Las máquinas de escaleras son las más usadas.",
+      "Cuando llueve, el gimnasio se llena. Llueve casi siempre. Somos un negocio redondo."
+     ],
+     "nodo": "Monitor",
+     "en": [3, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Socia",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": ["Corro por la Castrelos los fines de semana. Bueno, corro hasta que llueve. Luego, aquí."],
+     "nodo": "Socia",
+     "en": [6, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "moqueta_azul",
+   "pared": "gris_raya_roja",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [4, 4, 8, 4]]],
+   "muebles": [
+    ["taquilla_gris", 4, 0],
+    ["taquilla_gris", 5, 0],
+    ["taquilla_azul", 6, 0],
+    ["taquilla_azul", 7, 0],
+    ["banco_rojo", 9, 2],
+    ["tele", 2, 1],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "vigo/sala_calle_3_6": {
+   "pieza": "casa_gris",
+   "calle": ["vigo/exterior", [3, 6]],
+   "tipo": "casa",
+   "nombre": "Casa del aficionado del Celta",
+   "personas": [
+    {
+     "nombre": "Celtista",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "Afouteza e corazón. El Celta es de Vigo y Balaídos es nuestra casa. Lo demás, ya se verá.",
+      "Cuando el Celta gana al Deportivo, la ciudad hace fiesta. Cuando pierde, decimos que el árbitro era de Coruña."
+     ],
+     "nodo": "Celtista",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["Mi padre me puso de nombre Iago por Iago Aspas. Mi hermana se llama Celta. No es broma."],
+     "nodo": "Hijo",
+     "en": [7, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [5, 3, 4, 2]]],
+   "muebles": [
+    ["nevera", 2, 1],
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["armario_oliva", 7, 0],
+    ["estanteria_alta_oliva", 8, 0],
+    ["arbol_maceta", 1, 5],
+    ["planta", 10, 1],
+    ["tele_pequena", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "vigo/sala_calle_42_18": {
+   "pieza": "bloque_pisos",
+   "calle": ["vigo/exterior", [42, 18]],
+   "tipo": "portal",
+   "nombre": "Portal de la calle Príncipe",
+   "personas": [
+    {
+     "nombre": "Portera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "La calle Príncipe es la de las tiendas. En Navidad se llena de luces y de gente mirando las luces.",
+      "En diciembre no puedo salir del portal: hay cola para hacerse fotos con el árbol de enfrente."
+     ],
+     "nodo": "Portera",
+     "en": [2, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_crema",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["planta", 3, 1],
+    ["escalera_mano", 4, 0],
+    ["archivador", 1, 1],
+    ["archivador", 2, 1],
+    ["mostrador_blanco_i", 5, 4],
+    ["mostrador_blanco_m", 6, 4],
+    ["mostrador_blanco_d", 7, 4],
+    ["sillon_derecha", 1, 5],
+    ["planta", 7, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "vigo/sala_calle_42_32": {
+   "pieza": "oficinas_azules",
+   "calle": ["vigo/exterior", [42, 32]],
+   "tipo": "ayuntamiento",
+   "nombre": "Concello de Vigo",
+   "personas": [
+    {
+     "nombre": "Técnico de alumbrado",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Encendemos las luces de Navidad en noviembre y las apagamos en enero. El año que viene, a lo mejor, en octubre.",
+      "Once millones de luces LED. El alcalde quiere que se vean desde Nueva York. Hemos mirado y desde Nueva York no se ven."
+     ],
+     "nodo": "TecnicoDeAlumbrado",
+     "en": [8, 9],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Concejala",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Las luces atraen a medio millón de visitantes. Los hoteles nos dan las gracias. Los vecinos, no tanto."
+     ],
+     "nodo": "Concejala",
+     "en": [7, 9],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "CONTADOR DE LUCES DE NAVIDAD: 11.000.000 y subiendo. Próximo objetivo: que se vean desde la Luna."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [3, 10],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 4, 0],
+    ["mostrador_madera", 7, 2],
+    ["estatua_aguila", 10, 0],
+    ["banco_rojo", 4, 4],
+    ["banco_rojo", 7, 4],
+    ["banco_rojo", 10, 4],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 10, 6],
+    ["arbol_maceta", 13, 7],
+    ["arbol_maceta", 1, 0],
+    ["mesa_cristal", 7, 7],
+    ["taburete_amarillo", 9, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "vigo/sala_calle_49_31": {
+   "pieza": "bloque_verde",
+   "calle": ["vigo/exterior", [49, 31]],
+   "tipo": "piso",
+   "nombre": "Piso con vistas a las islas Cíes",
+   "personas": [
+    {
+     "nombre": "Vecina",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": [
+      "Desde la ventana se ven las Cíes. Dicen que la playa de Rodas es la mejor del mundo. Lo dijo un periódico inglés y aquí lo repetimos siempre.",
+      "Para ir a las Cíes hay que pedir permiso a la Xunta. Para volver, pedir que no llueva."
+     ],
+     "nodo": "Vecina",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": ["Fui de acampada a las Cíes. Me comieron los mosquitos y las gaviotas me robaron un bocadillo."],
+     "nodo": "Hijo",
+     "en": [7, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 8],
+   "puerta": [4, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["ropero_mostaza", 4, 0], ["tele_pequena", 1, 2]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  }
+ }
+}

@@ -1,0 +1,951 @@
+{
+ "_doc": "Interiores personalizados de malaga (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Malaga",
+ "interiores": {
+  "malaga/casa_1": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["malaga/exterior", [24, 10]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela del barrio del Perchel",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Abuela perchelera",
+     "aspecto": "npc_old_man",
+     "regalo": "malaga_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "El Perchel era barrio de pescadores. Se colgaba el pescado en perchas para secarlo; de ahí el nombre.",
+      "Toma, que con este calor hay que comer. Un espeto de sardinas no se le niega a nadie."
+     ],
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Mi abuela dice «quillo» a todo el mundo. Al cartero, al cura y al alcalde."],
+     "nodo": "Nieto",
+     "en": [10, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_verdes",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 2, 1],
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["cajon_oliva", 8, 1],
+    ["tele", 9, 1],
+    ["vitrina_madera", 11, 1],
+    ["mesa_cristal", 9, 3],
+    ["silla_derecha", 8, 3],
+    ["silla_izquierda", 11, 3],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "malaga/casa_2": {
+   "pieza": "casa_granero",
+   "calle": ["malaga/exterior", [48, 10]],
+   "tipo": "chiringuito",
+   "nombre": "Chiringuito de los espetos",
+   "personas": [
+    {
+     "nombre": "Espetero",
+     "aspecto": "npc_fisherman",
+     "papel": "cocina",
+     "frases": [
+      "El espeto se hace en una barca con arena y brasas. Las sardinas, ensartadas en caña y de cara al viento.",
+      "Las sardinas de los meses sin erre son las buenas: mayo, junio, julio y agosto."
+     ],
+     "nodo": "Espetero",
+     "en": [11, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Camarero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Un tinto de verano, una de boquerones y un espeto. Si pides paella aquí, te la sirvo, pero te miro."
+     ],
+     "nodo": "Camarero",
+     "en": [6, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 7, 1],
+    ["encimera", 9, 1],
+    ["nevera_alta", 12, 0],
+    ["mostrador_turquesa_i", 6, 3],
+    ["mostrador_turquesa_m", 7, 3],
+    ["mostrador_turquesa_m", 8, 3],
+    ["mostrador_turquesa_m", 9, 3],
+    ["mostrador_turquesa_d", 10, 3],
+    ["taburete_verde", 7, 5],
+    ["taburete_verde", 9, 5],
+    ["mesa_cristal", 5, 5],
+    ["taburete_verde", 4, 6],
+    ["taburete_verde", 7, 6],
+    ["mesa_cristal", 3, 2],
+    ["taburete_verde", 2, 2]
+   ],
+   "encima": [["plato", 7, 3], ["taza", 8, 3]],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_23_39": {
+   "pieza": "puesto_mercado",
+   "calle": ["malaga/exterior", [23, 39]],
+   "tipo": "puesto",
+   "nombre": "Puesto de pescado del Mercado de Atarazanas",
+   "personas": [
+    {
+     "nombre": "Pescadera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Boquerones victorianos, chanquetes que ya no se pueden pescar y coquinas. Lo de los chanquetes es ilegal; lo de echarlos de menos, no.",
+      "El mercado tiene una puerta árabe del siglo XIV. Por esa puerta entraba el mar. Ahora entran los cruceros."
+     ],
+     "nodo": "Pescadera",
+     "en": [5, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_verde_i", 4, 4],
+    ["mostrador_verde_m", 5, 4],
+    ["mostrador_verde_d", 6, 4],
+    ["nevera_alta", 3, 0],
+    ["cajas", 4, 1]
+   ],
+   "encima": [["plato_comida", 4, 4]],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "malaga/sala_calle_25_54": {
+   "pieza": "oficinas_azules",
+   "calle": ["malaga/exterior", [25, 54]],
+   "tipo": "oficina",
+   "nombre": "Oficina del Festival de Cine de Málaga",
+   "personas": [
+    {
+     "nombre": "Programadora",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "En marzo la ciudad se llena de alfombras rojas. La mitad de los actores viene por el cine y la otra mitad por el espeto.",
+      "Banderas viene todos los años. Bueno, Banderas vive aquí. Viene de su casa."
+     ],
+     "nodo": "Programadora",
+     "en": [9, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Becario",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": ["Me encargo de la alfombra roja. Literalmente: la enrollo y la desenrollo."],
+     "nodo": "Becario",
+     "en": [1, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [5, 9],
+   "suelo": "rombos_lila",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 6, 0],
+    ["archivador_bajo", 7, 1],
+    ["taquilla_archivo", 9, 0],
+    ["mostrador_celeste", 3, 3],
+    ["banqueta_azul", 4, 5],
+    ["mostrador_celeste", 6, 6],
+    ["banqueta_azul", 7, 8],
+    ["planta", 1, 1],
+    ["papelera", 10, 1],
+    ["mesa_cristal", 7, 3],
+    ["taburete_verde", 9, 4]
+   ],
+   "encima": [["libro_abierto", 7, 6], ["libro_abierto", 4, 3]],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_29_39": {
+   "pieza": "puesto_mercado",
+   "calle": ["malaga/exterior", [29, 39]],
+   "tipo": "puesto",
+   "nombre": "Puesto de frutas tropicales de Atarazanas",
+   "personas": [
+    {
+     "nombre": "Frutero",
+     "aspecto": "huertano",
+     "papel": "dependiente",
+     "frases": [
+      "Mangos y aguacates de la Axarquía. Málaga es el único sitio de Europa donde crecen como en el trópico.",
+      "Con la sequía, el aguacate cuesta más que el jamón. Hay quien lo ralla como si fuera trufa."
+     ],
+     "nodo": "Frutero",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_gris",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_azul_i", 5, 4],
+    ["mostrador_azul_m", 6, 4],
+    ["mostrador_azul_d", 7, 4],
+    ["cajas", 5, 1],
+    ["caja", 1, 6]
+   ],
+   "encima": [["plato", 5, 4], ["plato_comida", 7, 4]],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "malaga/sala_calle_31_7": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["malaga/exterior", [31, 7]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia de la Semana Santa",
+   "personas": [
+    {
+     "nombre": "Hombre de trono",
+     "aspecto": "costalero",
+     "papel": "libre",
+     "frases": [
+      "En Málaga no hay costaleros, hay hombres de trono. Los tronos llevan más de doscientos portadores.",
+      "El Cristo de Mena sale con la Legión cantando «El novio de la muerte». Se pone la piel de gallina hasta al guiri."
+     ],
+     "nodo": "HombreDeTrono",
+     "en": [9, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": [
+      "Mi padre ensaya llevando un sofá con mis tíos por el pasillo. En marzo no se puede vivir en esta casa."
+     ],
+     "nodo": "Hija",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "rombos_verdes",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["nevera", 9, 1],
+    ["tele", 2, 1],
+    ["estante_verde", 4, 1],
+    ["mesa_cristal", 7, 4],
+    ["taburete_amarillo", 6, 5],
+    ["taburete_amarillo", 9, 5],
+    ["sofa", 2, 5],
+    ["arbol_maceta", 1, 6],
+    ["planta", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_35_39": {
+   "pieza": "puesto_mercado",
+   "calle": ["malaga/exterior", [35, 39]],
+   "tipo": "kiosco",
+   "nombre": "Puesto de vinos dulces de Atarazanas",
+   "personas": [
+    {
+     "nombre": "Bodeguera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Vino de Málaga, moscatel y Pedro Ximénez. Dulce como la abuela que te lo sirve.",
+      "Aquí al lado está la Antigua Casa de Guardia, de 1840. Te apuntan la cuenta en la barra con tiza."
+     ],
+     "nodo": "Bodeguera",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "losa_gris",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_cristal_i", 4, 4],
+    ["mostrador_cristal_m", 5, 4],
+    ["mostrador_cristal_d", 6, 4],
+    ["estanteria_baja_verde", 1, 1],
+    ["caja", 3, 2],
+    ["caja", 7, 6]
+   ],
+   "encima": [["plato", 5, 4], ["plato", 6, 4]],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "malaga/sala_calle_3_6": {
+   "pieza": "casa_gris",
+   "calle": ["malaga/exterior", [3, 6]],
+   "tipo": "casa",
+   "nombre": "Casa del vecino de los corralones de la Trinidad",
+   "personas": [
+    {
+     "nombre": "Vecina del corralón",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Los corralones son casas con patio común. Antes vivían veinte familias y un pozo. Ahora vivimos diez y un grifo.",
+      "En mayo engalanamos el patio con macetas para el concurso. Ganó la del tercero, con trampas."
+     ],
+     "nodo": "VecinaDelCorralon",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Vecino",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": ["En el patio se sabe todo: quién viene, quién se va y quién no ha pagado la luz."],
+     "nodo": "Vecino",
+     "en": [9, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [6, 9],
+   "suelo": "parquet",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["tatami_verde", [3, 6, 4, 2]]],
+   "muebles": [
+    ["fogones", 7, 1],
+    ["fregadero", 9, 1],
+    ["nevera", 11, 1],
+    ["tele", 3, 1],
+    ["estante_oliva", 5, 1],
+    ["sillon_derecha", 2, 3],
+    ["mesa_cristal", 3, 4],
+    ["sillon_izquierda", 5, 3],
+    ["planta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_48_35": {
+   "pieza": "catedral_malaga",
+   "calle": ["malaga/exterior", [48, 35]],
+   "tipo": "catedral",
+   "nombre": "Catedral de la Encarnación, La Manquita",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Le falta una torre. El dinero se fue, dicen, a ayudar a la independencia de Estados Unidos. Por eso es «la Manquita».",
+      "Desde las cubiertas se ve el puerto, la Alcazaba y los cruceros que tapan el mar."
+     ],
+     "nodo": "Guia",
+     "en": [10, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Han pensado terminar la torre muchas veces. Ya no la quiere nadie: si se termina, se pierde el mote."
+     ],
+     "nodo": "Sacristan",
+     "en": [5, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Catedral de Málaga (1528–1782). Inacabada desde hace más de doscientos años. Patrimonio de la paciencia."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "tamano": [12, 11],
+   "puerta": [5, 10],
+   "suelo": "piedra",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [5, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_blanco", 4, 3],
+    ["pedestal", 1, 1],
+    ["pedestal", 8, 1],
+    ["arbol_maceta", 10, 0],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 6, 6],
+    ["arbol_maceta", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 9]},
+   "pasos": []
+  },
+  "malaga/sala_calle_50_42": {
+   "pieza": "tienda_azul",
+   "calle": ["malaga/exterior", [50, 42]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Málaga",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Los socios entrenan para la playa de la Malagueta. En invierno también: aquí no hay invierno.",
+      "Viene a entrenar un actor del rodaje. Hace el mismo ejercicio dos veces porque le gritan «corten»."
+     ],
+     "nodo": "Monitor",
+     "en": [5, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Socia",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": [
+      "Me apunté para salir en la película como figurante. Me han dicho que en la peli no se ve el gimnasio."
+     ],
+     "nodo": "Socia",
+     "en": [7, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [7, 9],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [["tatami_verde", [2, 4, 8, 4]]],
+   "muebles": [
+    ["taquilla_gris", 7, 0],
+    ["taquilla_gris", 8, 0],
+    ["taquilla_azul", 9, 0],
+    ["taquilla_azul", 10, 0],
+    ["caja", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_58_10": {
+   "pieza": "casa_granero",
+   "calle": ["malaga/exterior", [58, 10]],
+   "tipo": "casa",
+   "nombre": "Casa del pintor de la Plaza de la Merced",
+   "personas": [
+    {
+     "nombre": "Pintor",
+     "aspecto": "npc_man",
+     "papel": "mesa",
+     "frases": [
+      "Picasso nació aquí al lado, en la Plaza de la Merced, en 1881. Yo nací en el 1981. Cien años de diferencia y ningún cuadro en el Prado.",
+      "Pinto palomas como hacía su padre. Las palomas siguen siendo de la plaza. Los cuadros, de los turistas."
+     ],
+     "nodo": "Pintor",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": ["Mi padre dice que es cubista. Yo creo que dibuja mal."],
+     "nodo": "Hija",
+     "en": [4, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["nevera_alta", 10, 0],
+    ["tele", 1, 1],
+    ["estante_madera", 3, 1],
+    ["sillon_derecha", 6, 3],
+    ["mesa_cristal", 7, 4],
+    ["sillon_izquierda", 9, 3],
+    ["palmera_maceta", 10, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "malaga/sala_calle_5_13": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["malaga/exterior", [5, 13]],
+   "tipo": "casa",
+   "nombre": "Casa del cantaor de verdiales",
+   "personas": [
+    {
+     "nombre": "Cantaor de verdiales",
+     "aspecto": "tuno",
+     "papel": "libre",
+     "frases": [
+      "Los verdiales se tocan con violín, guitarra, panderos y platillos. Las pandas se pelean a cante el día de los Inocentes.",
+      "El sombrero lleva espejitos y cintas de colores. Se ve desde Ronda."
+     ],
+     "nodo": "CantaorDeVerdiales",
+     "en": [6, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido canta verdiales desde que se levanta. La cafetera ya se los sabe."],
+     "nodo": "Mujer",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "rombos_verdes",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 6, 0],
+    ["fogones", 7, 1],
+    ["fregadero", 9, 1],
+    ["tele", 2, 1],
+    ["sofa", 8, 7],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_60_35": {
+   "pieza": "castillo_luz",
+   "calle": ["malaga/exterior", [60, 35]],
+   "tipo": "castillo",
+   "nombre": "Alcazaba de Málaga",
+   "personas": [
+    {
+     "nombre": "Guarda",
+     "aspecto": "guarda_parque",
+     "papel": "libre",
+     "frases": [
+      "Es un palacio fortificado del siglo XI. Desde aquí los reyes taifas veían llegar los barcos. Ahora vemos llegar los cruceros.",
+      "Abajo está el Teatro Romano, enterrado durante siglos. Lo encontraron en 1951 al hacer unos jardines."
+     ],
+     "nodo": "Guarda",
+     "en": [10, 9],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista",
+     "papel": "libre",
+     "frases": ["Los jardines, las fuentes, las murallas… Esto es como la Alhambra, pero sin cola."],
+     "nodo": "Turista",
+     "en": [14, 9],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Patio de los Naranjos de la Alcazaba. Agua, sombra y azahar: el aire acondicionado del siglo XI."],
+     "nodo": "Cartel",
+     "en": [9, 1]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [12, 11],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_gargola", 2, 0],
+    ["escalera_mano", 4, 0],
+    ["estatua_gargola", 7, 0],
+    ["taquilla_gris", 14, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [12, 10]},
+   "pasos": []
+  },
+  "malaga/sala_calle_67_70": {
+   "pieza": "velero",
+   "calle": ["malaga/exterior", [67, 70]],
+   "tipo": "caseta",
+   "nombre": "Velero de alquiler del Muelle Uno",
+   "personas": [
+    {
+     "nombre": "Patrón",
+     "aspecto": "regatista",
+     "papel": "libre",
+     "frases": [
+      "Salidas de dos horas para ver delfines. Los delfines no siempre vienen. El cava, sí.",
+      "Esta semana he llevado a tres despedidas de soltera. El barco necesita una semana de vacaciones."
+     ],
+     "nodo": "Patron",
+     "en": [2, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [8, 8],
+   "puerta": [3, 7],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["cajon_gris", 2, 1], ["nevera", 3, 1], ["banqueta_azul", 1, 6], ["planta", 6, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "malaga/sala_calle_72_8": {
+   "pieza": "casa_teja",
+   "calle": ["malaga/exterior", [72, 8]],
+   "tipo": "casa",
+   "nombre": "Casa del vecino de la Malagueta",
+   "personas": [
+    {
+     "nombre": "Abuelo",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Llevo setenta años bañándome en la Malagueta. El agua está igual de fría y la playa igual de llena.",
+      "Antes los ingleses venían a curarse los pulmones. Ahora vienen a quemarse los hombros."
+     ],
+     "nodo": "Abuelo",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Mi abuelo se baña en enero. Los turistas le hacen fotos como si fuera un monumento."],
+     "nodo": "Nieta",
+     "en": [7, 7],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "parquet",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [6, 5, 3, 3]]],
+   "muebles": [
+    ["fogones", 8, 1],
+    ["encimera", 10, 1],
+    ["cajon_oliva", 2, 1],
+    ["tele", 3, 1],
+    ["vitrina_madera", 5, 1],
+    ["mesa_cristal_larga", 7, 5],
+    ["silla_derecha", 6, 5],
+    ["silla_izquierda", 10, 5],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_76_16": {
+   "pieza": "castillo_luz",
+   "calle": ["malaga/exterior", [76, 16]],
+   "tipo": "castillo",
+   "nombre": "Castillo de Gibralfaro",
+   "personas": [
+    {
+     "nombre": "Soldado de recreación",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Gibralfaro viene de «monte del faro». Arriba había un faro fenicio. Ahora hay un mirador y una máquina de refrescos.",
+      "Los Reyes Católicos asediaron este castillo tres meses. Se tarda menos en subir andando. Un poco menos."
+     ],
+     "nodo": "SoldadoDeRecreacion",
+     "en": [10, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Excursionista",
+     "aspecto": "montanera",
+     "papel": "libre",
+     "frases": ["He subido andando desde el centro. Ya entiendo por qué los asediadores se rindieron a medias."],
+     "nodo": "Excursionista",
+     "en": [4, 7],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Mirador de Gibralfaro: la plaza de toros, el puerto, la catedral sin torre y, en días claros, África."
+     ],
+     "nodo": "Cartel",
+     "en": [11, 1]
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [6, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_gargola", 4, 0],
+    ["escalera_mano", 6, 0],
+    ["estatua_gargola", 9, 0],
+    ["vitrina_alta", 1, 5],
+    ["cajas", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_77_65": {
+   "pieza": "torre_socorrista",
+   "calle": ["malaga/exterior", [77, 65]],
+   "tipo": "socorrismo",
+   "nombre": "Caseta de socorrismo de la Malagueta",
+   "personas": [
+    {
+     "nombre": "Socorrista",
+     "aspecto": "nadador_f",
+     "papel": "libre",
+     "frases": [
+      "Lo más peligroso de esta playa no son las olas: es la gente que se duerme al sol y se despierta de color espeto.",
+      "Cuando sopla el terral, la temperatura sube a cuarenta en un rato. Ese día rescato a más gente de la arena que del agua."
+     ],
+     "nodo": "Socorrista",
+     "en": [5, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [8, 8],
+   "puerta": [3, 7],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["cajon_gris", 2, 1], ["nevera", 3, 1], ["planta", 6, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "malaga/sala_calle_80_9": {
+   "pieza": "bloque_pisos",
+   "calle": ["malaga/exterior", [80, 9]],
+   "tipo": "portal",
+   "nombre": "Portal del Paseo de Reding",
+   "personas": [
+    {
+     "nombre": "Portera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "En este portal vive un actor famoso. No te diré cuál. Pero el bigote es de Zorro.",
+      "Los turistas preguntan por la casa de Banderas. Les mando a la de enfrente. Es más bonita."
+     ],
+     "nodo": "Portera",
+     "en": [7, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "piedra",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 6, 0],
+    ["planta", 9, 1],
+    ["cajonera_azul", 2, 1],
+    ["mostrador_cristal_i", 1, 3],
+    ["mostrador_cristal_m", 2, 3],
+    ["mostrador_cristal_d", 3, 3],
+    ["taburete_amarillo", 1, 5],
+    ["taburete_amarillo", 2, 5],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "malaga/sala_calle_83_64": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["malaga/exterior", [83, 64]],
+   "tipo": "casa",
+   "nombre": "Casa del biznaguero",
+   "personas": [
+    {
+     "nombre": "Biznaguero",
+     "aspecto": "npc_old_man",
+     "papel": "dependiente",
+     "frases": [
+      "La biznaga se hace pinchando jazmines en un cardo seco. Se vende de noche por la calle, cuando el jazmín huele más.",
+      "Mi padre vendía biznagas, mi abuelo también. Mi nieto vende fundas de móvil. La tradición, a veces, se pierde."
+     ],
+     "nodo": "Biznaguero",
+     "en": [3, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Esta casa huele a jazmín todo el verano. En invierno, a puchero."],
+     "nodo": "Mujer",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["tatami_verde", [4, 3, 4, 3]]],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["encimera", 5, 1],
+    ["fogones", 8, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal", 4, 4],
+    ["taburete_amarillo", 3, 5],
+    ["taburete_amarillo", 6, 5],
+    ["palmera_maceta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "malaga/sala_calle_87_8": {
+   "pieza": "casa_gris",
+   "calle": ["malaga/exterior", [87, 8]],
+   "tipo": "casa",
+   "nombre": "Casa del extranjero de la Costa del Sol",
+   "personas": [
+    {
+     "nombre": "Jubilado sueco",
+     "aspecto": "turista",
+     "papel": "tele",
+     "frases": [
+      "I live here since 2001. En Suecia ahora son las tres y es de noche. Aquí son las tres y es la siesta.",
+      "Hablo español muy bien. «Una caña, por favor», «la cuenta» y «qué calor». Es suficiente."
+     ],
+     "nodo": "JubiladoSueco",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Asistenta",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Le enseño español a cambio de que me enseñe sueco. Llevamos dos años y sabemos tres palabras cada uno."
+     ],
+     "nodo": "Asistenta",
+     "en": [7, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "salvia",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 2, 1],
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["tele", 9, 1],
+    ["mesa_cristal", 3, 5],
+    ["taburete_rojo", 2, 6],
+    ["taburete_rojo", 5, 6],
+    ["sofa", 7, 6],
+    ["arbol_maceta", 10, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  }
+ }
+}
