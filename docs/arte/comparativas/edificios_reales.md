@@ -198,7 +198,7 @@ Pruebas dirigidas: **3/3, 735 aserciones**. Alcance de Valladolid: **19 puertas,
 
 El rectángulo de franjas rojas y blancas se sustituye por una cubierta oscura con hueco del campo y una envolvente de cinco bandas de lamas claras. La planta baja queda retranqueada con paños de vidrio y un acceso enmarcado. El panel del escudo se simplifica a esta escala; no es una reproducción detallada del emblema. Se conserva el lienzo de **320×176 píxeles del arte (20×11 casillas)**, fuente **376**, puerta **(10,0)** y ancla **(1,14)**.
 
-Referencias: [fotografías y explicación del proyectista](https://www.idom.com/proyecto/san-mames-estructura-y-fachada/), [ficha técnica con sección de la envolvente](https://www.iasoglobal.com/downloads/fichas-at/estadios-y-recintos-deportivos/estadio%20san%20mames/at_ficha_estadio_san_mames_en.pdf), [arquitectura del estadio](https://sanmames.athletic-club.eus/san-mames/). No se copian fotos al repositorio. Las proporciones se adaptan al lienzo existente; no representan medidas reales.
+Referencias: [fotografías y explicación del proyectista](https://www.idom.com/proyecto/san-mames-estructura-y-fachada/), [ficha técnica de la envolvente](https://www.iasoglobal.com/downloads/fichas-at/estadios-y-recintos-deportivos/estadio%20san%20mames/at_ficha_estadio_san_mames_en.pdf), [arquitectura del estadio](https://sanmames.athletic-club.eus/san-mames/). No se copian fotos al repositorio. Las proporciones se adaptan al lienzo existente; no representan medidas reales.
 
 | Vista | Antes | Después |
 |---|---|---|
@@ -206,3 +206,6 @@ Referencias: [fotografías y explicación del proyectista](https://www.idom.com/
 | Misma escena y escala | [mapa](edificios_reales/san_mames_mapa_antes.png) | [mapa](edificios_reales/san_mames_mapa_despues.png) |
 
 Huella de colisión anterior declarada de forma explícita. No se cambia el mapa, la puerta ni el interior. Contrato: **3/3, 735 aserciones**. Bilbao: **19 puertas, 0 problemas de alcance**. Persisten los avisos de recursos retenidos al salir de la herramienta de alcance (148 recursos); no son fallos del recorrido. Arte provisional pendiente de Javier.
+
+
+**Comprobación conjunta del bloque 2, primera pasada:** **612/614 pruebas**, **81.688/81.697 aserciones**, **816,937 s**. Fallan dos pruebas de `test_city_services.gd`: en `getafe/casa_vecina` no se abre el PC desde (8,5) ni se sale desde (8,11); en `getafe/casa_1` no se recoge el regalo desde (12,7). Los edificios redibujados pasan su contrato. El agente de interiores ha guardado una corrección de ambas casas en su rama (`686f0efe`); falta que llegue a main y repetir la suite. No se modifican sus mapas desde edificios. Arte: **11.494 PNG, 0 errores/avisos**. Datos: **0 errores, 2 avisos anteriores**. Grafo: **958 mapas, todos alcanzables y con vuelta**. No se da el bloque por integrado.

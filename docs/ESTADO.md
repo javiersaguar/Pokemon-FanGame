@@ -441,6 +441,9 @@ Primero: casa de madera de Ruta 2, casa roja de Bilbao y faro de Ruta 19; son pi
 
 San Mamés también redibujado: cinco bandas de lamas claras, cubierta con hueco del campo, vidrio y acceso. Mantiene 20×11 casillas, fuente 376, puerta (10,0), ancla e interior. Contrato 3/3 y Bilbao 19 puertas, 0 problemas. Capturas antes/después guardadas. Sigue provisional; a continuación, comprobación conjunta del bloque 2.
 
+
+**Comprobación conjunta del bloque 2, primera pasada:** **612/614 pruebas**, **81.688/81.697 aserciones**, **816,937 s**. Fallan dos pruebas de `test_city_services.gd`: en `getafe/casa_vecina` no se abre el PC desde (8,5) ni se sale desde (8,11); en `getafe/casa_1` no se recoge el regalo desde (12,7). Los edificios redibujados pasan su contrato. El agente de interiores ha guardado una corrección de ambas casas en su rama (`686f0efe`); falta que llegue a main y repetir la suite. No se modifican sus mapas desde edificios. Arte: **11.494 PNG, 0 errores/avisos**. Datos: **0 errores, 2 avisos anteriores**. Grafo: **958 mapas, todos alcanzables y con vuelta**. No se da el bloque por integrado.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)
