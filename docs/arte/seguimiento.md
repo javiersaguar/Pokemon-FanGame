@@ -623,6 +623,8 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Casa de Ruta 2, casa roja de Bilbao y faro de Ruta 19 | colocaciones corregidas, recurso del pack intacto | pendiente | [Tres comparativas y contrato de puertas](comparativas/edificios_reales.md#bloque-1--piezas-recortadas-20-de-octubre) |
 | 137 fuentes propias | inventariadas con usos, dimensiones, puertas y captura previa; redibujo individual en curso | pendiente | [Lista completa y motivos](comparativas/edificios_reales.md#inventario-individual-de-fuentes-propias) |
 
+| Casa Consistorial de Valladolid, fachada propia | redibujada y comprobada en el mapa; provisional | pendiente | [Fotos municipales y antes/después](comparativas/edificios_reales.md#casa-consistorial-de-valladolid) |
+
 ## Interiores personalizados · 20 de octubre de 2026
 
 | Recurso | Área | Responsable | Estado | Procedencia | Aprobación Javier | Comparativa |

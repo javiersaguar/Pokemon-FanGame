@@ -428,10 +428,26 @@ func _hand_made(objects: Dictionary) -> void:
 		img.convert(Image.FORMAT_RGBA8)
 		var size := Vector2i(ceili(img.get_width() / float(T)), ceili(img.get_height() / float(T)))
 		var footprint := _solid_cells(img)
-		if pieces[id].get("huella", "") == "base":
+		var shape: Variant = pieces[id].get("huella", "")
+		if shape is Array:
+			# Una fachada rehecha conserva la colisión existente del mapa: los remates del
+			# tejado no añaden paredes a calles y accesos ya enlazados.
+			var valid := true
+			for cell: Variant in shape:
+				if not cell is Array or cell.size() != 2:
+					valid = false
+					break
+				if int(cell[0]) < 0 or int(cell[0]) >= size.x or int(cell[1]) > 0 or int(cell[1]) <= -size.y:
+					valid = false
+					break
+			if not valid:
+				push_error("piezas.json: huella fuera del lienzo de '%s'." % id)
+				continue
+			footprint = shape.duplicate(true)
+		elif shape == "base":
 			# Solo choca la fila de abajo (pilares de un acueducto, de un puente...): se pasa por debajo.
 			footprint = footprint.filter(func(cell: Array) -> bool: return int(cell[1]) == 0)
-		elif pieces[id].get("huella", "") == "ninguna":
+		elif shape == "ninguna":
 			# No choca nada (el tablero de un puente: se pinta debajo de los personajes).
 			footprint = []
 		objects[id] = {"source": source, "file": "hecho_a_mano/" + file,
