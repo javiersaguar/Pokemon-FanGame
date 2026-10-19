@@ -448,6 +448,8 @@ San Mamés también redibujado: cinco bandas de lamas claras, cubierta con hueco
 
 **Fachada preparada: Akuarela Playa.** Se sustituye la caja de ventanas azules por una cornisa curva clara, grandes ventanales divididos, pórtico, terraza pavimentada con barandilla y escalera exterior a la derecha. El rótulo se dibuja en píxeles del propio lienzo. La planta y las curvas se comprimen a la escala del juego; no se añade una segunda puerta ni se cambia el acceso al gimnasio. Contrato 3/3 (735 aserciones), alcance 0 problemas. Comparativas individual y en mapa guardadas. Provisional; la integración espera la suite conjunta.
 
+**Fachada preparada: Palacio Real de Madrid.** Se elimina el gran reloj frontal y se da profundidad a la cubierta, con el patio interior, balaustrada y pabellón central. La fachada distingue los pequeños vanos superiores, los balcones de la planta noble y el basamento con despiece horizontal. El acceso de la Liga sigue en su casilla. El escudo y las estatuas no se reproducen en detalle a esta escala; quedan pendientes de pulido artístico. Contrato 3/3 (735 aserciones), alcance 0 problemas. Comparativas individual y en mapa guardadas. Provisional; la integración espera la suite conjunta.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)

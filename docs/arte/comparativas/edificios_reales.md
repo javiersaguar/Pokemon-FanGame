@@ -56,7 +56,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `mercado_san_miguel` | [8, 5]; [3, 0] | `madrid/centro`, `santander/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/mercado_san_miguel.png) |
 | `edificio_metropolis` | [6, 11]; [2, 0] | `madrid/centro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/edificio_metropolis.png) |
 | `edificio_carrion` | [7, 12]; [3, 0] | `madrid/centro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/edificio_carrion.png) |
-| `palacio_real` | [20, 12]; [9, 0] | `madrid/palacio_real` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/palacio_real.png) |
+| `palacio_real` | [20, 12]; [9, 0] | `madrid/palacio_real` | Redibujado, provisional; referencias reales, tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/palacio_real.png) |
 | `catedral_almudena` | [10, 10]; [4, 0] | `madrid/palacio_real` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/catedral_almudena.png) |
 | `teatro_real` | [8, 7]; [3, 0] | `bilbao/exterior`, `madrid/palacio_real`, `santander/exterior`, `sevilla/rio` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/teatro_real.png) |
 | `felipe_iv` | [3, 6]; [-1, -1] | `madrid/palacio_real`, `pamplona/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/felipe_iv.png) |
@@ -239,3 +239,18 @@ Referencias consultadas el 20 de octubre de 2026: [fotografías y distribución 
 | Misma escena y escala | [mapa](edificios_reales/akuarela_mapa_antes.png) | [mapa](edificios_reales/akuarela_mapa_despues.png) |
 
 Contrato dirigido: **3/3, 735 aserciones**. Alcance de `valencia/malvarrosa`: **0 problemas**. Los avisos anteriores de recursos retenidos al salir de la herramienta siguen presentes. Arte provisional; falta la comprobación conjunta con la corrección de Getafe integrada.
+
+### Palacio Real de Madrid
+
+Se elimina el gran reloj frontal y se da profundidad a la cubierta, con el patio interior, balaustrada y pabellón central. La fachada distingue los pequeños vanos superiores, los balcones de la planta noble y el basamento con despiece horizontal. El acceso de la Liga sigue en su casilla. El escudo y las estatuas no se reproducen en detalle a esta escala; quedan pendientes de pulido artístico.
+
+Lienzo **20×12 casillas**, fuente **39**, puerta **[9, 0]**. Huella de colisión anterior declarada en el catálogo; no se cambia la escena exterior ni la identidad del interior.
+
+Referencias consultadas el 20 de octubre de 2026: [fotografías oficiales y vista aérea](https://www.esmadrid.com/informacion-turistica/palacio-real), [folleto de accesibilidad con distribución](https://www.patrimonionacional.es/sites/default/files/2020-06/folleto_palacio_real_accesibilidad_para_pmr.pdf). Las fotografías solo se enlazan. Las fuentes quedan también en la cabecera del `.px2`.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | ![](edificios_reales/piezas_antes/palacio_real.png) | ![](edificios_reales/piezas_despues/palacio_real.png) |
+| Misma escena y escala | [mapa](edificios_reales/palacio_real_mapa_antes.png) | [mapa](edificios_reales/palacio_real_mapa_despues.png) |
+
+Contrato dirigido: **3/3, 735 aserciones**. Alcance de `madrid/palacio_real`: **0 problemas**. Los avisos anteriores de recursos retenidos al salir de la herramienta siguen presentes. Arte provisional; falta la comprobación conjunta con la corrección de Getafe integrada.

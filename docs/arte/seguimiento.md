@@ -631,6 +631,8 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 
 | Akuarela Playa · redibujo real | fuente manual y comparativa en el mapa; provisional | pendiente | [Antes/después](comparativas/edificios_reales.md) |
 
+| Palacio Real de Madrid · redibujo real | fuente manual y comparativa en el mapa; provisional | pendiente | [Antes/después](comparativas/edificios_reales.md) |
+
 ## Interiores personalizados · 20 de octubre de 2026
 
 | Recurso | Área | Responsable | Estado | Procedencia | Aprobación Javier | Comparativa |
