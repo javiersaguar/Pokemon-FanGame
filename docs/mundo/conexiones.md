@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **952 mapas** en total. Se llega a **952** desde Pozuelo de Alarcón (`pozuelo/exterior`: 952) y Orcasitas (`orcasitas/exterior`: 952).
+- **957 mapas** en total. Se llega a **957** desde Pozuelo de Alarcón (`pozuelo/exterior`: 957) y Orcasitas (`orcasitas/exterior`: 957).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -137,30 +137,30 @@ Ninguna: todos los destinos existen.
 | `alicante/estanco` | Estanco · Alicante | — | Salida → `alicante/exterior` |
 | `alicante/exterior` | Alicante | north → `ruta_10/exterior`, west → `ruta_11/exterior` | Centro → `alicante/centro`, Mercadona → `alicante/mercadona`, Estanco → `alicante/estanco`, Sala58_12 → `alicante/sala_calle_58_12`, Sala28_33 → `alicante/sala_calle_28_33`, Sala20_43 → `alicante/sala_calle_20_43`, Sala4_9 → `alicante/sala_calle_4_9`, Sala12_9 → `alicante/sala_calle_12_9`, Sala22_9 → `alicante/sala_calle_22_9`, Sala31_8 → `alicante/sala_calle_31_8`, Sala42_8 → `alicante/sala_calle_42_8`, Sala6_19 → `alicante/sala_calle_6_19`, Sala24_20 → `alicante/sala_calle_24_20`, Sala29_20 → `alicante/sala_calle_29_20`, Sala19_32 → `alicante/sala_calle_19_32`, Sala44_32 → `alicante/sala_calle_44_32`, Sala7_43 → `alicante/sala_calle_7_43`, Sala42_42 → `alicante/sala_calle_42_42`, Sala51_43 → `alicante/sala_calle_51_43`, Sala50_26 → `alicante/sala_calle_50_26`, Sala55_26 → `alicante/sala_calle_55_26`, Sala50_31 → `alicante/sala_calle_50_31`, Sala55_31 → `alicante/sala_calle_55_31`, Sala42_19 → `alicante/sala_calle_42_19`, Sala56_42 → `alicante/sala_calle_56_42`, Sala32_12 → `alicante/sala_calle_32_12`, Sala68_36 → `alicante/sala_calle_68_36` |
 | `alicante/mercadona` | Mercadona · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_12_9` | Oficinas · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_19_32` | Casa rosa · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_20_43` | Casa Carbonell · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_22_9` | Grandes almacenes · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_24_20` | Tienda azul · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_28_33` | Concatedral de San Nicolás · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_29_20` | Teatro · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_31_8` | Portal verde · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_32_12` | Puesto · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_42_19` | Casa naranja · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_42_42` | Edificio Cupula · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_42_8` | Casa de dos aguas · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_44_32` | Oficinas · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_4_9` | Portal · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_50_26` | Casa ibicenca · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_50_31` | Casa ibicenca · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_51_43` | Tienda naranja · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_55_26` | Casa ibicenca · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_55_31` | Casa ibicenca · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_56_42` | Puesto · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_58_12` | Castillo de Santa Bárbara · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_68_36` | Torre de socorro · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_6_19` | Gimnasio · Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_7_43` | Portal verde · Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_12_9` | Oficina de turismo de la Costa Blanca, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_19_32` | Casa de la foguerera, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_20_43` | Casa Carbonell, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_22_9` | Grandes almacenes de la avenida Maisonnave, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_24_20` | Basic-Fit de Alicante, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_28_33` | Concatedral de San Nicolás, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_29_20` | Teatro Principal de Alicante, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_31_8` | Piso del jubilado inglés, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_32_12` | Puesto del Mercado Central, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_42_19` | Casa del turronero de Jijona, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_42_42` | Piso con cúpula frente al puerto, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_42_8` | Casa del vigilante del faro, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_44_32` | Ayuntamiento de Alicante, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_4_9` | Portal de la avenida de Alfonso el Sabio, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_50_26` | Casa encalada del Barrio de Santa Cruz, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_50_31` | Casa del costalero de Semana Santa, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_51_43` | Heladería de turrón de la Explanada, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_55_26` | Casa del guitarrista del Barrio, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_55_31` | Casa de la abuela de los gatos, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_56_42` | Puesto de artesanía de la Explanada, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_58_12` | Castillo de Santa Bárbara, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_68_36` | Caseta de socorrismo del Postiguet, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_6_19` | Club de artes marciales de la plaza de los Luceros, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_7_43` | Piso de la estudiante de la Universidad de Alicante, Alicante | — | Salida → `alicante/exterior` |
 | `barcelona/barceloneta/hospital` | Hospital · Barceloneta | — | Salida → `barcelona/ciutat_vella` |
 | `barcelona/casa_rufian` | Piso de Gabriel Rufián · Eixample | — | Salida → `barcelona/sala_eixample_10_31`, Habitacion → `barcelona/habitacion_rufian` |
 | `barcelona/ciutat_vella` | Barcelona · Ciutat Vella | north → `barcelona/eixample` | FerryPalma → `transporte/ferry_barcelona_palma`, Hospital → `barcelona/barceloneta/hospital`, Sala5_13 → `barcelona/sala_ciutat_vella_5_13`, Sala12_13 → `barcelona/sala_ciutat_vella_12_13`, Sala22_13 → `barcelona/sala_ciutat_vella_22_13`, Sala5_27 → `barcelona/sala_ciutat_vella_5_27`, Sala13_26 → `barcelona/sala_ciutat_vella_13_26`, Sala22_27 → `barcelona/sala_ciutat_vella_22_27`, Sala5_40 → `barcelona/sala_ciutat_vella_5_40`, Sala25_40 → `barcelona/sala_ciutat_vella_25_40`, Sala6_49 → `barcelona/sala_ciutat_vella_6_49`, Sala44_22 → `barcelona/sala_ciutat_vella_44_22`, Sala47_6 → `barcelona/sala_ciutat_vella_47_6`, Sala57_27 → `barcelona/sala_ciutat_vella_57_27`, Sala13_36 → `barcelona/sala_ciutat_vella_13_36`, Sala49_41 → `barcelona/sala_ciutat_vella_49_41` |
@@ -288,19 +288,19 @@ Ninguna: todos los destinos existen.
 | `getafe/sala_calle_55_23` | Casa de dos aguas · Getafe | — | Salida → `getafe/exterior` |
 | `getafe/sala_calle_59_7` | Casa roja pequeña · Getafe | — | Salida → `getafe/exterior` |
 | `getafe/sala_calle_5_9` | Oficinas · Getafe | — | Salida → `getafe/exterior` |
-| `huelva/casa_1` | Casa de la chimenea · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/casa_2` | Casa de la chimenea · Huelva | — | Salida → `huelva/exterior` |
+| `huelva/casa_1` | Casa inglesa del Barrio Obrero, Huelva | — | Salida → `huelva/exterior` |
+| `huelva/casa_2` | Casa del marisquero de gambas blancas, Huelva | — | Salida → `huelva/exterior` |
 | `huelva/centro` | Centro Pokémon · Huelva | — | Salida → `huelva/exterior` |
 | `huelva/estanco` | Estanco · Huelva | — | Salida → `huelva/exterior` |
 | `huelva/exterior` | Huelva | east → `ruta_14/exterior` | FerryCanarias → `transporte/ferry_huelva_las_palmas`, Centro → `huelva/centro`, Mercadona → `huelva/mercadona`, Estanco → `huelva/estanco`, Casa1 → `huelva/casa_1`, Casa2 → `huelva/casa_2`, Sala20_12 → `huelva/sala_calle_20_12`, Sala31_12 → `huelva/sala_calle_31_12`, Sala49_8 → `huelva/sala_calle_49_8`, Sala55_8 → `huelva/sala_calle_55_8`, Sala39_27 → `huelva/sala_calle_39_27`, Sala46_31 → `huelva/sala_calle_46_31`, Sala53_17 → `huelva/sala_calle_53_17` |
 | `huelva/mercadona` | Mercadona · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/sala_calle_20_12` | Palacio Infantado · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/sala_calle_31_12` | Catedral Ibiza · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/sala_calle_39_27` | Tienda naranja · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/sala_calle_46_31` | Portal · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/sala_calle_49_8` | Casa de la chimenea · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/sala_calle_53_17` | Casa roja pequeña · Huelva | — | Salida → `huelva/exterior` |
-| `huelva/sala_calle_55_8` | Casa de la chimenea · Huelva | — | Salida → `huelva/exterior` |
+| `huelva/sala_calle_20_12` | Casa Colón, Huelva | — | Salida → `huelva/exterior` |
+| `huelva/sala_calle_31_12` | Catedral de la Merced, Huelva | — | Salida → `huelva/exterior` |
+| `huelva/sala_calle_39_27` | Tienda de jamones de Jabugo, Huelva | — | Salida → `huelva/exterior` |
+| `huelva/sala_calle_46_31` | Piso del trabajador del Polo Químico, Huelva | — | Salida → `huelva/exterior` |
+| `huelva/sala_calle_49_8` | Casa de la familia del Rocío, Huelva | — | Salida → `huelva/exterior` |
+| `huelva/sala_calle_53_17` | Casa del marinero de Palos, Huelva | — | Salida → `huelva/exterior` |
+| `huelva/sala_calle_55_8` | Casa de la jornalera de la fresa, Huelva | — | Salida → `huelva/exterior` |
 | `ibiza/casa_1` | Casa de Margalida, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/casa_1_dormitorio` |
 | `ibiza/casa_1_dormitorio` | Dormitorio de Toni, Ibiza | — | Salida → `ibiza/casa_1` |
 | `ibiza/casa_2` | Piso de temporada, Ibiza | — | Salida → `ibiza/exterior`, Dormitorio → `ibiza/casa_2_dormitorio` |
@@ -343,32 +343,33 @@ Ninguna: todos los destinos existen.
 | `las_palmas/estanco` | Estanco · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
 | `las_palmas/hospital` | Hospital · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
 | `las_palmas/mercadona` | Mercadona · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_24_46` | Oficinas · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_25_32` | Edificio Cristal · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_26_19` | Puesto · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_33_32` | Portal · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_39_21` | Tienda naranja · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_41_31` | Portal verde · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_41_46` | Portal · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_43_15` | Castillo Luz · Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_vegueta_triana_11_8` | Casa de tejado azul · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_18_30` | Casa de teja · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_18_8` | Edificio Cupula · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_19_19` | Casa de tejado azul · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_21_38` | Catedral Santa Ana · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_24_19` | Casa de madera · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_25_8` | Casa de teja · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_31_27` | Casa roja pequeña · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_31_37` | Casa de madera · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_36_37` | Granero · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_37_46` | Casa de dos aguas · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_39_22` | Casa gris · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_3_35` | Casa de madera · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_3_46` | Casa de madera · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_42_37` | Puesto · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_42_46` | Casa de madera · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_4_8` | Casa de teja · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
-| `las_palmas/sala_vegueta_triana_8_35` | Granero · Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_canteras_24_46` | Oficina de la naviera del puerto de La Luz, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_25_32` | Hotel frente a Las Canteras, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_26_19` | Kiosco de la Isleta, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_33_32` | Piso del surfista de La Cícer, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_39_21` | Tienda de surf de Las Canteras, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_41_31` | Piso de la familia canaria del Puerto, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_41_46` | Portal del barrio de Guanarteme, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_43_15` | Castillo de la Luz, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_vegueta_triana_11_8` | Tienda de timples de la calle Mayor de Triana, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_18_30` | Casa canaria de balcón de madera, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_18_8` | Gabinete Literario, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_19_19` | Casa del guagüero de Triana, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_21_38` | Catedral de Santa Ana, Las Palmas | — | Salida → `las_palmas/vegueta_triana`, Torre → `las_palmas/sala_vegueta_triana_21_38_torre` |
+| `las_palmas/sala_vegueta_triana_21_38_torre` | Torre de la catedral de Santa Ana, Las Palmas | — | Salida → `las_palmas/sala_vegueta_triana_21_38` |
+| `las_palmas/sala_vegueta_triana_24_19` | Casa de la murguera del Carnaval, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_25_8` | Cafetería de la calle Mayor de Triana, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_31_27` | Casa del platanero, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_31_37` | Casa de Colón, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_36_37` | Casa de la quesera de Flor de Guía, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_37_46` | Casa del luchador canario, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_39_22` | Casa del poeta de Vegueta, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_3_35` | Casa de la abuela de los mojos, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_3_46` | Casa del pescador de San Cristóbal, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_42_37` | Puesto del Mercado de Vegueta, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_42_46` | Casa de la familia del ron miel, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_4_8` | Casa de la diseñadora de Triana, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
+| `las_palmas/sala_vegueta_triana_8_35` | Bodega de vino del Monte Lentiscal, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
 | `las_palmas/vegueta_triana` | Las Palmas · Vegueta y Triana | north → `las_palmas/canteras`, south → `ruta_15/exterior` | Hospital → `las_palmas/hospital`, Estanco → `las_palmas/estanco`, Sala4_8 → `las_palmas/sala_vegueta_triana_4_8`, Sala11_8 → `las_palmas/sala_vegueta_triana_11_8`, Sala18_8 → `las_palmas/sala_vegueta_triana_18_8`, Sala25_8 → `las_palmas/sala_vegueta_triana_25_8`, Sala19_19 → `las_palmas/sala_vegueta_triana_19_19`, Sala24_19 → `las_palmas/sala_vegueta_triana_24_19`, Sala21_38 → `las_palmas/sala_vegueta_triana_21_38`, Sala31_37 → `las_palmas/sala_vegueta_triana_31_37`, Sala36_37 → `las_palmas/sala_vegueta_triana_36_37`, Sala42_37 → `las_palmas/sala_vegueta_triana_42_37`, Sala3_35 → `las_palmas/sala_vegueta_triana_3_35`, Sala8_35 → `las_palmas/sala_vegueta_triana_8_35`, Sala3_46 → `las_palmas/sala_vegueta_triana_3_46`, Sala37_46 → `las_palmas/sala_vegueta_triana_37_46`, Sala42_46 → `las_palmas/sala_vegueta_triana_42_46`, Sala39_22 → `las_palmas/sala_vegueta_triana_39_22`, Sala31_27 → `las_palmas/sala_vegueta_triana_31_27`, Sala18_30 → `las_palmas/sala_vegueta_triana_18_30` |
 | `leganes/casa_1` | Casa de dos aguas · Leganés | — | Salida → `leganes/exterior` |
 | `leganes/casa_2` | Casa roja · Leganés | — | Salida → `leganes/exterior` |
@@ -504,8 +505,8 @@ Ninguna: todos los destinos existen.
 | `madrid/sala_retiro_55_47` | Palacio de Cristal, Madrid | — | Salida → `madrid/retiro` |
 | `madrid/sol/hospital` | Hospital · Sol | — | Salida → `madrid/centro` |
 | `madrid_rio/exterior` | Madrid Río | south → `orcasitas/exterior`, north → `madrid/retiro` | — |
-| `malaga/casa_1` | Casa de dos aguas · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/casa_2` | Casa de la chimenea · Málaga | — | Salida → `malaga/exterior` |
+| `malaga/casa_1` | Casa de la abuela del barrio del Perchel, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/casa_2` | Chiringuito de los espetos, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/estanco` | Estanco · Málaga | — | Salida → `malaga/exterior` |
 | `malaga/exterior` | Málaga | north → `ruta_26/exterior` | Hospital → `malaga/hospital`, Mercadona → `malaga/mercadona`, Estanco → `malaga/estanco`, Casa1 → `malaga/casa_1`, Casa2 → `malaga/casa_2`, Sala50_42 → `malaga/sala_calle_50_42`, Sala48_35 → `malaga/sala_calle_48_35`, Sala58_10 → `malaga/sala_calle_58_10`, Sala23_39 → `malaga/sala_calle_23_39`, Sala29_39 → `malaga/sala_calle_29_39`, Sala35_39 → `malaga/sala_calle_35_39`, Sala25_54 → `malaga/sala_calle_25_54`, Sala5_57 → `malaga/sala_calle_5_57`, Sala76_16 → `malaga/sala_calle_76_16`, Sala60_35 → `malaga/sala_calle_60_35`, Sala67_70 → `malaga/sala_calle_67_70`, Sala83_64 → `malaga/sala_calle_83_64`, Sala77_65 → `malaga/sala_calle_77_65`, Gimnasio → `malaga/gimnasio_1`, Sala3_6 → `malaga/sala_calle_3_6`, Sala31_7 → `malaga/sala_calle_31_7`, Sala72_8 → `malaga/sala_calle_72_8`, Sala80_9 → `malaga/sala_calle_80_9`, Sala87_8 → `malaga/sala_calle_87_8`, Sala5_13 → `malaga/sala_calle_5_13` |
 | `malaga/gimnasio_1` | Rodaje En El Puerto · Catering | — | Salida → `malaga/exterior`, Siguiente → `malaga/gimnasio_2` |
@@ -514,25 +515,25 @@ Ninguna: todos los destinos existen.
 | `malaga/gimnasio_lider` | Rodaje En El Puerto · Plató | — | Salida → `malaga/gimnasio_3` |
 | `malaga/hospital` | Hospital · Málaga | — | Salida → `malaga/exterior` |
 | `malaga/mercadona` | Mercadona · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_23_39` | Puesto · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_25_54` | Oficinas · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_29_39` | Puesto · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_31_7` | Casa roja pequeña · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_35_39` | Puesto · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_3_6` | Casa gris · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_48_35` | Catedral Malaga · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_50_42` | Tienda azul · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_58_10` | Casa naranja · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_5_13` | Casa roja pequeña · Málaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_23_39` | Puesto de pescado del Mercado de Atarazanas, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_25_54` | Oficina del Festival de Cine de Málaga, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_29_39` | Puesto de frutas tropicales de Atarazanas, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_31_7` | Casa de la familia de la Semana Santa, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_35_39` | Puesto de vinos dulces de Atarazanas, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_3_6` | Casa del vecino de los corralones de la Trinidad, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_48_35` | Catedral de la Encarnación, La Manquita, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_50_42` | Basic-Fit de Málaga, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_58_10` | Casa del pintor de la Plaza de la Merced, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_5_13` | Casa del cantaor de verdiales, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_5_57` | Estación María Zambrano · Málaga | — | Anden1 → `transporte/ave_malaga_madrid`, Salida → `malaga/exterior` |
-| `malaga/sala_calle_60_35` | Castillo Luz · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_67_70` | Velero · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_72_8` | Casa de teja · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_76_16` | Castillo Luz · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_77_65` | Torre de socorro · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_80_9` | Portal · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_83_64` | Casa de madera · Málaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_87_8` | Casa gris · Málaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_60_35` | Alcazaba de Málaga, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_67_70` | Velero de alquiler del Muelle Uno, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_72_8` | Casa del vecino de la Malagueta, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_76_16` | Castillo de Gibralfaro, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_77_65` | Caseta de socorrismo de la Malagueta, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_80_9` | Portal del Paseo de Reding, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_83_64` | Casa del biznaguero, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_87_8` | Casa del extranjero de la Costa del Sol, Malaga | — | Salida → `malaga/exterior` |
 | `maritima_1/exterior` | Ruta marítima 1 · Canal de Ibiza | north → `palma/exterior`, south → `ibiza/exterior` | — |
 | `mostoles/casa_1` | Casa de dos aguas · Móstoles | — | Salida → `mostoles/exterior` |
 | `mostoles/casa_2` | Granero · Móstoles | — | Salida → `mostoles/exterior` |
@@ -561,28 +562,29 @@ Ninguna: todos los destinos existen.
 | `murcia/estanco` | Estanco · Murcia | — | Salida → `murcia/exterior` |
 | `murcia/exterior` | Murcia | east → `ruta_11/exterior`, west → `ruta_12/exterior` | Centro → `murcia/centro`, Mercadona → `murcia/mercadona`, Estanco → `murcia/estanco`, Sala40_30 → `murcia/sala_calle_40_30`, Sala4_12 → `murcia/sala_calle_4_12`, Sala11_12 → `murcia/sala_calle_11_12`, Sala23_11 → `murcia/sala_calle_23_11`, Sala41_11 → `murcia/sala_calle_41_11`, Sala58_12 → `murcia/sala_calle_58_12`, Sala65_11 → `murcia/sala_calle_65_11`, Sala5_26 → `murcia/sala_calle_5_26`, Sala12_25 → `murcia/sala_calle_12_25`, Sala25_25 → `murcia/sala_calle_25_25`, Sala58_26 → `murcia/sala_calle_58_26`, Sala63_25 → `murcia/sala_calle_63_25`, Sala25_35 → `murcia/sala_calle_25_35`, Sala48_35 → `murcia/sala_calle_48_35`, Sala59_34 → `murcia/sala_calle_59_34`, Sala65_34 → `murcia/sala_calle_65_34`, Sala13_53 → `murcia/sala_calle_13_53`, Sala20_54 → `murcia/sala_calle_20_54`, Sala28_54 → `murcia/sala_calle_28_54`, Sala59_53 → `murcia/sala_calle_59_53`, Sala65_53 → `murcia/sala_calle_65_53`, Sala32_25 → `murcia/sala_calle_32_25` |
 | `murcia/mercadona` | Mercadona · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_11_12` | Teatro · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_12_25` | Puesto · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_13_53` | Casa de madera · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_20_54` | Portal · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_23_11` | Oficinas · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_25_25` | Edificio Cupula · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_25_35` | Portal verde · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_28_54` | Tienda naranja · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_32_25` | Puesto · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_40_30` | Catedral de Murcia · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_41_11` | Portal verde · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_48_35` | Oficinas · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_4_12` | Portal · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_58_12` | Portal · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_58_26` | Tienda azul · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_59_34` | Casa naranja · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_59_53` | Casa naranja · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_5_26` | Floristería · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_63_25` | Casa de la chimenea · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_65_11` | Casa de dos aguas · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_65_34` | Casa de madera · Murcia | — | Salida → `murcia/exterior` |
-| `murcia/sala_calle_65_53` | Casa de dos aguas · Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_11_12` | Teatro Romea, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_12_25` | Puesto de la plaza de las Flores, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_13_53` | Casa del huertano de la Vega, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_20_54` | Portal del barrio del Carmen, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_23_11` | Universidad de Murcia, aula del Convento de la Merced, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_25_25` | Real Casino de Murcia, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_25_35` | Piso con vistas al río Segura, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_28_54` | Pastelería de los paparajotes, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_32_25` | Puesto de limones de la plaza, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_40_30` | Catedral de Santa María de Murcia, Murcia | — | Salida → `murcia/exterior`, Salzillo → `murcia/sala_calle_40_30_salzillo` |
+| `murcia/sala_calle_40_30_salzillo` | Sala de los Salzillos, Murcia | — | Salida → `murcia/sala_calle_40_30` |
+| `murcia/sala_calle_41_11` | Piso de la familia de la plaza Circular, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_48_35` | Edificio Moneo del Ayuntamiento, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_4_12` | Portal de la Gran Vía, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_58_12` | Piso del estudiante de Cartagena, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_58_26` | Basic-Fit de Murcia, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_59_34` | Barraca huertana, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_59_53` | Casa de la familia de la Fuensanta, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_5_26` | Floristería de la Vega, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_63_25` | Casa del cocinero del michirones, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_65_11` | Casa de la familia del Entierro de la Sardina, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_65_34` | Casa del agricultor del trasvase, Murcia | — | Salida → `murcia/exterior` |
+| `murcia/sala_calle_65_53` | Casa de la bordadora de huertanos, Murcia | — | Salida → `murcia/exterior` |
 | `orcasitas/casa_jugador` | Tu casa · Orcasitas | — | Salida → `orcasitas/exterior` |
 | `orcasitas/casa_rival` | Casa del rival · Orcasitas | — | Salida → `orcasitas/exterior` |
 | `orcasitas/exterior` | Orcasitas | north → `madrid_rio/exterior` | CasaJugador → `orcasitas/casa_jugador`, CasaRival → `orcasitas/casa_rival`, Sala28_12 → `orcasitas/sala_calle_28_12`, Sala36_9 → `orcasitas/sala_calle_36_9`, Sala5_32 → `orcasitas/sala_calle_5_32`, Sala29_20 → `orcasitas/sala_calle_29_20` |
@@ -590,27 +592,28 @@ Ninguna: todos los destinos existen.
 | `orcasitas/sala_calle_29_20` | Tienda morada · Orcasitas | — | Salida → `orcasitas/exterior` |
 | `orcasitas/sala_calle_36_9` | Portal verde · Orcasitas | — | Salida → `orcasitas/exterior` |
 | `orcasitas/sala_calle_5_32` | Portal · Orcasitas | — | Salida → `orcasitas/exterior` |
-| `palma/casa_1` | Casa de la chimenea · Palma | — | Salida → `palma/exterior` |
-| `palma/casa_2` | Casa de dos aguas · Palma | — | Salida → `palma/exterior` |
+| `palma/casa_1` | Casa de la madona del barrio de Santa Catalina, Palma | — | Salida → `palma/exterior` |
+| `palma/casa_2` | Forn de les ensaïmades, Palma | — | Salida → `palma/exterior` |
 | `palma/centro` | Centro Pokémon · Palma | — | Salida → `palma/exterior` |
 | `palma/estanco` | Estanco · Palma | — | Salida → `palma/exterior` |
 | `palma/exterior` | Palma de Mallorca | south → `maritima_1/exterior` | FerryBarcelona → `transporte/ferry_palma_barcelona`, Centro → `palma/centro`, Mercadona → `palma/mercadona`, Estanco → `palma/estanco`, Casa1 → `palma/casa_1`, Casa2 → `palma/casa_2`, Sala7_14 → `palma/sala_calle_7_14`, Sala42_41 → `palma/sala_calle_42_41`, Sala32_40 → `palma/sala_calle_32_40`, Sala67_13 → `palma/sala_calle_67_13`, Sala44_12 → `palma/sala_calle_44_12`, Sala21_27 → `palma/sala_calle_21_27`, Sala45_26 → `palma/sala_calle_45_26`, Sala54_30 → `palma/sala_calle_54_30`, Sala61_30 → `palma/sala_calle_61_30`, Sala67_29 → `palma/sala_calle_67_29`, Sala59_43 → `palma/sala_calle_59_43`, Sala66_43 → `palma/sala_calle_66_43`, Sala19_6 → `palma/sala_calle_19_6`, Sala57_21 → `palma/sala_calle_57_21`, Sala3_38 → `palma/sala_calle_3_38` |
 | `palma/mercadona` | Mercadona · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_19_6` | Casa gris · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_21_27` | Portal verde · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_32_40` | Torre · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_3_38` | Casa gris · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_42_41` | Catedral Palma · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_44_12` | Casa de madera · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_45_26` | Tienda azul · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_54_30` | Portal · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_57_21` | Casa roja pequeña · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_59_43` | Portal · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_61_30` | Oficinas · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_66_43` | Portal verde · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_67_13` | Portal · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_67_29` | Granero · Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_7_14` | Castillo Bellver · Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_19_6` | Casa del payés que vende sobrasada, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_21_27` | Piso de temporada de la camarera de hotel, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_32_40` | Palacio de la Almudaina, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_3_38` | Casa del regatista jubilado, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_42_41` | La Seu, catedral de Mallorca, Palma | — | Salida → `palma/exterior`, Barcelo → `palma/sala_calle_42_41_barcelo` |
+| `palma/sala_calle_42_41_barcelo` | Capilla del Santísimo de Miquel Barceló, Palma | — | Salida → `palma/sala_calle_42_41` |
+| `palma/sala_calle_44_12` | Casa del vecino del Molinar, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_45_26` | Basic-Fit de Palma, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_54_30` | Piso turístico del Paseo Marítimo, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_57_21` | Casa de la pintora del barrio de la Llotja, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_59_43` | Portal de la calle Jaume III, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_61_30` | Consell de Mallorca, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_66_43` | Piso del chef de un restaurante de la playa, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_67_13` | Portal de las Avenidas, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_67_29` | Casa del músico que toca a Chopin, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_7_14` | Castell de Bellver, Palma | — | Salida → `palma/exterior` |
 | `pamplona/cafe_comedor` | Comedor · Café Iruña | — | Barra → `pamplona/cafe_iruna` |
 | `pamplona/cafe_iruna` | Café Iruña · Pamplona | — | Salida → `pamplona/exterior`, Comedor → `pamplona/cafe_comedor` |
 | `pamplona/centro` | Centro Pokémon · Pamplona | — | Salida → `pamplona/exterior` |
@@ -635,14 +638,14 @@ Ninguna: todos los destinos existen.
 | `playa_del_ingles/gimnasio_lider` | Concierto En La Playa · Escenario | — | Salida → `playa_del_ingles/gimnasio_3` |
 | `playa_del_ingles/hospital` | Hospital · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
 | `playa_del_ingles/mercadona` | Mercadona · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_16_18` | Edificio Cristal · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_24_21` | Portal · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_33_20` | Portal verde · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_39_21` | Oficinas · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_41_7` | Tienda naranja · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_53_11` | Torre de socorro · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_5_20` | Grandes almacenes · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
-| `playa_del_ingles/sala_calle_7_54` | Faro · Playa del Inglés | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_16_18` | Hotel de cristal junto al aeropuerto, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_24_21` | Apartamento de la temporada de invierno, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_33_20` | Apartamento de la promotora del concierto, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_39_21` | Oficina del ayuntamiento de San Bartolomé de Tirajana, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_41_7` | Tienda de recuerdos del aeropuerto, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_53_11` | Caseta de socorrismo de Playa del Inglés, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_5_20` | Centro comercial Yumbo, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
+| `playa_del_ingles/sala_calle_7_54` | Faro de Maspalomas, Playa Del Ingles | — | Salida → `playa_del_ingles/exterior` |
 | `pozuelo/casa_jugador` | Tu casa · Pozuelo | — | Salida → `pozuelo/exterior` |
 | `pozuelo/casa_rival` | Casa del rival · Pozuelo | — | Salida → `pozuelo/exterior` |
 | `pozuelo/exterior` | Pozuelo de Alarcón | east → `casa_de_campo/exterior` | CasaJugador → `pozuelo/casa_jugador`, CasaRival → `pozuelo/casa_rival`, Sala21_11 → `pozuelo/sala_calle_21_11`, Sala37_12 → `pozuelo/sala_calle_37_12`, Sala7_30 → `pozuelo/sala_calle_7_30`, Sala13_29 → `pozuelo/sala_calle_13_29`, Sala22_29 → `pozuelo/sala_calle_22_29`, Sala31_29 → `pozuelo/sala_calle_31_29`, Sala17_23 → `pozuelo/sala_calle_17_23` |
@@ -1043,45 +1046,47 @@ Ninguna: todos los destinos existen.
 | `valladolid/sala_calle_65_50` | Casa de dos aguas · Valladolid | — | Salida → `valladolid/exterior` |
 | `valladolid/sala_calle_66_14` | Portal · Valladolid | — | Salida → `valladolid/exterior` |
 | `vigo/aeropuerto` | Aeropuerto de Peinador · Vigo | — | Embarque → `transporte/avion_vigo_gran_canaria`, Salida → `vigo/exterior` |
-| `vigo/casa_1` | Casa de dos aguas · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/casa_2` | Casa de madera · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/casa_3` | Casa de la chimenea · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/casa_4` | Casa naranja · Vigo | — | Salida → `vigo/exterior` |
+| `vigo/casa_1` | Casa de la mariscadora de Bouzas, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/casa_2` | Casa del trabajador de los astilleros, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/casa_3` | Taller del conservero, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/casa_4` | Casa del vecino de Teis, Vigo | — | Salida → `vigo/exterior` |
 | `vigo/centro` | Centro Pokémon · Vigo | — | Salida → `vigo/exterior` |
 | `vigo/estanco` | Estanco · Vigo | — | Salida → `vigo/exterior` |
 | `vigo/exterior` | Vigo | north → `ruta_16/exterior` | AvionGranCanaria → `vigo/aeropuerto`, Centro → `vigo/centro`, Mercadona → `vigo/mercadona`, Estanco → `vigo/estanco`, Casa1 → `vigo/casa_1`, Casa2 → `vigo/casa_2`, Casa3 → `vigo/casa_3`, Casa4 → `vigo/casa_4`, Sala33_18 → `vigo/sala_calle_33_18`, Sala42_18 → `vigo/sala_calle_42_18`, Sala17_29 → `vigo/sala_calle_17_29`, Sala42_32 → `vigo/sala_calle_42_32`, Sala49_31 → `vigo/sala_calle_49_31`, Sala3_6 → `vigo/sala_calle_3_6`, Sala11_7 → `vigo/sala_calle_11_7`, Sala16_8 → `vigo/sala_calle_16_8` |
 | `vigo/mercadona` | Mercadona · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_11_7` | Casa roja pequeña · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_16_8` | Casa de teja · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_17_29` | Granero · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_33_18` | Tienda azul · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_3_6` | Casa gris · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_42_18` | Portal · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_42_32` | Oficinas · Vigo | — | Salida → `vigo/exterior` |
-| `vigo/sala_calle_49_31` | Portal verde · Vigo | — | Salida → `vigo/exterior` |
-| `zaragoza/casa_1` | Casa de dos aguas · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/casa_2` | Granero · Zaragoza | — | Salida → `zaragoza/exterior` |
+| `vigo/sala_calle_11_7` | Casa de la pulpeira, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/sala_calle_16_8` | Casa de la gaiteira, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/sala_calle_17_29` | Ostrería de la calle de A Pedra, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/sala_calle_33_18` | Basic-Fit de Vigo, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/sala_calle_3_6` | Casa del aficionado del Celta, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/sala_calle_42_18` | Portal de la calle Príncipe, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/sala_calle_42_32` | Concello de Vigo, Vigo | — | Salida → `vigo/exterior` |
+| `vigo/sala_calle_49_31` | Piso con vistas a las islas Cíes, Vigo | — | Salida → `vigo/exterior` |
+| `zaragoza/casa_1` | Casa de la abuela del Tubo, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/casa_2` | Taberna La Migueleta, en El Tubo, Zaragoza | — | Salida → `zaragoza/exterior` |
 | `zaragoza/centro` | Centro Pokémon · Zaragoza | — | Salida → `zaragoza/exterior` |
 | `zaragoza/estanco` | Estanco · Zaragoza | — | Salida → `zaragoza/exterior` |
 | `zaragoza/exterior` | Zaragoza | west → `ruta_6/exterior`, east → `ruta_7/exterior` | Centro → `zaragoza/centro`, Mercadona → `zaragoza/mercadona`, Estanco → `zaragoza/estanco`, Casa1 → `zaragoza/casa_1`, Casa2 → `zaragoza/casa_2`, Sala24_29 → `zaragoza/sala_calle_24_29`, Sala38_29 → `zaragoza/sala_calle_38_29`, Sala49_31 → `zaragoza/sala_calle_49_31`, Sala65_30 → `zaragoza/sala_calle_65_30`, Sala33_43 → `zaragoza/sala_calle_33_43`, Sala38_43 → `zaragoza/sala_calle_38_43`, Sala17_53 → `zaragoza/sala_calle_17_53`, Sala23_53 → `zaragoza/sala_calle_23_53`, Sala28_53 → `zaragoza/sala_calle_28_53`, Sala33_53 → `zaragoza/sala_calle_33_53`, Sala38_53 → `zaragoza/sala_calle_38_53`, Sala4_46 → `zaragoza/sala_calle_4_46`, Sala4_56 → `zaragoza/sala_calle_4_56`, Sala62_46 → `zaragoza/sala_calle_62_46`, Sala65_56 → `zaragoza/sala_calle_65_56`, Sala7_20 → `zaragoza/sala_calle_7_20`, Sala39_21 → `zaragoza/sala_calle_39_21`, Sala58_22 → `zaragoza/sala_calle_58_22`, Sala3_36 → `zaragoza/sala_calle_3_36`, Sala13_39 → `zaragoza/sala_calle_13_39` |
 | `zaragoza/mercadona` | Mercadona · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_13_39` | Casa roja pequeña · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_17_53` | Casa de la chimenea · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_23_53` | Casa de madera · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_24_29` | Basilica Pilar · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_28_53` | Granero · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_33_43` | Casa de madera · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_33_53` | Casa de dos aguas · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_38_29` | Oficinas · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_38_43` | Casa de dos aguas · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_38_53` | Casa de la chimenea · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_39_21` | Casa roja pequeña · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_3_36` | Casa gris · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_49_31` | La Seo · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_4_46` | Portal · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_4_56` | Oficinas · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_58_22` | Casa de teja · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_62_46` | Portal · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_65_30` | Tienda azul · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_65_56` | Portal verde · Zaragoza | — | Salida → `zaragoza/exterior` |
-| `zaragoza/sala_calle_7_20` | Casa gris · Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_13_39` | Casa del baturro de la jota, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_17_53` | Casa de la familia del cierzo, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_23_53` | Confitería de frutas de Aragón, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_24_29` | Basílica del Pilar, Zaragoza | — | Salida → `zaragoza/exterior`, Capilla → `zaragoza/sala_calle_24_29_capilla` |
+| `zaragoza/sala_calle_24_29_capilla` | Santa Capilla del Pilar, Zaragoza | — | Salida → `zaragoza/sala_calle_24_29` |
+| `zaragoza/sala_calle_28_53` | Bodega de vino de Cariñena, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_33_43` | Tasca de las madejas, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_33_53` | Piso de estudiantes de la Universidad, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_38_29` | Ayuntamiento de Zaragoza, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_38_43` | Casa de la Dolores, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_38_53` | Taller de los gigantes y cabezudos, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_39_21` | Casa del barquero del Ebro, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_3_36` | Casa de la familia de la Expo, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_49_31` | Catedral del Salvador, La Seo, Zaragoza | — | Salida → `zaragoza/exterior`, Tapices → `zaragoza/sala_calle_49_31_tapices` |
+| `zaragoza/sala_calle_49_31_tapices` | Museo de Tapices de La Seo, Zaragoza | — | Salida → `zaragoza/sala_calle_49_31` |
+| `zaragoza/sala_calle_4_46` | Portal de la calle Alfonso, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_4_56` | Oficina de logística de Plaza, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_58_22` | Casa del aficionado del Real Zaragoza, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_62_46` | Portal del barrio de la Magdalena, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_65_30` | Basic-Fit de Zaragoza, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_65_56` | Piso de la familia del Actur, Zaragoza | — | Salida → `zaragoza/exterior` |
+| `zaragoza/sala_calle_7_20` | Casa del jubilado del Puente de Piedra, Zaragoza | — | Salida → `zaragoza/exterior` |
