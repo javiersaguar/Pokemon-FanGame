@@ -1,6 +1,6 @@
 extends SceneTree
 ## Mueve el ancla de una pieza ya colocada y arrastra su puerta y la aparición de vuelta.
-## Uso: godot --headless --path . -s res://maps/_tools/mover_ancla.gd -- <mapa> <id> <x> <y>
+## Uso: godot --headless --path . -s res://maps/_tools/mover_ancla.gd -- <mapa> <id> <x> <y> [--desde=x,y]
 
 
 func _initialize() -> void:
@@ -13,10 +13,21 @@ func _initialize() -> void:
 	var catalog: Dictionary = ExteriorTiles.objects()
 	var piece: Dictionary = catalog[a[1]]
 	var dest := Vector2i(int(a[2]), int(a[3]))
+	var selected := Vector2i(-999, -999)
+	for arg: String in a:
+		if arg.begins_with("--desde="):
+			var parts := arg.trim_prefix("--desde=").split(",")
+			if parts.size() != 2 or not parts[0].is_valid_int() or not parts[1].is_valid_int():
+				push_error("mover_ancla: --desde necesita dos enteros separados por coma.")
+				quit(2)
+				return
+			selected = Vector2i(int(parts[0]), int(parts[1]))
 	var map: Node = (load("res://maps/%s.tscn" % a[0]) as PackedScene).instantiate()
 	var layer := map.get_node(^"Entities/Objects") as TileMapLayer
 	var from := Vector2i(-999, -999)
 	for cell: Vector2i in layer.get_used_cells():
+		if selected.x != -999 and cell != selected:
+			continue
 		if layer.get_cell_source_id(cell) == int(piece["source"]) and layer.get_cell_atlas_coords(cell) == (piece["coords"] as Vector2i):
 			from = cell
 			break

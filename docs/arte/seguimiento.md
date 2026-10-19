@@ -546,3 +546,10 @@ Exteriores rehechos sin repintarlos con `maps/_tools/vestir_exterior.gd` y una r
 |---|---|---|---|---|---|---|
 | 59 interiores de Sevilla | Mapa | Agente 1, cierre de sesión | recuperados, provisionales | Akizakura16 | ⏳ | [Antes/después](comparativas/interiores_2026-10-15.md#sevilla--cierre-del-trabajo-interrumpido) |
 | Entrada del Palacio y cinco salas de Liga | Mapa | Agente 2, cierre de sesión | conexión cerrada, provisional | Tileset de interiores | ⏳ | [Comparativa](comparativas/cierre_2026-10-15.md) |
+
+## Edificios reales · 20 de octubre de 2026
+
+| Recurso | Estado | Aprobación Javier | Evidencia |
+|---|---|---|---|
+| Casa de Ruta 2, casa roja de Bilbao y faro de Ruta 19 | colocaciones corregidas, recurso del pack intacto | pendiente | [Tres comparativas y contrato de puertas](comparativas/edificios_reales.md#bloque-1--piezas-recortadas-20-de-octubre) |
+| 137 fuentes propias | inventariadas con usos, dimensiones, puertas y captura previa; redibujo individual en curso | pendiente | [Lista completa y motivos](comparativas/edificios_reales.md#inventario-individual-de-fuentes-propias) |

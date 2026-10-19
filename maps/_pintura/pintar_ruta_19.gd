@@ -68,7 +68,7 @@ func _paint() -> Pintor:
 
 	# Castro Urdiales: la iglesia gótica de Santa María, el faro sobre las rocas y el puerto.
 	p.object(&"iglesia_altea", Vector2i(44, 11))
-	p.object(&"faro", Vector2i(30, 9))
+	p.object(&"faro", Vector2i(30, 12))
 	p.object(&"casa_azul_pequena", Vector2i(51, 18))
 	p.object(&"casa_naranja", Vector2i(46, 19))
 	p.object(&"barca_albufera", Vector2i(48, 6))

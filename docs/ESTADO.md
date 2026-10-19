@@ -399,6 +399,8 @@ Worktree `pokemon-panchito-agente3`, rama `feat/edificios-reales`. Redibujo indi
 
 Primero: casa de madera de Ruta 2, casa roja de Bilbao y faro de Ruta 19; son piezas de packs, por lo que su recurso original se conserva y se corrige la colocación. Después: fachadas de los ocho gimnasios y de la Liga. Todo provisional hasta aprobación de Javier.
 
+**Bloque 1 (20 de octubre):** corregidas las tres colocaciones recortadas, conservando puerta, interior y retorno. Las dos casas se mueven una columna a la izquierda; el faro baja tres filas para evitar el bordillo. Alcance: 0 problemas en los tres mapas. Test del contrato de 140 piezas y los accesos: 3/3, 735 aserciones. [Comparativas e inventario individual de las 137 fuentes propias](arte/comparativas/edificios_reales.md). Cierre del bloque: **614/614 tests, 75.814 aserciones**; arte 0 errores/0 avisos; datos 0 errores/2 avisos anteriores. Próximo: redibujo de fachadas de gimnasio y Liga; detectado que Valladolid reutiliza el dibujo de Correos. Arte provisional.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)
@@ -1117,6 +1119,9 @@ Implementado por A3: pestaña Pruebas y copia temporal restaurable, catálogos y
 
 
 ## Preguntas para Javier
+
+**PENDIENTE JAVIER · Edificios (20 de octubre):** ¿qué edificio real representa el Club de la Comedia de Sevilla y cuál el rodaje/gimnasio de Málaga? Actualmente usan fachadas genéricas; no elijo un teatro real ni cambio su ubicación sin esa decisión. Las fachadas identificadas de los otros gimnasios y la Liga siguen adelante.
+
 
 ### Respuestas de Javier del 2026-10-05
 

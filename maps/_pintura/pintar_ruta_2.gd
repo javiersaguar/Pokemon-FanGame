@@ -93,7 +93,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	p.object(&"casa_roja_chimenea", Vector2i(26, 62))
 	p.object(&"casa_azul_pequena", Vector2i(1, 52))
 	p.object(&"casa_naranja", Vector2i(1, 62))
-	p.object(&"casa_madera", Vector2i(32, 62))
+	p.object(&"casa_madera", Vector2i(31, 62))
 
 	# Bancos, farolas y árboles del paseo.
 	p.object(&"banco", Vector2i(3, 37))
