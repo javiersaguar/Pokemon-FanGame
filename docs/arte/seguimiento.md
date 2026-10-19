@@ -558,3 +558,35 @@ Exteriores rehechos sin repintarlos con `maps/_tools/vestir_exterior.gd` y una r
 |---|---|---|---|
 | Casa de Ruta 2, casa roja de Bilbao y faro de Ruta 19 | colocaciones corregidas, recurso del pack intacto | pendiente | [Tres comparativas y contrato de puertas](comparativas/edificios_reales.md#bloque-1--piezas-recortadas-20-de-octubre) |
 | 137 fuentes propias | inventariadas con usos, dimensiones, puertas y captura previa; redibujo individual en curso | pendiente | [Lista completa y motivos](comparativas/edificios_reales.md#inventario-individual-de-fuentes-propias) |
+
+## Interiores personalizados · 20 de octubre de 2026
+
+| Recurso | Área | Responsable | Estado | Procedencia | Aprobación Javier | Comparativa |
+|---|---|---|---|---|---|---|
+| Interiores de Zaragoza (24 salas, `data/interiores/zaragoza.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Palma (18 salas, `data/interiores/palma.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Alicante (24 salas, `data/interiores/alicante.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Murcia (23 salas, `data/interiores/murcia.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Málaga (20 salas, `data/interiores/malaga.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Las Palmas (27 salas, `data/interiores/las_palmas.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Playa del Inglés (8 salas, `data/interiores/playa_del_ingles.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Vigo (12 salas, `data/interiores/vigo.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Huelva (9 salas, `data/interiores/huelva.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Valladolid (15 salas, `data/interiores/valladolid.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Puertollano (20 salas, `data/interiores/puertollano.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Getafe (16 salas, `data/interiores/getafe.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Leganés (15 salas, `data/interiores/leganes.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Móstoles (19 salas, `data/interiores/mostoles.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Santander (13 salas, `data/interiores/santander.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Bilbao (14 salas, `data/interiores/bilbao.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Pamplona (10 salas, `data/interiores/pamplona.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Rocafonda (3 salas, `data/interiores/rocafonda.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de San Miguel de Bernuy (14 salas, `data/interiores/pueblo_inicial.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Pozuelo (7 salas, `data/interiores/pozuelo.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Orcasitas (4 salas, `data/interiores/orcasitas.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Ruta 5 (7 salas, `data/interiores/ruta_5.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Ruta 6 (7 salas, `data/interiores/ruta_6.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Ruta 8 (5 salas, `data/interiores/ruta_8.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Ruta 16 (2 salas, `data/interiores/ruta_16.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de Ruta 26 (2 salas, `data/interiores/ruta_26.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Gente de los 74 locales de servicio | Mapa | Interiores (Agente 1) | integrado, provisional | Textos propios | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
