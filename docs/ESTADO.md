@@ -122,6 +122,20 @@ Hay carpetas nuevas en el reparto (`DIRECTRICES.md` §6). Cada agente: confirmad
 
 ---
 
+## Agente de combate — fondos según el sitio y efectos de movimientos (2026-10-19)
+
+Rama `feat/combate-fondos-efectos`, worktree `pokemon-panchito-agente4`.
+
+**Parte 1 · Fondos de combate (hecho).**
+- **Datos:** `data/battle_backgrounds.json` (25 escenas, momentos del día, asignación de mapas y composiciones). **Lógica:** `BattleBackgrounds` (`src/battle/scene/battle_backgrounds.gd`) decide la escena; `BattleBackground` la pinta como EBDX: fondo del pack, cielo del momento del día con sol o estrellas, elementos de EBDX y frente compuesto, con el tinte de EBDX en exteriores.
+- **Escenas:** hierba, bosque, olivar, palmeral, montaña, nieve, playa, desierto, agua, ciudad, cueva, cueva oscura, casa, edificio público, monumento, una propia para cada uno de los 8 gimnasios, Alto Mando y campeón. Bases propias para cada una (17 `.px2` a mano).
+- **Cuándo:** `SceneManager.prepare_battle()` rellena `background`, `time_period` y `environment` si no vienen puestos: mapa actual, Surf o caña (agua) y nieve o arena bajo los pies. `environment` ya llega al motor (Buceo Ball, Ocaso Ball en cuevas, Cebo Ball al pescar).
+- **Arte:** `build_fondos.gd` copia byte a byte (procedencia y SHA-256 en `data/battle_background_assets.json`) y compone los frentes con piezas de los packs y `.px2` a mano a ×1 exacto. Nada generado por código, rotado ni escalado.
+- **Test:** `tests/combate/test_fondos_combate.gd` recorre todos los mapas y falla si alguno se queda con el genérico por descuido; comprueba gimnasios, Liga, horas, Surf y pesca.
+- **Comparativa:** `docs/arte/comparativas/fondos_combate.md`.
+- **Al pintar mapas nuevos:** añade el exterior a `exteriores` del JSON (el test lo exige). Los interiores se clasifican solos por su nombre; si uno no encaja, añade la clave o el mapa a `mapas`.
+- **PENDIENTE JAVIER:** aprobar las 25 escenas y las bases; los rótulos de gimnasio no se ponen en el fondo (a ×1 no se leen).
+
 ## Agente 1 — Mundo y arquitectura
 
 ### Agente 1 · Interiores personalizados (sesión del 2026-10-15)

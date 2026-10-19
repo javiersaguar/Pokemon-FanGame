@@ -91,7 +91,7 @@ func run(setup: Variant) -> StringName:
 	_box.text_speed = 0 if fast else Dialogue.text_speed
 	AudioManager.save_bgm()
 	AudioManager.play_bgm(StringName(_info.get("bgm", "battle_wild")), 0.0)
-	_background.set_environment(StringName(_info.get("background", "grass")))
+	_background.set_environment(StringName(_info.get("background", "grass")), StringName(_info.get("time_period", "")))
 	_apply_bases()
 	var start_events := _driver.start()
 	await _intro(start_events)

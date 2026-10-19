@@ -405,8 +405,8 @@ func _build_battle(box: VBoxContainer) -> void:
 	ai_label.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	ai_pick = _spin(rules,0,4,2)
 	environment_pick = OptionButton.new()
-	for id: StringName in BattleBackground.FILES:
-		environment_pick.add_item({"grass":"Bosque","field":"Pradera","forest":"Bosque","cave":"Cueva","city":"Ciudad","water":"Agua","indoor":"Interior","snow":"Nieve","sand":"Arena"}[String(id)])
+	for id: StringName in BattleBackgrounds.scene_ids():
+		environment_pick.add_item(String(BattleBackgrounds.scene(id).get("nombre", id)))
 		environment_pick.set_item_metadata(environment_pick.item_count-1,id)
 	rules.add_child(environment_pick)
 	var mechanics := _row(box)
@@ -432,8 +432,9 @@ func _choose_trainer() -> void:
 func _battle() -> void:
 	if not session.active or not session.available(): return
 	if heal_pick.button_pressed: GameState.party.heal_all()
-	var options := {"double":double_pick.button_pressed,"environment":environment_pick.get_selected_metadata(),
-		"background":environment_pick.get_selected_metadata(),"ai_level":int(ai_pick.value),"exp_enabled":exp_pick.button_pressed}
+	var scene_id: StringName = environment_pick.get_selected_metadata()
+	var options := {"double":double_pick.button_pressed,"environment":String(BattleBackgrounds.scene(scene_id).get("entorno","grass")),
+		"background":scene_id,"ai_level":int(ai_pick.value),"exp_enabled":exp_pick.button_pressed}
 	for key: String in mechanic_checks: options[key] = mechanic_checks[key].button_pressed
 	var setup := session.battle_setup(trainer_id,custom_pick.button_pressed,options)
 	if setup == null:

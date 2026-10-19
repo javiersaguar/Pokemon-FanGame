@@ -18,6 +18,7 @@ func info() -> Dictionary:
 		"kind": &"wild" if setup.is_wild() else &"trainer",
 		"trainers": setup.trainers,
 		"background": setup.background if setup.background != &"" else setup.environment,
+		"time_period": setup.time_period,
 		"bgm": setup.bgm,
 		"can_run": setup.can_run,
 		"can_lose": setup.can_lose,

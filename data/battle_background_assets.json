@@ -1,0 +1,242 @@
+{
+ "_doc": "Procedencia de los fondos de combate (build_fondos.gd). Copias byte a byte de los packs, con su SHA-256; los frentes son composiciones de piezas de los packs y de los .px2 a mano.",
+ "archivos": {
+  "capas/base001.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/base001.png",
+   "sha256": "00319979f53ca1ea949e27207f99cba31c15e495843bf1f4caf962bc0941affe"
+  },
+  "capas/base001a.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/base001a.png",
+   "sha256": "e49eac0dd79e670abcab8ef57f1c2fff9dc9ece544a0829e4ae85d6c8c716311"
+  },
+  "capas/cielo_amanecer.png": {
+   "origen": "10_fondos_combate/Battlebacks/elements/skyDawn.png",
+   "sha256": "1aaeba69e4591e0b6ef5cb240448728c530e794148714bc35c6072ad22a79241"
+  },
+  "capas/cielo_dia.png": {
+   "origen": "10_fondos_combate/Battlebacks/elements/skyDay.png",
+   "sha256": "0284e000bf7cc5c869469f4255c76e6db534b6cfab13dceea8b983e32b3e2dfe"
+  },
+  "capas/cielo_noche.png": {
+   "origen": "10_fondos_combate/Battlebacks/elements/skyNight.png",
+   "sha256": "9821b226a7949be3ed6407acbfed824483280fba8e6fe71a60dd123c55a2ee3b"
+  },
+  "capas/decor001.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor001.png",
+   "sha256": "7d2b3a26e8d5869e0b79d843b76ad52d1d7c0108db55a0bba4acaf17629e7c6c"
+  },
+  "capas/decor002.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor002.png",
+   "sha256": "dcf046105df6dddba253dd1865a735c0a8a908597144635cda8f1011832f75bb"
+  },
+  "capas/decor003.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor003.png",
+   "sha256": "50196a9f4cd26346190c0172fa6b207e27c04af79a023af53e00d20b89a804bf"
+  },
+  "capas/decor003a.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor003a.png",
+   "sha256": "2e11e3bf49468deb88862f7e958f3c70d85ca1ebbf4042583d291f7d38df97be"
+  },
+  "capas/decor004.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor004.png",
+   "sha256": "939f428dce039912d8c0151c3d62dbfad63170d75c5400adfcc80961be276b2f"
+  },
+  "capas/decor005.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor005.png",
+   "sha256": "97fb48715ca931ac51fe0f7b423594e937eb347f4e49f31d24a2b68eabdaba01"
+  },
+  "capas/decor006.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor006.png",
+   "sha256": "c0e50cedcec78e53715c891737902087e7cbb0797a8053973272f94c40101235"
+  },
+  "capas/decor007.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor007.png",
+   "sha256": "809d5026aefa1e357b1c2c1d9e9e6440c3214c43413e45730475439e8d3bb37f"
+  },
+  "capas/decor008.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor008.png",
+   "sha256": "8b421f02e8f606904760be8c6ad6705d2b64064abe5a8974eea966290176a04e"
+  },
+  "capas/decor009.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/decor009.png",
+   "sha256": "eb040fc085039d9ec0baa3483bfa684e7fc89bc852105c708f6bea7f770cce47"
+  },
+  "capas/disco.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/discoBg.png",
+   "sha256": "5a7d9c6553d5543dd8ce3557db216b900d80f5d0638a0f52753b9c6ffcdaf6be"
+  },
+  "capas/estrella.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/star.png",
+   "sha256": "0bc589f8acc2e3eae6fbda8c21764b7dc9dbd69333d4bbc599c23737d56f5f6a"
+  },
+  "capas/montana.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/mountain.png",
+   "sha256": "675ccd6b329567349c0128a807b6adaa74590742682846b89829f05e62714d5b"
+  },
+  "capas/montana_b.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/mountainB.png",
+   "sha256": "fefa4e0713c5dc681ca0a5f33a973738bdca98599d82a6ac1bca7df3103cbb10"
+  },
+  "capas/montana_c.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/mountainC.png",
+   "sha256": "9ae7fcbcb03e6a628039ea718b6484e1eb4144f88478134e05193f5a2c4b0067"
+  },
+  "capas/niebla.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/fog.png",
+   "sha256": "14c4a3253bb714a0de0b0384a191a428ba0c917f7bc1b5d22682a227d4f4ff8e"
+  },
+  "capas/niebla_oscura.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/darkFog.png",
+   "sha256": "451b41768025fa02f75c1bc53fb7112913a6ff5558b5f9600a81d9cb073a4f18"
+  },
+  "capas/publico.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/crowd.png",
+   "sha256": "11ae2f47e8162426c1405cbb4ce33cdd568d927db639eec726dd5fa4bc41de62"
+  },
+  "capas/publico_claro.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/crowd_d.png",
+   "sha256": "cc7d2a970868e0ea2e27ea6c8a245ba8ed6437f2f5a5ab379ee6759d6acdaf0e"
+  },
+  "capas/sol.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/sun.png",
+   "sha256": "d0dd51402a9686ef3479485664684a139395dd5da793c63d58c53a71366da31e"
+  },
+  "capas/sombra.png": {
+   "origen": "10_fondos_combate/Battlebacks/elements/shade.png",
+   "sha256": "a016367d3d9bbe629be8b4214d91fda06e009c538f4e450bda506f33fd67ab70"
+  },
+  "capas/sombra_bosque.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/elements/forestShade.png",
+   "sha256": "d95f96204a4aaaa9542ff63eba1362dd819cef1eaafc189392ad22ef52ee4708"
+  },
+  "cave.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/Cave.png",
+   "sha256": "f83a7a00cad5f3f01816bbba48b17f1d8d882f3bb9b2467882d76b7aa1af1ce7"
+  },
+  "cave_dark.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/CaveDark.png",
+   "sha256": "57fa0d359892a4b227746900eb864d986d81523fe9c544a7fdb28c41b3f1beea"
+  },
+  "champion.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/battlebg/Champion.png",
+   "sha256": "ba40fecdcd2a1610e83876cc0c7822c1275b1552434e887ac1cc6df264288867"
+  },
+  "city.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/City.png",
+   "sha256": "e37a9ad66701d2edae694b3e02a4a35e09421842d49b0bc1e922d9755b345517"
+  },
+  "dance_floor.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/battlebg/DanceFloor.png",
+   "sha256": "6ea44c5b7877760b3a73b585d2cf7b5e6f99ab4f5596e8e5763c056bd093548e"
+  },
+  "darkness.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/battlebg/Darkness.png",
+   "sha256": "7f140a2a72c986127782c2c66bd918134ade6ddcb1188a3cde3b3681d0f98151"
+  },
+  "field.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/Field.png",
+   "sha256": "78fd2d25975d9edf64f03d483f62a55d4e76578ad3546d2973204f8f43e2340a"
+  },
+  "forest.png": {
+   "compuesto": "field.png + frente_hierba.png (la ficha del Pokémon)"
+  },
+  "forest_denso.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/Forest.png",
+   "sha256": "2d5b4854eb0a1f6b52abe00730c1e66953f2aec37768e4baa65f87807bf60dcb"
+  },
+  "frente_bosque.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_bosque"
+  },
+  "frente_casa.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_casa"
+  },
+  "frente_ciudad.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_ciudad"
+  },
+  "frente_desierto.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_desierto"
+  },
+  "frente_edificio.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_edificio"
+  },
+  "frente_gimnasio_barcelona.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_barcelona"
+  },
+  "frente_gimnasio_bilbao.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_bilbao"
+  },
+  "frente_gimnasio_madrid.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_madrid"
+  },
+  "frente_gimnasio_malaga.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_malaga"
+  },
+  "frente_gimnasio_playa.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_playa"
+  },
+  "frente_gimnasio_sevilla.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_sevilla"
+  },
+  "frente_gimnasio_valencia.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_valencia"
+  },
+  "frente_gimnasio_valladolid.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_gimnasio_valladolid"
+  },
+  "frente_hierba.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_hierba"
+  },
+  "frente_liga.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_liga"
+  },
+  "frente_liga_campeon.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_liga_campeon"
+  },
+  "frente_montana.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_montana"
+  },
+  "frente_monumento.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_monumento"
+  },
+  "frente_nieve.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_nieve"
+  },
+  "frente_olivar.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_olivar"
+  },
+  "frente_palmeral.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_palmeral"
+  },
+  "frente_playa.png": {
+   "compuesto": "data/battle_backgrounds.json → composiciones.frente_playa"
+  },
+  "indoor_a.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/IndoorA.png",
+   "sha256": "637a52577fffb744455019dff043a5257ca5be3469bcc3fbc7756c75d1c6a551"
+  },
+  "indoor_b.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/IndoorB.png",
+   "sha256": "02036a45ed8be84e67153d5896b7e6b2240f13c36eff3b5a0b93fc020b89a4db"
+  },
+  "mountain.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/Mountain.png",
+   "sha256": "ceaa62d727842a4da1e82a6f57e7f7525fcea50556c90249fc1a1b649d90d640"
+  },
+  "sand.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/Sand.png",
+   "sha256": "5f0671cc51c74eb34182661018984ef9e60c24b46ebe1c20b23b412ea6e0c95c"
+  },
+  "sapphire.png": {
+   "origen": "16_elite_battle_dx/Graphics/EBDX/Battlebacks/battlebg/Sapphire.png",
+   "sha256": "221e67130968a3564a97ac01da2e663247192e349c470e1986dd842a1f14a004"
+  },
+  "snow.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/Snow.png",
+   "sha256": "86a95dc2ff4b6e4bf8561fdf81ad3d3a68814ca19f59f794de7683af02c12e8c"
+  },
+  "water.png": {
+   "origen": "10_fondos_combate/Battlebacks/battlebg/Water.png",
+   "sha256": "e2fc5f8f7312b23f1eda45b87cacd551d911aeca0b377e8c070c2ccf2f0278d3"
+  }
+ }
+}

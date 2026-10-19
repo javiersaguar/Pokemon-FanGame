@@ -335,6 +335,7 @@ func start_battle(setup: Variant, context: Dictionary = {}) -> StringName:
 ## tutorial=true excluye expresamente muerte/reglas; can_lose por sí solo no las excluye.
 func prepare_battle(setup: Variant, context: Dictionary = {}) -> Variant:
 	if setup is BattleSetup:
+		_fill_battle_place(setup, context)
 		setup.battle_style = UiPreferences.battle_style()
 		if not bool(context.get("tutorial",false)) and GameState.locke != null and GameState.locke.rules.battle_mode() == "fixed":
 			setup.battle_style = &"fixed"
@@ -349,6 +350,20 @@ func prepare_battle(setup: Variant, context: Dictionary = {}) -> Variant:
 	if not context.has("zone_id"):
 		context["zone_id"] = String(current_map.get_zone_id()) if current_map else String(GameState.map_id)
 	return LockeBattleDriver.new(setup, context)
+
+
+## Fondo, momento del día y entorno del combate según el sitio (data/battle_backgrounds.json):
+## el mapa actual, Surf, la caña y el suelo que pisa el jugador. Lo que ya venga puesto se respeta.
+func _fill_battle_place(setup: BattleSetup, context: Dictionary) -> void:
+	if setup.time_period == &"":
+		setup.time_period = Clock.period()
+	var fishing := String(context.get("method", "")) in BattleBackgrounds.FISHING
+	if setup.background == &"":
+		var surfing := FieldActions.transport() == &"surf"
+		var tile: Variant = player.tile_position() if is_instance_valid(player) else null
+		setup.background = BattleBackgrounds.for_battle(current_map, context, surfing, tile)
+	if setup.environment == &"":
+		setup.environment = &"fishing" if fishing else StringName(BattleBackgrounds.scene(setup.background).get("entorno", ""))
 
 # --- Menús ---
 
