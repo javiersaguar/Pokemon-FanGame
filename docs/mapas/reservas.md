@@ -11,3 +11,4 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 
 Sesión anterior cerrada. Reservas activas del 19 de octubre: Véase `docs/CIERRE_2026-10-15.md`.
+| interiores de ruta_21, ruta_22, ruta_24 y ruta_25 (sala_*, casa_*) | Interiores (Agente 1) | 2026-10-20 | interiores personalizados (solo las salas) |
