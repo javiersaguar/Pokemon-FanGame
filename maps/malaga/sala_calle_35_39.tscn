@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_2kk38"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_4de66"]
 
-[sub_resource type="Resource" id="Resource_ucjo3"]
+[sub_resource type="Resource" id="Resource_mubr1"]
 script = ExtResource("3_v4fk0")
 id = &"malaga/sala_calle_35_39"
 display_name = "Puesto de vinos dulces de Atarazanas, Malaga"
@@ -24,27 +24,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle3539" type="Node2D" unique_id=2095811051]
+[node name="SalaCalle3539" type="Node2D" unique_id=1764135127]
 script = ExtResource("1_ywp66")
-data = SubResource("Resource_ucjo3")
+data = SubResource("Resource_mubr1")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=841977661]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=577214837]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAADQAAAABAAAAAAAAADQAAAACAAAAAAAAADQAAAADAAAAAAAAADQAAAAEAAAAAAAAADQAAAAFAAAAAAAAADQAAAAGAAAAAAAAADQAAAAHAAAAAAAAADQAAAAIAAAAAAAAADQAAAAAAAEAAAAAADQAAAABAAEAAAAAADQAAAACAAEAAAAAADQAAAADAAEAAAAAADQAAAAEAAEAAAAAADQAAAAFAAEAAAAAADQAAAAGAAEAAAAAADQAAAAHAAEAAAAAADQAAAAIAAEAAAAAADQAAAAAAAIAAAAAADQAAAABAAIAAAAAADQAAAACAAIAAAAAADQAAAADAAIAAAAAADQAAAAEAAIAAAAAADQAAAAFAAIAAAAAADQAAAAGAAIAAAAAADQAAAAHAAIAAAAAADQAAAAIAAIAAAAAADQAAAAAAAMAAAAAADQAAAABAAMAAAAAADQAAAACAAMAAAAAADQAAAADAAMAAAAAADQAAAAEAAMAAAAAADQAAAAFAAMAAAAAADQAAAAGAAMAAAAAADQAAAAHAAMAAAAAADQAAAAIAAMAAAAAADQAAAAAAAQAAAAAADQAAAABAAQAAAAAADQAAAACAAQAAAAAADQAAAADAAQAAAAAADQAAAAEAAQAAAAAADQAAAAFAAQAAAAAADQAAAAGAAQAAAAAADQAAAAHAAQAAAAAADQAAAAIAAQAAAAAADQAAAAAAAUAAAAAADQAAAABAAUAAAAAADQAAAACAAUAAAAAADQAAAADAAUAAAAAADQAAAAEAAUAAAAAADQAAAAFAAUAAAAAADQAAAAGAAUAAAAAADQAAAAHAAUAAAAAADQAAAAIAAUAAAAAADQAAAAAAAYAAAAAADQAAAABAAYAAAAAADQAAAACAAYAAAAAADQAAAADAAYAAAAAADQAAAAEAAYAAAAAADQAAAAFAAYAAAAAADQAAAAGAAYAAAAAADQAAAAHAAYAAAAAADQAAAAIAAYAAAAAADQAAAAAAAcAAAAAADQAAAABAAcAAAAAADQAAAACAAcAAAAAADQAAAADAAcAAAAAABAAAAAEAAcAAAAAADQAAAAFAAcAAAAAADQAAAAGAAcAAAAAADQAAAAHAAcAAAAAADQAAAAIAAcAAAAAADQAAAA=")
 tile_set = ExtResource("4_bkny1")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=2071461170]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=279054756]
 tile_map_data = PackedByteArray("AAABAAAAAQABACEAAAABAAEAAQABACIAAAACAAAAAQABACEAAAACAAEAAQABACIAAAADAAAAAQABACEAAAADAAEAAQABACIAAAAEAAAAAQABACEAAAAEAAEAAQABACIAAAAFAAAAAQABACEAAAAFAAEAAQABACIAAAAGAAAAAQABACEAAAAGAAEAAQABACIAAAAHAAAAAQABACEAAAAHAAEAAQABACIAAAAAAAAAAQACAB8AAAAIAAAAAQAAAB8AAAAAAAEAAQACAB8AAAAIAAEAAQAAAB8AAAAAAAIAAQACAB8AAAAIAAIAAQAAAB8AAAAAAAMAAQACAB8AAAAIAAMAAQAAAB8AAAAAAAQAAQACAB8AAAAIAAQAAQAAAB8AAAAAAAUAAQACAB8AAAAIAAUAAQAAAB8AAAAAAAYAAQACAB8AAAAIAAYAAQAAAB8AAAABAAcAAQABAB4AAAACAAcAAQACAB4AAAAEAAcAAQAAAB4AAAAFAAcAAQABAB4AAAAGAAcAAQABAB4AAAAHAAcAAQABAB4AAAAAAAcAAQAFACIAAAAIAAcAAQAGACIAAAA=")
 tile_set = ExtResource("4_bkny1")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1407280006]
+[node name="Entities" type="Node2D" parent="." unique_id=1063841486]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1843550632]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1845819530]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAQAAwAAAAsAAAAEAAUAAwAAAAwAAAAFAAQAAwABAAsAAAAFAAUAAwABAAwAAAAGAAQAAwACAAsAAAAGAAUAAwACAAwAAAABAAEAAgABAA0AAAACAAEAAgACAA0AAAABAAIAAgABAA4AAAACAAIAAgACAA4AAAADAAIAAgAEACYAAAAHAAYAAgAEACYAAAA=")
 tile_set = ExtResource("4_bkny1")
 
-[node name="Bodeguera" type="Node2D" parent="Entities" unique_id=1317927308 instance=ExtResource("5_4k34t")]
+[node name="Bodeguera" type="Node2D" parent="Entities" unique_id=873928506 instance=ExtResource("5_4k34t")]
 position = Vector2(208, 112)
 script = ExtResource("6_ynye6")
 display_name = "Bodeguera"
@@ -52,38 +52,39 @@ lines = PackedStringArray("Vino de Málaga, moscatel y Pedro Ximénez. Dulce com
 turn_to_player = true
 sprite_sheet = ExtResource("7_mubr1")
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1041064567]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1336352152]
 z_index = 10
 tile_map_data = PackedByteArray("AAAFAAQAAgAAAD8AAAAGAAQAAgAAAD8AAAA=")
 tile_set = ExtResource("4_bkny1")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=931326472]
+[node name="Warps" type="Node2D" parent="." unique_id=2017554792]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1379552998]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=206142555]
 position = Vector2(112, 240)
 script = ExtResource("11_2kk38")
 target_map = &"malaga/exterior"
 target_spawn = &"from_sala_35_39"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=260827538]
+[node name="Spawns" type="Node2D" parent="." unique_id=2011656882]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1088466499]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1930691285]
 position = Vector2(112, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=93874686]
+[node name="Triggers" type="Node2D" parent="." unique_id=1852925651]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1656400399]
+[node name="Rotulo" type="Label" parent="." unique_id=534687056]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 272.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_4de66")
 theme_override_font_sizes/font_size = 16
 text = "PUESTO DE VINOS DULCES DE ATARAZANAS"
 horizontal_alignment = 1
+autowrap_mode = 3

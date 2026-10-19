@@ -1,0 +1,268 @@
+{
+ "_doc": "Interiores personalizados de ruta_22 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 22",
+ "interiores": {
+  "ruta_22/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_22/exterior", [16, 25]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia burgalesa",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Abuela burgalesa",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_22_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "En Burgos hace frío nueve meses y fresco los otros tres. Toma, que el que viene de fuera siempre llega helado.",
+      "Morcilla de Burgos con arroz, queso fresco y lechazo. Aquí se come para aguantar el invierno."
+     ],
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Mi abuela tiene la calefacción puesta en julio. Yo me quito el jersey dentro de casa."],
+     "nodo": "Nieto",
+     "en": [8, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [9, 8],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [7, 3, 4, 2]]],
+   "muebles": [["fogones", 2, 1], ["encimera", 4, 1], ["tele", 9, 1], ["planta", 11, 1], ["arbol_maceta", 1, 0]],
+   "encima": [],
+   "apariciones": {"default": [9, 7]},
+   "pasos": []
+  },
+  "ruta_22/casa_2": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_22/exterior", [2, 15]],
+   "tipo": "casa",
+   "nombre": "Casa del peregrino del Camino Francés",
+   "personas": [
+    {
+     "nombre": "Hospitalera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Llevo un albergue de peregrinos. Por aquí pasa el Camino Francés hacia Santiago. Cada noche duermen gentes de veinte países.",
+      "Se sella la credencial, se cena en común y a las diez se apaga la luz. El que ronca, duerme en la cocina."
+     ],
+     "nodo": "Hospitalera",
+     "en": [3, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Peregrino coreano",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": [
+      "I walk from Saint-Jean. Llevo doscientos kilómetros. Burgos tiene la catedral más bonita que he visto."
+     ],
+     "nodo": "PeregrinoCoreano",
+     "en": [7, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "crema",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["tele", 3, 1],
+    ["estante_madera", 5, 1],
+    ["estanteria_alta_madera", 1, 0],
+    ["planta", 1, 6],
+    ["caja", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "ruta_22/sala_calle_16_15": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_22/exterior", [16, 15]],
+   "tipo": "museo",
+   "nombre": "Centro de visitantes de Atapuerca",
+   "personas": [
+    {
+     "nombre": "Arqueólogo",
+     "aspecto": "arqueologo",
+     "papel": "libre",
+     "frases": [
+      "En la Sima de los Huesos hay restos de hace cuatrocientos mil años. En la Gran Dolina, de hace casi un millón: los europeos más antiguos.",
+      "Excavamos con brochas y paciencia. Cada verano encontramos algo. Un diente puede cambiar la historia."
+     ],
+     "nodo": "Arqueologo",
+     "en": [11, 8],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Escolar",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "He visto un cráneo de verdad. Bueno, una réplica. El de verdad se llama Miguelón y está en un museo."
+     ],
+     "nodo": "Escolar",
+     "en": [4, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Réplica del cráneo 5 de la Sima de los Huesos, «Miguelón». Unos cuatrocientos treinta mil años. Sin caries."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [6, 10],
+   "suelo": "parquet",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [9, 5, 4, 3]]],
+   "muebles": [
+    ["vitrina_madera", 1, 1],
+    ["estatua_gargola", 3, 0],
+    ["vitrina_madera", 5, 1],
+    ["isla_celeste", 8, 2],
+    ["banco_rojo", 12, 6],
+    ["vitrina_blanca_estrecha", 1, 7],
+    ["palmera_maceta", 14, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 9]},
+   "pasos": []
+  },
+  "ruta_22/sala_calle_8_26": {
+   "pieza": "catedral_burgos",
+   "calle": ["ruta_22/exterior", [8, 26]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Santa María de Burgos",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Gótica desde 1221, con las agujas que se ven desde toda la llanura. Aquí está enterrado el Cid con doña Jimena.",
+      "Arriba hay un muñeco, el Papamoscas, que abre la boca cada vez que da la hora. Los niños vienen a verlo bostezar."
+     ],
+     "nodo": "Sacristan",
+     "en": [9, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista_f",
+     "papel": "publico",
+     "frases": ["He esperado media hora para ver al Papamoscas abrir la boca. Ha merecido la pena. Un poco."],
+     "nodo": "Turista",
+     "en": [9, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 12],
+   "puerta": [8, 11],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 7, 3],
+    ["estatua_gargola", 4, 0],
+    ["estatua_gargola", 11, 0],
+    ["arbol_maceta", 1, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 9, 6],
+    ["banco_rojo", 5, 8],
+    ["banco_rojo", 2, 8],
+    ["banco_rojo", 9, 8],
+    ["palmera_maceta", 12, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 10], "desde_sala_calle_8_26_cimborrio": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Cimborrio",
+     "en": [6, 1],
+     "destino": "ruta_22/sala_calle_8_26_cimborrio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_8_26_cimborrio",
+     "llegada": [6, 2]
+    }
+   ]
+  },
+  "ruta_22/sala_calle_8_26_cimborrio": {
+   "tipo": "iglesia",
+   "nombre": "Crucero y cimborrio de la catedral",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "El cimborrio es una estrella de piedra calada sobre el crucero. Mirando hacia arriba, la luz parece encaje.",
+      "Debajo, una losa: la tumba del Cid Campeador y de doña Jimena. Llegaron aquí en 1921, después de mucho viaje."
+     ],
+     "nodo": "Guia",
+     "en": [13, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Tumba del Cid y doña Jimena. «Quien a buen señor sirve, buen galardón espera»."],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "padre": "ruta_22/sala_calle_8_26",
+   "tamano": [15, 12],
+   "puerta": [3, 11],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [3, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 2, 3],
+    ["estatua_gargola", 6, 0],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 13, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 10, 6],
+    ["banco_rojo", 4, 8],
+    ["banco_rojo", 7, 8],
+    ["banco_rojo", 10, 8],
+    ["arbol_maceta", 13, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 10]},
+   "pasos": [],
+   "salida": {"destino": "ruta_22/sala_calle_8_26", "aparicion": "desde_sala_calle_8_26_cimborrio"}
+  }
+ }
+}

@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_8wa3x"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_pk2h0"]
 
-[sub_resource type="Resource" id="Resource_m1b2q"]
+[sub_resource type="Resource" id="Resource_0ydl3"]
 script = ExtResource("3_hyvkv")
 id = &"getafe/sala_calle_55_23"
 display_name = "Casa del estudiante que comparte con su abuela, Getafe"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle5523" type="Node2D" unique_id=336235736]
+[node name="SalaCalle5523" type="Node2D" unique_id=1747859644]
 script = ExtResource("1_m1b2q")
-data = SubResource("Resource_m1b2q")
+data = SubResource("Resource_0ydl3")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=659142228]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1019406431]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAKAAAAAAAAABgAAAALAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAKAAEAAAAAABgAAAALAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAKAAIAAAAAABgAAAALAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAKAAMAAAAAABgAAAALAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAIAAQAAAAAABgAAAAJAAQAAAAAABgAAAAKAAQAAAAAABgAAAALAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAIAAUAAAAAABgAAAAJAAUAAAAAABgAAAAKAAUAAAAAABgAAAALAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABAAAAAGAAYAAAAAABAAAAAHAAYAAAAAABAAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAKAAYAAAAAABgAAAALAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABgAAAAEAAcAAAAAABgAAAAFAAcAAAAAABAAAAAGAAcAAAAAABAAAAAHAAcAAAAAABAAAAAIAAcAAAAAABgAAAAJAAcAAAAAABgAAAAKAAcAAAAAABgAAAALAAcAAAAAABgAAAAAAAgAAAAAABgAAAABAAgAAAAAABgAAAACAAgAAAAAABgAAAADAAgAAAAAABgAAAAEAAgAAAAAABgAAAAFAAgAAAAAABgAAAAGAAgAAAAAABgAAAAHAAgAAAAAABgAAAAIAAgAAAAAABgAAAAJAAgAAAAAABgAAAAKAAgAAAAAABgAAAALAAgAAAAAABgAAAAAAAkAAAAAABgAAAABAAkAAAAAABgAAAACAAkAAAAAABgAAAADAAkAAAAAAAQAAAAEAAkAAAAAABgAAAAFAAkAAAAAABgAAAAGAAkAAAAAABgAAAAHAAkAAAAAABgAAAAIAAkAAAAAABgAAAAJAAkAAAAAABgAAAAKAAkAAAAAABgAAAALAAkAAAAAABgAAAA=")
 tile_set = ExtResource("4_l5bn1")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=685536125]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1374299901]
 tile_map_data = PackedByteArray("AAABAAAAAQABADAAAAABAAEAAQABADEAAAACAAAAAQABADAAAAACAAEAAQABADEAAAADAAAAAQABADAAAAADAAEAAQABADEAAAAEAAAAAQABADAAAAAEAAEAAQABADEAAAAFAAAAAQABADAAAAAFAAEAAQABADEAAAAGAAAAAQABADAAAAAGAAEAAQABADEAAAAHAAAAAQABADAAAAAHAAEAAQABADEAAAAIAAAAAQABADAAAAAIAAEAAQABADEAAAAJAAAAAQABADAAAAAJAAEAAQABADEAAAAKAAAAAQABADAAAAAKAAEAAQABADEAAAAAAAAAAQACAC4AAAALAAAAAQAAAC4AAAAAAAEAAQACAC4AAAALAAEAAQAAAC4AAAAAAAIAAQACAC4AAAALAAIAAQAAAC4AAAAAAAMAAQACAC4AAAALAAMAAQAAAC4AAAAAAAQAAQACAC4AAAALAAQAAQAAAC4AAAAAAAUAAQACAC4AAAALAAUAAQAAAC4AAAAAAAYAAQACAC4AAAALAAYAAQAAAC4AAAAAAAcAAQACAC4AAAALAAcAAQAAAC4AAAAAAAgAAQACAC4AAAALAAgAAQAAAC4AAAABAAkAAQABAC0AAAACAAkAAQACAC0AAAAEAAkAAQAAAC0AAAAFAAkAAQABAC0AAAAGAAkAAQABAC0AAAAHAAkAAQABAC0AAAAIAAkAAQABAC0AAAAJAAkAAQABAC0AAAAKAAkAAQABAC0AAAAAAAkAAQAFADEAAAALAAkAAQAGADEAAAA=")
 tile_set = ExtResource("4_l5bn1")
 
-[node name="Entities" type="Node2D" parent="." unique_id=2026693686]
+[node name="Entities" type="Node2D" parent="." unique_id=414839362]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1471859501]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=495140054]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAEAAgACACIAAAADAAEAAgADACIAAAACAAIAAgACACMAAAADAAIAAgADACMAAAAEAAEAAgAAACIAAAAFAAEAAgABACIAAAAEAAIAAgAAACMAAAAFAAIAAgABACMAAAAGAAAAAgAHABsAAAAGAAEAAgAHABwAAAAGAAIAAgAHAB0AAAAJAAEAAgAFAB8AAAAKAAEAAgAGAB8AAAAJAAIAAgAFACAAAAAKAAIAAgAGACAAAAAHAAEAAgABABwAAAAIAAEAAgACABwAAAAHAAIAAgABAB0AAAAIAAIAAgACAB0AAAAGAAMAAgAFADQAAAAHAAMAAgAGADQAAAAIAAMAAgAHADQAAAAGAAQAAgAFADUAAAAHAAQAAgAGADUAAAAIAAQAAgAHADUAAAAGAAUAAgAAAD4AAAAIAAUAAgAAAD4AAAABAAgAAgACACYAAAA=")
 tile_set = ExtResource("4_l5bn1")
 
-[node name="Abuela" type="Node2D" parent="Entities" unique_id=951394288 instance=ExtResource("5_y2qjk")]
+[node name="Abuela" type="Node2D" parent="Entities" unique_id=1948150929 instance=ExtResource("5_y2qjk")]
 position = Vector2(48, 80)
 script = ExtResource("6_kdkdx")
 display_name = "Abuela"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_0ydl3")
 initial_facing = 2
 
-[node name="NietoEstudiante" type="Node2D" parent="Entities" unique_id=1066632184 instance=ExtResource("5_y2qjk")]
+[node name="NietoEstudiante" type="Node2D" parent="Entities" unique_id=1487882344 instance=ExtResource("5_y2qjk")]
 position = Vector2(304, 112)
 script = ExtResource("6_kdkdx")
 display_name = "Nieto estudiante"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_11ff2")
 initial_facing = 1
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1826815388]
+[node name="Above" type="TileMapLayer" parent="." unique_id=92684636]
 z_index = 10
 tile_map_data = PackedByteArray("AAABAAYAAgACACQAAAABAAcAAgACACUAAAA=")
 tile_set = ExtResource("4_l5bn1")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1412111494]
+[node name="Warps" type="Node2D" parent="." unique_id=26776255]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=364080486]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=169347843]
 position = Vector2(112, 304)
 script = ExtResource("11_8wa3x")
 target_map = &"getafe/exterior"
 target_spawn = &"from_sala_55_23"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=517885008]
+[node name="Spawns" type="Node2D" parent="." unique_id=1822216200]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1165730863]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=147140631]
 position = Vector2(112, 272)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1712782610]
+[node name="Triggers" type="Node2D" parent="." unique_id=898799517]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1833780722]
+[node name="Rotulo" type="Label" parent="." unique_id=2058315006]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 368.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_pk2h0")
 theme_override_font_sizes/font_size = 16
 text = "CASA DEL ESTUDIANTE QUE COMPARTE CON SU ABUELA"
 horizontal_alignment = 1
+autowrap_mode = 3

@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_twumy"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_dh0bw"]
 
-[sub_resource type="Resource" id="Resource_qa4ef"]
+[sub_resource type="Resource" id="Resource_fmdtp"]
 script = ExtResource("3_6rxmq")
 id = &"malaga/sala_calle_67_70"
 display_name = "Velero de alquiler del Muelle Uno, Malaga"
@@ -24,27 +24,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle6770" type="Node2D" unique_id=939088065]
+[node name="SalaCalle6770" type="Node2D" unique_id=284361658]
 script = ExtResource("1_8vw22")
-data = SubResource("Resource_qa4ef")
+data = SubResource("Resource_fmdtp")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=528614584]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1270114288]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAADgAAAABAAAAAAAAADgAAAACAAAAAAAAADgAAAADAAAAAAAAADgAAAAEAAAAAAAAADgAAAAFAAAAAAAAADgAAAAGAAAAAAAAADgAAAAHAAAAAAAAADgAAAAAAAEAAAAAADgAAAABAAEAAAAAADgAAAACAAEAAAAAADgAAAADAAEAAAAAADgAAAAEAAEAAAAAADgAAAAFAAEAAAAAADgAAAAGAAEAAAAAADgAAAAHAAEAAAAAADgAAAAAAAIAAAAAADgAAAABAAIAAAAAADgAAAACAAIAAAAAADgAAAADAAIAAAAAADgAAAAEAAIAAAAAADgAAAAFAAIAAAAAADgAAAAGAAIAAAAAADgAAAAHAAIAAAAAADgAAAAAAAMAAAAAADgAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAAAAQAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAADgAAAAFAAQAAAAAADgAAAAGAAQAAAAAADgAAAAHAAQAAAAAADgAAAAAAAUAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAADgAAAAFAAUAAAAAADgAAAAGAAUAAAAAADgAAAAHAAUAAAAAADgAAAAAAAYAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAADgAAAAFAAYAAAAAADgAAAAGAAYAAAAAADgAAAAHAAYAAAAAADgAAAAAAAcAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAAAgAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAA=")
 tile_set = ExtResource("4_dvaey")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1515672407]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1559273137]
 tile_map_data = PackedByteArray("AAABAAAAAQABABwAAAABAAEAAQABAB0AAAACAAAAAQABABwAAAACAAEAAQABAB0AAAADAAAAAQABABwAAAADAAEAAQABAB0AAAAEAAAAAQABABwAAAAEAAEAAQABAB0AAAAFAAAAAQABABwAAAAFAAEAAQABAB0AAAAGAAAAAQABABwAAAAGAAEAAQABAB0AAAAAAAAAAQACABoAAAAHAAAAAQAAABoAAAAAAAEAAQACABoAAAAHAAEAAQAAABoAAAAAAAIAAQACABoAAAAHAAIAAQAAABoAAAAAAAMAAQACABoAAAAHAAMAAQAAABoAAAAAAAQAAQACABoAAAAHAAQAAQAAABoAAAAAAAUAAQACABoAAAAHAAUAAQAAABoAAAAAAAYAAQACABoAAAAHAAYAAQAAABoAAAABAAcAAQABABkAAAACAAcAAQACABkAAAAEAAcAAQAAABkAAAAFAAcAAQABABkAAAAGAAcAAQABABkAAAAAAAcAAQAFAB0AAAAHAAcAAQAGAB0AAAA=")
 tile_set = ExtResource("4_dvaey")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1124377543]
+[node name="Entities" type="Node2D" parent="." unique_id=1155210733]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=750242809]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1917548916]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAEAAgADABYAAAACAAIAAgADABcAAAADAAEAAgAHACIAAAADAAIAAgAHACMAAAABAAYAAgABAD4AAAAGAAEAAgABACUAAAAGAAIAAgABACYAAAA=")
 tile_set = ExtResource("4_dvaey")
 
-[node name="Patron" type="Node2D" parent="Entities" unique_id=1269406645 instance=ExtResource("5_8cfpg")]
+[node name="Patron" type="Node2D" parent="Entities" unique_id=2005130590 instance=ExtResource("5_8cfpg")]
 position = Vector2(80, 112)
 script = ExtResource("6_8o4is")
 display_name = "Patrón"
@@ -53,37 +53,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_fmdtp")
 initial_facing = 1
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1808735439]
+[node name="Above" type="TileMapLayer" parent="." unique_id=252330072]
 z_index = 10
 tile_set = ExtResource("4_dvaey")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1174271788]
+[node name="Warps" type="Node2D" parent="." unique_id=1326861738]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1242677997]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=276784665]
 position = Vector2(112, 240)
 script = ExtResource("11_twumy")
 target_map = &"malaga/exterior"
 target_spawn = &"from_sala_67_70"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=853871724]
+[node name="Spawns" type="Node2D" parent="." unique_id=1012608466]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1588785314]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=257983749]
 position = Vector2(112, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1554747369]
+[node name="Triggers" type="Node2D" parent="." unique_id=1217282315]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1326205629]
+[node name="Rotulo" type="Label" parent="." unique_id=300831038]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 240.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_dh0bw")
 theme_override_font_sizes/font_size = 16
 text = "VELERO DE ALQUILER DEL MUELLE UNO"
 horizontal_alignment = 1
+autowrap_mode = 3

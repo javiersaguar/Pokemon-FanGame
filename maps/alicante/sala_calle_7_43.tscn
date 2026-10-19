@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_8ky36"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_lj1uh"]
 
-[sub_resource type="Resource" id="Resource_py865"]
+[sub_resource type="Resource" id="Resource_8lqcn"]
 script = ExtResource("3_27onk")
 id = &"alicante/sala_calle_7_43"
 display_name = "Piso de la estudiante de la Universidad de Alicante, Alicante"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle743" type="Node2D" unique_id=870969860]
+[node name="SalaCalle743" type="Node2D" unique_id=979890253]
 script = ExtResource("1_py865")
-data = SubResource("Resource_py865")
+data = SubResource("Resource_8lqcn")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1984697351]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=2116164464]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAJAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAJAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAJAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAAAQAAAADAAMAAAAAAAQAAAAEAAMAAAAAAAQAAAAFAAMAAAAAAAQAAAAGAAMAAAAAAAQAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAJAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAAAQAAAADAAQAAAAAAAQAAAAEAAQAAAAAAAQAAAAFAAQAAAAAAAQAAAAGAAQAAAAAAAQAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAJAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAAAQAAAADAAUAAAAAAAQAAAAEAAUAAAAAAAQAAAAFAAUAAAAAAAQAAAAGAAUAAAAAAAQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAJAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAACQAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAAJAAYAAAAAACQAAAAAAAcAAAAAACQAAAABAAcAAAAAACQAAAACAAcAAAAAACQAAAADAAcAAAAAACQAAAAEAAcAAAAAACQAAAAFAAcAAAAAACQAAAAGAAcAAAAAACQAAAAHAAcAAAAAACQAAAAIAAcAAAAAACQAAAAJAAcAAAAAACQAAAAAAAgAAAAAACQAAAABAAgAAAAAACQAAAACAAgAAAAAACQAAAADAAgAAAAAACQAAAAEAAgAAAAAACQAAAAFAAgAAAAAAAgAAAAGAAgAAAAAACQAAAAHAAgAAAAAACQAAAAIAAgAAAAAACQAAAAJAAgAAAAAACQAAAA=")
 tile_set = ExtResource("4_fdtgx")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=547442869]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=723430727]
 tile_map_data = PackedByteArray("AAABAAAAAQABAD8AAAABAAEAAQABAEAAAAACAAAAAQABAD8AAAACAAEAAQABAEAAAAADAAAAAQABAD8AAAADAAEAAQABAEAAAAAEAAAAAQABAD8AAAAEAAEAAQABAEAAAAAFAAAAAQABAD8AAAAFAAEAAQABAEAAAAAGAAAAAQABAD8AAAAGAAEAAQABAEAAAAAHAAAAAQABAD8AAAAHAAEAAQABAEAAAAAIAAAAAQABAD8AAAAIAAEAAQABAEAAAAAAAAAAAQACAD0AAAAJAAAAAQAAAD0AAAAAAAEAAQACAD0AAAAJAAEAAQAAAD0AAAAAAAIAAQACAD0AAAAJAAIAAQAAAD0AAAAAAAMAAQACAD0AAAAJAAMAAQAAAD0AAAAAAAQAAQACAD0AAAAJAAQAAQAAAD0AAAAAAAUAAQACAD0AAAAJAAUAAQAAAD0AAAAAAAYAAQACAD0AAAAJAAYAAQAAAD0AAAAAAAcAAQACAD0AAAAJAAcAAQAAAD0AAAABAAgAAQABADwAAAACAAgAAQABADwAAAADAAgAAQABADwAAAAEAAgAAQACADwAAAAGAAgAAQAAADwAAAAHAAgAAQABADwAAAAIAAgAAQABADwAAAAAAAgAAQAFAEAAAAAJAAgAAQAGAEAAAAA=")
 tile_set = ExtResource("4_fdtgx")
 
-[node name="Entities" type="Node2D" parent="." unique_id=887807626]
+[node name="Entities" type="Node2D" parent="." unique_id=1085565965]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=533898552]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=425372200]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAFAAAAAgAHABsAAAAFAAEAAgAHABwAAAAFAAIAAgAHAB0AAAAGAAEAAgAAACIAAAAHAAEAAgABACIAAAAGAAIAAgAAACMAAAAHAAIAAgABACMAAAABAAcAAgAFACYAAAACAAcAAgAGACYAAAADAAcAAgAHACYAAAAHAAYAAgADADQAAAAIAAYAAgAEADQAAAAHAAcAAgADADUAAAAIAAcAAgAEADUAAAAEAAIAAgADAD4AAAA=")
 tile_set = ExtResource("4_fdtgx")
 
-[node name="Estudiante" type="Node2D" parent="Entities" unique_id=1689732459 instance=ExtResource("5_sqw6j")]
+[node name="Estudiante" type="Node2D" parent="Entities" unique_id=598424146 instance=ExtResource("5_sqw6j")]
 position = Vector2(208, 208)
 script = ExtResource("6_jeots")
 display_name = "Estudiante"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_8lqcn")
 initial_facing = 2
 
-[node name="CompaneraErasmus" type="Node2D" parent="Entities" unique_id=907022866 instance=ExtResource("5_sqw6j")]
+[node name="CompaneraErasmus" type="Node2D" parent="Entities" unique_id=802912659 instance=ExtResource("5_sqw6j")]
 position = Vector2(112, 80)
 script = ExtResource("6_jeots")
 display_name = "Compañera erasmus"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_6ybdb")
 initial_facing = 2
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=89459620]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1069233481]
 z_index = 10
 tile_map_data = PackedByteArray("AAABAAYAAgAFACUAAAACAAYAAgAGACUAAAADAAYAAgAHACUAAAA=")
 tile_set = ExtResource("4_fdtgx")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1355696217]
+[node name="Warps" type="Node2D" parent="." unique_id=1403475517]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1143173333]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1074691695]
 position = Vector2(176, 272)
 script = ExtResource("11_8ky36")
 target_map = &"alicante/exterior"
 target_spawn = &"from_sala_7_43"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=343112657]
+[node name="Spawns" type="Node2D" parent="." unique_id=1235421550]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1840220412]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=732234529]
 position = Vector2(176, 240)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=2008869499]
+[node name="Triggers" type="Node2D" parent="." unique_id=1933694234]
 
-[node name="Rotulo" type="Label" parent="." unique_id=977527106]
+[node name="Rotulo" type="Label" parent="." unique_id=1924529568]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 304.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_lj1uh")
 theme_override_font_sizes/font_size = 16
 text = "PISO DE LA ESTUDIANTE DE LA UNIVERSIDAD DE ALICANTE"
 horizontal_alignment = 1
+autowrap_mode = 3

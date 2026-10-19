@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_od6t1"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_65b06"]
 
-[sub_resource type="Resource" id="Resource_7dur3"]
+[sub_resource type="Resource" id="Resource_j0oit"]
 script = ExtResource("3_1jnip")
 id = &"mostoles/sala_calle_25_48"
 display_name = "Casa de la familia del parque El Soto, Mostoles"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle2548" type="Node2D" unique_id=986392662]
+[node name="SalaCalle2548" type="Node2D" unique_id=1167595420]
 script = ExtResource("1_80mi8")
-data = SubResource("Resource_7dur3")
+data = SubResource("Resource_j0oit")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=378028493]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1836907356]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABwAAAABAAAAAAAAABwAAAACAAAAAAAAABwAAAADAAAAAAAAABwAAAAEAAAAAAAAABwAAAAFAAAAAAAAABwAAAAGAAAAAAAAABwAAAAHAAAAAAAAABwAAAAIAAAAAAAAABwAAAAJAAAAAAAAABwAAAAKAAAAAAAAABwAAAAAAAEAAAAAABwAAAABAAEAAAAAABwAAAACAAEAAAAAABwAAAADAAEAAAAAABwAAAAEAAEAAAAAABwAAAAFAAEAAAAAABwAAAAGAAEAAAAAABwAAAAHAAEAAAAAABwAAAAIAAEAAAAAABwAAAAJAAEAAAAAABwAAAAKAAEAAAAAABwAAAAAAAIAAAAAABwAAAABAAIAAAAAABwAAAACAAIAAAAAABwAAAADAAIAAAAAABwAAAAEAAIAAAAAABwAAAAFAAIAAAAAABwAAAAGAAIAAAAAABwAAAAHAAIAAAAAABwAAAAIAAIAAAAAABwAAAAJAAIAAAAAABwAAAAKAAIAAAAAABwAAAAAAAMAAAAAABwAAAABAAMAAAAAABwAAAACAAMAAAAAABwAAAADAAMAAAAAABwAAAAEAAMAAAAAABwAAAAFAAMAAAAAABwAAAAGAAMAAAAAABwAAAAHAAMAAAAAABwAAAAIAAMAAAAAABwAAAAJAAMAAAAAABwAAAAKAAMAAAAAABwAAAAAAAQAAAAAABwAAAABAAQAAAAAABwAAAACAAQAAAAAABwAAAADAAQAAAAAABwAAAAEAAQAAAAAABwAAAAFAAQAAAAAABwAAAAGAAQAAAAAABwAAAAHAAQAAAAAABwAAAAIAAQAAAAAABwAAAAJAAQAAAAAABwAAAAKAAQAAAAAABwAAAAAAAUAAAAAABwAAAABAAUAAAAAABwAAAACAAUAAAAAABwAAAADAAUAAAAAABwAAAAEAAUAAAAAABwAAAAFAAUAAAAAABwAAAAGAAUAAAAAABwAAAAHAAUAAAAAABwAAAAIAAUAAAAAABwAAAAJAAUAAAAAABwAAAAKAAUAAAAAABwAAAAAAAYAAAAAABwAAAABAAYAAAAAABwAAAACAAYAAAAAABwAAAADAAYAAAAAABwAAAAEAAYAAAAAABwAAAAFAAYAAAAAABwAAAAGAAYAAAAAABwAAAAHAAYAAAAAABwAAAAIAAYAAAAAABwAAAAJAAYAAAAAABwAAAAKAAYAAAAAABwAAAAAAAcAAAAAABwAAAABAAcAAAAAABwAAAACAAcAAAAAABwAAAADAAcAAAAAABwAAAAEAAcAAAAAABwAAAAFAAcAAAAAABwAAAAGAAcAAAAAAAgAAAAHAAcAAAAAABwAAAAIAAcAAAAAABwAAAAJAAcAAAAAABwAAAAKAAcAAAAAABwAAAA=")
 tile_set = ExtResource("4_3m7b7")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=96567125]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1215041228]
 tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAAAAAAAQACABAAAAAKAAAAAQAAABAAAAAAAAEAAQACABAAAAAKAAEAAQAAABAAAAAAAAIAAQACABAAAAAKAAIAAQAAABAAAAAAAAMAAQACABAAAAAKAAMAAQAAABAAAAAAAAQAAQACABAAAAAKAAQAAQAAABAAAAAAAAUAAQACABAAAAAKAAUAAQAAABAAAAAAAAYAAQACABAAAAAKAAYAAQAAABAAAAABAAcAAQABAA8AAAACAAcAAQABAA8AAAADAAcAAQABAA8AAAAEAAcAAQABAA8AAAAFAAcAAQACAA8AAAAHAAcAAQAAAA8AAAAIAAcAAQABAA8AAAAJAAcAAQABAA8AAAAAAAcAAQAFABMAAAAKAAcAAQAGABMAAAA=")
 tile_set = ExtResource("4_3m7b7")
 
-[node name="Entities" type="Node2D" parent="." unique_id=99158119]
+[node name="Entities" type="Node2D" parent="." unique_id=717218129]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1756230074]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1114507420]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAEAAgACACIAAAADAAEAAgADACIAAAACAAIAAgACACMAAAADAAIAAgADACMAAAAEAAEAAgAAACIAAAAFAAEAAgABACIAAAAEAAIAAgAAACMAAAAFAAIAAgABACMAAAAGAAAAAgAHABsAAAAGAAEAAgAHABwAAAAGAAIAAgAHAB0AAAAHAAEAAgAFAB8AAAAIAAEAAgAGAB8AAAAHAAIAAgAFACAAAAAIAAIAAgAGACAAAAAJAAEAAgABACUAAAAJAAIAAgABACYAAAACAAQAAgAGADsAAAACAAUAAgAGADwAAAADAAQAAgADADQAAAAEAAQAAgAEADQAAAADAAUAAgADADUAAAAEAAUAAgAEADUAAAAFAAQAAgAHADsAAAAFAAUAAgAHADwAAAA=")
 tile_set = ExtResource("4_3m7b7")
 
-[node name="Madre" type="Node2D" parent="Entities" unique_id=1594383097 instance=ExtResource("5_ljefw")]
+[node name="Madre" type="Node2D" parent="Entities" unique_id=249820955 instance=ExtResource("5_ljefw")]
 position = Vector2(48, 80)
 script = ExtResource("6_pg73r")
 display_name = "Madre"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_tdfva")
 initial_facing = 2
 
-[node name="Hijo" type="Node2D" parent="Entities" unique_id=1901858489 instance=ExtResource("5_ljefw")]
+[node name="Hijo" type="Node2D" parent="Entities" unique_id=355781584 instance=ExtResource("5_ljefw")]
 position = Vector2(272, 112)
 script = ExtResource("6_pg73r")
 display_name = "Hijo"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_j0oit")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1224955576]
+[node name="Above" type="TileMapLayer" parent="." unique_id=740039142]
 z_index = 10
 tile_map_data = PackedByteArray("AAACAAMAAgAGADoAAAAFAAMAAgAHADoAAAA=")
 tile_set = ExtResource("4_3m7b7")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=59820933]
+[node name="Warps" type="Node2D" parent="." unique_id=313904920]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1146009172]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1446014223]
 position = Vector2(208, 240)
 script = ExtResource("11_od6t1")
 target_map = &"mostoles/exterior"
 target_spawn = &"from_sala_25_48"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1299498284]
+[node name="Spawns" type="Node2D" parent="." unique_id=1644030564]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=851811267]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=563677691]
 position = Vector2(208, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=102292480]
+[node name="Triggers" type="Node2D" parent="." unique_id=1228984441]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1116240083]
+[node name="Rotulo" type="Label" parent="." unique_id=159053488]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 336.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_65b06")
 theme_override_font_sizes/font_size = 16
 text = "CASA DE LA FAMILIA DEL PARQUE EL SOTO"
 horizontal_alignment = 1
+autowrap_mode = 3

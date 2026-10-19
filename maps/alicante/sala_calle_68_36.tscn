@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_qaolj"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_nu60o"]
 
-[sub_resource type="Resource" id="Resource_upev3"]
+[sub_resource type="Resource" id="Resource_0wv8h"]
 script = ExtResource("3_jbefu")
 id = &"alicante/sala_calle_68_36"
 display_name = "Caseta de socorrismo del Postiguet, Alicante"
@@ -24,27 +24,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle6836" type="Node2D" unique_id=1569447368]
+[node name="SalaCalle6836" type="Node2D" unique_id=1652124256]
 script = ExtResource("1_d4w3n")
-data = SubResource("Resource_upev3")
+data = SubResource("Resource_0wv8h")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=781553770]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1862069300]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABgAAAAEAAcAAAAAAAQAAAAFAAcAAAAAABgAAAAGAAcAAAAAABgAAAAHAAcAAAAAABgAAAA=")
 tile_set = ExtResource("4_d274r")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=952783037]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1761854618]
 tile_map_data = PackedByteArray("AAABAAAAAQABAEkAAAABAAEAAQABAEoAAAACAAAAAQABAEkAAAACAAEAAQABAEoAAAADAAAAAQABAEkAAAADAAEAAQABAEoAAAAEAAAAAQABAEkAAAAEAAEAAQABAEoAAAAFAAAAAQABAEkAAAAFAAEAAQABAEoAAAAGAAAAAQABAEkAAAAGAAEAAQABAEoAAAAAAAAAAQACAEcAAAAHAAAAAQAAAEcAAAAAAAEAAQACAEcAAAAHAAEAAQAAAEcAAAAAAAIAAQACAEcAAAAHAAIAAQAAAEcAAAAAAAMAAQACAEcAAAAHAAMAAQAAAEcAAAAAAAQAAQACAEcAAAAHAAQAAQAAAEcAAAAAAAUAAQACAEcAAAAHAAUAAQAAAEcAAAAAAAYAAQACAEcAAAAHAAYAAQAAAEcAAAABAAcAAQABAEYAAAACAAcAAQABAEYAAAADAAcAAQACAEYAAAAFAAcAAQAAAEYAAAAGAAcAAQABAEYAAAAAAAcAAQAFAEoAAAAHAAcAAQAGAEoAAAA=")
 tile_set = ExtResource("4_d274r")
 
-[node name="Entities" type="Node2D" parent="." unique_id=174387640]
+[node name="Entities" type="Node2D" parent="." unique_id=1345377515]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=493504235]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=528195034]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAAAAgAHABUAAAACAAEAAgAHABYAAAACAAIAAgAHABcAAAADAAEAAgABABYAAAAEAAEAAgACABYAAAADAAIAAgABABcAAAAEAAIAAgACABcAAAAGAAIAAgABAD4AAAABAAYAAgABACYAAAA=")
 tile_set = ExtResource("4_d274r")
 
-[node name="Socorrista" type="Node2D" parent="Entities" unique_id=1203753093 instance=ExtResource("5_f73fr")]
+[node name="Socorrista" type="Node2D" parent="Entities" unique_id=1918912834 instance=ExtResource("5_f73fr")]
 position = Vector2(208, 144)
 script = ExtResource("6_acvlh")
 display_name = "Socorrista"
@@ -52,38 +52,39 @@ lines = PackedStringArray("Bandera verde, amarilla o roja. La de las medusas es 
 turn_to_player = true
 sprite_sheet = ExtResource("7_0wv8h")
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=2048006136]
+[node name="Above" type="TileMapLayer" parent="." unique_id=702906057]
 z_index = 10
 tile_map_data = PackedByteArray("AAABAAUAAgABACUAAAA=")
 tile_set = ExtResource("4_d274r")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=972348087]
+[node name="Warps" type="Node2D" parent="." unique_id=2087690433]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1020642862]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1036221368]
 position = Vector2(144, 240)
 script = ExtResource("11_qaolj")
 target_map = &"alicante/exterior"
 target_spawn = &"from_sala_68_36"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1435743131]
+[node name="Spawns" type="Node2D" parent="." unique_id=1821293181]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=248700878]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=789263009]
 position = Vector2(144, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1400369662]
+[node name="Triggers" type="Node2D" parent="." unique_id=1864508407]
 
-[node name="Rotulo" type="Label" parent="." unique_id=402943031]
+[node name="Rotulo" type="Label" parent="." unique_id=983548086]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 240.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_nu60o")
 theme_override_font_sizes/font_size = 16
 text = "CASETA DE SOCORRISMO DEL POSTIGUET"
 horizontal_alignment = 1
+autowrap_mode = 3

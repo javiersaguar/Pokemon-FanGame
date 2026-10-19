@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_ijnm7"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_g46j5"]
 
-[sub_resource type="Resource" id="Resource_8tx8p"]
+[sub_resource type="Resource" id="Resource_r1c6e"]
 script = ExtResource("3_t1g6o")
 id = &"alicante/sala_calle_51_43"
 display_name = "Heladería de turrón de la Explanada, Alicante"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle5143" type="Node2D" unique_id=606093758]
+[node name="SalaCalle5143" type="Node2D" unique_id=445950151]
 script = ExtResource("1_8tx8p")
-data = SubResource("Resource_8tx8p")
+data = SubResource("Resource_r1c6e")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=73608475]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1591520268]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAIAAQAAAAAABgAAAAJAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAIAAUAAAAAABgAAAAJAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABgAAAAEAAcAAAAAABgAAAAFAAcAAAAAABgAAAAGAAcAAAAAABgAAAAHAAcAAAAAABgAAAAIAAcAAAAAABgAAAAJAAcAAAAAABgAAAAAAAgAAAAAABgAAAABAAgAAAAAABgAAAACAAgAAAAAABgAAAADAAgAAAAAABgAAAAEAAgAAAAAAAwAAAAFAAgAAAAAABgAAAAGAAgAAAAAABgAAAAHAAgAAAAAABgAAAAIAAgAAAAAABgAAAAJAAgAAAAAABgAAAA=")
 tile_set = ExtResource("4_xjnrx")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=934472981]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1817077618]
 tile_map_data = PackedByteArray("AAABAAAAAQABACYAAAABAAEAAQABACcAAAACAAAAAQABACYAAAACAAEAAQABACcAAAADAAAAAQABACYAAAADAAEAAQABACcAAAAEAAAAAQABACYAAAAEAAEAAQABACcAAAAFAAAAAQABACYAAAAFAAEAAQABACcAAAAGAAAAAQABACYAAAAGAAEAAQABACcAAAAHAAAAAQABACYAAAAHAAEAAQABACcAAAAIAAAAAQABACYAAAAIAAEAAQABACcAAAAAAAAAAQACACQAAAAJAAAAAQAAACQAAAAAAAEAAQACACQAAAAJAAEAAQAAACQAAAAAAAIAAQACACQAAAAJAAIAAQAAACQAAAAAAAMAAQACACQAAAAJAAMAAQAAACQAAAAAAAQAAQACACQAAAAJAAQAAQAAACQAAAAAAAUAAQACACQAAAAJAAUAAQAAACQAAAAAAAYAAQACACQAAAAJAAYAAQAAACQAAAAAAAcAAQACACQAAAAJAAcAAQAAACQAAAABAAgAAQABACMAAAACAAgAAQABACMAAAADAAgAAQACACMAAAAFAAgAAQAAACMAAAAGAAgAAQABACMAAAAHAAgAAQABACMAAAAIAAgAAQABACMAAAAAAAgAAQAFACcAAAAJAAgAAQAGACcAAAA=")
 tile_set = ExtResource("4_xjnrx")
 
-[node name="Entities" type="Node2D" parent="." unique_id=315301561]
+[node name="Entities" type="Node2D" parent="." unique_id=1178718463]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2038069459]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1049131481]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAFAAEAAgABAAcAAAAGAAEAAgACAAcAAAAFAAIAAgABAAgAAAAGAAIAAgACAAgAAAAHAAEAAgABAAcAAAAIAAEAAgACAAcAAAAHAAIAAgABAAgAAAAIAAIAAgACAAgAAAADAAMAAwAFABcAAAADAAQAAwAFABgAAAAEAAMAAwAGABcAAAAEAAQAAwAGABgAAAAFAAMAAwAGABcAAAAFAAQAAwAGABgAAAAGAAMAAwAHABcAAAAGAAQAAwAHABgAAAA=")
 tile_set = ExtResource("4_xjnrx")
 
-[node name="Heladero" type="Node2D" parent="Entities" unique_id=812032847 instance=ExtResource("5_24si4")]
+[node name="Heladero" type="Node2D" parent="Entities" unique_id=1083659982 instance=ExtResource("5_24si4")]
 position = Vector2(144, 80)
 script = ExtResource("6_4ajll")
 display_name = "Heladero"
@@ -53,7 +53,7 @@ lines = PackedStringArray("El helado de turrón lo inventaron los heladeros de J
 turn_to_player = true
 sprite_sheet = ExtResource("7_r1c6e")
 
-[node name="Nina" type="Node2D" parent="Entities" unique_id=624390120 instance=ExtResource("5_24si4")]
+[node name="Nina" type="Node2D" parent="Entities" unique_id=1783617882 instance=ExtResource("5_24si4")]
 position = Vector2(176, 176)
 script = ExtResource("6_4ajll")
 display_name = "Niña"
@@ -62,37 +62,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_rkihu")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=694561512]
+[node name="Above" type="TileMapLayer" parent="." unique_id=851033008]
 z_index = 10
 tile_set = ExtResource("4_xjnrx")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=175992217]
+[node name="Warps" type="Node2D" parent="." unique_id=736808665]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1893157240]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1611087962]
 position = Vector2(144, 272)
 script = ExtResource("11_ijnm7")
 target_map = &"alicante/exterior"
 target_spawn = &"from_sala_51_43"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=867385473]
+[node name="Spawns" type="Node2D" parent="." unique_id=1587748378]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1228348417]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1470895752]
 position = Vector2(144, 240)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1987428085]
+[node name="Triggers" type="Node2D" parent="." unique_id=1572613492]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1536741362]
+[node name="Rotulo" type="Label" parent="." unique_id=1256812089]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 304.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_g46j5")
 theme_override_font_sizes/font_size = 16
 text = "HELADERÍA DE TURRÓN DE LA EXPLANADA"
 horizontal_alignment = 1
+autowrap_mode = 3

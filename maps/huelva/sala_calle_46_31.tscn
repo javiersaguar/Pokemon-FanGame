@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_8bf7s"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_0minr"]
 
-[sub_resource type="Resource" id="Resource_clkf2"]
+[sub_resource type="Resource" id="Resource_e1kkc"]
 script = ExtResource("3_cub1n")
 id = &"huelva/sala_calle_46_31"
 display_name = "Piso del trabajador del Polo Químico, Huelva"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle4631" type="Node2D" unique_id=1563317915]
+[node name="SalaCalle4631" type="Node2D" unique_id=81783475]
 script = ExtResource("1_clkf2")
-data = SubResource("Resource_clkf2")
+data = SubResource("Resource_e1kkc")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=213228068]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=417728784]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAgAAAABAAAAAAAAAAgAAAACAAAAAAAAAAgAAAADAAAAAAAAAAgAAAAEAAAAAAAAAAgAAAAFAAAAAAAAAAgAAAAGAAAAAAAAAAgAAAAHAAAAAAAAAAgAAAAIAAAAAAAAAAgAAAAJAAAAAAAAAAgAAAAAAAEAAAAAAAgAAAABAAEAAAAAAAgAAAACAAEAAAAAAAgAAAADAAEAAAAAAAgAAAAEAAEAAAAAAAgAAAAFAAEAAAAAAAgAAAAGAAEAAAAAAAgAAAAHAAEAAAAAAAgAAAAIAAEAAAAAAAgAAAAJAAEAAAAAAAgAAAAAAAIAAAAAAAgAAAABAAIAAAAAAAgAAAACAAIAAAAAAAgAAAADAAIAAAAAAAgAAAAEAAIAAAAAAAgAAAAFAAIAAAAAAAgAAAAGAAIAAAAAAAgAAAAHAAIAAAAAAAgAAAAIAAIAAAAAAAgAAAAJAAIAAAAAAAgAAAAAAAMAAAAAAAgAAAABAAMAAAAAAAgAAAACAAMAAAAAAAgAAAADAAMAAAAAAAgAAAAEAAMAAAAAAAgAAAAFAAMAAAAAAAgAAAAGAAMAAAAAAAgAAAAHAAMAAAAAAAgAAAAIAAMAAAAAAAgAAAAJAAMAAAAAAAgAAAAAAAQAAAAAAAgAAAABAAQAAAAAAAgAAAACAAQAAAAAAAgAAAADAAQAAAAAAAQAAAAEAAQAAAAAAAQAAAAFAAQAAAAAAAQAAAAGAAQAAAAAAAQAAAAHAAQAAAAAAAgAAAAIAAQAAAAAAAgAAAAJAAQAAAAAAAgAAAAAAAUAAAAAAAgAAAABAAUAAAAAAAgAAAACAAUAAAAAAAgAAAADAAUAAAAAAAQAAAAEAAUAAAAAAAQAAAAFAAUAAAAAAAQAAAAGAAUAAAAAAAQAAAAHAAUAAAAAAAgAAAAIAAUAAAAAAAgAAAAJAAUAAAAAAAgAAAAAAAYAAAAAAAgAAAABAAYAAAAAAAgAAAACAAYAAAAAAAgAAAADAAYAAAAAAAgAAAAEAAYAAAAAAAgAAAAFAAYAAAAAAAgAAAAGAAYAAAAAAAgAAAAHAAYAAAAAAAgAAAAIAAYAAAAAAAgAAAAJAAYAAAAAAAgAAAAAAAcAAAAAAAgAAAABAAcAAAAAAAgAAAACAAcAAAAAAAgAAAADAAcAAAAAAAgAAAAEAAcAAAAAAAgAAAAFAAcAAAAAAAQAAAAGAAcAAAAAAAgAAAAHAAcAAAAAAAgAAAAIAAcAAAAAAAgAAAAJAAcAAAAAAAgAAAA=")
 tile_set = ExtResource("4_k4gim")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1874924694]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1492145337]
 tile_map_data = PackedByteArray("AAABAAAAAQABAEkAAAABAAEAAQABAEoAAAACAAAAAQABAEkAAAACAAEAAQABAEoAAAADAAAAAQABAEkAAAADAAEAAQABAEoAAAAEAAAAAQABAEkAAAAEAAEAAQABAEoAAAAFAAAAAQABAEkAAAAFAAEAAQABAEoAAAAGAAAAAQABAEkAAAAGAAEAAQABAEoAAAAHAAAAAQABAEkAAAAHAAEAAQABAEoAAAAIAAAAAQABAEkAAAAIAAEAAQABAEoAAAAAAAAAAQACAEcAAAAJAAAAAQAAAEcAAAAAAAEAAQACAEcAAAAJAAEAAQAAAEcAAAAAAAIAAQACAEcAAAAJAAIAAQAAAEcAAAAAAAMAAQACAEcAAAAJAAMAAQAAAEcAAAAAAAQAAQACAEcAAAAJAAQAAQAAAEcAAAAAAAUAAQACAEcAAAAJAAUAAQAAAEcAAAAAAAYAAQACAEcAAAAJAAYAAQAAAEcAAAABAAcAAQABAEYAAAACAAcAAQABAEYAAAADAAcAAQABAEYAAAAEAAcAAQACAEYAAAAGAAcAAQAAAEYAAAAHAAcAAQABAEYAAAAIAAcAAQABAEYAAAAAAAcAAQAFAEoAAAAJAAcAAQAGAEoAAAA=")
 tile_set = ExtResource("4_k4gim")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1424521705]
+[node name="Entities" type="Node2D" parent="." unique_id=1151231870]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=303374375]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=330306226]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAIAAgADAD4AAAAEAAMAAgADADQAAAAFAAMAAgAEADQAAAAEAAQAAgADADUAAAAFAAQAAgAEADUAAAAGAAQAAgACAD0AAAA=")
 tile_set = ExtResource("4_k4gim")
 
-[node name="TrabajadorQuimico" type="Node2D" parent="Entities" unique_id=766787298 instance=ExtResource("5_upce1")]
+[node name="TrabajadorQuimico" type="Node2D" parent="Entities" unique_id=166058630 instance=ExtResource("5_upce1")]
 position = Vector2(112, 80)
 script = ExtResource("6_yj4qq")
 display_name = "Trabajador químico"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_e1kkc")
 initial_facing = 1
 
-[node name="Hija" type="Node2D" parent="Entities" unique_id=718199039 instance=ExtResource("5_upce1")]
+[node name="Hija" type="Node2D" parent="Entities" unique_id=1304037833 instance=ExtResource("5_upce1")]
 position = Vector2(144, 176)
 script = ExtResource("6_yj4qq")
 display_name = "Hija"
@@ -63,37 +63,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_pxosj")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=565532797]
+[node name="Above" type="TileMapLayer" parent="." unique_id=9995457]
 z_index = 10
 tile_set = ExtResource("4_k4gim")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1903726295]
+[node name="Warps" type="Node2D" parent="." unique_id=239957744]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=2092802857]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1760906487]
 position = Vector2(176, 240)
 script = ExtResource("11_8bf7s")
 target_map = &"huelva/exterior"
 target_spawn = &"from_sala_46_31"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=921036441]
+[node name="Spawns" type="Node2D" parent="." unique_id=1431194213]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1521456152]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1499479824]
 position = Vector2(176, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=495054978]
+[node name="Triggers" type="Node2D" parent="." unique_id=1857663749]
 
-[node name="Rotulo" type="Label" parent="." unique_id=707857238]
+[node name="Rotulo" type="Label" parent="." unique_id=341853184]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 304.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_0minr")
 theme_override_font_sizes/font_size = 16
 text = "PISO DEL TRABAJADOR DEL POLO QUÍMICO"
 horizontal_alignment = 1
+autowrap_mode = 3

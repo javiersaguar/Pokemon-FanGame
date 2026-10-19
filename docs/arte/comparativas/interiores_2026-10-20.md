@@ -1,6 +1,6 @@
 # Interiores personalizados del resto del mapa · 2026-10-20
 
-Continuación del encargo de Javier: un interior propio y con sentido para cada casa y edificio con puerta. Esta sesión cubre **338 salas** en 21 ciudades y pueblos y 5 rutas, además de dar gente propia a los **74 locales de servicio**. **Todo es provisional**: nombres, gente, frases y distribución, pendientes de Javier.
+Continuación del encargo de Javier: un interior propio y con sentido para cada casa y edificio con puerta. Esta sesión cubre **361 salas** en 21 ciudades y pueblos y 9 rutas, además de dar gente propia a los **74 locales de servicio**. **Todo es provisional**: nombres, gente, frases y distribución, pendientes de Javier.
 
 Cómo se hace: el contenido de cada sala se escribe a mano en `maps/_tools/contenido_interiores/<ciudad>.py`, se vuelca con `maps/_tools/rellenar_interiores.py` (conserva a quien da regalos) y se planifica y pinta con el sistema de interiores por datos (`planificar_interiores.py`, `pintar_interiores_datos.gd`). Los locales de servicio no se repintan: `maps/_tools/personalizar_servicios.py` cambia en la escena solo las frases del paciente o cliente, del visitante y de la placa.
 
@@ -207,6 +207,38 @@ Todas: [Masía de Santpedor](interiores_2026-10-20/ruta_8/ruta_8__casa_1_despues
 | Casa del bateeiro | Casa del vecino de Sanxenxo |
 
 Todas: [Casa del bateeiro](interiores_2026-10-20/ruta_16/ruta_16__casa_1_despues.png), [Casa del vecino de Sanxenxo](interiores_2026-10-20/ruta_16/ruta_16__casa_2_despues.png).
+
+## Ruta 21 (4 salas)
+
+| ![Bar de pinchos de la calle Laurel](interiores_2026-10-20/ruta_21/ruta_21__casa_2_despues.png) | ![Calado de la bodega familiar](interiores_2026-10-20/ruta_21/ruta_21__sala_calle_10_38_despues.png) |
+|---|---|
+| Bar de pinchos de la calle Laurel | Calado de la bodega familiar |
+
+Todas: [Casa del viticultor riojano](interiores_2026-10-20/ruta_21/ruta_21__casa_1_despues.png), [Bar de pinchos de la calle Laurel](interiores_2026-10-20/ruta_21/ruta_21__casa_2_despues.png), [Calado de la bodega familiar](interiores_2026-10-20/ruta_21/ruta_21__sala_calle_10_38_despues.png), [Casa de la Batalla del Vino](interiores_2026-10-20/ruta_21/ruta_21__sala_calle_33_38_despues.png).
+
+## Ruta 22 (5 salas)
+
+| ![Centro de visitantes de Atapuerca](interiores_2026-10-20/ruta_22/ruta_22__sala_calle_16_15_despues.png) | ![Catedral de Santa María de Burgos](interiores_2026-10-20/ruta_22/ruta_22__sala_calle_8_26_despues.png) | ![Crucero y cimborrio de la catedral](interiores_2026-10-20/ruta_22/ruta_22__sala_calle_8_26_cimborrio_despues.png) |
+|---|---|---|
+| Centro de visitantes de Atapuerca | Catedral de Santa María de Burgos | Crucero y cimborrio de la catedral |
+
+Todas: [Casa de la familia burgalesa](interiores_2026-10-20/ruta_22/ruta_22__casa_1_despues.png), [Casa del peregrino del Camino Francés](interiores_2026-10-20/ruta_22/ruta_22__casa_2_despues.png), [Centro de visitantes de Atapuerca](interiores_2026-10-20/ruta_22/ruta_22__sala_calle_16_15_despues.png), [Catedral de Santa María de Burgos](interiores_2026-10-20/ruta_22/ruta_22__sala_calle_8_26_despues.png), [Crucero y cimborrio de la catedral](interiores_2026-10-20/ruta_22/ruta_22__sala_calle_8_26_cimborrio_despues.png).
+
+## Ruta 24 (12 salas)
+
+| ![Molino Bolero](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_3_10_despues.png) | ![Molino Sancho](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_7_10_despues.png) | ![Molino Rucio](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_11_10_despues.png) |
+|---|---|---|
+| Molino Bolero | Molino Sancho | Molino Rucio |
+
+Todas: [Casa del agricultor de la Mancha](interiores_2026-10-20/ruta_24/ruta_24__casa_1_despues.png), [Casa de la recolectora de azafrán](interiores_2026-10-20/ruta_24/ruta_24__casa_2_despues.png), [Molino Bolero](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_3_10_despues.png), [Molino Sancho](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_7_10_despues.png), [Molino Rucio](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_11_10_despues.png), [Molino del Verde Gabán](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_15_10_despues.png), [Molino Mambrino](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_19_10_despues.png), [Molino Burleta](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_33_30_despues.png), [Molino Infanto](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_37_30_despues.png), [Molino Sardinero](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_41_30_despues.png), [Cueva bodega de Campo de Criptana](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_35_40_despues.png), [Casa del quesero manchego](interiores_2026-10-20/ruta_24/ruta_24__sala_calle_4_28_despues.png).
+
+## Ruta 25 (2 salas)
+
+| ![Casa del guarda forestal de Despeñaperros](interiores_2026-10-20/ruta_25/ruta_25__casa_1_despues.png) | ![Venta del camino de Andalucía](interiores_2026-10-20/ruta_25/ruta_25__casa_2_despues.png) |
+|---|---|
+| Casa del guarda forestal de Despeñaperros | Venta del camino de Andalucía |
+
+Todas: [Casa del guarda forestal de Despeñaperros](interiores_2026-10-20/ruta_25/ruta_25__casa_1_despues.png), [Venta del camino de Andalucía](interiores_2026-10-20/ruta_25/ruta_25__casa_2_despues.png).
 
 ## Ruta 26 (2 salas)
 

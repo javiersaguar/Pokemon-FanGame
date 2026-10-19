@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_vsfl2"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_yn3th"]
 
-[sub_resource type="Resource" id="Resource_h30g5"]
+[sub_resource type="Resource" id="Resource_a1afu"]
 script = ExtResource("3_rgfh0")
 id = &"bilbao/sala_calle_65_23"
 display_name = "Casa del trabajador del puerto de Santurtzi, Bilbao"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle6523" type="Node2D" unique_id=1351921203]
+[node name="SalaCalle6523" type="Node2D" unique_id=554723401]
 script = ExtResource("1_cs3xe")
-data = SubResource("Resource_h30g5")
+data = SubResource("Resource_a1afu")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1914524286]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=764817323]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABwAAAABAAAAAAAAABwAAAACAAAAAAAAABwAAAADAAAAAAAAABwAAAAEAAAAAAAAABwAAAAFAAAAAAAAABwAAAAGAAAAAAAAABwAAAAHAAAAAAAAABwAAAAIAAAAAAAAABwAAAAJAAAAAAAAABwAAAAKAAAAAAAAABwAAAALAAAAAAAAABwAAAAAAAEAAAAAABwAAAABAAEAAAAAABwAAAACAAEAAAAAABwAAAADAAEAAAAAABwAAAAEAAEAAAAAABwAAAAFAAEAAAAAABwAAAAGAAEAAAAAABwAAAAHAAEAAAAAABwAAAAIAAEAAAAAABwAAAAJAAEAAAAAABwAAAAKAAEAAAAAABwAAAALAAEAAAAAABwAAAAAAAIAAAAAABwAAAABAAIAAAAAABwAAAACAAIAAAAAABwAAAADAAIAAAAAABwAAAAEAAIAAAAAABwAAAAFAAIAAAAAABwAAAAGAAIAAAAAABwAAAAHAAIAAAAAABwAAAAIAAIAAAAAABwAAAAJAAIAAAAAABwAAAAKAAIAAAAAABwAAAALAAIAAAAAABwAAAAAAAMAAAAAABwAAAABAAMAAAAAABwAAAACAAMAAAAAABwAAAADAAMAAAAAABwAAAAEAAMAAAAAABwAAAAFAAMAAAAAABwAAAAGAAMAAAAAABwAAAAHAAMAAAAAABwAAAAIAAMAAAAAABwAAAAJAAMAAAAAABwAAAAKAAMAAAAAABwAAAALAAMAAAAAABwAAAAAAAQAAAAAABwAAAABAAQAAAAAABwAAAACAAQAAAAAABwAAAADAAQAAAAAABwAAAAEAAQAAAAAABwAAAAFAAQAAAAAABwAAAAGAAQAAAAAABwAAAAHAAQAAAAAABwAAAAIAAQAAAAAABwAAAAJAAQAAAAAABwAAAAKAAQAAAAAABwAAAALAAQAAAAAABwAAAAAAAUAAAAAABwAAAABAAUAAAAAABwAAAACAAUAAAAAABwAAAADAAUAAAAAABwAAAAEAAUAAAAAABwAAAAFAAUAAAAAABwAAAAGAAUAAAAAABwAAAAHAAUAAAAAABwAAAAIAAUAAAAAABwAAAAJAAUAAAAAABwAAAAKAAUAAAAAABwAAAALAAUAAAAAABwAAAAAAAYAAAAAABwAAAABAAYAAAAAABwAAAACAAYAAAAAABwAAAADAAYAAAAAABwAAAAEAAYAAAAAABwAAAAFAAYAAAAAABwAAAAGAAYAAAAAABwAAAAHAAYAAAAAABwAAAAIAAYAAAAAABwAAAAJAAYAAAAAABwAAAAKAAYAAAAAABwAAAALAAYAAAAAABwAAAAAAAcAAAAAABwAAAABAAcAAAAAABwAAAACAAcAAAAAABwAAAADAAcAAAAAABwAAAAEAAcAAAAAAAwAAAAFAAcAAAAAABwAAAAGAAcAAAAAABwAAAAHAAcAAAAAABwAAAAIAAcAAAAAABwAAAAJAAcAAAAAABwAAAAKAAcAAAAAABwAAAALAAcAAAAAABwAAAA=")
 tile_set = ExtResource("4_h0pyk")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=276575921]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=841699494]
 tile_map_data = PackedByteArray("AAABAAAAAQABAEkAAAABAAEAAQABAEoAAAACAAAAAQABAEkAAAACAAEAAQABAEoAAAADAAAAAQABAEkAAAADAAEAAQABAEoAAAAEAAAAAQABAEkAAAAEAAEAAQABAEoAAAAFAAAAAQABAEkAAAAFAAEAAQABAEoAAAAGAAAAAQABAEkAAAAGAAEAAQABAEoAAAAHAAAAAQABAEkAAAAHAAEAAQABAEoAAAAIAAAAAQABAEkAAAAIAAEAAQABAEoAAAAJAAAAAQABAEkAAAAJAAEAAQABAEoAAAAKAAAAAQABAEkAAAAKAAEAAQABAEoAAAAAAAAAAQACAEcAAAALAAAAAQAAAEcAAAAAAAEAAQACAEcAAAALAAEAAQAAAEcAAAAAAAIAAQACAEcAAAALAAIAAQAAAEcAAAAAAAMAAQACAEcAAAALAAMAAQAAAEcAAAAAAAQAAQACAEcAAAALAAQAAQAAAEcAAAAAAAUAAQACAEcAAAALAAUAAQAAAEcAAAAAAAYAAQACAEcAAAALAAYAAQAAAEcAAAABAAcAAQABAEYAAAACAAcAAQABAEYAAAADAAcAAQACAEYAAAAFAAcAAQAAAEYAAAAGAAcAAQABAEYAAAAHAAcAAQABAEYAAAAIAAcAAQABAEYAAAAJAAcAAQABAEYAAAAKAAcAAQABAEYAAAAAAAcAAQAFAEoAAAALAAcAAQAGAEoAAAA=")
 tile_set = ExtResource("4_h0pyk")
 
-[node name="Entities" type="Node2D" parent="." unique_id=999033256]
+[node name="Entities" type="Node2D" parent="." unique_id=1198629430]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1868461051]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=722088890]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAGAAEAAgACACIAAAAHAAEAAgADACIAAAAGAAIAAgACACMAAAAHAAIAAgADACMAAAAIAAEAAgAAACIAAAAJAAEAAgABACIAAAAIAAIAAgAAACMAAAAJAAIAAgABACMAAAAKAAAAAgAHABsAAAAKAAEAAgAHABwAAAAKAAIAAgAHAB0AAAACAAEAAgAFAB8AAAADAAEAAgAGAB8AAAACAAIAAgAFACAAAAADAAIAAgAGACAAAAAIAAQAAgADADQAAAAJAAQAAgAEADQAAAAIAAUAAgADADUAAAAJAAUAAgAEADUAAAAHAAUAAgAGAD4AAAAKAAUAAgAHAD4AAAABAAYAAgAAACYAAAA=")
 tile_set = ExtResource("4_h0pyk")
 
-[node name="Estibador" type="Node2D" parent="Entities" unique_id=1146196429 instance=ExtResource("5_uuxlb")]
+[node name="Estibador" type="Node2D" parent="Entities" unique_id=2137011825 instance=ExtResource("5_uuxlb")]
 position = Vector2(80, 144)
 script = ExtResource("6_8g2lc")
 display_name = "Estibador"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_a1afu")
 initial_facing = 2
 
-[node name="Mujer" type="Node2D" parent="Entities" unique_id=1003013447 instance=ExtResource("5_uuxlb")]
+[node name="Mujer" type="Node2D" parent="Entities" unique_id=1495228476 instance=ExtResource("5_uuxlb")]
 position = Vector2(48, 80)
 script = ExtResource("6_8g2lc")
 display_name = "Mujer"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_yi1jw")
 initial_facing = 2
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=965300047]
+[node name="Above" type="TileMapLayer" parent="." unique_id=374394644]
 z_index = 10
 tile_map_data = PackedByteArray("AAAHAAQAAgAGAD0AAAAKAAQAAgAHAD0AAAABAAQAAgAAACQAAAABAAUAAgAAACUAAAA=")
 tile_set = ExtResource("4_h0pyk")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=437469694]
+[node name="Warps" type="Node2D" parent="." unique_id=1515606407]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1867592196]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=201948758]
 position = Vector2(144, 240)
 script = ExtResource("11_vsfl2")
 target_map = &"bilbao/exterior"
 target_spawn = &"from_sala_65_23"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=345040612]
+[node name="Spawns" type="Node2D" parent="." unique_id=224883990]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=2086102808]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1178326724]
 position = Vector2(144, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1212671348]
+[node name="Triggers" type="Node2D" parent="." unique_id=418319309]
 
-[node name="Rotulo" type="Label" parent="." unique_id=2006583525]
+[node name="Rotulo" type="Label" parent="." unique_id=1154743338]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 368.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_yn3th")
 theme_override_font_sizes/font_size = 16
 text = "CASA DEL TRABAJADOR DEL PUERTO DE SANTURTZI"
 horizontal_alignment = 1
+autowrap_mode = 3

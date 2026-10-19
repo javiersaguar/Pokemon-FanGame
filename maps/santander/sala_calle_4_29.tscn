@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_h51j7"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_q7nm3"]
 
-[sub_resource type="Resource" id="Resource_ch55g"]
+[sub_resource type="Resource" id="Resource_00qvf"]
 script = ExtResource("3_cvfvo")
 id = &"santander/sala_calle_4_29"
 display_name = "Floristería de los Jardines de Pereda, Santander"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle429" type="Node2D" unique_id=296961843]
+[node name="SalaCalle429" type="Node2D" unique_id=1490073473]
 script = ExtResource("1_y4ddt")
-data = SubResource("Resource_ch55g")
+data = SubResource("Resource_00qvf")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1283164778]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=837201947]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAADAAAAABAAAAAAAAADAAAAACAAAAAAAAADAAAAADAAAAAAAAADAAAAAEAAAAAAAAADAAAAAFAAAAAAAAADAAAAAGAAAAAAAAADAAAAAHAAAAAAAAADAAAAAIAAAAAAAAADAAAAAJAAAAAAAAADAAAAAKAAAAAAAAADAAAAAAAAEAAAAAADAAAAABAAEAAAAAADAAAAACAAEAAAAAADAAAAADAAEAAAAAADAAAAAEAAEAAAAAADAAAAAFAAEAAAAAADAAAAAGAAEAAAAAADAAAAAHAAEAAAAAADAAAAAIAAEAAAAAADAAAAAJAAEAAAAAADAAAAAKAAEAAAAAADAAAAAAAAIAAAAAADAAAAABAAIAAAAAADAAAAACAAIAAAAAADAAAAADAAIAAAAAADAAAAAEAAIAAAAAADAAAAAFAAIAAAAAADAAAAAGAAIAAAAAADAAAAAHAAIAAAAAADAAAAAIAAIAAAAAADAAAAAJAAIAAAAAADAAAAAKAAIAAAAAADAAAAAAAAMAAAAAADAAAAABAAMAAAAAADAAAAACAAMAAAAAADAAAAADAAMAAAAAADAAAAAEAAMAAAAAADAAAAAFAAMAAAAAADAAAAAGAAMAAAAAADAAAAAHAAMAAAAAADAAAAAIAAMAAAAAADAAAAAJAAMAAAAAADAAAAAKAAMAAAAAADAAAAAAAAQAAAAAADAAAAABAAQAAAAAADAAAAACAAQAAAAAADAAAAADAAQAAAAAADAAAAAEAAQAAAAAADAAAAAFAAQAAAAAADAAAAAGAAQAAAAAADAAAAAHAAQAAAAAADAAAAAIAAQAAAAAADAAAAAJAAQAAAAAADAAAAAKAAQAAAAAADAAAAAAAAUAAAAAADAAAAABAAUAAAAAADAAAAACAAUAAAAAADAAAAADAAUAAAAAADAAAAAEAAUAAAAAADAAAAAFAAUAAAAAADAAAAAGAAUAAAAAADAAAAAHAAUAAAAAADAAAAAIAAUAAAAAADAAAAAJAAUAAAAAADAAAAAKAAUAAAAAADAAAAAAAAYAAAAAADAAAAABAAYAAAAAADAAAAACAAYAAAAAADAAAAADAAYAAAAAADAAAAAEAAYAAAAAADAAAAAFAAYAAAAAADAAAAAGAAYAAAAAADAAAAAHAAYAAAAAADAAAAAIAAYAAAAAADAAAAAJAAYAAAAAADAAAAAKAAYAAAAAADAAAAAAAAcAAAAAADAAAAABAAcAAAAAADAAAAACAAcAAAAAADAAAAADAAcAAAAAADAAAAAEAAcAAAAAADAAAAAFAAcAAAAAADAAAAAGAAcAAAAAADAAAAAHAAcAAAAAAAwAAAAIAAcAAAAAADAAAAAJAAcAAAAAADAAAAAKAAcAAAAAADAAAAA=")
 tile_set = ExtResource("4_fkwoe")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=190356425]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=192132099]
 tile_map_data = PackedByteArray("AAABAAAAAQABADoAAAABAAEAAQABADsAAAACAAAAAQABADoAAAACAAEAAQABADsAAAADAAAAAQABADoAAAADAAEAAQABADsAAAAEAAAAAQABADoAAAAEAAEAAQABADsAAAAFAAAAAQABADoAAAAFAAEAAQABADsAAAAGAAAAAQABADoAAAAGAAEAAQABADsAAAAHAAAAAQABADoAAAAHAAEAAQABADsAAAAIAAAAAQABADoAAAAIAAEAAQABADsAAAAJAAAAAQABADoAAAAJAAEAAQABADsAAAAAAAAAAQACADgAAAAKAAAAAQAAADgAAAAAAAEAAQACADgAAAAKAAEAAQAAADgAAAAAAAIAAQACADgAAAAKAAIAAQAAADgAAAAAAAMAAQACADgAAAAKAAMAAQAAADgAAAAAAAQAAQACADgAAAAKAAQAAQAAADgAAAAAAAUAAQACADgAAAAKAAUAAQAAADgAAAAAAAYAAQACADgAAAAKAAYAAQAAADgAAAABAAcAAQABADcAAAACAAcAAQABADcAAAADAAcAAQABADcAAAAEAAcAAQABADcAAAAFAAcAAQABADcAAAAGAAcAAQACADcAAAAIAAcAAQAAADcAAAAJAAcAAQABADcAAAAAAAcAAQAFADsAAAAKAAcAAQAGADsAAAA=")
 tile_set = ExtResource("4_fkwoe")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1840318792]
+[node name="Entities" type="Node2D" parent="." unique_id=1368831934]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1119432996]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1487191905]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAADAAAAAgACACQAAAADAAEAAgACACUAAAADAAIAAgACACYAAAAEAAEAAgABACUAAAAEAAIAAgABACYAAAAFAAAAAgACACQAAAAFAAEAAgACACUAAAAFAAIAAgACACYAAAACAAMAAwAAABcAAAACAAQAAwAAABgAAAADAAMAAwABABcAAAADAAQAAwABABgAAAAEAAMAAwACABcAAAAEAAQAAwACABgAAAAGAAUAAgAAACYAAAAHAAQAAgABACYAAAAIAAUAAgAAACYAAAAJAAYAAgACACYAAAAJAAEAAgABACUAAAAJAAIAAgABACYAAAABAAYAAgABACYAAAA=")
 tile_set = ExtResource("4_fkwoe")
 
-[node name="Florista" type="Node2D" parent="Entities" unique_id=1981283367 instance=ExtResource("5_h3i7s")]
+[node name="Florista" type="Node2D" parent="Entities" unique_id=1781277229 instance=ExtResource("5_h3i7s")]
 position = Vector2(80, 80)
 script = ExtResource("6_8xo4s")
 display_name = "Florista"
@@ -53,7 +53,7 @@ lines = PackedStringArray("Las hortensias cántabras son azules por la tierra á
 turn_to_player = true
 sprite_sheet = ExtResource("8_qeui6")
 
-[node name="Cliente" type="Node2D" parent="Entities" unique_id=1977856373 instance=ExtResource("5_h3i7s")]
+[node name="Cliente" type="Node2D" parent="Entities" unique_id=214977135 instance=ExtResource("5_h3i7s")]
 position = Vector2(144, 176)
 script = ExtResource("6_8xo4s")
 display_name = "Cliente"
@@ -62,38 +62,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_00qvf")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=459739499]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1509921010]
 z_index = 10
 tile_map_data = PackedByteArray("AAAGAAMAAgAAACQAAAAGAAQAAgAAACUAAAAHAAMAAgABACUAAAAIAAMAAgAAACQAAAAIAAQAAgAAACUAAAAJAAQAAgACACQAAAAJAAUAAgACACUAAAABAAUAAgABACUAAAAEAAMAAgAGAD8AAAACAAMAAgAGAD8AAAA=")
 tile_set = ExtResource("4_fkwoe")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=551171690]
+[node name="Warps" type="Node2D" parent="." unique_id=1800704687]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=444518410]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=544188799]
 position = Vector2(240, 240)
 script = ExtResource("11_h51j7")
 target_map = &"santander/exterior"
 target_spawn = &"from_sala_4_29"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=57386640]
+[node name="Spawns" type="Node2D" parent="." unique_id=881992051]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=34842202]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=768559858]
 position = Vector2(240, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=586456604]
+[node name="Triggers" type="Node2D" parent="." unique_id=1152500338]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1584351168]
+[node name="Rotulo" type="Label" parent="." unique_id=462838832]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 336.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_q7nm3")
 theme_override_font_sizes/font_size = 16
 text = "FLORISTERÍA DE LOS JARDINES DE PEREDA"
 horizontal_alignment = 1
+autowrap_mode = 3

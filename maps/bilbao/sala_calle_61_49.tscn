@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_eeevy"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_i1jeo"]
 
-[sub_resource type="Resource" id="Resource_omkkr"]
+[sub_resource type="Resource" id="Resource_src7b"]
 script = ExtResource("3_vdti6")
 id = &"bilbao/sala_calle_61_49"
 display_name = "Sociedad gastronómica de las Siete Calles, Bilbao"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle6149" type="Node2D" unique_id=393674116]
+[node name="SalaCalle6149" type="Node2D" unique_id=1481841966]
 script = ExtResource("1_we60m")
-data = SubResource("Resource_omkkr")
+data = SubResource("Resource_src7b")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=274632866]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=858416467]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABwAAAABAAAAAAAAABwAAAACAAAAAAAAABwAAAADAAAAAAAAABwAAAAEAAAAAAAAABwAAAAFAAAAAAAAABwAAAAGAAAAAAAAABwAAAAHAAAAAAAAABwAAAAIAAAAAAAAABwAAAAJAAAAAAAAABwAAAAKAAAAAAAAABwAAAAAAAEAAAAAABwAAAABAAEAAAAAABwAAAACAAEAAAAAABwAAAADAAEAAAAAABwAAAAEAAEAAAAAABwAAAAFAAEAAAAAABwAAAAGAAEAAAAAABwAAAAHAAEAAAAAABwAAAAIAAEAAAAAABwAAAAJAAEAAAAAABwAAAAKAAEAAAAAABwAAAAAAAIAAAAAABwAAAABAAIAAAAAABwAAAACAAIAAAAAABwAAAADAAIAAAAAABwAAAAEAAIAAAAAABwAAAAFAAIAAAAAABwAAAAGAAIAAAAAABwAAAAHAAIAAAAAABwAAAAIAAIAAAAAABwAAAAJAAIAAAAAABwAAAAKAAIAAAAAABwAAAAAAAMAAAAAABwAAAABAAMAAAAAABwAAAACAAMAAAAAABwAAAADAAMAAAAAABwAAAAEAAMAAAAAABwAAAAFAAMAAAAAABwAAAAGAAMAAAAAABwAAAAHAAMAAAAAABwAAAAIAAMAAAAAABwAAAAJAAMAAAAAABwAAAAKAAMAAAAAABwAAAAAAAQAAAAAABwAAAABAAQAAAAAABwAAAACAAQAAAAAABwAAAADAAQAAAAAAAwAAAAEAAQAAAAAAAwAAAAFAAQAAAAAAAwAAAAGAAQAAAAAAAwAAAAHAAQAAAAAABwAAAAIAAQAAAAAABwAAAAJAAQAAAAAABwAAAAKAAQAAAAAABwAAAAAAAUAAAAAABwAAAABAAUAAAAAABwAAAACAAUAAAAAABwAAAADAAUAAAAAAAwAAAAEAAUAAAAAAAwAAAAFAAUAAAAAAAwAAAAGAAUAAAAAAAwAAAAHAAUAAAAAABwAAAAIAAUAAAAAABwAAAAJAAUAAAAAABwAAAAKAAUAAAAAABwAAAAAAAYAAAAAABwAAAABAAYAAAAAABwAAAACAAYAAAAAABwAAAADAAYAAAAAAAwAAAAEAAYAAAAAAAwAAAAFAAYAAAAAAAwAAAAGAAYAAAAAAAwAAAAHAAYAAAAAABwAAAAIAAYAAAAAABwAAAAJAAYAAAAAABwAAAAKAAYAAAAAABwAAAAAAAcAAAAAABwAAAABAAcAAAAAABwAAAACAAcAAAAAABwAAAADAAcAAAAAABwAAAAEAAcAAAAAABwAAAAFAAcAAAAAABwAAAAGAAcAAAAAABwAAAAHAAcAAAAAABwAAAAIAAcAAAAAABwAAAAJAAcAAAAAABwAAAAKAAcAAAAAABwAAAAAAAgAAAAAABwAAAABAAgAAAAAABwAAAACAAgAAAAAABwAAAADAAgAAAAAABwAAAAEAAgAAAAAABwAAAAFAAgAAAAAABwAAAAGAAgAAAAAABwAAAAHAAgAAAAAAAgAAAAIAAgAAAAAABwAAAAJAAgAAAAAABwAAAAKAAgAAAAAABwAAAA=")
 tile_set = ExtResource("4_gajoe")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=2022869998]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2010903674]
 tile_map_data = PackedByteArray("AAABAAAAAQABADoAAAABAAEAAQABADsAAAACAAAAAQABADoAAAACAAEAAQABADsAAAADAAAAAQABADoAAAADAAEAAQABADsAAAAEAAAAAQABADoAAAAEAAEAAQABADsAAAAFAAAAAQABADoAAAAFAAEAAQABADsAAAAGAAAAAQABADoAAAAGAAEAAQABADsAAAAHAAAAAQABADoAAAAHAAEAAQABADsAAAAIAAAAAQABADoAAAAIAAEAAQABADsAAAAJAAAAAQABADoAAAAJAAEAAQABADsAAAAAAAAAAQACADgAAAAKAAAAAQAAADgAAAAAAAEAAQACADgAAAAKAAEAAQAAADgAAAAAAAIAAQACADgAAAAKAAIAAQAAADgAAAAAAAMAAQACADgAAAAKAAMAAQAAADgAAAAAAAQAAQACADgAAAAKAAQAAQAAADgAAAAAAAUAAQACADgAAAAKAAUAAQAAADgAAAAAAAYAAQACADgAAAAKAAYAAQAAADgAAAAAAAcAAQACADgAAAAKAAcAAQAAADgAAAABAAgAAQABADcAAAACAAgAAQABADcAAAADAAgAAQABADcAAAAEAAgAAQABADcAAAAFAAgAAQABADcAAAAGAAgAAQACADcAAAAIAAgAAQAAADcAAAAJAAgAAQABADcAAAAAAAgAAQAFADsAAAAKAAgAAQAGADsAAAA=")
 tile_set = ExtResource("4_gajoe")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1525165797]
+[node name="Entities" type="Node2D" parent="." unique_id=1848854719]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=828191968]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1824457001]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAEAAgAAACIAAAAFAAEAAgABACIAAAAEAAIAAgAAACMAAAAFAAIAAgABACMAAAAGAAEAAgACACIAAAAHAAEAAgADACIAAAAGAAIAAgACACMAAAAHAAIAAgADACMAAAAIAAEAAgAHACIAAAAIAAIAAgAHACMAAAABAAEAAgABACUAAAABAAIAAgABACYAAAACAAEAAgAFAB8AAAADAAEAAgAGAB8AAAACAAIAAgAFACAAAAADAAIAAgAGACAAAAABAAcAAgAEACYAAAADAAUAAgADADQAAAAEAAUAAgAEADQAAAADAAYAAgADADUAAAAEAAYAAgAEADUAAAAFAAYAAgABAD0AAAA=")
 tile_set = ExtResource("4_gajoe")
 
-[node name="SocioCocinero" type="Node2D" parent="Entities" unique_id=525729637 instance=ExtResource("5_7ybyb")]
+[node name="SocioCocinero" type="Node2D" parent="Entities" unique_id=1685111517 instance=ExtResource("5_7ybyb")]
 position = Vector2(144, 112)
 script = ExtResource("6_ucfi4")
 display_name = "Socio cocinero"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_r6rsp")
 initial_facing = 3
 
-[node name="SocioDeMus" type="Node2D" parent="Entities" unique_id=370770987 instance=ExtResource("5_7ybyb")]
+[node name="SocioDeMus" type="Node2D" parent="Entities" unique_id=1353537745 instance=ExtResource("5_7ybyb")]
 position = Vector2(176, 176)
 script = ExtResource("6_ucfi4")
 display_name = "Socio de mus"
@@ -63,37 +63,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_src7b")
 initial_facing = 1
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1851706641]
+[node name="Above" type="TileMapLayer" parent="." unique_id=41611122]
 z_index = 10
 tile_set = ExtResource("4_gajoe")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=726189775]
+[node name="Warps" type="Node2D" parent="." unique_id=1740043815]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=654602189]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=540174491]
 position = Vector2(240, 272)
 script = ExtResource("11_eeevy")
 target_map = &"bilbao/exterior"
 target_spawn = &"from_sala_61_49"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=211672173]
+[node name="Spawns" type="Node2D" parent="." unique_id=585336218]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1332527076]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1553740917]
 position = Vector2(240, 240)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1033774315]
+[node name="Triggers" type="Node2D" parent="." unique_id=413075230]
 
-[node name="Rotulo" type="Label" parent="." unique_id=369722411]
+[node name="Rotulo" type="Label" parent="." unique_id=964371400]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 336.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_i1jeo")
 theme_override_font_sizes/font_size = 16
 text = "SOCIEDAD GASTRONÓMICA DE LAS SIETE CALLES"
 horizontal_alignment = 1
+autowrap_mode = 3

@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_7g3lv"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_3e8aq"]
 
-[sub_resource type="Resource" id="Resource_67gfg"]
+[sub_resource type="Resource" id="Resource_aimn0"]
 script = ExtResource("3_7d3r5")
 id = &"rocafonda/sala_calle_25_17"
 display_name = "Casa del entrenador del campo del barrio, Rocafonda"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle2517" type="Node2D" unique_id=1235706151]
+[node name="SalaCalle2517" type="Node2D" unique_id=2079443024]
 script = ExtResource("1_v70os")
-data = SubResource("Resource_67gfg")
+data = SubResource("Resource_aimn0")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1871549442]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=2040170421]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAIAAMAAAAAAAAAAAAJAAMAAAAAAAAAAAAKAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAwAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAKAAcAAAAAAAAAAAA=")
 tile_set = ExtResource("4_q50qj")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1024854962]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=269246799]
 tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAAAAAAAQACABAAAAAKAAAAAQAAABAAAAAAAAEAAQACABAAAAAKAAEAAQAAABAAAAAAAAIAAQACABAAAAAKAAIAAQAAABAAAAAAAAMAAQACABAAAAAKAAMAAQAAABAAAAAAAAQAAQACABAAAAAKAAQAAQAAABAAAAAAAAUAAQACABAAAAAKAAUAAQAAABAAAAAAAAYAAQACABAAAAAKAAYAAQAAABAAAAABAAcAAQABAA8AAAACAAcAAQABAA8AAAADAAcAAQACAA8AAAAFAAcAAQAAAA8AAAAGAAcAAQABAA8AAAAHAAcAAQABAA8AAAAIAAcAAQABAA8AAAAJAAcAAQABAA8AAAAAAAcAAQAFABMAAAAKAAcAAQAGABMAAAA=")
 tile_set = ExtResource("4_q50qj")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1165852878]
+[node name="Entities" type="Node2D" parent="." unique_id=623608225]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=628000270]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1498895988]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAEAAgAAACIAAAADAAEAAgABACIAAAACAAIAAgAAACMAAAADAAIAAgABACMAAAAEAAEAAgAEACIAAAAFAAEAAgAFACIAAAAGAAEAAgAGACIAAAAEAAIAAgAEACMAAAAFAAIAAgAFACMAAAAGAAIAAgAGACMAAAAHAAEAAgAEAB8AAAAHAAIAAgAEACAAAAAIAAEAAgAFAB8AAAAJAAEAAgAGAB8AAAAIAAIAAgAFACAAAAAJAAIAAgAGACAAAAAGAAQAAgAGADsAAAAGAAUAAgAGADwAAAAHAAQAAgADADQAAAAIAAQAAgAEADQAAAAHAAUAAgADADUAAAAIAAUAAgAEADUAAAAJAAQAAgAHADsAAAAJAAUAAgAHADwAAAABAAYAAgABACYAAAAJAAYAAgAEACYAAAA=")
 tile_set = ExtResource("4_q50qj")
 
-[node name="EntrenadorDeBase" type="Node2D" parent="Entities" unique_id=697367669 instance=ExtResource("5_odmwg")]
+[node name="EntrenadorDeBase" type="Node2D" parent="Entities" unique_id=354219374 instance=ExtResource("5_odmwg")]
 position = Vector2(176, 144)
 script = ExtResource("6_7wuqo")
 display_name = "Entrenador de base"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_aimn0")
 initial_facing = 2
 
-[node name="Mujer" type="Node2D" parent="Entities" unique_id=1502887121 instance=ExtResource("5_odmwg")]
+[node name="Mujer" type="Node2D" parent="Entities" unique_id=1124228657 instance=ExtResource("5_odmwg")]
 position = Vector2(112, 112)
 script = ExtResource("6_7wuqo")
 display_name = "Mujer"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_l8hsm")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=65461811]
+[node name="Above" type="TileMapLayer" parent="." unique_id=843762296]
 z_index = 10
 tile_map_data = PackedByteArray("AAAGAAMAAgAGADoAAAAJAAMAAgAHADoAAAABAAUAAgABACUAAAA=")
 tile_set = ExtResource("4_q50qj")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=632228222]
+[node name="Warps" type="Node2D" parent="." unique_id=976861399]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1246704468]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1426687091]
 position = Vector2(144, 240)
 script = ExtResource("11_7g3lv")
 target_map = &"rocafonda/exterior"
 target_spawn = &"from_sala_25_17"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=2002607304]
+[node name="Spawns" type="Node2D" parent="." unique_id=1990565363]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1823196206]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=763418971]
 position = Vector2(144, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1549959432]
+[node name="Triggers" type="Node2D" parent="." unique_id=983205265]
 
-[node name="Rotulo" type="Label" parent="." unique_id=666577573]
+[node name="Rotulo" type="Label" parent="." unique_id=1913551800]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 336.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_3e8aq")
 theme_override_font_sizes/font_size = 16
 text = "CASA DEL ENTRENADOR DEL CAMPO DEL BARRIO"
 horizontal_alignment = 1
+autowrap_mode = 3

@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_lw4u4"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_mg3hw"]
 
-[sub_resource type="Resource" id="Resource_ufyw1"]
+[sub_resource type="Resource" id="Resource_swc1t"]
 script = ExtResource("3_g0fbd")
 id = &"valladolid/sala_calle_3_6"
 display_name = "Casa de la escritora de la calle Santiago, Valladolid"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle36" type="Node2D" unique_id=1135823304]
+[node name="SalaCalle36" type="Node2D" unique_id=1493587801]
 script = ExtResource("1_fsws1")
-data = SubResource("Resource_ufyw1")
+data = SubResource("Resource_swc1t")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1375335023]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=417376516]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAACAAAAABAAAAAAAAACAAAAACAAAAAAAAACAAAAADAAAAAAAAACAAAAAEAAAAAAAAACAAAAAFAAAAAAAAACAAAAAGAAAAAAAAACAAAAAHAAAAAAAAACAAAAAIAAAAAAAAACAAAAAJAAAAAAAAACAAAAAKAAAAAAAAACAAAAALAAAAAAAAACAAAAAAAAEAAAAAACAAAAABAAEAAAAAACAAAAACAAEAAAAAACAAAAADAAEAAAAAACAAAAAEAAEAAAAAACAAAAAFAAEAAAAAACAAAAAGAAEAAAAAACAAAAAHAAEAAAAAACAAAAAIAAEAAAAAACAAAAAJAAEAAAAAACAAAAAKAAEAAAAAACAAAAALAAEAAAAAACAAAAAAAAIAAAAAACAAAAABAAIAAAAAACAAAAACAAIAAAAAACAAAAADAAIAAAAAACAAAAAEAAIAAAAAACAAAAAFAAIAAAAAACAAAAAGAAIAAAAAACAAAAAHAAIAAAAAACAAAAAIAAIAAAAAACAAAAAJAAIAAAAAACAAAAAKAAIAAAAAACAAAAALAAIAAAAAACAAAAAAAAMAAAAAACAAAAABAAMAAAAAACAAAAACAAMAAAAAACAAAAADAAMAAAAAACAAAAAEAAMAAAAAACAAAAAFAAMAAAAAACAAAAAGAAMAAAAAACAAAAAHAAMAAAAAACAAAAAIAAMAAAAAACAAAAAJAAMAAAAAACAAAAAKAAMAAAAAACAAAAALAAMAAAAAACAAAAAAAAQAAAAAACAAAAABAAQAAAAAACAAAAACAAQAAAAAACAAAAADAAQAAAAAACAAAAAEAAQAAAAAACAAAAAFAAQAAAAAACAAAAAGAAQAAAAAAAgAAAAHAAQAAAAAAAgAAAAIAAQAAAAAAAgAAAAJAAQAAAAAACAAAAAKAAQAAAAAACAAAAALAAQAAAAAACAAAAAAAAUAAAAAACAAAAABAAUAAAAAACAAAAACAAUAAAAAACAAAAADAAUAAAAAACAAAAAEAAUAAAAAACAAAAAFAAUAAAAAACAAAAAGAAUAAAAAAAgAAAAHAAUAAAAAAAgAAAAIAAUAAAAAAAgAAAAJAAUAAAAAACAAAAAKAAUAAAAAACAAAAALAAUAAAAAACAAAAAAAAYAAAAAACAAAAABAAYAAAAAACAAAAACAAYAAAAAACAAAAADAAYAAAAAACAAAAAEAAYAAAAAACAAAAAFAAYAAAAAACAAAAAGAAYAAAAAAAgAAAAHAAYAAAAAAAgAAAAIAAYAAAAAAAgAAAAJAAYAAAAAACAAAAAKAAYAAAAAACAAAAALAAYAAAAAACAAAAAAAAcAAAAAACAAAAABAAcAAAAAACAAAAACAAcAAAAAACAAAAADAAcAAAAAACAAAAAEAAcAAAAAACAAAAAFAAcAAAAAACAAAAAGAAcAAAAAACAAAAAHAAcAAAAAACAAAAAIAAcAAAAAACAAAAAJAAcAAAAAACAAAAAKAAcAAAAAACAAAAALAAcAAAAAACAAAAAAAAgAAAAAACAAAAABAAgAAAAAACAAAAACAAgAAAAAACAAAAADAAgAAAAAACAAAAAEAAgAAAAAAAQAAAAFAAgAAAAAACAAAAAGAAgAAAAAACAAAAAHAAgAAAAAACAAAAAIAAgAAAAAACAAAAAJAAgAAAAAACAAAAAKAAgAAAAAACAAAAALAAgAAAAAACAAAAA=")
 tile_set = ExtResource("4_ucjnv")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=560001890]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=644899683]
 tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAKAAAAAQABABIAAAAKAAEAAQABABMAAAAAAAAAAQACABAAAAALAAAAAQAAABAAAAAAAAEAAQACABAAAAALAAEAAQAAABAAAAAAAAIAAQACABAAAAALAAIAAQAAABAAAAAAAAMAAQACABAAAAALAAMAAQAAABAAAAAAAAQAAQACABAAAAALAAQAAQAAABAAAAAAAAUAAQACABAAAAALAAUAAQAAABAAAAAAAAYAAQACABAAAAALAAYAAQAAABAAAAAAAAcAAQACABAAAAALAAcAAQAAABAAAAABAAgAAQABAA8AAAACAAgAAQABAA8AAAADAAgAAQACAA8AAAAFAAgAAQAAAA8AAAAGAAgAAQABAA8AAAAHAAgAAQABAA8AAAAIAAgAAQABAA8AAAAJAAgAAQABAA8AAAAKAAgAAQABAA8AAAAAAAgAAQAFABMAAAALAAgAAQAGABMAAAA=")
 tile_set = ExtResource("4_ucjnv")
 
-[node name="Entities" type="Node2D" parent="." unique_id=324149626]
+[node name="Entities" type="Node2D" parent="." unique_id=1237964137]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1023892548]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=461006540]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAGAAEAAgACACIAAAAHAAEAAgADACIAAAAGAAIAAgACACMAAAAHAAIAAgADACMAAAAIAAEAAgAAACIAAAAJAAEAAgABACIAAAAIAAIAAgAAACMAAAAJAAIAAgABACMAAAAKAAAAAgAHABsAAAAKAAEAAgAHABwAAAAKAAIAAgAHAB0AAAADAAQAAgAFADQAAAAEAAQAAgAGADQAAAAFAAQAAgAHADQAAAADAAUAAgAFADUAAAAEAAUAAgAGADUAAAAFAAUAAgAHADUAAAACAAUAAgAGAD4AAAAGAAUAAgAHAD4AAAABAAYAAgADADsAAAACAAYAAgAEADsAAAADAAYAAgAFADsAAAABAAcAAgADADwAAAACAAcAAgAEADwAAAADAAcAAgAFADwAAAAKAAcAAgAAACYAAAA=")
 tile_set = ExtResource("4_ucjnv")
 
-[node name="Escritora" type="Node2D" parent="Entities" unique_id=159225985 instance=ExtResource("5_btu03")]
+[node name="Escritora" type="Node2D" parent="Entities" unique_id=1811278165 instance=ExtResource("5_btu03")]
 position = Vector2(112, 112)
 script = ExtResource("6_o68jm")
 display_name = "Escritora"
@@ -53,7 +53,7 @@ lines = PackedStringArray("Delibes vivió aquí y escribió sobre el campo caste
 turn_to_player = true
 sprite_sheet = ExtResource("7_p808h")
 
-[node name="Gato" type="Node2D" parent="Entities" unique_id=577577579 instance=ExtResource("5_btu03")]
+[node name="Gato" type="Node2D" parent="Entities" unique_id=1676315681 instance=ExtResource("5_btu03")]
 position = Vector2(272, 112)
 script = ExtResource("6_o68jm")
 display_name = "Gato"
@@ -61,38 +61,39 @@ lines = PackedStringArray("Soy su sobrino. Me paga para no hacer ruido mientras 
 turn_to_player = true
 sprite_sheet = ExtResource("8_swc1t")
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=323542391]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1553131220]
 z_index = 10
 tile_map_data = PackedByteArray("AAACAAQAAgAGAD0AAAAGAAQAAgAHAD0AAAAKAAUAAgAAACQAAAAKAAYAAgAAACUAAAA=")
 tile_set = ExtResource("4_ucjnv")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1275172955]
+[node name="Warps" type="Node2D" parent="." unique_id=791141765]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1846808922]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1178626875]
 position = Vector2(144, 272)
 script = ExtResource("11_lw4u4")
 target_map = &"valladolid/exterior"
 target_spawn = &"from_sala_3_6"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1984064355]
+[node name="Spawns" type="Node2D" parent="." unique_id=1827992448]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1391794157]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1752125964]
 position = Vector2(144, 240)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1736314575]
+[node name="Triggers" type="Node2D" parent="." unique_id=612283418]
 
-[node name="Rotulo" type="Label" parent="." unique_id=828745493]
+[node name="Rotulo" type="Label" parent="." unique_id=12744111]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 368.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_mg3hw")
 theme_override_font_sizes/font_size = 16
 text = "CASA DE LA ESCRITORA DE LA CALLE SANTIAGO"
 horizontal_alignment = 1
+autowrap_mode = 3

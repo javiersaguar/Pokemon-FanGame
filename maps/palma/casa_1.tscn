@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_p87q1"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="13_yn7bp"]
 
-[sub_resource type="Resource" id="Resource_4rpqg"]
+[sub_resource type="Resource" id="Resource_cxxsm"]
 script = ExtResource("3_4rpqg")
 id = &"palma/casa_1"
 display_name = "Casa de la madona del barrio de Santa Catalina, Palma"
@@ -26,27 +26,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="Casa1" type="Node2D" unique_id=628505104]
+[node name="Casa1" type="Node2D" unique_id=797744832]
 script = ExtResource("1_3ul6s")
-data = SubResource("Resource_4rpqg")
+data = SubResource("Resource_cxxsm")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=504775653]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=381962728]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAKAAAAAAAAABgAAAALAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAKAAEAAAAAABgAAAALAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAKAAIAAAAAABgAAAALAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAKAAMAAAAAABgAAAALAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAIAAQAAAAAABgAAAAJAAQAAAAAABgAAAAKAAQAAAAAABgAAAALAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAIAAUAAAAAABgAAAAJAAUAAAAAABgAAAAKAAUAAAAAABgAAAALAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAKAAYAAAAAABgAAAALAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABgAAAAEAAcAAAAAABgAAAAFAAcAAAAAABgAAAAGAAcAAAAAABgAAAAHAAcAAAAAABgAAAAIAAcAAAAAABAAAAAJAAcAAAAAABgAAAAKAAcAAAAAABgAAAALAAcAAAAAABgAAAA=")
 tile_set = ExtResource("4_adacn")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1396032017]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1268996714]
 tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAKAAAAAQABABIAAAAKAAEAAQABABMAAAAAAAAAAQACABAAAAALAAAAAQAAABAAAAAAAAEAAQACABAAAAALAAEAAQAAABAAAAAAAAIAAQACABAAAAALAAIAAQAAABAAAAAAAAMAAQACABAAAAALAAMAAQAAABAAAAAAAAQAAQACABAAAAALAAQAAQAAABAAAAAAAAUAAQACABAAAAALAAUAAQAAABAAAAAAAAYAAQACABAAAAALAAYAAQAAABAAAAABAAcAAQABAA8AAAACAAcAAQABAA8AAAADAAcAAQABAA8AAAAEAAcAAQABAA8AAAAFAAcAAQABAA8AAAAGAAcAAQABAA8AAAAHAAcAAQACAA8AAAAJAAcAAQAAAA8AAAAKAAcAAQABAA8AAAAAAAcAAQAFABMAAAALAAcAAQAGABMAAAA=")
 tile_set = ExtResource("4_adacn")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1553333142]
+[node name="Entities" type="Node2D" parent="." unique_id=2086844783]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2054231579]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=488058023]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAEAAgAAACIAAAAFAAEAAgABACIAAAAEAAIAAgAAACMAAAAFAAIAAgABACMAAAAGAAEAAgACACIAAAAHAAEAAgADACIAAAAGAAIAAgACACMAAAAHAAIAAgADACMAAAAIAAEAAgAHACIAAAAIAAIAAgAHACMAAAABAAEAAgAFAB8AAAACAAEAAgAGAB8AAAABAAIAAgAFACAAAAACAAIAAgAGACAAAAADAAEAAgADAAoAAAADAAIAAgADAAsAAAADAAQAAgADADQAAAAEAAQAAgAEADQAAAADAAUAAgADADUAAAAEAAUAAgAEADUAAAACAAUAAgACAD0AAAAFAAUAAgACAD0AAAA=")
 tile_set = ExtResource("4_adacn")
 
-[node name="Anfitrion" type="Node2D" parent="Entities" unique_id=2068168296 instance=ExtResource("5_elfby")]
+[node name="Anfitrion" type="Node2D" parent="Entities" unique_id=1696758928 instance=ExtResource("5_elfby")]
 position = Vector2(144, 112)
 script = ExtResource("6_yn7bp")
 display_name = "Madona"
@@ -59,7 +59,7 @@ event_params = {
 sprite_sheet = ExtResource("7_qs5qd")
 initial_facing = 3
 
-[node name="Nieto" type="Node2D" parent="Entities" unique_id=526856306 instance=ExtResource("5_elfby")]
+[node name="Nieto" type="Node2D" parent="Entities" unique_id=865164803 instance=ExtResource("5_elfby")]
 position = Vector2(48, 112)
 script = ExtResource("6_yn7bp")
 display_name = "Nieto"
@@ -68,37 +68,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("9_cxxsm")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1888273611]
+[node name="Above" type="TileMapLayer" parent="." unique_id=890899318]
 z_index = 10
 tile_set = ExtResource("4_adacn")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1813243985]
+[node name="Warps" type="Node2D" parent="." unique_id=188757606]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1706835429]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1023394647]
 position = Vector2(272, 240)
 script = ExtResource("10_p87q1")
 target_map = &"palma/exterior"
 target_spawn = &"from_casa_1"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=432953561]
+[node name="Spawns" type="Node2D" parent="." unique_id=973695417]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1604484522]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=889773090]
 position = Vector2(272, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1764474433]
+[node name="Triggers" type="Node2D" parent="." unique_id=642511822]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1970789206]
+[node name="Rotulo" type="Label" parent="." unique_id=1929908235]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 368.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("13_yn7bp")
 theme_override_font_sizes/font_size = 16
 text = "CASA DE LA MADONA DEL BARRIO DE SANTA CATALINA"
 horizontal_alignment = 1
+autowrap_mode = 3

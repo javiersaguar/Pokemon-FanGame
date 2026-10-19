@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_irc7l"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_o7w38"]
 
-[sub_resource type="Resource" id="Resource_7u04i"]
+[sub_resource type="Resource" id="Resource_qwyge"]
 script = ExtResource("3_qf2hf")
 id = &"mostoles/sala_calle_39_28"
 display_name = "Casa del batería del grupo del barrio, Mostoles"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle3928" type="Node2D" unique_id=2039791162]
+[node name="SalaCalle3928" type="Node2D" unique_id=1537568232]
 script = ExtResource("1_7u04i")
-data = SubResource("Resource_7u04i")
+data = SubResource("Resource_qwyge")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=646355708]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1900796614]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAACAAAAABAAAAAAAAACAAAAACAAAAAAAAACAAAAADAAAAAAAAACAAAAAEAAAAAAAAACAAAAAFAAAAAAAAACAAAAAGAAAAAAAAACAAAAAHAAAAAAAAACAAAAAIAAAAAAAAACAAAAAJAAAAAAAAACAAAAAKAAAAAAAAACAAAAAAAAEAAAAAACAAAAABAAEAAAAAACAAAAACAAEAAAAAACAAAAADAAEAAAAAACAAAAAEAAEAAAAAACAAAAAFAAEAAAAAACAAAAAGAAEAAAAAACAAAAAHAAEAAAAAACAAAAAIAAEAAAAAACAAAAAJAAEAAAAAACAAAAAKAAEAAAAAACAAAAAAAAIAAAAAACAAAAABAAIAAAAAACAAAAACAAIAAAAAACAAAAADAAIAAAAAACAAAAAEAAIAAAAAACAAAAAFAAIAAAAAACAAAAAGAAIAAAAAACAAAAAHAAIAAAAAACAAAAAIAAIAAAAAACAAAAAJAAIAAAAAACAAAAAKAAIAAAAAACAAAAAAAAMAAAAAACAAAAABAAMAAAAAACAAAAACAAMAAAAAACAAAAADAAMAAAAAACAAAAAEAAMAAAAAACAAAAAFAAMAAAAAACAAAAAGAAMAAAAAACAAAAAHAAMAAAAAACAAAAAIAAMAAAAAACAAAAAJAAMAAAAAACAAAAAKAAMAAAAAACAAAAAAAAQAAAAAACAAAAABAAQAAAAAACAAAAACAAQAAAAAACAAAAADAAQAAAAAACAAAAAEAAQAAAAAACAAAAAFAAQAAAAAACAAAAAGAAQAAAAAACAAAAAHAAQAAAAAACAAAAAIAAQAAAAAACAAAAAJAAQAAAAAACAAAAAKAAQAAAAAACAAAAAAAAUAAAAAACAAAAABAAUAAAAAACAAAAACAAUAAAAAACAAAAADAAUAAAAAACAAAAAEAAUAAAAAACAAAAAFAAUAAAAAACAAAAAGAAUAAAAAACAAAAAHAAUAAAAAACAAAAAIAAUAAAAAACAAAAAJAAUAAAAAACAAAAAKAAUAAAAAACAAAAAAAAYAAAAAACAAAAABAAYAAAAAACAAAAACAAYAAAAAACAAAAADAAYAAAAAACAAAAAEAAYAAAAAACAAAAAFAAYAAAAAACAAAAAGAAYAAAAAACAAAAAHAAYAAAAAACAAAAAIAAYAAAAAACAAAAAJAAYAAAAAACAAAAAKAAYAAAAAACAAAAAAAAcAAAAAACAAAAABAAcAAAAAACAAAAACAAcAAAAAACAAAAADAAcAAAAAACAAAAAEAAcAAAAAACAAAAAFAAcAAAAAACAAAAAGAAcAAAAAACAAAAAHAAcAAAAAACAAAAAIAAcAAAAAACAAAAAJAAcAAAAAACAAAAAKAAcAAAAAACAAAAAAAAgAAAAAACAAAAABAAgAAAAAACAAAAACAAgAAAAAACAAAAADAAgAAAAAAAwAAAAEAAgAAAAAACAAAAAFAAgAAAAAACAAAAAGAAgAAAAAACAAAAAHAAgAAAAAACAAAAAIAAgAAAAAACAAAAAJAAgAAAAAACAAAAAKAAgAAAAAACAAAAA=")
 tile_set = ExtResource("4_njwhq")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=921259332]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2073190127]
 tile_map_data = PackedByteArray("AAABAAAAAQABABcAAAABAAEAAQABABgAAAACAAAAAQABABcAAAACAAEAAQABABgAAAADAAAAAQABABcAAAADAAEAAQABABgAAAAEAAAAAQABABcAAAAEAAEAAQABABgAAAAFAAAAAQABABcAAAAFAAEAAQABABgAAAAGAAAAAQABABcAAAAGAAEAAQABABgAAAAHAAAAAQABABcAAAAHAAEAAQABABgAAAAIAAAAAQABABcAAAAIAAEAAQABABgAAAAJAAAAAQABABcAAAAJAAEAAQABABgAAAAAAAAAAQACABUAAAAKAAAAAQAAABUAAAAAAAEAAQACABUAAAAKAAEAAQAAABUAAAAAAAIAAQACABUAAAAKAAIAAQAAABUAAAAAAAMAAQACABUAAAAKAAMAAQAAABUAAAAAAAQAAQACABUAAAAKAAQAAQAAABUAAAAAAAUAAQACABUAAAAKAAUAAQAAABUAAAAAAAYAAQACABUAAAAKAAYAAQAAABUAAAAAAAcAAQACABUAAAAKAAcAAQAAABUAAAABAAgAAQABABQAAAACAAgAAQACABQAAAAEAAgAAQAAABQAAAAFAAgAAQABABQAAAAGAAgAAQABABQAAAAHAAgAAQABABQAAAAIAAgAAQABABQAAAAJAAgAAQABABQAAAAAAAgAAQAFABgAAAAKAAgAAQAGABgAAAA=")
 tile_set = ExtResource("4_njwhq")
 
-[node name="Entities" type="Node2D" parent="." unique_id=742287781]
+[node name="Entities" type="Node2D" parent="." unique_id=1306572493]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1292543527]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2079484671]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAAAAgAAABsAAAAEAAEAAgAAABwAAAAEAAIAAgAAAB0AAAAFAAEAAgAAACIAAAAGAAEAAgABACIAAAAFAAIAAgAAACMAAAAGAAIAAgABACMAAAAHAAEAAgACACIAAAAIAAEAAgADACIAAAAHAAIAAgACACMAAAAIAAIAAgADACMAAAAGAAQAAgAGADsAAAAGAAUAAgAGADwAAAAHAAQAAgADADQAAAAIAAQAAgAEADQAAAAHAAUAAgADADUAAAAIAAUAAgAEADUAAAAJAAQAAgAHADsAAAAJAAUAAgAHADwAAAAJAAAAAgACACQAAAAJAAEAAgACACUAAAAJAAIAAgACACYAAAABAAEAAgAFAB8AAAACAAEAAgAGAB8AAAABAAIAAgAFACAAAAACAAIAAgAGACAAAAADAAEAAgAEAB8AAAADAAIAAgAEACAAAAA=")
 tile_set = ExtResource("4_njwhq")
 
-[node name="Bateria" type="Node2D" parent="Entities" unique_id=1556537530 instance=ExtResource("5_k7cvg")]
+[node name="Bateria" type="Node2D" parent="Entities" unique_id=2088285429 instance=ExtResource("5_k7cvg")]
 position = Vector2(176, 176)
 script = ExtResource("6_qdhbl")
 display_name = "Batería"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_qwyge")
 initial_facing = 1
 
-[node name="Hermana" type="Node2D" parent="Entities" unique_id=1813909543 instance=ExtResource("5_k7cvg")]
+[node name="Hermana" type="Node2D" parent="Entities" unique_id=950074165 instance=ExtResource("5_k7cvg")]
 position = Vector2(48, 112)
 script = ExtResource("6_qdhbl")
 display_name = "Hermana"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_niqei")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=2095374892]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1149584833]
 z_index = 10
 tile_map_data = PackedByteArray("AAAGAAMAAgAGADoAAAAJAAMAAgAHADoAAAA=")
 tile_set = ExtResource("4_njwhq")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=749500421]
+[node name="Warps" type="Node2D" parent="." unique_id=904248181]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1815078439]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1298433947]
 position = Vector2(112, 272)
 script = ExtResource("11_irc7l")
 target_map = &"mostoles/exterior"
 target_spawn = &"from_sala_39_28"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1755302844]
+[node name="Spawns" type="Node2D" parent="." unique_id=1909154720]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1316095895]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=753942956]
 position = Vector2(112, 240)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1296220454]
+[node name="Triggers" type="Node2D" parent="." unique_id=1411568141]
 
-[node name="Rotulo" type="Label" parent="." unique_id=953698446]
+[node name="Rotulo" type="Label" parent="." unique_id=34690043]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 336.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_o7w38")
 theme_override_font_sizes/font_size = 16
 text = "CASA DEL BATERÍA DEL GRUPO DEL BARRIO"
 horizontal_alignment = 1
+autowrap_mode = 3

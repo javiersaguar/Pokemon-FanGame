@@ -1,0 +1,214 @@
+{
+ "_doc": "Interiores personalizados de ruta_21 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 21",
+ "interiores": {
+  "ruta_21/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_21/exterior", [10, 16]],
+   "tipo": "casa",
+   "nombre": "Casa del viticultor riojano",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Viticultor",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_21_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "Tempranillo, garnacha, graciano y mazuelo. Con eso se hace el Rioja. Y con mucha paciencia en barrica.",
+      "Toma, para el camino, que de aquí a Burgos hay viñas y poco más."
+     ],
+     "en": [2, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Patatas a la riojana con chorizo. En vendimia se comen tres platos y se trabaja doce horas."],
+     "nodo": "Mujer",
+     "en": [6, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["alfombra_naranja", [6, 3, 4, 3]]],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["encimera", 3, 1],
+    ["cajon_oliva", 7, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal_larga", 3, 3],
+    ["silla_derecha", 2, 3],
+    ["silla_izquierda", 6, 3],
+    ["arbol_maceta", 10, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "ruta_21/casa_2": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_21/exterior", [33, 16]],
+   "tipo": "taberna",
+   "nombre": "Bar de pinchos de la calle Laurel",
+   "personas": [
+    {
+     "nombre": "Camarero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "En la Laurel cada bar tiene su pincho: champiñones, oreja, zapatillas. Se toma uno en cada sitio y se sigue.",
+      "El champiñón con gamba encima se come de un bocado. Si lo partes, te mira todo el bar."
+     ],
+     "nodo": "Camarero",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cuadrilla de despedida",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": ["Venimos de despedida de soltero. Llevamos once bares. El novio ya no sabe ni cómo se llama."],
+     "nodo": "CuadrillaDeDespedida",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [10, 9],
+   "suelo": "parquet",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 6, 1],
+    ["encimera", 8, 1],
+    ["nevera_alta", 11, 0],
+    ["mostrador_turquesa_i", 2, 4],
+    ["mostrador_turquesa_m", 3, 4],
+    ["mostrador_turquesa_m", 4, 4],
+    ["mostrador_turquesa_m", 5, 4],
+    ["mostrador_turquesa_d", 6, 4],
+    ["banqueta_roja", 3, 6],
+    ["banqueta_roja", 5, 6],
+    ["mesa_cristal", 8, 4],
+    ["banqueta_roja", 7, 5],
+    ["banqueta_roja", 10, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 8]},
+   "pasos": []
+  },
+  "ruta_21/sala_calle_10_38": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_21/exterior", [10, 38]],
+   "tipo": "bodega",
+   "nombre": "Calado de la bodega familiar",
+   "personas": [
+    {
+     "nombre": "Bodeguera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Los calados son túneles excavados bajo tierra para guardar el vino. Aquí abajo siempre hay doce grados.",
+      "Mi bisabuelo cavó este calado con pico. Tardó tres inviernos. El vino lo agradece cada año."
+     ],
+     "nodo": "Bodeguera",
+     "en": [2, 4],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Enólogo",
+     "aspecto": "tertuliano",
+     "papel": "mesa",
+     "frases": [
+      "Crianza, reserva y gran reserva. La diferencia es el tiempo en barrica y en botella. Y el precio."
+     ],
+     "nodo": "Enologo",
+     "en": [1, 4],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Barricas de roble americano y francés. El vino respira por la madera mientras duerme."],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "piedra",
+   "pared": "gris_cemento",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["taquilla_gris", 3, 0],
+    ["cajas", 4, 1],
+    ["escalera_mano", 7, 0],
+    ["cajas", 6, 3],
+    ["caja", 10, 7],
+    ["cajas", 1, 6],
+    ["mesa_cristal", 1, 2],
+    ["taburete_marron", 3, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "ruta_21/sala_calle_33_38": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_21/exterior", [33, 38]],
+   "tipo": "casa",
+   "nombre": "Casa de la Batalla del Vino",
+   "personas": [
+    {
+     "nombre": "Mozo de Haro",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": [
+      "En Haro, el 29 de junio, hacemos la Batalla del Vino: miles de litros tirados con botas, cubos y pistolas de agua. Acabas morado.",
+      "La ropa blanca de la batalla no se vuelve a lavar. Se guarda morada, como trofeo."
+     ],
+     "nodo": "MozoDeHaro",
+     "en": [8, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": ["Mi hijo vuelve de la Batalla del Vino con olor a vendimia hasta en las orejas. Una semana."],
+     "nodo": "Madre",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_naranja", [5, 5, 5, 3]]],
+   "muebles": [
+    ["tele", 2, 1],
+    ["armario_nogal", 4, 0],
+    ["estanteria_alta_nogal", 5, 0],
+    ["arbol_maceta", 10, 6],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  }
+ }
+}

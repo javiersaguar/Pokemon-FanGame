@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_5sa1w"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_36oxx"]
 
-[sub_resource type="Resource" id="Resource_i5kew"]
+[sub_resource type="Resource" id="Resource_pmrve"]
 script = ExtResource("3_oo8u4")
 id = &"playa_del_ingles/sala_calle_33_20"
 display_name = "Apartamento de la promotora del concierto, Playa Del Ingles"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle3320" type="Node2D" unique_id=2000176678]
+[node name="SalaCalle3320" type="Node2D" unique_id=1161374533]
 script = ExtResource("1_i5kew")
-data = SubResource("Resource_i5kew")
+data = SubResource("Resource_pmrve")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1255299918]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1656361894]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAADAAAAABAAAAAAAAADAAAAACAAAAAAAAADAAAAADAAAAAAAAADAAAAAEAAAAAAAAADAAAAAFAAAAAAAAADAAAAAGAAAAAAAAADAAAAAHAAAAAAAAADAAAAAIAAAAAAAAADAAAAAAAAEAAAAAADAAAAABAAEAAAAAADAAAAACAAEAAAAAADAAAAADAAEAAAAAADAAAAAEAAEAAAAAADAAAAAFAAEAAAAAADAAAAAGAAEAAAAAADAAAAAHAAEAAAAAADAAAAAIAAEAAAAAADAAAAAAAAIAAAAAADAAAAABAAIAAAAAADAAAAACAAIAAAAAADAAAAADAAIAAAAAADAAAAAEAAIAAAAAADAAAAAFAAIAAAAAADAAAAAGAAIAAAAAADAAAAAHAAIAAAAAADAAAAAIAAIAAAAAADAAAAAAAAMAAAAAADAAAAABAAMAAAAAADAAAAACAAMAAAAAADAAAAADAAMAAAAAAAgAAAAEAAMAAAAAAAgAAAAFAAMAAAAAAAgAAAAGAAMAAAAAADAAAAAHAAMAAAAAADAAAAAIAAMAAAAAADAAAAAAAAQAAAAAADAAAAABAAQAAAAAADAAAAACAAQAAAAAADAAAAADAAQAAAAAAAgAAAAEAAQAAAAAAAgAAAAFAAQAAAAAAAgAAAAGAAQAAAAAADAAAAAHAAQAAAAAADAAAAAIAAQAAAAAADAAAAAAAAUAAAAAADAAAAABAAUAAAAAADAAAAACAAUAAAAAADAAAAADAAUAAAAAAAgAAAAEAAUAAAAAAAgAAAAFAAUAAAAAAAgAAAAGAAUAAAAAADAAAAAHAAUAAAAAADAAAAAIAAUAAAAAADAAAAAAAAYAAAAAADAAAAABAAYAAAAAADAAAAACAAYAAAAAADAAAAADAAYAAAAAADAAAAAEAAYAAAAAADAAAAAFAAYAAAAAADAAAAAGAAYAAAAAADAAAAAHAAYAAAAAADAAAAAIAAYAAAAAADAAAAAAAAcAAAAAADAAAAABAAcAAAAAADAAAAACAAcAAAAAADAAAAADAAcAAAAAADAAAAAEAAcAAAAAABAAAAAFAAcAAAAAADAAAAAGAAcAAAAAADAAAAAHAAcAAAAAADAAAAAIAAcAAAAAADAAAAA=")
 tile_set = ExtResource("4_ik3yr")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=812582346]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=244019851]
 tile_map_data = PackedByteArray("AAABAAAAAQABADoAAAABAAEAAQABADsAAAACAAAAAQABADoAAAACAAEAAQABADsAAAADAAAAAQABADoAAAADAAEAAQABADsAAAAEAAAAAQABADoAAAAEAAEAAQABADsAAAAFAAAAAQABADoAAAAFAAEAAQABADsAAAAGAAAAAQABADoAAAAGAAEAAQABADsAAAAHAAAAAQABADoAAAAHAAEAAQABADsAAAAAAAAAAQACADgAAAAIAAAAAQAAADgAAAAAAAEAAQACADgAAAAIAAEAAQAAADgAAAAAAAIAAQACADgAAAAIAAIAAQAAADgAAAAAAAMAAQACADgAAAAIAAMAAQAAADgAAAAAAAQAAQACADgAAAAIAAQAAQAAADgAAAAAAAUAAQACADgAAAAIAAUAAQAAADgAAAAAAAYAAQACADgAAAAIAAYAAQAAADgAAAABAAcAAQABADcAAAACAAcAAQABADcAAAADAAcAAQACADcAAAAFAAcAAQAAADcAAAAGAAcAAQABADcAAAAHAAcAAQABADcAAAAAAAcAAQAFADsAAAAIAAcAAQAGADsAAAA=")
 tile_set = ExtResource("4_ik3yr")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1606206309]
+[node name="Entities" type="Node2D" parent="." unique_id=1531402683]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2001211878]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=724915733]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAAAAgAHABsAAAACAAEAAgAHABwAAAACAAIAAgAHAB0AAAADAAEAAgAAACIAAAAEAAEAAgABACIAAAADAAIAAgAAACMAAAAEAAIAAgABACMAAAABAAIAAgADAD4AAAABAAUAAgADADsAAAACAAUAAgAEADsAAAADAAUAAgAFADsAAAABAAYAAgADADwAAAACAAYAAgAEADwAAAADAAYAAgAFADwAAAAFAAYAAgAFACYAAAAGAAYAAgAGACYAAAAHAAYAAgAHACYAAAABAAMAAgADADQAAAACAAMAAgAEADQAAAABAAQAAgADADUAAAACAAQAAgAEADUAAAADAAQAAgABAD0AAAA=")
 tile_set = ExtResource("4_ik3yr")
 
-[node name="Promotora" type="Node2D" parent="Entities" unique_id=1803820808 instance=ExtResource("5_81405")]
+[node name="Promotora" type="Node2D" parent="Entities" unique_id=1571735777 instance=ExtResource("5_81405")]
 position = Vector2(112, 112)
 script = ExtResource("6_pniul")
 display_name = "Promotora"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_pmrve")
 initial_facing = 1
 
-[node name="TecnicoDeSonido" type="Node2D" parent="Entities" unique_id=1405126964 instance=ExtResource("5_81405")]
+[node name="TecnicoDeSonido" type="Node2D" parent="Entities" unique_id=327738900 instance=ExtResource("5_81405")]
 position = Vector2(240, 80)
 script = ExtResource("6_pniul")
 display_name = "Técnico de sonido"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_6is0n")
 initial_facing = 1
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=428706165]
+[node name="Above" type="TileMapLayer" parent="." unique_id=718113812]
 z_index = 10
 tile_map_data = PackedByteArray("AAAFAAUAAgAFACUAAAAGAAUAAgAGACUAAAAHAAUAAgAHACUAAAA=")
 tile_set = ExtResource("4_ik3yr")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=626081369]
+[node name="Warps" type="Node2D" parent="." unique_id=1384372984]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=357311063]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=184862303]
 position = Vector2(144, 240)
 script = ExtResource("11_5sa1w")
 target_map = &"playa_del_ingles/exterior"
 target_spawn = &"from_sala_33_20"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=464776025]
+[node name="Spawns" type="Node2D" parent="." unique_id=299402434]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1927700322]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=824849956]
 position = Vector2(144, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1081452393]
+[node name="Triggers" type="Node2D" parent="." unique_id=1055404690]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1141709723]
+[node name="Rotulo" type="Label" parent="." unique_id=812958281]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 272.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_36oxx")
 theme_override_font_sizes/font_size = 16
 text = "APARTAMENTO DE LA PROMOTORA DEL CONCIERTO"
 horizontal_alignment = 1
+autowrap_mode = 3

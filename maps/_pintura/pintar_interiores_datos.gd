@@ -213,6 +213,13 @@ func _rotulo(p: Pintor, texto: String, tam: Vector2i) -> void:
 	label.add_theme_color_override("font_shadow_color", Color("fff4d8"))
 	label.add_theme_constant_override("shadow_offset_x", 1)
 	label.add_theme_constant_override("shadow_offset_y", 1)
+	# Si el nombre no cabe en una línea, va en dos: la franja de la pared (dos filas) tiene sitio.
+	var font: Font = load(FONT)
+	if font.get_string_size(label.text, HORIZONTAL_ALIGNMENT_LEFT, -1, 16).x > label.size.x:
+		label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		label.position.y = 0
+		label.size.y = 40
+		label.add_theme_constant_override("line_spacing", -4)
 	p.root.add_child(label)
 
 

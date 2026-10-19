@@ -1,0 +1,527 @@
+{
+ "_doc": "Interiores personalizados de ruta_24 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 24",
+ "interiores": {
+  "ruta_24/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_24/exterior", [4, 58]],
+   "tipo": "casa",
+   "nombre": "Casa del agricultor de la Mancha",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Agricultor manchego",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_24_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "Aquí se siembra cereal, viña y azafrán. El azafrán se recoge flor a flor en otoño, de madrugada, antes de que abra.",
+      "Toma, para el viaje. En La Mancha el horizonte está muy lejos y el bar más cercano, también."
+     ],
+     "en": [1, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Pisto manchego, gachas y queso. Lo que da la tierra, que no es poco."],
+     "nodo": "Mujer",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["armario_mostaza", 1, 0],
+    ["estanteria_alta_mostaza", 2, 0],
+    ["planta", 10, 6],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "ruta_24/casa_2": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_24/exterior", [35, 15]],
+   "tipo": "casa",
+   "nombre": "Casa de la recolectora de azafrán",
+   "personas": [
+    {
+     "nombre": "Recolectora",
+     "aspecto": "npc_old_woman",
+     "papel": "mesa",
+     "frases": [
+      "Hacen falta unas ciento cincuenta mil flores para un kilo de azafrán. Por eso vale más que el oro.",
+      "Desbriznar es sacar los tres estigmas rojos de cada flor. Toda la familia en la mesa de la cocina, una noche entera."
+     ],
+     "nodo": "Recolectora",
+     "en": [4, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": ["Me han dejado desbriznar diez flores. He tardado una hora. Mi abuela hace cien en ese rato."],
+     "nodo": "Nieta",
+     "en": [3, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "retro",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["nevera_alta", 8, 0],
+    ["cajon_oliva", 9, 1],
+    ["tele", 10, 1],
+    ["armario_oliva", 1, 0],
+    ["estanteria_alta_oliva", 2, 0],
+    ["mesa_cristal_larga", 5, 3],
+    ["banqueta_roja", 5, 5],
+    ["banqueta_roja", 7, 5],
+    ["sillon_derecha", 9, 3],
+    ["mesa_cristal", 10, 4],
+    ["sillon_izquierda", 12, 3],
+    ["arbol_maceta", 1, 6],
+    ["caja", 12, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_3_10": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [3, 10]],
+   "tipo": "molino",
+   "nombre": "Molino Bolero",
+   "personas": [
+    {
+     "nombre": "Molinero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Este es el Bolero. Todos los molinos del cerro Calderico tienen nombre, como las personas.",
+      "Cuando sopla el viento, las aspas giran y la piedra muele el trigo. Si no sopla, se espera. Aquí se espera mucho."
+     ],
+     "nodo": "Molinero",
+     "en": [1, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Molino Bolero. Muele de vez en cuando para los turistas, los días de la Fiesta de la Rosa del Azafrán."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "tamano": [8, 9],
+   "puerta": [3, 8],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 1, 0], ["caja", 1, 7]],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_7_10": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [7, 10]],
+   "tipo": "molino",
+   "nombre": "Molino Sancho",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Se llama Sancho, por el escudero. El de al lado es Rucio, como su burro. En Consuegra todo es del Quijote.",
+      "Desde aquí arriba se ve el castillo de la Muela y toda la llanura. Doce molinos en fila, mirando el viento."
+     ],
+     "nodo": "Guia",
+     "en": [6, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Molino Sancho. Dentro, la escalera de caracol de madera que sube a la cámara de las piedras."],
+     "nodo": "Cartel",
+     "en": [6, 1]
+    }
+   ],
+   "tamano": [8, 9],
+   "puerta": [3, 8],
+   "suelo": "piedra",
+   "pared": "azulejo_azul",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 1, 0], ["caja", 6, 7]],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_11_10": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [11, 10]],
+   "tipo": "molino",
+   "nombre": "Molino Rucio",
+   "personas": [
+    {
+     "nombre": "Turista japonés",
+     "aspecto": "turista",
+     "papel": "libre",
+     "frases": [
+      "I read Don Quixote in Japanese. Ahora entiendo por qué pensó que eran gigantes: son enormes.",
+      "He subido el cerro andando. Mi Pokémon de tipo Volador ha subido volando. No me ha esperado."
+     ],
+     "nodo": "TuristaJapones",
+     "en": [6, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Molino Rucio. Por la ventana de la cámara se ve el castillo de la Muela, de la Orden de San Juan."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 6, 0], ["cajas", 1, 1], ["papelera", 1, 5]],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_15_10": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [15, 10]],
+   "tipo": "molino",
+   "nombre": "Molino del Verde Gabán",
+   "personas": [
+    {
+     "nombre": "Restaurador",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "Cambio las velas de las aspas cada pocos años. El viento de la Mancha las deja como un trapo.",
+      "La caperuza del molino gira para poner las aspas de cara al viento. Se mueve a mano, con un palo largo que se llama gobierno."
+     ],
+     "nodo": "Restaurador",
+     "en": [3, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Molino del Caballero del Verde Gabán. Herramientas del molinero: martillo de picar la piedra, cedazo y saco."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [5, 7],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 3, 0], ["cajon_gris", 7, 1], ["banqueta_azul", 7, 6]],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_19_10": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [19, 10]],
+   "tipo": "molino",
+   "nombre": "Molino Mambrino",
+   "personas": [
+    {
+     "nombre": "Molinera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Mi abuelo molía aquí el trigo de todo el pueblo. Se cobraba con una parte de la harina: la maquila.",
+      "El nombre viene del yelmo de Mambrino, que en el libro es una bacía de barbero. Don Quijote veía lo que quería ver."
+     ],
+     "nodo": "Molinera",
+     "en": [1, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Molino Mambrino. Las piedras: la solera abajo, quieta; la volandera arriba, girando. En medio, el trigo."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "tamano": [8, 9],
+   "puerta": [4, 8],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 2, 0], ["cajas", 1, 6], ["banqueta_azul", 6, 2]],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_33_30": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [33, 30]],
+   "tipo": "molino",
+   "nombre": "Molino Burleta",
+   "personas": [
+    {
+     "nombre": "Guía de Criptana",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "El Burleta es del siglo XVI y conserva la maquinaria original. Es uno de los tres molinos más antiguos de la sierra.",
+      "Cervantes pudo ver estos mismos molinos. Por eso decimos que la batalla contra los gigantes fue aquí, no en Consuegra."
+     ],
+     "nodo": "GuiaDeCriptana",
+     "en": [2, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Molino Burleta (siglo XVI). Bien de Interés Cultural. Maquinaria original de madera, sin un clavo de hierro."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "tamano": [8, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 4, 0], ["cajon_gris", 6, 6], ["tele_pequena", 1, 7]],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_37_30": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [37, 30]],
+   "tipo": "molino",
+   "nombre": "Molino Infanto",
+   "personas": [
+    {
+     "nombre": "Aficionado al Quijote",
+     "aspecto": "tertuliano",
+     "papel": "libre",
+     "frases": [
+      "En Campo de Criptana y en Consuegra discutimos cuáles son los molinos del Quijote. Los dos tenemos razón, y ninguno.",
+      "«Non fuyades, cobardes y viles criaturas…». Me lo sé de memoria. Los molinos, también: llevan oyéndolo cuatrocientos años."
+     ],
+     "nodo": "AficionadoAlQuijote",
+     "en": [4, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Molino Infanto (siglo XVI). En sus muros firman los visitantes desde hace un siglo. Está prohibido, pero ahí están."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [3, 7],
+   "suelo": "chapa",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 3, 0], ["cajon_gris", 6, 1], ["papelera", 6, 5]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_41_30": {
+   "pieza": "molino_mancha",
+   "calle": ["ruta_24/exterior", [41, 30]],
+   "tipo": "molino",
+   "nombre": "Molino Sardinero",
+   "personas": [
+    {
+     "nombre": "Pintor de molinos",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Pinto los molinos al atardecer. La luz de la Mancha es dorada y no hay montañas que la tapen.",
+      "El Sardinero, el Burleta y el Infanto son los tres viejos. Los demás son jóvenes, de hace solo trescientos años."
+     ],
+     "nodo": "PintorDeMolinos",
+     "en": [6, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Molino Sardinero (siglo XVI). En el piso alto, los engranajes de madera: la rueda catalina y la linterna."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 2, 0], ["caja", 1, 2]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_35_40": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_24/exterior", [35, 40]],
+   "tipo": "bodega",
+   "nombre": "Cueva bodega de Campo de Criptana",
+   "personas": [
+    {
+     "nombre": "Bodeguero",
+     "aspecto": "vendimiador",
+     "papel": "dependiente",
+     "frases": [
+      "En Criptana hay cientos de cuevas excavadas en la roca para guardar el vino. Fresco en verano, templado en invierno.",
+      "La Mancha es el viñedo más grande del mundo. Aquí no faltan uvas; falta que se beban despacio."
+     ],
+     "nodo": "Bodeguero",
+     "en": [11, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Visitante",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": ["He bajado a la cueva y hace un fresco buenísimo. Me quedo a vivir aquí."],
+     "nodo": "Visitante",
+     "en": [3, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["cajas", 5, 1],
+    ["cajas", 8, 1],
+    ["cajas", 8, 3],
+    ["caja", 11, 4],
+    ["caja", 11, 2],
+    ["caja", 12, 2],
+    ["papelera", 1, 1],
+    ["cajas", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "ruta_24/sala_calle_4_28": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_24/exterior", [4, 28]],
+   "tipo": "casa",
+   "nombre": "Casa del quesero manchego",
+   "personas": [
+    {
+     "nombre": "Quesero",
+     "aspecto": "pastor",
+     "papel": "libre",
+     "frases": [
+      "El queso manchego lleva la marca de la pleita en la corteza: el dibujo del esparto en zigzag. Si no la tiene, no es de aquí.",
+      "Seis meses de curación para el semicurado, doce para el viejo. El viejo pica la lengua y alegra el alma."
+     ],
+     "nodo": "Quesero",
+     "en": [3, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido habla con las ovejas por la mañana y con los quesos por la tarde. Conmigo, en la cena."],
+     "nodo": "Mujer",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [5, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [6, 3, 4, 2]]],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["tele", 8, 1],
+    ["estante_nogal", 10, 1],
+    ["vitrina_madera", 1, 1],
+    ["sofa", 8, 3],
+    ["arbol_maceta", 1, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  }
+ }
+}

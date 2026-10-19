@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_s3gdo"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_n0obr"]
 
-[sub_resource type="Resource" id="Resource_qq0vj"]
+[sub_resource type="Resource" id="Resource_clmq2"]
 script = ExtResource("3_potu8")
 id = &"orcasitas/sala_calle_28_12"
 display_name = "Piso de la familia del bloque cinco, Orcasitas"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle2812" type="Node2D" unique_id=1780336316]
+[node name="SalaCalle2812" type="Node2D" unique_id=1727409272]
 script = ExtResource("1_jmnah")
-data = SubResource("Resource_qq0vj")
+data = SubResource("Resource_clmq2")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1905988390]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=848904380]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAIAAMAAAAAAAAAAAAJAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAFAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAgAAAAAAAAAAAACAAgAAAAAAAAAAAADAAgAAAAAABAAAAAEAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAA=")
 tile_set = ExtResource("4_j7y14")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=514245150]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1286231465]
 tile_map_data = PackedByteArray("AAABAAAAAQABAD8AAAABAAEAAQABAEAAAAACAAAAAQABAD8AAAACAAEAAQABAEAAAAADAAAAAQABAD8AAAADAAEAAQABAEAAAAAEAAAAAQABAD8AAAAEAAEAAQABAEAAAAAFAAAAAQABAD8AAAAFAAEAAQABAEAAAAAGAAAAAQABAD8AAAAGAAEAAQABAEAAAAAHAAAAAQABAD8AAAAHAAEAAQABAEAAAAAIAAAAAQABAD8AAAAIAAEAAQABAEAAAAAAAAAAAQACAD0AAAAJAAAAAQAAAD0AAAAAAAEAAQACAD0AAAAJAAEAAQAAAD0AAAAAAAIAAQACAD0AAAAJAAIAAQAAAD0AAAAAAAMAAQACAD0AAAAJAAMAAQAAAD0AAAAAAAQAAQACAD0AAAAJAAQAAQAAAD0AAAAAAAUAAQACAD0AAAAJAAUAAQAAAD0AAAAAAAYAAQACAD0AAAAJAAYAAQAAAD0AAAAAAAcAAQACAD0AAAAJAAcAAQAAAD0AAAABAAgAAQABADwAAAACAAgAAQACADwAAAAEAAgAAQAAADwAAAAFAAgAAQABADwAAAAGAAgAAQABADwAAAAHAAgAAQABADwAAAAIAAgAAQABADwAAAAAAAgAAQAFAEAAAAAJAAgAAQAGAEAAAAA=")
 tile_set = ExtResource("4_j7y14")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1007450618]
+[node name="Entities" type="Node2D" parent="." unique_id=1944787924]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1558824690]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=586790768]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAFAAAAAgAHABsAAAAFAAEAAgAHABwAAAAFAAIAAgAHAB0AAAAGAAEAAgAAACIAAAAHAAEAAgABACIAAAAGAAIAAgAAACMAAAAHAAIAAgABACMAAAABAAIAAgAFAD4AAAACAAEAAgAFAB8AAAADAAEAAgAGAB8AAAACAAIAAgAFACAAAAADAAIAAgAGACAAAAAEAAYAAgAGADsAAAAEAAcAAgAGADwAAAAFAAYAAgADADQAAAAGAAYAAgAEADQAAAAFAAcAAgADADUAAAAGAAcAAgAEADUAAAAIAAIAAgAEACYAAAA=")
 tile_set = ExtResource("4_j7y14")
 
-[node name="Madre" type="Node2D" parent="Entities" unique_id=1191193749 instance=ExtResource("5_80cfb")]
+[node name="Madre" type="Node2D" parent="Entities" unique_id=133397388 instance=ExtResource("5_80cfb")]
 position = Vector2(208, 112)
 script = ExtResource("6_mg471")
 display_name = "Madre"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_xdru2")
 initial_facing = 3
 
-[node name="Hija" type="Node2D" parent="Entities" unique_id=245399240 instance=ExtResource("5_80cfb")]
+[node name="Hija" type="Node2D" parent="Entities" unique_id=1696507149 instance=ExtResource("5_80cfb")]
 position = Vector2(112, 112)
 script = ExtResource("6_mg471")
 display_name = "Hija"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_clmq2")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=447364024]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1328195072]
 z_index = 10
 tile_map_data = PackedByteArray("AAAEAAUAAgAGADoAAAA=")
 tile_set = ExtResource("4_j7y14")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1944943739]
+[node name="Warps" type="Node2D" parent="." unique_id=645165005]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1984039780]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=237548389]
 position = Vector2(112, 272)
 script = ExtResource("11_s3gdo")
 target_map = &"orcasitas/exterior"
 target_spawn = &"from_sala_28_12"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1890961069]
+[node name="Spawns" type="Node2D" parent="." unique_id=742874734]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=34207523]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1841087367]
 position = Vector2(112, 240)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=641172286]
+[node name="Triggers" type="Node2D" parent="." unique_id=1742972126]
 
-[node name="Rotulo" type="Label" parent="." unique_id=882615685]
+[node name="Rotulo" type="Label" parent="." unique_id=1018180566]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 304.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_n0obr")
 theme_override_font_sizes/font_size = 16
 text = "PISO DE LA FAMILIA DEL BLOQUE CINCO"
 horizontal_alignment = 1
+autowrap_mode = 3

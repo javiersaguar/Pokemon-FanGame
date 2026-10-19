@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_70w8u"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_qlmik"]
 
-[sub_resource type="Resource" id="Resource_2mwef"]
+[sub_resource type="Resource" id="Resource_nb1j1"]
 script = ExtResource("3_naxb8")
 id = &"alicante/sala_calle_6_19"
 display_name = "Club de artes marciales de la plaza de los Luceros, Alicante"
@@ -27,27 +27,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle619" type="Node2D" unique_id=732816222]
+[node name="SalaCalle619" type="Node2D" unique_id=109083950]
 script = ExtResource("1_nb1j1")
-data = SubResource("Resource_2mwef")
+data = SubResource("Resource_nb1j1")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=621533534]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1440697269]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAwAAAABAAAAAAAAAAwAAAACAAAAAAAAAAwAAAADAAAAAAAAAAwAAAAEAAAAAAAAAAwAAAAFAAAAAAAAAAwAAAAGAAAAAAAAAAwAAAAHAAAAAAAAAAwAAAAIAAAAAAAAAAwAAAAJAAAAAAAAAAwAAAAKAAAAAAAAAAwAAAALAAAAAAAAAAwAAAAMAAAAAAAAAAwAAAANAAAAAAAAAAwAAAAAAAEAAAAAAAwAAAABAAEAAAAAAAwAAAACAAEAAAAAAAwAAAADAAEAAAAAAAwAAAAEAAEAAAAAAAwAAAAFAAEAAAAAAAwAAAAGAAEAAAAAAAwAAAAHAAEAAAAAAAwAAAAIAAEAAAAAAAwAAAAJAAEAAAAAAAwAAAAKAAEAAAAAAAwAAAALAAEAAAAAAAwAAAAMAAEAAAAAAAwAAAANAAEAAAAAAAwAAAAAAAIAAAAAAAwAAAABAAIAAAAAAAwAAAACAAIAAAAAAAwAAAADAAIAAAAAAAwAAAAEAAIAAAAAAAwAAAAFAAIAAAAAAAwAAAAGAAIAAAAAAAwAAAAHAAIAAAAAAAwAAAAIAAIAAAAAAAwAAAAJAAIAAAAAAAwAAAAKAAIAAAAAAAwAAAALAAIAAAAAAAwAAAAMAAIAAAAAAAwAAAANAAIAAAAAAAwAAAAAAAMAAAAAAAwAAAABAAMAAAAAAAwAAAACAAMAAAAAAAwAAAADAAMAAAAAAAwAAAAEAAMAAAAAAAQAAAAFAAMAAAAAAAQAAAAGAAMAAAAAAAQAAAAHAAMAAAAAAAQAAAAIAAMAAAAAAAQAAAAJAAMAAAAAAAQAAAAKAAMAAAAAAAQAAAALAAMAAAAAAAQAAAAMAAMAAAAAAAwAAAANAAMAAAAAAAwAAAAAAAQAAAAAAAwAAAABAAQAAAAAAAwAAAACAAQAAAAAAAwAAAADAAQAAAAAAAwAAAAEAAQAAAAAAAQAAAAFAAQAAAAAAAQAAAAGAAQAAAAAAAQAAAAHAAQAAAAAAAQAAAAIAAQAAAAAAAQAAAAJAAQAAAAAAAQAAAAKAAQAAAAAAAQAAAALAAQAAAAAAAQAAAAMAAQAAAAAAAwAAAANAAQAAAAAAAwAAAAAAAUAAAAAAAwAAAABAAUAAAAAAAwAAAACAAUAAAAAAAwAAAADAAUAAAAAAAwAAAAEAAUAAAAAAAQAAAAFAAUAAAAAAAQAAAAGAAUAAAAAAAQAAAAHAAUAAAAAAAQAAAAIAAUAAAAAAAQAAAAJAAUAAAAAAAQAAAAKAAUAAAAAAAQAAAALAAUAAAAAAAQAAAAMAAUAAAAAAAwAAAANAAUAAAAAAAwAAAAAAAYAAAAAAAwAAAABAAYAAAAAAAwAAAACAAYAAAAAAAwAAAADAAYAAAAAAAwAAAAEAAYAAAAAAAQAAAAFAAYAAAAAAAQAAAAGAAYAAAAAAAQAAAAHAAYAAAAAAAQAAAAIAAYAAAAAAAQAAAAJAAYAAAAAAAQAAAAKAAYAAAAAAAQAAAALAAYAAAAAAAQAAAAMAAYAAAAAAAwAAAANAAYAAAAAAAwAAAAAAAcAAAAAAAwAAAABAAcAAAAAAAwAAAACAAcAAAAAAAwAAAADAAcAAAAAAAwAAAAEAAcAAAAAAAwAAAAFAAcAAAAAAAwAAAAGAAcAAAAAAAwAAAAHAAcAAAAAAAwAAAAIAAcAAAAAAAwAAAAJAAcAAAAAAAwAAAAKAAcAAAAAAAwAAAALAAcAAAAAAAwAAAAMAAcAAAAAAAwAAAANAAcAAAAAAAwAAAAAAAgAAAAAAAwAAAABAAgAAAAAAAwAAAACAAgAAAAAAAwAAAADAAgAAAAAAAwAAAAEAAgAAAAAAAwAAAAFAAgAAAAAAAwAAAAGAAgAAAAAAAwAAAAHAAgAAAAAAAwAAAAIAAgAAAAAAAwAAAAJAAgAAAAAAAwAAAAKAAgAAAAAAAwAAAALAAgAAAAAAAwAAAAMAAgAAAAAAAwAAAANAAgAAAAAAAwAAAAAAAkAAAAAAAwAAAABAAkAAAAAAAwAAAACAAkAAAAAAAwAAAADAAkAAAAAAAgAAAAEAAkAAAAAAAwAAAAFAAkAAAAAAAwAAAAGAAkAAAAAAAwAAAAHAAkAAAAAAAwAAAAIAAkAAAAAAAwAAAAJAAkAAAAAAAwAAAAKAAkAAAAAAAwAAAALAAkAAAAAAAwAAAAMAAkAAAAAAAwAAAANAAkAAAAAAAwAAAA=")
 tile_set = ExtResource("4_a6q8n")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1459471178]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2123599533]
 tile_map_data = PackedByteArray("AAABAAAAAQABADoAAAABAAEAAQABADsAAAACAAAAAQABADoAAAACAAEAAQABADsAAAADAAAAAQABADoAAAADAAEAAQABADsAAAAEAAAAAQABADoAAAAEAAEAAQABADsAAAAFAAAAAQABADoAAAAFAAEAAQABADsAAAAGAAAAAQABADoAAAAGAAEAAQABADsAAAAHAAAAAQABADoAAAAHAAEAAQABADsAAAAIAAAAAQABADoAAAAIAAEAAQABADsAAAAJAAAAAQABADoAAAAJAAEAAQABADsAAAAKAAAAAQABADoAAAAKAAEAAQABADsAAAALAAAAAQABADoAAAALAAEAAQABADsAAAAMAAAAAQABADoAAAAMAAEAAQABADsAAAAAAAAAAQACADgAAAANAAAAAQAAADgAAAAAAAEAAQACADgAAAANAAEAAQAAADgAAAAAAAIAAQACADgAAAANAAIAAQAAADgAAAAAAAMAAQACADgAAAANAAMAAQAAADgAAAAAAAQAAQACADgAAAANAAQAAQAAADgAAAAAAAUAAQACADgAAAANAAUAAQAAADgAAAAAAAYAAQACADgAAAANAAYAAQAAADgAAAAAAAcAAQACADgAAAANAAcAAQAAADgAAAAAAAgAAQACADgAAAANAAgAAQAAADgAAAABAAkAAQABADcAAAACAAkAAQACADcAAAAEAAkAAQAAADcAAAAFAAkAAQABADcAAAAGAAkAAQABADcAAAAHAAkAAQABADcAAAAIAAkAAQABADcAAAAJAAkAAQABADcAAAAKAAkAAQABADcAAAALAAkAAQABADcAAAAMAAkAAQABADcAAAAAAAkAAQAFADsAAAANAAkAAQAGADsAAAA=")
 tile_set = ExtResource("4_a6q8n")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1346584560]
+[node name="Entities" type="Node2D" parent="." unique_id=1310124394]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1615511594]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1968765854]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAAAAgAAABUAAAAEAAEAAgAAABYAAAAEAAIAAgAAABcAAAAFAAAAAgAAABUAAAAFAAEAAgAAABYAAAAFAAIAAgAAABcAAAAGAAAAAgAHABUAAAAGAAEAAgAHABYAAAAGAAIAAgAHABcAAAAHAAAAAgAHABUAAAAHAAEAAgAHABYAAAAHAAIAAgAHABcAAAALAAIAAgABAD4AAAAMAAIAAgABAD4AAAA=")
 tile_set = ExtResource("4_a6q8n")
 
-[node name="Sensei" type="Node2D" parent="Entities" unique_id=770460278 instance=ExtResource("5_2xdj1")]
+[node name="Sensei" type="Node2D" parent="Entities" unique_id=394837250 instance=ExtResource("5_2xdj1")]
 position = Vector2(240, 144)
 script = ExtResource("6_2840q")
 display_name = "Sensei"
@@ -56,7 +56,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_j2px6")
 initial_facing = 1
 
-[node name="Alumna" type="Node2D" parent="Entities" unique_id=1572124979 instance=ExtResource("5_2xdj1")]
+[node name="Alumna" type="Node2D" parent="Entities" unique_id=343267920 instance=ExtResource("5_2xdj1")]
 position = Vector2(176, 240)
 script = ExtResource("6_2840q")
 display_name = "Alumna"
@@ -64,44 +64,45 @@ lines = PackedStringArray("Vengo tres días a la semana. Mi Machop viene los otr
 turn_to_player = true
 sprite_sheet = ExtResource("8_nb1j1")
 
-[node name="Cartel" type="Node2D" parent="Entities" unique_id=933789664 instance=ExtResource("9_imry4")]
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1258527736 instance=ExtResource("9_imry4")]
 position = Vector2(272, 48)
 script = ExtResource("10_tvui1")
 lines = PackedStringArray("Normas del club: respeto, disciplina y no se pega fuera del tatami. Ni a los Pokémon.")
 only_from_below = false
 show_sprite = false
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=88674232]
+[node name="Above" type="TileMapLayer" parent="." unique_id=2028061864]
 z_index = 10
 tile_set = ExtResource("4_a6q8n")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=700196116]
+[node name="Warps" type="Node2D" parent="." unique_id=884577087]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1839623367]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1883110719]
 position = Vector2(112, 304)
 script = ExtResource("11_70w8u")
 target_map = &"alicante/exterior"
 target_spawn = &"from_sala_6_19"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1822491766]
+[node name="Spawns" type="Node2D" parent="." unique_id=733812876]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1648785238]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1082186050]
 position = Vector2(112, 272)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=170877591]
+[node name="Triggers" type="Node2D" parent="." unique_id=212421499]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1401232593]
+[node name="Rotulo" type="Label" parent="." unique_id=681497031]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 432.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_qlmik")
 theme_override_font_sizes/font_size = 16
 text = "CLUB DE ARTES MARCIALES DE LA PLAZA DE LOS LUCEROS"
 horizontal_alignment = 1
+autowrap_mode = 3

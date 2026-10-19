@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_cp83g"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_jwggm"]
 
-[sub_resource type="Resource" id="Resource_h3hp8"]
+[sub_resource type="Resource" id="Resource_2cd7c"]
 script = ExtResource("3_ft4l5")
 id = &"murcia/sala_calle_41_11"
 display_name = "Piso de la familia de la plaza Circular, Murcia"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle4111" type="Node2D" unique_id=1453646842]
+[node name="SalaCalle4111" type="Node2D" unique_id=594630402]
 script = ExtResource("1_o50gp")
-data = SubResource("Resource_h3hp8")
+data = SubResource("Resource_2cd7c")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=684008215]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=699523992]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAACgAAAABAAAAAAAAACgAAAACAAAAAAAAACgAAAADAAAAAAAAACgAAAAEAAAAAAAAACgAAAAFAAAAAAAAACgAAAAGAAAAAAAAACgAAAAHAAAAAAAAACgAAAAIAAAAAAAAACgAAAAJAAAAAAAAACgAAAAAAAEAAAAAACgAAAABAAEAAAAAACgAAAACAAEAAAAAACgAAAADAAEAAAAAACgAAAAEAAEAAAAAACgAAAAFAAEAAAAAACgAAAAGAAEAAAAAACgAAAAHAAEAAAAAACgAAAAIAAEAAAAAACgAAAAJAAEAAAAAACgAAAAAAAIAAAAAACgAAAABAAIAAAAAACgAAAACAAIAAAAAACgAAAADAAIAAAAAACgAAAAEAAIAAAAAACgAAAAFAAIAAAAAACgAAAAGAAIAAAAAACgAAAAHAAIAAAAAACgAAAAIAAIAAAAAACgAAAAJAAIAAAAAACgAAAAAAAMAAAAAACgAAAABAAMAAAAAACgAAAACAAMAAAAAACgAAAADAAMAAAAAACgAAAAEAAMAAAAAAAQAAAAFAAMAAAAAAAQAAAAGAAMAAAAAAAQAAAAHAAMAAAAAAAQAAAAIAAMAAAAAACgAAAAJAAMAAAAAACgAAAAAAAQAAAAAACgAAAABAAQAAAAAACgAAAACAAQAAAAAACgAAAADAAQAAAAAACgAAAAEAAQAAAAAAAQAAAAFAAQAAAAAAAQAAAAGAAQAAAAAAAQAAAAHAAQAAAAAAAQAAAAIAAQAAAAAACgAAAAJAAQAAAAAACgAAAAAAAUAAAAAACgAAAABAAUAAAAAACgAAAACAAUAAAAAACgAAAADAAUAAAAAACgAAAAEAAUAAAAAAAQAAAAFAAUAAAAAAAQAAAAGAAUAAAAAAAQAAAAHAAUAAAAAAAQAAAAIAAUAAAAAACgAAAAJAAUAAAAAACgAAAAAAAYAAAAAACgAAAABAAYAAAAAACgAAAACAAYAAAAAACgAAAADAAYAAAAAACgAAAAEAAYAAAAAACgAAAAFAAYAAAAAACgAAAAGAAYAAAAAACgAAAAHAAYAAAAAACgAAAAIAAYAAAAAACgAAAAJAAYAAAAAACgAAAAAAAcAAAAAACgAAAABAAcAAAAAACgAAAACAAcAAAAAACgAAAADAAcAAAAAACgAAAAEAAcAAAAAACgAAAAFAAcAAAAAABAAAAAGAAcAAAAAACgAAAAHAAcAAAAAACgAAAAIAAcAAAAAACgAAAAJAAcAAAAAACgAAAA=")
 tile_set = ExtResource("4_xq222")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1906912849]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=16755276]
 tile_map_data = PackedByteArray("AAABAAAAAQABAD8AAAABAAEAAQABAEAAAAACAAAAAQABAD8AAAACAAEAAQABAEAAAAADAAAAAQABAD8AAAADAAEAAQABAEAAAAAEAAAAAQABAD8AAAAEAAEAAQABAEAAAAAFAAAAAQABAD8AAAAFAAEAAQABAEAAAAAGAAAAAQABAD8AAAAGAAEAAQABAEAAAAAHAAAAAQABAD8AAAAHAAEAAQABAEAAAAAIAAAAAQABAD8AAAAIAAEAAQABAEAAAAAAAAAAAQACAD0AAAAJAAAAAQAAAD0AAAAAAAEAAQACAD0AAAAJAAEAAQAAAD0AAAAAAAIAAQACAD0AAAAJAAIAAQAAAD0AAAAAAAMAAQACAD0AAAAJAAMAAQAAAD0AAAAAAAQAAQACAD0AAAAJAAQAAQAAAD0AAAAAAAUAAQACAD0AAAAJAAUAAQAAAD0AAAAAAAYAAQACAD0AAAAJAAYAAQAAAD0AAAABAAcAAQABADwAAAACAAcAAQABADwAAAADAAcAAQABADwAAAAEAAcAAQACADwAAAAGAAcAAQAAADwAAAAHAAcAAQABADwAAAAIAAcAAQABADwAAAAAAAcAAQAFAEAAAAAJAAcAAQAGAEAAAAA=")
 tile_set = ExtResource("4_xq222")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1342294313]
+[node name="Entities" type="Node2D" parent="." unique_id=1915245553]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1219346493]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1740572001]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAEAAgACACIAAAAFAAEAAgADACIAAAAEAAIAAgACACMAAAAFAAIAAgADACMAAAAGAAEAAgAAACIAAAAHAAEAAgABACIAAAAGAAIAAgAAACMAAAAHAAIAAgABACMAAAABAAEAAgAFAB8AAAACAAEAAgAGAB8AAAABAAIAAgAFACAAAAACAAIAAgAGACAAAAAIAAAAAgAHAAAAAAAIAAEAAgAHAAEAAAAIAAIAAgAHAAIAAAA=")
 tile_set = ExtResource("4_xq222")
 
-[node name="Madre" type="Node2D" parent="Entities" unique_id=1135960929 instance=ExtResource("5_0l7ts")]
+[node name="Madre" type="Node2D" parent="Entities" unique_id=1951482757 instance=ExtResource("5_0l7ts")]
 position = Vector2(240, 112)
 script = ExtResource("6_h4575")
 display_name = "Madre"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_l7e21")
 initial_facing = 3
 
-[node name="Hijo" type="Node2D" parent="Entities" unique_id=1218997259 instance=ExtResource("5_0l7ts")]
+[node name="Hijo" type="Node2D" parent="Entities" unique_id=1472562642 instance=ExtResource("5_0l7ts")]
 position = Vector2(80, 112)
 script = ExtResource("6_h4575")
 display_name = "Hijo"
@@ -63,37 +63,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_2cd7c")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1710205695]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1548827878]
 z_index = 10
 tile_set = ExtResource("4_xq222")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=285664715]
+[node name="Warps" type="Node2D" parent="." unique_id=875143404]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1426815113]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=907157282]
 position = Vector2(176, 240)
 script = ExtResource("11_cp83g")
 target_map = &"murcia/exterior"
 target_spawn = &"from_sala_41_11"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=885377392]
+[node name="Spawns" type="Node2D" parent="." unique_id=409825242]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=2097078714]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1531500465]
 position = Vector2(176, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=264071563]
+[node name="Triggers" type="Node2D" parent="." unique_id=333603965]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1289823994]
+[node name="Rotulo" type="Label" parent="." unique_id=258728432]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 304.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_jwggm")
 theme_override_font_sizes/font_size = 16
 text = "PISO DE LA FAMILIA DE LA PLAZA CIRCULAR"
 horizontal_alignment = 1
+autowrap_mode = 3

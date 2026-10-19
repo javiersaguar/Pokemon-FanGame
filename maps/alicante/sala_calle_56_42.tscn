@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_xhqcp"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_0yjo5"]
 
-[sub_resource type="Resource" id="Resource_eg1r6"]
+[sub_resource type="Resource" id="Resource_sea5y"]
 script = ExtResource("3_7iu62")
 id = &"alicante/sala_calle_56_42"
 display_name = "Puesto de artesanía de la Explanada, Alicante"
@@ -24,27 +24,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle5642" type="Node2D" unique_id=1700123370]
+[node name="SalaCalle5642" type="Node2D" unique_id=190682964]
 script = ExtResource("1_7gx4w")
-data = SubResource("Resource_eg1r6")
+data = SubResource("Resource_sea5y")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1390212468]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=601044888]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAADwAAAABAAAAAAAAADwAAAACAAAAAAAAADwAAAADAAAAAAAAADwAAAAEAAAAAAAAADwAAAAFAAAAAAAAADwAAAAGAAAAAAAAADwAAAAHAAAAAAAAADwAAAAIAAAAAAAAADwAAAAAAAEAAAAAADwAAAABAAEAAAAAADwAAAACAAEAAAAAADwAAAADAAEAAAAAADwAAAAEAAEAAAAAADwAAAAFAAEAAAAAADwAAAAGAAEAAAAAADwAAAAHAAEAAAAAADwAAAAIAAEAAAAAADwAAAAAAAIAAAAAADwAAAABAAIAAAAAADwAAAACAAIAAAAAADwAAAADAAIAAAAAADwAAAAEAAIAAAAAADwAAAAFAAIAAAAAADwAAAAGAAIAAAAAADwAAAAHAAIAAAAAADwAAAAIAAIAAAAAADwAAAAAAAMAAAAAADwAAAABAAMAAAAAADwAAAACAAMAAAAAADwAAAADAAMAAAAAADwAAAAEAAMAAAAAADwAAAAFAAMAAAAAADwAAAAGAAMAAAAAADwAAAAHAAMAAAAAADwAAAAIAAMAAAAAADwAAAAAAAQAAAAAADwAAAABAAQAAAAAADwAAAACAAQAAAAAADwAAAADAAQAAAAAADwAAAAEAAQAAAAAADwAAAAFAAQAAAAAADwAAAAGAAQAAAAAADwAAAAHAAQAAAAAADwAAAAIAAQAAAAAADwAAAAAAAUAAAAAADwAAAABAAUAAAAAADwAAAACAAUAAAAAADwAAAADAAUAAAAAADwAAAAEAAUAAAAAADwAAAAFAAUAAAAAADwAAAAGAAUAAAAAADwAAAAHAAUAAAAAADwAAAAIAAUAAAAAADwAAAAAAAYAAAAAADwAAAABAAYAAAAAADwAAAACAAYAAAAAADwAAAADAAYAAAAAADwAAAAEAAYAAAAAADwAAAAFAAYAAAAAADwAAAAGAAYAAAAAADwAAAAHAAYAAAAAADwAAAAIAAYAAAAAADwAAAAAAAcAAAAAADwAAAABAAcAAAAAADwAAAACAAcAAAAAADwAAAADAAcAAAAAAAgAAAAEAAcAAAAAADwAAAAFAAcAAAAAADwAAAAGAAcAAAAAADwAAAAHAAcAAAAAADwAAAAIAAcAAAAAADwAAAA=")
 tile_set = ExtResource("4_in6gb")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1294434514]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1697108739]
 tile_map_data = PackedByteArray("AAABAAAAAQABADAAAAABAAEAAQABADEAAAACAAAAAQABADAAAAACAAEAAQABADEAAAADAAAAAQABADAAAAADAAEAAQABADEAAAAEAAAAAQABADAAAAAEAAEAAQABADEAAAAFAAAAAQABADAAAAAFAAEAAQABADEAAAAGAAAAAQABADAAAAAGAAEAAQABADEAAAAHAAAAAQABADAAAAAHAAEAAQABADEAAAAAAAAAAQACAC4AAAAIAAAAAQAAAC4AAAAAAAEAAQACAC4AAAAIAAEAAQAAAC4AAAAAAAIAAQACAC4AAAAIAAIAAQAAAC4AAAAAAAMAAQACAC4AAAAIAAMAAQAAAC4AAAAAAAQAAQACAC4AAAAIAAQAAQAAAC4AAAAAAAUAAQACAC4AAAAIAAUAAQAAAC4AAAAAAAYAAQACAC4AAAAIAAYAAQAAAC4AAAABAAcAAQABAC0AAAACAAcAAQACAC0AAAAEAAcAAQAAAC0AAAAFAAcAAQABAC0AAAAGAAcAAQABAC0AAAAHAAcAAQABAC0AAAAAAAcAAQAFADEAAAAIAAcAAQAGADEAAAA=")
 tile_set = ExtResource("4_in6gb")
 
-[node name="Entities" type="Node2D" parent="." unique_id=489104680]
+[node name="Entities" type="Node2D" parent="." unique_id=1240221882]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=784028661]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1995650500]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAQAAwAAAAUAAAAEAAUAAwAAAAYAAAAFAAQAAwABAAUAAAAFAAUAAwABAAYAAAAGAAQAAwACAAUAAAAGAAUAAwACAAYAAAABAAEAAgAFACUAAAACAAEAAgAGACUAAAADAAEAAgAHACUAAAABAAIAAgAFACYAAAACAAIAAgAGACYAAAADAAIAAgAHACYAAAA=")
 tile_set = ExtResource("4_in6gb")
 
-[node name="Artesano" type="Node2D" parent="Entities" unique_id=834557032 instance=ExtResource("5_k8cco")]
+[node name="Artesano" type="Node2D" parent="Entities" unique_id=563495210 instance=ExtResource("5_k8cco")]
 position = Vector2(208, 112)
 script = ExtResource("6_l45x3")
 display_name = "Artesano"
@@ -52,38 +52,39 @@ lines = PackedStringArray("Pulseras, collares y tu nombre en un grano de arroz. 
 turn_to_player = true
 sprite_sheet = ExtResource("7_sea5y")
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1041717763]
+[node name="Above" type="TileMapLayer" parent="." unique_id=605293723]
 z_index = 10
 tile_map_data = PackedByteArray("AAAFAAQAAgAFAD8AAAAGAAQAAgABAD8AAAA=")
 tile_set = ExtResource("4_in6gb")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=316483605]
+[node name="Warps" type="Node2D" parent="." unique_id=789417984]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=252515293]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=184899907]
 position = Vector2(112, 240)
 script = ExtResource("11_xhqcp")
 target_map = &"alicante/exterior"
 target_spawn = &"from_sala_56_42"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1394393388]
+[node name="Spawns" type="Node2D" parent="." unique_id=1100894652]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=747125212]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=313339489]
 position = Vector2(112, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1663400722]
+[node name="Triggers" type="Node2D" parent="." unique_id=510078011]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1669435069]
+[node name="Rotulo" type="Label" parent="." unique_id=179053145]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 272.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_0yjo5")
 theme_override_font_sizes/font_size = 16
 text = "PUESTO DE ARTESANÍA DE LA EXPLANADA"
 horizontal_alignment = 1
+autowrap_mode = 3

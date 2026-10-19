@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_kwwlf"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_v3bnx"]
 
-[sub_resource type="Resource" id="Resource_pg6xe"]
+[sub_resource type="Resource" id="Resource_xoc0m"]
 script = ExtResource("3_3qdqg")
 id = &"alicante/sala_calle_4_9"
 display_name = "Portal de la avenida de Alfonso el Sabio, Alicante"
@@ -24,27 +24,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle49" type="Node2D" unique_id=758082444]
+[node name="SalaCalle49" type="Node2D" unique_id=1561252773]
 script = ExtResource("1_0mm2g")
-data = SubResource("Resource_pg6xe")
+data = SubResource("Resource_xoc0m")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1409338507]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=266175746]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAADwAAAABAAAAAAAAADwAAAACAAAAAAAAADwAAAADAAAAAAAAADwAAAAEAAAAAAAAADwAAAAFAAAAAAAAADwAAAAGAAAAAAAAADwAAAAHAAAAAAAAADwAAAAIAAAAAAAAADwAAAAJAAAAAAAAADwAAAAKAAAAAAAAADwAAAALAAAAAAAAADwAAAAAAAEAAAAAADwAAAABAAEAAAAAADwAAAACAAEAAAAAADwAAAADAAEAAAAAADwAAAAEAAEAAAAAADwAAAAFAAEAAAAAADwAAAAGAAEAAAAAADwAAAAHAAEAAAAAADwAAAAIAAEAAAAAADwAAAAJAAEAAAAAADwAAAAKAAEAAAAAADwAAAALAAEAAAAAADwAAAAAAAIAAAAAADwAAAABAAIAAAAAADwAAAACAAIAAAAAADwAAAADAAIAAAAAADwAAAAEAAIAAAAAADwAAAAFAAIAAAAAADwAAAAGAAIAAAAAADwAAAAHAAIAAAAAADwAAAAIAAIAAAAAADwAAAAJAAIAAAAAADwAAAAKAAIAAAAAADwAAAALAAIAAAAAADwAAAAAAAMAAAAAADwAAAABAAMAAAAAADwAAAACAAMAAAAAADwAAAADAAMAAAAAADwAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAADwAAAAIAAMAAAAAADwAAAAJAAMAAAAAADwAAAAKAAMAAAAAADwAAAALAAMAAAAAADwAAAAAAAQAAAAAADwAAAABAAQAAAAAADwAAAACAAQAAAAAADwAAAADAAQAAAAAADwAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAADwAAAAIAAQAAAAAADwAAAAJAAQAAAAAADwAAAAKAAQAAAAAADwAAAALAAQAAAAAADwAAAAAAAUAAAAAADwAAAABAAUAAAAAADwAAAACAAUAAAAAADwAAAADAAUAAAAAADwAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAADwAAAAIAAUAAAAAADwAAAAJAAUAAAAAADwAAAAKAAUAAAAAADwAAAALAAUAAAAAADwAAAAAAAYAAAAAADwAAAABAAYAAAAAADwAAAACAAYAAAAAADwAAAADAAYAAAAAADwAAAAEAAYAAAAAADwAAAAFAAYAAAAAADwAAAAGAAYAAAAAADwAAAAHAAYAAAAAADwAAAAIAAYAAAAAADwAAAAJAAYAAAAAADwAAAAKAAYAAAAAADwAAAALAAYAAAAAADwAAAAAAAcAAAAAADwAAAABAAcAAAAAADwAAAACAAcAAAAAADwAAAADAAcAAAAAADwAAAAEAAcAAAAAADwAAAAFAAcAAAAAADwAAAAGAAcAAAAAADwAAAAHAAcAAAAAADwAAAAIAAcAAAAAADwAAAAJAAcAAAAAADwAAAAKAAcAAAAAADwAAAALAAcAAAAAADwAAAAAAAgAAAAAADwAAAABAAgAAAAAADwAAAACAAgAAAAAADwAAAADAAgAAAAAADwAAAAEAAgAAAAAADwAAAAFAAgAAAAAADwAAAAGAAgAAAAAADwAAAAHAAgAAAAAADwAAAAIAAgAAAAAAAQAAAAJAAgAAAAAADwAAAAKAAgAAAAAADwAAAALAAgAAAAAADwAAAA=")
 tile_set = ExtResource("4_2tu0m")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1981184338]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1685616133]
 tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAKAAAAAQABABIAAAAKAAEAAQABABMAAAAAAAAAAQACABAAAAALAAAAAQAAABAAAAAAAAEAAQACABAAAAALAAEAAQAAABAAAAAAAAIAAQACABAAAAALAAIAAQAAABAAAAAAAAMAAQACABAAAAALAAMAAQAAABAAAAAAAAQAAQACABAAAAALAAQAAQAAABAAAAAAAAUAAQACABAAAAALAAUAAQAAABAAAAAAAAYAAQACABAAAAALAAYAAQAAABAAAAAAAAcAAQACABAAAAALAAcAAQAAABAAAAABAAgAAQABAA8AAAACAAgAAQABAA8AAAADAAgAAQABAA8AAAAEAAgAAQABAA8AAAAFAAgAAQABAA8AAAAGAAgAAQABAA8AAAAHAAgAAQACAA8AAAAJAAgAAQAAAA8AAAAKAAgAAQABAA8AAAAAAAgAAQAFABMAAAALAAgAAQAGABMAAAA=")
 tile_set = ExtResource("4_2tu0m")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1335631442]
+[node name="Entities" type="Node2D" parent="." unique_id=2099161147]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1831206419]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2076797628]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAABAAEAAgABACUAAAABAAIAAgABACYAAAACAAAAAgAAADQAAAADAAAAAgABADQAAAAEAAAAAgACADQAAAACAAEAAgAAADUAAAADAAEAAgABADUAAAAEAAEAAgACADUAAAACAAIAAgAAADYAAAADAAIAAgABADYAAAAEAAIAAgACADYAAAAJAAEAAgABABMAAAAKAAEAAgACABMAAAAJAAIAAgABABQAAAAKAAIAAgACABQAAAABAAQAAwAAABcAAAABAAUAAwAAABgAAAACAAQAAwABABcAAAACAAUAAwABABgAAAADAAQAAwACABcAAAADAAUAAwACABgAAAAKAAcAAgAAACYAAAA=")
 tile_set = ExtResource("4_2tu0m")
 
-[node name="Portera" type="Node2D" parent="Entities" unique_id=44720253 instance=ExtResource("5_03ckm")]
+[node name="Portera" type="Node2D" parent="Entities" unique_id=1096014083 instance=ExtResource("5_03ckm")]
 position = Vector2(80, 208)
 script = ExtResource("6_2xm8k")
 display_name = "Portera"
@@ -53,38 +53,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_xoc0m")
 initial_facing = 1
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1139675761]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1282012790]
 z_index = 10
 tile_map_data = PackedByteArray("AAAKAAUAAgAAACQAAAAKAAYAAgAAACUAAAA=")
 tile_set = ExtResource("4_2tu0m")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=566307638]
+[node name="Warps" type="Node2D" parent="." unique_id=74309908]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=804359105]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=621377102]
 position = Vector2(272, 272)
 script = ExtResource("11_kwwlf")
 target_map = &"alicante/exterior"
 target_spawn = &"from_sala_4_9"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1405777532]
+[node name="Spawns" type="Node2D" parent="." unique_id=698511273]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=948698553]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=963735590]
 position = Vector2(272, 240)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=353539953]
+[node name="Triggers" type="Node2D" parent="." unique_id=1808107217]
 
-[node name="Rotulo" type="Label" parent="." unique_id=464139475]
+[node name="Rotulo" type="Label" parent="." unique_id=226507985]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 368.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_v3bnx")
 theme_override_font_sizes/font_size = 16
 text = "PORTAL DE LA AVENIDA DE ALFONSO EL SABIO"
 horizontal_alignment = 1
+autowrap_mode = 3

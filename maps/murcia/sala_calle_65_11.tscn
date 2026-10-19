@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_2iwo2"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_yukj5"]
 
-[sub_resource type="Resource" id="Resource_u7fuv"]
+[sub_resource type="Resource" id="Resource_wxqdm"]
 script = ExtResource("3_i7fpl")
 id = &"murcia/sala_calle_65_11"
 display_name = "Casa de la familia del Entierro de la Sardina, Murcia"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle6511" type="Node2D" unique_id=592722245]
+[node name="SalaCalle6511" type="Node2D" unique_id=372574083]
 script = ExtResource("1_t6yo7")
-data = SubResource("Resource_u7fuv")
+data = SubResource("Resource_wxqdm")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1807834579]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1129450265]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAKAAAAAAAAABgAAAALAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAKAAEAAAAAABgAAAALAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAKAAIAAAAAABgAAAALAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAKAAMAAAAAABgAAAALAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAAAwAAAAIAAQAAAAAAAwAAAAJAAQAAAAAAAwAAAAKAAQAAAAAABgAAAALAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAAAwAAAAIAAUAAAAAAAwAAAAJAAUAAAAAAAwAAAAKAAUAAAAAABgAAAALAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAKAAYAAAAAABgAAAALAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABAAAAAEAAcAAAAAABgAAAAFAAcAAAAAABgAAAAGAAcAAAAAABgAAAAHAAcAAAAAABgAAAAIAAcAAAAAABgAAAAJAAcAAAAAABgAAAAKAAcAAAAAABgAAAALAAcAAAAAABgAAAA=")
 tile_set = ExtResource("4_ewgpd")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=2147256831]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1211331358]
 tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAKAAAAAQABABIAAAAKAAEAAQABABMAAAAAAAAAAQACABAAAAALAAAAAQAAABAAAAAAAAEAAQACABAAAAALAAEAAQAAABAAAAAAAAIAAQACABAAAAALAAIAAQAAABAAAAAAAAMAAQACABAAAAALAAMAAQAAABAAAAAAAAQAAQACABAAAAALAAQAAQAAABAAAAAAAAUAAQACABAAAAALAAUAAQAAABAAAAAAAAYAAQACABAAAAALAAYAAQAAABAAAAABAAcAAQABAA8AAAACAAcAAQACAA8AAAAEAAcAAQAAAA8AAAAFAAcAAQABAA8AAAAGAAcAAQABAA8AAAAHAAcAAQABAA8AAAAIAAcAAQABAA8AAAAJAAcAAQABAA8AAAAKAAcAAQABAA8AAAAAAAcAAQAFABMAAAALAAcAAQAGABMAAAA=")
 tile_set = ExtResource("4_ewgpd")
 
-[node name="Entities" type="Node2D" parent="." unique_id=848194461]
+[node name="Entities" type="Node2D" parent="." unique_id=179046828]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2116950701]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=452276479]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAAAAgAHABsAAAAEAAEAAgAHABwAAAAEAAIAAgAHAB0AAAAFAAEAAgAEACIAAAAGAAEAAgAFACIAAAAHAAEAAgAGACIAAAAFAAIAAgAEACMAAAAGAAIAAgAFACMAAAAHAAIAAgAGACMAAAAIAAEAAgAAACIAAAAJAAEAAgABACIAAAAIAAIAAgAAACMAAAAJAAIAAgABACMAAAABAAEAAgABAAoAAAACAAEAAgACAAoAAAABAAIAAgABAAsAAAACAAIAAgACAAsAAAADAAEAAgADAAoAAAADAAIAAgADAAsAAAABAAYAAgABACYAAAA=")
 tile_set = ExtResource("4_ewgpd")
 
-[node name="Sardinero" type="Node2D" parent="Entities" unique_id=1518157069 instance=ExtResource("5_woty3")]
+[node name="Sardinero" type="Node2D" parent="Entities" unique_id=1727792536 instance=ExtResource("5_woty3")]
 position = Vector2(304, 112)
 script = ExtResource("6_gqanv")
 display_name = "Sardinero"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_wxqdm")
 initial_facing = 1
 
-[node name="Mujer" type="Node2D" parent="Entities" unique_id=808055093 instance=ExtResource("5_woty3")]
+[node name="Mujer" type="Node2D" parent="Entities" unique_id=1171633084 instance=ExtResource("5_woty3")]
 position = Vector2(208, 112)
 script = ExtResource("6_gqanv")
 display_name = "Mujer"
@@ -63,38 +63,39 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_3841k")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=146827204]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1950487317]
 z_index = 10
 tile_map_data = PackedByteArray("AAABAAUAAgABACUAAAA=")
 tile_set = ExtResource("4_ewgpd")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1842226646]
+[node name="Warps" type="Node2D" parent="." unique_id=1064271420]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=1146220523]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=431512397]
 position = Vector2(112, 240)
 script = ExtResource("11_2iwo2")
 target_map = &"murcia/exterior"
 target_spawn = &"from_sala_65_11"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=606439707]
+[node name="Spawns" type="Node2D" parent="." unique_id=125654094]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=436640904]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=371858115]
 position = Vector2(112, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=472067397]
+[node name="Triggers" type="Node2D" parent="." unique_id=1727873489]
 
-[node name="Rotulo" type="Label" parent="." unique_id=2049353888]
+[node name="Rotulo" type="Label" parent="." unique_id=1267308227]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 368.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_yukj5")
 theme_override_font_sizes/font_size = 16
 text = "CASA DE LA FAMILIA DEL ENTIERRO DE LA SARDINA"
 horizontal_alignment = 1
+autowrap_mode = 3

@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_818y2"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_jkfqg"]
 
-[sub_resource type="Resource" id="Resource_fvtng"]
+[sub_resource type="Resource" id="Resource_whsyc"]
 script = ExtResource("3_1wapr")
 id = &"getafe/sala_calle_30_58"
 display_name = "Casa del hortelano de la vega del Manzanares, Getafe"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle3058" type="Node2D" unique_id=1922630989]
+[node name="SalaCalle3058" type="Node2D" unique_id=521029347]
 script = ExtResource("1_fvtng")
-data = SubResource("Resource_fvtng")
+data = SubResource("Resource_whsyc")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=48910691]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=952057856]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAJAAAAAAAAACQAAAAKAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAJAAEAAAAAACQAAAAKAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAJAAIAAAAAACQAAAAKAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAACQAAAAFAAMAAAAAAAwAAAAGAAMAAAAAAAwAAAAHAAMAAAAAAAwAAAAIAAMAAAAAAAwAAAAJAAMAAAAAACQAAAAKAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAACQAAAAFAAQAAAAAAAwAAAAGAAQAAAAAAAwAAAAHAAQAAAAAAAwAAAAIAAQAAAAAAAwAAAAJAAQAAAAAACQAAAAKAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAJAAUAAAAAACQAAAAKAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAACQAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAAJAAYAAAAAACQAAAAKAAYAAAAAACQAAAAAAAcAAAAAACQAAAABAAcAAAAAACQAAAACAAcAAAAAACQAAAADAAcAAAAAACQAAAAEAAcAAAAAACQAAAAFAAcAAAAAABAAAAAGAAcAAAAAACQAAAAHAAcAAAAAACQAAAAIAAcAAAAAACQAAAAJAAcAAAAAACQAAAAKAAcAAAAAACQAAAA=")
 tile_set = ExtResource("4_j4240")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1098157523]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=169924473]
 tile_map_data = PackedByteArray("AAABAAAAAQABACYAAAABAAEAAQABACcAAAACAAAAAQABACYAAAACAAEAAQABACcAAAADAAAAAQABACYAAAADAAEAAQABACcAAAAEAAAAAQABACYAAAAEAAEAAQABACcAAAAFAAAAAQABACYAAAAFAAEAAQABACcAAAAGAAAAAQABACYAAAAGAAEAAQABACcAAAAHAAAAAQABACYAAAAHAAEAAQABACcAAAAIAAAAAQABACYAAAAIAAEAAQABACcAAAAJAAAAAQABACYAAAAJAAEAAQABACcAAAAAAAAAAQACACQAAAAKAAAAAQAAACQAAAAAAAEAAQACACQAAAAKAAEAAQAAACQAAAAAAAIAAQACACQAAAAKAAIAAQAAACQAAAAAAAMAAQACACQAAAAKAAMAAQAAACQAAAAAAAQAAQACACQAAAAKAAQAAQAAACQAAAAAAAUAAQACACQAAAAKAAUAAQAAACQAAAAAAAYAAQACACQAAAAKAAYAAQAAACQAAAABAAcAAQABACMAAAACAAcAAQABACMAAAADAAcAAQABACMAAAAEAAcAAQACACMAAAAGAAcAAQAAACMAAAAHAAcAAQABACMAAAAIAAcAAQABACMAAAAJAAcAAQABACMAAAAAAAcAAQAFACcAAAAKAAcAAQAGACcAAAA=")
 tile_set = ExtResource("4_j4240")
 
-[node name="Entities" type="Node2D" parent="." unique_id=781454085]
+[node name="Entities" type="Node2D" parent="." unique_id=6384350]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=721036477]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1753064485]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAFAAEAAgACACIAAAAGAAEAAgADACIAAAAFAAIAAgACACMAAAAGAAIAAgADACMAAAAHAAEAAgAAACIAAAAIAAEAAgABACIAAAAHAAIAAgAAACMAAAAIAAIAAgABACMAAAAJAAAAAgAHABsAAAAJAAEAAgAHABwAAAAJAAIAAgAHAB0AAAACAAEAAgABABAAAAADAAEAAgACABAAAAACAAIAAgABABEAAAADAAIAAgACABEAAAAEAAEAAgADABAAAAAEAAIAAgADABEAAAACAAMAAgAFADQAAAADAAMAAgAGADQAAAAEAAMAAgAHADQAAAACAAQAAgAFADUAAAADAAQAAgAGADUAAAAEAAQAAgAHADUAAAACAAUAAgABAD0AAAAEAAUAAgABAD0AAAA=")
 tile_set = ExtResource("4_j4240")
 
-[node name="Hortelano" type="Node2D" parent="Entities" unique_id=598256422 instance=ExtResource("5_5o714")]
+[node name="Hortelano" type="Node2D" parent="Entities" unique_id=1959820344 instance=ExtResource("5_5o714")]
 position = Vector2(272, 112)
 script = ExtResource("6_olamu")
 display_name = "Hortelano"
@@ -53,7 +53,7 @@ lines = PackedStringArray("Getafe tenía huertas junto al Manzanares. Ahora qued
 turn_to_player = true
 sprite_sheet = ExtResource("7_whsyc")
 
-[node name="Nieta" type="Node2D" parent="Entities" unique_id=950133167 instance=ExtResource("5_5o714")]
+[node name="Nieta" type="Node2D" parent="Entities" unique_id=513511270 instance=ExtResource("5_5o714")]
 position = Vector2(176, 112)
 script = ExtResource("6_olamu")
 display_name = "Nieta"
@@ -62,37 +62,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_4fdso")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=491817619]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1450870766]
 z_index = 10
 tile_set = ExtResource("4_j4240")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=403871244]
+[node name="Warps" type="Node2D" parent="." unique_id=1011444510]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=889291566]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1054424271]
 position = Vector2(176, 240)
 script = ExtResource("11_818y2")
 target_map = &"getafe/exterior"
 target_spawn = &"from_sala_30_58"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=622353273]
+[node name="Spawns" type="Node2D" parent="." unique_id=951092934]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=908325633]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=705894368]
 position = Vector2(176, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=422850391]
+[node name="Triggers" type="Node2D" parent="." unique_id=815014327]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1873048288]
+[node name="Rotulo" type="Label" parent="." unique_id=941364267]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 336.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_jkfqg")
 theme_override_font_sizes/font_size = 16
 text = "CASA DEL HORTELANO DE LA VEGA DEL MANZANARES"
 horizontal_alignment = 1
+autowrap_mode = 3

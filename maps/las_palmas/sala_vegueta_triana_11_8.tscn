@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_x0c5k"]
 [ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_waj1a"]
 
-[sub_resource type="Resource" id="Resource_vewc1"]
+[sub_resource type="Resource" id="Resource_lepeu"]
 script = ExtResource("3_a80j4")
 id = &"las_palmas/sala_vegueta_triana_11_8"
 display_name = "Tienda de timples de la calle Mayor de Triana, Las Palmas"
@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaVeguetaTriana118" type="Node2D" unique_id=1848361114]
+[node name="SalaVeguetaTriana118" type="Node2D" unique_id=1431156625]
 script = ExtResource("1_nn4jn")
-data = SubResource("Resource_vewc1")
+data = SubResource("Resource_lepeu")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=739526810]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=951472527]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAJAAAAAAAAACQAAAAKAAAAAAAAACQAAAALAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAJAAEAAAAAACQAAAAKAAEAAAAAACQAAAALAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAJAAIAAAAAACQAAAAKAAIAAAAAACQAAAALAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAACQAAAAFAAMAAAAAACQAAAAGAAMAAAAAACQAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAJAAMAAAAAACQAAAAKAAMAAAAAACQAAAALAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAACQAAAAFAAQAAAAAACQAAAAGAAQAAAAAACQAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAJAAQAAAAAACQAAAAKAAQAAAAAACQAAAALAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAJAAUAAAAAACQAAAAKAAUAAAAAACQAAAALAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAACQAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAAJAAYAAAAAACQAAAAKAAYAAAAAACQAAAALAAYAAAAAACQAAAAAAAcAAAAAACQAAAABAAcAAAAAACQAAAACAAcAAAAAACQAAAADAAcAAAAAACQAAAAEAAcAAAAAACQAAAAFAAcAAAAAACQAAAAGAAcAAAAAACQAAAAHAAcAAAAAAAQAAAAIAAcAAAAAACQAAAAJAAcAAAAAACQAAAAKAAcAAAAAACQAAAALAAcAAAAAACQAAAA=")
 tile_set = ExtResource("4_pi6o1")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1128610973]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2028263555]
 tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAKAAAAAQABABIAAAAKAAEAAQABABMAAAAAAAAAAQACABAAAAALAAAAAQAAABAAAAAAAAEAAQACABAAAAALAAEAAQAAABAAAAAAAAIAAQACABAAAAALAAIAAQAAABAAAAAAAAMAAQACABAAAAALAAMAAQAAABAAAAAAAAQAAQACABAAAAALAAQAAQAAABAAAAAAAAUAAQACABAAAAALAAUAAQAAABAAAAAAAAYAAQACABAAAAALAAYAAQAAABAAAAABAAcAAQABAA8AAAACAAcAAQABAA8AAAADAAcAAQABAA8AAAAEAAcAAQABAA8AAAAFAAcAAQABAA8AAAAGAAcAAQACAA8AAAAIAAcAAQAAAA8AAAAJAAcAAQABAA8AAAAKAAcAAQABAA8AAAAAAAcAAQAFABMAAAALAAcAAQAGABMAAAA=")
 tile_set = ExtResource("4_pi6o1")
 
-[node name="Entities" type="Node2D" parent="." unique_id=2065691760]
+[node name="Entities" type="Node2D" parent="." unique_id=301966438]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=232585549]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=442712839]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAHAAEAAgABABwAAAAIAAEAAgACABwAAAAHAAIAAgABAB0AAAAIAAIAAgACAB0AAAAJAAAAAgAFAAAAAAAKAAAAAgAGAAAAAAAJAAEAAgAFAAEAAAAKAAEAAgAGAAEAAAAJAAIAAgAFAAIAAAAKAAIAAgAGAAIAAAACAAMAAwAFAAsAAAACAAQAAwAFAAwAAAADAAMAAwAGAAsAAAADAAQAAwAGAAwAAAAEAAMAAwAHAAsAAAAEAAQAAwAHAAwAAAAFAAEAAgAFABYAAAAGAAEAAgAGABYAAAAFAAIAAgAFABcAAAAGAAIAAgAGABcAAAA=")
 tile_set = ExtResource("4_pi6o1")
 
-[node name="Luthier" type="Node2D" parent="Entities" unique_id=320007447 instance=ExtResource("5_w6vl2")]
+[node name="Luthier" type="Node2D" parent="Entities" unique_id=1964846718 instance=ExtResource("5_w6vl2")]
 position = Vector2(144, 80)
 script = ExtResource("6_q7n8e")
 display_name = "Luthier"
@@ -53,7 +53,7 @@ lines = PackedStringArray("El timple es una guitarra pequeña de cinco cuerdas c
 turn_to_player = true
 sprite_sheet = ExtResource("8_qfsfp")
 
-[node name="Musico" type="Node2D" parent="Entities" unique_id=92980005 instance=ExtResource("5_w6vl2")]
+[node name="Musico" type="Node2D" parent="Entities" unique_id=1854552476 instance=ExtResource("5_w6vl2")]
 position = Vector2(112, 176)
 script = ExtResource("6_q7n8e")
 display_name = "Músico"
@@ -62,37 +62,38 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_lepeu")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=355423226]
+[node name="Above" type="TileMapLayer" parent="." unique_id=246419159]
 z_index = 10
 tile_set = ExtResource("4_pi6o1")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=2033864392]
+[node name="Warps" type="Node2D" parent="." unique_id=1812427562]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=618487175]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1416597588]
 position = Vector2(240, 240)
 script = ExtResource("11_x0c5k")
 target_map = &"las_palmas/vegueta_triana"
 target_spawn = &"from_sala_11_8"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1195359435]
+[node name="Spawns" type="Node2D" parent="." unique_id=1219099965]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=534726723]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=301644280]
 position = Vector2(240, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=872098431]
+[node name="Triggers" type="Node2D" parent="." unique_id=1962911449]
 
-[node name="Rotulo" type="Label" parent="." unique_id=425191797]
+[node name="Rotulo" type="Label" parent="." unique_id=1874010892]
 offset_left = 16.0
-offset_top = 4.0
 offset_right = 368.0
-offset_bottom = 24.0
+offset_bottom = 40.0
 theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
 theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("12_waj1a")
 theme_override_font_sizes/font_size = 16
 text = "TIENDA DE TIMPLES DE LA CALLE MAYOR DE TRIANA"
 horizontal_alignment = 1
+autowrap_mode = 3

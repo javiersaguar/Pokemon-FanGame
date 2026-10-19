@@ -1,0 +1,111 @@
+{
+ "_doc": "Interiores personalizados de ruta_25 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 25",
+ "interiores": {
+  "ruta_25/casa_1": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_25/exterior", [17, 19]],
+   "tipo": "casa",
+   "nombre": "Casa del guarda forestal de Despeñaperros",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Guarda forestal",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_25_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "Despeñaperros es el paso entre la Meseta y Andalucía. Las rocas de los Órganos parecen tubos de un órgano gigante.",
+      "Toma, que en este puerto las curvas marean y las piernas se cansan. Te hará falta."
+     ],
+     "en": [10, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Desde casa vemos pasar el lince a veces. Se para, nos mira y sigue. Más educado que los camioneros."
+     ],
+     "nodo": "Mujer",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "tatami_verde",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_beige", [4, 4, 3, 2]]],
+   "muebles": [
+    ["nevera", 3, 1],
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["tele", 1, 1],
+    ["vitrina_madera", 8, 1],
+    ["sofa", 1, 5],
+    ["planta", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "ruta_25/casa_2": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_25/exterior", [4, 54]],
+   "tipo": "casa",
+   "nombre": "Venta del camino de Andalucía",
+   "personas": [
+    {
+     "nombre": "Ventera",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Esto era una venta de arrieros cuando el camino era de tierra. Paraban a comer y a contar historias de bandoleros.",
+      "Hoy paran los camioneros. Las historias son de la autovía, pero igual de largas."
+     ],
+     "nodo": "Ventera",
+     "en": [7, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Camionero",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": [
+      "Veinte años bajando a Málaga por Despeñaperros. Antes con curvas; ahora con túneles. Echo de menos las curvas."
+     ],
+     "nodo": "Camionero",
+     "en": [6, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [5, 3, 5, 3]]],
+   "muebles": [
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["nevera_alta", 8, 0],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["estanteria_alta_oliva", 9, 0],
+    ["mesa_cristal", 7, 4],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 9, 5],
+    ["arbol_maceta", 10, 5],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  }
+ }
+}
