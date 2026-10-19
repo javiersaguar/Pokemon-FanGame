@@ -142,6 +142,8 @@ Rama `feat/combate-fondos-efectos`, worktree `pokemon-panchito-agente4`.
 - **Simplificaciones, tal cual:** Cede Paso y Último Lugar no reordenan en dobles; Premonición calcula el daño al usarla; Mimético dura hasta el final del combate (no hasta el cambio); Plegaria Vital revive al primer debilitado sin preguntar; Gravedad no sube la precisión; Fijar Blanco no alcanza a los semiinvulnerables; Granizo pone nieve (9.ª generación); Dracoflechas no reparte en dobles; Sustituto no cuenta su daño para el retroceso ni el drenaje; Metrónomo elige entre todos los permitidos de los datos.
 - **Tests:** `tests/combate/test_efectos_movimientos.gd` y `test_efectos_movimientos_2.gd`.
 
+**Extra · Sonidos de las animaciones (hecho).** `tools/arte/sonidos_movimientos.py` lee los `pbSEPlay` de cada animación del pack 17 (EBDX move & common animation pack) y copia sin tocar los 114 sonidos usados a `assets/audio/se/anim/` (procedencia en `data/audio_assets.json`). `data/battle_motion_sounds.json` dice qué suena en cada movimiento (hasta 3, repartidos a lo largo de la animación); los que EBDX no anima usan el sonido más común de su tipo. Faltan en el pack 8 archivos que piden algunas animaciones (Flash, Flash3, Heal4, Ice7, eb_grass2, electric1, grass2, psychic3): esas usan el resto de sus sonidos. Test: `tests/combate/test_sonidos_movimientos.gd`.
+
 ## Agente 1 — Mundo y arquitectura
 
 ### Agente 1 · Interiores personalizados (sesión del 2026-10-15)

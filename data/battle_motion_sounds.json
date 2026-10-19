@@ -1,0 +1,3392 @@
+{
+ "_doc": "Sonidos de las animaciones de movimientos (tools/arte/sonidos_movimientos.py): los pbSEPlay de cada animación del EBDX move & common animation pack, en orden y hasta 3; los que EBDX no anima, el más común de su tipo. Archivos en assets/audio/se/anim/ (procedencia en data/audio_assets.json).",
+ "moves": {
+  "10000000voltthunderbolt": [
+   "anim/paralyze1"
+  ],
+  "absorb": [
+   "anim/absorb2",
+   "anim/recovery"
+  ],
+  "accelerock": [
+   "anim/rock2"
+  ],
+  "acid": [
+   "anim/ground1"
+  ],
+  "acidarmor": [
+   "anim/poison1"
+  ],
+  "aciddownpour": [
+   "anim/ground1"
+  ],
+  "acidspray": [
+   "anim/ground1"
+  ],
+  "acrobatics": [
+   "anim/normal2"
+  ],
+  "acupressure": [
+   "anim/move1"
+  ],
+  "aerialace": [
+   "anim/flying1",
+   "anim/normal3"
+  ],
+  "aeroblast": [
+   "anim/hyperbeam",
+   "anim/comet_punch"
+  ],
+  "afteryou": [
+   "anim/dragon2"
+  ],
+  "agility": [
+   "anim/move1"
+  ],
+  "aircutter": [
+   "anim/flying1",
+   "anim/normal3"
+  ],
+  "airslash": [
+   "anim/flying1",
+   "anim/normal3"
+  ],
+  "alloutpummeling": [
+   "anim/hit"
+  ],
+  "alluringvoice": [
+   "anim/love"
+  ],
+  "allyswitch": [
+   "anim/saint7"
+  ],
+  "amnesia": [
+   "anim/saint7"
+  ],
+  "anchorshot": [
+   "anim/dragon2"
+  ],
+  "ancientpower": [
+   "anim/psych_up",
+   "anim/rock2"
+  ],
+  "appleacid": [
+   "anim/grass2"
+  ],
+  "aquacutter": [
+   "anim/water1"
+  ],
+  "aquajet": [
+   "anim/water2",
+   "anim/water1"
+  ],
+  "aquaring": [
+   "anim/water3",
+   "anim/bubble1"
+  ],
+  "aquastep": [
+   "anim/water1"
+  ],
+  "aquatail": [
+   "anim/bubble1",
+   "anim/iron2",
+   "anim/normal4"
+  ],
+  "armorcannon": [
+   "anim/fire2"
+  ],
+  "armthrust": [
+   "anim/hit"
+  ],
+  "aromatherapy": [
+   "anim/wish"
+  ],
+  "aromaticmist": [
+   "anim/love"
+  ],
+  "assist": [
+   "anim/dragon2"
+  ],
+  "assurance": [
+   "anim/taunt"
+  ],
+  "astonish": [
+   "anim/normal4",
+   "anim/ground1"
+  ],
+  "astralbarrage": [
+   "anim/fog2"
+  ],
+  "attackorder": [
+   "anim/ground1"
+  ],
+  "attract": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "aurasphere": [
+   "anim/normal5"
+  ],
+  "aurawheel": [
+   "anim/paralyze1"
+  ],
+  "aurorabeam": [
+   "anim/psych_up",
+   "anim/ice1"
+  ],
+  "auroraveil": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "autotomize": [
+   "anim/dragon2"
+  ],
+  "avalanche": [
+   "anim/rock2"
+  ],
+  "axekick": [
+   "anim/hit"
+  ],
+  "babydolleyes": [
+   "anim/leer"
+  ],
+  "baddybad": [
+   "anim/taunt"
+  ],
+  "banefulbunker": [
+   "anim/ground1"
+  ],
+  "barbbarrage": [
+   "anim/ground1"
+  ],
+  "barrage": [
+   "anim/follow_me",
+   "anim/water5"
+  ],
+  "barrier": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "batonpass": [
+   "anim/throw",
+   "anim/flying1"
+  ],
+  "beakblast": [
+   "anim/flying1"
+  ],
+  "beatup": [
+   "anim/normal1"
+  ],
+  "behemothbash": [
+   "anim/dragon2"
+  ],
+  "behemothblade": [
+   "anim/dragon2"
+  ],
+  "belch": [
+   "anim/ground1"
+  ],
+  "bellydrum": [
+   "anim/normal2"
+  ],
+  "bestow": [
+   "anim/saint7"
+  ],
+  "bide": [
+   "anim/dragon2"
+  ],
+  "bind": [
+   "anim/wrap"
+  ],
+  "bite": [
+   "anim/super_fang"
+  ],
+  "bitterblade": [
+   "anim/fire2"
+  ],
+  "bittermalice": [
+   "anim/fog2"
+  ],
+  "blackholeeclipse": [
+   "anim/taunt"
+  ],
+  "blastburn": [
+   "anim/fire5",
+   "anim/fire2",
+   "anim/fire3"
+  ],
+  "blazekick": [
+   "anim/fog2",
+   "anim/fire3"
+  ],
+  "blazingtorque": [
+   "anim/fire2"
+  ],
+  "bleakwindstorm": [
+   "anim/flying1"
+  ],
+  "blizzard": [
+   "anim/wind8"
+  ],
+  "block": [
+   "anim/wrap"
+  ],
+  "bloodmoon": [
+   "anim/dragon2"
+  ],
+  "bloomdoom": [
+   "anim/grass2"
+  ],
+  "blueflare": [
+   "anim/fire2"
+  ],
+  "bodypress": [
+   "anim/hit"
+  ],
+  "bodyslam": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "boltbeak": [
+   "anim/paralyze1"
+  ],
+  "boltstrike": [
+   "anim/paralyze1",
+   "anim/slam",
+   "anim/thunder3"
+  ],
+  "boneclub": [
+   "anim/wind7",
+   "anim/hit"
+  ],
+  "bonemerang": [
+   "anim/wind7",
+   "anim/hit"
+  ],
+  "bonerush": [
+   "anim/wind7",
+   "anim/hit"
+  ],
+  "boomburst": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "bounce": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "bouncedown": [
+   "anim/wind1"
+  ],
+  "bounceup": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "bouncybubble": [
+   "anim/water1"
+  ],
+  "branchpoke": [
+   "anim/grass2"
+  ],
+  "bravebird": [
+   "anim/wind1",
+   "anim/normal1"
+  ],
+  "breakingswipe": [
+   "anim/dragon2"
+  ],
+  "breakneckblitz": [
+   "anim/dragon2"
+  ],
+  "brickbreak": [
+   "anim/hit"
+  ],
+  "brine": [
+   "anim/bubble1",
+   "anim/bubble2"
+  ],
+  "brutalswing": [
+   "anim/ground1",
+   "anim/slash10",
+   "anim/normal3"
+  ],
+  "bubble": [
+   "anim/bubble1",
+   "anim/bubble2"
+  ],
+  "bubblebeam": [
+   "anim/bubble1",
+   "anim/bubble2"
+  ],
+  "bugbite": [
+   "anim/bug1"
+  ],
+  "bugbuzz": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "bulkup": [
+   "anim/dragon2"
+  ],
+  "bulldoze": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "bulletpunch": [
+   "anim/move1"
+  ],
+  "bulletseed": [
+   "anim/follow_me",
+   "anim/comet_punch"
+  ],
+  "burningbulwark": [
+   "anim/fire2"
+  ],
+  "burningjealousy": [
+   "anim/fire2"
+  ],
+  "burnup": [
+   "anim/fire2",
+   "anim/fire3",
+   "anim/fire4"
+  ],
+  "buzzybuzz": [
+   "anim/paralyze1"
+  ],
+  "calmmind": [
+   "anim/psychic1",
+   "anim/psychic2",
+   "anim/dragon2"
+  ],
+  "camouflage": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "captivate": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "catastropika": [
+   "anim/paralyze1"
+  ],
+  "ceaselessedge": [
+   "anim/taunt"
+  ],
+  "celebrate": [
+   "anim/dragon2"
+  ],
+  "charge": [
+   "anim/saint8"
+  ],
+  "chargebeam": [
+   "anim/pollen",
+   "anim/paralyze1"
+  ],
+  "charm": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "chatter": [
+   "anim/normal2"
+  ],
+  "chillingwater": [
+   "anim/water1"
+  ],
+  "chillyreception": [
+   "anim/wind8"
+  ],
+  "chipaway": [
+   "anim/move1"
+  ],
+  "chloroblast": [
+   "anim/grass2"
+  ],
+  "circlethrow": [
+   "anim/hit"
+  ],
+  "clamp": [
+   "anim/wrap"
+  ],
+  "clangingscales": [
+   "anim/dragon2"
+  ],
+  "clangoroussoul": [
+   "anim/dragon2"
+  ],
+  "clangoroussoulblaze": [
+   "anim/dragon2"
+  ],
+  "clearsmog": [
+   "anim/ground1"
+  ],
+  "closecombat": [
+   "anim/hit"
+  ],
+  "coaching": [
+   "anim/hit"
+  ],
+  "coil": [
+   "anim/poison1"
+  ],
+  "collisioncourse": [
+   "anim/hit"
+  ],
+  "combattorque": [
+   "anim/hit"
+  ],
+  "cometpunch": [
+   "anim/normal2"
+  ],
+  "comeuppance": [
+   "anim/taunt"
+  ],
+  "confide": [
+   "anim/normal2"
+  ],
+  "confuseray": [
+   "anim/psych_up",
+   "anim/nightshade"
+  ],
+  "confusion": [
+   "anim/saint7"
+  ],
+  "constrict": [
+   "anim/wrap"
+  ],
+  "continentalcrush": [
+   "anim/rock2"
+  ],
+  "conversion": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "conversion2": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "copycat": [
+   "anim/dragon2"
+  ],
+  "coreenforcer": [
+   "anim/dragon2"
+  ],
+  "corkscrewcrash": [
+   "anim/dragon2"
+  ],
+  "corrosivegas": [
+   "anim/ground1"
+  ],
+  "cosmicpower": [
+   "anim/dragon2"
+  ],
+  "cottonguard": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "cottonspore": [
+   "anim/ground1"
+  ],
+  "counter": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "courtchange": [
+   "anim/dragon2"
+  ],
+  "covet": [
+   "anim/move1"
+  ],
+  "crabhammer": [
+   "anim/water1",
+   "anim/normal1"
+  ],
+  "craftyshield": [
+   "anim/love"
+  ],
+  "crosschop": [
+   "anim/normal1"
+  ],
+  "crosspoison": [
+   "anim/ground1",
+   "anim/poison",
+   "anim/normal3"
+  ],
+  "crunch": [
+   "anim/super_fang"
+  ],
+  "crushclaw": [
+   "anim/normal3"
+  ],
+  "crushgrip": [
+   "anim/wrap"
+  ],
+  "curse": [
+   "anim/fog2"
+  ],
+  "cut": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "darkestlariat": [
+   "anim/taunt"
+  ],
+  "darkpulse": [
+   "anim/ghost3",
+   "anim/nightshade"
+  ],
+  "darkvoid": [
+   "anim/harden",
+   "anim/nightshade"
+  ],
+  "dazzlinggleam": [
+   "anim/harden",
+   "anim/refresh",
+   "anim/saint8"
+  ],
+  "decorate": [
+   "anim/love"
+  ],
+  "defendorder": [
+   "anim/ground1"
+  ],
+  "defensecurl": [
+   "anim/iron5"
+  ],
+  "defog": [
+   "anim/wind8"
+  ],
+  "destinybond": [
+   "anim/absorb2",
+   "anim/perishsong"
+  ],
+  "detect": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "devastatingdrake": [
+   "anim/dragon2"
+  ],
+  "diamondstorm": [
+   "anim/rock2"
+  ],
+  "dig": [
+   "anim/rock2",
+   "anim/rock1"
+  ],
+  "digdown": [
+   "anim/rock2",
+   "anim/rock1"
+  ],
+  "digup": [
+   "anim/rock1",
+   "anim/rock2"
+  ],
+  "direclaw": [
+   "anim/ground1"
+  ],
+  "disable": [
+   "anim/dragon2"
+  ],
+  "disarmingvoice": [
+   "anim/disarmingvoice"
+  ],
+  "discharge": [
+   "anim/saint8"
+  ],
+  "dive": [
+   "anim/water2",
+   "anim/water1",
+   "anim/bubble1"
+  ],
+  "divedown": [
+   "anim/water2",
+   "anim/water1",
+   "anim/bubble1"
+  ],
+  "diveup": [
+   "anim/water1",
+   "anim/bubble1"
+  ],
+  "dizzypunch": [
+   "anim/hit"
+  ],
+  "doodle": [
+   "anim/dragon2"
+  ],
+  "doomdesire": [
+   "anim/dragon2"
+  ],
+  "doomdesireatt": [
+   "anim/iron4",
+   "anim/psych_up",
+   "anim/psychic4"
+  ],
+  "doubleedge": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "doublehit": [
+   "anim/hit"
+  ],
+  "doubleironbash": [
+   "anim/dragon2"
+  ],
+  "doublekick": [
+   "anim/hit"
+  ],
+  "doubleshock": [
+   "anim/paralyze1"
+  ],
+  "doubleslap": [
+   "anim/hit"
+  ],
+  "doubleteam": [
+   "anim/move1"
+  ],
+  "dracometeor": [
+   "anim/wind1",
+   "anim/normal1"
+  ],
+  "dragonascent": [
+   "anim/wind1",
+   "anim/normal1"
+  ],
+  "dragonbreath": [
+   "anim/dragon2",
+   "anim/dragon1"
+  ],
+  "dragoncheer": [
+   "anim/dragon2"
+  ],
+  "dragonclaw": [
+   "anim/dragon2",
+   "anim/slash10"
+  ],
+  "dragondance": [
+   "anim/dragon2"
+  ],
+  "dragondarts": [
+   "anim/dragon2"
+  ],
+  "dragonenergy": [
+   "anim/dragon2"
+  ],
+  "dragonhammer": [
+   "anim/iron2",
+   "anim/ground1",
+   "anim/dragon1"
+  ],
+  "dragonpulse": [
+   "anim/dragon2",
+   "anim/dragon1"
+  ],
+  "dragonrage": [
+   "anim/dragon2",
+   "anim/dragon1"
+  ],
+  "dragonrush": [
+   "anim/normal4",
+   "anim/iron2"
+  ],
+  "dragontail": [
+   "anim/normal4",
+   "anim/iron2"
+  ],
+  "drainingkiss": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "drainpunch": [
+   "anim/hit"
+  ],
+  "dreameater": [
+   "anim/saint7"
+  ],
+  "drillpeck": [
+   "anim/normal1",
+   "anim/normal2"
+  ],
+  "drillrun": [
+   "anim/normal1",
+   "anim/normal2"
+  ],
+  "drumbeating": [
+   "anim/grass2"
+  ],
+  "dualchop": [
+   "anim/gust",
+   "anim/hit"
+  ],
+  "dualwingbeat": [
+   "anim/flying1"
+  ],
+  "dynamaxcannon": [
+   "anim/dragon2"
+  ],
+  "dynamicpunch": [
+   "anim/dragon2"
+  ],
+  "earthpower": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "earthquake": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "echoedvoice": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "eerieimpulse": [
+   "anim/psych_up",
+   "anim/ghost3"
+  ],
+  "eeriespell": [
+   "anim/saint7"
+  ],
+  "eggbomb": [
+   "anim/throw",
+   "anim/explosion1"
+  ],
+  "electricterrain": [
+   "anim/electric1",
+   "anim/saint8"
+  ],
+  "electrify": [
+   "anim/paralyze1"
+  ],
+  "electroball": [
+   "anim/paralyze1",
+   "anim/electric1"
+  ],
+  "electrodrift": [
+   "anim/paralyze1"
+  ],
+  "electroshot": [
+   "anim/paralyze1"
+  ],
+  "electroweb": [
+   "anim/electric2"
+  ],
+  "embargo": [
+   "anim/perishsong"
+  ],
+  "ember": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "encore": [
+   "anim/taunt"
+  ],
+  "endeavor": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "endure": [
+   "anim/dragon2"
+  ],
+  "energyball": [
+   "anim/grass2",
+   "anim/grass1"
+  ],
+  "entrainment": [
+   "anim/dragon2"
+  ],
+  "eruption": [
+   "anim/rock1",
+   "anim/fire2"
+  ],
+  "esperwing": [
+   "anim/saint7"
+  ],
+  "eternabeam": [
+   "anim/dragon2"
+  ],
+  "expandingforce": [
+   "anim/saint7"
+  ],
+  "explosion": [
+   "anim/superdamage",
+   "anim/explosion1"
+  ],
+  "extrasensory": [
+   "anim/saint7"
+  ],
+  "extremeevoboost": [
+   "anim/dragon2"
+  ],
+  "extremespeed": [
+   "anim/move1"
+  ],
+  "facade": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "fairylock": [
+   "anim/love"
+  ],
+  "fairywind": [
+   "anim/whirlwind"
+  ],
+  "fakeout": [
+   "anim/move1"
+  ],
+  "faketears": [
+   "anim/taunt"
+  ],
+  "falsesurrender": [
+   "anim/taunt"
+  ],
+  "falseswipe": [
+   "anim/flying1",
+   "anim/normal3"
+  ],
+  "featherdance": [
+   "anim/wish"
+  ],
+  "feint": [
+   "anim/hit"
+  ],
+  "feintattack": [
+   "anim/move1"
+  ],
+  "fellstinger": [
+   "anim/normal1"
+  ],
+  "ficklebeam": [
+   "anim/dragon2"
+  ],
+  "fierydance": [
+   "anim/fire2"
+  ],
+  "fierywrath": [
+   "anim/taunt"
+  ],
+  "filletaway": [
+   "anim/dragon2"
+  ],
+  "finalgambit": [
+   "anim/hit"
+  ],
+  "fireblast": [
+   "anim/fire2",
+   "anim/fire3",
+   "anim/fire4"
+  ],
+  "firefang": [
+   "anim/super_fang",
+   "anim/fire2"
+  ],
+  "firelash": [
+   "anim/fire2",
+   "anim/fire4",
+   "anim/normal3"
+  ],
+  "firepledge": [
+   "anim/fire2"
+  ],
+  "firepunch": [
+   "anim/fog2",
+   "anim/fire3"
+  ],
+  "firespin": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "firstimpression": [
+   "anim/ground1"
+  ],
+  "fishiousrend": [
+   "anim/water1"
+  ],
+  "fissure": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "flail": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "flameburst": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "flamecharge": [
+   "anim/fire1",
+   "anim/fire2"
+  ],
+  "flamethrower": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "flamewheel": [
+   "anim/fire1",
+   "anim/fire2"
+  ],
+  "flareblitz": [
+   "anim/fire2",
+   "anim/fire3",
+   "anim/fire4"
+  ],
+  "flash": [
+   "anim/thunder3",
+   "anim/electric1"
+  ],
+  "flashcannon": [
+   "anim/harden",
+   "anim/refresh",
+   "anim/saint8"
+  ],
+  "flatter": [
+   "anim/taunt"
+  ],
+  "fleurcannon": [
+   "anim/saint7",
+   "anim/saint8",
+   "anim/saint6"
+  ],
+  "fling": [
+   "anim/move1",
+   "anim/normal1"
+  ],
+  "flipturn": [
+   "anim/water1"
+  ],
+  "floatyfall": [
+   "anim/flying1"
+  ],
+  "floralhealing": [
+   "anim/wish"
+  ],
+  "flowershield": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "flowertrick": [
+   "anim/grass2"
+  ],
+  "fly": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "flydown": [
+   "anim/wind1"
+  ],
+  "flyingpress": [
+   "anim/hit"
+  ],
+  "flyup": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "focusblast": [
+   "anim/harden",
+   "anim/refresh",
+   "anim/saint8"
+  ],
+  "focusenergy": [
+   "anim/dragon2"
+  ],
+  "focuspunch": [
+   "anim/dragon2"
+  ],
+  "followme": [
+   "anim/taunt"
+  ],
+  "forcepalm": [
+   "anim/normal5"
+  ],
+  "foresight": [
+   "anim/leer"
+  ],
+  "forestscurse": [
+   "anim/grass2"
+  ],
+  "foulplay": [
+   "anim/taunt"
+  ],
+  "freezedry": [
+   "anim/wind8"
+  ],
+  "freezeshock": [
+   "anim/wind8"
+  ],
+  "freezingglare": [
+   "anim/saint7"
+  ],
+  "freezyfrost": [
+   "anim/wind8"
+  ],
+  "frenzyplant": [
+   "anim/grass2",
+   "anim/grass1"
+  ],
+  "frostbreath": [
+   "anim/wind8"
+  ],
+  "frustration": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "furyattack": [
+   "anim/normal1"
+  ],
+  "furycutter": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "furyswipes": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "fusionbolt": [
+   "anim/paralyze1"
+  ],
+  "fusionflare": [
+   "anim/fire2"
+  ],
+  "futuresight": [
+   "anim/scaryface"
+  ],
+  "gastroacid": [
+   "anim/ground1"
+  ],
+  "geargrind": [
+   "anim/dragon2"
+  ],
+  "gearup": [
+   "anim/dragon2"
+  ],
+  "genesissupernova": [
+   "anim/saint7"
+  ],
+  "geomancy": [
+   "anim/love"
+  ],
+  "gigadrain": [
+   "anim/absorb2",
+   "anim/recovery"
+  ],
+  "gigaimpact": [
+   "anim/dragon2",
+   "anim/superdamage",
+   "anim/rock1"
+  ],
+  "gigatonhammer": [
+   "anim/dragon2"
+  ],
+  "gigavolthavoc": [
+   "anim/paralyze1"
+  ],
+  "glaciallance": [
+   "anim/wind8"
+  ],
+  "glaciate": [
+   "anim/wind8"
+  ],
+  "glaiverush": [
+   "anim/dragon2"
+  ],
+  "glare": [
+   "anim/scaryface"
+  ],
+  "glitzyglow": [
+   "anim/saint7"
+  ],
+  "gmaxbefuddle": [
+   "anim/ground1"
+  ],
+  "gmaxcannonade": [
+   "anim/water1"
+  ],
+  "gmaxcentiferno": [
+   "anim/fire2"
+  ],
+  "gmaxchistrike": [
+   "anim/hit"
+  ],
+  "gmaxcuddle": [
+   "anim/dragon2"
+  ],
+  "gmaxdepletion": [
+   "anim/dragon2"
+  ],
+  "gmaxdrumsolo": [
+   "anim/grass2"
+  ],
+  "gmaxfinale": [
+   "anim/love"
+  ],
+  "gmaxfireball": [
+   "anim/fire2"
+  ],
+  "gmaxfoamburst": [
+   "anim/water1"
+  ],
+  "gmaxgoldrush": [
+   "anim/dragon2"
+  ],
+  "gmaxgravitas": [
+   "anim/saint7"
+  ],
+  "gmaxhydrosnipe": [
+   "anim/water1"
+  ],
+  "gmaxmalodor": [
+   "anim/ground1"
+  ],
+  "gmaxmeltdown": [
+   "anim/dragon2"
+  ],
+  "gmaxoneblow": [
+   "anim/taunt"
+  ],
+  "gmaxrapidflow": [
+   "anim/water1"
+  ],
+  "gmaxreplenish": [
+   "anim/dragon2"
+  ],
+  "gmaxresonance": [
+   "anim/wind8"
+  ],
+  "gmaxsandblast": [
+   "anim/rock1"
+  ],
+  "gmaxsmite": [
+   "anim/love"
+  ],
+  "gmaxsnooze": [
+   "anim/taunt"
+  ],
+  "gmaxsteelsurge": [
+   "anim/dragon2"
+  ],
+  "gmaxstonesurge": [
+   "anim/water1"
+  ],
+  "gmaxstunshock": [
+   "anim/paralyze1"
+  ],
+  "gmaxsweetness": [
+   "anim/grass2"
+  ],
+  "gmaxtartness": [
+   "anim/grass2"
+  ],
+  "gmaxterror": [
+   "anim/fog2"
+  ],
+  "gmaxvinelash": [
+   "anim/grass2"
+  ],
+  "gmaxvolcalith": [
+   "anim/rock2"
+  ],
+  "gmaxvoltcrash": [
+   "anim/paralyze1"
+  ],
+  "gmaxwildfire": [
+   "anim/fire2"
+  ],
+  "gmaxwindrage": [
+   "anim/flying1"
+  ],
+  "grassknot": [
+   "anim/grass2"
+  ],
+  "grasspledge": [
+   "anim/grass2"
+  ],
+  "grasswhistle": [
+   "anim/grasswhistle"
+  ],
+  "grassyglide": [
+   "anim/grass2"
+  ],
+  "grassyterrain": [
+   "anim/grass2"
+  ],
+  "gravapple": [
+   "anim/grass2"
+  ],
+  "gravity": [
+   "anim/dragon2"
+  ],
+  "growl": [
+   "anim/dragon2"
+  ],
+  "growth": [
+   "anim/dragon2"
+  ],
+  "grudge": [
+   "anim/fog2"
+  ],
+  "guardianofalola": [
+   "anim/love"
+  ],
+  "guardsplit": [
+   "anim/saint7"
+  ],
+  "guardswap": [
+   "anim/saint7"
+  ],
+  "guillotine": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "gunkshot": [
+   "anim/bubble1",
+   "anim/bubble2"
+  ],
+  "gust": [
+   "anim/wind8"
+  ],
+  "gyroball": [
+   "anim/psych_up"
+  ],
+  "hail": [
+   "anim/ice8",
+   "anim/flying1"
+  ],
+  "hammerarm": [
+   "anim/iron2",
+   "anim/ground1",
+   "anim/rock1"
+  ],
+  "happyhour": [
+   "anim/dragon2"
+  ],
+  "harden": [
+   "anim/iron5"
+  ],
+  "hardpress": [
+   "anim/dragon2"
+  ],
+  "haze": [
+   "anim/ground1"
+  ],
+  "headbutt": [
+   "anim/ground1",
+   "anim/blow6"
+  ],
+  "headcharge": [
+   "anim/dragon2"
+  ],
+  "headlongrush": [
+   "anim/rock1"
+  ],
+  "headsmash": [
+   "anim/iron2",
+   "anim/ground1",
+   "anim/iron3"
+  ],
+  "healbell": [
+   "anim/healbell"
+  ],
+  "healblock": [
+   "anim/perishsong"
+  ],
+  "healingwish": [
+   "anim/wish"
+  ],
+  "healorder": [
+   "anim/ground1"
+  ],
+  "healpulse": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "heartstamp": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "heartswap": [
+   "anim/saint7"
+  ],
+  "heatcrash": [
+   "anim/fire2"
+  ],
+  "heatwave": [
+   "anim/wind8"
+  ],
+  "heavyslam": [
+   "anim/dragon2"
+  ],
+  "helpinghand": [
+   "anim/dragon2"
+  ],
+  "hex": [
+   "anim/ghost2",
+   "anim/ghost3"
+  ],
+  "hiddenpower": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "hiddenpowerbug": [
+   "anim/ground1"
+  ],
+  "hiddenpowerdark": [
+   "anim/taunt"
+  ],
+  "hiddenpowerdragon": [
+   "anim/dragon2"
+  ],
+  "hiddenpowerelectric": [
+   "anim/paralyze1"
+  ],
+  "hiddenpowerfighting": [
+   "anim/hit"
+  ],
+  "hiddenpowerfire": [
+   "anim/fire2"
+  ],
+  "hiddenpowerflying": [
+   "anim/flying1"
+  ],
+  "hiddenpowerghost": [
+   "anim/fog2"
+  ],
+  "hiddenpowergrass": [
+   "anim/grass2"
+  ],
+  "hiddenpowerground": [
+   "anim/rock1"
+  ],
+  "hiddenpowerice": [
+   "anim/wind8"
+  ],
+  "hiddenpowerpoison": [
+   "anim/ground1"
+  ],
+  "hiddenpowerpsychic": [
+   "anim/saint7"
+  ],
+  "hiddenpowerrock": [
+   "anim/rock2"
+  ],
+  "hiddenpowersteel": [
+   "anim/dragon2"
+  ],
+  "hiddenpowerwater": [
+   "anim/water1"
+  ],
+  "highhorsepower": [
+   "anim/hit",
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "highjumpkick": [
+   "anim/hit"
+  ],
+  "holdback": [
+   "anim/dragon2"
+  ],
+  "holdhands": [
+   "anim/dragon2"
+  ],
+  "honeclaws": [
+   "anim/dragon2"
+  ],
+  "hornattack": [
+   "anim/normal1"
+  ],
+  "horndrill": [
+   "anim/iron2"
+  ],
+  "hornleech": [
+   "anim/grass1"
+  ],
+  "howl": [
+   "anim/dragon2"
+  ],
+  "hurricane": [
+   "anim/wind8"
+  ],
+  "hydrocannon": [
+   "anim/water1"
+  ],
+  "hydropump": [
+   "anim/water3",
+   "anim/water5",
+   "anim/water1"
+  ],
+  "hydrosteam": [
+   "anim/water1"
+  ],
+  "hydrovortex": [
+   "anim/water1"
+  ],
+  "hyperbeam": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "hyperdrill": [
+   "anim/dragon2"
+  ],
+  "hyperfang": [
+   "anim/dragon2"
+  ],
+  "hyperspacefury": [
+   "anim/taunt"
+  ],
+  "hyperspacehole": [
+   "anim/saint7"
+  ],
+  "hypervoice": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "hypnosis": [
+   "anim/psych_up",
+   "anim/psychic1",
+   "anim/psychic2"
+  ],
+  "iceball": [
+   "anim/ice1",
+   "anim/ice2"
+  ],
+  "icebeam": [
+   "anim/ice8",
+   "anim/ice1"
+  ],
+  "iceburn": [
+   "anim/wind8"
+  ],
+  "icefang": [
+   "anim/super_fang",
+   "anim/ice1"
+  ],
+  "icehammer": [
+   "anim/wind8"
+  ],
+  "icepunch": [
+   "anim/fog2",
+   "anim/ice2",
+   "anim/ice1"
+  ],
+  "iceshard": [
+   "anim/move1"
+  ],
+  "icespinner": [
+   "anim/wind8"
+  ],
+  "iciclecrash": [
+   "anim/rock1"
+  ],
+  "iciclespear": [
+   "anim/ice1",
+   "anim/ice2"
+  ],
+  "icywind": [
+   "anim/wind8",
+   "anim/ice1"
+  ],
+  "imprison": [
+   "anim/perishsong"
+  ],
+  "incinerate": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "infernalparade": [
+   "anim/fog2"
+  ],
+  "inferno": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "infernooverdrive": [
+   "anim/fire2"
+  ],
+  "infestation": [
+   "anim/ground1"
+  ],
+  "ingrain": [
+   "anim/leechseedthrowing",
+   "anim/leechseedgrowing",
+   "anim/leechseedplanted"
+  ],
+  "instruct": [
+   "anim/saint7"
+  ],
+  "iondeluge": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "iondelugedown": [
+   "anim/wind1"
+  ],
+  "iondelugeup": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "irondefense": [
+   "anim/iron5"
+  ],
+  "ironhead": [
+   "anim/iron2",
+   "anim/ground1",
+   "anim/iron3"
+  ],
+  "irontail": [
+   "anim/iron3",
+   "anim/iron1"
+  ],
+  "ivycudgel": [
+   "anim/grass2"
+  ],
+  "jawlock": [
+   "anim/taunt"
+  ],
+  "jetpunch": [
+   "anim/water1"
+  ],
+  "judgment": [
+   "anim/harden",
+   "anim/refresh",
+   "anim/saint8"
+  ],
+  "jumpkick": [
+   "anim/hit"
+  ],
+  "junglehealing": [
+   "anim/grass2"
+  ],
+  "karatechop": [
+   "anim/hit"
+  ],
+  "kinesis": [
+   "anim/psychic1",
+   "anim/psychic2",
+   "anim/dragon2"
+  ],
+  "kingsshield": [
+   "anim/dragon2"
+  ],
+  "knockoff": [
+   "anim/taunt"
+  ],
+  "kowtowcleave": [
+   "anim/taunt"
+  ],
+  "landswrath": [
+   "anim/rock1"
+  ],
+  "laserfocus": [
+   "anim/lockon"
+  ],
+  "lashout": [
+   "anim/taunt"
+  ],
+  "lastresort": [
+   "anim/dragon2",
+   "anim/superdamage",
+   "anim/rock1"
+  ],
+  "lastrespects": [
+   "anim/fog2"
+  ],
+  "lavaplume": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "leafage": [
+   "anim/grass2"
+  ],
+  "leafblade": [
+   "anim/grass2"
+  ],
+  "leafstorm": [
+   "anim/grass2",
+   "anim/wind1",
+   "anim/grass1"
+  ],
+  "leaftornado": [
+   "anim/wind8"
+  ],
+  "leechlife": [
+   "anim/bite"
+  ],
+  "leechseed": [
+   "anim/poison1"
+  ],
+  "leer": [
+   "anim/leer"
+  ],
+  "letssnuggleforever": [
+   "anim/love"
+  ],
+  "lick": [
+   "anim/normal4"
+  ],
+  "lifedew": [
+   "anim/water1"
+  ],
+  "lightofruin": [
+   "anim/love"
+  ],
+  "lightscreen": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "lightthatburnsthesky": [
+   "anim/saint7"
+  ],
+  "liquidation": [
+   "anim/water1",
+   "anim/bubble2"
+  ],
+  "lockon": [
+   "anim/lockon"
+  ],
+  "lovelykiss": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "lowkick": [
+   "anim/hit"
+  ],
+  "lowsweep": [
+   "anim/hit"
+  ],
+  "luckychant": [
+   "anim/wish"
+  ],
+  "luminacrash": [
+   "anim/saint7"
+  ],
+  "lunarblessing": [
+   "anim/saint7"
+  ],
+  "lunardance": [
+   "anim/psychic1",
+   "anim/psychic2",
+   "anim/dragon2"
+  ],
+  "lunge": [
+   "anim/move1"
+  ],
+  "lusterpurge": [
+   "anim/dragon2",
+   "anim/psychic3",
+   "anim/psych_up"
+  ],
+  "machpunch": [
+   "anim/move1"
+  ],
+  "magicalleaf": [
+   "anim/grass2",
+   "anim/wind1",
+   "anim/grass1"
+  ],
+  "magicaltorque": [
+   "anim/love"
+  ],
+  "magiccoat": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "magicpowder": [
+   "anim/saint7"
+  ],
+  "magicroom": [
+   "anim/psychic4",
+   "anim/saint8"
+  ],
+  "magmastorm": [
+   "anim/rock1",
+   "anim/fire2"
+  ],
+  "magnetbomb": [
+   "anim/iron4",
+   "anim/psychic4",
+   "anim/normal1"
+  ],
+  "magneticflux": [
+   "anim/dragon2"
+  ],
+  "magnetrise": [
+   "anim/dragon2"
+  ],
+  "magnitude": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "makeitrain": [
+   "anim/dragon2"
+  ],
+  "maliciousmoonsault": [
+   "anim/taunt"
+  ],
+  "malignantchain": [
+   "anim/ground1"
+  ],
+  "matblock": [
+   "anim/hit"
+  ],
+  "matchagotcha": [
+   "anim/grass2"
+  ],
+  "maxairstream": [
+   "anim/flying1"
+  ],
+  "maxdarkness": [
+   "anim/taunt"
+  ],
+  "maxflare": [
+   "anim/fire2"
+  ],
+  "maxflutterby": [
+   "anim/ground1"
+  ],
+  "maxgeyser": [
+   "anim/water1"
+  ],
+  "maxguard": [
+   "anim/dragon2"
+  ],
+  "maxhailstorm": [
+   "anim/wind8"
+  ],
+  "maxknuckle": [
+   "anim/hit"
+  ],
+  "maxlightning": [
+   "anim/paralyze1"
+  ],
+  "maxmindstorm": [
+   "anim/saint7"
+  ],
+  "maxooze": [
+   "anim/ground1"
+  ],
+  "maxovergrowth": [
+   "anim/grass2"
+  ],
+  "maxphantasm": [
+   "anim/fog2"
+  ],
+  "maxquake": [
+   "anim/rock1"
+  ],
+  "maxrockfall": [
+   "anim/rock2"
+  ],
+  "maxstarfall": [
+   "anim/love"
+  ],
+  "maxsteelspike": [
+   "anim/dragon2"
+  ],
+  "maxstrike": [
+   "anim/dragon2"
+  ],
+  "maxwyrmwind": [
+   "anim/dragon2"
+  ],
+  "meanlook": [
+   "anim/scaryface"
+  ],
+  "meditate": [
+   "anim/dragon2"
+  ],
+  "mefirst": [
+   "anim/move1"
+  ],
+  "megadrain": [
+   "anim/absorb2",
+   "anim/recovery"
+  ],
+  "megahorn": [
+   "anim/iron2"
+  ],
+  "megakick": [
+   "anim/hit"
+  ],
+  "megapunch": [
+   "anim/hit"
+  ],
+  "memento": [
+   "anim/dragon2",
+   "anim/darkness6",
+   "anim/psych_up"
+  ],
+  "menacingmoonrazemaelstrom": [
+   "anim/fog2"
+  ],
+  "metalburst": [
+   "anim/dragon2"
+  ],
+  "metalclaw": [
+   "anim/iron5"
+  ],
+  "metalsound": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "meteorassault": [
+   "anim/hit"
+  ],
+  "meteorbeam": [
+   "anim/rock2"
+  ],
+  "meteormash": [
+   "anim/dragon2",
+   "anim/iron4",
+   "anim/psych_up"
+  ],
+  "metronome": [
+   "anim/bubble1"
+  ],
+  "mightycleave": [
+   "anim/rock2"
+  ],
+  "milkdrink": [
+   "anim/wish"
+  ],
+  "mimic": [
+   "anim/bubble1"
+  ],
+  "mindblown": [
+   "anim/fire2"
+  ],
+  "mindreader": [
+   "anim/scaryface"
+  ],
+  "minimize": [
+   "anim/move1"
+  ],
+  "miracleeye": [
+   "anim/scaryface"
+  ],
+  "mirrorcoat": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "mirrormove": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "mirrorshot": [
+   "anim/dragon2"
+  ],
+  "mist": [
+   "anim/ground1"
+  ],
+  "mistball": [
+   "anim/psychic4",
+   "anim/psychic3"
+  ],
+  "mistyexplosion": [
+   "anim/love"
+  ],
+  "mistyterrain": [
+   "anim/saint6",
+   "anim/saint8"
+  ],
+  "moonblast": [
+   "anim/harden",
+   "anim/refresh",
+   "anim/saint8"
+  ],
+  "moongeistbeam": [
+   "anim/fog2"
+  ],
+  "moonlight": [
+   "anim/wish"
+  ],
+  "morningsun": [
+   "anim/wish"
+  ],
+  "mortalspin": [
+   "anim/ground1"
+  ],
+  "mountaingale": [
+   "anim/wind8"
+  ],
+  "mudbomb": [
+   "anim/ground1"
+  ],
+  "muddywater": [
+   "anim/water1"
+  ],
+  "mudshot": [
+   "anim/water1"
+  ],
+  "mudslap": [
+   "anim/ground1"
+  ],
+  "mudsport": [
+   "anim/splat"
+  ],
+  "multiattack": [
+   "anim/dragon2"
+  ],
+  "mysticalfire": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "mysticalpower": [
+   "anim/saint7"
+  ],
+  "nastyplot": [
+   "anim/dragon2"
+  ],
+  "naturalgift": [
+   "anim/dragon2"
+  ],
+  "naturepower": [
+   "anim/dragon2"
+  ],
+  "naturesmadness": [
+   "anim/thunder3",
+   "anim/electric1"
+  ],
+  "needlearm": [
+   "anim/grass1",
+   "anim/grass2"
+  ],
+  "neverendingnightmare": [
+   "anim/fog2"
+  ],
+  "nightdaze": [
+   "anim/taunt"
+  ],
+  "nightmare": [
+   "anim/fog2"
+  ],
+  "nightshade": [
+   "anim/fog2"
+  ],
+  "nightslash": [
+   "anim/gust",
+   "anim/hit"
+  ],
+  "nihillight": [
+   "anim/dragon2"
+  ],
+  "nobleroar": [
+   "anim/dragon2"
+  ],
+  "noretreat": [
+   "anim/hit"
+  ],
+  "noxioustorque": [
+   "anim/ground1"
+  ],
+  "nuzzle": [
+   "anim/fog2",
+   "anim/hit",
+   "anim/paralyze1"
+  ],
+  "oblivionwing": [
+   "anim/flying1"
+  ],
+  "obstruct": [
+   "anim/taunt"
+  ],
+  "oceanicoperetta": [
+   "anim/water1"
+  ],
+  "octazooka": [
+   "anim/follow_me",
+   "anim/water5"
+  ],
+  "octolock": [
+   "anim/hit"
+  ],
+  "odorsleuth": [
+   "anim/leer"
+  ],
+  "ominouswind": [
+   "anim/wind1",
+   "anim/nightshade"
+  ],
+  "orderup": [
+   "anim/dragon2"
+  ],
+  "originpulse": [
+   "anim/harden",
+   "anim/refresh",
+   "anim/saint8"
+  ],
+  "outrage": [
+   "anim/dragon2",
+   "anim/fire2",
+   "anim/fire3"
+  ],
+  "overdrive": [
+   "anim/paralyze1"
+  ],
+  "overheat": [
+   "anim/fire2",
+   "anim/fire3",
+   "anim/fire4"
+  ],
+  "painsplit": [
+   "anim/dragon2"
+  ],
+  "paraboliccharge": [
+   "anim/paralyze1"
+  ],
+  "partingshot": [
+   "anim/taunt"
+  ],
+  "payback": [
+   "anim/taunt"
+  ],
+  "payday": [
+   "anim/move1",
+   "anim/money"
+  ],
+  "peck": [
+   "anim/normal1"
+  ],
+  "perishsong": [
+   "anim/perishsong"
+  ],
+  "petalblizzard": [
+   "anim/grass2",
+   "anim/wind1",
+   "anim/grass1"
+  ],
+  "petaldance": [
+   "anim/dragon2",
+   "anim/grass1",
+   "anim/wind1"
+  ],
+  "phantomforce": [
+   "anim/fog2"
+  ],
+  "photongeyser": [
+   "anim/saint7"
+  ],
+  "pikapapow": [
+   "anim/paralyze1"
+  ],
+  "pinmissile": [
+   "anim/throw",
+   "anim/normal1"
+  ],
+  "plasmafists": [
+   "anim/paralyze1"
+  ],
+  "playnice": [
+   "anim/dragon2"
+  ],
+  "playrough": [
+   "anim/love",
+   "anim/normal2"
+  ],
+  "pluck": [
+   "anim/flying1"
+  ],
+  "poisonfang": [
+   "anim/super_fang",
+   "anim/poison"
+  ],
+  "poisongas": [
+   "anim/ground1"
+  ],
+  "poisonjab": [
+   "anim/hit",
+   "anim/poison1"
+  ],
+  "poisonpowder": [
+   "anim/ground1"
+  ],
+  "poisonsting": [
+   "anim/normal1",
+   "anim/poison"
+  ],
+  "poisontail": [
+   "anim/normal4",
+   "anim/poison"
+  ],
+  "pollenpuff": [
+   "anim/ground1"
+  ],
+  "poltergeist": [
+   "anim/fog2"
+  ],
+  "populationbomb": [
+   "anim/dragon2"
+  ],
+  "pounce": [
+   "anim/ground1"
+  ],
+  "pound": [
+   "anim/move1"
+  ],
+  "powder": [
+   "anim/ground1"
+  ],
+  "powdersnow": [
+   "anim/wind8",
+   "anim/ice1"
+  ],
+  "powergem": [
+   "anim/psych_up",
+   "anim/rock2"
+  ],
+  "powershift": [
+   "anim/dragon2"
+  ],
+  "powersplit": [
+   "anim/saint7"
+  ],
+  "powerswap": [
+   "anim/saint7"
+  ],
+  "powertrick": [
+   "anim/saint7"
+  ],
+  "powertrip": [
+   "anim/dragon2"
+  ],
+  "poweruppunch": [
+   "anim/hit"
+  ],
+  "powerwhip": [
+   "anim/grass2"
+  ],
+  "precipiceblades": [
+   "anim/rock1",
+   "anim/rock2"
+  ],
+  "present": [
+   "anim/saint9",
+   "anim/wind7"
+  ],
+  "prismaticlaser": [
+   "anim/saint7"
+  ],
+  "protect": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "psybeam": [
+   "anim/psychic1"
+  ],
+  "psyblade": [
+   "anim/saint7"
+  ],
+  "psychic": [
+   "anim/psychic1",
+   "anim/psychic2"
+  ],
+  "psychicfangs": [
+   "anim/super_fang",
+   "anim/psychic3"
+  ],
+  "psychicnoise": [
+   "anim/saint7"
+  ],
+  "psychicterrain": [
+   "anim/psychic4",
+   "anim/saint8"
+  ],
+  "psychoboost": [
+   "anim/psychic1",
+   "anim/psychic2",
+   "anim/dragon2"
+  ],
+  "psychocut": [
+   "anim/normal3",
+   "anim/ground1",
+   "anim/fog2"
+  ],
+  "psychoshift": [
+   "anim/saint7"
+  ],
+  "psychup": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "psyshieldbash": [
+   "anim/saint7"
+  ],
+  "psyshock": [
+   "anim/dragon2",
+   "anim/psychic3",
+   "anim/psych_up"
+  ],
+  "psystrike": [
+   "anim/dragon2",
+   "anim/psychic3",
+   "anim/psych_up"
+  ],
+  "psywave": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "pulverizingpancake": [
+   "anim/dragon2"
+  ],
+  "punishment": [
+   "anim/taunt"
+  ],
+  "purify": [
+   "anim/ground1"
+  ],
+  "pursuit": [
+   "anim/move1"
+  ],
+  "pyroball": [
+   "anim/fire2"
+  ],
+  "quash": [
+   "anim/taunt"
+  ],
+  "quickattack": [
+   "anim/move1"
+  ],
+  "quickguard": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "quiverdance": [
+   "anim/psychic1",
+   "anim/psychic2",
+   "anim/dragon2"
+  ],
+  "rage": [
+   "anim/normal2"
+  ],
+  "ragefist": [
+   "anim/fog2"
+  ],
+  "ragepowder": [
+   "anim/ground1"
+  ],
+  "ragingbull": [
+   "anim/dragon2"
+  ],
+  "ragingfury": [
+   "anim/fire2"
+  ],
+  "raindance": [
+   "anim/bubble2",
+   "anim/flying1"
+  ],
+  "rapidspin": [
+   "anim/psych_up"
+  ],
+  "razorleaf": [
+   "anim/grass2",
+   "anim/wind1",
+   "anim/grass1"
+  ],
+  "razorshell": [
+   "anim/bubble2",
+   "anim/normal3"
+  ],
+  "razorwind": [
+   "anim/wind8"
+  ],
+  "razorwindcharge": [
+   "anim/wind8"
+  ],
+  "recover": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "recycle": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "reflect": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "reflecttype": [
+   "anim/dragon2"
+  ],
+  "refresh": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "relicsong": [
+   "anim/dragon2"
+  ],
+  "rest": [
+   "anim/saint7"
+  ],
+  "retaliate": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "return": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "revelationdance": [
+   "anim/dragon2"
+  ],
+  "revenge": [
+   "anim/hit"
+  ],
+  "reversal": [
+   "anim/hit"
+  ],
+  "revivalblessing": [
+   "anim/dragon2"
+  ],
+  "risingvoltage": [
+   "anim/paralyze1"
+  ],
+  "roar": [
+   "anim/dragon2"
+  ],
+  "roaroftime": [
+   "anim/psych_up",
+   "anim/water1"
+  ],
+  "rockblast": [
+   "anim/whirlwind",
+   "anim/rock2"
+  ],
+  "rockclimb": [
+   "anim/normal1"
+  ],
+  "rockpolish": [
+   "anim/dragon2"
+  ],
+  "rockslide": [
+   "anim/rock2"
+  ],
+  "rocksmash": [
+   "anim/hit"
+  ],
+  "rockthrow": [
+   "anim/rock2"
+  ],
+  "rocktomb": [
+   "anim/rock2"
+  ],
+  "rockwrecker": [
+   "anim/psych_up",
+   "anim/rock2"
+  ],
+  "roleplay": [
+   "anim/saint7"
+  ],
+  "rollingkick": [
+   "anim/hit"
+  ],
+  "rollout": [
+   "anim/rock1"
+  ],
+  "roost": [
+   "anim/wish"
+  ],
+  "rototiller": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "round": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "ruination": [
+   "anim/taunt"
+  ],
+  "sacredfire": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "sacredsword": [
+   "anim/hit"
+  ],
+  "safeguard": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "saltcure": [
+   "anim/rock2"
+  ],
+  "sandattack": [
+   "anim/ground1"
+  ],
+  "sandsearstorm": [
+   "anim/rock1"
+  ],
+  "sandstorm": [
+   "anim/earth4",
+   "anim/flying1"
+  ],
+  "sandtomb": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "sappyseed": [
+   "anim/grass2"
+  ],
+  "savagespinout": [
+   "anim/ground1"
+  ],
+  "scald": [
+   "anim/water1"
+  ],
+  "scaleshot": [
+   "anim/dragon2"
+  ],
+  "scaryface": [
+   "anim/scaryface"
+  ],
+  "scorchingsands": [
+   "anim/rock1"
+  ],
+  "scratch": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "screech": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "searingshot": [
+   "anim/fire2"
+  ],
+  "searingsunrazesmash": [
+   "anim/dragon2"
+  ],
+  "secretpower": [
+   "anim/dragon2"
+  ],
+  "secretsword": [
+   "anim/hit"
+  ],
+  "seedbomb": [
+   "anim/throw",
+   "anim/explosion1"
+  ],
+  "seedflare": [
+   "anim/grass2"
+  ],
+  "seismictoss": [
+   "anim/hit"
+  ],
+  "selfdestruct": [
+   "anim/superdamage",
+   "anim/explosion1"
+  ],
+  "shadowball": [
+   "anim/ghost1",
+   "anim/ghost3",
+   "anim/ghost2"
+  ],
+  "shadowblast": [
+   "anim/dragon2",
+   "anim/dragon1"
+  ],
+  "shadowblitz": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "shadowbolt": [
+   "anim/thunder3",
+   "anim/electric1"
+  ],
+  "shadowbone": [
+   "anim/fog2"
+  ],
+  "shadowbreak": [
+   "anim/dragon2",
+   "anim/superdamage",
+   "anim/rock1"
+  ],
+  "shadowchill": [
+   "anim/ice8",
+   "anim/ice1"
+  ],
+  "shadowclaw": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "shadowdown": [
+   "anim/normal3",
+   "anim/ground1",
+   "anim/fog2"
+  ],
+  "shadowend": [
+   "anim/wind1",
+   "anim/normal1"
+  ],
+  "shadowfire": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "shadowforce": [
+   "anim/ghost1",
+   "anim/nightshade"
+  ],
+  "shadowforceattack": [
+   "anim/ghost3",
+   "anim/comet_punch"
+  ],
+  "shadowforcehide": [
+   "anim/ghost1",
+   "anim/nightshade"
+  ],
+  "shadowhalf": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "shadowhold": [
+   "anim/wrap"
+  ],
+  "shadowmist": [
+   "anim/wind1",
+   "anim/nightshade"
+  ],
+  "shadowpanic": [
+   "anim/psychic1",
+   "anim/psychic2"
+  ],
+  "shadowpunch": [
+   "anim/fog2",
+   "anim/fire3"
+  ],
+  "shadowrave": [
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "shadowrush": [
+   "anim/iron2",
+   "anim/ground1",
+   "anim/psychic3"
+  ],
+  "shadowshed": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "shadowsky": [
+   "anim/bubble2",
+   "anim/flying1"
+  ],
+  "shadowsneak": [
+   "anim/move1"
+  ],
+  "shadowstorm": [
+   "anim/wind8"
+  ],
+  "shadowwave": [
+   "anim/normal5"
+  ],
+  "sharpen": [
+   "anim/dragon2"
+  ],
+  "shatteredpsyche": [
+   "anim/saint7"
+  ],
+  "shedtail": [
+   "anim/dragon2"
+  ],
+  "sheercold": [
+   "anim/wind8"
+  ],
+  "shellsidearm": [
+   "anim/ground1"
+  ],
+  "shellsmash": [
+   "anim/dragon2"
+  ],
+  "shelltrap": [
+   "anim/fire2"
+  ],
+  "shelter": [
+   "anim/dragon2"
+  ],
+  "shiftgear": [
+   "anim/dragon2"
+  ],
+  "shockwave": [
+   "anim/paralyze1"
+  ],
+  "shoreup": [
+   "anim/rock1"
+  ],
+  "signalbeam": [
+   "anim/psych_up",
+   "anim/ghost3"
+  ],
+  "silktrap": [
+   "anim/ground1"
+  ],
+  "silverwind": [
+   "anim/silverwind",
+   "anim/wind8"
+  ],
+  "simplebeam": [
+   "anim/dragon2"
+  ],
+  "sing": [
+   "anim/sing"
+  ],
+  "sinisterarrowraid": [
+   "anim/fog2"
+  ],
+  "sizzlyslide": [
+   "anim/fire2"
+  ],
+  "sketch": [
+   "anim/move1"
+  ],
+  "skillswap": [
+   "anim/saint7"
+  ],
+  "skittersmack": [
+   "anim/ground1"
+  ],
+  "skullbash": [
+   "anim/dragon2"
+  ],
+  "skyattack": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "skyattackatk": [
+   "anim/wind1",
+   "anim/normal1"
+  ],
+  "skyattackcharge": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "skydrop": [
+   "anim/wind1",
+   "anim/normal1",
+   "anim/refresh"
+  ],
+  "skydropdown": [
+   "anim/wind1"
+  ],
+  "skydropup": [
+   "anim/wind1",
+   "anim/normal1",
+   "anim/refresh"
+  ],
+  "skyuppercut": [
+   "anim/hit"
+  ],
+  "slackoff": [
+   "anim/wish"
+  ],
+  "slam": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "slash": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "sleeppowder": [
+   "anim/ground1"
+  ],
+  "sleeptalk": [
+   "anim/dragon2"
+  ],
+  "sludge": [
+   "anim/ground1"
+  ],
+  "sludgebomb": [
+   "anim/ground1"
+  ],
+  "sludgewave": [
+   "anim/ground1"
+  ],
+  "smackdown": [
+   "anim/rock2"
+  ],
+  "smartstrike": [
+   "anim/iron2"
+  ],
+  "smellingsalts": [
+   "anim/hit"
+  ],
+  "smog": [
+   "anim/ground1"
+  ],
+  "smokescreen": [
+   "anim/ground1"
+  ],
+  "snaptrap": [
+   "anim/grass2"
+  ],
+  "snarl": [
+   "anim/normal2"
+  ],
+  "snatch": [
+   "anim/scaryface"
+  ],
+  "snipeshot": [
+   "anim/water1"
+  ],
+  "snore": [
+   "anim/normal2"
+  ],
+  "snowscape": [
+   "anim/wind8"
+  ],
+  "soak": [
+   "anim/water1",
+   "anim/bubble2"
+  ],
+  "softboiled": [
+   "anim/wish"
+  ],
+  "solarbeam": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "solarbeamatk": [
+   "anim/refresh",
+   "anim/psych_up"
+  ],
+  "solarbeamcharge": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "solarblade": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "solarbladeatk": [
+   "anim/absorb2",
+   "anim/saint8",
+   "anim/normal4"
+  ],
+  "solarbladecharge": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "sonicboom": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "soulstealing7starstrike": [
+   "anim/fog2"
+  ],
+  "spacialrend": [
+   "anim/darkness6",
+   "anim/darkness2",
+   "anim/dragon2"
+  ],
+  "spark": [
+   "anim/fog2",
+   "anim/hit",
+   "anim/paralyze1"
+  ],
+  "sparklingaria": [
+   "anim/water1"
+  ],
+  "sparklyswirl": [
+   "anim/love"
+  ],
+  "spectralthief": [
+   "anim/fog2"
+  ],
+  "speedswap": [
+   "anim/saint7"
+  ],
+  "spicyextract": [
+   "anim/grass2"
+  ],
+  "spiderweb": [
+   "anim/water1",
+   "anim/splat"
+  ],
+  "spikecannon": [
+   "anim/normal1"
+  ],
+  "spikes": [
+   "anim/throw",
+   "anim/spikes1"
+  ],
+  "spikyshield": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "spinout": [
+   "anim/dragon2"
+  ],
+  "spiritbreak": [
+   "anim/love"
+  ],
+  "spiritshackle": [
+   "anim/fog2"
+  ],
+  "spite": [
+   "anim/ghost2",
+   "anim/ghost3"
+  ],
+  "spitup": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "splash": [
+   "anim/bubble1"
+  ],
+  "splinteredstormshards": [
+   "anim/rock2"
+  ],
+  "splishysplash": [
+   "anim/water1"
+  ],
+  "spore": [
+   "anim/ground1"
+  ],
+  "spotlight": [
+   "anim/taunt"
+  ],
+  "springtidestorm": [
+   "anim/love"
+  ],
+  "stealthrock": [
+   "anim/throw",
+   "anim/spikes2"
+  ],
+  "steameruption": [
+   "anim/water1"
+  ],
+  "steamroller": [
+   "anim/psych_up"
+  ],
+  "steelbeam": [
+   "anim/dragon2"
+  ],
+  "steelroller": [
+   "anim/dragon2"
+  ],
+  "steelwing": [
+   "anim/flying1",
+   "anim/metal"
+  ],
+  "stickyweb": [
+   "anim/throw",
+   "anim/splat"
+  ],
+  "stockpile": [
+   "anim/absorb2",
+   "anim/saint8"
+  ],
+  "stokedsparksurfer": [
+   "anim/paralyze1"
+  ],
+  "stomp": [
+   "anim/hit"
+  ],
+  "stompingtantrum": [
+   "anim/hit",
+   "anim/rock1",
+   "anim/earth4"
+  ],
+  "stoneaxe": [
+   "anim/rock2"
+  ],
+  "stoneedge": [
+   "anim/rock1",
+   "anim/rock2"
+  ],
+  "storedpower": [
+   "anim/saint7"
+  ],
+  "stormthrow": [
+   "anim/hit"
+  ],
+  "strangesteam": [
+   "anim/love"
+  ],
+  "strength": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "strengthsap": [
+   "anim/grass2"
+  ],
+  "stringshot": [
+   "anim/water1",
+   "anim/splat"
+  ],
+  "struggle": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "strugglebug": [
+   "anim/ground1",
+   "anim/normal2"
+  ],
+  "stuffcheeks": [
+   "anim/dragon2"
+  ],
+  "stunspore": [
+   "anim/ground1"
+  ],
+  "submission": [
+   "anim/hit"
+  ],
+  "substitute": [
+   "anim/substitute"
+  ],
+  "subzeroslammer": [
+   "anim/wind8"
+  ],
+  "suckerpunch": [
+   "anim/taunt"
+  ],
+  "sunnyday": [
+   "anim/fire2",
+   "anim/flying1"
+  ],
+  "sunsteelstrike": [
+   "anim/dragon2"
+  ],
+  "supercellslam": [
+   "anim/paralyze1"
+  ],
+  "superfang": [
+   "anim/dragon2"
+  ],
+  "superpower": [
+   "anim/dragon2"
+  ],
+  "supersonic": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "supersonicskystrike": [
+   "anim/flying1"
+  ],
+  "surf": [
+   "anim/water1"
+  ],
+  "surgingstrikes": [
+   "anim/water1"
+  ],
+  "swagger": [
+   "anim/taunt"
+  ],
+  "swallow": [
+   "anim/wish"
+  ],
+  "sweetkiss": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "sweetscent": [
+   "anim/whirlwind"
+  ],
+  "swift": [
+   "anim/whirlwind"
+  ],
+  "switcheroo": [
+   "anim/saint7"
+  ],
+  "swordsdance": [
+   "anim/dragon2"
+  ],
+  "synchronoise": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "synthesis": [
+   "anim/wish"
+  ],
+  "syrupbomb": [
+   "anim/grass2"
+  ],
+  "tachyoncutter": [
+   "anim/dragon2"
+  ],
+  "tackle": [
+   "anim/normal1"
+  ],
+  "tailglow": [
+   "anim/dragon2"
+  ],
+  "tailslap": [
+   "anim/normal4"
+  ],
+  "tailwhip": [
+   "anim/move1"
+  ],
+  "tailwind": [
+   "anim/wind8"
+  ],
+  "takedown": [
+   "anim/takedowncharge",
+   "anim/takedownattack"
+  ],
+  "takeheart": [
+   "anim/saint7"
+  ],
+  "tarshot": [
+   "anim/rock2"
+  ],
+  "taunt": [
+   "anim/taunt"
+  ],
+  "tearfullook": [
+   "anim/love",
+   "anim/lovesplatter"
+  ],
+  "teatime": [
+   "anim/dragon2"
+  ],
+  "technoblast": [
+   "anim/dragon2"
+  ],
+  "tectonicrage": [
+   "anim/rock1"
+  ],
+  "teeterdance": [
+   "anim/move1"
+  ],
+  "telekinesis": [
+   "anim/psychic1",
+   "anim/psychic2",
+   "anim/dragon2"
+  ],
+  "teleport": [
+   "anim/saint7"
+  ],
+  "temperflare": [
+   "anim/fire2"
+  ],
+  "terablast": [
+   "anim/dragon2"
+  ],
+  "terastarstorm": [
+   "anim/dragon2"
+  ],
+  "terrainpulse": [
+   "anim/dragon2"
+  ],
+  "thief": [
+   "anim/normal1"
+  ],
+  "thousandarrows": [
+   "anim/rock1"
+  ],
+  "thousandwaves": [
+   "anim/rock1"
+  ],
+  "thrash": [
+   "anim/dragon2",
+   "anim/fire2",
+   "anim/fire3"
+  ],
+  "throatchop": [
+   "anim/ground1",
+   "anim/slash10",
+   "anim/normal3"
+  ],
+  "thunder": [
+   "anim/paralyze1"
+  ],
+  "thunderbolt": [
+   "anim/thunder3",
+   "anim/electric1"
+  ],
+  "thundercage": [
+   "anim/paralyze1"
+  ],
+  "thunderclap": [
+   "anim/paralyze1"
+  ],
+  "thunderfang": [
+   "anim/super_fang",
+   "anim/paralyze1"
+  ],
+  "thunderouskick": [
+   "anim/hit"
+  ],
+  "thunderpunch": [
+   "anim/fog2",
+   "anim/hit",
+   "anim/thunder3"
+  ],
+  "thundershock": [
+   "anim/thunder3",
+   "anim/electric1"
+  ],
+  "thunderwave": [
+   "anim/thunder3",
+   "anim/electric1"
+  ],
+  "tickle": [
+   "anim/dragon2"
+  ],
+  "tidyup": [
+   "anim/dragon2"
+  ],
+  "topsyturvy": [
+   "anim/taunt"
+  ],
+  "torchsong": [
+   "anim/fire2"
+  ],
+  "torment": [
+   "anim/taunt"
+  ],
+  "toxic": [
+   "anim/ground1"
+  ],
+  "toxicspikes": [
+   "anim/throw",
+   "anim/spikes1"
+  ],
+  "toxicthread": [
+   "anim/ground1"
+  ],
+  "trailblaze": [
+   "anim/grass2"
+  ],
+  "transform": [
+   "anim/saint4",
+   "anim/psych_up"
+  ],
+  "triattack": [
+   "anim/psych_up"
+  ],
+  "trick": [
+   "anim/psychic1",
+   "anim/psychic2",
+   "anim/dragon2"
+  ],
+  "trickortreat": [
+   "anim/fog2"
+  ],
+  "trickroom": [
+   "anim/psychic4",
+   "anim/saint8"
+  ],
+  "triplearrows": [
+   "anim/hit"
+  ],
+  "tripleaxel": [
+   "anim/wind8"
+  ],
+  "tripledive": [
+   "anim/water1"
+  ],
+  "triplekick": [
+   "anim/hit"
+  ],
+  "tropkick": [
+   "anim/grass2"
+  ],
+  "trumpcard": [
+   "anim/dragon2",
+   "anim/superdamage",
+   "anim/rock1"
+  ],
+  "twinbeam": [
+   "anim/saint7"
+  ],
+  "twineedle": [
+   "anim/normal1"
+  ],
+  "twinkletackle": [
+   "anim/love"
+  ],
+  "twister": [
+   "anim/wind8"
+  ],
+  "upperhand": [
+   "anim/hit"
+  ],
+  "uproar": [
+   "anim/harden",
+   "anim/psych_up",
+   "anim/comet_punch"
+  ],
+  "uturn": [
+   "anim/move1"
+  ],
+  "vacuumwave": [
+   "anim/normal5"
+  ],
+  "vcreate": [
+   "anim/fire2"
+  ],
+  "veeveevolley": [
+   "anim/dragon2"
+  ],
+  "venomdrench": [
+   "anim/ground1"
+  ],
+  "venoshock": [
+   "anim/ground1"
+  ],
+  "vicegrip": [
+   "anim/wrap"
+  ],
+  "victorydance": [
+   "anim/hit"
+  ],
+  "vinewhip": [
+   "anim/normal4"
+  ],
+  "visegrip": [
+   "anim/dragon2"
+  ],
+  "vitalthrow": [
+   "anim/hit"
+  ],
+  "voltswitch": [
+   "anim/electric2",
+   "anim/electric1"
+  ],
+  "volttackle": [
+   "anim/electric1",
+   "anim/electric2",
+   "anim/thunder1"
+  ],
+  "wakeupslap": [
+   "anim/hit"
+  ],
+  "waterfall": [
+   "anim/water1"
+  ],
+  "watergun": [
+   "anim/water1"
+  ],
+  "waterpledge": [
+   "anim/water1"
+  ],
+  "waterpulse": [
+   "anim/bubble2",
+   "anim/bubble1"
+  ],
+  "watershuriken": [
+   "anim/water1"
+  ],
+  "watersport": [
+   "anim/bubble1"
+  ],
+  "waterspout": [
+   "anim/water1",
+   "anim/water5"
+  ],
+  "wavecrash": [
+   "anim/water1"
+  ],
+  "weatherball": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "weatherballdown": [
+   "anim/wind1"
+  ],
+  "weatherballup": [
+   "anim/refresh",
+   "anim/flying2"
+  ],
+  "whirlpool": [
+   "anim/water1"
+  ],
+  "whirlwind": [
+   "anim/whirlwind"
+  ],
+  "wickedblow": [
+   "anim/taunt"
+  ],
+  "wickedtorque": [
+   "anim/taunt"
+  ],
+  "wideguard": [
+   "anim/psychic2",
+   "anim/shine1"
+  ],
+  "wildboltstorm": [
+   "anim/paralyze1"
+  ],
+  "wildcharge": [
+   "anim/electric1",
+   "anim/electric2",
+   "anim/thunder1"
+  ],
+  "willowisp": [
+   "anim/fire2",
+   "anim/smokescreen"
+  ],
+  "wingattack": [
+   "anim/flying1",
+   "anim/normal1"
+  ],
+  "wish": [
+   "anim/swords_dance"
+  ],
+  "wishcast": [
+   "anim/wish"
+  ],
+  "withdraw": [
+   "anim/bubble1",
+   "anim/bubble2"
+  ],
+  "wonderroom": [
+   "anim/psychic4",
+   "anim/saint8"
+  ],
+  "woodhammer": [
+   "anim/iron2",
+   "anim/ground1",
+   "anim/grass1"
+  ],
+  "workup": [
+   "anim/dragon2"
+  ],
+  "worryseed": [
+   "anim/poison1"
+  ],
+  "wrap": [
+   "anim/wrap"
+  ],
+  "wringout": [
+   "anim/wrap"
+  ],
+  "xscissor": [
+   "anim/ground1",
+   "anim/normal3"
+  ],
+  "yawn": [
+   "anim/dragon2"
+  ],
+  "zapcannon": [
+   "anim/paralyze1",
+   "anim/electric1"
+  ],
+  "zenheadbutt": [
+   "anim/iron2",
+   "anim/ground1",
+   "anim/psychic3"
+  ],
+  "zingzap": [
+   "anim/electric2",
+   "anim/electric1"
+  ],
+  "zippyzap": [
+   "anim/paralyze1"
+  ]
+ }
+}

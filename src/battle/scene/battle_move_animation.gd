@@ -9,6 +9,32 @@ extends RefCounted
 const BACKDROP_ALPHA := 0.45
 const BACKDROP_IMAGE_ALPHA := 0.7
 static var _moves: Dictionary = {}
+## Movimiento → sonidos de su animación (data/battle_motion_sounds.json, sacados de EBDX).
+static var _sounds: Dictionary = {}
+
+
+## Sonidos de la animación de `id` (ids de AudioManager.play_se, como "anim/bite").
+static func sounds(id: StringName) -> Array:
+	if _sounds.is_empty():
+		var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/battle_motion_sounds.json"))
+		_sounds = parsed.get("moves", {}) if parsed is Dictionary else {"_": []}
+	return _sounds.get(String(id), [])
+
+
+## El primero suena al empezar y los demás, repartidos a lo largo de la animación.
+static func _play_sounds(parent: Node, id: StringName, duration: float) -> void:
+	var list := sounds(id)
+	if list.is_empty() or not is_instance_valid(parent) or not parent.is_inside_tree():
+		return
+	var audio: Node = parent.get_tree().root.get_node_or_null(^"AudioManager")
+	if audio == null:
+		return
+	for i: int in list.size():
+		var sound := StringName(str(list[i]))
+		if i == 0:
+			audio.play_se(sound)
+		else:
+			parent.get_tree().create_timer(duration * i / list.size()).timeout.connect(func() -> void: audio.play_se(sound))
 
 static func sequence(id: StringName) -> Dictionary:
 	if _moves.is_empty(): _moves = JSON.parse_string(FileAccess.get_file_as_string("res://data/battle_motion_moves.json"))
@@ -19,6 +45,7 @@ static func play(parent: Node, user: BattlePokemonSprite, target: BattlePokemonS
 	if spec.is_empty(): return false
 	if quick: return true
 	var duration := float(spec.duration)
+	_play_sounds(parent, StringName(details.get("move", "")), duration)
 	var backdrop := _backdrop(parent, spec)
 	if backdrop != null:
 		await _fade(backdrop, BACKDROP_IMAGE_ALPHA if backdrop is Sprite2D else BACKDROP_ALPHA, 0.15)
