@@ -1,21 +1,35 @@
 extends BattleEffect
-## Cargando un movimiento de dos turnos. Si está en el aire (Bote, Vuelo), solo le alcanzan los
-## movimientos que pueden golpear a quien vuela.
+## Cargando un movimiento de dos turnos. Si está en el aire (Bote, Vuelo), bajo tierra (Excavar), bajo
+## el agua (Buceo) o desaparecido (Golpe Umbrío, Golpe Fantasma), solo le alcanzan algunos movimientos,
+## y algunos de esos le hacen el doble.
 
-const HITS_AIRBORNE: Array[StringName] = [&"gust", &"twister", &"thunder", &"hurricane", &"skyuppercut", &"smackdown", &"thousandarrows"]
+## Lugar → movimientos que le alcanzan.
+const HITS := {
+	"air": [&"gust", &"twister", &"thunder", &"hurricane", &"skyuppercut", &"smackdown", &"thousandarrows"],
+	"underground": [&"earthquake", &"magnitude", &"fissure"],
+	"underwater": [&"surf", &"whirlpool"],
+	"shadow": [],
+}
+## Lugar → movimientos que le hacen el doble.
+const DOUBLE := {
+	"air": [&"gust", &"twister"],
+	"underground": [&"earthquake", &"magnitude"],
+	"underwater": [&"surf", &"whirlpool"],
+}
 
 
-func on_try_hit(engine: BattleEngine, target: Battler, state: Dictionary, user: Battler, move: MoveData) -> bool:
-	if str(state.get("invulnerable", "")) != "air" or move.id in HITS_AIRBORNE:
+func on_try_hit(engine: BattleEngine, _target: Battler, state: Dictionary, user: Battler, move: MoveData) -> bool:
+	var place := str(state.get("invulnerable", ""))
+	if place == "" or not HITS.has(place) or move.id in HITS[place]:
 		return true
 	engine.message(tr("¡El ataque %s ha fallado!") % engine.of_name(user))
 	return false
 
 
-## Tornado y Ciclón hacen el doble de daño a quien está en el aire.
 func damage_modifier(_engine: BattleEngine, _user: Battler, target: Battler, move: MoveData, _crit: bool) -> float:
 	var state: Dictionary = target.volatiles.get(&"twoturnmove", {})
-	if str(state.get("invulnerable", "")) == "air" and move.id in [&"gust", &"twister"]:
+	var place := str(state.get("invulnerable", ""))
+	if DOUBLE.has(place) and move.id in DOUBLE[place]:
 		return 2.0
 	return 1.0
 

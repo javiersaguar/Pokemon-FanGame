@@ -69,18 +69,22 @@ static func chain(modifiers: Array) -> float:
 ## `opts` (todo opcional, lo pone el motor con los efectos de la Fase 9): power (potencia base),
 ## weather (multiplicador del clima), final (Array de multiplicadores finales: Reflejo...),
 ## atk_mod / def_mod (multiplicadores de las estadísticas: Tormenta Arena, Nieve...).
+## Los movimientos con script pueden cambiar de quién es el ataque ("attacker": Juego Sucio usa el del
+## objetivo), qué estadísticas se usan ("atk_stat", "def_stat": Psicocarga, Plancha Corporal) y la
+## eficacia ("effectiveness": Liofilización).
 static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit: bool, roll: int, opts: Dictionary = {}) -> int:
 	var physical := move.is_physical()
-	var atk_stat := &"atk" if physical else &"spa"
-	var def_stat := &"def" if physical else &"spd"
-	var atk_stage: int = attacker.boosts[atk_stat]
+	var atk_stat: StringName = opts.get("atk_stat", &"atk" if physical else &"spa")
+	var def_stat: StringName = opts.get("def_stat", &"def" if physical else &"spd")
+	var owner: Battler = opts.get("attacker", attacker)
+	var atk_stage: int = owner.boosts[atk_stat]
 	var def_stage: int = defender.boosts[def_stat]
 	if crit:
 		atk_stage = maxi(atk_stage, 0)
 		def_stage = mini(def_stage, 0)
 	if move.ignore_defensive:
 		def_stage = 0
-	var attack := attacker.boosted_stat(atk_stat, atk_stage)
+	var attack := owner.boosted_stat(atk_stat, atk_stage)
 	var defense := defender.boosted_stat(def_stat, def_stage)
 	if float(opts.get("atk_mod", 1.0)) != 1.0:
 		attack = modify(attack, float(opts["atk_mod"]))
@@ -88,7 +92,7 @@ static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit
 		defense = modify(defense, float(opts["def_mod"]))
 	var base := base_damage(attacker.pokemon.level, int(opts.get("power", move.power)), attack, defense)
 	var typeless := is_typeless(move)
-	var effectiveness := 1.0 if typeless else DataDB.type_effectiveness(move.type, defender.types())
+	var effectiveness := 1.0 if typeless else float(opts.get("effectiveness", DataDB.type_effectiveness(move.type, defender.types())))
 	var stab := not typeless and attacker.has_type(move.type)
 	var stab_mod := _tera_stab(attacker, move) if not typeless else 0.0
 	if stab_mod > 1.0:

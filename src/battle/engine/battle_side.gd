@@ -7,6 +7,8 @@ var party: Array[Pokemon] = []
 var active: Array[Battler] = []
 ## Condiciones de bando activas (Reflejo, Velo Sagrado, Viento Afín, trampas, Deseo...): id → estado.
 var conditions: Dictionary[StringName, Dictionary] = {}
+## Turno en que se debilitó el último Pokémon de este bando (Represalia).
+var last_faint_turn: int = -10
 
 
 func _init(side_index: int, members: Array[Pokemon]) -> void:

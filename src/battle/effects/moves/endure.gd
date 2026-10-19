@@ -1,0 +1,23 @@
+extends BattleEffect
+## Aguante: este turno resiste con 1 PS cualquier golpe. Seguido, cada vez es menos probable, como
+## Protección, y falla si ya no queda nadie por moverse.
+
+
+func is_stalling_move() -> bool:
+	return true
+
+
+func on_hit(engine: BattleEngine, user: Battler, _target: Battler, _move: MoveData) -> int:
+	var foe := engine.foe_of(user)
+	var last := foe == null or foe.is_fainted() or foe.moved_this_turn
+	if engine.turn - user.protect_turn > 1:
+		user.protect_count = 0
+	var chance := int(pow(3, mini(user.protect_count, 6)))
+	if last or not engine.rand_chance(&"protect", 1, chance):
+		user.protect_count = 0
+		engine.message(tr("¡Pero falló!"))
+		return HANDLED
+	user.protect_count += 1
+	user.protect_turn = engine.turn
+	engine.add_volatile(user, &"endure", user)
+	return HANDLED

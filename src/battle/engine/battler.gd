@@ -38,6 +38,22 @@ var mega_from: StringName = &""
 var dynamax_turns: int = 0
 ## Tipo del Teratipo mientras dura el combate. Vacío si no ha teracristalizado.
 var tera_active: StringName = &""
+## Tipos puestos por un movimiento (Anegar, Polvo Mágico, Conversión, Clonatipo). Vacío = los suyos.
+var type_override: Array[StringName] = []
+## El motor lo pone al sacarlo: (battler, move) -> true si ese movimiento está impedido (Mofa, Anulación...).
+var move_filter: Callable
+## Último golpe de un movimiento que ha recibido: {"amount", "physical", "side", "slot", "turn"}
+## (Contraataque, Manto Espejo, Desquite, Alud...).
+var hurt_by: Dictionary = {}
+## Kilos de más o de menos (Aligerar).
+var weight_delta: float = 0.0
+## Último objeto que ha gastado y si se ha comido una baya en este combate (Reciclaje, Eructo).
+var consumed_item: StringName = &""
+var ate_berry: bool = false
+## Estadísticas cambiadas por un movimiento (Isoguardia, Isofuerza, Truco Fuerza, Cambiavelocidad).
+var stat_override: Dictionary[StringName, int] = {}
+## Movimientos usados desde que salió (Última Baza).
+var used_moves: Dictionary[StringName, bool] = {}
 
 
 func _init(p: Pokemon, battle_side: int, battle_slot: int, index: int) -> void:
@@ -66,6 +82,8 @@ func types() -> Array[StringName]:
 		var tera_types: Array[StringName] = []
 		tera_types.append(tera_active)
 		return tera_types
+	if not type_override.is_empty():
+		return type_override.duplicate()
 	# Copia: pokemon.types() es la lista de la especie. Sin copiar, Respiro le quitaba el tipo
 	# Volador a la especie entera para el resto de la partida.
 	var out := pokemon.types().duplicate()
@@ -81,10 +99,15 @@ func has_volatile(id: StringName) -> bool:
 	return volatiles.has(id)
 
 
+## Peso en kilos en el combate (Patada Baja, Cuerpo Pesado...). Nunca baja de 0,1.
+func weight() -> float:
+	return maxf(0.1, pokemon.species().weight + weight_delta)
+
+
 ## Estadística con su nivel aplicado (no sirve para los PS).
 func boosted_stat(stat: StringName, stage_override: Variant = null) -> int:
 	var stage: int = boosts.get(stat, 0) if stage_override == null else int(stage_override)
-	return StatCalc.apply_stage(pokemon.stat(stat), stage)
+	return StatCalc.apply_stage(stat_override.get(stat, pokemon.stat(stat)), stage)
 
 
 ## Velocidad para el orden de turno: nivel de Velocidad y parálisis (mitad).
@@ -107,6 +130,8 @@ func usable_moves() -> Array[int]:
 		if choice_move != &"" and slot.id != choice_move:
 			continue
 		if vest and slot.data().is_status():
+			continue
+		if move_filter.is_valid() and move_filter.call(self, slot.data()):
 			continue
 		out.append(i)
 	return out

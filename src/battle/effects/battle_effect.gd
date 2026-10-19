@@ -68,6 +68,34 @@ func runs_before_switch() -> bool:
 	return false
 
 
+## Cambia el movimiento antes de usarlo (tipo o potencia: Meteorobola, Pulso Terreno...). Devuelve
+## `move` o una copia (MoveData.from_dict(move.id, move.raw)) con lo cambiado.
+func modify_move(_engine: BattleEngine, _user: Battler, move: MoveData) -> MoveData:
+	return move
+
+
+## Ha fallado por precisión (Patada Salto: el usuario se estrella).
+func on_miss(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData) -> void:
+	pass
+
+
+## Ya ha acertado y va a resolverse contra `target` (Demolición rompe las pantallas antes del golpe).
+func on_prepare_hit(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData) -> void:
+	pass
+
+
+## Número de golpes (Paliza: uno por cada compañero sano). -1 = el de los datos.
+func hit_count(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData) -> int:
+	return -1
+
+
+## Ajusta las opciones del cálculo de daño (DamageCalc.calculate): "attacker" (de quién es el
+## ataque: Juego Sucio), "atk_stat" / "def_stat" (Psicocarga), "effectiveness" (Liofilización),
+## "ignore_burn" (Imagen)...
+func modify_damage_opts(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, _opts: Dictionary) -> void:
+	pass
+
+
 ## Protección y similares: usarlos seguidos es cada vez menos probable.
 func is_stalling_move() -> bool:
 	return false
@@ -174,6 +202,51 @@ func forced_action(_engine: BattleEngine, _battler: Battler, _state: Dictionary)
 ## Quita tipos al que la tiene (Respiro quita Volador durante el turno).
 func removed_types(_state: Dictionary) -> Array[StringName]:
 	return []
+
+
+## ¿No puede elegir ni usar ese movimiento quien la tiene (Mofa, Tormento, Anulación, Otra Vez)?
+func disables_move(_battler: Battler, _state: Dictionary, _move: MoveData) -> bool:
+	return false
+
+
+## ¿No pueden usar ese movimiento los rivales de quien la tiene (Cerca)?
+func disables_foe_move(_holder: Battler, _state: Dictionary, _battler: Battler, _move: MoveData) -> bool:
+	return false
+
+
+## Mensaje al intentar usar un movimiento que impide ("¡%s no puede usar %s por la Mofa!").
+func disabled_text(_state: Dictionary) -> String:
+	return "¡%s no puede usar %s!"
+
+
+## Daño que va a recibir quien la tiene (Aguante lo deja en 1 PS; Sustituto se lo lleva él).
+func on_damage(_engine: BattleEngine, _battler: Battler, _state: Dictionary, amount: int, _source: StringName, _move: MoveData) -> int:
+	return amount
+
+
+## ¿Es inmune a ese movimiento quien la tiene (Levitón contra lo de tipo Tierra)?
+func immune_to(_engine: BattleEngine, _target: Battler, _state: Dictionary, _move: MoveData) -> bool:
+	return false
+
+
+## 1 = le hace tocar el suelo (Antiaéreo, Arraigo, Gravedad); -1 = le levanta (Levitón); 0 = nada.
+func grounding(_state: Dictionary) -> int:
+	return 0
+
+
+## Potencia de los movimientos de quien la tiene (Carga dobla el siguiente de tipo Eléctrico).
+func modify_own_power(_engine: BattleEngine, _user: Battler, _state: Dictionary, _move: MoveData, power: int) -> int:
+	return power
+
+
+## ¿El siguiente movimiento de quien la tiene contra `target` acierta seguro (Fijar Blanco)?
+func ensures_hit(_engine: BattleEngine, _user: Battler, _state: Dictionary, _target: Battler, _move: MoveData) -> bool:
+	return false
+
+
+## ¿Impide que un rival le baje las características (Neblina)?
+func prevents_boost_drop(_engine: BattleEngine, _target: Battler, _state: Dictionary, _source: Battler) -> bool:
+	return false
 
 
 # --- Habilidades y objetos equipados (Fase 9.5) ---

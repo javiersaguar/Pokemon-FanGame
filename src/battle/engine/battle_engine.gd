@@ -76,6 +76,15 @@ var _deferred_switch_ins: Array[Battler] = []
 ## Durante un golpe, las bayas curativas esperan a que acaben sus efectos (Update de Showdown): así
 ## Picoteo y Picadura se comen la baya antes que su dueño.
 var _hold_berries := false
+## Quien está usando un movimiento ahora (Neblina distingue las bajadas que vienen del rival).
+var _move_user: Battler = null
+## Objetos que tenían los Pokémon del jugador antes de que se los quitaran o cambiaran (Desarme,
+## Ladrón, Truco): en combates contra entrenadores se devuelven al acabar (5.ª generación en adelante).
+var _items_before: Dictionary = {}
+## Último movimiento usado en el combate por cualquiera (Copión).
+var last_used_move: StringName = &""
+## Golpes recibidos por cada Pokémon (uid → veces) en todo el combate (Puño Furia).
+var times_hit: Dictionary = {}
 
 
 func _init(battle_setup: BattleSetup) -> void:
@@ -639,6 +648,7 @@ func _process_faints() -> void:
 		return
 	var steps: Array[Callable] = []
 	for b: Battler in _pending_faints:
+		_sides[b.side].last_faint_turn = turn
 		_emit(BattleEvent.FAINT, b.side, b.slot, {"party_index": b.party_index})
 		_msg(tr("¡%s se debilitó!") % BattleText.cap_name(b, setup.is_wild()))
 		if b.side == PLAYER and setup.locke_rules and not setup.tutorial:
@@ -825,6 +835,10 @@ func _finish(outcome: StringName) -> void:
 			_msg(tr("¡No te quedan Pokémon que puedan luchar!"), "defeat")
 	result.outcome = outcome
 	result.turns = turn
+	if not setup.is_wild():
+		for p: Pokemon in party(PLAYER):
+			if _items_before.has(p.uid):
+				p.held_item = _items_before[p.uid]
 	_revert_all_formes()
 	for side_index: int in [PLAYER, FOE]:
 		for slot: int in slot_count():
@@ -867,6 +881,7 @@ func _send_out(side_index: int, index: int, slot: int = 0) -> void:
 func _put_in(side_index: int, index: int, wild_appearance: bool, slot: int = 0) -> void:
 	var p := party(side_index)[index]
 	var b := Battler.new(p, side_index, slot, index)
+	b.move_filter = _move_disabled
 	if _tera_of.has(p.uid):
 		b.tera_active = _tera_of[p.uid]
 	_sides[side_index].active[slot] = b
@@ -1169,7 +1184,10 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 	else:
 		_msg(tr("¡A %s no le quedan movimientos!") % BattleText.name_of(user, setup.is_wild()))
 	user.last_move = move.id
+	user.used_moves[base_move.id] = true
 	var hit := _use_move(user, move)
+	if move.id != STRUGGLE:
+		last_used_move = base_move.id if z_status else move.id
 	if z_status:
 		_apply_z_status(user, base_move)
 	_after_move(user, base_move if z_status else move, hit)
@@ -1229,6 +1247,11 @@ func _before_move(user: Battler, move: MoveData) -> bool:
 		if priority < 10 and priority > 1 and user.volatiles.has(StringName(str(h[1].get("id", "")))) \
 				and not (h[0] as BattleEffect).on_before_move(self, user, h[1], move):
 			return false
+	var blocker := _move_blocker(user, move)
+	if not blocker.is_empty():
+		_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "disabled"})
+		_msg(tr(String(blocker["text"])) % [name, move.name])
+		return false
 	if p.status == &"par" and rand_chance(&"par", 1, 4):
 		_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "par"})
 		_msg(tr("¡%s está paralizado! ¡No se puede mover!") % name)
@@ -1238,8 +1261,18 @@ func _before_move(user: Battler, move: MoveData) -> bool:
 
 ## Usa el movimiento (tras "¡X usó Y!"). Devuelve true si ha llegado a resolverse contra su objetivo.
 func _use_move(user: Battler, move: MoveData) -> bool:
+	var previous_user := _move_user
+	_move_user = user
+	var hit := _use_move_inner(user, move)
+	_move_user = previous_user
+	return hit
+
+
+func _use_move_inner(user: Battler, move: MoveData) -> bool:
 	var wild := setup.is_wild()
 	var effect := Effects.move(move.id)
+	if effect != null:
+		move = effect.modify_move(self, user, move)
 	_msg(tr("¡%s usó %s!") % [BattleText.cap_name(user, wild), move.name])
 	var target := _move_target(user, move)
 	_emit(BattleEvent.MOVE, user.side, user.slot, {
@@ -1267,14 +1300,22 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 	if target != user and move.target not in MoveData.FIELD_TARGETS:
 		for c: Array in _conditions_of(target):
 			if not (c[0] as BattleEffect).on_try_hit(self, target, c[2], user, move):
+				if effect != null:
+					effect.on_miss(self, user, target, move)
 				return false
 		if _is_immune(target, move) or (move.ohko != &"" and target.pokemon.level > user.pokemon.level):
 			_msg(tr("No afecta %s...") % BattleText.to_name(target, wild))
+			if effect != null:
+				effect.on_miss(self, user, target, move)
 			return false
 		if not _accuracy_hits(user, target, move, effect):
 			_emit(BattleEvent.MISS, target.side, target.slot, {})
 			_msg(tr("¡El ataque %s ha fallado!") % BattleText.of_name(user, wild))
+			if effect != null:
+				effect.on_miss(self, user, target, move)
 			return false
+	if effect != null:
+		effect.on_prepare_hit(self, user, target, move)
 	if move.is_status():
 		_apply_status_move(user, target, move, effect)
 	else:
@@ -1371,6 +1412,9 @@ func _battler_of(side_index: int, party_index: int) -> Battler:
 func _is_immune(target: Battler, move: MoveData) -> bool:
 	if DamageCalc.is_typeless(move):
 		return false
+	for c: Array in _conditions_of(target):
+		if (c[0] as BattleEffect).immune_to(self, target, c[2], move):
+			return true
 	for t: StringName in target.types():
 		if DataDB.type_effectiveness(move.type, [t]) == 0.0 and not move.ignores_immunity_of(t):
 			return true
@@ -1389,6 +1433,10 @@ func _accuracy_hits(user: Battler, target: Battler, move: MoveData, effect: Batt
 		var ohko_accuracy := 20 if move.ohko == &"ice" and not user.has_type(&"ice") else 30
 		ohko_accuracy += user.pokemon.level - target.pokemon.level
 		return rand_chance(&"accuracy", ohko_accuracy, 100)
+	for id: StringName in user.volatiles:
+		var aim := Effects.condition(id)
+		if aim != null and aim.ensures_hit(self, user, user.volatiles[id], target, move):
+			return true
 	var accuracy := move.accuracy
 	if effect != null:
 		var override := effect.accuracy(self, user, target, move)
@@ -1430,7 +1478,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	var scripted_damage := effect.fixed_damage(self, user, target, move) if effect != null else -1
 	var fixed := scripted_damage >= 0 or move.ohko != &"" or move.level_damage or move.fixed_damage > 0
 	var effectiveness := 1.0 if fixed else DamageCalc.effectiveness(move, target)
-	var hits := _roll_hits(move)
+	var scripted_hits := effect.hit_count(self, user, target, move) if effect != null else -1
+	var hits := scripted_hits if scripted_hits >= 0 else _roll_hits(move)
 	var total := 0
 	var landed := 0
 	_hold_berries = true
@@ -1451,6 +1500,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			crit = _roll_crit(user, move)
 			var opts := _damage_opts(user, target, move, effect, crit)
 			opts["spread"] = spread
+			if opts.has("effectiveness"):
+				effectiveness = float(opts["effectiveness"])
 			amount = DamageCalc.calculate(user, target, move, crit, rand_int(&"damage_roll", 0, DamageCalc.ROLLS - 1), opts)
 			if opts["resist_berry"]:
 				_msg(tr("¡La baya de %s ha reducido el daño!") % target.pokemon.display_name())
@@ -1458,6 +1509,9 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		var dealt := _damage(target, amount, &"move", effectiveness, crit, move)
 		total += dealt
 		landed += 1
+		if dealt > 0:
+			target.hurt_by = {"amount": dealt, "physical": move.is_physical(), "side": user.side, "slot": user.slot, "turn": turn}
+			times_hit[target.pokemon.uid] = int(times_hit.get(target.pokemon.uid, 0)) + 1
 		# El drenaje cura con cada golpe, nada más hacer el daño (antes del Casco Dentado del rival).
 		if not move.drain.is_empty() and dealt > 0 and not user.is_fainted():
 			if _heal(user, roundi(dealt * float(move.drain[0]) / move.drain[1]), &"drain") > 0:
@@ -1535,6 +1589,10 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 		power = e.modify_base_power(self, user, target, move, power)
 		atk_mod *= e.stat_modifier(self, user, atk_stat)
 		def_mod *= e.stat_modifier(self, target, def_stat)
+	for id: StringName in user.volatiles:
+		var own := Effects.condition(id)
+		if own != null:
+			power = own.modify_own_power(self, user, user.volatiles[id], move, power)
 	for passive: BattleEffect in _passives(user):
 		power = passive.modify_base_power(self, user, target, move, power)
 		atk_mod *= passive.stat_modifier(self, user, atk_stat)
@@ -1562,8 +1620,11 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 	if resist_berry:
 		final_mods.append(0.5)
 	var ignore_burn := user.ability == &"guts" and user.pokemon.status != &""
-	return {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod,
+	var opts := {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod,
 		"ignore_burn": ignore_burn, "resist_berry": resist_berry}
+	if effect != null:
+		effect.modify_damage_opts(self, user, target, move, opts)
+	return opts
 
 
 @warning_ignore("integer_division")
@@ -1623,6 +1684,13 @@ func _apply_secondary(user: Battler, target: Battler, sec: Dictionary) -> void:
 # --- Daño, curación, estados y características ---
 
 func _damage(b: Battler, amount: int, source: StringName, effectiveness: float = 1.0, critical: bool = false, move: MoveData = null) -> int:
+	if source == &"move":
+		for id: StringName in b.volatiles.keys():
+			var guard := Effects.condition(id)
+			if guard != null and b.volatiles.has(id):
+				amount = guard.on_damage(self, b, b.volatiles[id], amount, source, move)
+		if amount < 0:
+			return 0
 	var held := Effects.item(b.pokemon.held_item)
 	if held != null and b.pokemon.held_item == &"focussash" and b.pokemon.current_hp == b.pokemon.max_hp() \
 			and b.pokemon.current_hp > 1 and amount >= b.pokemon.current_hp:
@@ -1782,6 +1850,10 @@ func _apply_boosts(target: Battler, boosts: Dictionary[StringName, int], seconda
 		if boosts[stat] < 0 and guard != null and guard.prevents_drop(stat):
 			if not secondary:
 				_msg(tr("¡%s se protege con su habilidad!") % BattleText.cap_name(target, wild))
+			continue
+		if boosts[stat] < 0 and _drop_prevented(target):
+			if not secondary:
+				_msg(tr("¡%s está protegido por la neblina!") % BattleText.cap_name(target, wild))
 			continue
 		var old: int = target.boosts[stat]
 		var new_stage := clampi(old + boosts[stat], -6, 6)
@@ -2305,9 +2377,14 @@ func side_condition(side_index: int, id: StringName) -> Dictionary:
 	return _sides[side_index].conditions.get(id, {})
 
 
-func consume_held_item(b: Battler) -> void:
+## Gasta el objeto de `b` (`used` = false si se lo quitan, como con Desarme, y no se puede reciclar).
+func consume_held_item(b: Battler, used: bool = true) -> void:
 	if b == null or b.pokemon.held_item == &"":
 		return
+	if used:
+		b.consumed_item = b.pokemon.held_item
+		if DataDB.has_item(b.pokemon.held_item) and DataDB.item(b.pokemon.held_item).pocket == &"berries":
+			b.ate_berry = true
 	b.pokemon.held_item = &""
 	b.choice_move = &""
 	if b.ability == &"unburden":
@@ -2347,6 +2424,66 @@ func _is_trapped(b: Battler) -> bool:
 	for id: StringName in b.volatiles:
 		var effect := Effects.condition(id)
 		if effect != null and effect.traps(self, b, b.volatiles[id]):
+			return true
+	for c: Array in _field_conditions():
+		if (c[0] as BattleEffect).traps(self, b, c[2]):
+			return true
+	return false
+
+
+## ¿Tiene impedido ese movimiento? (volátiles propios, Cerca de un rival, campo).
+func _move_disabled(b: Battler, move: MoveData) -> bool:
+	return not _move_blocker(b, move).is_empty()
+
+
+## {"text": mensaje} de lo que impide a `b` usar `move`, o {} si nada.
+func _move_blocker(b: Battler, move: MoveData) -> Dictionary:
+	if b == null or move == null or move.id == STRUGGLE:
+		return {}
+	for id: StringName in b.volatiles:
+		var effect := Effects.condition(id)
+		if effect != null and effect.disables_move(b, b.volatiles[id], move):
+			return {"text": effect.disabled_text(b.volatiles[id])}
+	for c: Array in _field_conditions():
+		if (c[0] as BattleEffect).disables_move(b, c[2], move):
+			return {"text": (c[0] as BattleEffect).disabled_text(c[2])}
+	for slot: int in slot_count():
+		var foe := active(1 - b.side, slot)
+		if foe == null or foe.is_fainted():
+			continue
+		for id: StringName in foe.volatiles:
+			var effect := Effects.condition(id)
+			if effect != null and effect.disables_foe_move(foe, foe.volatiles[id], b, move):
+				return {"text": effect.disabled_text(foe.volatiles[id])}
+	return {}
+
+
+## Cambia el objeto de `b` por `item` (Desarme, Ladrón, Truco): el del jugador se recuerda para
+## devolvérselo al acabar un combate contra entrenadores.
+func set_held_item(b: Battler, item: StringName) -> void:
+	if b.side == PLAYER and not _items_before.has(b.pokemon.uid):
+		_items_before[b.pokemon.uid] = b.pokemon.held_item
+	b.pokemon.held_item = item
+	b.choice_move = &""
+	if item == &"" and b.ability == &"unburden":
+		b.unburdened = true
+
+
+## ¿Se le puede quitar o cambiar el objeto? (Las megapiedras, los cristales Z y las placas, no.)
+func item_removable(b: Battler) -> bool:
+	var item := b.pokemon.held_item
+	if item == &"" or not DataDB.has_item(item):
+		return false
+	return DataDB.item(item).category not in [&"mega_stones", &"z_crystals", &"plates", &"memories"]
+
+
+## Neblina y compañía: ¿impide su bando que un rival le baje las características ahora?
+func _drop_prevented(target: Battler) -> bool:
+	if _move_user == null or _move_user.side == target.side:
+		return false
+	for id: StringName in _sides[target.side].conditions:
+		var effect := Effects.condition(id)
+		if effect != null and effect.prevents_boost_drop(self, target, _sides[target.side].conditions[id], _move_user):
 			return true
 	return false
 
@@ -2501,6 +2638,14 @@ func _new_state(id: StringName, data: Dictionary) -> Dictionary:
 
 ## ¿Toca el suelo? (No los de tipo Volador ni los que levitan.)
 func is_grounded(b: Battler) -> bool:
+	var forced := 0
+	for c: Array in _conditions_of(b):
+		var g := (c[0] as BattleEffect).grounding(c[2])
+		if g > 0:
+			return true
+		forced = mini(forced, g)
+	if forced < 0:
+		return false
 	return not b.has_type(&"flying") and b.ability != &"levitate" and b.pokemon.held_item != &"airballoon"
 
 
