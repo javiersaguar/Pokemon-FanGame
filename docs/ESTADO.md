@@ -450,6 +450,8 @@ San Mamés también redibujado: cinco bandas de lamas claras, cubierta con hueco
 
 **Fachada preparada: Palacio Real de Madrid.** Se elimina el gran reloj frontal y se da profundidad a la cubierta, con el patio interior, balaustrada y pabellón central. La fachada distingue los pequeños vanos superiores, los balcones de la planta noble y el basamento con despiece horizontal. El acceso de la Liga sigue en su casilla. El escudo y las estatuas no se reproducen en detalle a esta escala; quedan pendientes de pulido artístico. Contrato 3/3 (735 aserciones), alcance 0 problemas. Comparativas individual y en mapa guardadas. Provisional; la integración espera la suite conjunta.
 
+**Fachada preparada: Camp Nou · galería y acceso.** Revisión parcial. Se conservan el óvalo del campo, el graderío y las lonas con el nombre. Se redibujan las 28 filas inferiores: galería acristalada con pilares, acceso central enmarcado y escalones. Se reduce la saturación del azul y del granate. El edificio continúa en obras como establece el mapa; no se presenta una cubierta futura como terminada. La geometría del graderío anterior queda pendiente de un redibujo más fiel. Contrato 3/3 (735 aserciones), alcance 0 problemas. Comparativas individual y en mapa guardadas. Provisional; la integración espera la suite conjunta.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)

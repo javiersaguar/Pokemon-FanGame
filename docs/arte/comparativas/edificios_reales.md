@@ -84,7 +84,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `escenario_festival` | [10, 6]; [-1, -1] | `playa_del_ingles/exterior`, `ruta_7/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/escenario_festival.png) |
 | `agujas_montserrat` | [12, 8]; [-1, -1] | `ruta_8/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/agujas_montserrat.png) |
 | `monasterio_montserrat` | [10, 7]; [4, 0] | `ruta_8/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/monasterio_montserrat.png) |
-| `camp_nou` | [20, 11]; [10, 0] | `barcelona/les_corts` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/camp_nou.png) |
+| `camp_nou` | [20, 11]; [10, 0] | `barcelona/les_corts` | Redibujado, provisional; referencias reales, tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/camp_nou.png) |
 | `grua` | [6, 13]; [-1, -1] | `barcelona/eixample`, `barcelona/les_corts`, `ruta_10/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/grua.png) |
 | `sagrada_familia` | [12, 16]; [5, 0] | `barcelona/eixample` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/sagrada_familia.png) |
 | `casa_batllo` | [5, 9]; [2, 0] | `barcelona/eixample` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/casa_batllo.png) |
@@ -254,3 +254,18 @@ Referencias consultadas el 20 de octubre de 2026: [fotografías oficiales y vist
 | Misma escena y escala | [mapa](edificios_reales/palacio_real_mapa_antes.png) | [mapa](edificios_reales/palacio_real_mapa_despues.png) |
 
 Contrato dirigido: **3/3, 735 aserciones**. Alcance de `madrid/palacio_real`: **0 problemas**. Los avisos anteriores de recursos retenidos al salir de la herramienta siguen presentes. Arte provisional; falta la comprobación conjunta con la corrección de Getafe integrada.
+
+### Camp Nou · galería y acceso
+
+Revisión parcial. Se conservan el óvalo del campo, el graderío y las lonas con el nombre. Se redibujan las 28 filas inferiores: galería acristalada con pilares, acceso central enmarcado y escalones. Se reduce la saturación del azul y del granate. El edificio continúa en obras como establece el mapa; no se presenta una cubierta futura como terminada. La geometría del graderío anterior queda pendiente de un redibujo más fiel.
+
+Lienzo **20×11 casillas**, fuente **67**, puerta **[10, 0]**. Huella de colisión anterior declarada en el catálogo; no se cambia la escena exterior ni la identidad del interior.
+
+Referencias consultadas el 20 de octubre de 2026: [foto oficial de Tribuna antes de las obras, de 2022](https://www.fcbarcelona.es/es/noticias/2663694/el-barca-y-spotify-dan-inicio-a-su-alianza-estrategica-que-unira-musica-y-deporte), [dossier de 2021 con planos y secciones e imágenes orientativas](https://www.fcbarcelona.com/fcbarcelona/document/2021/11/04/7c46b292-2dbc-4172-b03d-86f307308c48/DOSSIER_ESPAI_B_CAS-1-.pdf). Las fotografías solo se enlazan. Las fuentes quedan también en la cabecera del `.px2`.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | ![](edificios_reales/piezas_antes/camp_nou.png) | ![](edificios_reales/piezas_despues/camp_nou.png) |
+| Misma escena y escala | [mapa](edificios_reales/camp_nou_mapa_antes.png) | [mapa](edificios_reales/camp_nou_mapa_despues.png) |
+
+Contrato dirigido: **3/3, 735 aserciones**. Alcance de `barcelona/les_corts`: **0 problemas**. Los avisos anteriores de recursos retenidos al salir de la herramienta siguen presentes. Arte provisional; falta la comprobación conjunta con la corrección de Getafe integrada.
