@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1647526774 instance=ExtResource("5_waf8m")]
+display_name = "Bañista con medusa"
 position = Vector2(176, 272)
 script = ExtResource("6_q1gi5")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Una medusa me ha dado un abrazo en la Malvarrosa. No era un abrazo bonito.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_6qhy8")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=510608874 instance=ExtResource("5_waf8m")]
 position = Vector2(144, 208)
 script = ExtResource("6_q1gi5")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Valencia. Valencia · Malvarrosa", "La salida sigue siendo el hueco del sur.")
+display_name = "Surfista"
+lines = PackedStringArray("Me ha golpeado mi propia tabla. Llevo seis años surfeando. La tabla, siete.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_urtyu")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=525706143 instance=ExtResource("9_b1gfi")]
 position = Vector2(144, 208)
 script = ExtResource("13_3fujj")
-lines = PackedStringArray("Oficinas · Valencia.", "Valencia · Malvarrosa")
+lines = PackedStringArray("HOSPITAL · MALVARROSA.", "Junto a la playa: picaduras, golpes de sol y arena en sitios imposibles.")
 only_from_below = false
 show_sprite = false
 

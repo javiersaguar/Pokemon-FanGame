@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_dh3ge")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=882957772 instance=ExtResource("5_gu7t4")]
+display_name = "Señora de Teis"
 position = Vector2(176, 240)
 script = ExtResource("6_fghr7")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro paraguas. Ya tengo siete, pero en Vigo nunca son suficientes.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_hysub")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1323731077 instance=ExtResource("5_gu7t4")]
 position = Vector2(144, 208)
 script = ExtResource("6_fghr7")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Vigo. Vigo", "La salida sigue siendo el hueco del sur.")
+display_name = "Turista de las luces"
+lines = PackedStringArray("He venido a ver las luces de Navidad. Estamos en octubre, pero ya están puestas.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_l6m0j")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=2082309518 instance=ExtResource("11_gu7t4")]
 position = Vector2(144, 208)
 script = ExtResource("12_fghr7")
-lines = PackedStringArray("Tienda verde · Vigo.", "Vigo")
+lines = PackedStringArray("MERCADONA · VIGO.", "Albariño, empanada y paraguas en la entrada.")
 only_from_below = false
 show_sprite = false
 

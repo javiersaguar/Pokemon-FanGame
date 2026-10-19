@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1573915273 instance=ExtResource("5_wncwi")]
+display_name = "Maño resfriado"
 position = Vector2(176, 272)
 script = ExtResource("6_buv5q")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Salí sin bufanda con cierzo. Error de novato. Y eso que llevo setenta años aquí.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_0fy28")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1092645697 instance=ExtResource("5_wncwi")]
 position = Vector2(144, 208)
 script = ExtResource("6_buv5q")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Zaragoza. Zaragoza", "La salida sigue siendo el hueco del sur.")
+display_name = "Jotero"
+lines = PackedStringArray("Vengo con la garganta tomada de cantar en la ofrenda. La jota no se canta, se grita con cariño.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_r2gs6")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=471840067 instance=ExtResource("9_odr6v")]
 position = Vector2(144, 208)
 script = ExtResource("13_1kurc")
-lines = PackedStringArray("Centro Pokémon · Zaragoza.", "Zaragoza")
+lines = PackedStringArray("CENTRO POKÉMON · ZARAGOZA.", "Especialidad en catarros de cierzo y Pokémon despeinados.")
 only_from_below = false
 show_sprite = false
 

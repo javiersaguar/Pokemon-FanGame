@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=157869685 instance=ExtResource("5_5g0hr")]
+display_name = "Pucelano"
 position = Vector2(176, 272)
 script = ExtResource("6_cp0m0")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me he resbalado en la Plaza Mayor con la helada. A las ocho de la mañana hay menos dos grados.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_8dgc4")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1893507667 instance=ExtResource("5_5g0hr")]
 position = Vector2(144, 208)
 script = ExtResource("6_cp0m0")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Valladolid. Valladolid", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante de Medicina"
+lines = PackedStringArray("Hago prácticas aquí. Hoy me han dejado tomar la tensión. A un muñeco.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_0lxw2")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=638194267 instance=ExtResource("9_611hn")]
 position = Vector2(144, 208)
 script = ExtResource("13_xqooq")
-lines = PackedStringArray("Oficinas · Valladolid.", "Valladolid")
+lines = PackedStringArray("HOSPITAL · VALLADOLID.", "En invierno, resfriados. En Semana Santa, pies helados de procesión.")
 only_from_below = false
 show_sprite = false
 

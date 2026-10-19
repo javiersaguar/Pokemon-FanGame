@@ -1,14 +1,5 @@
 # Interiores de Getafe. Propuesta provisional: nombres, gente y frases pendientes de Javier.
 SALAS = {
-    "getafe/casa_1": {
-        "tipo": "casa", "nombre": "Casa de la abuela de la calle Madrid",
-        "gente": [
-            ("Abuela getafense", "npc_old_woman", "regalo:cocina", [
-                "Getafe era un pueblo de huertas y de aviones. Ahora es una ciudad de bloques y de aviones.",
-                "Toma, para el Cercanías. Que la C-4 a veces llega y a veces se lo piensa."]),
-            ("Nieto", "npc_boy", "tele", ["En el colegio dicen que Getafe es «el sur». Yo digo que es el centro, si miras desde Parla."]),
-        ],
-    },
     "getafe/casa_2": {
         "tipo": "casa", "nombre": "Casa del mecánico de aviones",
         "gente": [
@@ -16,15 +7,6 @@ SALAS = {
                 "Desde la base aérea de Getafe despegaron los primeros aviones militares de España, en 1911. Mi bisabuelo vio el primero.",
                 "Ahora trabajo en la factoría de aviones. Hago piezas de alas que vuelan por medio mundo. Yo no he subido a uno nunca."]),
             ("Mujer", "npc_woman", "cocina", ["Mi marido sabe de alas de avión más que de alitas de pollo. Las alitas las hago yo."]),
-        ],
-    },
-    "getafe/casa_vecina": {
-        "tipo": "casa", "nombre": "Casa de la vecina cotilla",
-        "gente": [
-            ("Vecina", "npc_old_woman", "libre", [
-                "Yo no soy cotilla, soy informada. Sé quién entra, quién sale y quién no ha pagado la comunidad.",
-                "El del cuarto se ha comprado un patinete eléctrico. Ya verás qué pronto lo deja en el portal."]),
-            ("Marido", "npc_old_man", "tele", ["Mi mujer sabe todo de todos. De mí, también. Por eso no salgo."]),
         ],
     },
     "getafe/sala_calle_16_20": {

@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_lwmfk")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1366524837 instance=ExtResource("5_07dft")]
+display_name = "Turista inglés"
 position = Vector2(176, 240)
 script = ExtResource("6_k0wta")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Postcards of the camels, please. Mis nietos creen que Gran Canaria es el Sáhara.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_bxne3")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=201443032 instance=ExtResource("5_07dft")]
 position = Vector2(144, 208)
 script = ExtResource("6_k0wta")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Playa del Inglés. Playa del Inglés", "La salida sigue siendo el hueco del sur.")
+display_name = "Camarero de temporada"
+lines = PackedStringArray("Vengo a por tabaco de liar para todo el turno. El turno es de doce horas.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_6tflv")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=2002845730 instance=ExtResource("11_07dft")]
 position = Vector2(144, 208)
 script = ExtResource("12_k0wta")
-lines = PackedStringArray("Tienda morada · Playa del Inglés.", "Playa del Inglés")
+lines = PackedStringArray("ESTANCO · PLAYA DEL INGLÉS.", "Postales de camellos, sellos y crema solar de emergencia.")
 only_from_below = false
 show_sprite = false
 

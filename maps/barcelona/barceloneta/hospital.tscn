@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=896702515 instance=ExtResource("5_33yai")]
+display_name = "Bañista quemado"
 position = Vector2(176, 272)
 script = ExtResource("6_b48je")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me dormí en la playa de la Barceloneta a las dos. Me desperté a las cinco del color de una gamba.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_6xdxu")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=2098244489 instance=ExtResource("5_33yai")]
 position = Vector2(144, 208)
 script = ExtResource("6_b48je")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Barcelona. Barcelona · Ciutat Vella", "La salida sigue siendo el hueco del sur.")
+display_name = "Socorrista de descanso"
+lines = PackedStringArray("Vengo a por crema para las picaduras. Hoy había medusas y más turistas que arena.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_aq2qs")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=892234122 instance=ExtResource("9_xel3n")]
 position = Vector2(144, 208)
 script = ExtResource("13_qyy0j")
-lines = PackedStringArray("Oficinas · Barcelona.", "Barcelona · Ciutat Vella")
+lines = PackedStringArray("HOSPITAL · BARCELONETA.", "Especialidad de la casa: quemaduras de sol, cortes de concha y carteras robadas (estas no se curan).")
 only_from_below = false
 show_sprite = false
 

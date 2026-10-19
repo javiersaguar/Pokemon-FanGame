@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_v0qba")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1774865687 instance=ExtResource("5_a2lxw")]
+display_name = "Hippie de Las Dalias"
 position = Vector2(176, 240)
 script = ExtResource("6_vwgpx")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro papel de cartas. Escribo a mis amigos de 1975. Algunos contestan.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_m6mlg")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=472447991 instance=ExtResource("5_a2lxw")]
 position = Vector2(144, 208)
 script = ExtResource("6_vwgpx")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Ibiza. Ibiza", "La salida sigue siendo el hueco del sur.")
+display_name = "Relaciones públicas"
+lines = PackedStringArray("Vengo a por un mechero. Reparto flyers todo el día y siempre pierdo el mechero.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_ad0tn")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1225073727 instance=ExtResource("11_a2lxw")]
 position = Vector2(144, 208)
 script = ExtResource("12_vwgpx")
-lines = PackedStringArray("Tienda morada · Ibiza.", "Ibiza")
+lines = PackedStringArray("ESTANC · EIVISSA.", "Segells, tabac i postals de posta de sol.")
 only_from_below = false
 show_sprite = false
 

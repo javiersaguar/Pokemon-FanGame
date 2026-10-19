@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_52l4k")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1838599463 instance=ExtResource("5_gei2x")]
+display_name = "Señora con el abanico"
 position = Vector2(176, 240)
 script = ExtResource("6_nhm01")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro hielo, gazpacho y agua. En agosto el carro solo lleva cosas frías.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_nrfl8")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=433017096 instance=ExtResource("5_gei2x")]
 position = Vector2(144, 208)
 script = ExtResource("6_nhm01")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Sevilla. Sevilla · Centro", "La salida sigue siendo el hueco del sur.")
+display_name = "Turista con plano"
+lines = PackedStringArray("Busco el Alcázar. Me han dicho que está al lado. Llevo una hora. Esto parece un laberinto con naranjos.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_gccmr")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=858900217 instance=ExtResource("11_gei2x")]
 position = Vector2(144, 208)
 script = ExtResource("12_nhm01")
-lines = PackedStringArray("Tienda verde · Sevilla.", "Sevilla · Centro")
+lines = PackedStringArray("MERCADONA · SEVILLA.", "Gazpacho, salmorejo y aire acondicionado. Lo último es lo que más se agradece.")
 only_from_below = false
 show_sprite = false
 

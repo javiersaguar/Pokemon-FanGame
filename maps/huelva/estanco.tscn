@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_h3kx3")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=2115226720 instance=ExtResource("5_wujko")]
+display_name = "Marinero de Palos"
 position = Vector2(176, 240)
 script = ExtResource("6_0g0dd")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro una postal de las carabelas para mi nieto. Le digo que nuestro antepasado iba en la Pinta.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_88cn6")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1608226881 instance=ExtResource("5_wujko")]
 position = Vector2(144, 208)
 script = ExtResource("6_0g0dd")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Huelva. Huelva", "La salida sigue siendo el hueco del sur.")
+display_name = "Señora"
+lines = PackedStringArray("Lotería del Rocío. Si toca, le pongo a la Virgen un manto de oro. Si no, de terciopelo.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_3271j")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=145932402 instance=ExtResource("11_wujko")]
 position = Vector2(144, 208)
 script = ExtResource("12_0g0dd")
-lines = PackedStringArray("Tienda morada · Huelva.", "Huelva")
+lines = PackedStringArray("ESTANCO · HUELVA.", "Sellos, lotería y postales de las tres carabelas.")
 only_from_below = false
 show_sprite = false
 

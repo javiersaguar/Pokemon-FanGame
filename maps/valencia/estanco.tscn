@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_1vjs7")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1425597759 instance=ExtResource("5_4suqt")]
+display_name = "Fallera mayor de barrio"
 position = Vector2(176, 240)
 script = ExtResource("6_6iosw")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro lotería de la falla. Si toca, plantamos una falla de tres pisos. Si no, la de siempre.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_t2h6y")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1103987832 instance=ExtResource("5_4suqt")]
 position = Vector2(144, 208)
 script = ExtResource("6_6iosw")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Valencia. Valencia · Ciutat Vella", "La salida sigue siendo el hueco del sur.")
+display_name = "Jubilado"
+lines = PackedStringArray("El cupón y el Levante-EMV. Leo las esquelas y los resultados del Valencia, por ese orden.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_i72p8")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=182665910 instance=ExtResource("11_4suqt")]
 position = Vector2(144, 208)
 script = ExtResource("12_6iosw")
-lines = PackedStringArray("Tienda morada · Valencia.", "Valencia · Ciutat Vella")
+lines = PackedStringArray("ESTANC · VALÈNCIA.", "Loteria de la falla, segells i tabac. Petardos, no: eso en la tienda de al lado.")
 only_from_below = false
 show_sprite = false
 

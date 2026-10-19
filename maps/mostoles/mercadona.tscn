@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_qcqak")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1010910378 instance=ExtResource("5_1wqv3")]
+display_name = "Mostoleña"
 position = Vector2(176, 240)
 script = ExtResource("6_yjc47")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro para la comida del 2 de mayo. En Móstoles se celebra más que en Madrid.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_fmnpt")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=229975121 instance=ExtResource("5_1wqv3")]
 position = Vector2(144, 208)
 script = ExtResource("6_yjc47")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Móstoles. Móstoles", "La salida sigue siendo el hueco del sur.")
+display_name = "Repartidor"
+lines = PackedStringArray("Agua y un bocadillo. Hoy tengo cien entregas en Villafontana y todas en un quinto sin ascensor.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_ga48k")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=991670960 instance=ExtResource("11_1wqv3")]
 position = Vector2(144, 208)
 script = ExtResource("12_yjc47")
-lines = PackedStringArray("Tienda verde · Móstoles.", "Móstoles")
+lines = PackedStringArray("MERCADONA · MÓSTOLES.", "La ciudad que declaró la guerra a Napoleón también hace la compra.")
 only_from_below = false
 show_sprite = false
 

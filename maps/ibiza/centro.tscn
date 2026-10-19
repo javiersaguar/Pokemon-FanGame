@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=19287428 instance=ExtResource("5_nytca")]
+display_name = "Fiestero agotado"
 position = Vector2(176, 272)
 script = ExtResource("6_rni6w")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Llevo tres días sin dormir. Ahora sí he dormido: aquí, en la camilla, sin querer.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_hjlt6")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=2008093659 instance=ExtResource("5_nytca")]
 position = Vector2(144, 208)
 script = ExtResource("6_rni6w")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Ibiza. Ibiza", "La salida sigue siendo el hueco del sur.")
+display_name = "Payesa"
+lines = PackedStringArray("Vengo del campo a por mis pastillas. En agosto aquí todo el mundo viene de fiesta menos yo.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_xxjeg")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1189598275 instance=ExtResource("9_ljnmh")]
 position = Vector2(144, 208)
 script = ExtResource("13_1qap8")
-lines = PackedStringArray("Centro Pokémon · Ibiza.", "Ibiza")
+lines = PackedStringArray("CENTRO POKÉMON · EIVISSA.", "Curamos Pokémon y resacas. Lo primero, más rápido.")
 only_from_below = false
 show_sprite = false
 

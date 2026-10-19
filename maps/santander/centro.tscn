@@ -65,9 +65,10 @@ script = ExtResource("10_g7q87")
 lines = PackedStringArray()
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1492737235 instance=ExtResource("5_oc63m")]
+display_name = "Veraneante madrileño"
 position = Vector2(176, 272)
 script = ExtResource("6_iu6uv")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me he dado con una ola en la Segunda playa del Sardinero. La ola ganó.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_14ua0")
 

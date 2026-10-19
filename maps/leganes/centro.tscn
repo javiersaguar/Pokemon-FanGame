@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1586578070 instance=ExtResource("5_l3bwq")]
+display_name = "Pepinero"
 position = Vector2(176, 272)
 script = ExtResource("6_d2248")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me lesioné jugando al fútbol en el parque. Soy del Leganés: me lesiono con estilo.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_a5olt")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1904556695 instance=ExtResource("5_l3bwq")]
 position = Vector2(144, 208)
 script = ExtResource("6_d2248")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Leganés. Leganés", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante de ingeniería"
+lines = PackedStringArray("Vengo porque se me ha quemado la mano soldando una práctica. La práctica, aprobada.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_bub38")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=676777433 instance=ExtResource("9_c0s7h")]
 position = Vector2(144, 208)
 script = ExtResource("13_nnl5j")
-lines = PackedStringArray("Centro Pokémon · Leganés.", "Leganés")
+lines = PackedStringArray("CENTRO POKÉMON · LEGANÉS.", "Al lado de Butarque. Los días de partido, cola en la puerta.")
 only_from_below = false
 show_sprite = false
 

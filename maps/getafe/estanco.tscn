@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_c0mce")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=659698788 instance=ExtResource("5_mhobh")]
+display_name = "Jubilado"
 position = Vector2(176, 240)
 script = ExtResource("6_1n34g")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Echo la primitiva todos los jueves. Llevo cuarenta años. Me han tocado tres reintegros.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_hlckd")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1171176846 instance=ExtResource("5_mhobh")]
 position = Vector2(144, 208)
 script = ExtResource("6_1n34g")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Getafe. Getafe", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante de la Carlos III"
+lines = PackedStringArray("Compro sellos para mandar una carta a mi abuela. Ella no tiene WhatsApp y lo prefiere así.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_fnj6i")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=504650347 instance=ExtResource("11_mhobh")]
 position = Vector2(144, 208)
 script = ExtResource("12_1n34g")
-lines = PackedStringArray("Tienda morada · Getafe.", "Getafe")
+lines = PackedStringArray("ESTANCO · GETAFE.", "Sellos, lotería y bonos de Cercanías. Lo último, el más necesario.")
 only_from_below = false
 show_sprite = false
 

@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_ym2p8")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=666832600 instance=ExtResource("5_kt23a")]
+display_name = "Malagueña"
 position = Vector2(176, 240)
 script = ExtResource("6_5xcix")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro boquerones para freír y un tinto de verano. La cena del jueves, resuelta.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_d48t2")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=819674012 instance=ExtResource("5_kt23a")]
 position = Vector2(144, 208)
 script = ExtResource("6_5xcix")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Málaga. Málaga", "La salida sigue siendo el hueco del sur.")
+display_name = "Actor del rodaje"
+lines = PackedStringArray("Vengo a por agua. En el rodaje nos dan agua con el logo de la productora. Sabe igual.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_icqan")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=185286641 instance=ExtResource("11_kt23a")]
 position = Vector2(144, 208)
 script = ExtResource("12_5xcix")
-lines = PackedStringArray("Tienda verde · Málaga.", "Málaga")
+lines = PackedStringArray("MERCADONA · MÁLAGA.", "Aguacates y mangos de la Axarquía a precio de súper. Bueno, casi.")
 only_from_below = false
 show_sprite = false
 

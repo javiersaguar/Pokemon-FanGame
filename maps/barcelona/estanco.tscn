@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_u4p4n")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1345287796 instance=ExtResource("5_j81hx")]
+display_name = "Señor de la Rambla"
 position = Vector2(176, 240)
 script = ExtResource("6_iwnxr")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro la quiniela cada semana. Marco siempre el uno al Barça. A veces acierto.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_wkep2")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=2046732551 instance=ExtResource("5_j81hx")]
 position = Vector2(144, 208)
 script = ExtResource("6_iwnxr")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Barcelona. Barcelona · Eixample", "La salida sigue siendo el hueco del sur.")
+display_name = "Artista callejero"
+lines = PackedStringArray("Soy estatua humana en la Rambla. Vengo a por agua. Ser estatua da mucha sed.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_eq36x")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=625876331 instance=ExtResource("11_j81hx")]
 position = Vector2(144, 208)
 script = ExtResource("12_iwnxr")
-lines = PackedStringArray("Tienda morada · Barcelona.", "Barcelona · Eixample")
+lines = PackedStringArray("ESTANC · LA RAMBLA.", "Segells, loteria i tabac. Y postales de la Sagrada Familia que ya está casi terminada.")
 only_from_below = false
 show_sprite = false
 

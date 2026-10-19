@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_ovj5m")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1817800205 instance=ExtResource("5_xb6uk")]
+display_name = "Guagüero"
 position = Vector2(176, 240)
 script = ExtResource("6_i2khw")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro un bonoguagua. Bueno, eso no se vende aquí. Pues un cupón, ya que estoy.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_0qi6c")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1020942372 instance=ExtResource("5_xb6uk")]
 position = Vector2(144, 208)
 script = ExtResource("6_i2khw")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Las Palmas. Las Palmas · Vegueta y Triana", "La salida sigue siendo el hueco del sur.")
+display_name = "Turista sueca"
+lines = PackedStringArray("I buy stamps. Mis amigos en Estocolmo no se creen que aquí estemos a veinticuatro grados en enero.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_pgnhi")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=853551401 instance=ExtResource("11_xb6uk")]
 position = Vector2(144, 208)
 script = ExtResource("12_i2khw")
-lines = PackedStringArray("Tienda morada · Las Palmas.", "Las Palmas · Vegueta y Triana")
+lines = PackedStringArray("ESTANCO · LAS PALMAS.", "Tabaco canario, sellos y postales de Las Canteras.")
 only_from_below = false
 show_sprite = false
 

@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_df6ml")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1595379866 instance=ExtResource("5_pc3r2")]
+display_name = "Regatista"
 position = Vector2(176, 240)
 script = ExtResource("6_dwte8")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro una postal de la catedral para mi madre. Siempre la misma; dice que cada año la ve más bonita.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_0a5qu")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1761331847 instance=ExtResource("5_pc3r2")]
 position = Vector2(144, 208)
 script = ExtResource("6_dwte8")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Palma. Palma de Mallorca", "La salida sigue siendo el hueco del sur.")
+display_name = "Vecina de Santa Catalina"
+lines = PackedStringArray("Vengo a por el periódico local. Leo las noticias de los pisos turísticos y me sube la tensión.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_50ndd")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=61127485 instance=ExtResource("11_pc3r2")]
 position = Vector2(144, 208)
 script = ExtResource("12_dwte8")
-lines = PackedStringArray("Tienda morada · Palma.", "Palma de Mallorca")
+lines = PackedStringArray("ESTANC · PALMA.", "Postals de la Seu, segells i loteria.")
 only_from_below = false
 show_sprite = false
 

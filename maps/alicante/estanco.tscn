@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_ywutb")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1491683711 instance=ExtResource("5_6tuvk")]
+display_name = "Señora de la Explanada"
 position = Vector2(176, 240)
 script = ExtResource("6_vex7p")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Lotería de Navidad: compro el número de la Hoguera de mi barrio. Algún año tocará.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_cyw28")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=186847717 instance=ExtResource("5_6tuvk")]
 position = Vector2(144, 208)
 script = ExtResource("6_vex7p")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Alicante. Alicante", "La salida sigue siendo el hueco del sur.")
+display_name = "Pescador de Tabarca"
+lines = PackedStringArray("Vengo a por tabaco de liar y la previsión del tiempo. La del periódico se equivoca menos que la de la radio.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_wyhtm")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1693646886 instance=ExtResource("11_6tuvk")]
 position = Vector2(144, 208)
 script = ExtResource("12_vex7p")
-lines = PackedStringArray("Tienda morada · Alicante.", "Alicante")
+lines = PackedStringArray("ESTANCO · ALACANT.", "Sellos, lotería y postales del castillo de Santa Bárbara.")
 only_from_below = false
 show_sprite = false
 

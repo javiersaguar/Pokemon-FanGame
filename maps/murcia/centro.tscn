@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=876211998 instance=ExtResource("5_k50w1")]
+display_name = "Huertano"
 position = Vector2(176, 272)
 script = ExtResource("6_d0nfi")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me ha picado una avispa en la huerta. Acho, me ha dejado el brazo como un melón.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_ros0k")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1484831688 instance=ExtResource("5_k50w1")]
 position = Vector2(144, 208)
 script = ExtResource("6_d0nfi")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Murcia. Murcia", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante"
+lines = PackedStringArray("Vengo con mi Pokémon de Hielo, que no aguanta el verano de Murcia. Lo entiendo perfectamente.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_3iypx")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=933615654 instance=ExtResource("9_v1iwb")]
 position = Vector2(144, 208)
 script = ExtResource("13_m1shf")
-lines = PackedStringArray("Centro Pokémon · Murcia.", "Murcia")
+lines = PackedStringArray("CENTRO POKÉMON · MURCIA.", "Abierto también en agosto, que aquí hace falta.")
 only_from_below = false
 show_sprite = false
 

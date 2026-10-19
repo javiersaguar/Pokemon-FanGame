@@ -57,9 +57,10 @@ event_params = {
 sprite_sheet = ExtResource("8_jk3bm")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=587815580 instance=ExtResource("5_6oe7w")]
+display_name = "Amona"
 position = Vector2(176, 240)
 script = ExtResource("6_yj8li")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro bacalao para el pil pil. El del súper no es el de la Ribera, pero mi nieto no lo nota.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_jfohj")
 

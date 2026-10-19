@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_wopsl")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1565094069 instance=ExtResource("5_51gby")]
+display_name = "Aficionado del Real Zaragoza"
 position = Vector2(176, 240)
 script = ExtResource("6_4v15r")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Echo la quiniela con el Zaragoza en Segunda. Lo marco todo como si estuviéramos en Primera.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_qqw6i")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=726844869 instance=ExtResource("5_51gby")]
 position = Vector2(144, 208)
 script = ExtResource("6_4v15r")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Zaragoza. Zaragoza", "La salida sigue siendo el hueco del sur.")
+display_name = "Señora del cupón"
+lines = PackedStringArray("Compro el cupón del Pilar. Si me toca, le pongo un manto nuevo a la Virgen.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_rim4a")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=853916510 instance=ExtResource("11_51gby")]
 position = Vector2(144, 208)
 script = ExtResource("12_4v15r")
-lines = PackedStringArray("Tienda morada · Zaragoza.", "Zaragoza")
+lines = PackedStringArray("ESTANCO · ZARAGOZA.", "Lotería de Navidad desde agosto. El maño es previsor.")
 only_from_below = false
 show_sprite = false
 

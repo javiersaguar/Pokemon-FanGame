@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_ad5y2")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=406342110 instance=ExtResource("5_ioi7d")]
+display_name = "Socio culé"
 position = Vector2(176, 240)
 script = ExtResource("6_w5nhe")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro pipas para el partido. En el Camp Nou en obras el bocadillo va dentro de la chaqueta.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_28px5")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1675501684 instance=ExtResource("5_ioi7d")]
 position = Vector2(144, 208)
 script = ExtResource("6_w5nhe")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Barcelona. Barcelona · Les Corts", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante de la Diagonal"
+lines = PackedStringArray("Estudio en la zona universitaria. Mi dieta es arroz, atún y lágrimas en época de exámenes.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_pw23o")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1326390964 instance=ExtResource("11_ioi7d")]
 position = Vector2(144, 208)
 script = ExtResource("12_w5nhe")
-lines = PackedStringArray("Tienda verde · Barcelona.", "Barcelona · Les Corts")
+lines = PackedStringArray("MERCADONA · LES CORTS.", "Aquí al lado juega el Barça. Los días de partido se agotan las pipas.")
 only_from_below = false
 show_sprite = false
 

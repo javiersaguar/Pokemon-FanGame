@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_cecj5")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1580513467 instance=ExtResource("5_gjw7g")]
+display_name = "Viajera del AVE"
 position = Vector2(176, 240)
 script = ExtResource("6_17ubo")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro un bocadillo para el AVE. En el tren cuestan el triple y saben a pena.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_2ltko")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=899618372 instance=ExtResource("5_gjw7g")]
 position = Vector2(144, 208)
 script = ExtResource("6_17ubo")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Madrid. Madrid · Retiro y Prado", "La salida sigue siendo el hueco del sur.")
+display_name = "Enfermero de guardia"
+lines = PackedStringArray("Salgo de la guardia del hospital de aquí al lado. Ceno a las nueve de la mañana. Lo normal.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_sat5e")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=200444213 instance=ExtResource("11_gjw7g")]
 position = Vector2(144, 208)
 script = ExtResource("12_17ubo")
-lines = PackedStringArray("Tienda verde · Madrid.", "Madrid · Retiro y Prado")
+lines = PackedStringArray("MERCADONA · ATOCHA.", "Lo que más se vende: bocadillos para el tren y agua para el Retiro.")
 only_from_below = false
 show_sprite = false
 

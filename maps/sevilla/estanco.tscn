@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_ggrai")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1487834297 instance=ExtResource("5_oukdq")]
+display_name = "Aficionado del Betis"
 position = Vector2(176, 240)
 script = ExtResource("6_20i7d")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Echo la quiniela con el Betis siempre ganador. Pierdo dinero, pero no pierdo la fe.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_n7gwl")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1294124105 instance=ExtResource("5_oukdq")]
 position = Vector2(144, 208)
 script = ExtResource("6_20i7d")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Sevilla. Sevilla · Centro", "La salida sigue siendo el hueco del sur.")
+display_name = "Aficionado del Sevilla"
+lines = PackedStringArray("Yo marco al Sevilla. El de al lado marca al Betis. Llevamos veinte años sin hablarnos y comprando aquí a la misma hora.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_4qovq")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1451903465 instance=ExtResource("11_oukdq")]
 position = Vector2(144, 208)
 script = ExtResource("12_20i7d")
-lines = PackedStringArray("Tienda morada · Sevilla.", "Sevilla · Centro")
+lines = PackedStringArray("ESTANCO · SEVILLA.", "Quinielas, sellos y discusiones Betis–Sevilla incluidas en el precio.")
 only_from_below = false
 show_sprite = false
 

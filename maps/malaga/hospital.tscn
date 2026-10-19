@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1486858768 instance=ExtResource("5_bbxr0")]
+display_name = "Guiri de Torremolinos"
 position = Vector2(176, 272)
 script = ExtResource("6_h1x4e")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Sunburn. Me quemé en la Malagueta en noviembre. Aquí noviembre es verano para mí.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_5ynoa")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=810399136 instance=ExtResource("5_bbxr0")]
 position = Vector2(144, 208)
 script = ExtResource("6_h1x4e")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Málaga. Málaga", "La salida sigue siendo el hueco del sur.")
+display_name = "Hombre de trono"
+lines = PackedStringArray("Me he lesionado el hombro llevando el trono. Lo volvería a hacer mañana.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_m4k46")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=705129126 instance=ExtResource("9_ns4ix")]
 position = Vector2(144, 208)
 script = ExtResource("13_rv7wm")
-lines = PackedStringArray("Oficinas · Málaga.", "Málaga")
+lines = PackedStringArray("HOSPITAL · MÁLAGA.", "Quemaduras de sol, golpes de terral y hombros de Semana Santa.")
 only_from_below = false
 show_sprite = false
 

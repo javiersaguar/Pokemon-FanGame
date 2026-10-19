@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_um6nu")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1974038887 instance=ExtResource("5_v05b8")]
+display_name = "Madona"
 position = Vector2(176, 240)
 script = ExtResource("6_10od6")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro ensaimadas del súper para el desayuno y las del forn para presumir.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_cuyjl")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=2024518508 instance=ExtResource("5_v05b8")]
 position = Vector2(144, 208)
 script = ExtResource("6_10od6")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Palma. Palma de Mallorca", "La salida sigue siendo el hueco del sur.")
+display_name = "Patrón de yate"
+lines = PackedStringArray("Vengo a por provisiones para una semana de navegación. Cerveza, hielo y, si sobra sitio, comida.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_31hki")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1849618656 instance=ExtResource("11_v05b8")]
 position = Vector2(144, 208)
 script = ExtResource("12_10od6")
-lines = PackedStringArray("Tienda verde · Palma.", "Palma de Mallorca")
+lines = PackedStringArray("MERCADONA · PALMA.", "Lo que más venden en el puerto: hielo y cerveza para los barcos.")
 only_from_below = false
 show_sprite = false
 

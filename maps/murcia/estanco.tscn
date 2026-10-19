@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_kvy46")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=379976232 instance=ExtResource("5_e75pj")]
+display_name = "Sardinero"
 position = Vector2(176, 240)
 script = ExtResource("6_utmfd")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro lotería para la peña del Entierro de la Sardina. Si toca, la sardina del año que viene será de oro.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_l8unc")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=455889757 instance=ExtResource("5_e75pj")]
 position = Vector2(144, 208)
 script = ExtResource("6_utmfd")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Murcia. Murcia", "La salida sigue siendo el hueco del sur.")
+display_name = "Abuelo"
+lines = PackedStringArray("Sellos para mandarle a mi nieta en Alemania unos paparajotes. Bueno, una foto de los paparajotes.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_eglob")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1381180841 instance=ExtResource("11_e75pj")]
 position = Vector2(144, 208)
 script = ExtResource("12_utmfd")
-lines = PackedStringArray("Tienda morada · Murcia.", "Murcia")
+lines = PackedStringArray("ESTANCO · MURCIA.", "Lotería, sellos y abanicos de emergencia.")
 only_from_below = false
 show_sprite = false
 

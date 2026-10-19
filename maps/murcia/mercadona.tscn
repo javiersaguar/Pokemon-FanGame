@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_ledc8")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1006784313 instance=ExtResource("5_8y6hg")]
+display_name = "Murciana"
 position = Vector2(176, 240)
 script = ExtResource("6_b0tf5")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Limones, pimientos y lechugas de la huerta. Las del súper vienen de Murcia igual: de al lado.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_dnbuv")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1461989252 instance=ExtResource("5_8y6hg")]
 position = Vector2(144, 208)
 script = ExtResource("6_b0tf5")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Murcia. Murcia", "La salida sigue siendo el hueco del sur.")
+display_name = "Cartagenero"
+lines = PackedStringArray("Compro aquí porque en Cartagena no hay de esta marca de pipas. Bueno, sí hay, pero no se lo digas a nadie.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_woyg7")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1859909374 instance=ExtResource("11_8y6hg")]
 position = Vector2(144, 208)
 script = ExtResource("12_b0tf5")
-lines = PackedStringArray("Tienda verde · Murcia.", "Murcia")
+lines = PackedStringArray("MERCADONA · MURCIA.", "Verduras de la huerta de Europa, a cinco minutos de la huerta.")
 only_from_below = false
 show_sprite = false
 

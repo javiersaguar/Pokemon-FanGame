@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_r44i7")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1758264227 instance=ExtResource("5_op76s")]
+display_name = "Guiri de la playa"
 position = Vector2(176, 240)
 script = ExtResource("6_4xy6k")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Paella congelada, cerveza y crema solar. Mi menú de vacaciones perfecto.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_yoc7b")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1114237610 instance=ExtResource("5_op76s")]
 position = Vector2(144, 208)
 script = ExtResource("6_4xy6k")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Valencia. Valencia · Malvarrosa", "La salida sigue siendo el hueco del sur.")
+display_name = "Vecino del Cabanyal"
+lines = PackedStringArray("Mi abuelo era pescador en el Cabanyal. Yo compro el pescado aquí y le digo que es de la lonja.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_wuxjf")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1567805005 instance=ExtResource("11_op76s")]
 position = Vector2(144, 208)
 script = ExtResource("12_4xy6k")
-lines = PackedStringArray("Tienda verde · Valencia.", "Valencia · Malvarrosa")
+lines = PackedStringArray("MERCADONA · MALVARROSA.", "A dos pasos de la playa. Las neveras de playa se agotan antes que el pan.")
 only_from_below = false
 show_sprite = false
 

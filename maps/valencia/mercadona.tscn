@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_at42d")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=973055255 instance=ExtResource("5_1mynf")]
+display_name = "Señora con la compra de la paella"
 position = Vector2(176, 240)
 script = ExtResource("6_b4a4r")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Pollo, conejo, garrofó, bajoqueta, arroz y azafrán. El chorizo, aquí ni lo mires.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_6m16n")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1195363649 instance=ExtResource("5_1mynf")]
 position = Vector2(144, 208)
 script = ExtResource("6_b4a4r")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Valencia. Valencia · Ciutat Vella", "La salida sigue siendo el hueco del sur.")
+display_name = "Joven del Carmen"
+lines = PackedStringArray("Compro horchata y fartons. Es el desayuno, la merienda y la cena de agosto.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_0w371")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=103145259 instance=ExtResource("11_1mynf")]
 position = Vector2(144, 208)
 script = ExtResource("12_b4a4r")
-lines = PackedStringArray("Tienda verde · Valencia.", "Valencia · Ciutat Vella")
+lines = PackedStringArray("MERCADONA · VALÈNCIA.", "Mercadona nació en València. Aquí las cajeras saben más de paella que el chef de la tele.")
 only_from_below = false
 show_sprite = false
 

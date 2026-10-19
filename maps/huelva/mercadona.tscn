@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_6jdhy")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1451726606 instance=ExtResource("5_xl8gy")]
+display_name = "Jornalera de la fresa"
 position = Vector2(176, 240)
 script = ExtResource("6_4i3sg")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro de todo menos fresas. Esas las tengo de sobra en casa.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_88opv")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1924592714 instance=ExtResource("5_xl8gy")]
 position = Vector2(144, 208)
 script = ExtResource("6_4i3sg")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Huelva. Huelva", "La salida sigue siendo el hueco del sur.")
+display_name = "Aficionado del Recre"
+lines = PackedStringArray("Compro pipas para Nuevo Colombino. El Recre sufre y yo como pipas. Es un sistema.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_dm1eq")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=2027144716 instance=ExtResource("11_xl8gy")]
 position = Vector2(144, 208)
 script = ExtResource("12_4i3sg")
-lines = PackedStringArray("Tienda verde · Huelva.", "Huelva")
+lines = PackedStringArray("MERCADONA · HUELVA.", "La gamba blanca, en la pescadería. La congelada, mejor no la menciones aquí.")
 only_from_below = false
 show_sprite = false
 

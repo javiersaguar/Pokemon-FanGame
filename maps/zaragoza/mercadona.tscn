@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_85ooh")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=2033587274 instance=ExtResource("5_sm3vn")]
+display_name = "Abuela del Tubo"
 position = Vector2(176, 240)
 script = ExtResource("6_8mhp6")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro ternasco para el domingo. El carnicero me guarda el mejor; si no, me enfado y se entera todo El Tubo.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_ojqmh")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1973857816 instance=ExtResource("5_sm3vn")]
 position = Vector2(144, 208)
 script = ExtResource("6_8mhp6")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Zaragoza. Zaragoza", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante"
+lines = PackedStringArray("Compro frutas de Aragón para mi madre de Murcia. Así cree que como sano.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_j2qgf")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1663943965 instance=ExtResource("11_sm3vn")]
 position = Vector2(144, 208)
 script = ExtResource("12_8mhp6")
-lines = PackedStringArray("Tienda verde · Zaragoza.", "Zaragoza")
+lines = PackedStringArray("MERCADONA · ZARAGOZA.", "Frutas de Aragón, ternasco y bufandas en invierno.")
 only_from_below = false
 show_sprite = false
 

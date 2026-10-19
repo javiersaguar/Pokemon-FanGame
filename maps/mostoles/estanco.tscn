@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_xj34c")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=2476565 instance=ExtResource("5_5nb7e")]
+display_name = "Historiador aficionado"
 position = Vector2(176, 240)
 script = ExtResource("6_0pid0")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro sellos con el bando de Móstoles. No existen, pero yo los pido igual.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_5r7gr")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=207532340 instance=ExtResource("5_5nb7e")]
 position = Vector2(144, 208)
 script = ExtResource("6_0pid0")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Móstoles. Móstoles", "La salida sigue siendo el hueco del sur.")
+display_name = "Abuelo"
+lines = PackedStringArray("El cupón y el periódico. Leo los deportes y luego, la política, para enfadarme a gusto.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_u86x3")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1912608690 instance=ExtResource("11_5nb7e")]
 position = Vector2(144, 208)
 script = ExtResource("12_0pid0")
-lines = PackedStringArray("Tienda morada · Móstoles.", "Móstoles")
+lines = PackedStringArray("ESTANCO · MÓSTOLES.", "Sellos, lotería y bonos de la C-5.")
 only_from_below = false
 show_sprite = false
 

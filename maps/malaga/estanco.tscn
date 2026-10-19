@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_ufosp")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=2050063629 instance=ExtResource("5_l7o3u")]
+display_name = "Biznaguero"
 position = Vector2(176, 240)
 script = ExtResource("6_fmrru")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Vengo a por el periódico para ver qué estrenos hay en el Festival. Luego vendo biznagas a la salida.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_ir1di")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=275303671 instance=ExtResource("5_l7o3u")]
 position = Vector2(144, 208)
 script = ExtResource("6_fmrru")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Málaga. Málaga", "La salida sigue siendo el hueco del sur.")
+display_name = "Señora del Perchel"
+lines = PackedStringArray("Lotería de Navidad comprada en julio. Para cuando llega diciembre ya la he perdido dos veces.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_55rnu")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=237264772 instance=ExtResource("11_l7o3u")]
 position = Vector2(144, 208)
 script = ExtResource("12_fmrru")
-lines = PackedStringArray("Tienda morada · Málaga.", "Málaga")
+lines = PackedStringArray("ESTANCO · MÁLAGA.", "Sellos, lotería y postales de la Manquita, la catedral sin torre.")
 only_from_below = false
 show_sprite = false
 

@@ -65,9 +65,10 @@ script = ExtResource("10_a5y6d")
 lines = PackedStringArray()
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=58604552 instance=ExtResource("5_lrxkj")]
+display_name = "Corredor del encierro"
 position = Vector2(176, 272)
 script = ExtResource("6_t048f")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me ha pisado un mozo, no un toro. Es más común de lo que parece.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_cwa2n")
 

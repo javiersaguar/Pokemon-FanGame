@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_cc4kl")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=414114896 instance=ExtResource("5_4cfat")]
+display_name = "Madre canaria"
 position = Vector2(176, 240)
 script = ExtResource("6_j68jq")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Papas, gofio, mojo y plátanos. Lo básico para sobrevivir una semana.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_8cq5j")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=677566819 instance=ExtResource("5_4cfat")]
 position = Vector2(144, 208)
 script = ExtResource("6_j68jq")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Las Palmas. Las Palmas · Las Canteras", "La salida sigue siendo el hueco del sur.")
+display_name = "Marinero de paso"
+lines = PackedStringArray("Mi barco sale mañana hacia Brasil. Compro galletas para tres semanas de océano.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_co06m")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1524027431 instance=ExtResource("11_4cfat")]
 position = Vector2(144, 208)
 script = ExtResource("12_j68jq")
-lines = PackedStringArray("Tienda verde · Las Palmas.", "Las Palmas · Las Canteras")
+lines = PackedStringArray("MERCADONA · LAS PALMAS.", "Gofio en la sección de harinas. Si no lo encuentras, pregunta: aquí todo el mundo sabe dónde está.")
 only_from_below = false
 show_sprite = false
 

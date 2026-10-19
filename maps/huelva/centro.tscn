@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1414649368 instance=ExtResource("5_vxdl3")]
+display_name = "Rociero"
 position = Vector2(176, 272)
 script = ExtResource("6_ny6fb")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me he quedado ronco cantando sevillanas en la carreta. Volvería a hacerlo.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_4208e")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1380548459 instance=ExtResource("5_vxdl3")]
 position = Vector2(144, 208)
 script = ExtResource("6_ny6fb")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Huelva. Huelva", "La salida sigue siendo el hueco del sur.")
+display_name = "Marisquero"
+lines = PackedStringArray("Me ha pellizcado un cangrejo. Pequeño, pero con muy mala uva.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_guqep")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=690501129 instance=ExtResource("9_5hs52")]
 position = Vector2(144, 208)
 script = ExtResource("13_xwbmc")
-lines = PackedStringArray("Centro Pokémon · Huelva.", "Huelva")
+lines = PackedStringArray("CENTRO POKÉMON · HUELVA.", "A dos pasos del Muelle del Tinto. Curamos Pokémon y ánimos después del Recre.")
 only_from_below = false
 show_sprite = false
 

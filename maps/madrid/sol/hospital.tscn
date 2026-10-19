@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1462476682 instance=ExtResource("5_7tovf")]
+display_name = "Turista con ampollas"
 position = Vector2(176, 272)
 script = ExtResource("6_urkuj")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("He andado de Sol al Retiro y vuelta en chanclas. Mis pies ya no son de este mundo.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_rsxtu")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=216626836 instance=ExtResource("5_7tovf")]
 position = Vector2(144, 208)
 script = ExtResource("6_urkuj")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Madrid. Madrid · Sol y Gran Vía", "La salida sigue siendo el hueco del sur.")
+display_name = "Vendedora de lotería"
+lines = PackedStringArray("Vendo décimos en la puerta de Doña Manolita. Aquí entro a descansar los pies y a ver si alguien me pregunta por el Gordo.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_2jl60")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1116941437 instance=ExtResource("9_vlcfx")]
 position = Vector2(144, 208)
 script = ExtResource("13_xat6h")
-lines = PackedStringArray("Oficinas · Madrid.", "Madrid · Sol y Gran Vía")
+lines = PackedStringArray("HOSPITAL · PUERTA DEL SOL.", "Kilómetro cero de las caminatas por Madrid y de las rozaduras.")
 only_from_below = false
 show_sprite = false
 

@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_mx3jf")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1832163210 instance=ExtResource("5_7aqwr")]
+display_name = "Aficionado del Pucela"
 position = Vector2(176, 240)
 script = ExtResource("6_nrp1n")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("La quiniela con el Valladolid ganador. Es un acto de fe, como la Semana Santa.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_5s8lv")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=601490592 instance=ExtResource("5_7aqwr")]
 position = Vector2(144, 208)
 script = ExtResource("6_nrp1n")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Valladolid. Valladolid", "La salida sigue siendo el hueco del sur.")
+display_name = "Escritor"
+lines = PackedStringArray("Sellos para mandar mi novela a una editorial. Es la vigésima. La novela, y la editorial.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_u011j")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=631265707 instance=ExtResource("11_7aqwr")]
 position = Vector2(144, 208)
 script = ExtResource("12_nrp1n")
-lines = PackedStringArray("Tienda morada · Valladolid.", "Valladolid")
+lines = PackedStringArray("ESTANCO · VALLADOLID.", "Lotería, sellos y bufandas de emergencia.")
 only_from_below = false
 show_sprite = false
 

@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_cko88")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1760639051 instance=ExtResource("5_kkpwe")]
+display_name = "Trabajador de temporada"
 position = Vector2(176, 240)
 script = ExtResource("6_n0k2r")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Duermo en una furgoneta y trabajo en un beach club. Compro agua, pan y sueño.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_mmquw")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=609352944 instance=ExtResource("5_kkpwe")]
 position = Vector2(144, 208)
 script = ExtResource("6_n0k2r")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Ibiza. Ibiza", "La salida sigue siendo el hueco del sur.")
+display_name = "Turista italiana"
+lines = PackedStringArray("Ma che prezzi! Bueno, en Ibiza, comparado con un cóctel, esto es gratis.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_qpgte")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1354160577 instance=ExtResource("11_kkpwe")]
 position = Vector2(144, 208)
 script = ExtResource("12_n0k2r")
-lines = PackedStringArray("Tienda verde · Ibiza.", "Ibiza")
+lines = PackedStringArray("MERCADONA · EIVISSA.", "Lo más vendido en verano: agua, hielo y bebidas energéticas. En invierno: nada, está cerrado medio pueblo.")
 only_from_below = false
 show_sprite = false
 

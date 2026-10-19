@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_x70dw")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=228180491 instance=ExtResource("5_ulkw8")]
+display_name = "Madre de Zarzaquemada"
 position = Vector2(176, 240)
 script = ExtResource("6_e1hsw")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro para siete. Bueno, para cinco, pero los amigos del niño comen como dos.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_8s551")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=777647859 instance=ExtResource("5_ulkw8")]
 position = Vector2(144, 208)
 script = ExtResource("6_e1hsw")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Leganés. Leganés", "La salida sigue siendo el hueco del sur.")
+display_name = "Feriante"
+lines = PackedStringArray("Vengo a por azúcar para los algodones de la feria. Me llevo cincuenta kilos.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_72rka")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=883229796 instance=ExtResource("11_ulkw8")]
 position = Vector2(144, 208)
 script = ExtResource("12_e1hsw")
-lines = PackedStringArray("Tienda verde · Leganés.", "Leganés")
+lines = PackedStringArray("MERCADONA · LEGANÉS.", "Pepinos en la frutería, por tradición.")
 only_from_below = false
 show_sprite = false
 

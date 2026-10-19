@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1294176895 instance=ExtResource("5_gqshx")]
+display_name = "Surfista de La Cícer"
 position = Vector2(176, 272)
 script = ExtResource("6_s70af")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me he cortado con las rocas de la Barra. El mar de Las Canteras tiene dientes.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_kjrn0")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=309387401 instance=ExtResource("5_gqshx")]
 position = Vector2(144, 208)
 script = ExtResource("6_s70af")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Las Palmas. Las Palmas · Vegueta y Triana", "La salida sigue siendo el hueco del sur.")
+display_name = "Abuela canaria"
+lines = PackedStringArray("Vengo a por el sintrom, mi niño. Y a charlar con la enfermera, que es de mi pueblo.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_qfd2m")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1245760707 instance=ExtResource("9_avsvq")]
 position = Vector2(144, 208)
 script = ExtResource("13_wod5c")
-lines = PackedStringArray("Oficinas · Las Palmas.", "Las Palmas · Vegueta y Triana")
+lines = PackedStringArray("HOSPITAL · LAS PALMAS.", "Atendemos en canario y en todos los idiomas del puerto de La Luz.")
 only_from_below = false
 show_sprite = false
 

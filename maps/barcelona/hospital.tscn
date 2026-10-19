@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=2056212570 instance=ExtResource("5_o1xwg")]
+display_name = "Paciente del Eixample"
 position = Vector2(176, 272)
 script = ExtResource("6_785gm")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me he torcido el tobillo en una baldosa de panot de flor. Son preciosas y resbalan como el hielo.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_scgqe")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=908371930 instance=ExtResource("5_o1xwg")]
 position = Vector2(144, 208)
 script = ExtResource("6_785gm")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Barcelona. Barcelona · Eixample", "La salida sigue siendo el hueco del sur.")
+display_name = "Guiri despistado"
+lines = PackedStringArray("I was looking for the Sagrada Familia y he acabado en urgencias. No sé cómo, pero aquí estoy.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_i6dxy")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=739688980 instance=ExtResource("9_g4vg7")]
 position = Vector2(144, 208)
 script = ExtResource("13_2jxs6")
-lines = PackedStringArray("Oficinas · Barcelona.", "Barcelona · Eixample")
+lines = PackedStringArray("HOSPITAL · BARCELONA.", "Atención en catalán, castellano, inglés y lenguaje de gestos para los cruceros.")
 only_from_below = false
 show_sprite = false
 

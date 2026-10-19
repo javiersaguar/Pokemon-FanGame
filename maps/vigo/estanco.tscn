@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_d524s")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=176752208 instance=ExtResource("5_7v4f7")]
+display_name = "Conservero"
 position = Vector2(176, 240)
 script = ExtResource("6_a4yf4")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro sellos para mandar latas de berberechos a mis primos de Venezuela. La lata gallega viaja.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_q737k")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=695930473 instance=ExtResource("5_7v4f7")]
 position = Vector2(144, 208)
 script = ExtResource("6_a4yf4")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Vigo. Vigo", "La salida sigue siendo el hueco del sur.")
+display_name = "Señor de la gaita"
+lines = PackedStringArray("Compro el cupón y el Faro de Vigo. El periódico más antiguo de España, dicen. Y el cupón, el más pequeño.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_r6l53")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1109490211 instance=ExtResource("11_7v4f7")]
 position = Vector2(144, 208)
 script = ExtResource("12_a4yf4")
-lines = PackedStringArray("Tienda morada · Vigo.", "Vigo")
+lines = PackedStringArray("ESTANCO · VIGO.", "Sellos, prensa y postales de las islas Cíes.")
 only_from_below = false
 show_sprite = false
 

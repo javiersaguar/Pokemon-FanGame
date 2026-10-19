@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1194248580 instance=ExtResource("5_j8oic")]
+display_name = "Mariscadora"
 position = Vector2(176, 272)
 script = ExtResource("6_0afn1")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me duelen las rodillas de tanto agacharme en la ría. Treinta años de marisqueo pasan factura.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_x8msu")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1514535441 instance=ExtResource("5_j8oic")]
 position = Vector2(144, 208)
 script = ExtResource("6_0afn1")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Vigo. Vigo", "La salida sigue siendo el hueco del sur.")
+display_name = "Celtista"
+lines = PackedStringArray("Me he quedado sin voz en Balaídos. Hemos ganado al Deportivo. Lo celebro sin voz.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_eun8v")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=608387830 instance=ExtResource("9_gciwp")]
 position = Vector2(144, 208)
 script = ExtResource("13_ht0qp")
-lines = PackedStringArray("Centro Pokémon · Vigo.", "Vigo")
+lines = PackedStringArray("CENTRO POKÉMON · VIGO.", "Cuando llueve se llena; en Vigo, se llena mucho.")
 only_from_below = false
 show_sprite = false
 

@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_pw8i2")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=471279638 instance=ExtResource("5_yo0g1")]
+display_name = "Abuelo de Olavide"
 position = Vector2(176, 240)
 script = ExtResource("6_mbbn2")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Compro el periódico de papel y lo leo entero en la plaza de Olavide. Las noticias en papel duelen menos.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_dakgp")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1353729880 instance=ExtResource("5_yo0g1")]
 position = Vector2(144, 208)
 script = ExtResource("6_mbbn2")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Madrid. Madrid · Chamberí", "La salida sigue siendo el hueco del sur.")
+display_name = "Joven de la terraza"
+lines = PackedStringArray("Vengo a por un mechero. Me han dicho que en Chamberí se ha puesto de moda leer en las terrazas. Lo de leer no lo he visto.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_111rj")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1662445699 instance=ExtResource("11_yo0g1")]
 position = Vector2(144, 208)
 script = ExtResource("12_mbbn2")
-lines = PackedStringArray("Tienda morada · Madrid.", "Madrid · Chamberí")
+lines = PackedStringArray("ESTANCO · CHAMBERÍ.", "Prensa, sellos y conversación de portal.")
 only_from_below = false
 show_sprite = false
 

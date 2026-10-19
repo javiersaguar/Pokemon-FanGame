@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_wi4ir")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=898979737 instance=ExtResource("5_7endl")]
+display_name = "Opositor"
 position = Vector2(176, 240)
 script = ExtResource("6_lc5s5")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Vengo a por sellos para mandar la instancia. Soy el último ser humano que usa sellos.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_7wfdg")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=610231063 instance=ExtResource("5_7endl")]
 position = Vector2(144, 208)
 script = ExtResource("6_lc5s5")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Madrid. Madrid · Moncloa", "La salida sigue siendo el hueco del sur.")
+display_name = "Señor del cupón"
+lines = PackedStringArray("Compro el cupón cada día desde 1980. Me tocó una vez: me gasté el premio en más cupones.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_b0fxn")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=604975109 instance=ExtResource("11_7endl")]
 position = Vector2(144, 208)
 script = ExtResource("12_lc5s5")
-lines = PackedStringArray("Tienda morada · Madrid.", "Madrid · Moncloa")
+lines = PackedStringArray("ESTANCO · MONCLOA.", "Sellos, lotería, tabaco y paciencia para los que hacen cola de la ONCE.")
 only_from_below = false
 show_sprite = false
 

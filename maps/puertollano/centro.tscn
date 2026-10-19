@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1144270329 instance=ExtResource("5_se3s1")]
+display_name = "Exminero"
 position = Vector2(176, 272)
 script = ExtResource("6_600ob")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Vengo a la revisión de los pulmones. Treinta años de carbón no se van con agua agria.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_0oddm")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=965911418 instance=ExtResource("5_se3s1")]
 position = Vector2(144, 208)
 script = ExtResource("6_600ob")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Puertollano. Puertollano", "La salida sigue siendo el hueco del sur.")
+display_name = "Ingeniera de la planta"
+lines = PackedStringArray("Me he dado un golpe con una tubería. Hidrógeno verde, golpe morado.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_islj3")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1511118448 instance=ExtResource("9_yqna6")]
 position = Vector2(144, 208)
 script = ExtResource("13_0roaj")
-lines = PackedStringArray("Centro Pokémon · Puertollano.", "Puertollano")
+lines = PackedStringArray("CENTRO POKÉMON · PUERTOLLANO.", "Junto al Paseo de San Gregorio. Pregunta por la Fuente Agria: cura todo, según los abuelos.")
 only_from_below = false
 show_sprite = false
 

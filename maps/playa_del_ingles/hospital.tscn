@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1076627915 instance=ExtResource("5_xwnst")]
+display_name = "Turista alemana"
 position = Vector2(176, 272)
 script = ExtResource("6_kt6i1")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Ich bin in den Dünen verloren gegangen. Me perdí en las dunas tres horas. Ahora tengo arena hasta en el alma.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_tnx2i")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=2004125014 instance=ExtResource("5_xwnst")]
 position = Vector2(144, 208)
 script = ExtResource("6_kt6i1")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Playa del Inglés. Playa del Inglés", "La salida sigue siendo el hueco del sur.")
+display_name = "Animador del hotel"
+lines = PackedStringArray("Me he torcido el pie bailando la canción del verano por quinta vez hoy. Gajes del oficio.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_ggoaa")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1173379597 instance=ExtResource("9_4gbiy")]
 position = Vector2(144, 208)
 script = ExtResource("13_dfy7r")
-lines = PackedStringArray("Oficinas · Playa del Inglés.", "Playa del Inglés")
+lines = PackedStringArray("HOSPITAL · PLAYA DEL INGLÉS.", "Especialistas en insolaciones y en pies de turista que ha caminado por las dunas.")
 only_from_below = false
 show_sprite = false
 

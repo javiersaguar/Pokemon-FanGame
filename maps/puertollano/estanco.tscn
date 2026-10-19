@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_krh8v")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=430543234 instance=ExtResource("5_ga87f")]
+display_name = "Jubilado minero"
 position = Vector2(176, 240)
 script = ExtResource("6_3j2ej")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("El cupón y un periódico. En la mina no se leía; ahora leo hasta las esquelas de Ciudad Real.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_57v8b")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1893794424 instance=ExtResource("5_ga87f")]
 position = Vector2(144, 208)
 script = ExtResource("6_3j2ej")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Puertollano. Puertollano", "La salida sigue siendo el hueco del sur.")
+display_name = "Viajero del AVE"
+lines = PackedStringArray("Compro una revista para el tren. El AVE para aquí dos minutos: tengo que ser rápido.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_ipo4u")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1266801132 instance=ExtResource("11_ga87f")]
 position = Vector2(144, 208)
 script = ExtResource("12_3j2ej")
-lines = PackedStringArray("Tienda morada · Puertollano.", "Puertollano")
+lines = PackedStringArray("ESTANCO · PUERTOLLANO.", "Sellos, lotería y revistas para el AVE.")
 only_from_below = false
 show_sprite = false
 

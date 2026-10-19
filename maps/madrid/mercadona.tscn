@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_yy75u")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1720134373 instance=ExtResource("5_n5qdv")]
+display_name = "Estudiante de Moncloa"
 position = Vector2(176, 240)
 script = ExtResource("6_w5bwd")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro pasta, tomate frito y huevos. Es lo mismo que la semana pasada. Y que la anterior.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_1qtsq")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1594749259 instance=ExtResource("5_n5qdv")]
 position = Vector2(144, 208)
 script = ExtResource("6_w5bwd")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Madrid. Madrid · Moncloa", "La salida sigue siendo el hueco del sur.")
+display_name = "Madre con carro"
+lines = PackedStringArray("Llevo el carro lleno para cinco. En Madrid la compra se hace en una hora y la cola, en otra.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_ta5jq")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=567026650 instance=ExtResource("11_n5qdv")]
 position = Vector2(144, 208)
 script = ExtResource("12_w5bwd")
-lines = PackedStringArray("Tienda verde · Madrid.", "Madrid · Moncloa")
+lines = PackedStringArray("MERCADONA · MONCLOA.", "Lo más vendido en el barrio: café, pan de molde y fiambre para los tápers de la facultad.")
 only_from_below = false
 show_sprite = false
 

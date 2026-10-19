@@ -69,8 +69,8 @@ sprite_sheet = ExtResource("8_pwt8b")
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=969579940 instance=ExtResource("5_8hs3q")]
 position = Vector2(176, 240)
 script = ExtResource("6_ss60c")
-display_name = "Reponedora"
-lines = PackedStringArray()
+display_name = "Vecina del Sector III"
+lines = PackedStringArray("Compro para la semana entera. Con el Cercanías, no se puede venir cada día.")
 turn_to_player = true
 event = ExtResource("9_i8moo")
 event_params = {
@@ -102,15 +102,15 @@ initial_facing = 1
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=36520395 instance=ExtResource("5_8hs3q")]
 position = Vector2(368, 208)
 script = ExtResource("6_ss60c")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Getafe. Getafe", "La salida sigue siendo el hueco del sur.")
+display_name = "Trabajador de la fábrica"
+lines = PackedStringArray("Vengo del turno de noche. Compro el desayuno de la cena de la comida.")
 turn_to_player = true
 sprite_sheet = ExtResource("14_w2whv")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1030135908 instance=ExtResource("11_bxl8t")]
 position = Vector2(368, 208)
 script = ExtResource("13_j15av")
-lines = PackedStringArray("Tienda verde · Getafe.", "Getafe")
+lines = PackedStringArray("MERCADONA · GETAFE.", "Pregunta por el expositor: aquí se ven los precios sin hacer cola.")
 only_from_below = false
 show_sprite = false
 

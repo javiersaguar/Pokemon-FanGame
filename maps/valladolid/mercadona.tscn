@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_lyyk3")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=750736033 instance=ExtResource("5_c3qjo")]
+display_name = "Señora de la calle Santiago"
 position = Vector2(176, 240)
 script = ExtResource("6_repe0")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro lechazo para el domingo. Si viene mi yerno de Madrid, compro doble.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_pww80")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=148499093 instance=ExtResource("5_c3qjo")]
 position = Vector2(144, 208)
 script = ExtResource("6_repe0")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Valladolid. Valladolid", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante"
+lines = PackedStringArray("Compro sopa de sobre. En Valladolid en enero es el mejor invento de la humanidad.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_tieei")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=2083070426 instance=ExtResource("11_c3qjo")]
 position = Vector2(144, 208)
 script = ExtResource("12_repe0")
-lines = PackedStringArray("Tienda verde · Valladolid.", "Valladolid")
+lines = PackedStringArray("MERCADONA · VALLADOLID.", "Vinos de Ribera, Rueda y Cigales en la misma estantería. Elige con cuidado.")
 only_from_below = false
 show_sprite = false
 

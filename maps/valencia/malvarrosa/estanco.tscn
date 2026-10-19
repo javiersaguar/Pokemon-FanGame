@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_g0lg4")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1005381093 instance=ExtResource("5_7jkfh")]
+display_name = "Socorrista"
 position = Vector2(176, 240)
 script = ExtResource("6_ulmik")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Vengo a por un abono de tranvía. Llevo toda la mañana en la torre y quiero ir a casa sentado.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_jeyyr")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1291488292 instance=ExtResource("5_7jkfh")]
 position = Vector2(144, 208)
 script = ExtResource("6_ulmik")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Valencia. Valencia · Malvarrosa", "La salida sigue siendo el hueco del sur.")
+display_name = "Turista nórdica"
+lines = PackedStringArray("I buy postcards of the beach. In my country there is no beach. Only snow.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_83ww7")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1895878658 instance=ExtResource("11_7jkfh")]
 position = Vector2(144, 208)
 script = ExtResource("12_ulmik")
-lines = PackedStringArray("Tienda morada · Valencia.", "Valencia · Malvarrosa")
+lines = PackedStringArray("ESTANC · MALVARROSA.", "Postales, sellos y crema solar de emergencia.")
 only_from_below = false
 show_sprite = false
 

@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_heoby")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=412732916 instance=ExtResource("5_g84lr")]
+display_name = "Pastora manchega"
 position = Vector2(176, 240)
 script = ExtResource("6_gthfm")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro de todo menos queso. El queso lo hago yo.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_663fy")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1308964146 instance=ExtResource("5_g84lr")]
 position = Vector2(144, 208)
 script = ExtResource("6_gthfm")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Puertollano. Puertollano", "La salida sigue siendo el hueco del sur.")
+display_name = "Trabajador a turnos"
+lines = PackedStringArray("Vengo a las diez de la noche porque salgo del turno. A esta hora solo quedan las barras raras.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_qal35")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=698991784 instance=ExtResource("11_g84lr")]
 position = Vector2(144, 208)
 script = ExtResource("12_gthfm")
-lines = PackedStringArray("Tienda verde · Puertollano.", "Puertollano")
+lines = PackedStringArray("MERCADONA · PUERTOLLANO.", "Queso manchego, pisto y migas en lata. La Mancha en la estantería.")
 only_from_below = false
 show_sprite = false
 

@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1616457401 instance=ExtResource("5_7yl2y")]
+display_name = "Costalero con el cuello"
 position = Vector2(176, 272)
 script = ExtResource("6_s30tk")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Saqué el paso el Jueves Santo y el cuello no ha vuelto a su sitio. Mereció la pena.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_e7vdj")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=604811214 instance=ExtResource("5_7yl2y")]
 position = Vector2(144, 208)
 script = ExtResource("6_s30tk")
-display_name = "Visitante"
-lines = PackedStringArray("Oficinas, en Sevilla. Sevilla · Centro", "La salida sigue siendo el hueco del sur.")
+display_name = "Señora de Triana"
+lines = PackedStringArray("Vengo con mi nieto, que se ha comido diez pestiños. El pobre niño no puede ni andar.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_8e4pe")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=933314237 instance=ExtResource("9_4oua0")]
 position = Vector2(144, 208)
 script = ExtResource("13_7fmpy")
-lines = PackedStringArray("Oficinas · Sevilla.", "Sevilla · Centro")
+lines = PackedStringArray("HOSPITAL · SEVILLA.", "En agosto: golpes de calor. En Semana Santa: hombros de costalero. En Feria: pies de sevillanas.")
 only_from_below = false
 show_sprite = false
 

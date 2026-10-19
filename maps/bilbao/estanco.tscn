@@ -57,9 +57,10 @@ event_params = {
 sprite_sheet = ExtResource("8_03en4")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=689794437 instance=ExtResource("5_leldl")]
+display_name = "Socio del Athletic"
 position = Vector2(176, 240)
 script = ExtResource("6_g8oua")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Quiniela: el Athletic, siempre uno. Y la bufanda en el bolsillo por si acaso.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_28s70")
 

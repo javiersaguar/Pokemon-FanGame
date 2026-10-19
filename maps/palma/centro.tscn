@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=473305984 instance=ExtResource("5_n0jh1")]
+display_name = "Alemán quemado"
 position = Vector2(176, 272)
 script = ExtResource("6_h1diq")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Ich habe mich verbrannt. Me quedé dormido en Es Trenc. Ahora soy rojo como la sobrasada.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_5bf8r")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=779818269 instance=ExtResource("5_n0jh1")]
 position = Vector2(144, 208)
 script = ExtResource("6_h1diq")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Palma. Palma de Mallorca", "La salida sigue siendo el hueco del sur.")
+display_name = "Payés mallorquín"
+lines = PackedStringArray("Vengo a por las pastillas de la tensión. Desde que hay tantos turistas, la tensión me sube sola.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_my8jt")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=789448967 instance=ExtResource("9_6osn5")]
 position = Vector2(144, 208)
 script = ExtResource("13_p1rvc")
-lines = PackedStringArray("Centro Pokémon · Palma.", "Palma de Mallorca")
+lines = PackedStringArray("CENTRE POKÉMON · PALMA.", "Atenció en mallorquí, castellà, alemany i anglès.")
 only_from_below = false
 show_sprite = false
 

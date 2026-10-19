@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_jh1gh")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1827658922 instance=ExtResource("5_bixcq")]
+display_name = "Aficionado del Lega"
 position = Vector2(176, 240)
 script = ExtResource("6_ltdyf")
-lines = PackedStringArray("Aquí venden objetos para preparar el combate.")
+lines = PackedStringArray("Quiniela con el Leganés ganador. Ya ha subido a Primera una vez. Todo es posible.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_41e73")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=224387898 instance=ExtResource("5_bixcq")]
 position = Vector2(144, 208)
 script = ExtResource("6_ltdyf")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda morada, en Leganés. Leganés", "La salida sigue siendo el hueco del sur.")
+display_name = "Señora"
+lines = PackedStringArray("Compro la lotería del Leganés. Si toca, el estadio nuevo lo pago yo.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_d3ftq")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1814476789 instance=ExtResource("11_bixcq")]
 position = Vector2(144, 208)
 script = ExtResource("12_ltdyf")
-lines = PackedStringArray("Tienda morada · Leganés.", "Leganés")
+lines = PackedStringArray("ESTANCO · LEGANÉS.", "Lotería, sellos y bufandas blanquiazules.")
 only_from_below = false
 show_sprite = false
 

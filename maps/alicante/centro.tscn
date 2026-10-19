@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=761538225 instance=ExtResource("5_7vom1")]
+display_name = "Turista noruego"
 position = Vector2(176, 272)
 script = ExtResource("6_e7sg2")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me he quemado en la playa del Postiguet en marzo. En Noruega esto es pleno verano.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_fn7u2")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=2134299182 instance=ExtResource("5_7vom1")]
 position = Vector2(144, 208)
 script = ExtResource("6_e7sg2")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Alicante. Alicante", "La salida sigue siendo el hueco del sur.")
+display_name = "Abuela del Barrio"
+lines = PackedStringArray("Bajo del Barrio de Santa Cruz para la revisión. Para subir llamaré a mi nieto, que tiene piernas.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_0hcx0")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1414803917 instance=ExtResource("9_vwggd")]
 position = Vector2(144, 208)
 script = ExtResource("13_30tlu")
-lines = PackedStringArray("Centro Pokémon · Alicante.", "Alicante")
+lines = PackedStringArray("CENTRO POKÉMON · ALACANT.", "Cerca de la Explanada. Aquí el sol cura y quema a partes iguales.")
 only_from_below = false
 show_sprite = false
 

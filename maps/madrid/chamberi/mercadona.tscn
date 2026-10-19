@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_fxhud")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=538441305 instance=ExtResource("5_h17xo")]
+display_name = "Señora de Chamberí"
 position = Vector2(176, 240)
 script = ExtResource("6_l5xyp")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Vengo con el carrito de cuadros de toda la vida. Lo demás ha cambiado; el carrito, no.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_n6ygh")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1382787014 instance=ExtResource("5_h17xo")]
 position = Vector2(144, 208)
 script = ExtResource("6_l5xyp")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Madrid. Madrid · Chamberí", "La salida sigue siendo el hueco del sur.")
+display_name = "Vecino nuevo"
+lines = PackedStringArray("Me he mudado a Chamberí y pago por un piso interior lo que en mi pueblo vale una casa con huerto.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_5xc4w")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=1570129638 instance=ExtResource("11_h17xo")]
 position = Vector2(144, 208)
 script = ExtResource("12_l5xyp")
-lines = PackedStringArray("Tienda verde · Madrid.", "Madrid · Chamberí")
+lines = PackedStringArray("MERCADONA · CHAMBERÍ.", "El barrio castizo de los porteros, las mercerías y los alquileres imposibles.")
 only_from_below = false
 show_sprite = false
 

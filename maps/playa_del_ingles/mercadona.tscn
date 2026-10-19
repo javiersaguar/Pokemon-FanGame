@@ -60,24 +60,25 @@ event_params = {
 sprite_sheet = ExtResource("8_6lu0r")
 
 [node name="Cliente" type="Node2D" parent="Entities" unique_id=1169881958 instance=ExtResource("5_ehmko")]
+display_name = "Jubilado noruego"
 position = Vector2(176, 240)
 script = ExtResource("6_76txx")
-lines = PackedStringArray("Poké Balls, curas y repelentes: pregunta en la caja.")
+lines = PackedStringArray("Compro salmón. Es peor que el de Noruega, pero aquí hace sol. Compensa.")
 turn_to_player = true
 sprite_sheet = ExtResource("9_l25wk")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=1094387438 instance=ExtResource("5_ehmko")]
 position = Vector2(144, 208)
 script = ExtResource("6_76txx")
-display_name = "Visitante"
-lines = PackedStringArray("Tienda verde, en Playa del Inglés. Playa del Inglés", "La salida sigue siendo el hueco del sur.")
+display_name = "Fan del concierto"
+lines = PackedStringArray("Vengo a por agua y hielo para el concierto de Quevedo. Llevamos diez neveras.")
 turn_to_player = true
 sprite_sheet = ExtResource("10_42ilv")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=205295906 instance=ExtResource("11_ehmko")]
 position = Vector2(144, 208)
 script = ExtResource("12_76txx")
-lines = PackedStringArray("Tienda verde · Playa del Inglés.", "Playa del Inglés")
+lines = PackedStringArray("MERCADONA · PLAYA DEL INGLÉS.", "Abierto todos los días del año. Aquí todos los días son de playa.")
 only_from_below = false
 show_sprite = false
 

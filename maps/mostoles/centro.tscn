@@ -68,24 +68,25 @@ lines = PackedStringArray()
 show_sprite = false
 
 [node name="Paciente" type="Node2D" parent="Entities" unique_id=1085683389 instance=ExtResource("5_7utpn")]
+display_name = "Vecino de Móstoles"
 position = Vector2(176, 272)
 script = ExtResource("6_fm7eb")
-lines = PackedStringArray("Aquí puedes curar a tus Pokémon y organizar las cajas desde el PC.")
+lines = PackedStringArray("Me he caído en el Soto patinando. Tengo cuarenta y cinco años y un patinete nuevo.")
 turn_to_player = true
 sprite_sheet = ExtResource("11_0otcx")
 
 [node name="Visitante" type="Node2D" parent="Entities" unique_id=94664206 instance=ExtResource("5_7utpn")]
 position = Vector2(144, 208)
 script = ExtResource("6_fm7eb")
-display_name = "Visitante"
-lines = PackedStringArray("Centro Pokémon, en Móstoles. Móstoles", "La salida sigue siendo el hueco del sur.")
+display_name = "Estudiante de la Rey Juan Carlos"
+lines = PackedStringArray("Vengo por un ataque de nervios antes del examen. Me han dicho que es normal. Mucho.")
 turn_to_player = true
 sprite_sheet = ExtResource("12_0p33g")
 
 [node name="PlacaCiudad" type="Node2D" parent="Entities" unique_id=522076741 instance=ExtResource("9_ivso1")]
 position = Vector2(144, 208)
 script = ExtResource("13_1boxg")
-lines = PackedStringArray("Centro Pokémon · Móstoles.", "Móstoles")
+lines = PackedStringArray("CENTRO POKÉMON · MÓSTOLES.", "La patria está en peligro: tus Pokémon también. Cúralos aquí.")
 only_from_below = false
 show_sprite = false
 
