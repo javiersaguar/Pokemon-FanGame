@@ -101,7 +101,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `casa_ibicenca` | [4, 4]; [1, 0] | `alicante/exterior`, `ibiza/exterior`, `ruta_10/exterior`, `ruta_14/exterior`, `ruta_15/exterior`, `sevilla/centro`, `sevilla/rio` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/casa_ibicenca.png) |
 | `club_ibiza` | [9, 6]; [4, 0] | `ibiza/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/club_ibiza.png) |
 | `palmera` | [3, 6]; [-1, -1] | `alicante/exterior`, `huelva/exterior`, `ibiza/exterior`, `las_palmas/canteras`, `las_palmas/vegueta_triana`, `malaga/exterior`, `murcia/exterior`, `playa_del_ingles/exterior`, `rocafonda/exterior`, `ruta_10/exterior`, `ruta_11/exterior`, `ruta_15/exterior`, `ruta_9/exterior`, `sevilla/centro`, `sevilla/maria_luisa`, `sevilla/rio`, `valencia/ciutat_vella`, `valencia/malvarrosa`, `valencia/turia` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/palmera.png) |
-| `akuarela` | [12, 7]; [5, 0] | `valencia/malvarrosa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/akuarela.png) |
+| `akuarela` | [12, 7]; [5, 0] | `valencia/malvarrosa` | Redibujado, provisional; referencias reales, tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/akuarela.png) |
 | `cepa_rioja` | [1, 2]; [-1, -1] | `ruta_16/exterior`, `ruta_21/exterior`, `ruta_8/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/cepa_rioja.png) |
 | `catedral_burgos` | [5, 4]; [2, 0] | `bilbao/exterior`, `pamplona/exterior`, `ruta_17/exterior`, `ruta_22/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/catedral_burgos.png) |
 | `arbol_navidad_vigo` | [2, 3]; [-1, -1] | `vigo/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/arbol_navidad_vigo.png) |
@@ -224,3 +224,18 @@ Referencias consultadas el 20 de octubre de 2026: [fotografías de Turismo de Ma
 | Misma escena y escala | [mapa](edificios_reales/casa_correos_mapa_antes.png) | [mapa](edificios_reales/casa_correos_mapa_despues.png) |
 
 Contrato dirigido: **3/3, 735 aserciones**. Alcance de `madrid/centro`: **0 problemas**. Los avisos anteriores de recursos retenidos al salir de la herramienta siguen presentes. Arte provisional; falta la comprobación conjunta con la corrección de Getafe integrada.
+
+### Akuarela Playa
+
+Se sustituye la caja de ventanas azules por una cornisa curva clara, grandes ventanales divididos, pórtico, terraza pavimentada con barandilla y escalera exterior a la derecha. El rótulo se dibuja en píxeles del propio lienzo. La planta y las curvas se comprimen a la escala del juego; no se añade una segunda puerta ni se cambia el acceso al gimnasio.
+
+Lienzo **12×7 casillas**, fuente **84**, puerta **[5, 0]**. Huella de colisión anterior declarada en el catálogo; no se cambia la escena exterior ni la identidad del interior.
+
+Referencias consultadas el 20 de octubre de 2026: [fotografías y distribución del propietario](https://eventosgruposalamandra.com/es/salas/akuarela/), [fachada y escalera](https://eventosgruposalamandra.com/wp-content/uploads/2025/12/sala-akuarela-exterior-completo-1200x591.jpg), [dossier de salas](https://eventosgruposalamandra.com/wp-content/uploads/2026/03/dossier-salas-salamandra-2026-es.pdf). Las fotografías solo se enlazan. Las fuentes quedan también en la cabecera del `.px2`.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | ![](edificios_reales/piezas_antes/akuarela.png) | ![](edificios_reales/piezas_despues/akuarela.png) |
+| Misma escena y escala | [mapa](edificios_reales/akuarela_mapa_antes.png) | [mapa](edificios_reales/akuarela_mapa_despues.png) |
+
+Contrato dirigido: **3/3, 735 aserciones**. Alcance de `valencia/malvarrosa`: **0 problemas**. Los avisos anteriores de recursos retenidos al salir de la herramienta siguen presentes. Arte provisional; falta la comprobación conjunta con la corrección de Getafe integrada.

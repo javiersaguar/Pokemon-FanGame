@@ -446,6 +446,8 @@ San Mamés también redibujado: cinco bandas de lamas claras, cubierta con hueco
 
 **Fachada preparada: Real Casa de Correos.** La fachada anterior mezclaba ladrillo muy marcado y un reloj desproporcionado. Se redibujan los recuadros rojizos entre marcos de piedra clara, las dos plantas, el balcón sobre el portal, la cornisa, la profundidad del tejado y el templete del reloj. Se conserva el acceso en la casilla existente; el eje de la fachada se adapta a esa restricción. Los dos patios de la vista aérea histórica no se representan como salas ni accesos nuevos en este dibujo exterior. Contrato 3/3 (735 aserciones), alcance 0 problemas. Comparativas individual y en mapa guardadas. Provisional; la integración espera la suite conjunta.
 
+**Fachada preparada: Akuarela Playa.** Se sustituye la caja de ventanas azules por una cornisa curva clara, grandes ventanales divididos, pórtico, terraza pavimentada con barandilla y escalera exterior a la derecha. El rótulo se dibuja en píxeles del propio lienzo. La planta y las curvas se comprimen a la escala del juego; no se añade una segunda puerta ni se cambia el acceso al gimnasio. Contrato 3/3 (735 aserciones), alcance 0 problemas. Comparativas individual y en mapa guardadas. Provisional; la integración espera la suite conjunta.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)
