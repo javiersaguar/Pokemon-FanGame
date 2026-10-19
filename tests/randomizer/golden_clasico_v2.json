@@ -1,5 +1,5 @@
 {
-	"fingerprint": "05d4d821cda3e8970a8e8db950ef459ba8d73e0ae324a68b219d93ccea8ed20d",
+	"fingerprint": "fa083902e5a42d2d1b5503ee51e2bf2d609ccf5f985f4f03bcfcf6b3090413e1",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -4786,7 +4786,7 @@
 		"gifts": {
 			"gift_prueba": "karrablast"
 		},
-		"input_hash": "841eca6e561603c4288b3a15d7699232b86b77027fc398f2ba160ed5ee182da9",
+		"input_hash": "a256f0de0ac143cafe7910d8b28cc73d48321e03fd279c644412699e73774a46",
 		"items": {
 			"getafe/casa_1/Anfitrion": "laggingtail",
 			"getafe/mercadona/Cliente": "smartcandyxl",
@@ -4813,32 +4813,35 @@
 			"ruta_24/casa_1/Anfitrion": "quietmint",
 			"ruta_25/casa_1/Anfitrion": "duskball",
 			"ruta_26/casa_1/Anfitrion": "flameorb",
-			"ruta_3/casa_1/Anfitrion": "hastymint",
-			"ruta_4/casa_1/Anfitrion": "couragecandyl",
-			"ruta_5/casa_1/Anfitrion": "silverpowder",
-			"ruta_5/exterior/EterJuncos": "maxlure",
-			"ruta_5/exterior/SuperBallRibera": "fireterashard",
-			"ruta_5/exterior/SuperpocionCerro": "powerherb",
-			"ruta_6/casa_1/Anfitrion": "petayaberry",
-			"ruta_6/exterior/RepelentePastos": "firestone",
-			"ruta_6/exterior/SuperBallCampo": "omanytecandy",
-			"ruta_6/exterior/SuperpocionMuela": "iceheal",
-			"ruta_7/exterior/CuracionLaguna": "rockterashard",
-			"ruta_7/exterior/SuperBallCerro": "destinyknot",
-			"ruta_7/exterior/SuperpocionCerro": "smoothrock",
-			"ruta_8/casa_1/Anfitrion": "silverleaf",
-			"ruta_8/exterior/CuerdaHuidaLadera": "leafstone",
-			"ruta_8/exterior/SuperBallVinas": "hitmonleecandy",
-			"ruta_8/exterior/SuperpocionMonasterio": "zapdoscandy",
-			"test/muestra_pueblo/Pocion": "stoneplate",
-			"test/muestra_ruta/Pocion": "horseacandy",
-			"test/test_outdoor/PocionOculta": "discountcoupon",
-			"test/test_outdoor/PokeBalls": "machopcandy",
-			"test/test_room/CarameloOculto": "eviolite",
-			"test/test_room/Pocion": "xspeed",
-			"valladolid/casa_1/Anfitrion": "lure",
-			"vigo/casa_1/Anfitrion": "rarecandy",
-			"zaragoza/casa_1/Anfitrion": "fairyterashard"
+			"ruta_26/exterior/HiperpocionRincon": "hastymint",
+			"ruta_26/exterior/MaxiRepelentePrado": "couragecandyl",
+			"ruta_26/exterior/UltraBallMirador": "silverpowder",
+			"ruta_3/casa_1/Anfitrion": "maxlure",
+			"ruta_4/casa_1/Anfitrion": "fireterashard",
+			"ruta_5/casa_1/Anfitrion": "powerherb",
+			"ruta_5/exterior/EterJuncos": "petayaberry",
+			"ruta_5/exterior/SuperBallRibera": "firestone",
+			"ruta_5/exterior/SuperpocionCerro": "omanytecandy",
+			"ruta_6/casa_1/Anfitrion": "iceheal",
+			"ruta_6/exterior/RepelentePastos": "rockterashard",
+			"ruta_6/exterior/SuperBallCampo": "destinyknot",
+			"ruta_6/exterior/SuperpocionMuela": "smoothrock",
+			"ruta_7/exterior/CuracionLaguna": "silverleaf",
+			"ruta_7/exterior/SuperBallCerro": "leafstone",
+			"ruta_7/exterior/SuperpocionCerro": "hitmonleecandy",
+			"ruta_8/casa_1/Anfitrion": "zapdoscandy",
+			"ruta_8/exterior/CuerdaHuidaLadera": "stoneplate",
+			"ruta_8/exterior/SuperBallVinas": "horseacandy",
+			"ruta_8/exterior/SuperpocionMonasterio": "discountcoupon",
+			"test/muestra_pueblo/Pocion": "machopcandy",
+			"test/muestra_ruta/Pocion": "eviolite",
+			"test/test_outdoor/PocionOculta": "xspeed",
+			"test/test_outdoor/PokeBalls": "lure",
+			"test/test_room/CarameloOculto": "rarecandy",
+			"test/test_room/Pocion": "fairyterashard",
+			"valladolid/casa_1/Anfitrion": "spelltag",
+			"vigo/casa_1/Anfitrion": "kabutocandy",
+			"zaragoza/casa_1/Anfitrion": "guardspec"
 		},
 		"learnsets": {
 			"abomasnow": [
@@ -83171,7 +83174,7 @@
 					}
 				]
 			},
-			"ruta26_guia": {
+			"ruta26_guarda": {
 				"party": [
 					{
 						"level": 51.0,
@@ -83179,7 +83182,19 @@
 					},
 					{
 						"level": 52.0,
-						"species": "sudowoodo"
+						"species": "klawf"
+					}
+				]
+			},
+			"ruta26_guia": {
+				"party": [
+					{
+						"level": 51.0,
+						"species": "coalossal"
+					},
+					{
+						"level": 52.0,
+						"species": "corsola"
 					}
 				]
 			},
@@ -83187,11 +83202,11 @@
 				"party": [
 					{
 						"level": 49.0,
-						"species": "mantine"
+						"species": "decidueyehisui"
 					},
 					{
 						"level": 51.0,
-						"species": "castform"
+						"species": "quaquaval"
 					}
 				]
 			},
@@ -83199,11 +83214,11 @@
 				"party": [
 					{
 						"level": 49.0,
-						"species": "arboliva"
+						"species": "wyrdeer"
 					},
 					{
 						"level": 51.0,
-						"species": "stoutland"
+						"species": "squawkabillywhite"
 					}
 				]
 			},
@@ -83211,11 +83226,11 @@
 				"party": [
 					{
 						"level": 51.0,
-						"species": "cetitan"
+						"species": "dewgong"
 					},
 					{
 						"level": 51.0,
-						"species": "arctovish"
+						"species": "jynx"
 					}
 				]
 			},
@@ -83223,11 +83238,11 @@
 				"party": [
 					{
 						"level": 51.0,
-						"species": "musharna"
+						"species": "centiskorch"
 					},
 					{
 						"level": 53.0,
-						"species": "octillery"
+						"species": "magmar"
 					}
 				]
 			},
@@ -83235,11 +83250,11 @@
 				"party": [
 					{
 						"level": 53.0,
-						"species": "arboliva"
+						"species": "heliolisk"
 					},
 					{
 						"level": 54.0,
-						"species": "purugly"
+						"species": "delcatty"
 					}
 				]
 			},
@@ -83247,11 +83262,11 @@
 				"party": [
 					{
 						"level": 53.0,
-						"species": "blissey"
+						"species": "oranguru"
 					},
 					{
 						"level": 55.0,
-						"species": "gumshoos"
+						"species": "sawsbuck"
 					}
 				]
 			},
@@ -83259,11 +83274,11 @@
 				"party": [
 					{
 						"level": 15.0,
-						"species": "cubchoo"
+						"species": "yamaskgalar"
 					},
 					{
 						"level": 16.0,
-						"species": "varoom"
+						"species": "deerling"
 					}
 				]
 			},
@@ -83271,11 +83286,11 @@
 				"party": [
 					{
 						"level": 15.0,
-						"species": "scraggy"
+						"species": "clobbopus"
 					},
 					{
 						"level": 16.0,
-						"species": "mankey"
+						"species": "mienfoo"
 					}
 				]
 			},
@@ -83283,7 +83298,7 @@
 				"party": [
 					{
 						"level": 15.0,
-						"species": "bidoof"
+						"species": "shroodle"
 					},
 					{
 						"level": 17.0,
@@ -83295,11 +83310,11 @@
 				"party": [
 					{
 						"level": 15.0,
-						"species": "tepig"
+						"species": "tandemaus"
 					},
 					{
 						"level": 16.0,
-						"species": "horsea"
+						"species": "venonat"
 					}
 				]
 			},
@@ -83307,11 +83322,11 @@
 				"party": [
 					{
 						"level": 16.0,
-						"species": "chingling"
+						"species": "fomantis"
 					},
 					{
 						"level": 16.0,
-						"species": "pancham"
+						"species": "staravia"
 					}
 				]
 			},
@@ -83319,11 +83334,11 @@
 				"party": [
 					{
 						"level": 16.0,
-						"species": "tandemaus"
+						"species": "helioptile"
 					},
 					{
 						"level": 18.0,
-						"species": "delibird"
+						"species": "squirtle"
 					}
 				]
 			},
@@ -83335,7 +83350,7 @@
 					},
 					{
 						"level": 18.0,
-						"species": "yanma"
+						"species": "farfetchd"
 					}
 				]
 			},
@@ -83343,11 +83358,11 @@
 				"party": [
 					{
 						"level": 16.0,
-						"species": "rockruff"
+						"species": "poltchageist"
 					},
 					{
 						"level": 17.0,
-						"species": "sobble"
+						"species": "flittle"
 					}
 				]
 			},
@@ -83355,11 +83370,11 @@
 				"party": [
 					{
 						"level": 16.0,
-						"species": "zangoose"
+						"species": "tirtouga"
 					},
 					{
 						"level": 16.0,
-						"species": "growlithe"
+						"species": "voltorb"
 					}
 				]
 			},
@@ -83367,15 +83382,15 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "trapinch"
+						"species": "fuecoco"
 					},
 					{
 						"level": 18.0,
-						"species": "helioptile"
+						"species": "tinkatink"
 					},
 					{
 						"level": 19.0,
-						"species": "shellder"
+						"species": "cufant"
 					}
 				]
 			},
@@ -83383,7 +83398,7 @@
 				"party": [
 					{
 						"level": 17.0,
-						"species": "smeargle"
+						"species": "smoliv"
 					},
 					{
 						"level": 18.0,
@@ -83395,11 +83410,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "rookidee"
+						"species": "nincada"
 					},
 					{
 						"level": 19.0,
-						"species": "smoliv"
+						"species": "pidgey"
 					}
 				]
 			},
@@ -83407,11 +83422,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "larvitar"
+						"species": "slowpoke"
 					},
 					{
 						"level": 19.0,
-						"species": "zigzagoon"
+						"species": "marill"
 					}
 				]
 			},
@@ -83423,7 +83438,7 @@
 					},
 					{
 						"level": 20.0,
-						"species": "lileep"
+						"species": "sudowoodo"
 					}
 				]
 			},
@@ -83431,11 +83446,11 @@
 				"party": [
 					{
 						"level": 19.0,
-						"species": "shieldon"
+						"species": "skiddo"
 					},
 					{
 						"level": 20.0,
-						"species": "paras"
+						"species": "diglettalola"
 					}
 				]
 			},
@@ -83443,11 +83458,11 @@
 				"party": [
 					{
 						"level": 19.0,
-						"species": "impidimp"
+						"species": "snubbull"
 					},
 					{
 						"level": 20.0,
-						"species": "vulpixalola"
+						"species": "finizen"
 					}
 				]
 			},
@@ -83455,15 +83470,15 @@
 				"party": [
 					{
 						"level": 27.0,
-						"species": "wiglett"
+						"species": "wimpod"
 					},
 					{
 						"level": 27.0,
-						"species": "binacle"
+						"species": "ducklett"
 					},
 					{
 						"level": 28.0,
-						"species": "shellos"
+						"species": "chinchou"
 					}
 				]
 			},
@@ -83471,11 +83486,11 @@
 				"party": [
 					{
 						"level": 27.0,
-						"species": "frillish"
+						"species": "psyduck"
 					},
 					{
 						"level": 29.0,
-						"species": "basculin"
+						"species": "drednaw"
 					}
 				]
 			},
@@ -83483,15 +83498,15 @@
 				"party": [
 					{
 						"level": 27.0,
-						"species": "poliwag"
+						"species": "binacle"
 					},
 					{
 						"level": 27.0,
-						"species": "wimpod"
+						"species": "wooper"
 					},
 					{
 						"level": 28.0,
-						"species": "carvanha"
+						"species": "seel"
 					}
 				]
 			},
@@ -83499,11 +83514,11 @@
 				"party": [
 					{
 						"level": 27.0,
-						"species": "timburr"
+						"species": "scraggy"
 					},
 					{
 						"level": 28.0,
-						"species": "machop"
+						"species": "croagunk"
 					}
 				]
 			},
@@ -83511,11 +83526,11 @@
 				"party": [
 					{
 						"level": 43.0,
-						"species": "golisopod"
+						"species": "araquanid"
 					},
 					{
 						"level": 44.0,
-						"species": "taurospaldeaaqua"
+						"species": "marshtomp"
 					}
 				]
 			},
@@ -83523,11 +83538,11 @@
 				"party": [
 					{
 						"level": 43.0,
-						"species": "pyukumuku"
+						"species": "omastar"
 					},
 					{
 						"level": 43.0,
-						"species": "quaquaval"
+						"species": "whiscash"
 					}
 				]
 			},
@@ -83535,15 +83550,15 @@
 				"party": [
 					{
 						"level": 46.0,
-						"species": "claydol"
+						"species": "hatterene"
 					},
 					{
 						"level": 46.0,
-						"species": "lunatone"
+						"species": "armarouge"
 					},
 					{
 						"level": 47.0,
-						"species": "slowbro"
+						"species": "starmie"
 					}
 				]
 			},
@@ -83551,15 +83566,15 @@
 				"party": [
 					{
 						"level": 15.0,
-						"species": "stakataka"
+						"species": "dondozo"
 					},
 					{
 						"level": 15.0,
-						"species": "floetteeternal"
+						"species": "stakataka"
 					},
 					{
 						"level": 16.0,
-						"species": "dondozo"
+						"species": "ursalunabloodmoon"
 					}
 				]
 			},
@@ -83567,15 +83582,15 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "dugtrioalola"
+						"species": "hitmonchan"
 					},
 					{
 						"level": 32.0,
-						"species": "granbull"
+						"species": "stoutland"
 					},
 					{
 						"level": 33.0,
-						"species": "cramorantgorging"
+						"species": "electrode"
 					}
 				]
 			},
@@ -83583,11 +83598,11 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "pancham"
+						"species": "sawk"
 					},
 					{
 						"level": 33.0,
-						"species": "pignite"
+						"species": "hitmontop"
 					}
 				]
 			},
@@ -83595,11 +83610,11 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "shelgon"
+						"species": "arctovish"
 					},
 					{
 						"level": 32.0,
-						"species": "falinks"
+						"species": "granbull"
 					}
 				]
 			},
@@ -83607,11 +83622,11 @@
 				"party": [
 					{
 						"level": 32.0,
-						"species": "drednaw"
+						"species": "grotle"
 					},
 					{
 						"level": 33.0,
-						"species": "toxtricity"
+						"species": "barraskewda"
 					}
 				]
 			},
@@ -83619,11 +83634,11 @@
 				"party": [
 					{
 						"level": 32.0,
-						"species": "shuckle"
+						"species": "slowbrogalar"
 					},
 					{
 						"level": 31.0,
-						"species": "miniormeteor"
+						"species": "mothim"
 					}
 				]
 			},
@@ -83631,11 +83646,11 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "ninetalesalola"
+						"species": "toxtricity"
 					},
 					{
 						"level": 32.0,
-						"species": "chimecho"
+						"species": "ninjask"
 					}
 				]
 			},
@@ -83643,11 +83658,11 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "toxtricity"
+						"species": "dodrio"
 					},
 					{
 						"level": 33.0,
-						"species": "lanturn"
+						"species": "tatsugiri"
 					}
 				]
 			},
@@ -83655,11 +83670,11 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "tandemaus"
+						"species": "rufflet"
 					},
 					{
 						"level": 33.0,
-						"species": "komala"
+						"species": "diggersby"
 					}
 				]
 			},
@@ -83667,11 +83682,11 @@
 				"party": [
 					{
 						"level": 31.0,
-						"species": "pawmo"
+						"species": "archen"
 					},
 					{
 						"level": 33.0,
-						"species": "lycanrocmidnight"
+						"species": "vespiquen"
 					}
 				]
 			},
@@ -83679,15 +83694,15 @@
 				"party": [
 					{
 						"level": 29.0,
-						"species": "heracross"
+						"species": "hitmonchan"
 					},
 					{
 						"level": 29.0,
-						"species": "machoke"
+						"species": "taurospaldeablaze"
 					},
 					{
 						"level": 30.0,
-						"species": "throh"
+						"species": "taurospaldeacombat"
 					}
 				]
 			},
@@ -83695,15 +83710,15 @@
 				"party": [
 					{
 						"level": 51.0,
-						"species": "incineroar"
+						"species": "brutebonnet"
 					},
 					{
 						"level": 51.0,
-						"species": "obstagoon"
+						"species": "pangoro"
 					},
 					{
 						"level": 51.0,
-						"species": "mukalola"
+						"species": "crawdaunt"
 					}
 				]
 			},
@@ -83711,15 +83726,15 @@
 				"party": [
 					{
 						"level": 38.0,
-						"species": "lycanroc"
+						"species": "bombirdier"
 					},
 					{
 						"level": 38.0,
-						"species": "espathra"
+						"species": "togedemarutotem"
 					},
 					{
 						"level": 39.0,
-						"species": "mukalola"
+						"species": "toxtricitylowkey"
 					}
 				]
 			},
@@ -83727,11 +83742,11 @@
 				"party": [
 					{
 						"level": 25.0,
-						"species": "grimeralola"
+						"species": "impidimp"
 					},
 					{
 						"level": 25.0,
-						"species": "vullaby"
+						"species": "stunky"
 					}
 				]
 			},
@@ -83739,11 +83754,11 @@
 				"party": [
 					{
 						"level": 24.0,
-						"species": "ducklett"
+						"species": "vulpix"
 					},
 					{
 						"level": 25.0,
-						"species": "torchic"
+						"species": "magby"
 					}
 				]
 			},
@@ -83751,11 +83766,11 @@
 				"party": [
 					{
 						"level": 46.0,
-						"species": "cubchoo"
+						"species": "amaura"
 					},
 					{
 						"level": 47.0,
-						"species": "snover"
+						"species": "delibird"
 					}
 				]
 			},
@@ -83763,11 +83778,11 @@
 				"party": [
 					{
 						"level": 47.0,
-						"species": "kecleon"
+						"species": "drampa"
 					},
 					{
 						"level": 48.0,
-						"species": "greedent"
+						"species": "squawkabillywhite"
 					}
 				]
 			},
@@ -83775,11 +83790,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "oinkologne"
+						"species": "fluttermane"
 					},
 					{
 						"level": 19.0,
-						"species": "cetitan"
+						"species": "stakataka"
 					}
 				]
 			},
@@ -83787,11 +83802,11 @@
 				"party": [
 					{
 						"level": 56.0,
-						"species": "umbreon"
+						"species": "bisharp"
 					},
 					{
 						"level": 57.0,
-						"species": "scrafty"
+						"species": "absol"
 					}
 				]
 			},
@@ -83799,15 +83814,15 @@
 				"party": [
 					{
 						"level": 55.0,
-						"species": "crobat"
+						"species": "toxtricitylowkeygmax"
 					},
 					{
 						"level": 56.0,
-						"species": "toxtricity"
+						"species": "glimmora"
 					},
 					{
 						"level": 56.0,
-						"species": "nidoqueen"
+						"species": "weezing"
 					}
 				]
 			},
@@ -83815,15 +83830,15 @@
 				"party": [
 					{
 						"level": 57.0,
-						"species": "kabutops"
+						"species": "vikavolttotem"
 					},
 					{
 						"level": 56.0,
-						"species": "swoobat"
+						"species": "meowsticf"
 					},
 					{
 						"level": 58.0,
-						"species": "cradily"
+						"species": "gigalith"
 					}
 				]
 			},
@@ -83831,11 +83846,11 @@
 				"party": [
 					{
 						"level": 55.0,
-						"species": "rapidash"
+						"species": "scrafty"
 					},
 					{
 						"level": 56.0,
-						"species": "qwilfish"
+						"species": "eldegoss"
 					}
 				]
 			},
@@ -83843,11 +83858,11 @@
 				"party": [
 					{
 						"level": 36.0,
-						"species": "inteleon"
+						"species": "dracovish"
 					},
 					{
 						"level": 37.0,
-						"species": "bibarel"
+						"species": "poliwhirl"
 					}
 				]
 			},
@@ -83855,11 +83870,11 @@
 				"party": [
 					{
 						"level": 37.0,
-						"species": "slowking"
+						"species": "taurospaldeaaqua"
 					},
 					{
 						"level": 38.0,
-						"species": "slowbro"
+						"species": "seadra"
 					}
 				]
 			},
@@ -83867,15 +83882,15 @@
 				"party": [
 					{
 						"level": 15.0,
-						"species": "helioptile"
+						"species": "venonat"
 					},
 					{
 						"level": 15.0,
-						"species": "hatenna"
+						"species": "wimpod"
 					},
 					{
 						"level": 17.0,
-						"species": "kecleon"
+						"species": "darmanitangalar"
 					}
 				]
 			},
@@ -83883,15 +83898,15 @@
 				"party": [
 					{
 						"level": 13.0,
-						"species": "gligar"
+						"species": "vivillonpokeball"
 					},
 					{
 						"level": 14.0,
-						"species": "miniormeteor"
+						"species": "drifloon"
 					},
 					{
 						"level": 15.0,
-						"species": "squawkabillywhite"
+						"species": "oricoriopau"
 					}
 				]
 			},
@@ -83899,15 +83914,15 @@
 				"party": [
 					{
 						"level": 30.0,
-						"species": "ninjask"
+						"species": "corvisquire"
 					},
 					{
 						"level": 30.0,
-						"species": "gliscor"
+						"species": "minior"
 					},
 					{
 						"level": 31.0,
-						"species": "sigilyph"
+						"species": "fearow"
 					}
 				]
 			},
@@ -83915,15 +83930,15 @@
 				"party": [
 					{
 						"level": 20.0,
-						"species": "chatot"
+						"species": "corvisquire"
 					},
 					{
 						"level": 20.0,
-						"species": "emolga"
+						"species": "skarmory"
 					},
 					{
 						"level": 21.0,
-						"species": "natu"
+						"species": "wattrel"
 					}
 				]
 			},
@@ -83931,11 +83946,11 @@
 				"party": [
 					{
 						"level": 26.0,
-						"species": "illumise"
+						"species": "togedemarutotem"
 					},
 					{
 						"level": 28.0,
-						"species": "smoliv"
+						"species": "wimpod"
 					}
 				]
 			},
@@ -83943,11 +83958,11 @@
 				"party": [
 					{
 						"level": 27.0,
-						"species": "dudunsparcethreesegment"
+						"species": "bewear"
 					},
 					{
 						"level": 27.0,
-						"species": "rufflet"
+						"species": "teddiursa"
 					}
 				]
 			},
@@ -83955,11 +83970,11 @@
 				"party": [
 					{
 						"level": 26.0,
-						"species": "bunnelby"
+						"species": "greavard"
 					},
 					{
 						"level": 27.0,
-						"species": "simisage"
+						"species": "crocalor"
 					}
 				]
 			},
@@ -83967,11 +83982,11 @@
 				"party": [
 					{
 						"level": 26.0,
-						"species": "hitmonlee"
+						"species": "hitmonchan"
 					},
 					{
 						"level": 27.0,
-						"species": "taurospaldeablaze"
+						"species": "flamigo"
 					}
 				]
 			},
@@ -83979,11 +83994,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "steelix"
+						"species": "sandslashalola"
 					},
 					{
 						"level": 19.0,
-						"species": "orthworm"
+						"species": "aegislashblade"
 					}
 				]
 			},
@@ -83991,11 +84006,11 @@
 				"party": [
 					{
 						"level": 36.0,
-						"species": "drifloon"
+						"species": "haunter"
 					},
 					{
 						"level": 37.0,
-						"species": "mimikyu"
+						"species": "drifblim"
 					}
 				]
 			},
@@ -84003,11 +84018,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "spewpa"
+						"species": "nincada"
 					},
 					{
 						"level": 19.0,
-						"species": "electrodehisui"
+						"species": "tatsugiri"
 					}
 				]
 			},
@@ -84015,11 +84030,11 @@
 				"party": [
 					{
 						"level": 18.0,
-						"species": "sneasler"
+						"species": "sigilyph"
 					},
 					{
 						"level": 19.0,
-						"species": "tynamo"
+						"species": "meowthalola"
 					}
 				]
 			},
@@ -84027,11 +84042,11 @@
 				"party": [
 					{
 						"level": 16.0,
-						"species": "murkrow"
+						"species": "persianalola"
 					},
 					{
 						"level": 17.0,
-						"species": "spheal"
+						"species": "arrokuda"
 					}
 				]
 			},
@@ -84039,11 +84054,11 @@
 				"party": [
 					{
 						"level": 16.0,
-						"species": "persianalola"
+						"species": "mrmime"
 					},
 					{
 						"level": 17.0,
-						"species": "pidove"
+						"species": "smoochum"
 					}
 				]
 			}

@@ -705,6 +705,17 @@ Rama `feat/agente5-ciudades`. Encargo: todas las ciudades y rutas exteriores al 
 
 **Cierre por límite de uso:** el bloque de rutas 5–8 y 16 (`dd31c34e`) se recupera e integra conservando los cambios posteriores de los demás. La receta no aplicada de Ruta 26 se conserva íntegra en `docs/mundo/borradores/ruta_26.gd.txt`: no se debe ejecutar sin completar sus datos y comprobar su alcance.
 
+### Agente de rutas y ciudades (sesión del 2026-10-19)
+
+Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta y cada ciudad completa y al nivel de Añil. Orden: Ruta 26 (borrador), rutas 21, 22, 24 y 25, el resto de rutas y las manzanas de las ciudades. Reservas activas en `docs/mapas/reservas.md`.
+
+**Hecho:**
+- **Ruta 26 · El Torcal:** borrador del 15 validado y aplicado (`maps/_pintura/vestir/ruta_26.gd`). Para que pasara: entrada de dos casillas al claro del este desde la explanada del dolmen (estaba cerrado y el entrenador y la Ultra Ball quedaban fuera de alcance) y siete bloques recortados una casilla para no tapar celdas protegidas. Entrenador nuevo `ruta26_guarda` (clase `guarda_parque`, Crustle 51 y Golem 52, dentro de la curva 50–53; no hay clase de geólogo y no se crea), tres objetos en `data/item_placements.json` (Ultra Ball en el mirador, Hiperpoción y Maxirrepelente ocultos) y parche dorado rehecho. Hierba mínima entre Ruta 25 y Málaga: 4 en los dos sentidos (antes 0). Alcance desde `from_ruta_25` y `from_malaga`: 0 problemas. [Capturas](arte/seguimiento.md#ciudades-y-rutas-al-nivel-de-añil-agente-5-2026-10-15).
+
+**Provisional:** arte, textos del guarda y colocación.
+
+**Fallos tal cual:** `test_mundo.gd` falló una vez por imágenes sin importar en este worktree (`rotulo_malaga.png`, `camara_cine.png`); tras `--import` pasa 10/10. Las cimas de los bloques de caliza quedan lisas: por debajo de Añil, falta detalle encima.
+
 **Pendiente:** el resto de rutas (prioridad de la guía: 26, 21, 24 y las demás muy abiertas), las piezas fuera de límites (`ruta_2` casa de madera, `bilbao` casa roja, `ruta_19` faro) y las manzanas de las ciudades.
 
 **PENDIENTE JAVIER:** revisar las capturas de antes y después; en la Ruta 5 el paso de hierba es un «desvío por obras» de la A-2 (cartel de broma): confirmar si vale.

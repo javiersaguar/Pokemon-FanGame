@@ -2,7 +2,7 @@
 
 > Lo genera `tests/mundo/test_cobertura_personajes.gd` (no se edita a mano). Para cada entrenador de `data/trainers/*.json`: sprite del mapa, retrato de combate y dónde sale. Las explicaciones de lo que falta están en `data/personajes_en_el_mapa.json` (`pendientes`, `por_evento`, `sprites_prestados` y `arte_sin_uso`). Los sitios de los famosos son **propuesta**: los decide Javier.
 
-**Resumen:** 361 entrenadores · 361 con sprite de mapa propio · 361 con retrato de combate propio · 361 colocados · 0 pendientes con motivo · 1 personajes sin combate.
+**Resumen:** 362 entrenadores · 362 con sprite de mapa propio · 362 con retrato de combate propio · 362 colocados · 0 pendientes con motivo · 1 personajes sin combate.
 
 - **atlas `id`**: el diseño propio del personaje (`data/character_art.json`): retrato de combate y dieciséis poses de mapa. Si la clase del entrenador es la del personaje, el atlas sale por la clase.
 - **hoja / retrato de la clase**: las piezas del pack 11 o el sprite del pack de su clase, con el nombre de la clase (los entrenadores genéricos de una misma clase comparten diseño, como en los juegos).
@@ -553,6 +553,7 @@
 | Entrenador | Id | Mapa | Combate | Dónde | Nota |
 |---|---|---|---|---|---|
 | Montañera Inés | `ruta26_escaladora` | hoja de la clase | retrato de la clase | pintado: ruta_26/exterior |  |
+| Guarda del parque Rafael | `ruta26_guarda` | hoja de la clase | retrato de la clase | pintado: ruta_26/exterior |  |
 | Arqueólogo Elena | `ruta26_guia` | hoja de la clase | retrato de la clase | pintado: ruta_26/exterior |  |
 
 ## `ruta_3.json`

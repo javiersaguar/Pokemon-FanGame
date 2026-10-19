@@ -36,5 +36,24 @@
         "level": 53
       }
     ]
+  },
+  "ruta26_guarda": {
+    "class": "guarda_parque",
+    "name": "Rafael",
+    "intro_text": "El Torcal es paraje natural: aquí no se escala ni se pinta. ¡Combatir sí, que no deja marca!",
+    "lose_text": "Vale, vale. Pero las piedras se quedan donde están.",
+    "win_text": "Cuidado al bajar, que la caliza resbala.",
+    "after_text": "Estas formas las ha hecho el agua durante millones de años. Tú tardas un poco menos en hacer el camino.",
+    "items": [],
+    "party": [
+      {
+        "species": "crustle",
+        "level": 51
+      },
+      {
+        "species": "golem",
+        "level": 52
+      }
+    ]
   }
 }
