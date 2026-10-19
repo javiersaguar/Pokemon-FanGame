@@ -1,5 +1,5 @@
 {
-	"fingerprint": "f2f2949f6b1752a296dba388ff6817eeaf2c89776fb8b455d470aec615de3a63",
+	"fingerprint": "ccb7a356d4b337da307915c06077f8b97c06608562544420662fd2e14cf8543c",
 	"rom": {
 		"abilities": {},
 		"encounters": {
@@ -4786,7 +4786,7 @@
 		"gifts": {
 			"gift_prueba": "karrablast"
 		},
-		"input_hash": "4127b92e9479fc0d8eae1e158332203ea2b2e04d9cada980ac55d6b8aaf238ee",
+		"input_hash": "a2e18566d98a324a9f4a5d54bc756706d35b88e73a02b41290fe1c4cbc3eb0e0",
 		"items": {
 			"getafe/casa_1/Anfitrion": "laggingtail",
 			"getafe/mercadona/Cliente": "smartcandyxl",
@@ -4851,15 +4851,18 @@
 			"ruta_8/exterior/CuerdaHuidaLadera": "pechaberry",
 			"ruta_8/exterior/SuperBallVinas": "toxicorb",
 			"ruta_8/exterior/SuperpocionMonasterio": "thunderstone",
-			"test/muestra_pueblo/Pocion": "lure",
-			"test/muestra_ruta/Pocion": "nidoranfcandy",
-			"test/test_outdoor/PocionOculta": "quickcandyxl",
-			"test/test_outdoor/PokeBalls": "geniusmochi",
-			"test/test_room/CarameloOculto": "loneearring",
-			"test/test_room/Pocion": "healthmochi",
-			"valladolid/casa_1/Anfitrion": "poisonbarb",
-			"vigo/casa_1/Anfitrion": "pinkscarf",
-			"zaragoza/casa_1/Anfitrion": "pokeball"
+			"ruta_9/exterior/HiperpocionHuerta": "lure",
+			"ruta_9/exterior/RevivirMarjal": "nidoranfcandy",
+			"ruta_9/exterior/UltraBallSaler": "quickcandyxl",
+			"test/muestra_pueblo/Pocion": "geniusmochi",
+			"test/muestra_ruta/Pocion": "loneearring",
+			"test/test_outdoor/PocionOculta": "healthmochi",
+			"test/test_outdoor/PokeBalls": "poisonbarb",
+			"test/test_room/CarameloOculto": "pinkscarf",
+			"test/test_room/Pocion": "pokeball",
+			"valladolid/casa_1/Anfitrion": "musclemochi",
+			"vigo/casa_1/Anfitrion": "healpowder",
+			"zaragoza/casa_1/Anfitrion": "grassyseed"
 		},
 		"learnsets": {
 			"abomasnow": [
