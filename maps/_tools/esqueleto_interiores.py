@@ -26,10 +26,10 @@ FUERA = {
     'madrid/sala_retiro_20_58', 'malaga/sala_calle_5_57', 'valladolid/sala_calle_52_59',
     'playa_del_ingles/aeropuerto', 'vigo/aeropuerto',
     # Apeadero del AVE de San Miguel (Agente 4, pintar_transportes.gd).
-    pueblo_inicial/sala_calle_30_21,
+    'pueblo_inicial/sala_calle_30_21',
     # Salas de hitos con interior propio (maps/_pintura/pintar_salas_hitos.gd).
-    santander/botin, santander/botin_sala, bilbao/guggenheim, bilbao/guggenheim_rampa, bilbao/guggenheim_sala,
-    pamplona/cafe_iruna, pamplona/cafe_comedor, rocafonda/ruinas, rocafonda/ruinas_2,
+    'santander/botin', 'santander/botin_sala', 'bilbao/guggenheim', 'bilbao/guggenheim_rampa', 'bilbao/guggenheim_sala',
+    'pamplona/cafe_iruna', 'pamplona/cafe_comedor', 'rocafonda/ruinas', 'rocafonda/ruinas_2',
     # Piso de Rufián y su portal (Agente 2, personajes decididos por Javier).
     'barcelona/sala_eixample_10_31', 'barcelona/casa_rufian', 'barcelona/habitacion_rufian',
 }
