@@ -11,6 +11,6 @@ func on_hit(engine: BattleEngine, user: Battler, _target: Battler, _move: MoveDa
 		else:
 			engine.message(tr("¡Pero falló!"))
 		return HANDLED
-	if not engine.request_switch(user, &"teleport"):
+	if not engine.request_switch(user, &"uturn"):
 		engine.message(tr("¡Pero falló!"))
 	return HANDLED

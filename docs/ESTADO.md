@@ -136,6 +136,12 @@ Rama `feat/combate-fondos-efectos`, worktree `pokemon-panchito-agente4`.
 - **Al pintar mapas nuevos:** añade el exterior a `exteriores` del JSON (el test lo exige). Los interiores se clasifican solos por su nombre; si uno no encaja, añade la clave o el mapa a `mapas`.
 - **PENDIENTE JAVIER:** aprobar las 25 escenas y las bases; los rótulos de gimnasio no se ponen en el fondo (a ×1 no se leen).
 
+**Parte 2 · Efectos de movimientos (petición 81, hecho).**
+- El validador avisaba de **177** movimientos en uso sin script; ahora **0**. Hechos por orden de uso (entrenadores colocados, especies en uso). Lista y los 85 normales que nadie usa: `docs/arte/cobertura_combate/README.md`.
+- **Ganchos nuevos del motor** (`BattleEffect`): movimientos impedidos (`disables_move`, `disables_foe_move`: Mofa, Tormento, Anulación, Otra Vez, Cerca, Gravedad), daño recibido (`on_damage`: Aguante, Sustituto, Mismo Destino, Venganza), inmunidades y suelo (`immune_to`, `grounding`), Neblina (`prevents_boost_drop`), potencia propia (`modify_own_power`), acierto seguro (`ensures_hit`), cambio de movimiento (`modify_move`, `modify_own_move`), número de golpes (`hit_count`), opciones de daño (`modify_damage_opts`: Juego Sucio, Psicocarga, Liofilización), `modify_damage`, `on_miss`, `on_prepare_hit` y `before_turn`. En `Battler`: tipos y estadísticas cambiadas, último golpe recibido, peso, objeto gastado. En el motor: Espacio Raro, Zona Extraña, Zona Mágica, objetos que se devuelven al jugador tras un combate contra entrenadores (Desarme, Ladrón, Truco) y movimientos cambiados que vuelven al acabar (Mimético).
+- **Simplificaciones, tal cual:** Cede Paso y Último Lugar no reordenan en dobles; Premonición calcula el daño al usarla; Mimético dura hasta el final del combate (no hasta el cambio); Plegaria Vital revive al primer debilitado sin preguntar; Gravedad no sube la precisión; Fijar Blanco no alcanza a los semiinvulnerables; Granizo pone nieve (9.ª generación); Dracoflechas no reparte en dobles; Sustituto no cuenta su daño para el retroceso ni el drenaje; Metrónomo elige entre todos los permitidos de los datos.
+- **Tests:** `tests/combate/test_efectos_movimientos.gd` y `test_efectos_movimientos_2.gd`.
+
 ## Agente 1 — Mundo y arquitectura
 
 ### Agente 1 · Interiores personalizados (sesión del 2026-10-15)

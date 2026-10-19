@@ -52,6 +52,8 @@ var consumed_item: StringName = &""
 var ate_berry: bool = false
 ## Estadísticas cambiadas por un movimiento (Isoguardia, Isofuerza, Truco Fuerza, Cambiavelocidad).
 var stat_override: Dictionary[StringName, int] = {}
+## Si su último movimiento falló (Pataleta).
+var last_move_failed: bool = false
 ## Movimientos usados desde que salió (Última Baza).
 var used_moves: Dictionary[StringName, bool] = {}
 

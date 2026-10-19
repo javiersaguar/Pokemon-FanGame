@@ -81,6 +81,10 @@ var _move_user: Battler = null
 ## Objetos que tenían los Pokémon del jugador antes de que se los quitaran o cambiaran (Desarme,
 ## Ladrón, Truco): en combates contra entrenadores se devuelven al acabar (5.ª generación en adelante).
 var _items_before: Dictionary = {}
+## Lo pone el Sustituto cuando se lleva un golpe: ese golpe no afecta al Pokémon.
+var hit_absorbed := false
+## Movimientos cambiados durante el combate (Mimético): [Pokemon, índice, MoveSlot original].
+var _restore_slots: Array = []
 ## Último movimiento usado en el combate por cualquiera (Copión).
 var last_used_move: StringName = &""
 ## Golpes recibidos por cada Pokémon (uid → veces) en todo el combate (Puño Furia).
@@ -447,6 +451,7 @@ func _begin_turn(player_action: Variant = null) -> void:
 	_double_chosen.clear()
 	entries.sort_custom(_entry_goes_first)
 	_notify_order_ties(entries)
+	_queue.append(_step_before_turn.bind(entries))
 	for e: Dictionary in entries:
 		_queue.append(_step_action.bind(e))
 	_queue.append(_step_end_of_turn)
@@ -466,8 +471,26 @@ func _entry_goes_first(a: Dictionary, b: Dictionary) -> bool:
 	if a["priority"] != b["priority"]:
 		return a["priority"] > b["priority"]
 	if a["speed"] != b["speed"]:
-		return a["speed"] > b["speed"]
+		return (a["speed"] < b["speed"]) if trick_room() else (a["speed"] > b["speed"])
 	return a["tie"] < b["tie"]
+
+
+## Antes de que nadie se mueva: los movimientos elegidos que avisan al empezar el turno.
+func _step_before_turn(entries: Array[Dictionary]) -> void:
+	for e: Dictionary in entries:
+		var b: Battler = e["battler"]
+		var action: BattleAction = e["action"]
+		if _over or b.is_fainted() or action.kind != BattleAction.Kind.FIGHT:
+			continue
+		var move := _move_for(b, action.move_index)
+		var effect := Effects.move(move.id)
+		if effect != null:
+			effect.before_turn(self, b, move)
+
+
+## ¿Está el Espacio Raro? (Los más lentos se mueven antes.)
+func trick_room() -> bool:
+	return field.has("trickroom")
 
 
 func _action_priority(b: Battler, action: BattleAction) -> int:
@@ -839,6 +862,9 @@ func _finish(outcome: StringName) -> void:
 		for p: Pokemon in party(PLAYER):
 			if _items_before.has(p.uid):
 				p.held_item = _items_before[p.uid]
+	for entry: Array in _restore_slots:
+		(entry[0] as Pokemon).moves[int(entry[1])] = entry[2]
+	_restore_slots.clear()
 	_revert_all_formes()
 	for side_index: int in [PLAYER, FOE]:
 		for slot: int in slot_count():
@@ -1186,6 +1212,7 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 	user.last_move = move.id
 	user.used_moves[base_move.id] = true
 	var hit := _use_move(user, move)
+	user.last_move_failed = not hit
 	if move.id != STRUGGLE:
 		last_used_move = base_move.id if z_status else move.id
 	if z_status:
@@ -1273,6 +1300,12 @@ func _use_move_inner(user: Battler, move: MoveData) -> bool:
 	var effect := Effects.move(move.id)
 	if effect != null:
 		move = effect.modify_move(self, user, move)
+	for id: StringName in user.volatiles.keys():
+		var own := Effects.condition(id)
+		if own != null and user.volatiles.has(id):
+			move = own.modify_own_move(self, user, user.volatiles[id], move)
+	for c: Array in _field_conditions():
+		move = (c[0] as BattleEffect).modify_own_move(self, user, c[2], move)
 	_msg(tr("¡%s usó %s!") % [BattleText.cap_name(user, wild), move.name])
 	var target := _move_target(user, move)
 	_emit(BattleEvent.MOVE, user.side, user.slot, {
@@ -1506,7 +1539,16 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			if opts["resist_berry"]:
 				_msg(tr("¡La baya de %s ha reducido el daño!") % target.pokemon.display_name())
 				consume_held_item(target)
+		if effect != null:
+			amount = effect.modify_damage(self, user, target, move, amount)
+		hit_absorbed = false
 		var dealt := _damage(target, amount, &"move", effectiveness, crit, move)
+		if hit_absorbed:
+			hit_absorbed = false
+			landed += 1
+			if crit:
+				_msg(tr("¡Un golpe crítico!"))
+			continue
 		total += dealt
 		landed += 1
 		if dealt > 0:
@@ -1622,6 +1664,9 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 	var ignore_burn := user.ability == &"guts" and user.pokemon.status != &""
 	var opts := {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod,
 		"ignore_burn": ignore_burn, "resist_berry": resist_berry}
+	# Zona Extraña: los físicos van contra la Defensa Especial y los especiales contra la Defensa.
+	if field.has("wonderroom"):
+		opts["def_stat"] = &"spd" if move.is_physical() else &"def"
 	if effect != null:
 		effect.modify_damage_opts(self, user, target, move, opts)
 	return opts
@@ -2367,7 +2412,8 @@ func _passives(b: Battler) -> Array[BattleEffect]:
 	var ability := Effects.ability(b.ability)
 	if ability != null:
 		out.append(ability)
-	var held := Effects.item(b.pokemon.held_item)
+	# Zona Mágica: los objetos equipados no hacen nada.
+	var held := Effects.item(b.pokemon.held_item) if not field.has("magicroom") else null
 	if held != null:
 		out.append(held)
 	return out
@@ -2397,7 +2443,8 @@ func _actives_by_speed() -> Array[Battler]:
 		var b := active(side_index)
 		if b != null and not b.is_fainted():
 			order.append(b)
-	order.sort_custom(func(a: Battler, c: Battler) -> bool: return _speed(a) > _speed(c))
+	var reverse := trick_room()
+	order.sort_custom(func(a: Battler, c: Battler) -> bool: return (_speed(a) < _speed(c)) if reverse else (_speed(a) > _speed(c)))
 	return order
 
 
@@ -2456,6 +2503,12 @@ func _move_blocker(b: Battler, move: MoveData) -> Dictionary:
 			if effect != null and effect.disables_foe_move(foe, foe.volatiles[id], b, move):
 				return {"text": effect.disabled_text(foe.volatiles[id])}
 	return {}
+
+
+## Cambia un movimiento de `b` hasta el final del combate (Mimético, Esquema).
+func replace_move_slot(b: Battler, index: int, slot: MoveSlot) -> void:
+	_restore_slots.append([b.pokemon, index, b.pokemon.moves[index]])
+	b.pokemon.moves[index] = slot
 
 
 ## Cambia el objeto de `b` por `item` (Desarme, Ladrón, Truco): el del jugador se recuerda para

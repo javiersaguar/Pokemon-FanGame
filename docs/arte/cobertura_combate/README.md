@@ -1,5 +1,12 @@
 # Cobertura de habilidades y movimientos · 2026-10-12
 
+## Actualización · 2026-10-19 (petición 81)
+
+- **Movimientos en uso sin script: 0** (eran 177). El validador ya no avisa. Se hicieron por orden de uso: primero los que usan los entrenadores colocados (sus movimientos salen del nivel si no los tienen escritos), luego los de las especies de `data/species_in_use.json`.
+- Del catálogo entero quedan **253** que piden script sin tenerlo: los Z, Dinamax y de otras generaciones marcados como no estándar, y **85 normales que nadie usa en el juego** (ninguna especie en uso los aprende y ningún entrenador los lleva). Se harán cuando entren en uso: alluringvoice, aurawheel, barbbarrage, bleakwindstorm, bodypress, burningbulwark, burningjealousy, ceaselessedge, celebrate, chloroblast, clangoroussoul, collisioncourse, crushgrip, darkvoid, diamondstorm, direclaw, dragoncheer, eeriespell, electrodrift, electroshot, expandingforce, ficklebeam, filletaway, firepledge, forestscurse, freezeshock, fusionbolt, fusionflare, grasspledge, grassyglide, gravapple, happyhour, hardpress, heartswap, hyperspacefury, iceburn, infernalparade, instruct, ivycudgel, judgment, junglehealing, lashout, lastrespects, lunarblessing, meteorbeam, mistyexplosion, mortalspin, orderup, photongeyser, pollenpuff, poltergeist, populationbomb, present, prismaticlaser, psyblade, psychicnoise, psystrike, relicsong, risingvoltage, roaroftime, ruination, saltcure, sandsearstorm, secretsword, shadowforce, shellsidearm, sketch, snipeshot, spiritshackle, steelbeam, steelroller, stoneaxe, struggle (lo resuelve el motor), supercellslam, syrupbomb, takeheart, terablast, terastarstorm, thunderclap, tidyup, transform, upperhand, waterpledge, watershuriken y wildboltstorm.
+- Tests: `tests/combate/test_efectos_movimientos.gd` y `test_efectos_movimientos_2.gd` (64 casos). Mecánicas contrastadas con Showdown y Bulbapedia; las simplificaciones están en `docs/ESTADO.md`, sección del agente de combate.
+
+
 Inventario reproducible de los datos y registros actuales, sin parche RandomLocke. Fuente de catálogo: datos locales importados; [WikiDex](https://www.wikidex.net/wiki/Lista_de_habilidades) sirve para contrastar nombres y comportamiento. [Showdown](https://github.com/smogon/pokemon-showdown/blob/master/data/abilities.ts) es la referencia técnica del motor.
 
 | Comprobación | Resultado |

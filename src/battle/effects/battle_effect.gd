@@ -74,6 +74,16 @@ func modify_move(_engine: BattleEngine, _user: Battler, move: MoveData) -> MoveD
 	return move
 
 
+## Al empezar el turno, si lo ha elegido (Puño Certero se concentra, Pico Cañón se calienta).
+func before_turn(_engine: BattleEngine, _user: Battler, _move: MoveData) -> void:
+	pass
+
+
+## Daño de cada golpe antes de hacerlo (Falso Tortazo deja al objetivo con 1 PS).
+func modify_damage(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, amount: int) -> int:
+	return amount
+
+
 ## Ha fallado por precisión (Patada Salto: el usuario se estrella).
 func on_miss(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData) -> void:
 	pass
@@ -237,6 +247,11 @@ func grounding(_state: Dictionary) -> int:
 ## Potencia de los movimientos de quien la tiene (Carga dobla el siguiente de tipo Eléctrico).
 func modify_own_power(_engine: BattleEngine, _user: Battler, _state: Dictionary, _move: MoveData, power: int) -> int:
 	return power
+
+
+## Cambia el movimiento que va a usar quien la tiene (Electrificación lo vuelve de tipo Eléctrico).
+func modify_own_move(_engine: BattleEngine, _user: Battler, _state: Dictionary, move: MoveData) -> MoveData:
+	return move
 
 
 ## ¿El siguiente movimiento de quien la tiene contra `target` acierta seguro (Fijar Blanco)?
