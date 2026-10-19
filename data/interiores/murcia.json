@@ -1,0 +1,1100 @@
+{
+ "_doc": "Interiores personalizados de murcia (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Murcia",
+ "interiores": {
+  "murcia/sala_calle_11_12": {
+   "pieza": "teatro",
+   "calle": ["murcia/exterior", [11, 12]],
+   "tipo": "teatro",
+   "nombre": "Teatro Romea",
+   "personas": [
+    {
+     "nombre": "Tramoyista",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "El Romea se ha quemado dos veces. Dicen que hay una maldición: que arderá tres veces. Yo no fumo dentro.",
+      "Aquí han actuado todos los grandes. El aire acondicionado, no tanto."
+     ],
+     "nodo": "Tramoyista",
+     "en": [12, 8],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Actor",
+     "aspecto": "npc_man",
+     "papel": "artista",
+     "frases": ["Esta noche hago de Don Juan Tenorio. En Murcia, en julio, con capa. Soy un héroe."],
+     "nodo": "Actor",
+     "en": [13, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [16, 12],
+   "puerta": [10, 11],
+   "suelo": "rombos_oscuros",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["tatami_verde", [2, 2, 12, 2]]],
+   "muebles": [
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 7, 5],
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 11, 5],
+    ["taburete_rojo", 12, 5],
+    ["taburete_rojo", 13, 5],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 7, 7],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 11, 7],
+    ["taburete_rojo", 12, 7],
+    ["taburete_rojo", 13, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 10]},
+   "pasos": []
+  },
+  "murcia/sala_calle_12_25": {
+   "pieza": "puesto_mercado",
+   "calle": ["murcia/exterior", [12, 25]],
+   "tipo": "kiosco",
+   "nombre": "Puesto de la plaza de las Flores",
+   "personas": [
+    {
+     "nombre": "Floristera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "La plaza de las Flores se llama así por los puestos de flores. Ahora la mitad son de tapas. Las flores aguantan.",
+      "Un ramo de claveles para la Fuensanta. La patrona se lo merece y tú vas a quedar bien."
+     ],
+     "nodo": "Floristera",
+     "en": [4, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 7],
+   "puerta": [3, 6],
+   "suelo": "hidraulica_rosa",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["estanteria_baja_madera", 5, 1], ["caja", 7, 2]],
+   "encima": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "murcia/sala_calle_13_53": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["murcia/exterior", [13, 53]],
+   "tipo": "casa",
+   "nombre": "Casa del huertano de la Vega",
+   "personas": [
+    {
+     "nombre": "Huertano",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "La huerta de Murcia se regaba con acequias árabes. Algunas siguen funcionando. Mi tractor, no.",
+      "Pimientos, alcachofas, limones y lechugas. Aquí plantas una piedra y sale una berenjena."
+     ],
+     "nodo": "Huertano",
+     "en": [4, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Huertana",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["Zarangollo: calabacín, cebolla y huevo. Pocas cosas, mucho cariño y un poquito de aceite."],
+     "nodo": "Huertana",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["fogones", 7, 1],
+    ["tele", 1, 1],
+    ["palmera_maceta", 8, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_20_54": {
+   "pieza": "bloque_pisos",
+   "calle": ["murcia/exterior", [20, 54]],
+   "tipo": "portal",
+   "nombre": "Portal del barrio del Carmen",
+   "personas": [
+    {
+     "nombre": "Vecino",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "El Carmen está al otro lado del Puente Viejo. Antes era el barrio de los ferroviarios. Ahora es el de los bares.",
+      "En verano la gente sale a la calle con la silla a tomar el fresco. El fresco no viene, pero la charla sí."
+     ],
+     "nodo": "Vecino",
+     "en": [1, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [5, 3, 4, 2]]],
+   "muebles": [
+    ["planta", 7, 1],
+    ["escalera_mano", 8, 0],
+    ["cajonera_azul", 1, 1],
+    ["sillon_derecha", 10, 4],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_23_11": {
+   "pieza": "oficinas_verdes",
+   "calle": ["murcia/exterior", [23, 11]],
+   "tipo": "universidad",
+   "nombre": "Universidad de Murcia, aula del Convento de la Merced",
+   "personas": [
+    {
+     "nombre": "Profesora",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "La universidad nació en 1272 con Alfonso X. Luego cerró, volvió a abrir y aquí seguimos, entre exámenes.",
+      "En junio hacemos exámenes a cuarenta grados. Es un examen de conocimientos y de resistencia."
+     ],
+     "nodo": "Profesora",
+     "en": [3, 8],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Estudiante",
+     "aspecto": "estudianteinge",
+     "papel": "publico",
+     "frases": ["Tengo examen de Derecho Romano. Los romanos, al menos, tenían termas."],
+     "nodo": "Estudiante",
+     "en": [7, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 11],
+   "puerta": [9, 10],
+   "suelo": "tatami_verde",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_menta", 6, 0],
+    ["mostrador_celeste", 7, 2],
+    ["armario_menta", 10, 0],
+    ["mesa_cristal", 7, 4],
+    ["banqueta_azul", 7, 6],
+    ["mesa_cristal", 4, 4],
+    ["banqueta_azul", 4, 6],
+    ["mesa_cristal", 10, 4],
+    ["banqueta_azul", 10, 6],
+    ["arbol_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 9]},
+   "pasos": []
+  },
+  "murcia/sala_calle_25_25": {
+   "pieza": "edificio_cupula",
+   "calle": ["murcia/exterior", [25, 25]],
+   "tipo": "casino",
+   "nombre": "Real Casino de Murcia",
+   "personas": [
+    {
+     "nombre": "Socio del Casino",
+     "aspecto": "tertuliano",
+     "papel": "tele",
+     "frases": [
+      "El patio árabe imita a la Alhambra, el salón de baile es versallesco y el tocador de señoras tiene un techo pintado de ángeles.",
+      "Aquí se juega al dominó desde el siglo XIX. La partida de las cuatro aún no ha terminado."
+     ],
+     "nodo": "SocioDelCasino",
+     "en": [11, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Camarero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Café asiático: café, leche condensada, licor 43, coñac y canela, en copa de cristal. Es de Cartagena, pero lo servimos con orgullo."
+     ],
+     "nodo": "Camarero",
+     "en": [10, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Salón de baile del Real Casino (1847). Lámparas de cristal, espejos y un suelo donde se ha bailado de todo menos reguetón."
+     ],
+     "nodo": "Cartel",
+     "en": [9, 1]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [11, 10],
+   "suelo": "piedra",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [2, 3, 9, 5]]],
+   "muebles": [
+    ["arbol_maceta", 1, 0],
+    ["estatua_gargola", 2, 0],
+    ["estatua_gargola", 4, 0],
+    ["arbol_maceta", 6, 0],
+    ["mesa_cristal_larga", 8, 5],
+    ["silla_derecha", 7, 5],
+    ["silla_izquierda", 11, 5],
+    ["arbol_maceta", 13, 0],
+    ["tele", 11, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [11, 9]},
+   "pasos": []
+  },
+  "murcia/sala_calle_25_35": {
+   "pieza": "bloque_verde_2",
+   "calle": ["murcia/exterior", [25, 35]],
+   "tipo": "piso",
+   "nombre": "Piso con vistas al río Segura",
+   "personas": [
+    {
+     "nombre": "Vecina",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": [
+      "El Segura es el río más castigado de España: tiene más bancos de barro que agua.",
+      "Cuando llueve fuerte, una vez cada diez años, el río se acuerda de que es un río."
+     ],
+     "nodo": "Vecina",
+     "en": [7, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Desde la ventana veo el Malecón. Allí paseo al perro y al novio, en ese orden."],
+     "nodo": "Hija",
+     "en": [8, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_naranja", [5, 3, 4, 2]]],
+   "muebles": [["fogones", 1, 1], ["nevera", 3, 1], ["consola", 4, 2], ["tele", 5, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_28_54": {
+   "pieza": "tienda_naranja",
+   "calle": ["murcia/exterior", [28, 54]],
+   "tipo": "pasteleria",
+   "nombre": "Pastelería de los paparajotes",
+   "personas": [
+    {
+     "nombre": "Pastelera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "El paparajote es una hoja de limonero rebozada, frita y con azúcar. La hoja no se come. Todos los turistas se la comen.",
+      "El pastel de carne lleva carne, huevo y chorizo dentro de un hojaldre. Aquí lo comemos de merienda. Y de almuerzo. Y de cena."
+     ],
+     "nodo": "Pastelera",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": ["Me he comido la hoja del paparajote. Me han mirado como si hubiera matado a alguien."],
+     "nodo": "Turista",
+     "en": [5, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Paparajotes: la hoja es para dar sabor, NO SE COME. (Este cartel existe porque se la come todo el mundo.)"
+     ],
+     "nodo": "Cartel",
+     "en": [4, 2]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "parquet",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 5, 0],
+    ["encimera", 6, 1],
+    ["alacena", 9, 0],
+    ["mostrador_cristal_i", 3, 4],
+    ["mostrador_cristal_m", 4, 4],
+    ["mostrador_cristal_m", 5, 4],
+    ["mostrador_cristal_m", 6, 4],
+    ["mostrador_cristal_m", 7, 4],
+    ["mostrador_cristal_d", 8, 4],
+    ["vitrina_blanca", 3, 1],
+    ["cajas", 1, 6]
+   ],
+   "encima": [["plato_comida", 5, 4], ["plato_comida", 7, 4], ["taza", 4, 4]],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "murcia/sala_calle_32_25": {
+   "pieza": "puesto_mercado",
+   "calle": ["murcia/exterior", [32, 25]],
+   "tipo": "puesto",
+   "nombre": "Puesto de limones de la plaza",
+   "personas": [
+    {
+     "nombre": "Limonero",
+     "aspecto": "aceitunero",
+     "papel": "dependiente",
+     "frases": [
+      "Limón verna y limón fino. Murcia es la huerta de Europa: si en Alemania hay limón, es de aquí.",
+      "Un kilo de limones por un euro. En Berlín, el mismo limón vale tres. Y está triste."
+     ],
+     "nodo": "Limonero",
+     "en": [6, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 7],
+   "puerta": [3, 6],
+   "suelo": "hidraulica_rosa",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 3, 0], ["cajas", 4, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "murcia/sala_calle_40_30": {
+   "pieza": "catedral_murcia",
+   "calle": ["murcia/exterior", [40, 30]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Santa María de Murcia",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La fachada barroca parece un retablo de piedra. La torre tardó doscientos años en hacerse. Paciencia murciana.",
+      "Dentro está el corazón de Alfonso X. Literalmente. Lo pidió en su testamento."
+     ],
+     "nodo": "Sacristan",
+     "en": [4, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Nazareno",
+     "aspecto": "costalero",
+     "papel": "publico",
+     "frases": [
+      "En Semana Santa sacamos los pasos de Salzillo. En la procesión de los Salzillos se reparten caramelos y huevos duros."
+     ],
+     "nodo": "Nazareno",
+     "en": [8, 9],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 12],
+   "puerta": [4, 11],
+   "suelo": "rombos_oscuros",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [4, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 3, 3],
+    ["estatua_aguila", 7, 0],
+    ["arbol_maceta", 1, 0],
+    ["arbol_maceta", 13, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 5, 8],
+    ["banco_rojo", 8, 8],
+    ["palmera_maceta", 13, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 10], "desde_sala_calle_40_30_salzillo": [10, 2]},
+   "pasos": [
+    {
+     "nodo": "Salzillo",
+     "en": [10, 1],
+     "destino": "murcia/sala_calle_40_30_salzillo",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_40_30_salzillo",
+     "llegada": [10, 2]
+    }
+   ]
+  },
+  "murcia/sala_calle_40_30_salzillo": {
+   "tipo": "museo",
+   "nombre": "Sala de los Salzillos",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "vitrina",
+     "frases": [
+      "Francisco Salzillo talló las imágenes de la Semana Santa murciana en el siglo XVIII. La Oración en el Huerto tiene un ángel que parece moverse.",
+      "En el belén de Salzillo hay más de quinientas figuras. Hay hasta un pastor durmiendo la siesta."
+     ],
+     "nodo": "Guia",
+     "en": [11, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "La Dolorosa de Salzillo, 1755. Cada Viernes Santo sale a la calle y Murcia entera se pone de pie."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "padre": "murcia/sala_calle_40_30",
+   "tamano": [15, 11],
+   "puerta": [4, 10],
+   "suelo": "alfombra_roja",
+   "pared": "crema",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_azul", [7, 3, 4, 3]]],
+   "muebles": [
+    ["vitrina_madera", 5, 1],
+    ["estatua_gargola", 7, 0],
+    ["vitrina_madera", 9, 1],
+    ["pedestal", 4, 3],
+    ["pedestal", 7, 3],
+    ["estatua_gargola", 12, 3],
+    ["vitrina_madera_estrecha", 1, 5],
+    ["palmera_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": [],
+   "salida": {"destino": "murcia/sala_calle_40_30", "aparicion": "desde_sala_calle_40_30_salzillo"}
+  },
+  "murcia/sala_calle_41_11": {
+   "pieza": "bloque_verde",
+   "calle": ["murcia/exterior", [41, 11]],
+   "tipo": "piso",
+   "nombre": "Piso de la familia de la plaza Circular",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Aquí se dice «acho» para todo. Acho, ven; acho, para; acho, qué calor. Es como una coma, pero con cariño.",
+      "En el Bando de la Huerta todos nos vestimos de huertanos y salimos a la calle a comer. Aquí la fiesta es comer."
+     ],
+     "nodo": "Madre",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": ["Mis amigos de Madrid me imitan el acento. Yo les digo «acho, pijo» y ya no saben qué decir."],
+     "nodo": "Hijo",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "rombos_morados",
+   "pared": "menta",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [4, 3, 4, 3]]],
+   "muebles": [["fregadero", 4, 1], ["fogones", 6, 1], ["tele", 1, 1], ["ropero_madera", 8, 0]],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_48_35": {
+   "pieza": "oficinas_azules",
+   "calle": ["murcia/exterior", [48, 35]],
+   "tipo": "ayuntamiento",
+   "nombre": "Edificio Moneo del Ayuntamiento",
+   "personas": [
+    {
+     "nombre": "Arquitecta en visita",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Moneo diseñó la fachada como un retablo sin santos, para no competir con la catedral. Y aún así hubo polémica.",
+      "Los huecos de la fachada siguen una partitura. Unos dicen que es música; otros, que son ventanas."
+     ],
+     "nodo": "ArquitectaEnVisita",
+     "en": [10, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Funcionario",
+     "aspecto": "padretarjeta",
+     "papel": "dependiente",
+     "frases": ["Le atendemos de ocho a tres. Después, de nada: el sol también es funcionario."],
+     "nodo": "Funcionario",
+     "en": [12, 8],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 11],
+   "puerta": [4, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 1, 0],
+    ["mostrador_azul", 3, 2],
+    ["archivo_alto", 6, 0],
+    ["banco_rojo", 5, 4],
+    ["banco_rojo", 8, 4],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 8, 6],
+    ["arbol_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 9]},
+   "pasos": []
+  },
+  "murcia/sala_calle_4_12": {
+   "pieza": "bloque_pisos",
+   "calle": ["murcia/exterior", [4, 12]],
+   "tipo": "portal",
+   "nombre": "Portal de la Gran Vía",
+   "personas": [
+    {
+     "nombre": "Portero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Aquí al lado está el termómetro de la Gran Vía. Marca cuarenta y cinco. En agosto, más, pero se rompe.",
+      "En este portal los vecinos se saludan con un «qué calor» por la mañana y un «qué calor» por la noche."
+     ],
+     "nodo": "Portero",
+     "en": [1, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 3, 3, 3]]],
+   "muebles": [
+    ["escalera_mano", 1, 0],
+    ["planta", 4, 1],
+    ["archivador", 7, 1],
+    ["archivador", 8, 1],
+    ["mostrador_naranja_i", 7, 4],
+    ["mostrador_naranja_m", 8, 4],
+    ["mostrador_naranja_d", 9, 4],
+    ["sillon_derecha", 10, 4],
+    ["palmera_maceta", 10, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "murcia/sala_calle_58_12": {
+   "pieza": "bloque_pisos",
+   "calle": ["murcia/exterior", [58, 12]],
+   "tipo": "piso",
+   "nombre": "Piso del estudiante de Cartagena",
+   "personas": [
+    {
+     "nombre": "Estudiante cartagenero",
+     "aspecto": "npc_youngster",
+     "papel": "mesa",
+     "frases": [
+      "Soy de Cartagena. Murcia no es mi capital, es mi vecina. Esto en Cartagena se discute con fuerza.",
+      "En Cartagena tenemos puerto, teatro romano y submarino. En Murcia tienen huerta. Ya está."
+     ],
+     "nodo": "EstudianteCartagenero",
+     "en": [9, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Compañero murciano",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Cada día me dice lo del submarino. Cada día le digo que el submarino no navega."],
+     "nodo": "CompaneroMurciano",
+     "en": [9, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["fregadero", 2, 1], ["fogones", 4, 1], ["tele", 7, 1], ["mesa_cristal", 7, 3]],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_58_26": {
+   "pieza": "tienda_azul",
+   "calle": ["murcia/exterior", [58, 26]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Murcia",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Abrimos a las seis de la mañana porque a las doce ya hace demasiado calor para salir de casa.",
+      "En agosto la sala de máquinas parece una sauna. Por eso no cobramos la sauna."
+     ],
+     "nodo": "Monitor",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Socio",
+     "aspecto": "tronista",
+     "papel": "libre",
+     "frases": [
+      "Me estoy poniendo fuerte para el Entierro de la Sardina. Hay que llevar las sardinas a la hoguera."
+     ],
+     "nodo": "Socio",
+     "en": [4, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "parquet",
+   "pared": "gris_raya_roja",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [3, 4, 6, 3]]],
+   "muebles": [
+    ["taquilla_gris", 4, 0],
+    ["taquilla_gris", 5, 0],
+    ["taquilla_azul", 6, 0],
+    ["taquilla_azul", 7, 0],
+    ["banco_rojo", 7, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "murcia/sala_calle_59_34": {
+   "pieza": "casa_granero",
+   "calle": ["murcia/exterior", [59, 34]],
+   "tipo": "barraca",
+   "nombre": "Barraca huertana",
+   "personas": [
+    {
+     "nombre": "Abuelo huertano",
+     "aspecto": "huertano",
+     "papel": "libre",
+     "frases": [
+      "La barraca se hacía con barro, caña y paja. Fresquita en verano y caliente en invierno. Mejor que algunos pisos.",
+      "Esta la conservo para el Bando de la Huerta. El resto del año, la usan los gatos."
+     ],
+     "nodo": "AbueloHuertano",
+     "en": [4, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": ["Mi abuelo dice que las lechugas le hablan. Yo creo que son los Bulbasaur."],
+     "nodo": "Nieta",
+     "en": [5, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [5, 8],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["alacena", 3, 0],
+    ["mesa_cristal", 6, 4],
+    ["taburete_marron", 5, 5],
+    ["taburete_marron", 8, 5],
+    ["planta", 11, 6],
+    ["cajas", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "murcia/sala_calle_59_53": {
+   "pieza": "casa_granero",
+   "calle": ["murcia/exterior", [59, 53]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia de la Fuensanta",
+   "personas": [
+    {
+     "nombre": "Abuela devota",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "La Virgen de la Fuensanta baja a la ciudad dos veces al año. Y sube en romería hasta el santuario con medio Murcia detrás.",
+      "Le he prometido ir andando al santuario si me toca la lotería. Juego poco, por si acaso."
+     ],
+     "nodo": "AbuelaDevota",
+     "en": [9, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["La romería es de seis kilómetros. Mi abuela la hace más rápido que yo."],
+     "nodo": "Nieto",
+     "en": [8, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "parquet",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [3, 4, 4, 2]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal", 7, 5],
+    ["banqueta_azul", 6, 6],
+    ["banqueta_azul", 9, 6],
+    ["arbol_maceta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "murcia/sala_calle_5_26": {
+   "pieza": "tienda_flores",
+   "calle": ["murcia/exterior", [5, 26]],
+   "tipo": "floristeria",
+   "nombre": "Floristería de la Vega",
+   "personas": [
+    {
+     "nombre": "Florista",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "En la Batalla de las Flores se lanzan ramos desde las carrozas. Es la única batalla en la que nadie pierde.",
+      "Las flores de la huerta duran poco con este calor. Hay que regalarlas rápido."
+     ],
+     "nodo": "Florista",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Novio nervioso",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": ["Necesito un ramo para pedir matrimonio. Que no sea de limón, por favor."],
+     "nodo": "NovioNervioso",
+     "en": [2, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "losa_crema",
+   "pared": "lima",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["palmera_maceta", 5, 0],
+    ["planta", 6, 1],
+    ["palmera_maceta", 7, 0],
+    ["mostrador_blanco_i", 1, 3],
+    ["mostrador_blanco_m", 2, 3],
+    ["mostrador_blanco_d", 3, 3],
+    ["arbol_maceta", 6, 3],
+    ["planta", 7, 3],
+    ["arbol_maceta", 8, 3],
+    ["palmera_maceta", 1, 0],
+    ["planta", 8, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_63_25": {
+   "pieza": "casa_granero",
+   "calle": ["murcia/exterior", [63, 25]],
+   "tipo": "casa",
+   "nombre": "Casa del cocinero del michirones",
+   "personas": [
+    {
+     "nombre": "Cocinero",
+     "aspecto": "camarero",
+     "papel": "cocina",
+     "frases": [
+      "Michirones: habas secas, chorizo, jamón y guindilla. Se cocinan toda la noche. Como mi suegra.",
+      "La ensalada murciana lleva tomate, atún, huevo y aceitunas. No lleva lechuga. El que le pone lechuga, se va."
+     ],
+     "nodo": "Cocinero",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": ["Mi padre ha salido en la tele local con sus michirones. Desde entonces firma los tápers."],
+     "nodo": "Hija",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 6, 1],
+    ["fregadero", 7, 1],
+    ["fogones", 9, 1],
+    ["tele", 3, 1],
+    ["estante_oliva", 5, 1],
+    ["sofa", 8, 3],
+    ["palmera_maceta", 1, 4],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_65_11": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["murcia/exterior", [65, 11]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia del Entierro de la Sardina",
+   "personas": [
+    {
+     "nombre": "Sardinero",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "En el Entierro de la Sardina se tiran juguetes desde las carrozas. Después se quema una sardina gigante. Tiene sentido, más o menos.",
+      "Soy de la peña sardinera desde hace treinta años. Llevo treinta años quemando la misma sardina."
+     ],
+     "nodo": "Sardinero",
+     "en": [9, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido guarda en el trastero todos los juguetes que ha pillado en treinta años. No caben."],
+     "nodo": "Mujer",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["tatami_verde", [7, 4, 3, 2]]],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["encimera", 5, 1],
+    ["fogones", 8, 1],
+    ["estanteria_baja_menta", 1, 1],
+    ["estante_menta", 3, 1],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "murcia/sala_calle_65_34": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["murcia/exterior", [65, 34]],
+   "tipo": "casa",
+   "nombre": "Casa del agricultor del trasvase",
+   "personas": [
+    {
+     "nombre": "Agricultor",
+     "aspecto": "huertano",
+     "papel": "tele",
+     "frases": [
+      "Agua para todos, pone en las pancartas. El agua viene del Tajo por el trasvase. Y la discusión, de Toledo.",
+      "Sin agua no hay huerta, y sin huerta no hay ensalada en media Europa. Que lo sepa el que decide."
+     ],
+     "nodo": "Agricultor",
+     "en": [7, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo ingeniero",
+     "aspecto": "estudianteinge",
+     "papel": "mesa",
+     "frases": ["Estoy estudiando el riego por goteo. Mi padre dice que el goteo es para los grifos."],
+     "nodo": "HijoIngeniero",
+     "en": [9, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["nevera_alta", 5, 0],
+    ["cajon_oliva", 6, 1],
+    ["tele", 7, 1],
+    ["vitrina_madera", 9, 1],
+    ["sofa", 2, 4],
+    ["planta", 10, 6],
+    ["mesa_cristal", 9, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "murcia/sala_calle_65_53": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["murcia/exterior", [65, 53]],
+   "tipo": "casa",
+   "nombre": "Casa de la bordadora de huertanos",
+   "personas": [
+    {
+     "nombre": "Bordadora",
+     "aspecto": "npc_old_woman",
+     "papel": "mesa",
+     "frases": [
+      "Bordo los refajos y los chalecos de huertano para el Bando. Tardo tres meses en cada uno. Se pone un día.",
+      "Antes los bordaban todas las madres. Ahora los encargan por internet. A mí."
+     ],
+     "nodo": "Bordadora",
+     "en": [5, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": ["He venido a recoger el refajo de mi hija. Le queda pequeño: ha crecido mientras lo bordaban."],
+     "nodo": "Clienta",
+     "en": [1, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "tatami_verde",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [2, 4, 5, 3]]],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["encimera", 6, 1],
+    ["fogones", 9, 1],
+    ["vitrina_madera", 2, 1],
+    ["mesa_cristal_larga", 4, 5],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 6, 7],
+    ["arbol_maceta", 1, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  }
+ }
+}

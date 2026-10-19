@@ -1,0 +1,876 @@
+{
+ "_doc": "Interiores personalizados de palma (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Palma",
+ "interiores": {
+  "palma/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["palma/exterior", [33, 12]],
+   "tipo": "casa",
+   "nombre": "Casa de la madona del barrio de Santa Catalina",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Madona",
+     "aspecto": "npc_old_man",
+     "regalo": "palma_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "Madona es como llamamos aquí a las señoras de la casa. Yo soy madona desde los veinte.",
+      "Antes Santa Catalina era de pescadores. Ahora es de suecos con patinete. Toma, para el camino."
+     ],
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": ["Mi abuela no sabe decir «brunch». Dice «berenar tard», y tiene razón."],
+     "nodo": "Nieto",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["tele", 1, 1],
+    ["estante_menta", 3, 1],
+    ["mesa_cristal", 3, 4],
+    ["taburete_amarillo", 2, 5],
+    ["taburete_amarillo", 5, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  },
+  "palma/casa_2": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["palma/exterior", [39, 12]],
+   "tipo": "pasteleria",
+   "nombre": "Forn de les ensaïmades",
+   "personas": [
+    {
+     "nombre": "Fornera",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "La ensaimada lleva saïm, manteca de cerdo. Por eso se llama así. Si te la venden con mantequilla, no es ensaimada.",
+      "Las cajas redondas de cartón son para el avión. Los de Barcelona se llevan seis y vuelven a por más."
+     ],
+     "nodo": "Fornera",
+     "en": [1, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Alemán",
+     "aspecto": "turistachanclas",
+     "papel": "cliente",
+     "frases": ["Eine Ensaimada, bitte. ¿Dos? Ja. ¿Diez? Ja, ja."],
+     "nodo": "Aleman",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": ["ENSAÏMADA DE CABELL D'ÀNGEL. De cabello de ángel. Ningún ángel ha sido dañado."],
+     "nodo": "Cartel",
+     "en": [10, 2]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 4, 0],
+    ["encimera", 5, 1],
+    ["alacena", 8, 0],
+    ["mostrador_celeste_i", 5, 3],
+    ["mostrador_celeste_m", 6, 3],
+    ["mostrador_celeste_m", 7, 3],
+    ["mostrador_celeste_m", 8, 3],
+    ["mostrador_celeste_d", 9, 3],
+    ["vitrina_blanca", 9, 1],
+    ["caja", 1, 7]
+   ],
+   "encima": [["plato", 9, 3], ["taza", 7, 3]],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "palma/sala_calle_19_6": {
+   "pieza": "casa_gris",
+   "calle": ["palma/exterior", [19, 6]],
+   "tipo": "casa",
+   "nombre": "Casa del payés que vende sobrasada",
+   "personas": [
+    {
+     "nombre": "Payés",
+     "aspecto": "pastor",
+     "papel": "libre",
+     "frases": [
+      "La sobrasada se hace con cerdo negro mallorquín y pimentón. Se cuelga y se espera. Como en el ayuntamiento.",
+      "Mi finca era de mi abuelo. Ahora un alemán me ofrece un millón por ella cada verano."
+     ],
+     "nodo": "Payes",
+     "en": [10, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Payesa",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Pan con aceite, tomate de ramallet y un trocito de sobrasada. Eso es un pa amb oli, no una tostada."
+     ],
+     "nodo": "Payesa",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "alfombra_naranja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_azul", [2, 5, 4, 3]]],
+   "muebles": [
+    ["alacena", 6, 0],
+    ["fogones", 7, 1],
+    ["fregadero", 9, 1],
+    ["tele", 2, 1],
+    ["planta", 4, 1],
+    ["palmera_maceta", 1, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "palma/sala_calle_21_27": {
+   "pieza": "bloque_verde_2",
+   "calle": ["palma/exterior", [21, 27]],
+   "tipo": "piso",
+   "nombre": "Piso de temporada de la camarera de hotel",
+   "personas": [
+    {
+     "nombre": "Camarera de piso",
+     "aspecto": "npc_lass",
+     "papel": "cama",
+     "frases": [
+      "Hago cuarenta habitaciones al día en temporada. En invierno hago cola en el paro.",
+      "Pago de alquiler lo mismo que cobro. El resto de gastos los pago con fe."
+     ],
+     "nodo": "CamareraDePiso",
+     "en": [9, 4],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Compañera",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": ["Somos cinco en un piso de dos habitaciones. La casera lo llama «convivencia mediterránea»."],
+     "nodo": "Companera",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["tele", 5, 1],
+    ["mesa_cristal", 5, 5],
+    ["banqueta_azul", 7, 6],
+    ["cama_azul", 7, 1],
+    ["cajon_rosa", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "palma/sala_calle_32_40": {
+   "pieza": "torre_octogonal",
+   "calle": ["palma/exterior", [32, 40]],
+   "tipo": "palacio",
+   "nombre": "Palacio de la Almudaina",
+   "personas": [
+    {
+     "nombre": "Guía de Patrimonio",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Fue alcázar musulmán, palacio de los reyes de Mallorca y ahora residencia oficial del rey cuando viene.",
+      "El ángel de la torre es el Ángel Custodio. Lleva vigilando la bahía desde el siglo XIV."
+     ],
+     "nodo": "GuiaDePatrimonio",
+     "en": [3, 9],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Guardia Real",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": ["No puedo decirle si el rey está en Palma. Le diré que el barco no está en el puerto."],
+     "nodo": "GuardiaReal",
+     "en": [13, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Salón del Tinell. Aquí se celebraban los banquetes de los reyes de Mallorca. Ahora, las recepciones de verano."
+     ],
+     "nodo": "Cartel",
+     "en": [12, 1]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [8, 11],
+   "suelo": "rombos_oscuros",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [3, 4, 10, 6]]],
+   "muebles": [
+    ["sillon_derecha", 2, 4],
+    ["mesa_cristal", 3, 5],
+    ["sillon_izquierda", 5, 4],
+    ["pedestal", 13, 4],
+    ["arbol_maceta", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 10]},
+   "pasos": []
+  },
+  "palma/sala_calle_3_38": {
+   "pieza": "casa_gris",
+   "calle": ["palma/exterior", [3, 38]],
+   "tipo": "casa",
+   "nombre": "Casa del regatista jubilado",
+   "personas": [
+    {
+     "nombre": "Regatista jubilado",
+     "aspecto": "regatista",
+     "papel": "tele",
+     "frases": [
+      "Corrí la Copa del Rey veinte veces. Ganó el rey dos. Yo, ninguna. Pero yo no tenía el barco del rey.",
+      "En agosto el puerto se llena de yates. Algunos tienen piscina. Dentro del barco. En el mar."
+     ],
+     "nodo": "RegatistaJubilado",
+     "en": [7, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido habla más de barcos que de mí. Por lo menos los barcos no le contestan."],
+     "nodo": "Mujer",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_naranja", [3, 4, 4, 2]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["tele", 8, 1],
+    ["estante_mostaza", 10, 1],
+    ["sofa", 2, 5],
+    ["arbol_maceta", 10, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "palma/sala_calle_42_41": {
+   "pieza": "catedral_palma",
+   "calle": ["palma/exterior", [42, 41]],
+   "tipo": "catedral",
+   "nombre": "La Seu, catedral de Mallorca",
+   "personas": [
+    {
+     "nombre": "Sacristana",
+     "aspecto": "npc_old_woman",
+     "papel": "cura",
+     "frases": [
+      "La Seu tiene el rosetón gótico más grande del mundo. Cuando entra el sol por la mañana, el suelo se llena de colores.",
+      "El baldaquino lo hizo Gaudí. Lo dejó a medias, como casi todo. Pero aquí nadie se queja."
+     ],
+     "nodo": "Sacristana",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista",
+     "papel": "publico",
+     "frases": ["¿Esto es de Gaudí o de Barceló? Mi guía dice que de los dos, y que de Dios un poco."],
+     "nodo": "Turista",
+     "en": [8, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 11],
+   "puerta": [7, 10],
+   "suelo": "piedra",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [7, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_madera", 6, 3],
+    ["estatua_gargola", 3, 0],
+    ["estatua_gargola", 10, 0],
+    ["arbol_maceta", 1, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 8, 6],
+    ["arbol_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9], "desde_sala_calle_42_41_barcelo": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Barcelo",
+     "en": [2, 1],
+     "destino": "palma/sala_calle_42_41_barcelo",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_42_41_barcelo",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "palma/sala_calle_42_41_barcelo": {
+   "tipo": "galeria",
+   "nombre": "Capilla del Santísimo de Miquel Barceló",
+   "personas": [
+    {
+     "nombre": "Restauradora",
+     "aspecto": "npc_woman",
+     "papel": "vitrina",
+     "frases": [
+      "Barceló cubrió la capilla de cerámica: peces, panes, calaveras y frutas. Unos lo adoran y otros lo llaman «la cueva».",
+      "La cerámica se cocinó en Italia y se montó aquí pieza a pieza. Como un puzle, pero de arcilla."
+     ],
+     "nodo": "Restauradora",
+     "en": [11, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["El milagro de los panes y los peces, en barro. Hay un pulpo. No preguntes por el pulpo."],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "padre": "palma/sala_calle_42_41",
+   "tamano": [14, 11],
+   "puerta": [5, 10],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_blanca", 6, 7],
+    ["vitrina_blanca", 9, 7],
+    ["banco_rojo", 2, 8],
+    ["estatua_gargola", 11, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 9]},
+   "pasos": [],
+   "salida": {"destino": "palma/sala_calle_42_41", "aparicion": "desde_sala_calle_42_41_barcelo"}
+  },
+  "palma/sala_calle_44_12": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["palma/exterior", [44, 12]],
+   "tipo": "casa",
+   "nombre": "Casa del vecino del Molinar",
+   "personas": [
+    {
+     "nombre": "Pescador",
+     "aspecto": "npc_fisherman",
+     "papel": "libre",
+     "frases": [
+      "El Molinar era un barrio de molinos y pescadores. Los molinos se pararon; los pescadores, casi.",
+      "Llevo la llampuga a la lonja en otoño. En verano llevo turistas a ver delfines. Dan más dinero los turistas."
+     ],
+     "nodo": "Pescador",
+     "en": [8, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["Mi padre dice que los delfines le reconocen. Yo creo que reconocen el pan."],
+     "nodo": "Hija",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "tatami_verde",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [3, 3, 5, 3]]],
+   "muebles": [
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["nevera_alta", 7, 0],
+    ["mesa_cristal_larga", 4, 3],
+    ["silla_derecha", 3, 3],
+    ["silla_izquierda", 7, 3],
+    ["tele", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "palma/sala_calle_45_26": {
+   "pieza": "tienda_azul",
+   "calle": ["palma/exterior", [45, 26]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Palma",
+   "personas": [
+    {
+     "nombre": "Monitora",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": [
+      "En mayo todos quieren el cuerpo de playa. En junio ya están en la playa y en julio dejan de venir.",
+      "Hay socios alemanes que vienen solo en agosto. Pagan el año entero. Son nuestros favoritos."
+     ],
+     "nodo": "Monitora",
+     "en": [4, 7],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Socio",
+     "aspecto": "tronista",
+     "papel": "libre",
+     "frases": ["Entreno para el Magaluf. Allí no se baila: se sobrevive."],
+     "nodo": "Socio",
+     "en": [3, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 10],
+   "puerta": [8, 9],
+   "suelo": "moqueta_azul",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [["tatami_verde", [2, 4, 7, 4]]],
+   "muebles": [
+    ["taquilla_gris", 2, 0],
+    ["taquilla_gris", 3, 0],
+    ["taquilla_azul", 4, 0],
+    ["taquilla_azul", 5, 0],
+    ["banco_rojo", 9, 5],
+    ["tele", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "palma/sala_calle_54_30": {
+   "pieza": "bloque_pisos",
+   "calle": ["palma/exterior", [54, 30]],
+   "tipo": "piso",
+   "nombre": "Piso turístico del Paseo Marítimo",
+   "personas": [
+    {
+     "nombre": "Anfitrión de piso turístico",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "Tengo nueve pisos turísticos en la isla. Mi empresa se llama «Vive como un local». Yo vivo en Barcelona.",
+      "La llave está en una caja con código. El código es la fecha de mi primer piso."
+     ],
+     "nodo": "AnfitrionDePisoTuristico",
+     "en": [5, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista inglesa",
+     "aspecto": "turista_f",
+     "papel": "cama",
+     "frases": ["The flat is lovely. El ruido de las maletas a las cuatro de la mañana, not so much."],
+     "nodo": "TuristaInglesa",
+     "en": [1, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [6, 7],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["fregadero", 5, 1], ["fogones", 7, 1], ["cama_colcha_rosa", 2, 1], ["planta", 1, 1]],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "palma/sala_calle_57_21": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["palma/exterior", [57, 21]],
+   "tipo": "casa",
+   "nombre": "Casa de la pintora del barrio de la Llotja",
+   "personas": [
+    {
+     "nombre": "Pintora",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Miró vivió en Mallorca sus últimos años. Dijo que la luz de aquí lo cambiaba todo. A mí me cambió el alquiler.",
+      "Pinto el mar desde la ventana. Lo vendo a los del crucero. El cuadro llega a Miami y el mar se queda."
+     ],
+     "nodo": "Pintora",
+     "en": [10, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Gato",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["Miau. Bueno, soy el sobrino. Me ha pedido que haga de gato para un cuadro."],
+     "nodo": "Gato",
+     "en": [6, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["encimera", 5, 1],
+    ["tele", 9, 1],
+    ["mesa_cristal", 4, 3],
+    ["taburete_marron", 3, 4],
+    ["taburete_marron", 6, 4],
+    ["sillon_derecha", 8, 4],
+    ["mesa_cristal", 9, 5],
+    ["sillon_izquierda", 11, 4],
+    ["arbol_maceta", 1, 5],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "palma/sala_calle_59_43": {
+   "pieza": "bloque_pisos",
+   "calle": ["palma/exterior", [59, 43]],
+   "tipo": "portal",
+   "nombre": "Portal de la calle Jaume III",
+   "personas": [
+    {
+     "nombre": "Portero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Jaume III es la calle de las tiendas caras. Los soportales son para que no te dé el sol mientras te arruinas.",
+      "Antes en este portal vivían familias. Ahora vive una caja de llaves."
+     ],
+     "nodo": "Portero",
+     "en": [6, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 2, 0],
+    ["planta", 5, 1],
+    ["cajonera_azul", 6, 1],
+    ["sillon_derecha", 1, 5],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "palma/sala_calle_61_30": {
+   "pieza": "oficinas_azules",
+   "calle": ["palma/exterior", [61, 30]],
+   "tipo": "institucion",
+   "nombre": "Consell de Mallorca",
+   "personas": [
+    {
+     "nombre": "Consellera",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Hablamos de la ecotasa: dos euros por turista y noche. Los turistas pagan y la isla sigue igual de llena.",
+      "Queremos limitar los cruceros. Los cruceros quieren limitarnos a nosotros."
+     ],
+     "nodo": "Consellera",
+     "en": [2, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Ujier",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": ["Las sesiones del pleno son en catalán. Las preguntas de los turistas, en todos los idiomas."],
+     "nodo": "Ujier",
+     "en": [1, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Escudo de Mallorca: castillo sobre el agua. Antes significaba defensa. Ahora, segunda residencia."
+     ],
+     "nodo": "Cartel",
+     "en": [11, 1]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [3, 10],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["archivo_alto", 3, 0],
+    ["mostrador_celeste", 5, 2],
+    ["archivo_alto", 8, 0],
+    ["banco_rojo", 4, 4],
+    ["banco_rojo", 7, 4],
+    ["banco_rojo", 10, 4],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 10, 6],
+    ["arbol_maceta", 1, 0],
+    ["pedestal", 12, 1],
+    ["mesa_cristal", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "palma/sala_calle_66_43": {
+   "pieza": "bloque_verde_2",
+   "calle": ["palma/exterior", [66, 43]],
+   "tipo": "piso",
+   "nombre": "Piso del chef de un restaurante de la playa",
+   "personas": [
+    {
+     "nombre": "Chef",
+     "aspecto": "camarero",
+     "papel": "cocina",
+     "frases": [
+      "Por la mañana hago tumbet y frit mallorquí para mi madre. Por la noche, hamburguesas para los turistas.",
+      "El tumbet es como un pisto, pero con patata y más sol."
+     ],
+     "nodo": "Chef",
+     "en": [1, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Madre del chef",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": ["Mi hijo cocina en un restaurante de lujo. A mí me trae las sobras de lujo."],
+     "nodo": "MadreDelChef",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "menta",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [4, 3, 4, 3]]],
+   "muebles": [["encimera", 2, 1], ["nevera", 5, 1], ["tele_pequena", 8, 2], ["sofa", 5, 5]],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "palma/sala_calle_67_13": {
+   "pieza": "bloque_pisos",
+   "calle": ["palma/exterior", [67, 13]],
+   "tipo": "portal",
+   "nombre": "Portal de las Avenidas",
+   "personas": [
+    {
+     "nombre": "Vecina mayor",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Llevo sesenta años en este portal. He visto llegar a los ingleses, a los alemanes y ahora a los nómadas digitales.",
+      "Los nómadas digitales no hacen ruido. Solo llamadas por la mañana, en inglés, en el rellano."
+     ],
+     "nodo": "VecinaMayor",
+     "en": [5, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 9],
+   "puerta": [4, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [2, 3, 5, 3]]],
+   "muebles": [
+    ["planta", 4, 1],
+    ["escalera_mano", 5, 0],
+    ["archivador", 2, 1],
+    ["archivador", 3, 1],
+    ["mostrador_blanco_i", 5, 4],
+    ["mostrador_blanco_m", 6, 4],
+    ["mostrador_blanco_d", 7, 4],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "palma/sala_calle_67_29": {
+   "pieza": "casa_granero",
+   "calle": ["palma/exterior", [67, 29]],
+   "tipo": "casa",
+   "nombre": "Casa del músico que toca a Chopin",
+   "personas": [
+    {
+     "nombre": "Músico",
+     "aspecto": "flautista",
+     "papel": "libre",
+     "frases": [
+      "Chopin pasó un invierno en Valldemossa con George Sand. Le llovió todo el invierno. Lo escribió en el preludio de la gota de agua.",
+      "Toco en las calles de Palma. Los turistas me piden Chopin; los de aquí, que me calle."
+     ],
+     "nodo": "Musico",
+     "en": [4, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Sobrina",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": ["Mi tío se cree Chopin. Chopin, al menos, tenía piano."],
+     "nodo": "Sobrina",
+     "en": [1, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "moqueta_beige",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 5, 1],
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["tele", 1, 1],
+    ["estante_verde", 3, 1],
+    ["planta", 10, 1],
+    ["caja", 10, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "palma/sala_calle_7_14": {
+   "pieza": "castillo_bellver",
+   "calle": ["palma/exterior", [7, 14]],
+   "tipo": "castillo",
+   "nombre": "Castell de Bellver",
+   "personas": [
+    {
+     "nombre": "Guarda",
+     "aspecto": "guarda_parque",
+     "papel": "libre",
+     "frases": [
+      "Es el único castillo circular de España, del siglo XIV. Redondo para que no hubiera esquinas donde esconderse.",
+      "Fue prisión. Aquí estuvo encerrado Jovellanos. Se pasaba el día escribiendo sobre la vista."
+     ],
+     "nodo": "Guarda",
+     "en": [3, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Excursionista",
+     "aspecto": "montanera",
+     "papel": "libre",
+     "frases": ["He subido andando por el bosque. Desde arriba se ve toda la bahía y catorce cruceros."],
+     "nodo": "Excursionista",
+     "en": [4, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Patio de armas circular, de dos pisos. Un castillo sin esquinas: aquí nadie se queda arrinconado."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "tamano": [13, 10],
+   "puerta": [8, 9],
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [8, 2, 1, 7]]],
+   "muebles": [["escalera_mano", 4, 0], ["cajas", 7, 1], ["mesa_cristal_larga", 2, 5], ["caja", 11, 2]],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  }
+ }
+}

@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_1ktku"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_q8j15"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_3po4x"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_susm3"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_kq838"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_ljx4l"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="7_pnb3g"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_22vvm"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_fhpym"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_jn8wc"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_24t1w"]
+
+[sub_resource type="Resource" id="Resource_llxpw"]
+script = ExtResource("3_3po4x")
+id = &"palma/sala_calle_42_41_barcelo"
+display_name = "Capilla del Santísimo de Miquel Barceló, Palma"
+outdoor = false
+zone_id = &"palma"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaCalle4241Barcelo" type="Node2D" unique_id=1912279129]
+script = ExtResource("1_1ktku")
+data = SubResource("Resource_llxpw")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1901043650]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAKAAAAAAAAABgAAAALAAAAAAAAABgAAAAMAAAAAAAAABgAAAANAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAKAAEAAAAAABgAAAALAAEAAAAAABgAAAAMAAEAAAAAABgAAAANAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAKAAIAAAAAABgAAAALAAIAAAAAABgAAAAMAAIAAAAAABgAAAANAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAKAAMAAAAAABgAAAALAAMAAAAAABgAAAAMAAMAAAAAABgAAAANAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAIAAQAAAAAABgAAAAJAAQAAAAAABgAAAAKAAQAAAAAABgAAAALAAQAAAAAABgAAAAMAAQAAAAAABgAAAANAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAIAAUAAAAAABgAAAAJAAUAAAAAABgAAAAKAAUAAAAAABgAAAALAAUAAAAAABgAAAAMAAUAAAAAABgAAAANAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAKAAYAAAAAABgAAAALAAYAAAAAABgAAAAMAAYAAAAAABgAAAANAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABgAAAAEAAcAAAAAABgAAAAFAAcAAAAAABgAAAAGAAcAAAAAABgAAAAHAAcAAAAAABgAAAAIAAcAAAAAABgAAAAJAAcAAAAAABgAAAAKAAcAAAAAABgAAAALAAcAAAAAABgAAAAMAAcAAAAAABgAAAANAAcAAAAAABgAAAAAAAgAAAAAABgAAAABAAgAAAAAABgAAAACAAgAAAAAABgAAAADAAgAAAAAABgAAAAEAAgAAAAAABgAAAAFAAgAAAAAABgAAAAGAAgAAAAAABgAAAAHAAgAAAAAABgAAAAIAAgAAAAAABgAAAAJAAgAAAAAABgAAAAKAAgAAAAAABgAAAALAAgAAAAAABgAAAAMAAgAAAAAABgAAAANAAgAAAAAABgAAAAAAAkAAAAAABgAAAABAAkAAAAAABgAAAACAAkAAAAAABgAAAADAAkAAAAAABgAAAAEAAkAAAAAABgAAAAFAAkAAAAAABgAAAAGAAkAAAAAABgAAAAHAAkAAAAAABgAAAAIAAkAAAAAABgAAAAJAAkAAAAAABgAAAAKAAkAAAAAABgAAAALAAkAAAAAABgAAAAMAAkAAAAAABgAAAANAAkAAAAAABgAAAAAAAoAAAAAABgAAAABAAoAAAAAABgAAAACAAoAAAAAABgAAAADAAoAAAAAABgAAAAEAAoAAAAAABgAAAAFAAoAAAAAABAAAAAGAAoAAAAAABgAAAAHAAoAAAAAABgAAAAIAAoAAAAAABgAAAAJAAoAAAAAABgAAAAKAAoAAAAAABgAAAALAAoAAAAAABgAAAAMAAoAAAAAABgAAAANAAoAAAAAABgAAAA=")
+tile_set = ExtResource("4_susm3")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1575387899]
+tile_map_data = PackedByteArray("AAABAAAAAQABAAMAAAABAAEAAQABAAQAAAACAAAAAQABAAMAAAACAAEAAQABAAQAAAADAAAAAQABAAMAAAADAAEAAQABAAQAAAAEAAAAAQABAAMAAAAEAAEAAQABAAQAAAAFAAAAAQABAAMAAAAFAAEAAQABAAQAAAAGAAAAAQABAAMAAAAGAAEAAQABAAQAAAAHAAAAAQABAAMAAAAHAAEAAQABAAQAAAAIAAAAAQABAAMAAAAIAAEAAQABAAQAAAAJAAAAAQABAAMAAAAJAAEAAQABAAQAAAAKAAAAAQABAAMAAAAKAAEAAQABAAQAAAALAAAAAQABAAMAAAALAAEAAQABAAQAAAAMAAAAAQABAAMAAAAMAAEAAQABAAQAAAAAAAAAAQACAAEAAAANAAAAAQAAAAEAAAAAAAEAAQACAAEAAAANAAEAAQAAAAEAAAAAAAIAAQACAAEAAAANAAIAAQAAAAEAAAAAAAMAAQACAAEAAAANAAMAAQAAAAEAAAAAAAQAAQACAAEAAAANAAQAAQAAAAEAAAAAAAUAAQACAAEAAAANAAUAAQAAAAEAAAAAAAYAAQACAAEAAAANAAYAAQAAAAEAAAAAAAcAAQACAAEAAAANAAcAAQAAAAEAAAAAAAgAAQACAAEAAAANAAgAAQAAAAEAAAAAAAkAAQACAAEAAAANAAkAAQAAAAEAAAABAAoAAQABAAAAAAACAAoAAQABAAAAAAADAAoAAQABAAAAAAAEAAoAAQACAAAAAAAGAAoAAQAAAAAAAAAHAAoAAQABAAAAAAAIAAoAAQABAAAAAAAJAAoAAQABAAAAAAAKAAoAAQABAAAAAAALAAoAAQABAAAAAAAMAAoAAQABAAAAAAAAAAoAAQAFAAQAAAANAAoAAQAGAAQAAAA=")
+tile_set = ExtResource("4_susm3")
+
+[node name="Entities" type="Node2D" parent="." unique_id=286023707]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=514086651]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAGAAgAAgAFAB0AAAAHAAgAAgAGAB0AAAAJAAgAAgAFAB0AAAAKAAgAAgAGAB0AAAACAAgAAwAFAAAAAAADAAgAAwAGAAAAAAAEAAgAAwAHAAAAAAALAAUAAgAFADMAAAAMAAUAAgAGADMAAAA=")
+tile_set = ExtResource("4_susm3")
+
+[node name="Restauradora" type="Node2D" parent="Entities" unique_id=1158878171 instance=ExtResource("5_kq838")]
+position = Vector2(368, 240)
+script = ExtResource("6_ljx4l")
+display_name = "Restauradora"
+lines = PackedStringArray("Barceló cubrió la capilla de cerámica: peces, panes, calaveras y frutas. Unos lo adoran y otros lo llaman «la cueva».", "La cerámica se cocinó en Italia y se montó aquí pieza a pieza. Como un puzle, pero de arcilla.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_pnb3g")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=408178335 instance=ExtResource("8_22vvm")]
+position = Vector2(240, 48)
+script = ExtResource("9_fhpym")
+lines = PackedStringArray("El milagro de los panes y los peces, en barro. Hay un pulpo. No preguntes por el pulpo.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1424994228]
+z_index = 10
+tile_map_data = PackedByteArray("AAAGAAcAAgAFABwAAAAHAAcAAgAGABwAAAAJAAcAAgAFABwAAAAKAAcAAgAGABwAAAALAAMAAgAFADEAAAAMAAMAAgAGADEAAAALAAQAAgAFADIAAAAMAAQAAgAGADIAAAA=")
+tile_set = ExtResource("4_susm3")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1951827470]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=792126301]
+position = Vector2(176, 336)
+script = ExtResource("10_jn8wc")
+target_map = &"palma/sala_calle_42_41"
+target_spawn = &"desde_sala_calle_42_41_barcelo"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1393917218]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=2135172411]
+position = Vector2(176, 304)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=946311480]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1764049454]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_24t1w")
+theme_override_font_sizes/font_size = 16
+text = "CAPILLA DEL SANTÍSIMO DE MIQUEL BARCELÓ"
+horizontal_alignment = 1

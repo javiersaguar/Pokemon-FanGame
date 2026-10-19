@@ -1,0 +1,1143 @@
+{
+ "_doc": "Interiores personalizados de alicante (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Alicante",
+ "interiores": {
+  "alicante/sala_calle_12_9": {
+   "pieza": "oficinas_azules",
+   "calle": ["alicante/exterior", [12, 9]],
+   "tipo": "oficina",
+   "nombre": "Oficina de turismo de la Costa Blanca",
+   "personas": [
+    {
+     "nombre": "Informadora",
+     "aspecto": "npc_lass",
+     "papel": "dependiente",
+     "frases": [
+      "Tenemos playa, castillo, turrón y trescientos días de sol. Lo que no tenemos es sombra.",
+      "En verano la ciudad pasa de trescientos mil a medio millón. Las colas del helado, también."
+     ],
+     "nodo": "Informadora",
+     "en": [2, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista noruego",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": ["In Norway we have sol dos horas al día. Aquí he tenido catorce. Estoy rojo como un Magmar."],
+     "nodo": "TuristaNoruego",
+     "en": [2, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Mapa de la Costa Blanca: de Dénia a Torrevieja, doscientos kilómetros de playa y treinta mil apartamentos."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "losa_gris",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 6, 0],
+    ["archivador_bajo", 7, 1],
+    ["taquilla_archivo", 9, 0],
+    ["mostrador_celeste", 2, 4],
+    ["banqueta_roja", 3, 6],
+    ["mostrador_celeste", 5, 4],
+    ["banqueta_azul", 6, 6],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [["taza", 2, 4]],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_19_32": {
+   "pieza": "casa_rosa",
+   "calle": ["alicante/exterior", [19, 32]],
+   "tipo": "casa",
+   "nombre": "Casa de la foguerera",
+   "personas": [
+    {
+     "nombre": "Foguerera",
+     "aspecto": "flamenca",
+     "papel": "libre",
+     "frases": [
+      "Las Hogueras de San Juan son nuestras Fallas, pero más cerca de la playa. Se queman la noche del 24 de junio.",
+      "La «nit de la cremà» empieza con la palmera de fuegos del Benacantil. Se ve desde todo Alicante."
+     ],
+     "nodo": "Foguerera",
+     "en": [7, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Padre",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": ["En Hogueras no se duerme. Se va a la mascletà, a la barraca y a la ducha, por ese orden."],
+     "nodo": "Padre",
+     "en": [11, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["estanteria_baja_nogal", 3, 1],
+    ["estante_nogal", 5, 1],
+    ["planta", 12, 1],
+    ["caja", 1, 8],
+    ["tele_pequena", 11, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "alicante/sala_calle_20_43": {
+   "pieza": "casa_carbonell",
+   "calle": ["alicante/exterior", [20, 43]],
+   "tipo": "palacio",
+   "nombre": "Casa Carbonell",
+   "personas": [
+    {
+     "nombre": "Conserje",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "La mandó construir un industrial de Alcoy en 1925. Dicen que fue por despecho: un hotel no le dejó entrar.",
+      "Es el edificio más fotografiado de la Explanada. Los de la foto nunca entran."
+     ],
+     "nodo": "Conserje",
+     "en": [13, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vecina rica",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": ["Desde mi balcón veo el mar, el puerto y a los turistas mirando mi balcón."],
+     "nodo": "VecinaRica",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Casa Carbonell, 1925. Modernista, blanca y con cúpulas. Dentro, oficinas y pisos con vistas que no se pagan con un sueldo."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "tamano": [15, 11],
+   "puerta": [7, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [4, 4, 9, 5]]],
+   "muebles": [
+    ["pedestal", 12, 8],
+    ["arbol_maceta", 1, 7],
+    ["pedestal", 1, 1],
+    ["tele", 4, 1],
+    ["cajon_oliva", 6, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "alicante/sala_calle_22_9": {
+   "pieza": "grandes_almacenes",
+   "calle": ["alicante/exterior", [22, 9]],
+   "tipo": "grandes_almacenes",
+   "nombre": "Grandes almacenes de la avenida Maisonnave",
+   "personas": [
+    {
+     "nombre": "Dependienta",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "dependiente",
+     "frases": [
+      "En la sexta planta hay una cafetería con vistas al castillo. Los turistas suben a mirar y bajan sin comprar.",
+      "En agosto vendemos más bañadores que en todo el año en Burgos."
+     ],
+     "nodo": "Dependienta",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Señora con bolsas",
+     "aspecto": "npc_woman",
+     "papel": "cliente",
+     "frases": ["He venido a por un abanico y salgo con una nevera de playa. Esto pasa siempre."],
+     "nodo": "SenoraConBolsas",
+     "en": [8, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [6, 8],
+   "suelo": "rombos_lila",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_madera", 2, 0],
+    ["estanteria_alta_madera", 4, 0],
+    ["mostrador_naranja_i", 6, 3],
+    ["mostrador_naranja_m", 7, 3],
+    ["mostrador_naranja_d", 8, 3],
+    ["isla_naranja", 2, 3],
+    ["armario_madera", 6, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_24_20": {
+   "pieza": "tienda_azul",
+   "calle": ["alicante/exterior", [24, 20]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Alicante",
+   "personas": [
+    {
+     "nombre": "Entrenador",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Aquí la gente entrena para la playa del Postiguet. Luego en la playa no se mueve.",
+      "Tenemos aire acondicionado. Mucha gente se apunta solo por el aire acondicionado."
+     ],
+     "nodo": "Entrenador",
+     "en": [8, 7],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Socia",
+     "aspecto": "nadador_f",
+     "papel": "libre",
+     "frases": [
+      "Nado en el mar todas las mañanas y luego vengo aquí a ducharme. Es más barato que el agua de casa."
+     ],
+     "nodo": "Socia",
+     "en": [2, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 10],
+   "puerta": [7, 9],
+   "suelo": "parquet",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["tatami_verde", [2, 3, 7, 4]]],
+   "muebles": [
+    ["taquilla_gris", 1, 0],
+    ["taquilla_gris", 2, 0],
+    ["taquilla_azul", 3, 0],
+    ["taquilla_azul", 4, 0],
+    ["banco_rojo", 1, 4],
+    ["nevera_alta", 11, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "alicante/sala_calle_28_33": {
+   "pieza": "concatedral_san_nicolas",
+   "calle": ["alicante/exterior", [28, 33]],
+   "tipo": "catedral",
+   "nombre": "Concatedral de San Nicolás",
+   "personas": [
+    {
+     "nombre": "Párroco",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "San Nicolás es el patrón de Alicante. Su día es el 6 de diciembre, pero aquí se celebra con calor igual.",
+      "El claustro es un remanso de silencio en medio del centro. Los turistas entran a por la sombra."
+     ],
+     "nodo": "Parroco",
+     "en": [6, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": ["Me casé aquí, bauticé a mis hijos aquí y vengo los domingos por el fresquito."],
+     "nodo": "Abuela",
+     "en": [2, 7],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 11],
+   "puerta": [5, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [5, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_blanco", 4, 3],
+    ["estatua_aguila", 8, 0],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 11, 0],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 6, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 9]},
+   "pasos": []
+  },
+  "alicante/sala_calle_29_20": {
+   "pieza": "teatro",
+   "calle": ["alicante/exterior", [29, 20]],
+   "tipo": "teatro",
+   "nombre": "Teatro Principal de Alicante",
+   "personas": [
+    {
+     "nombre": "Actriz",
+     "aspecto": "npc_lass",
+     "papel": "artista",
+     "frases": [
+      "Esta noche hacemos una comedia de enredos. El enredo es que el aire acondicionado no funciona.",
+      "El teatro es de 1847. Los asientos, también. Se nota."
+     ],
+     "nodo": "Actriz",
+     "en": [6, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Espectador",
+     "aspecto": "tertuliano",
+     "papel": "publico",
+     "frases": ["Vengo todos los sábados. Me duermo en el segundo acto, pero el primero me encanta."],
+     "nodo": "Espectador",
+     "en": [10, 8],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 11],
+   "puerta": [7, 10],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["parquet", [2, 2, 9, 2]]],
+   "muebles": [
+    ["taburete_rojo", 6, 5],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 4, 5],
+    ["taburete_rojo", 3, 5],
+    ["taburete_rojo", 2, 5],
+    ["taburete_rojo", 8, 5],
+    ["taburete_rojo", 9, 5],
+    ["taburete_rojo", 10, 5],
+    ["taburete_rojo", 6, 7],
+    ["taburete_rojo", 5, 7],
+    ["taburete_rojo", 4, 7],
+    ["taburete_rojo", 3, 7],
+    ["taburete_rojo", 2, 7],
+    ["taburete_rojo", 8, 7],
+    ["taburete_rojo", 9, 7],
+    ["taburete_rojo", 10, 7],
+    ["palmera_maceta", 11, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "alicante/sala_calle_31_8": {
+   "pieza": "bloque_verde",
+   "calle": ["alicante/exterior", [31, 8]],
+   "tipo": "piso",
+   "nombre": "Piso del jubilado inglés",
+   "personas": [
+    {
+     "nombre": "Jubilado inglés",
+     "aspecto": "turistachanclas",
+     "papel": "tele",
+     "frases": [
+      "I came for two weeks in 1998. Sigo aquí. My Spanish is muy bien, ¿no?",
+      "En Inglaterra llueve. Aquí no. That is the whole plan."
+     ],
+     "nodo": "JubiladoIngles",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Asistenta",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Le cocino paella los domingos. Él le pone ketchup. Yo hago como que no lo veo."],
+     "nodo": "Asistenta",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "lima",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["fogones", 6, 1],
+    ["tele", 1, 1],
+    ["sillon_derecha", 4, 5],
+    ["mesa_cristal", 5, 6],
+    ["papelera", 8, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_32_12": {
+   "pieza": "puesto_mercado",
+   "calle": ["alicante/exterior", [32, 12]],
+   "tipo": "puesto",
+   "nombre": "Puesto del Mercado Central",
+   "personas": [
+    {
+     "nombre": "Vendedora de salazones",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Mojama, hueva y bonito seco. Esto es la salazón de Alicante, la que se toma con almendras y un vino de Monóvar.",
+      "La mojama es atún secado al sol y al viento. Como los turistas de agosto."
+     ],
+     "nodo": "VendedoraDeSalazones",
+     "en": [7, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 7],
+   "puerta": [3, 6],
+   "suelo": "losa_crema",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["cajas", 2, 1], ["papelera", 8, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "alicante/sala_calle_42_19": {
+   "pieza": "casa_granero",
+   "calle": ["alicante/exterior", [42, 19]],
+   "tipo": "casa",
+   "nombre": "Casa del turronero de Jijona",
+   "personas": [
+    {
+     "nombre": "Turronero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "El turrón de Jijona es blando y el de Alicante, duro. En esta casa se discute cada Navidad.",
+      "Almendra marcona, miel y clara de huevo. Lo demás es publicidad."
+     ],
+     "nodo": "Turronero",
+     "en": [8, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi padre se ha comido un kilo de turrón al año durante setenta años. Está como un roble."],
+     "nodo": "Hija",
+     "en": [6, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "tatami_verde",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [6, 4, 3, 2]]],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["nevera", 9, 1],
+    ["planta", 2, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal", 2, 4],
+    ["silla_derecha", 1, 4],
+    ["silla_izquierda", 4, 4],
+    ["sofa", 7, 3],
+    ["planta", 1, 6],
+    ["caja", 9, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_42_42": {
+   "pieza": "edificio_cupula",
+   "calle": ["alicante/exterior", [42, 42]],
+   "tipo": "piso",
+   "nombre": "Piso con cúpula frente al puerto",
+   "personas": [
+    {
+     "nombre": "Dueña",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": [
+      "Desde la cúpula se ve el puerto y la Explanada con su mosaico de olas. Se marea uno de mirarlo.",
+      "La Explanada tiene seis millones y medio de teselas. Las he contado. Bueno, mi marido dice que no."
+     ],
+     "nodo": "Duena",
+     "en": [1, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": ["No las ha contado. Ha contado hasta trescientas y se ha dormido."],
+     "nodo": "Marido",
+     "en": [3, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [4, 8],
+   "suelo": "tatami_verde",
+   "pared": "retro",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 3, 0], ["fogones", 4, 1], ["tele_pequena", 1, 2], ["sofa", 5, 6]],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_42_8": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["alicante/exterior", [42, 8]],
+   "tipo": "casa",
+   "nombre": "Casa del vigilante del faro",
+   "personas": [
+    {
+     "nombre": "Farero jubilado",
+     "aspecto": "marinero",
+     "papel": "libre",
+     "frases": [
+      "Vigilé el faro de la isla de Tabarca treinta años. Allí éramos cincuenta vecinos y un gato.",
+      "En Tabarca se come caldero, un arroz con pescado de roca. El que dice paella, que se vuelva en la barca."
+     ],
+     "nodo": "FareroJubilado",
+     "en": [1, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Mi abuelo dice que en Tabarca vio una sirena. Yo creo que era una foca. O un turista."],
+     "nodo": "Nieto",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [8, 8],
+   "suelo": "rombos_verdes",
+   "pared": "retro",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [3, 3, 5, 3]]],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["fregadero", 3, 1],
+    ["nevera", 5, 1],
+    ["tele", 6, 1],
+    ["estante_verde", 8, 1],
+    ["vitrina_madera", 9, 1],
+    ["sofa", 8, 3],
+    ["arbol_maceta", 11, 0],
+    ["caja", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_44_32": {
+   "pieza": "oficinas_verdes",
+   "calle": ["alicante/exterior", [44, 32]],
+   "tipo": "ayuntamiento",
+   "nombre": "Ayuntamiento de Alicante",
+   "personas": [
+    {
+     "nombre": "Ordenanza",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "En la escalera de este ayuntamiento está la «cota cero»: el punto desde el que se mide la altura de toda España.",
+      "Todo lo que ves de alto en el mapa se mide desde este escalón. Aquí empieza el Everest, en cierto modo."
+     ],
+     "nodo": "Ordenanza",
+     "en": [2, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Concejal",
+     "aspecto": "padretarjeta",
+     "papel": "mesa",
+     "frases": ["Estamos estudiando poner más sombra. Llevamos estudiándolo desde 1980."],
+     "nodo": "Concejal",
+     "en": [7, 4],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["COTA CERO. Nivel medio del mar en Alicante, referencia de las altitudes de la península."],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "tamano": [14, 11],
+   "puerta": [7, 10],
+   "suelo": "parquet",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["banco_rojo", 4, 4],
+    ["banco_rojo", 8, 4],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 8, 6],
+    ["palmera_maceta", 12, 0],
+    ["mesa_cristal", 6, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "alicante/sala_calle_4_9": {
+   "pieza": "bloque_pisos",
+   "calle": ["alicante/exterior", [4, 9]],
+   "tipo": "portal",
+   "nombre": "Portal de la avenida de Alfonso el Sabio",
+   "personas": [
+    {
+     "nombre": "Portera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "En este portal hay tres pisos turísticos y dos señoras de toda la vida. Ganamos nosotras por veteranía.",
+      "Los de los pisos turísticos llegan con maleta de ruedas a las cuatro. Las ruedas suenan como un tranvía."
+     ],
+     "nodo": "Portera",
+     "en": [2, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [8, 8],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_beige", [4, 3, 3, 3]]],
+   "muebles": [
+    ["planta", 1, 1],
+    ["escalera_mano", 2, 0],
+    ["archivador_bajo", 9, 1],
+    ["mostrador_oliva_i", 1, 4],
+    ["mostrador_oliva_m", 2, 4],
+    ["mostrador_oliva_d", 3, 4],
+    ["arbol_maceta", 10, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_50_26": {
+   "pieza": "casa_ibicenca",
+   "calle": ["alicante/exterior", [50, 26]],
+   "tipo": "casa",
+   "nombre": "Casa encalada del Barrio de Santa Cruz",
+   "personas": [
+    {
+     "nombre": "Vecina",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "El Barrio de Santa Cruz está colgado del monte Benacantil. Para bajar se tarda dos minutos. Para subir, media vida.",
+      "Pintamos las paredes de blanco cada primavera y ponemos macetas en las escaleras. Los turistas creen que estamos en Grecia."
+     ],
+     "nodo": "Vecina",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "libre",
+     "frases": ["Para subir la compra hasta aquí hay que estar en forma. Para bajarla, no."],
+     "nodo": "Hijo",
+     "en": [10, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "parquet",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [5, 4, 4, 3]]],
+   "muebles": [
+    ["armario_madera", 6, 0],
+    ["estanteria_alta_madera", 7, 0],
+    ["mesa_cristal", 7, 4],
+    ["silla_derecha", 6, 4],
+    ["silla_izquierda", 9, 4],
+    ["arbol_maceta", 1, 6],
+    ["fogones", 4, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "alicante/sala_calle_50_31": {
+   "pieza": "casa_ibicenca",
+   "calle": ["alicante/exterior", [50, 31]],
+   "tipo": "casa",
+   "nombre": "Casa del costalero de Semana Santa",
+   "personas": [
+    {
+     "nombre": "Costalero",
+     "aspecto": "costalero",
+     "papel": "libre",
+     "frases": [
+      "En Semana Santa el Cristo del Mar baja por estas calles. Son tan estrechas que el paso roza las macetas.",
+      "Lo de bajar el trono por las escaleras de Santa Cruz es un milagro con los riñones."
+     ],
+     "nodo": "Costalero",
+     "en": [6, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_woman",
+     "papel": "tele",
+     "frases": ["Cuando vuelve de la procesión, le pongo hielo en el hombro y le doy un cuarto de hora de gloria."],
+     "nodo": "Mujer",
+     "en": [9, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [6, 5, 3, 2]]],
+   "muebles": [
+    ["fregadero", 2, 1],
+    ["fogones", 4, 1],
+    ["nevera_alta", 6, 0],
+    ["tele", 7, 1],
+    ["mesa_cristal_larga", 6, 3],
+    ["taburete_verde", 6, 5],
+    ["taburete_verde", 8, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_51_43": {
+   "pieza": "tienda_naranja",
+   "calle": ["alicante/exterior", [51, 43]],
+   "tipo": "heladeria",
+   "nombre": "Heladería de turrón de la Explanada",
+   "personas": [
+    {
+     "nombre": "Heladero",
+     "aspecto": "vendedorchupachups",
+     "papel": "dependiente",
+     "frases": [
+      "El helado de turrón lo inventaron los heladeros de Jijona. Se iban a vender helados por toda España en verano.",
+      "Mantecado, turrón y horchata. Si pides chicle, te miro, pero te lo sirvo."
+     ],
+     "nodo": "Heladero",
+     "en": [4, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Niña",
+     "aspecto": "npc_girl",
+     "papel": "cliente",
+     "frases": ["Me he manchado de helado hasta las orejas. Mi madre dice que es parte de la experiencia."],
+     "nodo": "Nina",
+     "en": [5, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [4, 8],
+   "suelo": "parquet",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_nogal", 5, 1],
+    ["estanteria_baja_nogal", 7, 1],
+    ["mostrador_celeste_i", 3, 3],
+    ["mostrador_celeste_m", 4, 3],
+    ["mostrador_celeste_m", 5, 3],
+    ["mostrador_celeste_d", 6, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_55_26": {
+   "pieza": "casa_ibicenca",
+   "calle": ["alicante/exterior", [55, 26]],
+   "tipo": "casa",
+   "nombre": "Casa del guitarrista del Barrio",
+   "personas": [
+    {
+     "nombre": "Guitarrista",
+     "aspecto": "tuno",
+     "papel": "libre",
+     "frases": [
+      "Toco en las terrazas del Barrio por la noche. Los turistas me piden «Despacito» y yo les toco un pasodoble.",
+      "Desde mi azotea se ve el castillo iluminado. Es lo mejor que tengo. Lo segundo, la guitarra."
+     ],
+     "nodo": "Guitarrista",
+     "en": [2, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Vecino de abajo",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": ["Toca muy bien. A las tres de la mañana, un poco menos."],
+     "nodo": "VecinoDeAbajo",
+     "en": [3, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["encimera", 3, 1],
+    ["armario_madera", 8, 0],
+    ["estanteria_alta_madera", 9, 0],
+    ["planta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
+  },
+  "alicante/sala_calle_55_31": {
+   "pieza": "casa_ibicenca",
+   "calle": ["alicante/exterior", [55, 31]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela de los gatos",
+   "personas": [
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Tengo once gatos y un Meowth. El Meowth es el único que paga alquiler: me trae monedas.",
+      "En el Barrio todos los gatos tienen nombre. Muchos, dos o tres, según la vecina."
+     ],
+     "nodo": "Abuela",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Vengo a ver a mi abuela y me voy con pelos de once colores en el pantalón."],
+     "nodo": "Nieta",
+     "en": [5, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [7, 7],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 5, 1],
+    ["fregadero", 6, 1],
+    ["fogones", 8, 1],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["arbol_maceta", 9, 4],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "alicante/sala_calle_56_42": {
+   "pieza": "puesto_mercado",
+   "calle": ["alicante/exterior", [56, 42]],
+   "tipo": "kiosco",
+   "nombre": "Puesto de artesanía de la Explanada",
+   "personas": [
+    {
+     "nombre": "Artesano",
+     "aspecto": "hippie",
+     "papel": "dependiente",
+     "frases": [
+      "Pulseras, collares y tu nombre en un grano de arroz. El grano de arroz es lo que más se vende.",
+      "Llevo veinte años en la Explanada. He visto de todo: bodas, peleas y un Lapras perdido."
+     ],
+     "nodo": "Artesano",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "piedra",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["mostrador_turquesa_i", 4, 4],
+    ["mostrador_turquesa_m", 5, 4],
+    ["mostrador_turquesa_d", 6, 4],
+    ["cajas", 1, 1]
+   ],
+   "encima": [["taza", 5, 4], ["plato_comida", 6, 4]],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "alicante/sala_calle_58_12": {
+   "pieza": "castillo_santa_barbara",
+   "calle": ["alicante/exterior", [58, 12]],
+   "tipo": "castillo",
+   "nombre": "Castillo de Santa Bárbara",
+   "personas": [
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Se sube en un ascensor excavado en la roca del Benacantil. Arriba hay brisa, siglos y unas vistas que no caben en el móvil.",
+      "Desde la playa, el monte parece la cara de un moro. La «cara del moro», se llama. Por eso no hace falta guía para encontrarlo."
+     ],
+     "nodo": "Guia",
+     "en": [4, 9],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Soldado de recreación",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Hago de soldado del siglo XVIII los fines de semana. El calor del uniforme, también es del siglo XVIII."
+     ],
+     "nodo": "SoldadoDeRecreacion",
+     "en": [6, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Castillo de Santa Bárbara. Lo tomaron los cristianos el día de Santa Bárbara de 1248. El nombre, por puntualidad."
+     ],
+     "nodo": "Cartel",
+     "en": [14, 1]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [5, 11],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [5, 2, 1, 9]]],
+   "muebles": [
+    ["estatua_gargola", 1, 0],
+    ["escalera_mano", 3, 0],
+    ["estatua_gargola", 6, 0],
+    ["estatua_gargola", 1, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 10]},
+   "pasos": []
+  },
+  "alicante/sala_calle_68_36": {
+   "pieza": "torre_socorrista",
+   "calle": ["alicante/exterior", [68, 36]],
+   "tipo": "socorrismo",
+   "nombre": "Caseta de socorrismo del Postiguet",
+   "personas": [
+    {
+     "nombre": "Socorrista",
+     "aspecto": "nadador",
+     "papel": "libre",
+     "frases": [
+      "Bandera verde, amarilla o roja. La de las medusas es la morada, y esa la miran todos.",
+      "Lo que más rescato son chanclas que se lleva el mar. Y algún turista que se las quiere traer de vuelta."
+     ],
+     "nodo": "Socorrista",
+     "en": [6, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [8, 8],
+   "puerta": [4, 7],
+   "suelo": "parquet",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["taquilla_azul", 2, 0], ["cajonera_gris", 3, 1], ["banqueta_azul", 6, 2], ["planta", 1, 5]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "alicante/sala_calle_6_19": {
+   "pieza": "gimnasio_madera",
+   "calle": ["alicante/exterior", [6, 19]],
+   "tipo": "gimnasio",
+   "nombre": "Club de artes marciales de la plaza de los Luceros",
+   "personas": [
+    {
+     "nombre": "Sensei",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "Aquí entrenan los que quieren ser como Topuria. Unos lo consiguen; otros, solo el corte de pelo.",
+      "El primer día se aprende a caer. El resto de la vida, a levantarse."
+     ],
+     "nodo": "Sensei",
+     "en": [7, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Alumna",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": ["Vengo tres días a la semana. Mi Machop viene los otros cuatro."],
+     "nodo": "Alumna",
+     "en": [5, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Normas del club: respeto, disciplina y no se pega fuera del tatami. Ni a los Pokémon."],
+     "nodo": "Cartel",
+     "en": [8, 1]
+    }
+   ],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "tatami_verde",
+   "pared": "lima",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [4, 3, 8, 4]]],
+   "muebles": [
+    ["taquilla_gris", 4, 0],
+    ["taquilla_gris", 5, 0],
+    ["taquilla_azul", 6, 0],
+    ["taquilla_azul", 7, 0],
+    ["banqueta_azul", 11, 2],
+    ["banqueta_azul", 12, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "alicante/sala_calle_7_43": {
+   "pieza": "bloque_verde_2",
+   "calle": ["alicante/exterior", [7, 43]],
+   "tipo": "piso",
+   "nombre": "Piso de la estudiante de la Universidad de Alicante",
+   "personas": [
+    {
+     "nombre": "Estudiante",
+     "aspecto": "estudianteinge_f",
+     "papel": "mesa",
+     "frases": [
+      "Estudio en San Vicente del Raspeig y vivo aquí por la playa. El TRAM tarda media hora y yo estudio en el TRAM.",
+      "Los erasmus se van en junio y dicen que no se van a ir nunca. En septiembre llegan otros que dicen lo mismo."
+     ],
+     "nodo": "Estudiante",
+     "en": [6, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Compañera erasmus",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["Ich bin aus Berlin. Aquí he aprendido español, paella y a dormir la siesta."],
+     "nodo": "CompaneraErasmus",
+     "en": [3, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [5, 8],
+   "suelo": "rombos_verdes",
+   "pared": "menta",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [2, 3, 5, 3]]],
+   "muebles": [
+    ["nevera_alta", 5, 0],
+    ["fogones", 6, 1],
+    ["cajas", 1, 6],
+    ["mesa_cristal", 7, 6],
+    ["tele_pequena", 4, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  }
+ }
+}
