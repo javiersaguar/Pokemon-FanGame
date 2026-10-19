@@ -1,0 +1,1271 @@
+{
+ "_doc": "Interiores personalizados de zaragoza (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Zaragoza",
+ "interiores": {
+  "zaragoza/casa_1": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["zaragoza/exterior", [17, 43]],
+   "tipo": "casa",
+   "nombre": "Casa de la abuela del Tubo",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Abuela del Tubo",
+     "aspecto": "npc_old_man",
+     "regalo": "zaragoza_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "Vivo encima del Tubo desde el setenta. Huelo las bravas antes de que las pidas.",
+      "Toma, que vas muy flaco. En Zaragoza nadie sale de casa sin merendar."
+     ],
+     "en": [1, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Nieto opositor",
+     "aspecto": "opositor",
+     "papel": "mesa",
+     "frases": [
+      "Estoy opositando a la DGA. Mi abuela dice que ya soy funcionario de su cocina.",
+      "Cada vez que sopla el cierzo se me vuelan los apuntes por la ventana."
+     ],
+     "nodo": "NietoOpositor",
+     "en": [7, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [2, 3, 3, 3]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["planta", 7, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal_larga", 6, 3],
+    ["silla_derecha", 5, 3],
+    ["silla_izquierda", 9, 3],
+    ["arbol_maceta", 10, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "zaragoza/casa_2": {
+   "pieza": "casa_granero",
+   "calle": ["zaragoza/exterior", [28, 43]],
+   "tipo": "taberna",
+   "nombre": "Taberna La Migueleta, en El Tubo",
+   "personas": [
+    {
+     "nombre": "Tabernero",
+     "aspecto": "camarero",
+     "papel": "dependiente",
+     "frases": [
+      "Tenemos madejas, ternasco y un champiñón a la plancha que hace llorar a los de Huesca.",
+      "En El Tubo las calles son tan estrechas que si abres los brazos tocas dos bares."
+     ],
+     "nodo": "Tabernero",
+     "en": [4, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente de vermú",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": [
+      "Aquí se viene a por una caña y se sale a las tres con un amigo nuevo y sin cartera.",
+      "Yo sé arreglar el Real Zaragoza en una tarde. Que me llamen."
+     ],
+     "nodo": "ClienteDeVermu",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Se prohíbe hablar mal del Real Zaragoza dentro del local. Fuera, también."],
+     "nodo": "Cartel",
+     "en": [8, 1]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [8, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["estanteria_alta_nogal", 5, 0],
+    ["mostrador_cristal_i", 2, 4],
+    ["mostrador_cristal_m", 3, 4],
+    ["mostrador_cristal_m", 4, 4],
+    ["mostrador_cristal_m", 5, 4],
+    ["mostrador_cristal_d", 6, 4],
+    ["taburete_rojo", 3, 6],
+    ["taburete_rojo", 5, 6],
+    ["mesa_cristal", 8, 3],
+    ["taburete_rojo", 7, 4],
+    ["taburete_rojo", 10, 4],
+    ["papelera", 1, 6]
+   ],
+   "encima": [["plato_comida", 4, 4], ["taza", 8, 3], ["plato", 3, 4]],
+   "apariciones": {"default": [8, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_13_39": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["zaragoza/exterior", [13, 39]],
+   "tipo": "casa",
+   "nombre": "Casa del baturro de la jota",
+   "personas": [
+    {
+     "nombre": "Baturro",
+     "aspecto": "baturro",
+     "papel": "libre",
+     "frases": [
+      "¡Que si quieres bolsa! Ah, no, que esto es una casa. Pues pasa, maño.",
+      "La jota se baila con las piernas y se canta con la garganta. Lo de los Pokémon, con paciencia."
+     ],
+     "nodo": "Baturro",
+     "en": [8, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hija jotera",
+     "aspecto": "npc_lass",
+     "papel": "tele",
+     "frases": [
+      "Mi padre me enseñó la jota antes que a andar. Ahora la bailo en TikTok y se enfada.",
+      "En el Pilar canto en la ofrenda de flores. Hay tantas flores que no se ve a la Virgen."
+     ],
+     "nodo": "HijaJotera",
+     "en": [4, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "parquet",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["encimera", 5, 1],
+    ["fogones", 8, 1],
+    ["sofa", 1, 3],
+    ["palmera_maceta", 1, 0],
+    ["caja", 1, 7],
+    ["tele", 2, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_17_53": {
+   "pieza": "casa_granero",
+   "calle": ["zaragoza/exterior", [17, 53]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia del cierzo",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Aquí las ventanas se cierran con dos manos y una rodilla. El cierzo no pide permiso.",
+      "Mi marido salió a tender la ropa en 2019 y la sábana todavía está en Teruel."
+     ],
+     "nodo": "Madre",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": ["Con cierzo el balón llega solo a la portería. El problema es volver a por él."],
+     "nodo": "Hijo",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "tatami_verde",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["cajon_oliva", 1, 1],
+    ["tele", 2, 1],
+    ["mesa_cristal", 3, 5],
+    ["silla_derecha", 2, 5],
+    ["silla_izquierda", 5, 5],
+    ["palmera_maceta", 12, 6],
+    ["caja", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_23_53": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["zaragoza/exterior", [23, 53]],
+   "tipo": "pasteleria",
+   "nombre": "Confitería de frutas de Aragón",
+   "personas": [
+    {
+     "nombre": "Confitera",
+     "aspecto": "npc_old_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Frutas de Aragón: fruta escarchada bañada en chocolate. Se inventaron aquí y se regalan en toda España.",
+      "Los adoquines del Pilar son caramelos tan duros que traen un chiste dentro para que te distraigas."
+     ],
+     "nodo": "Confitera",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista_f",
+     "papel": "cliente",
+     "frases": ["Me he comprado un adoquín de caramelo. He leído el chiste de dentro. Sigo sin entenderlo."],
+     "nodo": "Turista",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "ADOQUÍN DEL PILAR. Un kilo de caramelo. Recomendado por los dentistas de Zaragoza (por motivos económicos)."
+     ],
+     "nodo": "Cartel",
+     "en": [8, 2]
+    }
+   ],
+   "tamano": [10, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "amarillo_cuadros",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["encimera", 3, 1],
+    ["alacena", 6, 0],
+    ["mostrador_tablas_i", 2, 4],
+    ["mostrador_tablas_m", 3, 4],
+    ["mostrador_tablas_m", 4, 4],
+    ["mostrador_tablas_m", 5, 4],
+    ["mostrador_tablas_d", 6, 4],
+    ["vitrina_blanca", 7, 1],
+    ["cajas", 1, 6]
+   ],
+   "encima": [["taza", 6, 4]],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_24_29": {
+   "pieza": "basilica_pilar",
+   "calle": ["zaragoza/exterior", [24, 29]],
+   "tipo": "basilica",
+   "nombre": "Basílica del Pilar",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Esta basílica tiene once cúpulas y cuatro torres. Y una cola para besar el Pilar que da la vuelta a la plaza.",
+      "En la guerra cayeron aquí dos bombas que no explotaron. Están colgadas en la pared, por si alguien duda."
+     ],
+     "nodo": "Sacristan",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Peregrina",
+     "aspecto": "npc_old_woman",
+     "papel": "publico",
+     "frases": ["He venido andando desde Calatayud. Me duelen los pies, pero la Pilarica lo vale."],
+     "nodo": "Peregrina",
+     "en": [8, 7],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Infantico",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Soy de los Infanticos del Pilar, el coro. Cantamos todos los días. Los Pokémon de tipo Hada se ponen contentos."
+     ],
+     "nodo": "Infantico",
+     "en": [2, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Dos bombas lanzadas en 1936 que no llegaron a estallar. Unos lo llaman milagro; los artificieros, mala espoleta."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 1]
+    }
+   ],
+   "tamano": [15, 12],
+   "puerta": [7, 11],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [7, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 6, 3],
+    ["estatua_gargola", 3, 0],
+    ["estatua_gargola", 10, 0],
+    ["palmera_maceta", 1, 0],
+    ["palmera_maceta", 13, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 4, 8],
+    ["banco_rojo", 8, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 10], "desde_sala_calle_24_29_capilla": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Capilla",
+     "en": [2, 1],
+     "destino": "zaragoza/sala_calle_24_29_capilla",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_24_29_capilla",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "zaragoza/sala_calle_24_29_capilla": {
+   "tipo": "iglesia",
+   "nombre": "Santa Capilla del Pilar",
+   "personas": [
+    {
+     "nombre": "Devota",
+     "aspecto": "npc_woman",
+     "papel": "publico",
+     "frases": [
+      "La columna se besa por detrás, por un agujerito. Hay tantos besos que el mármol está gastado.",
+      "Cada día le cambian el manto a la Virgen. Tiene más ropa que yo."
+     ],
+     "nodo": "Devota",
+     "en": [4, 9],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "EL PILAR. Según la tradición, la columna sobre la que se apareció la Virgen en el año 40. La cola, según la experiencia, de hora y media."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "padre": "zaragoza/sala_calle_24_29",
+   "tamano": [12, 12],
+   "puerta": [3, 11],
+   "suelo": "piedra",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [3, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_madera", 2, 3],
+    ["estatua_gargola", 6, 0],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 10, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 7, 6],
+    ["banco_rojo", 4, 8],
+    ["banco_rojo", 7, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 10]},
+   "pasos": [],
+   "salida": {"destino": "zaragoza/sala_calle_24_29", "aparicion": "desde_sala_calle_24_29_capilla"}
+  },
+  "zaragoza/sala_calle_28_53": {
+   "pieza": "casa_granero",
+   "calle": ["zaragoza/exterior", [28, 53]],
+   "tipo": "bodega",
+   "nombre": "Bodega de vino de Cariñena",
+   "personas": [
+    {
+     "nombre": "Bodeguero",
+     "aspecto": "vendimiador",
+     "papel": "dependiente",
+     "frases": [
+      "Garnacha de Cariñena y de Borja. Aquí el vino tiene más grados que la temperatura en agosto.",
+      "Mi abuelo vendía el vino a granel en garrafa. Ahora lo vendo yo en botella con dibujo y cuesta el triple."
+     ],
+     "nodo": "Bodeguero",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Catador",
+     "aspecto": "tertuliano",
+     "papel": "cliente",
+     "frases": ["Notas de frutos rojos, regaliz y un poco de cierzo. Lo del cierzo lo noto en todo."],
+     "nodo": "Catador",
+     "en": [11, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [3, 9],
+   "suelo": "piedra",
+   "pared": "gris_raya_roja",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["cajas", 1, 1], ["cajas", 4, 1], ["cajas", 10, 5], ["cajas", 2, 3], ["caja", 12, 2]],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_33_43": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["zaragoza/exterior", [33, 43]],
+   "tipo": "taberna",
+   "nombre": "Tasca de las madejas",
+   "personas": [
+    {
+     "nombre": "Cocinera",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Las madejas son tripas de cordero trenzadas. Antes de probarlas, no preguntes. Después, tampoco.",
+      "Aquí no hay carta. Hay lo que haya, y lo que haya está bueno."
+     ],
+     "nodo": "Cocinera",
+     "en": [4, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Universitario",
+     "aspecto": "estudianteinge",
+     "papel": "cliente",
+     "frases": ["Vengo a estudiar al bar porque en la biblioteca no hay madejas."],
+     "nodo": "Universitario",
+     "en": [9, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [9, 9],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["fogones", 4, 1],
+    ["encimera", 6, 1],
+    ["mostrador_turquesa_i", 7, 3],
+    ["mostrador_turquesa_m", 8, 3],
+    ["mostrador_turquesa_m", 9, 3],
+    ["mostrador_turquesa_d", 10, 3],
+    ["taburete_verde", 8, 5],
+    ["taburete_verde", 10, 5],
+    ["mesa_cristal", 2, 6],
+    ["silla_derecha", 1, 6],
+    ["silla_izquierda", 4, 6],
+    ["planta", 12, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 8]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_33_53": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["zaragoza/exterior", [33, 53]],
+   "tipo": "piso",
+   "nombre": "Piso de estudiantes de la Universidad",
+   "personas": [
+    {
+     "nombre": "Estudiante de Medicina",
+     "aspecto": "estudianteinge_f",
+     "papel": "mesa",
+     "frases": [
+      "Somos cuatro en un piso para dos. El casero dice que es «convivencia intensa».",
+      "Zaragoza es barata para estudiar. Lo que es caro es salir de fiesta por la Zona."
+     ],
+     "nodo": "EstudianteDeMedicina",
+     "en": [2, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Compañero de piso",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": ["Llevo tres años en primero. Dicen que es por la Expo. Yo no estuve en la Expo."],
+     "nodo": "CompaneroDePiso",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_lila",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["tele", 7, 1],
+    ["sillon_derecha", 1, 5],
+    ["mesa_cristal", 2, 6],
+    ["planta", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_38_29": {
+   "pieza": "oficinas_azules",
+   "calle": ["zaragoza/exterior", [38, 29]],
+   "tipo": "ayuntamiento",
+   "nombre": "Ayuntamiento de Zaragoza",
+   "personas": [
+    {
+     "nombre": "Concejala",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "Tenemos tranvía desde 2011 y todavía hay quien lo espera en la parada del autobús.",
+      "El pabellón puente de la Expo costó un dineral. Ahora es muy bonito para verlo desde fuera."
+     ],
+     "nodo": "Concejala",
+     "en": [2, 8],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Funcionario",
+     "aspecto": "padretarjeta",
+     "papel": "dependiente",
+     "frases": ["Para empadronarse, pida cita. Para pedir cita, empadrónese."],
+     "nodo": "Funcionario",
+     "en": [2, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "EXPO ZARAGOZA 2008. «Agua y desarrollo sostenible». La mascota se llamaba Fluvi. Nadie se acuerda de Fluvi."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [4, 11],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 5, 0],
+    ["mostrador_celeste", 8, 2],
+    ["estatua_aguila", 11, 0],
+    ["banco_rojo", 5, 4],
+    ["banco_rojo", 8, 4],
+    ["banco_rojo", 11, 4],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 11, 6],
+    ["banco_rojo", 5, 8],
+    ["banco_rojo", 8, 8],
+    ["banco_rojo", 11, 8],
+    ["arbol_maceta", 14, 8],
+    ["mesa_cristal", 2, 6],
+    ["taburete_verde", 4, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 10]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_38_43": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["zaragoza/exterior", [38, 43]],
+   "tipo": "casa",
+   "nombre": "Casa de la Dolores",
+   "personas": [
+    {
+     "nombre": "Dolores",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Me llamo Dolores y soy de Calatayud. Sí, ya lo sé, la copla. No me la cantes.",
+      "Me vine a Zaragoza para que dejaran de cantármela. Aquí me la cantan más."
+     ],
+     "nodo": "Dolores",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Vecino",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": ["Si vas a ir a Calatayud, pregunta por la Dolores. Ella te dirá que no vayas."],
+     "nodo": "Vecino",
+     "en": [4, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "rombos_lila",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 6, 1],
+    ["fregadero", 7, 1],
+    ["fogones", 9, 1],
+    ["tele", 2, 1],
+    ["estante_mostaza", 4, 1],
+    ["mesa_cristal_larga", 4, 4],
+    ["silla_derecha", 3, 4],
+    ["silla_izquierda", 7, 4],
+    ["planta", 11, 1],
+    ["caja", 1, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_38_53": {
+   "pieza": "casa_granero",
+   "calle": ["zaragoza/exterior", [38, 53]],
+   "tipo": "taller",
+   "nombre": "Taller de los gigantes y cabezudos",
+   "personas": [
+    {
+     "nombre": "Artesano",
+     "aspecto": "jubiladoobras",
+     "papel": "mesa",
+     "frases": [
+      "Aquí arreglamos las cabezas de cartón piedra. El Robaculeros pierde la nariz todos los Pilares.",
+      "Los cabezudos persiguen a los niños con una vara. Es tradición. Si lo hicieras tú, sería delito."
+     ],
+     "nodo": "Artesano",
+     "en": [4, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Niño asustado",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": ["El Forano me pegó con la vara el año pasado. Este año vengo con un Pokémon."],
+     "nodo": "NinoAsustado",
+     "en": [2, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": [
+      "Cabezas de cabezudos en reparación: el Tuerto, el Forano, la Pilara y el Robaculeros. No las mires a los ojos."
+     ],
+     "nodo": "Cartel",
+     "en": [9, 2]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [5, 8],
+   "suelo": "chapa",
+   "pared": "marino",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["taquilla_gris", 4, 0],
+    ["encimera", 5, 1],
+    ["taquilla_gris", 8, 0],
+    ["mesa_cristal_larga", 5, 3],
+    ["caja", 5, 5],
+    ["estanteria_baja_oliva", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_39_21": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["zaragoza/exterior", [39, 21]],
+   "tipo": "casa",
+   "nombre": "Casa del barquero del Ebro",
+   "personas": [
+    {
+     "nombre": "Barquero",
+     "aspecto": "piraguista",
+     "papel": "libre",
+     "frases": [
+      "El Ebro baja con fuerza. Si te caes en marzo, apareces en Tortosa en mayo.",
+      "Desde aquí se ve el Puente de Piedra. Lleva en pie desde el siglo XV. Mi barca, desde el lunes."
+     ],
+     "nodo": "Barquero",
+     "en": [10, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Mujer del barquero",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["Mi marido dice que el río es su vida. Yo le digo que la cena también."],
+     "nodo": "MujerDelBarquero",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [10, 9],
+   "suelo": "tatami_verde",
+   "pared": "topo",
+   "felpudo": "moqueta_beige",
+   "alfombras": [["moqueta_beige", [4, 5, 5, 3]]],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["tele", 2, 1],
+    ["estante_menta", 4, 1],
+    ["estanteria_alta_menta", 10, 0],
+    ["mesa_cristal_larga", 8, 3],
+    ["silla_derecha", 7, 3],
+    ["silla_izquierda", 11, 3],
+    ["sillon_derecha", 1, 6],
+    ["mesa_cristal", 2, 7],
+    ["sillon_izquierda", 4, 6],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 8]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_3_36": {
+   "pieza": "casa_gris",
+   "calle": ["zaragoza/exterior", [3, 36]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia de la Expo",
+   "personas": [
+    {
+     "nombre": "Padre",
+     "aspecto": "npc_man",
+     "papel": "tele",
+     "frases": [
+      "En 2008 trabajé de voluntario en la Expo. Me quedé la gorra de Fluvi. Es lo único que queda.",
+      "Aquí cerca está la Torre del Agua. Dentro hay una escultura de un chorro. Pagamos todos el chorro."
+     ],
+     "nodo": "Padre",
+     "en": [9, 2],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Abuela",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": ["El ternasco se asa con patatas a lo pobre y con paciencia. Sin prisas, como el AVE de antes."],
+     "nodo": "Abuela",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "rombos_lila",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [2, 5, 5, 3]]],
+   "muebles": [
+    ["alacena", 4, 0],
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["tele", 10, 1],
+    ["planta", 12, 1],
+    ["estanteria_alta_menta", 2, 0],
+    ["mesa_cristal", 5, 5],
+    ["silla_derecha", 4, 5],
+    ["silla_izquierda", 7, 5],
+    ["sofa", 10, 3],
+    ["caja", 12, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_49_31": {
+   "pieza": "la_seo",
+   "calle": ["zaragoza/exterior", [49, 31]],
+   "tipo": "catedral",
+   "nombre": "Catedral del Salvador, La Seo",
+   "personas": [
+    {
+     "nombre": "Canónigo",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "La Seo tiene un poco de todo: románico, gótico, mudéjar, barroco… Es la catedral más indecisa de España.",
+      "Zaragoza tiene dos catedrales. Una para los turistas y la otra para los de aquí. Adivina cuál es cuál."
+     ],
+     "nodo": "Canonigo",
+     "en": [6, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Guía",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["La pared mudéjar de la parroquieta es Patrimonio de la Humanidad. La cola para verla, también."],
+     "nodo": "Guia",
+     "en": [2, 9],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 12],
+   "puerta": [5, 11],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [5, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 4, 3],
+    ["pedestal", 8, 1],
+    ["arbol_maceta", 1, 0],
+    ["arbol_maceta", 13, 0],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 6, 6],
+    ["banco_rojo", 9, 6],
+    ["banco_rojo", 2, 8],
+    ["banco_rojo", 6, 8],
+    ["banco_rojo", 9, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 10], "desde_sala_calle_49_31_tapices": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Tapices",
+     "en": [2, 1],
+     "destino": "zaragoza/sala_calle_49_31_tapices",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_49_31_tapices",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "zaragoza/sala_calle_49_31_tapices": {
+   "tipo": "museo",
+   "nombre": "Museo de Tapices de La Seo",
+   "personas": [
+    {
+     "nombre": "Vigilante",
+     "aspecto": "npc_man",
+     "papel": "vitrina",
+     "frases": ["Tapices flamencos de los siglos XV y XVI. No se tocan. Ni con la mirada, a ser posible."],
+     "nodo": "Vigilante",
+     "en": [7, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una de las mejores colecciones de tapices góticos del mundo. Bordados a mano durante años. Sin tele, sin Pokémon."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "padre": "zaragoza/sala_calle_49_31",
+   "tamano": [14, 11],
+   "puerta": [6, 10],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [6, 6, 3, 3]]],
+   "muebles": [
+    ["vitrina_madera", 3, 1],
+    ["estatua_gargola", 5, 0],
+    ["vitrina_madera", 7, 1],
+    ["isla_cristal", 7, 6],
+    ["estatua_gargola", 10, 6],
+    ["palmera_maceta", 12, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 9]},
+   "pasos": [],
+   "salida": {"destino": "zaragoza/sala_calle_49_31", "aparicion": "desde_sala_calle_49_31_tapices"}
+  },
+  "zaragoza/sala_calle_4_46": {
+   "pieza": "bloque_pisos",
+   "calle": ["zaragoza/exterior", [4, 46]],
+   "tipo": "portal",
+   "nombre": "Portal de la calle Alfonso",
+   "personas": [
+    {
+     "nombre": "Portera",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "La calle Alfonso va del Pilar al Coso. Es la calle de pasear y de mirar quién pasea.",
+      "En este portal vivió un tenor que cantaba en el ascensor. El ascensor sigue sin arreglar."
+     ],
+     "nodo": "Portera",
+     "en": [7, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [6, 8],
+   "suelo": "piedra",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 6, 0],
+    ["archivador_bajo", 4, 1],
+    ["mostrador_naranja_i", 6, 4],
+    ["mostrador_naranja_m", 7, 4],
+    ["mostrador_naranja_d", 8, 4],
+    ["banqueta_roja", 8, 7],
+    ["banqueta_roja", 9, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_4_56": {
+   "pieza": "oficinas_azules",
+   "calle": ["zaragoza/exterior", [4, 56]],
+   "tipo": "oficina",
+   "nombre": "Oficina de logística de Plaza",
+   "personas": [
+    {
+     "nombre": "Jefa de almacén",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "Plaza es la plataforma logística más grande de Europa. Si lo has comprado por internet, ha pasado por aquí.",
+      "Aquí el cierzo es un empleado más: empuja los camiones hacia Barcelona gratis."
+     ],
+     "nodo": "JefaDeAlmacen",
+     "en": [3, 4],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Camionero",
+     "aspecto": "cunado",
+     "papel": "libre",
+     "frases": ["Llevo ocho horas de ruta y me queda la vuelta. El Monegros de noche parece la Luna."],
+     "nodo": "Camionero",
+     "en": [2, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "moqueta_azul",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["armario_archivo", 7, 0],
+    ["archivador_bajo", 8, 1],
+    ["taquilla_archivo", 10, 0],
+    ["mostrador_azul", 7, 3],
+    ["banqueta_roja", 8, 5],
+    ["maquina_billetes", 2, 1],
+    ["papelera", 10, 6],
+    ["mesa_cristal", 4, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_58_22": {
+   "pieza": "casa_teja",
+   "calle": ["zaragoza/exterior", [58, 22]],
+   "tipo": "casa",
+   "nombre": "Casa del aficionado del Real Zaragoza",
+   "personas": [
+    {
+     "nombre": "Aficionado",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Fui a París en 1995 a ver la Recopa. El gol de Nayim desde medio campo lo cuento en todas las bodas.",
+      "Ahora estamos en Segunda. Pero en Segunda se sufre más, y eso al aragonés le gusta."
+     ],
+     "nodo": "Aficionado",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_girl",
+     "papel": "libre",
+     "frases": ["Mi abuelo me ha enseñado a decir «Nayim» antes que «mamá»."],
+     "nodo": "Nieta",
+     "en": [3, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Bufanda de la Recopa de 1995, enmarcada. Huele a puro y a gloria."],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "tamano": [13, 9],
+   "puerta": [9, 8],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [5, 4, 3, 3]]],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["planta", 2, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal_larga", 6, 4],
+    ["silla_derecha", 5, 4],
+    ["silla_izquierda", 9, 4],
+    ["sofa", 2, 6],
+    ["planta", 11, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_62_46": {
+   "pieza": "bloque_pisos",
+   "calle": ["zaragoza/exterior", [62, 46]],
+   "tipo": "portal",
+   "nombre": "Portal del barrio de la Magdalena",
+   "personas": [
+    {
+     "nombre": "Vecino joven",
+     "aspecto": "perroflauta",
+     "papel": "libre",
+     "frases": [
+      "La Magdalena es el barrio con más bares por metro cuadrado. Lo he medido yo, empíricamente.",
+      "Aquí cerca está el Teatro Romano. Los romanos también salían de fiesta por esta zona."
+     ],
+     "nodo": "VecinoJoven",
+     "en": [6, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [2, 3, 4, 3]]],
+   "muebles": [
+    ["escalera_mano", 2, 0],
+    ["planta", 5, 1],
+    ["mostrador_turquesa_i", 8, 4],
+    ["mostrador_turquesa_m", 9, 4],
+    ["mostrador_turquesa_d", 10, 4],
+    ["banqueta_azul", 9, 3],
+    ["banqueta_azul", 10, 3],
+    ["palmera_maceta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_65_30": {
+   "pieza": "tienda_azul",
+   "calle": ["zaragoza/exterior", [65, 30]],
+   "tipo": "gimnasio",
+   "nombre": "Basic-Fit de Zaragoza",
+   "personas": [
+    {
+     "nombre": "Monitor",
+     "aspecto": "crossfitero",
+     "papel": "libre",
+     "frases": [
+      "El mejor ejercicio en Zaragoza es caminar contra el cierzo. Es cardio y es gratis.",
+      "Tenemos cincuenta socios apuntados en enero. En febrero vienen tres."
+     ],
+     "nodo": "Monitor",
+     "en": [10, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Socia",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": ["Me he apuntado para el Pilar. Para la ofrenda de flores hay que estar en forma."],
+     "nodo": "Socia",
+     "en": [5, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [6, 8],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [4, 3, 6, 3]]],
+   "muebles": [
+    ["taquilla_azul", 5, 0],
+    ["taquilla_azul", 6, 0],
+    ["taquilla_gris", 7, 0],
+    ["banqueta_azul", 8, 3],
+    ["banqueta_azul", 9, 3],
+    ["tele", 2, 1],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_65_56": {
+   "pieza": "bloque_verde_2",
+   "calle": ["zaragoza/exterior", [65, 56]],
+   "tipo": "piso",
+   "nombre": "Piso de la familia del Actur",
+   "personas": [
+    {
+     "nombre": "Madre teletrabajadora",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Vivimos en el Actur, al otro lado del río. Hay más rotondas que vecinos.",
+      "Desde la ventana se ve la Torre del Agua. Bonita es. Para qué sirve, ya es otra cosa."
+     ],
+     "nodo": "MadreTeletrabajadora",
+     "en": [5, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_girl",
+     "papel": "tele",
+     "frases": ["En las fiestas del Pilar me disfrazo de baturra y me hacen fotos los japoneses."],
+     "nodo": "Hija",
+     "en": [3, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "moqueta_beige",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [6, 3, 3, 2]]],
+   "muebles": [
+    ["tele_pequena", 2, 2],
+    ["mesa_cristal", 5, 5],
+    ["taburete_rojo", 7, 6],
+    ["ropero_mostaza", 9, 0],
+    ["papelera", 9, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "zaragoza/sala_calle_7_20": {
+   "pieza": "casa_gris",
+   "calle": ["zaragoza/exterior", [7, 20]],
+   "tipo": "casa",
+   "nombre": "Casa del jubilado del Puente de Piedra",
+   "personas": [
+    {
+     "nombre": "Jubilado",
+     "aspecto": "jubiladoobras",
+     "papel": "libre",
+     "frases": [
+      "Llevo cuarenta años mirando el Ebro desde esta ventana. Ha crecido, ha bajado y ha vuelto a crecer.",
+      "Los leones del Puente de Piedra son de 1991. Antes estaban los de verdad, de piedra vieja. Bueno, eso dicen."
+     ],
+     "nodo": "Jubilado",
+     "en": [2, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Mujer",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Aquí se merienda pan con vino y azúcar. Eso dicen los de antes. Yo prefiero las frutas de Aragón."
+     ],
+     "nodo": "Mujer",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "moqueta_beige",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_beige", [3, 3, 5, 3]]],
+   "muebles": [
+    ["nevera", 3, 1],
+    ["fregadero", 4, 1],
+    ["fogones", 6, 1],
+    ["planta", 8, 1],
+    ["tele", 9, 1],
+    ["mesa_cristal", 6, 5],
+    ["silla_derecha", 5, 5],
+    ["silla_izquierda", 8, 5],
+    ["planta", 1, 1],
+    ["caja", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  }
+ }
+}
