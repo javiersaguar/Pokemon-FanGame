@@ -800,13 +800,17 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - **Manzanas de las 41 ciudades y barrios:** ayudante `maps/_pintura/vestir/_ciudad.gd` (farolas y bancos en las aceras, árboles y farolas en las plazas empedradas sin estrechar pasos, arbolado en la hierba vacía) y una receta por mapa. Los 41 se guardan con 0 problemas de alcance. Con `alcance.gd -- <mapa> default`, 38 dan 0 problemas y 3 dan 1 problema que ya estaba antes (comprobado con la versión anterior): Ibiza, Palma y Moncloa (no se llega a la puerta de `casa_azul` en (5, 8)). [Capturas](arte/seguimiento.md#manzanas-de-las-ciudades-2026-10-19).
 - Bloque de ciudades integrado: suite 692/692, arte 11.568 PNG 0/0, datos 0 errores (1 aviso), grafo 961/961 sin aislados. Reservas liberadas.
 
-**Por debajo de Añil (con motivo):**
-- Ciudades que son una explanada empedrada con edificios sueltos (Zaragoza, Málaga, Getafe, Leganés, Móstoles, Puertollano y las plazas de Madrid, Barcelona y Valencia): el mobiliario no basta; hay que repintar calles, manzanas, patios y jardines con el pintor de mapas y quien lleve cada fachada. No se ha hecho para no mover puertas ni interiores enlazados.
-- Ruta 26: cimas de los bloques de caliza lisas. Ruta 24: llanura muy abierta, sin relieve ni agua nuevos. Rutas 9 y 10: avenida y paseo empedrados rectos y anchos. Ruta 11: carretera de 4 de lado a lado. Rutas 1, 2 y 4: solo el paso de hierba; el detalle queda como estaba.
-- Ruta 19: el faro sigue recortado (pieza pendiente del agente de Edificios, como la casa de madera de la Ruta 2 y la casa roja de Bilbao).
-- Ruta marítima 1: mar abierto sin escollos ni corrientes (necesita reglas de Surf).
-- El comprobador de alcance va a pie: lo que solo se alcanza con Surf aparece como problema (marítima 1) y no se colocan objetos en islotes sin paso.
-- Ninguna ruta tiene aún entrenadores nuevos con línea de visión colocados para cortar el paso, salvo el guarda de la Ruta 26; los objetos nuevos son 1–3 por ruta.
+**Por debajo de Añil (con motivo), revisado el 2026-10-20 (rama `feat/rutas-anil-2`):**
+- ~~Ciudades que eran una explanada empedrada~~ **Hecho:** Zaragoza, Málaga, Getafe, Leganés, Móstoles, Puertollano, Madrid (Sol y Palacio Real), Barcelona (Ciutat Vella y Eixample) y Valencia (Ciutat Vella). `Ciudad.explanada()` (`maps/_pintura/vestir/_ciudad.gd`) deja empedrada la red de calles rectas (en L) que une puertas, apariciones, pasarelas, bordes, personajes y carteles, con su acera junto a los edificios y delante de escaleras; el resto pasa a manzanas: jardines rectangulares con seto (siempre dentro del jardín), árboles en cuadrícula y flores. Ninguna puerta, spawn ni warp se mueve. Alcance 0 problemas en los 11; `test_interiores_unicos`, `test_urban_access` y `test_city_services` en verde. Sigue habiendo plazas empedradas grandes donde la ciudad real las tiene (Plaza del Pilar) y sin bordillo de acera (pieza pedida a Edificios).
+- ~~Ruta 24 sin relieve ni agua~~ **Hecho:** laguna manchega que sale del mapa como arroyo, con nenúfares, y cerro con escalera al sureste.
+- ~~Ruta 26 cimas lisas~~ **Hecho:** matojos, piedras, flores y alguna encina encima de cada bloque de caliza.
+- ~~Rutas 9 y 10 rectas~~ **Hecho:** camino de tierra que va de lado a lado entre pinos y palmeras (`_ruta.gd` → `romper_avenida()`). La hierba mínima sigue en 1 en las dos (las filas protegidas por carteles y vistas no dejan cerrar más).
+- ~~Ruta 11 carretera de lado a lado~~ **Hecho:** camino de tierra con tres curvas entre huertos y palmeras.
+- ~~Rutas 1, 2 y 4 solo con el paso de hierba~~ **Hecho:** pinares, encinas, matojos, setas y flores en la hierba vacía y objetos ocultos.
+- Ruta marítima 1: escollos de adorno junto a los islotes. **Sigue por debajo:** corrientes y objetos en los islotes esperan las reglas de Surf pedidas al agente de combate («Peticiones a Combate» en `docs/mapas/reservas.md`); el comprobador de alcance va a pie.
+- Ruta 19 (faro), Ruta 2 (casa de madera) y Bilbao (casa roja): **siguen recortadas**, a la espera de las piezas pedidas a Edificios.
+- Entrenadores: todas las rutas tienen ya entre 2 y 5 entrenadores con línea de visión (la marítima 1, 2); **no se han recolocado uno a uno en los cuellos de botella** en esta pasada. Objetos: la Ruta 3 (que no tenía) y las rutas tocadas tienen objetos nuevos, visibles y ocultos; atajos que se abran más tarde, **pendientes**.
+- Capturas antes y después: `docs/arte/comparativas/rutas_anil_2/`.
 
 **Provisional:** arte, textos del guarda y colocación.
 
