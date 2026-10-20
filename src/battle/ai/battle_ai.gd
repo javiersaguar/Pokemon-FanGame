@@ -118,6 +118,9 @@ static func _score_move(engine: BattleEngine, user: Battler, target: Battler, mo
 		if move.status != &"" and (not engine.can_set_status(target, move.status, user, false) or engine.is_immune(target, move)):
 			return -1
 		return maxi(1, target.pokemon.max_hp() / 6)
+	# Ataques previstos (Premonición, Deseo Oculto): fallan si ya hay uno en camino.
+	if level >= 2 and move.id in [&"futuresight", &"doomdesire"] and engine.has_side_condition(target.side, &"futuresight"):
+		return -1
 	if damage <= 0:
 		return -1 if level >= 2 else damage
 	if damage >= target.pokemon.current_hp:
