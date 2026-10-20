@@ -4,10 +4,11 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
-| ruta_12/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
-| ruta_14/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
-| ruta_18/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
-| ruta_20/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
+| ruta_1/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
+| ruta_2/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
+| ruta_3/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
+| ruta_4/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
+| maritima_1/exterior | Agente de rutas y ciudades (feat/rutas-anil) | 2026-10-19 | Estructura al nivel de Añil: relieve, paso por hierba, bordes, entrenadores y objetos |
 
 
 Sesión anterior cerrada. Reservas activas del 19 de octubre: Véase `docs/CIERRE_2026-10-15.md`.
