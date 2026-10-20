@@ -5121,5 +5121,260 @@
       2,
       0
     ]
+  },
+  "bordillo_n": {
+    "fuente": 386,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_s": {
+    "fuente": 387,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_o": {
+    "fuente": 388,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_e": {
+    "fuente": 389,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_esquina_no": {
+    "fuente": 390,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_esquina_ne": {
+    "fuente": 391,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_esquina_so": {
+    "fuente": 392,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_esquina_se": {
+    "fuente": 393,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_entrante_no": {
+    "fuente": 394,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_entrante_ne": {
+    "fuente": 395,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_entrante_so": {
+    "fuente": 396,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_entrante_se": {
+    "fuente": 397,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_fin_n": {
+    "fuente": 398,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_fin_s": {
+    "fuente": 399,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_fin_o": {
+    "fuente": 400,
+    "puerta": null,
+    "huella": []
+  },
+  "bordillo_fin_e": {
+    "fuente": 401,
+    "puerta": null,
+    "huella": []
+  },
+  "tapia_horizontal": {
+    "fuente": 402,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_vertical": {
+    "fuente": 403,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_esquina_no": {
+    "fuente": 404,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_esquina_ne": {
+    "fuente": 405,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_esquina_so": {
+    "fuente": 406,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_esquina_se": {
+    "fuente": 407,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_fin_n": {
+    "fuente": 408,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_fin_s": {
+    "fuente": 409,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_fin_o": {
+    "fuente": 410,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "tapia_fin_e": {
+    "fuente": 411,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "jardinera_urbana": {
+    "fuente": 412,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "jardinera_urbana_vertical": {
+    "fuente": 413,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "alcorque_urbano": {
+    "fuente": 414,
+    "puerta": null,
+    "huella": []
+  },
+  "alcorque_arbol": {
+    "fuente": 415,
+    "puerta": null,
+    "huella": [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ]
   }
 }

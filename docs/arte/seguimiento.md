@@ -693,3 +693,9 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Recurso | Estado | Aprobación Javier | Evidencia |
 |---|---|---|---|
 | Nave de acceso al rodaje | fachada propia colocada; entrada, regreso, cuatro salas y 25 pasarelas conservadas; provisional | pendiente | [Pieza y mapa antes/después](comparativas/edificios_reales.md#plató-portuario-de-málaga--acceso-original-al-gimnasio) |
+
+## Módulos urbanos · 20 de octubre de 2026
+
+| Recurso | Estado | Aprobación Javier | Evidencia |
+|---|---|---|---|
+| Bordillos (16), tapias (10), jardineras (2), alcorques (2) | Dibujos literales `.px2`, exportados e incorporados al catálogo; pruebas de uniones y colisión; provisional | pendiente | [Montaje antes/después y fuentes 386–415](comparativas/edificios_reales.md#piezas-urbanas--20-de-octubre-de-2026) |

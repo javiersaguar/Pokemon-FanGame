@@ -1,0 +1,349 @@
+{
+  "pieces": {
+    "bordillo_n": {
+      "source": 386,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_s": {
+      "source": 387,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_o": {
+      "source": 388,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_e": {
+      "source": 389,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_esquina_no": {
+      "source": 390,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_esquina_ne": {
+      "source": 391,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_esquina_so": {
+      "source": 392,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_esquina_se": {
+      "source": 393,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_entrante_no": {
+      "source": 394,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_entrante_ne": {
+      "source": 395,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_entrante_so": {
+      "source": 396,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_entrante_se": {
+      "source": 397,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_fin_n": {
+      "source": 398,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_fin_s": {
+      "source": 399,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_fin_o": {
+      "source": 400,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "bordillo_fin_e": {
+      "source": 401,
+      "size": [
+        1,
+        1
+      ],
+      "footprint": []
+    },
+    "tapia_horizontal": {
+      "source": 402,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_vertical": {
+      "source": 403,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_esquina_no": {
+      "source": 404,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_esquina_ne": {
+      "source": 405,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_esquina_so": {
+      "source": 406,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_esquina_se": {
+      "source": 407,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_fin_n": {
+      "source": 408,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_fin_s": {
+      "source": 409,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_fin_o": {
+      "source": 410,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "tapia_fin_e": {
+      "source": 411,
+      "size": [
+        1,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "jardinera_urbana": {
+      "source": 412,
+      "size": [
+        2,
+        2
+      ],
+      "footprint": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "jardinera_urbana_vertical": {
+      "source": 413,
+      "size": [
+        1,
+        3
+      ],
+      "footprint": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "alcorque_urbano": {
+      "source": 414,
+      "size": [
+        2,
+        2
+      ],
+      "footprint": []
+    },
+    "alcorque_arbol": {
+      "source": 415,
+      "size": [
+        2,
+        4
+      ],
+      "footprint": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  }
+}

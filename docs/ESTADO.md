@@ -469,6 +469,12 @@ Worktree `pokemon-panchito-agente2`, rama `feat/agente2-personajes`. Área: que 
 
 ---
 
+## Edificios y personajes · sesión del 2026-10-20
+
+Rama `feat/edificios-personajes`, worktree `pokemon-panchito-agente3`. Lista de Javier: piezas urbanas urgentes; puerta del Bernabéu sin enlazar; parciales Camp Nou, Sagrada Família y Palacio Real; resto del catálogo; fidelidad de personajes y variantes de vecinos. No se toca combate ni rutas. Javier Saguar sigue **PENDIENTE JAVIER** por falta de referencia de aspecto.
+
+**Tarea 1:** creados 30 módulos urbanos (fuentes 386–415): bordillos con esquinas, entrantes y finales; tapias con esquinas y remates; dos jardineras; alcorque vacío y con árbol. Todas las piezas sin puerta. Bordillos transitables, muebles con colisión explícita. No se editan mapas. Pruebas dirigidas 2/2, 227 aserciones; comparación con piezas existentes y catálogo a escala nativa guardados en [edificios_reales.md](arte/comparativas/edificios_reales.md#piezas-urbanas--20-de-octubre-de-2026). **Tarea 1 cerrada (21 de octubre): 740/740 pruebas, 88262 aserciones, 817.015s.** Arte: 11.600 PNG, 0 errores y 0 avisos. Datos: 0 errores y 1 aviso anterior de estadísticas sin verificar. Grafo: 961 mapas alcanzables y con vuelta. Contrato inicial de edificios: 5/5 y 836 aserciones; módulos nuevos: 2/2 y 227 aserciones. Suite en CPU 0, sin editar el proyecto durante su ejecución. El montaje de capturas no modifica mapas. Se conservan los avisos anteriores de audio y de recursos retenidos de las herramientas. Arte provisional.
+
 ## Edificios reales · sesión del 2026-10-19
 
 Worktree `pokemon-panchito-agente3`, rama `feat/edificios-reales`. Redibujo individual de las fuentes `.px2` de edificios y monumentos, con referencias reales y comparativas. Se conservan lienzo, fuente del tileset y casilla de puerta. Único responsable de regenerar `exterior.tres` y `objetos.json` durante esta sesión. Las piezas nuevas que necesite el trabajo de rutas se piden en «Peticiones» antes de regenerar.

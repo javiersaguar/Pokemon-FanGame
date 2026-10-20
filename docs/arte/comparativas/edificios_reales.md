@@ -378,3 +378,62 @@ Se retiran los setos del solar de 5×5 casillas y se continúa el empedrado exis
 [Contrato previo de las 25 pasarelas y del regreso](edificios_reales/plato_portuario_contrato.json). Pruebas dirigidas: **5/5, 836 aserciones**; se comprueban las 25 conexiones, el acceso al gimnasio, el retorno libre y la nueva posición del árbol, además del contrato inicial de 140 piezas y del teatro sevillano. Alcance de Málaga: **25 puertas, 0 problemas**. Suite conjunta terminada; resultado al cierre del bloque. Las herramientas de mapas mantienen los avisos anteriores de recursos retenidos al cerrar, con salida 0.
 
 **Bloque 5 cerrado (20 de octubre): 694/694 pruebas, 87239 aserciones, 766.056s.** Arte: 11570 PNG, 0 errores y 0 avisos; datos: 0 errores y 1 aviso de estadísticas sin verificar; grafo: 961 mapas conectados y con vuelta. Suite fijada a CPU 0; ROM caos en 2550 ms. Pruebas de edificios y accesos: 5/5, 836 aserciones. Málaga conserva sus 25 pasarelas y da 0 problemas de alcance. Se libera su reserva al integrar. Las herramientas mantienen los avisos anteriores de recursos retenidos al salir; la suite también avisa del audio que falta. El teatro y el plató autorizados están colocados y conectados; todo el arte sigue provisional.
+
+## Piezas urbanas · 20 de octubre de 2026
+
+Petición de Rutas resuelta con **30 módulos nuevos, fuentes 386–415**. Son dibujos originales en `.px2`, con paleta maestra y luz arriba a la izquierda. Se conservan intactos los packs y los contratos de las 140 piezas iniciales. No se pinta ningún exterior reservado ni se cambia ninguna puerta.
+
+| Familia | Uso y variantes | Colisión |
+|---|---|---|
+| Bordillo (16) | cuatro rectas, cuatro esquinas exteriores, cuatro entrantes y cuatro finales | ninguna; delimita visualmente una acera, no es el salto de una ruta |
+| Tapia (10) | horizontal, vertical, cuatro esquinas y cuatro finales | base; los módulos que prolongan la pared por dos filas chocan en ambas |
+| Jardineras (2) | horizontal de dos casillas y variante longitudinal; ambos extremos cerrados | dos casillas de base |
+| Alcorques (2) | marco vacío para combinar con arbolado y versión con árbol propio | vacío transitable; con árbol, base de 2×2 |
+
+Nombres `n/s/e/o`: orientación del borde. `esquina_no/ne/so/se` forma el perímetro exterior de un rectángulo; `entrante_*` cierra su esquina cóncava. La tapia horizontal ocupa un cuadro de 1×2, pero su pared está en la fila inferior. La vertical ocupa las dos filas: se repite cada dos casillas y termina con su remate. Las jardineras ya incluyen sus tapas. Ninguna pieza necesita rotación ni escala adicional.
+
+**Para Rutas:** `Pintor.object_under(&"bordillo_n", casilla)` para bordillos y alcorque vacío; `Pintor.object(...)` para tapias, jardineras y árbol. También se pueden colocar por fuente y coordenada `(0,0)` desde `ExteriorTiles.objects()`. Todas las anclas corresponden al cuadro inferior izquierdo. No repintar mapas con puertas enlazadas: colocar únicamente las celdas necesarias y comprobar el alcance.
+
+Diseño propio de mobiliario corriente, con la escala de [Añil](../referencias/anil_pueblo.png). Se consultó el [índice municipal de urbanización de Madrid](https://www.madrid.es/portales/munimadrid/es/Inicio/ViviendaYUrbanismo/Obras/Urbanizacion-espacio-publico/?vgnextchannel=ff08b52be5b80710VgnVCM2000001f4a900aRCRD&vgnextfmt=default&vgnextoid=3190e7bd62dc5910VgnVCM2000001f4a900aRCRD); no se afirma haber consultado sus planos acotados: el PDF de normalización supera el límite de lectura. Las piezas no reproducen modelos municipales concretos.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Montaje de revisión a escala nativa; misma casa, suelo y banco | [Piezas existentes](edificios_reales/urbanas_antes.png) | [Nuevos bordes, patio y vegetación](edificios_reales/urbanas_despues.png) |
+| Catálogo identificado por número de fuente | No existía esta familia completa | [30 piezas](edificios_reales/urbanas_catalogo.png) |
+
+Montaje reproducible con `godot --path . res://tools/arte/capturar_urbanas.tscn`. Es una escena de revisión, no una ciudad alterada. [Contrato de las nuevas piezas](edificios_reales/urbanas_contrato.json). Arte provisional, pendiente de Javier.
+
+| ID | Fuente | Casillas | Celdas sólidas relativas al ancla |
+|---|---|---|---|
+| `bordillo_n` | 386 | [1, 1] | [] |
+| `bordillo_s` | 387 | [1, 1] | [] |
+| `bordillo_o` | 388 | [1, 1] | [] |
+| `bordillo_e` | 389 | [1, 1] | [] |
+| `bordillo_esquina_no` | 390 | [1, 1] | [] |
+| `bordillo_esquina_ne` | 391 | [1, 1] | [] |
+| `bordillo_esquina_so` | 392 | [1, 1] | [] |
+| `bordillo_esquina_se` | 393 | [1, 1] | [] |
+| `bordillo_entrante_no` | 394 | [1, 1] | [] |
+| `bordillo_entrante_ne` | 395 | [1, 1] | [] |
+| `bordillo_entrante_so` | 396 | [1, 1] | [] |
+| `bordillo_entrante_se` | 397 | [1, 1] | [] |
+| `bordillo_fin_n` | 398 | [1, 1] | [] |
+| `bordillo_fin_s` | 399 | [1, 1] | [] |
+| `bordillo_fin_o` | 400 | [1, 1] | [] |
+| `bordillo_fin_e` | 401 | [1, 1] | [] |
+| `tapia_horizontal` | 402 | [1, 2] | [[0, 0]] |
+| `tapia_vertical` | 403 | [1, 2] | [[0, -1], [0, 0]] |
+| `tapia_esquina_no` | 404 | [1, 2] | [[0, 0]] |
+| `tapia_esquina_ne` | 405 | [1, 2] | [[0, 0]] |
+| `tapia_esquina_so` | 406 | [1, 2] | [[0, -1], [0, 0]] |
+| `tapia_esquina_se` | 407 | [1, 2] | [[0, -1], [0, 0]] |
+| `tapia_fin_n` | 408 | [1, 2] | [[0, -1], [0, 0]] |
+| `tapia_fin_s` | 409 | [1, 2] | [[0, -1], [0, 0]] |
+| `tapia_fin_o` | 410 | [1, 2] | [[0, 0]] |
+| `tapia_fin_e` | 411 | [1, 2] | [[0, 0]] |
+| `jardinera_urbana` | 412 | [2, 2] | [[0, 0], [1, 0]] |
+| `jardinera_urbana_vertical` | 413 | [1, 3] | [[0, -1], [0, 0]] |
+| `alcorque_urbano` | 414 | [2, 2] | [] |
+| `alcorque_arbol` | 415 | [2, 4] | [[0, -1], [1, -1], [0, 0], [1, 0]] |
+
+Pruebas dirigidas de módulos: **2/2, 227 aserciones**. Se corrigió la lectura de imágenes de la primera versión de la prueba para usar texturas importadas, y el nombre de una farola en la herramienta de captura. **Tarea 1 cerrada (21 de octubre): 740/740 pruebas, 88262 aserciones, 817.015s.** Arte: 11.600 PNG, 0 errores y 0 avisos. Datos: 0 errores y 1 aviso anterior de estadísticas sin verificar. Grafo: 961 mapas alcanzables y con vuelta. Contrato inicial de edificios: 5/5 y 836 aserciones; módulos nuevos: 2/2 y 227 aserciones. Suite en CPU 0, sin editar el proyecto durante su ejecución. El montaje de capturas no modifica mapas. Se conservan los avisos anteriores de audio y de recursos retenidos de las herramientas. Arte provisional.
