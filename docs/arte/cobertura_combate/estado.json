@@ -2,7 +2,7 @@
  "abilities": [
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "adaptability",
    "name": "Adaptable",
    "name_en": "Adaptability",
@@ -47,7 +47,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "aftermath",
    "name": "Detonación",
    "name_en": "Aftermath",
@@ -81,7 +81,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "analytic",
    "name": "Cálculo Final",
    "name_en": "Analytic",
@@ -104,7 +104,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "angerpoint",
    "name": "Irascible",
    "name_en": "Anger Point",
@@ -139,7 +139,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "anticipation",
    "name": "Anticipación",
    "name_en": "Anticipation",
@@ -168,7 +168,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "arenatrap",
    "name": "Trampa Arena",
    "name_en": "Arena Trap",
@@ -288,7 +288,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "battlearmor",
    "name": "Armadura Batalla",
    "name_en": "Battle Armor",
@@ -441,7 +441,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "bulletproof",
    "name": "Antibalas",
    "name_en": "Bulletproof",
@@ -463,7 +463,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "cheekpouch",
    "name": "Carrillo",
    "name_en": "Cheek Pouch",
@@ -543,7 +543,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "clearbody",
    "name": "Cuerpo Puro",
    "name_en": "Clear Body",
@@ -573,7 +573,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "cloudnine",
    "name": "Aclimatación",
    "name_en": "Cloud Nine",
@@ -632,7 +632,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "competitive",
    "name": "Tenacidad",
    "name_en": "Competitive",
@@ -684,7 +684,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "contrary",
    "name": "Respondón",
    "name_en": "Contrary",
@@ -723,7 +723,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "costar",
    "name": "Unísono",
    "name_en": "Costar",
@@ -748,7 +748,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "cudchew",
    "name": "Rumia",
    "name_en": "Cud Chew",
@@ -775,7 +775,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "cursedbody",
    "name": "Cuerpo Maldito",
    "name_en": "Cursed Body",
@@ -802,7 +802,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "cutecharm",
    "name": "Gran Encanto",
    "name_en": "Cute Charm",
@@ -828,7 +828,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "damp",
    "name": "Humedad",
    "name_en": "Damp",
@@ -859,7 +859,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "dancer",
    "name": "Pareja de Baile",
    "name_en": "Dancer",
@@ -924,7 +924,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "defiant",
    "name": "Competitivo",
    "name_en": "Defiant",
@@ -976,7 +976,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "disguise",
    "name": "Disfraz",
    "name_en": "Disguise",
@@ -991,7 +991,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "download",
    "name": "Descarga",
    "name_en": "Download",
@@ -1034,7 +1034,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "drizzle",
    "name": "Llovizna",
    "name_en": "Drizzle",
@@ -1048,7 +1048,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "drought",
    "name": "Sequía",
    "name_en": "Drought",
@@ -1064,7 +1064,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "dryskin",
    "name": "Piel Seca",
    "name_en": "Dry Skin",
@@ -1082,7 +1082,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "earlybird",
    "name": "Madrugar",
    "name_en": "Early Bird",
@@ -1109,7 +1109,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "eartheater",
    "name": "Geofagia",
    "name_en": "Earth Eater",
@@ -1133,7 +1133,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "effectspore",
    "name": "Efecto Espora",
    "name_en": "Effect Spore",
@@ -1229,7 +1229,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "emergencyexit",
    "name": "Retirada",
    "name_en": "Emergency Exit",
@@ -1282,7 +1282,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "flamebody",
    "name": "Cuerpo Llama",
    "name_en": "Flame Body",
@@ -1330,7 +1330,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "flashfire",
    "name": "Absorbe Fuego",
    "name_en": "Flash Fire",
@@ -1371,7 +1371,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "flowergift",
    "name": "Don Floral",
    "name_en": "Flower Gift",
@@ -1384,7 +1384,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "flowerveil",
    "name": "Velo Flor",
    "name_en": "Flower Veil",
@@ -1400,7 +1400,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "fluffy",
    "name": "Peluche",
    "name_en": "Fluffy",
@@ -1432,7 +1432,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "forewarn",
    "name": "Alerta",
    "name_en": "Forewarn",
@@ -1449,7 +1449,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "friendguard",
    "name": "Compiescolta",
    "name_en": "Friend Guard",
@@ -1533,7 +1533,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "furcoat",
    "name": "Pelaje Recio",
    "name_en": "Fur Coat",
@@ -1546,7 +1546,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "galewings",
    "name": "Alas Vendaval",
    "name_en": "Gale Wings",
@@ -1574,7 +1574,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "gluttony",
    "name": "Gula",
    "name_en": "Gluttony",
@@ -1623,7 +1623,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "goodasgold",
    "name": "Cuerpo Áureo",
    "name_en": "Good as Gold",
@@ -1635,7 +1635,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "gooey",
    "name": "Baba",
    "name_en": "Gooey",
@@ -1665,7 +1665,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "grasspelt",
    "name": "Manto Frondoso",
    "name_en": "Grass Pelt",
@@ -1678,7 +1678,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "grassysurge",
    "name": "Herbogénesis",
    "name_en": "Grassy Surge",
@@ -1706,7 +1706,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "guarddog",
    "name": "Perro Guardián",
    "name_en": "Guard Dog",
@@ -1719,7 +1719,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "gulpmissile",
    "name": "Tragamisil",
    "name_en": "Gulp Missile",
@@ -1782,7 +1782,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "harvest",
    "name": "Cosecha",
    "name_en": "Harvest",
@@ -1802,7 +1802,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "healer",
    "name": "Alma Cura",
    "name_en": "Healer",
@@ -1825,7 +1825,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "heatproof",
    "name": "Ignífugo",
    "name_en": "Heatproof",
@@ -1843,7 +1843,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "heavymetal",
    "name": "Metal Pesado",
    "name_en": "Heavy Metal",
@@ -1894,7 +1894,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "hugepower",
    "name": "Potencia",
    "name_en": "Huge Power",
@@ -1965,7 +1965,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "hydration",
    "name": "Hidratación",
    "name_en": "Hydration",
@@ -1999,7 +1999,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "hypercutter",
    "name": "Corte Fuerte",
    "name_en": "Hyper Cutter",
@@ -2022,7 +2022,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "icebody",
    "name": "Gélido",
    "name_en": "Ice Body",
@@ -2055,7 +2055,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "iceface",
    "name": "Cara de Hielo",
    "name_en": "Ice Face",
@@ -2068,7 +2068,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "icescales",
    "name": "Escama de Hielo",
    "name_en": "Ice Scales",
@@ -2081,7 +2081,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "illuminate",
    "name": "Iluminación",
    "name_en": "Illuminate",
@@ -2100,7 +2100,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "illusion",
    "name": "Ilusión",
    "name_en": "Illusion",
@@ -2115,7 +2115,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "immunity",
    "name": "Inmunidad",
    "name_en": "Immunity",
@@ -2180,7 +2180,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "innardsout",
    "name": "Revés",
    "name_en": "Innards Out",
@@ -2193,7 +2193,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "innerfocus",
    "name": "Fuerza Mental",
    "name_en": "Inner Focus",
@@ -2335,7 +2335,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "intrepidsword",
    "name": "Espada Indómita",
    "name_en": "Intrepid Sword",
@@ -2348,7 +2348,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "ironbarbs",
    "name": "Punta Acero",
    "name_en": "Iron Barbs",
@@ -2362,7 +2362,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "ironfist",
    "name": "Puño Férreo",
    "name_en": "Iron Fist",
@@ -2393,7 +2393,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "justified",
    "name": "Justiciero",
    "name_en": "Justified",
@@ -2468,7 +2468,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "klutz",
    "name": "Zoquete",
    "name_en": "Klutz",
@@ -2525,7 +2525,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "levitate",
    "name": "Levitación",
    "name_en": "Levitate",
@@ -2580,7 +2580,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "libero",
    "name": "Líbero",
    "name_en": "Libero",
@@ -2595,7 +2595,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "lightmetal",
    "name": "Metal Liviano",
    "name_en": "Light Metal",
@@ -2613,7 +2613,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "lightningrod",
    "name": "Pararrayos",
    "name_en": "Lightning Rod",
@@ -2659,7 +2659,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "limber",
    "name": "Flexibilidad",
    "name_en": "Limber",
@@ -2684,7 +2684,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "lingeringaroma",
    "name": "Olor Persistente",
    "name_en": "Lingering Aroma",
@@ -2696,7 +2696,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "liquidooze",
    "name": "Lodo Líquido",
    "name_en": "Liquid Ooze",
@@ -2711,7 +2711,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "liquidvoice",
    "name": "Voz Fluida",
    "name_en": "Liquid Voice",
@@ -2739,7 +2739,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "magicbounce",
    "name": "Espejo Mágico",
    "name_en": "Magic Bounce",
@@ -2762,7 +2762,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "magicguard",
    "name": "Muro Mágico",
    "name_en": "Magic Guard",
@@ -2783,7 +2783,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "magician",
    "name": "Prestidigitador",
    "name_en": "Magician",
@@ -2800,7 +2800,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "magmaarmor",
    "name": "Escudo Magma",
    "name_en": "Magma Armor",
@@ -2814,7 +2814,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "magnetpull",
    "name": "Imán",
    "name_en": "Magnet Pull",
@@ -2834,7 +2834,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "marvelscale",
    "name": "Escama Especial",
    "name_en": "Marvel Scale",
@@ -2848,7 +2848,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "megalauncher",
    "name": "Megadisparador",
    "name_en": "Mega Launcher",
@@ -2874,7 +2874,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "merciless",
    "name": "Ensañamiento",
    "name_en": "Merciless",
@@ -2911,7 +2911,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "minus",
    "name": "Menos",
    "name_en": "Minus",
@@ -2930,7 +2930,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "mirrorarmor",
    "name": "Coraza Reflejo",
    "name_en": "Mirror Armor",
@@ -2956,7 +2956,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "moldbreaker",
    "name": "Rompemoldes",
    "name_en": "Mold Breaker",
@@ -2994,7 +2994,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "moody",
    "name": "Veleta",
    "name_en": "Moody",
@@ -3013,7 +3013,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "motordrive",
    "name": "Electromotor",
    "name_en": "Motor Drive",
@@ -3055,7 +3055,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "multiscale",
    "name": "Multiescamas",
    "name_en": "Multiscale",
@@ -3124,7 +3124,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "naturalcure",
    "name": "Cura Natural",
    "name_en": "Natural Cure",
@@ -3166,7 +3166,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "neutralizinggas",
    "name": "Gas Reactivo",
    "name_en": "Neutralizing Gas",
@@ -3180,7 +3180,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "noguard",
    "name": "Indefenso",
    "name_en": "No Guard",
@@ -3217,7 +3217,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "oblivious",
    "name": "Despiste",
    "name_en": "Oblivious",
@@ -3277,7 +3277,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "overcoat",
    "name": "Funda",
    "name_en": "Overcoat",
@@ -3357,7 +3357,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "owntempo",
    "name": "Ritmo Propio",
    "name_en": "Own Tempo",
@@ -3439,7 +3439,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "pickpocket",
    "name": "Hurto",
    "name_en": "Pickpocket",
@@ -3466,7 +3466,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "pickup",
    "name": "Recogida",
    "name_en": "Pickup",
@@ -3519,7 +3519,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "pixilate",
    "name": "Piel Feérica",
    "name_en": "Pixilate",
@@ -3533,7 +3533,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "plus",
    "name": "Más",
    "name_en": "Plus",
@@ -3554,7 +3554,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "poisonheal",
    "name": "Antídoto",
    "name_en": "Poison Heal",
@@ -3568,7 +3568,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "poisonpoint",
    "name": "Punto Tóxico",
    "name_en": "Poison Point",
@@ -3611,7 +3611,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "poisontouch",
    "name": "Toque Tóxico",
    "name_en": "Poison Touch",
@@ -3672,7 +3672,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "prankster",
    "name": "Bromista",
    "name_en": "Prankster",
@@ -3703,7 +3703,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "pressure",
    "name": "Presión",
    "name_en": "Pressure",
@@ -3776,7 +3776,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "propellertail",
    "name": "Hélice Caudal",
    "name_en": "Propeller Tail",
@@ -3789,7 +3789,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "protean",
    "name": "Mutatipo",
    "name_en": "Protean",
@@ -3808,7 +3808,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "protosynthesis",
    "name": "Paleosíntesis",
    "name_en": "Protosynthesis",
@@ -3829,7 +3829,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "psychicsurge",
    "name": "Psicogénesis",
    "name_en": "Psychic Surge",
@@ -3843,7 +3843,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "punkrock",
    "name": "Punk Rock",
    "name_en": "Punk Rock",
@@ -3858,7 +3858,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "purepower",
    "name": "Energía Pura",
    "name_en": "Pure Power",
@@ -3872,7 +3872,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "purifyingsalt",
    "name": "Sal Purificadora",
    "name_en": "Purifying Salt",
@@ -3886,7 +3886,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "quarkdrive",
    "name": "Carga Cuark",
    "name_en": "Quark Drive",
@@ -3907,7 +3907,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "queenlymajesty",
    "name": "Regia Presencia",
    "name_en": "Queenly Majesty",
@@ -3931,7 +3931,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "quickfeet",
    "name": "Pies Rápidos",
    "name_en": "Quick Feet",
@@ -4022,7 +4022,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "reckless",
    "name": "Audaz",
    "name_en": "Reckless",
@@ -4060,7 +4060,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "regenerator",
    "name": "Regeneración",
    "name_en": "Regenerator",
@@ -4115,7 +4115,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "rivalry",
    "name": "Rivalidad",
    "name_en": "Rivalry",
@@ -4173,7 +4173,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "rockhead",
    "name": "Cabeza Roca",
    "name_en": "Rock Head",
@@ -4208,7 +4208,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "rockypayload",
    "name": "Transportarrocas",
    "name_en": "Rocky Payload",
@@ -4220,7 +4220,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "roughskin",
    "name": "Piel Tosca",
    "name_en": "Rough Skin",
@@ -4284,7 +4284,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sandforce",
    "name": "Poder Arena",
    "name_en": "Sand Force",
@@ -4314,7 +4314,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sandrush",
    "name": "Ímpetu Arena",
    "name_en": "Sand Rush",
@@ -4335,7 +4335,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sandspit",
    "name": "Expulsarena",
    "name_en": "Sand Spit",
@@ -4349,7 +4349,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sandstream",
    "name": "Chorro Arena",
    "name_en": "Sand Stream",
@@ -4365,7 +4365,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sandveil",
    "name": "Velo Arena",
    "name_en": "Sand Veil",
@@ -4406,7 +4406,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sapsipper",
    "name": "Herbívoro",
    "name_en": "Sap Sipper",
@@ -4438,7 +4438,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "schooling",
    "name": "Banco",
    "name_en": "Schooling",
@@ -4451,7 +4451,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "scrappy",
    "name": "Intrépido",
    "name_en": "Scrappy",
@@ -4502,7 +4502,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "serenegrace",
    "name": "Dicha",
    "name_en": "Serene Grace",
@@ -4540,7 +4540,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "shadowtag",
    "name": "Sombra Trampa",
    "name_en": "Shadow Tag",
@@ -4604,7 +4604,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sheerforce",
    "name": "Potencia Bruta",
    "name_en": "Sheer Force",
@@ -4651,7 +4651,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "shellarmor",
    "name": "Caparazón",
    "name_en": "Shell Armor",
@@ -4731,7 +4731,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "simple",
    "name": "Simple",
    "name_en": "Simple",
@@ -4747,7 +4747,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "skilllink",
    "name": "Encadenado",
    "name_en": "Skill Link",
@@ -4781,7 +4781,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "slushrush",
    "name": "Quitanieves",
    "name_en": "Slush Rush",
@@ -4828,7 +4828,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "snowcloak",
    "name": "Manto Níveo",
    "name_en": "Snow Cloak",
@@ -4854,7 +4854,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "snowwarning",
    "name": "Nevada",
    "name_en": "Snow Warning",
@@ -4925,7 +4925,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "soundproof",
    "name": "Insonorizar",
    "name_en": "Soundproof",
@@ -4953,7 +4953,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "speedboost",
    "name": "Impulso",
    "name_en": "Speed Boost",
@@ -4990,7 +4990,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stakeout",
    "name": "Vigilante",
    "name_en": "Stakeout",
@@ -5009,7 +5009,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stall",
    "name": "Rezagado",
    "name_en": "Stall",
@@ -5036,7 +5036,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stamina",
    "name": "Firmeza",
    "name_en": "Stamina",
@@ -5050,7 +5050,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stancechange",
    "name": "Cambio Táctico",
    "name_en": "Stance Change",
@@ -5063,7 +5063,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "static",
    "name": "Electricidad Estática",
    "name_en": "Static",
@@ -5107,7 +5107,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "steadfast",
    "name": "Impasible",
    "name_en": "Steadfast",
@@ -5134,7 +5134,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "steamengine",
    "name": "Combustible",
    "name_en": "Steam Engine",
@@ -5161,7 +5161,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "steelyspirit",
    "name": "Alma Acerada",
    "name_en": "Steely Spirit",
@@ -5173,7 +5173,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stench",
    "name": "Hedor",
    "name_en": "Stench",
@@ -5194,7 +5194,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stickyhold",
    "name": "Viscosidad",
    "name_en": "Sticky Hold",
@@ -5215,7 +5215,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stormdrain",
    "name": "Colector",
    "name_en": "Storm Drain",
@@ -5239,7 +5239,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "strongjaw",
    "name": "Mandíbula Fuerte",
    "name_en": "Strong Jaw",
@@ -5262,7 +5262,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sturdy",
    "name": "Robustez",
    "name_en": "Sturdy",
@@ -5321,7 +5321,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "suctioncups",
    "name": "Ventosas",
    "name_en": "Suction Cups",
@@ -5337,7 +5337,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "superluck",
    "name": "Afortunado",
    "name_en": "Super Luck",
@@ -5370,7 +5370,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "supremeoverlord",
    "name": "General Supremo",
    "name_en": "Supreme Overlord",
@@ -5530,7 +5530,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "symbiosis",
    "name": "Simbiosis",
    "name_en": "Symbiosis",
@@ -5546,7 +5546,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "synchronize",
    "name": "Sincronía",
    "name_en": "Synchronize",
@@ -5620,7 +5620,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "technician",
    "name": "Experto",
    "name_en": "Technician",
@@ -5659,7 +5659,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "telepathy",
    "name": "Telepatía",
    "name_en": "Telepathy",
@@ -5747,7 +5747,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "thermalexchange",
    "name": "Termoconversión",
    "name_en": "Thermal Exchange",
@@ -5762,7 +5762,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "thickfat",
    "name": "Sebo",
    "name_en": "Thick Fat",
@@ -5873,7 +5873,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "toughclaws",
    "name": "Garra Dura",
    "name_en": "Tough Claws",
@@ -5932,7 +5932,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "trace",
    "name": "Calco",
    "name_en": "Trace",
@@ -5951,7 +5951,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "transistor",
    "name": "Transistor",
    "name_en": "Transistor",
@@ -5963,7 +5963,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "triage",
    "name": "Primer Auxilio",
    "name_en": "Triage",
@@ -5975,7 +5975,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "truant",
    "name": "Ausente",
    "name_en": "Truant",
@@ -6002,7 +6002,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "unaware",
    "name": "Ignorante",
    "name_en": "Unaware",
@@ -6056,7 +6056,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "unnerve",
    "name": "Nerviosismo",
    "name_en": "Unnerve",
@@ -6135,7 +6135,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "vitalspirit",
    "name": "Espíritu Vital",
    "name_en": "Vital Spirit",
@@ -6162,7 +6162,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "voltabsorb",
    "name": "Absorbe Electricidad",
    "name_en": "Volt Absorb",
@@ -6200,7 +6200,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "waterabsorb",
    "name": "Absorbe Agua",
    "name_en": "Water Absorb",
@@ -6240,7 +6240,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "waterbubble",
    "name": "Pompa",
    "name_en": "Water Bubble",
@@ -6254,7 +6254,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "watercompaction",
    "name": "Hidrorrefuerzo",
    "name_en": "Water Compaction",
@@ -6267,7 +6267,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "waterveil",
    "name": "Velo Agua",
    "name_en": "Water Veil",
@@ -6291,7 +6291,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "weakarmor",
    "name": "Armadura Frágil",
    "name_en": "Weak Armor",
@@ -6341,7 +6341,7 @@
   },
   {
    "description_present": true,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "whitesmoke",
    "name": "Humo Blanco",
    "name_en": "White Smoke",
@@ -6369,7 +6369,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "windpower",
    "name": "Energía Eólica",
    "name_en": "Wind Power",
@@ -6382,7 +6382,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "windrider",
    "name": "Surcavientos",
    "name_en": "Wind Rider",
@@ -6439,7 +6439,7 @@
   },
   {
    "description_present": false,
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "zerotohero",
    "name": "Cambio Heroico",
    "name_en": "Zero to Hero",
@@ -14064,7 +14064,7 @@
  "summary": {
   "abilities": 316,
   "abilities_without_description": 49,
-  "ability_effects_registered": 29,
+  "ability_effects_registered": 206,
   "moves": 951,
   "moves_needing_unregistered_script": 253,
   "specific_move_animations": 951

@@ -1,5 +1,12 @@
 # Cobertura de habilidades y movimientos · 2026-10-12
 
+## Actualización · 2026-10-20 (combate fiel a la 9.ª generación)
+
+- **Habilidades con efecto: 206** (eran 29). Todas las de las especies de `data/species_in_use.json` tienen efecto; `tests/combate/test_habilidades.gd` lo comprueba y prueba una de cada familia (absorción e inmunidades, estados, Intimidación, características y potencia, contacto, entrada, final del turno, prioridad, críticos, niveles, formas, Rompemoldes y Gas Reactivo, Muro Mágico y Regeneración). Código: `src/battle/effects/ability_families.gd`.
+- **Objetos equipados**: además de los de antes, potenciadores de tipo y tablas, Cinta Fuerte, Gafas Especiales, Cinta Experto, Metrónomo, Mineral Evolutivo, Bola Férrea, Lupa, Telescopio, Polvo Brillo, Periscopio, Garra Afilada, Garra Rápida, Cola Plúmbea, Roca del Rey, Colmillo Agudo, Cascabel Concha, Seguro Debilidad, Tarjeta Roja, Botón Escape, Globo Helio, bayas Biglia, Maranga, Jaboca, Magua, Enigma, Lichi, Gonlan, Aslac, Yapati, Albaricoque, Arabol, Zonlan, Lagro, Chiri y Zanama, Toxisfera, Llamasfera, Lodo Negro, Hierba Blanca, Hierba Mental, Hierba Única, Mochila Escape, Espray Bucal, Seguro Fallo, Servicio Habitación, Capa Furtiva, Amuleto Claro, Energía Potenciadora, Refleluz, las cuatro rocas, Cubrecampos, Raíz Grande, Dado Trucado, Garra Garfio, Banda Atadura y las semillas de campo. Tests: `tests/combate/test_objetos_equipados.gd`. Código: `src/battle/effects/item_families.gd`.
+- **Simplificaciones de la petición 81 corregidas** (`tests/combate/test_simplificaciones.gd`): Cede Paso y Último Lugar reordenan (también en dobles), Premonición calcula el daño al golpear, Mimético dura hasta retirarse, Plegaria Vital deja elegir, Gravedad sube la precisión ×5/3, Fijar Blanco alcanza a los semiinvulnerables, Dracoflechas reparte en dobles, el daño al Sustituto cuenta para retroceso y drenaje, y Metrónomo usa la lista de la 9.ª generación.
+- Del catálogo entero siguen **253 movimientos** que piden script sin tenerlo (Z, Dinamax y de otras generaciones, y los 85 normales que nadie usa); ver `docs/ESTADO.md`.
+
 ## Actualización · 2026-10-19 (petición 81)
 
 - **Movimientos en uso sin script: 0** (eran 177). El validador ya no avisa. Se hicieron por orden de uso: primero los que usan los entrenadores colocados (sus movimientos salen del nivel si no los tienen escritos), luego los de las especies de `data/species_in_use.json`.

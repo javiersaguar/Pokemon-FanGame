@@ -146,6 +146,28 @@ Rama `feat/combate-fondos-efectos`, worktree `pokemon-panchito-agente4`.
 
 **Extra · Sonidos de las animaciones (hecho).** `tools/arte/sonidos_movimientos.py` lee los `pbSEPlay` de cada animación del pack 17 (EBDX move & common animation pack) y copia sin tocar los 114 sonidos usados a `assets/audio/se/anim/` (procedencia en `data/audio_assets.json`). `data/battle_motion_sounds.json` dice qué suena en cada movimiento (hasta 3, repartidos a lo largo de la animación); los que EBDX no anima usan el sonido más común de su tipo. Faltan en el pack 8 archivos que piden algunas animaciones (Flash, Flash3, Heal4, Ice7, eb_grass2, electric1, grass2, psychic3): esas usan el resto de sus sonidos. Test: `tests/combate/test_sonidos_movimientos.gd`.
 
+### Combate y sistemas · sesión del 20 de octubre (rama `feat/combate-2`)
+
+Encargo: combate fiel a la 9.ª generación en todo lo que se usa en partida. Inventario regenerado al empezar (`auditar_combate.gd`: 29 habilidades con efecto, 253 movimientos sin script; `auditar_wikidex.py`: sin cambios).
+
+**Hecho:**
+1. **Simplificaciones de la petición 81, corregidas una a una** con su test (`tests/combate/test_simplificaciones.gd`): Cede Paso y Último Lugar mueven la acción pendiente en la cola del turno (`act_next`, `act_last`), también en dobles; Premonición y Deseo Oculto calculan el daño al golpear con las características de entonces y golpean al que esté en ese sitio; Mimético se deshace al retirarse; Plegaria Vital pide al jugador a quién revivir (petición `SWITCH` con `reason` = `revivalblessing`; la BattleScene solo deja elegir debilitados; la IA revive al de más nivel; en dobles vuelve al campo si cayó en su sitio); Gravedad ×6840/4096 a la precisión, después de los niveles; Fijar Blanco y Telépata alcanzan al que vuela o está bajo tierra; Dracoflechas reparte un dardo a cada rival y, si el elegido está protegido o es inmune, los dos van al otro; el daño al Sustituto cuenta para el retroceso y el drenaje (redondeo hacia arriba, como Showdown); Metrónomo usa los movimientos con su marca que existen en la 9.ª generación, incluidos los «no disponibles». Al acabar el combate, los huecos cambiados se restauran en orden inverso (antes, dos cambios seguidos dejaban el intermedio).
+2. **Habilidades: las 174 que faltaban** de las especies en uso (`ability_families.gd`), con un test por familia (`tests/combate/test_habilidades.gd`, que además falla si alguna en uso se queda sin efecto). En el motor: `ability_effect()` con Gas Reactivo y Rompemoldes (lista `BREAKABLE` de Showdown), Nube Nueve, Indefenso, Intrépido contra Fantasma, Bromista contra Siniestro, Encadenado, Potencia Bruta (sin secundarios y sin el daño de la Vidasfera), Dicha, Viscosecreción, Presión, Sincronía, Madrugar, Ausente, Pareja de Baile, Rezagado, Ventosas, Viscosidad, Simbiosis, Carrillo, Nerviosismo, Zoquete, Pies Rápidos sin la bajada de la parálisis, Ilusión y cambios de forma (`BattleEvent.FORME`). Ganchos nuevos documentados en `docs/contratos.md` §8.7.
+3. **Objetos equipados**: los de la lista del encargo ya existían salvo los objetos de tipo; ahora hay unos 90 más (`item_families.gd`, test por familia en `tests/combate/test_objetos_equipados.gd`). **Nota:** ningún entrenador colocado lleva objeto y en partida solo se consiguen medicinas, Poké Balls, objetos de combate (X) y repelentes; por eso se han hecho los de la 9.ª generación más comunes y no una lista de «los que aparecen».
+4. Tests anteriores ajustados a reglas ahora correctas: Tijereta Furia con Experto (60), el fuego contra un Snorlax con Sebo y Plegaria Vital con elección.
+
+**Simplificaciones que quedan, tal cual:**
+- Nube Nueve y Bucle Aire anulan los efectos del tiempo que pasan por `engine.weather()`, pero el daño de la tormenta de arena al final del turno se sigue haciendo.
+- Velo Flor solo protege a quien la tiene (no a los aliados de tipo Planta). Humedad solo impide Explosión y compañía cuando su dueño es el objetivo.
+- Las absorciones (Absorbe Elec, Pararrayos…) solo se comprueban en el objetivo principal de los movimientos que alcanzan a varios.
+- Ilusión: el aspecto y el nombre del cartel de entrada son los del disfraz, pero los mensajes usan el nombre real.
+- Rumia vuelve a aplicar solo las bayas que curan PS o estado. Recogida actúa en combate (no busca objetos tras el combate).
+- Servicio Habitación y las semillas de campo actúan al entrar o al final del turno, no en el instante en que empieza el Espacio Raro o el campo.
+- Paraguas Multiusos, Escudo Habilidad, Orbe Adrenalina y Hierba Copia están registrados pero aún sin efecto.
+- Los 85 movimientos normales que nadie usa, Z, Dinamax/Gigamax y Teracristal: sin cambios en esta tanda (ver Pendiente).
+
+**Pendiente de este encargo:** 85 movimientos sin uso y movimientos Z/Dinamax/Tera según §8.5; mecánicas de campo (corrientes y escollos de la Ruta marítima 1, Fuerza, Golpe Roca, Corte, Cascada) configurables y marcadas PENDIENTE JAVIER; IA de líderes, Alto Mando y Pedro Sánchez con simulaciones (`tools/balance/simulate.gd`).
+
 ## Agente 1 — Mundo y arquitectura
 
 ### Agente 1 · Interiores personalizados (sesión del 2026-10-15)
