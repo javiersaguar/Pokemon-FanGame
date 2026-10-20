@@ -333,3 +333,171 @@ static func _plain(walk: Dictionary, starts: Array[Vector2i]) -> Dictionary:
 				dist[n] = dist[at] + 1
 				queue.append(n)
 	return dist
+
+
+# --- Segunda pasada a nivel Añil (2026-10-20) ---
+
+const PLAIN := ["grass", "", "stone", "sand", "dirt", "snow"]
+
+
+## Planta `id` con su base en `cell` si su base cabe en suelo libre y su dibujo no pisa el de otro objeto
+## ni el bosque.
+static func plantar(v: Vestidor, id: StringName, cell: Vector2i, grounds: Array = ["grass", "sand", "snow"]) -> bool:
+	var o: Dictionary = v.catalog[id]
+	for at: Vector2i in Pintor.cells(Rect2i(cell - Vector2i(0, o.size.y - 1), o.size)):
+		if not v.bounds.has_point(at) or v.covered.has(at) or v.forest.has(at) or v.objects.get_cell_source_id(at) != -1:
+			return false
+	for f: Vector2i in o.footprint:
+		if not v.open(cell + Vector2i(f), grounds):
+			return false
+	if not _sin_cortar(v, cell, o.footprint):
+		return false
+	return v.object(id, cell)
+
+
+## true si, con la base del objeto puesta, las casillas libres de alrededor siguen unidas entre sí cerca
+## (no corta un paso de una casilla).
+static func _sin_cortar(v: Vestidor, cell: Vector2i, footprint: Array) -> bool:
+	var base := {}
+	for f: Vector2i in footprint:
+		base[cell + Vector2i(f)] = true
+	var around: Array[Vector2i] = []
+	for at: Vector2i in base:
+		for d: Vector2i in DIRS:
+			if v.free.has(at + d) and not base.has(at + d) and not around.has(at + d):
+				around.append(at + d)
+	if around.size() < 2:
+		return true
+	var box := Rect2i(cell - Vector2i(7, 7), Vector2i(16, 15))
+	var seen := {around[0]: true}
+	var queue: Array[Vector2i] = [around[0]]
+	var cursor := 0
+	while cursor < queue.size():
+		var at := queue[cursor]
+		cursor += 1
+		for d: Vector2i in DIRS:
+			var n := at + d
+			if box.has_point(n) and v.free.has(n) and not base.has(n) and not seen.has(n):
+				seen[n] = true
+				queue.append(n)
+	return around.all(func(at: Vector2i) -> bool: return seen.has(at))
+
+
+## Casillas que se pisan y están vacías (sin hierba alta, camino, flores, adornos ni dibujo de objetos).
+static func vacias(v: Vestidor, with_protected: bool = false) -> Dictionary:
+	var out := {}
+	for at: Vector2i in v.free:
+		if v.terrain(at) in PLAIN and v.decor.get_cell_source_id(at) == -1 and not v.covered.has(at) \
+				and v.objects.get_cell_source_id(at) == -1 and (with_protected or not v.protected.has(at)):
+			out[at] = true
+	return out
+
+
+## El cuadrado vacío más grande: [esquina, lado].
+static func mayor_hueco(empty: Dictionary, bounds: Rect2i) -> Array:
+	var size := {}
+	var best := 0
+	var best_at := Vector2i.ZERO
+	for y: int in range(bounds.position.y, bounds.end.y):
+		for x: int in range(bounds.position.x, bounds.end.x):
+			var at := Vector2i(x, y)
+			if not empty.has(at):
+				continue
+			var s := 1 + mini(int(size.get(at + Vector2i.LEFT, 0)), mini(int(size.get(at + Vector2i.UP, 0)), int(size.get(at + Vector2i(-1, -1), 0))))
+			size[at] = s
+			if s > best:
+				best = s
+				best_at = at - Vector2i(s - 1, s - 1)
+	return [best_at, best]
+
+
+## Llena los huecos de más de `max_side` casillas de lado: en el centro de cada uno, un grupo de árboles
+## (`trees`) con flores, matas o piedras alrededor; en suelo empedrado, `urban` (alcorques, jardineras).
+static func llenar_huecos(v: Vestidor, max_side: int = 5, trees: Array = [&"arbol_redondo", &"arbol_verde", &"pino"],
+		urban: Array = [&"alcorque_arbol", &"jardinera_urbana"]) -> int:
+	var filled := 0
+	var tried := {}
+	for _i: int in 60:
+		var empty := vacias(v, true)
+		for at: Vector2i in tried:
+			empty.erase(at)
+		var hole := mayor_hueco(empty, v.bounds)
+		if int(hole[1]) <= max_side:
+			break
+		var side: int = hole[1]
+		var corner: Vector2i = hole[0]
+		var mid := corner + Vector2i(side / 2, side / 2)
+		var spots := Pintor.cells(Rect2i(corner + Vector2i(1, 1), Vector2i(side - 2, side - 2)))
+		spots.sort_custom(func(a: Vector2i, b: Vector2i) -> bool: return (a - mid).length_squared() < (b - mid).length_squared())
+		var placed := false
+		var ground := ""
+		var center := mid
+		for at: Vector2i in spots:
+			ground = v.terrain(at)
+			var paved := ground == "stone"
+			# En la arena, palmeras; en la nieve, pinos; en la hierba, `trees`; en el empedrado, `urban`.
+			var ids: Array = urban if paved else ([&"palmera"] if ground == "sand" else ([&"pino"] if ground == "snow" else trees))
+			for k: int in ids.size():
+				var id: StringName = ids[(filled + k) % ids.size()]
+				if plantar(v, id, at, [ground]):
+					placed = true
+					center = at
+					break
+			if placed:
+				break
+		if placed and ground != "stone":
+			var ring := Rect2i(center - Vector2i(2, 2), Vector2i(6, 5))
+			for at: Vector2i in Pintor.cells(ring):
+				if v.open(at, [ground]) and v.rng.randf() < 0.22:
+					var r := v.rng.randf()
+					if ground == "grass":
+						v.deco(at, ExteriorTiles.TUFT if r < 0.4 else (ExteriorTiles.ROCK if r < 0.55 else ExteriorTiles.PINK_FLOWERS))
+					else:
+						v.deco(at, ExteriorTiles.TUFT if r < 0.6 else ExteriorTiles.ROCK_BROWN, ExteriorTiles.SRC_GEN4, true)
+		if placed:
+			filled += 1
+		else:
+			for at: Vector2i in Pintor.cells(Rect2i(corner, Vector2i(side, side))):
+				tried[at] = true
+	return filled
+
+
+## Rompe los bordes rectos de bosque de más de `max_run` casillas: delante del borde, cada 5 o 7
+## casillas, un árbol suelto (o una mata) que se come la línea.
+static func romper_rectas(v: Vestidor, max_run: int = 10, trees: Array = [&"arbol_redondo", &"pino", &"arbol_verde"]) -> int:
+	var placed := 0
+	for dir: Vector2i in [Vector2i.RIGHT, Vector2i.DOWN]:
+		var normal := Vector2i(dir.y, dir.x)
+		for side: int in [-1, 1]:
+			var out := normal * side
+			var starts: Array[Vector2i] = []
+			for at: Vector2i in v.forest:
+				if v.free.has(at + out) and not (v.forest.has(at - dir) and v.free.has(at - dir + out)):
+					starts.append(at)
+			for start: Vector2i in starts:
+				var run: Array[Vector2i] = []
+				var t := start
+				while v.forest.has(t) and v.free.has(t + out):
+					run.append(t)
+					t += dir
+				if run.size() <= max_run:
+					continue
+				var i := 2 + v.rng.randi() % 3
+				while i < run.size() - 2:
+					var cell := run[i] + out
+					var ok := false
+					var kinds: Array = trees if v.terrain(cell) == "grass" else ([&"palmera"] if v.terrain(cell) == "sand" else [&"pino"])
+					for id: StringName in kinds:
+						var size: Vector2i = v.catalog[id].size
+						var base := run[i] + (out * size.y if out == Vector2i.DOWN else (out * size.x if out == Vector2i.LEFT else out))
+						if plantar(v, id, base):
+							ok = true
+							break
+					if not ok and v.open(cell):
+						ok = v.deco(cell, ExteriorTiles.TUFT_TALL)
+					if ok:
+						placed += 1
+						i += 5 + v.rng.randi() % 3
+					else:
+						i += 1
+	return placed

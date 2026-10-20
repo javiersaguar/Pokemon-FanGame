@@ -931,6 +931,33 @@ Worktree `pokemon-panchito-agente5`. Encargo, por orden: corrientes y escollos d
   - Alcance con 0 problemas y hierba obligada intacta en las 12 rutas.
   - [Ruta 5 antes](arte/comparativas/rutas_anil_3/ruta_5_entrenadores_antes.png) · [después](arte/comparativas/rutas_anil_3/ruta_5_entrenadores_despues.png).
 
+- **Segunda pasada a nivel Añil** (receta común `maps/_pintura/vestir/_anil_3.gd` y `_anil_3_huecos.gd`, ayudantes `Ruta.romper_rectas()`, `Ruta.llenar_huecos()` y `Ruta.plantar()`), en las 26 rutas y en las 22 ciudades con más huecos o bordes rectos.
+  - `maps/_tools/huecos.gd` mide cada mapa: el cuadrado vacío más grande, el porcentaje de casillas lisas y el borde recto de bosque más largo.
+  - Delante de los bordes rectos de bosque de más de 10 casillas va un árbol suelto cada 5 a 7.
+  - Cada hueco de más de 5 casillas lleva algo en el centro, según el suelo: árbol en la hierba, palmera en la arena, pino en la nieve, o alcorque con árbol o jardinera (piezas nuevas de Edificios) en el empedrado. Alrededor, matas, piedras y flores.
+  - No se planta nada que corte un paso de una casilla, tape algo protegido o pise otro dibujo. Ninguna puerta se mueve. Los 48 mapas se guardan con 0 problemas de alcance y con la hierba obligada intacta.
+  - **Resultado:** 44 de los 48 mapas quedan con huecos de 5 casillas o menos (antes, 8 rutas y 8 ciudades pasaban de 6). Quedan cuatro huecos de 6 en Málaga, Playa del Inglés, Orcasitas e Ibiza, pegados a bordes y entradas, que están protegidos.
+  - Comparativa con las 96 capturas y las cifras de antes y después, al lado de las referencias de Añil: [`arte/comparativas/rutas_anil_3/README.md`](arte/comparativas/rutas_anil_3/README.md).
+
+**Por debajo de Añil (revisado el 2026-10-20, rama `feat/rutas-anil-3`):**
+- Bordes rectos de bosque: siguen de más de 12 casillas en 19 mapas (la Ruta 13, por ejemplo, 72). La mayoría son las bandas del límite del mapa, donde no queda sitio delante. Los árboles que se ponen a unas casillas del borde lo tapan a la vista, pero la medida no los cuenta.
+- Ciudades empedradas como Sevilla o Valladolid: ya no tienen huecos grandes, pero siguen sin calzada y acera separadas. Para eso habría que repintar sus calles con los bordillos nuevos, moviendo mobiliario cerca de las puertas.
+- Entrenadores en pasos estrechos: en 14 rutas no hay ningún paso de menos de 6 casillas.
+- Atajos: no hay en las rutas 2, 4, 11 y 20, porque no hay rodeo que ahorrar.
+- Cascada: no hay casillas de cascada en el tileset; están pedidas a Edificios.
+
+**Provisional:** todo el arte, los textos de los obstáculos, de los atajos y del cartel del faro, y la colocación.
+
+**Fallos tal cual:**
+- En la primera prueba de la segunda pasada se plantaron árboles de hoja en las dunas de Playa del Inglés. Se deshizo y ahora la arena lleva palmeras.
+- Un árbol nuevo de la Ruta 20 dejaba sin acceso la Hiperpoción del hayedo. `vestir_exterior.gd` no guardó el mapa; ahora `Ruta.plantar()` comprueba que no corta pasos de una casilla.
+- El primer intento de integrar los obstáculos no llegó a `main`: el `commit` vacío cortó la cadena de órdenes. Se integró en la siguiente.
+
+**PENDIENTE JAVIER:**
+- La progresión de las acciones de campo (`data/world.json` → `field.actions`). Hasta entonces, los objetos que hay detrás de los obstáculos no se pueden coger.
+- Si quiere atajos en las rutas 2, 4, 11 y 20 aunque haya que crearles un rodeo.
+- Revisar las capturas de `rutas_anil_3/`.
+
 ### Piezas propias de los hitos prestados (2026-10-14)
 
 Sustituidas en el mapa, sin repintar (las demás puertas se quedan):
