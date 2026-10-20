@@ -183,3 +183,39 @@ func test_bernabeu_tiene_puerta_propia_y_conserva_las_cinco_pasarelas() -> void:
 		assert_false(map.get_world_2d().direct_space_state.intersect_point(query,1).is_empty(),"la pared lateral se conserva: %s"%tile)
 	map.queue_free()
 	await wait_physics_frames(2)
+
+func test_fachadas_terminadas_conservan_su_interior_y_regreso() -> void:
+	GameState.reset()
+	var entries := [
+		[&"camp_nou",&"barcelona/les_corts",Vector2i(16,40),&"barcelona/gimnasio_1"],
+		[&"sagrada_familia",&"barcelona/eixample",Vector2i(50,41),&"barcelona/sala_eixample_55_41"],
+		[&"palacio_real",&"madrid/palacio_real",Vector2i(14,30),&"madrid/sala_palacio_real_23_30"],
+	]
+	for entry: Array in entries:
+		var piece: Dictionary = ExteriorTiles.objects()[entry[0]]
+		var prepared := MapLoader.prepare(entry[1])
+		assert_eq(prepared.error,OK)
+		var map: MapRoot = prepared.map
+		add_child(map)
+		await wait_physics_frames(2)
+		assert_eq(map.get_layer(&"Entities/Objects").get_cell_source_id(entry[2]),int(piece.source))
+		var door: Vector2i = entry[2]+piece.door
+		var entrance := map.warp_at(door)
+		assert_not_null(entrance,String(entry[0]))
+		if entrance != null:
+			assert_eq(entrance.target_map,entry[3])
+			var inside := MapLoader.prepare(entrance.target_map)
+			assert_eq(inside.error,OK)
+			var room: MapRoot = inside.map
+			var exit := room.get_node(^"Warps/Salida") as Warp
+			assert_eq(exit.target_map,map.get_map_id())
+			var back: Vector2i = MapLoader.spawn_tile(map,exit.target_spawn)
+			assert_eq(back,door+Vector2i.DOWN)
+			for tile: Vector2i in [door,back]:
+				var query := PhysicsPointQueryParameters2D.new()
+				query.position = map.to_global(Grid.to_world(tile))
+				query.collision_mask = 1 | 2 | 8
+				assert_true(map.get_world_2d().direct_space_state.intersect_point(query,1).is_empty(),"%s: acceso libre %s"%[entry[0],tile])
+			room.free()
+		map.queue_free()
+		await wait_physics_frames(2)

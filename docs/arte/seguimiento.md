@@ -725,3 +725,11 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Recurso | Estado | Aprobación Javier | Evidencia |
 |---|---|---|---|
 | Entrada física de la pieza 375 | hueco transitable y futuro regreso libre; sin pasarela ni salas propias todavía; provisional | pendiente | [Contrato autorizado, colisión y comparativa](comparativas/edificios_reales.md#bernabéu--hueco-de-entrada-preparado-21-de-octubre) |
+
+## Cierre de fachadas parciales · 21 de octubre de 2026
+
+| Recurso | Estado | Aprobación Javier | Evidencia |
+|---|---|---|---|
+| Camp Nou, graderías, campo y cubierta parcial | fuente redibujada y acceso visible; interior conservado; provisional | pendiente | [Revisión anterior y nueva](comparativas/edificios_reales.md#parciales-terminados--21-de-octubre-de-2026) |
+| Sagrada Família, torres y portadas | fuente redibujada, relieve simplificado a escala e interior conservado; provisional | pendiente | [Revisión anterior y nueva](comparativas/edificios_reales.md#parciales-terminados--21-de-octubre-de-2026) |
+| Palacio Real, reloj, escudo y estatuas | detalles y puerta de madera; misma casilla de entrada y vestíbulo; provisional | pendiente | [Revisión anterior y nueva](comparativas/edificios_reales.md#parciales-terminados--21-de-octubre-de-2026) |
