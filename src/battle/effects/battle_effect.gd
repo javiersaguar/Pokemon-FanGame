@@ -429,3 +429,25 @@ func ignores_boosts() -> bool:
 func traps_foe(_engine: BattleEngine, _holder: Battler, _b: Battler) -> bool:
 	return false
 
+
+# --- Objetos equipados (segunda parte de la fase 9.5) ---
+
+## Actúa primero dentro de su prioridad este turno (Garra Rápida, baya Chiri). Se pregunta una vez por turno.
+func moves_first(_engine: BattleEngine, _b: Battler) -> bool:
+	return false
+
+
+## Le ha bajado alguna característica, por lo que sea (Hierba Blanca, Mochila Escape).
+func after_stat_drop(_engine: BattleEngine, _b: Battler) -> void:
+	pass
+
+
+## Bayas de apuro que no curan: hace su efecto y devuelve true si se la come.
+func on_pinch(_engine: BattleEngine, _b: Battler) -> bool:
+	return false
+
+
+## Alarga a 8 turnos la condición que pone quien lo lleva (Refleluz, rocas del tiempo, Cubrecampos).
+func extends_condition(_condition_id: StringName) -> bool:
+	return false
+

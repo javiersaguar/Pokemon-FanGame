@@ -17,6 +17,11 @@ func charge_turn(engine: BattleEngine, user: Battler, move: MoveData) -> bool:
 		return false
 	if skip_in_sun and engine.weather() == &"sunnyday":
 		return false
+	if user.pokemon.held_item == &"powerherb":
+		engine.message(tr(charge_text) % engine.name_of(user))
+		engine.message(tr("¡%s ha usado su Hierba Única!") % engine.name_of(user))
+		engine.consume_held_item(user)
+		return false
 	engine.add_volatile(user, &"twoturnmove", null, {"move": String(move.id), "invulnerable": String(invulnerable)})
 	engine.message(tr(charge_text) % engine.name_of(user))
 	return true

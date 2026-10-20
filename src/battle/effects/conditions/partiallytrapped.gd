@@ -19,7 +19,8 @@ func on_residual(engine: BattleEngine, holder: Variant, state: Dictionary) -> vo
 		engine.remove_volatile(trapped, &"partiallytrapped")
 		return
 	engine.message(tr("¡%s sufre el efecto de %s!") % [engine.name_of(trapped), str(state.get("move_name", ""))])
-	engine.deal_damage(trapped, maxi(1, trapped.pokemon.max_hp() / 8), &"partiallytrapped")
+	var denom := 6 if source.pokemon.held_item == &"bindingband" else 8
+	engine.deal_damage(trapped, maxi(1, trapped.pokemon.max_hp() / denom), &"partiallytrapped")
 
 
 func on_end(engine: BattleEngine, holder: Variant, state: Dictionary) -> void:

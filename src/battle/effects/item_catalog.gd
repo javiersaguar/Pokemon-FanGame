@@ -7,7 +7,10 @@ static func make(id: StringName) -> BattleEffect:
 	if id in CHOICE or id in HEAL_BERRIES or id in STATUS_BERRIES or id in RESIST_BERRIES \
 			or id in [&"leftovers", &"focussash", &"lifeorb", &"assaultvest", &"rockyhelmet", &"lumberry"]:
 		return ItemBehavior.new()
-	return null
+	return ItemFamilies.make(id)
+
+
+const ItemFamilies := preload("res://src/battle/effects/item_families.gd")
 
 
 const CHOICE: Array[StringName] = [&"choiceband", &"choicespecs", &"choicescarf"]

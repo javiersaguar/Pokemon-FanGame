@@ -459,6 +459,7 @@ func _begin_turn(player_action: Variant = null) -> void:
 				"priority": _action_priority(b, action),
 				"speed": _speed(b),
 				"last": _passives(b).any(func(e: BattleEffect) -> bool: return e.moves_last()),
+				"first": action.kind == BattleAction.Kind.FIGHT and _passives(b).any(func(e: BattleEffect) -> bool: return e.moves_first(self, b)),
 				"tie": rng.randf(),
 			})
 	_double_chosen.clear()
@@ -483,6 +484,8 @@ func _entry_goes_first(a: Dictionary, b: Dictionary) -> bool:
 		return a["order"] < b["order"]
 	if a["priority"] != b["priority"]:
 		return a["priority"] > b["priority"]
+	if a.get("first", false) != b.get("first", false):
+		return a.get("first", false)
 	if a.get("last", false) != b.get("last", false):
 		return b.get("last", false)
 	if a["speed"] != b["speed"]:
@@ -1591,6 +1594,15 @@ func _accuracy_hits(user: Battler, target: Battler, move: MoveData, effect: Batt
 	var target_ability := ability_effect(target)
 	if target_ability != null:
 		accuracy = target_ability.modify_incoming_accuracy(self, user, target, move, accuracy)
+	for passive: BattleEffect in _passives(user):
+		if passive != user_ability:
+			accuracy = passive.modify_accuracy(self, user, target, move, accuracy)
+	for passive: BattleEffect in _passives(target):
+		if passive != target_ability:
+			accuracy = passive.modify_incoming_accuracy(self, user, target, move, accuracy)
+	if user.has_volatile(&"micleberry"):
+		user.volatiles.erase(&"micleberry")
+		accuracy = DamageCalc.modify(accuracy, 4915, 4096)
 	var stage: int = 0 if target_ability != null and target_ability.ignores_boosts() else user.boosts[&"accuracy"]
 	var ignores_evasion := move.ignore_evasion or (user_ability != null and user_ability.ignores_boosts())
 	if user.ability in [&"keeneye", &"illuminate", &"mindseye"]:
@@ -1634,6 +1646,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	var hits := scripted_hits if scripted_hits >= 0 else _roll_hits(move)
 	if scripted_hits < 0 and user.ability == &"skilllink" and move.multihit_max > move.multihit_min:
 		hits = move.multihit_max
+	elif scripted_hits < 0 and user.pokemon.held_item == &"loadeddice" and move.multihit_min == 2 and move.multihit_max == 5:
+		hits = rand_int(&"multihit", 4, 5)
 	if _forced_hits > 0:
 		hits = _forced_hits
 		_forced_hits = 0
@@ -1685,6 +1699,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		# El drenaje cura con cada golpe, nada más hacer el daño (antes del Casco Dentado del rival).
 		if not move.drain.is_empty() and dealt > 0 and not user.is_fainted():
 			var drained := roundi(dealt * float(move.drain[0]) / move.drain[1])
+			if user.pokemon.held_item == &"bigroot":
+				drained = DamageCalc.modify(drained, 5324, 4096)
 			if target.ability == &"liquidooze":
 				_damage(user, maxi(1, drained), &"liquidooze")
 				_msg(tr("¡%s ha absorbido el lodo líquido!") % BattleText.cap_name(user, wild))
@@ -1866,6 +1882,9 @@ func _apply_secondary(user: Battler, target: Battler, sec: Dictionary) -> void:
 	# (Nitrocarga, Abrecaminos...) sí se aplican, como en Showdown (onModifySecondaries).
 	var dust := ability_effect(target)
 	var shielded := dust != null and dust.blocks_secondary()
+	var cloak := Effects.item(target.pokemon.held_item)
+	if cloak != null and cloak.blocks_secondary() and not field.has("magicroom"):
+		shielded = true
 	if not target.is_fainted() and not shielded:
 		if sec.has("status"):
 			_try_set_status(target, StringName(sec["status"]), false, user)
@@ -1940,6 +1959,8 @@ func _eat_healing_berry(b: Battler) -> void:
 		return
 	var amount := held.heal_amount(b)
 	if amount <= 0:
+		if held.on_pinch(self, b):
+			consume_held_item(b)
 		return
 	var confuse := held.pinch_confuses(b)
 	consume_held_item(b)
@@ -2066,11 +2087,14 @@ func _apply_boosts(target: Battler, boosts: Dictionary[StringName, int], seconda
 	var guard := ability_effect(target)
 	var by_foe := _move_user == null or _move_user.side != target.side
 	var lowered := false
+	var dropped := false
 	for stat: StringName in boosts:
 		if not target.boosts.has(stat):
 			continue
 		var delta: int = guard.modify_boost(boosts[stat]) if guard != null else boosts[stat]
-		if delta < 0 and by_foe and guard != null and guard.prevents_foe_drop():
+		var amulet := Effects.item(target.pokemon.held_item)
+		var foe_drop_blocked := (guard != null and guard.prevents_foe_drop()) or (amulet != null and amulet.prevents_foe_drop())
+		if delta < 0 and by_foe and foe_drop_blocked:
 			if target.ability == &"mirrorarmor" and _move_user != null and _move_user != target and not _mirroring:
 				_mirroring = true
 				_apply_boosts(_move_user, {stat: delta} as Dictionary[StringName, int], secondary)
@@ -2095,11 +2119,16 @@ func _apply_boosts(target: Battler, boosts: Dictionary[StringName, int], seconda
 			_msg(BattleText.stat_change(target, wild, stat, applied))
 			shown = true
 			lowered = lowered or (applied < 0 and by_foe)
+			dropped = dropped or applied < 0
 		elif not secondary:
 			_msg(BattleText.stat_limit(target, wild, stat, delta > 0))
 			shown = true
 	if lowered and guard != null and not target.is_fainted():
 		guard.on_stat_lowered(self, target)
+	if dropped and not target.is_fainted():
+		var held := Effects.item(target.pokemon.held_item)
+		if held != null and not field.has("magicroom"):
+			held.after_stat_drop(self, target)
 	return shown
 
 
@@ -2965,6 +2994,8 @@ func add_volatile(b: Battler, id: StringName, source: Battler = null, data: Dict
 		message(tr("¡%s se protege con su habilidad!") % name_of(b))
 		return false
 	var state := _new_state(id, data)
+	if id == &"partiallytrapped" and source != null and source.pokemon.held_item == &"gripclaw":
+		state["turns"] = 8
 	var effect := Effects.condition(id)
 	if effect != null and not effect.on_start(self, b, state, source):
 		return false
@@ -2984,6 +3015,7 @@ func add_side_condition(side_index: int, id: StringName, source: Battler = null,
 	if conditions.has(id):
 		return false
 	var state := _new_state(id, data)
+	_extend_by_item(state, id, source)
 	var effect := Effects.condition(id)
 	if effect != null and not effect.on_start(self, _sides[side_index], state, source):
 		return false
@@ -3046,6 +3078,7 @@ func _set_field(key: StringName, id: StringName, source: Battler) -> bool:
 	if StringName(str(field.get(String(key), {}).get("id", ""))) == id:
 		return false
 	var state := _new_state(id, {})
+	_extend_by_item(state, id, source)
 	var effect := Effects.condition(id)
 	if effect != null and not effect.on_start(self, null, state, source):
 		return false
@@ -3054,6 +3087,14 @@ func _set_field(key: StringName, id: StringName, source: Battler) -> bool:
 	field[String(key)] = state
 	_condition_event(null, key, true)
 	return true
+
+
+func _extend_by_item(state: Dictionary, id: StringName, source: Battler) -> void:
+	if source == null or int(state.get("turns", 0)) <= 0:
+		return
+	var held := Effects.item(source.pokemon.held_item)
+	if held != null and held.extends_condition(id):
+		state["turns"] = 8
 
 
 func _new_state(id: StringName, data: Dictionary) -> Dictionary:
