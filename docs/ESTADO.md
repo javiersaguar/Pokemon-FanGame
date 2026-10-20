@@ -766,6 +766,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - Bloque integrado (rutas 13, 23, 19 y 17): suite 689/689, arte 11.568 PNG 0/0, datos 0 errores (1 aviso), grafo 961/961.
 - **Ruta 12 · Sierra Nevada:** receta `maps/_pintura/vestir/ruta_12.gd`. Paso obligado por hierba de la sierra al pinar, flores, piedras y arboleda. Hierba mínima Ruta 13 ⇄ Murcia: 2 (antes 0). Alcance desde `from_ruta_13` y `from_murcia`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 - **Ruta 14 · Doñana:** receta `maps/_pintura/vestir/ruta_14.gd`. Paso obligado por juncos a la salida de Sevilla, juncos en las lagunas, barcas y pinos. Hierba mínima Sevilla ⇄ Huelva: 2 (antes 0). Alcance desde `from_sevilla` y `from_huelva`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
+- **Ruta 18 · Picos de Europa:** receta `maps/_pintura/vestir/ruta_18.gd`. Paso obligado por hierba de bosque a bosque antes de Santander, seto, flores y arboleda. Hierba mínima Ruta 17 ⇄ Santander: 2 (antes 0). Alcance desde `from_ruta_17` y `from_santander`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 
 **Provisional:** arte, textos del guarda y colocación.
 
