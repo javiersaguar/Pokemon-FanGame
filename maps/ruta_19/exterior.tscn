@@ -94,15 +94,15 @@ turn_to_player = true
 sprite_sheet = ExtResource("9_iufkb")
 
 [node name="Pescador" type="Node2D" parent="Entities" unique_id=1541951113 instance=ExtResource("7_6tovd")]
-position = Vector2(1456, 432)
+position = Vector2(1456, 752)
 script = ExtResource("8_xcqh0")
 trainer_id = &"ruta19_pescador"
-sight_range = 3
+sight_range = 5
 display_name = "Pescador Chema"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("10_gmr12")
-initial_facing = 1
+initial_facing = 3
 
 [node name="Bocartera" type="Node2D" parent="Entities" unique_id=1795449116 instance=ExtResource("10_neynj")]
 position = Vector2(1392, 496)

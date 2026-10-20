@@ -58,21 +58,21 @@ tile_map_data = PackedByteArray("AAAIAAkAdgEAAAAAAAAiAAoABgAOAAAAAAAcAD8ABAASAAA
 tile_set = ExtResource("4_skb2e")
 
 [node name="Guia" type="Node2D" parent="Entities" unique_id=395360280 instance=ExtResource("5_u0nsr")]
-position = Vector2(688, 464)
+position = Vector2(400, 656)
 script = ExtResource("6_gaaaa")
 trainer_id = &"ruta26_guia"
-sight_range = 3
+sight_range = 5
 display_name = "Arqueólogo Elena"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("7_gaaaa")
-initial_facing = 1
+initial_facing = 2
 
 [node name="Escaladora" type="Node2D" parent="Entities" unique_id=382710297 instance=ExtResource("5_u0nsr")]
-position = Vector2(944, 1392)
+position = Vector2(1008, 1456)
 script = ExtResource("6_gaaaa")
 trainer_id = &"ruta26_escaladora"
-sight_range = 3
+sight_range = 5
 display_name = "Montañera Inés"
 lines = PackedStringArray()
 turn_to_player = true

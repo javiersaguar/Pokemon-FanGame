@@ -7,17 +7,22 @@ extends SceneTree
 ##   <mapa>: id sin res://maps/ ni .tscn (ruta_16/exterior). La receta se llama como el mapa con
 ##   «/» cambiada por «_» y sin «_exterior» (ruta_16.gd, madrid_centro.gd).
 ##   --prueba: no guarda; solo dice lo que haría.
+##   --receta=<res://...gd>: usa esa receta en todos los mapas (por ejemplo, _entrenadores.gd).
 
 const DIRS: Array[Vector2i] = [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT]
 const RECIPES := "res://maps/_pintura/vestir/"
 
 var _failed := 0
+var _recipe_override := ""
 
 
 func _initialize() -> void:
 	await process_frame
 	var args := Array(OS.get_cmdline_user_args())
 	var dry := "--prueba" in args
+	for arg: String in args:
+		if arg.begins_with("--receta="):
+			_recipe_override = arg.get_slice("=", 1)
 	for mid: String in args:
 		if mid.begins_with("--"):
 			continue
@@ -31,12 +36,18 @@ static func recipe_path(mid: String) -> String:
 
 func _dress(mid: String, dry: bool) -> void:
 	var path := "res://maps/%s.tscn" % mid
-	var recipe_file := recipe_path(mid)
+	var recipe_file := _recipe_override if _recipe_override != "" else recipe_path(mid)
 	if not FileAccess.file_exists(recipe_file):
 		push_error("vestir: no hay receta %s" % recipe_file)
 		_failed += 1
 		return
 	var map: Node2D = (load(path) as PackedScene).instantiate()
+	# Los entrenadores rellenan su nombre y su hoja con los datos al entrar en el árbol: se guardan como
+	# estaban en el mapa, para no fijar en él lo que dicen hoy los datos.
+	var trainer_fields := {}
+	for node: Node in map.get_node("Entities").get_children():
+		if node.get(&"trainer_id") != null:
+			trainer_fields[node.name] = [node.get(&"display_name"), node.get(&"sprite_sheet")]
 	root.add_child(map)
 	await physics_frame
 	await physics_frame
@@ -119,6 +130,11 @@ func _dress(mid: String, dry: bool) -> void:
 		map.free()
 		return
 	v.commit_entities()
+	for node_name: StringName in trainer_fields:
+		var node := map.get_node("Entities").get_node_or_null(NodePath(node_name))
+		if node != null:
+			node.set(&"display_name", trainer_fields[node_name][0])
+			node.set(&"sprite_sheet", trainer_fields[node_name][1])
 	var packed := PackedScene.new()
 	var error := packed.pack(map)
 	if error == OK:

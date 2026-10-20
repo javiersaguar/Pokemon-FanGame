@@ -108,25 +108,26 @@ sprite_sheet = ExtResource("9_ga87v")
 initial_facing = 3
 
 [node name="Nuria" type="Node2D" parent="Entities" unique_id=409456205 instance=ExtResource("7_vfv51")]
-position = Vector2(1264, 624)
+position = Vector2(1296, 880)
 script = ExtResource("8_ga87v")
 trainer_id = &"ruta5_opositora"
-sight_range = 3
+sight_range = 5
 display_name = "Opositor eterno Nuria"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("10_xkdii")
+initial_facing = 2
 
 [node name="Alex" type="Node2D" parent="Entities" unique_id=998023786 instance=ExtResource("7_vfv51")]
-position = Vector2(1488, 592)
+position = Vector2(1552, 880)
 script = ExtResource("8_ga87v")
 trainer_id = &"ruta5_estudiante"
-sight_range = 3
+sight_range = 5
 display_name = "Estudiante de Ingeniería en exámenes Álex"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("11_11a4j")
-initial_facing = 1
+initial_facing = 2
 
 [node name="Guia" type="Node2D" parent="Entities" unique_id=792671864 instance=ExtResource("10_11a4j")]
 position = Vector2(976, 432)
@@ -160,15 +161,15 @@ sprite_sheet = ExtResource("18_683dj")
 initial_facing = 3
 
 [node name="Tuno" type="Node2D" parent="Entities" unique_id=526536690 instance=ExtResource("7_vfv51")]
-position = Vector2(1360, 720)
+position = Vector2(1936, 656)
 script = ExtResource("8_ga87v")
 trainer_id = &"ruta5_tuno"
-sight_range = 3
+sight_range = 5
 display_name = "Tuno Ignacio"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("19_k7ssn")
-initial_facing = 1
+initial_facing = 2
 
 [node name="PescadorHenares" type="Node2D" parent="Entities" unique_id=537229137 instance=ExtResource("10_11a4j")]
 position = Vector2(1168, 912)

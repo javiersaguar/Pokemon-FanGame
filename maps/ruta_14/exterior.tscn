@@ -110,14 +110,15 @@ turn_to_player = true
 sprite_sheet = ExtResource("10_lfdpc")
 
 [node name="Paco" type="Node2D" parent="Entities" unique_id=116332201 instance=ExtResource("7_lfdpc")]
-position = Vector2(656, 880)
+position = Vector2(304, 912)
 script = ExtResource("8_s5c8k")
 trainer_id = &"ruta14_guarda"
+sight_range = 5
 display_name = "Guarda del parque Paco"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("11_s5c8k")
-initial_facing = 2
+initial_facing = 3
 
 [node name="Romera" type="Node2D" parent="Entities" unique_id=1095415594 instance=ExtResource("10_u3f7q")]
 position = Vector2(1328, 176)

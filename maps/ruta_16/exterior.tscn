@@ -85,15 +85,15 @@ lines = PackedStringArray("BATEA.", "Mejillón de la ría. El cupo, como el de l
 show_sprite = false
 
 [node name="Roi" type="Node2D" parent="Entities" unique_id=1130588423 instance=ExtResource("7_vyccr")]
-position = Vector2(720, 976)
+position = Vector2(560, 1136)
 script = ExtResource("8_kp77d")
 trainer_id = &"ruta16_regatista"
-sight_range = 3
+sight_range = 5
 display_name = "Regatista Roi"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("9_vyccr")
-initial_facing = 1
+initial_facing = 2
 
 [node name="Iria" type="Node2D" parent="Entities" unique_id=355233381 instance=ExtResource("7_vyccr")]
 position = Vector2(496, 1296)

@@ -913,6 +913,15 @@ Worktree `pokemon-panchito-agente5`. Encargo, por orden: corrientes y escollos d
   - Alcance con 0 problemas en las 13 rutas tocadas.
 - Herramientas: `maps/_tools/buscar_bloqueos.gd` propone bolsas y atajos, y `captura_mapa.gd` acepta un recorte en casillas.
 
+- **Entrenadores en los pasos estrechos** (`_ruta.gd` → `entrenadores_en_pasos()`, receta común `maps/_pintura/vestir/_entrenadores.gd`, con `vestir_exterior.gd -- <rutas> --receta=...`). Solo se mueven los entrenadores propios de cada ruta (`data/trainers/<ruta>.json`); quedan fuera las parejas y los que se colocan por datos. Ni equipos ni niveles cambian, y cada uno se queda en su tramo de la ruta.
+  - Regla: un paso es bueno si, para no cruzar la vista del entrenador (5 casillas como mucho), hay que pisar más hierba o no se puede, y si el entrenador no tapa el camino una vez vencido. Se prefieren los que están de espaldas a una pared. No se ponen junto a puertas, pasarelas ni bordes, ni en la vista de otro.
+  - **Movidos 21 entrenadores en 12 rutas:** 1 (2), 3 (1), 5 (3), 6 (1), 8 (2), 9 (1), 14 (1), 16 (1), 17 (3), 18 (3), 19 (1) y 26 (2). Por ejemplo, en la Ruta 5 dos entrenadores vigilan el camino de la ribera, entre la hierba y el río.
+  - Los demás se quedan donde estaban, porque en su tramo no hay ningún paso estrecho libre.
+  - **Rutas 2, 4, 7, 10, 11, 12, 13, 15, 20, 21, 22, 23, 24 y 25 sin cambios:** todos sus pasos tienen más de 6 casillas de ancho o la hierba los cruza de lado a lado, así que cualquier sitio se rodea con la misma hierba. Para hacer pasos estrechos habría que repintar el relieve de esas rutas.
+  - El guardado ya no fija en el mapa el nombre y la hoja que los entrenadores sacan de los datos.
+  - Alcance con 0 problemas y hierba obligada intacta en las 12 rutas.
+  - [Ruta 5 antes](arte/comparativas/rutas_anil_3/ruta_5_entrenadores_antes.png) · [después](arte/comparativas/rutas_anil_3/ruta_5_entrenadores_despues.png).
+
 ### Piezas propias de los hitos prestados (2026-10-14)
 
 Sustituidas en el mapa, sin repintar (las demás puertas se quedan):

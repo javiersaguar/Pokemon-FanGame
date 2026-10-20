@@ -93,10 +93,10 @@ lines = PackedStringArray("→ Ruta 18 · Asturias y Picos de Europa.", "Sidra, 
 show_sprite = false
 
 [node name="Peregrina" type="Node2D" parent="Entities" unique_id=611484374 instance=ExtResource("7_85ijk")]
-position = Vector2(688, 784)
+position = Vector2(688, 912)
 script = ExtResource("8_qpqcj")
 trainer_id = &"ruta17_peregrina"
-sight_range = 3
+sight_range = 5
 display_name = "Montañera Uxía"
 lines = PackedStringArray()
 turn_to_player = true
@@ -104,10 +104,10 @@ sprite_sheet = ExtResource("9_sjtoh")
 initial_facing = 1
 
 [node name="Marisquero" type="Node2D" parent="Entities" unique_id=1173400419 instance=ExtResource("7_85ijk")]
-position = Vector2(432, 1008)
+position = Vector2(528, 1008)
 script = ExtResource("8_qpqcj")
 trainer_id = &"ruta17_marisquero"
-sight_range = 3
+sight_range = 5
 display_name = "Pescador Xurxo"
 lines = PackedStringArray()
 turn_to_player = true
@@ -115,10 +115,10 @@ sprite_sheet = ExtResource("10_85ijk")
 initial_facing = 2
 
 [node name="Gaiteiro" type="Node2D" parent="Entities" unique_id=841710060 instance=ExtResource("7_85ijk")]
-position = Vector2(1456, 528)
+position = Vector2(1552, 432)
 script = ExtResource("8_qpqcj")
 trainer_id = &"ruta17_gaiteiro"
-sight_range = 3
+sight_range = 5
 display_name = "Flautista Brais"
 lines = PackedStringArray()
 turn_to_player = true

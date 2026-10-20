@@ -130,7 +130,7 @@ lines = PackedStringArray("↓ RUTA 10 · COSTA BLANCA.", "Benidorm: más rascac
 show_sprite = false
 
 [node name="Vicent" type="Node2D" parent="Entities" unique_id=1796997280 instance=ExtResource("7_3m23x")]
-position = Vector2(464, 848)
+position = Vector2(976, 1008)
 script = ExtResource("8_bxqyk")
 trainer_id = &"ruta9_pescador"
 sight_range = 5
@@ -138,7 +138,7 @@ display_name = "Pescador Vicent"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("9_3m23x")
-initial_facing = 2
+initial_facing = 1
 
 [node name="Pilar" type="Node2D" parent="Entities" unique_id=157078961 instance=ExtResource("7_3m23x")]
 position = Vector2(1232, 720)

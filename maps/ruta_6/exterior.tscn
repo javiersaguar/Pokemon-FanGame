@@ -85,15 +85,14 @@ lines = PackedStringArray("MESÓN DE LA DOLORES · Calatayud.", "«Si vas a Cala
 show_sprite = false
 
 [node name="Cirilo" type="Node2D" parent="Entities" unique_id=927254203 instance=ExtResource("7_ik6fm")]
-position = Vector2(336, 720)
+position = Vector2(496, 560)
 script = ExtResource("8_7ym3b")
 trainer_id = &"ruta6_pastor"
-sight_range = 3
+sight_range = 5
 display_name = "Pastor Cirilo"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("9_bighi")
-initial_facing = 3
 
 [node name="Anselmo" type="Node2D" parent="Entities" unique_id=2051493694 instance=ExtResource("7_ik6fm")]
 position = Vector2(1616, 720)

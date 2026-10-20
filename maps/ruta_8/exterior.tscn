@@ -85,10 +85,10 @@ lines = PackedStringArray("SANT ESTEVE SESROVIRES.", "Pueblo de una cantante que
 show_sprite = false
 
 [node name="Laia" type="Node2D" parent="Entities" unique_id=986347742 instance=ExtResource("7_f2i6g")]
-position = Vector2(656, 592)
+position = Vector2(304, 592)
 script = ExtResource("8_hdoof")
 trainer_id = &"ruta8_laia"
-sight_range = 3
+sight_range = 5
 display_name = "Montañera Laia"
 lines = PackedStringArray()
 turn_to_player = true
@@ -96,10 +96,10 @@ sprite_sheet = ExtResource("9_f2i6g")
 initial_facing = 3
 
 [node name="Oriol" type="Node2D" parent="Entities" unique_id=542380042 instance=ExtResource("7_f2i6g")]
-position = Vector2(1488, 304)
+position = Vector2(1936, 944)
 script = ExtResource("8_hdoof")
 trainer_id = &"ruta8_flautista"
-sight_range = 3
+sight_range = 5
 display_name = "Flautista Oriol"
 lines = PackedStringArray()
 turn_to_player = true

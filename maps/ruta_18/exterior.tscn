@@ -92,37 +92,34 @@ lines = PackedStringArray("→ Santander.", "Rabas, Sardinero y el Palacio de la
 show_sprite = false
 
 [node name="Escanciador" type="Node2D" parent="Entities" unique_id=1984782632 instance=ExtResource("7_wi4p4")]
-position = Vector2(912, 784)
+position = Vector2(1584, 624)
 script = ExtResource("8_3mbe3")
 trainer_id = &"ruta18_escanciador"
-sight_range = 3
+sight_range = 5
 display_name = "Camarero sin propina Nel"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("9_8q280")
-initial_facing = 3
 
 [node name="Vaqueira" type="Node2D" parent="Entities" unique_id=748331701 instance=ExtResource("7_wi4p4")]
-position = Vector2(1424, 784)
+position = Vector2(1136, 656)
 script = ExtResource("8_3mbe3")
 trainer_id = &"ruta18_vaqueira"
-sight_range = 3
+sight_range = 5
 display_name = "Pastor Covadonga"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("10_wi4p4")
-initial_facing = 2
 
 [node name="Montanero" type="Node2D" parent="Entities" unique_id=1108329808 instance=ExtResource("7_wi4p4")]
-position = Vector2(1232, 304)
+position = Vector2(1968, 624)
 script = ExtResource("8_3mbe3")
 trainer_id = &"ruta18_montanero"
-sight_range = 3
+sight_range = 5
 display_name = "Montañera Pelayo"
 lines = PackedStringArray()
 turn_to_player = true
 sprite_sheet = ExtResource("11_3mbe3")
-initial_facing = 1
 
 [node name="Guia" type="Node2D" parent="Entities" unique_id=1016898483 instance=ExtResource("10_vbjss")]
 position = Vector2(1072, 528)
