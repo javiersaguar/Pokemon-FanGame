@@ -1,0 +1,76 @@
+{
+  "authorization": "Javier, encargo del 2026-10-20: preparar puerta sin enlazar interior",
+  "source": 375,
+  "size": [
+    12,
+    6
+  ],
+  "before_door": [
+    -1,
+    -1
+  ],
+  "door": [
+    5,
+    0
+  ],
+  "anchor": [
+    14,
+    14
+  ],
+  "world_door": [
+    19,
+    14
+  ],
+  "future_return": [
+    19,
+    15
+  ],
+  "map": "madrid/bernabeu",
+  "warps": [
+    {
+      "name": "Sala4_9",
+      "tile": [
+        4,
+        9
+      ],
+      "target_map": "madrid/sala_bernabeu_4_9",
+      "target_spawn": "default"
+    },
+    {
+      "name": "Sala34_9",
+      "tile": [
+        34,
+        9
+      ],
+      "target_map": "madrid/sala_bernabeu_34_9",
+      "target_spawn": "default"
+    },
+    {
+      "name": "Sala4_26",
+      "tile": [
+        4,
+        26
+      ],
+      "target_map": "madrid/sala_bernabeu_4_26",
+      "target_spawn": "default"
+    },
+    {
+      "name": "Sala34_26",
+      "tile": [
+        34,
+        26
+      ],
+      "target_map": "madrid/sala_bernabeu_34_26",
+      "target_spawn": "default"
+    },
+    {
+      "name": "Sala12_8",
+      "tile": [
+        12,
+        8
+      ],
+      "target_map": "madrid/sala_bernabeu_12_8",
+      "target_spawn": "default"
+    }
+  ]
+}

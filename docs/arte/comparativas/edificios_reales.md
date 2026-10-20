@@ -353,7 +353,7 @@ Contrato de edificios: **4/4, 747 aserciones**. Alcance: **33 puertas, 0 problem
 
 ### Acceso pendiente del Bernabéu
 
-La pieza del estadio no tenía puerta en el catálogo y el mapa no tiene pasarela a un interior de estadio. Sus cinco salas actuales corresponden a otros edificios del barrio. El vestíbulo del nuevo dibujo no equivale a un acceso funcional. Se conserva el contrato durante el redibujo; queda pendiente coordinar con Interiores un acceso y salas de estadio, reservar el exterior y comprobar el regreso. No se declara cumplida para este edificio la petición de entrada e interior personalizado.
+La pieza del estadio no tenía puerta en el catálogo y el mapa no tiene pasarela a un interior de estadio. Sus cinco salas actuales corresponden a otros edificios del barrio. El vestíbulo del primer redibujo no equivalía a un acceso funcional. Actualización del 21 de octubre: se prepara el hueco de entrada (19,14), sin pasarela todavía, como se detalla al final de esta comparativa; las salas propias siguen pendientes de Interiores. No se declara cumplida para este edificio la petición de entrada e interior personalizado.
 
 ### Boceto del plató de Málaga, todavía sin colocar
 
@@ -437,3 +437,20 @@ Montaje reproducible con `godot --path . res://tools/arte/capturar_urbanas.tscn`
 | `alcorque_arbol` | 415 | [2, 4] | [[0, -1], [1, -1], [0, 0], [1, 0]] |
 
 Pruebas dirigidas de módulos: **2/2, 227 aserciones**. Se corrigió la lectura de imágenes de la primera versión de la prueba para usar texturas importadas, y el nombre de una farola en la herramienta de captura. **Tarea 1 cerrada (21 de octubre): 740/740 pruebas, 88262 aserciones, 817.015s.** Arte: 11.600 PNG, 0 errores y 0 avisos. Datos: 0 errores y 1 aviso anterior de estadísticas sin verificar. Grafo: 961 mapas alcanzables y con vuelta. Contrato inicial de edificios: 5/5 y 836 aserciones; módulos nuevos: 2/2 y 227 aserciones. Suite en CPU 0, sin editar el proyecto durante su ejecución. El montaje de capturas no modifica mapas. Se conservan los avisos anteriores de audio y de recursos retenidos de las herramientas. Arte provisional.
+
+## Bernabéu · hueco de entrada preparado (21 de octubre)
+
+Encargo expreso de Javier: preparar una puerta lógica y transitable **sin enlazarla aún a un interior**. Se dibuja el acceso de doble hoja dentro de la casilla relativa **(5,0)**. Con el ancla conservada **(14,14)**, la entrada queda en **(19,14)** y el futuro regreso en **(19,15)**. Se evita el cartel de (20,15). No se modifica la escena, ni se mueve un personaje o una conexión existente.
+
+Fuente **375**, lienzo **192×96** del arte / **12×6 casillas**, ancla y lista previa de huella conservados. El constructor del TileSet excluye de la colisión únicamente la casilla declarada como puerta. Es la única excepción autorizada al contrato original de las 140 piezas; **ese JSON inicial no se reescribe**. [Autorización y contrato del acceso](edificios_reales/bernabeu_acceso_contrato.json), con copia previa de las cinco pasarelas del barrio.
+
+La prueba verifica que puerta y futuro regreso están libres, las dos paredes laterales siguen sólidas, no existe un `Warp` en la nueva puerta y las cinco pasarelas conservan destino y aparición. **6/6 pruebas, 863 aserciones**. Alcance: **6 puertas físicas, 5 pasarelas, 0 problemas**. El estadio sigue sin salas propias: queda abierto el encargo a Interiores de **vestíbulo, vestuarios, palco y túnel**, documentado en reservas. Ninguna de las cinco salas actuales se reutiliza como estadio.
+
+Referencia arquitectónica ya consultada: [proyecto y fotografías de L35](https://www.l35.com/proyectos/estadio-santiago-bernabeu.html). La posición del acceso se adapta a la calle del juego; no se atribuye a una numeración real de puertas. Dibujo e integración provisionales.
+
+| Vista | Antes de preparar el acceso | Después |
+|---|---|---|
+| Pieza, escala nativa | [Sin hueco](edificios_reales/bernabeu_puerta_antes.png) | [Doble hoja y umbral](edificios_reales/bernabeu_puerta_despues.png) |
+| Mismo mapa sin repintarlo | [Antes](edificios_reales/bernabeu_puerta_mapa_antes.png) | [Después](edificios_reales/bernabeu_puerta_mapa_despues.png) |
+
+**Tarea 2 cerrada (21 de octubre): 751/751 pruebas, 88420 aserciones, 806.79s.** Arte: 11.605 PNG, 0 errores y 0 avisos. Datos: 0 errores y 1 aviso anterior de estadísticas sin verificar. Grafo: 961 mapas alcanzables y con vuelta. Edificios y acceso: 6/6 pruebas, 863 aserciones; alcance del Bernabéu: 6 puertas y 0 problemas. Cinco pasarelas del barrio intactas. Suite en CPU 0, sin editar el proyecto durante la ejecución. Se libera la reserva del exterior; las salas propias siguen pendientes. Arte provisional. Se mantienen los avisos anteriores de recursos retenidos al salir de las herramientas de mapas.

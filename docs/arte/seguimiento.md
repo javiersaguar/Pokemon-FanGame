@@ -717,3 +717,9 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Recurso | Estado | Aprobación Javier | Evidencia |
 |---|---|---|---|
 | Bordillos (16), tapias (10), jardineras (2), alcorques (2) | Dibujos literales `.px2`, exportados e incorporados al catálogo; pruebas de uniones y colisión; provisional | pendiente | [Montaje antes/después y fuentes 386–415](comparativas/edificios_reales.md#piezas-urbanas--20-de-octubre-de-2026) |
+
+## Puerta del Bernabéu · 21 de octubre de 2026
+
+| Recurso | Estado | Aprobación Javier | Evidencia |
+|---|---|---|---|
+| Entrada física de la pieza 375 | hueco transitable y futuro regreso libre; sin pasarela ni salas propias todavía; provisional | pendiente | [Contrato autorizado, colisión y comparativa](comparativas/edificios_reales.md#bernabéu--hueco-de-entrada-preparado-21-de-octubre) |

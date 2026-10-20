@@ -13,7 +13,13 @@ func test_redibujo_conserva_fuentes_tamanos_puertas_y_huellas() -> void:
 		var piece: Dictionary = catalog[StringName(id)]
 		assert_eq(piece.source, int(expected.source), "%s mantiene su fuente" % id)
 		assert_eq(piece.size, Vector2i(int(expected.size[0]), int(expected.size[1])), "%s mantiene su lienzo" % id)
-		assert_eq(piece.door, Vector2i(int(expected.door[0]), int(expected.door[1])), "%s mantiene la casilla de puerta" % id)
+		var expected_door := Vector2i(int(expected.door[0]), int(expected.door[1]))
+		if id == "bernabeu":
+			# Excepción autorizada el 20 de octubre: se abre el hueco, sin enlazar salas.
+			# El contrato inicial permanece intacto y sigue describiendo la puerta anterior.
+			assert_eq(expected_door, Vector2i(-1,-1))
+			expected_door = Vector2i(5,0)
+		assert_eq(piece.door, expected_door, "%s: puerta conservada o cambio autorizado" % id)
 		assert_eq(JSON.stringify(piece.footprint), JSON.stringify(expected.footprint), "%s mantiene la colisión" % id)
 
 func test_piezas_corregidas_caben_y_conservan_entrada_interior_y_regreso() -> void:
@@ -137,5 +143,39 @@ func test_plato_de_malaga_conserva_todas_las_pasarelas_y_el_regreso() -> void:
 		query.position = map.to_global(Grid.to_world(back))
 		assert_true(map.get_world_2d().direct_space_state.intersect_point(query,1).is_empty())
 		room.free()
+	map.queue_free()
+	await wait_physics_frames(2)
+
+func test_bernabeu_tiene_hueco_transitable_sin_inventar_un_interior() -> void:
+	GameState.reset()
+	var contract := JsonFile.read_dict("res://docs/arte/comparativas/edificios_reales/bernabeu_acceso_contrato.json")
+	var piece: Dictionary = ExteriorTiles.objects()[&"bernabeu"]
+	assert_eq(piece.source,375)
+	assert_eq(piece.size,Vector2i(12,6))
+	assert_eq(piece.door,Vector2i(5,0))
+	var prepared := MapLoader.prepare(&"madrid/bernabeu")
+	assert_eq(prepared.error,OK)
+	var map: MapRoot = prepared.map
+	add_child(map)
+	await wait_physics_frames(2)
+	assert_eq(map.get_layer(&"Entities/Objects").get_cell_source_id(Vector2i(14,14)),375)
+	assert_null(map.warp_at(Vector2i(19,14)),"el hueco aún no enlaza a salas ajenas")
+	assert_eq(map.get_node(^"Warps").get_child_count(),contract.warps.size())
+	for saved: Dictionary in contract.warps:
+		var warp := map.warp_at(Vector2i(int(saved.tile[0]),int(saved.tile[1])))
+		assert_not_null(warp,String(saved.name))
+		if warp != null:
+			assert_eq(String(warp.target_map),String(saved.target_map))
+			assert_eq(String(warp.target_spawn),String(saved.target_spawn))
+	for tile: Vector2i in [Vector2i(19,14),Vector2i(19,15)]:
+		var query := PhysicsPointQueryParameters2D.new()
+		query.collision_mask = 1 | 2 | 8
+		query.position = map.to_global(Grid.to_world(tile))
+		assert_true(map.get_world_2d().direct_space_state.intersect_point(query,1).is_empty(),"entrada y futuro regreso libres: %s"%tile)
+	for tile: Vector2i in [Vector2i(18,14),Vector2i(20,14)]:
+		var query := PhysicsPointQueryParameters2D.new()
+		query.collision_mask = 1
+		query.position = map.to_global(Grid.to_world(tile))
+		assert_false(map.get_world_2d().direct_space_state.intersect_point(query,1).is_empty(),"la pared lateral se conserva: %s"%tile)
 	map.queue_free()
 	await wait_physics_frames(2)
