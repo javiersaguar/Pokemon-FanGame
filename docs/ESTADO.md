@@ -891,7 +891,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 
 ### Agente de rutas y ciudades (sesión del 2026-10-20, rama `feat/rutas-anil-3`)
 
-Worktree `pokemon-panchito-agente5`. Encargo, por orden: corrientes y escollos de la Ruta marítima 1; obstáculos de campo; entrenadores en los pasos estrechos; atajos que se abren más tarde; segunda pasada a nivel Añil. Reserva activa: `maritima_1/exterior` y `ruta_1/exterior` … `ruta_26/exterior`.
+Worktree `pokemon-panchito-agente5`. Encargo, por orden: corrientes y escollos de la Ruta marítima 1; obstáculos de campo; entrenadores en los pasos estrechos; atajos que se abren más tarde; segunda pasada a nivel Añil. Reservas liberadas al cerrar (rutas, marítima 1 y las 22 ciudades de la segunda pasada). Último bloque: suite 766/766, arte 0/0, datos 0 errores y 0 avisos, grafo 974/974 sin aislados.
 
 **Hecho:**
 - **Ruta marítima 1 · corrientes y escollos** (`maps/_pintura/vestir/maritima_1.gd`, tercera pasada). Cuatro corrientes `SurfCurrent` con agua revuelta animada y 22 escollos animados de 2×2 que chocan (`src/overworld/campo/escollo.tscn`), todo bajo el nodo `Mar` del mapa.
