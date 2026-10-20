@@ -1,6 +1,6 @@
 # Edificios reales · comparativas y seguimiento individual
 
-Encargo de Javier iniciado el 19 de octubre de 2026. La revisión del catálogo encuentra **137 fuentes propias**, además de las tres piezas de packs señaladas como recortadas. No todas las fuentes propias son edificios: también hay árboles, rocas, estatuas y vehículos. El inventario conserva las 140 entradas y explica su estado individual. El catálogo inicial sigue conservado; con el teatro original nuevo hay 138 fuentes propias. Ninguna revisión o captura equivale a aprobación artística.
+Encargo de Javier iniciado el 19 de octubre de 2026. La revisión del catálogo encuentra **137 fuentes propias**, además de las tres piezas de packs señaladas como recortadas. No todas las fuentes propias son edificios: también hay árboles, rocas, estatuas y vehículos. El inventario conserva las 140 entradas y explica su estado individual. El catálogo inicial sigue conservado; con el teatro original y la nave del rodaje hay 139 fuentes propias. Ninguna revisión o captura equivale a aprobación artística.
 
 ## Bloque 1 · piezas recortadas (20 de octubre)
 
@@ -360,3 +360,21 @@ La pieza del estadio no tenía puerta en el catálogo y el mapa no tiene pasarel
 [Boceto de la nave](edificios_reales/plato_portuario_boceto.png) y [fuente editable](../bocetos/plato_portuario.px2). Propuesta de 5×5 casillas con puerta relativa (2,0). No forma parte del tileset ni aparece aún en el juego. Antes de colocarlo hay que liberar y reservar el exterior y comprobar el espacio: el árbol actual de (59,57) invade esa propuesta. El segundo boceto amplía el portón doble y baja la cubierta para reforzar el volumen industrial. Su colocación aún debe comprobarse con el mapa. No se copia una sede real.
 
 **Bloque 4 cerrado (20 de octubre): 693/693 pruebas, 87150 aserciones, 761.252s.** Arte: 11.569 PNG, 0 errores y 0 avisos; datos: 0 errores y 1 aviso de estadísticas sin verificar; grafo: 961 mapas conectados y con vuelta. Suite fijada a CPU 0; ROM caos en 2562 ms. Contrato: 4/4 y 747 aserciones; alcance en Sevilla/centro, Santander, Bernabéu y Eixample: 86 puertas y 0 problemas. Se conservan los avisos anteriores de recursos retenidos al salir de las herramientas de mapas. Las cuatro revisiones son provisionales; la Sagrada Família sigue siendo parcial.
+
+## Plató portuario de Málaga · acceso original al gimnasio
+
+Fachada ficticia autorizada por Javier el 20 de octubre. Tras incorporar el rediseño de calles de Rutas y ciudades (`4bb1376e`), se reserva el exterior en `13430f13`. La pasarela existente estaba al aire libre: no se sustituye una carpa del pack ni se modifica ningún recurso prestado.
+
+Nueva pieza propia **`plato_portuario`, fuente 385, 5×5 casillas (80×80 del arte)**. La nave de acceso tiene cubierta metálica baja, portón doble, ventanilla de producción y cartel de claqueta. Se coloca en **(56,60)** con puerta relativa **(2,0)**: la entrada permanece en **(58,60)** y el retorno en **(58,61)**. Conserva `malaga/gimnasio_1`, las cuatro salas existentes, los entrenadores y su puzle. La fachada no representa una sede real; el arte es provisional.
+
+Se retiran los setos del solar de 5×5 casillas y se continúa el empedrado existente. Se mueve un árbol genérico de **(59,57) a (54,55)**, comprobando que sus dos casillas de base están libres. El resto del jardín, las palmeras, el Cubo Pompidou y los personajes no se trasladan. El cartel ahora indica la entrada por el portón. El pintor base también incorpora la pieza y ese texto; no se repinta el exterior enlazado.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza | No había fachada en esa entrada | [Nave propia](edificios_reales/piezas_despues/plato_portuario.png) |
+| Zona a escala nativa | [Sin fachada](edificios_reales/plato_portuario_detalle_antes.png) | [Entrada al rodaje](edificios_reales/plato_portuario_detalle_despues.png) |
+| Málaga completo | [Antes](edificios_reales/plato_portuario_mapa_antes.png) | [Después](edificios_reales/plato_portuario_mapa_despues.png) |
+
+[Contrato previo de las 25 pasarelas y del regreso](edificios_reales/plato_portuario_contrato.json). Pruebas dirigidas: **5/5, 836 aserciones**; se comprueban las 25 conexiones, el acceso al gimnasio, el retorno libre y la nueva posición del árbol, además del contrato inicial de 140 piezas y del teatro sevillano. Alcance de Málaga: **25 puertas, 0 problemas**. Suite conjunta terminada; resultado al cierre del bloque. Las herramientas de mapas mantienen los avisos anteriores de recursos retenidos al cerrar, con salida 0.
+
+**Bloque 5 cerrado (20 de octubre): 694/694 pruebas, 87239 aserciones, 766.056s.** Arte: 11570 PNG, 0 errores y 0 avisos; datos: 0 errores y 1 aviso de estadísticas sin verificar; grafo: 961 mapas conectados y con vuelta. Suite fijada a CPU 0; ROM caos en 2550 ms. Pruebas de edificios y accesos: 5/5, 836 aserciones. Málaga conserva sus 25 pasarelas y da 0 problemas de alcance. Se libera su reserva al integrar. Las herramientas mantienen los avisos anteriores de recursos retenidos al salir; la suite también avisa del audio que falta. El teatro y el plató autorizados están colocados y conectados; todo el arte sigue provisional.

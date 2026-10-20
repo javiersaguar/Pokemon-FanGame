@@ -97,3 +97,45 @@ func test_club_comedia_conserva_el_gimnasio_y_su_regreso() -> void:
 		room.free()
 	map.queue_free()
 	await wait_physics_frames(2)
+
+func test_plato_de_malaga_conserva_todas_las_pasarelas_y_el_regreso() -> void:
+	GameState.reset()
+	var contract := JsonFile.read_dict("res://docs/arte/comparativas/edificios_reales/plato_portuario_contrato.json")
+	var piece: Dictionary = ExteriorTiles.objects()[&"plato_portuario"]
+	assert_eq(piece.size, Vector2i(5,5))
+	assert_eq(piece.door, Vector2i(2,0))
+	var prepared := MapLoader.prepare(&"malaga/exterior")
+	assert_eq(prepared.error, OK)
+	var map: MapRoot = prepared.map
+	add_child(map)
+	await wait_physics_frames(2)
+	var objects := map.get_layer(&"Entities/Objects")
+	assert_eq(objects.get_cell_source_id(Vector2i(56,60)), int(piece.source))
+	assert_eq(objects.get_cell_source_id(Vector2i(59,57)), -1)
+	assert_eq(objects.get_cell_source_id(Vector2i(54,55)), 4)
+	assert_true(map.get_ground().get_used_rect().encloses(Rect2i(56,56,5,5)))
+	assert_eq(map.get_node(^"Warps").get_child_count(), contract.warps.size())
+	for entry: Dictionary in contract.warps:
+		var warp := map.warp_at(Vector2i(int(entry.tile[0]),int(entry.tile[1])))
+		assert_not_null(warp, String(entry.name))
+		if warp != null:
+			assert_eq(String(warp.target_map),String(entry.target_map))
+			assert_eq(String(warp.target_spawn),String(entry.target_spawn))
+	var entrance := map.warp_at(Vector2i(58,60))
+	assert_not_null(entrance)
+	if entrance != null:
+		assert_eq(entrance.target_map, &"malaga/gimnasio_1")
+		var inside := MapLoader.prepare(entrance.target_map)
+		assert_eq(inside.error, OK)
+		var room: MapRoot = inside.map
+		var exit := room.get_node(^"Warps/Salida") as Warp
+		assert_eq(exit.target_map,&"malaga/exterior")
+		var back: Vector2i = MapLoader.spawn_tile(map,exit.target_spawn)
+		assert_eq(back,Vector2i(58,61))
+		var query := PhysicsPointQueryParameters2D.new()
+		query.collision_mask = 1 | 2 | 8
+		query.position = map.to_global(Grid.to_world(back))
+		assert_true(map.get_world_2d().direct_space_state.intersect_point(query,1).is_empty())
+		room.free()
+	map.queue_free()
+	await wait_physics_frames(2)

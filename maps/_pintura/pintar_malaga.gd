@@ -63,6 +63,7 @@ func _initialize() -> void:
 	for rect: Rect2i in [Rect2i(58, 40, 17, 2), Rect2i(60, 42, 13, 2), Rect2i(62, 44, 9, 2)]:
 		p.nine_slice(rect, ExteriorTiles.PAVING_STONE)
 	p.object(&"cubo_pompidou", Vector2i(61, 61))
+	p.object(&"plato_portuario", Vector2i(56, 60))
 	p.object(&"velero", Vector2i(65, 70))
 	p.object(&"casa_madera", Vector2i(82, 65))
 	p.object(&"torre_socorrista", Vector2i(76, 66))
@@ -92,7 +93,7 @@ func _initialize() -> void:
 	_sign(p, "Gibralfaro", Vector2i(73, 24), ["GIBRALFARO", "Castillo sobre el monte. El acceso interior está cerrado."])
 	_sign(p, "Mercado", Vector2i(29, 41), ["MERCADO DE ATARAZANAS", "Puestos de productos frescos. El acceso interior está cerrado."])
 	_sign(p, "Pompidou", Vector2i(63, 62), ["CENTRE POMPIDOU · MUELLE UNO", "El Cubo de vidrio coloreado. El acceso interior está cerrado."])
-	_sign(p, "Gimnasio", Vector2i(56, 62), ["GIMNASIO 8 · RODAJE DE PELÍCULA", "Líder: Antonio Banderas. Acceso todavía cerrado."])
+	_sign(p, "Gimnasio", Vector2i(56, 62), ["GIMNASIO 8 · RODAJE DE PELÍCULA", "Líder: Antonio Banderas. Entrada al plató por el portón."])
 	_sign(p, "Estacion", Vector2i(8, 58), ["MÁLAGA MARÍA ZAMBRANO · AVE", "AVE a Madrid. Puntualidad garantizada: llega seguro, aunque no se sabe cuándo."])
 	for local: Array in [["Hospital", 27, 22, "HOSPITAL"], ["Mercadona", 46, 22, "MERCADONA"], ["Estanco", 52, 22, "ESTANCO"], ["BasicFit", 47, 43, "BASIC-FIT"]]:
 		_sign(p, local[0], Vector2i(local[1], local[2]), [local[3], "Cura y PC en recepción." if local[0] == "Hospital" else ("El acceso está cerrado por ahora." if local[0] == "BasicFit" else "Puedes entrar y comprar en la caja.")])

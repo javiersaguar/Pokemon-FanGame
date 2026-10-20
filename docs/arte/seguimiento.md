@@ -686,3 +686,9 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Centro Botín | redibujado, provisional | pendiente | [Pieza y mapa](comparativas/edificios_reales.md) |
 | Santiago Bernabéu | redibujado, provisional | pendiente | [Pieza y mapa](comparativas/edificios_reales.md) |
 | Sagrada Família · remate de la torre de Jesús | revisión parcial, provisional | pendiente | [Pieza y mapa](comparativas/edificios_reales.md) |
+
+## Plató original de Málaga · 20 de octubre
+
+| Recurso | Estado | Aprobación Javier | Evidencia |
+|---|---|---|---|
+| Nave de acceso al rodaje | fachada propia colocada; entrada, regreso, cuatro salas y 25 pasarelas conservadas; provisional | pendiente | [Pieza y mapa antes/después](comparativas/edificios_reales.md#plató-portuario-de-málaga--acceso-original-al-gimnasio) |
