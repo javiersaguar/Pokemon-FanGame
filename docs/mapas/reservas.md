@@ -14,3 +14,5 @@ Sesión anterior cerrada. Reservas activas del 19 de octubre: Véase `docs/CIERR
 - (Rutas y ciudades, 2026-10-19) Para repintar las ciudades que son una explanada empedrada (Zaragoza, Málaga, Getafe, Leganés, Móstoles, Puertollano): bordillo de acera, alcorque con árbol, jardinera de dos casillas y tapia de patio, en el estilo del tileset de exterior. Mientras tanto, solo se ha puesto mobiliario.
 
 - (Edificios, 2026-10-20) Javier autoriza un teatro original para Sevilla y un plató portuario original para el gimnasio de Málaga. Sevilla/rio queda terminado y liberado al cerrar el bloque 3. Málaga/exterior ya está reservado por Rutas y ciudades: se preparará su pieza fuera del mapa y se sustituirá la carpa conservando puerta (58,60), tamaño y colisión cuando liberen el exterior. No mover esa entrada ni su regreso.
+
+- (Edificios → Interiores, 2026-10-20) El estadio `bernabeu` no tiene puerta ni interior propio en `madrid/bernabeu`; las cinco salas existentes son de otros edificios del barrio. El redibujo conserva ese contrato. Hace falta coordinar una entrada de estadio y salas acordes, reservando primero el exterior y sin alterar las otras cinco conexiones.

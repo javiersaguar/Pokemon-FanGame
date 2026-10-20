@@ -454,6 +454,10 @@ Tras rebasar con las integraciones de interiores, ciudades y combate: contrato 3
 
 **Cierre del bloque 3 (20 de octubre): 693/693 pruebas, 87150 aserciones, 763.906s; 11569 PNG sin errores ni avisos; datos 0 errores, 1 avisos.; 961 mapas, todos alcanzables y con vuelta.** Suite en CPU 0, sin modificar el proyecto durante la ejecución; ROM caos en 2.633 ms. Contrato y acceso del teatro: 4/4, 747 aserciones; Sevilla/rio, 29 puertas y 0 problemas. La reserva de Sevilla se libera al integrar. Persisten los avisos de recursos retenidos al cerrar las herramientas de mapas y los avisos de audio faltante de la suite. Todo el arte sigue provisional.
 
+**Bloque 4 cerrado:** Giralda (sebka, ajimeces y campanario), Centro Botín (dos volúmenes elevados y conexión) y Bernabéu (bandas de acero y cubierta). Sagrada Família: revisión parcial de la cruz de Jesús; resto de la fachada pendiente. Contratos conservados, 4/4 pruebas y 747 aserciones; alcance de los cuatro exteriores, 86 puertas y 0 problemas. Comparativas y suite conjunta terminadas. El Bernabéu sigue sin entrada propia: se pide coordinación con Interiores, sin presentar el vestíbulo dibujado como una puerta funcional. Boceto del plató de Málaga guardado en la comparativa, todavía sin colocar.
+
+**Bloque 4 cerrado (20 de octubre): 693/693 pruebas, 87150 aserciones, 761.252s.** Arte: 11.569 PNG, 0 errores y 0 avisos; datos: 0 errores y 1 aviso de estadísticas sin verificar; grafo: 961 mapas conectados y con vuelta. Suite fijada a CPU 0; ROM caos en 2562 ms. Contrato: 4/4 y 747 aserciones; alcance en Sevilla/centro, Santander, Bernabéu y Eixample: 86 puertas y 0 problemas. Se conservan los avisos anteriores de recursos retenidos al salir de las herramientas de mapas. Las cuatro revisiones son provisionales; la Sagrada Família sigue siendo parcial.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)

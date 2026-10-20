@@ -1,0 +1,92 @@
+# Plató portuario de Málaga. Edificio ficticio autorizado por Javier el 2026-10-20.
+# Nave de rodaje con cubierta metálica de poca pendiente, portón doble,
+# ventanilla de producción y cartel de claqueta. No representa una sede real.
+# Referencia de escala y perspectiva: docs/arte/referencias/anil_pueblo.png.
+# Propuesta de 80x80 del arte (5x5 casillas), puerta relativa (2,0).
+# Su colocación espera que se libere malaga/exterior y se compruebe el espacio.
+# Luz arriba a la izquierda. PROVISIONAL hasta aprobación de Javier.
+@leyenda . = transparente K = piedra_1 D = piedra_2 d = piedra_3 g = piedra_4 l = piedra_5 L = piedra_6
+@leyenda n = metal_1 N = metal_2 m = metal_3 M = metal_4 t = metal_5 T = metal_6 U = ui_6
+@leyenda b = acento_azul r = acento_rojo y = acento_amarillo S = piedra_1@90
+@salida res://assets/tilesets/exterior/hecho_a_mano/plato_portuario.png
+---
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+..................nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn..................
+..................nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn..................
+............TTTTTTmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNN............
+............TTTTTTmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNN............
+........TTTTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmmmmmNNNNNN....
+........TTTTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmmmmmNNNNNN....
+......TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN......
+......TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN......
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmtmmmmmNNNNNN..
+....TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTNNNNNN..
+....TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTNNNNNN..
+....ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddDDDDDD..
+....ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddDDDDDD..
+....llllggnnnnnnnnnnnnggnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnggggnnnnnnnnnnggDDDDDD..
+....llllggnnnnnnnnnnnnggnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnggggnnnnnnnnnnggDDDDDD..
+....llllggnnTTTTTTTTnnggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrggggnnLLLLLLnnggDDDDDD..
+....llllggnnTTTTTTTTnnggrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnggggnnnLLnLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnggggnnnLLnLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLnLLnnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLnLLnnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnnnnnnnnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnnnnnnnnnggDDDDDD..
+....llllggnnttttttttnnggnnmmmmmmmmmmmmmttmmmmmmmmmmmmmnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnttttttttnnggnnmmmmmmmmmmmmmttmmmmmmmmmmmmmnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLnnnnLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLnnnnLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLnnnnLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLnnnnLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLnnLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLnnLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnmmmmmmmmmmmmmttmmmmmmmmmmmmmnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnmmmmmmmmmmmmmttmmmmmmmmmmmmmnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnNNNTTNNNnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnLLLLLLnnggDDDDDD..
+....llllggnnnnnnnnnnnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnnnnnnnnnggDDDDDD..
+....llllggnnnnnnnnnnnnggnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnggggnnnnnnnnnnggDDDDDD..
+....llllggggggggggggggggnnNNNNNNNNNNNNyttyNNNNNNNNNNNNnnggggggggggggggggDDDDDD..
+....llllggggggggggggggggnnNNNNNNNNNNNNyttyNNNNNNNNNNNNnnggggggggggggggggDDDDDD..
+....llllggggggggggggggggnnmmmmmmmmmmmmmttmmmmmmmmmmmmmnnggggggggggggggggDDDDDD..
+....llllggggggggggggggggnnmmmmmmmmmmmmmttmmmmmmmmmmmmmnnggggggggggggggggDDDDDD..
+....llllddddddddddddddddnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnddddddddddddddddDDDDDD..
+....llllddddddddddddddddnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnddddddddddddddddDDDDDD..
+....llllddddddddddddddddnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnddddddddddddddddDDDDDD..
+....llllddddddddddddddddnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnddddddddddddddddDDDDDD..
+....llllddddddddddddddddnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnddddddddddddddddDDDDDD..
+....llllddddddddddddddddnnNNNNNNNNNNNNNttNNNNNNNNNNNNNnnddddddddddddddddDDDDDD..
+....ddddddddddddddddddddnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnddddddddddddddddDDDDDD..
+....ddddddddddddddddddddnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnddddddddddddddddDDDDDD..
+....ddddddddddddddddddddLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLddddddddddddddddDDDDDD..
+....ddddddddddddddddddddLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLddddddddddddddddDDDDDD..
+....DDDDDDDDDDDDDDDDDDDDggggggggggggggggggggggggggggggggDDDDDDDDDDDDDDDDKKKKKK..
+....DDDDDDDDDDDDDDDDDDDDggggggggggggggggggggggggggggggggDDDDDDDDDDDDDDDDKKKKKK..
+....DDDDDDDDDDDDDDDDDDDDllllllllllllllllllllllllllllllllDDDDDDDDDDDDDDDDKKKKKK..
+....DDDDDDDDDDDDDDDDDDDDllllllllllllllllllllllllllllllllDDDDDDDDDDDDDDDDKKKKKK..
+....DDDDDDDDDDDDDDDDDDDDddddddddddddddddddddddddddddddddDDDDDDDDDDDDDDDDKKKKKK..
+....DDDDDDDDDDDDDDDDDDDDddddddddddddddddddddddddddddddddDDDDDDDDDDDDDDDDKKKKKK..

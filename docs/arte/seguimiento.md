@@ -677,3 +677,12 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Recurso | Estado | Aprobación Javier | Evidencia |
 |---|---|---|---|
 | Club de la Comedia, fachada original autorizada | sustituida la pieza genérica; acceso e interior conservados; provisional | pendiente | [Pieza y mapa antes/después](comparativas/edificios_reales.md#club-de-la-comedia--teatro-original-de-triana) |
+
+## Monumentos · bloque 4 de edificios
+
+| Recurso | Estado | Aprobación Javier | Evidencia |
+|---|---|---|---|
+| Giralda | redibujado, provisional | pendiente | [Pieza y mapa](comparativas/edificios_reales.md) |
+| Centro Botín | redibujado, provisional | pendiente | [Pieza y mapa](comparativas/edificios_reales.md) |
+| Santiago Bernabéu | redibujado, provisional | pendiente | [Pieza y mapa](comparativas/edificios_reales.md) |
+| Sagrada Família · remate de la torre de Jesús | revisión parcial, provisional | pendiente | [Pieza y mapa](comparativas/edificios_reales.md) |

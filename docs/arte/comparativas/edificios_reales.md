@@ -1,6 +1,6 @@
 # Edificios reales · comparativas y seguimiento individual
 
-Encargo de Javier iniciado el 19 de octubre de 2026. La revisión del catálogo encuentra **137 fuentes propias**, además de las tres piezas de packs señaladas como recortadas. No todas las fuentes propias son edificios: también hay árboles, rocas, estatuas y vehículos. El inventario conserva las 140 entradas y explica su estado individual. Ninguna revisión o captura equivale a aprobación artística.
+Encargo de Javier iniciado el 19 de octubre de 2026. La revisión del catálogo encuentra **137 fuentes propias**, además de las tres piezas de packs señaladas como recortadas. No todas las fuentes propias son edificios: también hay árboles, rocas, estatuas y vehículos. El inventario conserva las 140 entradas y explica su estado individual. El catálogo inicial sigue conservado; con el teatro original nuevo hay 138 fuentes propias. Ninguna revisión o captura equivale a aprobación artística.
 
 ## Bloque 1 · piezas recortadas (20 de octubre)
 
@@ -86,7 +86,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `monasterio_montserrat` | [10, 7]; [4, 0] | `ruta_8/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/monasterio_montserrat.png) |
 | `camp_nou` | [20, 11]; [10, 0] | `barcelona/les_corts` | Revisión parcial de galería y acceso; graderío pendiente; contrato conservado | [pieza](edificios_reales/piezas_antes/camp_nou.png) |
 | `grua` | [6, 13]; [-1, -1] | `barcelona/eixample`, `barcelona/les_corts`, `ruta_10/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/grua.png) |
-| `sagrada_familia` | [12, 16]; [5, 0] | `barcelona/eixample` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/sagrada_familia.png) |
+| `sagrada_familia` | [12, 16]; [5, 0] | `barcelona/eixample` | Revisión parcial del remate; torres y portadas pendientes; contrato conservado | [pieza](edificios_reales/piezas_antes/sagrada_familia.png) |
 | `casa_batllo` | [5, 9]; [2, 0] | `barcelona/eixample` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/casa_batllo.png) |
 | `la_pedrera` | [8, 8]; [3, 0] | `barcelona/eixample` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/la_pedrera.png) |
 | `monumento_colon` | [3, 12]; [-1, -1] | `barcelona/ciutat_vella` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/monumento_colon.png) |
@@ -117,7 +117,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `alhambra` | [8, 4]; [-1, -1] | `ruta_12/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/alhambra.png) |
 | `olivo` | [2, 2]; [-1, -1] | `ruta_13/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/olivo.png) |
 | `mezquita` | [8, 5]; [-1, -1] | `ruta_13/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/mezquita.png) |
-| `giralda` | [4, 9]; [-1, -1] | `sevilla/centro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/giralda.png) |
+| `giralda` | [4, 9]; [-1, -1] | `sevilla/centro` | Redibujado, provisional; tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/giralda.png) |
 | `catedral_sevilla` | [8, 6]; [3, 0] | `sevilla/centro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/catedral_sevilla.png) |
 | `setas` | [8, 4]; [-1, -1] | `sevilla/centro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/setas.png) |
 | `plaza_espana` | [12, 5]; [-1, -1] | `sevilla/maria_luisa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/plaza_espana.png) |
@@ -165,10 +165,10 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `palmera_imperial` | [3, 7]; [-1, -1] | `ruta_11/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/palmera_imperial.png) |
 | `catedral_murcia` | [10, 12]; [6, 0] | `murcia/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/catedral_murcia.png) |
 | `sardina_segura` | [3, 2]; [-1, -1] | `murcia/exterior` | Monumento pendiente de redibujo, después de las fachadas prioritarias | [pieza](edificios_reales/piezas_antes/sardina_segura.png) |
-| `bernabeu` | [12, 6]; [-1, -1] | `madrid/bernabeu` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/bernabeu.png) |
+| `bernabeu` | [12, 6]; [-1, -1] | `madrid/bernabeu` | Redibujado, provisional; tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/bernabeu.png) |
 | `san_mames` | [20, 11]; [10, 0] | `bilbao/exterior` | Redibujado, provisional; envolvente de lamas, cubierta y entrada conservada | [pieza](edificios_reales/piezas_antes/san_mames.png) |
-| `guggenheim` | [12, 8]; [6, 0] | `bilbao/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/guggenheim.png) |
-| `centro_botin` | [10, 6]; [4, 0] | `santander/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/centro_botin.png) |
+| `guggenheim` | [12, 8]; [6, 0] | `bilbao/exterior` | Pendiente: boceto descartado por volúmenes demasiado planos para el titanio y el atrio | [pieza](edificios_reales/piezas_antes/guggenheim.png) |
+| `centro_botin` | [10, 6]; [4, 0] | `santander/exterior` | Redibujado, provisional; tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/centro_botin.png) |
 | `horreo` | [3, 4]; [1, 0] | `ruta_17/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/horreo.png) |
 | `basilica_covadonga` | [6, 8]; [2, 0] | `ruta_18/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/basilica_covadonga.png) |
 | `cafe_iruna` | [8, 5]; [3, 0] | `pamplona/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/cafe_iruna.png) |
@@ -298,3 +298,65 @@ Pruebas dirigidas: **4/4, 747 aserciones**; alcance de Sevilla/rio: **29 puertas
 **Málaga:** la inspección del exterior actual encuentra la pasarela del gimnasio en (58,60), pero ninguna carpa ni fachada en `Entities/Objects` que la cubra. La referencia antigua a una carpa en ESTADO no describe la escena actual. Rutas y ciudades ha reservado este exterior para rehacer calles y manzanas; no se coloca un edificio ni se reserva por segunda vez. El plató original está autorizado, pero queda pendiente de disponer del mapa y reservar una huella que no invada el árbol (59,57), el entrenador (55,59), el Cubo Pompidou (61,61) ni el regreso (58,61).
 
 **Cierre del bloque 3 (20 de octubre): 693/693 pruebas, 87150 aserciones, 763.906s; 11569 PNG sin errores ni avisos; datos 0 errores, 1 avisos.; 961 mapas, todos alcanzables y con vuelta.** Suite en CPU 0, sin modificar el proyecto durante la ejecución; ROM caos en 2.633 ms. Contrato y acceso del teatro: 4/4, 747 aserciones; Sevilla/rio, 29 puertas y 0 problemas. La reserva de Sevilla se libera al integrar. Persisten los avisos de recursos retenidos al cerrar las herramientas de mapas y los avisos de audio faltante de la suite. Todo el arte sigue provisional.
+
+## Giralda
+
+Se redibujan los paños de sebka, las tres parejas de ajimeces y el campanario de cinco vanos. Los cuerpos altos se escalonan y el Giraldillo se distingue en bronce verdoso. Se conserva la ausencia de puerta independiente; no se inventa una sala de torre ni se modifica la catedral enlazada.
+
+Referencias: [Fotografías del Cabildo](https://www.catedraldesevilla.es/la-catedral/edificio/la-giralda/), [plano oficial del conjunto](https://www.catedraldesevilla.es/wp-content/uploads/2019/09/ES.pdf). Contrato conservado: **64×144, 4×9 casillas; fuente 153; sin puerta independiente**; ancla, huella y salidas existentes sin cambios. No se descargan fotos al repositorio.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | [Antes](edificios_reales/piezas_antes/giralda.png) | [Después](edificios_reales/piezas_despues/giralda.png) |
+| `sevilla/centro` | [Antes](edificios_reales/giralda_mapa_antes.png) | [Después](edificios_reales/giralda_mapa_despues.png) |
+
+Contrato de edificios: **4/4, 747 aserciones**. Alcance: **32 puertas, 0 problemas**. Capturas de la base `0399811d`, con el PNG antiguo y el nuevo en la misma escena, sin repintar el mapa. Arte provisional; suite conjunta cerrada, resultado al final del bloque.
+
+## Centro Botín
+
+Dos cuerpos redondeados con vidrio en los frentes, cubiertas acanaladas, apoyos delgados, pasarela central y escalera. La escalera se adapta a la entrada ya enlazada: la elevación dibujada no abre nuevos pasos bajo el edificio ni añade salas.
+
+Referencias: [Edificio y fotografías del propio centro](https://www.centrobotin.org/en/the-centro-botin/the-building/), [planos de visita](https://www.centrobotin.org/wp-content/uploads/2017/04/Centro-Botin_Mapas.pdf), [dibujos preparatorios](https://www.centrobotin.org/renzo-piano/). Contrato conservado: **160×96, 10×6 casillas; fuente 378; puerta (4,0)**; ancla, huella y salidas existentes sin cambios. No se descargan fotos al repositorio.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | [Antes](edificios_reales/piezas_antes/centro_botin.png) | [Después](edificios_reales/piezas_despues/centro_botin.png) |
+| `santander/exterior` | [Antes](edificios_reales/centro_botin_mapa_antes.png) | [Después](edificios_reales/centro_botin_mapa_despues.png) |
+
+Contrato de edificios: **4/4, 747 aserciones**. Alcance: **16 puertas, 0 problemas**. Capturas de la base `0399811d`, con el PNG antiguo y el nuevo en la misma escena, sin repintar el mapa. Arte provisional; suite conjunta cerrada, resultado al final del bloque.
+
+## Santiago Bernabéu
+
+La caja anterior se sustituye por una envolvente curva de bandas horizontales, hueco de cubierta con una parte del campo visible y vestíbulo acristalado bajo el vuelo. Las bandas distinguen la parte clara ventilada y el lateral en sombra. Se buscaron planos públicos, pero no se consultó un plano acotado: las proporciones se dibujan a partir de las fotos y la explicación del proyectista.
+
+Referencias: [Fotografías y proyecto de L35](https://www.l35.com/proyectos/estadio-santiago-bernabeu.html), [explicación del equipo proyectista](https://www.l35.com/actualidad/noticias-l35/el-equipo-de-arquitectos-gmp-l35-ribas-gana-la-remodelacion-del-estadio-santiago-bernabeu.html). Contrato conservado: **192×96, 12×6 casillas; fuente 375; catálogo anterior sin puerta**; ancla, huella y salidas existentes sin cambios. No se descargan fotos al repositorio.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | [Antes](edificios_reales/piezas_antes/bernabeu.png) | [Después](edificios_reales/piezas_despues/bernabeu.png) |
+| `madrid/bernabeu` | [Antes](edificios_reales/bernabeu_mapa_antes.png) | [Después](edificios_reales/bernabeu_mapa_despues.png) |
+
+Contrato de edificios: **4/4, 747 aserciones**. Alcance: **5 puertas, 0 problemas**. Capturas de la base `0399811d`, con el PNG antiguo y el nuevo en la misma escena, sin repintar el mapa. Arte provisional; suite conjunta cerrada, resultado al final del bloque.
+
+## Sagrada Família · remate de la torre de Jesús
+
+Revisión parcial de las primeras 26 filas. El remate anterior parecía una estrella; se dibuja una cruz blanca de cuatro brazos con caras en sombra. Se conservan las demás torres y las portadas. La textura y el volumen de esas partes aún necesitan un redibujo completo: no se da la fachada por terminada.
+
+Referencias: [Galería oficial actual de la cruz y la fachada del Nacimiento](https://sagradafamilia.org/es/galeria-fotografica), [cuaderno oficial con esquema de torres y planta](https://sagradafamilia.org/documents/20142/1693656/SF_Cuaderno_01_20260227_digital_AF.pdf/df51f59e-4bc2-544f-5630-0e52bf613947). Contrato conservado: **192×256, 12×16 casillas; fuente 69; puerta (5,0)**; ancla, huella y salidas existentes sin cambios. No se descargan fotos al repositorio.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza nativa | [Antes](edificios_reales/piezas_antes/sagrada_familia.png) | [Después](edificios_reales/piezas_despues/sagrada_familia.png) |
+| `barcelona/eixample` | [Antes](edificios_reales/sagrada_familia_mapa_antes.png) | [Después](edificios_reales/sagrada_familia_mapa_despues.png) |
+
+Contrato de edificios: **4/4, 747 aserciones**. Alcance: **33 puertas, 0 problemas**. Capturas de la base `0399811d`, con el PNG antiguo y el nuevo en la misma escena, sin repintar el mapa. Arte provisional; suite conjunta cerrada, resultado al final del bloque.
+
+### Acceso pendiente del Bernabéu
+
+La pieza del estadio no tenía puerta en el catálogo y el mapa no tiene pasarela a un interior de estadio. Sus cinco salas actuales corresponden a otros edificios del barrio. El vestíbulo del nuevo dibujo no equivale a un acceso funcional. Se conserva el contrato durante el redibujo; queda pendiente coordinar con Interiores un acceso y salas de estadio, reservar el exterior y comprobar el regreso. No se declara cumplida para este edificio la petición de entrada e interior personalizado.
+
+### Boceto del plató de Málaga, todavía sin colocar
+
+[Boceto de la nave](edificios_reales/plato_portuario_boceto.png) y [fuente editable](../bocetos/plato_portuario.px2). Propuesta de 5×5 casillas con puerta relativa (2,0). No forma parte del tileset ni aparece aún en el juego. Antes de colocarlo hay que liberar y reservar el exterior y comprobar el espacio: el árbol actual de (59,57) invade esa propuesta. El segundo boceto amplía el portón doble y baja la cubierta para reforzar el volumen industrial. Su colocación aún debe comprobarse con el mapa. No se copia una sede real.
+
+**Bloque 4 cerrado (20 de octubre): 693/693 pruebas, 87150 aserciones, 761.252s.** Arte: 11.569 PNG, 0 errores y 0 avisos; datos: 0 errores y 1 aviso de estadísticas sin verificar; grafo: 961 mapas conectados y con vuelta. Suite fijada a CPU 0; ROM caos en 2562 ms. Contrato: 4/4 y 747 aserciones; alcance en Sevilla/centro, Santander, Bernabéu y Eixample: 86 puertas y 0 problemas. Se conservan los avisos anteriores de recursos retenidos al salir de las herramientas de mapas. Las cuatro revisiones son provisionales; la Sagrada Família sigue siendo parcial.
