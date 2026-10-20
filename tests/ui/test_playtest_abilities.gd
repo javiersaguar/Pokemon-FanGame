@@ -47,7 +47,8 @@ func test_habilidad_oculta_se_elige_con_mando_y_aplicar_objeto_la_conserva() -> 
 	picker.list.select(index)
 	picker.list.item_selected.emit(index)
 	await wait_process_frames(3)
-	assert_true(picker.note.text.contains("Cobertura"))
+	# Pararrayos ya tiene efecto: la nota dice «Efecto registrado»; las que no, «Cobertura...».
+	assert_true(picker.note.text.contains("Efecto registrado") or picker.note.text.contains("Cobertura"))
 	assert_true(picker.detail_hint.visible)
 	picker.list.grab_focus()
 	_press(JOY_BUTTON_START)
