@@ -446,6 +446,8 @@ Se conservan los fallos previos como historial: la primera pasada falló en dos 
 **Siguiente bloque:** fachadas originales del teatro del Club de la Comedia en `sevilla/rio` y del plató portuario en `malaga/exterior`, autorizadas por Javier el 20 de octubre: «eso te lo puedes inventar». Se conservan sus accesos e interiores. Después siguen los monumentos identificados y el resto del catálogo. No se considera terminado el redibujo de todas las piezas.
 
 
+Tras rebasar con las integraciones de interiores, ciudades y combate: contrato 3/3 (735 aserciones), arte 11.568 PNG sin errores ni avisos, datos 0 errores y **1 aviso restante** (estadísticas sin verificar), grafo **961 mapas conectados y con vuelta**, alcance sin problemas en los seis exteriores. La importación inicial se cerró con fallo de segmentación al procesar `slam.mp3`; repetida en CPU 0 terminó correctamente. La suite completa citada arriba corresponde a la base anterior al último rebase; no se atribuye esa ejecución a los cambios posteriores de otros responsables.
+
 ## Agente 3 — Presentación, UI y contenido Spain
 
 ### Agente 3 · Gimnasios (sesión del 2026-10-15)
