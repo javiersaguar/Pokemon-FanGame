@@ -2,7 +2,9 @@
 
 **Hito actual:** `v0.1` (MVP, Fase 8 de la guía).
 
-**Aviso de Edificios (2026-10-20):** corregidas tres colocaciones recortadas; revisadas diez fuentes de edificios y monumentos (Camp Nou y Sagrada Família, parciales), y creados el teatro sevillano y el acceso al plató de Málaga autorizados por Javier. Ambos tienen entrada, regreso y gimnasio enlazados. Málaga conserva el rediseño de calles de Rutas y ciudades; reserva de Edificios liberada al cerrar. Última suite: **694/694**, arte y datos sin errores; queda el aviso anterior de estadísticas sin verificar. [Comparativas, contratos y estado individual](arte/comparativas/edificios_reales.md). El resto del catálogo y la aprobación visual siguen pendientes; el Bernabéu aún necesita acceso e interior propios. No se declara completado el rediseño del mundo.
+**Cierre (2026-10-20, sesión de cuatro agentes):** interiores, edificios reales, combate y sistemas, y rutas y ciudades al nivel de Añil, todo integrado en `main`. Comprobación conjunta: **738/738 tests**, arte 11.570 PNG sin errores, datos 0 errores (1 aviso), **961 mapas conectados**. Qué hizo cada uno, qué queda y qué decide Javier: **[`CIERRE_2026-10-20.md`](CIERRE_2026-10-20.md)**. Sin reservas activas.
+
+**Aviso anterior de Edificios (2026-10-20):** corregidas tres colocaciones recortadas; revisadas diez fuentes de edificios y monumentos (Camp Nou y Sagrada Família, parciales), y creados el teatro sevillano y el acceso al plató de Málaga autorizados por Javier. Ambos tienen entrada, regreso y gimnasio enlazados. Málaga conserva el rediseño de calles de Rutas y ciudades; reserva de Edificios liberada al cerrar. Última suite: **694/694**, arte y datos sin errores; queda el aviso anterior de estadísticas sin verificar. [Comparativas, contratos y estado individual](arte/comparativas/edificios_reales.md). El resto del catálogo y la aprobación visual siguen pendientes; el Bernabéu aún necesita acceso e interior propios. No se declara completado el rediseño del mundo.
 
 **Cierre anterior (2026-10-15, límite de uso):** los cinco trabajos quedan parados. Javier pide revisar lo realizado, cerrar solo lo mínimo interrumpido, documentarlo y subirlo. Se recuperan 59 interiores de Sevilla, el bloque terminado de rutas 5–8 y 16 y las cinco salas de Liga; se cierra el paso Palacio ⇄ Liga con control de ocho medallas. [Inventario, comprobaciones y pendientes para retomar](CIERRE_2026-10-15.md). **Cierre verificado: suite 611/611, 75.079 aserciones; arte 0 errores/0 avisos; datos 0 errores/2 avisos existentes; 952 mapas conectados y 361 entrenadores con sprite, retrato y sitio.** El resto del rediseño sigue pendiente y todo el arte nuevo sigue provisional. Las reservas de esta sesión se liberan al cerrar; antes de volver a editar hay que reservar de nuevo.
 
@@ -845,9 +847,9 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 
 **Provisional:** arte, textos del guarda y colocación.
 
-**Fallos tal cual:** `test_mundo.gd` falló una vez por imágenes sin importar en este worktree (`rotulo_malaga.png`, `camara_cine.png`); tras `--import` pasa 10/10. Las cimas de los bloques de caliza quedan lisas: por debajo de Añil, falta detalle encima.
+**Fallos tal cual:** `test_mundo.gd` falló una vez por imágenes sin importar en este worktree (`rotulo_malaga.png`, `camara_cine.png`); tras `--import` pasa 10/10. (Las cimas lisas de la caliza de la Ruta 26 se arreglaron en `2d9860de`.)
 
-**Pendiente:** el resto de rutas (prioridad de la guía: 26, 21, 24 y las demás muy abiertas), las piezas fuera de límites (`ruta_2` casa de madera, `bilbao` casa roja, `ruta_19` faro) y las manzanas de las ciudades.
+**Pendiente (al cierre del 20 de octubre):** colocar las corrientes y los escollos de la Ruta marítima 1 con la lógica de `SurfCurrent` que ya existe; recolocar los entrenadores en los cuellos de botella y añadir atajos que se abran más tarde. Todo lo demás de esta lista está hecho.
 
 **PENDIENTE JAVIER:** revisar las capturas de antes y después; en la Ruta 5 el paso de hierba es un «desvío por obras» de la A-2 (cartel de broma): confirmar si vale.
 
