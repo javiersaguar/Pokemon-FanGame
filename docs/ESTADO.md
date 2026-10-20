@@ -156,6 +156,9 @@ Encargo: combate fiel a la 9.ª generación en todo lo que se usa en partida. In
 3. **Objetos equipados**: los de la lista del encargo ya existían salvo los objetos de tipo; ahora hay unos 90 más (`item_families.gd`, test por familia en `tests/combate/test_objetos_equipados.gd`). **Nota:** ningún entrenador colocado lleva objeto y en partida solo se consiguen medicinas, Poké Balls, objetos de combate (X) y repelentes; por eso se han hecho los de la 9.ª generación más comunes y no una lista de «los que aparecen».
 4. Tests anteriores ajustados a reglas ahora correctas: Tijereta Furia con Experto (60), el fuego contra un Snorlax con Sebo y Plegaria Vital con elección.
 
+5. **IA de entrenadores** (`battle_ai.gd`): desde el nivel 2 usan los objetos de su ficha (`items` de `data/trainers`; hoy, 16 Hiperpociones) a 1/4 de los PS si después aguantan el siguiente golpe, no usan estados que impide una habilidad, un tipo o el campo, y entre golpes que debilitan eligen el de más prioridad; desde el 3 curan estados con sus objetos y cambian al que aguanta si el que está caería antes de moverse. El motor gestiona los objetos del rival (`foe_items()`). Simulación: `godot --headless --path . res://tools/balance/simular_ia.tscn -- --games=20` (espejo: su equipo con su IA contra el mismo con IA al azar). Con 10 combates: Ayuso, Laporta, Labrador, Quevedo, Gasol, Alonso y Pedro Sánchez 100 %; Joaquín, Latasa y Nadal 90 %; Aupa Athletic 80 %; Iniesta 70 %; Banderas 60 %. `tools/balance/simulate.gd` no puede ejecutarse con `-s` (usa autoloads) y su lista de líderes y equipo esperado sigue siendo PENDIENTE JAVIER. Test: `tests/combate/test_ia_entrenadores.gd`.
+6. **Mecánicas de campo**: Corte, Golpe Roca, Fuerza y Cascada ya existían; añadidas las **corrientes marinas** (`SurfCurrent`), con test (`tests/mundo/test_corrientes_surf.gd`). Pedidos los mapas al agente de rutas («Peticiones de Combate» en `docs/mapas/reservas.md`). Progresión configurable en `data/world.json` y **PENDIENTE JAVIER** (ver `docs/mapas/mecanicas_campo.md`).
+
 **Simplificaciones que quedan, tal cual:**
 - Nube Nueve y Bucle Aire anulan los efectos del tiempo que pasan por `engine.weather()`, pero el daño de la tormenta de arena al final del turno se sigue haciendo.
 - Velo Flor solo protege a quien la tiene (no a los aliados de tipo Planta). Humedad solo impide Explosión y compañía cuando su dueño es el objetivo.
@@ -166,7 +169,7 @@ Encargo: combate fiel a la 9.ª generación en todo lo que se usa en partida. In
 - Paraguas Multiusos, Escudo Habilidad, Orbe Adrenalina y Hierba Copia están registrados pero aún sin efecto.
 - Los 85 movimientos normales que nadie usa, Z, Dinamax/Gigamax y Teracristal: sin cambios en esta tanda (ver Pendiente).
 
-**Pendiente de este encargo:** 85 movimientos sin uso y movimientos Z/Dinamax/Tera según §8.5; mecánicas de campo (corrientes y escollos de la Ruta marítima 1, Fuerza, Golpe Roca, Corte, Cascada) configurables y marcadas PENDIENTE JAVIER; IA de líderes, Alto Mando y Pedro Sánchez con simulaciones (`tools/balance/simulate.gd`).
+**Pendiente de este encargo:** 85 movimientos sin uso y movimientos Z/Dinamax/Tera según §8.5; colocar corrientes y escollos en la Ruta marítima 1 (agente de rutas).
 
 ## Agente 1 — Mundo y arquitectura
 

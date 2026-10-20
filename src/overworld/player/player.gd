@@ -176,7 +176,9 @@ func _walk(dir: Vector2i) -> void:
 			break
 		if GameState.input_locked or SceneManager.is_busy() or not is_inside_tree():
 			break
-		dir = read_direction()
+		# Corrientes marinas: con Surf, arrastran en su dirección mientras se esté dentro.
+		var drift := SurfCurrent.direction_at(get_map_root(), tile_position()) if FieldActions.transport() == &"surf" else Vector2i.ZERO
+		dir = drift if drift != Vector2i.ZERO else read_direction()
 	_walking = false
 
 
