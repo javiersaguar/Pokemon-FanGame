@@ -137,7 +137,8 @@ const BLOQUES: Array[Rect2i] = [
 ]
 
 
-func vestir(v: Vestidor) -> void:
+## Primera pasada (2026-10-19), ya aplicada: plano, bloques, entrenador y objetos.
+func vestir_inicial(v: Vestidor) -> void:
 	v.remove_objects([&"roca_torcal"], v.bounds)
 	v.move("Torcal", Vector2i(23, 15))
 	v.move("Sur", Vector2i(24, 61))
@@ -157,3 +158,21 @@ func vestir(v: Vestidor) -> void:
 	v.item("MaxiRepelentePrado", &"maxrepel", Vector2i(5, 60), true)
 	await v.refresh()
 	v.fill({"estilo": "roquedal", "densidad": 0.0, "margen": [1, 1], "adornos": 0.07})
+
+
+## Segunda pasada (2026-10-20): las cimas de los bloques de caliza dejan de ser lisas. Encima de cada
+## bloque (dentro del borde y por encima de la pared) van matojos, piedras, flores de roca y, en los
+## más anchos, alguna encina o una pila de piedras. No se pisa: es solo el detalle de arriba.
+func vestir(v: Vestidor) -> void:
+	var pieces: Array = [ExteriorTiles.TUFT, ExteriorTiles.TUFT_TALL, ExteriorTiles.ROCK, ExteriorTiles.ROCK_BROWN,
+		ExteriorTiles.WHITE_FLOWERS, ExteriorTiles.TUFT]
+	var n := 0
+	for r: Rect2i in BLOQUES:
+		var top := Rect2i(r.position + Vector2i.ONE, Vector2i(r.size.x - 2, r.size.y - 3))
+		if top.size.x <= 0 or top.size.y <= 0:
+			continue
+		n += 1
+		if top.size.x >= 3 and top.size.y >= 2 and n % 4 == 1:
+			v.object(&"arbol_redondo", top.position + Vector2i(top.size.x / 2, top.size.y - 1))
+		v.sprinkle(top, 0.45, pieces)
+	await v.refresh()

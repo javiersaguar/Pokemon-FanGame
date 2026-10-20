@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="5_u0nsr"]
 [ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="6_gaaaa"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/arqueologo.png" id="7_gaaaa"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="7_xbti8"]
 [ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_li23l"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/montanera.png" id="8_xbti8"]
 [ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_eapm1"]
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_3u3lm"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/guarda_parque.png" id="11_gaaaa"]
 [ext_resource type="PackedScene" path="res://src/overworld/item_ball/item_ball.tscn" id="12_li23l"]
 [ext_resource type="Script" path="res://src/overworld/item_ball/item_ball.gd" id="13_eapm1"]
 
@@ -54,7 +54,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=659520640]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAIAAkAdgEAAAAAAAAiAAoABgAOAAAAAAAcAD8ABAASAAAAAAAdAAcAdQEAAAAAAAAsABMAdQEAAAAAAAAfABYAdQEAAAAAAAAbABkAdQEAAAAAAAAIABsAdQEAAAAAAAAQAB0AdQEAAAAAAAAjACAAdQEAAAAAAAAIACEAdQEAAAAAAAAUACYAdQEAAAAAAAAtACgAdQEAAAAAAAAUAC4AdQEAAAAAAAANADEAdQEAAAAAAAATADoAdQEAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAIAAkAdgEAAAAAAAAiAAoABgAOAAAAAAAcAD8ABAASAAAAAAAdAAcAdQEAAAAAAAAsABMAdQEAAAAAAAAfABYAdQEAAAAAAAAbABkAdQEAAAAAAAAIABsAdQEAAAAAAAAQAB0AdQEAAAAAAAAjACAAdQEAAAAAAAAIACEAdQEAAAAAAAAUACYAdQEAAAAAAAAtACgAdQEAAAAAAAAUAC4AdQEAAAAAAAANADEAdQEAAAAAAAATADoAdQEAAAAAAAAoABYABAAGAAAAAAADACEABAAGAAAAAAAWACYABAAGAAAAAAADACcABAAGAAAAAAAlACwABAAGAAAAAAAlADEABAAGAAAAAAA=")
 tile_set = ExtResource("4_skb2e")
 
 [node name="Guia" type="Node2D" parent="Entities" unique_id=395360280 instance=ExtResource("5_u0nsr")]
@@ -101,9 +101,10 @@ show_sprite = false
 position = Vector2(1360, 848)
 script = ExtResource("6_gaaaa")
 trainer_id = &"ruta26_guarda"
+display_name = "Guarda del parque Rafael"
 lines = PackedStringArray()
 turn_to_player = true
-sprite_sheet = ExtResource("7_xbti8")
+sprite_sheet = ExtResource("11_gaaaa")
 initial_facing = 1
 
 [node name="UltraBallMirador" type="Node2D" parent="Entities" unique_id=1480632489 instance=ExtResource("12_li23l")]
