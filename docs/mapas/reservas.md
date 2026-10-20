@@ -16,3 +16,6 @@ Sesión anterior cerrada. Reservas activas del 19 de octubre: Véase `docs/CIERR
 - (Edificios, 2026-10-20) Javier autoriza un teatro original para Sevilla y un plató portuario original para el gimnasio de Málaga. Sevilla/rio queda terminado y liberado al cerrar el bloque 3. Málaga/exterior ha sido liberado por Rutas y ciudades (`4bb1376e`) y Edificios ha terminado la nave de 5×5 casillas en el bloque 5. Entrada (58,60), regreso (58,61), salas y 25 pasarelas conservadas; árbol recolocado a (54,55), solar y calle comprobados. Reserva liberada al integrar.
 
 - (Edificios → Interiores, 2026-10-20) El estadio `bernabeu` no tiene puerta ni interior propio en `madrid/bernabeu`; las cinco salas existentes son de otros edificios del barrio. El redibujo conserva ese contrato. Hace falta coordinar una entrada de estadio y salas acordes, reservando primero el exterior y sin alterar las otras cinco conexiones.
+
+## Peticiones a Combate
+- (Rutas y ciudades, 2026-10-20) Ruta marítima 1: reglas de Surf para escollos y corrientes (una casilla de corriente que arrastre en una dirección, y escollos que no se puedan atravesar con Surf). Con ellas se añadirán corrientes y objetos en los islotes; ahora solo hay escollos de adorno y el comprobador de alcance va a pie.
