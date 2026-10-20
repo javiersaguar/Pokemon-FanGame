@@ -99,6 +99,9 @@ class ItemBehavior extends BattleEffect:
 	func eats_at(battler: Battler) -> bool:
 		var hp := battler.pokemon.current_hp
 		if PINCH_FLAVOR.has(id):
+			# Gula: las bayas de apuro, a la mitad de los PS.
+			if battler.ability == &"gluttony":
+				return hp * 2 <= battler.pokemon.max_hp()
 			return hp * 4 <= battler.pokemon.max_hp()
 		return hp * 2 <= battler.pokemon.max_hp()
 

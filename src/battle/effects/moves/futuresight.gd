@@ -1,6 +1,7 @@
 extends BattleEffect
-## Premonición: el ataque llega al final del segundo turno siguiente, contra quien esté entonces en
-## ese lugar. El daño se calcula al usarlo (con las estadísticas de ese momento).
+## Premonición (y Deseo Oculto, que hereda): golpea dos turnos después al que esté en ese sitio. El
+## daño se calcula al golpear (5.ª generación en adelante), con las características que tenga entonces
+## quien lo usó, aunque se haya retirado.
 
 var text := "¡%s ha previsto un ataque!"
 
@@ -9,9 +10,7 @@ func on_try_move(engine: BattleEngine, user: Battler, target: Battler, move: Mov
 	if engine.has_side_condition(target.side, &"futuresight"):
 		engine.message(tr("¡Pero falló!"))
 		return false
-	var opts := engine._damage_opts(user, target, move, self, false)
-	var amount := DamageCalc.calculate(user, target, move, false, engine.rand_int(&"damage_roll", 0, DamageCalc.ROLLS - 1), opts)
-	engine.add_side_condition(target.side, &"futuresight", user, {"turns": 3, "damage": amount,
-		"move": String(move.id), "user": engine.name_of(user), "type": String(move.type)})
+	engine.add_side_condition(target.side, &"futuresight", user, {"turns": 3, "move": String(move.id),
+		"user": engine.name_of(user), "type": String(move.type), "slot": target.slot, "source": user})
 	engine.message(tr(text) % engine.name_of(user))
 	return false

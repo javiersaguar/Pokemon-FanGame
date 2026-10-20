@@ -18,9 +18,14 @@ const DOUBLE := {
 }
 
 
-func on_try_hit(engine: BattleEngine, _target: Battler, state: Dictionary, user: Battler, move: MoveData) -> bool:
+func on_try_hit(engine: BattleEngine, target: Battler, state: Dictionary, user: Battler, move: MoveData) -> bool:
 	var place := str(state.get("invulnerable", ""))
 	if place == "" or not HITS.has(place) or move.id in HITS[place]:
+		return true
+	# Fijar Blanco y Telépata (y Indefenso) alcanzan también al que vuela o se esconde.
+	var aim: Dictionary = user.volatiles.get(&"lockon", {}) if user != null else {}
+	if (not aim.is_empty() and str(aim.get("uid", "")) == target.pokemon.uid) \
+			or (user != null and user.ability == &"noguard") or target.ability == &"noguard":
 		return true
 	engine.message(tr("¡El ataque %s ha fallado!") % engine.of_name(user))
 	return false

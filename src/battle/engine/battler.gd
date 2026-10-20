@@ -17,6 +17,8 @@ var toxic_stage: int = 0
 ## Niveles de crítico extra (Directo, Foco Energía).
 var crit_stage: int = 0
 var turns_active: int = 0
+## Turno en que salió al campo (0 = al empezar el combate). Impulso, Vigilante.
+var entered_turn: int = 0
 var last_move: StringName = &""
 var moved_this_turn: bool = false
 ## Ha recibido daño este turno (Buena Baza).
@@ -103,7 +105,13 @@ func has_volatile(id: StringName) -> bool:
 
 ## Peso en kilos en el combate (Patada Baja, Cuerpo Pesado...). Nunca baja de 0,1.
 func weight() -> float:
-	return maxf(0.1, pokemon.species().weight + weight_delta)
+	var w := maxf(0.1, pokemon.species().weight + weight_delta)
+	# Metal Pesado y Metal Liviano.
+	if ability == &"heavymetal":
+		w *= 2.0
+	elif ability == &"lightmetal":
+		w = maxf(0.1, w / 2.0)
+	return w
 
 
 ## Estadística con su nivel aplicado (no sirve para los PS).

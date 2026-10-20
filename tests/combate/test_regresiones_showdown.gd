@@ -79,6 +79,7 @@ func test_mar_llamas_sube_el_ataque_especial_y_no_la_potencia() -> void:
 		[_mon(&"snorlax", 30, ["tackle"])])
 	var user := engine.active(BattleEngine.PLAYER)
 	user.pokemon.current_hp = 1
+	engine.active(BattleEngine.FOE).ability = &"immunity"  # Con Sebo, el fuego le haría la mitad.
 	var move := DataDB.move(&"ember")
 	var opts: Dictionary = engine.call("_damage_opts", user, engine.active(BattleEngine.FOE), move, null, false)
 	assert_eq(int(opts["power"]), move.power)

@@ -23,3 +23,8 @@ func disables_move(_battler: Battler, _state: Dictionary, move: MoveData) -> boo
 
 func disabled_text(_state: Dictionary) -> String:
 	return "¡%s no puede usar %s por la gravedad!"
+
+
+## Precisión ×5/3 (6840/4096 de Showdown), después de los niveles de precisión y evasión.
+func modify_accuracy(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, accuracy: int) -> int:
+	return DamageCalc.modify(accuracy, 6840.0, 4096.0)

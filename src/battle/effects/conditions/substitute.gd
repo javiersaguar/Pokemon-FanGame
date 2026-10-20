@@ -24,9 +24,11 @@ func on_damage(engine: BattleEngine, battler: Battler, state: Dictionary, amount
 	var user: Battler = engine._move_user
 	if user == battler or _bypasses(engine, move):
 		return amount
-	var left := int(state.get("hp", 0)) - amount
+	var hp := int(state.get("hp", 0))
+	var left := hp - amount
 	state["hp"] = left
 	engine.hit_absorbed = true
+	engine.absorbed_damage = mini(amount, hp)
 	engine.message(tr("¡El sustituto ha recibido el daño en lugar de %s!") % engine.inner_name_of(battler))
 	if left <= 0:
 		engine.remove_volatile(battler, &"substitute")

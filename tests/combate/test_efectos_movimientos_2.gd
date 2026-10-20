@@ -297,4 +297,6 @@ func test_niebla_y_plegaria_vital() -> void:
 	fallen.current_hp = 0
 	var bless := _engine([_mon(&"pawmot", 50, ["revivalblessing"]), fallen], [_mon(&"snorlax", 50, ["splash"])])
 	bless.submit(BattleAction.fight(0))
+	assert_eq(bless.request.reason, &"revivalblessing", "el jugador elige a quién revivir")
+	bless.submit(BattleAction.switch_to(1))
 	assert_eq(fallen.current_hp, fallen.max_hp() / 2)

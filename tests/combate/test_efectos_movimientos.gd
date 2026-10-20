@@ -320,6 +320,7 @@ func test_rencor_quita_pp() -> void:
 func test_corte_furia_dobla_si_se_repite() -> void:
 	var engine := _engine([_mon(&"scyther", 50, ["furycutter"])], [_mon(&"blissey", 70, ["splash"])], false, 1)
 	var me := engine.active(0)
+	me.ability = &"swarm"  # Con Experto (otra de sus habilidades) serían 60.
 	assert_eq(_power(engine, &"furycutter", me, engine.active(1)), 40)
 	engine.submit(BattleAction.fight(0))
 	engine.turn += 1

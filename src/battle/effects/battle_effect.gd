@@ -107,6 +107,11 @@ func modify_damage_opts(_engine: BattleEngine, _user: Battler, _target: Battler,
 
 
 ## Protección y similares: usarlos seguidos es cada vez menos probable.
+## Dracoflechas: en dobles reparte un golpe a cada rival (o los dos al que se pueda alcanzar).
+func smart_target() -> bool:
+	return false
+
+
 func is_stalling_move() -> bool:
 	return false
 
@@ -329,3 +334,98 @@ func heal_amount(_battler: Battler) -> int:
 
 func pinch_confuses(_battler: Battler) -> bool:
 	return false
+
+
+# --- Habilidades (segunda parte de la fase 9.5) ---
+
+## Absorbe el movimiento (Absorbe Elec, Pararrayos, Herbívoro...): hace su efecto y devuelve true. Solo
+## se llama en el golpe de verdad (immune_to es la consulta sin efectos que usa la IA).
+func absorbs_move(_engine: BattleEngine, _target: Battler, _user: Battler, _move: MoveData) -> bool:
+	return false
+
+
+## No le afecta la Intimidación (Foco Interno, Despiste, Ritmo Propio, Intrépido, Guardián).
+func blocks_intimidate() -> bool:
+	return false
+
+
+## Multiplicador al Ataque o Ataque Especial de quien golpea a este Pokémon (Sebo, Ignífugo...).
+func incoming_atk_modifier(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData) -> float:
+	return 1.0
+
+
+## STAB propio (Adaptable: 2). 0 = el normal.
+func stab_modifier(_user: Battler) -> float:
+	return 0.0
+
+
+## Multiplicador final del daño que recibe (Compensación, Peluche, Escama de Hielo, Filtro...).
+func incoming_damage_modifier(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, _crit: bool) -> float:
+	return 1.0
+
+
+## Cambia el daño que va a recibir de cualquier fuente (Robustez, Muro Mágico, Cabeza Roca, Antídoto,
+## Disfraz...). `source` es la del motor (move, recoil, psn, tox, brn, weather...).
+func modify_damage_taken(_engine: BattleEngine, _b: Battler, amount: int, _source: StringName, _move: MoveData) -> int:
+	return amount
+
+
+## Después de cada golpe que hace daño, con la habilidad u objeto del atacante (Toque Tóxico, Hedor...).
+func on_dealt_damage(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData, _damage: int) -> void:
+	pass
+
+
+## Al retirarse vivo (Cura Natural, Regeneración, Cambio Heroico).
+func on_switch_out(_engine: BattleEngine, _b: Battler) -> void:
+	pass
+
+
+## false = no se mueve este turno (Ausente).
+func can_act(_engine: BattleEngine, _user: Battler, _move: MoveData) -> bool:
+	return true
+
+
+## Prioridad del movimiento (Bromista, Alas Vendaval, Primer Auxilio).
+func modify_priority(_engine: BattleEngine, _user: Battler, _move: MoveData, priority: int) -> int:
+	return priority
+
+
+## Actúa el último dentro de su prioridad (Rezagado).
+func moves_last() -> bool:
+	return false
+
+
+## Nadie le asesta golpes críticos (Armadura Batalla, Caparazón).
+func blocks_crit() -> bool:
+	return false
+
+
+## Niveles de crítico de más (Afortunado: 1; Ensañamiento contra envenenados: siempre).
+func crit_bonus(_engine: BattleEngine, _user: Battler, _target: Battler, _move: MoveData) -> int:
+	return 0
+
+
+## Los rivales no le bajan las características (Cuerpo Puro, Humo Blanco, Espejo Escudo).
+func prevents_foe_drop() -> bool:
+	return false
+
+
+## Cambia cada subida o bajada (Respondón: al revés; Simple: el doble).
+func modify_boost(amount: int) -> int:
+	return amount
+
+
+## Un rival le ha bajado una característica (Competitivo, Tenacidad).
+func on_stat_lowered(_engine: BattleEngine, _b: Battler) -> void:
+	pass
+
+
+## No tiene en cuenta los cambios de características del rival (Ignorante).
+func ignores_boosts() -> bool:
+	return false
+
+
+## Impide huir o cambiar a `b`, un rival de quien lo lleva (Trampa Arena, Sombra Trampa, Imán).
+func traps_foe(_engine: BattleEngine, _holder: Battler, _b: Battler) -> bool:
+	return false
+

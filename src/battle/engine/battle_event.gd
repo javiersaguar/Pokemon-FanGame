@@ -41,6 +41,8 @@ const DYNAMAX := &"dynamax"
 const DYNAMAX_END := &"dynamax_end"
 ## Teratipo: {type}. El tipo defensivo pasa a ser solo ese. Dura todo el combate.
 const TERA := &"tera"
+## Cambio de forma por habilidad o fin de Ilusión: species, form_name, hp, max_hp (y name si cambia).
+const FORME := &"forme"
 
 var type: StringName
 ## 0 = jugador, 1 = rival, -1 = ninguno.

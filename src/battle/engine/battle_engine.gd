@@ -83,8 +83,20 @@ var _move_user: Battler = null
 var _items_before: Dictionary = {}
 ## Lo pone el Sustituto cuando se lleva un golpe: ese golpe no afecta al Pokémon.
 var hit_absorbed := false
+## Daño que se ha llevado el sustituto en el último golpe (cuenta para el retroceso y el drenaje).
+var absorbed_damage := 0
+## Golpes del siguiente _apply_damaging_move (Dracoflechas en dobles: uno a cada rival).
+var _forced_hits := 0
+const PROTECT_VOLATILES: Array[StringName] = [&"protect", &"banefulbunker", &"spikyshield", &"kingsshield",
+	&"silktrap", &"burningbulwark", &"obstruct", &"maxguard", &"protect_variant"]
 ## Movimientos cambiados durante el combate (Mimético): [Pokemon, índice, MoveSlot original].
 var _restore_slots: Array = []
+## Formas cambiadas por habilidad que duran todo el combate: {Pokemon: especie original}.
+var _forme_restore: Dictionary = {}
+## ¿Fue crítico el último golpe? (Irascible.)
+var last_hit_crit := false
+var _dancing := false
+var _mirroring := false
 ## Último movimiento usado en el combate por cualquiera (Copión).
 var last_used_move: StringName = &""
 ## Golpes recibidos por cada Pokémon (uid → veces) en todo el combate (Puño Furia).
@@ -446,6 +458,7 @@ func _begin_turn(player_action: Variant = null) -> void:
 				"order": BattleAction.ORDER[action.kind],
 				"priority": _action_priority(b, action),
 				"speed": _speed(b),
+				"last": _passives(b).any(func(e: BattleEffect) -> bool: return e.moves_last()),
 				"tie": rng.randf(),
 			})
 	_double_chosen.clear()
@@ -470,6 +483,8 @@ func _entry_goes_first(a: Dictionary, b: Dictionary) -> bool:
 		return a["order"] < b["order"]
 	if a["priority"] != b["priority"]:
 		return a["priority"] > b["priority"]
+	if a.get("last", false) != b.get("last", false):
+		return b.get("last", false)
 	if a["speed"] != b["speed"]:
 		return (a["speed"] < b["speed"]) if trick_room() else (a["speed"] > b["speed"])
 	return a["tie"] < b["tie"]
@@ -501,7 +516,7 @@ func _action_priority(b: Battler, action: BattleAction) -> int:
 		return 0
 	if b.dynamax_turns > 0 and m.id != STRUGGLE:
 		return _as_max_move(m).priority
-	return m.priority
+	return move_priority(b, m)
 
 
 ## Corrige acciones imposibles del jugador (la interfaz no debería enviarlas).
@@ -729,6 +744,11 @@ func _step_player_replacement() -> void:
 
 
 func _resolve_switch_request(req: BattleRequest, action: BattleAction) -> void:
+	if req.reason == &"revivalblessing":
+		var chosen := action.party_index if action.kind == BattleAction.Kind.SWITCH else -1
+		var fainted := fainted_indices(PLAYER)
+		_revive(PLAYER, chosen if chosen in fainted else fainted[0])
+		return
 	if req.reason == &"shift":
 		var current := active(PLAYER)
 		if current != null and action.kind == BattleAction.Kind.SWITCH \
@@ -862,9 +882,17 @@ func _finish(outcome: StringName) -> void:
 		for p: Pokemon in party(PLAYER):
 			if _items_before.has(p.uid):
 				p.held_item = _items_before[p.uid]
-	for entry: Array in _restore_slots:
+	# Al revés: si un hueco se cambió dos veces, queda el movimiento de antes del primer cambio.
+	for i: int in range(_restore_slots.size() - 1, -1, -1):
+		var entry: Array = _restore_slots[i]
 		(entry[0] as Pokemon).moves[int(entry[1])] = entry[2]
 	_restore_slots.clear()
+	for p: Pokemon in _forme_restore:
+		var hp_ratio := float(p.current_hp) / maxf(1.0, float(p.max_hp()))
+		p.species_id = _forme_restore[p]
+		if p.current_hp > 0:
+			p.current_hp = clampi(roundi(hp_ratio * p.max_hp()), 1, p.max_hp())
+	_forme_restore.clear()
 	_revert_all_formes()
 	for side_index: int in [PLAYER, FOE]:
 		for slot: int in slot_count():
@@ -905,18 +933,28 @@ func _send_out(side_index: int, index: int, slot: int = 0) -> void:
 
 
 func _put_in(side_index: int, index: int, wild_appearance: bool, slot: int = 0) -> void:
+	var leaving := active(side_index, slot) if slot < slot_count() else null
+	if leaving != null:
+		_restore_switch_slots(leaving.pokemon)
+		if not leaving.is_fainted():
+			for passive: BattleEffect in _passives(leaving):
+				passive.on_switch_out(self, leaving)
 	var p := party(side_index)[index]
 	var b := Battler.new(p, side_index, slot, index)
+	b.entered_turn = turn
 	b.move_filter = _move_disabled
 	if _tera_of.has(p.uid):
 		b.tera_active = _tera_of[p.uid]
 	_sides[side_index].active[slot] = b
 	var s := p.species()
+	var disguise := _illusion_of(side_index, index) if p.ability_id() == &"illusion" else null
+	if disguise != null:
+		b.volatiles[&"illusion"] = {"species": String(disguise.species_id)}
 	var data := {
 		"party_index": index,
-		"species": String(p.species_id),
-		"form_name": s.form_name,
-		"name": p.display_name(),
+		"species": String(p.species_id if disguise == null else disguise.species_id),
+		"form_name": s.form_name if disguise == null else disguise.species().form_name,
+		"name": p.display_name() if disguise == null else disguise.display_name(),
 		"level": p.level,
 		"gender": String(p.gender),
 		"shiny": p.shiny,
@@ -1025,7 +1063,7 @@ func _do_run(b: Battler) -> void:
 	_flee_attempts += 1
 	var mine := _speed(b)
 	var theirs := maxi(1, _speed(foe))
-	var escape_ability := Effects.ability(b.ability)
+	var escape_ability := ability_effect(b)
 	var escaped := (escape_ability != null and escape_ability.guarantees_escape()) or mine >= theirs
 	if not escaped:
 		var odds := mine * 128 / theirs + 30 * _flee_attempts
@@ -1206,7 +1244,7 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 		return
 	if slot != null:
 		if not action.forced:
-			slot.pp = maxi(0, slot.pp - 1)
+			slot.pp = maxi(0, slot.pp - _pp_cost(user, move))
 	else:
 		_msg(tr("¡A %s no le quedan movimientos!") % BattleText.name_of(user, setup.is_wild()))
 	user.last_move = move.id
@@ -1226,6 +1264,19 @@ func _after_move(user: Battler, move: MoveData, hit: bool) -> void:
 	var effect := Effects.move(move.id)
 	if effect != null:
 		effect.on_after_move(self, user, move, hit)
+	for passive: BattleEffect in _passives(user):
+		passive.on_after_move(self, user, move, hit)
+	# Pareja de Baile: los demás que la tienen repiten la danza (una vez, sin encadenar).
+	if hit and move.has_flag(&"dance") and not _dancing:
+		_dancing = true
+		for side_index: int in [PLAYER, FOE]:
+			for slot: int in slot_count():
+				var dancer := active(side_index, slot)
+				if dancer != null and dancer != user and not dancer.is_fainted() and dancer.ability == &"dancer" \
+						and ability_effect(dancer) != null:
+					_msg(tr("¡%s se une al baile!") % BattleText.cap_name(dancer, setup.is_wild()))
+					use_move(dancer, move)
+		_dancing = false
 	if effect == null or not effect.is_stalling_move():
 		user.protect_count = 0
 
@@ -1239,7 +1290,7 @@ func _before_move(user: Battler, move: MoveData) -> bool:
 		if (h[0] as BattleEffect).before_move_priority() >= 10 and not (h[0] as BattleEffect).on_before_move(self, user, h[1], move):
 			return false
 	if p.status == &"slp":
-		p.status_turns -= 1
+		p.status_turns -= 2 if user.ability == &"earlybird" else 1
 		if p.status_turns <= 0:
 			_cure_status(user)
 		else:
@@ -1253,6 +1304,10 @@ func _before_move(user: Battler, move: MoveData) -> bool:
 		else:
 			_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "frz"})
 			_msg(tr("¡%s está congelado!") % name)
+			return false
+	for passive: BattleEffect in _passives(user):
+		if not passive.can_act(self, user, move):
+			_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "truant"})
 			return false
 	if user.has_volatile(&"flinch"):
 		_emit(BattleEvent.CANT_MOVE, user.side, user.slot, {"reason": "flinch"})
@@ -1306,6 +1361,9 @@ func _use_move_inner(user: Battler, move: MoveData) -> bool:
 			move = own.modify_own_move(self, user, user.volatiles[id], move)
 	for c: Array in _field_conditions():
 		move = (c[0] as BattleEffect).modify_own_move(self, user, c[2], move)
+	# Habilidades que cambian el movimiento o al usuario (Piel Feérica, Voz Fluida, Cambio Táctico, Mutatipo).
+	for passive: BattleEffect in _passives(user):
+		move = passive.modify_own_move(self, user, {}, move)
 	_msg(tr("¡%s usó %s!") % [BattleText.cap_name(user, wild), move.name])
 	var target := _move_target(user, move)
 	_emit(BattleEvent.MOVE, user.side, user.slot, {
@@ -1330,13 +1388,34 @@ func _use_move_inner(user: Battler, move: MoveData) -> bool:
 		return false
 	if effect != null and not effect.on_try_move(self, user, target, move):
 		return false
+	# Dracoflechas en dobles: un dardo a cada rival; si el elegido no se puede alcanzar, los dos al otro.
+	var split: Battler = null
+	if effect != null and effect.smart_target() and is_double() and target != user:
+		var other := active(target.side, 1 - target.slot)
+		if other != null and not other.is_fainted():
+			if not _reachable(user, target, move):
+				target = other
+			elif _reachable(user, other, move):
+				split = other
 	if target != user and move.target not in MoveData.FIELD_TARGETS:
 		for c: Array in _conditions_of(target):
 			if not (c[0] as BattleEffect).on_try_hit(self, target, c[2], user, move):
 				if effect != null:
 					effect.on_miss(self, user, target, move)
 				return false
-		if _is_immune(target, move) or (move.ohko != &"" and target.pokemon.level > user.pokemon.level):
+		var absorbed := false
+		for passive: BattleEffect in _passives(target):
+			if passive.absorbs_move(self, target, user, move):
+				absorbed = true
+				break
+		if absorbed:
+			if effect != null:
+				effect.on_miss(self, user, target, move)
+			return false
+		# Bromista (7.ª generación en adelante): sus movimientos de estado no afectan a los de tipo Siniestro rivales.
+		var prankster_blocked := user.ability == &"prankster" and move.is_status() and target.side != user.side \
+			and target.has_type(&"dark") and move.target not in MoveData.FIELD_TARGETS
+		if prankster_blocked or _is_immune(target, move) or (move.ohko != &"" and target.pokemon.level > user.pokemon.level):
 			_msg(tr("No afecta %s...") % BattleText.to_name(target, wild))
 			if effect != null:
 				effect.on_miss(self, user, target, move)
@@ -1351,15 +1430,39 @@ func _use_move_inner(user: Battler, move: MoveData) -> bool:
 		effect.on_prepare_hit(self, user, target, move)
 	if move.is_status():
 		_apply_status_move(user, target, move, effect)
+	elif split != null:
+		_forced_hits = 1
+		_apply_damaging_move(user, target, move, effect)
+		if not split.is_fainted() and not user.is_fainted():
+			if _accuracy_hits(user, split, move, effect):
+				_forced_hits = 1
+				_apply_damaging_move(user, split, move, effect)
+			else:
+				_emit(BattleEvent.MISS, split.side, split.slot, {})
+				_msg(tr("¡El ataque %s ha fallado!") % BattleText.of_name(user, wild))
+		_forced_hits = 0
 	else:
 		var targets := _hit_targets(user, move)
 		var spread := targets.size() > 1
-		if targets.is_empty():
+		# Un solo objetivo: el ya comprobado (puede haber cambiado, como con Dracoflechas).
+		if targets.size() <= 1:
 			_apply_damaging_move(user, target, move, effect)
 		else:
 			for hit: Battler in targets:
 				_apply_damaging_move(user, hit, move, effect, spread)
 	return true
+
+
+## ¿Le llegaría el golpe sin que nada lo pare (protección, inmunidad, vuelo o subsuelo)? Para elegir
+## objetivo sin mensajes (Dracoflechas).
+func _reachable(user: Battler, b: Battler, move: MoveData) -> bool:
+	if b == null or b.is_fainted() or _is_immune(b, move):
+		return false
+	for id: StringName in PROTECT_VOLATILES:
+		if b.has_volatile(id) and not move.has_flag(&"bypassprotect"):
+			return false
+	var air: Dictionary = b.volatiles.get(&"twoturnmove", {})
+	return str(air.get("invulnerable", "")) == "" or user.ability == &"noguard" or b.ability == &"noguard"
 
 
 ## ¿A algún bando ya no le quedan Pokémon que puedan luchar? (El combate acaba al procesar los KO.)
@@ -1448,7 +1551,10 @@ func _is_immune(target: Battler, move: MoveData) -> bool:
 	for c: Array in _conditions_of(target):
 		if (c[0] as BattleEffect).immune_to(self, target, c[2], move):
 			return true
+	var scrappy := _move_user != null and _move_user.ability == &"scrappy" and move.type in [&"normal", &"fighting"]
 	for t: StringName in target.types():
+		if scrappy and t == &"ghost":
+			continue
 		if DataDB.type_effectiveness(move.type, [t]) == 0.0 and not move.ignores_immunity_of(t):
 			return true
 		if move.has_flag(&"powder") and DataDB.type_immune_to(t, &"powder"):
@@ -1459,6 +1565,8 @@ func _is_immune(target: Battler, move: MoveData) -> bool:
 
 
 func _accuracy_hits(user: Battler, target: Battler, move: MoveData, effect: BattleEffect = null) -> bool:
+	if user.ability == &"noguard" or target.ability == &"noguard":
+		return true
 	# Tóxico usado por un Pokémon de tipo Veneno no falla nunca (6.ª generación en adelante).
 	if move.id == &"toxic" and user.has_type(&"poison"):
 		return true
@@ -1477,18 +1585,22 @@ func _accuracy_hits(user: Battler, target: Battler, move: MoveData, effect: Batt
 			accuracy = override
 	if accuracy <= 0:
 		return true
-	var user_ability := Effects.ability(user.ability)
+	var user_ability := ability_effect(user)
 	if user_ability != null:
 		accuracy = user_ability.modify_accuracy(self, user, target, move, accuracy)
-	var target_ability := Effects.ability(target.ability)
+	var target_ability := ability_effect(target)
 	if target_ability != null:
 		accuracy = target_ability.modify_incoming_accuracy(self, user, target, move, accuracy)
-	var stage: int = user.boosts[&"accuracy"]
-	if user.ability == &"keeneye":
+	var stage: int = 0 if target_ability != null and target_ability.ignores_boosts() else user.boosts[&"accuracy"]
+	var ignores_evasion := move.ignore_evasion or (user_ability != null and user_ability.ignores_boosts())
+	if user.ability in [&"keeneye", &"illuminate", &"mindseye"]:
 		stage = maxi(0, stage)
-	elif not move.ignore_evasion:
+	elif not ignores_evasion:
 		stage = clampi(stage - target.boosts[&"evasion"], -6, 6)
-	return rand_chance(&"accuracy", StatCalc.apply_accuracy_stage(accuracy, stage), 100)
+	var final_accuracy := StatCalc.apply_accuracy_stage(accuracy, stage)
+	for c: Array in _field_conditions():
+		final_accuracy = (c[0] as BattleEffect).modify_accuracy(self, user, target, move, final_accuracy)
+	return rand_chance(&"accuracy", final_accuracy, 100)
 
 
 func _roll_hits(move: MoveData) -> int:
@@ -1499,10 +1611,17 @@ func _roll_hits(move: MoveData) -> int:
 	return move.multihit_min
 
 
-func _roll_crit(user: Battler, move: MoveData) -> bool:
+func _roll_crit(user: Battler, move: MoveData, target: Battler = null) -> bool:
+	if target != null:
+		for passive: BattleEffect in _passives(target):
+			if passive.blocks_crit():
+				return false
 	if move.will_crit:
 		return true
-	var ratio := clampi(move.crit_ratio + user.crit_stage, 0, CRIT_CHANCES.size() - 1)
+	var bonus := 0
+	for passive: BattleEffect in _passives(user):
+		bonus += passive.crit_bonus(self, user, target, move)
+	var ratio := clampi(move.crit_ratio + user.crit_stage + bonus, 0, CRIT_CHANCES.size() - 1)
 	return ratio > 0 and rand_chance(&"crit", 1, CRIT_CHANCES[ratio])
 
 
@@ -1513,6 +1632,11 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	var effectiveness := 1.0 if fixed else DamageCalc.effectiveness(move, target)
 	var scripted_hits := effect.hit_count(self, user, target, move) if effect != null else -1
 	var hits := scripted_hits if scripted_hits >= 0 else _roll_hits(move)
+	if scripted_hits < 0 and user.ability == &"skilllink" and move.multihit_max > move.multihit_min:
+		hits = move.multihit_max
+	if _forced_hits > 0:
+		hits = _forced_hits
+		_forced_hits = 0
 	var total := 0
 	var landed := 0
 	_hold_berries = true
@@ -1530,7 +1654,7 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		elif move.fixed_damage > 0:
 			amount = move.fixed_damage
 		else:
-			crit = _roll_crit(user, move)
+			crit = _roll_crit(user, move, target)
 			var opts := _damage_opts(user, target, move, effect, crit)
 			opts["spread"] = spread
 			if opts.has("effectiveness"):
@@ -1546,6 +1670,10 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		if hit_absorbed:
 			hit_absorbed = false
 			landed += 1
+			total += absorbed_damage
+			# Con el sustituto, Showdown redondea el drenaje hacia arriba.
+			if not move.drain.is_empty() and absorbed_damage > 0 and not user.is_fainted():
+				_heal(user, ceili(absorbed_damage * float(move.drain[0]) / move.drain[1]), &"drain")
 			if crit:
 				_msg(tr("¡Un golpe crítico!"))
 			continue
@@ -1556,12 +1684,18 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			times_hit[target.pokemon.uid] = int(times_hit.get(target.pokemon.uid, 0)) + 1
 		# El drenaje cura con cada golpe, nada más hacer el daño (antes del Casco Dentado del rival).
 		if not move.drain.is_empty() and dealt > 0 and not user.is_fainted():
-			if _heal(user, roundi(dealt * float(move.drain[0]) / move.drain[1]), &"drain") > 0:
+			var drained := roundi(dealt * float(move.drain[0]) / move.drain[1])
+			if target.ability == &"liquidooze":
+				_damage(user, maxi(1, drained), &"liquidooze")
+				_msg(tr("¡%s ha absorbido el lodo líquido!") % BattleText.cap_name(user, wild))
+			elif _heal(user, drained, &"drain") > 0:
 				_msg(tr("¡%s ha perdido energía!") % BattleText.cap_name(target, wild))
 		if crit:
 			_msg(tr("¡Un golpe crítico!"))
-		for sec: Dictionary in move.secondaries:
-			if rand_chance(&"secondary", int(sec.get("chance", 100)), 100):
+		# Potencia Bruta quita los efectos secundarios; Dicha duplica su probabilidad.
+		var sec_mult := 2 if user.ability == &"serenegrace" else 1
+		for sec: Dictionary in (move.secondaries if user.ability != &"sheerforce" else [] as Array[Dictionary]):
+			if rand_chance(&"secondary", mini(100, int(sec.get("chance", 100)) * sec_mult), 100):
 				_apply_secondary(user, target, sec)
 		# El fuego descongela después de los efectos secundarios (DamagingHit de Showdown): un Lanzallamas
 		# sobre un congelado no puede quemarlo, porque al aplicar la quemadura aún está congelado.
@@ -1570,8 +1704,11 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 		# Con cada golpe que hace daño, aunque debilite (DamagingHit de Showdown): Casco Dentado,
 		# Nerviosismo...
 		if dealt > 0:
+			last_hit_crit = crit
 			for passive: BattleEffect in _passives(target):
 				passive.on_damaged(self, target, user, move)
+			for passive: BattleEffect in _passives(user):
+				passive.on_dealt_damage(self, user, target, move, dealt)
 		if i < hits - 1:
 			_hold_berries = false
 			_eat_healing_berries(user, target)
@@ -1604,13 +1741,14 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 	_eat_healing_berries(user, target)
 	if str(move.raw.get("is_max", false)) == "true" and landed > 0:
 		_max_side_effect(user, target, move.id)
-	if user.pokemon.held_item == &"lifeorb" and total > 0 and not user.is_fainted():
+	if user.pokemon.held_item == &"lifeorb" and total > 0 and not user.is_fainted() \
+			and not (user.ability == &"sheerforce" and not move.secondaries.is_empty()):
 		_damage(user, maxi(1, user.pokemon.max_hp() / 10), &"item")
 		_msg(tr("¡%s se ha hecho daño con la Vidasfera!") % BattleText.cap_name(user, wild))
 	# Como en Showdown, si el KO acaba el combate (al rival no le quedan Pokémon), Autoestima y
 	# compañía ya no se activan.
 	if target.is_fainted() and _sides[target.side].first_able_index() >= 0:
-		var pride := Effects.ability(user.ability)
+		var pride := ability_effect(user)
 		if pride != null:
 			pride.on_foe_fainted(self, user)
 
@@ -1641,7 +1779,15 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 		atk_mod *= passive.move_stat_modifier(self, user, move)
 	for passive: BattleEffect in _passives(target):
 		def_mod *= passive.stat_modifier(self, target, def_stat)
+		atk_mod *= passive.incoming_atk_modifier(self, user, target, move)
 	var final_mods: Array = []
+	for passive: BattleEffect in _passives(target):
+		var incoming := passive.incoming_damage_modifier(self, user, target, move, crit)
+		if incoming != 1.0:
+			final_mods.append(incoming)
+	var guard_ally := ally_of(target)
+	if guard_ally != null and guard_ally.ability == &"friendguard" and ability_effect(guard_ally) != null:
+		final_mods.append(0.75)
 	# Condiciones del campo, del bando y volátiles del objetivo (Reflejo...). Su habilidad y su objeto
 	# no: su damage_modifier es ofensivo (Francotirador, Cromolente, Vidasfera) y solo vale para el usuario.
 	var target_passives := _passives(target)
@@ -1664,6 +1810,14 @@ func _damage_opts(user: Battler, target: Battler, move: MoveData, effect: Battle
 	var ignore_burn := user.ability == &"guts" and user.pokemon.status != &""
 	var opts := {"power": power, "weather": weather_mod, "final": final_mods, "atk_mod": atk_mod, "def_mod": def_mod,
 		"ignore_burn": ignore_burn, "resist_berry": resist_berry}
+	var own_ability := ability_effect(user)
+	var their_ability := ability_effect(target)
+	if own_ability != null and own_ability.stab_modifier(user) > 0.0:
+		opts["stab_mod"] = own_ability.stab_modifier(user)
+	if own_ability != null and own_ability.ignores_boosts():
+		opts["ignore_def_boosts"] = true
+	if their_ability != null and their_ability.ignores_boosts():
+		opts["ignore_atk_boosts"] = true
 	# Zona Extraña: los físicos van contra la Defensa Especial y los especiales contra la Defensa.
 	if field.has("wonderroom"):
 		opts["def_stat"] = &"spd" if move.is_physical() else &"def"
@@ -1710,7 +1864,7 @@ func _apply_status_move(user: Battler, target: Battler, move: MoveData, effect: 
 func _apply_secondary(user: Battler, target: Battler, sec: Dictionary) -> void:
 	# Polvo Escudo solo bloquea lo que afecta al objetivo: las mejoras del propio atacante
 	# (Nitrocarga, Abrecaminos...) sí se aplican, como en Showdown (onModifySecondaries).
-	var dust := Effects.ability(target.ability)
+	var dust := ability_effect(target)
 	var shielded := dust != null and dust.blocks_secondary()
 	if not target.is_fainted() and not shielded:
 		if sec.has("status"):
@@ -1736,6 +1890,12 @@ func _damage(b: Battler, amount: int, source: StringName, effectiveness: float =
 				amount = guard.on_damage(self, b, b.volatiles[id], amount, source, move)
 		if amount < 0:
 			return 0
+	for passive: BattleEffect in _passives(b):
+		amount = passive.modify_damage_taken(self, b, amount, source, move)
+	if amount <= 0 and source != &"move":
+		return 0
+	if source == &"move" and b.has_volatile(&"illusion") and amount > 0:
+		_break_illusion(b)
 	var held := Effects.item(b.pokemon.held_item)
 	if held != null and b.pokemon.held_item == &"focussash" and b.pokemon.current_hp == b.pokemon.max_hp() \
 			and b.pokemon.current_hp > 1 and amount >= b.pokemon.current_hp:
@@ -1763,7 +1923,18 @@ func _eat_healing_berries(user: Battler, target: Battler) -> void:
 			_eat_healing_berry(b)
 
 
+## Nerviosismo: los rivales no pueden comer bayas.
+func _unnerved(b: Battler) -> bool:
+	for slot: int in slot_count():
+		var foe := active(1 - b.side, slot)
+		if foe != null and not foe.is_fainted() and foe.ability == &"unnerve" and ability_effect(foe) != null:
+			return true
+	return false
+
+
 func _eat_healing_berry(b: Battler) -> void:
+	if _unnerved(b) and DataDB.has_item(b.pokemon.held_item) and DataDB.item(b.pokemon.held_item).pocket == &"berries":
+		return
 	var held := Effects.item(b.pokemon.held_item)
 	if held == null or not held.eats_at(b):
 		return
@@ -1810,6 +1981,10 @@ func _try_set_status(target: Battler, status: StringName, announce: bool, source
 	_emit(BattleEvent.STATUS, target.side, target.slot, {"status": String(status)})
 	_msg(tr(BattleText.STATUS_SET[status]) % name)
 	eat_status_berry(target)
+	if target.ability == &"synchronize" and source != null and source != target and status in [&"psn", &"tox", &"par", &"brn"] \
+			and not source.is_fainted() and source.pokemon.status == &"":
+		_msg(tr("¡Sincronía de %s!") % BattleText.name_of(target, setup.is_wild()))
+		_try_set_status(source, status, true, target)
 	return true
 
 
@@ -1888,29 +2063,43 @@ func _end_confusion(b: Battler) -> void:
 func _apply_boosts(target: Battler, boosts: Dictionary[StringName, int], secondary: bool) -> bool:
 	var wild := setup.is_wild()
 	var shown := false
-	var guard := Effects.ability(target.ability)
+	var guard := ability_effect(target)
+	var by_foe := _move_user == null or _move_user.side != target.side
+	var lowered := false
 	for stat: StringName in boosts:
 		if not target.boosts.has(stat):
 			continue
-		if boosts[stat] < 0 and guard != null and guard.prevents_drop(stat):
+		var delta: int = guard.modify_boost(boosts[stat]) if guard != null else boosts[stat]
+		if delta < 0 and by_foe and guard != null and guard.prevents_foe_drop():
+			if target.ability == &"mirrorarmor" and _move_user != null and _move_user != target and not _mirroring:
+				_mirroring = true
+				_apply_boosts(_move_user, {stat: delta} as Dictionary[StringName, int], secondary)
+				_mirroring = false
+			elif not secondary:
+				_msg(tr("¡%s se protege con su habilidad!") % BattleText.cap_name(target, wild))
+			continue
+		if delta < 0 and guard != null and guard.prevents_drop(stat):
 			if not secondary:
 				_msg(tr("¡%s se protege con su habilidad!") % BattleText.cap_name(target, wild))
 			continue
-		if boosts[stat] < 0 and _drop_prevented(target):
+		if delta < 0 and _drop_prevented(target):
 			if not secondary:
 				_msg(tr("¡%s está protegido por la neblina!") % BattleText.cap_name(target, wild))
 			continue
 		var old: int = target.boosts[stat]
-		var new_stage := clampi(old + boosts[stat], -6, 6)
+		var new_stage := clampi(old + delta, -6, 6)
 		var applied := new_stage - old
 		if applied != 0:
 			target.boosts[stat] = new_stage
 			_emit(BattleEvent.BOOST, target.side, target.slot, {"stat": String(stat), "amount": applied, "stage": new_stage})
 			_msg(BattleText.stat_change(target, wild, stat, applied))
 			shown = true
+			lowered = lowered or (applied < 0 and by_foe)
 		elif not secondary:
-			_msg(BattleText.stat_limit(target, wild, stat, boosts[stat] > 0))
+			_msg(BattleText.stat_limit(target, wild, stat, delta > 0))
 			shown = true
+	if lowered and guard != null and not target.is_fainted():
+		guard.on_stat_lowered(self, target)
 	return shown
 
 
@@ -2084,6 +2273,23 @@ func _set_species_keep_ratio(b: Battler, species_id: StringName) -> void:
 	elif hp > new_max:
 		p.current_hp = new_max
 	b.ability = p.ability_id()
+
+
+## Ilusión: el último del equipo que puede luchar y no es él (null si no hay).
+func _illusion_of(side_index: int, index: int) -> Pokemon:
+	var members := party(side_index)
+	for i: int in range(members.size() - 1, -1, -1):
+		if i != index and not members[i].is_fainted():
+			return members[i]
+	return null
+
+
+func _break_illusion(b: Battler) -> void:
+	b.volatiles.erase(&"illusion")
+	var p := b.pokemon
+	_emit(BattleEvent.FORME, b.side, b.slot, {"species": String(p.species_id), "form_name": p.species().form_name,
+		"name": p.display_name(), "hp": p.current_hp, "max_hp": p.max_hp()})
+	_msg(tr("¡Se ha desvanecido la ilusión de %s!") % BattleText.name_of(b, setup.is_wild()))
 
 
 func _revert_forme(b: Battler) -> void:
@@ -2399,7 +2605,7 @@ func _speed(b: Battler) -> int:
 	for c: Array in _conditions_of(b):
 		spe = (c[0] as BattleEffect).modify_speed(self, b, spe)
 	# La parálisis va la última, como en Showdown (Viento Afín y parálisis: 149 → 298 → 149, no 148).
-	if b.pokemon.status == &"par":
+	if b.pokemon.status == &"par" and b.ability != &"quickfeet":
 		@warning_ignore("integer_division")
 		spe = spe * 50 / 100
 	return spe
@@ -2409,14 +2615,94 @@ func _passives(b: Battler) -> Array[BattleEffect]:
 	var out: Array[BattleEffect] = []
 	if b == null:
 		return out
-	var ability := Effects.ability(b.ability)
+	var ability := ability_effect(b)
 	if ability != null:
 		out.append(ability)
-	# Zona Mágica: los objetos equipados no hacen nada.
-	var held := Effects.item(b.pokemon.held_item) if not field.has("magicroom") else null
+	# Zona Mágica y Zoquete: los objetos equipados no hacen nada.
+	var held := Effects.item(b.pokemon.held_item) if not field.has("magicroom") and b.ability != &"klutz" else null
 	if held != null:
 		out.append(held)
 	return out
+
+
+## Habilidades que Rompemoldes (y Turbollama y Terravoltaje) pasan por alto (marca «breakable» de Showdown).
+const BREAKABLE: Array[StringName] = [&"aromaveil", &"battlearmor", &"bigpecks", &"bulletproof", &"clearbody",
+	&"contrary", &"damp", &"dazzling", &"disguise", &"dryskin", &"eartheater", &"filter", &"flashfire", &"flowergift",
+	&"flowerveil", &"fluffy", &"friendguard", &"furcoat", &"goodasgold", &"grasspelt", &"guarddog", &"heatproof",
+	&"heavymetal", &"hypercutter", &"icescales", &"iceface", &"illuminate", &"immunity", &"innerfocus", &"insomnia",
+	&"keeneye", &"leafguard", &"levitate", &"lightmetal", &"lightningrod", &"limber", &"magicbounce", &"magmaarmor",
+	&"marvelscale", &"mirrorarmor", &"motordrive", &"multiscale", &"oblivious", &"overcoat", &"owntempo",
+	&"punkrock", &"purifyingsalt", &"queenlymajesty", &"sandveil", &"sapsipper", &"shellarmor", &"shielddust",
+	&"simple", &"snowcloak", &"solidrock", &"soundproof", &"stickyhold", &"stormdrain", &"sturdy", &"suctioncups",
+	&"sweetveil", &"tangledfeet", &"telepathy", &"thermalexchange", &"thickfat", &"unaware", &"vitalspirit",
+	&"voltabsorb", &"waterabsorb", &"waterbubble", &"waterveil", &"wellbakedbody", &"whitesmoke", &"windrider"]
+const MOLD_BREAKERS: Array[StringName] = [&"moldbreaker", &"teravolt", &"turboblaze"]
+
+
+## La habilidad que cuenta ahora: ninguna con Gas Reactivo en el campo (salvo la suya) ni la que pasa
+## por alto el Rompemoldes de quien está atacando.
+func ability_effect(b: Battler) -> BattleEffect:
+	if b == null or b.ability == &"":
+		return null
+	if b.ability != &"neutralizinggas":
+		for side_index: int in [PLAYER, FOE]:
+			for slot: int in slot_count():
+				var other := active(side_index, slot)
+				if other != null and other != b and not other.is_fainted() and other.ability == &"neutralizinggas":
+					return null
+	if _move_user != null and _move_user != b and _move_user.ability in MOLD_BREAKERS and b.ability in BREAKABLE:
+		return null
+	return Effects.ability(b.ability)
+
+
+## El compañero en dobles (null en individuales o si no está).
+func ally_of(b: Battler) -> Battler:
+	if b == null or not is_double():
+		return null
+	var ally := active(b.side, 1 - b.slot)
+	return ally if ally != null and not ally.is_fainted() else null
+
+
+## Prioridad del movimiento con lo que la cambia (Bromista, Alas Vendaval, Primer Auxilio).
+func move_priority(user: Battler, move: MoveData) -> int:
+	var priority := move.priority
+	for passive: BattleEffect in _passives(user):
+		priority = passive.modify_priority(self, user, move, priority)
+	return priority
+
+
+## ¿Hace contacto? (Paracontacto y Remoto lo evitan.)
+func makes_contact(user: Battler, move: MoveData) -> bool:
+	return move.has_flag(&"contact") and user.pokemon.held_item != &"protectivepads" and user.ability != &"longreach"
+
+
+## Cambio de forma por habilidad (Modo Escudo, Banco, Disfraz, Tragamisil, Cara de Hielo, Cambio
+## Heroico). `until_end`: dura aunque se retire y se deshace al acabar el combate; si no, al retirarse.
+func change_forme(b: Battler, species_id: StringName, until_end: bool = false) -> void:
+	if b == null or not DataDB.has_species(species_id) or b.pokemon.species_id == species_id:
+		return
+	if until_end:
+		if not _forme_restore.has(b.pokemon):
+			_forme_restore[b.pokemon] = b.pokemon.species_id
+	elif b.mega_from == &"":
+		b.mega_from = b.pokemon.species_id
+	var keep := b.ability
+	_set_species_keep_ratio(b, species_id)
+	b.ability = keep
+	_emit(BattleEvent.FORME, b.side, b.slot, {"species": String(species_id), "form_name": b.pokemon.species().form_name,
+		"hp": b.pokemon.current_hp, "max_hp": b.pokemon.max_hp()})
+
+
+## Rumia: la baya vuelve a hacer efecto.
+func eat_berry(b: Battler, berry: StringName) -> void:
+	var effect := Effects.item(berry)
+	if effect == null:
+		return
+	var amount := effect.heal_amount(b)
+	if amount > 0:
+		_heal(b, amount, &"item")
+	elif effect.cures_status(b.pokemon.status):
+		_cure_status(b)
 
 
 func side_condition(side_index: int, id: StringName) -> Dictionary:
@@ -2431,10 +2717,20 @@ func consume_held_item(b: Battler, used: bool = true) -> void:
 		b.consumed_item = b.pokemon.held_item
 		if DataDB.has_item(b.pokemon.held_item) and DataDB.item(b.pokemon.held_item).pocket == &"berries":
 			b.ate_berry = true
+	var eaten := b.pokemon.held_item
 	b.pokemon.held_item = &""
 	b.choice_move = &""
 	if b.ability == &"unburden":
 		b.unburdened = true
+	if used and b.ate_berry and b.ability == &"cheekpouch" and DataDB.has_item(eaten) and DataDB.item(eaten).pocket == &"berries":
+		if _heal(b, maxi(1, b.pokemon.max_hp() / 3), &"ability") > 0:
+			_msg(tr("¡%s ha recuperado PS con Carrillo!") % BattleText.cap_name(b, setup.is_wild()))
+	var giver := ally_of(b)
+	if giver != null and giver.ability == &"symbiosis" and giver.pokemon.held_item != &"":
+		var item := giver.pokemon.held_item
+		giver.pokemon.held_item = &""
+		b.pokemon.held_item = item
+		_msg(tr("¡%s ha pasado su objeto a %s!") % [BattleText.cap_name(giver, setup.is_wild()), BattleText.name_of(b, setup.is_wild())])
 
 
 func _actives_by_speed() -> Array[Battler]:
@@ -2475,6 +2771,14 @@ func _is_trapped(b: Battler) -> bool:
 	for c: Array in _field_conditions():
 		if (c[0] as BattleEffect).traps(self, b, c[2]):
 			return true
+	if b.pokemon.held_item == &"shedshell":
+		return false
+	for slot: int in slot_count():
+		var foe := active(1 - b.side, slot)
+		if foe != null and not foe.is_fainted():
+			for passive: BattleEffect in _passives(foe):
+				if passive.traps_foe(self, foe, b):
+					return true
 	return false
 
 
@@ -2505,10 +2809,73 @@ func _move_blocker(b: Battler, move: MoveData) -> Dictionary:
 	return {}
 
 
-## Cambia un movimiento de `b` hasta el final del combate (Mimético, Esquema).
-func replace_move_slot(b: Battler, index: int, slot: MoveSlot) -> void:
-	_restore_slots.append([b.pokemon, index, b.pokemon.moves[index]])
+## Cambia un movimiento de `b` hasta el final del combate (Esquema) o, con `until_switch`, hasta
+## que se retire (Mimético).
+func replace_move_slot(b: Battler, index: int, slot: MoveSlot, until_switch: bool = false) -> void:
+	_restore_slots.append([b.pokemon, index, b.pokemon.moves[index], until_switch])
 	b.pokemon.moves[index] = slot
+
+
+func _restore_switch_slots(p: Pokemon) -> void:
+	for i: int in range(_restore_slots.size() - 1, -1, -1):
+		var entry: Array = _restore_slots[i]
+		if entry.size() > 3 and entry[3] and entry[0] == p:
+			p.moves[int(entry[1])] = entry[2]
+			_restore_slots.remove_at(i)
+
+
+## Presión: cada rival en el campo con ella gasta un PP más si el movimiento le apunta.
+func _pp_cost(user: Battler, move: MoveData) -> int:
+	if move.targets_user() or move.target in [&"all", &"ally_side", &"adjacent_ally"]:
+		return 1
+	var cost := 1
+	for slot: int in slot_count():
+		var foe := active(1 - user.side, slot)
+		if foe != null and not foe.is_fainted() and foe.ability == &"pressure" and ability_effect(foe) != null:
+			cost += 1
+	return cost
+
+
+## Cede Paso: quien todavía no se ha movido actúa justo después. false si ya no le queda acción.
+func act_next(b: Battler) -> bool:
+	var i := _pending_action_index(b)
+	if i < 0:
+		return false
+	var step: Callable = _queue[i]
+	_queue.remove_at(i)
+	var first := i
+	for j: int in _queue.size():
+		if _is_action_step(_queue[j]):
+			first = mini(first, j)
+			break
+	_queue.insert(mini(first, _queue.size()), step)
+	return true
+
+
+## Último Lugar: su acción pasa a ser la última del turno.
+func act_last(b: Battler) -> bool:
+	var i := _pending_action_index(b)
+	if i < 0:
+		return false
+	var step: Callable = _queue[i]
+	_queue.remove_at(i)
+	var last := -1
+	for j: int in _queue.size():
+		if _is_action_step(_queue[j]):
+			last = j
+	_queue.insert(last + 1 if last >= 0 else i, step)
+	return true
+
+
+func _is_action_step(step: Callable) -> bool:
+	return step.get_method() == &"_step_action" and not step.get_bound_arguments().is_empty()
+
+
+func _pending_action_index(b: Battler) -> int:
+	for j: int in _queue.size():
+		if _is_action_step(_queue[j]) and (_queue[j].get_bound_arguments()[0] as Dictionary).get("battler") == b:
+			return j
+	return -1
 
 
 ## Cambia el objeto de `b` por `item` (Desarme, Ladrón, Truco): el del jugador se recuerda para
@@ -2526,6 +2893,8 @@ func set_held_item(b: Battler, item: StringName) -> void:
 func item_removable(b: Battler) -> bool:
 	var item := b.pokemon.held_item
 	if item == &"" or not DataDB.has_item(item):
+		return false
+	if b.ability == &"stickyhold" and ability_effect(b) != null:
 		return false
 	return DataDB.item(item).category not in [&"mega_stones", &"z_crystals", &"plates", &"memories"]
 
@@ -2591,7 +2960,7 @@ func confuse(target: Battler, source: Battler = null, announce: bool = true) -> 
 func add_volatile(b: Battler, id: StringName, source: Battler = null, data: Dictionary = {}) -> bool:
 	if b == null or b.is_fainted() or b.volatiles.has(id):
 		return false
-	var veil := Effects.ability(b.ability)
+	var veil := ability_effect(b)
 	if veil != null and not veil.allows_volatile(id):
 		message(tr("¡%s se protege con su habilidad!") % name_of(b))
 		return false
@@ -2642,6 +3011,11 @@ func clear_weather() -> void:
 
 
 func weather() -> StringName:
+	for side_index: int in [PLAYER, FOE]:
+		for slot: int in slot_count():
+			var b := active(side_index, slot)
+			if b != null and not b.is_fainted() and b.ability in [&"cloudnine", &"airlock"]:
+				return &""
 	return StringName(str(field.get("weather", {}).get("id", "")))
 
 
@@ -2788,8 +3162,67 @@ func _step_mid_turn_switch(b: Battler, reason: StringName) -> void:
 	request = r
 
 
+## Índices del equipo de `side_index` que están debilitados (Plegaria Vital).
+func fainted_indices(side_index: int) -> Array[int]:
+	var out: Array[int] = []
+	var members := party(side_index)
+	for i: int in members.size():
+		if members[i].is_fainted():
+			out.append(i)
+	return out
+
+
+## Plegaria Vital: el jugador elige a quién revivir (petición SWITCH con `reason` = revivalblessing,
+## que solo admite debilitados); el rival, su IA (el de más nivel). false si no hay nadie debilitado.
+func request_revival(b: Battler) -> bool:
+	if fainted_indices(b.side).is_empty():
+		return false
+	var steps: Array[Callable] = [_step_revival.bind(b)]
+	_push_front(steps)
+	return true
+
+
+func _step_revival(b: Battler) -> void:
+	var fainted := fainted_indices(b.side)
+	if _over or fainted.is_empty():
+		return
+	if b.side == FOE:
+		var best := fainted[0]
+		for i: int in fainted:
+			if party(FOE)[i].level > party(FOE)[best].level:
+				best = i
+		_revive(FOE, best)
+		return
+	var r := BattleRequest.new()
+	r.kind = BattleRequest.Kind.SWITCH
+	r.side = PLAYER
+	r.slot = b.slot
+	r.party_index = b.party_index
+	r.can_run = false
+	r.can_switch = true
+	r.can_use_items = false
+	r.reason = &"revivalblessing"
+	request = r
+
+
+func _revive(side_index: int, index: int) -> void:
+	var p := party(side_index)[index]
+	p.current_hp = maxi(1, p.max_hp() / 2)
+	p.status = &""
+	_msg(tr("¡%s ha vuelto a la vida!") % p.display_name())
+	# En dobles, si el compañero cayó en su sitio y aún no lo han sustituido, vuelve a salir.
+	for slot: int in slot_count():
+		var b := active(side_index, slot)
+		if b != null and b.party_index == index and b.pokemon == p:
+			_put_in(side_index, index, false, slot)
+			return
+
+
 ## Remolino y Rugido: en un combate salvaje lo acaban; contra un entrenador sacan a otro al azar.
 func force_switch(target: Battler) -> bool:
+	if target.ability == &"suctioncups" and ability_effect(target) != null:
+		_msg(tr("¡%s se ha agarrado con Ventosas!") % name_of(target))
+		return false
 	if setup.is_wild():
 		_msg(tr("¡%s ha salido despedido!") % name_of(target))
 		_finish(BattleResult.RUN)

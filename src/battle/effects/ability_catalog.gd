@@ -12,7 +12,10 @@ static func make(id: StringName) -> BattleEffect:
 		&"torrent", &"unburden",
 	]:
 		return AbilityBehavior.new()
-	return null
+	return AbilityFamilies.make(id)
+
+
+const AbilityFamilies := preload("res://src/battle/effects/ability_families.gd")
 
 
 class AbilityBehavior extends BattleEffect:
@@ -100,6 +103,13 @@ class AbilityBehavior extends BattleEffect:
 			return
 		if id == &"intimidate":
 			engine.message(tr("¡%s intimida a %s!") % [engine.name_of(battler), engine.name_of(foe)])
+			var foe_ability := engine.ability_effect(foe)
+			if foe_ability != null and foe_ability.blocks_intimidate():
+				if foe.ability == &"guarddog":
+					engine.boost(foe, {&"atk": 1}, true)
+				else:
+					engine.message(tr("¡A %s no le afecta!") % engine.inner_name_of(foe))
+				return
 			var atk_before: int = foe.boosts[&"atk"]
 			engine.boost(foe, {&"atk": -1}, false)
 			# Nerviosismo: desde la 8.ª generación, la Intimidación le sube la Velocidad (si le ha

@@ -175,7 +175,7 @@ func _play_event(event: Variant) -> void:
 			await _sprite(side).withdraw(_t(0.3))
 			_data_box(side).hide()
 			_sprite(side).set_big(false)
-		&"mega", &"zmove", &"dynamax", &"dynamax_end", &"tera":
+		&"mega", &"zmove", &"dynamax", &"dynamax_end", &"tera", &"forme":
 			await _mechanic_event(type,side,data)
 		&"move":
 			await _animate_move(side, int(data.get("target_side", 1 - side)), data)
@@ -404,6 +404,8 @@ func _ask_player(request: Dictionary) -> Dictionary:
 				var choice := await _list(tr("El rival sacará otro Pokémon.\n¿Quieres cambiar?"),
 					[tr("Cambiar Pokémon"), tr("Seguir luchando")], [], true)
 				return {"type": &"switch", "party_index": await _choose_party(false) if choice == 0 else -1}
+			if StringName(request.get("reason", "")) == &"revivalblessing":
+				return {"type": &"switch", "party_index": await _choose_party(true, false, true)}
 			return {"type": &"switch", "party_index": await _choose_party(true)}
 		BattleDriver.REQUEST_LEARN_MOVE:
 			return {"type": &"learn_move", "forget_index": await _choose_forget(request)}
@@ -511,15 +513,21 @@ func _choose_item() -> Dictionary:
 
 ## Pokémon del equipo: para cambiar (no se puede elegir el activo ni los debilitados)
 ## o, con `for_item`, como objetivo de un objeto (se puede elegir cualquiera).
-func _choose_party(forced: bool, for_item: bool = false) -> int:
+## `revive`: Plegaria Vital, solo se pueden elegir los debilitados.
+func _choose_party(forced: bool, for_item: bool = false, revive: bool = false) -> int:
 	var party := _driver.player_party()
 	var labels := PackedStringArray()
 	var disabled: Array[bool] = []
 	for pokemon: Dictionary in party:
 		labels.append("%s  Nv%d  %d/%d" % [pokemon.get("name", "?"), int(pokemon.get("level", 1)),
 			int(pokemon.get("hp", 0)), int(pokemon.get("max_hp", 1))])
-		disabled.append(not for_item and (not pokemon.get("able", true) or pokemon.get("active", false)))
+		if revive:
+			disabled.append(int(pokemon.get("hp", 0)) > 0)
+		else:
+			disabled.append(not for_item and (not pokemon.get("able", true) or pokemon.get("active", false)))
 	var prompt := tr("¿Sobre qué Pokémon?") if for_item else (tr("¿Qué Pokémon sacarás?") if forced else tr("Elige un Pokémon."))
+	if revive:
+		prompt = tr("¿A quién quieres revivir?")
 	return await _list(prompt, labels, disabled, not forced)
 
 
@@ -836,6 +844,10 @@ func _mechanic_event(kind: StringName,side: int,data: Dictionary) -> void:
 			sprite.set_pokemon(summary)
 			box.show_pokemon(summary)
 			box.set_mechanic(&"mega")
+		&"forme":
+			summary.merge(data,true)
+			sprite.set_pokemon(summary)
+			box.show_pokemon(summary)
 		&"zmove":
 			box.set_mechanic(&"z")
 			await BattleFx.sparkle(_fx,sprite.center(),Color("f0b030"),_t(0.45))

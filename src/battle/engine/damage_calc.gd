@@ -82,8 +82,10 @@ static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit
 	if crit:
 		atk_stage = maxi(atk_stage, 0)
 		def_stage = mini(def_stage, 0)
-	if move.ignore_defensive:
+	if move.ignore_defensive or bool(opts.get("ignore_def_boosts", false)):
 		def_stage = 0
+	if bool(opts.get("ignore_atk_boosts", false)):
+		atk_stage = 0
 	var attack := owner.boosted_stat(atk_stat, atk_stage)
 	var defense := defender.boosted_stat(def_stat, def_stage)
 	if float(opts.get("atk_mod", 1.0)) != 1.0:
@@ -95,6 +97,10 @@ static func calculate(attacker: Battler, defender: Battler, move: MoveData, crit
 	var effectiveness := 1.0 if typeless else float(opts.get("effectiveness", DataDB.type_effectiveness(move.type, defender.types())))
 	var stab := not typeless and attacker.has_type(move.type)
 	var stab_mod := _tera_stab(attacker, move) if not typeless else 0.0
+	# Adaptable: STAB ×2 (con Teracristal del mismo tipo, ×2,25).
+	var own_stab := float(opts.get("stab_mod", 0.0))
+	if own_stab > 1.0 and (stab or stab_mod > 1.0):
+		stab_mod = 2.25 if stab_mod >= 2.0 else own_stab
 	if stab_mod > 1.0:
 		stab = false
 	var burned := physical and attacker.pokemon.status == &"brn" and move.id != &"facade" and not bool(opts.get("ignore_burn", false))

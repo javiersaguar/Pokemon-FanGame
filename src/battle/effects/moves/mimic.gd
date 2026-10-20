@@ -12,6 +12,6 @@ func on_hit(engine: BattleEngine, user: Battler, target: Battler, move: MoveData
 		return HANDLED
 	var slot := MoveSlot.create(last)
 	slot.pp = mini(5, slot.max_pp())
-	engine.replace_move_slot(user, index, slot)
+	engine.replace_move_slot(user, index, slot, true)
 	engine.message(tr("¡%s ha aprendido %s!") % [engine.name_of(user), DataDB.move(last).name])
 	return HANDLED
