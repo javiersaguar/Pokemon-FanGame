@@ -4,7 +4,7 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
-| zaragoza/exterior, malaga/exterior, getafe/exterior, leganes/exterior, mostoles/exterior, puertollano/exterior, madrid/centro, madrid/palacio_real, barcelona/ciutat_vella, barcelona/eixample, valencia/ciutat_vella | Rutas y ciudades | 2026-10-20 | explanadas empedradas → calles y manzanas con jardines (sin mover puertas) |
+| ruta_1 a ruta_26/exterior y maritima_1/exterior | Rutas y ciudades | 2026-10-20 | relieve, agua y detalle (24, 26, 9, 10, 11, 1, 2, 4, marítima 1) y entrenadores con línea de visión y objetos en todas |
 
 
 Sesión anterior cerrada. Reservas activas del 19 de octubre: Véase `docs/CIERRE_2026-10-15.md`.
