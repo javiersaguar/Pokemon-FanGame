@@ -851,7 +851,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - ~~Rutas 9 y 10 rectas~~ **Hecho:** camino de tierra que va de lado a lado entre pinos y palmeras (`_ruta.gd` → `romper_avenida()`). La hierba mínima sigue en 1 en las dos (las filas protegidas por carteles y vistas no dejan cerrar más).
 - ~~Ruta 11 carretera de lado a lado~~ **Hecho:** camino de tierra con tres curvas entre huertos y palmeras.
 - ~~Rutas 1, 2 y 4 solo con el paso de hierba~~ **Hecho:** pinares, encinas, matojos, setas y flores en la hierba vacía y objetos ocultos.
-- Ruta marítima 1: escollos de adorno junto a los islotes. **Sigue por debajo:** corrientes y objetos en los islotes esperan las reglas de Surf pedidas al agente de combate («Peticiones a Combate» en `docs/mapas/reservas.md`); el comprobador de alcance va a pie.
+- ~~Ruta marítima 1 sin corrientes~~ **Hecho el 20 de octubre (rama `feat/rutas-anil-3`, ver abajo).** Antes: escollos de adorno junto a los islotes. **Sigue por debajo:** corrientes y objetos en los islotes esperan las reglas de Surf pedidas al agente de combate («Peticiones a Combate» en `docs/mapas/reservas.md`); el comprobador de alcance va a pie.
 - Ruta 19 (faro), Ruta 2 (casa de madera) y Bilbao (casa roja): **resuelto por Edificios** (`d55ff0ed`), con puertas e interiores conservados; la segunda pasada de la Ruta 2 se ha combinado con su arreglo (alcance 0 problemas).
 - Entrenadores: todas las rutas tienen ya entre 2 y 5 entrenadores con línea de visión (la marítima 1, 2); **no se han recolocado uno a uno en los cuellos de botella** en esta pasada. Objetos: la Ruta 3 (que no tenía) y las rutas tocadas tienen objetos nuevos, visibles y ocultos; atajos que se abran más tarde, **pendientes**.
 - Capturas antes y después: `docs/arte/comparativas/rutas_anil_2/`.
@@ -863,6 +863,19 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 **Pendiente (al cierre del 20 de octubre):** colocar las corrientes y los escollos de la Ruta marítima 1 con la lógica de `SurfCurrent` que ya existe; recolocar los entrenadores en los cuellos de botella y añadir atajos que se abran más tarde. Todo lo demás de esta lista está hecho.
 
 **PENDIENTE JAVIER:** revisar las capturas de antes y después; en la Ruta 5 el paso de hierba es un «desvío por obras» de la A-2 (cartel de broma): confirmar si vale.
+
+### Agente de rutas y ciudades (sesión del 2026-10-20, rama `feat/rutas-anil-3`)
+
+Worktree `pokemon-panchito-agente5`. Encargo, por orden: corrientes y escollos de la Ruta marítima 1; obstáculos de campo; entrenadores en los pasos estrechos; atajos que se abren más tarde; segunda pasada a nivel Añil. Reserva activa: `maritima_1/exterior` y `ruta_1/exterior` … `ruta_26/exterior`.
+
+**Hecho:**
+- **Ruta marítima 1 · corrientes y escollos** (`maps/_pintura/vestir/maritima_1.gd`, tercera pasada). Cuatro corrientes `SurfCurrent` con agua revuelta animada y 22 escollos animados de 2×2 que chocan (`src/overworld/campo/escollo.tscn`), todo bajo el nodo `Mar` del mapa.
+  - Camino: la corriente de bajada lleva de la entrada de Palma al velero y al faro, entre dos hileras de escollos.
+  - Premio fuera del camino: una cala cerrada por escollos en el sureste con un PP Máx. Se entra por la corriente que baja pegada al borde este y se sale por el hueco del oeste, donde otra corriente echa fuera. Un cartel nuevo en el faro lo insinúa.
+  - La corriente del canal, al sur del faro, empuja hacia el islote del sur.
+  - `tests/mundo/test_corrientes.gd` simula el Surf como `Player._walk`: no hay casillas de las que no se salga, se cruza de Palma a Ibiza y la cala solo se abre por su corriente. Alcance con `--surf` desde `from_palma`: 0 problemas.
+  - Herramientas: `Vestidor.current()`, `reef()` y `obstacle()`; las recetas de mar piden `var con_surf := true`. `maps/_tools/ascii_mapa.gd` dibuja un mapa en texto para planear.
+  - Arte copiado sin tocar del pack 05 (`assets/sprites/overworld/campo/`), con su procedencia en `docs/arte/licencias.md` y `CREDITOS.md`.
 
 ### Piezas propias de los hitos prestados (2026-10-14)
 

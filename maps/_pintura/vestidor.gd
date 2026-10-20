@@ -19,6 +19,15 @@ const GREEN_OVERHANG := Rect2i(1, 1, 1, 4)
 const SNOW_OVERHANG := Rect2i(0, 34, 1, 4)
 const POND_RECT := Rect2i(5, 6, 3, 3)
 const ITEM_SCENE := "res://src/overworld/item_ball/item_ball.tscn"
+## Obstáculos de campo (FieldObstacle) por acción, escollos (2×2, chocan) y agua de corriente.
+const OBSTACLES := {
+	"cut": "res://src/overworld/campo/corte.tscn",
+	"rock_smash": "res://src/overworld/campo/golpe_roca.tscn",
+	"strength": "res://src/overworld/campo/fuerza.tscn",
+}
+const REEF_SCENE := "res://src/overworld/campo/escollo.tscn"
+const CURRENT_SCRIPT := "res://src/overworld/surf_current.gd"
+const CURRENT_FRAMES := "res://src/overworld/campo/corriente_frames.tres"
 
 var mid := ""
 var map: Node2D
@@ -50,6 +59,10 @@ var pending_entities: Array[Node2D] = []
 ## Casillas ocupadas por entidades nuevas (chocan como las de siempre).
 var pending_cells := {}
 var log_lines: PackedStringArray = []
+## Recetas de mar: con Surf el agua cuenta como libre (la receta pide `var con_surf := true`).
+var surf := false
+## Escollos y corrientes nuevos: van al nodo «Mar», debajo de las entidades.
+var pending_sea: Array[Node2D] = []
 
 
 func setup(the_map: Node2D, map_id: String) -> void:
@@ -90,7 +103,7 @@ func scan(space: PhysicsDirectSpaceState2D) -> void:
 			continue
 		var q := PhysicsPointQueryParameters2D.new()
 		q.position = map.to_global(Grid.to_world(at))
-		q.collision_mask = 1 | 2 | 8
+		q.collision_mask = 1 | 2 if surf else 1 | 2 | 8
 		if space.intersect_point(q, 1).is_empty():
 			free[at] = true
 	covered.clear()
@@ -1031,6 +1044,59 @@ func sign(node_name: String, at: Vector2i, lines: PackedStringArray, coords: Vec
 	_add_entity(node, at)
 
 
+## Obstáculo de campo: arbolillo de Corte, roca de Golpe Roca o roca de Fuerza. Con `cleared_flag`
+## desaparece para siempre al quitarlo; sin ella, vuelve al cargar el mapa.
+func obstacle(node_name: String, action: String, at: Vector2i, cleared_flag: StringName = &"") -> void:
+	if _entity_exists(node_name):
+		return
+	var node: Node2D = (load(OBSTACLES[action]) as PackedScene).instantiate()
+	node.name = node_name
+	node.position = Grid.to_world(at)
+	if cleared_flag != &"":
+		node.set(&"cleared_flag", cleared_flag)
+	_add_entity(node, at)
+
+
+## Escollo de 2×2 casillas (`at` es la de arriba a la izquierda): roca en el mar que choca.
+func reef(at: Vector2i) -> void:
+	var node: Node2D = (load(REEF_SCENE) as PackedScene).instantiate()
+	node.name = "Escollo_%d_%d" % [at.x, at.y]
+	node.position = Grid.to_world(at)
+	pending_sea.append(node)
+	for cell: Vector2i in Pintor.cells(Rect2i(at, Vector2i(2, 2))):
+		if not free.has(cell) or protected.has(cell):
+			note("AVISO: escollo en %s tapa %s" % [at, cell])
+		pending_cells[cell] = true
+		free.erase(cell)
+
+
+## Corriente marina (SurfCurrent) en `rect`, con su agua revuelta casilla a casilla.
+func current(rect: Rect2i, direction: Vector2i) -> void:
+	var node := Node2D.new()
+	node.set_script(load(CURRENT_SCRIPT))
+	node.name = "Corriente_%d_%d" % [rect.position.x, rect.position.y]
+	node.position = Grid.to_world(rect.position)
+	node.set(&"direction", direction)
+	node.set(&"size_tiles", rect.size)
+	var frames: SpriteFrames = load(CURRENT_FRAMES)
+	for cell: Vector2i in Pintor.cells(Rect2i(Vector2i.ZERO, rect.size)):
+		var sprite := AnimatedSprite2D.new()
+		sprite.name = "Agua_%d_%d" % [cell.x, cell.y]
+		sprite.sprite_frames = frames
+		sprite.autoplay = "default"
+		sprite.position = Vector2(cell * Grid.TILE)
+		node.add_child(sprite)
+	for cell: Vector2i in Pintor.cells(rect):
+		if not water.has(cell) and not _is_sea(cell):
+			note("AVISO: corriente fuera del agua en %s" % cell)
+	pending_sea.append(node)
+
+
+func _is_sea(at: Vector2i) -> bool:
+	var data := ground.get_cell_tile_data(at)
+	return data != null and data.get_custom_data(&"terrain") == "water"
+
+
 func _entity_exists(node_name: String) -> bool:
 	if entities.has_node(NodePath(node_name)):
 		note("ya existe %s: no se repite" % node_name)
@@ -1054,6 +1120,22 @@ func commit_entities() -> void:
 		entities.add_child(node)
 		node.owner = map
 	pending_entities.clear()
+	if pending_sea.is_empty():
+		return
+	var sea := map.get_node_or_null(^"Mar") as Node2D
+	if sea == null:
+		sea = Node2D.new()
+		sea.name = "Mar"
+		map.add_child(sea)
+		map.move_child(sea, entities.get_index())
+		sea.owner = map
+	for node: Node2D in pending_sea:
+		sea.add_child(node)
+		node.owner = map
+		if node.scene_file_path == "":
+			for child: Node in node.get_children():
+				child.owner = map
+	pending_sea.clear()
 
 
 # --- Cierre ---

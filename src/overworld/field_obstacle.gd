@@ -6,12 +6,21 @@ extends MapEntity
 @export_enum("cut", "rock_smash", "strength") var action := "cut"
 @export var cleared_flag: StringName
 var moving := false
+## Lo que se lee al examinarlo sin poder usar la acción (provisional).
+const EXAMINE := {
+	"cut": "Es un arbolillo. Parece que se podría cortar.",
+	"rock_smash": "Es una roca agrietada. Parece que se podría romper.",
+	"strength": "Es una roca enorme. Con mucha fuerza se podría empujar.",
+}
 func _ready() -> void:
 	super()
 	if not Engine.is_editor_hint() and cleared_flag != &"" and GameState.flag(cleared_flag):
 		set_forced_hidden(true)
 func interact(player: Player) -> void:
-	if moving or not FieldActions.available(StringName(action), player.get_map_root()):
+	if moving:
+		return
+	if not FieldActions.available(StringName(action), player.get_map_root()):
+		await Dialogue.say(EXAMINE[action])
 		return
 	if action == "strength":
 		await push(player)

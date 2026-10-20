@@ -43,10 +43,11 @@ func _dress(mid: String, dry: bool) -> void:
 	var space := root.get_world_2d().direct_space_state
 	var v := Vestidor.new()
 	v.setup(map, mid)
-	v.scan(space)
-	var before := _status(v)
 	var recipe: Object = (load(recipe_file) as GDScript).new()
 	recipe.set(&"tree", self)
+	v.surf = recipe.get(&"con_surf") == true
+	v.scan(space)
+	var before := _status(v)
 	await recipe.call(&"vestir", v)
 	v.build()
 	await physics_frame
@@ -89,7 +90,7 @@ func _dress(mid: String, dry: bool) -> void:
 	if problems > 0 or dry:
 		if problems > 0:
 			_failed += 1
-		for node: Node2D in v.pending_entities:
+		for node: Node2D in v.pending_entities + v.pending_sea:
 			node.free()
 		map.free()
 		return

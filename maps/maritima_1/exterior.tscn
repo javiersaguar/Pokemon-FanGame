@@ -4,9 +4,12 @@
 [ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_5ncd1"]
 [ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_jrlt0"]
 [ext_resource type="TileSet" path="res://assets/tilesets/exterior/exterior.tres" id="4_e3vsc"]
+[ext_resource type="Script" path="res://src/overworld/surf_current.gd" id="5_3pdxi"]
 [ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="5_gjsem"]
 [ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="6_cj2cg"]
+[ext_resource type="SpriteFrames" path="res://src/overworld/campo/corriente_frames.tres" id="6_gfmk5"]
 [ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="7_3pdxi"]
+[ext_resource type="PackedScene" path="res://src/overworld/campo/escollo.tscn" id="7_y74vv"]
 [ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="8_gfmk5"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/nadador.png" id="9_e3vsc"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/raver_f.png" id="10_gjsem"]
@@ -44,8 +47,614 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAGAAcAAAABAAAAAAAGAAcAAAACAAAAAAAGAAc
 tile_set = ExtResource("4_e3vsc")
 
 [node name="Decor" type="TileMapLayer" parent="." unique_id=2087049171]
-tile_map_data = PackedByteArray("AAAAABEAAgAAAAIAAAAAABIAAgAAAAIAAAAAAB4AAgAAAAIAAAAAAD4AAgAAAAIAAAABAAcAAgAAAAIAAAABABQAAgAAAAIAAAABACEAAgAAAAIAAAABADcAAgAAAAIAAAACAAoAAgAAAAIAAAACAB0AAgAAAAIAAAACACYAAgAAAAIAAAADAAIAAgAAAAIAAAADACIAAgAAAAIAAAADADIAAgAAAAIAAAADADYAAgAAAAIAAAADADcAAgAAAAIAAAADAD0AAgAAAAIAAAAEAAIAAgAAAAIAAAAEABMAAgAAAAIAAAAEACAAAgAAAAIAAAAEACMAAgAAAAIAAAAFACkAAgAAAAIAAAAFAC8AAgAAAAIAAAAFAD8AAgAAAAIAAAAGAAMAAgAAAAIAAAAHAB0AAgAAAAIAAAAHADkAAgAAAAIAAAAIABcAAgAAAAIAAAAIADYAAgAAAAIAAAAKABgAAgAAAAIAAAAKAB8AAgAAAAIAAAALAAUAAgAAAAIAAAALAAYAAgAAAAIAAAALABIAAgAAAAIAAAAMABMAAgAAAAIAAAAMACMAAgAAAAIAAAAMAD8AAgAAAAIAAAANABgAAgAAAAIAAAANABkAAgAAAAIAAAANACYAAgAAAAIAAAAOABwAAgAAAAIAAAAOAB0AAgAAAAIAAAAOAD0AAgAAAAIAAAAPACwAAgAAAAIAAAAPADwAAgAAAAIAAAAQAAEAAgAAAAIAAAAQAAYAAgAAAAIAAAAQABsAAgAAAAIAAAAQABwAAgAAAAIAAAAQACIAAgAAAAIAAAAQADgAAgAAAAIAAAAQAD8AAgAAAAIAAAARABQAAgAAAAIAAAASAAEAAgAAAAIAAAASAA4AAgAAAAIAAAASADQAAgAAAAIAAAASAD8AAgAAAAIAAAATACIAAgAAAAIAAAATACMAAgAAAAIAAAATAC0AAgAAAAIAAAATADAAAgAAAAIAAAATADMAAgAAAAIAAAAUAAsAAgAAAAIAAAAUAA0AAgAAAAIAAAAUABAAAgAAAAIAAAAUADoAAgAAAAIAAAAUAD8AAgAAAAIAAAAVAA4AAgAAAAIAAAAVABwAAgAAAAIAAAAVACMAAgAAAAIAAAAVAD4AAgAAAAIAAAAWAAAAAgAAAAIAAAAWAD4AAgAAAAIAAAAXAAsAAgAAAAIAAAAXAC0AAgAAAAIAAAAXADQAAgAAAAIAAAAYABkAAgAAAAIAAAAYACgAAgAAAAIAAAAYADQAAgAAAAIAAAAYADUAAgAAAAIAAAAYADsAAgAAAAIAAAAYAD8AAgAAAAIAAAAZAAAAAgAAAAIAAAAZABgAAgAAAAIAAAAZACYAAgAAAAIAAAAZADcAAgAAAAIAAAAbAAsAAgAAAAIAAAAbABkAAgAAAAIAAAAbACsAAgAAAAIAAAAbADoAAgAAAAIAAAAcABgAAgAAAAIAAAAdABkAAgAAAAIAAAAdAC4AAgAAAAIAAAAdADQAAgAAAAIAAAAdADgAAgAAAAIAAAAeAAEAAgAAAAIAAAAeABUAAgAAAAIAAAAeACcAAgAAAAIAAAAeADAAAgAAAAIAAAAeADYAAgAAAAIAAAAeADkAAgAAAAIAAAAfABAAAgAAAAIAAAAfAD8AAgAAAAIAAAAgACYAAgAAAAIAAAAgAC0AAgAAAAIAAAAhABEAAgAAAAIAAAAhABQAAgAAAAIAAAAhABYAAgAAAAIAAAAhADAAAgAAAAIAAAAhADgAAgAAAAIAAAAiABUAAgAAAAIAAAAiADYAAgAAAAIAAAAiADkAAgAAAAIAAAAiADwAAgAAAAIAAAAjAAAAAgAAAAIAAAAjAAgAAgAAAAIAAAAjAAkAAgAAAAIAAAAjAC4AAgAAAAIAAAAkAAQAAgAAAAIAAAAkABkAAgAAAAIAAAAkACgAAgAAAAIAAAAkADsAAgAAAAIAAAAlABAAAgAAAAIAAAAlABkAAgAAAAIAAAAlABsAAgAAAAIAAAAlACEAAgAAAAIAAAAlADsAAgAAAAIAAAAmAC8AAgAAAAIAAAAnACwAAgAAAAIAAAAoAAwAAgAAAAIAAAAoACEAAgAAAAIAAAAoACoAAgAAAAIAAAAoACwAAgAAAAIAAAApAAAAAgAAAAIAAAApABUAAgAAAAIAAAApAB8AAgAAAAIAAAApADYAAgAAAAIAAAAqAAIAAgAAAAIAAAAqAAgAAgAAAAIAAAAqABMAAgAAAAIAAAAqADsAAgAAAAIAAAArAAUAAgAAAAIAAAArABQAAgAAAAIAAAArAB0AAgAAAAIAAAArACMAAgAAAAIAAAArADAAAgAAAAIAAAArADIAAgAAAAIAAAArADwAAgAAAAIAAAAsABEAAgAAAAIAAAAsABQAAgAAAAIAAAAsACUAAgAAAAIAAAAsADwAAgAAAAIAAAAtAAMAAgAAAAIAAAAtABsAAgAAAAIAAAAtACQAAgAAAAIAAAAtACYAAgAAAAIAAAAtADAAAgAAAAIAAAAtADcAAgAAAAIAAAAuAAIAAgAAAAIAAAAuAAYAAgAAAAIAAAAuAAoAAgAAAAIAAAAuABQAAgAAAAIAAAAvABkAAgAAAAIAAAAvADYAAgAAAAIAAAAvAD4AAgAAAAIAAAAGAAkAAAACAA4AAAANAAwAAAABAA4AAAAKAAkAAAACAA4AAAAiAB0AAAACAA4AAAAJAC4AAAABAA4AAAAOAAoAAAAAAAQAAAAKAC8AAAAAAAQAAAA=")
+tile_map_data = PackedByteArray("AAAAABEAAgAAAAIAAAAAABIAAgAAAAIAAAAAAB4AAgAAAAIAAAAAAD4AAgAAAAIAAAABAAcAAgAAAAIAAAABABQAAgAAAAIAAAABACEAAgAAAAIAAAABADcAAgAAAAIAAAACAAoAAgAAAAIAAAACAB0AAgAAAAIAAAACACYAAgAAAAIAAAADAAIAAgAAAAIAAAADACIAAgAAAAIAAAADADIAAgAAAAIAAAADADYAAgAAAAIAAAADADcAAgAAAAIAAAADAD0AAgAAAAIAAAAEAAIAAgAAAAIAAAAEABMAAgAAAAIAAAAEACAAAgAAAAIAAAAEACMAAgAAAAIAAAAFACkAAgAAAAIAAAAFAC8AAgAAAAIAAAAFAD8AAgAAAAIAAAAGAAMAAgAAAAIAAAAHAB0AAgAAAAIAAAAHADkAAgAAAAIAAAAIABcAAgAAAAIAAAAIADYAAgAAAAIAAAAKABgAAgAAAAIAAAAKAB8AAgAAAAIAAAALAAUAAgAAAAIAAAALAAYAAgAAAAIAAAALABIAAgAAAAIAAAAMABMAAgAAAAIAAAAMACMAAgAAAAIAAAAMAD8AAgAAAAIAAAANABgAAgAAAAIAAAANABkAAgAAAAIAAAANACYAAgAAAAIAAAAOABwAAgAAAAIAAAAOAB0AAgAAAAIAAAAOAD0AAgAAAAIAAAAPACwAAgAAAAIAAAAPADwAAgAAAAIAAAAQAAEAAgAAAAIAAAAQAAYAAgAAAAIAAAAQABsAAgAAAAIAAAAQABwAAgAAAAIAAAAQACIAAgAAAAIAAAAQADgAAgAAAAIAAAAQAD8AAgAAAAIAAAARABQAAgAAAAIAAAASAAEAAgAAAAIAAAASAA4AAgAAAAIAAAASADQAAgAAAAIAAAASAD8AAgAAAAIAAAATACIAAgAAAAIAAAATACMAAgAAAAIAAAATAC0AAgAAAAIAAAATADAAAgAAAAIAAAATADMAAgAAAAIAAAAUAAsAAgAAAAIAAAAUAA0AAgAAAAIAAAAUABAAAgAAAAIAAAAUADoAAgAAAAIAAAAUAD8AAgAAAAIAAAAVAA4AAgAAAAIAAAAVABwAAgAAAAIAAAAVACMAAgAAAAIAAAAVAD4AAgAAAAIAAAAWAAAAAgAAAAIAAAAWAD4AAgAAAAIAAAAXAAsAAgAAAAIAAAAXAC0AAgAAAAIAAAAXADQAAgAAAAIAAAAYABkAAgAAAAIAAAAYACgAAgAAAAIAAAAYADQAAgAAAAIAAAAYADUAAgAAAAIAAAAYADsAAgAAAAIAAAAYAD8AAgAAAAIAAAAZAAAAAgAAAAIAAAAZABgAAgAAAAIAAAAZACYAAgAAAAIAAAAZADcAAgAAAAIAAAAbAAsAAgAAAAIAAAAbABkAAgAAAAIAAAAbACsAAgAAAAIAAAAbADoAAgAAAAIAAAAcABgAAgAAAAIAAAAdABkAAgAAAAIAAAAdAC4AAgAAAAIAAAAdADQAAgAAAAIAAAAdADgAAgAAAAIAAAAeAAEAAgAAAAIAAAAeABUAAgAAAAIAAAAeACcAAgAAAAIAAAAeADAAAgAAAAIAAAAeADYAAgAAAAIAAAAeADkAAgAAAAIAAAAfABAAAgAAAAIAAAAfAD8AAgAAAAIAAAAgACYAAgAAAAIAAAAgAC0AAgAAAAIAAAAhABEAAgAAAAIAAAAhABQAAgAAAAIAAAAhABYAAgAAAAIAAAAhADAAAgAAAAIAAAAhADgAAgAAAAIAAAAiABUAAgAAAAIAAAAiADYAAgAAAAIAAAAiADkAAgAAAAIAAAAiADwAAgAAAAIAAAAjAAAAAgAAAAIAAAAjAAgAAgAAAAIAAAAjAAkAAgAAAAIAAAAjAC4AAgAAAAIAAAAkAAQAAgAAAAIAAAAkABkAAgAAAAIAAAAkACgAAgAAAAIAAAAkADsAAgAAAAIAAAAlABAAAgAAAAIAAAAlABkAAgAAAAIAAAAlABsAAgAAAAIAAAAlACEAAgAAAAIAAAAlADsAAgAAAAIAAAAmAC8AAgAAAAIAAAAnACwAAgAAAAIAAAAoAAwAAgAAAAIAAAAoACEAAgAAAAIAAAAoACoAAgAAAAIAAAAoACwAAgAAAAIAAAApAAAAAgAAAAIAAAApABUAAgAAAAIAAAApAB8AAgAAAAIAAAApADYAAgAAAAIAAAAqAAIAAgAAAAIAAAAqAAgAAgAAAAIAAAAqABMAAgAAAAIAAAAqADsAAgAAAAIAAAArAAUAAgAAAAIAAAArABQAAgAAAAIAAAArAB0AAgAAAAIAAAArACMAAgAAAAIAAAArADAAAgAAAAIAAAArADIAAgAAAAIAAAArADwAAgAAAAIAAAAsABEAAgAAAAIAAAAsABQAAgAAAAIAAAAsACUAAgAAAAIAAAAsADwAAgAAAAIAAAAtAAMAAgAAAAIAAAAtABsAAgAAAAIAAAAtACQAAgAAAAIAAAAtACYAAgAAAAIAAAAtADAAAgAAAAIAAAAtADcAAgAAAAIAAAAuAAIAAgAAAAIAAAAuAAYAAgAAAAIAAAAuAAoAAgAAAAIAAAAuABQAAgAAAAIAAAAvABkAAgAAAAIAAAAvADYAAgAAAAIAAAAvAD4AAgAAAAIAAAAGAAkAAAACAA4AAAANAAwAAAABAA4AAAAKAAkAAAACAA4AAAAiAB0AAAACAA4AAAAJAC4AAAABAA4AAAAOAAoAAAAAAAQAAAAKAC8AAAAAAAQAAAAjAB8AAAAAAAQAAAA=")
 tile_set = ExtResource("4_e3vsc")
+
+[node name="Mar" type="Node2D" parent="." unique_id=1441136184]
+
+[node name="Corriente_22_6" type="Node2D" parent="Mar" unique_id=331313290]
+position = Vector2(720, 208)
+script = ExtResource("5_3pdxi")
+size_tiles = Vector2i(2, 20)
+
+[node name="Agua_0_0" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=2035162461]
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_0" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=2086676785]
+position = Vector2(32, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_1" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1305776489]
+position = Vector2(0, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_1" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1968310750]
+position = Vector2(32, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_2" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1400466759]
+position = Vector2(0, 64)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_2" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=754130872]
+position = Vector2(32, 64)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_3" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=401004262]
+position = Vector2(0, 96)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_3" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=209087637]
+position = Vector2(32, 96)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_4" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=207937713]
+position = Vector2(0, 128)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_4" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1661582914]
+position = Vector2(32, 128)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_5" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1210196315]
+position = Vector2(0, 160)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_5" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1399976531]
+position = Vector2(32, 160)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_6" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=412093372]
+position = Vector2(0, 192)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_6" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=818029700]
+position = Vector2(32, 192)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_7" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1727440094]
+position = Vector2(0, 224)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_7" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=667630511]
+position = Vector2(32, 224)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_8" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=582052505]
+position = Vector2(0, 256)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_8" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=2132630724]
+position = Vector2(32, 256)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_9" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1821953388]
+position = Vector2(0, 288)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_9" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=828841967]
+position = Vector2(32, 288)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_10" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=2062811892]
+position = Vector2(0, 320)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_10" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1270087258]
+position = Vector2(32, 320)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_11" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1445396079]
+position = Vector2(0, 352)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_11" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=403945169]
+position = Vector2(32, 352)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_12" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=793692788]
+position = Vector2(0, 384)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_12" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=2062366918]
+position = Vector2(32, 384)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_13" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1354211552]
+position = Vector2(0, 416)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_13" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=935418734]
+position = Vector2(32, 416)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_14" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=114023554]
+position = Vector2(0, 448)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_14" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1006408028]
+position = Vector2(32, 448)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_15" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=493306344]
+position = Vector2(0, 480)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_15" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1638887757]
+position = Vector2(32, 480)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_16" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1261290432]
+position = Vector2(0, 512)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_16" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1031055029]
+position = Vector2(32, 512)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_17" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1649881849]
+position = Vector2(0, 544)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_17" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1912788333]
+position = Vector2(32, 544)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_18" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1625807505]
+position = Vector2(0, 576)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_18" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=379574965]
+position = Vector2(32, 576)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_19" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=289967970]
+position = Vector2(0, 608)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_19" type="AnimatedSprite2D" parent="Mar/Corriente_22_6" unique_id=1989186284]
+position = Vector2(32, 608)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Escollo_19_8" type="Node2D" parent="Mar" unique_id=1700814827 instance=ExtResource("7_y74vv")]
+position = Vector2(624, 272)
+
+[node name="Escollo_26_11" type="Node2D" parent="Mar" unique_id=497363945 instance=ExtResource("7_y74vv")]
+position = Vector2(848, 368)
+
+[node name="Escollo_19_15" type="Node2D" parent="Mar" unique_id=1045468311 instance=ExtResource("7_y74vv")]
+position = Vector2(624, 496)
+
+[node name="Escollo_26_18" type="Node2D" parent="Mar" unique_id=284961002 instance=ExtResource("7_y74vv")]
+position = Vector2(848, 592)
+
+[node name="Escollo_19_22" type="Node2D" parent="Mar" unique_id=899397963 instance=ExtResource("7_y74vv")]
+position = Vector2(624, 720)
+
+[node name="Corriente_44_30" type="Node2D" parent="Mar" unique_id=1587002177]
+position = Vector2(1424, 976)
+script = ExtResource("5_3pdxi")
+size_tiles = Vector2i(2, 14)
+
+[node name="Agua_0_0" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=125279158]
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_0" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=702070023]
+position = Vector2(32, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_1" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=961323352]
+position = Vector2(0, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_1" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1019170043]
+position = Vector2(32, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_2" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=431062468]
+position = Vector2(0, 64)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_2" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=77803034]
+position = Vector2(32, 64)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_3" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1502749952]
+position = Vector2(0, 96)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_3" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=924718621]
+position = Vector2(32, 96)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_4" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1434176341]
+position = Vector2(0, 128)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_4" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=595815172]
+position = Vector2(32, 128)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_5" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1317478873]
+position = Vector2(0, 160)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_5" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=753024378]
+position = Vector2(32, 160)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_6" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=410661820]
+position = Vector2(0, 192)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_6" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1839806526]
+position = Vector2(32, 192)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_7" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=328877438]
+position = Vector2(0, 224)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_7" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1582592136]
+position = Vector2(32, 224)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_8" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1680251047]
+position = Vector2(0, 256)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_8" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=2023387317]
+position = Vector2(32, 256)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_9" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=128226549]
+position = Vector2(0, 288)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_9" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=767311121]
+position = Vector2(32, 288)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_10" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=367032188]
+position = Vector2(0, 320)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_10" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=436088614]
+position = Vector2(32, 320)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_11" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=975335818]
+position = Vector2(0, 352)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_11" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=101949875]
+position = Vector2(32, 352)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_12" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1130996282]
+position = Vector2(0, 384)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_12" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=318097550]
+position = Vector2(32, 384)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_13" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=221099387]
+position = Vector2(0, 416)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_13" type="AnimatedSprite2D" parent="Mar/Corriente_44_30" unique_id=1586295741]
+position = Vector2(32, 416)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Escollo_40_42" type="Node2D" parent="Mar" unique_id=1651321069 instance=ExtResource("7_y74vv")]
+position = Vector2(1296, 1360)
+
+[node name="Escollo_42_42" type="Node2D" parent="Mar" unique_id=740181026 instance=ExtResource("7_y74vv")]
+position = Vector2(1360, 1360)
+
+[node name="Escollo_46_42" type="Node2D" parent="Mar" unique_id=1265126671 instance=ExtResource("7_y74vv")]
+position = Vector2(1488, 1360)
+
+[node name="Escollo_40_44" type="Node2D" parent="Mar" unique_id=1603053593 instance=ExtResource("7_y74vv")]
+position = Vector2(1296, 1424)
+
+[node name="Escollo_40_47" type="Node2D" parent="Mar" unique_id=1867612325 instance=ExtResource("7_y74vv")]
+position = Vector2(1296, 1520)
+
+[node name="Escollo_40_49" type="Node2D" parent="Mar" unique_id=152659250 instance=ExtResource("7_y74vv")]
+position = Vector2(1296, 1584)
+
+[node name="Escollo_42_49" type="Node2D" parent="Mar" unique_id=1880382259 instance=ExtResource("7_y74vv")]
+position = Vector2(1360, 1584)
+
+[node name="Escollo_44_49" type="Node2D" parent="Mar" unique_id=183922217 instance=ExtResource("7_y74vv")]
+position = Vector2(1424, 1584)
+
+[node name="Escollo_46_49" type="Node2D" parent="Mar" unique_id=745339681 instance=ExtResource("7_y74vv")]
+position = Vector2(1488, 1584)
+
+[node name="Corriente_38_46" type="Node2D" parent="Mar" unique_id=1057612339]
+position = Vector2(1232, 1488)
+script = ExtResource("5_3pdxi")
+direction = Vector2i(-1, 0)
+size_tiles = Vector2i(4, 1)
+
+[node name="Agua_0_0" type="AnimatedSprite2D" parent="Mar/Corriente_38_46" unique_id=456476575]
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_0" type="AnimatedSprite2D" parent="Mar/Corriente_38_46" unique_id=646920475]
+position = Vector2(32, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_2_0" type="AnimatedSprite2D" parent="Mar/Corriente_38_46" unique_id=694075640]
+position = Vector2(64, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_3_0" type="AnimatedSprite2D" parent="Mar/Corriente_38_46" unique_id=1634997356]
+position = Vector2(96, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Corriente_15_38" type="Node2D" parent="Mar" unique_id=1560131099]
+position = Vector2(496, 1232)
+script = ExtResource("5_3pdxi")
+direction = Vector2i(-1, 0)
+size_tiles = Vector2i(16, 2)
+
+[node name="Agua_0_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=729266147]
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=808879674]
+position = Vector2(32, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_2_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=413478646]
+position = Vector2(64, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_3_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1545678317]
+position = Vector2(96, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_4_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=2135657259]
+position = Vector2(128, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_5_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1743871579]
+position = Vector2(160, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_6_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=2076886021]
+position = Vector2(192, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_7_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=200255583]
+position = Vector2(224, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_8_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=974355402]
+position = Vector2(256, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_9_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=2051406666]
+position = Vector2(288, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_10_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=496363260]
+position = Vector2(320, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_11_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=989562146]
+position = Vector2(352, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_12_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=499074107]
+position = Vector2(384, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_13_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1021830455]
+position = Vector2(416, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_14_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1223135928]
+position = Vector2(448, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_15_0" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1042393516]
+position = Vector2(480, 0)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_0_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=2050258903]
+position = Vector2(0, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_1_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1625453452]
+position = Vector2(32, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_2_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=116419446]
+position = Vector2(64, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_3_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=388951828]
+position = Vector2(96, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_4_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=672297500]
+position = Vector2(128, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_5_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1744049215]
+position = Vector2(160, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_6_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=218123963]
+position = Vector2(192, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_7_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=2124886680]
+position = Vector2(224, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_8_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1420554442]
+position = Vector2(256, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_9_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1136478286]
+position = Vector2(288, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_10_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=12785943]
+position = Vector2(320, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_11_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=414696373]
+position = Vector2(352, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_12_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1770889857]
+position = Vector2(384, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_13_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1623944086]
+position = Vector2(416, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_14_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=454690770]
+position = Vector2(448, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Agua_15_1" type="AnimatedSprite2D" parent="Mar/Corriente_15_38" unique_id=1313415295]
+position = Vector2(480, 32)
+sprite_frames = ExtResource("6_gfmk5")
+autoplay = "default"
+
+[node name="Escollo_17_35" type="Node2D" parent="Mar" unique_id=1204559424 instance=ExtResource("7_y74vv")]
+position = Vector2(560, 1136)
+
+[node name="Escollo_24_41" type="Node2D" parent="Mar" unique_id=1029451074 instance=ExtResource("7_y74vv")]
+position = Vector2(784, 1328)
+
+[node name="Escollo_29_49" type="Node2D" parent="Mar" unique_id=1825848687 instance=ExtResource("7_y74vv")]
+position = Vector2(944, 1584)
+
+[node name="Escollo_20_53" type="Node2D" parent="Mar" unique_id=77976512 instance=ExtResource("7_y74vv")]
+position = Vector2(656, 1712)
+
+[node name="Escollo_4_30" type="Node2D" parent="Mar" unique_id=1816044902 instance=ExtResource("7_y74vv")]
+position = Vector2(144, 976)
+
+[node name="Escollo_38_9" type="Node2D" parent="Mar" unique_id=157284728 instance=ExtResource("7_y74vv")]
+position = Vector2(1232, 304)
+
+[node name="Escollo_42_22" type="Node2D" parent="Mar" unique_id=966931595 instance=ExtResource("7_y74vv")]
+position = Vector2(1360, 720)
+
+[node name="Escollo_6_56" type="Node2D" parent="Mar" unique_id=1340205913 instance=ExtResource("7_y74vv")]
+position = Vector2(208, 1808)
 
 [node name="Entities" type="Node2D" parent="." unique_id=1027424937]
 y_sort_enabled = true
@@ -94,6 +703,17 @@ position = Vector2(304, 368)
 script = ExtResource("12_3pdxi")
 item_id = &"ultraball"
 hidden_item = true
+
+[node name="PPMaxCala" type="Node2D" parent="Entities" unique_id=1601972443 instance=ExtResource("11_cj2cg")]
+position = Vector2(1488, 1520)
+script = ExtResource("12_3pdxi")
+item_id = &"ppmax"
+
+[node name="CartelCorrientes" type="Node2D" parent="Entities" unique_id=1045587857 instance=ExtResource("5_gjsem")]
+position = Vector2(1136, 1008)
+script = ExtResource("6_cj2cg")
+lines = PackedStringArray("FARO DE LA RUTA MARÍTIMA 1", "¡Ojo, navegantes! Al este baja una corriente pegada a la costa.", "Dicen que acaba en una cala entre escollos.")
+show_sprite = false
 
 [node name="Above" type="TileMapLayer" parent="." unique_id=1266186833]
 z_index = 10
