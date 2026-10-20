@@ -773,6 +773,15 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - **Ruta marítima 1:** receta `maritima_1.gd`. Piedras y palmeras en los islotes y una Ultra Ball oculta en Dragonera. Sin paso de hierba porque es agua. El alcance desde `from_palma` da 7 problemas: 6 ya estaban (el velero, los dos carteles, Biel y DJ Marta solo se alcanzan con Surf y el comprobador va a pie) y el séptimo es la Ultra Ball, que está en el mismo islote que el cartel y Biel. Parche dorado rehecho.
 - **Todas las rutas pasadas** (1–26 y marítima 1). Bloque final de rutas integrado: suite 692/692, arte 11.568 PNG 0/0, datos 0 errores (1 aviso), grafo 961/961. Sigue: manzanas de las ciudades.
 - **Manzanas de las 41 ciudades y barrios:** ayudante `maps/_pintura/vestir/_ciudad.gd` (farolas y bancos en las aceras, árboles y farolas en las plazas empedradas sin estrechar pasos, arbolado en la hierba vacía) y una receta por mapa. Los 41 se guardan con 0 problemas de alcance. Con `alcance.gd -- <mapa> default`, 38 dan 0 problemas y 3 dan 1 problema que ya estaba antes (comprobado con la versión anterior): Ibiza, Palma y Moncloa (no se llega a la puerta de `casa_azul` en (5, 8)). [Capturas](arte/seguimiento.md#manzanas-de-las-ciudades-2026-10-19).
+- Bloque de ciudades integrado: suite 692/692, arte 11.568 PNG 0/0, datos 0 errores (1 aviso), grafo 961/961 sin aislados. Reservas liberadas.
+
+**Por debajo de Añil (con motivo):**
+- Ciudades que son una explanada empedrada con edificios sueltos (Zaragoza, Málaga, Getafe, Leganés, Móstoles, Puertollano y las plazas de Madrid, Barcelona y Valencia): el mobiliario no basta; hay que repintar calles, manzanas, patios y jardines con el pintor de mapas y quien lleve cada fachada. No se ha hecho para no mover puertas ni interiores enlazados.
+- Ruta 26: cimas de los bloques de caliza lisas. Ruta 24: llanura muy abierta, sin relieve ni agua nuevos. Rutas 9 y 10: avenida y paseo empedrados rectos y anchos. Ruta 11: carretera de 4 de lado a lado. Rutas 1, 2 y 4: solo el paso de hierba; el detalle queda como estaba.
+- Ruta 19: el faro sigue recortado (pieza pendiente del agente de Edificios, como la casa de madera de la Ruta 2 y la casa roja de Bilbao).
+- Ruta marítima 1: mar abierto sin escollos ni corrientes (necesita reglas de Surf).
+- El comprobador de alcance va a pie: lo que solo se alcanza con Surf aparece como problema (marítima 1) y no se colocan objetos en islotes sin paso.
+- Ninguna ruta tiene aún entrenadores nuevos con línea de visión colocados para cortar el paso, salvo el guarda de la Ruta 26; los objetos nuevos son 1–3 por ruta.
 
 **Provisional:** arte, textos del guarda y colocación.
 
