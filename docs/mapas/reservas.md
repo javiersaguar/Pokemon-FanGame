@@ -4,9 +4,9 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
+| `maritima_1/exterior` y `ruta_1/exterior` … `ruta_26/exterior` | Rutas y ciudades | 2026-10-20 | Corrientes y escollos (marítima 1), obstáculos de campo, entrenadores en los pasos estrechos y atajos (`feat/rutas-anil-3`) |
 
 
-Sesión de cuatro agentes del 19–20 de octubre cerrada: **no hay reservas activas**. Véase `docs/CIERRE_2026-10-20.md`.
 
 ## Peticiones a Edificios
 - **Resuelto en `d55ff0ed` (Edificios, 20 de octubre):** faro de Ruta 19, casa de madera de Ruta 2 y casa roja de Bilbao recolocados completos, con puertas e interiores conservados. Ver `docs/arte/comparativas/edificios_reales.md`, bloque 1.
