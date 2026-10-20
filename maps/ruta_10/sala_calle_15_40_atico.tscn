@@ -1,0 +1,97 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_h5xw5"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_wondl"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_etqkr"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_wrc1x"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_lq77k"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_7pk7o"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/influencerlinkedin.png" id="7_jq2nv"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_3iwur"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_wau8r"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_p385t"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_8tyqm"]
+
+[sub_resource type="Resource" id="Resource_h5xw5"]
+script = ExtResource("3_etqkr")
+id = &"ruta_10/sala_calle_15_40_atico"
+display_name = "Ático del Intempo, Ruta 10"
+outdoor = false
+zone_id = &"ruta_10"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 12, 8)
+followers_allowed = false
+
+[node name="SalaCalle1540Atico" type="Node2D" unique_id=599648459]
+script = ExtResource("1_h5xw5")
+data = SubResource("Resource_h5xw5")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1618032347]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAJAAAAAAAAACQAAAAKAAAAAAAAACQAAAALAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAJAAEAAAAAACQAAAAKAAEAAAAAACQAAAALAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAJAAIAAAAAACQAAAAKAAIAAAAAACQAAAALAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAACQAAAAFAAMAAAAAACQAAAAGAAMAAAAAACQAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAJAAMAAAAAACQAAAAKAAMAAAAAACQAAAALAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAACQAAAAFAAQAAAAAACQAAAAGAAQAAAAAACQAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAJAAQAAAAAACQAAAAKAAQAAAAAACQAAAALAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAJAAUAAAAAACQAAAAKAAUAAAAAACQAAAALAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAACQAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAAJAAYAAAAAACQAAAAKAAYAAAAAACQAAAALAAYAAAAAACQAAAAAAAcAAAAAACQAAAABAAcAAAAAACQAAAACAAcAAAAAACQAAAADAAcAAAAAACQAAAAEAAcAAAAAAAQAAAAFAAcAAAAAACQAAAAGAAcAAAAAACQAAAAHAAcAAAAAACQAAAAIAAcAAAAAACQAAAAJAAcAAAAAACQAAAAKAAcAAAAAACQAAAALAAcAAAAAACQAAAA=")
+tile_set = ExtResource("4_wrc1x")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=511296807]
+tile_map_data = PackedByteArray("AAABAAAAAQABAEQAAAABAAEAAQABAEUAAAACAAAAAQABAEQAAAACAAEAAQABAEUAAAADAAAAAQABAEQAAAADAAEAAQABAEUAAAAEAAAAAQABAEQAAAAEAAEAAQABAEUAAAAFAAAAAQABAEQAAAAFAAEAAQABAEUAAAAGAAAAAQABAEQAAAAGAAEAAQABAEUAAAAHAAAAAQABAEQAAAAHAAEAAQABAEUAAAAIAAAAAQABAEQAAAAIAAEAAQABAEUAAAAJAAAAAQABAEQAAAAJAAEAAQABAEUAAAAKAAAAAQABAEQAAAAKAAEAAQABAEUAAAAAAAAAAQACAEIAAAALAAAAAQAAAEIAAAAAAAEAAQACAEIAAAALAAEAAQAAAEIAAAAAAAIAAQACAEIAAAALAAIAAQAAAEIAAAAAAAMAAQACAEIAAAALAAMAAQAAAEIAAAAAAAQAAQACAEIAAAALAAQAAQAAAEIAAAAAAAUAAQACAEIAAAALAAUAAQAAAEIAAAAAAAYAAQACAEIAAAALAAYAAQAAAEIAAAABAAcAAQABAEEAAAACAAcAAQABAEEAAAADAAcAAQACAEEAAAAFAAcAAQAAAEEAAAAGAAcAAQABAEEAAAAHAAcAAQABAEEAAAAIAAcAAQABAEEAAAAJAAcAAQABAEEAAAAKAAcAAQABAEEAAAAAAAcAAQAFAEUAAAALAAcAAQAGAEUAAAA=")
+tile_set = ExtResource("4_wrc1x")
+
+[node name="Entities" type="Node2D" parent="." unique_id=88305932]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=754550750]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAEAAEAAgAAACIAAAAFAAEAAgABACIAAAAEAAIAAgAAACMAAAAFAAIAAgABACMAAAAGAAEAAgAHACIAAAAGAAIAAgAHACMAAAAFAAUAAgADADsAAAAGAAUAAgAEADsAAAAHAAUAAgAFADsAAAAFAAYAAgADADwAAAAGAAYAAgAEADwAAAAHAAYAAgAFADwAAAA=")
+tile_set = ExtResource("4_wrc1x")
+
+[node name="Inversor" type="Node2D" parent="Entities" unique_id=2107560206 instance=ExtResource("5_lq77k")]
+position = Vector2(272, 176)
+script = ExtResource("6_7pk7o")
+display_name = "Inversor"
+lines = PackedStringArray("Compré el ático sin verlo, por videollamada. Desde aquí se ve todo Benidorm, el mar y la grúa del edificio de al lado.", "Vengo dos semanas al año. El resto, lo alquilo a gente que viene a hacerse fotos en el balcón.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_jq2nv")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=263369605 instance=ExtResource("8_3iwur")]
+position = Vector2(80, 48)
+script = ExtResource("9_wau8r")
+lines = PackedStringArray("Un ventanal de suelo a techo. Abajo, la playa de Levante, llena de sombrillas, parece un tablero de parchís.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=454775397]
+z_index = 10
+tile_set = ExtResource("4_wrc1x")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=2006676407]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=625362627]
+position = Vector2(144, 240)
+script = ExtResource("10_p385t")
+target_map = &"ruta_10/sala_calle_15_40"
+target_spawn = &"desde_sala_calle_15_40_atico"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1755557121]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1832237233]
+position = Vector2(144, 208)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1954112731]
+
+[node name="Rotulo" type="Label" parent="." unique_id=20102186]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_8tyqm")
+theme_override_font_sizes/font_size = 16
+text = "ÁTICO DEL INTEMPO"
+horizontal_alignment = 1

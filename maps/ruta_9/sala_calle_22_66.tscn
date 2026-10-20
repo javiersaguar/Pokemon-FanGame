@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle2266" type="Node2D" unique_id=1538858061]
+[node name="SalaCalle2266" type="Node2D" unique_id=412339098]
 script = ExtResource("1_5nu8s")
 data = SubResource("Resource_076yv")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=746037771]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=216222957]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAIAAQAAAAAABgAAAAJAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAIAAUAAAAAABgAAAAJAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAABgAAAAEAAcAAAAAABgAAAAFAAcAAAAAABgAAAAGAAcAAAAAABAAAAAHAAcAAAAAABgAAAAIAAcAAAAAABgAAAAJAAcAAAAAABgAAAA=")
 tile_set = ExtResource("4_7v8g1")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=635447004]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=988303806]
 tile_map_data = PackedByteArray("AAABAAAAAQABACYAAAABAAEAAQABACcAAAACAAAAAQABACYAAAACAAEAAQABACcAAAADAAAAAQABACYAAAADAAEAAQABACcAAAAEAAAAAQABACYAAAAEAAEAAQABACcAAAAFAAAAAQABACYAAAAFAAEAAQABACcAAAAGAAAAAQABACYAAAAGAAEAAQABACcAAAAHAAAAAQABACYAAAAHAAEAAQABACcAAAAIAAAAAQABACYAAAAIAAEAAQABACcAAAAAAAAAAQACACQAAAAJAAAAAQAAACQAAAAAAAEAAQACACQAAAAJAAEAAQAAACQAAAAAAAIAAQACACQAAAAJAAIAAQAAACQAAAAAAAMAAQACACQAAAAJAAMAAQAAACQAAAAAAAQAAQACACQAAAAJAAQAAQAAACQAAAAAAAUAAQACACQAAAAJAAUAAQAAACQAAAAAAAYAAQACACQAAAAJAAYAAQAAACQAAAABAAcAAQABACMAAAACAAcAAQABACMAAAADAAcAAQABACMAAAAEAAcAAQABACMAAAAFAAcAAQACACMAAAAHAAcAAQAAACMAAAAIAAcAAQABACMAAAAAAAcAAQAFACcAAAAJAAcAAQAGACcAAAA=")
 tile_set = ExtResource("4_7v8g1")
 
-[node name="Entities" type="Node2D" parent="." unique_id=1114327972]
+[node name="Entities" type="Node2D" parent="." unique_id=1718392240]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1172868459]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=890914177]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAAAAgAAABsAAAACAAEAAgAAABwAAAACAAIAAgAAAB0AAAADAAEAAgAEACIAAAAEAAEAAgAFACIAAAAFAAEAAgAGACIAAAADAAIAAgAEACMAAAAEAAIAAgAFACMAAAAFAAIAAgAGACMAAAAGAAAAAgAAABsAAAAGAAEAAgAAABwAAAAGAAIAAgAAAB0AAAAEAAMAAwAAAAUAAAAEAAQAAwAAAAYAAAAFAAMAAwABAAUAAAAFAAQAAwABAAYAAAAGAAMAAwABAAUAAAAGAAQAAwABAAYAAAAHAAMAAwACAAUAAAAHAAQAAwACAAYAAAAHAAEAAgAFABwAAAAIAAEAAgAGABwAAAAHAAIAAgAFAB0AAAAIAAIAAgAGAB0AAAA=")
 tile_set = ExtResource("4_7v8g1")
 
-[node name="Horchatera" type="Node2D" parent="Entities" unique_id=427556699 instance=ExtResource("5_kh8sh")]
+[node name="Horchatera" type="Node2D" parent="Entities" unique_id=565550533 instance=ExtResource("5_kh8sh")]
 position = Vector2(272, 112)
 script = ExtResource("6_thfch")
 display_name = "Horchatera"
@@ -53,7 +53,7 @@ lines = PackedStringArray("La horchata se hace con chufa de Alboraya, agua y az√
 turn_to_player = true
 sprite_sheet = ExtResource("8_s2rik")
 
-[node name="Cliente" type="Node2D" parent="Entities" unique_id=170988522 instance=ExtResource("5_kh8sh")]
+[node name="Cliente" type="Node2D" parent="Entities" unique_id=1627764657 instance=ExtResource("5_kh8sh")]
 position = Vector2(144, 176)
 script = ExtResource("6_thfch")
 display_name = "Cliente"
@@ -62,29 +62,29 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_076yv")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=1218293334]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1668591552]
 z_index = 10
 tile_map_data = PackedByteArray("AAAFAAMAAgAAAD8AAAAEAAMAAgAFAD8AAAA=")
 tile_set = ExtResource("4_7v8g1")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1874682604]
+[node name="Warps" type="Node2D" parent="." unique_id=1761081314]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=2073721181]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=904516365]
 position = Vector2(208, 240)
 script = ExtResource("11_omyfk")
 target_map = &"ruta_9/exterior"
 target_spawn = &"from_sala_22_66"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1542135409]
+[node name="Spawns" type="Node2D" parent="." unique_id=2023820109]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=412113887]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=113385297]
 position = Vector2(208, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=101792209]
+[node name="Triggers" type="Node2D" parent="." unique_id=1451051221]
 
-[node name="Rotulo" type="Label" parent="." unique_id=2010012192]
+[node name="Rotulo" type="Label" parent="." unique_id=923561027]
 offset_left = 16.0
 offset_top = 4.0
 offset_right = 304.0

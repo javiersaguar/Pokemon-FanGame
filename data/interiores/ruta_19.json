@@ -17,7 +17,7 @@
       "Cuando hay galerna, el mar sube hasta la puerta. Esa noche subo la escalera con el corazón en la mano y el bocadillo en la otra."
      ],
      "nodo": "Farera",
-     "en": [3, 5],
+     "en": [4, 4],
      "mira": "abajo"
     }
    ],
@@ -28,7 +28,7 @@
       "Una tabla de destellos: «grupo de cuatro cada veinte segundos». Debajo, a boli: «y el wifi, cuando quiere»."
      ],
      "nodo": "Cartel",
-     "en": [2, 1]
+     "en": [7, 1]
     }
    ],
    "tamano": [10, 8],
@@ -39,8 +39,57 @@
    "alfombras": [],
    "muebles": [["escalera_mano", 4, 0], ["papelera", 8, 1]],
    "encima": [],
+   "apariciones": {"default": [6, 6], "desde_sala_calle_33_8_linterna": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Linterna",
+     "en": [2, 1],
+     "destino": "ruta_19/sala_calle_33_8_linterna",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_33_8_linterna",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "ruta_19/sala_calle_33_8_linterna": {
+   "tipo": "torre",
+   "nombre": "Linterna del faro",
+   "personas": [
+    {
+     "nombre": "Técnico de faros",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "La lente es de Fresnel: muchos anillos de cristal que concentran la luz de una bombilla pequeña en un haz que llega a veinte millas.",
+      "Antes había fareros que vivían aquí con su familia. Ahora venimos los técnicos una vez al mes. La gaviota de la barandilla es la única fija."
+     ],
+     "nodo": "TecnicoDeFaros",
+     "en": [4, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una lente enorme de anillos de cristal que gira despacio. Si la miras de cerca, el mundo sale del revés."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "padre": "ruta_19/sala_calle_33_8",
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "parquet",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 6, 0], ["caja", 8, 6], ["tele_pequena", 1, 6]],
+   "encima": [],
    "apariciones": {"default": [6, 6]},
-   "pasos": []
+   "pasos": [],
+   "salida": {"destino": "ruta_19/sala_calle_33_8", "aparicion": "desde_sala_calle_33_8_linterna"}
   },
   "ruta_19/sala_calle_46_11": {
    "pieza": "iglesia_altea",

@@ -1,0 +1,109 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_guiu5"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_1sica"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_cxv6t"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_8y7w8"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_ki80p"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_mngsq"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/profesor.png" id="7_m0sef"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_girl.png" id="8_fwvig"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_draq1"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_o6oqo"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_632d8"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_u0aaa"]
+
+[sub_resource type="Resource" id="Resource_guiu5"]
+script = ExtResource("3_cxv6t")
+id = &"ruta_23/sala_calle_12_11_aula"
+display_name = "Aula del instituto del castillo, Ruta 23"
+outdoor = false
+zone_id = &"ruta_23"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 14, 11)
+followers_allowed = false
+
+[node name="SalaCalle1211Aula" type="Node2D" unique_id=1471966413]
+script = ExtResource("1_guiu5")
+data = SubResource("Resource_guiu5")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1313694942]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAwAAAABAAAAAAAAAAwAAAACAAAAAAAAAAwAAAADAAAAAAAAAAwAAAAEAAAAAAAAAAwAAAAFAAAAAAAAAAwAAAAGAAAAAAAAAAwAAAAHAAAAAAAAAAwAAAAIAAAAAAAAAAwAAAAJAAAAAAAAAAwAAAAKAAAAAAAAAAwAAAALAAAAAAAAAAwAAAAMAAAAAAAAAAwAAAANAAAAAAAAAAwAAAAAAAEAAAAAAAwAAAABAAEAAAAAAAwAAAACAAEAAAAAAAwAAAADAAEAAAAAAAwAAAAEAAEAAAAAAAwAAAAFAAEAAAAAAAwAAAAGAAEAAAAAAAwAAAAHAAEAAAAAAAwAAAAIAAEAAAAAAAwAAAAJAAEAAAAAAAwAAAAKAAEAAAAAAAwAAAALAAEAAAAAAAwAAAAMAAEAAAAAAAwAAAANAAEAAAAAAAwAAAAAAAIAAAAAAAwAAAABAAIAAAAAAAwAAAACAAIAAAAAAAwAAAADAAIAAAAAAAwAAAAEAAIAAAAAAAwAAAAFAAIAAAAAAAwAAAAGAAIAAAAAAAwAAAAHAAIAAAAAAAwAAAAIAAIAAAAAAAwAAAAJAAIAAAAAAAwAAAAKAAIAAAAAAAwAAAALAAIAAAAAAAwAAAAMAAIAAAAAAAwAAAANAAIAAAAAAAwAAAAAAAMAAAAAAAwAAAABAAMAAAAAAAwAAAACAAMAAAAAAAwAAAADAAMAAAAAAAwAAAAEAAMAAAAAAAwAAAAFAAMAAAAAAAwAAAAGAAMAAAAAAAwAAAAHAAMAAAAAAAwAAAAIAAMAAAAAAAwAAAAJAAMAAAAAAAwAAAAKAAMAAAAAAAwAAAALAAMAAAAAAAwAAAAMAAMAAAAAAAwAAAANAAMAAAAAAAwAAAAAAAQAAAAAAAwAAAABAAQAAAAAAAwAAAACAAQAAAAAAAwAAAADAAQAAAAAAAwAAAAEAAQAAAAAAAwAAAAFAAQAAAAAAAwAAAAGAAQAAAAAAAwAAAAHAAQAAAAAAAwAAAAIAAQAAAAAAAwAAAAJAAQAAAAAAAwAAAAKAAQAAAAAAAwAAAALAAQAAAAAAAwAAAAMAAQAAAAAAAwAAAANAAQAAAAAAAwAAAAAAAUAAAAAAAwAAAABAAUAAAAAAAwAAAACAAUAAAAAAAwAAAADAAUAAAAAAAwAAAAEAAUAAAAAAAwAAAAFAAUAAAAAAAwAAAAGAAUAAAAAAAwAAAAHAAUAAAAAAAwAAAAIAAUAAAAAAAwAAAAJAAUAAAAAAAwAAAAKAAUAAAAAAAwAAAALAAUAAAAAAAwAAAAMAAUAAAAAAAwAAAANAAUAAAAAAAwAAAAAAAYAAAAAAAwAAAABAAYAAAAAAAwAAAACAAYAAAAAAAwAAAADAAYAAAAAAAwAAAAEAAYAAAAAAAwAAAAFAAYAAAAAAAwAAAAGAAYAAAAAAAwAAAAHAAYAAAAAAAwAAAAIAAYAAAAAAAwAAAAJAAYAAAAAAAwAAAAKAAYAAAAAAAwAAAALAAYAAAAAAAwAAAAMAAYAAAAAAAwAAAANAAYAAAAAAAwAAAAAAAcAAAAAAAwAAAABAAcAAAAAAAwAAAACAAcAAAAAAAwAAAADAAcAAAAAAAwAAAAEAAcAAAAAAAwAAAAFAAcAAAAAAAwAAAAGAAcAAAAAAAwAAAAHAAcAAAAAAAwAAAAIAAcAAAAAAAwAAAAJAAcAAAAAAAwAAAAKAAcAAAAAAAwAAAALAAcAAAAAAAwAAAAMAAcAAAAAAAwAAAANAAcAAAAAAAwAAAAAAAgAAAAAAAwAAAABAAgAAAAAAAwAAAACAAgAAAAAAAwAAAADAAgAAAAAAAwAAAAEAAgAAAAAAAwAAAAFAAgAAAAAAAwAAAAGAAgAAAAAAAwAAAAHAAgAAAAAAAwAAAAIAAgAAAAAAAwAAAAJAAgAAAAAAAwAAAAKAAgAAAAAAAwAAAALAAgAAAAAAAwAAAAMAAgAAAAAAAwAAAANAAgAAAAAAAwAAAAAAAkAAAAAAAwAAAABAAkAAAAAAAwAAAACAAkAAAAAAAwAAAADAAkAAAAAAAwAAAAEAAkAAAAAAAwAAAAFAAkAAAAAAAwAAAAGAAkAAAAAAAwAAAAHAAkAAAAAAAwAAAAIAAkAAAAAAAwAAAAJAAkAAAAAAAwAAAAKAAkAAAAAAAwAAAALAAkAAAAAAAwAAAAMAAkAAAAAAAwAAAANAAkAAAAAAAwAAAAAAAoAAAAAAAwAAAABAAoAAAAAAAwAAAACAAoAAAAAAAwAAAADAAoAAAAAAAwAAAAEAAoAAAAAAAwAAAAFAAoAAAAAAAwAAAAGAAoAAAAAAAwAAAAHAAoAAAAAAAwAAAAIAAoAAAAAAAQAAAAJAAoAAAAAAAwAAAAKAAoAAAAAAAwAAAALAAoAAAAAAAwAAAAMAAoAAAAAAAwAAAANAAoAAAAAAAwAAAA=")
+tile_set = ExtResource("4_8y7w8")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2016398472]
+tile_map_data = PackedByteArray("AAABAAAAAQABABcAAAABAAEAAQABABgAAAACAAAAAQABABcAAAACAAEAAQABABgAAAADAAAAAQABABcAAAADAAEAAQABABgAAAAEAAAAAQABABcAAAAEAAEAAQABABgAAAAFAAAAAQABABcAAAAFAAEAAQABABgAAAAGAAAAAQABABcAAAAGAAEAAQABABgAAAAHAAAAAQABABcAAAAHAAEAAQABABgAAAAIAAAAAQABABcAAAAIAAEAAQABABgAAAAJAAAAAQABABcAAAAJAAEAAQABABgAAAAKAAAAAQABABcAAAAKAAEAAQABABgAAAALAAAAAQABABcAAAALAAEAAQABABgAAAAMAAAAAQABABcAAAAMAAEAAQABABgAAAAAAAAAAQACABUAAAANAAAAAQAAABUAAAAAAAEAAQACABUAAAANAAEAAQAAABUAAAAAAAIAAQACABUAAAANAAIAAQAAABUAAAAAAAMAAQACABUAAAANAAMAAQAAABUAAAAAAAQAAQACABUAAAANAAQAAQAAABUAAAAAAAUAAQACABUAAAANAAUAAQAAABUAAAAAAAYAAQACABUAAAANAAYAAQAAABUAAAAAAAcAAQACABUAAAANAAcAAQAAABUAAAAAAAgAAQACABUAAAANAAgAAQAAABUAAAAAAAkAAQACABUAAAANAAkAAQAAABUAAAABAAoAAQABABQAAAACAAoAAQABABQAAAADAAoAAQABABQAAAAEAAoAAQABABQAAAAFAAoAAQABABQAAAAGAAoAAQABABQAAAAHAAoAAQACABQAAAAJAAoAAQAAABQAAAAKAAoAAQABABQAAAALAAoAAQABABQAAAAMAAoAAQABABQAAAAAAAoAAQAFABgAAAANAAoAAQAGABgAAAA=")
+tile_set = ExtResource("4_8y7w8")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1540604905]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=503500860]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAIAAAAAgAFAAAAAAAJAAAAAgAGAAAAAAAIAAEAAgAFAAEAAAAJAAEAAgAGAAEAAAAIAAIAAgAFAAIAAAAJAAIAAgAGAAIAAAAKAAIAAwAFAAsAAAALAAIAAwAGAAsAAAAMAAIAAwAHAAsAAAAKAAMAAwAFAAwAAAALAAMAAwAGAAwAAAAMAAMAAwAHAAwAAAAGAAQAAgADADQAAAAHAAQAAgAEADQAAAAGAAUAAgADADUAAAAHAAUAAgAEADUAAAAGAAYAAgAAAD4AAAADAAQAAgADADQAAAAEAAQAAgAEADQAAAADAAUAAgADADUAAAAEAAUAAgAEADUAAAADAAYAAgAAAD4AAAAJAAQAAgADADQAAAAKAAQAAgAEADQAAAAJAAUAAgADADUAAAAKAAUAAgAEADUAAAAJAAYAAgAAAD4AAAAMAAkAAgABACYAAAABAAkAAgAFACYAAAACAAkAAgAGACYAAAADAAkAAgAHACYAAAA=")
+tile_set = ExtResource("4_8y7w8")
+
+[node name="ProfesorDeHistoria" type="Node2D" parent="Entities" unique_id=400916861 instance=ExtResource("5_ki80p")]
+position = Vector2(400, 176)
+script = ExtResource("6_mngsq")
+display_name = "Profesor de Historia"
+lines = PackedStringArray("Doy la clase de los Reyes Católicos en el castillo de su rival. Los alumnos lo entienden enseguida: se asoman a la ventana.", "Hoy toca la guerra de sucesión de Castilla. La ganó Isabel; la Beltraneja se fue a Portugal. Fecha del examen: el lunes.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_m0sef")
+initial_facing = 2
+
+[node name="Alumna" type="Node2D" parent="Entities" unique_id=403308164 instance=ExtResource("5_ki80p")]
+position = Vector2(272, 176)
+script = ExtResource("6_mngsq")
+display_name = "Alumna"
+lines = PackedStringArray("En invierno el castillo no hay quien lo caliente. Hacemos los exámenes con guantes. Los romanos no tenían ni eso, dice el profe.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_fwvig")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1912837430 instance=ExtResource("9_draq1")]
+position = Vector2(80, 48)
+script = ExtResource("10_o6oqo")
+lines = PackedStringArray("Una pizarra con un árbol genealógico de Trastámaras lleno de flechas. Alguien ha dibujado un Pokémon en la esquina.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1604876196]
+z_index = 10
+tile_map_data = PackedByteArray("AAAMAAgAAgABACUAAAABAAgAAgAFACUAAAACAAgAAgAGACUAAAADAAgAAgAHACUAAAA=")
+tile_set = ExtResource("4_8y7w8")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=376790987]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=852030593]
+position = Vector2(272, 336)
+script = ExtResource("11_632d8")
+target_map = &"ruta_23/sala_calle_12_11"
+target_spawn = &"desde_sala_calle_12_11_aula"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=881522822]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1898540101]
+position = Vector2(272, 304)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1590998883]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1045280136]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_u0aaa")
+theme_override_font_sizes/font_size = 16
+text = "AULA DEL INSTITUTO DEL CASTILLO"
+horizontal_alignment = 1

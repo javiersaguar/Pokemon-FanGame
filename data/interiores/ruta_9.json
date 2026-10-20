@@ -536,7 +536,7 @@
       "Su bisabuelo fue el papa Alejandro VI. Los Borja de Roma tenían mala fama; los de Gandía, una fábrica de azúcar."
      ],
      "nodo": "GuiaDelPalau",
-     "en": [10, 5],
+     "en": [10, 3],
      "mira": "abajo"
     },
     {
@@ -547,7 +547,7 @@
       "Vengo por la serie de los Borgia. Me han dicho que es más fiel la del palacio. Menos sangre, más azulejo."
      ],
      "nodo": "Visitante",
-     "en": [6, 3],
+     "en": [13, 4],
      "mira": "abajo"
     }
    ],
@@ -555,24 +555,79 @@
    "tamano": [15, 11],
    "puerta": [3, 10],
    "suelo": "piedra",
-   "pared": "madera_oscura",
+   "pared": "melocoton",
    "felpudo": "alfombra_roja",
    "alfombras": [["alfombra_roja", [4, 4, 9, 5]]],
    "muebles": [
-    ["arbol_maceta", 5, 0],
-    ["estatua_gargola", 6, 0],
-    ["estatua_gargola", 8, 0],
-    ["arbol_maceta", 10, 0],
+    ["arbol_maceta", 8, 0],
+    ["estatua_gargola", 9, 0],
+    ["estatua_gargola", 11, 0],
+    ["arbol_maceta", 13, 0],
     ["mesa_cristal_larga", 5, 6],
     ["silla_derecha", 4, 6],
     ["silla_izquierda", 8, 6],
     ["pedestal", 12, 5],
-    ["palmera_maceta", 13, 0],
+    ["palmera_maceta", 13, 7],
     ["pedestal", 1, 1]
    ],
    "encima": [],
-   "apariciones": {"default": [3, 9]},
-   "pasos": []
+   "apariciones": {"default": [3, 9], "desde_sala_calle_7_66_galeria": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Galeria",
+     "en": [6, 1],
+     "destino": "ruta_9/sala_calle_7_66_galeria",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_7_66_galeria",
+     "llegada": [6, 2]
+    }
+   ]
+  },
+  "ruta_9/sala_calle_7_66_galeria": {
+   "tipo": "museo",
+   "nombre": "Galería Dorada del Palau",
+   "personas": [
+    {
+     "nombre": "Restauradora",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Esta galería se decoró para celebrar la santidad de Francisco de Borja: techos dorados y suelo de azulejo valenciano.",
+      "El azulejo pintado a mano no se pisa con tacones. Lo pone en la entrada. Lo leen después de pisarlo."
+     ],
+     "nodo": "Restauradora",
+     "en": [3, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un suelo de azulejos con los cuatro elementos: agua, aire, tierra y fuego. Ningún Pokémon de tipo Planta: se ve que no los conocían."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 1]
+    }
+   ],
+   "padre": "ruta_9/sala_calle_7_66",
+   "tamano": [14, 10],
+   "puerta": [8, 9],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["pedestal", 6, 5],
+    ["pedestal", 9, 5],
+    ["vitrina_alta", 12, 3],
+    ["estatua_gargola", 1, 4],
+    ["arbol_maceta", 12, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 8]},
+   "pasos": [],
+   "salida": {"destino": "ruta_9/sala_calle_7_66", "aparicion": "desde_sala_calle_7_66_galeria"}
   },
   "ruta_9/sala_calle_41_67": {
    "pieza": "torre_socorrista",

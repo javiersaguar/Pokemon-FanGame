@@ -200,7 +200,7 @@
       "Yo bajo la granada del cielo desde la cúpula, con cuerdas y una manivela. Aquí la tramoya tiene seiscientos años y ninguna avería."
      ],
      "nodo": "Tramoyista",
-     "en": [9, 9],
+     "en": [10, 7],
      "mira": "abajo"
     }
    ],
@@ -223,8 +223,57 @@
     ["banco_rojo", 8, 8]
    ],
    "encima": [],
-   "apariciones": {"default": [7, 10]},
-   "pasos": []
+   "apariciones": {"default": [7, 10], "desde_sala_calle_35_28_tramoya": [9, 2]},
+   "pasos": [
+    {
+     "nodo": "Tramoya",
+     "en": [9, 1],
+     "destino": "ruta_11/sala_calle_35_28_tramoya",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_35_28_tramoya",
+     "llegada": [9, 2]
+    }
+   ]
+  },
+  "ruta_11/sala_calle_35_28_tramoya": {
+   "tipo": "torre",
+   "nombre": "Tramoya del Misteri",
+   "personas": [
+    {
+     "nombre": "Maestro de tramoya",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Desde aquí arriba se maneja el «cielo»: una lona pintada que se abre para que bajen la granada dorada y el araceli con los ángeles.",
+      "El torno es de madera y las cuerdas se revisan cada año. Abajo hay un niño cantando colgado a veinte metros: aquí no se improvisa."
+     ],
+     "nodo": "MaestroDeTramoya",
+     "en": [5, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un torno de madera con una cuerda gruesa que se pierde por un agujero del suelo. Una etiqueta: «No tocar en agosto»."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "padre": "ruta_11/sala_calle_35_28",
+   "tamano": [9, 8],
+   "puerta": [3, 7],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 4, 0], ["caja", 1, 6], ["banqueta_azul", 7, 6]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": [],
+   "salida": {"destino": "ruta_11/sala_calle_35_28", "aparicion": "desde_sala_calle_35_28_tramoya"}
   },
   "ruta_11/sala_calle_44_27": {
    "pieza": "casa_dos_aguas",

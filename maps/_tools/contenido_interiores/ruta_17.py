@@ -18,6 +18,15 @@ SALAS = {
                 "Por aquí pasa el Camino Primitivo, el primero que hizo un rey asturiano hasta Santiago. A pie, sin aplicación."]),
             ("Peregrina", "montanera", "visitante", ["Salí de Oviedo hace diez días. Me quedan cuatro hasta Santiago y ninguna uña del pie."]),
         ],
+        "dentro": {
+            "ruta_17/sala_calle_32_7_capilla": {
+                "tipo": "iglesia", "nombre": "Capilla de la Virgen de los Ojos Grandes",
+                "gente": [("Devota", "npc_old_woman", "publico", [
+                    "La Virgen de los Ojos Grandes es la patrona de Lugo. Dicen que te mira estés donde estés de la capilla.",
+                    "Yo me pongo en la esquina para probarlo. Me sigue mirando. Ya no me pongo en la esquina."])],
+                "carteles": [("pared", ["Una capilla barroca detrás del altar mayor, toda de piedra y oro, con una talla de la Virgen de ojos muy abiertos."])],
+            },
+        },
     },
     "ruta_17/sala_calle_37_13": {
         "tipo": "taberna", "nombre": "Taberna de las tapas de Lugo",

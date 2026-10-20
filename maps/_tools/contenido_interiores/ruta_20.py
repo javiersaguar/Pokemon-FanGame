@@ -18,5 +18,14 @@ SALAS = {
             ("Montañera", "montanera", "visitante", ["He subido desde Uharte-Arakil por el camino viejo. Tres horas. El dragón lo habría hecho en diez minutos."]),
         ],
         "carteles": [("pared", ["Unas cadenas de hierro colgadas en la pared. Las de Teodosio, dicen. Están frías aunque sea agosto."])],
+        "dentro": {
+            "ruta_20/sala_calle_20_5_frontal": {
+                "tipo": "museo", "nombre": "Frontal esmaltado de Aralar",
+                "gente": [("Guía del santuario", "profesor", "libre", [
+                    "El frontal del altar es de cobre esmaltado del siglo XII, una de las grandes joyas del románico europeo.",
+                    "En 1979 lo robó un ladrón de arte famoso, Erik el Belga. Se recuperó casi todo; dos esmaltes siguen sin aparecer."])],
+                "carteles": [("vitrina", ["El frontal de esmalte azul, verde y oro: la Virgen con el Niño en el centro y los apóstoles alrededor. Los huecos de los dos esmaltes perdidos siguen vacíos."])],
+            },
+        },
     },
 }

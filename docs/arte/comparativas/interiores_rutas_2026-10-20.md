@@ -30,37 +30,37 @@ Todas: [Casa del resinero de Cantalejo](interiores_2026-10-20/ruta_2/ruta_2__cas
 
 Todas: [Refugio del puerto de Navacerrada](interiores_2026-10-20/ruta_3/ruta_3__casa_1_despues.png), [Casa del conductor de la quitanieves](interiores_2026-10-20/ruta_3/ruta_3__casa_2_despues.png), [Basílica del Valle de Cuelgamuros](interiores_2026-10-20/ruta_3/ruta_3__sala_calle_6_66_despues.png).
 
-## Ruta 4 (10 salas)
+## Ruta 4 (12 salas)
 
-| ![Venta de la carretera del Escorial](interiores_2026-10-20/ruta_4/ruta_4__casa_1_despues.png) | ![Real Monasterio de San Lorenzo de El Escorial](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_9_24_despues.png) |
-|---|---|
-| Venta de la carretera del Escorial | Real Monasterio de San Lorenzo de El Escorial |
+| ![Venta de la carretera del Escorial](interiores_2026-10-20/ruta_4/ruta_4__casa_1_despues.png) | ![Real Monasterio de San Lorenzo de El Escorial](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_9_24_despues.png) | ![Real Biblioteca del Monasterio](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_9_24_biblioteca_despues.png) |
+|---|---|---|
+| Venta de la carretera del Escorial | Real Monasterio de San Lorenzo de El Escorial | Real Biblioteca del Monasterio |
 
-Todas: [Venta de la carretera del Escorial](interiores_2026-10-20/ruta_4/ruta_4__casa_1_despues.png), [Casa del guía del Monasterio](interiores_2026-10-20/ruta_4/ruta_4__casa_2_despues.png), [Casa del restaurador jubilado](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_34_14_despues.png), [Chalet de la presidenta de la comunidad](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_29_27_despues.png), [Chalet de la colina](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_38_28_despues.png), [Chalet de la teletrabajadora](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_45_28_despues.png), [Chalet del tertuliano](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_30_38_despues.png), [Chalet de la familia del pádel](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_38_39_despues.png), [Chalet de la familia del repartidor](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_44_39_despues.png), [Real Monasterio de San Lorenzo de El Escorial](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_9_24_despues.png).
+Todas: [Venta de la carretera del Escorial](interiores_2026-10-20/ruta_4/ruta_4__casa_1_despues.png), [Casa del guía del Monasterio](interiores_2026-10-20/ruta_4/ruta_4__casa_2_despues.png), [Casa del restaurador jubilado](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_34_14_despues.png), [Chalet de la presidenta de la comunidad](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_29_27_despues.png), [Chalet de la colina](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_38_28_despues.png), [Chalet de la teletrabajadora](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_45_28_despues.png), [Chalet del tertuliano](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_30_38_despues.png), [Chalet de la familia del pádel](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_38_39_despues.png), [Chalet de la familia del repartidor](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_44_39_despues.png), [Real Monasterio de San Lorenzo de El Escorial](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_9_24_despues.png), [Real Biblioteca del Monasterio](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_9_24_biblioteca_despues.png), [Panteón de Reyes](interiores_2026-10-20/ruta_4/ruta_4__sala_calle_9_24_panteon_despues.png).
 
-## Ruta 9 (18 salas)
+## Ruta 9 (19 salas)
 
 | ![Casa forestal de la Devesa](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_18_15_despues.png) | ![Barraca del anguilero](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_16_24_despues.png) | ![Barraca de la abuela del arroz](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_21_24_despues.png) |
 |---|---|---|
 | Casa forestal de la Devesa | Barraca del anguilero | Barraca de la abuela del arroz |
 
-Todas: [Casa forestal de la Devesa](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_18_15_despues.png), [Barraca del anguilero](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_16_24_despues.png), [Barraca de la abuela del arroz](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_21_24_despues.png), [Barraca del barquero de vela latina](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_17_33_despues.png), [Arrocería de El Palmar](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_22_33_despues.png), [Puesto de tellinas y clóchinas](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_22_40_despues.png), [Torre de apartamentos de Cullera](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_19_56_despues.png), [Faro de Cullera](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_34_55_despues.png), [Casa de la familia gandiense](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_15_65_despues.png), [Horchatería de Gandía](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_22_66_despues.png), [Chalet del reality de Gandía](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_31_65_despues.png), [Palau Ducal dels Borja](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_7_66_despues.png), [Caseta de socorrismo de la playa de Gandía](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_41_67_despues.png), [Apartamento de los veraneantes de toda la vida](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_5_74_despues.png), [Tienda de recuerdos del paseo](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_11_74_despues.png), [Casa del DJ de verano](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_17_74_despues.png), [Peluquería del paseo marítimo](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_23_74_despues.png), [Heladería del Paseo](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_32_74_despues.png).
+Todas: [Casa forestal de la Devesa](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_18_15_despues.png), [Barraca del anguilero](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_16_24_despues.png), [Barraca de la abuela del arroz](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_21_24_despues.png), [Barraca del barquero de vela latina](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_17_33_despues.png), [Arrocería de El Palmar](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_22_33_despues.png), [Puesto de tellinas y clóchinas](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_22_40_despues.png), [Torre de apartamentos de Cullera](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_19_56_despues.png), [Faro de Cullera](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_34_55_despues.png), [Casa de la familia gandiense](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_15_65_despues.png), [Horchatería de Gandía](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_22_66_despues.png), [Chalet del reality de Gandía](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_31_65_despues.png), [Palau Ducal dels Borja](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_7_66_despues.png), [Galería Dorada del Palau](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_7_66_galeria_despues.png), [Caseta de socorrismo de la playa de Gandía](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_41_67_despues.png), [Apartamento de los veraneantes de toda la vida](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_5_74_despues.png), [Tienda de recuerdos del paseo](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_11_74_despues.png), [Casa del DJ de verano](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_17_74_despues.png), [Peluquería del paseo marítimo](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_23_74_despues.png), [Heladería del Paseo](interiores_2026-10-20/ruta_9/ruta_9__sala_calle_32_74_despues.png).
 
-## Ruta 10 (19 salas)
+## Ruta 10 (20 salas)
 
 | ![Iglesia de Nuestra Señora del Consuelo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_10_23_despues.png) | ![Caseta del socorrista de la Olla](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_41_27_despues.png) | ![Hotel del Imserso](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_10_40_despues.png) |
 |---|---|---|
 | Iglesia de Nuestra Señora del Consuelo | Caseta del socorrista de la Olla | Hotel del Imserso |
 
-Todas: [Casa del pescador de Calp](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_31_8_despues.png), [Casa de la jubilada holandesa](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_35_8_despues.png), [Casa del escalador del Peñón](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_31_13_despues.png), [Estudio del pintor de Altea](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_16_20_despues.png), [Casa de la vecina del casco antiguo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_18_24_despues.png), [Iglesia de Nuestra Señora del Consuelo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_10_23_despues.png), [Caseta del socorrista de la Olla](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_41_27_despues.png), [Apartamento de los jubilados ingleses](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_6_40_despues.png), [Hotel del Imserso](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_10_40_despues.png), [Portal del Intempo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_15_40_despues.png), [Apartamento de la despedida de soltero](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_20_40_despues.png), [The Red Lion](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_9_50_despues.png), [Supermercado británico](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_16_50_despues.png), [Floristería de Benidorm](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_22_50_despues.png), [Portal de los vecinos de Benidorm](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_32_51_despues.png), [Chocolatería de La Vila](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_7_60_despues.png), [Casa azul del pescador](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_11_59_despues.png), [Casa del festero de Moros y Cristianos](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_17_59_despues.png), [Casa roja de la familia del puerto](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_23_60_despues.png).
+Todas: [Casa del pescador de Calp](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_31_8_despues.png), [Casa de la jubilada holandesa](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_35_8_despues.png), [Casa del escalador del Peñón](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_31_13_despues.png), [Estudio del pintor de Altea](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_16_20_despues.png), [Casa de la vecina del casco antiguo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_18_24_despues.png), [Iglesia de Nuestra Señora del Consuelo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_10_23_despues.png), [Caseta del socorrista de la Olla](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_41_27_despues.png), [Apartamento de los jubilados ingleses](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_6_40_despues.png), [Hotel del Imserso](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_10_40_despues.png), [Portal del Intempo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_15_40_despues.png), [Ático del Intempo](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_15_40_atico_despues.png), [Apartamento de la despedida de soltero](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_20_40_despues.png), [The Red Lion](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_9_50_despues.png), [Supermercado británico](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_16_50_despues.png), [Floristería de Benidorm](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_22_50_despues.png), [Portal de los vecinos de Benidorm](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_32_51_despues.png), [Chocolatería de La Vila](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_7_60_despues.png), [Casa azul del pescador](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_11_59_despues.png), [Casa del festero de Moros y Cristianos](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_17_59_despues.png), [Casa roja de la familia del puerto](interiores_2026-10-20/ruta_10/ruta_10__sala_calle_23_60_despues.png).
 
-## Ruta 11 (5 salas)
+## Ruta 11 (6 salas)
 
-| ![Basílica de Santa María de Elche](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_35_28_despues.png) |
-|---|
-| Basílica de Santa María de Elche |
+| ![Basílica de Santa María de Elche](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_35_28_despues.png) | ![Tramoya del Misteri](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_35_28_tramoya_despues.png) |
+|---|---|
+| Basílica de Santa María de Elche | Tramoya del Misteri |
 
-Todas: [Casa de la profesora de Orihuela](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_11_27_despues.png), [Casa del huertano de la Vega Baja](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_17_27_despues.png), [Casa de la familia del calzado](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_23_27_despues.png), [Basílica de Santa María de Elche](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_35_28_despues.png), [Casa del palmerero](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_44_27_despues.png).
+Todas: [Casa de la profesora de Orihuela](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_11_27_despues.png), [Casa del huertano de la Vega Baja](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_17_27_despues.png), [Casa de la familia del calzado](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_23_27_despues.png), [Basílica de Santa María de Elche](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_35_28_despues.png), [Tramoya del Misteri](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_35_28_tramoya_despues.png), [Casa del palmerero](interiores_2026-10-20/ruta_11/ruta_11__sala_calle_44_27_despues.png).
 
 ## Ruta 12 (1 salas)
 
@@ -94,13 +94,13 @@ Todas: [Casa de hermandad de El Rocío](interiores_2026-10-20/ruta_14/ruta_14__c
 
 Todas: [Casa del guagüero de Telde](interiores_2026-10-20/ruta_15/ruta_15__casa_1_despues.png), [Casa de la familia de Pozo Izquierdo](interiores_2026-10-20/ruta_15/ruta_15__casa_2_despues.png).
 
-## Ruta 17 (5 salas)
+## Ruta 17 (6 salas)
 
-| ![Catedral de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_32_7_despues.png) | ![Taberna de las tapas de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_37_13_despues.png) | ![Casa de labranza de la aldea](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_5_24_despues.png) |
+| ![Catedral de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_32_7_despues.png) | ![Capilla de la Virgen de los Ojos Grandes](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_32_7_capilla_despues.png) | ![Taberna de las tapas de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_37_13_despues.png) |
 |---|---|---|
-| Catedral de Lugo | Taberna de las tapas de Lugo | Casa de labranza de la aldea |
+| Catedral de Lugo | Capilla de la Virgen de los Ojos Grandes | Taberna de las tapas de Lugo |
 
-Todas: [Casa del vecino de la muralla](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_27_12_despues.png), [Catedral de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_32_7_despues.png), [Taberna de las tapas de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_37_13_despues.png), [Casa de la costurera de Arteixo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_47_37_despues.png), [Casa de labranza de la aldea](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_5_24_despues.png).
+Todas: [Casa del vecino de la muralla](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_27_12_despues.png), [Catedral de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_32_7_despues.png), [Capilla de la Virgen de los Ojos Grandes](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_32_7_capilla_despues.png), [Taberna de las tapas de Lugo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_37_13_despues.png), [Casa de la costurera de Arteixo](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_47_37_despues.png), [Casa de labranza de la aldea](interiores_2026-10-20/ruta_17/ruta_17__sala_calle_5_24_despues.png).
 
 ## Ruta 18 (3 salas)
 
@@ -110,26 +110,26 @@ Todas: [Casa del vecino de la muralla](interiores_2026-10-20/ruta_17/ruta_17__sa
 
 Todas: [Quesería de Cabrales](interiores_2026-10-20/ruta_18/ruta_18__sala_calle_21_18_despues.png), [Sidrería del pueblo](interiores_2026-10-20/ruta_18/ruta_18__sala_calle_27_18_despues.png), [Casa de la vaqueira](interiores_2026-10-20/ruta_18/ruta_18__sala_calle_45_18_despues.png).
 
-## Ruta 19 (4 salas)
+## Ruta 19 (5 salas)
 
-| ![Faro del cabo](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_33_8_despues.png) | ![Iglesia de Santa María de Castro Urdiales](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_46_11_despues.png) | ![Conservera de anchoas](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_47_18_despues.png) |
+| ![Faro del cabo](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_33_8_despues.png) | ![Linterna del faro](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_33_8_linterna_despues.png) | ![Iglesia de Santa María de Castro Urdiales](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_46_11_despues.png) |
 |---|---|---|
-| Faro del cabo | Iglesia de Santa María de Castro Urdiales | Conservera de anchoas |
+| Faro del cabo | Linterna del faro | Iglesia de Santa María de Castro Urdiales |
 
-Todas: [Faro del cabo](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_33_8_despues.png), [Iglesia de Santa María de Castro Urdiales](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_46_11_despues.png), [Conservera de anchoas](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_47_18_despues.png), [Casa del surfista de la playa](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_52_17_despues.png).
+Todas: [Faro del cabo](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_33_8_despues.png), [Linterna del faro](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_33_8_linterna_despues.png), [Iglesia de Santa María de Castro Urdiales](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_46_11_despues.png), [Conservera de anchoas](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_47_18_despues.png), [Casa del surfista de la playa](interiores_2026-10-20/ruta_19/ruta_19__sala_calle_52_17_despues.png).
 
-## Ruta 20 (2 salas)
+## Ruta 20 (3 salas)
 
-| ![Borda del pastor](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_18_28_despues.png) | ![Santuario de San Miguel de Aralar](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_20_5_despues.png) |
-|---|---|
-| Borda del pastor | Santuario de San Miguel de Aralar |
+| ![Borda del pastor](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_18_28_despues.png) | ![Santuario de San Miguel de Aralar](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_20_5_despues.png) | ![Frontal esmaltado de Aralar](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_20_5_frontal_despues.png) |
+|---|---|---|
+| Borda del pastor | Santuario de San Miguel de Aralar | Frontal esmaltado de Aralar |
 
-Todas: [Borda del pastor](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_18_28_despues.png), [Santuario de San Miguel de Aralar](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_20_5_despues.png).
+Todas: [Borda del pastor](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_18_28_despues.png), [Santuario de San Miguel de Aralar](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_20_5_despues.png), [Frontal esmaltado de Aralar](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_20_5_frontal_despues.png).
 
-## Ruta 23 (4 salas)
+## Ruta 23 (5 salas)
 
-| ![Castillo de los Duques de Alburquerque](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_despues.png) | ![Iglesia de San Miguel de Cuéllar](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_22_11_despues.png) |
-|---|---|
-| Castillo de los Duques de Alburquerque | Iglesia de San Miguel de Cuéllar |
+| ![Castillo de los Duques de Alburquerque](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_despues.png) | ![Aula del instituto del castillo](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_aula_despues.png) | ![Iglesia de San Miguel de Cuéllar](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_22_11_despues.png) |
+|---|---|---|
+| Castillo de los Duques de Alburquerque | Aula del instituto del castillo | Iglesia de San Miguel de Cuéllar |
 
-Todas: [Casa del caballista de los encierros](interiores_2026-10-20/ruta_23/ruta_23__casa_1_despues.png), [Casa de la piñonera](interiores_2026-10-20/ruta_23/ruta_23__casa_2_despues.png), [Castillo de los Duques de Alburquerque](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_despues.png), [Iglesia de San Miguel de Cuéllar](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_22_11_despues.png).
+Todas: [Casa del caballista de los encierros](interiores_2026-10-20/ruta_23/ruta_23__casa_1_despues.png), [Casa de la piñonera](interiores_2026-10-20/ruta_23/ruta_23__casa_2_despues.png), [Castillo de los Duques de Alburquerque](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_despues.png), [Aula del instituto del castillo](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_aula_despues.png), [Iglesia de San Miguel de Cuéllar](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_22_11_despues.png).

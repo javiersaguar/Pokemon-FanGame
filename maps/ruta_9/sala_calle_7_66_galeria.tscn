@@ -1,0 +1,99 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_ei4pn"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_jk65m"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_hpc8l"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_1rf8l"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_d2taa"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_uojwe"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="7_mrva4"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_xsb8j"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_c5fqt"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_10pux"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_p55xj"]
+
+[sub_resource type="Resource" id="Resource_ei4pn"]
+script = ExtResource("3_hpc8l")
+id = &"ruta_9/sala_calle_7_66_galeria"
+display_name = "Galería Dorada del Palau, Ruta 9"
+outdoor = false
+zone_id = &"ruta_9"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 14, 10)
+followers_allowed = false
+
+[node name="SalaCalle766Galeria" type="Node2D" unique_id=668540978]
+script = ExtResource("1_ei4pn")
+data = SubResource("Resource_ei4pn")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=374383615]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADAAAAABAAAAAAAAADAAAAACAAAAAAAAADAAAAADAAAAAAAAADAAAAAEAAAAAAAAADAAAAAFAAAAAAAAADAAAAAGAAAAAAAAADAAAAAHAAAAAAAAADAAAAAIAAAAAAAAADAAAAAJAAAAAAAAADAAAAAKAAAAAAAAADAAAAALAAAAAAAAADAAAAAMAAAAAAAAADAAAAANAAAAAAAAADAAAAAAAAEAAAAAADAAAAABAAEAAAAAADAAAAACAAEAAAAAADAAAAADAAEAAAAAADAAAAAEAAEAAAAAADAAAAAFAAEAAAAAADAAAAAGAAEAAAAAADAAAAAHAAEAAAAAADAAAAAIAAEAAAAAADAAAAAJAAEAAAAAADAAAAAKAAEAAAAAADAAAAALAAEAAAAAADAAAAAMAAEAAAAAADAAAAANAAEAAAAAADAAAAAAAAIAAAAAADAAAAABAAIAAAAAADAAAAACAAIAAAAAADAAAAADAAIAAAAAADAAAAAEAAIAAAAAADAAAAAFAAIAAAAAADAAAAAGAAIAAAAAADAAAAAHAAIAAAAAADAAAAAIAAIAAAAAADAAAAAJAAIAAAAAADAAAAAKAAIAAAAAADAAAAALAAIAAAAAADAAAAAMAAIAAAAAADAAAAANAAIAAAAAADAAAAAAAAMAAAAAADAAAAABAAMAAAAAADAAAAACAAMAAAAAADAAAAADAAMAAAAAADAAAAAEAAMAAAAAADAAAAAFAAMAAAAAADAAAAAGAAMAAAAAADAAAAAHAAMAAAAAADAAAAAIAAMAAAAAADAAAAAJAAMAAAAAADAAAAAKAAMAAAAAADAAAAALAAMAAAAAADAAAAAMAAMAAAAAADAAAAANAAMAAAAAADAAAAAAAAQAAAAAADAAAAABAAQAAAAAADAAAAACAAQAAAAAADAAAAADAAQAAAAAADAAAAAEAAQAAAAAADAAAAAFAAQAAAAAADAAAAAGAAQAAAAAADAAAAAHAAQAAAAAADAAAAAIAAQAAAAAADAAAAAJAAQAAAAAADAAAAAKAAQAAAAAADAAAAALAAQAAAAAADAAAAAMAAQAAAAAADAAAAANAAQAAAAAADAAAAAAAAUAAAAAADAAAAABAAUAAAAAADAAAAACAAUAAAAAADAAAAADAAUAAAAAADAAAAAEAAUAAAAAADAAAAAFAAUAAAAAADAAAAAGAAUAAAAAADAAAAAHAAUAAAAAADAAAAAIAAUAAAAAADAAAAAJAAUAAAAAADAAAAAKAAUAAAAAADAAAAALAAUAAAAAADAAAAAMAAUAAAAAADAAAAANAAUAAAAAADAAAAAAAAYAAAAAADAAAAABAAYAAAAAADAAAAACAAYAAAAAADAAAAADAAYAAAAAADAAAAAEAAYAAAAAADAAAAAFAAYAAAAAADAAAAAGAAYAAAAAADAAAAAHAAYAAAAAADAAAAAIAAYAAAAAADAAAAAJAAYAAAAAADAAAAAKAAYAAAAAADAAAAALAAYAAAAAADAAAAAMAAYAAAAAADAAAAANAAYAAAAAADAAAAAAAAcAAAAAADAAAAABAAcAAAAAADAAAAACAAcAAAAAADAAAAADAAcAAAAAADAAAAAEAAcAAAAAADAAAAAFAAcAAAAAADAAAAAGAAcAAAAAADAAAAAHAAcAAAAAADAAAAAIAAcAAAAAADAAAAAJAAcAAAAAADAAAAAKAAcAAAAAADAAAAALAAcAAAAAADAAAAAMAAcAAAAAADAAAAANAAcAAAAAADAAAAAAAAgAAAAAADAAAAABAAgAAAAAADAAAAACAAgAAAAAADAAAAADAAgAAAAAADAAAAAEAAgAAAAAADAAAAAFAAgAAAAAADAAAAAGAAgAAAAAADAAAAAHAAgAAAAAADAAAAAIAAgAAAAAADAAAAAJAAgAAAAAADAAAAAKAAgAAAAAADAAAAALAAgAAAAAADAAAAAMAAgAAAAAADAAAAANAAgAAAAAADAAAAAAAAkAAAAAADAAAAABAAkAAAAAADAAAAACAAkAAAAAADAAAAADAAkAAAAAADAAAAAEAAkAAAAAADAAAAAFAAkAAAAAADAAAAAGAAkAAAAAADAAAAAHAAkAAAAAADAAAAAIAAkAAAAAAAgAAAAJAAkAAAAAADAAAAAKAAkAAAAAADAAAAALAAkAAAAAADAAAAAMAAkAAAAAADAAAAANAAkAAAAAADAAAAA=")
+tile_set = ExtResource("4_1rf8l")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=221055798]
+tile_map_data = PackedByteArray("AAABAAAAAQABACEAAAABAAEAAQABACIAAAACAAAAAQABACEAAAACAAEAAQABACIAAAADAAAAAQABACEAAAADAAEAAQABACIAAAAEAAAAAQABACEAAAAEAAEAAQABACIAAAAFAAAAAQABACEAAAAFAAEAAQABACIAAAAGAAAAAQABACEAAAAGAAEAAQABACIAAAAHAAAAAQABACEAAAAHAAEAAQABACIAAAAIAAAAAQABACEAAAAIAAEAAQABACIAAAAJAAAAAQABACEAAAAJAAEAAQABACIAAAAKAAAAAQABACEAAAAKAAEAAQABACIAAAALAAAAAQABACEAAAALAAEAAQABACIAAAAMAAAAAQABACEAAAAMAAEAAQABACIAAAAAAAAAAQACAB8AAAANAAAAAQAAAB8AAAAAAAEAAQACAB8AAAANAAEAAQAAAB8AAAAAAAIAAQACAB8AAAANAAIAAQAAAB8AAAAAAAMAAQACAB8AAAANAAMAAQAAAB8AAAAAAAQAAQACAB8AAAANAAQAAQAAAB8AAAAAAAUAAQACAB8AAAANAAUAAQAAAB8AAAAAAAYAAQACAB8AAAANAAYAAQAAAB8AAAAAAAcAAQACAB8AAAANAAcAAQAAAB8AAAAAAAgAAQACAB8AAAANAAgAAQAAAB8AAAABAAkAAQABAB4AAAACAAkAAQABAB4AAAADAAkAAQABAB4AAAAEAAkAAQABAB4AAAAFAAkAAQABAB4AAAAGAAkAAQABAB4AAAAHAAkAAQACAB4AAAAJAAkAAQAAAB4AAAAKAAkAAQABAB4AAAALAAkAAQABAB4AAAAMAAkAAQABAB4AAAAAAAkAAQAFACIAAAANAAkAAQAGACIAAAA=")
+tile_set = ExtResource("4_1rf8l")
+
+[node name="Entities" type="Node2D" parent="." unique_id=998358321]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1004444562]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAGAAYAAgADADMAAAAHAAYAAgAEADMAAAAJAAYAAgADADMAAAAKAAYAAgAEADMAAAAMAAYAAgAHADkAAAABAAYAAgAFADMAAAACAAYAAgAGADMAAAAMAAAAAgAAACQAAAAMAAEAAgAAACUAAAAMAAIAAgAAACYAAAA=")
+tile_set = ExtResource("4_1rf8l")
+
+[node name="Restauradora" type="Node2D" parent="Entities" unique_id=621399283 instance=ExtResource("5_d2taa")]
+position = Vector2(112, 240)
+script = ExtResource("6_uojwe")
+display_name = "Restauradora"
+lines = PackedStringArray("Esta galería se decoró para celebrar la santidad de Francisco de Borja: techos dorados y suelo de azulejo valenciano.", "El azulejo pintado a mano no se pisa con tacones. Lo pone en la entrada. Lo leen después de pisarlo.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_mrva4")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=360331024 instance=ExtResource("8_xsb8j")]
+position = Vector2(208, 48)
+script = ExtResource("9_c5fqt")
+lines = PackedStringArray("Un suelo de azulejos con los cuatro elementos: agua, aire, tierra y fuego. Ningún Pokémon de tipo Planta: se ve que no los conocían.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=2075173207]
+z_index = 10
+tile_map_data = PackedByteArray("AAAGAAUAAgADADIAAAAHAAUAAgAEADIAAAAJAAUAAgADADIAAAAKAAUAAgAEADIAAAAMAAMAAgAHADYAAAAMAAQAAgAHADcAAAAMAAUAAgAHADgAAAABAAQAAgAFADEAAAACAAQAAgAGADEAAAABAAUAAgAFADIAAAACAAUAAgAGADIAAAA=")
+tile_set = ExtResource("4_1rf8l")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1849411924]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=943743366]
+position = Vector2(272, 304)
+script = ExtResource("10_10pux")
+target_map = &"ruta_9/sala_calle_7_66"
+target_spawn = &"desde_sala_calle_7_66_galeria"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=115552557]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1252147693]
+position = Vector2(272, 272)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=905173603]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1713566120]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_p55xj")
+theme_override_font_sizes/font_size = 16
+text = "GALERÍA DORADA DEL PALAU"
+horizontal_alignment = 1

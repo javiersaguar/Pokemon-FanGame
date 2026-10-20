@@ -27,6 +27,18 @@ SALAS = {
                 "Por eso la llamaron «la Beltraneja». Un mote así cambió la historia de Castilla. Cuidado con lo que se cuenta en los pasillos."]),
             ("Estudiante", "npc_youngster", "libre", ["Mi instituto está dentro del castillo. Hay almenas, foso y examen de Matemáticas el lunes. Sigue siendo un instituto."]),
         ],
+        "dentro": {
+            "ruta_23/sala_calle_12_11_aula": {
+                "tipo": "aula", "nombre": "Aula del instituto del castillo",
+                "gente": [
+                    ("Profesor de Historia", "profesor", "libre", [
+                        "Doy la clase de los Reyes Católicos en el castillo de su rival. Los alumnos lo entienden enseguida: se asoman a la ventana.",
+                        "Hoy toca la guerra de sucesión de Castilla. La ganó Isabel; la Beltraneja se fue a Portugal. Fecha del examen: el lunes."]),
+                    ("Alumna", "npc_girl", "mesa", ["En invierno el castillo no hay quien lo caliente. Hacemos los exámenes con guantes. Los romanos no tenían ni eso, dice el profe."]),
+                ],
+                "carteles": [("pared", ["Una pizarra con un árbol genealógico de Trastámaras lleno de flechas. Alguien ha dibujado un Pokémon en la esquina."])],
+            },
+        },
     },
     "ruta_23/sala_calle_22_11": {
         "tipo": "iglesia", "nombre": "Iglesia de San Miguel de Cuéllar",

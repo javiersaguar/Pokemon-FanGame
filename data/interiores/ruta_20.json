@@ -76,7 +76,7 @@
       "He subido desde Uharte-Arakil por el camino viejo. Tres horas. El dragón lo habría hecho en diez minutos."
      ],
      "nodo": "Montanera",
-     "en": [3, 4],
+     "en": [2, 8],
      "mira": "abajo"
     }
    ],
@@ -87,14 +87,14 @@
       "Unas cadenas de hierro colgadas en la pared. Las de Teodosio, dicen. Están frías aunque sea agosto."
      ],
      "nodo": "Cartel",
-     "en": [3, 1]
+     "en": [2, 1]
     }
    ],
    "tamano": [13, 11],
    "puerta": [8, 10],
    "suelo": "piedra",
-   "pared": "madera_oscura",
-   "felpudo": "alfombra_roja",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
    "alfombras": [["alfombra_roja", [8, 4, 1, 6]]],
    "muebles": [
     ["mostrador_madera", 7, 3],
@@ -106,8 +106,57 @@
     ["arbol_maceta", 1, 7]
    ],
    "encima": [],
-   "apariciones": {"default": [8, 9]},
-   "pasos": []
+   "apariciones": {"default": [8, 9], "desde_sala_calle_20_5_frontal": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Frontal",
+     "en": [6, 1],
+     "destino": "ruta_20/sala_calle_20_5_frontal",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_20_5_frontal",
+     "llegada": [6, 2]
+    }
+   ]
+  },
+  "ruta_20/sala_calle_20_5_frontal": {
+   "tipo": "museo",
+   "nombre": "Frontal esmaltado de Aralar",
+   "personas": [
+    {
+     "nombre": "Guía del santuario",
+     "aspecto": "profesor",
+     "papel": "libre",
+     "frases": [
+      "El frontal del altar es de cobre esmaltado del siglo XII, una de las grandes joyas del románico europeo.",
+      "En 1979 lo robó un ladrón de arte famoso, Erik el Belga. Se recuperó casi todo; dos esmaltes siguen sin aparecer."
+     ],
+     "nodo": "GuiaDelSantuario",
+     "en": [8, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "El frontal de esmalte azul, verde y oro: la Virgen con el Niño en el centro y los apóstoles alrededor. Los huecos de los dos esmaltes perdidos siguen vacíos."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 2]
+    }
+   ],
+   "padre": "ruta_20/sala_calle_20_5",
+   "tamano": [15, 11],
+   "puerta": [7, 10],
+   "suelo": "alfombra_roja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [3, 3, 4, 3]]],
+   "muebles": [["estatua_aguila", 7, 0], ["vitrina_blanca", 10, 1], ["pedestal", 4, 5], ["pedestal", 7, 5]],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": [],
+   "salida": {"destino": "ruta_20/sala_calle_20_5", "aparicion": "desde_sala_calle_20_5_frontal"}
   }
  }
 }

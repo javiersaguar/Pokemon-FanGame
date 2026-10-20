@@ -90,5 +90,21 @@ SALAS = {
             ("Turista", "turista_f", "visitante", [
                 "Me he perdido entre el palacio y la basílica. Un señor muy amable me ha dicho que eso le pasaba también al rey."]),
         ],
+        "dentro": {
+            "ruta_4/sala_calle_9_24_biblioteca": {
+                "tipo": "biblioteca", "nombre": "Real Biblioteca del Monasterio",
+                "gente": [("Bibliotecario", "profesor", "estanteria", [
+                    "La bóveda está pintada con las siete artes liberales: gramática, retórica, dialéctica, aritmética, música, geometría y astrología.",
+                    "Felipe II mandó traer aquí libros de toda Europa. Hoy pediría un ordenador; tardaría lo mismo en llegar."])],
+                "carteles": [("estanteria", ["Libros con el canto dorado hacia fuera y el lomo hacia dentro. Así no se leen los títulos, pero el oro brilla."])],
+            },
+            "ruta_4/sala_calle_9_24_panteon": {
+                "tipo": "cripta", "nombre": "Panteón de Reyes",
+                "gente": [("Vigilante", "npc_man", "libre", [
+                    "Bajo el altar mayor descansan los reyes de España desde Carlos I, en urnas de mármol y bronce dorado.",
+                    "Aquí se habla en voz baja. No por los reyes: por el eco, que te devuelve las tonterías el doble de alto."])],
+                "carteles": [("pared", ["Urnas de mármol gris, una sobre otra, con nombres en latín. Quedan pocos huecos libres."])],
+            },
+        },
     },
 }

@@ -240,7 +240,8 @@ Las **93 salas** de casas de ruta que seguían con el interior genérico (rutas 
 - Los regalos de las casas (`casa_1` de las rutas 2, 3, 4, 12, 13, 14, 15 y 23) se conservan: los da la misma persona, con frases nuevas.
 - **Fuera, a propósito:** el hórreo de la Ruta 17 y la basílica y la cueva de Covadonga (Ruta 18), que tienen sala hecha a mano en `pintar_salas_hitos.gd` (añadidos a la lista de `esqueleto_interiores.py`).
 - **PENDIENTE JAVIER:** el chalet de la colina de la Ruta 4 queda sin dueño (un guardia civil en la puerta y las cajas de la mudanza). En la basílica de Cuelgamuros hay un guía, una forense y la nieta de una víctima, en tono serio y con datos reales, sin famosos: hay que confirmar el tono. En la Basílica de Cuelgamuros la estatua es un pedestal y no la gárgola que elegía el planificador.
-- **Pruebas:** `test_interiores_unicos.gd` 6/6 (17.411 aserciones); 0 firmas repetidas.
+- **Salas de dentro (9)** en los monumentos de ruta: Real Biblioteca y Panteón de Reyes (Escorial), Galería Dorada (Palau Ducal), ático del Intempo, tramoya del Misteri, capilla de la Virgen de los Ojos Grandes (Lugo), linterna del faro del cabo, frontal esmaltado de Aralar y un aula del castillo-instituto de Cuéllar. Fondos de combate nuevos para los tipos `restaurante`, `cortijo` y `aula`.
+- **Pruebas:** `test_interiores_unicos.gd` 6/6 (17.622 aserciones); `test_fondos_combate.gd` 11/11; 0 firmas repetidas.
 
 ### Sesión del 14 de octubre · Inicio y sistemas (Agente A)
 

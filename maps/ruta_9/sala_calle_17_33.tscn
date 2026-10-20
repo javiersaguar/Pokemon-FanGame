@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle1733" type="Node2D" unique_id=1770086649]
+[node name="SalaCalle1733" type="Node2D" unique_id=1248396760]
 script = ExtResource("1_vdnmd")
 data = SubResource("Resource_4kutg")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=762651471]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=43454960]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAADAAAAABAAAAAAAAADAAAAACAAAAAAAAADAAAAADAAAAAAAAADAAAAAEAAAAAAAAADAAAAAFAAAAAAAAADAAAAAGAAAAAAAAADAAAAAHAAAAAAAAADAAAAAIAAAAAAAAADAAAAAJAAAAAAAAADAAAAAAAAEAAAAAADAAAAABAAEAAAAAADAAAAACAAEAAAAAADAAAAADAAEAAAAAADAAAAAEAAEAAAAAADAAAAAFAAEAAAAAADAAAAAGAAEAAAAAADAAAAAHAAEAAAAAADAAAAAIAAEAAAAAADAAAAAJAAEAAAAAADAAAAAAAAIAAAAAADAAAAABAAIAAAAAADAAAAACAAIAAAAAADAAAAADAAIAAAAAADAAAAAEAAIAAAAAADAAAAAFAAIAAAAAADAAAAAGAAIAAAAAADAAAAAHAAIAAAAAADAAAAAIAAIAAAAAADAAAAAJAAIAAAAAADAAAAAAAAMAAAAAADAAAAABAAMAAAAAADAAAAACAAMAAAAAADAAAAADAAMAAAAAADAAAAAEAAMAAAAAADAAAAAFAAMAAAAAADAAAAAGAAMAAAAAADAAAAAHAAMAAAAAADAAAAAIAAMAAAAAADAAAAAJAAMAAAAAADAAAAAAAAQAAAAAADAAAAABAAQAAAAAADAAAAACAAQAAAAAADAAAAADAAQAAAAAADAAAAAEAAQAAAAAADAAAAAFAAQAAAAAADAAAAAGAAQAAAAAADAAAAAHAAQAAAAAADAAAAAIAAQAAAAAADAAAAAJAAQAAAAAADAAAAAAAAUAAAAAADAAAAABAAUAAAAAADAAAAACAAUAAAAAADAAAAADAAUAAAAAADAAAAAEAAUAAAAAADAAAAAFAAUAAAAAADAAAAAGAAUAAAAAADAAAAAHAAUAAAAAADAAAAAIAAUAAAAAADAAAAAJAAUAAAAAADAAAAAAAAYAAAAAADAAAAABAAYAAAAAADAAAAACAAYAAAAAADAAAAADAAYAAAAAADAAAAAEAAYAAAAAADAAAAAFAAYAAAAAADAAAAAGAAYAAAAAADAAAAAHAAYAAAAAADAAAAAIAAYAAAAAADAAAAAJAAYAAAAAADAAAAAAAAcAAAAAADAAAAABAAcAAAAAADAAAAACAAcAAAAAADAAAAADAAcAAAAAADAAAAAEAAcAAAAAADAAAAAFAAcAAAAAAAQAAAAGAAcAAAAAADAAAAAHAAcAAAAAADAAAAAIAAcAAAAAADAAAAAJAAcAAAAAADAAAAA=")
 tile_set = ExtResource("4_yvv2r")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=339437048]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1087188207]
 tile_map_data = PackedByteArray("AAABAAAAAQABAE4AAAABAAEAAQABAE8AAAACAAAAAQABAE4AAAACAAEAAQABAE8AAAADAAAAAQABAE4AAAADAAEAAQABAE8AAAAEAAAAAQABAE4AAAAEAAEAAQABAE8AAAAFAAAAAQABAE4AAAAFAAEAAQABAE8AAAAGAAAAAQABAE4AAAAGAAEAAQABAE8AAAAHAAAAAQABAE4AAAAHAAEAAQABAE8AAAAIAAAAAQABAE4AAAAIAAEAAQABAE8AAAAAAAAAAQACAEwAAAAJAAAAAQAAAEwAAAAAAAEAAQACAEwAAAAJAAEAAQAAAEwAAAAAAAIAAQACAEwAAAAJAAIAAQAAAEwAAAAAAAMAAQACAEwAAAAJAAMAAQAAAEwAAAAAAAQAAQACAEwAAAAJAAQAAQAAAEwAAAAAAAUAAQACAEwAAAAJAAUAAQAAAEwAAAAAAAYAAQACAEwAAAAJAAYAAQAAAEwAAAABAAcAAQABAEsAAAACAAcAAQABAEsAAAADAAcAAQABAEsAAAAEAAcAAQACAEsAAAAGAAcAAQAAAEsAAAAHAAcAAQABAEsAAAAIAAcAAQABAEsAAAAAAAcAAQAFAE8AAAAJAAcAAQAGAE8AAAA=")
 tile_set = ExtResource("4_yvv2r")
 
-[node name="Entities" type="Node2D" parent="." unique_id=681017416]
+[node name="Entities" type="Node2D" parent="." unique_id=1951500420]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=829792633]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1408252276]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAIAAgAFADQAAAADAAIAAgAGADQAAAAEAAIAAgAHADQAAAACAAMAAgAFADUAAAADAAMAAgAGADUAAAAEAAMAAgAHADUAAAACAAQAAgAAAD4AAAAEAAQAAgAAAD4AAAAGAAEAAgAFACUAAAAHAAEAAgAGACUAAAAIAAEAAgAHACUAAAAGAAIAAgAFACYAAAAHAAIAAgAGACYAAAAIAAIAAgAHACYAAAA=")
 tile_set = ExtResource("4_yvv2r")
 
-[node name="Barquero" type="Node2D" parent="Entities" unique_id=2020513158 instance=ExtResource("5_und7i")]
+[node name="Barquero" type="Node2D" parent="Entities" unique_id=1351650470 instance=ExtResource("5_und7i")]
 position = Vector2(208, 144)
 script = ExtResource("6_kaur0")
 display_name = "Barquero"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_4kutg")
 initial_facing = 1
 
-[node name="Turista" type="Node2D" parent="Entities" unique_id=1506915183 instance=ExtResource("5_und7i")]
+[node name="Turista" type="Node2D" parent="Entities" unique_id=674841837 instance=ExtResource("5_und7i")]
 position = Vector2(112, 144)
 script = ExtResource("6_kaur0")
 display_name = "Turista"
@@ -63,28 +63,28 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_kx3e8")
 initial_facing = 1
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=97987894]
+[node name="Above" type="TileMapLayer" parent="." unique_id=1074252823]
 z_index = 10
 tile_set = ExtResource("4_yvv2r")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1546962915]
+[node name="Warps" type="Node2D" parent="." unique_id=1673407916]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=604660576]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1860177539]
 position = Vector2(176, 240)
 script = ExtResource("11_34vfo")
 target_map = &"ruta_9/exterior"
 target_spawn = &"from_sala_17_33"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=125462264]
+[node name="Spawns" type="Node2D" parent="." unique_id=1342192552]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=618941406]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1775354932]
 position = Vector2(176, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=846954463]
+[node name="Triggers" type="Node2D" parent="." unique_id=1506688496]
 
-[node name="Rotulo" type="Label" parent="." unique_id=2141379347]
+[node name="Rotulo" type="Label" parent="." unique_id=2102505932]
 offset_left = 16.0
 offset_right = 304.0
 offset_bottom = 40.0

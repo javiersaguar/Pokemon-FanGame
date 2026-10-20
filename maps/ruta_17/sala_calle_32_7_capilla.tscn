@@ -1,0 +1,100 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_y8axi"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_pbj6f"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_rdr2b"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_h7tm0"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_ktmo7"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_lblls"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="7_p7koa"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_acgle"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_v6pxu"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_7t0m6"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_6tgvh"]
+
+[sub_resource type="Resource" id="Resource_y8axi"]
+script = ExtResource("3_rdr2b")
+id = &"ruta_17/sala_calle_32_7_capilla"
+display_name = "Capilla de la Virgen de los Ojos Grandes, Ruta 17"
+outdoor = false
+zone_id = &"ruta_17"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 12, 12)
+followers_allowed = false
+
+[node name="SalaCalle327Capilla" type="Node2D" unique_id=830863029]
+script = ExtResource("1_y8axi")
+data = SubResource("Resource_y8axi")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=796829118]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADQAAAABAAAAAAAAADQAAAACAAAAAAAAADQAAAADAAAAAAAAADQAAAAEAAAAAAAAADQAAAAFAAAAAAAAADQAAAAGAAAAAAAAADQAAAAHAAAAAAAAADQAAAAIAAAAAAAAADQAAAAJAAAAAAAAADQAAAAKAAAAAAAAADQAAAALAAAAAAAAADQAAAAAAAEAAAAAADQAAAABAAEAAAAAADQAAAACAAEAAAAAADQAAAADAAEAAAAAADQAAAAEAAEAAAAAADQAAAAFAAEAAAAAADQAAAAGAAEAAAAAADQAAAAHAAEAAAAAADQAAAAIAAEAAAAAADQAAAAJAAEAAAAAADQAAAAKAAEAAAAAADQAAAALAAEAAAAAADQAAAAAAAIAAAAAADQAAAABAAIAAAAAADQAAAACAAIAAAAAADQAAAADAAIAAAAAADQAAAAEAAIAAAAAADQAAAAFAAIAAAAAADQAAAAGAAIAAAAAADQAAAAHAAIAAAAAADQAAAAIAAIAAAAAADQAAAAJAAIAAAAAADQAAAAKAAIAAAAAADQAAAALAAIAAAAAADQAAAAAAAMAAAAAADQAAAABAAMAAAAAADQAAAACAAMAAAAAADQAAAADAAMAAAAAADQAAAAEAAMAAAAAADQAAAAFAAMAAAAAADQAAAAGAAMAAAAAADQAAAAHAAMAAAAAADQAAAAIAAMAAAAAADQAAAAJAAMAAAAAADQAAAAKAAMAAAAAADQAAAALAAMAAAAAADQAAAAAAAQAAAAAADQAAAABAAQAAAAAADQAAAACAAQAAAAAADQAAAADAAQAAAAAADQAAAAEAAQAAAAAADQAAAAFAAQAAAAAADQAAAAGAAQAAAAAAAQAAAAHAAQAAAAAADQAAAAIAAQAAAAAADQAAAAJAAQAAAAAADQAAAAKAAQAAAAAADQAAAALAAQAAAAAADQAAAAAAAUAAAAAADQAAAABAAUAAAAAADQAAAACAAUAAAAAADQAAAADAAUAAAAAADQAAAAEAAUAAAAAADQAAAAFAAUAAAAAADQAAAAGAAUAAAAAAAQAAAAHAAUAAAAAADQAAAAIAAUAAAAAADQAAAAJAAUAAAAAADQAAAAKAAUAAAAAADQAAAALAAUAAAAAADQAAAAAAAYAAAAAADQAAAABAAYAAAAAADQAAAACAAYAAAAAADQAAAADAAYAAAAAADQAAAAEAAYAAAAAADQAAAAFAAYAAAAAADQAAAAGAAYAAAAAAAQAAAAHAAYAAAAAADQAAAAIAAYAAAAAADQAAAAJAAYAAAAAADQAAAAKAAYAAAAAADQAAAALAAYAAAAAADQAAAAAAAcAAAAAADQAAAABAAcAAAAAADQAAAACAAcAAAAAADQAAAADAAcAAAAAADQAAAAEAAcAAAAAADQAAAAFAAcAAAAAADQAAAAGAAcAAAAAAAQAAAAHAAcAAAAAADQAAAAIAAcAAAAAADQAAAAJAAcAAAAAADQAAAAKAAcAAAAAADQAAAALAAcAAAAAADQAAAAAAAgAAAAAADQAAAABAAgAAAAAADQAAAACAAgAAAAAADQAAAADAAgAAAAAADQAAAAEAAgAAAAAADQAAAAFAAgAAAAAADQAAAAGAAgAAAAAAAQAAAAHAAgAAAAAADQAAAAIAAgAAAAAADQAAAAJAAgAAAAAADQAAAAKAAgAAAAAADQAAAALAAgAAAAAADQAAAAAAAkAAAAAADQAAAABAAkAAAAAADQAAAACAAkAAAAAADQAAAADAAkAAAAAADQAAAAEAAkAAAAAADQAAAAFAAkAAAAAADQAAAAGAAkAAAAAAAQAAAAHAAkAAAAAADQAAAAIAAkAAAAAADQAAAAJAAkAAAAAADQAAAAKAAkAAAAAADQAAAALAAkAAAAAADQAAAAAAAoAAAAAADQAAAABAAoAAAAAADQAAAACAAoAAAAAADQAAAADAAoAAAAAADQAAAAEAAoAAAAAADQAAAAFAAoAAAAAADQAAAAGAAoAAAAAAAQAAAAHAAoAAAAAADQAAAAIAAoAAAAAADQAAAAJAAoAAAAAADQAAAAKAAoAAAAAADQAAAALAAoAAAAAADQAAAAAAAsAAAAAADQAAAABAAsAAAAAADQAAAACAAsAAAAAADQAAAADAAsAAAAAADQAAAAEAAsAAAAAADQAAAAFAAsAAAAAADQAAAAGAAsAAAAAAAQAAAAHAAsAAAAAADQAAAAIAAsAAAAAADQAAAAJAAsAAAAAADQAAAAKAAsAAAAAADQAAAALAAsAAAAAADQAAAA=")
+tile_set = ExtResource("4_h7tm0")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=650483857]
+tile_map_data = PackedByteArray("AAABAAAAAQABAE4AAAABAAEAAQABAE8AAAACAAAAAQABAE4AAAACAAEAAQABAE8AAAADAAAAAQABAE4AAAADAAEAAQABAE8AAAAEAAAAAQABAE4AAAAEAAEAAQABAE8AAAAFAAAAAQABAE4AAAAFAAEAAQABAE8AAAAGAAAAAQABAE4AAAAGAAEAAQABAE8AAAAHAAAAAQABAE4AAAAHAAEAAQABAE8AAAAIAAAAAQABAE4AAAAIAAEAAQABAE8AAAAJAAAAAQABAE4AAAAJAAEAAQABAE8AAAAKAAAAAQABAE4AAAAKAAEAAQABAE8AAAAAAAAAAQACAEwAAAALAAAAAQAAAEwAAAAAAAEAAQACAEwAAAALAAEAAQAAAEwAAAAAAAIAAQACAEwAAAALAAIAAQAAAEwAAAAAAAMAAQACAEwAAAALAAMAAQAAAEwAAAAAAAQAAQACAEwAAAALAAQAAQAAAEwAAAAAAAUAAQACAEwAAAALAAUAAQAAAEwAAAAAAAYAAQACAEwAAAALAAYAAQAAAEwAAAAAAAcAAQACAEwAAAALAAcAAQAAAEwAAAAAAAgAAQACAEwAAAALAAgAAQAAAEwAAAAAAAkAAQACAEwAAAALAAkAAQAAAEwAAAAAAAoAAQACAEwAAAALAAoAAQAAAEwAAAABAAsAAQABAEsAAAACAAsAAQABAEsAAAADAAsAAQABAEsAAAAEAAsAAQABAEsAAAAFAAsAAQACAEsAAAAHAAsAAQAAAEsAAAAIAAsAAQABAEsAAAAJAAsAAQABAEsAAAAKAAsAAQABAEsAAAAAAAsAAQAFAE8AAAALAAsAAQAGAE8AAAA=")
+tile_set = ExtResource("4_h7tm0")
+
+[node name="Entities" type="Node2D" parent="." unique_id=574723613]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=699466072]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAMAAwAFAAsAAAAGAAMAAwAGAAsAAAAHAAMAAwAHAAsAAAAFAAQAAwAFAAwAAAAGAAQAAwAGAAwAAAAHAAQAAwAHAAwAAAABAAAAAgAAADEAAAACAAAAAgABADEAAAADAAAAAgACADEAAAABAAEAAgAAADIAAAACAAEAAgABADIAAAADAAEAAgACADIAAAABAAIAAgAAADMAAAACAAIAAgABADMAAAADAAIAAgACADMAAAAKAAAAAgAAACQAAAAKAAEAAgAAACUAAAAKAAIAAgAAACYAAAADAAYAAwAFAAAAAAAEAAYAAwAGAAAAAAAFAAYAAwAHAAAAAAAHAAYAAwAFAAAAAAAIAAYAAwAGAAAAAAAJAAYAAwAHAAAAAAADAAgAAwAFAAAAAAAEAAgAAwAGAAAAAAAFAAgAAwAHAAAAAAAHAAgAAwAFAAAAAAAIAAgAAwAGAAAAAAAJAAgAAwAHAAAAAAAKAAoAAgAAACYAAAA=")
+tile_set = ExtResource("4_h7tm0")
+
+[node name="Devota" type="Node2D" parent="Entities" unique_id=1129808351 instance=ExtResource("5_ktmo7")]
+position = Vector2(240, 304)
+script = ExtResource("6_lblls")
+display_name = "Devota"
+lines = PackedStringArray("La Virgen de los Ojos Grandes es la patrona de Lugo. Dicen que te mira estés donde estés de la capilla.", "Yo me pongo en la esquina para probarlo. Me sigue mirando. Ya no me pongo en la esquina.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_p7koa")
+initial_facing = 3
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1725982366 instance=ExtResource("8_acgle")]
+position = Vector2(304, 48)
+script = ExtResource("9_v6pxu")
+lines = PackedStringArray("Una capilla barroca detrás del altar mayor, toda de piedra y oro, con una talla de la Virgen de ojos muy abiertos.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=742954394]
+z_index = 10
+tile_map_data = PackedByteArray("AAAKAAgAAgAAACQAAAAKAAkAAgAAACUAAAA=")
+tile_set = ExtResource("4_h7tm0")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=927835877]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1363308303]
+position = Vector2(208, 368)
+script = ExtResource("10_7t0m6")
+target_map = &"ruta_17/sala_calle_32_7"
+target_spawn = &"desde_sala_calle_32_7_capilla"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=990100580]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=844455890]
+position = Vector2(208, 336)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=314562202]
+
+[node name="Rotulo" type="Label" parent="." unique_id=865564495]
+offset_left = 16.0
+offset_right = 368.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/line_spacing = -4
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_6tgvh")
+theme_override_font_sizes/font_size = 16
+text = "CAPILLA DE LA VIRGEN DE LOS OJOS GRANDES"
+horizontal_alignment = 1
+autowrap_mode = 3

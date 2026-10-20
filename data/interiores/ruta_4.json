@@ -472,27 +472,138 @@
      ],
      "nodo": "Turista",
      "en": [3, 4],
-     "mira": "izquierda"
+     "mira": "abajo"
     }
    ],
    "carteles": [],
    "tamano": [13, 11],
    "puerta": [6, 10],
-   "suelo": "piedra",
-   "pared": "topo",
-   "felpudo": "moqueta_azul",
+   "suelo": "losa_gris",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
    "alfombras": [["alfombra_roja", [6, 4, 1, 6]]],
    "muebles": [
     ["mostrador_madera", 5, 3],
     ["estatua_aguila", 1, 0],
-    ["estatua_aguila", 9, 0],
+    ["arbol_maceta", 11, 0],
     ["banco_rojo", 3, 6],
     ["banco_rojo", 7, 6],
     ["palmera_maceta", 11, 7]
    ],
    "encima": [],
-   "apariciones": {"default": [6, 9]},
-   "pasos": []
+   "apariciones": {
+    "default": [6, 9],
+    "desde_sala_calle_9_24_biblioteca": [10, 2],
+    "desde_sala_calle_9_24_panteon": [4, 2]
+   },
+   "pasos": [
+    {
+     "nodo": "Biblioteca",
+     "en": [10, 1],
+     "destino": "ruta_4/sala_calle_9_24_biblioteca",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_9_24_biblioteca",
+     "llegada": [10, 2]
+    },
+    {
+     "nodo": "Panteon",
+     "en": [4, 1],
+     "destino": "ruta_4/sala_calle_9_24_panteon",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_9_24_panteon",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "ruta_4/sala_calle_9_24_biblioteca": {
+   "tipo": "biblioteca",
+   "nombre": "Real Biblioteca del Monasterio",
+   "personas": [
+    {
+     "nombre": "Bibliotecario",
+     "aspecto": "profesor",
+     "papel": "estanteria",
+     "frases": [
+      "La bóveda está pintada con las siete artes liberales: gramática, retórica, dialéctica, aritmética, música, geometría y astrología.",
+      "Felipe II mandó traer aquí libros de toda Europa. Hoy pediría un ordenador; tardaría lo mismo en llegar."
+     ],
+     "nodo": "Bibliotecario",
+     "en": [8, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": [
+      "Libros con el canto dorado hacia fuera y el lomo hacia dentro. Así no se leen los títulos, pero el oro brilla."
+     ],
+     "nodo": "Cartel",
+     "en": [9, 6]
+    }
+   ],
+   "padre": "ruta_4/sala_calle_9_24",
+   "tamano": [13, 10],
+   "puerta": [3, 9],
+   "suelo": "parquet",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_madera", 3, 0],
+    ["estanteria_alta_madera", 5, 0],
+    ["estanteria_baja_madera", 5, 5],
+    ["estanteria_baja_madera", 7, 5],
+    ["estanteria_baja_madera", 9, 5],
+    ["mesa_cristal", 2, 5],
+    ["banqueta_roja", 1, 6],
+    ["mostrador_madera_i", 9, 3],
+    ["mostrador_madera_m", 10, 3],
+    ["mostrador_madera_d", 11, 3],
+    ["planta", 11, 1]
+   ],
+   "encima": [["libro_abierto", 11, 3], ["libro_abierto", 10, 3], ["libro_abierto", 3, 5]],
+   "apariciones": {"default": [3, 8]},
+   "pasos": [],
+   "salida": {"destino": "ruta_4/sala_calle_9_24", "aparicion": "desde_sala_calle_9_24_biblioteca"}
+  },
+  "ruta_4/sala_calle_9_24_panteon": {
+   "tipo": "cripta",
+   "nombre": "Panteón de Reyes",
+   "personas": [
+    {
+     "nombre": "Vigilante",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Bajo el altar mayor descansan los reyes de España desde Carlos I, en urnas de mármol y bronce dorado.",
+      "Aquí se habla en voz baja. No por los reyes: por el eco, que te devuelve las tonterías el doble de alto."
+     ],
+     "nodo": "Vigilante",
+     "en": [6, 6],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Urnas de mármol gris, una sobre otra, con nombres en latín. Quedan pocos huecos libres."],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "padre": "ruta_4/sala_calle_9_24",
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["cajas", 2, 1], ["pedestal", 5, 1], ["pedestal", 5, 3], ["pedestal", 1, 6], ["papelera", 1, 1]],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": [],
+   "salida": {"destino": "ruta_4/sala_calle_9_24", "aparicion": "desde_sala_calle_9_24_panteon"}
   }
  }
 }

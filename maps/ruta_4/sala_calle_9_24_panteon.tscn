@@ -1,0 +1,99 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_cjpmd"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_0tfnd"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_ixlao"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_45fw5"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_dbjsy"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_1pvyc"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="7_akb1b"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_coo7g"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_1mvfi"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_cqyul"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_qh45k"]
+
+[sub_resource type="Resource" id="Resource_cjpmd"]
+script = ExtResource("3_ixlao")
+id = &"ruta_4/sala_calle_9_24_panteon"
+display_name = "Panteón de Reyes, Ruta 4"
+outdoor = false
+zone_id = &"ruta_4"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 12, 9)
+followers_allowed = false
+
+[node name="SalaCalle924Panteon" type="Node2D" unique_id=1053883863]
+script = ExtResource("1_cjpmd")
+data = SubResource("Resource_cjpmd")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1824614210]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADgAAAABAAAAAAAAADgAAAACAAAAAAAAADgAAAADAAAAAAAAADgAAAAEAAAAAAAAADgAAAAFAAAAAAAAADgAAAAGAAAAAAAAADgAAAAHAAAAAAAAADgAAAAIAAAAAAAAADgAAAAJAAAAAAAAADgAAAAKAAAAAAAAADgAAAALAAAAAAAAADgAAAAAAAEAAAAAADgAAAABAAEAAAAAADgAAAACAAEAAAAAADgAAAADAAEAAAAAADgAAAAEAAEAAAAAADgAAAAFAAEAAAAAADgAAAAGAAEAAAAAADgAAAAHAAEAAAAAADgAAAAIAAEAAAAAADgAAAAJAAEAAAAAADgAAAAKAAEAAAAAADgAAAALAAEAAAAAADgAAAAAAAIAAAAAADgAAAABAAIAAAAAADgAAAACAAIAAAAAADgAAAADAAIAAAAAADgAAAAEAAIAAAAAADgAAAAFAAIAAAAAADgAAAAGAAIAAAAAADgAAAAHAAIAAAAAADgAAAAIAAIAAAAAADgAAAAJAAIAAAAAADgAAAAKAAIAAAAAADgAAAALAAIAAAAAADgAAAAAAAMAAAAAADgAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAIAAMAAAAAADgAAAAJAAMAAAAAADgAAAAKAAMAAAAAADgAAAALAAMAAAAAADgAAAAAAAQAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAADgAAAAFAAQAAAAAADgAAAAGAAQAAAAAADgAAAAHAAQAAAAAADgAAAAIAAQAAAAAADgAAAAJAAQAAAAAADgAAAAKAAQAAAAAADgAAAALAAQAAAAAADgAAAAAAAUAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAADgAAAAFAAUAAAAAADgAAAAGAAUAAAAAADgAAAAHAAUAAAAAADgAAAAIAAUAAAAAADgAAAAJAAUAAAAAADgAAAAKAAUAAAAAADgAAAALAAUAAAAAADgAAAAAAAYAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAADgAAAAFAAYAAAAAADgAAAAGAAYAAAAAADgAAAAHAAYAAAAAADgAAAAIAAYAAAAAADgAAAAJAAYAAAAAADgAAAAKAAYAAAAAADgAAAALAAYAAAAAADgAAAAAAAcAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAADgAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAAIAAcAAAAAADgAAAAJAAcAAAAAADgAAAAKAAcAAAAAADgAAAALAAcAAAAAADgAAAAAAAgAAAAAADgAAAABAAgAAAAAADgAAAACAAgAAAAAADgAAAADAAgAAAAAAAwAAAAEAAgAAAAAADgAAAAFAAgAAAAAADgAAAAGAAgAAAAAADgAAAAHAAgAAAAAADgAAAAIAAgAAAAAADgAAAAJAAgAAAAAADgAAAAKAAgAAAAAADgAAAALAAgAAAAAADgAAAA=")
+tile_set = ExtResource("4_45fw5")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2008397209]
+tile_map_data = PackedByteArray("AAABAAAAAQABABwAAAABAAEAAQABAB0AAAACAAAAAQABABwAAAACAAEAAQABAB0AAAADAAAAAQABABwAAAADAAEAAQABAB0AAAAEAAAAAQABABwAAAAEAAEAAQABAB0AAAAFAAAAAQABABwAAAAFAAEAAQABAB0AAAAGAAAAAQABABwAAAAGAAEAAQABAB0AAAAHAAAAAQABABwAAAAHAAEAAQABAB0AAAAIAAAAAQABABwAAAAIAAEAAQABAB0AAAAJAAAAAQABABwAAAAJAAEAAQABAB0AAAAKAAAAAQABABwAAAAKAAEAAQABAB0AAAAAAAAAAQACABoAAAALAAAAAQAAABoAAAAAAAEAAQACABoAAAALAAEAAQAAABoAAAAAAAIAAQACABoAAAALAAIAAQAAABoAAAAAAAMAAQACABoAAAALAAMAAQAAABoAAAAAAAQAAQACABoAAAALAAQAAQAAABoAAAAAAAUAAQACABoAAAALAAUAAQAAABoAAAAAAAYAAQACABoAAAALAAYAAQAAABoAAAAAAAcAAQACABoAAAALAAcAAQAAABoAAAABAAgAAQABABkAAAACAAgAAQACABkAAAAEAAgAAQAAABkAAAAFAAgAAQABABkAAAAGAAgAAQABABkAAAAHAAgAAQABABkAAAAIAAgAAQABABkAAAAJAAgAAQABABkAAAAKAAgAAQABABkAAAAAAAgAAQAFAB0AAAALAAgAAQAGAB0AAAA=")
+tile_set = ExtResource("4_45fw5")
+
+[node name="Entities" type="Node2D" parent="." unique_id=164169885]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2051947525]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAEAAgAFACUAAAADAAEAAgAGACUAAAAEAAEAAgAHACUAAAACAAIAAgAFACYAAAADAAIAAgAGACYAAAAEAAIAAgAHACYAAAAFAAEAAgADADIAAAAGAAEAAgAEADIAAAAFAAIAAgADADMAAAAGAAIAAgAEADMAAAAFAAQAAgADADMAAAAGAAQAAgAEADMAAAABAAcAAgADADMAAAACAAcAAgAEADMAAAABAAEAAgADACUAAAABAAIAAgADACYAAAA=")
+tile_set = ExtResource("4_45fw5")
+
+[node name="Vigilante" type="Node2D" parent="Entities" unique_id=23713359 instance=ExtResource("5_dbjsy")]
+position = Vector2(208, 208)
+script = ExtResource("6_1pvyc")
+display_name = "Vigilante"
+lines = PackedStringArray("Bajo el altar mayor descansan los reyes de España desde Carlos I, en urnas de mármol y bronce dorado.", "Aquí se habla en voz baja. No por los reyes: por el eco, que te devuelve las tonterías el doble de alto.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_akb1b")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1001242775 instance=ExtResource("8_coo7g")]
+position = Vector2(240, 48)
+script = ExtResource("9_1mvfi")
+lines = PackedStringArray("Urnas de mármol gris, una sobre otra, con nombres en latín. Quedan pocos huecos libres.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=1013411594]
+z_index = 10
+tile_map_data = PackedByteArray("AAAFAAMAAgADADIAAAAGAAMAAgAEADIAAAABAAYAAgADADIAAAACAAYAAgAEADIAAAA=")
+tile_set = ExtResource("4_45fw5")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=784004464]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1556333724]
+position = Vector2(112, 272)
+script = ExtResource("10_cqyul")
+target_map = &"ruta_4/sala_calle_9_24"
+target_spawn = &"desde_sala_calle_9_24_panteon"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=784465877]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1312066336]
+position = Vector2(112, 240)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=638151359]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1873681025]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_qh45k")
+theme_override_font_sizes/font_size = 16
+text = "PANTEÓN DE REYES"
+horizontal_alignment = 1

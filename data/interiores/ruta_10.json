@@ -406,7 +406,7 @@
       "Hay pisos vacíos, pisos de inversores y pisos de alquiler por días. Vecinos de verdad, en la planta cuatro y en la doce."
      ],
      "nodo": "ConserjeDelIntempo",
-     "en": [5, 5],
+     "en": [1, 4],
      "mira": "abajo"
     }
    ],
@@ -419,8 +419,57 @@
    "alfombras": [["moqueta_beige", [3, 3, 4, 3]]],
    "muebles": [["escalera_mano", 5, 0], ["archivador", 3, 1], ["archivador", 4, 1], ["palmera_maceta", 1, 0]],
    "encima": [],
-   "apariciones": {"default": [6, 6]},
-   "pasos": []
+   "apariciones": {"default": [6, 6], "desde_sala_calle_15_40_atico": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Atico",
+     "en": [2, 1],
+     "destino": "ruta_10/sala_calle_15_40_atico",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_15_40_atico",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "ruta_10/sala_calle_15_40_atico": {
+   "tipo": "piso",
+   "nombre": "Ático del Intempo",
+   "personas": [
+    {
+     "nombre": "Inversor",
+     "aspecto": "influencerlinkedin",
+     "papel": "libre",
+     "frases": [
+      "Compré el ático sin verlo, por videollamada. Desde aquí se ve todo Benidorm, el mar y la grúa del edificio de al lado.",
+      "Vengo dos semanas al año. El resto, lo alquilo a gente que viene a hacerse fotos en el balcón."
+     ],
+     "nodo": "Inversor",
+     "en": [8, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un ventanal de suelo a techo. Abajo, la playa de Levante, llena de sombrillas, parece un tablero de parchís."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "padre": "ruta_10/sala_calle_15_40",
+   "tamano": [12, 8],
+   "puerta": [4, 7],
+   "suelo": "rombos_verdes",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["fogones", 4, 1], ["nevera", 6, 1], ["sofa", 5, 5]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": [],
+   "salida": {"destino": "ruta_10/sala_calle_15_40", "aparicion": "desde_sala_calle_15_40_atico"}
   },
   "ruta_10/sala_calle_20_40": {
    "pieza": "rascacielos_benidorm",

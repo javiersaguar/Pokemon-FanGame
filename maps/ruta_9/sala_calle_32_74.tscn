@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle3274" type="Node2D" unique_id=844314448]
+[node name="SalaCalle3274" type="Node2D" unique_id=864847401]
 script = ExtResource("1_s0yec")
 data = SubResource("Resource_srq2a")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=1536344874]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=774343766]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAABgAAAABAAAAAAAAABgAAAACAAAAAAAAABgAAAADAAAAAAAAABgAAAAEAAAAAAAAABgAAAAFAAAAAAAAABgAAAAGAAAAAAAAABgAAAAHAAAAAAAAABgAAAAIAAAAAAAAABgAAAAJAAAAAAAAABgAAAAAAAEAAAAAABgAAAABAAEAAAAAABgAAAACAAEAAAAAABgAAAADAAEAAAAAABgAAAAEAAEAAAAAABgAAAAFAAEAAAAAABgAAAAGAAEAAAAAABgAAAAHAAEAAAAAABgAAAAIAAEAAAAAABgAAAAJAAEAAAAAABgAAAAAAAIAAAAAABgAAAABAAIAAAAAABgAAAACAAIAAAAAABgAAAADAAIAAAAAABgAAAAEAAIAAAAAABgAAAAFAAIAAAAAABgAAAAGAAIAAAAAABgAAAAHAAIAAAAAABgAAAAIAAIAAAAAABgAAAAJAAIAAAAAABgAAAAAAAMAAAAAABgAAAABAAMAAAAAABgAAAACAAMAAAAAABgAAAADAAMAAAAAABgAAAAEAAMAAAAAABgAAAAFAAMAAAAAABgAAAAGAAMAAAAAABgAAAAHAAMAAAAAABgAAAAIAAMAAAAAABgAAAAJAAMAAAAAABgAAAAAAAQAAAAAABgAAAABAAQAAAAAABgAAAACAAQAAAAAABgAAAADAAQAAAAAABgAAAAEAAQAAAAAABgAAAAFAAQAAAAAABgAAAAGAAQAAAAAABgAAAAHAAQAAAAAABgAAAAIAAQAAAAAABgAAAAJAAQAAAAAABgAAAAAAAUAAAAAABgAAAABAAUAAAAAABgAAAACAAUAAAAAABgAAAADAAUAAAAAABgAAAAEAAUAAAAAABgAAAAFAAUAAAAAABgAAAAGAAUAAAAAABgAAAAHAAUAAAAAABgAAAAIAAUAAAAAABgAAAAJAAUAAAAAABgAAAAAAAYAAAAAABgAAAABAAYAAAAAABgAAAACAAYAAAAAABgAAAADAAYAAAAAABgAAAAEAAYAAAAAABgAAAAFAAYAAAAAABgAAAAGAAYAAAAAABgAAAAHAAYAAAAAABgAAAAIAAYAAAAAABgAAAAJAAYAAAAAABgAAAAAAAcAAAAAABgAAAABAAcAAAAAABgAAAACAAcAAAAAABgAAAADAAcAAAAAAAgAAAAEAAcAAAAAABgAAAAFAAcAAAAAABgAAAAGAAcAAAAAABgAAAAHAAcAAAAAABgAAAAIAAcAAAAAABgAAAAJAAcAAAAAABgAAAA=")
 tile_set = ExtResource("4_1yjs2")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=1030157076]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1565236211]
 tile_map_data = PackedByteArray("AAABAAAAAQABAEkAAAABAAEAAQABAEoAAAACAAAAAQABAEkAAAACAAEAAQABAEoAAAADAAAAAQABAEkAAAADAAEAAQABAEoAAAAEAAAAAQABAEkAAAAEAAEAAQABAEoAAAAFAAAAAQABAEkAAAAFAAEAAQABAEoAAAAGAAAAAQABAEkAAAAGAAEAAQABAEoAAAAHAAAAAQABAEkAAAAHAAEAAQABAEoAAAAIAAAAAQABAEkAAAAIAAEAAQABAEoAAAAAAAAAAQACAEcAAAAJAAAAAQAAAEcAAAAAAAEAAQACAEcAAAAJAAEAAQAAAEcAAAAAAAIAAQACAEcAAAAJAAIAAQAAAEcAAAAAAAMAAQACAEcAAAAJAAMAAQAAAEcAAAAAAAQAAQACAEcAAAAJAAQAAQAAAEcAAAAAAAUAAQACAEcAAAAJAAUAAQAAAEcAAAAAAAYAAQACAEcAAAAJAAYAAQAAAEcAAAABAAcAAQABAEYAAAACAAcAAQACAEYAAAAEAAcAAQAAAEYAAAAFAAcAAQABAEYAAAAGAAcAAQABAEYAAAAHAAcAAQABAEYAAAAIAAcAAQABAEYAAAAAAAcAAQAFAEoAAAAJAAcAAQAGAEoAAAA=")
 tile_set = ExtResource("4_1yjs2")
 
-[node name="Entities" type="Node2D" parent="." unique_id=2139518080]
+[node name="Entities" type="Node2D" parent="." unique_id=1261923401]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=365800887]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=584681980]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAEAAgABABAAAAADAAEAAgACABAAAAACAAIAAgABABEAAAADAAIAAgACABEAAAAEAAEAAgABABAAAAAFAAEAAgACABAAAAAEAAIAAgABABEAAAAFAAIAAgACABEAAAADAAMAAwAAAB0AAAADAAQAAwAAAB4AAAAEAAMAAwABAB0AAAAEAAQAAwABAB4AAAAFAAMAAwABAB0AAAAFAAQAAwABAB4AAAAGAAMAAwABAB0AAAAGAAQAAwABAB4AAAAHAAMAAwACAB0AAAAHAAQAAwACAB4AAAAGAAEAAgABABwAAAAHAAEAAgACABwAAAAGAAIAAgABAB0AAAAHAAIAAgACAB0AAAAIAAIAAgAEACYAAAA=")
 tile_set = ExtResource("4_1yjs2")
 
-[node name="Heladero" type="Node2D" parent="Entities" unique_id=1168074705 instance=ExtResource("5_uin23")]
+[node name="Heladero" type="Node2D" parent="Entities" unique_id=1697923983 instance=ExtResource("5_uin23")]
 position = Vector2(80, 112)
 script = ExtResource("6_mynqa")
 display_name = "Heladero"
@@ -53,7 +53,7 @@ lines = PackedStringArray("Tengo treinta sabores. El que más se vende es el de 
 turn_to_player = true
 sprite_sheet = ExtResource("7_srq2a")
 
-[node name="Nina" type="Node2D" parent="Entities" unique_id=1621465507 instance=ExtResource("5_uin23")]
+[node name="Nina" type="Node2D" parent="Entities" unique_id=1500779009 instance=ExtResource("5_uin23")]
 position = Vector2(176, 176)
 script = ExtResource("6_mynqa")
 display_name = "Niña"
@@ -62,29 +62,29 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_jnm11")
 initial_facing = 3
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=754785825]
+[node name="Above" type="TileMapLayer" parent="." unique_id=905220459]
 z_index = 10
 tile_map_data = PackedByteArray("AAADAAMAAgABAD8AAAA=")
 tile_set = ExtResource("4_1yjs2")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=1897497255]
+[node name="Warps" type="Node2D" parent="." unique_id=235039685]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=570480108]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1047308252]
 position = Vector2(112, 240)
 script = ExtResource("11_0pn17")
 target_map = &"ruta_9/exterior"
 target_spawn = &"from_sala_32_74"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1432597752]
+[node name="Spawns" type="Node2D" parent="." unique_id=1151215915]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=1502907630]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=875682361]
 position = Vector2(112, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1669422578]
+[node name="Triggers" type="Node2D" parent="." unique_id=1020540517]
 
-[node name="Rotulo" type="Label" parent="." unique_id=1655053481]
+[node name="Rotulo" type="Label" parent="." unique_id=119697938]
 offset_left = 16.0
 offset_top = 4.0
 offset_right = 304.0

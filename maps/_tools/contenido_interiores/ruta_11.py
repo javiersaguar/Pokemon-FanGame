@@ -37,6 +37,15 @@ SALAS = {
                 "Los cantores son vecinos de Elche, todos hombres y niños, también los papeles de mujer. Es patrimonio de la humanidad; las tradiciones, a veces, van despacio."]),
             ("Tramoyista", "npc_man", "libre", ["Yo bajo la granada del cielo desde la cúpula, con cuerdas y una manivela. Aquí la tramoya tiene seiscientos años y ninguna avería."]),
         ],
+        "dentro": {
+            "ruta_11/sala_calle_35_28_tramoya": {
+                "tipo": "torre", "nombre": "Tramoya del Misteri",
+                "gente": [("Maestro de tramoya", "npc_old_man", "libre", [
+                    "Desde aquí arriba se maneja el «cielo»: una lona pintada que se abre para que bajen la granada dorada y el araceli con los ángeles.",
+                    "El torno es de madera y las cuerdas se revisan cada año. Abajo hay un niño cantando colgado a veinte metros: aquí no se improvisa."])],
+                "carteles": [("pared", ["Un torno de madera con una cuerda gruesa que se pierde por un agujero del suelo. Una etiqueta: «No tocar en agosto»."])],
+            },
+        },
     },
     "ruta_11/sala_calle_44_27": {
         "tipo": "casa", "nombre": "Casa del palmerero",

@@ -85,6 +85,15 @@ SALAS = {
                 "Cuarenta y siete plantas en forma de M. El arquitecto quería una puerta al cielo. Los compradores querían garaje.",
                 "Hay pisos vacíos, pisos de inversores y pisos de alquiler por días. Vecinos de verdad, en la planta cuatro y en la doce."]),
         ],
+        "dentro": {
+            "ruta_10/sala_calle_15_40_atico": {
+                "tipo": "piso", "nombre": "Ático del Intempo",
+                "gente": [("Inversor", "influencerlinkedin", "libre", [
+                    "Compré el ático sin verlo, por videollamada. Desde aquí se ve todo Benidorm, el mar y la grúa del edificio de al lado.",
+                    "Vengo dos semanas al año. El resto, lo alquilo a gente que viene a hacerse fotos en el balcón."])],
+                "carteles": [("pared", ["Un ventanal de suelo a techo. Abajo, la playa de Levante, llena de sombrillas, parece un tablero de parchís."])],
+            },
+        },
     },
     "ruta_10/sala_calle_20_40": {
         "tipo": "piso", "nombre": "Apartamento de la despedida de soltero",

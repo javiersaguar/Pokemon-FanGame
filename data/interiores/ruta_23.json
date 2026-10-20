@@ -117,7 +117,7 @@
       "Por eso la llamaron «la Beltraneja». Un mote así cambió la historia de Castilla. Cuidado con lo que se cuenta en los pasillos."
      ],
      "nodo": "GuiaDelCastillo",
-     "en": [4, 2],
+     "en": [4, 5],
      "mira": "abajo"
     },
     {
@@ -128,27 +128,98 @@
       "Mi instituto está dentro del castillo. Hay almenas, foso y examen de Matemáticas el lunes. Sigue siendo un instituto."
      ],
      "nodo": "Estudiante",
-     "en": [9, 3],
+     "en": [5, 5],
      "mira": "abajo"
     }
    ],
    "carteles": [],
    "tamano": [14, 11],
    "puerta": [6, 10],
-   "suelo": "losa_crema",
-   "pared": "madera_oscura",
+   "suelo": "piedra",
+   "pared": "topo",
    "felpudo": "moqueta_azul",
    "alfombras": [["alfombra_roja", [6, 2, 1, 8]]],
    "muebles": [
-    ["escalera_mano", 6, 0],
-    ["cajas", 9, 1],
+    ["escalera_mano", 2, 0],
+    ["cajas", 5, 1],
     ["banco_rojo", 1, 4],
     ["estatua_gargola", 11, 5],
     ["caja", 12, 2]
    ],
    "encima": [],
-   "apariciones": {"default": [6, 9]},
-   "pasos": []
+   "apariciones": {"default": [6, 9], "desde_sala_calle_12_11_aula": [8, 2]},
+   "pasos": [
+    {
+     "nodo": "Aula",
+     "en": [8, 1],
+     "destino": "ruta_23/sala_calle_12_11_aula",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_12_11_aula",
+     "llegada": [8, 2]
+    }
+   ]
+  },
+  "ruta_23/sala_calle_12_11_aula": {
+   "tipo": "aula",
+   "nombre": "Aula del instituto del castillo",
+   "personas": [
+    {
+     "nombre": "Profesor de Historia",
+     "aspecto": "profesor",
+     "papel": "libre",
+     "frases": [
+      "Doy la clase de los Reyes Católicos en el castillo de su rival. Los alumnos lo entienden enseguida: se asoman a la ventana.",
+      "Hoy toca la guerra de sucesión de Castilla. La ganó Isabel; la Beltraneja se fue a Portugal. Fecha del examen: el lunes."
+     ],
+     "nodo": "ProfesorDeHistoria",
+     "en": [12, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Alumna",
+     "aspecto": "npc_girl",
+     "papel": "mesa",
+     "frases": [
+      "En invierno el castillo no hay quien lo caliente. Hacemos los exámenes con guantes. Los romanos no tenían ni eso, dice el profe."
+     ],
+     "nodo": "Alumna",
+     "en": [8, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una pizarra con un árbol genealógico de Trastámaras lleno de flechas. Alguien ha dibujado un Pokémon en la esquina."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "padre": "ruta_23/sala_calle_12_11",
+   "tamano": [14, 11],
+   "puerta": [8, 10],
+   "suelo": "tatami_verde",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_madera", 8, 0],
+    ["mostrador_madera", 10, 2],
+    ["mesa_cristal", 6, 4],
+    ["banqueta_roja", 6, 6],
+    ["mesa_cristal", 3, 4],
+    ["banqueta_roja", 3, 6],
+    ["mesa_cristal", 9, 4],
+    ["banqueta_roja", 9, 6],
+    ["planta", 12, 8],
+    ["cajas", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": [],
+   "salida": {"destino": "ruta_23/sala_calle_12_11", "aparicion": "desde_sala_calle_12_11_aula"}
   },
   "ruta_23/sala_calle_22_11": {
    "pieza": "iglesia_san_miguel",

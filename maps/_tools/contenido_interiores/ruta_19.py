@@ -8,6 +8,15 @@ SALAS = {
                 "Cuando hay galerna, el mar sube hasta la puerta. Esa noche subo la escalera con el corazón en la mano y el bocadillo en la otra."]),
         ],
         "carteles": [("pared", ["Una tabla de destellos: «grupo de cuatro cada veinte segundos». Debajo, a boli: «y el wifi, cuando quiere»."])],
+        "dentro": {
+            "ruta_19/sala_calle_33_8_linterna": {
+                "tipo": "torre", "nombre": "Linterna del faro",
+                "gente": [("Técnico de faros", "npc_man", "libre", [
+                    "La lente es de Fresnel: muchos anillos de cristal que concentran la luz de una bombilla pequeña en un haz que llega a veinte millas.",
+                    "Antes había fareros que vivían aquí con su familia. Ahora venimos los técnicos una vez al mes. La gaviota de la barandilla es la única fija."])],
+                "carteles": [("pared", ["Una lente enorme de anillos de cristal que gira despacio. Si la miras de cerca, el mundo sale del revés."])],
+            },
+        },
     },
     "ruta_19/sala_calle_46_11": {
         "tipo": "iglesia", "nombre": "Iglesia de Santa María de Castro Urdiales",

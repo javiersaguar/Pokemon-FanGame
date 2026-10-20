@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **961 mapas** en total. Se llega a **961** desde Pozuelo de Alarcón (`pozuelo/exterior`: 961) y Orcasitas (`orcasitas/exterior`: 961).
+- **970 mapas** en total. Se llega a **970** desde Pozuelo de Alarcón (`pozuelo/exterior`: 970) y Orcasitas (`orcasitas/exterior`: 970).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -708,7 +708,8 @@ Ninguna: todos los destinos existen.
 | `ruta_10/sala_calle_10_23` | Iglesia de Nuestra Señora del Consuelo, Ruta 10 | — | Salida → `ruta_10/exterior` |
 | `ruta_10/sala_calle_10_40` | Hotel del Imserso, Ruta 10 | — | Salida → `ruta_10/exterior` |
 | `ruta_10/sala_calle_11_59` | Casa azul del pescador, Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_15_40` | Portal del Intempo, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_15_40` | Portal del Intempo, Ruta 10 | — | Salida → `ruta_10/exterior`, Atico → `ruta_10/sala_calle_15_40_atico` |
+| `ruta_10/sala_calle_15_40_atico` | Ático del Intempo, Ruta 10 | — | Salida → `ruta_10/sala_calle_15_40` |
 | `ruta_10/sala_calle_16_20` | Estudio del pintor de Altea, Ruta 10 | — | Salida → `ruta_10/exterior` |
 | `ruta_10/sala_calle_16_50` | Supermercado británico, Ruta 10 | — | Salida → `ruta_10/exterior` |
 | `ruta_10/sala_calle_17_59` | Casa del festero de Moros y Cristianos, Ruta 10 | — | Salida → `ruta_10/exterior` |
@@ -728,7 +729,8 @@ Ninguna: todos los destinos existen.
 | `ruta_11/sala_calle_11_27` | Casa de la profesora de Orihuela, Ruta 11 | — | Salida → `ruta_11/exterior` |
 | `ruta_11/sala_calle_17_27` | Casa del huertano de la Vega Baja, Ruta 11 | — | Salida → `ruta_11/exterior` |
 | `ruta_11/sala_calle_23_27` | Casa de la familia del calzado, Ruta 11 | — | Salida → `ruta_11/exterior` |
-| `ruta_11/sala_calle_35_28` | Basílica de Santa María de Elche, Ruta 11 | — | Salida → `ruta_11/exterior` |
+| `ruta_11/sala_calle_35_28` | Basílica de Santa María de Elche, Ruta 11 | — | Salida → `ruta_11/exterior`, Tramoya → `ruta_11/sala_calle_35_28_tramoya` |
+| `ruta_11/sala_calle_35_28_tramoya` | Tramoya del Misteri, Ruta 11 | — | Salida → `ruta_11/sala_calle_35_28` |
 | `ruta_11/sala_calle_44_27` | Casa del palmerero, Ruta 11 | — | Salida → `ruta_11/exterior` |
 | `ruta_12/casa_1` | Cortijo El Olivar, Ruta 12 | — | Salida → `ruta_12/exterior` |
 | `ruta_12/exterior` | Ruta 12 · Sierra Nevada y Granada | west → `ruta_13/exterior`, east → `murcia/exterior` | Casa1 → `ruta_12/casa_1` |
@@ -751,7 +753,8 @@ Ninguna: todos los destinos existen.
 | `ruta_17/exterior` | Ruta 17 · Galicia interior | south → `ruta_16/exterior`, east → `ruta_18/exterior` | Sala32_7 → `ruta_17/sala_calle_32_7`, Sala27_12 → `ruta_17/sala_calle_27_12`, Sala37_13 → `ruta_17/sala_calle_37_13`, Sala5_24 → `ruta_17/sala_calle_5_24`, Sala11_24 → `ruta_17/horreo`, Sala47_37 → `ruta_17/sala_calle_47_37` |
 | `ruta_17/horreo` | Hórreo · Ruta 17 | — | Salida → `ruta_17/exterior` |
 | `ruta_17/sala_calle_27_12` | Casa del vecino de la muralla, Ruta 17 | — | Salida → `ruta_17/exterior` |
-| `ruta_17/sala_calle_32_7` | Catedral de Lugo, Ruta 17 | — | Salida → `ruta_17/exterior` |
+| `ruta_17/sala_calle_32_7` | Catedral de Lugo, Ruta 17 | — | Salida → `ruta_17/exterior`, Capilla → `ruta_17/sala_calle_32_7_capilla` |
+| `ruta_17/sala_calle_32_7_capilla` | Capilla de la Virgen de los Ojos Grandes, Ruta 17 | — | Salida → `ruta_17/sala_calle_32_7` |
 | `ruta_17/sala_calle_37_13` | Taberna de las tapas de Lugo, Ruta 17 | — | Salida → `ruta_17/exterior` |
 | `ruta_17/sala_calle_47_37` | Casa de la costurera de Arteixo, Ruta 17 | — | Salida → `ruta_17/exterior` |
 | `ruta_17/sala_calle_5_24` | Casa de labranza de la aldea, Ruta 17 | — | Salida → `ruta_17/exterior` |
@@ -762,7 +765,8 @@ Ninguna: todos los destinos existen.
 | `ruta_18/sala_calle_27_18` | Sidrería del pueblo, Ruta 18 | — | Salida → `ruta_18/exterior` |
 | `ruta_18/sala_calle_45_18` | Casa de la vaqueira, Ruta 18 | — | Salida → `ruta_18/exterior` |
 | `ruta_19/exterior` | Ruta 19 · Costa de Cantabria | west → `santander/exterior`, east → `bilbao/exterior` | Sala46_11 → `ruta_19/sala_calle_46_11`, Sala33_8 → `ruta_19/sala_calle_33_8`, Sala52_17 → `ruta_19/sala_calle_52_17`, Sala47_18 → `ruta_19/sala_calle_47_18` |
-| `ruta_19/sala_calle_33_8` | Faro del cabo, Ruta 19 | — | Salida → `ruta_19/exterior` |
+| `ruta_19/sala_calle_33_8` | Faro del cabo, Ruta 19 | — | Salida → `ruta_19/exterior`, Linterna → `ruta_19/sala_calle_33_8_linterna` |
+| `ruta_19/sala_calle_33_8_linterna` | Linterna del faro, Ruta 19 | — | Salida → `ruta_19/sala_calle_33_8` |
 | `ruta_19/sala_calle_46_11` | Iglesia de Santa María de Castro Urdiales, Ruta 19 | — | Salida → `ruta_19/exterior` |
 | `ruta_19/sala_calle_47_18` | Conservera de anchoas, Ruta 19 | — | Salida → `ruta_19/exterior` |
 | `ruta_19/sala_calle_52_17` | Casa del surfista de la playa, Ruta 19 | — | Salida → `ruta_19/exterior` |
@@ -778,7 +782,8 @@ Ninguna: todos los destinos existen.
 | `ruta_2/sala_calle_9_61` | Casa del cantero, Ruta 2 | — | Salida → `ruta_2/exterior` |
 | `ruta_20/exterior` | Ruta 20 · Sierra de Aralar | north → `bilbao/exterior`, south → `pamplona/exterior` | Sala20_5 → `ruta_20/sala_calle_20_5`, Sala18_28 → `ruta_20/sala_calle_18_28` |
 | `ruta_20/sala_calle_18_28` | Borda del pastor, Ruta 20 | — | Salida → `ruta_20/exterior` |
-| `ruta_20/sala_calle_20_5` | Santuario de San Miguel de Aralar, Ruta 20 | — | Salida → `ruta_20/exterior` |
+| `ruta_20/sala_calle_20_5` | Santuario de San Miguel de Aralar, Ruta 20 | — | Salida → `ruta_20/exterior`, Frontal → `ruta_20/sala_calle_20_5_frontal` |
+| `ruta_20/sala_calle_20_5_frontal` | Frontal esmaltado de Aralar, Ruta 20 | — | Salida → `ruta_20/sala_calle_20_5` |
 | `ruta_21/casa_1` | Casa del viticultor riojano, Ruta 21 | — | Salida → `ruta_21/exterior` |
 | `ruta_21/casa_2` | Bar de pinchos de la calle Laurel, Ruta 21 | — | Salida → `ruta_21/exterior` |
 | `ruta_21/exterior` | Ruta 21 · Viñedos de La Rioja | south → `ruta_22/exterior`, north → `pamplona/exterior` | Casa1 → `ruta_21/casa_1`, Casa2 → `ruta_21/casa_2`, Sala10_38 → `ruta_21/sala_calle_10_38`, Sala33_38 → `ruta_21/sala_calle_33_38` |
@@ -794,7 +799,8 @@ Ninguna: todos los destinos existen.
 | `ruta_23/casa_2` | Casa de la piñonera, Ruta 23 | — | Salida → `ruta_23/exterior` |
 | `ruta_23/cuellar/mercadona` | Mercadona · Cuéllar | — | Salida → `ruta_23/exterior` |
 | `ruta_23/exterior` | Ruta 23 · Cuéllar y Tierra de Pinares | west → `valladolid/exterior`, east → `pueblo_inicial/exterior` | Mercadona → `ruta_23/cuellar/mercadona`, Casa1 → `ruta_23/casa_1`, Casa2 → `ruta_23/casa_2`, Sala12_11 → `ruta_23/sala_calle_12_11`, Sala22_11 → `ruta_23/sala_calle_22_11` |
-| `ruta_23/sala_calle_12_11` | Castillo de los Duques de Alburquerque, Ruta 23 | — | Salida → `ruta_23/exterior` |
+| `ruta_23/sala_calle_12_11` | Castillo de los Duques de Alburquerque, Ruta 23 | — | Salida → `ruta_23/exterior`, Aula → `ruta_23/sala_calle_12_11_aula` |
+| `ruta_23/sala_calle_12_11_aula` | Aula del instituto del castillo, Ruta 23 | — | Salida → `ruta_23/sala_calle_12_11` |
 | `ruta_23/sala_calle_22_11` | Iglesia de San Miguel de Cuéllar, Ruta 23 | — | Salida → `ruta_23/exterior` |
 | `ruta_24/casa_1` | Casa del agricultor de la Mancha, Ruta 24 | — | Salida → `ruta_24/exterior` |
 | `ruta_24/casa_2` | Casa de la recolectora de azafrán, Ruta 24 | — | Salida → `ruta_24/exterior` |
@@ -829,7 +835,9 @@ Ninguna: todos los destinos existen.
 | `ruta_4/sala_calle_38_39` | Chalet de la familia del pádel, Ruta 4 | — | Salida → `ruta_4/exterior` |
 | `ruta_4/sala_calle_44_39` | Chalet de la familia del repartidor, Ruta 4 | — | Salida → `ruta_4/exterior` |
 | `ruta_4/sala_calle_45_28` | Chalet de la teletrabajadora, Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_9_24` | Real Monasterio de San Lorenzo de El Escorial, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_9_24` | Real Monasterio de San Lorenzo de El Escorial, Ruta 4 | — | Salida → `ruta_4/exterior`, Biblioteca → `ruta_4/sala_calle_9_24_biblioteca`, Panteon → `ruta_4/sala_calle_9_24_panteon` |
+| `ruta_4/sala_calle_9_24_biblioteca` | Real Biblioteca del Monasterio, Ruta 4 | — | Salida → `ruta_4/sala_calle_9_24` |
+| `ruta_4/sala_calle_9_24_panteon` | Panteón de Reyes, Ruta 4 | — | Salida → `ruta_4/sala_calle_9_24` |
 | `ruta_5/casa_1` | Casa del mozo de almacén, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_5/casa_2` | Casa del repartidor de la A-2, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_5/exterior` | Ruta 5 · Corredor del Henares | west → `madrid/retiro`, east → `ruta_6/exterior` | Casa1 → `ruta_5/casa_1`, Casa2 → `ruta_5/casa_2`, Sala31_12 → `ruta_5/sala_calle_31_12`, Sala56_12 → `ruta_5/sala_calle_56_12`, Sala65_11 → `ruta_5/sala_calle_65_11`, Sala47_11 → `ruta_5/sala_calle_47_11`, Sala58_27 → `ruta_5/sala_calle_58_27` |
@@ -871,7 +879,8 @@ Ninguna: todos los destinos existen.
 | `ruta_9/sala_calle_34_55` | Faro de Cullera, Ruta 9 | — | Salida → `ruta_9/exterior` |
 | `ruta_9/sala_calle_41_67` | Caseta de socorrismo de la playa de Gandía, Ruta 9 | — | Salida → `ruta_9/exterior` |
 | `ruta_9/sala_calle_5_74` | Apartamento de los veraneantes de toda la vida, Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_7_66` | Palau Ducal dels Borja, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_7_66` | Palau Ducal dels Borja, Ruta 9 | — | Salida → `ruta_9/exterior`, Galeria → `ruta_9/sala_calle_7_66_galeria` |
+| `ruta_9/sala_calle_7_66_galeria` | Galería Dorada del Palau, Ruta 9 | — | Salida → `ruta_9/sala_calle_7_66` |
 | `santander/botin` | Centro Botín · Santander | — | Salida → `santander/exterior`, Sala → `santander/botin_sala` |
 | `santander/botin_sala` | Exposición · Botín | — | Bajar → `santander/botin` |
 | `santander/centro` | Centro Pokémon · Santander | — | Salida → `santander/exterior` |

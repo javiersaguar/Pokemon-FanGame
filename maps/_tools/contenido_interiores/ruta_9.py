@@ -106,6 +106,15 @@ SALAS = {
                 "Su bisabuelo fue el papa Alejandro VI. Los Borja de Roma tenían mala fama; los de Gandía, una fábrica de azúcar."]),
             ("Visitante", "turista", "visitante", ["Vengo por la serie de los Borgia. Me han dicho que es más fiel la del palacio. Menos sangre, más azulejo."]),
         ],
+        "dentro": {
+            "ruta_9/sala_calle_7_66_galeria": {
+                "tipo": "museo", "nombre": "Galería Dorada del Palau",
+                "gente": [("Restauradora", "npc_woman", "libre", [
+                    "Esta galería se decoró para celebrar la santidad de Francisco de Borja: techos dorados y suelo de azulejo valenciano.",
+                    "El azulejo pintado a mano no se pisa con tacones. Lo pone en la entrada. Lo leen después de pisarlo."])],
+                "carteles": [("pared", ["Un suelo de azulejos con los cuatro elementos: agua, aire, tierra y fuego. Ningún Pokémon de tipo Planta: se ve que no los conocían."])],
+            },
+        },
     },
     "ruta_9/sala_calle_41_67": {
         "tipo": "socorrismo", "nombre": "Caseta de socorrismo de la playa de Gandía",

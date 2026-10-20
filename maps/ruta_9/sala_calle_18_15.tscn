@@ -25,27 +25,27 @@ fixed_camera = true
 legacy_save_bounds = Rect2i(0, 0, 16, 12)
 followers_allowed = false
 
-[node name="SalaCalle1815" type="Node2D" unique_id=948053207]
+[node name="SalaCalle1815" type="Node2D" unique_id=2023725405]
 script = ExtResource("1_qk3ug")
 data = SubResource("Resource_7ddct")
 
-[node name="Ground" type="TileMapLayer" parent="." unique_id=980627013]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=21961231]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAwAAAABAAAAAAAAAAwAAAACAAAAAAAAAAwAAAADAAAAAAAAAAwAAAAEAAAAAAAAAAwAAAAFAAAAAAAAAAwAAAAGAAAAAAAAAAwAAAAHAAAAAAAAAAwAAAAIAAAAAAAAAAwAAAAJAAAAAAAAAAwAAAAKAAAAAAAAAAwAAAAAAAEAAAAAAAwAAAABAAEAAAAAAAwAAAACAAEAAAAAAAwAAAADAAEAAAAAAAwAAAAEAAEAAAAAAAwAAAAFAAEAAAAAAAwAAAAGAAEAAAAAAAwAAAAHAAEAAAAAAAwAAAAIAAEAAAAAAAwAAAAJAAEAAAAAAAwAAAAKAAEAAAAAAAwAAAAAAAIAAAAAAAwAAAABAAIAAAAAAAwAAAACAAIAAAAAAAwAAAADAAIAAAAAAAwAAAAEAAIAAAAAAAwAAAAFAAIAAAAAAAwAAAAGAAIAAAAAAAwAAAAHAAIAAAAAAAwAAAAIAAIAAAAAAAwAAAAJAAIAAAAAAAwAAAAKAAIAAAAAAAwAAAAAAAMAAAAAAAwAAAABAAMAAAAAAAwAAAACAAMAAAAAAAwAAAADAAMAAAAAAAwAAAAEAAMAAAAAAAwAAAAFAAMAAAAAAAwAAAAGAAMAAAAAAAwAAAAHAAMAAAAAAAwAAAAIAAMAAAAAAAwAAAAJAAMAAAAAAAwAAAAKAAMAAAAAAAwAAAAAAAQAAAAAAAwAAAABAAQAAAAAAAwAAAACAAQAAAAAAAwAAAADAAQAAAAAAAwAAAAEAAQAAAAAAAwAAAAFAAQAAAAAAAwAAAAGAAQAAAAAAAwAAAAHAAQAAAAAAAwAAAAIAAQAAAAAAAwAAAAJAAQAAAAAAAwAAAAKAAQAAAAAAAwAAAAAAAUAAAAAAAwAAAABAAUAAAAAAAwAAAACAAUAAAAAAAwAAAADAAUAAAAAAAwAAAAEAAUAAAAAAAwAAAAFAAUAAAAAAAwAAAAGAAUAAAAAAAwAAAAHAAUAAAAAAAwAAAAIAAUAAAAAAAwAAAAJAAUAAAAAAAwAAAAKAAUAAAAAAAwAAAAAAAYAAAAAAAwAAAABAAYAAAAAAAwAAAACAAYAAAAAAAwAAAADAAYAAAAAAAwAAAAEAAYAAAAAAAwAAAAFAAYAAAAAAAwAAAAGAAYAAAAAAAwAAAAHAAYAAAAAAAwAAAAIAAYAAAAAAAwAAAAJAAYAAAAAAAwAAAAKAAYAAAAAAAwAAAAAAAcAAAAAAAwAAAABAAcAAAAAAAwAAAACAAcAAAAAAAwAAAADAAcAAAAAABAAAAAEAAcAAAAAAAwAAAAFAAcAAAAAAAwAAAAGAAcAAAAAAAwAAAAHAAcAAAAAAAwAAAAIAAcAAAAAAAwAAAAJAAcAAAAAAAwAAAAKAAcAAAAAAAwAAAA=")
 tile_set = ExtResource("4_31i1u")
 
-[node name="Decor" type="TileMapLayer" parent="." unique_id=841045221]
+[node name="Decor" type="TileMapLayer" parent="." unique_id=81574073]
 tile_map_data = PackedByteArray("AAABAAAAAQABAE4AAAABAAEAAQABAE8AAAACAAAAAQABAE4AAAACAAEAAQABAE8AAAADAAAAAQABAE4AAAADAAEAAQABAE8AAAAEAAAAAQABAE4AAAAEAAEAAQABAE8AAAAFAAAAAQABAE4AAAAFAAEAAQABAE8AAAAGAAAAAQABAE4AAAAGAAEAAQABAE8AAAAHAAAAAQABAE4AAAAHAAEAAQABAE8AAAAIAAAAAQABAE4AAAAIAAEAAQABAE8AAAAJAAAAAQABAE4AAAAJAAEAAQABAE8AAAAAAAAAAQACAEwAAAAKAAAAAQAAAEwAAAAAAAEAAQACAEwAAAAKAAEAAQAAAEwAAAAAAAIAAQACAEwAAAAKAAIAAQAAAEwAAAAAAAMAAQACAEwAAAAKAAMAAQAAAEwAAAAAAAQAAQACAEwAAAAKAAQAAQAAAEwAAAAAAAUAAQACAEwAAAAKAAUAAQAAAEwAAAAAAAYAAQACAEwAAAAKAAYAAQAAAEwAAAABAAcAAQABAEsAAAACAAcAAQACAEsAAAAEAAcAAQAAAEsAAAAFAAcAAQABAEsAAAAGAAcAAQABAEsAAAAHAAcAAQABAEsAAAAIAAcAAQABAEsAAAAJAAcAAQABAEsAAAAAAAcAAQAFAE8AAAAKAAcAAQAGAE8AAAA=")
 tile_set = ExtResource("4_31i1u")
 
-[node name="Entities" type="Node2D" parent="." unique_id=101366279]
+[node name="Entities" type="Node2D" parent="." unique_id=293251101]
 y_sort_enabled = true
 
-[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1839959768]
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=295875900]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAABAAEAAgAAACIAAAACAAEAAgABACIAAAABAAIAAgAAACMAAAACAAIAAgABACMAAAADAAEAAgAEACIAAAAEAAEAAgAFACIAAAAFAAEAAgAGACIAAAADAAIAAgAEACMAAAAEAAIAAgAFACMAAAAFAAIAAgAGACMAAAAHAAEAAgAAACcAAAAIAAEAAgABACcAAAAJAAEAAgACACcAAAAHAAIAAgAAACgAAAAIAAIAAgABACgAAAAJAAIAAgACACgAAAAHAAMAAgAAACkAAAAIAAMAAgABACkAAAAJAAMAAgACACkAAAABAAYAAgAEACYAAAADAAMAAgADADQAAAAEAAMAAgAEADQAAAADAAQAAgADADUAAAAEAAQAAgAEADUAAAAFAAQAAgACAD0AAAA=")
 tile_set = ExtResource("4_31i1u")
 
-[node name="GuardaDeLaDevesa" type="Node2D" parent="Entities" unique_id=807543834 instance=ExtResource("5_cvf6p")]
+[node name="GuardaDeLaDevesa" type="Node2D" parent="Entities" unique_id=218789235 instance=ExtResource("5_cvf6p")]
 position = Vector2(240, 144)
 script = ExtResource("6_7rpm0")
 display_name = "Guarda de la Devesa"
@@ -54,7 +54,7 @@ turn_to_player = true
 sprite_sheet = ExtResource("7_7ddct")
 initial_facing = 1
 
-[node name="Biologa" type="Node2D" parent="Entities" unique_id=1143593031 instance=ExtResource("5_cvf6p")]
+[node name="Biologa" type="Node2D" parent="Entities" unique_id=598892390 instance=ExtResource("5_cvf6p")]
 position = Vector2(80, 112)
 script = ExtResource("6_7rpm0")
 display_name = "Bióloga"
@@ -63,28 +63,28 @@ turn_to_player = true
 sprite_sheet = ExtResource("8_7qrgy")
 initial_facing = 2
 
-[node name="Above" type="TileMapLayer" parent="." unique_id=185740833]
+[node name="Above" type="TileMapLayer" parent="." unique_id=518269602]
 z_index = 10
 tile_set = ExtResource("4_31i1u")
 collision_enabled = false
 
-[node name="Warps" type="Node2D" parent="." unique_id=357845655]
+[node name="Warps" type="Node2D" parent="." unique_id=1204437641]
 
-[node name="Salida" type="Node2D" parent="Warps" unique_id=758799126]
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1809075253]
 position = Vector2(112, 240)
 script = ExtResource("11_4fyaf")
 target_map = &"ruta_9/exterior"
 target_spawn = &"from_sala_18_15"
 arrival_facing = 1
 
-[node name="Spawns" type="Node2D" parent="." unique_id=1328667535]
+[node name="Spawns" type="Node2D" parent="." unique_id=1435482513]
 
-[node name="default" type="Marker2D" parent="Spawns" unique_id=760426106]
+[node name="default" type="Marker2D" parent="Spawns" unique_id=45848662]
 position = Vector2(112, 208)
 
-[node name="Triggers" type="Node2D" parent="." unique_id=1709825813]
+[node name="Triggers" type="Node2D" parent="." unique_id=961435399]
 
-[node name="Rotulo" type="Label" parent="." unique_id=235117747]
+[node name="Rotulo" type="Label" parent="." unique_id=638559583]
 offset_left = 16.0
 offset_top = 4.0
 offset_right = 336.0
