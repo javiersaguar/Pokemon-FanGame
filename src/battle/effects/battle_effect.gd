@@ -451,3 +451,8 @@ func on_pinch(_engine: BattleEngine, _b: Battler) -> bool:
 func extends_condition(_condition_id: StringName) -> bool:
 	return false
 
+
+## Prioridad de más del propio movimiento según las circunstancias (Fitoimpulso con Campo de Hierba).
+func priority_bonus(_engine: BattleEngine, _user: Battler, _move: MoveData) -> int:
+	return 0
+

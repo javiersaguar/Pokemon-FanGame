@@ -1934,6 +1934,11 @@ func _apply_secondary(user: Battler, target: Battler, sec: Dictionary) -> void:
 				target.volatiles[&"flinch"] = {}
 			"confusion":
 				_try_confuse(target, false, user)
+			"", "partiallytrapped":
+				pass
+			var other:
+				# En Salazón, Bomba Caramelo, Anticura...: el volátil con su script.
+				add_volatile(target, StringName(other), user)
 		if sec.has("boosts"):
 			_apply_boosts(target, DataUtil.int_dict(sec["boosts"]), true)
 	if sec.has("self_boosts") and not user.is_fainted():
@@ -2161,6 +2166,10 @@ func _apply_boosts(target: Battler, boosts: Dictionary[StringName, int], seconda
 			shown = true
 			lowered = lowered or (applied < 0 and by_foe)
 			dropped = dropped or applied < 0
+			if applied > 0:
+				target.raised_turn = turn
+			else:
+				target.lowered_turn = turn
 		elif not secondary:
 			_msg(BattleText.stat_limit(target, wild, stat, delta > 0))
 			shown = true
@@ -2736,6 +2745,9 @@ func ally_of(b: Battler) -> Battler:
 ## Prioridad del movimiento con lo que la cambia (Bromista, Alas Vendaval, Primer Auxilio).
 func move_priority(user: Battler, move: MoveData) -> int:
 	var priority := move.priority
+	var own := Effects.move(move.id)
+	if own != null:
+		priority += own.priority_bonus(self, user, move)
 	for passive: BattleEffect in _passives(user):
 		priority = passive.modify_priority(self, user, move, priority)
 	return priority

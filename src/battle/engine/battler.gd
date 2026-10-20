@@ -19,6 +19,9 @@ var crit_stage: int = 0
 var turns_active: int = 0
 ## Turno en que salió al campo (0 = al empezar el combate). Impulso, Vigilante.
 var entered_turn: int = 0
+## Último turno en que subió o bajó alguna característica (Desahogo, Envidia Ardiente, Voz Cautivadora).
+var raised_turn: int = -1
+var lowered_turn: int = -1
 var last_move: StringName = &""
 var moved_this_turn: bool = false
 ## Ha recibido daño este turno (Buena Baza).

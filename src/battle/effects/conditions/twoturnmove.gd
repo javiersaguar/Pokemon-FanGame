@@ -15,6 +15,7 @@ const DOUBLE := {
 	"air": [&"gust", &"twister"],
 	"underground": [&"earthquake", &"magnitude"],
 	"underwater": [&"surf", &"whirlpool"],
+	"phantom": [],
 }
 
 

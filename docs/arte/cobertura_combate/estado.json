@@ -6581,7 +6581,7 @@
    "type": "fighting"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "alluringvoice",
    "name": "Canto Encantador",
    "needs_script": true,
@@ -6757,7 +6757,7 @@
    "type": "fighting"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "aurawheel",
    "name": "Rueda Aural",
    "needs_script": true,
@@ -6829,7 +6829,7 @@
    "type": "poison"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "barbbarrage",
    "name": "Mil Púas Tóxicas",
    "needs_script": true,
@@ -6989,7 +6989,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "bleakwindstorm",
    "name": "Vendaval Gélido",
    "needs_script": true,
@@ -7037,7 +7037,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "bodypress",
    "name": "Plancha Corporal",
    "needs_script": true,
@@ -7237,7 +7237,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "burningbulwark",
    "name": "Llama Protectora",
    "needs_script": true,
@@ -7245,7 +7245,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "burningjealousy",
    "name": "Envidia Ardiente",
    "needs_script": true,
@@ -7301,7 +7301,7 @@
    "type": "electric"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "ceaselessedge",
    "name": "Tajo Metralla",
    "needs_script": true,
@@ -7309,7 +7309,7 @@
    "type": "dark"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "celebrate",
    "name": "Celebración",
    "needs_script": true,
@@ -7373,7 +7373,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "chloroblast",
    "name": "Clorofiláser",
    "needs_script": true,
@@ -7405,7 +7405,7 @@
    "type": "dragon"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "clangoroussoul",
    "name": "Estruendo Escama",
    "needs_script": true,
@@ -7453,7 +7453,7 @@
    "type": "poison"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "collisioncourse",
    "name": "Nitrochoque",
    "needs_script": true,
@@ -7669,7 +7669,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "crushgrip",
    "name": "Agarrón",
    "needs_script": true,
@@ -7709,7 +7709,7 @@
    "type": "dark"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "darkvoid",
    "name": "Brecha Negra",
    "needs_script": true,
@@ -7781,7 +7781,7 @@
    "type": "dragon"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "diamondstorm",
    "name": "Tormenta de Diamantes",
    "needs_script": true,
@@ -7797,7 +7797,7 @@
    "type": "ground"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "direclaw",
    "name": "Garra Nociva",
    "needs_script": true,
@@ -7941,7 +7941,7 @@
    "type": "dragon"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "dragoncheer",
    "name": "Bramido Dragón",
    "needs_script": true,
@@ -8133,7 +8133,7 @@
    "type": "electric"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "eeriespell",
    "name": "Conjuro Funesto",
    "needs_script": true,
@@ -8173,7 +8173,7 @@
    "type": "electric"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "electrodrift",
    "name": "Electroderrape",
    "needs_script": true,
@@ -8181,7 +8181,7 @@
    "type": "electric"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "electroshot",
    "name": "Electrorrayo",
    "needs_script": true,
@@ -8277,7 +8277,7 @@
    "type": "dragon"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "expandingforce",
    "name": "Vasta Fuerza",
    "needs_script": true,
@@ -8405,7 +8405,7 @@
    "type": "bug"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "ficklebeam",
    "name": "Láser Veleidoso",
    "needs_script": true,
@@ -8429,7 +8429,7 @@
    "type": "dark"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "filletaway",
    "name": "Deslome",
    "needs_script": true,
@@ -8469,7 +8469,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "firepledge",
    "name": "Voto Fuego",
    "needs_script": true,
@@ -8709,7 +8709,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "forestscurse",
    "name": "Condena Silvana",
    "needs_script": true,
@@ -8733,7 +8733,7 @@
    "type": "ice"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "freezeshock",
    "name": "Rayo Gélido",
    "needs_script": true,
@@ -8805,7 +8805,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "fusionbolt",
    "name": "Rayo Fusión",
    "needs_script": true,
@@ -8813,7 +8813,7 @@
    "type": "electric"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "fusionflare",
    "name": "Llama Fusión",
    "needs_script": true,
@@ -9213,7 +9213,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "grasspledge",
    "name": "Voto Planta",
    "needs_script": true,
@@ -9229,7 +9229,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "grassyglide",
    "name": "Fitoimpulso",
    "needs_script": true,
@@ -9245,7 +9245,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "gravapple",
    "name": "Fuerza G",
    "needs_script": true,
@@ -9357,7 +9357,7 @@
    "type": "fighting"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "happyhour",
    "name": "Paga Extra",
    "needs_script": true,
@@ -9373,7 +9373,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "hardpress",
    "name": "Prensa Metálica",
    "needs_script": true,
@@ -9469,7 +9469,7 @@
    "type": "psychic"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "heartswap",
    "name": "Cambiaalmas",
    "needs_script": true,
@@ -9789,7 +9789,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "hyperspacefury",
    "name": "Cerco Dimensión",
    "needs_script": true,
@@ -9837,7 +9837,7 @@
    "type": "ice"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "iceburn",
    "name": "Llama Gélida",
    "needs_script": true,
@@ -9925,7 +9925,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "infernalparade",
    "name": "Marcha Espectral",
    "needs_script": true,
@@ -9965,7 +9965,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "instruct",
    "name": "Mandato",
    "needs_script": true,
@@ -10005,7 +10005,7 @@
    "type": "steel"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "ivycudgel",
    "name": "Garrote Liana",
    "needs_script": true,
@@ -10029,7 +10029,7 @@
    "type": "water"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "judgment",
    "name": "Sentencia",
    "needs_script": true,
@@ -10045,7 +10045,7 @@
    "type": "fighting"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "junglehealing",
    "name": "Cura Selvática",
    "needs_script": true,
@@ -10109,7 +10109,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "lashout",
    "name": "Desahogo",
    "needs_script": true,
@@ -10125,7 +10125,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "lastrespects",
    "name": "Homenaje Póstumo",
    "needs_script": true,
@@ -10301,7 +10301,7 @@
    "type": "psychic"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "lunarblessing",
    "name": "Plegaria Lunar",
    "needs_script": true,
@@ -10717,7 +10717,7 @@
    "type": "fighting"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "meteorbeam",
    "name": "Rayo Meteórico",
    "needs_script": true,
@@ -10837,7 +10837,7 @@
    "type": "psychic"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "mistyexplosion",
    "name": "Bruma Explosiva",
    "needs_script": true,
@@ -10885,7 +10885,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "mortalspin",
    "name": "Giro Mortífero",
    "needs_script": true,
@@ -11141,7 +11141,7 @@
    "type": "ghost"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "orderup",
    "name": "Oído Cocina",
    "needs_script": true,
@@ -11261,7 +11261,7 @@
    "type": "ghost"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "photongeyser",
    "name": "Géiser Fotónico",
    "needs_script": true,
@@ -11365,7 +11365,7 @@
    "type": "poison"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "pollenpuff",
    "name": "Bola de Polen",
    "needs_script": true,
@@ -11373,7 +11373,7 @@
    "type": "bug"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "poltergeist",
    "name": "Poltergeist",
    "needs_script": true,
@@ -11381,7 +11381,7 @@
    "type": "ghost"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "populationbomb",
    "name": "Proliferación",
    "needs_script": true,
@@ -11493,7 +11493,7 @@
    "type": "ground"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "present",
    "name": "Presente",
    "needs_script": true,
@@ -11501,7 +11501,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "prismaticlaser",
    "name": "Láser Prisma",
    "needs_script": true,
@@ -11525,7 +11525,7 @@
    "type": "psychic"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "psyblade",
    "name": "Psicohojas",
    "needs_script": true,
@@ -11549,7 +11549,7 @@
    "type": "psychic"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "psychicnoise",
    "name": "Psicorruido",
    "needs_script": true,
@@ -11613,7 +11613,7 @@
    "type": "psychic"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "psystrike",
    "name": "Onda Mental",
    "needs_script": true,
@@ -11821,7 +11821,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "relicsong",
    "name": "Canto Arcaico",
    "needs_script": true,
@@ -11885,7 +11885,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "risingvoltage",
    "name": "Alto Voltaje",
    "needs_script": true,
@@ -11901,7 +11901,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "roaroftime",
    "name": "Distorsión",
    "needs_script": true,
@@ -12021,7 +12021,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "ruination",
    "name": "Calamidad",
    "needs_script": true,
@@ -12053,7 +12053,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "saltcure",
    "name": "Salazón",
    "needs_script": true,
@@ -12069,7 +12069,7 @@
    "type": "ground"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sandsearstorm",
    "name": "Simún de Arena",
    "needs_script": true,
@@ -12181,7 +12181,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "secretsword",
    "name": "Sable Místico",
    "needs_script": true,
@@ -12245,7 +12245,7 @@
    "type": "ghost"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "shadowforce",
    "name": "Golpe Umbrío",
    "needs_script": true,
@@ -12301,7 +12301,7 @@
    "type": "ice"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "shellsidearm",
    "name": "Moluscañón",
    "needs_script": true,
@@ -12413,7 +12413,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "sketch",
    "name": "Esquema",
    "needs_script": true,
@@ -12597,7 +12597,7 @@
    "type": "dark"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "snipeshot",
    "name": "Disparo Certero",
    "needs_script": true,
@@ -12773,7 +12773,7 @@
    "type": "fairy"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "spiritshackle",
    "name": "Puntada Sombría",
    "needs_script": true,
@@ -12869,7 +12869,7 @@
    "type": "bug"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "steelbeam",
    "name": "Metaláser",
    "needs_script": true,
@@ -12877,7 +12877,7 @@
    "type": "steel"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "steelroller",
    "name": "Allanador Férreo",
    "needs_script": true,
@@ -12933,7 +12933,7 @@
    "type": "ground"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "stoneaxe",
    "name": "Hachazo Pétreo",
    "needs_script": true,
@@ -13077,7 +13077,7 @@
    "type": "steel"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "supercellslam",
    "name": "Plancha Voltaica",
    "needs_script": true,
@@ -13205,7 +13205,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "syrupbomb",
    "name": "Bomba Caramelo",
    "needs_script": true,
@@ -13269,7 +13269,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "takeheart",
    "name": "Bálsamo Osado",
    "needs_script": true,
@@ -13357,7 +13357,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "terablast",
    "name": "Teraexplosión",
    "needs_script": true,
@@ -13365,7 +13365,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "terastarstorm",
    "name": "Teraclúster",
    "needs_script": true,
@@ -13445,7 +13445,7 @@
    "type": "electric"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "thunderclap",
    "name": "Relámpago Súbito",
    "needs_script": true,
@@ -13501,7 +13501,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "tidyup",
    "name": "Limpieza General",
    "needs_script": true,
@@ -13565,7 +13565,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "transform",
    "name": "Transformación",
    "needs_script": true,
@@ -13685,7 +13685,7 @@
    "type": "dragon"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "upperhand",
    "name": "Palma Rauda",
    "needs_script": true,
@@ -13821,7 +13821,7 @@
    "type": "water"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "waterpledge",
    "name": "Voto Agua",
    "needs_script": true,
@@ -13837,7 +13837,7 @@
    "type": "water"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "watershuriken",
    "name": "Shuriken de Agua",
    "needs_script": true,
@@ -13917,7 +13917,7 @@
    "type": "rock"
   },
   {
-   "effect_registered": false,
+   "effect_registered": true,
    "id": "wildboltstorm",
    "name": "Electormenta",
    "needs_script": true,
@@ -14066,7 +14066,7 @@
   "abilities_without_description": 49,
   "ability_effects_registered": 206,
   "moves": 951,
-  "moves_needing_unregistered_script": 253,
+  "moves_needing_unregistered_script": 169,
   "specific_move_animations": 951
  }
 }
