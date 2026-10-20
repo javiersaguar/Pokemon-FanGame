@@ -26,6 +26,9 @@ const OBSTACLES := {
 	"strength": "res://src/overworld/campo/fuerza.tscn",
 }
 const REEF_SCENE := "res://src/overworld/campo/escollo.tscn"
+## Atajos: tronco (paso de norte a sur, 2 de ancho) y cancela (paso de oeste a este, 2 de alto).
+const SHORTCUT_LOG := "res://src/overworld/campo/atajo_tronco.tscn"
+const SHORTCUT_GATE := "res://src/overworld/campo/atajo_valla.tscn"
 const CURRENT_SCRIPT := "res://src/overworld/surf_current.gd"
 const CURRENT_FRAMES := "res://src/overworld/campo/corriente_frames.tres"
 
@@ -61,6 +64,10 @@ var pending_cells := {}
 var log_lines: PackedStringArray = []
 ## Recetas de mar: con Surf el agua cuenta como libre (la receta pide `var con_surf := true`).
 var surf := false
+## Casillas de los obstáculos de campo (nuevos y de antes): detrás solo puede quedar lo opcional.
+var obstacle_cells: Array[Vector2i] = []
+## Casillas de los atajos nuevos (abiertos, se comprueba que siga habiendo que pisar hierba).
+var shortcut_cells: Array[Vector2i] = []
 ## Escollos y corrientes nuevos: van al nodo «Mar», debajo de las entidades.
 var pending_sea: Array[Node2D] = []
 
@@ -87,6 +94,9 @@ func setup(the_map: Node2D, map_id: String) -> void:
 			forest[cell] = ExteriorTiles.FOREST_ORIGIN
 		elif SNOW_FOREST.has_point(c):
 			forest[cell] = ExteriorTiles.SNOW_FOREST_ORIGIN
+	for node: Node in entities.get_children():
+		if node is Node2D and node.scene_file_path in OBSTACLES.values():
+			obstacle_cells.append(Grid.to_tile((node as Node2D).position))
 	for cell: Vector2i in ground.get_used_cells():
 		if ground.get_cell_source_id(cell) == ExteriorTiles.SRC_GEN4 and POND_RECT.has_point(ground.get_cell_atlas_coords(cell)):
 			water[cell] = true
@@ -1055,6 +1065,33 @@ func obstacle(node_name: String, action: String, at: Vector2i, cleared_flag: Str
 	if cleared_flag != &"":
 		node.set(&"cleared_flag", cleared_flag)
 	_add_entity(node, at)
+	obstacle_cells.append(at)
+
+
+## Atajo que se abre más tarde: abre un hueco de dos casillas en un muro fino (bosque, seto, valla o
+## piedras) de `wall` casillas que empieza en `from + dir` y lo tapa con un tronco (dir abajo) o una
+## cancela (dir derecha) que solo se abre desde `open_side` y pone `flag` para siempre.
+func shortcut(node_name: String, from: Vector2i, dir: Vector2i, wall: int, open_side: Vector2i, flag: StringName) -> void:
+	if _entity_exists(node_name):
+		return
+	var side := Vector2i(dir.y, dir.x)
+	var cells: Array[Vector2i] = []
+	for s: int in 2:
+		for i: int in range(1, wall + 1):
+			cells.append(from + side * s + dir * i)
+	clear_cells(cells)
+	var at := from + dir
+	var node: Node2D = (load(SHORTCUT_LOG if dir == Vector2i.DOWN else SHORTCUT_GATE) as PackedScene).instantiate()
+	node.name = node_name
+	node.position = Grid.to_world(at)
+	node.set(&"hidden_if_flag", flag)
+	node.set(&"open_side", open_side)
+	for cell: Vector2i in cells:
+		free[cell] = true
+	_add_entity(node, at)
+	pending_cells[at + side] = true
+	free.erase(at + side)
+	shortcut_cells.append_array([at, at + side])
 
 
 ## Escollo de 2×2 casillas (`at` es la de arriba a la izquierda): roca en el mar que choca.

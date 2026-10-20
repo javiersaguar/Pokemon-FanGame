@@ -5,11 +5,13 @@ extends RefCounted
 ## bosque. Se conservan el faro, los caseríos, sus puertas, los carteles, los entrenadores, los
 ## vecinos y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+func vestir_inicial(v: Vestidor) -> void:
 	# Paso obligado por hierba del borde del acantilado al bosque del sur.
 	v.grass_band(Rect2i(36, 8, 2, 24))
 	# Setos y flores en los prados; piedras en la playa.
@@ -24,3 +26,10 @@ func vestir(v: Vestidor) -> void:
 	await v.refresh()
 	v.fill({"estilo": "arboleda", "margen": [1, 1], "arboles": [&"arbol_verde", &"arbol_redondo"], "hueco": 2,
 		"adornos": 0.06})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.atajo(v, "TroncoAcantilado", Vector2i(29, 14), Vector2i.DOWN, 1, "bilbao/exterior")
+	await v.refresh()

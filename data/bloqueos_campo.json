@@ -1,0 +1,247 @@
+{
+	"_": "Generado por tools/mundo/bloqueos_campo.gd. Obstáculos de campo y atajos por mapa y lo que dejan detrás.",
+	"mapas": {
+		"ruta_1/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						34,
+						37
+					],
+					"condicion": "cut",
+					"nombre": "ArbolCorteRibera",
+					"se_examina": true,
+					"tipo": "cut"
+				},
+				{
+					"casilla": [
+						18,
+						18
+					],
+					"condicion": "flag:atajo:ruta_1/exterior:CancelaPrado",
+					"nombre": "CancelaPrado",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [
+				"CarameloRaroRibera"
+			],
+			"tras_bloqueo": []
+		},
+		"ruta_10/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						7,
+						15
+					],
+					"condicion": "flag:atajo:ruta_10/exterior:TroncoPinada",
+					"nombre": "TroncoPinada",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [],
+			"tras_bloqueo": []
+		},
+		"ruta_12/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						21,
+						33
+					],
+					"condicion": "rock_smash",
+					"nombre": "RocaGolpeSierra",
+					"se_examina": true,
+					"tipo": "rock_smash"
+				}
+			],
+			"opcional": [
+				"RevivirSierra"
+			],
+			"tras_bloqueo": []
+		},
+		"ruta_17/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						24,
+						6
+					],
+					"condicion": "flag:atajo:ruta_17/exterior:CancelaFraga",
+					"nombre": "CancelaFraga",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [],
+			"tras_bloqueo": []
+		},
+		"ruta_18/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						20,
+						8
+					],
+					"condicion": "flag:atajo:ruta_18/exterior:CancelaPicos",
+					"nombre": "CancelaPicos",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [],
+			"tras_bloqueo": []
+		},
+		"ruta_19/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						29,
+						15
+					],
+					"condicion": "flag:atajo:ruta_19/exterior:TroncoAcantilado",
+					"nombre": "TroncoAcantilado",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [],
+			"tras_bloqueo": []
+		},
+		"ruta_20/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						18,
+						5
+					],
+					"condicion": "rock_smash",
+					"nombre": "RocaGolpeValle",
+					"se_examina": true,
+					"tipo": "rock_smash"
+				}
+			],
+			"opcional": [
+				"HiperpocionValle"
+			],
+			"tras_bloqueo": []
+		},
+		"ruta_24/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						20,
+						6
+					],
+					"condicion": "flag:atajo:ruta_24/exterior:CancelaLlanura",
+					"nombre": "CancelaLlanura",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [],
+			"tras_bloqueo": []
+		},
+		"ruta_3/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						30,
+						26
+					],
+					"condicion": "flag:atajo:ruta_3/exterior:TroncoPinar",
+					"nombre": "TroncoPinar",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [],
+			"tras_bloqueo": []
+		},
+		"ruta_5/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						6,
+						6
+					],
+					"condicion": "rock_smash",
+					"nombre": "RocaGolpeCerro",
+					"se_examina": true,
+					"tipo": "rock_smash"
+				}
+			],
+			"opcional": [
+				"SuperpocionCerro"
+			],
+			"tras_bloqueo": []
+		},
+		"ruta_7/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						8,
+						32
+					],
+					"condicion": "strength",
+					"nombre": "RocaFuerzaCerro",
+					"se_examina": true,
+					"tipo": "strength"
+				}
+			],
+			"opcional": [
+				"SuperBallCerro"
+			],
+			"tras_bloqueo": []
+		},
+		"ruta_8/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						17,
+						9
+					],
+					"condicion": "cut",
+					"nombre": "ArbolCorteLadera",
+					"se_examina": true,
+					"tipo": "cut"
+				}
+			],
+			"opcional": [
+				"CuerdaHuidaLadera"
+			],
+			"tras_bloqueo": []
+		},
+		"ruta_9/exterior": {
+			"bloqueos": [
+				{
+					"casilla": [
+						13,
+						42
+					],
+					"condicion": "cut",
+					"nombre": "ArbolCorteHuerta",
+					"se_examina": true,
+					"tipo": "cut"
+				},
+				{
+					"casilla": [
+						15,
+						45
+					],
+					"condicion": "flag:atajo:ruta_9/exterior:CancelaHuerta",
+					"nombre": "CancelaHuerta",
+					"se_examina": true,
+					"tipo": "atajo"
+				}
+			],
+			"opcional": [
+				"PepitaHuerta"
+			],
+			"tras_bloqueo": []
+		}
+	}
+}

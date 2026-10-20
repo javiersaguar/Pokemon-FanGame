@@ -1,7 +1,8 @@
 extends SceneTree
 ## Captura un mapa entero a PNG (vista de pájaro, a escala real o reducida) para revisarlo y
 ## para las comparativas de docs/arte/comparativas/. Necesita ventana (no --headless).
-##   godot --path . -s res://maps/_tools/captura_mapa.gd -- <id del mapa> <salida.png> [escala]
+##   godot --path . -s res://maps/_tools/captura_mapa.gd -- <id del mapa> <salida.png> [escala] [x0 y0 x1 y1]
+##   (el recorte, en casillas, es opcional)
 ## Ejemplo: -- pueblo_inicial/exterior res://docs/arte/comparativas/san_miguel_mapa.png 0.5
 
 
@@ -36,6 +37,11 @@ func _initialize() -> void:
 		await process_frame
 	await RenderingServer.frame_post_draw
 	var image := viewport.get_texture().get_image()
+	# Recorte opcional en casillas: -- <mapa> <salida> <escala> <x0> <y0> <x1> <y1>
+	if args.size() >= 7:
+		var a := Vector2i(int(args[3]), int(args[4])) - used.position
+		var b := Vector2i(int(args[5]), int(args[6])) - used.position + Vector2i.ONE
+		image = image.get_region(Rect2i(a * Grid.TILE, (b - a) * Grid.TILE))
 	if scale != 1.0:
 		image.resize(int(image.get_width() * scale), int(image.get_height() * scale), Image.INTERPOLATE_LANCZOS)
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(out).get_base_dir())

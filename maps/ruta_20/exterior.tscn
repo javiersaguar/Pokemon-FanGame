@@ -15,6 +15,8 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="13_1q7nx"]
 [ext_resource type="PackedScene" path="res://src/overworld/item_ball/item_ball.tscn" id="13_j0tfo"]
 [ext_resource type="Script" path="res://src/overworld/item_ball/item_ball.gd" id="14_ypej4"]
+[ext_resource type="PackedScene" path="res://src/overworld/campo/golpe_roca.tscn" id="15_ypej4"]
+[ext_resource type="Script" path="res://src/overworld/field_obstacle.gd" id="16_wyahx"]
 
 [sub_resource type="Resource" id="Resource_i8lf2"]
 script = ExtResource("2_1q7nx")
@@ -143,6 +145,16 @@ position = Vector2(48, 1488)
 script = ExtResource("14_ypej4")
 item_id = &"revive"
 hidden_item = true
+
+[node name="RocaGolpeValle" type="Node2D" parent="Entities" unique_id=986802438 instance=ExtResource("15_ypej4")]
+position = Vector2(592, 176)
+script = ExtResource("16_wyahx")
+action = "rock_smash"
+
+[node name="HiperpocionValle" type="Node2D" parent="Entities" unique_id=660734815 instance=ExtResource("13_j0tfo")]
+position = Vector2(624, 80)
+script = ExtResource("14_ypej4")
+item_id = &"hyperpotion"
 
 [node name="Above" type="TileMapLayer" parent="." unique_id=2120744060]
 z_index = 10

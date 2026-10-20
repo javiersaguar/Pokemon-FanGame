@@ -119,6 +119,26 @@ Personajes fijos de `data/personajes_en_el_mapa.json` que tapan un paso hasta te
 - **Obras de la A-6 hasta 7 medallas** (`madrid/moncloa`): obras_a6_1, obras_a6_2, obras_a6_3, obras_a6_4, obras_a6_5. Cierra `madrid/moncloa` → `ruta_4/exterior`.
 - **C-5 averiado hasta 1 medalla** (`madrid/retiro`): averia_c5_1, averia_c5_2. Cierra `madrid/retiro` → `leganes/exterior`, `madrid/retiro` → `mostoles/exterior`.
 
+## Obstáculos de campo y atajos
+
+Rocas de Golpe Roca y de Fuerza, arbolillos de Corte y troncos que se apartan desde un lado (`data/bloqueos_campo.json`, de `tools/mundo/bloqueos_campo.gd`). Las salidas a las que solo se llega abriendo uno se quitan del grafo mientras su acción no esté disponible (`data/world.json` → `field.actions`; ahora: bike, good_rod, old_rod, super_rod).
+
+- **15 bloqueos** en 13 mapas.
+  - `ruta_1/exterior`: 1 atajo, 1 cut. Detrás: CarameloRaroRibera.
+  - `ruta_10/exterior`: 1 atajo.
+  - `ruta_12/exterior`: 1 rock_smash. Detrás: RevivirSierra.
+  - `ruta_17/exterior`: 1 atajo.
+  - `ruta_18/exterior`: 1 atajo.
+  - `ruta_19/exterior`: 1 atajo.
+  - `ruta_20/exterior`: 1 rock_smash. Detrás: HiperpocionValle.
+  - `ruta_24/exterior`: 1 atajo.
+  - `ruta_3/exterior`: 1 atajo.
+  - `ruta_5/exterior`: 1 rock_smash. Detrás: SuperpocionCerro.
+  - `ruta_7/exterior`: 1 strength. Detrás: SuperBallCerro.
+  - `ruta_8/exterior`: 1 cut. Detrás: CuerdaHuidaLadera.
+  - `ruta_9/exterior`: 1 atajo, 1 cut. Detrás: PepitaHuerta.
+- Ninguna salida queda detrás de un bloqueo: solo cierran objetos, zonas opcionales y atajos.
+
 ## Uniones de un solo sentido
 
 - `madrid/atico_ayuso` → `madrid/chamberi`: a propósito (de la terraza del ático se baja a Chamberí; se sube con Ayuso desde su despacho (evento)).

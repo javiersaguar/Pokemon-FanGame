@@ -4,11 +4,13 @@ extends RefCounted
 ## pinares al norte y el paseo del Henares con sotos, juncos y un pescador. Se conservan los
 ## edificios, sus puertas, los carteles, Wilmer, Nuria, Álex y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+func vestir_inicial(v: Vestidor) -> void:
 	var R := Vestidor.rects
 	# Cerro del noroeste: meseta con hierba alta; escalera en la columna 6.
 	v.plateau(Rect2i(0, 0, 13, 7), [6])
@@ -66,3 +68,10 @@ func vestir(v: Vestidor) -> void:
 	v.fill({"estilo": "arboleda", "zona": Rect2i(0, 18, 72, 9), "margen": [1, 1],
 		"arboles": [&"arbol_verde", &"pino", &"arbol_redondo"], "hueco": 1, "adornos": 0.07,
 		"excluir": [Rect2i(36, 18, 11, 9)]})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.bolsa(v, "RocaGolpeCerro", "rock_smash", Vector2i(6, 6))
+	await v.refresh()

@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="7_vfv51"]
 [ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="8_ga87v"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/repartidorbici.png" id="9_ga87v"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="9_xkdii"]
 [ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="10_11a4j"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/opositor_f.png" id="10_xkdii"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/estudianteinge.png" id="11_11a4j"]
@@ -19,7 +18,11 @@
 [ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="14_c5cy2"]
 [ext_resource type="PackedScene" path="res://src/overworld/item_ball/item_ball.tscn" id="16_683dj"]
 [ext_resource type="Script" path="res://src/overworld/item_ball/item_ball.gd" id="17_k7ssn"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/crossfitero.png" id="18_683dj"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/tuno.png" id="19_k7ssn"]
 [ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_fisherman.png" id="19_u3bgj"]
+[ext_resource type="PackedScene" path="res://src/overworld/campo/golpe_roca.tscn" id="21_u3bgj"]
+[ext_resource type="Script" path="res://src/overworld/field_obstacle.gd" id="22_t5dor"]
 
 [sub_resource type="Resource" id="Resource_t5dor"]
 script = ExtResource("2_c5cy2")
@@ -150,9 +153,10 @@ position = Vector2(272, 848)
 script = ExtResource("8_ga87v")
 trainer_id = &"ruta5_mozo"
 sight_range = 3
+display_name = "Crossfitero Rubén"
 lines = PackedStringArray()
 turn_to_player = true
-sprite_sheet = ExtResource("9_xkdii")
+sprite_sheet = ExtResource("18_683dj")
 initial_facing = 3
 
 [node name="Tuno" type="Node2D" parent="Entities" unique_id=526536690 instance=ExtResource("7_vfv51")]
@@ -160,9 +164,10 @@ position = Vector2(1360, 720)
 script = ExtResource("8_ga87v")
 trainer_id = &"ruta5_tuno"
 sight_range = 3
+display_name = "Tuno Ignacio"
 lines = PackedStringArray()
 turn_to_player = true
-sprite_sheet = ExtResource("9_xkdii")
+sprite_sheet = ExtResource("19_k7ssn")
 initial_facing = 1
 
 [node name="PescadorHenares" type="Node2D" parent="Entities" unique_id=537229137 instance=ExtResource("10_11a4j")]
@@ -188,6 +193,11 @@ position = Vector2(1648, 592)
 script = ExtResource("6_0j7nf")
 lines = PackedStringArray("OBRAS EN LA A-2.", "Desvío por el campo. Disculpen las molestias (desde 2009).")
 show_sprite = false
+
+[node name="RocaGolpeCerro" type="Node2D" parent="Entities" unique_id=1982409988 instance=ExtResource("21_u3bgj")]
+position = Vector2(208, 208)
+script = ExtResource("22_t5dor")
+action = "rock_smash"
 
 [node name="Above" type="TileMapLayer" parent="." unique_id=1269454870]
 z_index = 10

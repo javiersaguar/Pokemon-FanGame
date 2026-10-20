@@ -5,11 +5,13 @@ extends RefCounted
 ## hierba corta la carretera del bosque del norte al del sur antes de Santander. Se conservan las
 ## casas, sus puertas, los carteles, los entrenadores, los vecinos y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+func vestir_inicial(v: Vestidor) -> void:
 	# Paso obligado por hierba de bosque a bosque antes de Santander.
 	v.grass_band(Rect2i(52, 18, 2, 14))
 	v.hedge(2, 9, 13)
@@ -21,3 +23,10 @@ func vestir(v: Vestidor) -> void:
 	await v.refresh()
 	v.fill({"estilo": "arboleda", "margen": [1, 1], "arboles": [&"arbol_verde", &"arbol_redondo"], "hueco": 2,
 		"adornos": 0.06, "excluir": [Rect2i(20, 0, 30, 14)]})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.atajo(v, "CancelaPicos", Vector2i(19, 8), Vector2i.RIGHT, 1, "santander/exterior")
+	await v.refresh()

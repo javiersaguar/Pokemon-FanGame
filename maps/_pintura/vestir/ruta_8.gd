@@ -4,11 +4,13 @@ extends RefCounted
 ## viñas del Bages junto a Santpedor, frutales en Sant Esteve y bosque al sur. Se conservan el
 ## monasterio, las agujas, las casas, los carteles, Laia, Oriol y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+func vestir_inicial(v: Vestidor) -> void:
 	var R := Vestidor.rects
 	# Explanada del monasterio: cipreses, flores y bancos.
 	for at: Vector2i in [Vector2i(26, 11), Vector2i(48, 11)]:
@@ -49,3 +51,10 @@ func vestir(v: Vestidor) -> void:
 	# Pinar en las laderas y bosque al sur.
 	v.fill({"estilo": "bosque", "margen": [1, 1], "sueltos": 0.45, "adornos": 0.07,
 		"excluir": [Rect2i(23, 0, 28, 13)]})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.bolsa(v, "ArbolCorteLadera", "cut", Vector2i(17, 9))
+	await v.refresh()

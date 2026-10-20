@@ -893,6 +893,26 @@ Worktree `pokemon-panchito-agente5`. Encargo, por orden: corrientes y escollos d
   - Herramientas: `Vestidor.current()`, `reef()` y `obstacle()`; las recetas de mar piden `var con_surf := true`. `maps/_tools/ascii_mapa.gd` dibuja un mapa en texto para planear.
   - Arte copiado sin tocar del pack 05 (`assets/sprites/overworld/campo/`), con su procedencia en `docs/arte/licencias.md` y `CREDITOS.md`.
 
+- **Obstáculos de campo** (`Vestidor.obstacle()`, `Ruta.bolsa()`): 9, todos en la entrada de una bolsa sin salidas; detrás solo hay un objeto.
+  - Corte: Ruta 1 (Caramelo Raro nuevo), Ruta 8 (Cuerda Huida) y Ruta 9 (Pepita nueva).
+  - Golpe Roca: escalera del cerro de la Ruta 5 (Superpoción), Ruta 12 (Revivir nuevo) y Ruta 20 (Hiperpoción nueva).
+  - Fuerza: escalera del cerro de la Ruta 7 (Super Ball); se empuja hacia arriba y queda encima del cerro.
+  - Al examinarlos sin la acción sale un texto (provisional) en `FieldObstacle`.
+  - Como las acciones siguen sin objeto (PENDIENTE JAVIER), hoy esos objetos no se pueden coger.
+  - **Cascada, no:** el tileset no tiene casillas de cascada; pedidas a Edificios en `docs/mapas/reservas.md`.
+- **Atajos que se abren más tarde** (`Vestidor.shortcut()`, `Ruta.atajo()` y `Ruta.atajo_primero()`; `src/overworld/campo/atajo.gd`): un tronco caído (paso de norte a sur) o una cancela (paso de oeste a este) abre un hueco en un muro fino. Solo se abre desde el lado más cercano, andando, al destino de la ruta; desde el otro se lee que no se puede. Al abrirlo pone `atajo:<mapa>:<nombre>` para siempre.
+  - Rutas 1, 3, 9, 10, 17, 18, 19 y 24. Ahorran entre 16 y 84 pasos.
+  - `Ruta.atajo_primero()` descarta los sitios que, abiertos, dejarían cruzar la ruta sin pisar hierba (así se descartaron uno en la 1, tres en la 17 y uno en la 24).
+  - **Rutas 2, 4, 11 y 20 sin atajo:** el camino ya es directo y no hay ningún muro fino que ahorre al menos 14 pasos (`maps/_tools/buscar_bloqueos.gd`). Habría que crear un rodeo nuevo solo para poner el atajo; no se ha hecho.
+- **Comprobaciones nuevas:**
+  - `tools/mundo/bloqueos_campo.gd` escribe `data/bloqueos_campo.json` con los bloqueos de cada mapa, lo que dejan detrás y las salidas a las que solo se llega abriéndolos (ninguna).
+  - `tools/mundo/grafo_mundo.py` lo lee: quita del grafo esas salidas mientras su acción no esté disponible y lo cuenta en `docs/mundo/conexiones.md`.
+  - `tests/mundo/test_bloqueos_campo.gd` comprueba que ninguna salida queda cerrada, que cada obstáculo cierra algo, que el archivo está al día y que cada atajo se cruza abierto, se rodea cerrado (12 pasos o más) y solo se abre desde su lado.
+  - `alcance.gd` da como opcional lo que queda detrás de un obstáculo o un atajo. Las puertas, pasarelas y bordes tienen que alcanzarse con ellos puestos.
+  - `vestir_exterior.gd` hace lo mismo y comprueba la hierba obligada con los atajos abiertos.
+  - Alcance con 0 problemas en las 13 rutas tocadas.
+- Herramientas: `maps/_tools/buscar_bloqueos.gd` propone bolsas y atajos, y `captura_mapa.gd` acepta un recorte en casillas.
+
 ### Piezas propias de los hitos prestados (2026-10-14)
 
 Sustituidas en el mapa, sin repintar (las demás puertas se quedan):

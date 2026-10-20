@@ -4,11 +4,13 @@ extends RefCounted
 ## público, luces y la barra; y un pastor en el cerro grande. Se conservan el escenario, las mesas
 ## del sur, los carteles, Kike, Vane y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+func vestir_inicial(v: Vestidor) -> void:
 	var R := Vestidor.rects
 	# Laguna de Sariñena al nordeste, con juncos y nenúfares.
 	v.pond(Rect2i(66, 0, 6, 8), [Vector2i(68, 3), Vector2i(69, 5), Vector2i(67, 6)])
@@ -54,3 +56,10 @@ func vestir(v: Vestidor) -> void:
 	# Piedras y matojos secos por todo el desierto, menos el festival y la carretera.
 	v.fill({"estilo": "roquedal", "suelo": ["sand"], "densidad": 0.12, "margen": [1, 1], "adornos": 0.0,
 		"excluir": [Rect2i(36, 6, 22, 8)]})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.bolsa(v, "RocaFuerzaCerro", "strength", Vector2i(8, 32))
+	await v.refresh()

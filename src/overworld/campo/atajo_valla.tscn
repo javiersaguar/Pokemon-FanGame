@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://src/overworld/campo/atajo.gd" id="1_atajo"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/gen4.png" id="2_gen4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_valla"]
+atlas = ExtResource("2_gen4")
+region = Rect2(0, 352, 32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_valla"]
+size = Vector2(28, 60)
+
+[node name="AtajoValla" type="Node2D"]
+script = ExtResource("1_atajo")
+closed_text = "Es una cancela con el cerrojo por el otro lado."
+open_text = "Descorres el cerrojo y abres la cancela. ¡Ya hay un atajo por aquí!"
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 16)
+texture = SubResource("AtlasTexture_valla")
+
+[node name="Body" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+position = Vector2(0, 16)
+shape = SubResource("RectangleShape2D_valla")

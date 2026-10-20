@@ -5,6 +5,8 @@ extends RefCounted
 ## surcos, tapias de piedra seca y flores de campo. Se conservan los molinos, las casas, sus puertas,
 ## los carteles, los entrenadores, los vecinos y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
@@ -35,7 +37,7 @@ func vestir_inicial(v: Vestidor) -> void:
 ## Segunda pasada (2026-10-20): relieve y agua. Una laguna manchega al este que sale del mapa como
 ## arroyo, con juncos y nenúfares, y un cerro con escalera al sureste;
 ## a sus pies, una Pepita escondida.
-func vestir(v: Vestidor) -> void:
+func vestir_segunda(v: Vestidor) -> void:
 	v.remove_objects([&"arbol_redondo"], Rect2i(30, 22, 18, 7))
 	v.remove_objects([&"arbol_redondo"], Rect2i(36, 57, 12, 7))
 	await v.refresh()
@@ -45,4 +47,13 @@ func vestir(v: Vestidor) -> void:
 	v.flowers(Rect2i(33, 27, 6, 1), 0.4, 0.5)
 	v.item("PepitaCerro", &"nugget", Vector2i(36, 62), true)
 	v.item("CaramelosLaguna", &"rarecandy", Vector2i(31, 26), true)
+	await v.refresh()
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.atajo_primero(v, "CancelaLlanura", [[Vector2i(19, 1), Vector2i.RIGHT, 1], [Vector2i(19, 6), Vector2i.RIGHT, 1],
+			[Vector2i(1, 19), Vector2i.DOWN, 2], [Vector2i(19, 13), Vector2i.RIGHT, 1], [Vector2i(6, 19), Vector2i.DOWN, 2]],
+			"puertollano/exterior")
 	await v.refresh()

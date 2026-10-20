@@ -5,11 +5,13 @@ extends RefCounted
 ## del muro de la sierra al pinar. Se conservan las casas, sus puertas, los carteles, los entrenadores,
 ## los vecinos y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+func vestir_inicial(v: Vestidor) -> void:
 	# Paso obligado por hierba de la falda de la sierra al pinar del sur.
 	v.grass_band(Rect2i(44, 22, 2, 14))
 	v.flowers(Rect2i(3, 6, 4, 2), 0.4)
@@ -22,3 +24,10 @@ func vestir(v: Vestidor) -> void:
 	await v.refresh()
 	v.fill({"estilo": "arboleda", "margen": [1, 1], "arboles": [&"pino", &"arbol_redondo"], "hueco": 2,
 		"adornos": 0.06, "excluir": [Rect2i(18, 0, 34, 22)]})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.bolsa(v, "RocaGolpeSierra", "rock_smash", Vector2i(21, 33), "RevivirSierra", &"revive")
+	await v.refresh()

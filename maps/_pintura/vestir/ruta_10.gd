@@ -27,10 +27,17 @@ func vestir_inicial(v: Vestidor) -> void:
 ## Segunda pasada (2026-10-20): el paseo empedrado recto pasa a ser un camino de tierra que va de un
 ## lado a otro entre palmeras y pinos, al norte del pueblo y al sur del paso de hierba. El paseo del
 ## pueblo (filas 29-51) se queda.
-func vestir(v: Vestidor) -> void:
+func vestir_segunda(v: Vestidor) -> void:
 	await Ruta.romper_avenida(v, Rect2i(25, 2, 4, 27), 9)
 	await Ruta.romper_avenida(v, Rect2i(25, 55, 4, 9), 5)
 	v.flowers(Rect2i(27, 16, 2, 1), 0.3)
 	v.item("PolvoEstelarPaseo", &"stardust", Vector2i(28, 6), true)
 	await v.refresh()
 	v.fill({"estilo": "arboleda", "zona": Rect2i(24, 2, 6, 27), "margen": [1, 1], "arboles": [&"palmera", &"pino"], "hueco": 2, "adornos": 0.08})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.atajo(v, "TroncoPinada", Vector2i(7, 14), Vector2i.DOWN, 1, "alicante/exterior")
+	await v.refresh()

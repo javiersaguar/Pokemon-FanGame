@@ -4,11 +4,13 @@ extends RefCounted
 ## un paso obligado por hierba en la garganta del bosque antes de Pamplona. Se conservan el caserío,
 ## sus puertas, los carteles, los entrenadores, los vecinos y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+func vestir_inicial(v: Vestidor) -> void:
 	# Paso obligado por hierba en la garganta del bosque antes de Pamplona.
 	v.grass_band(Rect2i(28, 49, 8, 2))
 	v.fence(0, 9, 31)
@@ -20,3 +22,10 @@ func vestir(v: Vestidor) -> void:
 	await v.refresh()
 	v.fill({"estilo": "arboleda", "margen": [1, 1], "arboles": [&"arbol_verde", &"arbol_redondo"], "hueco": 2,
 		"adornos": 0.06})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.bolsa(v, "RocaGolpeValle", "rock_smash", Vector2i(18, 5), "HiperpocionValle", &"hyperpotion")
+	await v.refresh()

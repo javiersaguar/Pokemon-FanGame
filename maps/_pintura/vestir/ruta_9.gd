@@ -33,7 +33,7 @@ func vestir_inicial(v: Vestidor) -> void:
 ## Segunda pasada (2026-10-20): la avenida empedrada recta de cuatro casillas pasa a ser un camino de
 ## tierra que va de un lado a otro entre la pinada; el resto, hierba con pinos y flores. Las dos
 ## casillas que rodeaban el paso de hierba de la fila 36 pasan a hierba alta.
-func vestir(v: Vestidor) -> void:
+func vestir_segunda(v: Vestidor) -> void:
 	await Ruta.romper_avenida(v, Rect2i(25, 2, 4, 55), 9)
 	v.tall_grass([Vector2i(24, 36), Vector2i(25, 36)])
 	v.flowers(Rect2i(25, 12, 2, 1), 0.3)
@@ -41,3 +41,11 @@ func vestir(v: Vestidor) -> void:
 	v.item("PerlaPinada", &"bigpearl", Vector2i(28, 28), true)
 	await v.refresh()
 	v.fill({"estilo": "arboleda", "zona": Rect2i(24, 2, 6, 55), "margen": [1, 1], "arboles": [&"pino", &"arbol_verde"], "hueco": 2, "adornos": 0.08})
+
+
+## Pasada del 2026-10-20 (rama feat/rutas-anil-3): obstáculos de campo (solo cierran objetos y zonas
+## opcionales; las acciones siguen sin objeto, PENDIENTE JAVIER) y atajos que se abren desde un lado.
+func vestir(v: Vestidor) -> void:
+	Ruta.bolsa(v, "ArbolCorteHuerta", "cut", Vector2i(13, 42), "PepitaHuerta", &"nugget")
+	Ruta.atajo(v, "CancelaHuerta", Vector2i(14, 45), Vector2i.RIGHT, 1, "ruta_10/exterior")
+	await v.refresh()

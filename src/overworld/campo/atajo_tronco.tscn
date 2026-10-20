@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://src/overworld/campo/atajo.gd" id="1_atajo"]
+[ext_resource type="Texture2D" path="res://assets/tilesets/exterior/gen4.png" id="2_gen4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tronco"]
+atlas = ExtResource("2_gen4")
+region = Rect2(0, 160, 64, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tronco"]
+size = Vector2(60, 28)
+
+[node name="AtajoTronco" type="Node2D"]
+script = ExtResource("1_atajo")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(16, 0)
+texture = SubResource("AtlasTexture_tronco")
+
+[node name="Body" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_tronco")

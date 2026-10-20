@@ -79,6 +79,30 @@ def leer_mapas() -> dict:
     return maps
 
 
+def bloqueos(maps: dict) -> dict:
+    """Obstáculos de campo y atajos (data/bloqueos_campo.json, de tools/mundo/bloqueos_campo.gd).
+
+    Quita de `maps` las salidas a las que solo se llega abriendo un bloqueo cuya acción no está disponible
+    (data/world.json → field.actions.<acción>.item vacío) o que es un atajo (se abre en el propio mapa)."""
+    path = ROOT / "data" / "bloqueos_campo.json"
+    data = json.loads(path.read_text(encoding="utf-8")).get("mapas", {}) if path.exists() else {}
+    world = json.loads((ROOT / "data" / "world.json").read_text(encoding="utf-8"))
+    actions = world.get("field", {}).get("actions", {})
+    ready = {a for a, v in actions.items() if isinstance(v, dict) and v.get("item")}
+    cut = []
+    for k, info in data.items():
+        for exit_ in info.get("tras_bloqueo", []):
+            if all(c in ready for c in exit_["condicion"]) or k not in maps:
+                continue
+            kind, name = exit_["salida"].split(" ", 1)
+            if kind == "pasarela":
+                maps[k]["warps"] = [w for w in maps[k]["warps"] if w[0] != name]
+            else:
+                maps[k]["edges"] = [e for e in maps[k]["edges"] if e[0] != name]
+            cut.append((k, exit_["salida"], exit_["destino"], exit_["condicion"]))
+    return {"mapas": data, "cortadas": cut, "listas": sorted(ready)}
+
+
 def grafo(maps: dict, first_visit: bool = False) -> tuple:
     """Grafo con sentido. Con first_visit, sin las pasarelas que piden haber estado ya en el destino."""
     graph = {k: set() for k in maps}
@@ -209,6 +233,7 @@ def main() -> None:
     region = json.loads((ROOT / "data" / "region.json").read_text(encoding="utf-8"))
     starts = [region["locations"][s]["map"] for s in region.get("start", [])]
     maps = leer_mapas()
+    blocks = bloqueos(maps)
     graph, kinds, missing = grafo(maps)
     first_graph = grafo(maps, True)[0]
     gates = cortes(maps)
@@ -311,6 +336,27 @@ def main() -> None:
     for g in gates:
         links = ", ".join("`%s` → `%s`" % ab for ab in sorted(g["links"])) or "—"
         lines.append("- **%s** (`%s`): %s. Cierra %s." % (g["label"], g["map"], ", ".join(g["ids"]), links))
+    lines += ["", "## Obstáculos de campo y atajos", "",
+              "Rocas de Golpe Roca y de Fuerza, arbolillos de Corte y troncos que se apartan desde un lado "
+              "(`data/bloqueos_campo.json`, de `tools/mundo/bloqueos_campo.gd`). Las salidas a las que solo se llega "
+              "abriendo uno se quitan del grafo mientras su acción no esté disponible (`data/world.json` → "
+              "`field.actions`; ahora: %s)." % (", ".join(blocks["listas"]) or "ninguna"), ""]
+    total = sum(len(v.get("bloqueos", [])) for v in blocks["mapas"].values())
+    lines.append("- **%d bloqueos** en %d mapas." % (total, len(blocks["mapas"])))
+    for k in sorted(blocks["mapas"]):
+        v = blocks["mapas"][k]
+        kinds_count = {}
+        for b in v.get("bloqueos", []):
+            kinds_count[b["tipo"]] = kinds_count.get(b["tipo"], 0) + 1
+        what = ", ".join("%d %s" % (n, t) for t, n in sorted(kinds_count.items()))
+        extra = (" Detrás: %s." % ", ".join(v["opcional"])) if v.get("opcional") else ""
+        lines.append("  - `%s`: %s.%s" % (k, what, extra))
+    if blocks["cortadas"]:
+        lines += ["", "**Salidas tras un bloqueo cerrado (quitadas del grafo):**", ""]
+        for k, s, t, c in blocks["cortadas"]:
+            lines.append("- `%s`, %s → `%s` (hace falta: %s)." % (k, s, t, ", ".join(c)))
+    else:
+        lines.append("- Ninguna salida queda detrás de un bloqueo: solo cierran objetos, zonas opcionales y atajos.")
     lines += ["", "## Uniones de un solo sentido", ""]
     for a, b, why in one_way_ok:
         lines.append("- `%s` → `%s`: a propósito (%s)." % (a, b, why))

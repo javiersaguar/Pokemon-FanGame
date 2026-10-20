@@ -55,15 +55,23 @@ func _initialize() -> void:
 		q.collision_mask = mask
 		q.collide_with_areas = false
 		return space.intersect_point(q, 1).is_empty()
-	var seen := {start: true}
-	var queue: Array[Vector2i] = [start]
-	while not queue.is_empty():
-		var t: Vector2i = queue.pop_front()
-		for d: Vector2i in DIRS:
-			var n := t + d
-			if not seen.has(n) and free.call(n):
-				seen[n] = true
-				queue.append(n)
+	var seen := _walk(start, free)
+	# Obstáculos de campo y atajos (src/overworld/campo/): lo que solo se alcanza quitándolos es opcional
+	# (objetos y personajes); las puertas, pasarelas y bordes tienen que alcanzarse con ellos puestos.
+	var exclude: Array[RID] = []
+	for node: Node in map.get_node("Entities").get_children():
+		if node.scene_file_path.begins_with("res://src/overworld/campo/") and node.get_node_or_null("Body") != null:
+			exclude.append((node.get_node("Body") as CollisionObject2D).get_rid())
+	var opened := seen
+	if not exclude.is_empty():
+		opened = _walk(start, func(tile: Vector2i) -> bool:
+			if not bounds.has_point(tile):
+				return false
+			var q := PhysicsPointQueryParameters2D.new()
+			q.position = map.to_global(Grid.to_world(tile))
+			q.collision_mask = mask
+			q.exclude = exclude
+			return space.intersect_point(q, 1).is_empty())
 	print("%s: %d casillas a las que se llega desde '%s' %s." % [map_id, seen.size(), spawn_name, start])
 	var problems := 0
 	# Puertas de los edificios (casilla de la puerta de cada objeto con puerta).
@@ -95,7 +103,12 @@ func _initialize() -> void:
 		var near := false
 		for d: Vector2i in DIRS:
 			near = near or seen.has(t + d)
-		if not near:
+		var behind := false
+		for d: Vector2i in DIRS:
+			behind = behind or opened.has(t + d)
+		if not near and behind:
+			print("  tras un obstáculo (opcional): %s en %s" % [node.name, t])
+		elif not near:
 			problems += 1
 			print("  NO se llega a %s en %s" % [node.name, t])
 	# Pasarelas (ferris, avión, Cercanías): hay que poder pisar su casilla.
@@ -124,3 +137,16 @@ func _initialize() -> void:
 	print("%d problemas." % problems)
 	map.queue_free()
 	quit(1 if problems > 0 else 0)
+
+
+func _walk(start: Vector2i, free: Callable) -> Dictionary:
+	var seen := {start: true}
+	var queue: Array[Vector2i] = [start]
+	while not queue.is_empty():
+		var t: Vector2i = queue.pop_front()
+		for d: Vector2i in DIRS:
+			var n := t + d
+			if not seen.has(n) and free.call(n):
+				seen[n] = true
+				queue.append(n)
+	return seen

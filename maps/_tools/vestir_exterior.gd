@@ -55,12 +55,25 @@ func _dress(mid: String, dry: bool) -> void:
 	v.scan(space)
 	var after := _status(v)
 	var problems := 0
+	# Detrás de un obstáculo de campo solo puede quedar lo opcional (objetos y personajes): se mira
+	# también con los obstáculos quitados.
+	for at: Vector2i in v.obstacle_cells:
+		v.free[at] = true
+	var opened := _status(v)
+	for at: Vector2i in v.obstacle_cells:
+		v.free.erase(at)
 	for key: String in before:
 		if before[key] and not after.get(key, false):
+			if key.begins_with("personaje o cartel") and opened.get(key, false):
+				print("  · tras un obstáculo (opcional): ", key)
+				continue
 			problems += 1
 			print("  ✗ ya no se llega: ", key)
 	for key: String in after:
 		if not before.has(key) and not after[key]:
+			if key.begins_with("personaje o cartel") and opened.get(key, false):
+				print("  · tras un obstáculo (opcional): ", key)
+				continue
 			problems += 1
 			print("  ✗ no se llega a lo nuevo: ", key)
 	for line: String in v.log_lines:
@@ -73,6 +86,17 @@ func _dress(mid: String, dry: bool) -> void:
 		if must and int(costs[key]) == 0:
 			problems += 1
 			print("  ✗ se puede cruzar sin pisar hierba: ", key)
+	if must and not v.shortcut_cells.is_empty():
+		for at: Vector2i in v.shortcut_cells:
+			v.free[at] = true
+		var open_costs := v.grass_costs()
+		for key: String in open_costs:
+			print("  hierba mínima con los atajos abiertos %s: %d" % [key, open_costs[key]])
+			if int(open_costs[key]) == 0:
+				problems += 1
+				print("  ✗ con los atajos abiertos se cruza sin pisar hierba: ", key)
+		for at: Vector2i in v.shortcut_cells:
+			v.free.erase(at)
 	if must:
 		var connections: Array = map.get(&"data").connections
 		for i: int in connections.size():
