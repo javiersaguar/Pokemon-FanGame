@@ -91,6 +91,8 @@ const PROTECT_VOLATILES: Array[StringName] = [&"protect", &"banefulbunker", &"sp
 	&"silktrap", &"burningbulwark", &"obstruct", &"maxguard", &"protect_variant"]
 ## Movimientos cambiados durante el combate (Mimético): [Pokemon, índice, MoveSlot original].
 var _restore_slots: Array = []
+## Objetos que le quedan al entrenador rival en este combate (los «items» de su ficha de data/trainers).
+var _foe_items: Array[StringName] = []
 ## Formas cambiadas por habilidad que duran todo el combate: {Pokemon: especie original}.
 var _forme_restore: Dictionary = {}
 ## ¿Fue crítico el último golpe? (Irascible.)
@@ -126,6 +128,11 @@ func _init(battle_setup: BattleSetup) -> void:
 func start() -> Array[BattleEvent]:
 	if not _started:
 		_started = true
+		_foe_items.clear()
+		for t: Dictionary in setup.trainers:
+			for it: Variant in t.get("items", []):
+				if DataDB.has_item(StringName(str(it))):
+					_foe_items.append(StringName(str(it)))
 		_queue.append(_step_intro)
 	return _run()
 
@@ -1081,7 +1088,41 @@ func _do_run(b: Battler) -> void:
 
 # --- Objetos ---
 
+## Objetos que le quedan al rival (la IA de entrenador los usa desde el nivel 2).
+func foe_items() -> Array[StringName]:
+	return _foe_items
+
+
+## Objeto del entrenador rival: siempre sobre el Pokémon que está luchando, y se gasta.
+func _do_foe_item(b: Battler, action: BattleAction) -> void:
+	var it := DataDB.item(action.item_id)
+	_foe_items.erase(it.id)
+	result.items_used.append(it.id)
+	var who := BattleText.cap_name(b, false)
+	_msg(tr("¡%s ha usado %s!") % [_trainer_name(), it.name])
+	_emit(BattleEvent.ITEM_USED, FOE, b.slot, {"item": String(it.id), "item_name": it.name, "party_index": b.party_index})
+	match it.effect:
+		&"heal_hp", &"heal_and_cure":
+			var amount := int(it.param("amount", 0))
+			if it.effect_params.has("fraction"):
+				amount = maxi(1, roundi(b.pokemon.max_hp() * float(it.param("fraction"))))
+			var healed := _heal_pokemon(b.pokemon, b, amount, &"item")
+			if healed > 0:
+				_msg(tr("¡%s ha recuperado %d PS!") % [who, healed])
+			if it.effect == &"heal_and_cure":
+				_cure_pokemon(b.pokemon, b, [], true)
+		&"cure_status":
+			_cure_pokemon(b.pokemon, b, it.param("statuses", []), bool(it.param("confusion", false)))
+		&"boost_stat":
+			boost(b, {StringName(str(it.param("stat", "atk"))): int(it.param("stages", 1))}, false)
+		&"crit_boost":
+			b.crit_stage += int(it.param("stages", 1))
+
+
 func _do_item(b: Battler, action: BattleAction) -> void:
+	if b.side == FOE:
+		_do_foe_item(b, action)
+		return
 	var it := DataDB.item(action.item_id)
 	result.items_used.append(it.id)
 	if it.is_ball():
@@ -2787,6 +2828,15 @@ func _forced_action(b: Battler) -> BattleAction:
 				action.forced = true
 				return action
 	return null
+
+
+## ¿Es inmune a `move`? (Consulta sin efectos para la IA.)
+func is_immune(target: Battler, move: MoveData) -> bool:
+	return _is_immune(target, move)
+
+
+func is_trapped(b: Battler) -> bool:
+	return _is_trapped(b)
 
 
 ## ¿No puede cambiar ni huir? (Los de tipo Fantasma siempre pueden.)

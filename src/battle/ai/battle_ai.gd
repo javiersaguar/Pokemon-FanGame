@@ -6,6 +6,9 @@ extends RefCounted
 ##   2: además evita lo inútil (inmune, estado repetido) y usa un estado con sentido si el daño es flojo.
 ##   3: cambia si el que está no puede hacer daño y otro del equipo sí.
 ##   4: puntúa el golpe menos el contraataque del rival si no lo debilita.
+## Desde el 2, los entrenadores usan los objetos de su ficha (curar a 1/4 de los PS); desde el 3, curan
+## estados y cambian al que aguanta mejor si el que está caería antes de moverse. Entre golpes que
+## debilitan, el de más prioridad. No usa estados que una habilidad, un tipo o el campo impiden.
 ## Nunca usa información oculta: solo lo que el motor sabe del campo.
 
 
@@ -21,6 +24,9 @@ static func choose_action(engine: BattleEngine, side: int, slot: int, level: int
 	var target := engine.active(1 - side)
 	if level == 1:
 		return _with_mega(engine, b, _most_damage(engine, b, target, usable))
+	var item := _item_choice(engine, b, target, level)
+	if item != null:
+		return item
 	var best := -1
 	var best_score := -1
 	for i: int in usable:
@@ -28,10 +34,14 @@ static func choose_action(engine: BattleEngine, side: int, slot: int, level: int
 		if score > best_score:
 			best_score = score
 			best = i
-	if level >= 3 and target != null and not target.is_fainted():
+	if level >= 3 and target != null and not target.is_fainted() and not engine.is_trapped(b):
 		var switch_to := _best_bench(engine, side, target, b.party_index)
 		if switch_to >= 0 and best_score <= 0:
 			return BattleAction.switch_to(switch_to)
+		if best_score < 100000:
+			var safer := _safer_bench(engine, side, b, target)
+			if safer >= 0:
+				return BattleAction.switch_to(safer)
 	if best < 0:
 		return _with_mega(engine, b, BattleAction.fight(usable[engine.rng.randi_range(0, usable.size() - 1)]))
 	return _with_mega(engine, b, BattleAction.fight(best))
@@ -105,14 +115,62 @@ static func _score_move(engine: BattleEngine, user: Battler, target: Battler, mo
 	if move.is_status():
 		if level < 2 or not _status_is_useful(user, target, move):
 			return -1
+		if move.status != &"" and (not engine.can_set_status(target, move.status, user, false) or engine.is_immune(target, move)):
+			return -1
 		return maxi(1, target.pokemon.max_hp() / 6)
 	if damage <= 0:
 		return -1 if level >= 2 else damage
 	if damage >= target.pokemon.current_hp:
-		return 100000 + damage
+		# Entre los que debilitan, el de más prioridad (rematar antes de que actúe).
+		return 100000 + engine.move_priority(user, move) * 10000 + mini(damage, target.pokemon.current_hp)
 	if level >= 4:
 		return damage * 1000 - _best_damage(engine, target, user)
 	return damage
+
+
+## Objeto del entrenador: curar a 1/4 de los PS (nivel 2+) o quitar un estado (nivel 3+).
+static func _item_choice(engine: BattleEngine, b: Battler, target: Battler, level: int) -> BattleAction:
+	if b.side != BattleEngine.FOE or level < 2 or engine.setup.is_wild():
+		return null
+	var items := engine.foe_items()
+	var hp := b.pokemon.current_hp
+	var max_hp := b.pokemon.max_hp()
+	var foe_hits := _best_damage(engine, target, b) if target != null and not target.is_fainted() else 0
+	if hp * 4 <= max_hp:
+		var best := &""
+		var best_amount := 0
+		for id: StringName in items:
+			var it := DataDB.item(id)
+			if it.effect not in [&"heal_hp", &"heal_and_cure"]:
+				continue
+			var amount := int(it.param("amount", 0)) if not it.effect_params.has("fraction") else max_hp
+			if amount > best_amount:
+				best_amount = amount
+				best = id
+		# Solo si después de curarse aguanta el siguiente golpe (si no, mejor atacar).
+		if best != &"" and mini(max_hp, hp + best_amount) > foe_hits:
+			return BattleAction.use_item(best, b.party_index)
+	if level >= 3 and b.pokemon.status in [&"slp", &"frz", &"par", &"brn", &"tox"]:
+		for id: StringName in items:
+			var it := DataDB.item(id)
+			if it.effect == &"cure_status" and String(b.pokemon.status) in it.param("statuses", []):
+				return BattleAction.use_item(id, b.party_index)
+	return null
+
+
+## Nivel 3+: si el que está caería antes de moverse (el rival es más rápido y lo debilita), el del
+## equipo que aguanta su mejor golpe y le hace daño. −1 si no hay ninguno.
+static func _safer_bench(engine: BattleEngine, side: int, b: Battler, foe: Battler) -> int:
+	if engine.speed_of(foe) <= engine.speed_of(b) or _best_damage(engine, foe, b) < b.pokemon.current_hp:
+		return -1
+	var party := engine.party(side)
+	for i: int in party.size():
+		if i == b.party_index or not engine.side(side).can_switch_to(i):
+			continue
+		var bench := Battler.new(party[i], side, 0, i)
+		if _best_damage(engine, foe, bench) * 2 < party[i].current_hp and _best_damage(engine, bench, foe) > 0:
+			return i
+	return -1
 
 
 static func _status_is_useful(user: Battler, target: Battler, move: MoveData) -> bool:
