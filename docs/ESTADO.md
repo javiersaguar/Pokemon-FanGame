@@ -764,6 +764,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - **Ruta 19 · Costa cántabra:** receta `maps/_pintura/vestir/ruta_19.gd`. Paso obligado por hierba del acantilado al bosque, seto, flores, piedras en la playa. Hierba mínima Santander ⇄ Bilbao: 2 (antes 0). Alcance desde `from_santander` y `from_bilbao`: 0 problemas. Tres objetos nuevos y parche dorado rehecho. El faro sigue recortado.
 - **Ruta 17 · Camino gallego:** receta `maps/_pintura/vestir/ruta_17.gd`. Paso obligado por hierba entre el castro y la fraga, muro en los prados y arboleda. Hierba mínima Ruta 16 ⇄ Ruta 18: 1 (antes 0). Alcance desde `from_ruta_16` y `from_ruta_18`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 - Bloque integrado (rutas 13, 23, 19 y 17): suite 689/689, arte 11.568 PNG 0/0, datos 0 errores (1 aviso), grafo 961/961.
+- **Ruta 12 · Sierra Nevada:** receta `maps/_pintura/vestir/ruta_12.gd`. Paso obligado por hierba de la sierra al pinar, flores, piedras y arboleda. Hierba mínima Ruta 13 ⇄ Murcia: 2 (antes 0). Alcance desde `from_ruta_13` y `from_murcia`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 
 **Provisional:** arte, textos del guarda y colocación.
 
