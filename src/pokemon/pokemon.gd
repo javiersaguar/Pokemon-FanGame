@@ -30,6 +30,8 @@ var nature: StringName = &"hardy"
 var ability_slot: String = "0"
 var gender: StringName = GENDERLESS
 var shiny: bool = false
+## Factor Gigamax: al dinamaxizarse toma su forma Gigamax y usa el movimiento Gigamax de su especie.
+var gigantamax: bool = false
 var moves: Array[MoveSlot] = []
 var current_hp: int = 0
 ## "", "par", "brn", "psn", "tox", "slp" o "frz".
@@ -150,6 +152,8 @@ func apply_spec(spec: Dictionary) -> void:
 		gender = StringName(spec["gender"])
 	if spec.has("shiny"):
 		shiny = bool(spec["shiny"])
+	if spec.has("gigantamax"):
+		gigantamax = bool(spec["gigantamax"])
 	if spec.has("nickname"):
 		nickname = str(spec["nickname"])
 	if spec.has("tera_type"):
@@ -449,6 +453,7 @@ func to_dict() -> Dictionary:
 		"ability_slot": ability_slot,
 		"gender": String(gender),
 		"shiny": shiny,
+		"gigantamax": gigantamax,
 		"moves": moves.map(func(m: MoveSlot) -> Dictionary: return m.to_dict()),
 		"hp": current_hp,
 		"status": String(status),
@@ -482,6 +487,7 @@ static func from_dict(d: Dictionary) -> Pokemon:
 	p.ability_slot = str(d.get("ability_slot", "0"))
 	p.gender = StringName(d.get("gender", ""))
 	p.shiny = bool(d.get("shiny", false))
+	p.gigantamax = bool(d.get("gigantamax", false))
 	for m: Dictionary in d.get("moves", []):
 		p.moves.append(MoveSlot.from_dict(m))
 	p.current_hp = int(d.get("hp", 0))

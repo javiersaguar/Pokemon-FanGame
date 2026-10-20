@@ -148,6 +148,11 @@ Rama `feat/combate-fondos-efectos`, worktree `pokemon-panchito-agente4`.
 
 **Extra · Sonidos de las animaciones (hecho).** `tools/arte/sonidos_movimientos.py` lee los `pbSEPlay` de cada animación del pack 17 (EBDX move & common animation pack) y copia sin tocar los 114 sonidos usados a `assets/audio/se/anim/` (procedencia en `data/audio_assets.json`). `data/battle_motion_sounds.json` dice qué suena en cada movimiento (hasta 3, repartidos a lo largo de la animación); los que EBDX no anima usan el sonido más común de su tipo. Faltan en el pack 8 archivos que piden algunas animaciones (Flash, Flash3, Heal4, Ice7, eb_grass2, electric1, grass2, psychic3): esas usan el resto de sus sonidos. Test: `tests/combate/test_sonidos_movimientos.gd`.
 
+### Combate y sistemas · sesión del 20 de octubre, segunda parte (rama `feat/combate-3`)
+
+**Hecho:**
+1. **Gigamax por especie.** `Pokemon.gigantamax` (factor Gigamax; se guarda en la partida y se puede poner en las fichas con `"gigantamax": true`). Al dinamaxizarse, si la especie tiene forma Gigamax (`<especie>gmax` o la de su especie base), toma esa forma (evento `forme`) y sus golpes del tipo de su movimiento Gigamax pasan a ser ese movimiento; al acabar el Dinamax vuelve a su forma. Los 33 movimientos Gigamax tienen su efecto en `_gmax_side_effect` (daño residual 4 turnos, estados, atrapar, Gravedad, Trampa Rocas y púas de acero, crítico y curación de su bando, confusión, Tormento, bayas, Velo Aurora, Bostezo, Despejar...); Bombo, Balón Ígneo y Disparo Gigamax (160) pasan por alto las habilidades. Test por familia: `tests/combate/test_gigamax.gd`. **El juego no permite Dinamax en partida**: `BattleSetup.dynamax` solo se activa desde el menú de pruebas (F9); ningún combate normal lo pide. Cuándo y cómo se dinamaxiza en la aventura es **PENDIENTE JAVIER**.
+
 ### Combate y sistemas · sesión del 20 de octubre (rama `feat/combate-2`)
 
 Encargo: combate fiel a la 9.ª generación en todo lo que se usa en partida. Inventario regenerado al empezar (`auditar_combate.gd`: 29 habilidades con efecto, 253 movimientos sin script; `auditar_wikidex.py`: sin cambios).

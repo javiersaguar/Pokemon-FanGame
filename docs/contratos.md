@@ -1063,6 +1063,10 @@ Aditivo; nada se quita ni se renombra. Habilidades: `ability_catalog.gd` (las 29
 - **Eventos**: `BattleEvent.FORME` (`forme`): cambio de forma por habilidad o fin de Ilusión (`species`, `form_name`, `hp`, `max_hp` y `name` si cambia). La BattleScene cambia sprite y caja sin marca de megaevolución.
 - **Peticiones**: `SWITCH` con `reason` = `revivalblessing` solo admite debilitados (la BattleScene los deja elegir); `emergencyexit`, `ejectbutton` y `ejectpack` son cambios a mitad de turno como `uturn`.
 
+#### Gigamax (combate y sistemas, 2026-10-20)
+
+- `Pokemon.gigantamax: bool` (factor Gigamax; `to_dict`/`from_dict` y `apply_spec`). `BattleEngine.gmax_species(b)` devuelve la forma Gigamax o `&""`. Al dinamaxizarse con forma Gigamax, el Battler lleva el volátil `gigantamax` y `_as_max_move(base, user)` usa el movimiento Gigamax de su especie para su tipo (los que tienen 160 de potencia la conservan). Efectos en `_gmax_side_effect`. Condiciones nuevas: `gmaxvinelash`, `gmaxwildfire`, `gmaxcannonade`, `gmaxvolcalith` (base `GmaxResidualCondition`) y `gmaxsteelsurge`.
+
 #### Azar y ganchos de pruebas (Agente 5, 2026-10-07)
 
 - **Todas las tiradas del combate** pasan por `engine.rand_int(tag: StringName, lo: int, hi: int) -> int` y `engine.rand_chance(tag: StringName, num: int, den: int) -> bool`. Sin oráculo consumen `engine.rng` exactamente igual que antes (`randi_range(lo, hi)` y `randi_range(0, den - 1) < num`): misma semilla = mismo combate. **Los efectos nuevos que pidan azar deben usar estas funciones, no `engine.rng`.** Etiquetas actuales: `accuracy`, `crit`, `damage_roll`, `secondary`, `multihit`, `par`, `frz_thaw`, `slp_turns`, `confusion_turns`, `confusion_hit`, `attract`, `partiallytrapped_turns`, `lockedmove_turns`, `protect`, `shedskin`, `force_switch` y `run`.

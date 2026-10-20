@@ -99,6 +99,8 @@ var _forme_restore: Dictionary = {}
 var last_hit_crit := false
 var _dancing := false
 var _mirroring := false
+## Movimiento que se está usando ahora (para los que pasan por alto habilidades, como los Gigamax de 160).
+var _current_move_id: StringName = &""
 ## Último movimiento usado en el combate por cualquiera (Copión).
 var last_used_move: StringName = &""
 ## Golpes recibidos por cada Pokémon (uid → veces) en todo el combate (Puño Furia).
@@ -525,7 +527,7 @@ func _action_priority(b: Battler, action: BattleAction) -> int:
 	if m == null:
 		return 0
 	if b.dynamax_turns > 0 and m.id != STRUGGLE:
-		return _as_max_move(m).priority
+		return _as_max_move(m, b).priority
 	return move_priority(b, m)
 
 
@@ -1251,7 +1253,7 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 	var base_move := move
 	var z_status := false
 	if user.dynamax_turns > 0 and move.id != STRUGGLE:
-		move = _as_max_move(base_move)
+		move = _as_max_move(base_move, user)
 	elif action.z and not action.forced and can_z(user, action.move_index):
 		var built: MoveData = null if base_move.is_status() else _z_damage_move(user, base_move)
 		if base_move.is_status() or built != null:
@@ -1395,6 +1397,7 @@ func _use_move(user: Battler, move: MoveData) -> bool:
 
 
 func _use_move_inner(user: Battler, move: MoveData) -> bool:
+	_current_move_id = move.id
 	var wild := setup.is_wild()
 	var effect := Effects.move(move.id)
 	if effect != null:
@@ -2549,6 +2552,10 @@ func _start_tera(b: Battler) -> void:
 func _start_dynamax(b: Battler) -> void:
 	_dynamax_used[b.side] = true
 	b.dynamax_turns = 3
+	var gmax := gmax_species(b)
+	if gmax != &"":
+		b.volatiles[&"gigantamax"] = {"base": String(b.pokemon.species_id)}
+		change_forme(b, gmax)
 	if b.pokemon.max_hp() > 1:
 		var ratio := float(b.pokemon.current_hp) / float(b.pokemon.max_hp())
 		b.pokemon.battle_hp_scale = 2
@@ -2563,6 +2570,9 @@ func _end_dynamax(b: Battler) -> void:
 	if b == null or (b.dynamax_turns == 0 and b.pokemon.battle_hp_scale <= 1):
 		return
 	b.dynamax_turns = 0
+	if b.volatiles.has(&"gigantamax"):
+		b.volatiles.erase(&"gigantamax")
+		_revert_forme(b)
 	if b.pokemon.battle_hp_scale > 1:
 		var ratio := float(b.pokemon.current_hp) / float(b.pokemon.max_hp()) if b.pokemon.max_hp() > 0 else 0.0
 		b.pokemon.battle_hp_scale = 1
@@ -2571,9 +2581,42 @@ func _end_dynamax(b: Battler) -> void:
 	_emit(BattleEvent.DYNAMAX_END, b.side, b.slot, {"hp": b.pokemon.current_hp, "max_hp": b.pokemon.max_hp()})
 
 
-func _as_max_move(base: MoveData) -> MoveData:
+## Especie Gigamax de `b` si tiene el factor Gigamax y la especie la tiene (Charizard → charizardgmax).
+func gmax_species(b: Battler) -> StringName:
+	if b == null or not b.pokemon.gigantamax:
+		return &""
+	var id := b.pokemon.species_id
+	for candidate: String in [String(id) + "gmax", String(b.pokemon.species().base_species) + "gmax"]:
+		if candidate != "gmax" and DataDB.has_species(StringName(candidate)):
+			return StringName(candidate)
+	return &""
+
+
+## Movimiento Gigamax de la especie para un golpe de tipo `type` (null si no tiene).
+func _gmax_move_for(b: Battler, type: StringName) -> MoveData:
+	if b == null or not b.volatiles.has(&"gigantamax"):
+		return null
+	var base := StringName(str(b.volatiles[&"gigantamax"].get("base", "")))
+	var owners: Array[String] = [String(base)]
+	if DataDB.has_species(base):
+		owners.append(String(DataDB.species(base).base_species))
+	for id: StringName in DataDB.move_ids():
+		if String(id).begins_with("gmax"):
+			var move := DataDB.move(id)
+			if move.type == type and str(move.raw.get("is_max", "")) in owners:
+				return move
+	return null
+
+
+func _as_max_move(base: MoveData, user: Battler = null) -> MoveData:
 	if base.is_status():
 		return _copy_max(DataDB.move(&"maxguard"), base, 0)
+	var gmax := _gmax_move_for(user, base.type)
+	if gmax != null:
+		var power := gmax.power if gmax.power > 10 else _max_power(_z_base_power_of(base))
+		var copy := _copy_max(gmax, base, power)
+		copy.raw = {"is_max": true, "gmax": true}
+		return copy
 	var template: MoveData = null
 	for id: StringName in DataDB.move_ids():
 		var move := DataDB.move(id)
@@ -2657,7 +2700,97 @@ func _max_side_effect(user: Battler, target: Battler, id: StringName) -> void:
 		&"maxsteelspike":
 			_max_raise_side(user, &"def")
 		_:
-			pass
+			if String(id).begins_with("gmax"):
+				_gmax_side_effect(user, target, id)
+
+
+## Efecto propio de cada movimiento Gigamax (8.ª generación, como Showdown). «Rivales» son los del
+## bando del objetivo; «su bando», el usuario y su aliado.
+func _gmax_side_effect(user: Battler, target: Battler, id: StringName) -> void:
+	var foes: Array[Battler] = []
+	var allies: Array[Battler] = []
+	for slot: int in slot_count():
+		var f := active(target.side, slot)
+		if f != null and not f.is_fainted():
+			foes.append(f)
+		var a := active(user.side, slot)
+		if a != null and not a.is_fainted():
+			allies.append(a)
+	match id:
+		&"gmaxvinelash", &"gmaxwildfire", &"gmaxcannonade", &"gmaxvolcalith":
+			add_side_condition(target.side, id, user)
+		&"gmaxsteelsurge":
+			add_side_condition(target.side, &"gmaxsteelsurge", user)
+		&"gmaxstonesurge":
+			add_side_condition(target.side, &"stealthrock", user)
+		&"gmaxbefuddle", &"gmaxstunshock", &"gmaxmalodor", &"gmaxvoltcrash":
+			var options: Array = {&"gmaxbefuddle": [&"slp", &"par", &"psn"], &"gmaxstunshock": [&"par", &"psn"],
+				&"gmaxmalodor": [&"psn"], &"gmaxvoltcrash": [&"par"]}[id]
+			for f: Battler in foes:
+				_try_set_status(f, options[rand_int(&"gmax", 0, options.size() - 1)], true, user)
+		&"gmaxcentiferno", &"gmaxsandblast":
+			for f: Battler in foes:
+				add_volatile(f, &"partiallytrapped", user, {"source_side": user.side, "source_party": user.party_index,
+					"move_name": DataDB.move(id).name})
+		&"gmaxterror":
+			for f: Battler in foes:
+				add_volatile(f, &"trapped", user, {"source_side": user.side, "source_party": user.party_index})
+		&"gmaxchistrike":
+			for a: Battler in allies:
+				a.crit_stage += 1
+				_msg(tr("¡%s se concentra al máximo!") % BattleText.cap_name(a, setup.is_wild()))
+		&"gmaxcuddle":
+			for f: Battler in foes:
+				if f.pokemon.gender != Pokemon.GENDERLESS and user.pokemon.gender != Pokemon.GENDERLESS and f.pokemon.gender != user.pokemon.gender:
+					add_volatile(f, &"attract", user)
+		&"gmaxdepletion":
+			for f: Battler in foes:
+				for slot: MoveSlot in f.pokemon.moves:
+					if slot.id == f.last_move and slot.pp > 0:
+						slot.pp = maxi(0, slot.pp - 2)
+						_msg(tr("¡%s ha perdido PP!") % BattleText.cap_name(f, setup.is_wild()))
+		&"gmaxfinale":
+			for a: Battler in allies:
+				_heal(a, maxi(1, a.pokemon.max_hp() / 6), &"move")
+		&"gmaxfoamburst":
+			for f: Battler in foes:
+				boost(f, {&"spe": -2})
+		&"gmaxtartness":
+			for f: Battler in foes:
+				boost(f, {&"evasion": -1})
+		&"gmaxgoldrush", &"gmaxsmite":
+			for f: Battler in foes:
+				_try_confuse(f, true, user)
+		&"gmaxgravitas":
+			if field_state(&"gravity").is_empty():
+				set_field_state(&"gravity", {"turns": 5})
+				_msg(tr("¡La gravedad se ha intensificado!"))
+		&"gmaxmeltdown":
+			for f: Battler in foes:
+				add_volatile(f, &"torment", user)
+		&"gmaxreplenish":
+			for a: Battler in allies:
+				if a.pokemon.held_item == &"" and a.consumed_item != &"" and DataDB.has_item(a.consumed_item) \
+						and DataDB.item(a.consumed_item).pocket == &"berries" and rand_chance(&"gmax", 1, 2):
+					a.pokemon.held_item = a.consumed_item
+					a.consumed_item = &""
+					_msg(tr("¡%s ha recuperado su baya!") % BattleText.cap_name(a, setup.is_wild()))
+		&"gmaxresonance":
+			add_side_condition(user.side, &"auroraveil", user)
+		&"gmaxsnooze":
+			if not target.is_fainted() and rand_chance(&"gmax", 1, 2):
+				add_volatile(target, &"yawn", user)
+		&"gmaxsweetness":
+			for a: Battler in allies:
+				if a.pokemon.status != &"":
+					_cure_status(a)
+		&"gmaxwindrage":
+			for c: StringName in [&"reflect", &"lightscreen", &"auroraveil", &"safeguard", &"mist", &"spikes",
+					&"toxicspikes", &"stealthrock", &"stickyweb", &"gmaxsteelsurge"]:
+				remove_side_condition(target.side, c)
+			for c: StringName in [&"spikes", &"toxicspikes", &"stealthrock", &"stickyweb", &"gmaxsteelsurge"]:
+				remove_side_condition(user.side, c)
+			clear_terrain()
 
 
 func _max_drop(target: Battler, stat: StringName) -> void:
@@ -2729,7 +2862,8 @@ func ability_effect(b: Battler) -> BattleEffect:
 				var other := active(side_index, slot)
 				if other != null and other != b and not other.is_fainted() and other.ability == &"neutralizinggas":
 					return null
-	if _move_user != null and _move_user != b and _move_user.ability in MOLD_BREAKERS and b.ability in BREAKABLE:
+	if _move_user != null and _move_user != b and b.ability in BREAKABLE \
+			and (_move_user.ability in MOLD_BREAKERS or _current_move_id in [&"gmaxdrumsolo", &"gmaxfireball", &"gmaxhydrosnipe"]):
 		return null
 	return Effects.ability(b.ability)
 
