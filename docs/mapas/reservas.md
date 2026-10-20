@@ -5,7 +5,7 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
 | `maritima_1/exterior` y `ruta_1/exterior` … `ruta_26/exterior` | Rutas y ciudades | 2026-10-20 | Corrientes y escollos (marítima 1), obstáculos de campo, entrenadores en los pasos estrechos y atajos (`feat/rutas-anil-3`) |
-| Interiores de las casas de las rutas 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20 y 23 (`ruta_N/casa_*` y salas de dentro; **no** los exteriores) | Interiores | 2026-10-20 | Las 93 salas que siguen con el interior genérico (`feat/interiores-rutas`). Solo cambio las escenas de interior y `data/interiores/ruta_N.json` |
+| `madrid/bernabeu` (solo el Warp de la puerta del estadio en (19,14) y su aparición en (19,15)) y las salas nuevas `madrid/estadio_bernabeu*` | Interiores | 2026-10-21 | Vestíbulo, vestuarios, palco y túnel del estadio, enlazados a la puerta que ha preparado Edificios; sin repintar el exterior ni tocar sus cinco pasarelas (`feat/interiores-rutas`) |
 
 
 
