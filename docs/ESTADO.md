@@ -762,6 +762,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - **Ruta 13 · Olivares del Guadalquivir:** receta `maps/_pintura/vestir/ruta_13.gd`. Paso obligado por hierba entre dos hileras de olivos, del bosque al río; juncos y flores. Hierba mínima Sevilla ⇄ Ruta 12: 2 (antes 0). Alcance desde `from_sevilla` y `from_ruta_12`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 - **Ruta 23 · Cuéllar:** receta `maps/_pintura/vestir/ruta_23.gd`. Paso obligado por hierba de pinar a pinar antes de San Miguel, pinar junto a la muralla y pinos sueltos (dos vallas de prueba tapaban la puerta de una casa y se quitaron). Hierba mínima Valladolid ⇄ San Miguel: 2 (antes 0). Alcance desde `from_valladolid` y `from_san_miguel`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 - **Ruta 19 · Costa cántabra:** receta `maps/_pintura/vestir/ruta_19.gd`. Paso obligado por hierba del acantilado al bosque, seto, flores, piedras en la playa. Hierba mínima Santander ⇄ Bilbao: 2 (antes 0). Alcance desde `from_santander` y `from_bilbao`: 0 problemas. Tres objetos nuevos y parche dorado rehecho. El faro sigue recortado.
+- **Ruta 17 · Camino gallego:** receta `maps/_pintura/vestir/ruta_17.gd`. Paso obligado por hierba entre el castro y la fraga, muro en los prados y arboleda. Hierba mínima Ruta 16 ⇄ Ruta 18: 1 (antes 0). Alcance desde `from_ruta_16` y `from_ruta_18`: 0 problemas. Tres objetos nuevos y parche dorado rehecho.
 
 **Provisional:** arte, textos del guarda y colocación.
 
