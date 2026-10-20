@@ -808,7 +808,7 @@ Rama `feat/rutas-anil`, worktree `pokemon-panchito-agente5`. Encargo: cada ruta 
 - ~~Ruta 11 carretera de lado a lado~~ **Hecho:** camino de tierra con tres curvas entre huertos y palmeras.
 - ~~Rutas 1, 2 y 4 solo con el paso de hierba~~ **Hecho:** pinares, encinas, matojos, setas y flores en la hierba vacía y objetos ocultos.
 - Ruta marítima 1: escollos de adorno junto a los islotes. **Sigue por debajo:** corrientes y objetos en los islotes esperan las reglas de Surf pedidas al agente de combate («Peticiones a Combate» en `docs/mapas/reservas.md`); el comprobador de alcance va a pie.
-- Ruta 19 (faro), Ruta 2 (casa de madera) y Bilbao (casa roja): **siguen recortadas**, a la espera de las piezas pedidas a Edificios.
+- Ruta 19 (faro), Ruta 2 (casa de madera) y Bilbao (casa roja): **resuelto por Edificios** (`d55ff0ed`), con puertas e interiores conservados; la segunda pasada de la Ruta 2 se ha combinado con su arreglo (alcance 0 problemas).
 - Entrenadores: todas las rutas tienen ya entre 2 y 5 entrenadores con línea de visión (la marítima 1, 2); **no se han recolocado uno a uno en los cuellos de botella** en esta pasada. Objetos: la Ruta 3 (que no tenía) y las rutas tocadas tienen objetos nuevos, visibles y ocultos; atajos que se abran más tarde, **pendientes**.
 - Capturas antes y después: `docs/arte/comparativas/rutas_anil_2/`.
 
