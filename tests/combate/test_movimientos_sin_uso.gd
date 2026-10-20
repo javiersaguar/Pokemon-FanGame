@@ -108,3 +108,16 @@ func test_cataclismo_quita_la_mitad() -> void:
 	var hp := foe.pokemon.current_hp
 	engine.submit(BattleAction.fight(0))
 	assert_eq(foe.pokemon.current_hp, hp - hp / 2)
+
+
+func test_movimientos_dinamax_hacen_su_efecto() -> void:
+	var engine := _engine([_mon(&"charizard", 50, ["flamethrower"])], [_mon(&"snorlax", 50, ["splash"])])
+	var me := engine.active(0)
+	var effect := Effects.move(&"maxflare")
+	assert_not_null(effect)
+	effect.on_after_hit(engine, me, engine.active(1), DataDB.move(&"maxflare"), 10)
+	assert_eq(engine.weather(), &"sunnyday", "Llamarada Dinamax pone sol")
+	Effects.move(&"maxairstream").on_after_hit(engine, me, engine.active(1), DataDB.move(&"maxairstream"), 10)
+	assert_eq(me.boosts[&"spe"], 1, "Viento Dinamax sube la Velocidad")
+	Effects.move(&"maxstrike").on_after_hit(engine, me, engine.active(1), DataDB.move(&"maxstrike"), 10)
+	assert_eq(engine.active(1).boosts[&"spe"], -1, "Ataque Dinamax la baja al rival")
