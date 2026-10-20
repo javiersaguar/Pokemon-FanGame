@@ -1,0 +1,106 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_nt2lg"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_icwx0"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_juydp"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_lg25u"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_f6udl"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_t4cix"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_man.png" id="7_h61ss"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/policia.png" id="8_eq7hl"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_ni12r"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_q8nrj"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_ef1di"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_38n2j"]
+
+[sub_resource type="Resource" id="Resource_gtqbu"]
+script = ExtResource("3_juydp")
+id = &"madrid/sala_bernabeu_19_14_tunel"
+display_name = "Túnel de vestuarios, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaBernabeu1914Tunel" type="Node2D" unique_id=985483978]
+script = ExtResource("1_nt2lg")
+data = SubResource("Resource_gtqbu")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=2018480525]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADAAAAABAAAAAAAAADAAAAACAAAAAAAAADAAAAADAAAAAAAAADAAAAAEAAAAAAAAADAAAAAFAAAAAAAAADAAAAAGAAAAAAAAADAAAAAHAAAAAAAAADAAAAAIAAAAAAAAADAAAAAJAAAAAAAAADAAAAAKAAAAAAAAADAAAAAAAAEAAAAAADAAAAABAAEAAAAAADAAAAACAAEAAAAAADAAAAADAAEAAAAAADAAAAAEAAEAAAAAADAAAAAFAAEAAAAAADAAAAAGAAEAAAAAADAAAAAHAAEAAAAAADAAAAAIAAEAAAAAADAAAAAJAAEAAAAAADAAAAAKAAEAAAAAADAAAAAAAAIAAAAAADAAAAABAAIAAAAAADAAAAACAAIAAAAAADAAAAADAAIAAAAAADAAAAAEAAIAAAAAADAAAAAFAAIAAAAAADAAAAAGAAIAAAAAADAAAAAHAAIAAAAAADAAAAAIAAIAAAAAADAAAAAJAAIAAAAAADAAAAAKAAIAAAAAADAAAAAAAAMAAAAAADAAAAABAAMAAAAAADAAAAACAAMAAAAAADAAAAADAAMAAAAAADAAAAAEAAMAAAAAADAAAAAFAAMAAAAAADAAAAAGAAMAAAAAADAAAAAHAAMAAAAAADAAAAAIAAMAAAAAADAAAAAJAAMAAAAAADAAAAAKAAMAAAAAADAAAAAAAAQAAAAAADAAAAABAAQAAAAAADAAAAACAAQAAAAAADAAAAADAAQAAAAAADAAAAAEAAQAAAAAADAAAAAFAAQAAAAAADAAAAAGAAQAAAAAADAAAAAHAAQAAAAAADAAAAAIAAQAAAAAADAAAAAJAAQAAAAAADAAAAAKAAQAAAAAADAAAAAAAAUAAAAAADAAAAABAAUAAAAAADAAAAACAAUAAAAAADAAAAADAAUAAAAAADAAAAAEAAUAAAAAADAAAAAFAAUAAAAAADAAAAAGAAUAAAAAADAAAAAHAAUAAAAAADAAAAAIAAUAAAAAADAAAAAJAAUAAAAAADAAAAAKAAUAAAAAADAAAAAAAAYAAAAAADAAAAABAAYAAAAAADAAAAACAAYAAAAAADAAAAADAAYAAAAAADAAAAAEAAYAAAAAADAAAAAFAAYAAAAAADAAAAAGAAYAAAAAADAAAAAHAAYAAAAAADAAAAAIAAYAAAAAADAAAAAJAAYAAAAAADAAAAAKAAYAAAAAADAAAAAAAAcAAAAAADAAAAABAAcAAAAAADAAAAACAAcAAAAAADAAAAADAAcAAAAAADAAAAAEAAcAAAAAADAAAAAFAAcAAAAAADAAAAAGAAcAAAAAADAAAAAHAAcAAAAAADAAAAAIAAcAAAAAADAAAAAJAAcAAAAAADAAAAAKAAcAAAAAADAAAAAAAAgAAAAAADAAAAABAAgAAAAAADAAAAACAAgAAAAAADAAAAADAAgAAAAAADAAAAAEAAgAAAAAADAAAAAFAAgAAAAAADAAAAAGAAgAAAAAABAAAAAHAAgAAAAAADAAAAAIAAgAAAAAADAAAAAJAAgAAAAAADAAAAAKAAgAAAAAADAAAAA=")
+tile_set = ExtResource("4_lg25u")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=940240928]
+tile_map_data = PackedByteArray("AAABAAAAAQABACEAAAABAAEAAQABACIAAAACAAAAAQABACEAAAACAAEAAQABACIAAAADAAAAAQABACEAAAADAAEAAQABACIAAAAEAAAAAQABACEAAAAEAAEAAQABACIAAAAFAAAAAQABACEAAAAFAAEAAQABACIAAAAGAAAAAQABACEAAAAGAAEAAQABACIAAAAHAAAAAQABACEAAAAHAAEAAQABACIAAAAIAAAAAQABACEAAAAIAAEAAQABACIAAAAJAAAAAQABACEAAAAJAAEAAQABACIAAAAAAAAAAQACAB8AAAAKAAAAAQAAAB8AAAAAAAEAAQACAB8AAAAKAAEAAQAAAB8AAAAAAAIAAQACAB8AAAAKAAIAAQAAAB8AAAAAAAMAAQACAB8AAAAKAAMAAQAAAB8AAAAAAAQAAQACAB8AAAAKAAQAAQAAAB8AAAAAAAUAAQACAB8AAAAKAAUAAQAAAB8AAAAAAAYAAQACAB8AAAAKAAYAAQAAAB8AAAAAAAcAAQACAB8AAAAKAAcAAQAAAB8AAAABAAgAAQABAB4AAAACAAgAAQABAB4AAAADAAgAAQABAB4AAAAEAAgAAQABAB4AAAAFAAgAAQACAB4AAAAHAAgAAQAAAB4AAAAIAAgAAQABAB4AAAAJAAgAAQABAB4AAAAAAAgAAQAFACIAAAAKAAgAAQAGACIAAAA=")
+tile_set = ExtResource("4_lg25u")
+
+[node name="Entities" type="Node2D" parent="." unique_id=534762899]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=333442349]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAAAAgAAADQAAAADAAAAAgABADQAAAAEAAAAAgACADQAAAACAAEAAgAAADUAAAADAAEAAgABADUAAAAEAAEAAgACADUAAAACAAIAAgAAADYAAAADAAIAAgABADYAAAAEAAIAAgACADYAAAAGAAEAAgABABYAAAAHAAEAAgACABYAAAAGAAIAAgABABcAAAAHAAIAAgACABcAAAAIAAEAAgADABYAAAAIAAIAAgADABcAAAAHAAQAAwAFAAAAAAAIAAQAAwAGAAAAAAAJAAQAAwAHAAAAAAAJAAEAAgABACUAAAAJAAIAAgABACYAAAA=")
+tile_set = ExtResource("4_lg25u")
+
+[node name="JardineroDelCesped" type="Node2D" parent="Entities" unique_id=1085881495 instance=ExtResource("5_f6udl")]
+position = Vector2(272, 176)
+script = ExtResource("6_t4cix")
+display_name = "Jardinero del césped"
+lines = PackedStringArray("El césped se guarda bajo el estadio, en un sótano con luces y riego, para que arriba se pueda usar el campo para otras cosas.", "Esa hierba vive mejor que yo: tiene temperatura controlada, luz a su hora y nadie la pisa entre semana.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_h61ss")
+
+[node name="Vigilante" type="Node2D" parent="Entities" unique_id=1421467254 instance=ExtResource("5_f6udl")]
+position = Vector2(80, 176)
+script = ExtResource("6_t4cix")
+display_name = "Vigilante"
+lines = PackedStringArray("Por este túnel salen los equipos al campo. Si eres jugador, adelante. Si no, vuelve por donde has venido y no toques el escudo.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_eq7hl")
+initial_facing = 1
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1858592065 instance=ExtResource("9_ni12r")]
+position = Vector2(176, 48)
+script = ExtResource("10_q8nrj")
+lines = PackedStringArray("Un escudo grande sobre la salida al campo. Dicen que los jugadores lo tocan para tener suerte. Está desgastado a la altura de la mano.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=837098264]
+z_index = 10
+tile_set = ExtResource("4_lg25u")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=676223315]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=14718870]
+position = Vector2(208, 272)
+script = ExtResource("11_ef1di")
+target_map = &"madrid/sala_bernabeu_19_14"
+target_spawn = &"desde_sala_bernabeu_19_14_tunel"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1209318007]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=684954840]
+position = Vector2(208, 240)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1587683463]
+
+[node name="Rotulo" type="Label" parent="." unique_id=877689683]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 336.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_38n2j")
+theme_override_font_sizes/font_size = 16
+text = "TÚNEL DE VESTUARIOS"
+horizontal_alignment = 1

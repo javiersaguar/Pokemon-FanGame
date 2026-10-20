@@ -689,6 +689,7 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Interiores de la Ruta 19 (5 salas, `data/interiores/ruta_19.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
 | Interiores de la Ruta 20 (3 salas, `data/interiores/ruta_20.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
 | Interiores de la Ruta 23 (5 salas, `data/interiores/ruta_23.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores del Estadio Santiago Bernabéu (4 salas, `data/interiores/madrid.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md#estadio-santiago-bernabéu-4-salas) |
 
 
 ## Teatro original de Sevilla · 20 de octubre

@@ -5,7 +5,6 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
 | `maritima_1/exterior` y `ruta_1/exterior` … `ruta_26/exterior` | Rutas y ciudades | 2026-10-20 | Corrientes y escollos (marítima 1), obstáculos de campo, entrenadores en los pasos estrechos y atajos (`feat/rutas-anil-3`) |
-| `madrid/bernabeu` (solo el Warp de la puerta del estadio en (19,14) y su aparición en (19,15)) y las salas nuevas `madrid/estadio_bernabeu*` | Interiores | 2026-10-21 | Vestíbulo, vestuarios, palco y túnel del estadio, enlazados a la puerta que ha preparado Edificios; sin repintar el exterior ni tocar sus cinco pasarelas (`feat/interiores-rutas`) |
 
 
 
@@ -35,3 +34,5 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 Edificios prepara el hueco de entrada de la pieza 375. Ancla conservada **(14,14)**; puerta relativa **(5,0)**, casilla exterior **(19,14)**, futuro regreso **(19,15)**. Se evita el cartel de (20,15). **No enlazar a ninguna de las cinco salas del barrio**: pertenecen a otras fachadas. Petición abierta para otra sesión de Interiores: **vestíbulo, vestuarios, palco y túnel**, con entrada y salida en ese acceso. En esta tarea solo se prepara el dibujo y la colisión de la puerta, sin añadir pasarela ni sala. La escena y los personajes no se repintan.
 
 **Entrega del acceso (21 de octubre):** puerta transitable comprobada, sin pasarela; cinco conexiones conservadas. Suite 751/751, arte y datos sin errores, grafo conectado. Exterior liberado.
+
+**Salas hechas (Interiores, 21 de octubre):** pasarela `Estadio` en (19,14) con vuelta `from_estadio` en (19,15), hacia la sala de trofeos `madrid/sala_bernabeu_19_14` y sus tres salas de dentro (vestuario, túnel y palco). Exterior sin repintar; cinco pasarelas del barrio intactas. **Petición cerrada.**

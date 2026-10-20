@@ -146,7 +146,7 @@ func test_plato_de_malaga_conserva_todas_las_pasarelas_y_el_regreso() -> void:
 	map.queue_free()
 	await wait_physics_frames(2)
 
-func test_bernabeu_tiene_hueco_transitable_sin_inventar_un_interior() -> void:
+func test_bernabeu_tiene_puerta_propia_y_conserva_las_cinco_pasarelas() -> void:
 	GameState.reset()
 	var contract := JsonFile.read_dict("res://docs/arte/comparativas/edificios_reales/bernabeu_acceso_contrato.json")
 	var piece: Dictionary = ExteriorTiles.objects()[&"bernabeu"]
@@ -159,8 +159,12 @@ func test_bernabeu_tiene_hueco_transitable_sin_inventar_un_interior() -> void:
 	add_child(map)
 	await wait_physics_frames(2)
 	assert_eq(map.get_layer(&"Entities/Objects").get_cell_source_id(Vector2i(14,14)),375)
-	assert_null(map.warp_at(Vector2i(19,14)),"el hueco aún no enlaza a salas ajenas")
-	assert_eq(map.get_node(^"Warps").get_child_count(),contract.warps.size())
+	# 21 de octubre: Interiores enlaza el hueco con las salas propias del estadio (no con las del barrio).
+	var estadio := map.warp_at(Vector2i(19,14))
+	assert_not_null(estadio,"la puerta del estadio lleva a su sala")
+	if estadio != null:
+		assert_eq(String(estadio.target_map),"madrid/sala_bernabeu_19_14")
+	assert_eq(map.get_node(^"Warps").get_child_count(),contract.warps.size() + 1)
 	for saved: Dictionary in contract.warps:
 		var warp := map.warp_at(Vector2i(int(saved.tile[0]),int(saved.tile[1])))
 		assert_not_null(warp,String(saved.name))

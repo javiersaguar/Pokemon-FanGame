@@ -133,3 +133,11 @@ Todas: [Borda del pastor](interiores_2026-10-20/ruta_20/ruta_20__sala_calle_18_2
 | Castillo de los Duques de Alburquerque | Aula del instituto del castillo | Iglesia de San Miguel de Cuéllar |
 
 Todas: [Casa del caballista de los encierros](interiores_2026-10-20/ruta_23/ruta_23__casa_1_despues.png), [Casa de la piñonera](interiores_2026-10-20/ruta_23/ruta_23__casa_2_despues.png), [Castillo de los Duques de Alburquerque](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_despues.png), [Aula del instituto del castillo](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_12_11_aula_despues.png), [Iglesia de San Miguel de Cuéllar](interiores_2026-10-20/ruta_23/ruta_23__sala_calle_22_11_despues.png).
+
+## Estadio Santiago Bernabéu (4 salas)
+
+La puerta la preparó Edificios en la pieza 375 (casilla (19,14), vuelta en (19,15)); la pasarela se añadió con `enlazar_puerta.gd`, sin repintar el exterior ni tocar sus cinco pasarelas. Sin futbolistas ni directivos famosos: dónde va cada uno lo decide Javier.
+
+| ![Sala de trofeos](interiores_2026-10-20/madrid/madrid__sala_bernabeu_19_14_despues.png) | ![Vestuario](interiores_2026-10-20/madrid/madrid__sala_bernabeu_19_14_vestuarios_despues.png) | ![Túnel](interiores_2026-10-20/madrid/madrid__sala_bernabeu_19_14_tunel_despues.png) | ![Palco](interiores_2026-10-20/madrid/madrid__sala_bernabeu_19_14_palco_despues.png) |
+|---|---|---|---|
+| Sala de trofeos | Vestuario del equipo local | Túnel de vestuarios | Palco de honor |

@@ -1,0 +1,106 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_64by6"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_yirb3"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_2h5o4"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_tgmgn"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_ppmfr"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_236or"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_man.png" id="7_evl0d"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/enfermero.png" id="8_gjeew"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_pwwu6"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_vov7m"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_nli8d"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_x23x1"]
+
+[sub_resource type="Resource" id="Resource_b1qha"]
+script = ExtResource("3_2h5o4")
+id = &"madrid/sala_bernabeu_19_14_vestuarios"
+display_name = "Vestuario del equipo local, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaBernabeu1914Vestuarios" type="Node2D" unique_id=378007382]
+script = ExtResource("1_64by6")
+data = SubResource("Resource_b1qha")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1149987194]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADgAAAABAAAAAAAAADgAAAACAAAAAAAAADgAAAADAAAAAAAAADgAAAAEAAAAAAAAADgAAAAFAAAAAAAAADgAAAAGAAAAAAAAADgAAAAHAAAAAAAAADgAAAAIAAAAAAAAADgAAAAJAAAAAAAAADgAAAAKAAAAAAAAADgAAAALAAAAAAAAADgAAAAAAAEAAAAAADgAAAABAAEAAAAAADgAAAACAAEAAAAAADgAAAADAAEAAAAAADgAAAAEAAEAAAAAADgAAAAFAAEAAAAAADgAAAAGAAEAAAAAADgAAAAHAAEAAAAAADgAAAAIAAEAAAAAADgAAAAJAAEAAAAAADgAAAAKAAEAAAAAADgAAAALAAEAAAAAADgAAAAAAAIAAAAAADgAAAABAAIAAAAAADgAAAACAAIAAAAAADgAAAADAAIAAAAAADgAAAAEAAIAAAAAADgAAAAFAAIAAAAAADgAAAAGAAIAAAAAADgAAAAHAAIAAAAAADgAAAAIAAIAAAAAADgAAAAJAAIAAAAAADgAAAAKAAIAAAAAADgAAAALAAIAAAAAADgAAAAAAAMAAAAAADgAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAIAAMAAAAAADgAAAAJAAMAAAAAADgAAAAKAAMAAAAAADgAAAALAAMAAAAAADgAAAAAAAQAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAABAAAAAFAAQAAAAAABAAAAAGAAQAAAAAABAAAAAHAAQAAAAAABAAAAAIAAQAAAAAABAAAAAJAAQAAAAAABAAAAAKAAQAAAAAADgAAAALAAQAAAAAADgAAAAAAAUAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAABAAAAAFAAUAAAAAABAAAAAGAAUAAAAAABAAAAAHAAUAAAAAABAAAAAIAAUAAAAAABAAAAAJAAUAAAAAABAAAAAKAAUAAAAAADgAAAALAAUAAAAAADgAAAAAAAYAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAABAAAAAFAAYAAAAAABAAAAAGAAYAAAAAABAAAAAHAAYAAAAAABAAAAAIAAYAAAAAABAAAAAJAAYAAAAAABAAAAAKAAYAAAAAADgAAAALAAYAAAAAADgAAAAAAAcAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAADgAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAAIAAcAAAAAADgAAAAJAAcAAAAAADgAAAAKAAcAAAAAADgAAAALAAcAAAAAADgAAAAAAAgAAAAAADgAAAABAAgAAAAAADgAAAACAAgAAAAAADgAAAADAAgAAAAAADgAAAAEAAgAAAAAADgAAAAFAAgAAAAAADgAAAAGAAgAAAAAADgAAAAHAAgAAAAAAAwAAAAIAAgAAAAAADgAAAAJAAgAAAAAADgAAAAKAAgAAAAAADgAAAALAAgAAAAAADgAAAA=")
+tile_set = ExtResource("4_tgmgn")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2117902330]
+tile_map_data = PackedByteArray("AAABAAAAAQABADoAAAABAAEAAQABADsAAAACAAAAAQABADoAAAACAAEAAQABADsAAAADAAAAAQABADoAAAADAAEAAQABADsAAAAEAAAAAQABADoAAAAEAAEAAQABADsAAAAFAAAAAQABADoAAAAFAAEAAQABADsAAAAGAAAAAQABADoAAAAGAAEAAQABADsAAAAHAAAAAQABADoAAAAHAAEAAQABADsAAAAIAAAAAQABADoAAAAIAAEAAQABADsAAAAJAAAAAQABADoAAAAJAAEAAQABADsAAAAKAAAAAQABADoAAAAKAAEAAQABADsAAAAAAAAAAQACADgAAAALAAAAAQAAADgAAAAAAAEAAQACADgAAAALAAEAAQAAADgAAAAAAAIAAQACADgAAAALAAIAAQAAADgAAAAAAAMAAQACADgAAAALAAMAAQAAADgAAAAAAAQAAQACADgAAAALAAQAAQAAADgAAAAAAAUAAQACADgAAAALAAUAAQAAADgAAAAAAAYAAQACADgAAAALAAYAAQAAADgAAAAAAAcAAQACADgAAAALAAcAAQAAADgAAAABAAgAAQABADcAAAACAAgAAQABADcAAAADAAgAAQABADcAAAAEAAgAAQABADcAAAAFAAgAAQABADcAAAAGAAgAAQACADcAAAAIAAgAAQAAADcAAAAJAAgAAQABADcAAAAKAAgAAQABADcAAAAAAAgAAQAFADsAAAALAAgAAQAGADsAAAA=")
+tile_set = ExtResource("4_tgmgn")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1038115635]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=980271131]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAABAAAAAgAAABUAAAABAAEAAgAAABYAAAABAAIAAgAAABcAAAACAAAAAgAAABUAAAACAAEAAgAAABYAAAACAAIAAgAAABcAAAADAAAAAgAHABUAAAADAAEAAgAHABYAAAADAAIAAgAHABcAAAAEAAAAAgAHABUAAAAEAAEAAgAHABYAAAAEAAIAAgAHABcAAAACAAUAAwAFAAAAAAADAAUAAwAGAAAAAAAEAAUAAwAHAAAAAAAFAAAAAgAHABsAAAAFAAEAAgAHABwAAAAFAAIAAgAHAB0AAAA=")
+tile_set = ExtResource("4_tgmgn")
+
+[node name="Utillero" type="Node2D" parent="Entities" unique_id=1646048399 instance=ExtResource("5_ppmfr")]
+position = Vector2(272, 208)
+script = ExtResource("6_236or")
+display_name = "Utillero"
+lines = PackedStringArray("Preparo las botas, las medias y las camisetas de cada partido. Cada jugador tiene su manía: uno no quiere la percha número trece.", "Llevo treinta años aquí. He visto pasar a los mejores del mundo y a todos les he tenido que buscar una espinillera perdida.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_evl0d")
+
+[node name="Fisioterapeuta" type="Node2D" parent="Entities" unique_id=2060391006 instance=ExtResource("5_ppmfr")]
+position = Vector2(304, 112)
+script = ExtResource("6_236or")
+display_name = "Fisioterapeuta"
+lines = PackedStringArray("Antes del partido, masaje y vendas. Después, hielo y más hielo. En este vestuario se gasta más hielo que en una boda en agosto.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_gjeew")
+initial_facing = 2
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=1115701554 instance=ExtResource("9_pwwu6")]
+position = Vector2(240, 48)
+script = ExtResource("10_vov7m")
+lines = PackedStringArray("Taquillas con un número y un nombre tapado con cinta. Los nombres cambian cada verano; los números, no.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=327333543]
+z_index = 10
+tile_set = ExtResource("4_tgmgn")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1176680668]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=1547518980]
+position = Vector2(240, 272)
+script = ExtResource("11_nli8d")
+target_map = &"madrid/sala_bernabeu_19_14"
+target_spawn = &"desde_sala_bernabeu_19_14_vestuarios"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=749890612]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1513885727]
+position = Vector2(240, 240)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1025958801]
+
+[node name="Rotulo" type="Label" parent="." unique_id=229864850]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_x23x1")
+theme_override_font_sizes/font_size = 16
+text = "VESTUARIO DEL EQUIPO LOCAL"
+horizontal_alignment = 1

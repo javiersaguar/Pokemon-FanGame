@@ -3761,7 +3761,9 @@
    ],
    "encima": [],
    "apariciones": {"default": [11, 9], "desde_liga": [11, 2]},
-   "pasos": [{"nodo": "Liga", "en": [11, 0], "destino": "madrid/liga_iniesta", "aparicion": "default"}]
+   "pasos": [
+    {"nodo": "Liga", "en": [11, 0], "destino": "madrid/liga_iniesta", "aparicion": "default"}
+   ]
   },
   "madrid/sala_palacio_real_23_54": {
    "tipo": "catedral",
@@ -4844,6 +4846,291 @@
    "encima": [],
    "apariciones": {"default": [12, 9]},
    "pasos": []
+  },
+  "madrid/sala_bernabeu_19_14": {
+   "tipo": "museo",
+   "nombre": "Estadio Santiago Bernabéu · sala de trofeos",
+   "rotulo": "Estadio Santiago Bernabéu",
+   "pieza": "bernabeu",
+   "calle": ["madrid/bernabeu", [19, 14]],
+   "salida": {"destino": "madrid/bernabeu", "aparicion": "from_estadio"},
+   "personas": [
+    {
+     "nombre": "Guía del tour",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "El tour pasa por la sala de trofeos, los vestuarios, el túnel y el palco. Por el césped no: el césped se mira y no se toca.",
+      "Con la reforma, el estadio tiene techo que se cierra y un videomarcador que da la vuelta entera. Aparcamiento, el mismo de antes."
+     ],
+     "nodo": "GuiaDelTour",
+     "en": [1, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Socio veterano",
+     "aspecto": "cunado",
+     "papel": "libre",
+     "frases": [
+      "Soy socio desde 1987. El abono pasará a mi hijo y luego a mi nieto. Es lo único de Chamartín que heredas sin hipoteca."
+     ],
+     "nodo": "SocioVeterano",
+     "en": [11, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vecina de enfrente",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Vivo enfrente. Cuando hubo conciertos, el ruido nos llegaba al salón y los vecinos protestamos hasta que los pararon.",
+      "El fútbol lo aguanto. Noventa minutos de gritos los domingos son más llevaderos que tres horas de bises."
+     ],
+     "nodo": "VecinaDeEnfrente",
+     "en": [8, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "vitrina",
+     "frases": [
+      "Copas de Europa en fila, cada una con su año grabado. Detrás, una etiqueta del utillero: «dejar sitio»."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 2]
+    }
+   ],
+   "tamano": [16, 11],
+   "puerta": [6, 10],
+   "suelo": "losa_gris",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 3, 0],
+    ["vitrina_blanca", 6, 1],
+    ["pedestal", 2, 6],
+    ["pedestal", 5, 6],
+    ["estatua_gargola", 12, 5]
+   ],
+   "encima": [],
+   "apariciones": {
+    "default": [6, 9],
+    "desde_sala_bernabeu_19_14_palco": [12, 2],
+    "desde_sala_bernabeu_19_14_tunel": [9, 2],
+    "desde_sala_bernabeu_19_14_vestuarios": [2, 2]
+   },
+   "pasos": [
+    {
+     "nodo": "Palco",
+     "en": [12, 1],
+     "destino": "madrid/sala_bernabeu_19_14_palco",
+     "aparicion": "default",
+     "vuelta": "desde_sala_bernabeu_19_14_palco",
+     "llegada": [12, 2]
+    },
+    {
+     "nodo": "Tunel",
+     "en": [9, 1],
+     "destino": "madrid/sala_bernabeu_19_14_tunel",
+     "aparicion": "default",
+     "vuelta": "desde_sala_bernabeu_19_14_tunel",
+     "llegada": [9, 2]
+    },
+    {
+     "nodo": "Vestuarios",
+     "en": [2, 1],
+     "destino": "madrid/sala_bernabeu_19_14_vestuarios",
+     "aparicion": "default",
+     "vuelta": "desde_sala_bernabeu_19_14_vestuarios",
+     "llegada": [2, 2]
+    }
+   ]
+  },
+  "madrid/sala_bernabeu_19_14_vestuarios": {
+   "tipo": "gimnasio",
+   "nombre": "Vestuario del equipo local",
+   "padre": "madrid/sala_bernabeu_19_14",
+   "personas": [
+    {
+     "nombre": "Utillero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Preparo las botas, las medias y las camisetas de cada partido. Cada jugador tiene su manía: uno no quiere la percha número trece.",
+      "Llevo treinta años aquí. He visto pasar a los mejores del mundo y a todos les he tenido que buscar una espinillera perdida."
+     ],
+     "nodo": "Utillero",
+     "en": [8, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Fisioterapeuta",
+     "aspecto": "enfermero",
+     "papel": "libre",
+     "frases": [
+      "Antes del partido, masaje y vendas. Después, hielo y más hielo. En este vestuario se gasta más hielo que en una boda en agosto."
+     ],
+     "nodo": "Fisioterapeuta",
+     "en": [9, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Taquillas con un número y un nombre tapado con cinta. Los nombres cambian cada verano; los números, no."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "chapa",
+   "pared": "lima",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [4, 4, 6, 3]]],
+   "muebles": [
+    ["taquilla_gris", 1, 0],
+    ["taquilla_gris", 2, 0],
+    ["taquilla_azul", 3, 0],
+    ["taquilla_azul", 4, 0],
+    ["banco_rojo", 2, 5],
+    ["nevera_alta", 5, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_bernabeu_19_14", "aparicion": "desde_sala_bernabeu_19_14_vestuarios"}
+  },
+  "madrid/sala_bernabeu_19_14_tunel": {
+   "tipo": "portal",
+   "nombre": "Túnel de vestuarios",
+   "padre": "madrid/sala_bernabeu_19_14",
+   "personas": [
+    {
+     "nombre": "Jardinero del césped",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "El césped se guarda bajo el estadio, en un sótano con luces y riego, para que arriba se pueda usar el campo para otras cosas.",
+      "Esa hierba vive mejor que yo: tiene temperatura controlada, luz a su hora y nadie la pisa entre semana."
+     ],
+     "nodo": "JardineroDelCesped",
+     "en": [8, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Vigilante",
+     "aspecto": "policia",
+     "papel": "libre",
+     "frases": [
+      "Por este túnel salen los equipos al campo. Si eres jugador, adelante. Si no, vuelve por donde has venido y no toques el escudo."
+     ],
+     "nodo": "Vigilante",
+     "en": [2, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un escudo grande sobre la salida al campo. Dicen que los jugadores lo tocan para tener suerte. Está desgastado a la altura de la mano."
+     ],
+     "nodo": "Cartel",
+     "en": [5, 1]
+    }
+   ],
+   "tamano": [11, 9],
+   "puerta": [6, 8],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 2, 0],
+    ["cajonera_gris", 6, 1],
+    ["cajon_gris", 8, 1],
+    ["banco_rojo", 7, 4],
+    ["planta", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_bernabeu_19_14", "aparicion": "desde_sala_bernabeu_19_14_tunel"}
+  },
+  "madrid/sala_bernabeu_19_14_palco": {
+   "tipo": "palacio",
+   "nombre": "Palco de honor",
+   "padre": "madrid/sala_bernabeu_19_14",
+   "personas": [
+    {
+     "nombre": "Camarero del palco",
+     "aspecto": "camarero",
+     "papel": "libre",
+     "frases": [
+      "En el palco se ve el partido, se come jamón y se hacen negocios. El orden cambia según cómo vaya el marcador.",
+      "Sirvo el mismo vino a ministros, empresarios y embajadores. Ninguno mira la etiqueta; todos miran quién está al lado."
+     ],
+     "nodo": "CamareroDelPalco",
+     "en": [12, 8],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Empresario",
+     "aspecto": "padretarjeta",
+     "papel": "libre",
+     "frases": [
+      "No sé quién ha marcado. Pero en el descanso he cerrado la venta de dos solares y una autopista de peaje."
+     ],
+     "nodo": "Empresario",
+     "en": [13, 9],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Tertuliano invitado",
+     "aspecto": "tertuliano",
+     "papel": "libre",
+     "frases": [
+      "Vengo al palco a que me vean venir al palco. Mañana lo cuento en la radio como si hubiera estado en el césped."
+     ],
+     "nodo": "TertulianoInvitado",
+     "en": [9, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una fila de butacas de piel con vistas al centro del campo. En el respaldo de cada una, una placa con un nombre que no se puede leer desde aquí."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "tamano": [16, 12],
+   "puerta": [11, 11],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "tatami_verde",
+   "alfombras": [["moqueta_azul", [2, 3, 10, 6]]],
+   "muebles": [
+    ["mesa_cristal_larga", 10, 5],
+    ["silla_derecha", 9, 5],
+    ["silla_izquierda", 13, 5],
+    ["estatua_gargola", 1, 5],
+    ["palmera_maceta", 14, 8],
+    ["pedestal", 1, 9]
+   ],
+   "encima": [],
+   "apariciones": {"default": [11, 10]},
+   "pasos": [],
+   "salida": {"destino": "madrid/sala_bernabeu_19_14", "aparicion": "desde_sala_bernabeu_19_14_palco"}
   }
  }
 }

@@ -113,6 +113,12 @@ script = ExtResource("10_86p5c")
 target_map = &"madrid/sala_bernabeu_12_8"
 arrival_facing = 4
 
+[node name="Estadio" type="Node2D" parent="Warps" unique_id=611673246]
+position = Vector2(624, 464)
+script = ExtResource("10_86p5c")
+target_map = &"madrid/sala_bernabeu_19_14"
+arrival_facing = 4
+
 [node name="Spawns" type="Node2D" parent="." unique_id=1359294079]
 
 [node name="default" type="Marker2D" parent="Spawns" unique_id=2046720367]
@@ -135,5 +141,8 @@ position = Vector2(1104, 880)
 
 [node name="from_sala_12_8" type="Marker2D" parent="Spawns" unique_id=1171916995]
 position = Vector2(400, 304)
+
+[node name="from_estadio" type="Marker2D" parent="Spawns" unique_id=504129809]
+position = Vector2(624, 496)
 
 [node name="Triggers" type="Node2D" parent="." unique_id=373359692]

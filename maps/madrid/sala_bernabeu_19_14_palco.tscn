@@ -1,0 +1,116 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_cm2ow"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_drrj6"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_lsxv4"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_1pygk"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_2lfb5"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_tnfq0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/camarero.png" id="7_cer1c"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/padretarjeta.png" id="8_b0is7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/tertuliano.png" id="9_lc0j6"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="10_u6dlg"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="11_am50g"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="12_2cje6"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="13_wa5k7"]
+
+[sub_resource type="Resource" id="Resource_gfms4"]
+script = ExtResource("3_lsxv4")
+id = &"madrid/sala_bernabeu_19_14_palco"
+display_name = "Palco de honor, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaBernabeu1914Palco" type="Node2D" unique_id=1425206573]
+script = ExtResource("1_cm2ow")
+data = SubResource("Resource_gfms4")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1299239518]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADAAAAABAAAAAAAAADAAAAACAAAAAAAAADAAAAADAAAAAAAAADAAAAAEAAAAAAAAADAAAAAFAAAAAAAAADAAAAAGAAAAAAAAADAAAAAHAAAAAAAAADAAAAAIAAAAAAAAADAAAAAJAAAAAAAAADAAAAAKAAAAAAAAADAAAAALAAAAAAAAADAAAAAMAAAAAAAAADAAAAANAAAAAAAAADAAAAAOAAAAAAAAADAAAAAPAAAAAAAAADAAAAAAAAEAAAAAADAAAAABAAEAAAAAADAAAAACAAEAAAAAADAAAAADAAEAAAAAADAAAAAEAAEAAAAAADAAAAAFAAEAAAAAADAAAAAGAAEAAAAAADAAAAAHAAEAAAAAADAAAAAIAAEAAAAAADAAAAAJAAEAAAAAADAAAAAKAAEAAAAAADAAAAALAAEAAAAAADAAAAAMAAEAAAAAADAAAAANAAEAAAAAADAAAAAOAAEAAAAAADAAAAAPAAEAAAAAADAAAAAAAAIAAAAAADAAAAABAAIAAAAAADAAAAACAAIAAAAAADAAAAADAAIAAAAAADAAAAAEAAIAAAAAADAAAAAFAAIAAAAAADAAAAAGAAIAAAAAADAAAAAHAAIAAAAAADAAAAAIAAIAAAAAADAAAAAJAAIAAAAAADAAAAAKAAIAAAAAADAAAAALAAIAAAAAADAAAAAMAAIAAAAAADAAAAANAAIAAAAAADAAAAAOAAIAAAAAADAAAAAPAAIAAAAAADAAAAAAAAMAAAAAADAAAAABAAMAAAAAADAAAAACAAMAAAAAABAAAAADAAMAAAAAABAAAAAEAAMAAAAAABAAAAAFAAMAAAAAABAAAAAGAAMAAAAAABAAAAAHAAMAAAAAABAAAAAIAAMAAAAAABAAAAAJAAMAAAAAABAAAAAKAAMAAAAAABAAAAALAAMAAAAAABAAAAAMAAMAAAAAADAAAAANAAMAAAAAADAAAAAOAAMAAAAAADAAAAAPAAMAAAAAADAAAAAAAAQAAAAAADAAAAABAAQAAAAAADAAAAACAAQAAAAAABAAAAADAAQAAAAAABAAAAAEAAQAAAAAABAAAAAFAAQAAAAAABAAAAAGAAQAAAAAABAAAAAHAAQAAAAAABAAAAAIAAQAAAAAABAAAAAJAAQAAAAAABAAAAAKAAQAAAAAABAAAAALAAQAAAAAABAAAAAMAAQAAAAAADAAAAANAAQAAAAAADAAAAAOAAQAAAAAADAAAAAPAAQAAAAAADAAAAAAAAUAAAAAADAAAAABAAUAAAAAADAAAAACAAUAAAAAABAAAAADAAUAAAAAABAAAAAEAAUAAAAAABAAAAAFAAUAAAAAABAAAAAGAAUAAAAAABAAAAAHAAUAAAAAABAAAAAIAAUAAAAAABAAAAAJAAUAAAAAABAAAAAKAAUAAAAAABAAAAALAAUAAAAAABAAAAAMAAUAAAAAADAAAAANAAUAAAAAADAAAAAOAAUAAAAAADAAAAAPAAUAAAAAADAAAAAAAAYAAAAAADAAAAABAAYAAAAAADAAAAACAAYAAAAAABAAAAADAAYAAAAAABAAAAAEAAYAAAAAABAAAAAFAAYAAAAAABAAAAAGAAYAAAAAABAAAAAHAAYAAAAAABAAAAAIAAYAAAAAABAAAAAJAAYAAAAAABAAAAAKAAYAAAAAABAAAAALAAYAAAAAABAAAAAMAAYAAAAAADAAAAANAAYAAAAAADAAAAAOAAYAAAAAADAAAAAPAAYAAAAAADAAAAAAAAcAAAAAADAAAAABAAcAAAAAADAAAAACAAcAAAAAABAAAAADAAcAAAAAABAAAAAEAAcAAAAAABAAAAAFAAcAAAAAABAAAAAGAAcAAAAAABAAAAAHAAcAAAAAABAAAAAIAAcAAAAAABAAAAAJAAcAAAAAABAAAAAKAAcAAAAAABAAAAALAAcAAAAAABAAAAAMAAcAAAAAADAAAAANAAcAAAAAADAAAAAOAAcAAAAAADAAAAAPAAcAAAAAADAAAAAAAAgAAAAAADAAAAABAAgAAAAAADAAAAACAAgAAAAAABAAAAADAAgAAAAAABAAAAAEAAgAAAAAABAAAAAFAAgAAAAAABAAAAAGAAgAAAAAABAAAAAHAAgAAAAAABAAAAAIAAgAAAAAABAAAAAJAAgAAAAAABAAAAAKAAgAAAAAABAAAAALAAgAAAAAABAAAAAMAAgAAAAAADAAAAANAAgAAAAAADAAAAAOAAgAAAAAADAAAAAPAAgAAAAAADAAAAAAAAkAAAAAADAAAAABAAkAAAAAADAAAAACAAkAAAAAADAAAAADAAkAAAAAADAAAAAEAAkAAAAAADAAAAAFAAkAAAAAADAAAAAGAAkAAAAAADAAAAAHAAkAAAAAADAAAAAIAAkAAAAAADAAAAAJAAkAAAAAADAAAAAKAAkAAAAAADAAAAALAAkAAAAAADAAAAAMAAkAAAAAADAAAAANAAkAAAAAADAAAAAOAAkAAAAAADAAAAAPAAkAAAAAADAAAAAAAAoAAAAAADAAAAABAAoAAAAAADAAAAACAAoAAAAAADAAAAADAAoAAAAAADAAAAAEAAoAAAAAADAAAAAFAAoAAAAAADAAAAAGAAoAAAAAADAAAAAHAAoAAAAAADAAAAAIAAoAAAAAADAAAAAJAAoAAAAAADAAAAAKAAoAAAAAADAAAAALAAoAAAAAADAAAAAMAAoAAAAAADAAAAANAAoAAAAAADAAAAAOAAoAAAAAADAAAAAPAAoAAAAAADAAAAAAAAsAAAAAADAAAAABAAsAAAAAADAAAAACAAsAAAAAADAAAAADAAsAAAAAADAAAAAEAAsAAAAAADAAAAAFAAsAAAAAADAAAAAGAAsAAAAAADAAAAAHAAsAAAAAADAAAAAIAAsAAAAAADAAAAAJAAsAAAAAADAAAAAKAAsAAAAAADAAAAALAAsAAAAAAAwAAAAMAAsAAAAAADAAAAANAAsAAAAAADAAAAAOAAsAAAAAADAAAAAPAAsAAAAAADAAAAA=")
+tile_set = ExtResource("4_1pygk")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=1054409058]
+tile_map_data = PackedByteArray("AAABAAAAAQABABIAAAABAAEAAQABABMAAAACAAAAAQABABIAAAACAAEAAQABABMAAAADAAAAAQABABIAAAADAAEAAQABABMAAAAEAAAAAQABABIAAAAEAAEAAQABABMAAAAFAAAAAQABABIAAAAFAAEAAQABABMAAAAGAAAAAQABABIAAAAGAAEAAQABABMAAAAHAAAAAQABABIAAAAHAAEAAQABABMAAAAIAAAAAQABABIAAAAIAAEAAQABABMAAAAJAAAAAQABABIAAAAJAAEAAQABABMAAAAKAAAAAQABABIAAAAKAAEAAQABABMAAAALAAAAAQABABIAAAALAAEAAQABABMAAAAMAAAAAQABABIAAAAMAAEAAQABABMAAAANAAAAAQABABIAAAANAAEAAQABABMAAAAOAAAAAQABABIAAAAOAAEAAQABABMAAAAAAAAAAQACABAAAAAPAAAAAQAAABAAAAAAAAEAAQACABAAAAAPAAEAAQAAABAAAAAAAAIAAQACABAAAAAPAAIAAQAAABAAAAAAAAMAAQACABAAAAAPAAMAAQAAABAAAAAAAAQAAQACABAAAAAPAAQAAQAAABAAAAAAAAUAAQACABAAAAAPAAUAAQAAABAAAAAAAAYAAQACABAAAAAPAAYAAQAAABAAAAAAAAcAAQACABAAAAAPAAcAAQAAABAAAAAAAAgAAQACABAAAAAPAAgAAQAAABAAAAAAAAkAAQACABAAAAAPAAkAAQAAABAAAAAAAAoAAQACABAAAAAPAAoAAQAAABAAAAABAAsAAQABAA8AAAACAAsAAQABAA8AAAADAAsAAQABAA8AAAAEAAsAAQABAA8AAAAFAAsAAQABAA8AAAAGAAsAAQABAA8AAAAHAAsAAQABAA8AAAAIAAsAAQABAA8AAAAJAAsAAQABAA8AAAAKAAsAAQACAA8AAAAMAAsAAQAAAA8AAAANAAsAAQABAA8AAAAOAAsAAQABAA8AAAAAAAsAAQAFABMAAAAPAAsAAQAGABMAAAA=")
+tile_set = ExtResource("4_1pygk")
+
+[node name="Entities" type="Node2D" parent="." unique_id=669309701]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=693887191]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAKAAUAAgAFADQAAAALAAUAAgAGADQAAAAMAAUAAgAHADQAAAAKAAYAAgAFADUAAAALAAYAAgAGADUAAAAMAAYAAgAHADUAAAAJAAYAAgAGAD4AAAANAAYAAgAHAD4AAAABAAcAAgAFADMAAAACAAcAAgAGADMAAAAOAAoAAgACACYAAAABAAoAAgADADMAAAACAAoAAgAEADMAAAA=")
+tile_set = ExtResource("4_1pygk")
+
+[node name="CamareroDelPalco" type="Node2D" parent="Entities" unique_id=454691605 instance=ExtResource("5_2lfb5")]
+position = Vector2(400, 272)
+script = ExtResource("6_tnfq0")
+display_name = "Camarero del palco"
+lines = PackedStringArray("En el palco se ve el partido, se come jamón y se hacen negocios. El orden cambia según cómo vaya el marcador.", "Sirvo el mismo vino a ministros, empresarios y embajadores. Ninguno mira la etiqueta; todos miran quién está al lado.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_cer1c")
+initial_facing = 2
+
+[node name="Empresario" type="Node2D" parent="Entities" unique_id=1796138109 instance=ExtResource("5_2lfb5")]
+position = Vector2(432, 304)
+script = ExtResource("6_tnfq0")
+display_name = "Empresario"
+lines = PackedStringArray("No sé quién ha marcado. Pero en el descanso he cerrado la venta de dos solares y una autopista de peaje.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_b0is7")
+
+[node name="TertulianoInvitado" type="Node2D" parent="Entities" unique_id=952275758 instance=ExtResource("5_2lfb5")]
+position = Vector2(304, 112)
+script = ExtResource("6_tnfq0")
+display_name = "Tertuliano invitado"
+lines = PackedStringArray("Vengo al palco a que me vean venir al palco. Mañana lo cuento en la radio como si hubiera estado en el césped.")
+turn_to_player = true
+sprite_sheet = ExtResource("9_lc0j6")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=379598992 instance=ExtResource("10_u6dlg")]
+position = Vector2(48, 48)
+script = ExtResource("11_am50g")
+lines = PackedStringArray("Una fila de butacas de piel con vistas al centro del campo. En el respaldo de cada una, una placa con un nombre que no se puede leer desde aquí.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=335227783]
+z_index = 10
+tile_map_data = PackedByteArray("AAAJAAUAAgAGAD0AAAANAAUAAgAHAD0AAAABAAUAAgAFADEAAAACAAUAAgAGADEAAAABAAYAAgAFADIAAAACAAYAAgAGADIAAAAOAAgAAgACACQAAAAOAAkAAgACACUAAAABAAkAAgADADIAAAACAAkAAgAEADIAAAA=")
+tile_set = ExtResource("4_1pygk")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1164825236]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=375223314]
+position = Vector2(368, 368)
+script = ExtResource("12_2cje6")
+target_map = &"madrid/sala_bernabeu_19_14"
+target_spawn = &"desde_sala_bernabeu_19_14_palco"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1950413340]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=375022842]
+position = Vector2(368, 336)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1801439081]
+
+[node name="Rotulo" type="Label" parent="." unique_id=877408047]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 496.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_wa5k7")
+theme_override_font_sizes/font_size = 16
+text = "PALCO DE HONOR"
+horizontal_alignment = 1

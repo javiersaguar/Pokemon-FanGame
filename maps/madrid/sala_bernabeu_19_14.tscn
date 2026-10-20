@@ -1,0 +1,144 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_62wpu"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_0cdn0"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_dy436"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_rn1o0"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_5ovdd"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_7bqkm"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_woman.png" id="7_e50cv"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/cunado.png" id="8_1flwk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_woman.png" id="9_ntct4"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="10_qsjae"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="11_s5da0"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="12_mrqye"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="13_qh01m"]
+
+[sub_resource type="Resource" id="Resource_y0i0o"]
+script = ExtResource("3_dy436")
+id = &"madrid/sala_bernabeu_19_14"
+display_name = "Estadio Santiago Bernabéu · sala de trofeos, Madrid"
+outdoor = false
+zone_id = &"madrid"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaBernabeu1914" type="Node2D" unique_id=285536377]
+script = ExtResource("1_62wpu")
+data = SubResource("Resource_y0i0o")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1109269743]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADQAAAABAAAAAAAAADQAAAACAAAAAAABADUAAAADAAAAAAAAADQAAAAEAAAAAAAAADQAAAAFAAAAAAAAADQAAAAGAAAAAAAAADQAAAAHAAAAAAAAADQAAAAIAAAAAAAAADQAAAAJAAAAAAABADUAAAAKAAAAAAAAADQAAAALAAAAAAAAADQAAAAMAAAAAAABADUAAAANAAAAAAAAADQAAAAOAAAAAAAAADQAAAAPAAAAAAAAADQAAAAAAAEAAAAAADQAAAABAAEAAAAAADQAAAACAAEAAAABADUAAAADAAEAAAAAADQAAAAEAAEAAAAAADQAAAAFAAEAAAAAADQAAAAGAAEAAAAAADQAAAAHAAEAAAAAADQAAAAIAAEAAAAAADQAAAAJAAEAAAABADUAAAAKAAEAAAAAADQAAAALAAEAAAAAADQAAAAMAAEAAAABADUAAAANAAEAAAAAADQAAAAOAAEAAAAAADQAAAAPAAEAAAAAADQAAAAAAAIAAAAAADQAAAABAAIAAAAAADQAAAACAAIAAAAAADQAAAADAAIAAAAAADQAAAAEAAIAAAAAADQAAAAFAAIAAAAAADQAAAAGAAIAAAAAADQAAAAHAAIAAAAAADQAAAAIAAIAAAAAADQAAAAJAAIAAAAAADQAAAAKAAIAAAAAADQAAAALAAIAAAAAADQAAAAMAAIAAAAAADQAAAANAAIAAAAAADQAAAAOAAIAAAAAADQAAAAPAAIAAAAAADQAAAAAAAMAAAAAADQAAAABAAMAAAAAADQAAAACAAMAAAAAADQAAAADAAMAAAAAADQAAAAEAAMAAAAAADQAAAAFAAMAAAAAADQAAAAGAAMAAAAAADQAAAAHAAMAAAAAADQAAAAIAAMAAAAAADQAAAAJAAMAAAAAADQAAAAKAAMAAAAAADQAAAALAAMAAAAAADQAAAAMAAMAAAAAADQAAAANAAMAAAAAADQAAAAOAAMAAAAAADQAAAAPAAMAAAAAADQAAAAAAAQAAAAAADQAAAABAAQAAAAAADQAAAACAAQAAAAAADQAAAADAAQAAAAAADQAAAAEAAQAAAAAADQAAAAFAAQAAAAAADQAAAAGAAQAAAAAADQAAAAHAAQAAAAAADQAAAAIAAQAAAAAADQAAAAJAAQAAAAAADQAAAAKAAQAAAAAADQAAAALAAQAAAAAADQAAAAMAAQAAAAAADQAAAANAAQAAAAAADQAAAAOAAQAAAAAADQAAAAPAAQAAAAAADQAAAAAAAUAAAAAADQAAAABAAUAAAAAADQAAAACAAUAAAAAADQAAAADAAUAAAAAADQAAAAEAAUAAAAAADQAAAAFAAUAAAAAADQAAAAGAAUAAAAAADQAAAAHAAUAAAAAADQAAAAIAAUAAAAAADQAAAAJAAUAAAAAADQAAAAKAAUAAAAAADQAAAALAAUAAAAAADQAAAAMAAUAAAAAADQAAAANAAUAAAAAADQAAAAOAAUAAAAAADQAAAAPAAUAAAAAADQAAAAAAAYAAAAAADQAAAABAAYAAAAAADQAAAACAAYAAAAAADQAAAADAAYAAAAAADQAAAAEAAYAAAAAADQAAAAFAAYAAAAAADQAAAAGAAYAAAAAADQAAAAHAAYAAAAAADQAAAAIAAYAAAAAADQAAAAJAAYAAAAAADQAAAAKAAYAAAAAADQAAAALAAYAAAAAADQAAAAMAAYAAAAAADQAAAANAAYAAAAAADQAAAAOAAYAAAAAADQAAAAPAAYAAAAAADQAAAAAAAcAAAAAADQAAAABAAcAAAAAADQAAAACAAcAAAAAADQAAAADAAcAAAAAADQAAAAEAAcAAAAAADQAAAAFAAcAAAAAADQAAAAGAAcAAAAAADQAAAAHAAcAAAAAADQAAAAIAAcAAAAAADQAAAAJAAcAAAAAADQAAAAKAAcAAAAAADQAAAALAAcAAAAAADQAAAAMAAcAAAAAADQAAAANAAcAAAAAADQAAAAOAAcAAAAAADQAAAAPAAcAAAAAADQAAAAAAAgAAAAAADQAAAABAAgAAAAAADQAAAACAAgAAAAAADQAAAADAAgAAAAAADQAAAAEAAgAAAAAADQAAAAFAAgAAAAAADQAAAAGAAgAAAAAADQAAAAHAAgAAAAAADQAAAAIAAgAAAAAADQAAAAJAAgAAAAAADQAAAAKAAgAAAAAADQAAAALAAgAAAAAADQAAAAMAAgAAAAAADQAAAANAAgAAAAAADQAAAAOAAgAAAAAADQAAAAPAAgAAAAAADQAAAAAAAkAAAAAADQAAAABAAkAAAAAADQAAAACAAkAAAAAADQAAAADAAkAAAAAADQAAAAEAAkAAAAAADQAAAAFAAkAAAAAADQAAAAGAAkAAAAAADQAAAAHAAkAAAAAADQAAAAIAAkAAAAAADQAAAAJAAkAAAAAADQAAAAKAAkAAAAAADQAAAALAAkAAAAAADQAAAAMAAkAAAAAADQAAAANAAkAAAAAADQAAAAOAAkAAAAAADQAAAAPAAkAAAAAADQAAAAAAAoAAAAAADQAAAABAAoAAAAAADQAAAACAAoAAAAAADQAAAADAAoAAAAAADQAAAAEAAoAAAAAADQAAAAFAAoAAAAAADQAAAAGAAoAAAAAAAwAAAAHAAoAAAAAADQAAAAIAAoAAAAAADQAAAAJAAoAAAAAADQAAAAKAAoAAAAAADQAAAALAAoAAAAAADQAAAAMAAoAAAAAADQAAAANAAoAAAAAADQAAAAOAAoAAAAAADQAAAAPAAoAAAAAADQAAAA=")
+tile_set = ExtResource("4_rn1o0")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=689250344]
+tile_map_data = PackedByteArray("AAABAAAAAQABACYAAAABAAEAAQABACcAAAADAAAAAQABACYAAAADAAEAAQABACcAAAAEAAAAAQABACYAAAAEAAEAAQABACcAAAAFAAAAAQABACYAAAAFAAEAAQABACcAAAAGAAAAAQABACYAAAAGAAEAAQABACcAAAAHAAAAAQABACYAAAAHAAEAAQABACcAAAAIAAAAAQABACYAAAAIAAEAAQABACcAAAAKAAAAAQABACYAAAAKAAEAAQABACcAAAALAAAAAQABACYAAAALAAEAAQABACcAAAANAAAAAQABACYAAAANAAEAAQABACcAAAAOAAAAAQABACYAAAAOAAEAAQABACcAAAAAAAAAAQACACQAAAAPAAAAAQAAACQAAAAAAAEAAQACACQAAAAPAAEAAQAAACQAAAAAAAIAAQACACQAAAAPAAIAAQAAACQAAAAAAAMAAQACACQAAAAPAAMAAQAAACQAAAAAAAQAAQACACQAAAAPAAQAAQAAACQAAAAAAAUAAQACACQAAAAPAAUAAQAAACQAAAAAAAYAAQACACQAAAAPAAYAAQAAACQAAAAAAAcAAQACACQAAAAPAAcAAQAAACQAAAAAAAgAAQACACQAAAAPAAgAAQAAACQAAAAAAAkAAQACACQAAAAPAAkAAQAAACQAAAABAAoAAQABACMAAAACAAoAAQABACMAAAADAAoAAQABACMAAAAEAAoAAQABACMAAAAFAAoAAQACACMAAAAHAAoAAQAAACMAAAAIAAoAAQABACMAAAAJAAoAAQABACMAAAAKAAoAAQABACMAAAALAAoAAQABACMAAAAMAAoAAQABACMAAAANAAoAAQABACMAAAAOAAoAAQABACMAAAAAAAoAAQAFACcAAAAPAAoAAQAGACcAAAA=")
+tile_set = ExtResource("4_rn1o0")
+
+[node name="Entities" type="Node2D" parent="." unique_id=2068616244]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1160235866]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAADAAAAAgAAADEAAAAEAAAAAgABADEAAAAFAAAAAgACADEAAAADAAEAAgAAADIAAAAEAAEAAgABADIAAAAFAAEAAgACADIAAAADAAIAAgAAADMAAAAEAAIAAgABADMAAAAFAAIAAgACADMAAAAGAAEAAgAFABwAAAAHAAEAAgAGABwAAAAGAAIAAgAFAB0AAAAHAAIAAgAGAB0AAAACAAcAAgADADMAAAADAAcAAgAEADMAAAAFAAcAAgADADMAAAAGAAcAAgAEADMAAAAMAAcAAgAFADMAAAANAAcAAgAGADMAAAA=")
+tile_set = ExtResource("4_rn1o0")
+
+[node name="GuiaDelTour" type="Node2D" parent="Entities" unique_id=639207620 instance=ExtResource("5_5ovdd")]
+position = Vector2(48, 112)
+script = ExtResource("6_7bqkm")
+display_name = "Guía del tour"
+lines = PackedStringArray("El tour pasa por la sala de trofeos, los vestuarios, el túnel y el palco. Por el césped no: el césped se mira y no se toca.", "Con la reforma, el estadio tiene techo que se cierra y un videomarcador que da la vuelta entera. Aparcamiento, el mismo de antes.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_e50cv")
+initial_facing = 1
+
+[node name="SocioVeterano" type="Node2D" parent="Entities" unique_id=789384524 instance=ExtResource("5_5ovdd")]
+position = Vector2(368, 176)
+script = ExtResource("6_7bqkm")
+display_name = "Socio veterano"
+lines = PackedStringArray("Soy socio desde 1987. El abono pasará a mi hijo y luego a mi nieto. Es lo único de Chamartín que heredas sin hipoteca.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_1flwk")
+initial_facing = 1
+
+[node name="VecinaDeEnfrente" type="Node2D" parent="Entities" unique_id=855252238 instance=ExtResource("5_5ovdd")]
+position = Vector2(272, 208)
+script = ExtResource("6_7bqkm")
+display_name = "Vecina de enfrente"
+lines = PackedStringArray("Vivo enfrente. Cuando hubo conciertos, el ruido nos llegaba al salón y los vecinos protestamos hasta que los pararon.", "El fútbol lo aguanto. Noventa minutos de gritos los domingos son más llevaderos que tres horas de bises.")
+turn_to_player = true
+sprite_sheet = ExtResource("9_ntct4")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=639361948 instance=ExtResource("10_qsjae")]
+position = Vector2(240, 80)
+script = ExtResource("11_s5da0")
+lines = PackedStringArray("Copas de Europa en fila, cada una con su año grabado. Detrás, una etiqueta del utillero: «dejar sitio».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=767502079]
+z_index = 10
+tile_map_data = PackedByteArray("AAACAAYAAgADADIAAAADAAYAAgAEADIAAAAFAAYAAgADADIAAAAGAAYAAgAEADIAAAAMAAUAAgAFADEAAAANAAUAAgAGADEAAAAMAAYAAgAFADIAAAANAAYAAgAGADIAAAA=")
+tile_set = ExtResource("4_rn1o0")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=959854905]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=304144845]
+position = Vector2(208, 336)
+script = ExtResource("12_mrqye")
+target_map = &"madrid/bernabeu"
+target_spawn = &"from_estadio"
+arrival_facing = 1
+
+[node name="Palco" type="Node2D" parent="Warps" unique_id=948919843]
+position = Vector2(400, 48)
+script = ExtResource("12_mrqye")
+target_map = &"madrid/sala_bernabeu_19_14_palco"
+arrival_facing = 4
+
+[node name="Tunel" type="Node2D" parent="Warps" unique_id=1783191449]
+position = Vector2(304, 48)
+script = ExtResource("12_mrqye")
+target_map = &"madrid/sala_bernabeu_19_14_tunel"
+arrival_facing = 4
+
+[node name="Vestuarios" type="Node2D" parent="Warps" unique_id=1341955147]
+position = Vector2(80, 48)
+script = ExtResource("12_mrqye")
+target_map = &"madrid/sala_bernabeu_19_14_vestuarios"
+arrival_facing = 4
+
+[node name="Spawns" type="Node2D" parent="." unique_id=884342502]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1554393446]
+position = Vector2(208, 304)
+
+[node name="desde_sala_bernabeu_19_14_palco" type="Marker2D" parent="Spawns" unique_id=1199658914]
+position = Vector2(400, 80)
+
+[node name="desde_sala_bernabeu_19_14_tunel" type="Marker2D" parent="Spawns" unique_id=1750150042]
+position = Vector2(304, 80)
+
+[node name="desde_sala_bernabeu_19_14_vestuarios" type="Marker2D" parent="Spawns" unique_id=1052916913]
+position = Vector2(80, 80)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1557182576]
+
+[node name="Rotulo" type="Label" parent="." unique_id=253320237]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 496.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("13_qh01m")
+theme_override_font_sizes/font_size = 16
+text = "ESTADIO SANTIAGO BERNABÉU"
+horizontal_alignment = 1
