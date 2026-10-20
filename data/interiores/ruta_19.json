@@ -1,0 +1,197 @@
+{
+ "_doc": "Interiores personalizados de ruta_19 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 19",
+ "interiores": {
+  "ruta_19/sala_calle_33_8": {
+   "pieza": "faro",
+   "calle": ["ruta_19/exterior", [33, 11]],
+   "tipo": "faro",
+   "nombre": "Faro del cabo",
+   "personas": [
+    {
+     "nombre": "Farera",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "La costa de Cantabria tiene más faros que playas sin surfistas. Cada uno con su destello, para que el barco sepa dónde está.",
+      "Cuando hay galerna, el mar sube hasta la puerta. Esa noche subo la escalera con el corazón en la mano y el bocadillo en la otra."
+     ],
+     "nodo": "Farera",
+     "en": [3, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una tabla de destellos: «grupo de cuatro cada veinte segundos». Debajo, a boli: «y el wifi, cuando quiere»."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "parquet",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 4, 0], ["papelera", 8, 1]],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "ruta_19/sala_calle_46_11": {
+   "pieza": "iglesia_altea",
+   "calle": ["ruta_19/exterior", [46, 11]],
+   "tipo": "iglesia",
+   "nombre": "Iglesia de Santa María de Castro Urdiales",
+   "personas": [
+    {
+     "nombre": "Sacristana",
+     "aspecto": "npc_old_woman",
+     "papel": "cura",
+     "frases": [
+      "Santa María es gótica, del siglo XIII, y está en lo alto del puerto junto al castillo-faro. Desde aquí los marineros veían su casa.",
+      "En Semana Santa, Castro representa la Pasión Viviente por sus calles con cientos de vecinos. El romano más malo es el del banco."
+     ],
+     "nodo": "Sacristana",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista_f",
+     "papel": "visitante",
+     "frases": [
+      "He subido para la foto de la iglesia con el castillo. Me he quedado por la vista. Y por la cuesta, que no me deja bajar."
+     ],
+     "nodo": "Turista",
+     "en": [6, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 12],
+   "puerta": [7, 11],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [7, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 6, 3],
+    ["estatua_aguila", 2, 0],
+    ["estatua_aguila", 10, 0],
+    ["arbol_maceta", 1, 0],
+    ["banco_rojo", 4, 6],
+    ["banco_rojo", 8, 6],
+    ["banco_rojo", 4, 8],
+    ["banco_rojo", 8, 8],
+    ["palmera_maceta", 12, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 10]},
+   "pasos": []
+  },
+  "ruta_19/sala_calle_47_18": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_19/exterior", [47, 18]],
+   "tipo": "taller",
+   "nombre": "Conservera de anchoas",
+   "personas": [
+    {
+     "nombre": "Sobadora",
+     "aspecto": "npc_woman",
+     "papel": "tras_mostrador",
+     "frases": [
+      "La anchoa se limpia a mano, una a una, quitándole la espina con los dedos. Se llama sobar. Llevo treinta años sobando.",
+      "Unos italianos montaron las primeras conserveras aquí hace más de un siglo. Ellos traían la sal; nosotros, las manos."
+     ],
+     "nodo": "Sobadora",
+     "en": [4, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aprendiz",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": ["Hoy he sobado cien anchoas. La maestra ciento cincuenta. Y hablando por teléfono."],
+     "nodo": "Aprendiz",
+     "en": [9, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["cajonera_gris", 4, 1],
+    ["cajonera_azul", 6, 1],
+    ["escalera_mano", 8, 0],
+    ["mostrador_tablas", 1, 4],
+    ["caja", 3, 6],
+    ["caja", 4, 6],
+    ["papelera", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "ruta_19/sala_calle_52_17": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_19/exterior", [52, 17]],
+   "tipo": "casa",
+   "nombre": "Casa del surfista de la playa",
+   "personas": [
+    {
+     "nombre": "Surfista",
+     "aspecto": "surfista",
+     "papel": "libre",
+     "frases": [
+      "En Cantabria se surfea todo el año. En invierno con neopreno de cinco milímetros, botines y capucha. Parezco una foca.",
+      "Cuando entra mar del noroeste, llamo al trabajo y me pongo enfermo. Mi jefe también surfea: nos vemos en el agua."
+     ],
+     "nodo": "Surfista",
+     "en": [3, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Madre",
+     "aspecto": "mom",
+     "papel": "cocina",
+     "frases": ["El neopreno de mi hijo se seca en la bañera. Yo me ducho con un tiburón de goma mirándome."],
+     "nodo": "Madre",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [4, 9],
+   "suelo": "rombos_lila",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [5, 5, 4, 2]]],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["fogones", 5, 1],
+    ["tele", 7, 1],
+    ["planta", 9, 1],
+    ["mesa_cristal", 5, 5],
+    ["taburete_verde", 4, 6],
+    ["taburete_verde", 7, 6],
+    ["arbol_maceta", 1, 6],
+    ["planta", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  }
+ }
+}

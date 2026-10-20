@@ -1,0 +1,113 @@
+{
+ "_doc": "Interiores personalizados de ruta_20 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 20",
+ "interiores": {
+  "ruta_20/sala_calle_18_28": {
+   "pieza": "casa_paja",
+   "calle": ["ruta_20/exterior", [18, 28]],
+   "tipo": "rural",
+   "nombre": "Borda del pastor",
+   "personas": [
+    {
+     "nombre": "Pastora",
+     "aspecto": "pastor",
+     "papel": "libre",
+     "frases": [
+      "En la borda hacemos el queso como siempre: leche cruda de latxa, cuajo y paciencia. El ahumado le da el humo de la chimenea.",
+      "En verano vivo aquí arriba con las ovejas. No hay cobertura. Las ovejas no me preguntan si he visto el último mensaje."
+     ],
+     "nodo": "Pastora",
+     "en": [2, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aizkolari",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": ["Entreno cortando troncos para la plaza del pueblo. Mi mujer dice que en casa no corto ni el pan."],
+     "nodo": "Aizkolari",
+     "en": [3, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [4, 7],
+   "suelo": "losa_crema",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["alacena", 7, 0],
+    ["mesa_cristal_larga", 6, 3],
+    ["banqueta_roja", 6, 5],
+    ["banqueta_roja", 8, 5],
+    ["cajas", 1, 1],
+    ["cajas", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
+   "pasos": []
+  },
+  "ruta_20/sala_calle_20_5": {
+   "pieza": "ermita_virgen_del_rio",
+   "calle": ["ruta_20/exterior", [20, 5]],
+   "tipo": "ermita",
+   "nombre": "Santuario de San Miguel de Aralar",
+   "personas": [
+    {
+     "nombre": "Guardés del santuario",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Cuenta la leyenda que el caballero Teodosio de Goñi pasó años aquí atado con cadenas, de penitencia, y que un dragón le salió al paso.",
+      "San Miguel bajó del cielo y mató al dragón. Las cadenas siguen colgadas en la pared, por si alguien no se lo cree."
+     ],
+     "nodo": "GuardesDelSantuario",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Montañera",
+     "aspecto": "montanera",
+     "papel": "visitante",
+     "frases": [
+      "He subido desde Uharte-Arakil por el camino viejo. Tres horas. El dragón lo habría hecho en diez minutos."
+     ],
+     "nodo": "Montanera",
+     "en": [3, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Unas cadenas de hierro colgadas en la pared. Las de Teodosio, dicen. Están frías aunque sea agosto."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "tamano": [13, 11],
+   "puerta": [8, 10],
+   "suelo": "piedra",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [8, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_madera", 7, 3],
+    ["estatua_gargola", 4, 0],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 11, 0],
+    ["banco_rojo", 5, 6],
+    ["banco_rojo", 2, 6],
+    ["arbol_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  }
+ }
+}

@@ -1,0 +1,498 @@
+{
+ "_doc": "Interiores personalizados de ruta_4 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 4",
+ "interiores": {
+  "ruta_4/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_4/exterior", [24, 21]],
+   "tipo": "taberna",
+   "nombre": "Venta de la carretera del Escorial",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Ventero",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_4_from_casa_1",
+     "papel": "tras_mostrador",
+     "frases": [
+      "Esta venta da de comer a los arrieros desde antes de que hubiera monasterio. Ahora, a los ciclistas de los domingos.",
+      "Toma, invita la casa. Que con la cuesta que te queda hasta Madrid, vas a necesitar algo más que un café."
+     ],
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Ciclista",
+     "aspecto": "crossfitero",
+     "papel": "cliente",
+     "frases": [
+      "Salgo de Madrid a las siete, subo a Abantos y bajo a desayunar aquí. Gasto en bici lo que un coche y en lycra lo que un traje."
+     ],
+     "nodo": "Ciclista",
+     "en": [2, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [7, 8],
+   "suelo": "piedra",
+   "pared": "marino",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["encimera", 4, 1],
+    ["alacena", 7, 0],
+    ["mostrador_naranja_i", 2, 4],
+    ["mostrador_naranja_m", 3, 4],
+    ["mostrador_naranja_m", 4, 4],
+    ["mostrador_naranja_m", 5, 4],
+    ["mostrador_naranja_m", 6, 4],
+    ["mostrador_naranja_d", 7, 4],
+    ["taburete_amarillo", 3, 6],
+    ["taburete_amarillo", 5, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "ruta_4/casa_2": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_4/exterior", [29, 14]],
+   "tipo": "casa",
+   "nombre": "Casa del guía del Monasterio",
+   "personas": [
+    {
+     "nombre": "Guía del Monasterio",
+     "aspecto": "profesor",
+     "papel": "mesa",
+     "frases": [
+      "En el Panteón de Reyes hay sitio contado: los reyes y las madres de reyes. El resto de la familia, al de Infantes, que es como el trastero.",
+      "Felipe II gobernaba medio mundo desde una celda pequeña con una ventana que daba al altar. Teletrabajo del siglo XVI."
+     ],
+     "nodo": "GuiaDelMonasterio",
+     "en": [6, 7],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija opositora",
+     "aspecto": "opositor_f",
+     "papel": "estanteria",
+     "frases": [
+      "Oposito a archivera. Mi padre dice que el Monasterio tiene cuarenta mil libros. Yo ya me he leído el temario, que es más largo."
+     ],
+     "nodo": "HijaOpositora",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "tatami_verde",
+   "pared": "retro",
+   "felpudo": "moqueta_beige",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["fregadero", 3, 1],
+    ["nevera", 5, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal", 5, 5],
+    ["taburete_amarillo", 4, 6],
+    ["taburete_amarillo", 7, 6],
+    ["sofa", 2, 3],
+    ["planta", 12, 7],
+    ["papelera", 12, 1],
+    ["estanteria_baja_madera", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_34_14": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_4/exterior", [34, 14]],
+   "tipo": "casa",
+   "nombre": "Casa del restaurador jubilado",
+   "personas": [
+    {
+     "nombre": "Restaurador jubilado",
+     "aspecto": "jubiladoobras",
+     "papel": "tele",
+     "frases": [
+      "Treinta años restaurando frescos en la Biblioteca del Monasterio. Ahora restauro el sofá: también tiene grietas.",
+      "Los libros de esa biblioteca están colocados con el lomo hacia dentro, para que respiren. Ojalá me hubieran colocado así a mí."
+     ],
+     "nodo": "RestauradorJubilado",
+     "en": [8, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [9, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [4, 4, 4, 2]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["tele", 7, 1],
+    ["estanteria_alta_madera", 10, 0],
+    ["mesa_cristal", 6, 4],
+    ["silla_derecha", 5, 4],
+    ["silla_izquierda", 8, 4],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 7]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_29_27": {
+   "pieza": "casa_azul",
+   "calle": ["ruta_4/exterior", [29, 27]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la presidenta de la comunidad",
+   "personas": [
+    {
+     "nombre": "Presidenta de la comunidad",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Soy presidenta de la urbanización desde 2009. No me ha votado nadie: no se presenta nadie más.",
+      "Orden del día de la próxima junta: el seto del 14, el perro del 21 y los periodistas que se asoman a la colina."
+     ],
+     "nodo": "PresidentaDeLaComunidad",
+     "en": [8, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Marido",
+     "aspecto": "padretarjeta",
+     "papel": "sofa",
+     "frases": ["Yo voy a las juntas a callarme. Es la única reunión en la que no tengo que pagar yo."],
+     "nodo": "Marido",
+     "en": [5, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_verdes",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["nevera_alta", 7, 0],
+    ["tele", 8, 1],
+    ["planta", 10, 1],
+    ["mesa_cristal", 7, 4],
+    ["silla_derecha", 6, 4],
+    ["silla_izquierda", 9, 4],
+    ["arbol_maceta", 10, 5],
+    ["papelera", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_38_28": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_4/exterior", [38, 28]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la colina",
+   "personas": [
+    {
+     "nombre": "Guardia civil de la puerta",
+     "aspecto": "policia",
+     "papel": "libre",
+     "frases": [
+      "Los dueños no están. Quiénes son, no te lo puedo decir. Tampoco te lo preguntaría yo, que es tu primer día por aquí.",
+      "Tiene piscina, barbacoa y dieciséis cámaras. Una de ellas te está grabando ahora. Saluda."
+     ],
+     "nodo": "GuardiaCivilDeLaPuerta",
+     "en": [9, 6],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Cajas de la mudanza, todavía cerradas. En la de arriba alguien ha escrito «LIBROS» y ha tachado «MUCHOS»."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [4, 4, 3, 2]]],
+   "muebles": [
+    ["nevera_alta", 3, 0],
+    ["encimera", 4, 1],
+    ["fogones", 7, 1],
+    ["mesa_cristal", 6, 5],
+    ["silla_derecha", 5, 5],
+    ["silla_izquierda", 8, 5],
+    ["sillon_derecha", 1, 3],
+    ["mesa_cristal", 2, 4],
+    ["sillon_izquierda", 4, 3],
+    ["arbol_maceta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_45_28": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_4/exterior", [45, 28]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la teletrabajadora",
+   "personas": [
+    {
+     "nombre": "Teletrabajadora",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "mesa",
+     "frases": [
+      "Me vine a la sierra para teletrabajar con vistas. Ahora la empresa nos obliga a ir a la oficina tres días: hora y media de A-6.",
+      "Mi perfil dice «Remote first». Mi coche dice ciento veinte mil kilómetros."
+     ],
+     "nodo": "Teletrabajadora",
+     "en": [4, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [6, 7],
+   "suelo": "moqueta_beige",
+   "pared": "retro",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 6, 1],
+    ["fregadero", 8, 1],
+    ["nevera", 10, 1],
+    ["vitrina_madera", 4, 1],
+    ["planta", 10, 5],
+    ["mesa_cristal", 5, 3],
+    ["banqueta_azul", 7, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_30_38": {
+   "pieza": "casa_roja",
+   "calle": ["ruta_4/exterior", [30, 38]],
+   "tipo": "chalet",
+   "nombre": "Chalet del tertuliano",
+   "personas": [
+    {
+     "nombre": "Tertuliano",
+     "aspecto": "tertuliano",
+     "papel": "tele",
+     "frases": [
+      "Por la mañana opino de economía, por la tarde de vulcanología y por la noche de fútbol. De todo con la misma seguridad.",
+      "Me compré el chalet con lo que cobro por gritar. Aquí no grito: los vecinos me denunciarían."
+     ],
+     "nodo": "Tertuliano",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_lass",
+     "papel": "cocina",
+     "frases": [
+      "En casa le tengo prohibido opinar. Se pone tan nervioso que tiene que encender la tele para que le lleven la contraria."
+     ],
+     "nodo": "SuMujer",
+     "en": [1, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [6, 7],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [4, 3, 3, 2]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["tele", 8, 1],
+    ["mesa_cristal_larga", 3, 3],
+    ["banqueta_azul", 3, 5],
+    ["banqueta_azul", 5, 5],
+    ["planta", 9, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_38_39": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_4/exterior", [38, 39]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la familia del pádel",
+   "personas": [
+    {
+     "nombre": "Jugadora de pádel",
+     "aspecto": "crossfitero_f",
+     "papel": "libre",
+     "frases": [
+      "En la urbanización hay tres pistas de pádel y ninguna biblioteca. Las pistas están siempre llenas.",
+      "Juego los martes con la del 14 y los jueves contra ella. Los martes somos amigas."
+     ],
+     "nodo": "JugadoraDePadel",
+     "en": [1, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Hijo",
+     "aspecto": "npc_youngster",
+     "papel": "tele",
+     "frases": [
+      "Mis padres juegan al pádel, mis tíos juegan al pádel y el perro persigue las pelotas de pádel. Yo juego a Pokémon."
+     ],
+     "nodo": "Hijo",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [3, 8],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [2, 4, 5, 3]]],
+   "muebles": [
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["nevera_alta", 7, 0],
+    ["sofa", 1, 4],
+    ["planta", 1, 1],
+    ["caja", 1, 7],
+    ["tele", 8, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_44_39": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_4/exterior", [44, 39]],
+   "tipo": "chalet",
+   "nombre": "Chalet de la familia del repartidor",
+   "personas": [
+    {
+     "nombre": "Repartidor",
+     "aspecto": "repartidorbici",
+     "papel": "libre",
+     "frases": [
+      "En esta urbanización no hay números en las casas: hay nombres. «Villa Paquita», «El Refugio», «Casa Dani». El GPS se pone a llorar.",
+      "Vivo aquí con mis suegros. Reparto en los chalets de los demás y vuelvo al mío, que es el garaje."
+     ],
+     "nodo": "Repartidor",
+     "en": [3, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Suegra",
+     "aspecto": "mom",
+     "papel": "cocina",
+     "frases": [
+      "Mi yerno es muy trabajador. Lo sé porque viene a comer a las cinco y se vuelve a ir a las cinco y diez."
+     ],
+     "nodo": "Suegra",
+     "en": [4, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [4, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "lima",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["nevera_alta", 9, 0],
+    ["sillon_derecha", 9, 4],
+    ["mesa_cristal", 10, 5],
+    ["sillon_izquierda", 12, 4],
+    ["planta", 12, 7],
+    ["caja", 12, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 8]},
+   "pasos": []
+  },
+  "ruta_4/sala_calle_9_24": {
+   "pieza": "monasterio_escorial",
+   "calle": ["ruta_4/exterior", [9, 24]],
+   "tipo": "monasterio",
+   "nombre": "Real Monasterio de San Lorenzo de El Escorial",
+   "personas": [
+    {
+     "nombre": "Fraile agustino",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "Este monasterio es a la vez basílica, palacio, biblioteca, panteón y colegio. Felipe II no quería mudarse cinco veces.",
+      "En la biblioteca hay libros en árabe, hebreo y griego. Algunos llevan aquí más tiempo que la orden."
+     ],
+     "nodo": "FraileAgustino",
+     "en": [5, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista_f",
+     "papel": "visitante",
+     "frases": [
+      "Me he perdido entre el palacio y la basílica. Un señor muy amable me ha dicho que eso le pasaba también al rey."
+     ],
+     "nodo": "Turista",
+     "en": [3, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 11],
+   "puerta": [6, 10],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [6, 4, 1, 6]]],
+   "muebles": [
+    ["mostrador_madera", 5, 3],
+    ["estatua_aguila", 1, 0],
+    ["estatua_aguila", 9, 0],
+    ["banco_rojo", 3, 6],
+    ["banco_rojo", 7, 6],
+    ["palmera_maceta", 11, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 9]},
+   "pasos": []
+  }
+ }
+}

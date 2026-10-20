@@ -30,6 +30,7 @@ FUERA = {
     # Salas de hitos con interior propio (maps/_pintura/pintar_salas_hitos.gd).
     'santander/botin', 'santander/botin_sala', 'bilbao/guggenheim', 'bilbao/guggenheim_rampa', 'bilbao/guggenheim_sala',
     'pamplona/cafe_iruna', 'pamplona/cafe_comedor', 'rocafonda/ruinas', 'rocafonda/ruinas_2',
+    'ruta_17/horreo', 'ruta_18/covadonga', 'ruta_18/covadonga_cueva',
     # Casas de Getafe diseñadas a mano con sus pruebas (regalo y PC de la vecina, tests/ui/test_city_services.gd).
     'getafe/casa_1', 'getafe/casa_vecina',
     # Piso de Rufián y su portal (Agente 2, personajes decididos por Javier).

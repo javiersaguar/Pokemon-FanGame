@@ -1,0 +1,114 @@
+{
+ "_doc": "Interiores personalizados de ruta_15 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 15",
+ "interiores": {
+  "ruta_15/casa_1": {
+   "pieza": "casa_ibicenca",
+   "calle": ["ruta_15/exterior", [13, 28]],
+   "tipo": "casa",
+   "nombre": "Casa del guagüero de Telde",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Guagüero",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_15_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "La guagua de la costa para en todas las paradas aunque no haya nadie. Por si acaso. Aquí no se deja a nadie en tierra.",
+      "Toma, mi niño, que hoy te veo con mala cara. En Canarias no se pasa por una casa sin llevarse algo."
+     ],
+     "en": [7, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Papas arrugadas con mojo picón y con mojo verde. Si no repites, me ofendes a mí y a los dos mojos."
+     ],
+     "nodo": "SuMujer",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_verdes",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_beige", [3, 3, 3, 2]]],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["fregadero", 3, 1],
+    ["nevera", 5, 1],
+    ["tele", 6, 1],
+    ["estante_madera", 8, 1],
+    ["mesa_cristal", 3, 3],
+    ["taburete_marron", 2, 4],
+    ["taburete_marron", 5, 4],
+    ["planta", 8, 5],
+    ["planta", 1, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_15/casa_2": {
+   "pieza": "casa_ibicenca",
+   "calle": ["ruta_15/exterior", [17, 28]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia de Pozo Izquierdo",
+   "personas": [
+    {
+     "nombre": "Windsurfista",
+     "aspecto": "surfista",
+     "papel": "libre",
+     "frases": [
+      "En Pozo Izquierdo sopla el viento más fuerte del Atlántico. Viene a competir gente de todo el mundo. Yo vengo andando.",
+      "Mi madre dice que el viento me ha dejado sin peinado. Mi madre no me ha visto hacer un salto mortal con la vela."
+     ],
+     "nodo": "Windsurfista",
+     "en": [3, 6],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuela salinera",
+     "aspecto": "npc_old_woman",
+     "papel": "tele",
+     "frases": [
+      "Trabajé cuarenta años en las salinas de Arinaga. Todavía me echo sal en el café sin darme cuenta."
+     ],
+     "nodo": "AbuelaSalinera",
+     "en": [2, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [4, 8],
+   "suelo": "parquet",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 4, 0],
+    ["encimera", 5, 1],
+    ["fogones", 8, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["mesa_cristal_larga", 6, 4],
+    ["taburete_rojo", 6, 6],
+    ["taburete_rojo", 8, 6],
+    ["sofa", 1, 3],
+    ["palmera_maceta", 1, 5],
+    ["caja", 9, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  }
+ }
+}

@@ -674,6 +674,22 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Interiores de Ruta 24 (12 salas, `data/interiores/ruta_24.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
 | Interiores de Ruta 25 (2 salas, `data/interiores/ruta_25.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
 | Gente de los 74 locales de servicio | Mapa | Interiores (Agente 1) | integrado, provisional | Textos propios | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+| Interiores de la Ruta 2 (9 salas, `data/interiores/ruta_2.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 3 (3 salas, `data/interiores/ruta_3.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 4 (10 salas, `data/interiores/ruta_4.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 9 (18 salas, `data/interiores/ruta_9.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 10 (19 salas, `data/interiores/ruta_10.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 11 (5 salas, `data/interiores/ruta_11.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 12 (1 salas, `data/interiores/ruta_12.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 13 (2 salas, `data/interiores/ruta_13.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 14 (6 salas, `data/interiores/ruta_14.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 15 (2 salas, `data/interiores/ruta_15.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 17 (5 salas, `data/interiores/ruta_17.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 18 (3 salas, `data/interiores/ruta_18.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 19 (4 salas, `data/interiores/ruta_19.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 20 (2 salas, `data/interiores/ruta_20.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+| Interiores de la Ruta 23 (4 salas, `data/interiores/ruta_23.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
+
 
 ## Teatro original de Sevilla · 20 de octubre
 

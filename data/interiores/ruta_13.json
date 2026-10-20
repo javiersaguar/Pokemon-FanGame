@@ -1,0 +1,108 @@
+{
+ "_doc": "Interiores personalizados de ruta_13 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 13",
+ "interiores": {
+  "ruta_13/casa_1": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_13/exterior", [26, 28]],
+   "tipo": "cortijo",
+   "nombre": "Cortijo del aceite",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Maestra de almazara",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_13_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "La aceituna se muele el mismo día que se coge. Si espera, el aceite sale con defectos. Como las personas.",
+      "Toma. No es aceite, que eso ahora vale más que el oro. Es lo que te puedo regalar sin pedir un préstamo."
+     ],
+     "en": [5, 4],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Aceitunero",
+     "aspecto": "aceitunero",
+     "papel": "libre",
+     "frases": [
+      "La campaña empieza en noviembre y acaba en febrero. Vareo, recojo y cargo. En marzo me duele todo menos el sueldo."
+     ],
+     "nodo": "Aceitunero",
+     "en": [9, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "tatami_verde",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["encimera", 7, 1],
+    ["mesa_cristal_larga", 6, 3],
+    ["banqueta_roja", 6, 5],
+    ["banqueta_roja", 8, 5],
+    ["cama_colcha_rosa", 1, 1],
+    ["cajas", 8, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_13/casa_2": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_13/exterior", [47, 12]],
+   "tipo": "casa",
+   "nombre": "Casa del patio cordobés",
+   "personas": [
+    {
+     "nombre": "Dueña del patio",
+     "aspecto": "abuela",
+     "papel": "libre",
+     "frases": [
+      "Para regar las macetas de arriba uso una caña con una lata en la punta. Ningún invento moderno lo hace mejor.",
+      "Gitanillas, geranios y claveles. Ciento veinte macetas. Cada una tiene nombre; mis nietos, a veces se me olvidan."
+     ],
+     "nodo": "DuenaDelPatio",
+     "en": [7, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "tele",
+     "frases": [
+      "En mayo la abuela no me deja salir al patio: dice que asusto a los turistas. Los turistas me hacen fotos."
+     ],
+     "nodo": "Nieto",
+     "en": [10, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "amarillo_cuadros",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [6, 4, 3, 2]]],
+   "muebles": [
+    ["fogones", 3, 1],
+    ["fregadero", 5, 1],
+    ["nevera", 7, 1],
+    ["planta", 8, 1],
+    ["tele", 9, 1],
+    ["estanteria_alta_oliva", 1, 0],
+    ["sofa", 2, 4],
+    ["planta", 10, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  }
+ }
+}

@@ -1,0 +1,846 @@
+{
+ "_doc": "Interiores personalizados de ruta_9 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 9",
+ "interiores": {
+  "ruta_9/sala_calle_18_15": {
+   "pieza": "cabana",
+   "calle": ["ruta_9/exterior", [18, 15]],
+   "tipo": "rural",
+   "nombre": "Casa forestal de la Devesa",
+   "personas": [
+    {
+     "nombre": "Guarda de la Devesa",
+     "aspecto": "guarda_parque",
+     "papel": "libre",
+     "frases": [
+      "Las dunas de la Devesa las replantamos a mano, planta a planta. Un coche aparcado encima se las carga en una tarde.",
+      "En verano hago la ronda de las once de la noche. Siempre encuentro a alguien preparando una barbacoa «pequeñita»."
+     ],
+     "nodo": "GuardaDeLaDevesa",
+     "en": [7, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Bióloga",
+     "aspecto": "ornitologa",
+     "papel": "mesa",
+     "frases": [
+      "Estoy contando fartets, un pez pequeño que solo vive en estas costas. Si ves uno, no lo pesques: no es un boquerón."
+     ],
+     "nodo": "Biologa",
+     "en": [2, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "tatami_verde",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["encimera", 3, 1],
+    ["cama_rosa", 7, 1],
+    ["caja", 1, 6],
+    ["mesa_cristal", 3, 3],
+    ["taburete_amarillo", 5, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_16_24": {
+   "pieza": "barraca",
+   "calle": ["ruta_9/exterior", [16, 24]],
+   "tipo": "barraca",
+   "nombre": "Barraca del anguilero",
+   "personas": [
+    {
+     "nombre": "Anguilero",
+     "aspecto": "pescador",
+     "papel": "libre",
+     "frases": [
+      "La anguila nace en el mar de los Sargazos y cruza el Atlántico para meterse en mi red. Hay que tener mala suerte.",
+      "Con ella se hace el all i pebre: ajo, pimentón, guindilla y anguila. Si no repites, es que no era de aquí."
+     ],
+     "nodo": "Anguilero",
+     "en": [6, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": ["La barraca tiene el tejado de paja y la cocina de vitrocerámica. Mitad patrimonio, mitad Ikea."],
+     "nodo": "SuMujer",
+     "en": [2, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [7, 8],
+   "suelo": "losa_crema",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 1, 0],
+    ["fregadero", 2, 1],
+    ["mesa_cristal", 4, 5],
+    ["taburete_marron", 3, 6],
+    ["taburete_marron", 6, 6],
+    ["escalera_mano", 4, 0],
+    ["caja", 11, 2],
+    ["arbol_maceta", 11, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_21_24": {
+   "pieza": "barraca",
+   "calle": ["ruta_9/exterior", [21, 24]],
+   "tipo": "barraca",
+   "nombre": "Barraca de la abuela del arroz",
+   "personas": [
+    {
+     "nombre": "Abuela",
+     "aspecto": "abuela",
+     "papel": "cocina",
+     "frases": [
+      "La paella se hace en el fuego de leña, se come de la paella con cuchara y se deja el socarrat para el final.",
+      "Mi nieta me trajo una «paella fit» con quinoa. La he denunciado a la Guardia Civil."
+     ],
+     "nodo": "Abuela",
+     "en": [5, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieta",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Mi abuela tiene un grupo de WhatsApp para denunciar paellas mal hechas. Tiene más miembros que el pueblo."
+     ],
+     "nodo": "Nieta",
+     "en": [7, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [5, 8],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["fregadero", 4, 1],
+    ["mesa_cristal_larga", 7, 2],
+    ["banqueta_roja", 7, 4],
+    ["banqueta_roja", 9, 4],
+    ["caja", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_17_33": {
+   "pieza": "barraca",
+   "calle": ["ruta_9/exterior", [17, 33]],
+   "tipo": "barraca",
+   "nombre": "Barraca del barquero de vela latina",
+   "personas": [
+    {
+     "nombre": "Barquero",
+     "aspecto": "marinero",
+     "papel": "libre",
+     "frases": [
+      "Las barcas de vela latina llevaban arroz y paja por los canales. Ahora llevan parejas haciéndose fotos al atardecer.",
+      "En la Albufera hay que empujar la barca con una pértiga. Los turistas preguntan dónde está el motor. El motor soy yo."
+     ],
+     "nodo": "Barquero",
+     "en": [6, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista_f",
+     "papel": "visitante",
+     "frases": [
+      "He reservado el paseo al atardecer por internet. Ponía «experiencia auténtica». El barquero lleva un chaleco con QR."
+     ],
+     "nodo": "Turista",
+     "en": [3, 4],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [5, 7],
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["mesa_cristal_larga", 2, 2], ["banqueta_roja", 2, 4], ["banqueta_roja", 4, 4], ["cajas", 6, 1]],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_22_33": {
+   "pieza": "barraca",
+   "calle": ["ruta_9/exterior", [22, 33]],
+   "tipo": "restaurante",
+   "nombre": "Arrocería de El Palmar",
+   "personas": [
+    {
+     "nombre": "Arrocero",
+     "aspecto": "camarero",
+     "papel": "tras_mostrador",
+     "frases": [
+      "Arroz del Palmar, cultivado aquí al lado. Lo que no plantamos nosotros, lo plantan los patos. Y lo que no, los turistas lo pisan.",
+      "Con la sequía de la Albufera, este año el arroz salió caro. La paella, igual de cara que siempre: eso no lo arregla la lluvia."
+     ],
+     "nodo": "Arrocero",
+     "en": [10, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Comensal",
+     "aspecto": "turistachanclas",
+     "papel": "mesa",
+     "frases": ["I asked for sangría with my paella. The waiter looked at me like I had insulted his mother."],
+     "nodo": "Comensal",
+     "en": [5, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 11],
+   "puerta": [8, 10],
+   "suelo": "parquet",
+   "pared": "madera_oscura",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["encimera", 8, 1],
+    ["nevera_alta", 11, 0],
+    ["mostrador_oliva_i", 8, 4],
+    ["mostrador_oliva_m", 9, 4],
+    ["mostrador_oliva_m", 10, 4],
+    ["mostrador_oliva_m", 11, 4],
+    ["mostrador_oliva_d", 12, 4],
+    ["mesa_cristal", 11, 7],
+    ["silla_derecha", 10, 7],
+    ["silla_izquierda", 13, 7],
+    ["mesa_cristal", 3, 7],
+    ["banqueta_azul", 2, 8],
+    ["banqueta_azul", 5, 8],
+    ["arbol_maceta", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 9]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_22_40": {
+   "pieza": "puesto_mercado",
+   "calle": ["ruta_9/exterior", [22, 40]],
+   "tipo": "puesto",
+   "nombre": "Puesto de tellinas y clóchinas",
+   "personas": [
+    {
+     "nombre": "Vendedora",
+     "aspecto": "npc_woman",
+     "papel": "dependiente",
+     "frases": [
+      "Tellinas de la playa del Saler y clóchinas del puerto. La clóchina solo se come de mayo a agosto: el resto del año es un mejillón.",
+      "Con ajo, perejil y un chorro de limón. Si le echas tomate, lo mismo te las devuelvo yo a la playa."
+     ],
+     "nodo": "Vendedora",
+     "en": [3, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 7],
+   "puerta": [5, 6],
+   "suelo": "piedra",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [["nevera_alta", 5, 0], ["cajas", 6, 1]],
+   "encima": [],
+   "apariciones": {"default": [5, 5]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_19_56": {
+   "pieza": "bloque_pisos",
+   "calle": ["ruta_9/exterior", [19, 56]],
+   "tipo": "portal",
+   "nombre": "Torre de apartamentos de Cullera",
+   "personas": [
+    {
+     "nombre": "Portero",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "En invierno, en esta torre vivimos cuatro. En agosto, cuatrocientos. Y todos quieren el ascensor a la vez.",
+      "Los de Madrid vienen en julio, los de Albacete en agosto y los alemanes en noviembre. Así se reparte Cullera."
+     ],
+     "nodo": "Portero",
+     "en": [3, 3],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Veraneante de Albacete",
+     "aspecto": "padretarjeta",
+     "papel": "visitante",
+     "frases": ["Desde Albacete se tarda dos horas al mar. Lo que se tarda en Albacete en ir a cualquier sitio."],
+     "nodo": "VeraneanteDeAlbacete",
+     "en": [8, 5],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [5, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["escalera_mano", 3, 0],
+    ["cajonera_azul", 7, 1],
+    ["mostrador_cristal_i", 7, 3],
+    ["mostrador_cristal_m", 8, 3],
+    ["mostrador_cristal_d", 9, 3]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 6]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_34_55": {
+   "pieza": "faro",
+   "calle": ["ruta_9/exterior", [34, 55]],
+   "tipo": "faro",
+   "nombre": "Faro de Cullera",
+   "personas": [
+    {
+     "nombre": "Farero",
+     "aspecto": "marinero",
+     "papel": "libre",
+     "frases": [
+      "El faro ya funciona solo. Yo vengo a limpiar la lente, a cambiar alguna bombilla y a que no se sienta abandonado.",
+      "Desde aquí se ve el cabo de San Antonio, en Jávea. En días muy claros, dicen que Ibiza. Yo solo he visto la niebla."
+     ],
+     "nodo": "Farero",
+     "en": [1, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un dibujo de la costa con los faros: Cullera, Jávea, Denia. Alguien ha añadido a lápiz «aquí tu Pokémon»."
+     ],
+     "nodo": "Cartel",
+     "en": [2, 1]
+    }
+   ],
+   "tamano": [8, 8],
+   "puerta": [3, 7],
+   "suelo": "chapa",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 3, 0], ["caja", 1, 6], ["banqueta_azul", 6, 2]],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_15_65": {
+   "pieza": "casa_teja",
+   "calle": ["ruta_9/exterior", [15, 65]],
+   "tipo": "casa",
+   "nombre": "Casa de la familia gandiense",
+   "personas": [
+    {
+     "nombre": "Madre",
+     "aspecto": "mom",
+     "papel": "cocina",
+     "frases": [
+      "En agosto alquilamos el piso de la playa y nos venimos al de la abuela. Con eso pagamos el colegio de los niños.",
+      "Hay que ver la gente que viene a Gandía: sevillanos, madrileños, alemanes... Y de Gandía, solo yo."
+     ],
+     "nodo": "Madre",
+     "en": [9, 2],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hijo opositor",
+     "aspecto": "opositor",
+     "papel": "mesa",
+     "frases": [
+      "Oposito a profesor de Historia. Gandía me ayuda: aquí nació un papa, un santo y un duque, y me los tengo que aprender."
+     ],
+     "nodo": "HijoOpositor",
+     "en": [9, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "rombos_verdes",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 4, 1],
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["tele", 1, 1],
+    ["estante_madera", 3, 1],
+    ["palmera_maceta", 1, 5],
+    ["planta", 10, 6],
+    ["mesa_cristal", 8, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_22_66": {
+   "pieza": "tienda_naranja",
+   "calle": ["ruta_9/exterior", [22, 66]],
+   "tipo": "heladeria",
+   "nombre": "Horchatería de Gandía",
+   "personas": [
+    {
+     "nombre": "Horchatera",
+     "aspecto": "npc_lass",
+     "papel": "tras_mostrador",
+     "frases": [
+      "La horchata se hace con chufa de Alboraya, agua y azúcar. Nada más. Si lleva leche, es un batido con complejo.",
+      "Fartons para mojar. Si te sobran, no los guardes: al día siguiente son un arma."
+     ],
+     "nodo": "Horchatera",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "npc_boy",
+     "papel": "cliente",
+     "frases": ["Mi madre dice que la horchata es sana. Yo me he tomado tres y me noto sanísimo."],
+     "nodo": "Cliente",
+     "en": [4, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "parquet",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["encimera", 3, 1],
+    ["alacena", 6, 0],
+    ["mostrador_turquesa_i", 4, 3],
+    ["mostrador_turquesa_m", 5, 3],
+    ["mostrador_turquesa_m", 6, 3],
+    ["mostrador_turquesa_d", 7, 3],
+    ["vitrina_blanca", 7, 1]
+   ],
+   "encima": [["plato", 5, 3], ["taza", 4, 3]],
+   "apariciones": {"default": [6, 6]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_31_65": {
+   "pieza": "casa_grande",
+   "calle": ["ruta_9/exterior", [31, 65]],
+   "tipo": "chalet",
+   "nombre": "Chalet del reality de Gandía",
+   "personas": [
+    {
+     "nombre": "Exconcursante",
+     "aspecto": "tronista",
+     "papel": "sofa",
+     "frases": [
+      "Yo salí en la primera temporada. Tres semanas de fiesta, cámaras en el baño y un jacuzzi que no he vuelto a ver tan lleno.",
+      "Ahora vendo seguros. Cuando me reconocen, me piden una foto. Cuando me piden un seguro, no me reconocen."
+     ],
+     "nodo": "Exconcursante",
+     "en": [7, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Dueña del chalet",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Lo alquilé para una serie de la tele. Me dijeron «un programa familiar». Aún estoy sacando purpurina de la piscina."
+     ],
+     "nodo": "DuenaDelChalet",
+     "en": [10, 6],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [6, 8],
+   "suelo": "tatami_verde",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["moqueta_azul", [4, 3, 4, 3]]],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["fregadero", 4, 1],
+    ["nevera", 6, 1],
+    ["cajon_oliva", 9, 1],
+    ["tele", 10, 1],
+    ["vitrina_madera", 7, 1],
+    ["mesa_cristal", 3, 3],
+    ["silla_derecha", 2, 3],
+    ["silla_izquierda", 5, 3],
+    ["sillon_derecha", 1, 5],
+    ["mesa_cristal", 2, 6],
+    ["sillon_izquierda", 4, 5],
+    ["palmera_maceta", 1, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_7_66": {
+   "pieza": "palau_ducal_gandia",
+   "calle": ["ruta_9/exterior", [7, 66]],
+   "tipo": "palacio",
+   "nombre": "Palau Ducal dels Borja",
+   "personas": [
+    {
+     "nombre": "Guía del Palau",
+     "aspecto": "profesor",
+     "papel": "libre",
+     "frases": [
+      "Aquí nació Francisco de Borja, duque de Gandía. Lo dejó todo para hacerse jesuita y acabó de santo. Lo normal en esta familia.",
+      "Su bisabuelo fue el papa Alejandro VI. Los Borja de Roma tenían mala fama; los de Gandía, una fábrica de azúcar."
+     ],
+     "nodo": "GuiaDelPalau",
+     "en": [10, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Visitante",
+     "aspecto": "turista",
+     "papel": "visitante",
+     "frases": [
+      "Vengo por la serie de los Borgia. Me han dicho que es más fiel la del palacio. Menos sangre, más azulejo."
+     ],
+     "nodo": "Visitante",
+     "en": [6, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 11],
+   "puerta": [3, 10],
+   "suelo": "piedra",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [["alfombra_roja", [4, 4, 9, 5]]],
+   "muebles": [
+    ["arbol_maceta", 5, 0],
+    ["estatua_gargola", 6, 0],
+    ["estatua_gargola", 8, 0],
+    ["arbol_maceta", 10, 0],
+    ["mesa_cristal_larga", 5, 6],
+    ["silla_derecha", 4, 6],
+    ["silla_izquierda", 8, 6],
+    ["pedestal", 12, 5],
+    ["palmera_maceta", 13, 0],
+    ["pedestal", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_41_67": {
+   "pieza": "torre_socorrista",
+   "calle": ["ruta_9/exterior", [41, 67]],
+   "tipo": "socorrismo",
+   "nombre": "Caseta de socorrismo de la playa de Gandía",
+   "personas": [
+    {
+     "nombre": "Socorrista",
+     "aspecto": "nadador_f",
+     "papel": "libre",
+     "frases": [
+      "Bandera verde, amarilla o roja. La roja quiere decir «no te bañes». Hay quien lo entiende como «bañarse con más emoción».",
+      "Hoy he rescatado a un señor, a un flotador con forma de unicornio y a un niño que iba en el unicornio. Por ese orden."
+     ],
+     "nodo": "Socorrista",
+     "en": [6, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [9, 7],
+   "puerta": [3, 6],
+   "suelo": "azulejo_menta",
+   "pared": "gris_cemento",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["cajon_gris", 4, 1], ["nevera", 5, 1], ["taburete_rojo", 1, 5]],
+   "encima": [],
+   "apariciones": {"default": [3, 5]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_5_74": {
+   "pieza": "casa_rosa",
+   "calle": ["ruta_9/exterior", [5, 74]],
+   "tipo": "casa",
+   "nombre": "Apartamento de los veraneantes de toda la vida",
+   "personas": [
+    {
+     "nombre": "Veraneante jubilado",
+     "aspecto": "jubiladoobras",
+     "papel": "tele",
+     "frases": [
+      "Venimos a Gandía desde 1987. El mismo apartamento, la misma sombrilla y la misma discusión por el aire acondicionado.",
+      "Antes la playa estaba vacía. Ahora está llena de gente como yo hace treinta años. No me gusta nada."
+     ],
+     "nodo": "VeraneanteJubilado",
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su mujer",
+     "aspecto": "npc_old_woman",
+     "papel": "cocina",
+     "frases": [
+      "Él va a la playa a las ocho a poner la sombrilla. Yo voy a las doce. La sombrilla nos espera los dos turnos."
+     ],
+     "nodo": "SuMujer",
+     "en": [4, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [10, 9],
+   "suelo": "hidraulica_rosa",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [8, 3, 4, 3]]],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["tele", 9, 1],
+    ["planta", 11, 1],
+    ["estanteria_baja_madera", 1, 1],
+    ["estante_madera", 3, 1],
+    ["mesa_cristal_larga", 6, 3],
+    ["banqueta_roja", 6, 5],
+    ["banqueta_roja", 8, 5],
+    ["sofa", 9, 4],
+    ["palmera_maceta", 12, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 8]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_11_74": {
+   "pieza": "tienda_naranja",
+   "calle": ["ruta_9/exterior", [11, 74]],
+   "tipo": "souvenirs",
+   "nombre": "Tienda de recuerdos del paseo",
+   "personas": [
+    {
+     "nombre": "Dependiente",
+     "aspecto": "clerk",
+     "papel": "tras_mostrador",
+     "frases": [
+      "Imanes de la paella, abanicos y toallas con el toro. La toalla del toro la hacen en China y la compran los chinos.",
+      "Lo que más se vende en verano es protector solar. Lo segundo, aftersun para los que no lo compraron."
+     ],
+     "nodo": "Dependiente",
+     "en": [11, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [9, 8],
+   "suelo": "losa_gris",
+   "pared": "melocoton",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_madera", 4, 1],
+    ["vitrina_blanca", 6, 1],
+    ["estanteria_baja_madera", 8, 1],
+    ["mostrador_azul_i", 9, 4],
+    ["mostrador_azul_m", 10, 4],
+    ["mostrador_azul_d", 11, 4],
+    ["vitrina_blanca", 2, 3],
+    ["vitrina_blanca", 4, 3],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 7]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_17_74": {
+   "pieza": "casa_rosa",
+   "calle": ["ruta_9/exterior", [17, 74]],
+   "tipo": "casa",
+   "nombre": "Casa del DJ de verano",
+   "personas": [
+    {
+     "nombre": "DJ",
+     "aspecto": "raver",
+     "papel": "libre",
+     "frases": [
+      "Pincho en un chiringuito de la playa de junio a septiembre. El resto del año pincho en bodas, que pagan mejor.",
+      "Si pongo reguetón, protestan los de cuarenta. Si pongo los ochenta, bailan los de cuarenta y se van los de veinte. Ganan los de cuarenta."
+     ],
+     "nodo": "DJ",
+     "en": [8, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [6, 3, 3, 3]]],
+   "muebles": [
+    ["nevera_alta", 1, 0],
+    ["encimera", 2, 1],
+    ["fogones", 5, 1],
+    ["tele", 7, 1],
+    ["planta", 9, 1],
+    ["mesa_cristal", 3, 4],
+    ["silla_derecha", 2, 4],
+    ["silla_izquierda", 5, 4],
+    ["sofa", 2, 6],
+    ["arbol_maceta", 1, 5],
+    ["caja", 9, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_23_74": {
+   "pieza": "casa_roja_pequena",
+   "calle": ["ruta_9/exterior", [23, 74]],
+   "tipo": "peluqueria",
+   "nombre": "Peluquería del paseo marítimo",
+   "personas": [
+    {
+     "nombre": "Peluquera",
+     "aspecto": "npc_lass",
+     "papel": "tras_mostrador",
+     "frases": [
+      "En verano peino trenzas de playa a las turistas y en invierno tinto a las abuelas de Gandía. Las abuelas dan mejor propina.",
+      "La sal y el cloro destrozan el pelo. Te lo digo yo, que me baño todos los días a la hora de comer."
+     ],
+     "nodo": "Peluquera",
+     "en": [8, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": ["Vengo todos los sábados a que me peinen para la misa del domingo. El domingo llueve. Siempre."],
+     "nodo": "Clienta",
+     "en": [9, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [7, 8],
+   "suelo": "rombos_oscuros",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["banqueta_roja", 6, 6],
+    ["banqueta_roja", 8, 6],
+    ["banqueta_roja", 10, 6],
+    ["banco_rojo", 1, 2],
+    ["mostrador_cristal_i", 8, 4],
+    ["mostrador_cristal_m", 9, 4],
+    ["mostrador_cristal_d", 10, 4]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 7]},
+   "pasos": []
+  },
+  "ruta_9/sala_calle_32_74": {
+   "pieza": "tienda_azul",
+   "calle": ["ruta_9/exterior", [32, 74]],
+   "tipo": "heladeria",
+   "nombre": "Heladería del Paseo",
+   "personas": [
+    {
+     "nombre": "Heladero",
+     "aspecto": "npc_man",
+     "papel": "tras_mostrador",
+     "frases": [
+      "Tengo treinta sabores. El que más se vende es el de vainilla. Treinta sabores para que me pidan vainilla.",
+      "En septiembre cierro y me voy de vacaciones. Tú vienes en verano a mi pueblo; yo me voy en otoño al tuyo."
+     ],
+     "nodo": "Heladero",
+     "en": [2, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Niña",
+     "aspecto": "npc_girl",
+     "papel": "cliente",
+     "frases": ["Quiero uno de chocolate, uno de fresa y uno de turrón. Para mí sola. Es que es verano."],
+     "nodo": "Nina",
+     "en": [5, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "parquet",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_mostaza", 2, 1],
+    ["estanteria_baja_mostaza", 4, 1],
+    ["mostrador_verde_i", 3, 3],
+    ["mostrador_verde_m", 4, 3],
+    ["mostrador_verde_m", 5, 3],
+    ["mostrador_verde_m", 6, 3],
+    ["mostrador_verde_d", 7, 3],
+    ["vitrina_madera", 6, 1],
+    ["caja", 8, 2]
+   ],
+   "encima": [["plato_comida", 3, 3]],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  }
+ }
+}

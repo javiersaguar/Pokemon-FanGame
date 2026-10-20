@@ -226,10 +226,20 @@ Continuación del encargo de interiores en el reparto de cuatro agentes del 19 d
 - **Locales de servicio (74):** sin repintarlos, `maps/_tools/personalizar_servicios.py` cambia las frases genéricas del paciente o cliente, del visitante y de la placa por gente y lugares de su ciudad (`contenido_interiores/_servicios.py`).
 - **Fuera, a propósito** (lista en `esqueleto_interiores.py`): el apeadero del AVE de San Miguel, las salas de hitos de otro agente (Botín, Guggenheim, Café Iruña, ruinas de Rocafonda) y `getafe/casa_1` y `getafe/casa_vecina`, diseñadas a mano el 12 de octubre con pruebas propias. Las pisé al principio y las he restaurado.
 - **San Miguel de Bernuy:** solo vecinos genéricos; la casa y la familia de Javier no se tocan (su lore es suyo).
-- **Pendiente:** las casas de las rutas que el agente de rutas aún está rehaciendo (1–4, 9–15, 17–20 y 23, unas 75 salas), cuando cierre cada una.
+- **Pendiente:** las casas de las rutas que el agente de rutas aún estaba rehaciendo. *Hecho después del cierre: ver «Interiores de las casas de ruta».*
 - **Rótulos largos:** `pintar_interiores_datos.gd` pasa a dos líneas el nombre que no cabe en el ancho de la sala (64 escenas repintadas solo por eso). Las frases son propuesta, pendientes de Javier.
 - **Errores míos, ya corregidos:** una edición rompió las comillas de la lista de exclusiones de `esqueleto_interiores.py` (subida a main y arreglada en el commit siguiente), y las dos casas de Getafe citadas.
 - **Pruebas:** `test_interiores_unicos.gd` 6/6 tras cada tanda; `test_city_services.gd` 12/12.
+
+### Interiores de las casas de ruta (20 de octubre, después del cierre; rama `feat/interiores-rutas`)
+
+Las **93 salas** de casas de ruta que seguían con el interior genérico (rutas 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20 y 23) ya tienen interior propio. Comparativa: [`interiores_rutas_2026-10-20.md`](arte/comparativas/interiores_rutas_2026-10-20.md). Con esto, todas las casas y edificios con puerta del mapa tienen interior propio; solo falta el Bernabéu, que aún no tiene puerta (petición abierta a Edificios).
+
+- Lo de dentro sigue a lo de fuera: el mesón del cochinillo y la pastelería del ponche en el Azoguejo; la venta, el Monasterio y la urbanización de Galapagar; las barracas, la arrocería, el faro de Cullera, el Palau Ducal y el chalet del reality; Calp, Altea, el Intempo, The Red Lion y la chocolatería de La Vila; el Misteri d'Elx y el palmerero; el cortijo del aceite y el patio cordobés; la casa de hermandad de El Rocío, el observatorio y el yegüero de la saca; la catedral de Lugo y la muralla; la quesería de Cabrales y la sidrería; la conservera de anchoas de Castro; las cadenas de Teodosio en San Miguel de Aralar; el castillo-instituto de Cuéllar.
+- Los regalos de las casas (`casa_1` de las rutas 2, 3, 4, 12, 13, 14, 15 y 23) se conservan: los da la misma persona, con frases nuevas.
+- **Fuera, a propósito:** el hórreo de la Ruta 17 y la basílica y la cueva de Covadonga (Ruta 18), que tienen sala hecha a mano en `pintar_salas_hitos.gd` (añadidos a la lista de `esqueleto_interiores.py`).
+- **PENDIENTE JAVIER:** el chalet de la colina de la Ruta 4 queda sin dueño (un guardia civil en la puerta y las cajas de la mudanza). En la basílica de Cuelgamuros hay un guía, una forense y la nieta de una víctima, en tono serio y con datos reales, sin famosos: hay que confirmar el tono. En la Basílica de Cuelgamuros la estatua es un pedestal y no la gárgola que elegía el planificador.
+- **Pruebas:** `test_interiores_unicos.gd` 6/6 (17.411 aserciones); 0 firmas repetidas.
 
 ### Sesión del 14 de octubre · Inicio y sistemas (Agente A)
 

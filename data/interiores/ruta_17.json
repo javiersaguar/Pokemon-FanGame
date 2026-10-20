@@ -1,0 +1,267 @@
+{
+ "_doc": "Interiores personalizados de ruta_17 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 17",
+ "interiores": {
+  "ruta_17/sala_calle_27_12": {
+   "pieza": "casa_teja",
+   "calle": ["ruta_17/exterior", [27, 12]],
+   "tipo": "casa",
+   "nombre": "Casa del vecino de la muralla",
+   "personas": [
+    {
+     "nombre": "Vecino de intramuros",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Vivo dentro de la muralla desde que nací. Cada mañana doy la vuelta entera por arriba: dos kilómetros y setenta y una torres.",
+      "Es la única muralla romana que se conserva entera en el mundo. Ya puede llover, que ésta no se cae."
+     ],
+     "nodo": "VecinoDeIntramuros",
+     "en": [8, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Su nieta",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Mi abuelo cuenta las torres cuando pasea. Le salen setenta y una. Un día le salieron setenta y dos y no durmió."
+     ],
+     "nodo": "SuNieta",
+     "en": [9, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 8],
+   "puerta": [8, 7],
+   "suelo": "alfombra_naranja",
+   "pared": "retro",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["estanteria_alta_madera", 9, 0],
+    ["mesa_cristal", 4, 3],
+    ["banqueta_azul", 3, 4],
+    ["banqueta_azul", 6, 4],
+    ["palmera_maceta", 1, 4],
+    ["tele", 7, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [8, 6]},
+   "pasos": []
+  },
+  "ruta_17/sala_calle_32_7": {
+   "pieza": "catedral_burgos",
+   "calle": ["ruta_17/exterior", [32, 7]],
+   "tipo": "catedral",
+   "nombre": "Catedral de Lugo",
+   "personas": [
+    {
+     "nombre": "Sacristán",
+     "aspecto": "npc_old_man",
+     "papel": "cura",
+     "frases": [
+      "En esta catedral el Santísimo está expuesto día y noche desde hace siglos. Por eso sale en el escudo de Lugo.",
+      "Por aquí pasa el Camino Primitivo, el primero que hizo un rey asturiano hasta Santiago. A pie, sin aplicación."
+     ],
+     "nodo": "Sacristan",
+     "en": [5, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Peregrina",
+     "aspecto": "montanera",
+     "papel": "visitante",
+     "frases": ["Salí de Oviedo hace diez días. Me quedan cuatro hasta Santiago y ninguna uña del pie."],
+     "nodo": "Peregrina",
+     "en": [1, 7],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [15, 12],
+   "puerta": [5, 11],
+   "suelo": "losa_gris",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [5, 4, 1, 7]]],
+   "muebles": [
+    ["mostrador_blanco", 4, 3],
+    ["estatua_aguila", 8, 0],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 13, 0],
+    ["banco_rojo", 2, 6],
+    ["banco_rojo", 6, 6],
+    ["banco_rojo", 9, 6],
+    ["banco_rojo", 2, 8],
+    ["banco_rojo", 6, 8],
+    ["banco_rojo", 9, 8],
+    ["arbol_maceta", 13, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 10]},
+   "pasos": []
+  },
+  "ruta_17/sala_calle_37_13": {
+   "pieza": "casa_rosa",
+   "calle": ["ruta_17/exterior", [37, 13]],
+   "tipo": "taberna",
+   "nombre": "Taberna de las tapas de Lugo",
+   "personas": [
+    {
+     "nombre": "Tabernero",
+     "aspecto": "camarero",
+     "papel": "tras_mostrador",
+     "frases": [
+      "En octubre son las fiestas de San Froilán y el pulpo se come en casetas de madera. Este mes doy de comer a media Galicia.",
+      "Aquí la tapa va con el vino y no se pide: llega. Si pides la tapa, te miro raro y te traigo dos."
+     ],
+     "nodo": "Tabernero",
+     "en": [8, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "npc_man",
+     "papel": "cliente",
+     "frases": [
+      "Llevo cuatro vinos y cuatro tapas. No he pedido comida y ya no tengo hambre. Esto en Madrid no pasa."
+     ],
+     "nodo": "Cliente",
+     "en": [6, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "losa_crema",
+   "pared": "mostaza",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 3, 0],
+    ["encimera", 4, 1],
+    ["alacena", 7, 0],
+    ["mostrador_tablas_i", 4, 3],
+    ["mostrador_tablas_m", 5, 3],
+    ["mostrador_tablas_m", 6, 3],
+    ["mostrador_tablas_m", 7, 3],
+    ["mostrador_tablas_d", 8, 3],
+    ["taburete_rojo", 5, 5],
+    ["taburete_rojo", 7, 5],
+    ["mesa_cristal", 6, 7],
+    ["silla_derecha", 5, 7],
+    ["silla_izquierda", 8, 7],
+    ["papelera", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "ruta_17/sala_calle_47_37": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_17/exterior", [47, 37]],
+   "tipo": "casa",
+   "nombre": "Casa de la costurera de Arteixo",
+   "personas": [
+    {
+     "nombre": "Costurera",
+     "aspecto": "npc_woman",
+     "papel": "mesa",
+     "frases": [
+      "Antes de la gran tienda, en las aldeas de aquí cosíamos batas en casa para un taller de A Coruña. Así empezó todo.",
+      "Ahora mi hija trabaja en la sede, diseñando. Yo le arreglo los bajos de los pantalones. Eso no lo hace ninguna máquina."
+     ],
+     "nodo": "Costurera",
+     "en": [7, 6],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "influencerlinkedin_f",
+     "papel": "libre",
+     "frases": [
+      "En la oficina tenemos la ropa de la temporada que viene. En casa, la de mi madre de hace treinta años, que es la que me queda bien."
+     ],
+     "nodo": "Hija",
+     "en": [2, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "hidraulica_rosa",
+   "pared": "salvia",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 4, 1],
+    ["fregadero", 6, 1],
+    ["nevera", 8, 1],
+    ["tele", 1, 1],
+    ["planta", 3, 1],
+    ["palmera_maceta", 8, 4],
+    ["papelera", 1, 5],
+    ["mesa_cristal", 5, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_17/sala_calle_5_24": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_17/exterior", [5, 24]],
+   "tipo": "rural",
+   "nombre": "Casa de labranza de la aldea",
+   "personas": [
+    {
+     "nombre": "Labrador",
+     "aspecto": "pueblerino",
+     "papel": "libre",
+     "frases": [
+      "Vacas, maíz, patatas y unos grelos. En el hórreo guardo el maíz; en la bodega, el vino; y en el banco, nada.",
+      "Mis hijos se fueron a Barcelona. Vienen en agosto y en la matanza. A las vacas no las echan de menos; a mí, eso dicen."
+     ],
+     "nodo": "Labrador",
+     "en": [2, 5],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Abuela",
+     "aspecto": "abuela",
+     "papel": "cocina",
+     "frases": [
+      "Caldo gallego al fuego desde las seis de la mañana. Grelos, patata, unto y un hueso. Si no te lo comes, no te vas."
+     ],
+     "nodo": "Abuela",
+     "en": [3, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 2, 1],
+    ["encimera", 4, 1],
+    ["mesa_cristal_larga", 4, 3],
+    ["banqueta_roja", 4, 5],
+    ["banqueta_roja", 6, 5],
+    ["cama_rosa", 7, 1],
+    ["caja", 9, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  }
+ }
+}

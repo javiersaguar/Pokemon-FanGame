@@ -1,0 +1,474 @@
+{
+ "_doc": "Interiores personalizados de ruta_2 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 2",
+ "interiores": {
+  "ruta_2/casa_1": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_2/exterior", [7, 18]],
+   "tipo": "casa",
+   "nombre": "Casa del resinero de Cantalejo",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Resinero",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_2_from_casa_1",
+     "papel": "libre",
+     "frases": [
+      "Le hago una herida al pino, le pongo un pote y en un mes tengo resina. El pino no se queja; mi espalda, sí.",
+      "Toma, para las heridas del camino. Las de los pinos se curan solas; las tuyas, con esto."
+     ],
+     "en": [2, 5],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Mujer del resinero",
+     "aspecto": "npc_woman",
+     "papel": "cocina",
+     "frases": [
+      "Todo en esta casa huele a trementina: la ropa, el pan y el perro. Te acostumbras a los veinte años, más o menos."
+     ],
+     "nodo": "MujerDelResinero",
+     "en": [5, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [6, 8],
+   "suelo": "hidraulica_rosa",
+   "pared": "amarillo_cuadros",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_naranja", [5, 4, 4, 2]]],
+   "muebles": [
+    ["nevera", 2, 1],
+    ["fregadero", 3, 1],
+    ["fogones", 5, 1],
+    ["planta", 7, 1],
+    ["tele", 8, 1],
+    ["palmera_maceta", 1, 0],
+    ["caja", 9, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 7]},
+   "pasos": []
+  },
+  "ruta_2/casa_2": {
+   "pieza": "casa_roja",
+   "calle": ["ruta_2/exterior", [10, 50]],
+   "tipo": "casa",
+   "nombre": "Casa de la trillera",
+   "personas": [
+    {
+     "nombre": "Abuela trillera",
+     "aspecto": "abuela",
+     "papel": "tele",
+     "frases": [
+      "Mi padre clavaba las lascas de sílex en los trillos con un martillo pequeño. Diez mil piedras por trillo.",
+      "Ahora los compran para colgarlos en la pared del salón. A mí me parece bien: por fin descansan."
+     ],
+     "nodo": "AbuelaTrillera",
+     "en": [2, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto",
+     "aspecto": "npc_boy",
+     "papel": "libre",
+     "frases": [
+      "Mi abuela dice que con un trillo se separa el grano de la paja. Yo con el móvil separo los vídeos buenos de los malos."
+     ],
+     "nodo": "Nieto",
+     "en": [9, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Un trillo colgado de la pared, con una etiqueta: «No es una mesa. No apoyes el vaso»."],
+     "nodo": "Cartel",
+     "en": [9, 1]
+    }
+   ],
+   "tamano": [12, 10],
+   "puerta": [3, 9],
+   "suelo": "moqueta_beige",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["nevera", 4, 1],
+    ["fregadero", 5, 1],
+    ["fogones", 7, 1],
+    ["tele", 1, 1],
+    ["estante_verde", 3, 1],
+    ["mesa_cristal", 3, 5],
+    ["silla_derecha", 2, 5],
+    ["silla_izquierda", 5, 5],
+    ["palmera_maceta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "ruta_2/sala_calle_2_51": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_2/exterior", [2, 51]],
+   "tipo": "casa",
+   "nombre": "Casa del pastor de la cañada",
+   "personas": [
+    {
+     "nombre": "Pastor trashumante",
+     "aspecto": "pastor",
+     "papel": "libre",
+     "frases": [
+      "Por aquí pasa la Cañada Real Soriana. En otoño bajamos las merinas hasta Extremadura, a pie, como hace quinientos años.",
+      "Una vez al año cruzamos el centro de Madrid hasta Cibeles con dos mil ovejas. Es el único día que allí no hay atasco: somos el atasco."
+     ],
+     "nodo": "PastorTrashumante",
+     "en": [8, 3],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [5, 3, 3, 3]]],
+   "muebles": [
+    ["fregadero", 1, 1],
+    ["fogones", 3, 1],
+    ["nevera_alta", 5, 0],
+    ["cajon_oliva", 6, 1],
+    ["tele", 7, 1],
+    ["mesa_cristal", 4, 3],
+    ["silla_derecha", 3, 3],
+    ["silla_izquierda", 6, 3],
+    ["planta", 8, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_2/sala_calle_27_51": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_2/exterior", [27, 51]],
+   "tipo": "restaurante",
+   "nombre": "Mesón del cochinillo",
+   "personas": [
+    {
+     "nombre": "Camarera",
+     "aspecto": "camarero",
+     "papel": "tras_mostrador",
+     "frases": [
+      "Cochinillo de menos de tres semanas, cordero lechal y judiones de La Granja. De postre, ponche segoviano.",
+      "¿Algo vegetariano? Los judiones. Bueno, llevan chorizo, oreja y morro. Pero el judión es vegetal."
+     ],
+     "nodo": "Camarera",
+     "en": [3, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Turista japonés",
+     "aspecto": "turista",
+     "papel": "mesa",
+     "frases": [
+      "Vine por el Acueducto y me quedo por el cochinillo. En mi país esto saldría en la tele todos los días."
+     ],
+     "nodo": "TuristaJapones",
+     "en": [12, 6],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Comensal",
+     "aspecto": "cunado",
+     "papel": "cliente",
+     "frases": [
+      "Yo el cochinillo lo corto con la mano, que el plato ya lo rompe el mesonero. Y luego se lo cobra a otro."
+     ],
+     "nodo": "Comensal",
+     "en": [2, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [16, 11],
+   "puerta": [11, 10],
+   "suelo": "parquet",
+   "pared": "madera_oscura",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["nevera_alta", 2, 0],
+    ["fogones", 3, 1],
+    ["fogones", 5, 1],
+    ["encimera", 7, 1],
+    ["mesa_cristal", 11, 4],
+    ["silla_derecha", 10, 4],
+    ["silla_izquierda", 13, 4],
+    ["mesa_cristal", 2, 8],
+    ["banqueta_azul", 1, 9],
+    ["banqueta_azul", 4, 9],
+    ["mostrador_blanco_i", 2, 4],
+    ["mostrador_blanco_m", 3, 4],
+    ["mostrador_blanco_d", 4, 4]
+   ],
+   "encima": [["taza", 3, 8], ["jarron_flores", 12, 4]],
+   "apariciones": {"default": [11, 9]},
+   "pasos": []
+  },
+  "ruta_2/sala_calle_2_61": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_2/exterior", [2, 61]],
+   "tipo": "panaderia",
+   "nombre": "Pastelería del ponche segoviano",
+   "personas": [
+    {
+     "nombre": "Pastelera",
+     "aspecto": "npc_woman",
+     "papel": "tras_mostrador",
+     "frases": [
+      "Ponche segoviano: bizcocho, crema, mazapán y azúcar quemada en rombos. Un pedazo y no comes hasta el lunes.",
+      "Lo inventó un pastelero de Segovia en los años veinte. Desde entonces los dentistas de la ciudad viven muy bien."
+     ],
+     "nodo": "Pastelera",
+     "en": [7, 2],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Clienta",
+     "aspecto": "npc_old_woman",
+     "papel": "cliente",
+     "frases": ["Vengo a por una tarta para mi nieto. Y a por otra para mí, que nadie se entera."],
+     "nodo": "Clienta",
+     "en": [2, 5],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [10, 8],
+   "puerta": [3, 7],
+   "suelo": "parquet",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_baja_verde", 3, 1],
+    ["estanteria_baja_verde", 5, 1],
+    ["mostrador_tablas_i", 1, 3],
+    ["mostrador_tablas_m", 2, 3],
+    ["mostrador_tablas_m", 3, 3],
+    ["mostrador_tablas_d", 4, 3],
+    ["vitrina_madera", 1, 1]
+   ],
+   "encima": [["taza", 3, 3], ["plato_comida", 4, 3], ["plato_comida", 2, 3]],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  },
+  "ruta_2/sala_calle_9_61": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_2/exterior", [9, 61]],
+   "tipo": "casa",
+   "nombre": "Casa del cantero",
+   "personas": [
+    {
+     "nombre": "Cantero jubilado",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": [
+      "Los romanos pusieron veinte mil sillares sin una gota de argamasa. Yo puse un bordillo con cemento y se cayó en dos años.",
+      "Cuando paso por debajo del Acueducto le hago una reverencia. Es lo que se hace con un compañero mayor."
+     ],
+     "nodo": "CanteroJubilado",
+     "en": [3, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Hija",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Mi padre lleva cuarenta años diciendo que el Acueducto lo hicieron sin grúa. Ni sin grúa ni sin seguro, papá."
+     ],
+     "nodo": "Hija",
+     "en": [10, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [4, 8],
+   "suelo": "alfombra_naranja",
+   "pared": "retro",
+   "felpudo": "tatami_verde",
+   "alfombras": [["tatami_verde", [5, 4, 4, 3]]],
+   "muebles": [
+    ["tele", 3, 1],
+    ["estanteria_baja_mostaza", 5, 1],
+    ["estante_mostaza", 7, 1],
+    ["mesa_cristal", 6, 3],
+    ["silla_derecha", 5, 3],
+    ["silla_izquierda", 8, 3],
+    ["arbol_maceta", 10, 5]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "ruta_2/sala_calle_14_61": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_2/exterior", [14, 61]],
+   "tipo": "casa",
+   "nombre": "Piso de estudiantes del Azoguejo",
+   "personas": [
+    {
+     "nombre": "Estudiante de Empresariales",
+     "aspecto": "influencerlinkedin",
+     "papel": "mesa",
+     "frases": [
+      "Estudio en la universidad privada del convento. Pago lo de un piso en Madrid por vivir con vistas a un acueducto.",
+      "Mis padres creen que estudio. Yo creo que estoy haciendo contactos. El Acueducto cree que esto ya lo ha visto antes."
+     ],
+     "nodo": "EstudianteDeEmpresariales",
+     "en": [2, 3],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Compañera de piso",
+     "aspecto": "estudianteinge_f",
+     "papel": "libre",
+     "frases": ["Hay calefacción, pero el casero la apaga en abril. En Segovia, en abril, nieva."],
+     "nodo": "CompaneraDePiso",
+     "en": [6, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 9],
+   "puerta": [5, 8],
+   "suelo": "tatami_verde",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["fogones", 1, 1],
+    ["fregadero", 3, 1],
+    ["nevera", 5, 1],
+    ["tele", 7, 1],
+    ["estante_verde", 9, 1],
+    ["mesa_cristal", 3, 3],
+    ["taburete_amarillo", 2, 4],
+    ["taburete_amarillo", 5, 4],
+    ["arbol_maceta", 9, 5],
+    ["planta", 1, 6]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "ruta_2/sala_calle_27_61": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_2/exterior", [27, 61]],
+   "tipo": "casa",
+   "nombre": "Casa de los madrileños del fin de semana",
+   "personas": [
+    {
+     "nombre": "Padre de Madrid",
+     "aspecto": "padretarjeta",
+     "papel": "sofa",
+     "frases": [
+      "Nos compramos la casa para desconectar. Nos pasamos el sábado poniendo la fibra y el domingo en el atasco de vuelta.",
+      "Los vecinos nos llaman «los de Madrid». Llevamos quince años viniendo. Seremos «los de Madrid» hasta que nos muramos."
+     ],
+     "nodo": "PadreDeMadrid",
+     "en": [4, 4],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Vecina de toda la vida",
+     "aspecto": "npc_old_woman",
+     "papel": "libre",
+     "frases": [
+      "Vienen el viernes, se van el domingo y el resto de la semana la casa ladra. Tienen un perro de alarma."
+     ],
+     "nodo": "VecinaDeTodaLaVida",
+     "en": [8, 3],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 10],
+   "puerta": [7, 9],
+   "suelo": "tatami_verde",
+   "pared": "topo",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_naranja", [7, 3, 3, 2]]],
+   "muebles": [
+    ["fogones", 5, 1],
+    ["encimera", 7, 1],
+    ["planta", 2, 1],
+    ["tele", 3, 1],
+    ["mesa_cristal_larga", 2, 5],
+    ["taburete_amarillo", 2, 7],
+    ["taburete_amarillo", 4, 7],
+    ["sofa", 8, 7],
+    ["arbol_maceta", 1, 0],
+    ["papelera", 10, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 8]},
+   "pasos": []
+  },
+  "ruta_2/sala_calle_33_61": {
+   "pieza": "casa_azul_pequena",
+   "calle": ["ruta_2/exterior", [32, 61]],
+   "tipo": "casa",
+   "nombre": "Casa del guía del Acueducto",
+   "personas": [
+    {
+     "nombre": "Guía turístico",
+     "aspecto": "profesor",
+     "papel": "estanteria",
+     "frases": [
+      "La leyenda dice que el diablo construyó el Acueducto en una noche para ganarse el alma de una aguadora.",
+      "Le faltó una piedra antes de que cantara el gallo. Desde entonces, en Segovia todas las obras acaban con una piedra de menos."
+     ],
+     "nodo": "GuiaTuristico",
+     "en": [9, 3],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": [
+      "Libros sobre el Acueducto, la Catedral y el Alcázar. Uno se titula «Cómo explicar a un turista que el Alcázar no es de Disney»."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 2]
+    }
+   ],
+   "tamano": [12, 8],
+   "puerta": [3, 7],
+   "suelo": "rombos_lila",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [["tatami_verde", [4, 3, 4, 2]]],
+   "muebles": [
+    ["alacena", 4, 0],
+    ["fogones", 5, 1],
+    ["fregadero", 7, 1],
+    ["planta", 1, 1],
+    ["tele", 2, 1],
+    ["arbol_maceta", 10, 4],
+    ["estanteria_baja_verde", 9, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  }
+ }
+}

@@ -705,80 +705,80 @@ Ninguna: todos los destinos existen.
 | `rocafonda/sala_calle_32_10` | Mansión de Rocafonda, Rocafonda | — | Salida → `rocafonda/exterior` |
 | `ruta_1/exterior` | Ruta 1 · Hoces del Duratón | north → `pueblo_inicial/exterior`, south → `ruta_2/exterior` | — |
 | `ruta_10/exterior` | Ruta 10 · Costa Blanca | north → `ruta_9/exterior`, south → `alicante/exterior` | Sala31_8 → `ruta_10/sala_calle_31_8`, Sala35_8 → `ruta_10/sala_calle_35_8`, Sala31_13 → `ruta_10/sala_calle_31_13`, Sala10_23 → `ruta_10/sala_calle_10_23`, Sala16_20 → `ruta_10/sala_calle_16_20`, Sala18_24 → `ruta_10/sala_calle_18_24`, Sala6_40 → `ruta_10/sala_calle_6_40`, Sala10_40 → `ruta_10/sala_calle_10_40`, Sala20_40 → `ruta_10/sala_calle_20_40`, Sala15_40 → `ruta_10/sala_calle_15_40`, Sala9_50 → `ruta_10/sala_calle_9_50`, Sala16_50 → `ruta_10/sala_calle_16_50`, Sala22_50 → `ruta_10/sala_calle_22_50`, Sala32_51 → `ruta_10/sala_calle_32_51`, Sala41_27 → `ruta_10/sala_calle_41_27`, Sala7_60 → `ruta_10/sala_calle_7_60`, Sala11_59 → `ruta_10/sala_calle_11_59`, Sala17_59 → `ruta_10/sala_calle_17_59`, Sala23_60 → `ruta_10/sala_calle_23_60` |
-| `ruta_10/sala_calle_10_23` | Iglesia de Altea · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_10_40` | Apartamentos · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_11_59` | Casa azul pequeña · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_15_40` | Intempo · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_16_20` | Casa ibicenca · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_16_50` | Tienda azul · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_17_59` | Casa naranja · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_18_24` | Casa ibicenca · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_20_40` | Apartamentos · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_22_50` | Floristería · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_23_60` | Casa roja pequeña · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_31_13` | Casa ibicenca · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_31_8` | Casa ibicenca · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_32_51` | Portal · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_35_8` | Casa ibicenca · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_41_27` | Torre de socorro · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_6_40` | Apartamentos · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_7_60` | Casa rosa · Ruta 10 | — | Salida → `ruta_10/exterior` |
-| `ruta_10/sala_calle_9_50` | Tienda naranja · Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_10_23` | Iglesia de Nuestra Señora del Consuelo, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_10_40` | Hotel del Imserso, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_11_59` | Casa azul del pescador, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_15_40` | Portal del Intempo, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_16_20` | Estudio del pintor de Altea, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_16_50` | Supermercado británico, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_17_59` | Casa del festero de Moros y Cristianos, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_18_24` | Casa de la vecina del casco antiguo, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_20_40` | Apartamento de la despedida de soltero, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_22_50` | Floristería de Benidorm, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_23_60` | Casa roja de la familia del puerto, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_31_13` | Casa del escalador del Peñón, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_31_8` | Casa del pescador de Calp, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_32_51` | Portal de los vecinos de Benidorm, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_35_8` | Casa de la jubilada holandesa, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_41_27` | Caseta del socorrista de la Olla, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_6_40` | Apartamento de los jubilados ingleses, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_7_60` | Chocolatería de La Vila, Ruta 10 | — | Salida → `ruta_10/exterior` |
+| `ruta_10/sala_calle_9_50` | The Red Lion, Ruta 10 | — | Salida → `ruta_10/exterior` |
 | `ruta_11/exterior` | Ruta 11 · Palmeral de Elche | east → `alicante/exterior`, west → `murcia/exterior` | Sala35_28 → `ruta_11/sala_calle_35_28`, Sala44_27 → `ruta_11/sala_calle_44_27`, Sala11_27 → `ruta_11/sala_calle_11_27`, Sala17_27 → `ruta_11/sala_calle_17_27`, Sala23_27 → `ruta_11/sala_calle_23_27` |
-| `ruta_11/sala_calle_11_27` | Casa de teja · Ruta 11 | — | Salida → `ruta_11/exterior` |
-| `ruta_11/sala_calle_17_27` | Casa de la chimenea · Ruta 11 | — | Salida → `ruta_11/exterior` |
-| `ruta_11/sala_calle_23_27` | Casa de madera · Ruta 11 | — | Salida → `ruta_11/exterior` |
-| `ruta_11/sala_calle_35_28` | Basílica de Santa María · Ruta 11 | — | Salida → `ruta_11/exterior` |
-| `ruta_11/sala_calle_44_27` | Casa de dos aguas · Ruta 11 | — | Salida → `ruta_11/exterior` |
-| `ruta_12/casa_1` | Casa · Ruta 12 | — | Salida → `ruta_12/exterior` |
+| `ruta_11/sala_calle_11_27` | Casa de la profesora de Orihuela, Ruta 11 | — | Salida → `ruta_11/exterior` |
+| `ruta_11/sala_calle_17_27` | Casa del huertano de la Vega Baja, Ruta 11 | — | Salida → `ruta_11/exterior` |
+| `ruta_11/sala_calle_23_27` | Casa de la familia del calzado, Ruta 11 | — | Salida → `ruta_11/exterior` |
+| `ruta_11/sala_calle_35_28` | Basílica de Santa María de Elche, Ruta 11 | — | Salida → `ruta_11/exterior` |
+| `ruta_11/sala_calle_44_27` | Casa del palmerero, Ruta 11 | — | Salida → `ruta_11/exterior` |
+| `ruta_12/casa_1` | Cortijo El Olivar, Ruta 12 | — | Salida → `ruta_12/exterior` |
 | `ruta_12/exterior` | Ruta 12 · Sierra Nevada y Granada | west → `ruta_13/exterior`, east → `murcia/exterior` | Casa1 → `ruta_12/casa_1` |
-| `ruta_13/casa_1` | Casa · Ruta 13 | — | Salida → `ruta_13/exterior` |
-| `ruta_13/casa_2` | Casa · Ruta 13 | — | Salida → `ruta_13/exterior` |
+| `ruta_13/casa_1` | Cortijo del aceite, Ruta 13 | — | Salida → `ruta_13/exterior` |
+| `ruta_13/casa_2` | Casa del patio cordobés, Ruta 13 | — | Salida → `ruta_13/exterior` |
 | `ruta_13/exterior` | Ruta 13 · Mar de olivos | east → `ruta_12/exterior`, west → `sevilla/centro` | Casa1 → `ruta_13/casa_1`, Casa2 → `ruta_13/casa_2` |
-| `ruta_14/casa_1` | Casa · Ruta 14 | — | Salida → `ruta_14/exterior` |
-| `ruta_14/casa_2` | Casa · Ruta 14 | — | Salida → `ruta_14/exterior` |
+| `ruta_14/casa_1` | Casa de hermandad de El Rocío, Ruta 14 | — | Salida → `ruta_14/exterior` |
+| `ruta_14/casa_2` | Casa del tamborilero, Ruta 14 | — | Salida → `ruta_14/exterior` |
 | `ruta_14/exterior` | Ruta 14 · Doñana | east → `sevilla/rio`, west → `huelva/exterior` | Casa1 → `ruta_14/casa_1`, Casa2 → `ruta_14/casa_2`, Sala53_9 → `ruta_14/sala_calle_53_9`, Sala53_17 → `ruta_14/sala_calle_53_17`, Sala57_9 → `ruta_14/sala_calle_57_9`, Sala34_13 → `ruta_14/sala_calle_34_13` |
-| `ruta_14/sala_calle_34_13` | Cabaña · Ruta 14 | — | Salida → `ruta_14/exterior` |
-| `ruta_14/sala_calle_53_17` | Casa ibicenca · Ruta 14 | — | Salida → `ruta_14/exterior` |
-| `ruta_14/sala_calle_53_9` | Casa ibicenca · Ruta 14 | — | Salida → `ruta_14/exterior` |
-| `ruta_14/sala_calle_57_9` | Casa ibicenca · Ruta 14 | — | Salida → `ruta_14/exterior` |
-| `ruta_15/casa_1` | Casa · Ruta 15 | — | Salida → `ruta_15/exterior` |
-| `ruta_15/casa_2` | Casa · Ruta 15 | — | Salida → `ruta_15/exterior` |
+| `ruta_14/sala_calle_34_13` | Observatorio de aves de la marisma, Ruta 14 | — | Salida → `ruta_14/exterior` |
+| `ruta_14/sala_calle_53_17` | Casa del guarda de Doñana, Ruta 14 | — | Salida → `ruta_14/exterior` |
+| `ruta_14/sala_calle_53_9` | Casa de la jornalera de la fresa, Ruta 14 | — | Salida → `ruta_14/exterior` |
+| `ruta_14/sala_calle_57_9` | Casa del yegüero de la saca, Ruta 14 | — | Salida → `ruta_14/exterior` |
+| `ruta_15/casa_1` | Casa del guagüero de Telde, Ruta 15 | — | Salida → `ruta_15/exterior` |
+| `ruta_15/casa_2` | Casa de la familia de Pozo Izquierdo, Ruta 15 | — | Salida → `ruta_15/exterior` |
 | `ruta_15/exterior` | Ruta 15 · Costa de Gran Canaria | north → `las_palmas/vegueta_triana`, south → `playa_del_ingles/exterior` | Casa1 → `ruta_15/casa_1`, Casa2 → `ruta_15/casa_2` |
 | `ruta_16/casa_1` | Casa del bateeiro, Ruta 16 | — | Salida → `ruta_16/exterior` |
 | `ruta_16/casa_2` | Casa del vecino de Sanxenxo, Ruta 16 | — | Salida → `ruta_16/exterior` |
 | `ruta_16/exterior` | Ruta 16 · Rías Baixas | south → `vigo/exterior`, north → `ruta_17/exterior` | Casa1 → `ruta_16/casa_1`, Casa2 → `ruta_16/casa_2` |
 | `ruta_17/exterior` | Ruta 17 · Galicia interior | south → `ruta_16/exterior`, east → `ruta_18/exterior` | Sala32_7 → `ruta_17/sala_calle_32_7`, Sala27_12 → `ruta_17/sala_calle_27_12`, Sala37_13 → `ruta_17/sala_calle_37_13`, Sala5_24 → `ruta_17/sala_calle_5_24`, Sala11_24 → `ruta_17/horreo`, Sala47_37 → `ruta_17/sala_calle_47_37` |
 | `ruta_17/horreo` | Hórreo · Ruta 17 | — | Salida → `ruta_17/exterior` |
-| `ruta_17/sala_calle_27_12` | Casa de teja · Ruta 17 | — | Salida → `ruta_17/exterior` |
-| `ruta_17/sala_calle_32_7` | Catedral Burgos · Ruta 17 | — | Salida → `ruta_17/exterior` |
-| `ruta_17/sala_calle_37_13` | Casa rosa · Ruta 17 | — | Salida → `ruta_17/exterior` |
-| `ruta_17/sala_calle_47_37` | Casa de madera · Ruta 17 | — | Salida → `ruta_17/exterior` |
-| `ruta_17/sala_calle_5_24` | Casa de dos aguas · Ruta 17 | — | Salida → `ruta_17/exterior` |
+| `ruta_17/sala_calle_27_12` | Casa del vecino de la muralla, Ruta 17 | — | Salida → `ruta_17/exterior` |
+| `ruta_17/sala_calle_32_7` | Catedral de Lugo, Ruta 17 | — | Salida → `ruta_17/exterior` |
+| `ruta_17/sala_calle_37_13` | Taberna de las tapas de Lugo, Ruta 17 | — | Salida → `ruta_17/exterior` |
+| `ruta_17/sala_calle_47_37` | Casa de la costurera de Arteixo, Ruta 17 | — | Salida → `ruta_17/exterior` |
+| `ruta_17/sala_calle_5_24` | Casa de labranza de la aldea, Ruta 17 | — | Salida → `ruta_17/exterior` |
 | `ruta_18/covadonga` | Basílica · Covadonga | — | Salida → `ruta_18/exterior`, Cueva → `ruta_18/covadonga_cueva` |
 | `ruta_18/covadonga_cueva` | Cueva · Covadonga | — | Nave → `ruta_18/covadonga` |
 | `ruta_18/exterior` | Ruta 18 · Asturias y Picos de Europa | west → `ruta_17/exterior`, east → `santander/exterior` | Sala45_12 → `ruta_18/covadonga`, Sala21_18 → `ruta_18/sala_calle_21_18`, Sala27_18 → `ruta_18/sala_calle_27_18`, Sala45_18 → `ruta_18/sala_calle_45_18` |
-| `ruta_18/sala_calle_21_18` | Casa de teja · Ruta 18 | — | Salida → `ruta_18/exterior` |
-| `ruta_18/sala_calle_27_18` | Casa de tejado rojo · Ruta 18 | — | Salida → `ruta_18/exterior` |
-| `ruta_18/sala_calle_45_18` | Casa de tejado rojo · Ruta 18 | — | Salida → `ruta_18/exterior` |
+| `ruta_18/sala_calle_21_18` | Quesería de Cabrales, Ruta 18 | — | Salida → `ruta_18/exterior` |
+| `ruta_18/sala_calle_27_18` | Sidrería del pueblo, Ruta 18 | — | Salida → `ruta_18/exterior` |
+| `ruta_18/sala_calle_45_18` | Casa de la vaqueira, Ruta 18 | — | Salida → `ruta_18/exterior` |
 | `ruta_19/exterior` | Ruta 19 · Costa de Cantabria | west → `santander/exterior`, east → `bilbao/exterior` | Sala46_11 → `ruta_19/sala_calle_46_11`, Sala33_8 → `ruta_19/sala_calle_33_8`, Sala52_17 → `ruta_19/sala_calle_52_17`, Sala47_18 → `ruta_19/sala_calle_47_18` |
-| `ruta_19/sala_calle_33_8` | Faro · Ruta 19 | — | Salida → `ruta_19/exterior` |
-| `ruta_19/sala_calle_46_11` | Iglesia de Altea · Ruta 19 | — | Salida → `ruta_19/exterior` |
-| `ruta_19/sala_calle_47_18` | Casa de tejado rojo · Ruta 19 | — | Salida → `ruta_19/exterior` |
-| `ruta_19/sala_calle_52_17` | Casa de madera · Ruta 19 | — | Salida → `ruta_19/exterior` |
-| `ruta_2/casa_1` | Casa · Ruta 2 | — | Salida → `ruta_2/exterior` |
-| `ruta_2/casa_2` | Casa · Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_19/sala_calle_33_8` | Faro del cabo, Ruta 19 | — | Salida → `ruta_19/exterior` |
+| `ruta_19/sala_calle_46_11` | Iglesia de Santa María de Castro Urdiales, Ruta 19 | — | Salida → `ruta_19/exterior` |
+| `ruta_19/sala_calle_47_18` | Conservera de anchoas, Ruta 19 | — | Salida → `ruta_19/exterior` |
+| `ruta_19/sala_calle_52_17` | Casa del surfista de la playa, Ruta 19 | — | Salida → `ruta_19/exterior` |
+| `ruta_2/casa_1` | Casa del resinero de Cantalejo, Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/casa_2` | Casa de la trillera, Ruta 2 | — | Salida → `ruta_2/exterior` |
 | `ruta_2/exterior` | Ruta 2 · Tierra de Pinares y Acueducto | north → `ruta_1/exterior`, south → `ruta_3/exterior` | Casa1 → `ruta_2/casa_1`, Casa2 → `ruta_2/casa_2`, Sala27_51 → `ruta_2/sala_calle_27_51`, Sala9_61 → `ruta_2/sala_calle_9_61`, Sala14_61 → `ruta_2/sala_calle_14_61`, Sala27_61 → `ruta_2/sala_calle_27_61`, Sala2_51 → `ruta_2/sala_calle_2_51`, Sala2_61 → `ruta_2/sala_calle_2_61`, Sala33_61 → `ruta_2/sala_calle_33_61` |
-| `ruta_2/sala_calle_14_61` | Granero · Ruta 2 | — | Salida → `ruta_2/exterior` |
-| `ruta_2/sala_calle_27_51` | Casa de tejado rojo · Ruta 2 | — | Salida → `ruta_2/exterior` |
-| `ruta_2/sala_calle_27_61` | Casa de la chimenea · Ruta 2 | — | Salida → `ruta_2/exterior` |
-| `ruta_2/sala_calle_2_51` | Casa azul pequeña · Ruta 2 | — | Salida → `ruta_2/exterior` |
-| `ruta_2/sala_calle_2_61` | Casa naranja · Ruta 2 | — | Salida → `ruta_2/exterior` |
-| `ruta_2/sala_calle_33_61` | Casa de madera · Ruta 2 | — | Salida → `ruta_2/exterior` |
-| `ruta_2/sala_calle_9_61` | Casa de dos aguas · Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/sala_calle_14_61` | Piso de estudiantes del Azoguejo, Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/sala_calle_27_51` | Mesón del cochinillo, Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/sala_calle_27_61` | Casa de los madrileños del fin de semana, Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/sala_calle_2_51` | Casa del pastor de la cañada, Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/sala_calle_2_61` | Pastelería del ponche segoviano, Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/sala_calle_33_61` | Casa del guía del Acueducto, Ruta 2 | — | Salida → `ruta_2/exterior` |
+| `ruta_2/sala_calle_9_61` | Casa del cantero, Ruta 2 | — | Salida → `ruta_2/exterior` |
 | `ruta_20/exterior` | Ruta 20 · Sierra de Aralar | north → `bilbao/exterior`, south → `pamplona/exterior` | Sala20_5 → `ruta_20/sala_calle_20_5`, Sala18_28 → `ruta_20/sala_calle_18_28` |
-| `ruta_20/sala_calle_18_28` | Casa de paja · Ruta 20 | — | Salida → `ruta_20/exterior` |
-| `ruta_20/sala_calle_20_5` | Ermita Virgen Del Rio · Ruta 20 | — | Salida → `ruta_20/exterior` |
+| `ruta_20/sala_calle_18_28` | Borda del pastor, Ruta 20 | — | Salida → `ruta_20/exterior` |
+| `ruta_20/sala_calle_20_5` | Santuario de San Miguel de Aralar, Ruta 20 | — | Salida → `ruta_20/exterior` |
 | `ruta_21/casa_1` | Casa del viticultor riojano, Ruta 21 | — | Salida → `ruta_21/exterior` |
 | `ruta_21/casa_2` | Bar de pinchos de la calle Laurel, Ruta 21 | — | Salida → `ruta_21/exterior` |
 | `ruta_21/exterior` | Ruta 21 · Viñedos de La Rioja | south → `ruta_22/exterior`, north → `pamplona/exterior` | Casa1 → `ruta_21/casa_1`, Casa2 → `ruta_21/casa_2`, Sala10_38 → `ruta_21/sala_calle_10_38`, Sala33_38 → `ruta_21/sala_calle_33_38` |
@@ -790,12 +790,12 @@ Ninguna: todos los destinos existen.
 | `ruta_22/sala_calle_16_15` | Centro de visitantes de Atapuerca, Ruta 22 | — | Salida → `ruta_22/exterior` |
 | `ruta_22/sala_calle_8_26` | Catedral de Santa María de Burgos, Ruta 22 | — | Salida → `ruta_22/exterior`, Cimborrio → `ruta_22/sala_calle_8_26_cimborrio` |
 | `ruta_22/sala_calle_8_26_cimborrio` | Crucero y cimborrio de la catedral, Ruta 22 | — | Salida → `ruta_22/sala_calle_8_26` |
-| `ruta_23/casa_1` | Casa · Ruta 23 | — | Salida → `ruta_23/exterior` |
-| `ruta_23/casa_2` | Casa · Ruta 23 | — | Salida → `ruta_23/exterior` |
+| `ruta_23/casa_1` | Casa del caballista de los encierros, Ruta 23 | — | Salida → `ruta_23/exterior` |
+| `ruta_23/casa_2` | Casa de la piñonera, Ruta 23 | — | Salida → `ruta_23/exterior` |
 | `ruta_23/cuellar/mercadona` | Mercadona · Cuéllar | — | Salida → `ruta_23/exterior` |
 | `ruta_23/exterior` | Ruta 23 · Cuéllar y Tierra de Pinares | west → `valladolid/exterior`, east → `pueblo_inicial/exterior` | Mercadona → `ruta_23/cuellar/mercadona`, Casa1 → `ruta_23/casa_1`, Casa2 → `ruta_23/casa_2`, Sala12_11 → `ruta_23/sala_calle_12_11`, Sala22_11 → `ruta_23/sala_calle_22_11` |
-| `ruta_23/sala_calle_12_11` | Castillo Cuellar · Ruta 23 | — | Salida → `ruta_23/exterior` |
-| `ruta_23/sala_calle_22_11` | Iglesia San Miguel · Ruta 23 | — | Salida → `ruta_23/exterior` |
+| `ruta_23/sala_calle_12_11` | Castillo de los Duques de Alburquerque, Ruta 23 | — | Salida → `ruta_23/exterior` |
+| `ruta_23/sala_calle_22_11` | Iglesia de San Miguel de Cuéllar, Ruta 23 | — | Salida → `ruta_23/exterior` |
 | `ruta_24/casa_1` | Casa del agricultor de la Mancha, Ruta 24 | — | Salida → `ruta_24/exterior` |
 | `ruta_24/casa_2` | Casa de la recolectora de azafrán, Ruta 24 | — | Salida → `ruta_24/exterior` |
 | `ruta_24/exterior` | Ruta 24 · La Mancha | south → `puertollano/exterior`, north → `getafe/exterior` | Casa1 → `ruta_24/casa_1`, Casa2 → `ruta_24/casa_2`, Sala3_10 → `ruta_24/sala_calle_3_10`, Sala7_10 → `ruta_24/sala_calle_7_10`, Sala11_10 → `ruta_24/sala_calle_11_10`, Sala15_10 → `ruta_24/sala_calle_15_10`, Sala19_10 → `ruta_24/sala_calle_19_10`, Sala33_30 → `ruta_24/sala_calle_33_30`, Sala37_30 → `ruta_24/sala_calle_37_30`, Sala41_30 → `ruta_24/sala_calle_41_30`, Sala4_28 → `ruta_24/sala_calle_4_28`, Sala35_40 → `ruta_24/sala_calle_35_40` |
@@ -815,21 +815,21 @@ Ninguna: todos los destinos existen.
 | `ruta_26/casa_1` | Casa del guarda del Torcal, Ruta 26 | — | Salida → `ruta_26/exterior` |
 | `ruta_26/exterior` | Ruta 26 · El Torcal de Antequera | south → `malaga/exterior`, north → `ruta_25/exterior` | Casa1 → `ruta_26/casa_1`, Sala9_9 → `ruta_26/sala_calle_9_9` |
 | `ruta_26/sala_calle_9_9` | Dolmen de Menga, Ruta 26 | — | Salida → `ruta_26/exterior` |
-| `ruta_3/casa_1` | Casa · Ruta 3 | — | Salida → `ruta_3/exterior` |
-| `ruta_3/casa_2` | Casa · Ruta 3 | — | Salida → `ruta_3/exterior` |
+| `ruta_3/casa_1` | Refugio del puerto de Navacerrada, Ruta 3 | — | Salida → `ruta_3/exterior` |
+| `ruta_3/casa_2` | Casa del conductor de la quitanieves, Ruta 3 | — | Salida → `ruta_3/exterior` |
 | `ruta_3/exterior` | Ruta 3 · Puerto de Navacerrada | north → `ruta_2/exterior`, south → `ruta_4/exterior` | Casa1 → `ruta_3/casa_1`, Casa2 → `ruta_3/casa_2`, Sala6_66 → `ruta_3/sala_calle_6_66` |
-| `ruta_3/sala_calle_6_66` | Basilica Cuelgamuros · Ruta 3 | — | Salida → `ruta_3/exterior` |
-| `ruta_4/casa_1` | Casa · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/casa_2` | Casa · Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_3/sala_calle_6_66` | Basílica del Valle de Cuelgamuros, Ruta 3 | — | Salida → `ruta_3/exterior` |
+| `ruta_4/casa_1` | Venta de la carretera del Escorial, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/casa_2` | Casa del guía del Monasterio, Ruta 4 | — | Salida → `ruta_4/exterior` |
 | `ruta_4/exterior` | Ruta 4 · El Escorial y Galapagar | north → `ruta_3/exterior`, east → `madrid/moncloa` | Casa1 → `ruta_4/casa_1`, Casa2 → `ruta_4/casa_2`, Sala9_24 → `ruta_4/sala_calle_9_24`, Sala34_14 → `ruta_4/sala_calle_34_14`, Sala29_27 → `ruta_4/sala_calle_29_27`, Sala38_28 → `ruta_4/sala_calle_38_28`, Sala45_28 → `ruta_4/sala_calle_45_28`, Sala30_38 → `ruta_4/sala_calle_30_38`, Sala38_39 → `ruta_4/sala_calle_38_39`, Sala44_39 → `ruta_4/sala_calle_44_39` |
-| `ruta_4/sala_calle_29_27` | Casa azul · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_30_38` | Casa roja · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_34_14` | Casa de dos aguas · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_38_28` | Casa de tejado rojo · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_38_39` | Casa azul pequeña · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_44_39` | Casa naranja · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_45_28` | Casa de la chimenea · Ruta 4 | — | Salida → `ruta_4/exterior` |
-| `ruta_4/sala_calle_9_24` | Monasterio Escorial · Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_29_27` | Chalet de la presidenta de la comunidad, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_30_38` | Chalet del tertuliano, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_34_14` | Casa del restaurador jubilado, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_38_28` | Chalet de la colina, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_38_39` | Chalet de la familia del pádel, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_44_39` | Chalet de la familia del repartidor, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_45_28` | Chalet de la teletrabajadora, Ruta 4 | — | Salida → `ruta_4/exterior` |
+| `ruta_4/sala_calle_9_24` | Real Monasterio de San Lorenzo de El Escorial, Ruta 4 | — | Salida → `ruta_4/exterior` |
 | `ruta_5/casa_1` | Casa del mozo de almacén, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_5/casa_2` | Casa del repartidor de la A-2, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_5/exterior` | Ruta 5 · Corredor del Henares | west → `madrid/retiro`, east → `ruta_6/exterior` | Casa1 → `ruta_5/casa_1`, Casa2 → `ruta_5/casa_2`, Sala31_12 → `ruta_5/sala_calle_31_12`, Sala56_12 → `ruta_5/sala_calle_56_12`, Sala65_11 → `ruta_5/sala_calle_65_11`, Sala47_11 → `ruta_5/sala_calle_47_11`, Sala58_27 → `ruta_5/sala_calle_58_27` |
@@ -854,24 +854,24 @@ Ninguna: todos los destinos existen.
 | `ruta_8/sala_calle_51_36` | Casa del ciclista del Bages, Ruta 8 | — | Salida → `ruta_8/exterior` |
 | `ruta_8/sala_calle_56_36` | Celler de cava del Penedès, Ruta 8 | — | Salida → `ruta_8/exterior` |
 | `ruta_9/exterior` | Ruta 9 · La Albufera y Gandía | north → `valencia/turia`, south → `ruta_10/exterior` | Sala16_24 → `ruta_9/sala_calle_16_24`, Sala21_24 → `ruta_9/sala_calle_21_24`, Sala17_33 → `ruta_9/sala_calle_17_33`, Sala22_33 → `ruta_9/sala_calle_22_33`, Sala18_15 → `ruta_9/sala_calle_18_15`, Sala22_40 → `ruta_9/sala_calle_22_40`, Sala19_56 → `ruta_9/sala_calle_19_56`, Sala34_55 → `ruta_9/sala_calle_34_55`, Sala7_66 → `ruta_9/sala_calle_7_66`, Sala15_65 → `ruta_9/sala_calle_15_65`, Sala22_66 → `ruta_9/sala_calle_22_66`, Sala5_74 → `ruta_9/sala_calle_5_74`, Sala11_74 → `ruta_9/sala_calle_11_74`, Sala17_74 → `ruta_9/sala_calle_17_74`, Sala23_74 → `ruta_9/sala_calle_23_74`, Sala32_74 → `ruta_9/sala_calle_32_74`, Sala31_65 → `ruta_9/sala_calle_31_65`, Sala41_67 → `ruta_9/sala_calle_41_67` |
-| `ruta_9/sala_calle_11_74` | Tienda naranja · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_15_65` | Casa de teja · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_16_24` | Barraca · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_17_33` | Barraca · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_17_74` | Casa rosa · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_18_15` | Cabaña · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_19_56` | Portal · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_21_24` | Barraca · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_22_33` | Barraca · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_22_40` | Puesto · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_22_66` | Tienda naranja · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_23_74` | Casa roja pequeña · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_31_65` | Casa grande · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_32_74` | Tienda azul · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_34_55` | Faro · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_41_67` | Torre de socorro · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_5_74` | Casa rosa · Ruta 9 | — | Salida → `ruta_9/exterior` |
-| `ruta_9/sala_calle_7_66` | Palau Ducal dels Borja · Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_11_74` | Tienda de recuerdos del paseo, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_15_65` | Casa de la familia gandiense, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_16_24` | Barraca del anguilero, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_17_33` | Barraca del barquero de vela latina, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_17_74` | Casa del DJ de verano, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_18_15` | Casa forestal de la Devesa, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_19_56` | Torre de apartamentos de Cullera, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_21_24` | Barraca de la abuela del arroz, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_22_33` | Arrocería de El Palmar, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_22_40` | Puesto de tellinas y clóchinas, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_22_66` | Horchatería de Gandía, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_23_74` | Peluquería del paseo marítimo, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_31_65` | Chalet del reality de Gandía, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_32_74` | Heladería del Paseo, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_34_55` | Faro de Cullera, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_41_67` | Caseta de socorrismo de la playa de Gandía, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_5_74` | Apartamento de los veraneantes de toda la vida, Ruta 9 | — | Salida → `ruta_9/exterior` |
+| `ruta_9/sala_calle_7_66` | Palau Ducal dels Borja, Ruta 9 | — | Salida → `ruta_9/exterior` |
 | `santander/botin` | Centro Botín · Santander | — | Salida → `santander/exterior`, Sala → `santander/botin_sala` |
 | `santander/botin_sala` | Exposición · Botín | — | Bajar → `santander/botin` |
 | `santander/centro` | Centro Pokémon · Santander | — | Salida → `santander/exterior` |

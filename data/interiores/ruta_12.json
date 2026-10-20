@@ -1,0 +1,57 @@
+{
+ "_doc": "Interiores personalizados de ruta_12 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 12",
+ "interiores": {
+  "ruta_12/casa_1": {
+   "pieza": "casa_dos_aguas",
+   "calle": ["ruta_12/exterior", [9, 20]],
+   "tipo": "cortijo",
+   "nombre": "Cortijo El Olivar",
+   "personas": [
+    {
+     "nodo": "Anfitrion",
+     "nombre": "Cortijera",
+     "aspecto": "npc_woman",
+     "regalo": "ruta_12_from_casa_1",
+     "papel": "cocina",
+     "frases": [
+      "Alquilamos el patio para bodas. En esta vega se plantaba tabaco y remolacha; ahora se plantan novios.",
+      "Toma, que en la boda de ahí fuera no se come: se fotografía. Llévatelo para el camino."
+     ],
+     "en": [9, 3],
+     "mira": "arriba"
+    },
+    {
+     "nombre": "Nieto esquiador",
+     "aspecto": "esquiador",
+     "papel": "libre",
+     "frases": [
+      "Por la mañana esquío en Pradollano y por la tarde me baño en Almuñécar. Granada es la única ciudad que te permite equivocarte de deporte."
+     ],
+     "nodo": "NietoEsquiador",
+     "en": [6, 4],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [13, 9],
+   "puerta": [3, 8],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 8, 0],
+    ["fregadero", 9, 1],
+    ["mesa_cristal", 7, 4],
+    ["taburete_marron", 6, 5],
+    ["taburete_marron", 9, 5],
+    ["cajas", 9, 6],
+    ["arbol_maceta", 11, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  }
+ }
+}

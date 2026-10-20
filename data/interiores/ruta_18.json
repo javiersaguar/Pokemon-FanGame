@@ -1,0 +1,160 @@
+{
+ "_doc": "Interiores personalizados de ruta_18 (propuesta provisional: textos, gente y distribución pendientes de Javier). Lo pinta maps/_pintura/pintar_interiores_datos.gd; la distribución la calcula maps/_tools/planificar_interiores.py.",
+ "ciudad": "Ruta 18",
+ "interiores": {
+  "ruta_18/sala_calle_21_18": {
+   "pieza": "casa_teja",
+   "calle": ["ruta_18/exterior", [21, 18]],
+   "tipo": "tienda",
+   "nombre": "Quesería de Cabrales",
+   "personas": [
+    {
+     "nombre": "Quesera",
+     "aspecto": "npc_woman",
+     "papel": "tras_mostrador",
+     "frases": [
+      "El Cabrales madura en cuevas de los Picos, con leche cruda de vaca, oveja y cabra. Si huele fuerte, es que está bueno.",
+      "Hubo un año que se pagaron más de veinte mil euros por un queso en subasta. El mío te lo dejo a precio de cuñado."
+     ],
+     "nodo": "Quesera",
+     "en": [10, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "turista",
+     "papel": "cliente",
+     "frases": ["Me he llevado medio queso. Lo he metido en la maleta. Mi maleta ya es de Cabrales."],
+     "nodo": "Cliente",
+     "en": [10, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [12, 9],
+   "puerta": [3, 8],
+   "suelo": "moqueta_azul",
+   "pared": "melocoton",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_madera", 4, 1],
+    ["estanteria_alta_menta", 6, 0],
+    ["mostrador_naranja_i", 8, 4],
+    ["mostrador_naranja_m", 9, 4],
+    ["mostrador_naranja_d", 10, 4],
+    ["estanteria_baja_menta", 4, 4],
+    ["estanteria_baja_menta", 6, 4],
+    ["armario_menta", 3, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 7]},
+   "pasos": []
+  },
+  "ruta_18/sala_calle_27_18": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_18/exterior", [27, 18]],
+   "tipo": "bar",
+   "nombre": "Sidrería del pueblo",
+   "personas": [
+    {
+     "nombre": "Escanciadora",
+     "aspecto": "camarero",
+     "papel": "tras_mostrador",
+     "frases": [
+      "La sidra se escancia para que rompa contra el vaso y coja aire. Un culín se bebe de un trago; lo que sobra, al suelo.",
+      "Las paredes de una buena sidrería huelen a manzana y el suelo es de serrín. Si brilla, no es una sidrería."
+     ],
+     "nodo": "Escanciadora",
+     "en": [9, 3],
+     "mira": "abajo"
+    },
+    {
+     "nombre": "Cliente",
+     "aspecto": "npc_old_man",
+     "papel": "cliente",
+     "frases": ["Cachopo para dos, fabada para dos y arroz con leche para dos. Somos uno, pero con hambre de dos."],
+     "nodo": "Cliente",
+     "en": [6, 6],
+     "mira": "arriba"
+    }
+   ],
+   "carteles": [],
+   "tamano": [14, 10],
+   "puerta": [5, 9],
+   "suelo": "losa_crema",
+   "pared": "marino",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 2, 0],
+    ["encimera", 3, 1],
+    ["alacena", 6, 0],
+    ["mostrador_turquesa_i", 6, 4],
+    ["mostrador_turquesa_m", 7, 4],
+    ["mostrador_turquesa_m", 8, 4],
+    ["mostrador_turquesa_d", 9, 4],
+    ["taburete_rojo", 7, 6],
+    ["taburete_rojo", 9, 6],
+    ["mesa_cristal", 2, 6],
+    ["silla_derecha", 1, 6],
+    ["silla_izquierda", 4, 6],
+    ["mesa_cristal", 11, 3],
+    ["taburete_rojo", 10, 3],
+    ["tele_pequena", 1, 2],
+    ["planta", 12, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 8]},
+   "pasos": []
+  },
+  "ruta_18/sala_calle_45_18": {
+   "pieza": "casa_granero",
+   "calle": ["ruta_18/exterior", [45, 18]],
+   "tipo": "rural",
+   "nombre": "Casa de la vaqueira",
+   "personas": [
+    {
+     "nombre": "Vaqueira",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Los vaqueiros de alzada subíamos con el ganado a los puertos en verano y bajábamos en invierno. Media vida en cada sitio.",
+      "En los lagos ya no se sube en coche. Las vacas siguen subiendo andando. Ellas no necesitan autobús."
+     ],
+     "nodo": "Vaqueira",
+     "en": [1, 5],
+     "mira": "izquierda"
+    },
+    {
+     "nombre": "Su padre",
+     "aspecto": "npc_old_man",
+     "papel": "tele",
+     "frases": ["Asturias tiene más vacas que turistas. En agosto, casi empate."],
+     "nodo": "SuPadre",
+     "en": [2, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [],
+   "tamano": [11, 8],
+   "puerta": [3, 7],
+   "suelo": "moqueta_beige",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [],
+   "muebles": [
+    ["alacena", 4, 0],
+    ["fregadero", 5, 1],
+    ["mesa_cristal", 5, 4],
+    ["taburete_marron", 4, 5],
+    ["taburete_marron", 7, 5],
+    ["escalera_mano", 7, 0],
+    ["tele_pequena", 3, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 6]},
+   "pasos": []
+  }
+ }
+}
