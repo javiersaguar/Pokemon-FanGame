@@ -10461,7 +10461,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxairstream",
    "name": "Maxiciclón",
    "needs_script": true,
@@ -10469,7 +10469,7 @@
    "type": "flying"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxdarkness",
    "name": "Maxisombra",
    "needs_script": true,
@@ -10477,7 +10477,7 @@
    "type": "dark"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxflare",
    "name": "Maxignición",
    "needs_script": true,
@@ -10485,7 +10485,7 @@
    "type": "fire"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxflutterby",
    "name": "Maxinsecto",
    "needs_script": true,
@@ -10493,7 +10493,7 @@
    "type": "bug"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxgeyser",
    "name": "Maxichorro",
    "needs_script": true,
@@ -10509,7 +10509,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxhailstorm",
    "name": "Maxihelada",
    "needs_script": true,
@@ -10517,7 +10517,7 @@
    "type": "ice"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxknuckle",
    "name": "Maxipuño",
    "needs_script": true,
@@ -10525,7 +10525,7 @@
    "type": "fighting"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxlightning",
    "name": "Maxitormenta",
    "needs_script": true,
@@ -10533,7 +10533,7 @@
    "type": "electric"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxmindstorm",
    "name": "Maxionda",
    "needs_script": true,
@@ -10541,7 +10541,7 @@
    "type": "psychic"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxooze",
    "name": "Maxiácido",
    "needs_script": true,
@@ -10549,7 +10549,7 @@
    "type": "poison"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxovergrowth",
    "name": "Maxiflora",
    "needs_script": true,
@@ -10557,7 +10557,7 @@
    "type": "grass"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxphantasm",
    "name": "Maxiespectro",
    "needs_script": true,
@@ -10565,7 +10565,7 @@
    "type": "ghost"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxquake",
    "name": "Maxitemblor",
    "needs_script": true,
@@ -10573,7 +10573,7 @@
    "type": "ground"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxrockfall",
    "name": "Maxilito",
    "needs_script": true,
@@ -10581,7 +10581,7 @@
    "type": "rock"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxstarfall",
    "name": "Maxiestela",
    "needs_script": true,
@@ -10589,7 +10589,7 @@
    "type": "fairy"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxsteelspike",
    "name": "Maximetal",
    "needs_script": true,
@@ -10597,7 +10597,7 @@
    "type": "steel"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxstrike",
    "name": "Maxiataque",
    "needs_script": true,
@@ -10605,7 +10605,7 @@
    "type": "normal"
   },
   {
-   "effect_registered": true,
+   "effect_registered": false,
    "id": "maxwyrmwind",
    "name": "Maxidraco",
    "needs_script": true,
@@ -14066,7 +14066,7 @@
   "abilities_without_description": 49,
   "ability_effects_registered": 206,
   "moves": 951,
-  "moves_needing_unregistered_script": 151,
+  "moves_needing_unregistered_script": 169,
   "specific_move_animations": 951
  }
 }

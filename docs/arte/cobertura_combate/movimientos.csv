@@ -500,25 +500,25 @@ maliciousmoonsault,Hiperplancha Oscura,dark,true,false,true
 malignantchain,Cadena Virulenta,poison,false,false,true
 matblock,Escudo Tatami,fighting,true,false,true
 matchagotcha,Cañón Batidor,grass,false,false,true
-maxairstream,Maxiciclón,flying,true,true,true
-maxdarkness,Maxisombra,dark,true,true,true
-maxflare,Maxignición,fire,true,true,true
-maxflutterby,Maxinsecto,bug,true,true,true
-maxgeyser,Maxichorro,water,true,true,true
+maxairstream,Maxiciclón,flying,true,false,true
+maxdarkness,Maxisombra,dark,true,false,true
+maxflare,Maxignición,fire,true,false,true
+maxflutterby,Maxinsecto,bug,true,false,true
+maxgeyser,Maxichorro,water,true,false,true
 maxguard,Maxibarrera,normal,true,false,true
-maxhailstorm,Maxihelada,ice,true,true,true
-maxknuckle,Maxipuño,fighting,true,true,true
-maxlightning,Maxitormenta,electric,true,true,true
-maxmindstorm,Maxionda,psychic,true,true,true
-maxooze,Maxiácido,poison,true,true,true
-maxovergrowth,Maxiflora,grass,true,true,true
-maxphantasm,Maxiespectro,ghost,true,true,true
-maxquake,Maxitemblor,ground,true,true,true
-maxrockfall,Maxilito,rock,true,true,true
-maxstarfall,Maxiestela,fairy,true,true,true
-maxsteelspike,Maximetal,steel,true,true,true
-maxstrike,Maxiataque,normal,true,true,true
-maxwyrmwind,Maxidraco,dragon,true,true,true
+maxhailstorm,Maxihelada,ice,true,false,true
+maxknuckle,Maxipuño,fighting,true,false,true
+maxlightning,Maxitormenta,electric,true,false,true
+maxmindstorm,Maxionda,psychic,true,false,true
+maxooze,Maxiácido,poison,true,false,true
+maxovergrowth,Maxiflora,grass,true,false,true
+maxphantasm,Maxiespectro,ghost,true,false,true
+maxquake,Maxitemblor,ground,true,false,true
+maxrockfall,Maxilito,rock,true,false,true
+maxstarfall,Maxiestela,fairy,true,false,true
+maxsteelspike,Maximetal,steel,true,false,true
+maxstrike,Maxiataque,normal,true,false,true
+maxwyrmwind,Maxidraco,dragon,true,false,true
 meanlook,Mal de Ojo,normal,true,true,true
 meditate,Meditación,psychic,false,false,true
 mefirst,Yo Primero,normal,true,false,true
