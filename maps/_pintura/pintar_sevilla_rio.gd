@@ -57,7 +57,7 @@ func _paint(painter: GDScript) -> RefCounted:
 	for y: int in [6, 30, 38, 52]:
 		p.object(&"palmera", Vector2i(34, y))
 	# Orilla oeste: Triana.
-	p.object(&"teatro", Vector2i(8, 31))               # el club de la comedia
+	p.object(&"club_comedia", Vector2i(8, 31))               # el club de la comedia
 	p.object(&"puesto_mercado", Vector2i(13, 16))      # Mercado de Triana
 	p.object(&"tienda_flores", Vector2i(2, 16))        # cerámica de Triana
 	for cell: Vector2i in [Vector2i(2, 6), Vector2i(7, 6), Vector2i(12, 6), Vector2i(17, 6), Vector2i(2, 44),

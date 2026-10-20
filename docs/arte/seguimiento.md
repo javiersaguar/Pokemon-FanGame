@@ -670,3 +670,9 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Interiores de Ruta 24 (12 salas, `data/interiores/ruta_24.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
 | Interiores de Ruta 25 (2 salas, `data/interiores/ruta_25.json`) | Mapa | Interiores (Agente 1) | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
 | Gente de los 74 locales de servicio | Mapa | Interiores (Agente 1) | integrado, provisional | Textos propios | ⏳ | [Capturas](comparativas/interiores_2026-10-20.md) |
+
+## Teatro original de Sevilla · 20 de octubre
+
+| Recurso | Estado | Aprobación Javier | Evidencia |
+|---|---|---|---|
+| Club de la Comedia, fachada original autorizada | sustituida la pieza genérica; acceso e interior conservados; provisional | pendiente | [Pieza y mapa antes/después](comparativas/edificios_reales.md#club-de-la-comedia--teatro-original-de-triana) |

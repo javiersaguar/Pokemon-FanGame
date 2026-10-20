@@ -281,3 +281,20 @@ Se conservan los fallos previos como historial: la primera pasada falló en dos 
 **Siguiente bloque:** fachadas originales del teatro del Club de la Comedia en `sevilla/rio` y del plató portuario en `malaga/exterior`, autorizadas por Javier el 20 de octubre: «eso te lo puedes inventar». Se conservan sus accesos e interiores. Después siguen los monumentos identificados y el resto del catálogo. No se considera terminado el redibujo de todas las piezas.
 
 Tras rebasar con las integraciones de interiores, ciudades y combate: contrato 3/3 (735 aserciones), arte 11.568 PNG sin errores ni avisos, datos 0 errores y **1 aviso restante** (estadísticas sin verificar), grafo **961 mapas conectados y con vuelta**, alcance sin problemas en los seis exteriores. La importación inicial se cerró con fallo de segmentación al procesar `slam.mp3`; repetida en CPU 0 terminó correctamente. La suite completa citada arriba corresponde a la base anterior al último rebase; no se atribuye esa ejecución a los cambios posteriores de otros responsables.
+
+## Club de la Comedia · teatro original de Triana
+
+Javier autoriza una fachada ficticia el 20 de octubre: «eso te lo puedes inventar». No se atribuye a un teatro real. La entrada existente estaba en la pieza genérica `teatro` del pack, en el ancla (8,31), no en `teatro_real` (que permanece intacto). Se dibuja una fuente propia `club_comedia` (384), de **6×6 casillas**, con cubierta de teja, revoco albero, balcones de hierro, zócalo cerámico, marquesina y cartel de máscaras. La escala se compara con `anil_pueblo.png`; no se modifica ningún recurso del pack.
+
+Se mantienen exactamente la huella anterior, la puerta **(9,31)**, `sevilla/gimnasio_1` y su retorno **(9,32)**. El gimnasio ya conserva sus salas y su salida a la calle. El pintor también usa el nuevo ID para que una reconstrucción no restaure la fachada genérica. [Contrato de sustitución](edificios_reales/club_comedia_contrato.json). El contrato inicial de las 140 piezas se conserva intacto.
+
+| Vista | Antes | Después |
+|---|---|---|
+| Pieza a escala nativa | [Pack intacto](edificios_reales/piezas_antes/club_comedia.png) | [Teatro original](edificios_reales/piezas_despues/club_comedia.png) |
+| Sevilla, mismo mapa | [Antes](edificios_reales/club_comedia_mapa_antes.png) | [Después](edificios_reales/club_comedia_mapa_despues.png) |
+
+Pruebas dirigidas: **4/4, 747 aserciones**; alcance de Sevilla/rio: **29 puertas, 0 problemas**. Se corrigió antes de validar un error de tipo en la nueva prueba y la conversión de las casillas del contrato a `Vector2i`. No se cambió la colisión para hacer pasar las pruebas. Suite conjunta terminada; resultado en el cierre del bloque. Arte provisional.
+
+**Málaga:** la inspección del exterior actual encuentra la pasarela del gimnasio en (58,60), pero ninguna carpa ni fachada en `Entities/Objects` que la cubra. La referencia antigua a una carpa en ESTADO no describe la escena actual. Rutas y ciudades ha reservado este exterior para rehacer calles y manzanas; no se coloca un edificio ni se reserva por segunda vez. El plató original está autorizado, pero queda pendiente de disponer del mapa y reservar una huella que no invada el árbol (59,57), el entrenador (55,59), el Cubo Pompidou (61,61) ni el regreso (58,61).
+
+**Cierre del bloque 3 (20 de octubre): 693/693 pruebas, 87150 aserciones, 763.906s; 11569 PNG sin errores ni avisos; datos 0 errores, 1 avisos.; 961 mapas, todos alcanzables y con vuelta.** Suite en CPU 0, sin modificar el proyecto durante la ejecución; ROM caos en 2.633 ms. Contrato y acceso del teatro: 4/4, 747 aserciones; Sevilla/rio, 29 puertas y 0 problemas. La reserva de Sevilla se libera al integrar. Persisten los avisos de recursos retenidos al cerrar las herramientas de mapas y los avisos de audio faltante de la suite. Todo el arte sigue provisional.

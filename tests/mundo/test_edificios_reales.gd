@@ -59,3 +59,41 @@ func test_la_otra_casa_de_madera_de_ruta_2_no_se_traslada() -> void:
 	assert_eq(map.get_layer(&"Entities/Objects").get_cell_source_id(Vector2i(6, 19)), int(piece.source))
 	assert_eq(map.get_layer(&"Entities/Objects").get_cell_atlas_coords(Vector2i(6, 19)), piece.coords)
 	map.free()
+
+func test_club_comedia_conserva_el_gimnasio_y_su_regreso() -> void:
+	GameState.reset()
+	var contract := JsonFile.read_dict("res://docs/arte/comparativas/edificios_reales/club_comedia_contrato.json")
+	var piece: Dictionary = ExteriorTiles.objects()[&"club_comedia"]
+	assert_eq(piece.size, Vector2i(int(contract.piece.size[0]), int(contract.piece.size[1])))
+	assert_eq(piece.door, Vector2i(int(contract.piece.door[0]), int(contract.piece.door[1])))
+	var original_footprint: Array[Vector2i] = []
+	for cell: Array in contract.piece.footprint:
+		original_footprint.append(Vector2i(int(cell[0]), int(cell[1])))
+	assert_eq(JSON.stringify(piece.footprint), JSON.stringify(original_footprint))
+	var prepared := MapLoader.prepare(StringName(contract.map))
+	assert_eq(prepared.error, OK)
+	var map: MapRoot = prepared.map
+	add_child(map)
+	await wait_physics_frames(2)
+	var anchor := Vector2i(int(contract.anchor[0]), int(contract.anchor[1]))
+	assert_eq(map.get_layer(&"Entities/Objects").get_cell_source_id(anchor), int(piece.source))
+	var door: Vector2i = anchor + piece.door
+	assert_eq(door, Vector2i(int(contract.door[0]), int(contract.door[1])))
+	var warp := map.warp_at(door)
+	assert_not_null(warp)
+	if warp != null:
+		assert_eq(String(warp.target_map), String(contract.interior))
+		var inside := MapLoader.prepare(warp.target_map)
+		assert_eq(inside.error, OK)
+		var room: MapRoot = inside.map
+		var exit := room.get_node(^"Warps/Salida") as Warp
+		assert_eq(String(exit.target_map), String(contract.map))
+		var back: Vector2i = MapLoader.spawn_tile(map, exit.target_spawn)
+		assert_eq(back, door + Vector2i.DOWN)
+		var query := PhysicsPointQueryParameters2D.new()
+		query.collision_mask = 1 | 2 | 8
+		query.position = map.to_global(Grid.to_world(back))
+		assert_true(map.get_world_2d().direct_space_state.intersect_point(query, 1).is_empty())
+		room.free()
+	map.queue_free()
+	await wait_physics_frames(2)
