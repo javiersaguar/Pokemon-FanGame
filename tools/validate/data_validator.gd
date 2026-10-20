@@ -231,7 +231,11 @@ func _check_wikidex() -> void:
 		_warn("Las estadísticas no se han comprobado con WikiDex (node tools/wikidex/verify_stats.mjs).")
 		return
 	var report := JsonFile.read_dict(WIKIDEX_CHECK)
+	# Diferencias revisadas a mano: nuestros datos están bien y WikiDex no (species_overrides.json).
+	var reviewed: Dictionary = JsonFile.read_dict("res://data/species_overrides.json").get("_wikidex_revisado", {})
 	for m: Dictionary in report.get("mismatches", []):
+		if reviewed.has(str(m.get("species", ""))):
+			continue
 		_warn("WikiDex: %s tiene estadísticas distintas: %s" % [m.get("species", "?"), "; ".join(PackedStringArray(m.get("differences", [])))])
 	var checked := {}
 	for id: Variant in report.get("species", []):

@@ -143,9 +143,12 @@ const ORDINALS = { primera: 1, segunda: 2, tercera: 3, cuarta: 4, quinta: 5, sex
 // el bloque "A partir de la ... generación" más reciente (o el último si no hay ninguno).
 function currentBlock(wikitext, speciesName) {
   let section = wikitext;
-  const start = wikitext.indexOf('== Características de combate');
+  // Con o sin espacios: "== Características de combate ==" o "==Características de combate==".
+  const found = /==\s*Características de combate/.exec(wikitext);
+  const start = found ? found.index : -1;
   if (start >= 0) {
-    const end = wikitext.indexOf('\n== ', start + 5);
+    const next = /\n==[^=]/.exec(wikitext.slice(start + 5));
+    const end = next ? start + 5 + next.index : -1;
     section = wikitext.slice(start, end >= 0 ? end : undefined);
   }
   const tokens = [...section.matchAll(/^(={3,}\s*(.+?)\s*={3,}|;\s*(.+)|Las (?:\[\[)?(?:características|estadísticas)(?:\]\])? de (.+?) son:?)\s*$|\{\{\s*Características\s*\n([\s\S]*?)\}\}/gm)];
@@ -166,7 +169,9 @@ function currentBlock(wikitext, speciesName) {
       continue;
     }
     const text = (t[2] ?? t[3] ?? '').toLowerCase();
-    if (t[2] !== undefined && !text.includes('generación')) {
+    // "=== Características habituales ===" y "==== Medicham ====" no son otra forma.
+    const sameSpecies = text === speciesName.toLowerCase() || text.startsWith('características');
+    if (t[2] !== undefined && !text.includes('generación') && !sameSpecies) {
       forms += 1;
       if (blocks.length > 0 || forms > 1) break;
       label = '';

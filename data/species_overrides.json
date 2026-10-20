@@ -1,4 +1,14 @@
 {
+  "_wikidex_revisado": {
+    "aegislash": "EVs de la forma escudo: 2 Defensa y 1 Defensa Especial. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día.",
+    "bellossom": "Defensa 95 desde la 6.ª generación. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día.",
+    "heliolisk": "EVs: 1 Ataque Especial y 1 Velocidad. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día.",
+    "kleavor": "EVs: 3 Ataque. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día.",
+    "porygon2": "EVs: 2 Ataque Especial. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día.",
+    "rabsca": "EVs: 2 Ataque Especial. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día.",
+    "tinglu": "155/110/125/55/80/45. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día.",
+    "vigoroth": "EVs: 2 Velocidad. Revisado el 2026-10-20: coincide con Showdown y Bulbapedia (9.ª generación); la tabla de WikiDex no está al día."
+  },
   "_doc": "Cambios propios sobre data/generated/species.json. Cada entrada sustituye los campos indicados de la especie. Para crear una especie nueva (por ejemplo, una forma regional Panchito) añade \"base\": \"<especie de la que se copia>\". Las claves que empiezan por _ son comentarios.",
   "_evoluciones_por_intercambio": "Decisión de Javier: las evoluciones por intercambio simples pasan a ser por nivel (36-38) y las que piden objeto, a subir de nivel con ese objeto equipado (method level_hold). replaces = \"trade\" marca las sustituidas.",
   "_nincada": "Shedinja aparece al evolucionar Nincada si hay hueco en el equipo y una Poké Ball (method shed: no es una evolución normal).",
