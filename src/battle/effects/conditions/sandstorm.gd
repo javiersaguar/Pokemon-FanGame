@@ -12,13 +12,18 @@ func _init() -> void:
 @warning_ignore("integer_division")
 func on_residual(engine: BattleEngine, _holder: Variant, _state: Dictionary) -> void:
 	engine.message(tr(continue_text))
+	# Nube Nueve o Bucle Aire en el campo: la arena sigue, pero no hace daño.
+	if engine.weather() != &"sandstorm":
+		return
 	for side_index: int in [BattleEngine.PLAYER, BattleEngine.FOE]:
-		var b := engine.active(side_index)
-		if b == null or b.is_fainted() or b.has_type(&"rock") or b.has_type(&"ground") or b.has_type(&"steel"):
-			continue
-		engine.message(tr("¡La tormenta de arena zarandea %s!") % engine.to_name(b))
-		engine.deal_damage(b, maxi(1, b.pokemon.max_hp() / 16), &"sandstorm")
+		for slot: int in engine.slot_count():
+			var b := engine.active(side_index, slot)
+			if b == null or b.is_fainted() or b.has_type(&"rock") or b.has_type(&"ground") or b.has_type(&"steel") \
+					or b.ability in [&"overcoat", &"sandveil", &"sandrush", &"sandforce"] or b.pokemon.held_item == &"safetygoggles":
+				continue
+			engine.message(tr("¡La tormenta de arena zarandea %s!") % engine.to_name(b))
+			engine.deal_damage(b, maxi(1, b.pokemon.max_hp() / 16), &"sandstorm")
 
 
-func stat_modifier(_engine: BattleEngine, battler: Battler, stat: StringName) -> float:
-	return 1.5 if stat == &"spd" and battler.has_type(&"rock") else 1.0
+func stat_modifier(engine: BattleEngine, battler: Battler, stat: StringName) -> float:
+	return 1.5 if stat == &"spd" and battler.has_type(&"rock") and engine.weather() == &"sandstorm" else 1.0

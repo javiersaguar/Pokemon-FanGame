@@ -456,3 +456,13 @@ func extends_condition(_condition_id: StringName) -> bool:
 func priority_bonus(_engine: BattleEngine, _user: Battler, _move: MoveData) -> int:
 	return 0
 
+
+## Efecto de la baya al comerla, sin mirar los PS (bayas de apuro, Zanama, Lagro; la usa Rumia).
+func on_eat(_engine: BattleEngine, _b: Battler) -> bool:
+	return false
+
+
+## Ha cambiado algo del campo (empieza un campo o el Espacio Raro): Servicio Habitación, semillas.
+func on_field_change(_engine: BattleEngine, _b: Battler) -> void:
+	pass
+

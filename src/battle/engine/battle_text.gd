@@ -43,7 +43,8 @@ const CATCH_FAIL: Array[String] = [
 
 ## "Pikachu", "el Pidgey salvaje" o "el Pidgey enemigo".
 static func name_of(b: Battler, wild: bool) -> String:
-	var n := b.pokemon.display_name()
+	# Con Ilusión, el nombre del disfraz hasta que se rompe.
+	var n := str(b.volatiles[&"illusion"].get("name", "")) if b.volatiles.has(&"illusion") else b.pokemon.display_name()
 	if b.side == 0:
 		return n
 	return t("el %s salvaje") % n if wild else t("el %s enemigo") % n

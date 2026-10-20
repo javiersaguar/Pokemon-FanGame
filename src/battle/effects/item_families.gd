@@ -231,19 +231,25 @@ class HeldItem extends BattleEffect:
 						engine.remove_volatile(b, v)
 						if b.pokemon.held_item == id:
 							_use(engine, b, "¡%s se ha curado con su %s!")
-			&"roomservice":
-				if engine.trick_room():
-					_use(engine, b, "¡%s usa su %s!")
-					engine.boost(b, {&"spe": -1}, true)
+			_:
+				pass
+
+
+	## Semillas al empezar su campo y Servicio Habitación al empezar el Espacio Raro (y al entrar con ellos).
+	func on_field_change(engine: BattleEngine, b: Battler) -> void:
+		if b.pokemon.held_item != id:
+			return
 		if SEEDS.has(id) and engine.terrain() == SEEDS[id][0]:
 			_use(engine, b, "¡%s usa su %s!")
 			engine.boost(b, {SEEDS[id][1]: 1}, true)
+		elif id == &"roomservice" and engine.trick_room():
+			_use(engine, b, "¡%s usa su %s!")
+			engine.boost(b, {&"spe": -1}, true)
 
 
 	func on_switch_in(engine: BattleEngine, battler: Battler, _state: Dictionary) -> void:
-		if SEEDS.has(id) and engine.terrain() == SEEDS[id][0]:
-			_use(engine, battler, "¡%s usa su %s!")
-			engine.boost(battler, {SEEDS[id][1]: 1}, true)
+		if SEEDS.has(id) or id == &"roomservice":
+			on_field_change(engine, battler)
 		elif id == &"boosterenergy" and battler.ability in [&"protosynthesis", &"quarkdrive"] \
 				and not (battler.ability == &"protosynthesis" and engine.weather() == &"sunnyday") \
 				and not (battler.ability == &"quarkdrive" and engine.terrain() == &"electricterrain"):
@@ -290,6 +296,10 @@ class HeldItem extends BattleEffect:
 	func on_pinch(engine: BattleEngine, b: Battler) -> bool:
 		if not _pinch(b):
 			return false
+		return on_eat(engine, b)
+
+
+	func on_eat(engine: BattleEngine, b: Battler) -> bool:
 		if PINCH_STAT.has(id):
 			engine.message(tr("¡%s se come su %s!") % [engine.name_of(b), _name()])
 			engine.boost(b, {PINCH_STAT[id]: 1}, true)

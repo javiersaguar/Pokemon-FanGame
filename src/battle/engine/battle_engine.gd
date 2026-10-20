@@ -937,10 +937,13 @@ func _collect_evolutions() -> void:
 
 func _send_out(side_index: int, index: int, slot: int = 0) -> void:
 	var p := party(side_index)[index]
+	var shown := p.display_name()
+	if p.ability_id() == &"illusion" and _illusion_of(side_index, index) != null:
+		shown = _illusion_of(side_index, index).display_name()
 	if side_index == PLAYER:
-		_msg(tr("¡Adelante, %s!") % p.display_name(), "send_out")
+		_msg(tr("¡Adelante, %s!") % shown, "send_out")
 	else:
-		_msg(tr("¡%s sacó a %s!") % [_trainer_name(), p.display_name()], "send_out")
+		_msg(tr("¡%s sacó a %s!") % [_trainer_name(), shown], "send_out")
 	_put_in(side_index, index, false, slot)
 
 
@@ -961,7 +964,7 @@ func _put_in(side_index: int, index: int, wild_appearance: bool, slot: int = 0) 
 	var s := p.species()
 	var disguise := _illusion_of(side_index, index) if p.ability_id() == &"illusion" else null
 	if disguise != null:
-		b.volatiles[&"illusion"] = {"species": String(disguise.species_id)}
+		b.volatiles[&"illusion"] = {"species": String(disguise.species_id), "name": disguise.display_name()}
 	var data := {
 		"party_index": index,
 		"species": String(p.species_id if disguise == null else disguise.species_id),
@@ -1302,7 +1305,9 @@ func _do_move(user: Battler, action: BattleAction) -> void:
 	if z_status:
 		_apply_z_status(user, base_move)
 	_after_move(user, base_move if z_status else move, hit)
-	if move.selfdestruct == &"always" and not user.is_fainted():
+	# Con Humedad en el campo, Explosión y compañía no salen y el usuario no se debilita.
+	var damp_blocked := move.id in [&"explosion", &"selfdestruct", &"mistyexplosion", &"mindblown"] and _damp_holder() != null
+	if move.selfdestruct == &"always" and not user.is_fainted() and not damp_blocked:
 		_damage(user, user.pokemon.current_hp, &"selfdestruct")
 
 
@@ -1433,6 +1438,10 @@ func _use_move_inner(user: Battler, move: MoveData) -> bool:
 	if target == null or target.is_fainted():
 		_msg(tr("¡Pero no había ningún objetivo!"))
 		return false
+	if move.id in [&"explosion", &"selfdestruct", &"mistyexplosion", &"mindblown"] and _damp_holder() != null:
+		_msg(tr("¡%s no puede usar %s por la Humedad de %s!") % [BattleText.cap_name(user, wild), move.name,
+			BattleText.name_of(_damp_holder(), wild)])
+		return false
 	if effect != null and not effect.on_try_move(self, user, target, move):
 		return false
 	# Dracoflechas en dobles: un dardo a cada rival; si el elegido no se puede alcanzar, los dos al otro.
@@ -1496,6 +1505,17 @@ func _use_move_inner(user: Battler, move: MoveData) -> bool:
 			_apply_damaging_move(user, target, move, effect)
 		else:
 			for hit: Battler in targets:
+				if hit != target:
+					var soaked := false
+					for passive: BattleEffect in _passives(hit):
+						if passive.absorbs_move(self, hit, user, move):
+							soaked = true
+							break
+					if soaked:
+						continue
+					if _is_immune(hit, move):
+						_msg(tr("No afecta %s...") % BattleText.to_name(hit, wild))
+						continue
 				_apply_damaging_move(user, hit, move, effect, spread)
 	return true
 
@@ -1754,6 +1774,8 @@ func _apply_damaging_move(user: Battler, target: Battler, move: MoveData, effect
 			_msg(tr("¡Un golpe crítico!"))
 		# Potencia Bruta quita los efectos secundarios; Dicha duplica su probabilidad.
 		var sec_mult := 2 if user.ability == &"serenegrace" else 1
+		if has_side_condition(user.side, &"waterpledgecombo"):
+			sec_mult *= 2
 		for sec: Dictionary in (move.secondaries if user.ability != &"sheerforce" else [] as Array[Dictionary]):
 			if rand_chance(&"secondary", mini(100, int(sec.get("chance", 100)) * sec_mult), 100):
 				_apply_secondary(user, target, sec)
@@ -1991,6 +2013,43 @@ func _eat_healing_berries(user: Battler, target: Battler) -> void:
 			_eat_healing_berry(b)
 
 
+## Velo Flor del propio Pokémon o de su aliado (protege a los de tipo Planta).
+func _flower_veil_on(b: Battler) -> bool:
+	for other: Battler in [b, ally_of(b)]:
+		if other != null and other.ability == &"flowerveil" and ability_effect(other) != null:
+			return true
+	return false
+
+
+## Humedad en cualquier Pokémon del campo (impide Explosión y compañía).
+func _damp_holder() -> Battler:
+	for side_index: int in [PLAYER, FOE]:
+		for slot: int in slot_count():
+			var b := active(side_index, slot)
+			if b != null and not b.is_fainted() and b.ability == &"damp" and ability_effect(b) != null:
+				return b
+	return null
+
+
+## Muestra otra especie sin cambiar los datos (Transformación).
+func show_forme(b: Battler, species_id: StringName) -> void:
+	if b == null or not DataDB.has_species(species_id):
+		return
+	_emit(BattleEvent.FORME, b.side, b.slot, {"species": String(species_id), "form_name": DataDB.species(species_id).form_name,
+		"hp": b.pokemon.current_hp, "max_hp": b.pokemon.max_hp()})
+
+
+## Algo del campo ha cambiado (campo, Espacio Raro...): objetos que reaccionan al instante.
+func _on_field_changed() -> void:
+	for side_index: int in [PLAYER, FOE]:
+		for slot: int in slot_count():
+			var b := active(side_index, slot)
+			if b != null and not b.is_fainted():
+				var held := Effects.item(b.pokemon.held_item)
+				if held != null and not field.has("magicroom") and b.ability != &"klutz":
+					held.on_field_change(self, b)
+
+
 ## Nerviosismo: los rivales no pueden comer bayas.
 func _unnerved(b: Battler) -> bool:
 	for slot: int in slot_count():
@@ -2020,6 +2079,9 @@ func _eat_healing_berry(b: Battler) -> void:
 
 
 func _heal(b: Battler, amount: int, source: StringName) -> int:
+	# Anticura (Ruido Psíquico): ningún movimiento, drenaje, habilidad ni objeto cura.
+	if b.has_volatile(&"healblock"):
+		return 0
 	var healed := b.pokemon.heal(amount)
 	if healed > 0:
 		_emit(BattleEvent.HEAL, b.side, b.slot, {
@@ -2142,7 +2204,8 @@ func _apply_boosts(target: Battler, boosts: Dictionary[StringName, int], seconda
 			continue
 		var delta: int = guard.modify_boost(boosts[stat]) if guard != null else boosts[stat]
 		var amulet := Effects.item(target.pokemon.held_item)
-		var foe_drop_blocked := (guard != null and guard.prevents_foe_drop()) or (amulet != null and amulet.prevents_foe_drop())
+		var foe_drop_blocked := (guard != null and guard.prevents_foe_drop()) or (amulet != null and amulet.prevents_foe_drop()) \
+			or (target.has_type(&"grass") and _flower_veil_on(target))
 		if delta < 0 and by_foe and foe_drop_blocked:
 			if target.ability == &"mirrorarmor" and _move_user != null and _move_user != target and not _mirroring:
 				_mirroring = true
@@ -2246,6 +2309,11 @@ func _status_guards(target: Battler) -> Array[Array]:
 				out.append([effect, b, b.volatiles[id]])
 	for passive: BattleEffect in _passives(target):
 		out.append([passive, target, {}])
+	var ally := ally_of(target)
+	if ally != null and ally.ability in [&"flowerveil", &"sweetveil"]:
+		var veil := ability_effect(ally)
+		if veil != null:
+			out.append([veil, target, {}])
 	return out
 
 
@@ -2917,8 +2985,12 @@ func eat_berry(b: Battler, berry: StringName) -> void:
 	var amount := effect.heal_amount(b)
 	if amount > 0:
 		_heal(b, amount, &"item")
-	elif effect.cures_status(b.pokemon.status):
+	elif b.pokemon.status != &"" and effect.cures_status(b.pokemon.status):
 		_cure_status(b)
+	elif effect.cures_confusion() and b.has_volatile(&"confusion"):
+		_end_confusion(b)
+	else:
+		effect.on_eat(self, b)
 
 
 func side_condition(side_index: int, id: StringName) -> Dictionary:
@@ -3268,6 +3340,7 @@ func field_state(id: StringName) -> Dictionary:
 func set_field_state(id: StringName, state: Dictionary) -> void:
 	state["id"] = String(id)
 	field[String(id)] = state
+	_on_field_changed()
 
 
 func _set_field(key: StringName, id: StringName, source: Battler) -> bool:
@@ -3282,6 +3355,7 @@ func _set_field(key: StringName, id: StringName, source: Battler) -> bool:
 		_remove_condition(null, key)
 	field[String(key)] = state
 	_condition_event(null, key, true)
+	_on_field_changed()
 	return true
 
 

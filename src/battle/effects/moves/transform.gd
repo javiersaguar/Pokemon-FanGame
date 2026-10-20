@@ -1,6 +1,6 @@
 extends BattleEffect
-## Transformación: copia especie (aspecto), tipos, características salvo PS, niveles, habilidad y
-## movimientos (5 PP cada uno) del objetivo hasta retirarse.
+## Transformación: copia el aspecto (evento forme), tipos, características salvo PS, niveles, habilidad
+## y movimientos (5 PP cada uno) del objetivo hasta retirarse.
 
 
 func on_hit(engine: BattleEngine, user: Battler, target: Battler, _move: MoveData) -> int:
@@ -20,5 +20,6 @@ func on_hit(engine: BattleEngine, user: Battler, target: Battler, _move: MoveDat
 			engine.replace_move_slot(user, i, slot, true)
 		else:
 			user.pokemon.moves.append(slot)
+	engine.show_forme(user, target.pokemon.species_id)
 	engine.message(tr("¡%s se ha transformado en %s!") % [engine.name_of(user), target.pokemon.species().name])
 	return HANDLED
