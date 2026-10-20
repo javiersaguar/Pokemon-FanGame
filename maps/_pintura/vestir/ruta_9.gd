@@ -5,11 +5,14 @@ extends RefCounted
 ## se corta por las obras del carril bici). Se conservan las barracas, las casas, sus puertas, los
 ## carteles, los entrenadores, los vecinos y las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+## Primera pasada (2026-10-19), ya aplicada.
+func vestir_inicial(v: Vestidor) -> void:
 	# Paso obligado por hierba de la orilla de la Albufera a la arena del Saler.
 	v.grass_band(Rect2i(14, 36, 29, 2))
 	v.sign("CartelObrasCarril", Vector2i(24, 39), PackedStringArray(["OBRAS DEL CARRIL BICI.",
@@ -26,3 +29,15 @@ func vestir(v: Vestidor) -> void:
 	# Pinada del Saler y arboleda en lo que queda de hierba lejos de la avenida.
 	v.fill({"estilo": "arboleda", "margen": [1, 1], "arboles": [&"pino", &"arbol_redondo"], "hueco": 2,
 		"adornos": 0.05, "excluir": [Rect2i(0, 57, 48, 19)]})
+
+## Segunda pasada (2026-10-20): la avenida empedrada recta de cuatro casillas pasa a ser un camino de
+## tierra que va de un lado a otro entre la pinada; el resto, hierba con pinos y flores. Las dos
+## casillas que rodeaban el paso de hierba de la fila 36 pasan a hierba alta.
+func vestir(v: Vestidor) -> void:
+	await Ruta.romper_avenida(v, Rect2i(25, 2, 4, 55), 9)
+	v.tall_grass([Vector2i(24, 36), Vector2i(25, 36)])
+	v.flowers(Rect2i(25, 12, 2, 1), 0.3)
+	v.flowers(Rect2i(27, 44, 2, 1), 0.3)
+	v.item("PerlaPinada", &"bigpearl", Vector2i(28, 28), true)
+	await v.refresh()
+	v.fill({"estilo": "arboleda", "zona": Rect2i(24, 2, 6, 55), "margen": [1, 1], "arboles": [&"pino", &"arbol_verde"], "hueco": 2, "adornos": 0.08})

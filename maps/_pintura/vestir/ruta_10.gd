@@ -5,11 +5,14 @@ extends RefCounted
 ## bosque cerrado. Se conservan las casas, sus puertas, los carteles, los entrenadores, los vecinos y
 ## las conexiones.
 
+const Ruta := preload("res://maps/_pintura/vestir/_ruta.gd")
+
 var tree: SceneTree
 var hierba_obligada := true
 
 
-func vestir(v: Vestidor) -> void:
+## Primera pasada (2026-10-19), ya aplicada.
+func vestir_inicial(v: Vestidor) -> void:
 	# Paso obligado por hierba al salir del paseo: del pinar del oeste a la arena.
 	v.grass_band(Rect2i(4, 53, 40, 2))
 	v.flowers(Rect2i(30, 28, 4, 1), 0.4)
@@ -20,3 +23,14 @@ func vestir(v: Vestidor) -> void:
 	await v.refresh()
 	v.fill({"estilo": "arboleda", "margen": [1, 1], "arboles": [&"palmera", &"pino"], "hueco": 2,
 		"adornos": 0.05, "excluir": [Rect2i(4, 29, 34, 23)]})
+
+## Segunda pasada (2026-10-20): el paseo empedrado recto pasa a ser un camino de tierra que va de un
+## lado a otro entre palmeras y pinos, al norte del pueblo y al sur del paso de hierba. El paseo del
+## pueblo (filas 29-51) se queda.
+func vestir(v: Vestidor) -> void:
+	await Ruta.romper_avenida(v, Rect2i(25, 2, 4, 27), 9)
+	await Ruta.romper_avenida(v, Rect2i(25, 55, 4, 9), 5)
+	v.flowers(Rect2i(27, 16, 2, 1), 0.3)
+	v.item("PolvoEstelarPaseo", &"stardust", Vector2i(28, 6), true)
+	await v.refresh()
+	v.fill({"estilo": "arboleda", "zona": Rect2i(24, 2, 6, 27), "margen": [1, 1], "arboles": [&"palmera", &"pino"], "hueco": 2, "adornos": 0.08})
