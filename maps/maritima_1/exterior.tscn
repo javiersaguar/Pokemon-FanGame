@@ -8,7 +8,10 @@
 [ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="6_cj2cg"]
 [ext_resource type="PackedScene" path="res://src/overworld/trainers/trainer_npc.tscn" id="7_3pdxi"]
 [ext_resource type="Script" path="res://src/overworld/trainers/trainer_npc.gd" id="8_gfmk5"]
-[ext_resource type="Texture2D" path="res://assets/sprites/characters/trainer.png" id="9_y74vv"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/nadador.png" id="9_e3vsc"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/raver_f.png" id="10_gjsem"]
+[ext_resource type="PackedScene" path="res://src/overworld/item_ball/item_ball.tscn" id="11_cj2cg"]
+[ext_resource type="Script" path="res://src/overworld/item_ball/item_ball.gd" id="12_3pdxi"]
 
 [sub_resource type="Resource" id="Resource_huo2c"]
 script = ExtResource("2_5ncd1")
@@ -49,7 +52,7 @@ y_sort_enabled = true
 
 [node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1081517924]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAASACAACAAoAAkAAAAeADwATgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAASACAACAAoAAkAAAAeADwATgAAAAAAAAAHAAkAUwAAAAAAAAAgAB0AUwAAAAAAAAA=")
 tile_set = ExtResource("4_e3vsc")
 
 [node name="CartelDragonera" type="Node2D" parent="Entities" unique_id=339221515 instance=ExtResource("5_gjsem")]
@@ -69,9 +72,10 @@ position = Vector2(272, 368)
 script = ExtResource("8_gfmk5")
 trainer_id = &"maritima1_nadador"
 sight_range = 3
+display_name = "Nadador Biel"
 lines = PackedStringArray()
 turn_to_player = true
-sprite_sheet = ExtResource("9_y74vv")
+sprite_sheet = ExtResource("9_e3vsc")
 initial_facing = 2
 
 [node name="DjMarta" type="Node2D" parent="Entities" unique_id=151302823 instance=ExtResource("7_3pdxi")]
@@ -79,10 +83,17 @@ position = Vector2(912, 976)
 script = ExtResource("8_gfmk5")
 trainer_id = &"maritima1_dj"
 sight_range = 3
+display_name = "Raver DJ Marta"
 lines = PackedStringArray()
 turn_to_player = true
-sprite_sheet = ExtResource("9_y74vv")
+sprite_sheet = ExtResource("10_gjsem")
 initial_facing = 1
+
+[node name="UltraBallDragonera" type="Node2D" parent="Entities" unique_id=79157244 instance=ExtResource("11_cj2cg")]
+position = Vector2(304, 368)
+script = ExtResource("12_3pdxi")
+item_id = &"ultraball"
+hidden_item = true
 
 [node name="Above" type="TileMapLayer" parent="." unique_id=1266186833]
 z_index = 10
