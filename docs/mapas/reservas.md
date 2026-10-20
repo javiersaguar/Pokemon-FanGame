@@ -5,6 +5,7 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
 | `maritima_1/exterior` y `ruta_1/exterior` … `ruta_26/exterior` | Rutas y ciudades | 2026-10-20 | Corrientes y escollos (marítima 1), obstáculos de campo, entrenadores en los pasos estrechos y atajos (`feat/rutas-anil-3`) |
+| Salas de dentro (solo interiores) de 17 monumentos: Alcázar y Archivo de Indias (Sevilla), Liceu, Alcazaba, Gibralfaro y Catedral de Málaga, Almudaina y Bellver, Santa Bárbara, la Magdalena, Universidad de Alcalá, Infantado, Montserrat, Catedral de Valladolid, Museo de la Minería, Atapuerca, Castillo de la Luz y Catedral de Bilbao | Interiores | 2026-10-21 | Una o dos salas hijas por monumento; la sala madre se redistribuye para abrir el paso. Sin tocar exteriores (`feat/interiores-rutas`) |
 
 
 
