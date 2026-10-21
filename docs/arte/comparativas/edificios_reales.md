@@ -45,8 +45,8 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `basilica_cuelgamuros` | [10, 5]; [4, 0] | `ruta_3/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/basilica_cuelgamuros.png) |
 | `monasterio_escorial` | [16, 8]; [7, 0] | `ruta_4/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/monasterio_escorial.png) |
 | `arco_victoria` | [8, 8]; [-1, -1] | `madrid/moncloa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/arco_victoria.png) |
-| `templo_debod` | [6, 4]; [2, 0] | `madrid/moncloa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/templo_debod.png) |
-| `puerta_debod` | [3, 4]; [-1, -1] | `madrid/moncloa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/puerta_debod.png) |
+| `templo_debod` | [6, 4]; [2, 0] | `madrid/moncloa` | Redibujado el 21 de octubre, provisional: gola estriada, disco solar alado, cuatro columnas, pronaos y escalinata; fuente 28, puerta y huella conservadas | [pieza](edificios_reales/piezas_antes/templo_debod.png) |
+| `puerta_debod` | [3, 4]; [-1, -1] | `madrid/moncloa` | Redibujado el 21 de octubre, provisional: cornisa y disco a juego con el templo, jambas con relieves; silueta de opacos idéntica | [pieza](edificios_reales/piezas_antes/puerta_debod.png) |
 | `faro_moncloa` | [3, 12]; [-1, -1] | `madrid/moncloa` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/faro_moncloa.png) |
 | `casa_correos` | [12, 9]; [5, 0] | `madrid/centro` | Redibujado, provisional; referencias reales, tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/casa_correos.png) |
 | `oso_madrono` | [2, 3]; [-1, -1] | `madrid/centro` | Monumento pendiente de redibujo, después de las fachadas prioritarias | [pieza](edificios_reales/piezas_antes/oso_madrono.png) |
@@ -65,8 +65,8 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `cibeles` | [4, 4]; [-1, -1] | `madrid/retiro` | Monumento pendiente de redibujo, después de las fachadas prioritarias | [pieza](edificios_reales/piezas_antes/cibeles.png) |
 | `palacio_cibeles` | [10, 11]; [4, 0] | `madrid/retiro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/palacio_cibeles.png) |
 | `puerta_alcala` | [8, 6]; [-1, -1] | `madrid/retiro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/puerta_alcala.png) |
-| `congreso` | [10, 6]; [4, 0] | `madrid/retiro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/congreso.png) |
-| `leon_congreso` | [2, 2]; [-1, -1] | `madrid/retiro`, `zaragoza/exterior` | Monumento pendiente de redibujo, después de las fachadas prioritarias | [pieza](edificios_reales/piezas_antes/leon_congreso.png) |
+| `congreso` | [10, 6]; [4, 0] | `madrid/retiro` | Redibujado el 21 de octubre, provisional: pórtico corintio, frontón con relieve, alas con ventanas, puerta de bronce y escalinata; huella fijada en piezas.json | [pieza](edificios_reales/piezas_antes/congreso.png) |
+| `leon_congreso` | [2, 2]; [-1, -1] | `madrid/retiro`, `zaragoza/exterior` | Redibujado el 21 de octubre, provisional: león de bronce tumbado sobre pedestal con moldura; huella fijada en piezas.json | [pieza](edificios_reales/piezas_antes/leon_congreso.png) |
 | `museo_prado` | [12, 6]; [5, 0] | `madrid/retiro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/museo_prado.png) |
 | `fuente_neptuno` | [3, 3]; [-1, -1] | `madrid/retiro` | Monumento pendiente de redibujo, después de las fachadas prioritarias | [pieza](edificios_reales/piezas_antes/fuente_neptuno.png) |
 | `estacion_atocha` | [14, 8]; [6, 0] | `madrid/retiro` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/estacion_atocha.png) |
@@ -511,3 +511,16 @@ Para conservar estos identificadores, el constructor copia el dibujo propio en e
 El contrato nuevo `gimnasios_pendientes_contrato.json` es una instantánea de `966e9478`; el contrato inicial de las 140 piezas no se reescribe. Pruebas dirigidas: **3/3, 59 aserciones** para el atlas y los dos accesos; contrato anterior **7/7, 891 aserciones**. Alcance: **32 puertas comprobadas, 0 problemas** en los cuatro mapas. Arte: **11.606 PNG, 0 errores, 0 avisos**. Datos: **0 errores y 0 avisos**. Grafo: **974 mapas alcanzables y con vuelta**. Los comprobadores de mapas siguen mostrando al cerrar sus avisos anteriores de recursos/RID sin liberar; no se ocultan y no son problemas nuevos de acceso.
 
 **Validación completa del bloque (21 de octubre, terminada desde Interiores tras cortarse la sesión de Edificios):** 771/771 pruebas, 92.186 aserciones; arte 11.606 PNG sin errores ni avisos; datos 0/0; grafo 994 mapas alcanzables y con vuelta. Integrado en `main`. Estas dos piezas siguen provisionales hasta que las apruebe Javier. Después continúan los monumentos identificados, servicios y casas del inventario; la pasada de personajes todavía está pendiente.
+
+## Redibujo continuado · 21 de octubre de 2026 (bloque 1: Moncloa y Congreso)
+
+La sesión de Edificios se cortó tras la tarea 4; Javier pide seguir sustituyendo los edificios actuales por diseños nuevos. Se sigue el mismo método: fuente `.px2` escrita a mano en texto, mismo lienzo, misma fuente del TileSet, misma puerta y misma huella (fijada en `piezas.json` cuando el dibujo nuevo ocupa otros píxeles), sin repintar ningún mapa. `objetos.json` no cambia en ninguna pieza. Las filas repetidas se escriben con segmentos elegidos a mano; no hay geometría ni texturas calculadas.
+
+| Pieza | Antes | Después | En el mapa |
+|---|---|---|---|
+| Templo de Debod | [pieza](edificios_reales/piezas_antes/templo_debod.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/templo_debod.png) | [antes](edificios_reales/templo_debod_detalle_antes.png) · [después](edificios_reales/templo_debod_detalle_despues.png) |
+| Puerta de Debod | [pieza](edificios_reales/piezas_antes/puerta_debod.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/puerta_debod.png) | (en la misma captura de Moncloa) |
+| Congreso de los Diputados | [pieza](edificios_reales/piezas_antes/congreso.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/congreso.png) | [antes](edificios_reales/congreso_detalle_antes.png) · [después](edificios_reales/congreso_detalle_despues.png) |
+| Leones del Congreso | [pieza](edificios_reales/piezas_antes/leon_congreso.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/leon_congreso.png) | (en la misma captura del Retiro; también en Zaragoza) |
+
+Referencias: [Templo de Debod (esMadrid)](https://www.esmadrid.com/informacion-turistica/templo-de-debod) y [Palacio del Congreso](https://www.congreso.es/es/cem/palacio-congreso). Todo provisional hasta que lo apruebe Javier.

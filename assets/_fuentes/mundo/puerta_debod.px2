@@ -1,71 +1,73 @@
-# Puerta (pilono) del Templo de Debod: dos jambas de arenisca y el dintel con el disco solar. El hueco
-# es transparente y solo choca la base: se pasa por debajo. 48x64 pixeles del arte (3x4 casillas), a x2.
+# Puerta (pilono) del Templo de Debod: dos jambas de arenisca y el dintel con cornisa de gola y el disco
+# solar alado, a juego con el templo. Redibujo del 21 de octubre: jambas con juntas y relieves de ofrenda.
+# El hueco es transparente y solo choca la base: se pasa por debajo. 48x64 pixeles del arte (3x4 casillas), a x2.
+# Se conserva exactamente la silueta de opacos anterior (y con ella la huella).
 # PROVISIONAL hasta que la apruebe Javier.
-@leyenda  . = transparente   K = piedra_1   D = tierra_2   d = tierra_3   j = tierra_3   g = tierra_5   l = tierra_5   L = tierra_6
-@leyenda  y = acento_amarillo
+@leyenda  . = transparente   D = tierra_2   d = tierra_3   m = tierra_4   g = tierra_5   l = tierra_5   L = tierra_6
+@leyenda  y = acento_amarillo   b = pizarra_4   B = pizarra_5
 @salida res://assets/tilesets/exterior/hecho_a_mano/puerta_debod.png
 ---
 ................................................
 ................................................
 ................................................
 ................................................
-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
-LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
-llllllllllllllllllllllllllllllllllllllllllllllll
-.lLggggggggggjgggggggggggjgggggggggggjgggggggdl.
-.lLggggggggggjggggyyyyyyyyyyyygggggggjgggggggdl.
-.lLggggggggggjggggyyyyyyyyyyyygggggggjgggggggdl.
-..Ljjjjjjjjjjjjjjjyyyyyyyyyyyyjjjjjjjjjjjjjjjd..
-..Lggggjggggggggggyyyyyyyyyyyygjgggggggggggjgd..
-..Lggggjgggggggggggjgggggggggggjgggggggggggjgd..
-..Lggggjgggggggggggjgggggggggggjgggggggggggjgd..
-..Ljjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjd..
+DLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLD
+LggdLggdLggdLggdLggdLggdLggdLggdLggdLggdLggdLggd
+LggdLggdLggdLggdLggdLggdLggdLggdLggdLggdLggdLggd
+dddddddddddddddddddddddddddddddddddddddddddddddd
+.lLgggggggggggBBBBBBBDyyyyDBBBBBBBgggggggggggdl.
+.lLgggggggggggbbbbbbbyyLyyybbbbbbbgggggggggggdl.
+.lLgggggggggggggbbbbbyyyyyybbbbbgggggggggggggdl.
+..Lddddddddddddddddddddddddddddddddddddddddddd..
+..Lggggggggggggggggggggggggggggggggggggggggggd..
+..Lgmggmggmggmggmggmggmggmggmggmggmggmggmggmgd..
+..Lggggggggggggggggggggggggggggggggggggggggggd..
+..Lddddddddddddddddddddddddddddddddddddddddddd..
 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 ..Lggggggggggd....................Lggggggggggd..
+..Lddddddddddd....................Lddddddddddd..
 ..Lggggggggggd....................Lggggggggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
 ..Lggggggggggd....................Lggggggggggd..
+..Lddddddddddd....................Lddddddddddd..
 ..Lggggggggggd....................Lggggggggggd..
+..LgggmLLmgggd....................LgggmLLmgggd..
+..LgggmLLmgggd....................LgggmLLmgggd..
+..LgggmLLmgggd....................LgggmLLmgggd..
 ..Lggggggggggd....................Lggggggggggd..
+..Lddddddddddd....................Lddddddddddd..
 ..Lggggggggggd....................Lggggggggggd..
+..LgmgggggmLgd....................LgmgggggmLgd..
+..LgmgggggmLgd....................LgmgggggmLgd..
+..LgmgggggmLgd....................LgmgggggmLgd..
 ..Lggggggggggd....................Lggggggggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
+..Lddddddddddd....................Lddddddddddd..
 ..Lggggggggggd....................Lggggggggggd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
+..Lggdmmmmdggd....................Lggdmmmmdggd..
+..Lddddddddddd....................Lddddddddddd..
 ..Lggggggggggd....................Lggggggggggd..
+..LgggmLLmgggd....................LgggmLLmgggd..
+..LgggmLLmgggd....................LgggmLLmgggd..
+..LgggmLLmgggd....................LgggmLLmgggd..
 ..Lggggggggggd....................Lggggggggggd..
-..Lggggggggggd....................Lggggggggggd..
-..Lggggggggggd....................Lggggggggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
-..Lggggggggggd....................Lggggggggggd..
-..Lggggggggggd....................Lggggggggggd..
+..Lddddddddddd....................Lddddddddddd..
 ..Lggggggggggd....................Lggggggggggd..
 ..Lggggggggggd....................Lggggggggggd..
 ..Lggggggggggd....................Lggggggggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Lggggjgggggd....................Lggggjgggggd..
-..Ljjjjjjjjjjd....................Ljjjjjjjjjjd..
+..Lggggggggggd....................Lggggggggggd..
+..Lggggggggggd....................Lggggggggggd..
+..Lddddddddddd....................Lddddddddddd..
+..Lggggggggggd....................Lggggggggggd..
+..Lggggggggggd....................Lggggggggggd..
+..Lggggggggggd....................Lggggggggggd..
+..Lggggggggggd....................Lggggggggggd..
+..Lggggggggggd....................Lggggggggggd..
+..Lddddddddddd....................Lddddddddddd..
 dddddddddddddddddddddddddddddddddddddddddddddddd
-dddddddddddddddddddddddddddddddddddddddddddddddd
+DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
