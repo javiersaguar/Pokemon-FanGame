@@ -170,8 +170,8 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `guggenheim` | [12, 8]; [6, 0] | `bilbao/exterior` | Pendiente: boceto descartado por volúmenes demasiado planos para el titanio y el atrio | [pieza](edificios_reales/piezas_antes/guggenheim.png) |
 | `centro_botin` | [10, 6]; [4, 0] | `santander/exterior` | Redibujado, provisional; tamaño, puerta y huella conservados | [pieza](edificios_reales/piezas_antes/centro_botin.png) |
 | `horreo` | [3, 4]; [1, 0] | `ruta_17/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/horreo.png) |
-| `basilica_covadonga` | [6, 8]; [2, 0] | `ruta_18/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/basilica_covadonga.png) |
-| `cafe_iruna` | [8, 5]; [3, 0] | `pamplona/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/cafe_iruna.png) |
+| `basilica_covadonga` | [6, 8]; [2, 0] | `ruta_18/exterior` | Redibujado el 21 de octubre, provisional: caliza rosada, dos torres con agujas y cruz, rosetón, arquillos, portada de tres arcos y escalinata sobre la peña; huella fijada en piezas.json | [pieza](edificios_reales/piezas_antes/basilica_covadonga.png) |
+| `cafe_iruna` | [8, 5]; [3, 0] | `pamplona/exterior` | Redibujado el 21 de octubre, provisional: casa de tres plantas con balcones, rótulo «CAFE IRUÑA» dibujado a mano, toldos y planta baja del café; huella fijada en piezas.json | [pieza](edificios_reales/piezas_antes/cafe_iruna.png) |
 | `ruinas_rocafonda` | [5, 4]; [2, 0] | `rocafonda/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/ruinas_rocafonda.png) |
 | `falcon` | [5, 2]; [-1, -1] | `playa_del_ingles/exterior`, `vigo/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/falcon.png) |
 
@@ -524,3 +524,12 @@ La sesión de Edificios se cortó tras la tarea 4; Javier pide seguir sustituyen
 | Leones del Congreso | [pieza](edificios_reales/piezas_antes/leon_congreso.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/leon_congreso.png) | (en la misma captura del Retiro; también en Zaragoza) |
 
 Referencias: [Templo de Debod (esMadrid)](https://www.esmadrid.com/informacion-turistica/templo-de-debod) y [Palacio del Congreso](https://www.congreso.es/es/cem/palacio-congreso). Todo provisional hasta que lo apruebe Javier.
+
+## Redibujo continuado · bloque 2: Café Iruña y Covadonga
+
+| Pieza | Antes | Después | En el mapa |
+|---|---|---|---|
+| Café Iruña (Pamplona) | [pieza](edificios_reales/piezas_antes/cafe_iruna.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/cafe_iruna.png) | [antes](edificios_reales/cafe_iruna_detalle_antes.png) · [después](edificios_reales/cafe_iruna_detalle_despues.png) |
+| Basílica de Covadonga (Ruta 18) | [pieza](edificios_reales/piezas_antes/basilica_covadonga.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/basilica_covadonga.png) | [antes](edificios_reales/basilica_covadonga_detalle_antes.png) · [después](edificios_reales/basilica_covadonga_detalle_despues.png) |
+
+Mismo método que el bloque 1: lienzo, fuente, puerta y huella conservados, `objetos.json` sin cambios y ningún mapa repintado. Referencias: [plaza del Castillo (Visit Navarra)](https://www.visitnavarra.es/es/plaza-del-castillo) y [Basílica de Covadonga (Turismo de Asturias)](https://www.turismoasturias.es/descubre/cultura/patrimonio-cultural/basilica-de-covadonga). Provisional hasta que lo apruebe Javier.
