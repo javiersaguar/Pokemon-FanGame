@@ -343,7 +343,7 @@
       "Aquí se rodó una serie de dragones. Desde entonces vienen fans preguntando por el trono. El trono está en Madrid, les digo."
      ],
      "nodo": "GuiaDelAlcazar",
-     "en": [8, 6],
+     "en": [2, 3],
      "mira": "abajo"
     },
     {
@@ -355,7 +355,7 @@
       "He visto el estanque donde salía una princesa. Ahora sale una carpa naranja que me mira con desprecio."
      ],
      "nodo": "FanDeLaSerie",
-     "en": [9, 3],
+     "en": [10, 2],
      "mira": "derecha"
     }
    ],
@@ -366,25 +366,46 @@
       "Azulejos con estrellas y lazos de colores. Si se miran mucho rato, parecen moverse. Si se miran más, se cobra otra entrada."
      ],
      "nodo": "Cartel",
-     "en": [5, 1]
+     "en": [4, 1]
     }
    ],
    "tamano": [16, 11],
    "puerta": [8, 10],
-   "suelo": "piedra",
-   "pared": "beige_rayado",
-   "felpudo": "moqueta_azul",
+   "suelo": "rombos_oscuros",
+   "pared": "crema",
+   "felpudo": "alfombra_naranja",
    "alfombras": [["moqueta_azul", [2, 3, 10, 5]]],
    "muebles": [
-    ["sillon_derecha", 10, 2],
-    ["mesa_cristal", 11, 3],
-    ["sillon_izquierda", 13, 2],
+    ["sillon_derecha", 9, 6],
+    ["mesa_cristal", 10, 7],
+    ["sillon_izquierda", 12, 6],
     ["vitrina_alta", 14, 5],
     ["arbol_maceta", 1, 0]
    ],
    "encima": [],
-   "apariciones": {"default": [8, 9]},
-   "pasos": []
+   "apariciones": {
+    "default": [8, 9],
+    "desde_sala_centro_24_51_doncellas": [11, 2],
+    "desde_sala_centro_24_51_embajadores": [6, 2]
+   },
+   "pasos": [
+    {
+     "nodo": "Doncellas",
+     "en": [11, 1],
+     "destino": "sevilla/sala_centro_24_51_doncellas",
+     "aparicion": "default",
+     "vuelta": "desde_sala_centro_24_51_doncellas",
+     "llegada": [11, 2]
+    },
+    {
+     "nodo": "Embajadores",
+     "en": [6, 1],
+     "destino": "sevilla/sala_centro_24_51_embajadores",
+     "aparicion": "default",
+     "vuelta": "desde_sala_centro_24_51_embajadores",
+     "llegada": [6, 2]
+    }
+   ]
   },
   "sevilla/sala_centro_27_6": {
    "tipo": "casa",
@@ -521,7 +542,7 @@
       "Hay investigadores que vienen veinte años a leer un solo legajo. Es la oposición más larga del mundo."
      ],
      "nodo": "Archivera",
-     "en": [10, 6],
+     "en": [13, 5],
      "mira": "abajo"
     },
     {
@@ -533,7 +554,7 @@
       "En estos papeles está la mitad de la historia de mi país. La otra mitad está en la memoria de mis abuelos."
      ],
      "nodo": "InvestigadorDeLima",
-     "en": [5, 9],
+     "en": [3, 8],
      "mira": "abajo"
     }
    ],
@@ -544,15 +565,15 @@
       "Un mapa de 1527 con las costas de América. Al sur pone «tierra por descubrir». Al lado, a lápiz: «y por pagar»."
      ],
      "nodo": "Cartel",
-     "en": [6, 5]
+     "en": [9, 5]
     }
    ],
    "tamano": [16, 12],
    "puerta": [6, 11],
-   "suelo": "alfombra_roja",
-   "pared": "madera_oscura",
-   "felpudo": "moqueta_beige",
-   "alfombras": [["moqueta_beige", [8, 7, 3, 2]]],
+   "suelo": "parquet",
+   "pared": "mostaza",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["alfombra_roja", [8, 7, 3, 2]]],
    "muebles": [
     ["estatua_aguila", 2, 0],
     ["vitrina_blanca", 5, 1],
@@ -562,8 +583,17 @@
     ["vitrina_madera_estrecha", 1, 8]
    ],
    "encima": [],
-   "apariciones": {"default": [6, 10]},
-   "pasos": []
+   "apariciones": {"default": [6, 10], "desde_sala_centro_33_47_legajos": [8, 2]},
+   "pasos": [
+    {
+     "nodo": "Legajos",
+     "en": [8, 1],
+     "destino": "sevilla/sala_centro_33_47_legajos",
+     "aparicion": "default",
+     "vuelta": "desde_sala_centro_33_47_legajos",
+     "llegada": [8, 2]
+    }
+   ]
   },
   "sevilla/sala_centro_37_33": {
    "tipo": "hostal",
@@ -3169,6 +3199,163 @@
    "encima": [],
    "carteles": [],
    "apariciones": {"default": [7, 6]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_24_51_doncellas": {
+   "tipo": "palacio",
+   "nombre": "Patio de las Doncellas",
+   "padre": "sevilla/sala_centro_24_51",
+   "personas": [
+    {
+     "nombre": "Guía del Alcázar",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "Lo mandó levantar Pedro I en el siglo XIV con alarifes de Granada y Toledo: arcos de yesería y una alberca larga en el centro.",
+      "Es el palacio real en uso más antiguo de Europa: cuando el Rey viene a Sevilla, duerme en la planta de arriba."
+     ],
+     "nodo": "GuiaDelAlcazar",
+     "en": [10, 6],
+     "mira": "derecha"
+    },
+    {
+     "nombre": "Turista",
+     "aspecto": "turista",
+     "papel": "visitante",
+     "frases": [
+      "He venido buscando dragones porque aquí rodaron una serie. Solo hay pavos reales sueltos por el jardín. Y me miran mal."
+     ],
+     "nodo": "Turista",
+     "en": [12, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Yeserías que suben hasta el techo, tan finas que parecen encaje. Debajo, un zócalo de azulejos de colores."
+     ],
+     "nodo": "Cartel",
+     "en": [6, 1]
+    }
+   ],
+   "salida": {"destino": "sevilla/sala_centro_24_51", "aparicion": "desde_sala_centro_24_51_doncellas"},
+   "tamano": [16, 11],
+   "puerta": [7, 10],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [4, 4, 10, 5]]],
+   "muebles": [
+    ["mesa_cristal_larga", 5, 3],
+    ["silla_derecha", 4, 3],
+    ["silla_izquierda", 8, 3],
+    ["vitrina_alta", 14, 2],
+    ["arbol_maceta", 14, 7],
+    ["pedestal", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [7, 9]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_24_51_embajadores": {
+   "tipo": "palacio",
+   "nombre": "Salón de Embajadores",
+   "padre": "sevilla/sala_centro_24_51",
+   "personas": [
+    {
+     "nombre": "Vigilante de sala",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "La cúpula es de madera dorada, redonda como media naranja: por eso a esta sala la llamaban la de la Media Naranja.",
+      "Aquí se casó el emperador Carlos V con Isabel de Portugal en 1526. La boda duró días; la luna de miel se fueron a Granada."
+     ],
+     "nodo": "VigilanteDeSala",
+     "en": [9, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una cúpula de madera dorada llena de estrellas talladas. Si miras mucho rato hacia arriba, te mareas como en un planetario."
+     ],
+     "nodo": "Cartel",
+     "en": [10, 1]
+    }
+   ],
+   "salida": {"destino": "sevilla/sala_centro_24_51", "aparicion": "desde_sala_centro_24_51_embajadores"},
+   "tamano": [16, 11],
+   "puerta": [3, 10],
+   "suelo": "losa_crema",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [3, 3, 10, 5]]],
+   "muebles": [
+    ["estatua_aguila", 2, 0],
+    ["vitrina_madera", 5, 1],
+    ["estatua_aguila", 7, 0],
+    ["mesa_cristal_larga", 3, 4],
+    ["silla_derecha", 2, 4],
+    ["silla_izquierda", 6, 4],
+    ["estatua_gargola", 1, 7],
+    ["arbol_maceta", 14, 7],
+    ["arbol_maceta", 14, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 9]},
+   "pasos": []
+  },
+  "sevilla/sala_centro_33_47_legajos": {
+   "tipo": "biblioteca",
+   "nombre": "Galería de los legajos",
+   "padre": "sevilla/sala_centro_33_47",
+   "personas": [
+    {
+     "nombre": "Archivera",
+     "aspecto": "npc_woman",
+     "papel": "estanteria",
+     "frases": [
+      "Aquí se guardan los papeles de la administración de América: unos cuarenta y tres mil legajos y ochenta millones de páginas.",
+      "Vienen investigadores de todo el mundo a buscar a sus antepasados. Encuentran barcos, cargamentos y, a veces, deudas."
+     ],
+     "nodo": "Archivera",
+     "en": [4, 2],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "estanteria",
+     "frases": [
+      "Estanterías de caoba hasta el techo, con legajos atados con cinta. Cada uno, cientos de páginas escritas a pluma."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 4]
+    }
+   ],
+   "salida": {"destino": "sevilla/sala_centro_33_47", "aparicion": "desde_sala_centro_33_47_legajos"},
+   "tamano": [14, 11],
+   "puerta": [9, 10],
+   "suelo": "moqueta_beige",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["estanteria_alta_mostaza", 5, 0],
+    ["estanteria_alta_mostaza", 7, 0],
+    ["estanteria_baja_mostaza", 2, 3],
+    ["estanteria_baja_mostaza", 4, 3],
+    ["estanteria_baja_mostaza", 6, 3],
+    ["mesa_cristal", 3, 6],
+    ["taburete_rojo", 2, 7],
+    ["arbol_maceta", 1, 0]
+   ],
+   "encima": [["libro_abierto", 3, 6], ["libro_abierto", 4, 6]],
+   "apariciones": {"default": [9, 9]},
    "pasos": []
   }
  }

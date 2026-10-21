@@ -134,3 +134,6 @@ SALAS = {
             "En este portal hay calefacción central. Por eso se juntan aquí los vecinos a hablar en enero."])],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['valladolid/sala_calle_59_16'].setdefault("dentro", {}).update({'valladolid/sala_calle_59_16_torre': {'tipo': 'torre', 'nombre': 'Torre de la Catedral', 'gente': [('Campanero', 'npc_man', 'libre', ['La catedral la trazó Juan de Herrera, el del Escorial, y se quedó a medias: lleva sin terminar desde el siglo XVI.', 'La torre antigua se derrumbó en 1841. Ésta se levantó después; desde arriba se ve toda Valladolid y el Pisuerga.'])], 'carteles': [('pared', ['Campanas grandes y pequeñas colgadas de vigas de madera. Una tiene una grieta y un cartel: «No tocar, que ya no suena».'])]}})

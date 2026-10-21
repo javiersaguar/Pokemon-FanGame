@@ -235,3 +235,6 @@ SALAS = {
         ],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['las_palmas/sala_canteras_43_15'].setdefault("dentro", {}).update({'las_palmas/sala_canteras_43_15_esculturas': {'tipo': 'museo', 'nombre': 'Sala de esculturas del Castillo de la Luz', 'gente': [('Mediadora del museo', 'npc_lass', 'libre', ['Dentro del castillo está la fundación del escultor Martín Chirino, el de las espirales de hierro que parecen viento.', 'El castillo defendía el puerto de los piratas. Ahora defiende esculturas: nadie ha intentado llevárselas, pesan demasiado.'])], 'carteles': [('pared', ['Una espiral de hierro oxidado en el centro de la sala. Si la miras de lado parece una ola; de frente, un remolino.'])]}})

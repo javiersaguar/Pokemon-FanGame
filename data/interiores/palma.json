@@ -221,7 +221,7 @@
       "El ángel de la torre es el Ángel Custodio. Lleva vigilando la bahía desde el siglo XIV."
      ],
      "nodo": "GuiaDePatrimonio",
-     "en": [3, 9],
+     "en": [9, 6],
      "mira": "abajo"
     },
     {
@@ -230,7 +230,7 @@
      "papel": "libre",
      "frases": ["No puedo decirle si el rey está en Palma. Le diré que el barco no está en el puerto."],
      "nodo": "GuardiaReal",
-     "en": [13, 2],
+     "en": [10, 3],
      "mira": "abajo"
     }
    ],
@@ -241,25 +241,38 @@
       "Salón del Tinell. Aquí se celebraban los banquetes de los reyes de Mallorca. Ahora, las recepciones de verano."
      ],
      "nodo": "Cartel",
-     "en": [12, 1]
+     "en": [10, 1]
     }
    ],
-   "tamano": [16, 12],
-   "puerta": [8, 11],
-   "suelo": "rombos_oscuros",
-   "pared": "mostaza",
-   "felpudo": "moqueta_azul",
-   "alfombras": [["alfombra_roja", [3, 4, 10, 6]]],
+   "tamano": [14, 11],
+   "puerta": [6, 10],
+   "suelo": "hidraulica_rosa",
+   "pared": "melocoton",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["moqueta_azul", [4, 4, 8, 5]]],
    "muebles": [
-    ["sillon_derecha", 2, 4],
-    ["mesa_cristal", 3, 5],
-    ["sillon_izquierda", 5, 4],
-    ["pedestal", 13, 4],
-    ["arbol_maceta", 1, 8]
+    ["estatua_aguila", 1, 0],
+    ["vitrina_madera", 4, 1],
+    ["estatua_aguila", 6, 0],
+    ["sillon_derecha", 8, 6],
+    ["mesa_cristal", 9, 7],
+    ["sillon_izquierda", 11, 6],
+    ["pedestal", 11, 4],
+    ["arbol_maceta", 1, 7],
+    ["arbol_maceta", 12, 7]
    ],
    "encima": [],
-   "apariciones": {"default": [8, 10]},
-   "pasos": []
+   "apariciones": {"default": [6, 9], "desde_sala_calle_32_40_tinell": [11, 2]},
+   "pasos": [
+    {
+     "nodo": "Tinell",
+     "en": [11, 1],
+     "destino": "palma/sala_calle_32_40_tinell",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_32_40_tinell",
+     "llegada": [11, 2]
+    }
+   ]
   },
   "palma/sala_calle_3_38": {
    "pieza": "casa_gris",
@@ -847,7 +860,7 @@
      "papel": "libre",
      "frases": ["He subido andando por el bosque. Desde arriba se ve toda la bahía y catorce cruceros."],
      "nodo": "Excursionista",
-     "en": [4, 3],
+     "en": [1, 3],
      "mira": "abajo"
     }
    ],
@@ -858,18 +871,121 @@
       "Patio de armas circular, de dos pisos. Un castillo sin esquinas: aquí nadie se queda arrinconado."
      ],
      "nodo": "Cartel",
-     "en": [2, 1]
+     "en": [3, 1]
     }
    ],
    "tamano": [13, 10],
    "puerta": [8, 9],
-   "suelo": "losa_gris",
-   "pared": "beige_rayado",
-   "felpudo": "tatami_verde",
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
    "alfombras": [["alfombra_roja", [8, 2, 1, 7]]],
-   "muebles": [["escalera_mano", 4, 0], ["cajas", 7, 1], ["mesa_cristal_larga", 2, 5], ["caja", 11, 2]],
+   "muebles": [["escalera_mano", 5, 0], ["cajas", 8, 1], ["mesa_cristal_larga", 2, 5], ["caja", 11, 2]],
    "encima": [],
-   "apariciones": {"default": [8, 8]},
+   "apariciones": {"default": [8, 8], "desde_sala_calle_7_14_patio": [4, 2]},
+   "pasos": [
+    {
+     "nodo": "Patio",
+     "en": [4, 1],
+     "destino": "palma/sala_calle_7_14_patio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_7_14_patio",
+     "llegada": [4, 2]
+    }
+   ]
+  },
+  "palma/sala_calle_32_40_tinell": {
+   "tipo": "palacio",
+   "nombre": "Salón del Tinell",
+   "padre": "palma/sala_calle_32_40",
+   "personas": [
+    {
+     "nombre": "Guía de Patrimonio",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "La Almudaina fue alcázar árabe; los reyes de Mallorca la convirtieron en palacio gótico en el siglo XIV.",
+      "Hoy es residencia oficial del Rey en la isla. Aquí se dan las recepciones de verano; la familia duerme en otro sitio con piscina."
+     ],
+     "nodo": "GuiaDePatrimonio",
+     "en": [10, 9],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": ["Arcos góticos enormes y tapices flamencos. El salón es tan alto que los tapices parecen sellos."],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "salida": {"destino": "palma/sala_calle_32_40", "aparicion": "desde_sala_calle_32_40_tinell"},
+   "tamano": [16, 12],
+   "puerta": [5, 11],
+   "suelo": "hidraulica_rosa",
+   "pared": "madera_oscura",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [
+    ["estatua_aguila", 2, 0],
+    ["vitrina_madera", 5, 1],
+    ["estatua_aguila", 7, 0],
+    ["mesa_cristal_larga", 5, 6],
+    ["silla_derecha", 4, 6],
+    ["silla_izquierda", 8, 6],
+    ["vitrina_alta", 14, 5],
+    ["arbol_maceta", 14, 0],
+    ["arbol_maceta", 1, 8]
+   ],
+   "encima": [],
+   "apariciones": {"default": [5, 10]},
+   "pasos": []
+  },
+  "palma/sala_calle_7_14_patio": {
+   "tipo": "castillo",
+   "nombre": "Patio circular de Bellver",
+   "padre": "palma/sala_calle_7_14",
+   "personas": [
+    {
+     "nombre": "Guarda de Bellver",
+     "aspecto": "npc_old_man",
+     "papel": "libre",
+     "frases": [
+      "Es de los pocos castillos redondos de Europa: patio circular, torre del homenaje separada y foso alrededor. Siglo XIV.",
+      "También fue prisión. Aquí estuvo encerrado Jovellanos varios años; escribió sobre el castillo para no aburrirse."
+     ],
+     "nodo": "GuardaDeBellver",
+     "en": [5, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Dos pisos de arcos alrededor de un patio redondo. Si gritas en el centro, el eco te contesta desde todos los lados a la vez."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "salida": {"destino": "palma/sala_calle_7_14", "aparicion": "desde_sala_calle_7_14_patio"},
+   "tamano": [13, 10],
+   "puerta": [3, 9],
+   "suelo": "piedra",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [3, 2, 1, 7]]],
+   "muebles": [
+    ["estatua_gargola", 4, 0],
+    ["escalera_mano", 6, 0],
+    ["estatua_gargola", 9, 0],
+    ["estatua_gargola", 10, 4],
+    ["pedestal", 10, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 8]},
    "pasos": []
   }
  }

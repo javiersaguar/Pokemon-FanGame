@@ -6,7 +6,7 @@ Bordes = `MapConnection` (se pasa andando, sin fundido; `span` = solo un tramo d
 
 ## Desde los pueblos iniciales
 
-- **974 mapas** en total. Se llega a **974** desde Pozuelo de Alarcón (`pozuelo/exterior`: 974) y Orcasitas (`orcasitas/exterior`: 974).
+- **994 mapas** en total. Se llega a **994** desde Pozuelo de Alarcón (`pozuelo/exterior`: 994) y Orcasitas (`orcasitas/exterior`: 994).
 - No queda ningún mapa aislado.
 - Desde todos los mapas se puede volver a los pueblos iniciales.
 
@@ -177,7 +177,8 @@ Ninguna: todos los destinos existen.
 | `alicante/sala_calle_55_26` | Casa del guitarrista del Barrio, Alicante | — | Salida → `alicante/exterior` |
 | `alicante/sala_calle_55_31` | Casa de la abuela de los gatos, Alicante | — | Salida → `alicante/exterior` |
 | `alicante/sala_calle_56_42` | Puesto de artesanía de la Explanada, Alicante | — | Salida → `alicante/exterior` |
-| `alicante/sala_calle_58_12` | Castillo de Santa Bárbara, Alicante | — | Salida → `alicante/exterior` |
+| `alicante/sala_calle_58_12` | Castillo de Santa Bárbara, Alicante | — | Salida → `alicante/exterior`, Macho → `alicante/sala_calle_58_12_macho` |
+| `alicante/sala_calle_58_12_macho` | Macho del castillo de Santa Bárbara, Alicante | — | Salida → `alicante/sala_calle_58_12` |
 | `alicante/sala_calle_68_36` | Caseta de socorrismo del Postiguet, Alicante | — | Salida → `alicante/exterior` |
 | `alicante/sala_calle_6_19` | Club de artes marciales de la plaza de los Luceros, Alicante | — | Salida → `alicante/exterior` |
 | `alicante/sala_calle_7_43` | Piso de la estudiante de la Universidad de Alicante, Alicante | — | Salida → `alicante/exterior` |
@@ -199,7 +200,8 @@ Ninguna: todos los destinos existen.
 | `barcelona/sala_ciutat_vella_13_26` | Piso del Gótico, Barcelona | — | Salida → `barcelona/ciutat_vella` |
 | `barcelona/sala_ciutat_vella_13_36` | Casa del pescador de la Barceloneta, Barcelona | — | Salida → `barcelona/ciutat_vella` |
 | `barcelona/sala_ciutat_vella_22_13` | Mercado de la Boqueria, Barcelona | — | Salida → `barcelona/ciutat_vella` |
-| `barcelona/sala_ciutat_vella_22_27` | Gran Teatre del Liceu, Barcelona | — | Salida → `barcelona/ciutat_vella` |
+| `barcelona/sala_ciutat_vella_22_27` | Gran Teatre del Liceu, Barcelona | — | Salida → `barcelona/ciutat_vella`, Espejos → `barcelona/sala_ciutat_vella_22_27_espejos` |
+| `barcelona/sala_ciutat_vella_22_27_espejos` | Salón de los Espejos del Liceu, Barcelona | — | Salida → `barcelona/sala_ciutat_vella_22_27` |
 | `barcelona/sala_ciutat_vella_25_40` | Bazar de imanes de Gaudí, Barcelona | — | Salida → `barcelona/ciutat_vella` |
 | `barcelona/sala_ciutat_vella_44_22` | Catedral de Barcelona, Barcelona | — | Salida → `barcelona/ciutat_vella`, Claustro → `barcelona/sala_ciutat_vella_44_22_claustro` |
 | `barcelona/sala_ciutat_vella_44_22_claustro` | Claustro de las ocas, Barcelona | — | Salida → `barcelona/sala_ciutat_vella_44_22` |
@@ -274,7 +276,8 @@ Ninguna: todos los destinos existen.
 | `bilbao/sala_calle_34_42` | Taberna de pintxos de las Siete Calles, Bilbao | — | Salida → `bilbao/exterior` |
 | `bilbao/sala_calle_35_7` | Casa del remero de la trainera, Bilbao | — | Salida → `bilbao/exterior` |
 | `bilbao/sala_calle_38_26` | Piso de la familia de Abando, Bilbao | — | Salida → `bilbao/exterior` |
-| `bilbao/sala_calle_44_41` | Catedral de Santiago, Bilbao | — | Salida → `bilbao/exterior` |
+| `bilbao/sala_calle_44_41` | Catedral de Santiago, Bilbao | — | Salida → `bilbao/exterior`, Claustro → `bilbao/sala_calle_44_41_claustro` |
+| `bilbao/sala_calle_44_41_claustro` | Claustro de la Catedral de Santiago, Bilbao | — | Salida → `bilbao/sala_calle_44_41` |
 | `bilbao/sala_calle_46_14` | Basic-Fit de Bilbao, Bilbao | — | Salida → `bilbao/exterior` |
 | `bilbao/sala_calle_50_14` | Portal de la Gran Vía de Bilbao, Bilbao | — | Salida → `bilbao/exterior` |
 | `bilbao/sala_calle_53_27` | Teatro Arriaga, Bilbao | — | Salida → `bilbao/exterior` |
@@ -370,7 +373,8 @@ Ninguna: todos los destinos existen.
 | `las_palmas/sala_canteras_39_21` | Tienda de surf de Las Canteras, Las Palmas | — | Salida → `las_palmas/canteras` |
 | `las_palmas/sala_canteras_41_31` | Piso de la familia canaria del Puerto, Las Palmas | — | Salida → `las_palmas/canteras` |
 | `las_palmas/sala_canteras_41_46` | Portal del barrio de Guanarteme, Las Palmas | — | Salida → `las_palmas/canteras` |
-| `las_palmas/sala_canteras_43_15` | Castillo de la Luz, Las Palmas | — | Salida → `las_palmas/canteras` |
+| `las_palmas/sala_canteras_43_15` | Castillo de la Luz, Las Palmas | — | Salida → `las_palmas/canteras`, Esculturas → `las_palmas/sala_canteras_43_15_esculturas` |
+| `las_palmas/sala_canteras_43_15_esculturas` | Sala de esculturas del Castillo de la Luz, Las Palmas | — | Salida → `las_palmas/sala_canteras_43_15` |
 | `las_palmas/sala_vegueta_triana_11_8` | Tienda de timples de la calle Mayor de Triana, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
 | `las_palmas/sala_vegueta_triana_18_30` | Casa canaria de balcón de madera, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
 | `las_palmas/sala_vegueta_triana_18_8` | Gabinete Literario, Las Palmas | — | Salida → `las_palmas/vegueta_triana` |
@@ -545,15 +549,18 @@ Ninguna: todos los destinos existen.
 | `malaga/sala_calle_31_7` | Casa de la familia de la Semana Santa, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_35_39` | Puesto de vinos dulces de Atarazanas, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_3_6` | Casa del vecino de los corralones de la Trinidad, Malaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_48_35` | Catedral de la Encarnación, La Manquita, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_48_35` | Catedral de la Encarnación, La Manquita, Malaga | — | Salida → `malaga/exterior`, Cubiertas → `malaga/sala_calle_48_35_cubiertas` |
+| `malaga/sala_calle_48_35_cubiertas` | Cubiertas de la Catedral, Malaga | — | Salida → `malaga/sala_calle_48_35` |
 | `malaga/sala_calle_50_42` | Basic-Fit de Málaga, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_58_10` | Casa del pintor de la Plaza de la Merced, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_5_13` | Casa del cantaor de verdiales, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_5_57` | Estación María Zambrano · Málaga | — | Anden1 → `transporte/ave_malaga_madrid`, Salida → `malaga/exterior` |
-| `malaga/sala_calle_60_35` | Alcazaba de Málaga, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_60_35` | Alcazaba de Málaga, Malaga | — | Salida → `malaga/exterior`, Patio → `malaga/sala_calle_60_35_patio` |
+| `malaga/sala_calle_60_35_patio` | Patio de Armas de la Alcazaba, Malaga | — | Salida → `malaga/sala_calle_60_35` |
 | `malaga/sala_calle_67_70` | Velero de alquiler del Muelle Uno, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_72_8` | Casa del vecino de la Malagueta, Malaga | — | Salida → `malaga/exterior` |
-| `malaga/sala_calle_76_16` | Castillo de Gibralfaro, Malaga | — | Salida → `malaga/exterior` |
+| `malaga/sala_calle_76_16` | Castillo de Gibralfaro, Malaga | — | Salida → `malaga/exterior`, Ronda → `malaga/sala_calle_76_16_ronda` |
+| `malaga/sala_calle_76_16_ronda` | Paseo de ronda de Gibralfaro, Malaga | — | Salida → `malaga/sala_calle_76_16` |
 | `malaga/sala_calle_77_65` | Caseta de socorrismo de la Malagueta, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_80_9` | Portal del Paseo de Reding, Malaga | — | Salida → `malaga/exterior` |
 | `malaga/sala_calle_83_64` | Casa del biznaguero, Malaga | — | Salida → `malaga/exterior` |
@@ -624,7 +631,8 @@ Ninguna: todos los destinos existen.
 | `palma/mercadona` | Mercadona · Palma | — | Salida → `palma/exterior` |
 | `palma/sala_calle_19_6` | Casa del payés que vende sobrasada, Palma | — | Salida → `palma/exterior` |
 | `palma/sala_calle_21_27` | Piso de temporada de la camarera de hotel, Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_32_40` | Palacio de la Almudaina, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_32_40` | Palacio de la Almudaina, Palma | — | Salida → `palma/exterior`, Tinell → `palma/sala_calle_32_40_tinell` |
+| `palma/sala_calle_32_40_tinell` | Salón del Tinell, Palma | — | Salida → `palma/sala_calle_32_40` |
 | `palma/sala_calle_3_38` | Casa del regatista jubilado, Palma | — | Salida → `palma/exterior` |
 | `palma/sala_calle_42_41` | La Seu, catedral de Mallorca, Palma | — | Salida → `palma/exterior`, Barcelo → `palma/sala_calle_42_41_barcelo` |
 | `palma/sala_calle_42_41_barcelo` | Capilla del Santísimo de Miquel Barceló, Palma | — | Salida → `palma/sala_calle_42_41` |
@@ -637,7 +645,8 @@ Ninguna: todos los destinos existen.
 | `palma/sala_calle_66_43` | Piso del chef de un restaurante de la playa, Palma | — | Salida → `palma/exterior` |
 | `palma/sala_calle_67_13` | Portal de las Avenidas, Palma | — | Salida → `palma/exterior` |
 | `palma/sala_calle_67_29` | Casa del músico que toca a Chopin, Palma | — | Salida → `palma/exterior` |
-| `palma/sala_calle_7_14` | Castell de Bellver, Palma | — | Salida → `palma/exterior` |
+| `palma/sala_calle_7_14` | Castell de Bellver, Palma | — | Salida → `palma/exterior`, Patio → `palma/sala_calle_7_14_patio` |
+| `palma/sala_calle_7_14_patio` | Patio circular de Bellver, Palma | — | Salida → `palma/sala_calle_7_14` |
 | `pamplona/cafe_comedor` | Comedor · Café Iruña | — | Barra → `pamplona/cafe_iruna` |
 | `pamplona/cafe_iruna` | Café Iruña · Pamplona | — | Salida → `pamplona/exterior`, Comedor → `pamplona/cafe_comedor` |
 | `pamplona/centro` | Centro Pokémon · Pamplona | — | Salida → `pamplona/exterior` |
@@ -712,7 +721,8 @@ Ninguna: todos los destinos existen.
 | `puertollano/sala_calle_38_13` | Portal del barrio de las Seiscientas, Puertollano | — | Salida → `puertollano/exterior` |
 | `puertollano/sala_calle_44_35` | Casa de Baños, Puertollano | — | Salida → `puertollano/exterior` |
 | `puertollano/sala_calle_51_6` | Casa de la maestra jubilada, Puertollano | — | Salida → `puertollano/exterior` |
-| `puertollano/sala_calle_51_60` | Museo de la Minería, Puertollano | — | Salida → `puertollano/exterior` |
+| `puertollano/sala_calle_51_60` | Museo de la Minería, Puertollano | — | Salida → `puertollano/exterior`, Galeria → `puertollano/sala_calle_51_60_galeria` |
+| `puertollano/sala_calle_51_60_galeria` | Galería de la mina, Puertollano | — | Salida → `puertollano/sala_calle_51_60` |
 | `puertollano/sala_calle_59_7` | Casa del ciclista del Cerro de Santa Ana, Puertollano | — | Salida → `puertollano/exterior` |
 | `puertollano/sala_calle_61_16` | Casa de la abuela de las tortas de Alcázar, Puertollano | — | Salida → `puertollano/exterior` |
 | `puertollano/sala_calle_62_33` | Oficina del complejo industrial, Puertollano | — | Salida → `puertollano/exterior` |
@@ -816,7 +826,8 @@ Ninguna: todos los destinos existen.
 | `ruta_22/casa_1` | Casa de la familia burgalesa, Ruta 22 | — | Salida → `ruta_22/exterior` |
 | `ruta_22/casa_2` | Casa del peregrino del Camino Francés, Ruta 22 | — | Salida → `ruta_22/exterior` |
 | `ruta_22/exterior` | Ruta 22 · Burgos y Atapuerca | north → `ruta_21/exterior`, south → `valladolid/exterior` | Casa1 → `ruta_22/casa_1`, Casa2 → `ruta_22/casa_2`, Sala8_26 → `ruta_22/sala_calle_8_26`, Sala16_15 → `ruta_22/sala_calle_16_15` |
-| `ruta_22/sala_calle_16_15` | Centro de visitantes de Atapuerca, Ruta 22 | — | Salida → `ruta_22/exterior` |
+| `ruta_22/sala_calle_16_15` | Centro de visitantes de Atapuerca, Ruta 22 | — | Salida → `ruta_22/exterior`, Sima → `ruta_22/sala_calle_16_15_sima` |
+| `ruta_22/sala_calle_16_15_sima` | Réplica de la Sima de los Huesos, Ruta 22 | — | Salida → `ruta_22/sala_calle_16_15` |
 | `ruta_22/sala_calle_8_26` | Catedral de Santa María de Burgos, Ruta 22 | — | Salida → `ruta_22/exterior`, Cimborrio → `ruta_22/sala_calle_8_26_cimborrio` |
 | `ruta_22/sala_calle_8_26_cimborrio` | Crucero y cimborrio de la catedral, Ruta 22 | — | Salida → `ruta_22/sala_calle_8_26` |
 | `ruta_23/casa_1` | Casa del caballista de los encierros, Ruta 23 | — | Salida → `ruta_23/exterior` |
@@ -865,9 +876,11 @@ Ninguna: todos los destinos existen.
 | `ruta_5/casa_1` | Casa del mozo de almacén, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_5/casa_2` | Casa del repartidor de la A-2, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_5/exterior` | Ruta 5 · Corredor del Henares | west → `madrid/retiro`, east → `ruta_6/exterior` | Casa1 → `ruta_5/casa_1`, Casa2 → `ruta_5/casa_2`, Sala31_12 → `ruta_5/sala_calle_31_12`, Sala56_12 → `ruta_5/sala_calle_56_12`, Sala65_11 → `ruta_5/sala_calle_65_11`, Sala47_11 → `ruta_5/sala_calle_47_11`, Sala58_27 → `ruta_5/sala_calle_58_27` |
-| `ruta_5/sala_calle_31_12` | Universidad de Alcalá, Colegio de San Ildefonso, Ruta 5 | — | Salida → `ruta_5/exterior` |
+| `ruta_5/sala_calle_31_12` | Universidad de Alcalá, Colegio de San Ildefonso, Ruta 5 | — | Salida → `ruta_5/exterior`, Paraninfo → `ruta_5/sala_calle_31_12_paraninfo` |
+| `ruta_5/sala_calle_31_12_paraninfo` | Paraninfo de la Universidad de Alcalá, Ruta 5 | — | Salida → `ruta_5/sala_calle_31_12` |
 | `ruta_5/sala_calle_47_11` | Casa natal de Cervantes, Ruta 5 | — | Salida → `ruta_5/exterior` |
-| `ruta_5/sala_calle_56_12` | Palacio del Infantado de Guadalajara, Ruta 5 | — | Salida → `ruta_5/exterior` |
+| `ruta_5/sala_calle_56_12` | Palacio del Infantado de Guadalajara, Ruta 5 | — | Salida → `ruta_5/exterior`, Patio → `ruta_5/sala_calle_56_12_patio` |
+| `ruta_5/sala_calle_56_12_patio` | Patio de los Leones del Infantado, Ruta 5 | — | Salida → `ruta_5/sala_calle_56_12` |
 | `ruta_5/sala_calle_58_27` | Portal de Azuqueca de Henares, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_5/sala_calle_65_11` | Casa de las cigüeñas de Alcalá, Ruta 5 | — | Salida → `ruta_5/exterior` |
 | `ruta_6/casa_1` | Casa del último vecino, Ruta 6 | — | Salida → `ruta_6/exterior` |
@@ -882,7 +895,9 @@ Ninguna: todos los destinos existen.
 | `ruta_8/casa_1` | Masía de Santpedor, Ruta 8 | — | Salida → `ruta_8/exterior` |
 | `ruta_8/casa_2` | Casa de la familia de Sant Esteve Sesrovires, Ruta 8 | — | Salida → `ruta_8/exterior` |
 | `ruta_8/exterior` | Ruta 8 · Montserrat | west → `ruta_7/exterior`, east → `barcelona/les_corts` | Casa1 → `ruta_8/casa_1`, Casa2 → `ruta_8/casa_2`, Sala36_10 → `ruta_8/sala_calle_36_10`, Sala51_36 → `ruta_8/sala_calle_51_36`, Sala56_36 → `ruta_8/sala_calle_56_36` |
-| `ruta_8/sala_calle_36_10` | Basílica de Montserrat, Ruta 8 | — | Salida → `ruta_8/exterior` |
+| `ruta_8/sala_calle_36_10` | Basílica de Montserrat, Ruta 8 | — | Salida → `ruta_8/exterior`, Camarin → `ruta_8/sala_calle_36_10_camarin`, Escolania → `ruta_8/sala_calle_36_10_escolania` |
+| `ruta_8/sala_calle_36_10_camarin` | Camarín de la Moreneta, Ruta 8 | — | Salida → `ruta_8/sala_calle_36_10` |
+| `ruta_8/sala_calle_36_10_escolania` | Escolanía de Montserrat, Ruta 8 | — | Salida → `ruta_8/sala_calle_36_10` |
 | `ruta_8/sala_calle_51_36` | Casa del ciclista del Bages, Ruta 8 | — | Salida → `ruta_8/exterior` |
 | `ruta_8/sala_calle_56_36` | Celler de cava del Penedès, Ruta 8 | — | Salida → `ruta_8/exterior` |
 | `ruta_9/exterior` | Ruta 9 · La Albufera y Gandía | north → `valencia/turia`, south → `ruta_10/exterior` | Sala16_24 → `ruta_9/sala_calle_16_24`, Sala21_24 → `ruta_9/sala_calle_21_24`, Sala17_33 → `ruta_9/sala_calle_17_33`, Sala22_33 → `ruta_9/sala_calle_22_33`, Sala18_15 → `ruta_9/sala_calle_18_15`, Sala22_40 → `ruta_9/sala_calle_22_40`, Sala19_56 → `ruta_9/sala_calle_19_56`, Sala34_55 → `ruta_9/sala_calle_34_55`, Sala7_66 → `ruta_9/sala_calle_7_66`, Sala15_65 → `ruta_9/sala_calle_15_65`, Sala22_66 → `ruta_9/sala_calle_22_66`, Sala5_74 → `ruta_9/sala_calle_5_74`, Sala11_74 → `ruta_9/sala_calle_11_74`, Sala17_74 → `ruta_9/sala_calle_17_74`, Sala23_74 → `ruta_9/sala_calle_23_74`, Sala32_74 → `ruta_9/sala_calle_32_74`, Sala31_65 → `ruta_9/sala_calle_31_65`, Sala41_67 → `ruta_9/sala_calle_41_67` |
@@ -921,7 +936,8 @@ Ninguna: todos los destinos existen.
 | `santander/sala_calle_4_18_cristo` | Iglesia del Cristo (cripta de la catedral), Santander | — | Salida → `santander/sala_calle_4_18` |
 | `santander/sala_calle_4_29` | Floristería de los Jardines de Pereda, Santander | — | Salida → `santander/exterior` |
 | `santander/sala_calle_53_11` | Gran Casino del Sardinero, Santander | — | Salida → `santander/exterior` |
-| `santander/sala_calle_58_29` | Palacio de la Magdalena, Santander | — | Salida → `santander/exterior` |
+| `santander/sala_calle_58_29` | Palacio de la Magdalena, Santander | — | Salida → `santander/exterior`, Salon → `santander/sala_calle_58_29_salon` |
+| `santander/sala_calle_58_29_salon` | Salón de baile de la Magdalena, Santander | — | Salida → `santander/sala_calle_58_29` |
 | `santander/sala_calle_5_11` | Casa del pejino de Puertochico, Santander | — | Salida → `santander/exterior` |
 | `santander/sala_calle_9_28` | Casa de la familia del Racing, Santander | — | Salida → `santander/exterior` |
 | `sevilla/centro` | Sevilla · Centro | east → `ruta_13/exterior`, west → `sevilla/rio`, south → `sevilla/maria_luisa` | Hospital → `sevilla/hospital`, Mercadona → `sevilla/mercadona`, Estanco → `sevilla/estanco`, Sala3_8 → `sevilla/sala_centro_3_8`, Sala10_7 → `sevilla/sala_centro_10_7`, Sala43_8 → `sevilla/sala_centro_43_8`, Sala53_6 → `sevilla/sala_centro_53_6`, Sala21_6 → `sevilla/sala_centro_21_6`, Sala59_11 → `sevilla/sala_centro_59_11`, Sala38_19 → `sevilla/sala_centro_38_19`, Sala44_19 → `sevilla/sala_centro_44_19`, Sala50_20 → `sevilla/sala_centro_50_20`, Sala56_19 → `sevilla/sala_centro_56_19`, Sala3_40 → `sevilla/sala_centro_3_40`, Sala10_41 → `sevilla/sala_centro_10_41`, Sala3_53 → `sevilla/sala_centro_3_53`, Sala10_53 → `sevilla/sala_centro_10_53`, Sala33_47 → `sevilla/sala_centro_33_47`, Sala28_21 → `sevilla/sala_centro_28_21`, Sala22_40 → `sevilla/sala_centro_22_40`, Sala24_51 → `sevilla/sala_centro_24_51`, Sala37_33 → `sevilla/sala_centro_37_33`, Sala42_33 → `sevilla/sala_centro_42_33`, Sala47_33 → `sevilla/sala_centro_47_33`, Sala37_39 → `sevilla/sala_centro_37_39`, Sala43_39 → `sevilla/sala_centro_43_39`, Sala49_39 → `sevilla/sala_centro_49_39`, Sala54_36 → `sevilla/sala_centro_54_36`, Sala59_33 → `sevilla/sala_centro_59_33`, Sala59_42 → `sevilla/sala_centro_59_42`, Sala27_6 → `sevilla/sala_centro_27_6`, Sala45_49 → `sevilla/sala_centro_45_49` |
@@ -940,10 +956,13 @@ Ninguna: todos los destinos existen.
 | `sevilla/sala_centro_21_6` | Casa de la costurera de trajes de flamenca, Sevilla | — | Salida → `sevilla/centro` |
 | `sevilla/sala_centro_22_40` | Catedral de Sevilla, Sevilla | — | Salida → `sevilla/centro`, Naranjos → `sevilla/sala_centro_22_40_naranjos` |
 | `sevilla/sala_centro_22_40_naranjos` | Patio de los Naranjos, Sevilla | — | Salida → `sevilla/sala_centro_22_40` |
-| `sevilla/sala_centro_24_51` | Real Alcázar, apeadero, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_24_51` | Real Alcázar, apeadero, Sevilla | — | Salida → `sevilla/centro`, Doncellas → `sevilla/sala_centro_24_51_doncellas`, Embajadores → `sevilla/sala_centro_24_51_embajadores` |
+| `sevilla/sala_centro_24_51_doncellas` | Patio de las Doncellas, Sevilla | — | Salida → `sevilla/sala_centro_24_51` |
+| `sevilla/sala_centro_24_51_embajadores` | Salón de Embajadores, Sevilla | — | Salida → `sevilla/sala_centro_24_51` |
 | `sevilla/sala_centro_27_6` | Casa del capataz de costaleros, Sevilla | — | Salida → `sevilla/centro` |
 | `sevilla/sala_centro_28_21` | Bar de tapas de la Alfalfa, Sevilla | — | Salida → `sevilla/centro` |
-| `sevilla/sala_centro_33_47` | Archivo General de Indias, Sevilla | — | Salida → `sevilla/centro` |
+| `sevilla/sala_centro_33_47` | Archivo General de Indias, Sevilla | — | Salida → `sevilla/centro`, Legajos → `sevilla/sala_centro_33_47_legajos` |
+| `sevilla/sala_centro_33_47_legajos` | Galería de los legajos, Sevilla | — | Salida → `sevilla/sala_centro_33_47` |
 | `sevilla/sala_centro_37_33` | Pensión del Barrio de Santa Cruz, Sevilla | — | Salida → `sevilla/centro` |
 | `sevilla/sala_centro_37_39` | Apartamento turístico de Santa Cruz, Sevilla | — | Salida → `sevilla/centro` |
 | `sevilla/sala_centro_38_19` | Casa del aficionado del Betis, Sevilla | — | Salida → `sevilla/centro` |
@@ -1078,7 +1097,8 @@ Ninguna: todos los destinos existen.
 | `valladolid/sala_calle_50_26` | Casa del actor del Teatro Zorrilla, Valladolid | — | Salida → `valladolid/exterior` |
 | `valladolid/sala_calle_52_59` | Estación Campo Grande · Valladolid | — | Anden1 → `transporte/ave_valladolid_madrid`, Salida → `valladolid/exterior` |
 | `valladolid/sala_calle_56_48` | Casa de la familia del Campo Grande, Valladolid | — | Salida → `valladolid/exterior` |
-| `valladolid/sala_calle_59_16` | Catedral de Valladolid, Valladolid | — | Salida → `valladolid/exterior` |
+| `valladolid/sala_calle_59_16` | Catedral de Valladolid, Valladolid | — | Salida → `valladolid/exterior`, Torre → `valladolid/sala_calle_59_16_torre` |
+| `valladolid/sala_calle_59_16_torre` | Torre de la Catedral, Valladolid | — | Salida → `valladolid/sala_calle_59_16` |
 | `valladolid/sala_calle_64_38` | Basic-Fit de Valladolid, Valladolid | — | Salida → `valladolid/exterior` |
 | `valladolid/sala_calle_65_50` | Casa del aficionado del Real Valladolid, Valladolid | — | Salida → `valladolid/exterior` |
 | `valladolid/sala_calle_66_14` | Portal de la calle Santiago, Valladolid | — | Salida → `valladolid/exterior` |

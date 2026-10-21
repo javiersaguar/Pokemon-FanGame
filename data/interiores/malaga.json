@@ -395,7 +395,7 @@
       "Desde las cubiertas se ve el puerto, la Alcazaba y los cruceros que tapan el mar."
      ],
      "nodo": "Guia",
-     "en": [10, 4],
+     "en": [6, 2],
      "mira": "derecha"
     },
     {
@@ -417,14 +417,14 @@
       "Catedral de Málaga (1528–1782). Inacabada desde hace más de doscientos años. Patrimonio de la paciencia."
      ],
      "nodo": "Cartel",
-     "en": [7, 1]
+     "en": [4, 1]
     }
    ],
    "tamano": [12, 11],
    "puerta": [5, 10],
    "suelo": "piedra",
-   "pared": "mostaza",
-   "felpudo": "alfombra_roja",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
    "alfombras": [["alfombra_roja", [5, 4, 1, 6]]],
    "muebles": [
     ["mostrador_blanco", 4, 3],
@@ -436,8 +436,17 @@
     ["arbol_maceta", 10, 7]
    ],
    "encima": [],
-   "apariciones": {"default": [5, 9]},
-   "pasos": []
+   "apariciones": {"default": [5, 9], "desde_sala_calle_48_35_cubiertas": [3, 2]},
+   "pasos": [
+    {
+     "nodo": "Cubiertas",
+     "en": [3, 1],
+     "destino": "malaga/sala_calle_48_35_cubiertas",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_48_35_cubiertas",
+     "llegada": [3, 2]
+    }
+   ]
   },
   "malaga/sala_calle_50_42": {
    "pieza": "tienda_azul",
@@ -599,7 +608,7 @@
       "Abajo está el Teatro Romano, enterrado durante siglos. Lo encontraron en 1951 al hacer unos jardines."
      ],
      "nodo": "Guarda",
-     "en": [10, 9],
+     "en": [4, 9],
      "mira": "abajo"
     },
     {
@@ -608,7 +617,7 @@
      "papel": "libre",
      "frases": ["Los jardines, las fuentes, las murallas… Esto es como la Alhambra, pero sin cola."],
      "nodo": "Turista",
-     "en": [14, 9],
+     "en": [12, 7],
      "mira": "abajo"
     }
    ],
@@ -617,24 +626,33 @@
      "sobre": "pared",
      "frases": ["Patio de los Naranjos de la Alcazaba. Agua, sombra y azahar: el aire acondicionado del siglo XI."],
      "nodo": "Cartel",
-     "en": [9, 1]
+     "en": [3, 1]
     }
    ],
    "tamano": [16, 12],
    "puerta": [12, 11],
    "suelo": "losa_crema",
-   "pared": "topo",
-   "felpudo": "tatami_verde",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_roja",
    "alfombras": [],
    "muebles": [
-    ["estatua_gargola", 2, 0],
-    ["escalera_mano", 4, 0],
     ["estatua_gargola", 7, 0],
+    ["escalera_mano", 9, 0],
+    ["estatua_gargola", 12, 0],
     ["taquilla_gris", 14, 6]
    ],
    "encima": [],
-   "apariciones": {"default": [12, 10]},
-   "pasos": []
+   "apariciones": {"default": [12, 10], "desde_sala_calle_60_35_patio": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Patio",
+     "en": [6, 1],
+     "destino": "malaga/sala_calle_60_35_patio",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_60_35_patio",
+     "llegada": [6, 2]
+    }
+   ]
   },
   "malaga/sala_calle_67_70": {
    "pieza": "velero",
@@ -732,7 +750,7 @@
       "Los Reyes Católicos asediaron este castillo tres meses. Se tarda menos en subir andando. Un poco menos."
      ],
      "nodo": "SoldadoDeRecreacion",
-     "en": [10, 5],
+     "en": [5, 4],
      "mira": "derecha"
     },
     {
@@ -741,7 +759,7 @@
      "papel": "libre",
      "frases": ["He subido andando desde el centro. Ya entiendo por qué los asediadores se rindieron a medias."],
      "nodo": "Excursionista",
-     "en": [4, 7],
+     "en": [11, 2],
      "mira": "derecha"
     }
    ],
@@ -752,7 +770,7 @@
       "Mirador de Gibralfaro: la plaza de toros, el puerto, la catedral sin torre y, en días claros, África."
      ],
      "nodo": "Cartel",
-     "en": [11, 1]
+     "en": [1, 1]
     }
    ],
    "tamano": [13, 10],
@@ -766,11 +784,20 @@
     ["escalera_mano", 6, 0],
     ["estatua_gargola", 9, 0],
     ["vitrina_alta", 1, 5],
-    ["cajas", 1, 1]
+    ["cajas", 9, 7]
    ],
    "encima": [],
-   "apariciones": {"default": [6, 8]},
-   "pasos": []
+   "apariciones": {"default": [6, 8], "desde_sala_calle_76_16_ronda": [3, 2]},
+   "pasos": [
+    {
+     "nodo": "Ronda",
+     "en": [3, 1],
+     "destino": "malaga/sala_calle_76_16_ronda",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_76_16_ronda",
+     "llegada": [3, 2]
+    }
+   ]
   },
   "malaga/sala_calle_77_65": {
    "pieza": "torre_socorrista",
@@ -945,6 +972,138 @@
    ],
    "encima": [],
    "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "malaga/sala_calle_60_35_patio": {
+   "tipo": "castillo",
+   "nombre": "Patio de Armas de la Alcazaba",
+   "padre": "malaga/sala_calle_60_35",
+   "personas": [
+    {
+     "nombre": "Guía de la Alcazaba",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "La levantaron en el siglo XI sobre la colina, aprovechando columnas y piedras del teatro romano que tiene a los pies.",
+      "Desde estos jardines se vigilaba el puerto. Antes llegaban barcos enemigos; ahora llegan cruceros con cuatro mil turistas."
+     ],
+     "nodo": "GuiaDeLaAlcazaba",
+     "en": [6, 2],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Arcos de ladrillo, una fuente con su acequia y naranjos. El agua corre por canales tan estrechos como un dedo."
+     ],
+     "nodo": "Cartel",
+     "en": [4, 1]
+    }
+   ],
+   "salida": {"destino": "malaga/sala_calle_60_35", "aparicion": "desde_sala_calle_60_35_patio"},
+   "tamano": [16, 12],
+   "puerta": [9, 11],
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "tatami_verde",
+   "alfombras": [["alfombra_roja", [9, 2, 1, 9]]],
+   "muebles": [
+    ["escalera_mano", 8, 0],
+    ["cajas", 11, 1],
+    ["cajas", 12, 9],
+    ["estatua_gargola", 1, 3],
+    ["pedestal", 1, 1]
+   ],
+   "encima": [],
+   "apariciones": {"default": [9, 10]},
+   "pasos": []
+  },
+  "malaga/sala_calle_76_16_ronda": {
+   "tipo": "castillo",
+   "nombre": "Paseo de ronda de Gibralfaro",
+   "padre": "malaga/sala_calle_76_16",
+   "personas": [
+    {
+     "nombre": "Vigilante del castillo",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Por la coracha, un pasillo entre dos murallas, se bajaba de Gibralfaro a la Alcazaba sin que te vieran desde fuera.",
+      "Gibralfaro viene del árabe: el monte del faro. Aquí arriba hubo una luz para los barcos mucho antes que el castillo."
+     ],
+     "nodo": "VigilanteDelCastillo",
+     "en": [9, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una almena con vistas: la plaza de toros, el puerto y la ciudad entera. Sopla un viento que te despeina las ideas."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "salida": {"destino": "malaga/sala_calle_76_16", "aparicion": "desde_sala_calle_76_16_ronda"},
+   "tamano": [16, 12],
+   "puerta": [6, 11],
+   "suelo": "losa_crema",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["pedestal", 8, 1],
+    ["estatua_aguila", 10, 0],
+    ["pedestal", 13, 1],
+    ["mesa_cristal_larga", 12, 5],
+    ["vitrina_alta", 14, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 10]},
+   "pasos": []
+  },
+  "malaga/sala_calle_48_35_cubiertas": {
+   "tipo": "torre",
+   "nombre": "Cubiertas de la Catedral",
+   "padre": "malaga/sala_calle_48_35",
+   "personas": [
+    {
+     "nombre": "Guía de las cubiertas",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Se llama La Manquita porque le falta la torre sur. Dicen que el dinero se fue a ayudar a la independencia de los Estados Unidos.",
+      "Aquí arriba se camina sobre las bóvedas. Abajo se reza; arriba se hacen fotos. Cada uno sube a lo suyo."
+     ],
+     "nodo": "GuiaDeLasCubiertas",
+     "en": [5, 5],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Las bóvedas vistas desde arriba, como burbujas de piedra en fila. Al fondo, el muñón de la torre que nunca se terminó."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "salida": {"destino": "malaga/sala_calle_48_35", "aparicion": "desde_sala_calle_48_35_cubiertas"},
+   "tamano": [10, 8],
+   "puerta": [6, 7],
+   "suelo": "piedra",
+   "pared": "crema",
+   "felpudo": "alfombra_roja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 4, 0], ["cajas", 1, 5]],
+   "encima": [],
+   "apariciones": {"default": [6, 6]},
    "pasos": []
   }
  }

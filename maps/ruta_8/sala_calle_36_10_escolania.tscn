@@ -1,0 +1,106 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_lwqk2"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_eewxc"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_tjbx6"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_vcxmf"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_kx84a"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_uwm2d"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_boy.png" id="7_n24gl"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/profesor.png" id="8_wjxul"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="9_1xaem"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="10_1yn0v"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="11_0ks53"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="12_n6i7u"]
+
+[sub_resource type="Resource" id="Resource_gkier"]
+script = ExtResource("3_tjbx6")
+id = &"ruta_8/sala_calle_36_10_escolania"
+display_name = "Escolanía de Montserrat, Ruta 8"
+outdoor = false
+zone_id = &"ruta_8"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaCalle3610Escolania" type="Node2D" unique_id=1849403365]
+script = ExtResource("1_lwqk2")
+data = SubResource("Resource_gkier")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=832267164]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACQAAAABAAAAAAAAACQAAAACAAAAAAAAACQAAAADAAAAAAAAACQAAAAEAAAAAAAAACQAAAAFAAAAAAAAACQAAAAGAAAAAAAAACQAAAAHAAAAAAAAACQAAAAIAAAAAAAAACQAAAAJAAAAAAAAACQAAAAKAAAAAAAAACQAAAALAAAAAAAAACQAAAAMAAAAAAAAACQAAAANAAAAAAAAACQAAAAAAAEAAAAAACQAAAABAAEAAAAAACQAAAACAAEAAAAAACQAAAADAAEAAAAAACQAAAAEAAEAAAAAACQAAAAFAAEAAAAAACQAAAAGAAEAAAAAACQAAAAHAAEAAAAAACQAAAAIAAEAAAAAACQAAAAJAAEAAAAAACQAAAAKAAEAAAAAACQAAAALAAEAAAAAACQAAAAMAAEAAAAAACQAAAANAAEAAAAAACQAAAAAAAIAAAAAACQAAAABAAIAAAAAACQAAAACAAIAAAAAACQAAAADAAIAAAAAACQAAAAEAAIAAAAAACQAAAAFAAIAAAAAACQAAAAGAAIAAAAAACQAAAAHAAIAAAAAACQAAAAIAAIAAAAAACQAAAAJAAIAAAAAACQAAAAKAAIAAAAAACQAAAALAAIAAAAAACQAAAAMAAIAAAAAACQAAAANAAIAAAAAACQAAAAAAAMAAAAAACQAAAABAAMAAAAAACQAAAACAAMAAAAAACQAAAADAAMAAAAAACQAAAAEAAMAAAAAACQAAAAFAAMAAAAAACQAAAAGAAMAAAAAACQAAAAHAAMAAAAAACQAAAAIAAMAAAAAACQAAAAJAAMAAAAAACQAAAAKAAMAAAAAACQAAAALAAMAAAAAACQAAAAMAAMAAAAAACQAAAANAAMAAAAAACQAAAAAAAQAAAAAACQAAAABAAQAAAAAACQAAAACAAQAAAAAACQAAAADAAQAAAAAACQAAAAEAAQAAAAAACQAAAAFAAQAAAAAACQAAAAGAAQAAAAAACQAAAAHAAQAAAAAACQAAAAIAAQAAAAAACQAAAAJAAQAAAAAACQAAAAKAAQAAAAAACQAAAALAAQAAAAAACQAAAAMAAQAAAAAACQAAAANAAQAAAAAACQAAAAAAAUAAAAAACQAAAABAAUAAAAAACQAAAACAAUAAAAAACQAAAADAAUAAAAAACQAAAAEAAUAAAAAACQAAAAFAAUAAAAAACQAAAAGAAUAAAAAACQAAAAHAAUAAAAAACQAAAAIAAUAAAAAACQAAAAJAAUAAAAAACQAAAAKAAUAAAAAACQAAAALAAUAAAAAACQAAAAMAAUAAAAAACQAAAANAAUAAAAAACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACQAAAACAAYAAAAAACQAAAADAAYAAAAAACQAAAAEAAYAAAAAACQAAAAFAAYAAAAAACQAAAAGAAYAAAAAACQAAAAHAAYAAAAAACQAAAAIAAYAAAAAACQAAAAJAAYAAAAAACQAAAAKAAYAAAAAACQAAAALAAYAAAAAACQAAAAMAAYAAAAAACQAAAANAAYAAAAAACQAAAAAAAcAAAAAACQAAAABAAcAAAAAACQAAAACAAcAAAAAACQAAAADAAcAAAAAACQAAAAEAAcAAAAAACQAAAAFAAcAAAAAACQAAAAGAAcAAAAAACQAAAAHAAcAAAAAACQAAAAIAAcAAAAAACQAAAAJAAcAAAAAACQAAAAKAAcAAAAAACQAAAALAAcAAAAAACQAAAAMAAcAAAAAACQAAAANAAcAAAAAACQAAAAAAAgAAAAAACQAAAABAAgAAAAAACQAAAACAAgAAAAAACQAAAADAAgAAAAAACQAAAAEAAgAAAAAACQAAAAFAAgAAAAAACQAAAAGAAgAAAAAACQAAAAHAAgAAAAAACQAAAAIAAgAAAAAACQAAAAJAAgAAAAAACQAAAAKAAgAAAAAACQAAAALAAgAAAAAACQAAAAMAAgAAAAAACQAAAANAAgAAAAAACQAAAAAAAkAAAAAACQAAAABAAkAAAAAACQAAAACAAkAAAAAACQAAAADAAkAAAAAACQAAAAEAAkAAAAAACQAAAAFAAkAAAAAACQAAAAGAAkAAAAAACQAAAAHAAkAAAAAACQAAAAIAAkAAAAAACQAAAAJAAkAAAAAACQAAAAKAAkAAAAAACQAAAALAAkAAAAAACQAAAAMAAkAAAAAACQAAAANAAkAAAAAACQAAAAAAAoAAAAAACQAAAABAAoAAAAAACQAAAACAAoAAAAAACQAAAADAAoAAAAAACQAAAAEAAoAAAAAACQAAAAFAAoAAAAAACQAAAAGAAoAAAAAACQAAAAHAAoAAAAAACQAAAAIAAoAAAAAACQAAAAJAAoAAAAAACQAAAAKAAoAAAAAAAwAAAALAAoAAAAAACQAAAAMAAoAAAAAACQAAAANAAoAAAAAACQAAAA=")
+tile_set = ExtResource("4_vcxmf")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=2137512037]
+tile_map_data = PackedByteArray("AAABAAAAAQABADoAAAABAAEAAQABADsAAAACAAAAAQABADoAAAACAAEAAQABADsAAAADAAAAAQABADoAAAADAAEAAQABADsAAAAEAAAAAQABADoAAAAEAAEAAQABADsAAAAFAAAAAQABADoAAAAFAAEAAQABADsAAAAGAAAAAQABADoAAAAGAAEAAQABADsAAAAHAAAAAQABADoAAAAHAAEAAQABADsAAAAIAAAAAQABADoAAAAIAAEAAQABADsAAAAJAAAAAQABADoAAAAJAAEAAQABADsAAAAKAAAAAQABADoAAAAKAAEAAQABADsAAAALAAAAAQABADoAAAALAAEAAQABADsAAAAMAAAAAQABADoAAAAMAAEAAQABADsAAAAAAAAAAQACADgAAAANAAAAAQAAADgAAAAAAAEAAQACADgAAAANAAEAAQAAADgAAAAAAAIAAQACADgAAAANAAIAAQAAADgAAAAAAAMAAQACADgAAAANAAMAAQAAADgAAAAAAAQAAQACADgAAAANAAQAAQAAADgAAAAAAAUAAQACADgAAAANAAUAAQAAADgAAAAAAAYAAQACADgAAAANAAYAAQAAADgAAAAAAAcAAQACADgAAAANAAcAAQAAADgAAAAAAAgAAQACADgAAAANAAgAAQAAADgAAAAAAAkAAQACADgAAAANAAkAAQAAADgAAAABAAoAAQABADcAAAACAAoAAQABADcAAAADAAoAAQABADcAAAAEAAoAAQABADcAAAAFAAoAAQABADcAAAAGAAoAAQABADcAAAAHAAoAAQABADcAAAAIAAoAAQABADcAAAAJAAoAAQACADcAAAALAAoAAQAAADcAAAAMAAoAAQABADcAAAAAAAoAAQAFADsAAAANAAoAAQAGADsAAAA=")
+tile_set = ExtResource("4_vcxmf")
+
+[node name="Entities" type="Node2D" parent="." unique_id=722477591]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1445150164]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAHAAIAAwAAABcAAAAIAAIAAwABABcAAAAJAAIAAwACABcAAAAHAAMAAwAAABgAAAAIAAMAAwABABgAAAAJAAMAAwACABgAAAAKAAEAAgABAAcAAAALAAEAAgACAAcAAAAKAAIAAgABAAgAAAALAAIAAgACAAgAAAAIAAQAAgADADQAAAAJAAQAAgAEADQAAAAIAAUAAgADADUAAAAJAAUAAgAEADUAAAAIAAYAAgABAD4AAAAFAAQAAgADADQAAAAGAAQAAgAEADQAAAAFAAUAAgADADUAAAAGAAUAAgAEADUAAAAFAAYAAgABAD4AAAACAAQAAgADADQAAAADAAQAAgAEADQAAAACAAUAAgADADUAAAADAAUAAgAEADUAAAACAAYAAgABAD4AAAA=")
+tile_set = ExtResource("4_vcxmf")
+
+[node name="Escolan" type="Node2D" parent="Entities" unique_id=2004780196 instance=ExtResource("5_kx84a")]
+position = Vector2(48, 176)
+script = ExtResource("6_uwm2d")
+display_name = "Escolán"
+lines = PackedStringArray("Somos uno de los coros de niños más antiguos de Europa. Cada día, a la una, cantamos el Virolai en la basílica.", "Vivimos aquí arriba, entre clases y ensayos. Lo más difícil no es el latín: es bajar la montaña el fin de semana.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_n24gl")
+initial_facing = 2
+
+[node name="MaestroDeCapilla" type="Node2D" parent="Entities" unique_id=194273881 instance=ExtResource("5_kx84a")]
+position = Vector2(336, 176)
+script = ExtResource("6_uwm2d")
+display_name = "Maestro de capilla"
+lines = PackedStringArray("Un niño que canta en la basílica a los diez años no pierde el oído en toda su vida. Ni la paciencia.")
+turn_to_player = true
+sprite_sheet = ExtResource("8_wjxul")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=185170651 instance=ExtResource("9_1xaem")]
+position = Vector2(80, 48)
+script = ExtResource("10_1yn0v")
+lines = PackedStringArray("Partituras en atriles de madera y un piano vertical. En la pizarra, el Virolai con las respiraciones marcadas en rojo.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=333503629]
+z_index = 10
+tile_set = ExtResource("4_vcxmf")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1781201132]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=511954882]
+position = Vector2(336, 336)
+script = ExtResource("11_0ks53")
+target_map = &"ruta_8/sala_calle_36_10"
+target_spawn = &"desde_sala_calle_36_10_escolania"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1516760233]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=1969573139]
+position = Vector2(336, 304)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1074353494]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1461225175]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("12_n6i7u")
+theme_override_font_sizes/font_size = 16
+text = "ESCOLANÍA DE MONTSERRAT"
+horizontal_alignment = 1

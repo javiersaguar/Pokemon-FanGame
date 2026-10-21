@@ -161,3 +161,7 @@ SALAS = {
         "carteles": [("pared", ["Patio de armas circular, de dos pisos. Un castillo sin esquinas: aquí nadie se queda arrinconado."])],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['palma/sala_calle_32_40'].setdefault("dentro", {}).update({'palma/sala_calle_32_40_tinell': {'tipo': 'palacio', 'nombre': 'Salón del Tinell', 'gente': [('Guía de Patrimonio', 'npc_woman', 'libre', ['La Almudaina fue alcázar árabe; los reyes de Mallorca la convirtieron en palacio gótico en el siglo XIV.', 'Hoy es residencia oficial del Rey en la isla. Aquí se dan las recepciones de verano; la familia duerme en otro sitio con piscina.'])], 'carteles': [('pared', ['Arcos góticos enormes y tapices flamencos. El salón es tan alto que los tapices parecen sellos.'])]}})
+SALAS['palma/sala_calle_7_14'].setdefault("dentro", {}).update({'palma/sala_calle_7_14_patio': {'tipo': 'castillo', 'nombre': 'Patio circular de Bellver', 'gente': [('Guarda de Bellver', 'npc_old_man', 'libre', ['Es de los pocos castillos redondos de Europa: patio circular, torre del homenaje separada y foso alrededor. Siglo XIV.', 'También fue prisión. Aquí estuvo encerrado Jovellanos varios años; escribió sobre el castillo para no aburrirse.'])], 'carteles': [('pared', ['Dos pisos de arcos alrededor de un patio redondo. Si gritas en el centro, el eco te contesta desde todos los lados a la vez.'])]}})

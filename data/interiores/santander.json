@@ -503,7 +503,7 @@
       "Ahora acoge los cursos de verano de la Universidad Menéndez Pelayo. Antes reyes; ahora, profesores en chanclas."
      ],
      "nodo": "Guia",
-     "en": [9, 6],
+     "en": [1, 3],
      "mira": "abajo"
     },
     {
@@ -514,7 +514,7 @@
       "Doy un curso sobre la España contemporánea. Con estas vistas, la España contemporánea parece maravillosa."
      ],
      "nodo": "ProfesorDeCursosDeVerano",
-     "en": [6, 5],
+     "en": [4, 5],
      "mira": "abajo"
     }
    ],
@@ -523,14 +523,14 @@
      "sobre": "pared",
      "frases": ["Salón de los Reyes. Vistas a la bahía, a la isla de Mouro y a las focas del mini zoo."],
      "nodo": "Cartel",
-     "en": [6, 1]
+     "en": [2, 1]
     }
    ],
    "tamano": [16, 11],
    "puerta": [12, 10],
-   "suelo": "hidraulica_rosa",
-   "pared": "melocoton",
-   "felpudo": "alfombra_roja",
+   "suelo": "alfombra_roja",
+   "pared": "mostaza",
+   "felpudo": "moqueta_beige",
    "alfombras": [["moqueta_azul", [4, 4, 10, 5]]],
    "muebles": [
     ["arbol_maceta", 7, 0],
@@ -545,8 +545,17 @@
     ["pedestal", 1, 8]
    ],
    "encima": [],
-   "apariciones": {"default": [12, 9]},
-   "pasos": []
+   "apariciones": {"default": [12, 9], "desde_sala_calle_58_29_salon": [5, 2]},
+   "pasos": [
+    {
+     "nodo": "Salon",
+     "en": [5, 1],
+     "destino": "santander/sala_calle_58_29_salon",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_58_29_salon",
+     "llegada": [5, 2]
+    }
+   ]
   },
   "santander/sala_calle_5_11": {
    "pieza": "casa_roja_pequena",
@@ -645,6 +654,55 @@
    ],
    "encima": [],
    "apariciones": {"default": [4, 7]},
+   "pasos": []
+  },
+  "santander/sala_calle_58_29_salon": {
+   "tipo": "palacio",
+   "nombre": "Salón de baile de la Magdalena",
+   "padre": "santander/sala_calle_58_29",
+   "personas": [
+    {
+     "nombre": "Profesora de los cursos",
+     "aspecto": "profesor",
+     "papel": "libre",
+     "frases": [
+      "Santander regaló el palacio a Alfonso XIII en 1912 como residencia de verano. Lo pagó la ciudad con una suscripción popular.",
+      "Desde 1932 aquí se dan los cursos de verano de la Universidad Menéndez Pelayo. Los alumnos estudian con vistas al Sardinero."
+     ],
+     "nodo": "ProfesoraDeLosCursos",
+     "en": [1, 7],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un salón con parqué y ventanales al mar. Las sillas plegables de los cursos tapan la mitad del parqué."
+     ],
+     "nodo": "Cartel",
+     "en": [11, 1]
+    }
+   ],
+   "salida": {"destino": "santander/sala_calle_58_29", "aparicion": "desde_sala_calle_58_29_salon"},
+   "tamano": [15, 11],
+   "puerta": [3, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "crema",
+   "felpudo": "moqueta_azul",
+   "alfombras": [["moqueta_azul", [3, 4, 9, 5]]],
+   "muebles": [
+    ["estatua_aguila", 2, 0],
+    ["vitrina_madera", 5, 1],
+    ["estatua_aguila", 7, 0],
+    ["sillon_derecha", 4, 3],
+    ["mesa_cristal", 5, 4],
+    ["sillon_izquierda", 7, 3],
+    ["palmera_maceta", 1, 0],
+    ["arbol_maceta", 13, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [3, 9]},
    "pasos": []
   }
  }

@@ -114,3 +114,6 @@ SALAS = {
         ],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['santander/sala_calle_58_29'].setdefault("dentro", {}).update({'santander/sala_calle_58_29_salon': {'tipo': 'palacio', 'nombre': 'Salón de baile de la Magdalena', 'gente': [('Profesora de los cursos', 'profesor', 'libre', ['Santander regaló el palacio a Alfonso XIII en 1912 como residencia de verano. Lo pagó la ciudad con una suscripción popular.', 'Desde 1932 aquí se dan los cursos de verano de la Universidad Menéndez Pelayo. Los alumnos estudian con vistas al Sardinero.'])], 'carteles': [('pared', ['Un salón con parqué y ventanales al mar. Las sillas plegables de los cursos tapan la mitad del parqué.'])]}})

@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_4albt"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_ljgj7"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_mhsew"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_oyku7"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_y5fsi"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_udoqm"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/npc_old_man.png" id="7_y10yw"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_5tckw"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_0wrqx"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_osx3k"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_upre4"]
+
+[sub_resource type="Resource" id="Resource_4albt"]
+script = ExtResource("3_mhsew")
+id = &"puertollano/sala_calle_51_60_galeria"
+display_name = "Galería de la mina, Puertollano"
+outdoor = false
+zone_id = &"puertollano"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+legacy_save_bounds = Rect2i(0, 0, 14, 10)
+followers_allowed = false
+
+[node name="SalaCalle5160Galeria" type="Node2D" unique_id=1430731389]
+script = ExtResource("1_4albt")
+data = SubResource("Resource_4albt")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1641808112]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADgAAAABAAAAAAAAADgAAAACAAAAAAAAADgAAAADAAAAAAAAADgAAAAEAAAAAAAAADgAAAAFAAAAAAAAADgAAAAGAAAAAAAAADgAAAAHAAAAAAAAADgAAAAIAAAAAAAAADgAAAAJAAAAAAAAADgAAAAKAAAAAAAAADgAAAALAAAAAAAAADgAAAAMAAAAAAAAADgAAAANAAAAAAAAADgAAAAAAAEAAAAAADgAAAABAAEAAAAAADgAAAACAAEAAAAAADgAAAADAAEAAAAAADgAAAAEAAEAAAAAADgAAAAFAAEAAAAAADgAAAAGAAEAAAAAADgAAAAHAAEAAAAAADgAAAAIAAEAAAAAADgAAAAJAAEAAAAAADgAAAAKAAEAAAAAADgAAAALAAEAAAAAADgAAAAMAAEAAAAAADgAAAANAAEAAAAAADgAAAAAAAIAAAAAADgAAAABAAIAAAAAADgAAAACAAIAAAAAADgAAAADAAIAAAAAADgAAAAEAAIAAAAAADgAAAAFAAIAAAAAADgAAAAGAAIAAAAAADgAAAAHAAIAAAAAADgAAAAIAAIAAAAAADgAAAAJAAIAAAAAADgAAAAKAAIAAAAAADgAAAALAAIAAAAAADgAAAAMAAIAAAAAADgAAAANAAIAAAAAADgAAAAAAAMAAAAAADgAAAABAAMAAAAAADgAAAACAAMAAAAAADgAAAADAAMAAAAAADgAAAAEAAMAAAAAADgAAAAFAAMAAAAAADgAAAAGAAMAAAAAADgAAAAHAAMAAAAAADgAAAAIAAMAAAAAADgAAAAJAAMAAAAAADgAAAAKAAMAAAAAADgAAAALAAMAAAAAADgAAAAMAAMAAAAAADgAAAANAAMAAAAAADgAAAAAAAQAAAAAADgAAAABAAQAAAAAADgAAAACAAQAAAAAADgAAAADAAQAAAAAADgAAAAEAAQAAAAAADgAAAAFAAQAAAAAADgAAAAGAAQAAAAAADgAAAAHAAQAAAAAADgAAAAIAAQAAAAAADgAAAAJAAQAAAAAADgAAAAKAAQAAAAAADgAAAALAAQAAAAAADgAAAAMAAQAAAAAADgAAAANAAQAAAAAADgAAAAAAAUAAAAAADgAAAABAAUAAAAAADgAAAACAAUAAAAAADgAAAADAAUAAAAAADgAAAAEAAUAAAAAADgAAAAFAAUAAAAAADgAAAAGAAUAAAAAADgAAAAHAAUAAAAAADgAAAAIAAUAAAAAADgAAAAJAAUAAAAAADgAAAAKAAUAAAAAADgAAAALAAUAAAAAADgAAAAMAAUAAAAAADgAAAANAAUAAAAAADgAAAAAAAYAAAAAADgAAAABAAYAAAAAADgAAAACAAYAAAAAADgAAAADAAYAAAAAADgAAAAEAAYAAAAAADgAAAAFAAYAAAAAADgAAAAGAAYAAAAAADgAAAAHAAYAAAAAADgAAAAIAAYAAAAAADgAAAAJAAYAAAAAADgAAAAKAAYAAAAAADgAAAALAAYAAAAAADgAAAAMAAYAAAAAADgAAAANAAYAAAAAADgAAAAAAAcAAAAAADgAAAABAAcAAAAAADgAAAACAAcAAAAAADgAAAADAAcAAAAAADgAAAAEAAcAAAAAADgAAAAFAAcAAAAAADgAAAAGAAcAAAAAADgAAAAHAAcAAAAAADgAAAAIAAcAAAAAADgAAAAJAAcAAAAAADgAAAAKAAcAAAAAADgAAAALAAcAAAAAADgAAAAMAAcAAAAAADgAAAANAAcAAAAAADgAAAAAAAgAAAAAADgAAAABAAgAAAAAADgAAAACAAgAAAAAADgAAAADAAgAAAAAADgAAAAEAAgAAAAAADgAAAAFAAgAAAAAADgAAAAGAAgAAAAAADgAAAAHAAgAAAAAADgAAAAIAAgAAAAAADgAAAAJAAgAAAAAADgAAAAKAAgAAAAAADgAAAALAAgAAAAAADgAAAAMAAgAAAAAADgAAAANAAgAAAAAADgAAAAAAAkAAAAAADgAAAABAAkAAAAAADgAAAACAAkAAAAAADgAAAADAAkAAAAAADgAAAAEAAkAAAAAADgAAAAFAAkAAAAAADgAAAAGAAkAAAAAADgAAAAHAAkAAAAAADgAAAAIAAkAAAAAADgAAAAJAAkAAAAAADgAAAAKAAkAAAAAAAwAAAALAAkAAAAAADgAAAAMAAkAAAAAADgAAAANAAkAAAAAADgAAAA=")
+tile_set = ExtResource("4_oyku7")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=452621501]
+tile_map_data = PackedByteArray("AAABAAAAAQABAE4AAAABAAEAAQABAE8AAAACAAAAAQABAE4AAAACAAEAAQABAE8AAAADAAAAAQABAE4AAAADAAEAAQABAE8AAAAEAAAAAQABAE4AAAAEAAEAAQABAE8AAAAFAAAAAQABAE4AAAAFAAEAAQABAE8AAAAGAAAAAQABAE4AAAAGAAEAAQABAE8AAAAHAAAAAQABAE4AAAAHAAEAAQABAE8AAAAIAAAAAQABAE4AAAAIAAEAAQABAE8AAAAJAAAAAQABAE4AAAAJAAEAAQABAE8AAAAKAAAAAQABAE4AAAAKAAEAAQABAE8AAAALAAAAAQABAE4AAAALAAEAAQABAE8AAAAMAAAAAQABAE4AAAAMAAEAAQABAE8AAAAAAAAAAQACAEwAAAANAAAAAQAAAEwAAAAAAAEAAQACAEwAAAANAAEAAQAAAEwAAAAAAAIAAQACAEwAAAANAAIAAQAAAEwAAAAAAAMAAQACAEwAAAANAAMAAQAAAEwAAAAAAAQAAQACAEwAAAANAAQAAQAAAEwAAAAAAAUAAQACAEwAAAANAAUAAQAAAEwAAAAAAAYAAQACAEwAAAANAAYAAQAAAEwAAAAAAAcAAQACAEwAAAANAAcAAQAAAEwAAAAAAAgAAQACAEwAAAANAAgAAQAAAEwAAAABAAkAAQABAEsAAAACAAkAAQABAEsAAAADAAkAAQABAEsAAAAEAAkAAQABAEsAAAAFAAkAAQABAEsAAAAGAAkAAQABAEsAAAAHAAkAAQABAEsAAAAIAAkAAQABAEsAAAAJAAkAAQACAEsAAAALAAkAAQAAAEsAAAAMAAkAAQABAEsAAAAAAAkAAQAFAE8AAAANAAkAAQAGAE8AAAA=")
+tile_set = ExtResource("4_oyku7")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1029638714]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=1660547099]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAIAAAAAgAFACUAAAAJAAAAAgAGACUAAAAKAAAAAgAHACUAAAAIAAEAAgAFACYAAAAJAAEAAgAGACYAAAAKAAEAAgAHACYAAAACAAcAAgADADMAAAADAAcAAgAEADMAAAAMAAIAAgAEACYAAAAMAAgAAgADACYAAAA=")
+tile_set = ExtResource("4_oyku7")
+
+[node name="MineroJubilado" type="Node2D" parent="Entities" unique_id=359489826 instance=ExtResource("5_y5fsi")]
+position = Vector2(80, 80)
+script = ExtResource("6_udoqm")
+display_name = "Minero jubilado"
+lines = PackedStringArray("Puertollano vivió del carbón más de un siglo: pozos, castilletes, lavaderos y una ciudad entera trabajando bajo tierra.", "El grisú era el enemigo: un gas que no huele y que explota. Los canarios en jaula nos avisaban antes que los aparatos.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_y10yw")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=521534548 instance=ExtResource("8_5tckw")]
+position = Vector2(48, 48)
+script = ExtResource("9_0wrqx")
+lines = PackedStringArray("Una galería apuntalada con madera, raíles en el suelo y una vagoneta de carbón. Huele a humedad y a historia.")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=738341069]
+z_index = 10
+tile_map_data = PackedByteArray("AAACAAYAAgADADIAAAADAAYAAgAEADIAAAAMAAcAAgADACUAAAA=")
+tile_set = ExtResource("4_oyku7")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=10423098]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=352745379]
+position = Vector2(336, 304)
+script = ExtResource("10_osx3k")
+target_map = &"puertollano/sala_calle_51_60"
+target_spawn = &"desde_sala_calle_51_60_galeria"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1545376873]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=2086198250]
+position = Vector2(336, 272)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=1287582151]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1600581846]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 432.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_upre4")
+theme_override_font_sizes/font_size = 16
+text = "GALERÍA DE LA MINA"
+horizontal_alignment = 1

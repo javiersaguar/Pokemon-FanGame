@@ -47,3 +47,6 @@ SALAS = {
         },
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['ruta_22/sala_calle_16_15'].setdefault("dentro", {}).update({'ruta_22/sala_calle_16_15_sima': {'tipo': 'cueva', 'nombre': 'Réplica de la Sima de los Huesos', 'gente': [('Paleontóloga', 'arqueologo', 'libre', ['En la Sima de los Huesos han salido restos de una treintena de personas de hace unos 430.000 años. Es el mayor hallazgo de su época en el mundo.', 'Se baja por una grieta estrecha, se excava tumbado y se sale con los huesos en cajitas. Esto es la réplica; la de verdad no la verías ni con linterna.'])], 'carteles': [('pared', ['Un fondo de cueva iluminado con huesos de mentira en el suelo y cuadrículas de cuerda. Una etiqueta: «Réplica: no recoger».'])]}})

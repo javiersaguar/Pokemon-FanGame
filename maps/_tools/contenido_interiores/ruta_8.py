@@ -48,3 +48,6 @@ SALAS = {
         ],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['ruta_8/sala_calle_36_10'].setdefault("dentro", {}).update({'ruta_8/sala_calle_36_10_camarin': {'tipo': 'iglesia', 'nombre': 'Camarín de la Moreneta', 'gente': [('Devota', 'npc_old_woman', 'publico', ['La Moreneta es una talla románica de la Virgen, morena por el humo de las velas y el paso de los siglos. Es la patrona de Cataluña.', 'La cara está tras un cristal; se toca la bola que tiene en la mano. Los domingos, la cola da la vuelta a la basílica.'])], 'carteles': [('pared', ['Un camarín de mármol y oro, con la talla en lo alto. La bola de la mano brilla de tanto que la han tocado.'])]}, 'ruta_8/sala_calle_36_10_escolania': {'tipo': 'aula', 'nombre': 'Escolanía de Montserrat', 'gente': [('Escolán', 'npc_boy', 'libre', ['Somos uno de los coros de niños más antiguos de Europa. Cada día, a la una, cantamos el Virolai en la basílica.', 'Vivimos aquí arriba, entre clases y ensayos. Lo más difícil no es el latín: es bajar la montaña el fin de semana.']), ('Maestro de capilla', 'profesor', 'libre', ['Un niño que canta en la basílica a los diez años no pierde el oído en toda su vida. Ni la paciencia.'])], 'carteles': [('pared', ['Partituras en atriles de madera y un piano vertical. En la pizarra, el Virolai con las respiraciones marcadas en rojo.'])]}})

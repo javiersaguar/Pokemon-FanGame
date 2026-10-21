@@ -63,3 +63,7 @@ SALAS = {
         ],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['ruta_5/sala_calle_31_12'].setdefault("dentro", {}).update({'ruta_5/sala_calle_31_12_paraninfo': {'tipo': 'palacio', 'nombre': 'Paraninfo de la Universidad de Alcalá', 'gente': [('Bedel', 'npc_old_man', 'libre', ['En este paraninfo se entrega cada 23 de abril el Premio Cervantes, el de las letras en español. Ese día no cabe ni el eco.', 'El techo es un artesonado de madera de hace quinientos años. Yo llevo treinta mirándolo y sigo encontrando dibujos nuevos.'])], 'carteles': [('pared', ['Una tribuna de madera, bancos de estudiantes y un artesonado dorado. En el atril, una nota: «Discursos de menos de diez minutos, por favor».'])]}})
+SALAS['ruta_5/sala_calle_56_12'].setdefault("dentro", {}).update({'ruta_5/sala_calle_56_12_patio': {'tipo': 'palacio', 'nombre': 'Patio de los Leones del Infantado', 'gente': [('Guía del Infantado', 'npc_woman', 'libre', ['El patio está lleno de leones y grifos tallados en piedra, con los escudos de los Mendoza, los duques del Infantado.', 'En 1936 un bombardeo destruyó los techos pintados de los salones. El patio aguantó: los leones son más duros que los techos.'])], 'carteles': [('pared', ['Leones de piedra con melena rizada y grifos con alas. Todos miran al centro del patio, como si esperaran a alguien.'])]}})

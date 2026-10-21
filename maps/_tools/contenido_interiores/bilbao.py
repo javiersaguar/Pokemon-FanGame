@@ -127,3 +127,6 @@ SALAS = {
         ],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['bilbao/sala_calle_44_41'].setdefault("dentro", {}).update({'bilbao/sala_calle_44_41_claustro': {'tipo': 'iglesia', 'nombre': 'Claustro de la Catedral de Santiago', 'gente': [('Peregrino', 'montanera', 'visitante', ['Bilbao es parada del Camino del Norte. Sello la credencial aquí y me queda media España de costa hasta Santiago.', 'En el claustro hay silencio. Fuera, las Siete Calles llenas de pintxos. Me cuesta elegir dónde descansar.'])], 'carteles': [('pared', ['Un claustro gótico pequeño, con arcos de piedra oscura por la lluvia de Bilbao. En el centro, un jardín muy verde por lo mismo.'])]}})

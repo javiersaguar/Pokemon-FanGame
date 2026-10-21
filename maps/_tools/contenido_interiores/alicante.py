@@ -210,3 +210,6 @@ SALAS = {
         ],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['alicante/sala_calle_58_12'].setdefault("dentro", {}).update({'alicante/sala_calle_58_12_macho': {'tipo': 'castillo', 'nombre': 'Macho del castillo de Santa Bárbara', 'gente': [('Guía del castillo', 'npc_man', 'libre', ['Estás en lo más alto del monte Benacantil. Desde la playa del Postiguet, la roca de aquí abajo parece una cara de perfil: la Cara del Moro.', 'Al castillo se sube en un ascensor que va por dentro de la roca, desde la playa. Bajar andando también se puede, si llevas agua.'])], 'carteles': [('pared', ['Un mirador sobre el puerto, la Explanada y la huerta. Una placa explica de qué siglo es cada muralla; son muchos siglos.'])]}})

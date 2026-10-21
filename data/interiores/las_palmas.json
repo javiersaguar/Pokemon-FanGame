@@ -336,7 +336,7 @@
       "Ahora es la fundación de Martín Chirino, el escultor de las espirales de hierro. Antes cañones; ahora, arte."
      ],
      "nodo": "Guia",
-     "en": [4, 3],
+     "en": [4, 2],
      "mira": "abajo"
     },
     {
@@ -345,7 +345,7 @@
      "papel": "vitrina",
      "frases": ["Las espirales de Chirino representan el viento. Aquí el viento se representa solo, pero bueno."],
      "nodo": "Vigilante",
-     "en": [8, 2],
+     "en": [11, 2],
      "mira": "derecha"
     }
    ],
@@ -356,19 +356,28 @@
       "Castillo de la Luz (siglo XV). Lo atacó el pirata Van der Does en 1599. Se fue sin el castillo y con muchos agujeros."
      ],
      "nodo": "Cartel",
-     "en": [12, 1]
+     "en": [1, 1]
     }
    ],
    "tamano": [15, 11],
    "puerta": [4, 10],
-   "suelo": "losa_crema",
-   "pared": "topo",
-   "felpudo": "alfombra_naranja",
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_roja",
    "alfombras": [],
-   "muebles": [["escalera_mano", 2, 0], ["cajas", 5, 1], ["cajas", 10, 5], ["vitrina_madera", 9, 1]],
+   "muebles": [["escalera_mano", 5, 0], ["cajas", 8, 1], ["cajas", 10, 5], ["vitrina_madera", 12, 1]],
    "encima": [],
-   "apariciones": {"default": [4, 9]},
-   "pasos": []
+   "apariciones": {"default": [4, 9], "desde_sala_canteras_43_15_esculturas": [2, 2]},
+   "pasos": [
+    {
+     "nodo": "Esculturas",
+     "en": [2, 1],
+     "destino": "las_palmas/sala_canteras_43_15_esculturas",
+     "aparicion": "default",
+     "vuelta": "desde_sala_canteras_43_15_esculturas",
+     "llegada": [2, 2]
+    }
+   ]
   },
   "las_palmas/sala_vegueta_triana_11_8": {
    "pieza": "casa_tejado_azul",
@@ -1303,6 +1312,52 @@
    "muebles": [["cajas", 2, 1], ["cajas", 5, 1], ["cajas", 5, 6], ["caja", 3, 6], ["caja", 4, 6], ["cajas", 8, 1]],
    "encima": [],
    "apariciones": {"default": [3, 8]},
+   "pasos": []
+  },
+  "las_palmas/sala_canteras_43_15_esculturas": {
+   "tipo": "museo",
+   "nombre": "Sala de esculturas del Castillo de la Luz",
+   "padre": "las_palmas/sala_canteras_43_15",
+   "personas": [
+    {
+     "nombre": "Mediadora del museo",
+     "aspecto": "npc_lass",
+     "papel": "libre",
+     "frases": [
+      "Dentro del castillo está la fundación del escultor Martín Chirino, el de las espirales de hierro que parecen viento.",
+      "El castillo defendía el puerto de los piratas. Ahora defiende esculturas: nadie ha intentado llevárselas, pesan demasiado."
+     ],
+     "nodo": "MediadoraDelMuseo",
+     "en": [1, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Una espiral de hierro oxidado en el centro de la sala. Si la miras de lado parece una ola; de frente, un remolino."
+     ],
+     "nodo": "Cartel",
+     "en": [8, 1]
+    }
+   ],
+   "salida": {"destino": "las_palmas/sala_canteras_43_15", "aparicion": "desde_sala_canteras_43_15_esculturas"},
+   "tamano": [16, 11],
+   "puerta": [10, 10],
+   "suelo": "losa_gris",
+   "pared": "crema",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [
+    ["vitrina_blanca", 8, 3],
+    ["vitrina_blanca", 11, 3],
+    ["banco_rojo", 2, 5],
+    ["vitrina_blanca_estrecha", 1, 8],
+    ["palmera_maceta", 14, 0]
+   ],
+   "encima": [],
+   "apariciones": {"default": [10, 9]},
    "pasos": []
   }
  }

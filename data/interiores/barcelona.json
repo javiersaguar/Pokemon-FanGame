@@ -275,8 +275,17 @@
    ],
    "encima": [],
    "carteles": [],
-   "apariciones": {"default": [8, 9]},
-   "pasos": []
+   "apariciones": {"default": [8, 9], "desde_sala_ciutat_vella_22_27_espejos": [11, 2]},
+   "pasos": [
+    {
+     "nodo": "Espejos",
+     "en": [11, 1],
+     "destino": "barcelona/sala_ciutat_vella_22_27_espejos",
+     "aparicion": "default",
+     "vuelta": "desde_sala_ciutat_vella_22_27_espejos",
+     "llegada": [11, 2]
+    }
+   ]
   },
   "barcelona/sala_ciutat_vella_25_40": {
    "tipo": "souvenirs",
@@ -3252,6 +3261,49 @@
    "encima": [],
    "carteles": [],
    "apariciones": {"default": [8, 6]},
+   "pasos": []
+  },
+  "barcelona/sala_ciutat_vella_22_27_espejos": {
+   "tipo": "palacio",
+   "nombre": "Salón de los Espejos del Liceu",
+   "padre": "barcelona/sala_ciutat_vella_22_27",
+   "personas": [
+    {
+     "nombre": "Acomodadora",
+     "aspecto": "npc_woman",
+     "papel": "libre",
+     "frases": [
+      "El Liceu ardió en 1994 y hubo que reconstruir la sala entera. Este salón se salvó del fuego: espejos, dorados y techo pintado.",
+      "Ya había ardido en 1861. Dicen que el teatro tiene mala suerte con las velas; desde entonces, ni una en la casa."
+     ],
+     "nodo": "Acomodadora",
+     "en": [2, 4],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Espejos enfrentados que repiten las lámparas hasta el infinito. Hay más lámparas reflejadas que entradas vendidas para el martes."
+     ],
+     "nodo": "Cartel",
+     "en": [1, 1]
+    }
+   ],
+   "salida": {
+    "destino": "barcelona/sala_ciutat_vella_22_27",
+    "aparicion": "desde_sala_ciutat_vella_22_27_espejos"
+   },
+   "tamano": [14, 11],
+   "puerta": [4, 10],
+   "suelo": "rombos_oscuros",
+   "pared": "mostaza",
+   "felpudo": "tatami_verde",
+   "alfombras": [],
+   "muebles": [["pedestal", 11, 7], ["arbol_maceta", 1, 7]],
+   "encima": [],
+   "apariciones": {"default": [4, 9]},
    "pasos": []
   }
  }

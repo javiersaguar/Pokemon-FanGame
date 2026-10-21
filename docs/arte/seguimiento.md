@@ -692,6 +692,24 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Interiores de la Ruta 20 (3 salas, `data/interiores/ruta_20.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
 | Interiores de la Ruta 23 (5 salas, `data/interiores/ruta_23.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md) |
 | Interiores del Estadio Santiago Bernabéu (4 salas, `data/interiores/madrid.json`) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_rutas_2026-10-20.md#estadio-santiago-bernabéu-4-salas) |
+| Salas de dentro de Real Alcázar, apeadero (Patio de las Doncellas, Salón de Embajadores) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Archivo General de Indias (Galería de los legajos) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Basílica de Montserrat (Camarín de la Moreneta, Escolanía de Montserrat) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Alcazaba de Málaga (Patio de Armas de la Alcazaba) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Castillo de Gibralfaro (Paseo de ronda de Gibralfaro) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Catedral de la Encarnación, La Manquita (Cubiertas de la Catedral) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Palacio de la Almudaina (Salón del Tinell) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Castell de Bellver (Patio circular de Bellver) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Castillo de Santa Bárbara (Macho del castillo de Santa Bárbara) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Gran Teatre del Liceu (Salón de los Espejos del Liceu) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Palacio de la Magdalena (Salón de baile de la Magdalena) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Universidad de Alcalá, Colegio de San Ildefonso (Paraninfo de la Universidad de Alcalá) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Palacio del Infantado de Guadalajara (Patio de los Leones del Infantado) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Catedral de Valladolid (Torre de la Catedral) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Museo de la Minería (Galería de la mina) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Centro de visitantes de Atapuerca (Réplica de la Sima de los Huesos) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Castillo de la Luz (Sala de esculturas del Castillo de la Luz) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
+| Salas de dentro de Catedral de Santiago (Claustro de la Catedral de Santiago) | Mapa | Interiores | integrado, provisional | Tileset de interiores (Akizakura16) | ⏳ | [Capturas](comparativas/interiores_dentro_2026-10-21.md) |
 
 
 ## Teatro original de Sevilla · 20 de octubre

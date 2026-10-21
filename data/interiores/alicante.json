@@ -967,7 +967,7 @@
       "Desde la playa, el monte parece la cara de un moro. La «cara del moro», se llama. Por eso no hace falta guía para encontrarlo."
      ],
      "nodo": "Guia",
-     "en": [4, 9],
+     "en": [11, 2],
      "mira": "abajo"
     },
     {
@@ -978,7 +978,7 @@
       "Hago de soldado del siglo XVIII los fines de semana. El calor del uniforme, también es del siglo XVIII."
      ],
      "nodo": "SoldadoDeRecreacion",
-     "en": [6, 3],
+     "en": [11, 9],
      "mira": "izquierda"
     }
    ],
@@ -989,13 +989,13 @@
       "Castillo de Santa Bárbara. Lo tomaron los cristianos el día de Santa Bárbara de 1248. El nombre, por puntualidad."
      ],
      "nodo": "Cartel",
-     "en": [14, 1]
+     "en": [9, 1]
     }
    ],
    "tamano": [16, 12],
    "puerta": [5, 11],
-   "suelo": "losa_gris",
-   "pared": "gris_cemento",
+   "suelo": "losa_crema",
+   "pared": "madera_oscura",
    "felpudo": "alfombra_naranja",
    "alfombras": [["alfombra_roja", [5, 2, 1, 9]]],
    "muebles": [
@@ -1005,8 +1005,17 @@
     ["estatua_gargola", 1, 4]
    ],
    "encima": [],
-   "apariciones": {"default": [5, 10]},
-   "pasos": []
+   "apariciones": {"default": [5, 10], "desde_sala_calle_58_12_macho": [8, 2]},
+   "pasos": [
+    {
+     "nodo": "Macho",
+     "en": [8, 1],
+     "destino": "alicante/sala_calle_58_12_macho",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_58_12_macho",
+     "llegada": [8, 2]
+    }
+   ]
   },
   "alicante/sala_calle_68_36": {
    "pieza": "torre_socorrista",
@@ -1137,6 +1146,52 @@
    ],
    "encima": [],
    "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "alicante/sala_calle_58_12_macho": {
+   "tipo": "castillo",
+   "nombre": "Macho del castillo de Santa Bárbara",
+   "padre": "alicante/sala_calle_58_12",
+   "personas": [
+    {
+     "nombre": "Guía del castillo",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "Estás en lo más alto del monte Benacantil. Desde la playa del Postiguet, la roca de aquí abajo parece una cara de perfil: la Cara del Moro.",
+      "Al castillo se sube en un ascensor que va por dentro de la roca, desde la playa. Bajar andando también se puede, si llevas agua."
+     ],
+     "nodo": "GuiaDelCastillo",
+     "en": [7, 2],
+     "mira": "izquierda"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un mirador sobre el puerto, la Explanada y la huerta. Una placa explica de qué siglo es cada muralla; son muchos siglos."
+     ],
+     "nodo": "Cartel",
+     "en": [8, 1]
+    }
+   ],
+   "salida": {"destino": "alicante/sala_calle_58_12", "aparicion": "desde_sala_calle_58_12_macho"},
+   "tamano": [15, 11],
+   "puerta": [4, 10],
+   "suelo": "piedra",
+   "pared": "beige_rayado",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [["alfombra_roja", [4, 2, 1, 8]]],
+   "muebles": [
+    ["escalera_mano", 1, 0],
+    ["cajas", 4, 1],
+    ["cajas", 11, 7],
+    ["estatua_gargola", 12, 3],
+    ["caja", 13, 2]
+   ],
+   "encima": [],
+   "apariciones": {"default": [4, 9]},
    "pasos": []
   }
  }

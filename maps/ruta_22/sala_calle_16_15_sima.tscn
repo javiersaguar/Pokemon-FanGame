@@ -1,0 +1,97 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://src/overworld/map_root.gd" id="1_rcc8n"]
+[ext_resource type="Script" path="res://src/overworld/map_connection.gd" id="2_twoyl"]
+[ext_resource type="Script" path="res://src/overworld/map_data.gd" id="3_87t3v"]
+[ext_resource type="TileSet" path="res://assets/tilesets/interior/interior.tres" id="4_4pugx"]
+[ext_resource type="PackedScene" path="res://src/overworld/npc/npc.tscn" id="5_xt7n7"]
+[ext_resource type="Script" path="res://src/overworld/npc/npc.gd" id="6_k3q82"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/arqueologo.png" id="7_axk4d"]
+[ext_resource type="PackedScene" path="res://src/overworld/sign/sign.tscn" id="8_lqtk5"]
+[ext_resource type="Script" path="res://src/overworld/sign/sign.gd" id="9_3f2r5"]
+[ext_resource type="Script" path="res://src/overworld/warp/warp.gd" id="10_wya2u"]
+[ext_resource type="FontFile" path="res://assets/fonts/truth_and_ideals/TruthAndIdeals-Normal.ttf" id="11_o0dsm"]
+
+[sub_resource type="Resource" id="Resource_nfedx"]
+script = ExtResource("3_87t3v")
+id = &"ruta_22/sala_calle_16_15_sima"
+display_name = "Réplica de la Sima de los Huesos, Ruta 22"
+outdoor = false
+zone_id = &"ruta_22"
+battle_background = &"indoor"
+can_fly_from = false
+can_bike = false
+can_run = false
+fixed_camera = true
+followers_allowed = false
+
+[node name="SalaCalle1615Sima" type="Node2D" unique_id=1219080530]
+script = ExtResource("1_rcc8n")
+data = SubResource("Resource_nfedx")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=544884330]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADQAAAABAAAAAAAAADQAAAACAAAAAAAAADQAAAADAAAAAAAAADQAAAAEAAAAAAAAADQAAAAFAAAAAAAAADQAAAAGAAAAAAAAADQAAAAHAAAAAAAAADQAAAAIAAAAAAAAADQAAAAJAAAAAAAAADQAAAAKAAAAAAAAADQAAAALAAAAAAAAADQAAAAAAAEAAAAAADQAAAABAAEAAAAAADQAAAACAAEAAAAAADQAAAADAAEAAAAAADQAAAAEAAEAAAAAADQAAAAFAAEAAAAAADQAAAAGAAEAAAAAADQAAAAHAAEAAAAAADQAAAAIAAEAAAAAADQAAAAJAAEAAAAAADQAAAAKAAEAAAAAADQAAAALAAEAAAAAADQAAAAAAAIAAAAAADQAAAABAAIAAAAAADQAAAACAAIAAAAAADQAAAADAAIAAAAAADQAAAAEAAIAAAAAADQAAAAFAAIAAAAAADQAAAAGAAIAAAAAADQAAAAHAAIAAAAAADQAAAAIAAIAAAAAADQAAAAJAAIAAAAAADQAAAAKAAIAAAAAADQAAAALAAIAAAAAADQAAAAAAAMAAAAAADQAAAABAAMAAAAAADQAAAACAAMAAAAAADQAAAADAAMAAAAAADQAAAAEAAMAAAAAADQAAAAFAAMAAAAAADQAAAAGAAMAAAAAADQAAAAHAAMAAAAAADQAAAAIAAMAAAAAADQAAAAJAAMAAAAAADQAAAAKAAMAAAAAADQAAAALAAMAAAAAADQAAAAAAAQAAAAAADQAAAABAAQAAAAAADQAAAACAAQAAAAAADQAAAADAAQAAAAAADQAAAAEAAQAAAAAADQAAAAFAAQAAAAAADQAAAAGAAQAAAAAADQAAAAHAAQAAAAAADQAAAAIAAQAAAAAADQAAAAJAAQAAAAAADQAAAAKAAQAAAAAADQAAAALAAQAAAAAADQAAAAAAAUAAAAAADQAAAABAAUAAAAAADQAAAACAAUAAAAAADQAAAADAAUAAAAAADQAAAAEAAUAAAAAADQAAAAFAAUAAAAAADQAAAAGAAUAAAAAADQAAAAHAAUAAAAAADQAAAAIAAUAAAAAADQAAAAJAAUAAAAAADQAAAAKAAUAAAAAADQAAAALAAUAAAAAADQAAAAAAAYAAAAAADQAAAABAAYAAAAAADQAAAACAAYAAAAAADQAAAADAAYAAAAAADQAAAAEAAYAAAAAADQAAAAFAAYAAAAAADQAAAAGAAYAAAAAADQAAAAHAAYAAAAAADQAAAAIAAYAAAAAADQAAAAJAAYAAAAAADQAAAAKAAYAAAAAADQAAAALAAYAAAAAADQAAAAAAAcAAAAAADQAAAABAAcAAAAAADQAAAACAAcAAAAAADQAAAADAAcAAAAAADQAAAAEAAcAAAAAADQAAAAFAAcAAAAAADQAAAAGAAcAAAAAADQAAAAHAAcAAAAAADQAAAAIAAcAAAAAADQAAAAJAAcAAAAAADQAAAAKAAcAAAAAADQAAAALAAcAAAAAADQAAAAAAAgAAAAAADQAAAABAAgAAAAAADQAAAACAAgAAAAAADQAAAADAAgAAAAAADQAAAAEAAgAAAAAADQAAAAFAAgAAAAAADQAAAAGAAgAAAAAADQAAAAHAAgAAAAAADQAAAAIAAgAAAAAADQAAAAJAAgAAAAAADQAAAAKAAgAAAAAADQAAAALAAgAAAAAADQAAAAAAAkAAAAAADQAAAABAAkAAAAAADQAAAACAAkAAAAAADQAAAADAAkAAAAAADQAAAAEAAkAAAAAADQAAAAFAAkAAAAAADQAAAAGAAkAAAAAAAgAAAAHAAkAAAAAADQAAAAIAAkAAAAAADQAAAAJAAkAAAAAADQAAAAKAAkAAAAAADQAAAALAAkAAAAAADQAAAA=")
+tile_set = ExtResource("4_4pugx")
+
+[node name="Decor" type="TileMapLayer" parent="." unique_id=731863648]
+tile_map_data = PackedByteArray("AAABAAAAAQABABwAAAABAAEAAQABAB0AAAACAAAAAQABABwAAAACAAEAAQABAB0AAAADAAAAAQABABwAAAADAAEAAQABAB0AAAAEAAAAAQABABwAAAAEAAEAAQABAB0AAAAFAAAAAQABABwAAAAFAAEAAQABAB0AAAAGAAAAAQABABwAAAAGAAEAAQABAB0AAAAHAAAAAQABABwAAAAHAAEAAQABAB0AAAAIAAAAAQABABwAAAAIAAEAAQABAB0AAAAJAAAAAQABABwAAAAJAAEAAQABAB0AAAAKAAAAAQABABwAAAAKAAEAAQABAB0AAAAAAAAAAQACABoAAAALAAAAAQAAABoAAAAAAAEAAQACABoAAAALAAEAAQAAABoAAAAAAAIAAQACABoAAAALAAIAAQAAABoAAAAAAAMAAQACABoAAAALAAMAAQAAABoAAAAAAAQAAQACABoAAAALAAQAAQAAABoAAAAAAAUAAQACABoAAAALAAUAAQAAABoAAAAAAAYAAQACABoAAAALAAYAAQAAABoAAAAAAAcAAQACABoAAAALAAcAAQAAABoAAAAAAAgAAQACABoAAAALAAgAAQAAABoAAAABAAkAAQABABkAAAACAAkAAQABABkAAAADAAkAAQABABkAAAAEAAkAAQABABkAAAAFAAkAAQACABkAAAAHAAkAAQAAABkAAAAIAAkAAQABABkAAAAJAAkAAQABABkAAAAKAAkAAQABABkAAAAAAAkAAQAFAB0AAAALAAkAAQAGAB0AAAA=")
+tile_set = ExtResource("4_4pugx")
+
+[node name="Entities" type="Node2D" parent="." unique_id=1755645776]
+y_sort_enabled = true
+
+[node name="Objects" type="TileMapLayer" parent="Entities" unique_id=2077983445]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAFAAEAAgAFACUAAAAGAAEAAgAGACUAAAAHAAEAAgAHACUAAAAFAAIAAgAFACYAAAAGAAIAAgAGACYAAAAHAAIAAgAHACYAAAAIAAEAAgADADIAAAAJAAEAAgAEADIAAAAIAAIAAgADADMAAAAJAAIAAgAEADMAAAAIAAQAAgAEACYAAAAKAAUAAgAEACYAAAAJAAgAAgADADMAAAAKAAgAAgAEADMAAAABAAgAAgAFACYAAAACAAgAAgAGACYAAAADAAgAAgAHACYAAAA=")
+tile_set = ExtResource("4_4pugx")
+
+[node name="Paleontologa" type="Node2D" parent="Entities" unique_id=1396466870 instance=ExtResource("5_xt7n7")]
+position = Vector2(144, 176)
+script = ExtResource("6_k3q82")
+display_name = "Paleontóloga"
+lines = PackedStringArray("En la Sima de los Huesos han salido restos de una treintena de personas de hace unos 430.000 años. Es el mayor hallazgo de su época en el mundo.", "Se baja por una grieta estrecha, se excava tumbado y se sale con los huesos en cajitas. Esto es la réplica; la de verdad no la verías ni con linterna.")
+turn_to_player = true
+sprite_sheet = ExtResource("7_axk4d")
+
+[node name="Cartel" type="Node2D" parent="Entities" unique_id=729624575 instance=ExtResource("8_lqtk5")]
+position = Vector2(112, 48)
+script = ExtResource("9_3f2r5")
+lines = PackedStringArray("Un fondo de cueva iluminado con huesos de mentira en el suelo y cuadrículas de cuerda. Una etiqueta: «Réplica: no recoger».")
+only_from_below = false
+show_sprite = false
+
+[node name="Above" type="TileMapLayer" parent="." unique_id=956770561]
+z_index = 10
+tile_map_data = PackedByteArray("AAAJAAcAAgADADIAAAAKAAcAAgAEADIAAAABAAcAAgAFACUAAAACAAcAAgAGACUAAAADAAcAAgAHACUAAAA=")
+tile_set = ExtResource("4_4pugx")
+collision_enabled = false
+
+[node name="Warps" type="Node2D" parent="." unique_id=1509080312]
+
+[node name="Salida" type="Node2D" parent="Warps" unique_id=880099022]
+position = Vector2(208, 304)
+script = ExtResource("10_wya2u")
+target_map = &"ruta_22/sala_calle_16_15"
+target_spawn = &"desde_sala_calle_16_15_sima"
+arrival_facing = 1
+
+[node name="Spawns" type="Node2D" parent="." unique_id=1315125671]
+
+[node name="default" type="Marker2D" parent="Spawns" unique_id=959294011]
+position = Vector2(208, 272)
+
+[node name="Triggers" type="Node2D" parent="." unique_id=72096390]
+
+[node name="Rotulo" type="Label" parent="." unique_id=1199148089]
+offset_left = 16.0
+offset_top = 4.0
+offset_right = 368.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.1882353, 0.1882353, 0.28235295, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.95686275, 0.84705883, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("11_o0dsm")
+theme_override_font_sizes/font_size = 16
+text = "RÉPLICA DE LA SIMA DE LOS HUESOS"
+horizontal_alignment = 1

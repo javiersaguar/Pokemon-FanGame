@@ -109,7 +109,7 @@
       "Excavamos con brochas y paciencia. Cada verano encontramos algo. Un diente puede cambiar la historia."
      ],
      "nodo": "Arqueologo",
-     "en": [11, 8],
+     "en": [11, 2],
      "mira": "abajo"
     },
     {
@@ -131,14 +131,14 @@
       "Réplica del cráneo 5 de la Sima de los Huesos, «Miguelón». Unos cuatrocientos treinta mil años. Sin caries."
      ],
      "nodo": "Cartel",
-     "en": [5, 2]
+     "en": [1, 2]
     }
    ],
    "tamano": [16, 11],
    "puerta": [6, 10],
-   "suelo": "parquet",
-   "pared": "madera_oscura",
-   "felpudo": "alfombra_roja",
+   "suelo": "losa_crema",
+   "pared": "topo",
+   "felpudo": "alfombra_naranja",
    "alfombras": [["moqueta_azul", [9, 5, 4, 3]]],
    "muebles": [
     ["vitrina_madera", 1, 1],
@@ -150,8 +150,17 @@
     ["palmera_maceta", 14, 7]
    ],
    "encima": [],
-   "apariciones": {"default": [6, 9]},
-   "pasos": []
+   "apariciones": {"default": [6, 9], "desde_sala_calle_16_15_sima": [13, 2]},
+   "pasos": [
+    {
+     "nodo": "Sima",
+     "en": [13, 1],
+     "destino": "ruta_22/sala_calle_16_15_sima",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_16_15_sima",
+     "llegada": [13, 2]
+    }
+   ]
   },
   "ruta_22/sala_calle_8_26": {
    "pieza": "catedral_burgos",
@@ -263,6 +272,53 @@
    "apariciones": {"default": [3, 10]},
    "pasos": [],
    "salida": {"destino": "ruta_22/sala_calle_8_26", "aparicion": "desde_sala_calle_8_26_cimborrio"}
+  },
+  "ruta_22/sala_calle_16_15_sima": {
+   "tipo": "cueva",
+   "nombre": "Réplica de la Sima de los Huesos",
+   "padre": "ruta_22/sala_calle_16_15",
+   "personas": [
+    {
+     "nombre": "Paleontóloga",
+     "aspecto": "arqueologo",
+     "papel": "libre",
+     "frases": [
+      "En la Sima de los Huesos han salido restos de una treintena de personas de hace unos 430.000 años. Es el mayor hallazgo de su época en el mundo.",
+      "Se baja por una grieta estrecha, se excava tumbado y se sale con los huesos en cajitas. Esto es la réplica; la de verdad no la verías ni con linterna."
+     ],
+     "nodo": "Paleontologa",
+     "en": [4, 5],
+     "mira": "abajo"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Un fondo de cueva iluminado con huesos de mentira en el suelo y cuadrículas de cuerda. Una etiqueta: «Réplica: no recoger»."
+     ],
+     "nodo": "Cartel",
+     "en": [3, 1]
+    }
+   ],
+   "salida": {"destino": "ruta_22/sala_calle_16_15", "aparicion": "desde_sala_calle_16_15_sima"},
+   "tamano": [12, 10],
+   "puerta": [6, 9],
+   "suelo": "losa_gris",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [
+    ["cajas", 5, 1],
+    ["pedestal", 8, 1],
+    ["caja", 8, 4],
+    ["caja", 10, 5],
+    ["pedestal", 9, 7],
+    ["cajas", 1, 7]
+   ],
+   "encima": [],
+   "apariciones": {"default": [6, 8]},
+   "pasos": []
   }
  }
 }

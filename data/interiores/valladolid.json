@@ -617,8 +617,17 @@
     ["palmera_maceta", 12, 8]
    ],
    "encima": [],
-   "apariciones": {"default": [8, 10]},
-   "pasos": []
+   "apariciones": {"default": [8, 10], "desde_sala_calle_59_16_torre": [6, 2]},
+   "pasos": [
+    {
+     "nodo": "Torre",
+     "en": [6, 1],
+     "destino": "valladolid/sala_calle_59_16_torre",
+     "aparicion": "default",
+     "vuelta": "desde_sala_calle_59_16_torre",
+     "llegada": [6, 2]
+    }
+   ]
   },
   "valladolid/sala_calle_64_38": {
    "pieza": "tienda_azul",
@@ -755,6 +764,46 @@
    ],
    "encima": [],
    "apariciones": {"default": [5, 7]},
+   "pasos": []
+  },
+  "valladolid/sala_calle_59_16_torre": {
+   "tipo": "torre",
+   "nombre": "Torre de la Catedral",
+   "padre": "valladolid/sala_calle_59_16",
+   "personas": [
+    {
+     "nombre": "Campanero",
+     "aspecto": "npc_man",
+     "papel": "libre",
+     "frases": [
+      "La catedral la trazó Juan de Herrera, el del Escorial, y se quedó a medias: lleva sin terminar desde el siglo XVI.",
+      "La torre antigua se derrumbó en 1841. Ésta se levantó después; desde arriba se ve toda Valladolid y el Pisuerga."
+     ],
+     "nodo": "Campanero",
+     "en": [7, 3],
+     "mira": "derecha"
+    }
+   ],
+   "carteles": [
+    {
+     "sobre": "pared",
+     "frases": [
+      "Campanas grandes y pequeñas colgadas de vigas de madera. Una tiene una grieta y un cartel: «No tocar, que ya no suena»."
+     ],
+     "nodo": "Cartel",
+     "en": [7, 1]
+    }
+   ],
+   "salida": {"destino": "valladolid/sala_calle_59_16", "aparicion": "desde_sala_calle_59_16_torre"},
+   "tamano": [10, 8],
+   "puerta": [4, 7],
+   "suelo": "chapa",
+   "pared": "gris_cemento",
+   "felpudo": "alfombra_naranja",
+   "alfombras": [],
+   "muebles": [["escalera_mano", 2, 0], ["caja", 8, 2]],
+   "encima": [],
+   "apariciones": {"default": [4, 6]},
    "pasos": []
   }
  }

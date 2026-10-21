@@ -177,3 +177,6 @@ SALAS = {
             "En este portal viven tres generaciones de la misma familia. Cada una en un piso distinto, para discutir menos."])],
     },
 }
+
+# Salas de dentro de los monumentos (21 de octubre).
+SALAS['puertollano/sala_calle_51_60'].setdefault("dentro", {}).update({'puertollano/sala_calle_51_60_galeria': {'tipo': 'cueva', 'nombre': 'Galería de la mina', 'gente': [('Minero jubilado', 'npc_old_man', 'libre', ['Puertollano vivió del carbón más de un siglo: pozos, castilletes, lavaderos y una ciudad entera trabajando bajo tierra.', 'El grisú era el enemigo: un gas que no huele y que explota. Los canarios en jaula nos avisaban antes que los aparatos.'])], 'carteles': [('pared', ['Una galería apuntalada con madera, raíles en el suelo y una vagoneta de carbón. Huele a humedad y a historia.'])]}})
