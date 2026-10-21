@@ -53,7 +53,9 @@ func _check(path: String) -> void:
 				_warn(path, "%s (%s)" % [problem, pack_exceptions[path]])
 			else:
 				_fail(path, problem)
-	if placeholder or _starts_with_any(path, _rules.get("third_party", [])):
+	var third_party := _starts_with_any(path, _rules.get("third_party", []))
+	var own_art := _starts_with_any(path, _rules.get("own_art", []))
+	if placeholder or (third_party and not own_art):
 		return
 	var outside := _colors_outside_palette(img)
 	if outside > 0:

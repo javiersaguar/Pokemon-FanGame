@@ -158,7 +158,9 @@ func _initialize() -> void:
 		elif arg.begins_with("--paso="):
 			step = arg.get_slice("=", 1)
 	if step == "png":
-		_build_pngs()
+		if not _build_pngs():
+			quit(1)
+			return
 	else:
 		var builder: GDScript = load("res://assets/tilesets/exterior/exterior_tileset_builder.gd")
 		builder.call(&"build")
@@ -167,7 +169,7 @@ func _initialize() -> void:
 
 # --- Paso 1: PNG ---
 
-func _build_pngs() -> void:
+func _build_pngs() -> bool:
 	_save(_retouched(_gen4()), "gen4.png")
 	_save(_retouched(_autotiles()), "autotiles.png")
 	_save(_retouched(_animated()), "animados.png")
@@ -177,13 +179,54 @@ func _build_pngs() -> void:
 	_save(_retouched(_flora()), "flora.png")
 	_save(_retouched(_houses_dppt(objects)), "casas_dppt.png")
 	_save(_fences(objects), "vallas.png")
-	_save(_city_buildings(objects), "edificios.png")
+	var city := _city_buildings(objects)
+	if not _apply_city_revisions(city, objects):
+		return false
+	_save(city, "edificios.png")
 	_save(_urban_props(objects), "adornos.png")
 	_hand_made(objects)
 	var file := FileAccess.open(OUT + "objetos.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(objects, "\t", true) + "\n")
 	file.close()
 	print("objetos.json: %d objetos" % objects.size())
+	return true
+
+
+## Copia dibujos propios sobre el atlas generado, sin alterar la fuente original,
+## la colocación de las piezas, su tamaño, la puerta ni su huella de colisión.
+func _apply_city_revisions(atlas: Image, objects: Dictionary) -> bool:
+	var manifest: Dictionary = JsonFile.read_dict(OUT + "revisiones/piezas.json")
+	if manifest.is_empty():
+		push_error("Falta el registro de revisiones de edificios de ciudad.")
+		return false
+	for id: String in manifest:
+		var replacement: Dictionary = manifest[id]
+		if not objects.has(id):
+			push_error("Revisión de un edificio desconocido: %s" % id)
+			return false
+		var original: Dictionary = objects[id]
+		var coords := Vector2i(int(original.coords[0]), int(original.coords[1]))
+		var cells := Vector2i(int(original.size[0]), int(original.size[1]))
+		var revised_coords := Vector2i(int(replacement.coordenadas[0]), int(replacement.coordenadas[1]))
+		var revised_cells := Vector2i(int(replacement.tamano[0]), int(replacement.tamano[1]))
+		if (int(original.source) != ExteriorTiles.SRC_EDIFICIOS
+				or int(replacement.fuente) != int(original.source)
+				or coords != revised_coords or cells != revised_cells):
+			push_error("La revisión cambia la fuente o el rectángulo de %s." % id)
+			return false
+		var path := String(replacement.archivo)
+		if path.get_file() != path or path.get_extension() != "png":
+			push_error("Archivo de revisión no válido: %s" % id)
+			return false
+		var art := Image.load_from_file(ProjectSettings.globalize_path(OUT + "revisiones/" + path))
+		var size := cells * T
+		var at := coords * T
+		if art == null or art.get_size() != size or not Rect2i(Vector2i.ZERO, atlas.get_size()).encloses(Rect2i(at, size)):
+			push_error("La revisión no cabe en su rectángulo: %s" % id)
+			return false
+		# blit_rect sustituye también la transparencia del dibujo anterior.
+		atlas.blit_rect(art, Rect2i(Vector2i.ZERO, size), at)
+	return true
 
 
 func _gen4() -> Image:

@@ -81,7 +81,7 @@ Esta tabla registra el recorrido técnico completo del catálogo, sus usos y la 
 | `basilica_pilar` | [18, 11]; [8, 0] | `zaragoza/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/basilica_pilar.png) |
 | `la_seo` | [10, 9]; [6, 0] | `zaragoza/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/la_seo.png) |
 | `puente_piedra` | [4, 8]; [-1, -1] | Sin uso en mapas | Revisada en catálogo; sin colocación actual, pendiente de su revisión artística individual | [pieza](edificios_reales/piezas_antes/puente_piedra.png) |
-| `escenario_festival` | [10, 6]; [-1, -1] | `playa_del_ingles/exterior`, `ruta_7/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/escenario_festival.png) |
+| `escenario_festival` | [10, 6]; [-1, -1] | `playa_del_ingles/exterior`, `ruta_7/exterior` | Cubierta, equipo y tarima revisados el 21 de octubre; fuente 64 y acceso conservados; provisional | [pieza](edificios_reales/piezas_antes/escenario_festival.png) |
 | `agujas_montserrat` | [12, 8]; [-1, -1] | `ruta_8/exterior` | Revisada en catálogo; objeto no arquitectónico (sin fachada de edificio) | [pieza](edificios_reales/piezas_antes/agujas_montserrat.png) |
 | `monasterio_montserrat` | [10, 7]; [4, 0] | `ruta_8/exterior` | Revisada en catálogo; pendiente de redibujo con su referencia real y comparativa | [pieza](edificios_reales/piezas_antes/monasterio_montserrat.png) |
 | `camp_nou` | [20, 11]; [10, 0] | `barcelona/les_corts` | Graderío, campo, cubierta parcial y acceso redibujados; contrato conservado; provisional | [pieza](edificios_reales/piezas_antes/camp_nou.png) |
@@ -484,3 +484,30 @@ Pruebas de edificios: **7/7, 890 aserciones**. Se añade la comprobación del in
 La primera suite del bloque 3 se interrumpió al detectar que una previsualización había escrito por error el PNG del escenario. Se restauró exactamente su versión anterior desde el commit de partida y el boceto se conservó fuera del proyecto. La herramienta externa de previsualización ahora rechaza cualquier salida al repositorio. La ejecución final se repite con una huella de las fuentes y capturas para comprobar que no cambian durante la suite.
 
 Tras incorporar las publicaciones de los otros frentes: **7/7 pruebas de edificios, 891 aserciones; arte 11605 PNG sin errores ni avisos; datos 0 errores y 0 avisos; grafo 974 mapas, todos alcanzables y con vuelta**. La suite completa de 763 pruebas citada arriba corresponde a la base `09292a13`, no se atribuye a los cambios posteriores de los demás. Interiores ya enlazó el Bernabéu y añadió sus salas (`be0a0d1f`); se conserva su actualización del test y la petición deja de estar pendiente. Edificios no creó esas salas ni retiró sus enlaces.
+
+
+## Gimnasios de Chamberí y Playa del Inglés · 21 de octubre de 2026
+
+**Finca de Chamberí (`atico_jardin`):** la fachada verde de gimnasio genérico se sustituye por una finca con estuco ocre, mirador, balcones de hierro, portal de madera y terraza retranqueada. Es una adaptación de tipología urbana a partir de la [fotografía pública de Olavide y la descripción de Chamberí de Turismo de Madrid](https://www.esmadrid.com/descubre-chamberi); no representa una vivienda particular. Dibujo literal `assets/_fuentes/mundo/atico_chamberi.px2`, 128×96 píxeles a ×2.
+
+El mismo objeto aparece en el exterior de Chamberí y en la terraza del ático. Se conserva en ambos: fuente **8**, coordenadas de atlas **(6,9)**, caja **8×6**, puerta relativa **(3,0)** y las 37 casillas de huella anteriores. El portal exterior sigue en **(31,32)** y vuelve a **(31,33)**, hacia `madrid/sala_chamberi_31_32`. La bajada desde la terraza mantiene su conexión a Chamberí. No se han repintado escenas, trasladado personajes ni cambiado interiores.
+
+Para conservar estos identificadores, el constructor copia el dibujo propio en el rectángulo exacto de la hoja generada `edificios.png`, registrado en `assets/tilesets/exterior/revisiones/piezas.json`. Los archivos originales del pack permanecen intactos. La prueba compara todos los metadatos de la fuente 8 y los píxeles de la hoja fuera del rectángulo: ninguna pieza vecina cambia. El validador revisa la paleta maestra del nuevo PNG, aunque comparta carpeta general con los atlas de terceros. No cambia `exterior.tres`.
+
+**Escenario (`escenario_festival`):** nueva cubierta, celosía de soporte, focos, altavoces suspendidos, pantalla, monitores y tarima con escalera. Referencias: [sistema de cubierta y ficha de Prolyte](https://www.prolyte.com/products/stage-roofs/mpt-roof), y [fotografía municipal de un escenario de playa de San Bartolomé de Tirajana](https://www.maspalomas.com/mnunotprensa/2980-soul-record-asistencia). Sirven para estructura y equipamiento; no se identifica el concierto del juego con ese festival real. Fuente **64**, lienzo **10×6**, huella anterior explícita y sin puerta de catálogo. El acceso existente al gimnasio sigue en **(48,23)**, con regreso **(48,24)**. La pieza compartida de Monegros conserva su colocación **(40,12)**.
+
+| Comparativa | Antes | Después |
+|---|---|---|
+| Finca, pieza aislada | [Pieza](edificios_reales/atico_chamberi_previo.png) | [Pieza](edificios_reales/atico_chamberi_terminado.png) |
+| Chamberí, detalle | [Mapa](edificios_reales/atico_chamberi_detalle_antes.png) | [Mapa](edificios_reales/atico_chamberi_detalle_despues.png) |
+| Chamberí, mapa entero | [Mapa](edificios_reales/atico_chamberi_mapa_antes.png) | [Mapa](edificios_reales/atico_chamberi_mapa_despues.png) |
+| Terraza del ático | [Mapa](edificios_reales/atico_terraza_mapa_antes.png) | [Mapa](edificios_reales/atico_terraza_mapa_despues.png) |
+| Escenario, pieza aislada | [Pieza](edificios_reales/escenario_gimnasio_previo.png) | [Pieza](edificios_reales/escenario_gimnasio_terminado.png) |
+| Playa del Inglés, detalle | [Mapa](edificios_reales/escenario_playa_detalle_antes.png) | [Mapa](edificios_reales/escenario_playa_detalle_despues.png) |
+| Playa del Inglés, mapa entero | [Mapa](edificios_reales/escenario_playa_mapa_antes.png) | [Mapa](edificios_reales/escenario_playa_mapa_despues.png) |
+| Monegros, detalle | [Mapa](edificios_reales/escenario_monegros_detalle_antes.png) | [Mapa](edificios_reales/escenario_monegros_detalle_despues.png) |
+| Monegros, mapa entero | [Mapa](edificios_reales/escenario_monegros_mapa_antes.png) | [Mapa](edificios_reales/escenario_monegros_mapa_despues.png) |
+
+El contrato nuevo `gimnasios_pendientes_contrato.json` es una instantánea de `966e9478`; el contrato inicial de las 140 piezas no se reescribe. Pruebas dirigidas: **3/3, 59 aserciones** para el atlas y los dos accesos; contrato anterior **7/7, 891 aserciones**. Alcance: **32 puertas comprobadas, 0 problemas** en los cuatro mapas. Arte: **11.606 PNG, 0 errores, 0 avisos**. Datos: **0 errores y 0 avisos**. Grafo: **974 mapas alcanzables y con vuelta**. Los comprobadores de mapas siguen mostrando al cerrar sus avisos anteriores de recursos/RID sin liberar; no se ocultan y no son problemas nuevos de acceso.
+
+**Validación completa del bloque: en curso.** No se declara integrado hasta terminarla. Estas dos piezas siguen provisionales hasta que las apruebe Javier. Después continúan los monumentos identificados, servicios y casas del inventario; la pasada de personajes todavía está pendiente.

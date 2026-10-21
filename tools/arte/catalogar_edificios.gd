@@ -7,6 +7,7 @@ func _ready() -> void:
 	var output := args[0] if not args.is_empty() else "/tmp/edificios-inventario.json"
 	var catalog := ExteriorTiles.objects()
 	var sources := JsonFile.read_dict("res://assets/tilesets/exterior/hecho_a_mano/piezas.json")
+	var revisions := JsonFile.read_dict("res://assets/tilesets/exterior/revisiones/piezas.json")
 	var by_tile := {}
 	var entries := {}
 	var tileset := load(ExteriorTiles.TILESET) as TileSet
@@ -17,7 +18,7 @@ func _ready() -> void:
 		var piece: Dictionary = catalog[id]
 		var key := "%d:%s" % [piece.source, piece.coords]
 		by_tile[key] = String(id)
-		if sources.has(String(id)) or id in [&"casa_madera", &"casa_tejado_rojo", &"faro"]:
+		if sources.has(String(id)) or revisions.has(String(id)) or id in [&"casa_madera", &"casa_tejado_rojo", &"faro"]:
 			entries[String(id)] = {"source": piece.source, "size": [piece.size.x, piece.size.y], "door": [piece.door.x, piece.door.y], "file": piece.file, "footprint": piece.footprint, "placements": []}
 			if captures != "":
 				var source := tileset.get_source(int(piece.source)) as TileSetAtlasSource
