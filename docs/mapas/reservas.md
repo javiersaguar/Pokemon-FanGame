@@ -4,6 +4,7 @@ Antes de pintar o editar un mapa, apúntalo aquí (y haz commit). **Un mapa = un
 
 | Mapa (id) | Quién | Desde | Para qué |
 |-----------|-------|-------|----------|
+| Fuentes `.px2` de edificios pendientes de redibujo y regeneración de `exterior.tres`, `objetos.json` y las hojas de `hecho_a_mano/` (sin tocar mapas) | Edificios (continúa Interiores) | 2026-10-21 | Sustituir los dibujos pendientes del inventario conservando lienzo, fuente, puerta y huella (`feat/edificios-personajes`) |
 
 
 
