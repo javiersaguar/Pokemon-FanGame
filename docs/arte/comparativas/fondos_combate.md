@@ -74,3 +74,9 @@ Momentos del día del fondo de hierba: `fondos_combate/hierba_morning.png`, `hie
   hay bases, como pidió Javier y como en los juegos de 4.ª y 5.ª generación.
 - **Pendiente de revisar con Javier:** los rótulos de los gimnasios no se ponen (a ×1 no se leen); las
   nubes de EBDX tampoco, porque solo funcionan teñidas con el color del cielo.
+
+## Referencia nueva · 25 de octubre de 2026
+
+Javier aporta una [captura de combate de World Frontier](../referencias/javier_2026-10-25/combate_world_frontier.png). Pide mejorar el diseño dentro del combate y los ambientes. [Análisis y orden de trabajo](../guia_world_frontier_2026-10-25.md): campo continuo y legible, arquitectura y luz coherentes, paneles más cuidados y muestra con mensaje y cuatro acciones. Los 25 ambientes anteriores existen y sus pruebas pasan; este añadido no los declara redibujados.
+
+Desajuste detectado: la terraza `madrid/atico_ayuso` usa el mismo fondo interior y alfombra que las salas de Madrid; necesita una variante exterior. El nombre «Real Casa de Correos» de la escena también está desactualizado respecto a ese emplazamiento. Pendiente del siguiente bloque de Combate/interfaz.

@@ -533,3 +533,7 @@ Referencias: [Templo de Debod (esMadrid)](https://www.esmadrid.com/informacion-t
 | Basílica de Covadonga (Ruta 18) | [pieza](edificios_reales/piezas_antes/basilica_covadonga.png) | [pieza](../../../assets/tilesets/exterior/hecho_a_mano/basilica_covadonga.png) | [antes](edificios_reales/basilica_covadonga_detalle_antes.png) · [después](edificios_reales/basilica_covadonga_detalle_despues.png) |
 
 Mismo método que el bloque 1: lienzo, fuente, puerta y huella conservados, `objetos.json` sin cambios y ningún mapa repintado. Referencias: [plaza del Castillo (Visit Navarra)](https://www.visitnavarra.es/es/plaza-del-castillo) y [Basílica de Covadonga (Turismo de Asturias)](https://www.turismoasturias.es/descubre/cultura/patrimonio-cultural/basilica-de-covadonga). Provisional hasta que lo apruebe Javier.
+
+## Recuento comprobado · 25 de octubre de 2026
+
+[Lista completa de pendientes y diseños ya integrados](edificios_pendientes_2026-10-25.md). El inventario contiene 137 fuentes de tipos distintos: 17 revisadas, 101 con redibujo pendiente (se incluye el Guggenheim que tenía una nota distinta), 4 sin colocación y 15 de vegetación, vehículos o decorado. Más los diseños nuevos de la finca de Chamberí, el teatro y el plató: 20 revisiones o diseños ya integrados; los 30 módulos urbanos se cuentan aparte. No hay un lote terminado por sustituir globalmente. El hórreo solo tiene un boceto externo. Las nuevas [referencias de World Frontier](../referencias/javier_2026-10-25/README.md) orientan el acabado; conservar los contratos y todas las colocaciones de cada pieza.

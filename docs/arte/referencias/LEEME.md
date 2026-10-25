@@ -14,3 +14,7 @@ Capturas de **Pokémon Añil** que marcan el **nivel mínimo** de calidad de Pok
 ## Ampliación de Javier del 2026-10-15
 
 [13 referencias de composición de rutas y ciudades](javier_2026-10-15/README.md), conservadas en su resolución original y con SHA-256. Son la referencia para corregir límites, calles, recorridos y pasos por hierba. [Diagnóstico y reparto entre los cinco agentes](../../mundo/guia_composicion_anil_2026-10-15.md). Se conservan los monumentos y la identidad española; sus fachadas se rediseñan con entrada, salida e interior personalizado, proporcionado y con varias salas cuando corresponda.
+
+## Ampliación de Javier del 2026-10-25
+
+[Siete capturas de Pokémon World Frontier](javier_2026-10-25/README.md), conservadas sin modificar y con sus tamaños y SHA-256. Referencia de acabado del combate (fondo, suelo, cajas y acciones), volumen y acceso de edificios, calles, plazas y entradas. [Guía de aplicación y reparto](../guia_world_frontier_2026-10-25.md). Añil sigue siendo el mínimo de calidad. No se incorporan como texturas del juego.

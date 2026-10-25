@@ -762,3 +762,9 @@ Pasada común a los 41 exteriores urbanos con `maps/_pintura/vestir/_ciudad.gd` 
 | Escenario de Playa del Inglés y Monegros | Cubierta, celosía, focos, pantalla, altavoces y acceso; fuente 64, tamaño y huella intactos. Provisional | pendiente | [Antes y después](comparativas/edificios_reales.md#gimnasios-de-chamberí-y-playa-del-inglés--21-de-octubre-de-2026) |
 
 Pruebas dirigidas 10/10; 32 puertas sin problemas. Arte 11.606 PNG sin errores ni avisos; datos 0/0; grafo 974 mapas conectados y con vuelta. Suite completa en curso antes de integrar. El catálogo restante y la fidelidad de personajes siguen pendientes.
+
+### Referencia World Frontier y auditoría · 25 de octubre de 2026
+
+Siete originales de Javier guardados sin modificar, con manifest de tamaños y SHA-256. [Guía visual para Combate/interfaz, Edificios y Rutas/interiores](guia_world_frontier_2026-10-25.md). Los 25 ambientes ya existen; revisión visual pendiente, empezando por la terraza de Madrid y una muestra completa del Camp Nou. No se han redibujado fondos ni paneles en esta publicación.
+
+[Recuento de edificios](comparativas/edificios_pendientes_2026-10-25.md): 17 revisiones de las 137 fuentes originales, más finca de Chamberí, teatro y plató fuera de ese inventario: 20 diseños integrados, todos provisionales. Quedan 101 fuentes pendientes; el recuento anterior de 100 omitía el Guggenheim por su etiqueta distinta. Hórreo: boceto externo, sin integrar. Suite completa: **771/771 pruebas. 92.186 aserciones. 631.772 s**. Fondos: **11/11, 2.073 aserciones**. Arte: **11.606 PNG, 0 errores, 0 avisos**. Datos: **0 errores y 0 avisos**. Grafo: **994 mapas, todos alcanzables y con vuelta**. Las fuentes y las capturas no se han modificado durante la suite.

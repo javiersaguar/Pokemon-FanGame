@@ -1,0 +1,56 @@
+{
+  "aportadas_por": "Javier",
+  "fecha": "2026-10-25",
+  "juego_referido_por_javier": "Pokémon World Frontier",
+  "archivos": [
+    {
+      "archivo": "combate_world_frontier.png",
+      "ancho": 640,
+      "alto": 440,
+      "sha256": "cee22107b05a55f1f645bb7b713743dd502956647474e768df889b503b67286c",
+      "descripcion": "Combate: fondo, suelo, profundidad, barras y cuatro acciones"
+    },
+    {
+      "archivo": "plaza_liga.png",
+      "ancho": 640,
+      "alto": 440,
+      "sha256": "b2cdc86e8ae63376515c9681ae29e14b34bee301cc4a03b59270c3eedaa20d19",
+      "descripcion": "Plaza: recorrido central, pavimentos, focos y bordes"
+    },
+    {
+      "archivo": "puerto_ferry.png",
+      "ancho": 1920,
+      "alto": 1080,
+      "sha256": "4c73835c20fff589317d341d3b4c453af62006ac97b129ed3743cb27463ffe03",
+      "descripcion": "Puerto: barco completo, pasarela y mobiliario"
+    },
+    {
+      "archivo": "entrada_liga.png",
+      "ancho": 640,
+      "alto": 440,
+      "sha256": "09573f760a6d9fda7491d69effbf7a3f7e2978ad427e04abf750146fe34af7ed",
+      "descripcion": "Entrada: alfombra, umbral, columnas y luces"
+    },
+    {
+      "archivo": "calles_y_aceras.png",
+      "ancho": 640,
+      "alto": 440,
+      "sha256": "e19ed57fe21afc0f774dfc9a45774edee9cecec0c1c3dd66c5f26d15a9741c99",
+      "descripcion": "Calles: calzada, aceras, parterres y mobiliario"
+    },
+    {
+      "archivo": "plaza_comercial.png",
+      "ancho": 256,
+      "alto": 192,
+      "sha256": "c355702e0c6bb6304bcd0ecd787cbd48cd39fe1b7f29a6e515f108c93b055c18",
+      "descripcion": "Plaza comercial: puestos, edificios y recorrido delimitado"
+    },
+    {
+      "archivo": "edificio_acristalado.png",
+      "ancho": 256,
+      "alto": 192,
+      "sha256": "1eb080c59349081fa57c6a9b55c52f2ec77ac2f3937977f7e60414f056141935",
+      "descripcion": "Edificio: volumen, cristal, escalera y entrada legible"
+    }
+  ]
+}
