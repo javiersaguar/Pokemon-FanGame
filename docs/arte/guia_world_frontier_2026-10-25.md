@@ -62,3 +62,7 @@ Conservar las reglas de combate, controles, equipos, lore y accesibilidad. No ha
 Suite completa: **771/771 pruebas. 92.186 aserciones. 631.772 s**. Fondos: **11/11, 2.073 aserciones**. Arte: **11.606 PNG, 0 errores, 0 avisos**. Datos: **0 errores y 0 avisos**. Grafo: **994 mapas, todos alcanzables y con vuelta**. Las fuentes y las capturas no se han modificado durante la suite.
 
 Se incorporan referencias y guía de trabajo. La mejora visual de fondos y paneles sigue pendiente; esta publicación no modifica el motor ni los gráficos del juego.
+
+## Corrección posterior del fondo de ciudad · 25 de octubre
+
+Tras la publicación de las referencias, Javier señala los árboles cortados en la captura de ciudad. [Corregida su distribución, con antes y después de día y noche](comparativas/ciudad_arboles_2026-10-25/README.md). Las copas caben en el encuadre y no quedan cortadas por las cajas en esa composición. Esta corrección concreta no sustituye el resto del bloque visual pendiente. Las comprobaciones de la publicación de referencias citadas arriba corresponden a `61e5bf95`; la corrección tiene su validación propia en la comparativa.

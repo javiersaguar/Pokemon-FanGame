@@ -50,6 +50,7 @@ func _run() -> void:
 		for p: StringName in PERIODS:
 			var shot := await _capture(&"hierba", p)
 			shot.save_png(OUT + "hierba_" + String(p) + ".png")
+	if _only == "" or _only == "ciudad":
 		var city := await _capture(&"ciudad", &"night")
 		city.save_png(OUT + "ciudad_night.png")
 	quit()

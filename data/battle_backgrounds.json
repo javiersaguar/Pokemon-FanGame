@@ -371,14 +371,12 @@
    ["arbol:arbustos", 316, 116]
   ],
   "frente_ciudad": [
-   ["arbol:redondo", 72, 104],
-   ["arbol:redondo", 120, 102, true],
-   ["arbol:redondo", 170, 101],
-   ["arbol:redondo", 286, 102, true],
-   ["arbol:redondo", 330, 104],
-   ["arbol:arbustos", 96, 116],
-   ["arbol:arbustos", 146, 115, true],
-   ["arbol:arbustos", 306, 116, true]
+   ["arbol:redondo", 98, 123],
+   ["arbol:redondo", 155, 123, true],
+   ["arbol:redondo", 292, 123, true],
+   ["arbol:arbustos", 100, 123],
+   ["arbol:arbustos", 150, 123, true],
+   ["arbol:arbustos", 292, 123, true]
   ],
   "frente_casa": [
    {"pared": "melocoton", "abajo": 102, "filas": 4},

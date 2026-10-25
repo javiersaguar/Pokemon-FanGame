@@ -80,3 +80,7 @@ Momentos del día del fondo de hierba: `fondos_combate/hierba_morning.png`, `hie
 Javier aporta una [captura de combate de World Frontier](../referencias/javier_2026-10-25/combate_world_frontier.png). Pide mejorar el diseño dentro del combate y los ambientes. [Análisis y orden de trabajo](../guia_world_frontier_2026-10-25.md): campo continuo y legible, arquitectura y luz coherentes, paneles más cuidados y muestra con mensaje y cuatro acciones. Los 25 ambientes anteriores existen y sus pruebas pasan; este añadido no los declara redibujados.
 
 Desajuste detectado: la terraza `madrid/atico_ayuso` usa el mismo fondo interior y alfombra que las salas de Madrid; necesita una variante exterior. El nombre «Real Casa de Correos» de la escena también está desactualizado respecto a ese emplazamiento. Pendiente del siguiente bloque de Combate/interfaz.
+
+## Corrección de ciudad · 25 de octubre de 2026
+
+Javier detectó árboles cortados en los bordes y por la caja superior. Se recompone la distribución para que el follaje quede completo en el encuadre real de 512×384. [Antes y después de día y noche, causa y prueba de regresión](ciudad_arboles_2026-10-25/README.md). La composición anterior queda conservada; las capturas de ciudad de esta galería muestran ya la corrección. Fondos 12/12. La revisión completa del resto de escenas sigue pendiente.

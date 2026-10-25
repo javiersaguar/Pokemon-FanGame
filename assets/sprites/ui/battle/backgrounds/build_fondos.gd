@@ -13,7 +13,7 @@ extends SceneTree
 ##      de cada bloque de 2×2: el mismo dibujo, a la escala del fondo.
 ##   4. forest.png (la ficha del Pokémon) = el fondo Field con el frente de hierba, como antes.
 ## Escribe la procedencia (archivo original y SHA-256) en data/battle_background_assets.json.
-##   godot --headless --path . -s res://assets/sprites/ui/battle/backgrounds/build_fondos.gd [-- --recursos=<ruta>]
+##   godot --headless --path . -s res://assets/sprites/ui/battle/backgrounds/build_fondos.gd [-- --recursos=<ruta> --solo=<composición>]
 
 const DEFAULT_RESOURCES := "/mnt/c/Users/Javier/Pokemon-Panchito-recursos"
 const OUT := "res://assets/sprites/ui/battle/backgrounds/"
@@ -67,6 +67,7 @@ const TREE_AREAS := {
 }
 
 var _resources := DEFAULT_RESOURCES
+var _only := ""
 var _trees: Image
 var _pieces: Dictionary
 var _sheets: Array[Image] = []
@@ -78,19 +79,31 @@ func _initialize() -> void:
 	for arg: String in OS.get_cmdline_user_args():
 		if arg.begins_with("--recursos="):
 			_resources = arg.get_slice("=", 1)
-	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(LAYERS_OUT))
-	for id: String in BACKDROPS:
-		_copy(BACKDROPS[id], OUT + id + ".png")
-	for id: String in LAYERS:
-		_copy(LAYERS[id], LAYERS_OUT + id + ".png")
+		elif arg.begins_with("--solo="):
+			_only = arg.get_slice("=", 1)
+	var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(DATA))
+	var recipes: Dictionary = data["composiciones"]
+	if _only != "" and (not recipes.has(_only) or _only.begins_with("_")):
+		push_error("build_fondos: composición desconocida: %s" % _only)
+		quit(1)
+		return
+	if _only == "":
+		DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(LAYERS_OUT))
+		for id: String in BACKDROPS:
+			_copy(BACKDROPS[id], OUT + id + ".png")
+		for id: String in LAYERS:
+			_copy(LAYERS[id], LAYERS_OUT + id + ".png")
+	else:
+		# Una composición no regenera las demás a partir de fachadas que puedan
+		# haber cambiado mientras otro frente trabajaba en sus fondos.
+		var saved: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(MANIFEST))
+		_manifest = saved.get("archivos", {}).duplicate(true)
 	_trees = ExteriorBuild._retouched(_load_resource(TREES))
 	_pieces = JSON.parse_string(FileAccess.get_file_as_string(PIECES))
 	for path: String in INTERIOR_SHEETS:
 		_sheets.append(_load_project(path))
-	var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(DATA))
-	var recipes: Dictionary = data["composiciones"]
 	for id: String in recipes:
-		if id.begins_with("_"):
+		if id.begins_with("_") or (_only != "" and id != _only):
 			continue
 		var out := Image.create_empty(SIZE.x, SIZE.y, false, Image.FORMAT_RGBA8)
 		for entry: Variant in recipes[id]:
@@ -98,11 +111,12 @@ func _initialize() -> void:
 		out.save_png(OUT + id + ".png")
 		_manifest[id + ".png"] = {"compuesto": "data/battle_backgrounds.json → composiciones." + id}
 		print("build_fondos: %s%s.png" % [OUT, id])
-	var forest := _load_project(OUT + "field.png")
-	var front := Image.load_from_file(ProjectSettings.globalize_path(OUT + "frente_hierba.png"))
-	forest.blend_rect(front, Rect2i(Vector2i.ZERO, SIZE), Vector2i.ZERO)
-	forest.save_png(OUT + "forest.png")
-	_manifest["forest.png"] = {"compuesto": "field.png + frente_hierba.png (la ficha del Pokémon)"}
+	if _only == "" or _only == "frente_hierba":
+		var forest := _load_project(OUT + "field.png")
+		var front := Image.load_from_file(ProjectSettings.globalize_path(OUT + "frente_hierba.png"))
+		forest.blend_rect(front, Rect2i(Vector2i.ZERO, SIZE), Vector2i.ZERO)
+		forest.save_png(OUT + "forest.png")
+		_manifest["forest.png"] = {"compuesto": "field.png + frente_hierba.png (la ficha del Pokémon)"}
 	var file := FileAccess.open(MANIFEST, FileAccess.WRITE)
 	file.store_string(JSON.stringify({"_doc": "Procedencia de los fondos de combate (build_fondos.gd). Copias byte a byte de los packs, con su SHA-256; los frentes son composiciones de piezas de los packs y de los .px2 a mano.", "archivos": _manifest}, " ", true) + "\n")
 	file.close()

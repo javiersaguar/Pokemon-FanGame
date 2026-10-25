@@ -209,3 +209,42 @@ func test_prepara_el_combate_con_el_fondo_y_la_hora() -> void:
 	SceneManager._fill_battle_place(fishing, {"method": "goodrod"})
 	assert_eq(fishing.background, &"agua")
 	assert_eq(fishing.environment, &"fishing", "la Cebo Ball sabe que se pesca")
+
+
+func test_arboles_de_ciudad_no_se_recortan_en_los_bordes_ni_en_las_cajas() -> void:
+	var screen: Control = load("res://src/battle/scene/battle_scene.tscn").instantiate()
+	add_child_autofree(screen)
+	screen._background.set_environment(&"ciudad", &"day")
+	screen._foe_box.show_pokemon({"name":"Snorlax","level":50,"hp":100,"max_hp":100})
+	screen._player_box.show_pokemon({"name":"Pikachu","level":50,"hp":150,"max_hp":150})
+	screen._foe_box.show()
+	screen._player_box.show()
+	await wait_process_frames(2)
+	var front := screen._background.get_node("Escena/Frente") as Sprite2D
+	var frame := Rect2(screen.global_position,Vector2(512,384))
+	var boxes: Array[Rect2] = [screen._foe_box.get_global_rect(),screen._player_box.get_global_rect()]
+	var current := _city_foliage_coverage(front.texture.get_image(),front,frame,boxes)
+	assert_gt(current.visible,1000,"El arreglo conserva árboles y arbustos, no vacía el frente")
+	assert_eq(current.outside,0,"Todas las copas quedan dentro del encuadre real de 512×384")
+	assert_eq(current.behind_boxes,0,"Las cajas de datos no cortan el follaje")
+	var previous := Image.load_from_file(ProjectSettings.globalize_path("res://docs/arte/comparativas/ciudad_arboles_2026-10-25/frente_antes.png"))
+	var old := _city_foliage_coverage(previous,front,frame,boxes)
+	assert_gt(old.outside,0,"La composición anterior reproduce los árboles cortados en el borde")
+	assert_gt(old.behind_boxes,0,"La composición anterior reproduce el recorte de la caja superior")
+
+
+func _city_foliage_coverage(image: Image, sprite: Sprite2D, frame: Rect2, boxes: Array[Rect2]) -> Dictionary:
+	var result := {"visible":0,"outside":0,"behind_boxes":0}
+	for y: int in image.get_height():
+		for x: int in image.get_width():
+			if image.get_pixel(x,y).a <= 0.02:
+				continue
+			var point := sprite.to_global(Vector2(x+0.5,y+0.5))
+			if not frame.has_point(point):
+				result.outside += 1
+			else:
+				result.visible += 1
+			for box: Rect2 in boxes:
+				if box.has_point(point):
+					result.behind_boxes += 1
+	return result
